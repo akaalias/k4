@@ -17,6 +17,7 @@ as a statistic.
 | `08-timeline.md` | 1939 to 2026, dated to the day where the sources allow |
 | `09-contradictions.md` | Where the record disagrees with itself, and Sanborn's own disinformation warnings |
 | `10-sanborn-the-artist.md` | The oeuvre, the obsessions, the working habits |
+| `11-clue-register.md` | Every hint with its readings, how each becomes an experiment, and its test status |
 | `people/` | Biographies: Sanborn, Scheidt, and the solvers and community |
 | `sources/` | Full text of 71 primary sources. Open the one a hypothesis rests on before you trust the quote here. |
 

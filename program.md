@@ -2,7 +2,7 @@
 
 You are running an autoresearch loop against Kryptos K4. Before your first edit, read
 in full and in this order: this file; `README.md`; every numbered file in `knowledge/`
-(`01-facts.md` through `10-sanborn-the-artist.md`); `families.md`; `results.tsv` and the
+(`01-facts.md` through `11-clue-register.md`); `families.md`; `results.tsv` and the
 `experiments/*/experiment.md` records newest first. This is not optional and it is not
 skimmable. The record contains throwaway remarks from the artist and the cryptographer
 that no search strategy will rediscover; the clue that breaks K4 is as likely to be one of
@@ -66,7 +66,11 @@ negative result: a precise statement of what was searched.
 ## Writing the record
 
 - `hypothesis_expert`: what a cryptanalyst would need to reproduce the idea.
-  Name the cipher family, the key space, and the constraint being tested.
+  Name the cipher family, the key space, the constraint being tested, and the
+  clue-register entries and readings it tests (for example "C1(a), C8(a)").
+  After the run, update those entries' status in `knowledge/11-clue-register.md`
+  with the experiment tag. An experiment that tests no clue needs a stated
+  reason to exist.
 - `hypothesis_eli5`: standalone, for a curious non-specialist. No jargon
   without a one-clause gloss.
 - `walkthrough`: a standalone guide that lets a reader redo the method by

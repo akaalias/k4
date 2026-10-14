@@ -1,0 +1,188 @@
+# 11. Clue register
+
+Every hint, with its readings and what each reading would mean for an experiment.
+Experiments cite entries by number in `hypothesis_expert`. Status is updated by the
+loop: `untested`, `tested under reading (x) in 00NN`, `exhausted under reading (x)`.
+A clue is not done until every plausible reading has been tried or shown to be
+untestable. Quotes are verbatim; sources in `02-sanborn-said.md`, `03-scheidt-said.md`
+and `sources/`.
+
+## Method clues
+
+**C1. "I used a matrix code, and then we can possibly use this code [the tableau] to
+decipher with... sometimes I used double matrixes and triple matrixes... and then went
+back to this table to do the ultimate."** (Sanborn, CNN 2005). Readings: (a) K4 is one
+or more columnar or route transpositions followed by keyed-tableau substitution; (b) the
+sentence describes the whole sculpture (K3 then K1-K2) and says nothing about K4; (c) the
+"matrix" is the KRYPTOS-shifted tableau itself and "double" means two tableau passes.
+Experiments: family A searches for (a); (c) means composed Quagmires, which the period
+sweep bounds. Status: untested.
+
+**C2. "No one has recovered the original matrix... surprised that no one had tried
+recovering the original matrix and running it through all the possible 'shifts'."**
+(Sanborn, 2003, secondhand). Readings: (a) K3's true matrix is not the NSA's 4x86 but a
+different grid whose other "shifts" (rotations, offsets, start positions) produce K4; (b)
+"shifts" are the 26 row shifts of the tableau, and the matrix is the K1-K2 worksheet
+(the "K1/K2 matrix" he "seemed mystified no one has gotten any thing more from"); (c) a
+Hill-style numeric matrix. Experiments: recover every grid that reproduces K3 (widths 7,
+8, 14, 21, 24, 28, 42, 48, 86; Bauer's double rotation; Stehle's 192 rule), then apply
+each grid's family of shifts to K4 before and after tableau substitution. Status:
+untested.
+
+**C3. "I like to use spatial systems of encoding and decoding... pattern, light and
+shadow... visual systems... individualistic."** (1999, 2005). Readings: (a) a route
+through the carved grid (31-wide lines, the four plates) rather than an abstract matrix;
+(b) the tableau read mirrored, as it reads from behind; (c) positions of the physical
+anomalies as the key. Experiments: family D. Status: untested.
+
+**C4. "I masked the English language... the masking technique may not be known... you
+need to solve the technique first and then go for the puzzle... more than one stage."**
+(Scheidt, 2005, 2015). Readings: (a) a plaintext transform before a keyed cipher; (b) a
+non-standard alphabet or base ("base 16," "Mayan... base 60"); (c) "stego": the English is
+hidden inside something readable; (d) the mask is what Sanborn calls a matrix. Family B.
+Status: untested.
+
+**C5. "Not mathematical... simple, can be remembered, and executed years later when used
+with the correct key word/s... similar to what would be provided agents or pilots in
+case of capture."** (Scheidt, 2011). Readings: (a) keyword-driven classical system,
+no primers or arithmetic; (b) "key word/s" plural: two keywords, as K1 and K2 each had
+KRYPTOS plus one; (c) a duress code: two valid readings. Constraint on every family.
+Status: constraint.
+
+**C6. "The key is the algorithm... the keys were concealed at the sculpture... conveys not
+only the encrypted data, but also the key... part of the code was designed to be solved
+with multiple keys."** (Scheidt, 2003, secondhand). Readings: (a) the keyword is
+written on the sculpture (KRYPTOS, the Morse words, HILL, DYAHR); (b) the method is
+recoverable from the sculpture's layout; (c) the K1-K3 keys are reused in combination.
+Family C. Status: untested.
+
+**C7. "Instructions in the earlier text that refer to later text"; "clues to the last
+section are contained in previously deciphered parts... getting those first three sections
+correct is crucial"; "it will come back to the first part."** (2005, 2006). Readings: (a)
+words in K1-K3 are keys (PALIMPSEST: overwritten; ABSCISSA: the x-axis; LAYER TWO; ID BY
+ROWS was wrong but "by rows" was Sanborn's own reading of jargon); (b) the misspellings'
+positions are indices; (c) K2's coordinates are numbers for a key; (d) K3's Carter passage
+instructs: candle, breach in the upper left corner, widening the hole, "can you see
+anything." Key-source rule plus families C and D. Status: untested.
+
+**C8. "The most obvious key to the sculpture, nobody has picked up on."** (2005). Readings:
+(a) KRYPTOS itself used in a way not yet tried (as a transposition key for K4, as it was
+for K3; as the K4 Vigenère key at a period other than 7; as a numeric key 1473625);
+(b) the tableau's own header A-Z; (c) the word on the entrance, the Morse, the compass;
+(d) the title's meaning, "hidden," as a word. Status: untested.
+
+**C9. "Having the letters sitting there in plain sight is a pretty big clue."** (2005).
+Readings: (a) the ciphertext is already the plaintext in some reading order
+(contradicted by the cribs for pure transposition, but not for transposition plus a
+light substitution); (b) the tableau letters, including the extra L, are the key.
+Status: untested.
+
+**C10. "The misspellings... it's more the orientation of those letters that's useful
+there... the positioning."** "They're important" (the misaligned YAR). (2003). Readings:
+(a) the positions of Q in IQLUSION, U in UNDERGRUUND, A in DESPARATLY (and the missing E),
+and the raised YAR, read as indices into the tableau or the K4 text; (b) Bauer's error
+coordinates (25,2), (24,6), (11,15), (15,15) as a matrix; (c) "orientation" literally:
+the letters' direction, upside down (RQ reads YR). Status: untested.
+
+**C11. "The other 91 characters and their proper order are yet to be determined."**
+(NYT 2010 wording). Reading: a reordering step exists. Supports C1(a). Status: noted.
+
+**C12. "Delve into that particular clock" (2014) against "the World Clock in Berlin"
+(2025).** Readings: (a) the clock is plaintext content only; (b) the Weltzeituhr's
+structure (24 time zones on a rotating ring, a compass-rose mosaic on the ground) is a
+key: 24-letter alphabet, a rotating offset; (c) the 2014 steer was misdirection. Status:
+Mengenlehreuhr readings dead; Weltzeituhr readings untested.
+
+**C13. "Two events... my second trip to Egypt in late 1986, and the fall of the Berlin
+Wall."** (2025). Readings: (a) plaintext content: the words EGYPT, WALL, CAIRO, LUXOR,
+TUTANKHAMUN, NOVEMBER; (b) keys: the same words. Status: untested as keys.
+
+**C14. "The codes of Kryptos from the morse code at the beginning through K5 are about
+delivering a message."** (2025). Readings: (a) theme only; (b) MESSAGE, DELIVER, TRANSMIT
+as keys; (c) K2's "last message" is the hinge. Status: untested.
+
+**C15. "If they don't, then (CLUE) what's the point? Power resides with a secret, not
+without it."** (open letter, August 2025; the FT called it "one final hint"). Readings:
+(a) "point" as a compass point: the plaintext states a bearing or direction beyond EAST
+NORTHEAST, or the key is a direction word; (b) "point" as the decimal point in K2's "six
+point five"; (c) "the point" as the place on the grounds: "find that place"; (d) "point"
+as a punctuation mark: the "?" or the X stop, Scheidt's "what's a period"; (e) POWER,
+SECRET, RESIDES, WITHOUT as keys; (f) the parenthetical marks only that the sentence is a
+clue to K5's theme. Status: untested.
+
+**C16. "The final passage will lead in several directions. The word directions is, I use
+intentionally."** (2010). Readings: (a) the plaintext contains compass directions (EAST,
+NORTHEAST confirmed); (b) more directions follow; (c) "directions" as instructions.
+Status: partly confirmed by the cribs.
+
+**C17. "Whether it's 97, whether it's 100... I seem to like to manipulate the
+information."** (2005). Readings: (a) disinformation; (b) the working text had nulls or
+a different length before being cut to 97; (c) the "?" counts. Family G. Status:
+parameter.
+
+**C18. "Scheidt's 'a bit of stego'" and "I think there are 98 characters left."** (2004,
+2005). Readings: (a) the plaintext is hidden among nulls; (b) a 98-character working
+text including "?"; (c) an even length for a digraphic or 7x14 layout. Status: untested.
+
+**C19. "What's a period, because there's more than one sentence in there... special
+characters don't work."** (Scheidt, 2015). Readings: (a) K4 has sentence breaks marked
+by X or Q as in K2 and K3; (b) the breaks fall at structurally meaningful positions.
+Constraint on the scorer: tolerate X and Q. Status: constraint.
+
+**C20. "Layer two."** (K2, confirmed 2006). Readings: (a) a second layer of encryption
+on K4; (b) fold the halves; (c) the second plate; (d) the tableau row two; (e) K5.
+Status: untested.
+
+**C21. The extra L and HILL.** Readings: (a) Hill cipher (2x2 and 3x3 exhausted under
+the alignments tested; affine, chaining, 4x4, shifting numberings, paired 2x2 open); (b)
+a marker at row N, the first line of the lower-right plate, matching YAR on the first line
+of the lower-left plate; (c) a production error (Sanborn omitted it from replicas; also
+missing on Antipodes). Status: (a) partly exhausted; (b) untested.
+
+**C22. The raised YAR / DYAHR / "1-2-3".** Readings: (a) a Gromark primer; (b) HYDRA
+anagram, a keyword; (c) the column-extraction marker for K3 only (NSA's reading); (d)
+Sanborn's reported "1-2-3" spacing as an ordering. Status: (c) explained; others untested.
+
+**C23. The K2 coordinates, the USGS marker "no longer there," "an act I could have
+carried out," "buried out there somewhere."** Readings: (a) riddle layer, out of scope;
+(b) the digits 38 57 6 5 77 8 44 as a key or matrix; (c) the marker's crosshairs as the
+compass-point reading of C15. Status: (b) untested.
+
+**C24. The compass rose "offset... there's a mystery there."** Readings: (a) the offset
+angle is a shift value; (b) the lodestone direction names a word; (c) riddle layer.
+Status: untestable without a surveyed bearing; record as such.
+
+**C25. The Morse: VIRTUALLY INVISIBLE, DIGETAL INTERPRETATI..., SHADOW FORCES, LUCID
+MEMORY, T IS YOUR POSITION, SOS, RQ, the E padding; INVISIBLE a palindrome; DIGETAL
+misspelled.** Readings: (a) keywords; (b) the E counts as numbers; (c) "digital
+interpretation" and "lucid memory" as instructions (binary; recall the key); (d) "RQ/YR"
+upside-down as the orientation clue. Status: keywords untested in bounded form.
+
+**C26. Antipodes differs from Kryptos only by the UUND/RTBJ spelling, the extra L, and
+"the order is shifted a little"; "it's possible that you could crack the whole thing
+from here, but it's also possible you couldn't."** Readings: (a) the extra L matters;
+(b) the plate order matters; (c) the differences are decoys. Status: untested.
+
+**C27. The 2010 worksheets: "there might be revelations in there... I gave more than just
+Berlin."** Readings: (a) the PALIMPCEST slip shows how he worked, one word at a time
+against a repeating key written out underneath; (b) the BERLIN chart's layout shows the
+97 as 31-character lines he counted on; (c) his tableau was "slightly different from the
+one on Kryptos." Status: untested; images in `../research_notes/sanborn_charts/`.
+
+**C28. Stein's I.C. peak at m = 13 in both K1 and K2.** Reading: a 13-letter key or
+structure overlaid; or an artefact. Status: untested on K4.
+
+**C29. "P.S. It's as simple as ABC" (the keyword anagram), PALIMPSEST + ABSCISSA.**
+Readings: (a) a joke; (b) a standard-alphabet step; (c) the combined keyword alphabet.
+Status: untested.
+
+**C30. Sanborn 2019: not necessary to know K1-K3 to solve K4; 2013: K5 cannot be solved
+without K4.** Reading: the method stands alone; the content chains. Constraint on how
+much weight C7 can carry. Status: noted.
+
+## How the loop uses this
+
+Before each experiment, pick the clue entries the hypothesis reads, state the reading by
+letter, and after the run update the entry's status with the experiment tag. When all
+readings of a clue are exhausted, say so here. Every few pivots, sort this file by
+"untested" and start from the top.

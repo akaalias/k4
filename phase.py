@@ -4,6 +4,7 @@
     uv run python phase.py design       # thinking, reading the record, writing EXPERIMENT
     uv run python phase.py implement    # writing run/encrypt/worked_example
     uv run python phase.py test         # pytest and dry runs
+    uv run python phase.py pause        # waiting on a person; time until the next tick is dropped
 
 run_experiment.py adds the run and record phases itself, folds all of them into
 result.json, and resets the clock. If the clock was never ticked, the time since the
@@ -15,7 +16,7 @@ import time
 from pathlib import Path
 
 CLOCK = Path(__file__).resolve().parent / ".phase.json"
-PHASES = ("design", "implement", "test")
+PHASES = ("design", "implement", "test", "pause")
 
 
 def load():
@@ -36,6 +37,8 @@ def close(now=None):
     ticks = d.get("ticks", [])
     for i, tk in enumerate(ticks):
         end = ticks[i + 1]["t"] if i + 1 < len(ticks) else now
+        if tk["phase"] == "pause":
+            continue
         out[tk["phase"]] = out.get(tk["phase"], 0.0) + max(0.0, end - tk["t"])
     if CLOCK.exists():
         CLOCK.unlink()

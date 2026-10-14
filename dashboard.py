@@ -160,7 +160,7 @@ def phase_bar(ph, scale_max, width=160):
         parts.append(f'<rect x="{x:.1f}" y="0" width="{max(w-0.5,0.5):.1f}" height="10" fill="{PHASE_FILL[k]}"><title>{k}: {fmt_dur(v)}</title></rect>')
         x += w
     pre = sum(ph.get(k, 0.0) for k in ("design", "implement", "test"))
-    note = '' if pre >= 10 else ' <span class="faint" style="font-size:11.5px">run only; earlier phases unclocked</span>'
+    note = '' if pre >= 10 else ' <span class="faint" style="font-size:11.5px;white-space:nowrap" title="design, implement and test were not clocked; the bar is run time only">unclocked</span>'
     return f'<svg width="{width}" height="10" style="vertical-align:middle">{"".join(parts)}</svg>' + note
 
 
@@ -350,7 +350,7 @@ def overview():
             + hero + champ
             + sec(1, "Loss over the run", "Each dot is one experiment's best candidate. The axis breaks at the line so the band where a solution would appear has room.")
             + '<div class="chart-row">' + loss_chart(rows) + chart_aside() + '</div>'
-            + sec(2, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. Phase bars show run time only for experiments 1 to 5, which predate the clock.")
+            + sec(2, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
             + sec(3, "Lineage", "What each experiment inherits from.")
             + (tree(None) or "<p class='muted'>empty</p>"))

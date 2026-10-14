@@ -1,0 +1,13 @@
+route: K3 rule, start 5, step 7 (plaintext[i] comes from position 5 + 7 i, 0-indexed); convention kry/kry/kry Vigenere
+
+plain pos  letter  lands at  cipher there  forced key letter
+       22    E        31         G              Y
+       23    A        45         E              T
+       24    S        59         W              L
+       25    T        73         P              Z
+       64    B        37         W              I
+       65    E        51         T              N
+       66    R        65         Y              R
+       67    L        79         Z              B
+
+consecutive crib letters land 7 apart, so period 7 and period 1 need their forced letters equal.

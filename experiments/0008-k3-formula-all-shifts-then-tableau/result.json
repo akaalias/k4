@@ -1,0 +1,188 @@
+{
+ "id": 8,
+ "tag": "0008-k3-formula-all-shifts-then-tableau",
+ "started": "2026-10-14T16:43:10+00:00",
+ "seconds": 37.5,
+ "status": "ran",
+ "phases": {
+  "design": 52.4,
+  "implement": 0.1,
+  "test": 6.3,
+  "run": 37.5,
+  "record": 0.0
+ },
+ "ended_epoch": 1791996228.432599,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "K3 affine rule with all shifts, or double rotation, then periodic tableau (separate alphabets)",
+  "routes": 21025,
+  "route_convention_pairs_checked": 504600,
+  "route_set": "plaintext[i] = inter[(a + b i) mod 97], a in 0..96, b in 1..96, fwd and inv; double rotation w1, w2 in 2..50",
+  "conventions": 24,
+  "periods": "1-97 by divisor rule",
+  "key_pool": "vocabulary words and K1-K3 windows of length P for live P <= 30",
+  "min_live_period_histogram": {
+   "22": 4,
+   "23": 22,
+   "24": 492,
+   "25": 1276,
+   "26": 6644,
+   "27": 8744,
+   "28": 8430,
+   "29": 9646,
+   "30": 11430,
+   "31": 24652,
+   "32": 25370,
+   "33": 38770,
+   "34": 33660,
+   "35": 29338,
+   "36": 29950,
+   "37": 15774,
+   "38": 29406,
+   "39": 27084,
+   "40": 17890,
+   "41": 18424,
+   "42": 16512,
+   "43": 24298,
+   "44": 18380,
+   "45": 10120,
+   "46": 16502,
+   "47": 25208,
+   "48": 7740,
+   "49": 5308,
+   "50": 8486,
+   "51": 2816,
+   "52": 4466,
+   "53": 1052,
+   "54": 820,
+   "55": 1990,
+   "56": 1158,
+   "57": 878,
+   "58": 1112,
+   "59": 1268,
+   "60": 1194,
+   "61": 922,
+   "62": 1162,
+   "63": 834,
+   "64": 1010,
+   "65": 938,
+   "66": 1090,
+   "67": 814,
+   "68": 890,
+   "69": 716,
+   "70": 732,
+   "71": 658,
+   "72": 634,
+   "73": 796,
+   "74": 482,
+   "75": 528,
+   "76": 626,
+   "77": 578,
+   "78": 710,
+   "79": 384,
+   "80": 438,
+   "81": 404,
+   "82": 528,
+   "83": 350,
+   "84": 186,
+   "85": 248,
+   "86": 212,
+   "87": 212,
+   "88": 210,
+   "89": 488,
+   "90": 62,
+   "91": 80,
+   "92": 14,
+   "93": 16,
+   "94": 334
+  },
+  "fifteen_shortest": [
+   {
+    "min_period": 22,
+    "route": "K3 rule a=24 b=2 fwd",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=24 b=2 fwd",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=85 b=49 inv",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=85 b=49 inv",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "K3 rule a=60 b=8 fwd",
+    "convention": "std/kry/std/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "K3 rule a=60 b=8 fwd",
+    "convention": "std/kry/kry/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "K3 rule a=53 b=12 inv",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "K3 rule a=53 b=12 inv",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "K3 rule a=41 b=85 inv",
+    "convention": "std/kry/std/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "K3 rule a=41 b=85 inv",
+    "convention": "std/kry/kry/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "K3 rule a=36 b=89 fwd",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "K3 rule a=36 b=89 fwd",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 23,
+    "route": "double rotation w=40 then w=45",
+    "convention": "std/kry/std/vig"
+   },
+   {
+    "min_period": 23,
+    "route": "double rotation w=40 then w=45",
+    "convention": "std/kry/std/varbeau"
+   },
+   {
+    "min_period": 23,
+    "route": "double rotation w=40 then w=45",
+    "convention": "std/kry/kry/vig"
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "504600 route/convention pairs; 0 forced-fragment matches submitted. K3 rule verified against data/k3.json inside run.",
+ "error": null,
+ "candidates": []
+}

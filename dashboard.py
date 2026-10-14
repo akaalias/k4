@@ -71,7 +71,7 @@ code,pre{font:12.5px/1.5 var(--mono)}pre{background:var(--wash);border:1px solid
 article{max-width:980px}article h1{font:400 30px/1.2 var(--serif);margin:10px 0 6px}
 article h2{font:400 22px/1.25 var(--serif);margin:34px 0 6px;padding-top:12px;border-top:1px solid var(--rule)}
 article h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}
-article p,article li{max-width:720px}
+article p,article li{max-width:720px}article ol{padding-left:26px}article ol li{margin:0 0 8px}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
 svg text{paint-order:stroke;stroke:var(--paper);stroke-width:2.8px;stroke-linejoin:round;font-family:var(--serif)}
 .tip{position:fixed;pointer-events:none;background:var(--paper);border:1px solid var(--rule);padding:6px 9px;font-size:12.5px;line-height:1.45;display:none;max-width:320px;z-index:9}
@@ -112,6 +112,8 @@ def load_results():
             r["parent"] = None if p.startswith("none") else p
             m = re.search(r"^# \S+: (.+)$", r["_md"], re.M)
             r["title"] = m.group(1).strip() if m else r["tag"]
+            m = re.search(r"## In plain words\n\n(.+?)\n\n## ", r["_md"], re.S)
+            r["eli5"] = m.group(1).strip() if m else ""
             rows.append(r)
     return rows
 
@@ -310,9 +312,13 @@ def overview():
             f"<li><a href='/exp/{esc(k['tag'])}'>{esc(k['tag'])}</a> <span class='{esc(k['decision'])}'>{esc(k['decision'])}</span> "
             f"<span class='muted'>{esc(k['family'])}, loss {'' if k.get('best_loss') is None else f'{k['best_loss']:.1f}'}</span>{tree(k['tag'])}</li>" for k in kids) + "</ul>"
 
+    latest = rows[-1] if rows else None
+    plain = ""
+    if latest and latest.get("eli5"):
+        plain = f"""<div class="callout" style="border-left-color:var(--ochre)"><div class="callout-h" style="color:var(--ochre)">Latest experiment, in plain words: {esc(latest['tag'])}</div><p>{esc(latest['eli5'])}</p><p class="muted" style="font-size:13px;margin-top:6px">Outcome: {esc(latest['decision'])}, {latest['n_candidates']} candidates, best crib hits {latest['best_crib_hits']}/24. <a href="/exp/{esc(latest['tag'])}">Read the record.</a></p></div>"""
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
-            + hero + champ
+            + hero + champ + plain
             + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; hollow dots returned no candidate. The axis breaks at the crib gate so the band below it, where a solution would appear, has room.")
             + loss_chart(rows)
             + sec(2, "Experiments", "Newest first. Crib letters: E N B C flags, a capital when a whole clue word is in place.")

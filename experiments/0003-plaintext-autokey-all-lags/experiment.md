@@ -3,7 +3,12 @@
 **Family:** 1-keyed-periodic  
 **Parent:** 0002-ciphertext-autokey-all-lags  
 **Decision:** reverted  
-**Run:** 2026-10-14T16:15:46+00:00, 0.1 s, status ran
+**Run:** 2026-10-14T16:15:46+00:00, 0.1 s, status ran  
+**Time by phase:** run 0 s
+
+## In plain words
+
+This is the other autokey: the real message, not the scrambled one, becomes its own key after a short start. We can only test it where two of the 24 known letters sit the right distance apart, so some distances get a clear no and some get no answer at all. The point is to know exactly which distances are still alive, so no one wastes time on the dead ones.
 
 ## Lineage
 
@@ -146,9 +151,15 @@ Best loss: None (0 is solved; 10 per missed crib letter). Best fitness: None. Ch
 Notes: No candidate can be built without the primer; this experiment exists for its bounds.
 
 
-## Walkthrough (standalone)
+## Walkthrough, by hand
 
-1. Number the ciphertext 1 to 97 and mark the 24 known plaintext letters. 2. Pick a distance, say 3. 3. Position 25 is T and position 22, three back, is E. 4. Under the sculpture's alphabet, T is at 4 and E at 11; add them, 15, and read the letter there, I. 5. The carved letter at 25 is V, so distance 3 fails under this convention. 6. For a distance like 20 there is no pair of known letters that far apart, so the test says nothing; that distance stays open.
+1. Number the ciphertext 1 to 97 and mark the 24 known plaintext letters.
+2. Pick a distance, say
+3. 
+3. Position 25 is T and position 22, three back, is E.
+4. Under the sculpture's alphabet, T is at 4 and E at 11; add them, 15, and read the letter there, I.
+5. The carved letter at 25 is V, so distance 3 fails under this convention.
+6. For a distance like 20 there is no pair of known letters that far apart, so the test says nothing; that distance stays open.
 
 ## Worked example (generated)
 
@@ -164,7 +175,3 @@ pos  plain  key=p[pos-3]  idx(p)+idx(k)  predicted  carved
  29    T      N             4+19        W        R  x
  30    H      O            14+5         N        N  ok
 ```
-
-## ELI5
-
-This is the other autokey: the real message, not the scrambled one, becomes its own key after a short start. We can only test it where two of the 24 known letters sit the right distance apart, so some distances get a clear no and some get no answer at all. The point is to know exactly which distances are still alive, so no one wastes time on the dead ones.

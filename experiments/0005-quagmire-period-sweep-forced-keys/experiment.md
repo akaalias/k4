@@ -3,7 +3,12 @@
 **Family:** 1-keyed-periodic  
 **Parent:** 0004-running-key-from-k1-k3  
 **Decision:** reverted  
-**Run:** 2026-10-14T16:17:13+00:00, 0.3 s, status ran
+**Run:** 2026-10-14T16:17:13+00:00, 0.3 s, status ran  
+**Time by phase:** run 0 s
+
+## In plain words
+
+The first two messages used a repeating secret word and the table on the sculpture. We ask: if the fourth message used the same trick with a longer secret word, how long could that word be? The 24 known letters tell us which lengths are impossible, because two letters that would use the same letter of the secret word must agree. For the lengths that survive, the known letters also tell us some letters of the secret word, so we check whether any word from the puzzle's own world fits those letters.
 
 ## Lineage
 
@@ -148,9 +153,15 @@ Best loss: None (0 is solved; 10 per missed crib letter). Best fitness: None. Ch
 Notes: 0 forced-fragment matches submitted as candidates.
 
 
-## Walkthrough (standalone)
+## Walkthrough, by hand
 
-1. Choose a period, say 28, and a convention: plaintext on the sculpture's alphabet, ciphertext on the standard one, key on the sculpture's, Vigenere. 2. Position 22 is plaintext E, ciphertext F; the key letter that does that is forced. Position 50 would use the same key slot, but 50 is not a crib, so no conflict. 3. Positions 26 and 54: 54 is not a crib either. 4. Positions 64 and 36: neither pair conflicts. 5. Collect the forced letters into a 28-slot pattern with blanks. 6. Slide every word and phrase from the puzzle's vocabulary across the pattern. 7. A fit gives the whole key; decrypt and check the cribs.
+1. Choose a period, say 28, and a convention: plaintext on the sculpture's alphabet, ciphertext on the standard one, key on the sculpture's, Vigenere.
+2. Position 22 is plaintext E, ciphertext F; the key letter that does that is forced. Position 50 would use the same key slot, but 50 is not a crib, so no conflict.
+3. Positions 26 and 54: 54 is not a crib either.
+4. Positions 64 and 36: neither pair conflicts.
+5. Collect the forced letters into a 28-slot pattern with blanks.
+6. Slide every word and phrase from the puzzle's vocabulary across the pattern.
+7. A fit gives the whole key; decrypt and check the cribs.
 
 ## Worked example (generated)
 
@@ -167,7 +178,3 @@ pos  plain  cipher  slot(pos-1 mod 28)  forced key letter
  65    E      Y         8                 G
  66    R      P         9                 H
 ```
-
-## ELI5
-
-The first two messages used a repeating secret word and the table on the sculpture. We ask: if the fourth message used the same trick with a longer secret word, how long could that word be? The 24 known letters tell us which lengths are impossible, because two letters that would use the same letter of the secret word must agree. For the lengths that survive, the known letters also tell us some letters of the secret word, so we check whether any word from the puzzle's own world fits those letters.

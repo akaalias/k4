@@ -3,7 +3,12 @@
 **Family:** 1-keyed-periodic  
 **Parent:** none (root)  
 **Decision:** reverted  
-**Run:** 2026-10-14T16:08:01+00:00, 0.0 s, status ran
+**Run:** 2026-10-14T16:08:01+00:00, 0.0 s, status ran  
+**Time by phase:** run 0 s
+
+## In plain words
+
+The first two messages on the sculpture were locked with a simple scheme: a secret word is written over and over under the message, and each pair of letters is looked up in a table carved on the sculpture. We try the laziest possible secret word, KRYPTOS. We expect it to fail, and the way it fails tells us the checking machinery works: the 24 letters Sanborn has revealed will not show up where they should.
 
 ## Lineage
 
@@ -48,9 +53,10 @@ Best loss: 224.67605782561338 (0 is solved; 10 per missed crib letter). Best fit
 Notes: Pipeline check only.
 
 
-## Walkthrough (standalone)
+## Walkthrough, by hand
 
-Take the keyed alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ. Number its letters 0 to 25. For each ciphertext letter, find its number, subtract the number of the key letter beneath it (the key KRYPTOS repeating), wrap around 26, and read off the plaintext letter at that number. The harness then checks positions 22 to 34 for EASTNORTHEAST and 64 to 74 for BERLINCLOCK. If they are not there, the hypothesis is dead at that gate.
+Take the keyed alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ. Number its letters 0 to
+25. For each ciphertext letter, find its number, subtract the number of the key letter beneath it (the key KRYPTOS repeating), wrap around 26, and read off the plaintext letter at that number. The harness then checks positions 22 to 34 for EASTNORTHEAST and 64 to 74 for BERLINCLOCK. If they are not there, the hypothesis is dead at that gate.
 
 ## Worked example (generated)
 
@@ -66,7 +72,3 @@ pos  cipher  key  (c - k) mod 26  plain
   5    U      T     21 -  4 = 17     L
   6    O      O      5 -  5 =  0     K
 ```
-
-## ELI5
-
-The first two messages on the sculpture were locked with a simple scheme: a secret word is written over and over under the message, and each pair of letters is looked up in a table carved on the sculpture. We try the laziest possible secret word, KRYPTOS. We expect it to fail, and the way it fails tells us the checking machinery works: the 24 letters Sanborn has revealed will not show up where they should.

@@ -78,7 +78,8 @@ negative result: a precise statement of what was searched.
 - `hypothesis_eli5`: standalone, for a curious non-specialist. No jargon
   without a one-clause gloss.
 - `walkthrough`: a standalone guide that lets a reader redo the method by
-  hand on a few letters. If this experiment ever becomes part of the winning
+  hand on a few letters. Write it as numbered steps, one action each; the
+  harness puts each step on its own line. If this experiment ever becomes part of the winning
   chain, the walkthroughs compose into the method writeup.
 - `bounds`: numbers. Periods tried, key lengths, alphabets, word lists,
   how many keys, whether exhaustive. "Tried a few" is not a bound.

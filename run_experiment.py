@@ -56,7 +56,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--budget", type=float, default=1800.0, help="seconds (default 30 min)")
     ap.add_argument("--no-commit", action="store_true")
+    ap.add_argument("--rerender", action="store_true", help="rebuild all experiment.md files and exit")
     args = ap.parse_args()
+    if args.rerender:
+        rerender(); return
 
     meta = load_experiment_meta()
     exp_id = next_id()
@@ -151,6 +154,14 @@ def main():
         subprocess.run(["git", "commit", "-q", "-m", f"exp {tag}: {decision} ({len(passed)}/{len(scored)} passed gates, best cribs {best_hits}/24)\n\n{meta['title']}\nFamily: {meta['family']}\nParent: {meta['parent'] or '-'}\nChanged: {meta['changed']}"], cwd=ROOT, check=False)
 
 
+def steps(text):
+    """Put each numbered step on its own line so markdown renders a real list."""
+    import re as _re
+    t = text.strip()
+    t = _re.sub(r"\s*(?<!\d)(\d{1,2})\.\s+", lambda m: f"\n{m.group(1)}. ", t)
+    return t.strip()
+
+
 def render_md(meta, result, raw):
     cands = result["candidates"]
     rows = "\n".join(
@@ -167,6 +178,10 @@ def render_md(meta, result, raw):
 **Run:** {result['started']}, {result['seconds']} s, status {result['status']}  
 **Time by phase:** {', '.join(f"{k} {v:.0f} s" for k, v in result['phases'].items()) or 'not recorded'}
 
+## In plain words
+
+{meta['hypothesis_eli5']}
+
 ## Lineage
 
 Inherits from {meta['parent'] or 'nothing; this is a root experiment'}. What changed: {meta['changed']}
@@ -181,7 +196,7 @@ Inherits from {meta['parent'] or 'nothing; this is a root experiment'}. What cha
 
 ## Method
 
-{meta['method']}
+{steps(meta['method'])}
 
 ## Result
 
@@ -202,20 +217,32 @@ Best loss: {result['best_loss']} (0 is solved; 10 per missed crib letter). Best 
 {('Notes: ' + result['notes']) if result['notes'] else ''}
 {('Error:\n```\n' + result['error'] + '\n```') if result['error'] else ''}
 
-## Walkthrough (standalone)
+## Walkthrough, by hand
 
-{meta['walkthrough']}
+{steps(meta['walkthrough'])}
 
 ## Worked example (generated)
 
 ```
 {raw.get('worked_example', '')}
 ```
-
-## ELI5
-
-{meta['hypothesis_eli5']}
 """
+
+
+def rerender():
+    """Rebuild every experiment.md from its snapshot attack.py, result.json and raw.json."""
+    import importlib.util
+    for d in sorted(EXPERIMENTS.iterdir()):
+        if not (d / "result.json").exists():
+            continue
+        spec = importlib.util.spec_from_file_location("attack_snap", d / "attack.py")
+        mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+        meta = dict(mod.EXPERIMENT)
+        result = json.loads((d / "result.json").read_text())
+        result.setdefault("phases", {"run": result.get("seconds", 0)})
+        raw = json.loads((d / "raw.json").read_text()) if (d / "raw.json").exists() else {}
+        (d / "experiment.md").write_text(render_md(meta, result, raw))
+        print("re-rendered", d.name)
 
 
 if __name__ == "__main__":

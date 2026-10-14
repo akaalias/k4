@@ -3,7 +3,12 @@
 **Family:** 1-keyed-periodic  
 **Parent:** 0003-plaintext-autokey-all-lags  
 **Decision:** reverted  
-**Run:** 2026-10-14T16:16:30+00:00, 0.8 s, status ran
+**Run:** 2026-10-14T16:16:30+00:00, 0.8 s, status ran  
+**Time by phase:** run 1 s
+
+## In plain words
+
+Instead of a short secret word, the key might be a long piece of text the solver already knows, such as the first three messages on the sculpture. We slide each of those texts along the fourth message in every possible position, forwards and backwards, and check whether any position explains all 24 known letters. If none does, those texts are not the key, full stop.
 
 ## Lineage
 
@@ -77,9 +82,14 @@ Best loss: None (0 is solved; 10 per missed crib letter). Best fitness: None. Ch
 Notes: Every trial is decided at all 24 crib positions.
 
 
-## Walkthrough (standalone)
+## Walkthrough, by hand
 
-1. Write K1's plaintext, BETWEENSUBTLE..., under the K4 ciphertext starting at some offset. 2. At position 64 the plaintext must be B. Suppose the key letter above it is T. 3. Under the sculpture's alphabet, B is 8 and T is 4; add, 12, read F. 4. The carved letter is N, so this offset fails. 5. Slide one letter and repeat, for every text, direction and alphabet convention. 6. An offset that passes all 24 checks decrypts the rest at once.
+1. Write K1's plaintext, BETWEENSUBTLE..., under the K4 ciphertext starting at some offset.
+2. At position 64 the plaintext must be B. Suppose the key letter above it is T.
+3. Under the sculpture's alphabet, B is 8 and T is 4; add, 12, read F.
+4. The carved letter is N, so this offset fails.
+5. Slide one letter and repeat, for every text, direction and alphabet convention.
+6. An offset that passes all 24 checks decrypts the rest at once.
 
 ## Worked example (generated)
 
@@ -95,7 +105,3 @@ pos  plain  key          idx(p)+idx(k)  predicted  carved
  68    I      E           15+11        K        T  x
  69    N      E           19+11        T        T  ok
 ```
-
-## ELI5
-
-Instead of a short secret word, the key might be a long piece of text the solver already knows, such as the first three messages on the sculpture. We slide each of those texts along the fourth message in every possible position, forwards and backwards, and check whether any position explains all 24 known letters. If none does, those texts are not the key, full stop.

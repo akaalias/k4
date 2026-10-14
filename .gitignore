@@ -4,3 +4,4 @@ __pycache__/
 .venv/
 dashboard/
 Unsolved Book Kryptos Chapter/
+.phase.json

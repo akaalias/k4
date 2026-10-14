@@ -17,6 +17,7 @@ from pathlib import Path
 from kryptos import facts
 from kryptos.gates import run_gates, crib_hits
 from kryptos.scorer import fitness, english_score, free_text, loss
+import phase as phaseclock
 
 ROOT = Path(__file__).resolve().parent
 EXPERIMENTS = ROOT / "experiments"
@@ -67,6 +68,13 @@ def main():
 
     started = datetime.now(timezone.utc).isoformat(timespec="seconds")
     t0 = time.time()
+    phases = phaseclock.close(now=t0)
+    if not phases:
+        prev = sorted(EXPERIMENTS.glob("*/result.json"))
+        if prev:
+            prev_end = json.loads(prev[-1].read_text()).get("ended_epoch")
+            if prev_end:
+                phases["unattributed"] = max(0.0, t0 - prev_end)
     status = "ran"
     try:
         subprocess.run([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path), str(args.budget)],
@@ -74,6 +82,8 @@ def main():
     except subprocess.TimeoutExpired:
         status = "timeout"
     seconds = time.time() - t0
+    phases["run"] = seconds
+    t_record = time.time()
     raw = json.loads(raw_path.read_text()) if raw_path.exists() else {"candidates": [], "bounds": {}, "error": "no output", "worked_example": "", "notes": ""}
     if raw.get("error"):
         status = "error"
@@ -110,8 +120,11 @@ def main():
     if status in ("timeout", "error"):
         decision = status
 
+    phases["record"] = time.time() - t_record
+    phases = {k: round(v, 1) for k, v in phases.items()}
     result = {
         "id": exp_id, "tag": tag, "started": started, "seconds": round(seconds, 1), "status": status,
+        "phases": phases, "ended_epoch": time.time(),
         "decision": decision, "n_candidates": len(scored), "n_passed": len(passed),
         "best_crib_hits": best_hits, "best_crib_words": best_words, "best_fitness": best["fitness"] if best else None,
         "best_loss": best_loss,
@@ -123,9 +136,10 @@ def main():
     (outdir / "experiment.md").write_text(render_md(meta, result, raw))
 
     if not RESULTS.exists():
-        RESULTS.write_text("id\ttag\tfamily\tparent\tdecision\tn_candidates\tn_passed\tbest_crib_hits\tbest_loss\tbest_fitness\tseconds\n")
+        RESULTS.write_text("id\ttag\tfamily\tparent\tdecision\tn_candidates\tn_passed\tbest_crib_hits\tbest_loss\tbest_fitness\tseconds\tphases\n")
     with RESULTS.open("a") as f:
-        f.write(f"{exp_id:04d}\t{tag}\t{meta['family']}\t{meta['parent'] or '-'}\t{decision}\t{len(scored)}\t{len(passed)}\t{best_hits}\t{'' if best_loss is None else f'{best_loss:.3f}'}\t{'' if best is None else f'{best['fitness']:.4f}'}\t{seconds:.0f}\n")
+        ph = " ".join(f"{k}={v:.0f}" for k, v in phases.items())
+        f.write(f"{exp_id:04d}\t{tag}\t{meta['family']}\t{meta['parent'] or '-'}\t{decision}\t{len(scored)}\t{len(passed)}\t{best_hits}\t{'' if best_loss is None else f'{best_loss:.3f}'}\t{'' if best is None else f'{best['fitness']:.4f}'}\t{seconds:.0f}\t{ph}\n")
 
     print(f"[{tag}] decision={decision} candidates={len(scored)} passed={len(passed)} best_crib_hits={best_hits}/24"
           f" best_fitness={best['fitness'] if best else None} seconds={seconds:.0f}")
@@ -150,7 +164,8 @@ def render_md(meta, result, raw):
 **Family:** {meta['family']}  
 **Parent:** {meta['parent'] or 'none (root)'}  
 **Decision:** {result['decision']}  
-**Run:** {result['started']}, {result['seconds']} s, status {result['status']}
+**Run:** {result['started']}, {result['seconds']} s, status {result['status']}  
+**Time by phase:** {', '.join(f"{k} {v:.0f} s" for k, v in result['phases'].items()) or 'not recorded'}
 
 ## Lineage
 

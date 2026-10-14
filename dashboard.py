@@ -121,6 +121,39 @@ def champion():
     return json.loads(p.read_text()) if p.exists() else None
 
 
+PHASE_ORDER = ("design", "implement", "test", "run", "record", "unattributed")
+PHASE_FILL = {"design": "var(--ochre)", "implement": "var(--accent)", "test": "var(--muted)",
+              "run": "var(--ink)", "record": "var(--disc)", "unattributed": "var(--rule)"}
+
+
+def fmt_dur(sec):
+    if sec is None:
+        return ""
+    if sec < 90:
+        return f"{sec:.0f} s"
+    if sec < 5400:
+        return f"{sec/60:.0f} min"
+    return f"{sec/3600:.1f} h"
+
+
+def phase_bar(ph, width=140):
+    total = sum(ph.values()) or 1.0
+    x = 0.0
+    parts = []
+    for k in PHASE_ORDER:
+        v = ph.get(k, 0.0)
+        if v <= 0:
+            continue
+        w = width * v / total
+        parts.append(f'<rect x="{x:.1f}" y="0" width="{max(w-1,0.5):.1f}" height="10" fill="{PHASE_FILL[k]}"><title>{k}: {fmt_dur(v)}</title></rect>')
+        x += w
+    return f'<svg width="{width}" height="10" style="vertical-align:middle">{"".join(parts)}</svg>'
+
+
+def phase_legend():
+    return " ".join(f'<span style="display:inline-block;width:9px;height:9px;background:{PHASE_FILL[k]};margin:0 3px 0 10px"></span>{k}' for k in PHASE_ORDER[:5])
+
+
 def words_str(r):
     w = r.get("best_crib_words") or {}
     return ", ".join(f"{k} {h}/{n}" for k, (h, n) in w.items())
@@ -219,7 +252,11 @@ def overview():
     losses = [r["best_loss"] for r in rows if r.get("best_loss") is not None]
     best_loss = min(losses) if losses else None
     fams = len({r["family"] for r in rows})
-    secs = sum(r["seconds"] for r in rows)
+    secs = sum(sum((r.get("phases") or {}).values()) or r["seconds"] for r in rows)
+    by_phase = {}
+    for r in rows:
+        for k, v in (r.get("phases") or {"run": r["seconds"]}).items():
+            by_phase[k] = by_phase.get(k, 0.0) + v
     hero = f"""<div class="stat-hero"><b class="num">{'' if best_loss is None else f'{best_loss:.1f}'}</b><span>best loss so far. zero is solved</span></div>
 <p class="hero-sub">Ten per missed crib letter, plus how far the other 73 letters are from English, plus the cost of a key too long to remember. Below ten means every known letter is in place.</p>
 <div class="stats">
@@ -227,8 +264,9 @@ def overview():
 <div class="stat"><b class="num">{kept}</b><span>kept</span></div>
 <div class="stat"><b class="num">{best_hits}<span style="font-size:14px;font-weight:400;display:inline">/24</span></b><span>best crib hits</span></div>
 <div class="stat"><b class="num">{fams}</b><span>families touched</span></div>
-<div class="stat"><b class="num">{secs/3600:.1f}</b><span>hours of compute</span></div>
-</div>"""
+<div class="stat"><b class="num">{secs/3600:.1f}</b><span>hours, all phases</span></div>
+</div>
+<p class="hero-sub">Time by phase across the run: {', '.join(f"{k} {fmt_dur(v)}" for k, v in sorted(by_phase.items(), key=lambda kv: PHASE_ORDER.index(kv[0]) if kv[0] in PHASE_ORDER else 9)) or 'none yet'}.</p>"""
     if ch:
         champ = f"""<div class="callout"><div class="callout-h">Champion: {esc(ch['experiment'])}</div><p><code class="ct">{esc(ch['plaintext'])}</code></p><p class="muted" style="font-size:13px">{esc(ch['key_description'])}, fitness {ch['fitness']:.3f}</p></div>"""
     else:
@@ -238,10 +276,10 @@ def overview():
 <td class="{esc(r['decision'])}">{esc(r['decision'])}</td>
 <td class="num">{'' if r.get('best_loss') is None else f"{r['best_loss']:.1f}"}</td>
 <td class="num" title="{esc(words_str(r))}">{r['best_crib_hits']}/24 <span class="faint">{esc(words_short(r))}</span></td>
-<td class="num">{r['n_candidates']}</td><td class="num">{r['seconds']:.0f}</td></tr>"""
+<td class="num">{r['n_candidates']}</td><td class="num" title="{esc(', '.join(f'{k} {fmt_dur(v)}' for k, v in (r.get('phases') or {}).items()))}">{fmt_dur(sum((r.get('phases') or {}).values()) or r['seconds'])}</td><td>{phase_bar(r.get('phases') or {'run': r['seconds']})}</td></tr>"""
         for r in reversed(rows)
     )
-    table = f"""<table><thead><tr><th>experiment</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="hits out of 24, then E N B C: capital = whole word in place, lower = partial">crib letters</th><th class="num">candidates</th><th class="num">seconds</th></tr></thead><tbody>{trs}</tbody></table>"""
+    table = f"""<table><thead><tr><th>experiment</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="hits out of 24, then E N B C: capital = whole word in place, lower = partial">crib letters</th><th class="num">candidates</th><th class="num">time</th><th>by phase</th></tr></thead><tbody>{trs}</tbody></table>"""
     by_parent = {}
     for r in rows:
         by_parent.setdefault(r["parent"], []).append(r)
@@ -259,8 +297,8 @@ def overview():
             + hero + champ
             + sec(1, "Loss over the run", "Each dot is one experiment's best candidate. The accent line is the champion. The line at ten is the crib gate.")
             + loss_chart(rows)
-            + sec(2, "Experiments", "Newest first. Cribs column: E N B C flags, a capital when a whole clue word is in place.")
-            + table
+            + sec(2, "Experiments", "Newest first. Crib letters: E N B C flags, a capital when a whole clue word is in place.")
+            + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
             + sec(3, "Lineage", "What each experiment inherits from.")
             + (tree(None) or "<p class='muted'>empty</p>"))
     return page("Kryptos K4 autoresearch", body, "/")

@@ -34,6 +34,10 @@ negative result: a precise statement of what was searched.
 
 ## The loop
 
+0. Tick the phase clock as you go: `uv run python phase.py design` when you start
+   reading and thinking, `... implement` when you start writing code, `... test`
+   when you run the tests and dry runs. The harness records run and record itself.
+   Time per phase is part of every experiment's record and of the dashboard.
 1. Read the record. Decide the next experiment: one focused change, with a
    parent (the champion, or the experiment you are extending) or a new root
    when changing family.

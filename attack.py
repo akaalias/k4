@@ -1,172 +1,182 @@
-"""Experiment 0013. See program.md for the contract."""
+"""Experiment 0014. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "gromark-recurrence-on-crib-shifts",
-    "title": "Gromark and its cousins: must the 13 known shifts in a row obey a lagged-Fibonacci rule?",
-    "family": "5-gromark-lfsr",
+    "slug": "two-keywords-two-passes-linear",
+    "title": "Two key words, two passes through the tableau: the cribs as linear equations mod 26",
+    "family": "3-two-component-key",
     "parent": None,
-    "changed": "New root in family 5. The key is a running number stream from a short primer, as in the ACA Gromark; the cribs give 13 consecutive key values, which a recurrence must reproduce.",
+    "changed": "New root in family 3. The key is the sum of two short repeating keys, one per pass, so the 24 cribs become linear equations in a + b unknowns and consistency is decided exactly.",
     "hypothesis_expert": (
-        "Gromark (Gillogly 1999, 2004; Bean, HistoCrypt 2021, knowledge/05-attacks.md): a primer of a digits "
-        "expands by k[i] = k[i-a] + k[i-b] mod B, and each plaintext letter shifts by k[i] between a plain "
-        "and a cipher alphabet. Bean exhausted base 10 with a = 5, b = 4 under free annealed alphabets. "
-        "Here the rule is the variable: every lag pair 1 <= b < a <= 12 and bases 10 and 26, under plain "
-        "and cipher alphabets drawn from the standard, KRYPTOS and the four Friedman mixings of every "
-        "vocabulary word, with the three tableau modes. Positions 22-34 force 13 consecutive shifts and "
-        "64-74 force 11; the recurrence is checked on both runs, giving 24 - 2a checks per rule. In base 10 "
-        "every forced shift must also be a digit. A survivor with at least six passing checks has chance "
-        "probability below 26 to the minus six per trial; with about 700,000 trials per rule, chance "
-        "survivors should be rare. For each survivor the recurrence runs backward and forward from the "
-        "22-34 window to a full key stream, the text is decrypted and submitted. Bounds: complete for the "
-        "stated rules, bases and alphabet pools; free alphabets outside the vocabulary remain Bean's."
+        "Scheidt's habit of combining two key components (knowledge/people/scheidt.md, C6) and Sanborn's "
+        "'double' (C1 reading c, composed tableau passes) suggest two keywords X and Y applied in two "
+        "passes. Two passes through the same tableau compose to one periodic key t[i] = x[i mod a] + s y[i mod b] "
+        "mod 26 with s = +1 or -1 depending on the modes, of period lcm(a, b). 0005 excluded periods 1-26 and "
+        "30-52, so only pairs with lcm in {27, 28, 29} or 53 and above remain; within them the question is "
+        "whether the forced total key factors into two short words. For each pair 2 <= a < b <= 30, each "
+        "plain and cipher alphabet in {standard, KRYPTOS}, each sign of the plaintext (Vigenere-like or "
+        "Beaufort-like) and each s, the 24 forced values give 24 equations x_u - y'_v = t over Z26, checked "
+        "by a weighted union-find; with a + b - 1 effective unknowns there are 25 - a - b redundant checks, "
+        "each passing by chance with probability 1/26. Survivors are enumerated (26 to the power of the "
+        "number of components) and X, Y matched against the vocabulary and K1-K3 windows under both key "
+        "alphabets and both signs; matches are decrypted and submitted. Bounds: complete for two-pass "
+        "periodic keys with lengths 2-30 under the standard and KRYPTOS alphabets."
     ),
     "hypothesis_eli5": (
-        "Gromark is a cipher where the secret is a short number, say five digits, that grows into a long "
-        "stream of digits by adding pairs of earlier digits, like a Fibonacci sequence. Each letter of the "
-        "message is pushed along the alphabet by the next digit. The 13 known letters of EASTNORTHEAST "
-        "tell us 13 pushes in a row, and in a Fibonacci-style stream each push must equal the sum of two "
-        "earlier ones. We test every pair of positions the rule might add, in base 10 and in base 26, and "
-        "with every alphabet the puzzle's words can build. A rule that fits the known pushes would be found "
-        "out at once."
+        "Suppose the artist ran the message through the sculpture's table twice, with a different secret "
+        "word each time. Two pushes along the alphabet add up to one push, so the two words act like one "
+        "long key made by adding them letter by letter. The 24 known letters give 24 facts about that sum. "
+        "If the two words are short, say 7 and 8 letters, 24 facts are more than enough to tell whether "
+        "any pair of words can produce them, and if so, what the words are. We check every pair of "
+        "lengths and read off the words where the facts agree."
     ),
     "prediction": (
-        "In base 10 almost no alphabet pair makes all 24 forced shifts digits, and none of those also "
-        "satisfies a recurrence. In base 26, a handful of (rule, alphabet) survivors appear at the long "
-        "lags where only a few checks apply, none with six or more checks. No decrypted candidate is "
-        "English; zero pass."
+        "Length pairs with a + b above about 20 survive by chance under some settings, because they have "
+        "few redundant checks. Pairs with a + b of 15 or less survive in at most a handful of settings. "
+        "No surviving pair yields X or Y in the vocabulary or K1-K3 windows; zero candidates pass."
     ),
     "method": (
-        "1. Build the alphabet pool: standard, KRYPTOS and the four mixings of each vocabulary word. "
-        "2. For each plain alphabet, cipher alphabet and mode, compute the forced shift at each of the 24 "
-        "crib positions. 3. For base 10, drop any triple with a shift above 9. 4. For each lag pair (a, b) "
-        "check k[i] = k[i-a] + k[i-b] mod B on both crib runs; keep triples with every check passing and at "
-        "least six checks. 5. For each survivor, extend the stream over all 97 positions from the 22-34 "
-        "window, confirm it reproduces 64-74, decrypt and submit."
+        "1. For each plain alphabet, cipher alphabet and plaintext sign, compute the forced total key value "
+        "t at each crib position. 2. For each length pair (a, b) with lcm not in 1-26 or 30-52, and each "
+        "sign s, build nodes for the a slots of X and the b slots of Y and add the edge x[i mod a] - s y[i mod b] = t[i] "
+        "for each crib. 3. Reject on any inconsistent cycle. 4. Count components; enumerate the free values "
+        "when there are at most three components. 5. Match X and Y against the vocabulary and K1-K3 windows "
+        "under the standard and KRYPTOS key alphabets; decrypt and submit matches."
     ),
     "walkthrough": (
-        "1. Take the standard alphabet for the plaintext and the KRYPTOS alphabet for the ciphertext, "
-        "Vigenere. 2. Position 22: plaintext E is index 4 in the standard alphabet; ciphertext F is index 11 "
-        "in KRYPTOS; the shift is 11 - 4 = 7. 3. Position 23: A is 0, L is 18; shift 18. 4. Continue to "
-        "position 34 for 13 shifts in a row. 5. Try the Gromark rule, a = 5, b = 4: the sixth shift must "
-        "equal the first plus the second, mod 10, and all shifts must be digits. The shift 18 already fails "
-        "base 10. 6. In base 26, check the sixth against the first plus the second mod 26, the seventh "
-        "against the second plus the third, and so on: eight checks. 7. One failure kills the rule under "
-        "this alphabet pair; try the next pair."
+        "1. Take lengths 7 and 8 and the KRYPTOS alphabet for everything, Vigenere both passes. 2. Position 22 "
+        "needs a total key letter that sends E to F: R, index 1. Position 22 uses slot 0 of the 7-letter word "
+        "(21 mod 7) and slot 5 of the 8-letter word (21 mod 8), so x0 + y5 = 1. 3. Position 29 uses slot 0 "
+        "again and slot 4: x0 + y4 = its forced value. 4. Subtract: y5 - y4 is now fixed. 5. Walk all 24 "
+        "positions this way; every slot gets tied to the others through shared positions. 6. When a loop "
+        "closes, the values must agree, or the pair 7 and 8 is dead. 7. If they all agree, pick x0 freely; "
+        "every other letter follows. 8. Twenty-six choices of x0 give twenty-six word pairs; see whether "
+        "either word is one the puzzle knows."
     ),
 }
 
-from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
+from math import lcm
+from kryptos.alphabets import ALPHABETS, key_letter_for, encrypt_letter, decrypt_letter
+from kryptos.facts import load_k1, load_k2, load_k3
 
 N = 97
-RUNS = [(22, 34), (64, 74)]
-MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
-ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
-MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
-MIN_CHECKS = 6
+MAXLEN = 30
+DEAD_PERIODS = set(range(1, 27)) | set(range(30, 53))
 
 
-def stream_from_window(window, start, a, b, base):
-    """Given key values at positions start..start+len(window)-1 (0-indexed), extend the recurrence
-    k[i] = k[i-a] + k[i-b] mod base backward and forward over 0..N-1."""
-    k = {start + j: v for j, v in enumerate(window)}
-    lo, hi = start, start + len(window) - 1
-    while hi + 1 < N:
-        i = hi + 1
-        k[i] = (k[i - a] + k[i - b]) % base
-        hi = i
-    while lo - 1 >= 0:
-        i = lo - 1
-        # k[i+a] = k[i] + k[i+a-b]  =>  k[i] = k[i+a] - k[i+a-b]
-        k[i] = (k[i + a] - k[i + a - b]) % base
-        lo = i
-    return [k[i] for i in range(N)]
+def letters(s):
+    return "".join(c for c in s if "A" <= c <= "Z")
 
 
 def encrypt(plaintext, key):
-    pa, ca, m, a, b, base, primer = key["pa"], key["ca"], key["m"], key["a"], key["b"], key["base"], key["primer"]
-    k = list(primer)
-    while len(k) < N:
-        k.append((k[-a] + k[-b]) % base)
-    return "".join(ca[ENC[m](pa.index(p), k[i])] for i, p in enumerate(plaintext))
+    pa, ca, ka, m1, m2, X, Y = key["pa"], key["ca"], key["ka"], key["m1"], key["m2"], key["X"], key["Y"]
+    mid = "".join(encrypt_letter(p, X[i % len(X)], pa, ca, ka, m1) for i, p in enumerate(plaintext))
+    # second pass reads the first pass's output on the cipher alphabet as its plaintext
+    return "".join(encrypt_letter(c, Y[i % len(Y)], ca, ca, ka, m2) for i, c in enumerate(mid))
+
+
+class WUF:
+    """Weighted union-find over Z26: maintains v[node] - v[root] = w[node]."""
+    def __init__(self, n):
+        self.p = list(range(n)); self.w = [0] * n
+    def find(self, x):
+        if self.p[x] == x:
+            return x, 0
+        r, wr = self.find(self.p[x])
+        self.w[x] = (self.w[x] + wr) % 26
+        self.p[x] = r
+        return r, self.w[x]
+    def union(self, x, y, d):
+        """Impose v[x] - v[y] = d. Returns False on contradiction."""
+        rx, wx = self.find(x); ry, wy = self.find(y)
+        if rx == ry:
+            return (wx - wy) % 26 == d % 26
+        # v[x] = wx + v[rx]; v[y] = wy + v[ry]; want v[x] - v[y] = d  =>  v[rx] - v[ry] = d - wx + wy
+        self.p[rx] = ry; self.w[rx] = (d - wx + wy) % 26
+        return True
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    vocab = [w for w in ctx.vocabulary if len(set(w)) >= 3]
-    pool = {"std": STD, "kry": KRY}
-    for w in vocab:
-        for mname, fn in MIX.items():
-            pool[f"{w}/{mname}"] = fn(w)
-    seen, dedup = {}, {}
-    for name, A in pool.items():
-        if A not in seen:
-            seen[A] = name; dedup[name] = A
-    pool = dedup
-    index = {name: {ch: i for i, ch in enumerate(A)} for name, A in pool.items()}
-    crib = [[(known[pos], ct[pos - 1]) for pos in range(lo, hi + 1)] for lo, hi in RUNS]
-    rules = [(a, b) for a in range(2, 13) for b in range(1, a)]
-    survivors = []
-    candidates = []
-    n_triples = 0
-    digit_ok = 0
-    for pname, pa in pool.items():
-        pidx = index[pname]
-        for cname, ca in pool.items():
-            cidx = index[cname]
-            for m, f in MODES.items():
-                n_triples += 1
-                shifts = [[f(pidx[p], cidx[c]) for p, c in pairs] for pairs in crib]
-                all_digits = all(s <= 9 for run_ in shifts for s in run_)
-                digit_ok += all_digits
-                for base in (10, 26):
-                    if base == 10 and not all_digits:
-                        continue
-                    for a, b in rules:
-                        checks = 0; ok = True
-                        for run_ in shifts:
-                            for i in range(a, len(run_)):
-                                checks += 1
-                                if run_[i] != (run_[i - a] + run_[i - b]) % base:
-                                    ok = False; break
-                            if not ok:
-                                break
-                        if ok and checks >= MIN_CHECKS:
-                            stream = stream_from_window(shifts[0], RUNS[0][0] - 1, a, b, base)
-                            second_ok = all(stream[RUNS[1][0] - 1 + j] == v for j, v in enumerate(shifts[1]))
-                            survivors.append({"plain": pname, "cipher": cname, "mode": m, "base": base, "a": a, "b": b,
-                                              "checks": checks, "stream_matches_second_run": second_ok})
-                            if second_ok:
-                                pt = "".join(pa[MODES_DEC(m)(cidx[c], stream[i])] for i, c in enumerate(ct))
-                                key = {"pa": pa, "ca": ca, "m": m, "a": a, "b": b, "base": base, "primer": stream[:a]}
-                                candidates.append({"plaintext": pt, "key": key, "key_bits": a * (3.33 if base == 10 else 4.7) + 10,
-                                                   "key_description": f"Gromark-style a={a} b={b} base {base}, primer {stream[:a]}; plain {pname}, cipher {cname}, {m}"})
+    vocab = set(ctx.vocabulary)
+    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
+    crib_pos = sorted(known)
+    pairs = [(a, b) for a in range(2, MAXLEN + 1) for b in range(a + 1, MAXLEN + 1) if lcm(a, b) not in DEAD_PERIODS]
+    survivors, candidates = [], []
+    n_cases = 0
+    pool_cache = {}
+
+    def pool(L):
+        if L not in pool_cache:
+            s = {w for w in vocab if len(w) == L}
+            for t in texts:
+                for i in range(0, len(t) - L + 1):
+                    s.add(t[i:i + L])
+            pool_cache[L] = s
+        return pool_cache[L]
+
+    for pa in ("std", "kry"):
+        for ca in ("std", "kry"):
+            for psign in ("vig", "beau"):           # total key under Vigenere or Beaufort reading
+                t = {pos: ALPHABETS["std"].index(key_letter_for(known[pos], ct[pos - 1], pa, ca, "std", psign)) for pos in crib_pos}
+                for a, b in pairs:
+                    for s in (1, -1):
+                        n_cases += 1
+                        uf = WUF(a + b)
+                        ok = True
+                        for pos in crib_pos:
+                            i = pos - 1
+                            # x[i%a] + s*y[i%b] = t  =>  x_u - y'_v = t with y' = -s*y
+                            if not uf.union(i % a, a + (i % b), t[pos]):
+                                ok = False; break
+                        if not ok:
+                            continue
+                        roots = sorted({uf.find(n)[0] for n in range(a + b)})
+                        comps = len(roots)
+                        rec = {"a": a, "b": b, "pa": pa, "ca": ca, "plain_sign": psign, "s": s, "components": comps,
+                               "redundant_checks": 24 - (a + b - comps)}
+                        survivors.append(rec)
+                        if comps > 3:
+                            continue
+                        # enumerate: value of each node = w[node] + v[root]
+                        import itertools
+                        for vals in itertools.product(range(26), repeat=comps):
+                            v = dict(zip(roots, vals))
+                            xs = [(uf.find(n)[1] + v[uf.find(n)[0]]) % 26 for n in range(a)]
+                            ys = [(-s * (uf.find(n)[1] + v[uf.find(n)[0]])) % 26 for n in range(a, a + b)]
+                            for ka in ("std", "kry"):
+                                A = ALPHABETS[ka]
+                                X = "".join(A[x] for x in xs); Y = "".join(A[y] for y in ys)
+                                hitX, hitY = X in pool(a), Y in pool(b)
+                                if hitX or hitY:
+                                    STD = ALPHABETS["std"]
+                                    total = [STD[(xs[i % a] + s * ys[i % b]) % 26] for i in range(N)]
+                                    pt = "".join(decrypt_letter(ct[i], total[i], pa, ca, "std", psign) for i in range(N))
+                                    candidates.append({"plaintext": pt, "key": {"pa": pa, "ca": ca, "ka": ka, "m1": psign, "m2": "vig" if s == 1 else "varbeau", "X": X, "Y": Y},
+                                                       "key_bits": 4.7 * (a + b), "key_description": f"X={X} Y={Y} ({a},{b}) {pa}/{ca}/{ka} {psign}, s={s}; vocab hit {'X' if hitX else ''}{'Y' if hitY else ''}"})
         if ctx.time_left() < 20:
             break
+    by_sum = {}
+    for r in survivors:
+        by_sum.setdefault(r["a"] + r["b"], 0); by_sum[r["a"] + r["b"]] += 1
+    small = sorted([r for r in survivors if r["a"] + r["b"] <= 15], key=lambda r: (r["a"] + r["b"], r["a"]))
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "running numerical key, k[i] = k[i-a] + k[i-b] mod base", "rules": f"{len(rules)} lag pairs, 1 <= b < a <= 12",
-                   "bases": [10, 26], "alphabets": len(pool), "alphabet_triples": n_triples, "modes": 3,
-                   "base10_all_digit_triples": digit_ok, "min_checks": MIN_CHECKS,
-                   "survivors": survivors[:40], "n_survivors": len(survivors),
-                   "n_survivors_consistent_with_second_run": sum(1 for s in survivors if s["stream_matches_second_run"])},
-        "notes": f"{n_triples} alphabet triples x {len(rules)} rules x 2 bases. {len(survivors)} survivors with >= {MIN_CHECKS} checks; {len(candidates)} full-stream candidates submitted.",
+        "bounds": {"family": "two periodic keys composed through two tableau passes", "lengths": f"2 <= a < b <= {MAXLEN}, lcm outside 1-26 and 30-52",
+                   "pairs": len(pairs), "alphabets": "plain and cipher in {std, kry}; key words read in std or kry", "cases": n_cases,
+                   "survivors": len(survivors), "survivors_by_a_plus_b": {str(k): v for k, v in sorted(by_sum.items())},
+                   "smallest_surviving_pairs": small[:20], "vocab_or_k1k3_matches": len(candidates)},
+        "notes": f"{n_cases} cases; {len(survivors)} consistent; {len(candidates)} word matches submitted.",
     }
 
 
-def MODES_DEC(m):
-    return {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}[m]
-
-
 def worked_example(ctx, key):
-    pa, ca = STD, KRY
-    lines = ["plain alphabet standard, cipher alphabet KRYPTOS, Vigenere: forced shifts at 22-34", "", "pos  plain  cipher  shift"]
-    shifts = []
-    for pos in range(22, 35):
+    A = ALPHABETS["kry"]
+    lines = ["lengths 7 and 8, KRYPTOS alphabet throughout, Vigenere both passes: equations from the first cribs", "",
+             "pos  plain  cipher  total key  index  x slot (pos-1 mod 7)  y slot (pos-1 mod 8)"]
+    for pos in (22, 23, 24, 29, 30, 64, 65):
         p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
-        s = (ca.index(c) - pa.index(p)) % 26; shifts.append(s)
-        lines.append(f"{pos:>3}    {p}      {c}      {s:>2}")
+        k = key_letter_for(p, c, "kry", "kry", "kry", "vig")
+        lines.append(f"{pos:>3}    {p}      {c}        {k}        {A.index(k):>2}           {(pos-1)%7}                    {(pos-1)%8}")
     lines.append("")
-    lines.append("shifts: " + " ".join(map(str, shifts)))
-    lines.append(f"Gromark rule a=5 b=4 base 10: all digits? {all(s <= 9 for s in shifts)}; base 26 check at i=5: {shifts[5]} vs {(shifts[0] + shifts[1]) % 26}")
+    lines.append("positions 22 and 29 share x slot 0, so y5 - y4 equals the difference of their totals; the chain of such ties must close consistently.")
     return "\n".join(lines)

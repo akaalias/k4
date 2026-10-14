@@ -16,7 +16,7 @@ or more columnar or route transpositions followed by keyed-tableau substitution;
 sentence describes the whole sculpture (K3 then K1-K2) and says nothing about K4; (c) the
 "matrix" is the KRYPTOS-shifted tableau itself and "double" means two tableau passes.
 Experiments: family A searches for (a); (c) means composed Quagmires, which the period
-sweep bounds. Status: (a) bounded by 0006: columnar routes (plain, keyed, double plain) before a periodic tableau admit no key shorter than 23; route transpositions and triple stages untested. (c) untested.
+sweep bounds. Status: (c) bounded by 0005 (composed period) and 0014 (two words of total length under 25 cannot compose to the forced key). (a) bounded by 0006: columnar routes (plain, keyed, double plain) before a periodic tableau admit no key shorter than 23; route transpositions and triple stages untested. (c) untested.
 
 **C2. "No one has recovered the original matrix... surprised that no one had tried
 recovering the original matrix and running it through all the possible 'shifts'."**

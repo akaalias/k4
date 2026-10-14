@@ -12,10 +12,8 @@ In an autokey cipher the secret word only covers the first few letters. After th
 
 ## Walkthrough, by hand
 
-1. Write the ciphertext in a row and number it 1 to
-97. 
-2. Pick a distance, say
-7. 
+1. Write the ciphertext in a row and number it 1 to 97.
+2. Pick a distance, say 7.
 3. Go to position 64, where the plaintext is B. Look seven back: position 57 is D.
 4. Under the sculpture's alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ, B is at 8 and D is at 10; add them, 18, and read the 18th letter, M.
 5. The carved letter at 64 is N, not M, so distance 7 under this convention is wrong.

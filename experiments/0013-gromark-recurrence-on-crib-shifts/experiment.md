@@ -13,13 +13,10 @@ Gromark is a cipher where the secret is a short number, say five digits, that gr
 ## Walkthrough, by hand
 
 1. Take the standard alphabet for the plaintext and the KRYPTOS alphabet for the ciphertext, Vigenere.
-2. Position 22: plaintext E is index 4 in the standard alphabet; ciphertext F is index 11 in KRYPTOS; the shift is 11 - 4 =
-7. 
-3. Position 23: A is 0, L is 18; shift
-18. 
+2. Position 22: plaintext E is index 4 in the standard alphabet; ciphertext F is index 11 in KRYPTOS; the shift is 11 - 4 = 7.
+3. Position 23: A is 0, L is 18; shift 18.
 4. Continue to position 34 for 13 shifts in a row.
-5. Try the Gromark rule, a = 5, b = 4: the sixth shift must equal the first plus the second, mod 10, and all shifts must be digits. The shift 18 already fails base
-10. 
+5. Try the Gromark rule, a = 5, b = 4: the sixth shift must equal the first plus the second, mod 10, and all shifts must be digits. The shift 18 already fails base 10.
 6. In base 26, check the sixth against the first plus the second mod 26, the seventh against the second plus the third, and so on: eight checks.
 7. One failure kills the rule under this alphabet pair; try the next pair.
 
@@ -63,8 +60,7 @@ In base 10 almost no alphabet pair makes all 24 forced shifts digits, and none o
 
 1. Build the alphabet pool: standard, KRYPTOS and the four mixings of each vocabulary word.
 2. For each plain alphabet, cipher alphabet and mode, compute the forced shift at each of the 24 crib positions.
-3. For base 10, drop any triple with a shift above
-9. 
+3. For base 10, drop any triple with a shift above 9.
 4. For each lag pair (a, b) check k[i] = k[i-a] + k[i-b] mod B on both crib runs; keep triples with every check passing and at least six checks.
 5. For each survivor, extend the stream over all 97 positions from the 22-34 window, confirm it reproduces 64-74, decrypt and submit.
 

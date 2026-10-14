@@ -12,11 +12,8 @@ The third message was scrambled by a fixed rule: take every 192nd letter, wrappi
 
 ## Walkthrough, by hand
 
-1. Pick a rule: start at 5, step
-7. The first plaintext letter comes from position 5, the second from 12, the third from 19, and so on, wrapping past
-97. 
-2. Position 22 of the plaintext, the E of EAST, is the 22nd letter read, so it comes from 5 + 7 x 21 = 152, which wraps to
-55. 
+1. Pick a rule: start at 5, step 7. The first plaintext letter comes from position 5, the second from 12, the third from 19, and so on, wrapping past 97.
+2. Position 22 of the plaintext, the E of EAST, is the 22nd letter read, so it comes from 5 + 7 x 21 = 152, which wraps to 55.
 3. The ciphertext at 55 is therefore the enciphered E; under the sculpture's alphabet and Vigenere the key letter that sends E there is forced.
 4. Do this for all 24 known letters to get 24 forced key letters at 24 positions.
 5. Two positions whose distance is a multiple of p share a key slot at period p; if their forced letters differ, p is dead.

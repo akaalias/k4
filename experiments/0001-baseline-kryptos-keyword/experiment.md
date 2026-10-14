@@ -12,8 +12,7 @@ The first two messages on the sculpture were locked with a simple scheme: a secr
 
 ## Walkthrough, by hand
 
-Take the keyed alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ. Number its letters 0 to
-25. For each ciphertext letter, find its number, subtract the number of the key letter beneath it (the key KRYPTOS repeating), wrap around 26, and read off the plaintext letter at that number. The harness then checks positions 22 to 34 for EASTNORTHEAST and 64 to 74 for BERLINCLOCK. If they are not there, the hypothesis is dead at that gate.
+Take the keyed alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ. Number its letters 0 to 25. For each ciphertext letter, find its number, subtract the number of the key letter beneath it (the key KRYPTOS repeating), wrap around 26, and read off the plaintext letter at that number. The harness then checks positions 22 to 34 for EASTNORTHEAST and 64 to 74 for BERLINCLOCK. If they are not there, the hypothesis is dead at that gate.
 
 ## Worked example (generated)
 

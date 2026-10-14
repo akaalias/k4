@@ -14,8 +14,7 @@ This is the other autokey: the real message, not the scrambled one, becomes its 
 
 1. Number the ciphertext 1 to 97 and mark the 24 known plaintext letters.
 2. Pick a distance, say
-3. 
-3. Position 25 is T and position 22, three back, is E.
+3. 3. Position 25 is T and position 22, three back, is E.
 4. Under the sculpture's alphabet, T is at 4 and E at 11; add them, 15, and read the letter there, I.
 5. The carved letter at 25 is V, so distance 3 fails under this convention.
 6. For a distance like 20 there is no pair of known letters that far apart, so the test says nothing; that distance stays open.

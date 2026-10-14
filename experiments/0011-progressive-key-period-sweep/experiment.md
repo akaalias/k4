@@ -13,10 +13,8 @@ A repeating secret word was ruled out at most lengths because two known letters 
 ## Walkthrough, by hand
 
 1. Choose period 13 and step 1, per-repeat form, with the sculpture's alphabet throughout and Vigenere.
-2. Position 22 is in repeat 1 (positions 14 to 26), slot
-8. Its forced key letter, from E and F, is R, index 1 in KRYPTOS; subtract one step for repeat 1: index 0, K.
-3. Position 35 would be slot 8 of repeat 2, but it is not a crib. Position 74, the K of CLOCK, is repeat 5, slot 8: its forced key letter K against ciphertext K is index 0; subtract 5 steps: index
-21. 
+2. Position 22 is in repeat 1 (positions 14 to 26), slot 8. Its forced key letter, from E and F, is R, index 1 in KRYPTOS; subtract one step for repeat 1: index 0, K.
+3. Position 35 would be slot 8 of repeat 2, but it is not a crib. Position 74, the K of CLOCK, is repeat 5, slot 8: its forced key letter K against ciphertext K is index 0; subtract 5 steps: index 21.
 4. Slot 8 is now forced to two different letters, so period 13 with step 1 is dead under this convention.
 5. Try the other 25 steps and the other 23 conventions.
 6. A survivor gives a pattern of forced base letters with blanks; slide the puzzle's words across it.

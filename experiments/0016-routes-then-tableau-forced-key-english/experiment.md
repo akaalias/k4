@@ -15,8 +15,7 @@ Earlier we asked whether a grid scramble followed by the table could use a short
 1. Take the route: write in rows of 7, read down the columns.
 2. The known letters at 22 to 34 land at 4, 18, 32, 46, 60, 74, 88, 5, 19, 33, 47, 61, 75; those at 64 to 74 land elsewhere.
 3. Under the sculpture's alphabet with Vigenere, each landing spot has a forced key letter.
-4. Choose period 28: slot is the landing spot minus one, mod
-28. 
+4. Choose period 28: slot is the landing spot minus one, mod 28.
 5. Write the 28 slots in a row and fill in the forced letters; 24 of 28 are filled.
 6. Read the filled stretches.
 7. Score them as English; compare with what random letters would give.

@@ -13,8 +13,7 @@ Last time we assumed the artist scrambled the letters first and used the table s
 ## Walkthrough, by hand
 
 1. Pick a route: write in rows of 7, read down the columns.
-2. Position 22, the E of EAST, is row 4 column 1, so it is read out fourth: its enciphered letter is the carved R at position
-4. 
+2. Position 22, the E of EAST, is row 4 column 1, so it is read out fourth: its enciphered letter is the carved R at position 4.
 3. Position 23, the A, is row 4 column 2; column 2 holds 14 letters after column 1's 14, so A sits at 18, the carved F.
 4. Under the sculpture's alphabet and Vigenere, the key letter sending E to R is forced, and so is the one sending A to F.
 5. These two key letters sit at slots 22 and 23 of the key, so any period dividing 1 would need them equal: only period 1 is at stake here.

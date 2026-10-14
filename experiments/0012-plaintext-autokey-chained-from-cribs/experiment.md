@@ -14,8 +14,7 @@ In an autokey cipher the message is its own secret word: each letter is encipher
 
 1. Take lag 13 and the sculpture's alphabet with Vigenere.
 2. Position 22 is E and its ciphertext is F; under the table, the key that turns E into F is R, so position 9 is R.
-3. Position 35 was enciphered with key E, the letter at 22; the ciphertext at 35 is S, and S decrypted with key E is the letter at
-35. 
+3. Position 35 was enciphered with key E, the letter at 22; the ciphertext at 35 is S, and S decrypted with key E is the letter at 35.
 4. Now 9 and 35 are known, so 48 and 61 follow, and so on, up and down by 13 until the chain leaves the text.
 5. Do the same from every one of the 24 known letters.
 6. Where two chains meet, the letters must agree, or lag 13 is dead under this convention.

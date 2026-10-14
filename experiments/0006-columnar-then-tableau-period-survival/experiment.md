@@ -13,14 +13,11 @@ The artist said he first scrambled the order of the letters by writing them in a
 ## Walkthrough, by hand
 
 1. Pick a route: write the text in rows of 7 and read down the columns, left column first.
-2. Position 22, the E of EAST, is row 4 column 1 (counting from 1). Column 1 holds rows 1 to 14, so E lands at intermediate position
-4. 
-3. Position 64, the B of BERLIN, is row 10 column 1, so it lands at position
-10. 
+2. Position 22, the E of EAST, is row 4 column 1 (counting from 1). Column 1 holds rows 1 to 14, so E lands at intermediate position 4.
+3. Position 64, the B of BERLIN, is row 10 column 1, so it lands at position 10.
 4. The ciphertext at 4 is R and at 10 is H. Under the sculpture's alphabet with Vigenere, the key letter that sends E to R and the one that sends B to H are forced.
 5. Do this for all 24 known letters; you get 24 forced key letters at 24 positions.
-6. A period of 6 would make positions 4 and 10 share a key letter; if their forced letters differ, period 6 is dead, and so is any period dividing
-6. 
+6. A period of 6 would make positions 4 and 10 share a key letter; if their forced letters differ, period 6 is dead, and so is any period dividing 6.
 7. Cross out every dead period; the smallest survivor is the shortest secret word this route allows.
 8. Write the survivors' forced letters into a pattern with blanks and slide the puzzle's words across it.
 
@@ -56,8 +53,7 @@ A dry run on 40 routes calibrated this. The smallest live period will cluster be
 
 ## Method
 
-1. Build the route set: plain columnar widths 2-96 in two column directions, forward and inverse; keyed columnar from each vocabulary word, forward and inverse; doubles of plain forward columnars at widths 2-
-50. 
+1. Build the route set: plain columnar widths 2-96 in two column directions, forward and inverse; keyed columnar from each vocabulary word, forward and inverse; doubles of plain forward columnars at widths 2-50.
 2. For each route, map each crib position to its intermediate position.
 3. For each convention, force the key letter at each intermediate position from the crib plaintext and the ciphertext there.
 4. Mark period p dead if it divides a distance between two positions with different forced letters; the smallest live period is the route's score.

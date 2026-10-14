@@ -14,8 +14,7 @@ The table on the sculpture starts with the word KRYPTOS and then the rest of the
 
 1. Write the alphabet starting with PALIMPSEST, dropping repeats: PALIMSETBCDFGHJKNOQRUVWXYZ.
 2. Use it for the plaintext; keep the carved KRYPTOS alphabet for the ciphertext.
-3. Position 22 is plaintext E, index 6 in the PALIMPSEST alphabet; ciphertext F, index 11 in KRYPTOS; Vigenere gives key index
-5. 
+3. Position 22 is plaintext E, index 6 in the PALIMPSEST alphabet; ciphertext F, index 11 in KRYPTOS; Vigenere gives key index 5.
 4. Do the same for positions 23 to 34 to get 13 key indices.
 5. Now choose a key alphabet, say ABSCISSA mixed by columns, and read off the letter at each index.
 6. Score the 13 letters by how common each run of four is in English.

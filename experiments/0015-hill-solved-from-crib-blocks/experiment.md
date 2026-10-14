@@ -12,12 +12,10 @@ A Hill cipher turns letters into numbers, takes them two, three or four at a tim
 
 ## Walkthrough, by hand
 
-1. Number the letters A=0 to Z=
-25. 
+1. Number the letters A=0 to Z=25.
 2. Take blocks of two starting at position 1, so 23-24 and 25-26 are whole blocks inside EASTNORTHEAST: AS and TN, which are (0,18) and (19,13).
 3. The carved letters there are LR and VQ: (11,17) and (21,16).
-4. We want a 2x2 table M with M times (0,18) = (11,17) and M times (19,13) = (21,16), all mod
-26. 
+4. We want a 2x2 table M with M times (0,18) = (11,17) and M times (19,13) = (21,16), all mod 26.
 5. Put the plaintext pairs side by side as a 2x2 matrix, invert it mod 26 if its determinant is coprime to 26, and multiply: that is M.
 6. Now test M on the next block, 27-28, OR, which must come out as the carved QP.
 7. If it does not, this setting is dead.
@@ -46,8 +44,7 @@ For 2x2 and 3x3, every numbering, alignment and direction gives a matrix from th
 
 ## Method
 
-1. For each numbering map letters to 0-
-25. 
+1. For each numbering map letters to 0-25.
 2. For each block size n, alignment o and direction, list the whole crib blocks and their ciphertext blocks.
 3. Plain form: pick n blocks with an invertible plaintext matrix, solve M, check the rest. Affine form: use differences between blocks to solve M, then v from one block, check the rest.
 4. Decrypt the text with the inverse map; submit if all 24 cribs hold.

@@ -13,9 +13,7 @@ Suppose the artist ran the message through the sculpture's table twice, with a d
 ## Walkthrough, by hand
 
 1. Take lengths 7 and 8 and the KRYPTOS alphabet for everything, Vigenere both passes.
-2. Position 22 needs a total key letter that sends E to F: R, index
-1. Position 22 uses slot 0 of the 7-letter word (21 mod 7) and slot 5 of the 8-letter word (21 mod 8), so x0 + y5 =
-1. 
+2. Position 22 needs a total key letter that sends E to F: R, index 1. Position 22 uses slot 0 of the 7-letter word (21 mod 7) and slot 5 of the 8-letter word (21 mod 8), so x0 + y5 = 1.
 3. Position 29 uses slot 0 again and slot 4: x0 + y4 = its forced value.
 4. Subtract: y5 - y4 is now fixed.
 5. Walk all 24 positions this way; every slot gets tied to the others through shared positions.

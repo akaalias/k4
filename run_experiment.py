@@ -155,11 +155,25 @@ def main():
 
 
 def steps(text):
-    """Put each numbered step on its own line so markdown renders a real list."""
+    """Put each numbered step on its own line so markdown renders a real list.
+    Splits only on the next expected step number, so '25.' inside a sentence stays put."""
     import re as _re
-    t = text.strip()
-    t = _re.sub(r"\s*(?<!\d)(\d{1,2})\.\s+", lambda m: f"\n{m.group(1)}. ", t)
-    return t.strip()
+    t = " ".join(text.split())
+    k = 1
+    out = []
+    pos = 0
+    while True:
+        m = _re.search(rf"(?<!\d){k}\.\s+", t[pos:])
+        if not m:
+            break
+        if k > 1:
+            out.append(t[pos:pos + m.start()].strip())
+        pos += m.end()
+        k += 1
+    if k == 1:
+        return t
+    out.append(t[pos:].strip())
+    return "\n".join(f"{i}. {s}" for i, s in enumerate(out, start=1))
 
 
 def render_md(meta, result, raw):

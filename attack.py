@@ -1,178 +1,172 @@
-"""Experiment 0012. See program.md for the contract."""
+"""Experiment 0013. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "plaintext-autokey-chained-from-cribs",
-    "title": "Plaintext autokey, chained: the 24 known letters force the rest, lag by lag",
-    "family": "1-keyed-periodic",
-    "parent": "0003-plaintext-autokey-all-lags",
-    "changed": "0003 only checked the cribs against each other. Here each known letter is also used as the key for the letter one lag later, and as the ciphertext's partner one lag earlier, and the forced letters are chained until nothing new follows. For small lags that fixes the whole text.",
+    "slug": "gromark-recurrence-on-crib-shifts",
+    "title": "Gromark and its cousins: must the 13 known shifts in a row obey a lagged-Fibonacci rule?",
+    "family": "5-gromark-lfsr",
+    "parent": None,
+    "changed": "New root in family 5. The key is a running number stream from a short primer, as in the ACA Gromark; the cribs give 13 consecutive key values, which a recurrence must reproduce.",
     "hypothesis_expert": (
-        "Plaintext autokey (the NSA's 1992 guess, C11a; a Scheidt-era hand system, C5): c[i] = E(p[i], p[i-L]) "
-        "for i >= L after a primer of length L. A crib letter p[i] forces p[i-L] through c[i] and forces "
-        "p[i+L] through c[i+L]; each forced letter forces two more. The closure from the 24 cribs covers "
-        "every residue class modulo L that a crib position touches, so for L <= 13 the whole text is forced, "
-        "for L up to about 24 most of it, and for larger L two or three stretches. 0003 found lags 1-11 and "
-        "30-52 inconsistent inside the cribs; lags 12-29 and 53-96 were undecided. Here, under each of the "
-        "24 conventions and each lag 1-96, we propagate to closure, reject on any conflict, and for a fully "
-        "forced text derive the primer and submit the candidate. Partially forced texts are scored as "
-        "English on their forced runs and compared with the same procedure on shuffled K4 letters. "
-        "Bounds: complete for plaintext autokey with a primer of length L, any L 1-96, under these conventions."
+        "Gromark (Gillogly 1999, 2004; Bean, HistoCrypt 2021, knowledge/05-attacks.md): a primer of a digits "
+        "expands by k[i] = k[i-a] + k[i-b] mod B, and each plaintext letter shifts by k[i] between a plain "
+        "and a cipher alphabet. Bean exhausted base 10 with a = 5, b = 4 under free annealed alphabets. "
+        "Here the rule is the variable: every lag pair 1 <= b < a <= 12 and bases 10 and 26, under plain "
+        "and cipher alphabets drawn from the standard, KRYPTOS and the four Friedman mixings of every "
+        "vocabulary word, with the three tableau modes. Positions 22-34 force 13 consecutive shifts and "
+        "64-74 force 11; the recurrence is checked on both runs, giving 24 - 2a checks per rule. In base 10 "
+        "every forced shift must also be a digit. A survivor with at least six passing checks has chance "
+        "probability below 26 to the minus six per trial; with about 700,000 trials per rule, chance "
+        "survivors should be rare. For each survivor the recurrence runs backward and forward from the "
+        "22-34 window to a full key stream, the text is decrypted and submitted. Bounds: complete for the "
+        "stated rules, bases and alphabet pools; free alphabets outside the vocabulary remain Bean's."
     ),
     "hypothesis_eli5": (
-        "In an autokey cipher the message is its own secret word: each letter is enciphered using the "
-        "letter some fixed distance before it. That makes the 24 known letters very powerful. Each one "
-        "was used to encipher a letter further on, so that letter can be worked out; and each one was "
-        "itself enciphered by a letter further back, so that one can be worked out too. Repeating this "
-        "spreads outward until, for short distances, the whole message is known. We try every distance "
-        "and every way of using the table, and read what comes out."
+        "Gromark is a cipher where the secret is a short number, say five digits, that grows into a long "
+        "stream of digits by adding pairs of earlier digits, like a Fibonacci sequence. Each letter of the "
+        "message is pushed along the alphabet by the next digit. The 13 known letters of EASTNORTHEAST "
+        "tell us 13 pushes in a row, and in a Fibonacci-style stream each push must equal the sum of two "
+        "earlier ones. We test every pair of positions the rule might add, in base 10 and in base 26, and "
+        "with every alphabet the puzzle's words can build. A rule that fits the known pushes would be found "
+        "out at once."
     ),
     "prediction": (
-        "Every lag from 1 to 25 either conflicts somewhere in the chain or yields a fully forced text that "
-        "is not English, scoring below -6 per quadgram against -3.6 for English. Lags above 25 leave "
-        "stretches that score no better than the shuffled control. No candidate passes the English "
-        "standard; a fully forced text may pass the four gates by construction and will then stand as a "
-        "champion with a loss of 3 to 4, which is a gibberish champion, not a solution."
+        "In base 10 almost no alphabet pair makes all 24 forced shifts digits, and none of those also "
+        "satisfies a recurrence. In base 26, a handful of (rule, alphabet) survivors appear at the long "
+        "lags where only a few checks apply, none with six or more checks. No decrypted candidate is "
+        "English; zero pass."
     ),
     "method": (
-        "1. For each convention and lag L, start with the 24 cribs as forced letters. 2. For each forced "
-        "letter at i: if i >= L, force p[i-L] as the key that maps p[i] to c[i]; if i + L < 97, force "
-        "p[i+L] by decrypting c[i+L] with key p[i]. 3. Repeat until nothing new appears; any conflict kills "
-        "the pair. 4. If all 97 letters are forced, derive the primer k[i] for i < L and submit the text. "
-        "5. Otherwise score the forced runs of four or more letters as English. 6. Run the same procedure "
-        "on ten shuffles of K4 for a control."
+        "1. Build the alphabet pool: standard, KRYPTOS and the four mixings of each vocabulary word. "
+        "2. For each plain alphabet, cipher alphabet and mode, compute the forced shift at each of the 24 "
+        "crib positions. 3. For base 10, drop any triple with a shift above 9. 4. For each lag pair (a, b) "
+        "check k[i] = k[i-a] + k[i-b] mod B on both crib runs; keep triples with every check passing and at "
+        "least six checks. 5. For each survivor, extend the stream over all 97 positions from the 22-34 "
+        "window, confirm it reproduces 64-74, decrypt and submit."
     ),
     "walkthrough": (
-        "1. Take lag 13 and the sculpture's alphabet with Vigenere. 2. Position 22 is E and its ciphertext "
-        "is F; under the table, the key that turns E into F is R, so position 9 is R. 3. Position 35 was "
-        "enciphered with key E, the letter at 22; the ciphertext at 35 is S, and S decrypted with key E is "
-        "the letter at 35. 4. Now 9 and 35 are known, so 48 and 61 follow, and so on, up and down by 13 "
-        "until the chain leaves the text. 5. Do the same from every one of the 24 known letters. 6. Where "
-        "two chains meet, the letters must agree, or lag 13 is dead under this convention. 7. If every "
-        "position fills, read the text aloud. 8. The first 13 letters were enciphered with the primer; "
-        "the key letter that maps each of them to its ciphertext is the primer, which should be a word."
+        "1. Take the standard alphabet for the plaintext and the KRYPTOS alphabet for the ciphertext, "
+        "Vigenere. 2. Position 22: plaintext E is index 4 in the standard alphabet; ciphertext F is index 11 "
+        "in KRYPTOS; the shift is 11 - 4 = 7. 3. Position 23: A is 0, L is 18; shift 18. 4. Continue to "
+        "position 34 for 13 shifts in a row. 5. Try the Gromark rule, a = 5, b = 4: the sixth shift must "
+        "equal the first plus the second, mod 10, and all shifts must be digits. The shift 18 already fails "
+        "base 10. 6. In base 26, check the sixth against the first plus the second mod 26, the seventh "
+        "against the second plus the third, and so on: eight checks. 7. One failure kills the rule under "
+        "this alphabet pair; try the next pair."
     ),
 }
 
-import random
-from kryptos.alphabets import conventions, key_letter_for, decrypt_letter, encrypt_letter
+from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
 
 N = 97
+RUNS = [(22, 34), (64, 74)]
+MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
+ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
+MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
+MIN_CHECKS = 6
+
+
+def stream_from_window(window, start, a, b, base):
+    """Given key values at positions start..start+len(window)-1 (0-indexed), extend the recurrence
+    k[i] = k[i-a] + k[i-b] mod base backward and forward over 0..N-1."""
+    k = {start + j: v for j, v in enumerate(window)}
+    lo, hi = start, start + len(window) - 1
+    while hi + 1 < N:
+        i = hi + 1
+        k[i] = (k[i - a] + k[i - b]) % base
+        hi = i
+    while lo - 1 >= 0:
+        i = lo - 1
+        # k[i+a] = k[i] + k[i+a-b]  =>  k[i] = k[i+a] - k[i+a-b]
+        k[i] = (k[i + a] - k[i + a - b]) % base
+        lo = i
+    return [k[i] for i in range(N)]
 
 
 def encrypt(plaintext, key):
-    pa, ca, ka, m, L, primer = key["pa"], key["ca"], key["ka"], key["m"], key["lag"], key["primer"]
-    out = []
-    for i, p in enumerate(plaintext):
-        k = primer[i] if i < L else plaintext[i - L]
-        out.append(encrypt_letter(p, k, pa, ca, ka, m))
-    return "".join(out)
-
-
-def closure(ct, known, L, conv):
-    """Propagate forced plaintext letters from the cribs. Returns (ok, forced dict 0-indexed)."""
-    pa, ca, ka, m = conv
-    forced = {pos - 1: p for pos, p in known.items()}
-    queue = list(forced)
-    while queue:
-        i = queue.pop()
-        p = forced[i]
-        if i - L >= 0:
-            k = key_letter_for(p, ct[i], pa, ca, ka, m)
-            j = i - L
-            if j in forced:
-                if forced[j] != k:
-                    return False, forced
-            else:
-                forced[j] = k; queue.append(j)
-        if i + L < N:
-            q = decrypt_letter(ct[i + L], p, pa, ca, ka, m)
-            j = i + L
-            if j in forced:
-                if forced[j] != q:
-                    return False, forced
-            else:
-                forced[j] = q; queue.append(j)
-    return True, forced
-
-
-def runs_of(forced):
-    """Maximal runs of consecutive forced positions, as strings."""
-    out, cur, prev = [], [], None
-    for i in sorted(forced):
-        if prev is not None and i == prev + 1:
-            cur.append(forced[i])
-        else:
-            if cur: out.append("".join(cur))
-            cur = [forced[i]]
-        prev = i
-    if cur: out.append("".join(cur))
-    return [r for r in out if len(r) >= 4]
-
-
-def score_runs(runs, score):
-    qs = sum(len(r) - 3 for r in runs)
-    if qs == 0:
-        return None
-    return sum(score(r) * (len(r) - 3) for r in runs) / qs
-
-
-def sweep(ct, known, convs, score):
-    rows = []
-    for L in range(1, N):
-        for conv in convs:
-            ok, forced = closure(ct, known, L, conv)
-            if not ok:
-                continue
-            runs = runs_of(forced)
-            rows.append((L, conv, forced, runs, score_runs(runs, score)))
-    return rows
+    pa, ca, m, a, b, base, primer = key["pa"], key["ca"], key["m"], key["a"], key["b"], key["base"], key["primer"]
+    k = list(primer)
+    while len(k) < N:
+        k.append((k[-a] + k[-b]) % base)
+    return "".join(ca[ENC[m](pa.index(p), k[i])] for i, p in enumerate(plaintext))
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    score = ctx.english_score
-    convs = list(conventions())
-    rows = sweep(ct, known, convs, score)
+    vocab = [w for w in ctx.vocabulary if len(set(w)) >= 3]
+    pool = {"std": STD, "kry": KRY}
+    for w in vocab:
+        for mname, fn in MIX.items():
+            pool[f"{w}/{mname}"] = fn(w)
+    seen, dedup = {}, {}
+    for name, A in pool.items():
+        if A not in seen:
+            seen[A] = name; dedup[name] = A
+    pool = dedup
+    index = {name: {ch: i for i, ch in enumerate(A)} for name, A in pool.items()}
+    crib = [[(known[pos], ct[pos - 1]) for pos in range(lo, hi + 1)] for lo, hi in RUNS]
+    rules = [(a, b) for a in range(2, 13) for b in range(1, a)]
+    survivors = []
     candidates = []
-    consistent_by_lag = {}
-    for L, conv, forced, runs, sc in rows:
-        consistent_by_lag[L] = consistent_by_lag.get(L, 0) + 1
-        if len(forced) == N:
-            pa, ca, ka, m = conv
-            pt = "".join(forced[i] for i in range(N))
-            primer = "".join(key_letter_for(pt[i], ct[i], pa, ca, ka, m) for i in range(L))
-            candidates.append({"plaintext": pt, "key": {"pa": pa, "ca": ca, "ka": ka, "m": m, "lag": L, "primer": primer},
-                               "key_bits": 4.7 * L, "key_description": f"autokey lag {L} primer {primer}; {pa}/{ca}/{ka} {m}",
-                               "notes": f"fully forced from the cribs; English {sc:.2f}"})
-    candidates.sort(key=lambda c: -float(c["notes"].split()[-1]))
-    scored = [(sc, L, "/".join(conv), len(forced), runs) for L, conv, forced, runs, sc in rows if sc is not None]
-    scored.sort(reverse=True)
-    rng_rows = []
-    for seed in range(10):
-        letters_ = list(ct); random.Random(seed).shuffle(letters_)
-        rs = sweep("".join(letters_), known, convs, score)
-        best = max((sc for *_, sc in rs if sc is not None), default=None)
-        rng_rows.append(None if best is None else round(best, 3))
-    dead_lags = [L for L in range(1, N) if L not in consistent_by_lag]
+    n_triples = 0
+    digit_ok = 0
+    for pname, pa in pool.items():
+        pidx = index[pname]
+        for cname, ca in pool.items():
+            cidx = index[cname]
+            for m, f in MODES.items():
+                n_triples += 1
+                shifts = [[f(pidx[p], cidx[c]) for p, c in pairs] for pairs in crib]
+                all_digits = all(s <= 9 for run_ in shifts for s in run_)
+                digit_ok += all_digits
+                for base in (10, 26):
+                    if base == 10 and not all_digits:
+                        continue
+                    for a, b in rules:
+                        checks = 0; ok = True
+                        for run_ in shifts:
+                            for i in range(a, len(run_)):
+                                checks += 1
+                                if run_[i] != (run_[i - a] + run_[i - b]) % base:
+                                    ok = False; break
+                            if not ok:
+                                break
+                        if ok and checks >= MIN_CHECKS:
+                            stream = stream_from_window(shifts[0], RUNS[0][0] - 1, a, b, base)
+                            second_ok = all(stream[RUNS[1][0] - 1 + j] == v for j, v in enumerate(shifts[1]))
+                            survivors.append({"plain": pname, "cipher": cname, "mode": m, "base": base, "a": a, "b": b,
+                                              "checks": checks, "stream_matches_second_run": second_ok})
+                            if second_ok:
+                                pt = "".join(pa[MODES_DEC(m)(cidx[c], stream[i])] for i, c in enumerate(ct))
+                                key = {"pa": pa, "ca": ca, "m": m, "a": a, "b": b, "base": base, "primer": stream[:a]}
+                                candidates.append({"plaintext": pt, "key": key, "key_bits": a * (3.33 if base == 10 else 4.7) + 10,
+                                                   "key_description": f"Gromark-style a={a} b={b} base {base}, primer {stream[:a]}; plain {pname}, cipher {cname}, {m}"})
+        if ctx.time_left() < 20:
+            break
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "plaintext autokey with primer, chained closure from cribs", "conventions": 24, "lags": "1-96",
-                   "lags_dead_all_conventions": dead_lags,
-                   "consistent_pairs_by_lag": {str(L): n for L, n in sorted(consistent_by_lag.items())},
-                   "fully_forced_candidates": len(candidates),
-                   "best_english_of_forced_runs": [{"score": round(sc, 3), "lag": L, "convention": c, "forced_letters": n, "runs": r[:4]} for sc, L, c, n, r in scored[:8]],
-                   "shuffled_control_best_per_seed": rng_rows},
-        "notes": f"{len(rows)} consistent (lag, convention) pairs; {len(candidates)} fully forced texts submitted. A fully forced text passes the crib gate by construction; only its English score matters.",
+        "bounds": {"family": "running numerical key, k[i] = k[i-a] + k[i-b] mod base", "rules": f"{len(rules)} lag pairs, 1 <= b < a <= 12",
+                   "bases": [10, 26], "alphabets": len(pool), "alphabet_triples": n_triples, "modes": 3,
+                   "base10_all_digit_triples": digit_ok, "min_checks": MIN_CHECKS,
+                   "survivors": survivors[:40], "n_survivors": len(survivors),
+                   "n_survivors_consistent_with_second_run": sum(1 for s in survivors if s["stream_matches_second_run"])},
+        "notes": f"{n_triples} alphabet triples x {len(rules)} rules x 2 bases. {len(survivors)} survivors with >= {MIN_CHECKS} checks; {len(candidates)} full-stream candidates submitted.",
     }
 
 
+def MODES_DEC(m):
+    return {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}[m]
+
+
 def worked_example(ctx, key):
-    conv = ("kry", "kry", "kry", "vig")
-    ok, forced = closure(ctx.K4, ctx.KNOWN, 13, conv)
-    lines = ["lag 13, KRYPTOS alphabet throughout, Vigenere: chaining from the cribs", ""]
-    lines.append(f"consistent: {ok}; letters forced: {len(forced)} of 97")
-    text = "".join(forced.get(i, ".") for i in range(97))
-    lines.append(text)
+    pa, ca = STD, KRY
+    lines = ["plain alphabet standard, cipher alphabet KRYPTOS, Vigenere: forced shifts at 22-34", "", "pos  plain  cipher  shift"]
+    shifts = []
+    for pos in range(22, 35):
+        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
+        s = (ca.index(c) - pa.index(p)) % 26; shifts.append(s)
+        lines.append(f"{pos:>3}    {p}      {c}      {s:>2}")
     lines.append("")
-    lines.append("position 22 (E, cipher F) forces position 9 = " + key_letter_for("E", ctx.K4[21], *conv) + "; key E at 22 decrypts cipher " + ctx.K4[34] + " at 35 to " + decrypt_letter(ctx.K4[34], "E", *conv))
+    lines.append("shifts: " + " ".join(map(str, shifts)))
+    lines.append(f"Gromark rule a=5 b=4 base 10: all digits? {all(s <= 9 for s in shifts)}; base 26 check at i=5: {shifts[5]} vs {(shifts[0] + shifts[1]) % 26}")
     return "\n".join(lines)

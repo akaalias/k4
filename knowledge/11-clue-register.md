@@ -147,7 +147,7 @@ missing on Antipodes). Status: (a) partly exhausted; (b) untested.
 
 **C22. The raised YAR / DYAHR / "1-2-3".** Readings: (a) a Gromark primer; (b) HYDRA
 anagram, a keyword; (c) the column-extraction marker for K3 only (NSA's reading); (d)
-Sanborn's reported "1-2-3" spacing as an ordering. Status: (c) explained; others untested.
+Sanborn's reported "1-2-3" spacing as an ordering. Status: (a) as a Gromark primer is bounded by 0013 for every two-term lag rule under vocabulary alphabets: no rule fits the known shifts, whatever the primer. (b) untested.
 
 **C23. The K2 coordinates, the USGS marker "no longer there," "an act I could have
 carried out," "buried out there somewhere."** Readings: (a) riddle layer, out of scope;

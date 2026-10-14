@@ -54,7 +54,7 @@ only the encrypted data, but also the key... part of the code was designed to be
 with multiple keys."** (Scheidt, 2003, secondhand). Readings: (a) the keyword is
 written on the sculpture (KRYPTOS, the Morse words, HILL, DYAHR); (b) the method is
 recoverable from the sculpture's layout; (c) the K1-K3 keys are reused in combination.
-Family C. Status: untested.
+Family C. Status: 'keys concealed at the sculpture' as a running key from the carved tableau or the Morse is bounded by 0017; as a keyword in a periodic tableau by 0005 and 0009-0011. Family C otherwise untested.
 
 **C7. "Instructions in the earlier text that refer to later text"; "clues to the last
 section are contained in previously deciphered parts... getting those first three sections
@@ -162,7 +162,7 @@ Status: untestable without a surveyed bearing; record as such.
 MEMORY, T IS YOUR POSITION, SOS, RQ, the E padding; INVISIBLE a palindrome; DIGETAL
 misspelled.** Readings: (a) keywords; (b) the E counts as numbers; (c) "digital
 interpretation" and "lucid memory" as instructions (binary; recall the key); (d) "RQ/YR"
-upside-down as the orientation clue. Status: keywords untested in bounded form.
+upside-down as the orientation clue. Status: the Morse plaintexts as a running key, carved or reversed order, are dead (0017); as keywords untested in bounded form.
 
 **C26. Antipodes differs from Kryptos only by the UUND/RTBJ spelling, the extra L, and
 "the order is shifted a little"; "it's possible that you could crack the whole thing

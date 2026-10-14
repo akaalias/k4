@@ -1,198 +1,133 @@
-"""Experiment 0016. See program.md for the contract."""
+"""Experiment 0017. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "routes-then-tableau-forced-key-english",
-    "title": "Every route from 0006 and 0008, then the tableau: does any route make the forced key read as English?",
-    "family": "6-transposition-then-tableau",
-    "parent": "0008-k3-formula-all-shifts-then-tableau",
-    "changed": "0006 and 0008 matched forced key fragments against a word list. Here the forced key under every route and live period up to 40 is scored as English, with a shuffled-letter control, as 0009 did for the plain tableau.",
+    "slug": "running-key-from-the-sculpture-itself",
+    "title": "A running key read off the sculpture: the carved tableau, the Morse, and the whole right-hand panel",
+    "family": "1-keyed-periodic",
+    "parent": "0004-running-key-from-k1-k3",
+    "changed": "Key sources are the sculpture's own carved texts rather than the K1-K3 solutions: the tableau read by rows and by columns, the Morse plaintexts, and the four ciphertexts as one panel. Family 1 re-entered with a new key source, as its parked status requires.",
     "hypothesis_expert": (
-        "Under K4 = tableau(T(P)) with a periodic key of period p, each route T sends the 24 cribs to 24 "
-        "intermediate positions whose forced key letters fill 24 slots of the key, most of them distinct "
-        "when p is 27 or more. If the key is a word or phrase (C5, C6), the filled slots read as English "
-        "in slot order. Routes: the 2,905 columnar routes of 0006 and the 21,025 K3-rule and double-rotation "
-        "routes of 0008, under all 24 conventions; for each live period up to 40 the forced slots are "
-        "collected, runs of five or more consecutive filled slots, at least four quadgrams in all, are scored by quadgram log-probability, "
-        "and the best (route, convention, period) is compared with the same procedure on two shuffles of "
-        "the K4 letters. Chance expectation: the best of about a million scores sits where the shuffled "
-        "best sits. Bounds: complete for these route sets, conventions and periods, for readable keys."
+        "Scheidt: 'the keys were concealed at the sculpture' (C6); the Morse and the tableau are the texts "
+        "concealed there in plain sight (C9, C25). 0004 slid the K1-K3 plaintexts and ciphertexts past K4 "
+        "under 24 conventions and found nothing. Here the sources are: the carved tableau as 26 rows of 30 "
+        "letters plus the extra L, read row by row and column by column; the left-hand index column plus "
+        "the rows; the seven Morse plaintexts as carved and in reverse order; the right-hand panel's four "
+        "ciphertexts as one 869-letter text; each forward and backward, at every cyclic offset, under the "
+        "24 conventions, scored by crib mismatches. Zero mismatches is a survivor and is decrypted; one "
+        "or two mismatches are reported for the one-letter-error reading (C17). About 200,000 trials; "
+        "chance survival per trial is 26 to the minus 24. Bounds: complete for these sources."
     ),
     "hypothesis_eli5": (
-        "Earlier we asked whether a grid scramble followed by the table could use a short secret word; "
-        "none could. Now we ask a softer question: for each scramble, the 24 known letters pin down 24 "
-        "letters of the secret word, scattered through it. Do those pinned letters ever spell something "
-        "that looks like English? We check every scramble we have, and we run the same check on the "
-        "carved letters shuffled at random, so we know what a meaningless best looks like."
+        "A running key is a long text used as the secret, one letter per message letter, so the key is as "
+        "long as the message. The designer said the keys were hidden at the sculpture. The sculpture "
+        "carries plenty of text: the big table of shifted alphabets, the Morse code messages on the stones "
+        "outside, and the three solved messages. We slide each of those texts along the fourth message "
+        "at every possible starting point and ask whether any position explains all 24 known letters."
     ),
     "prediction": (
-        "The best forced key over all routes, conventions and periods scores within 0.2 of the best from "
-        "shuffled K4 letters, and the top entries show no recognisable word of five or more letters. Zero "
-        "candidates pass."
+        "No source, direction, offset or convention explains all 24 known letters. The best trial has "
+        "no fewer than 5 mismatches, which is what chance gives among 200,000 trials. Zero candidates pass."
     ),
     "method": (
-        "1. Build the route sets of 0006 and 0008. 2. For each route, send each crib position to its "
-        "intermediate position. 3. For each convention, force the key letter there. 4. For each period "
-        "from 2 to 40 that the forced letters allow, place them in slots and score runs of four or more "
-        "consecutive filled slots. 5. Keep the best twenty overall. 6. Repeat on two shuffles of K4."
+        "1. Build the key texts from data/site_texts.json and the K1-K4 ciphertexts, letters only. "
+        "2. For each text, each direction, each convention and each cyclic offset, encrypt the 24 known "
+        "plaintext letters with the key letters at their positions and count mismatches against the carved "
+        "letters. 3. Keep the best few trials. 4. Decrypt and submit any zero-mismatch trial."
     ),
     "walkthrough": (
-        "1. Take the route: write in rows of 7, read down the columns. 2. The known letters at 22 to 34 "
-        "land at 4, 18, 32, 46, 60, 74, 88, 5, 19, 33, 47, 61, 75; those at 64 to 74 land elsewhere. "
-        "3. Under the sculpture's alphabet with Vigenere, each landing spot has a forced key letter. "
-        "4. Choose period 28: slot is the landing spot minus one, mod 28. 5. Write the 28 slots in a row "
-        "and fill in the forced letters; 24 of 28 are filled. 6. Read the filled stretches. 7. Score them "
-        "as English; compare with what random letters would give."
+        "1. Take the tableau read row by row: KRYPTOSABCDEFGHIJLMNQUVWXZKRYP, then RYPTOSABCD..., and so on. "
+        "2. Choose an offset, say 0, so key letter 1 is K, key letter 2 is R, and so on. 3. Position 22 of "
+        "the message is E; its key letter is the 22nd letter of the text, H. 4. Under the sculpture's "
+        "alphabet and Vigenere, E shifted by H should give the carved F; it gives something else, so count "
+        "one mismatch. 5. Do this for all 24 known letters. 6. Slide the offset by one and repeat, "
+        "through the whole text, forward and backward, under each way of using the table."
     ),
 }
 
-import random
-from kryptos.alphabets import conventions, key_letter_for, encrypt_letter, numeric_order
-from kryptos.ciphers import columnar_transposition_encrypt, columnar_transposition_decrypt
+import json
+from pathlib import Path
+from kryptos.alphabets import conventions, encrypt_letter, decrypt_letter
+from kryptos.ciphers import tableau_rows
+from kryptos.facts import load_k1, load_k2, load_k3, STANDARD_ALPHABET as STD
 
 N = 97
-MAXP = 40
-DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0] for d in range(1, N + 1)}
+DATA = Path(__file__).resolve().parent / "data"
 
 
-def perm_of(fn):
-    idx = [chr(0x100 + i) for i in range(N)]
-    return [ord(ch) - 0x100 for ch in fn("".join(idx))]
+def letters(s):
+    return "".join(c for c in s.upper() if "A" <= c <= "Z")
 
 
-def plain_order(w, rtl=False):
-    o = list(range(w))
-    return o[::-1] if rtl else o
-
-
-def affine_fwd(s, a, b):
-    n = len(s); out = [""] * n
-    for i in range(n):
-        out[(a + b * i) % n] = s[i]
-    return "".join(out)
-
-
-def affine_inv(s, a, b):
-    n = len(s)
-    return "".join(s[(a + b * i) % n] for i in range(n))
-
-
-def rotate(s, w):
-    rows = [s[i:i + w] for i in range(0, len(s), w)]
-    return "".join(r[col] for col in range(w) for r in reversed(rows) if col < len(r))
-
-
-def route_set(vocab):
-    routes = []
-    for w in range(2, N):
-        for rtl in (False, True):
-            order = plain_order(w, rtl)
-            routes.append((f"columnar w={w}{' rtl' if rtl else ''} fwd", lambda s, o=order: columnar_transposition_encrypt(s, o)))
-            routes.append((f"columnar w={w}{' rtl' if rtl else ''} inv", lambda s, o=order: columnar_transposition_decrypt(s, o)))
-    for word in vocab:
-        if 2 <= len(word) <= 40:
-            order = numeric_order(word)
-            routes.append((f"keyed columnar {word} fwd", lambda s, o=order: columnar_transposition_encrypt(s, o)))
-            routes.append((f"keyed columnar {word} inv", lambda s, o=order: columnar_transposition_decrypt(s, o)))
-    for w1 in range(2, 51):
-        for w2 in range(2, 51):
-            routes.append((f"double columnar w={w1} then w={w2}", lambda s, a=plain_order(w1), b=plain_order(w2): columnar_transposition_encrypt(columnar_transposition_encrypt(s, a), b)))
-            routes.append((f"double rotation w={w1} then w={w2}", lambda s, a=w1, b=w2: rotate(rotate(s, a), b)))
-    for b in range(1, N):
-        for a in range(N):
-            routes.append((f"K3 rule a={a} b={b} fwd", lambda s, a=a, b=b: affine_fwd(s, a, b)))
-            routes.append((f"K3 rule a={a} b={b} inv", lambda s, a=a, b=b: affine_inv(s, a, b)))
-    return routes
-
-
-def encrypt(plaintext, key):
-    raise NotImplementedError("diagnostic experiment: no full key is implied, so no candidate is submitted")
-
-
-def runs_in_slots(slots, P):
-    """Runs of consecutive filled slots, cyclic, as strings, length >= 5."""
-    filled = [slots.get(s) for s in range(P)]
-    if all(filled):
-        start = 0
-    else:
-        start = next(i for i in range(P) if filled[i] is None)
-    out, cur = [], []
-    for k in range(1, P + 1):
-        ch = filled[(start + k) % P]
-        if ch is None:
-            if len(cur) >= 5: out.append("".join(cur))
-            cur = []
-        else:
-            cur.append(ch)
-    if len(cur) >= 5: out.append("".join(cur))
+def sources():
+    site = json.loads((DATA / "site_texts.json").read_text())
+    rows = tableau_rows(carved=True)
+    src = {}
+    src["tableau rows"] = "".join(rows)
+    src["tableau rows with index column"] = "".join(STD[i] + r for i, r in enumerate(rows))
+    width = max(len(r) for r in rows)
+    src["tableau columns"] = "".join(r[c] for c in range(width) for r in rows if c < len(r))
+    morse = [letters(m) for m in site["morse"]]
+    src["morse as carved"] = "".join(morse)
+    src["morse reversed order"] = "".join(reversed(morse))
+    k1, k2, k3 = load_k1(), load_k2(), load_k3()
+    k4 = letters(Path(DATA / "k4.txt").read_text())
+    src["right panel ciphertexts K1-K4"] = letters(k1["ciphertext"]) + letters(k2["ciphertext_as_carved"]) + letters(k3["ciphertext"]) + k4
+    out = {}
+    for name, t in src.items():
+        out[name + " fwd"] = t
+        out[name + " bwd"] = t[::-1]
     return out
 
 
-def search(ct, known, routes, convs, score, time_left):
-    crib_pos = sorted(known)
-    best = []
-    n = 0
-    for name, fn in routes:
-        if time_left() < 30:
-            break
-        sigma = perm_of(fn)
-        where = {sigma[j]: j for j in range(N)}
-        inter = [where[p - 1] for p in crib_pos]
-        for conv in convs:
-            pa, ca, ka, m = conv
-            forced = [key_letter_for(known[p], ct[j], pa, ca, ka, m) for p, j in zip(crib_pos, inter)]
-            dead = set()
-            for a in range(24):
-                for b in range(a + 1, 24):
-                    if forced[a] != forced[b]:
-                        dead.update(DIVISORS[abs(inter[a] - inter[b])])
-            for P in range(2, MAXP + 1):
-                if P in dead:
-                    continue
-                slots = {j % P: l for j, l in zip(inter, forced)}
-                runs = runs_in_slots(slots, P)
-                qs = sum(len(r) - 3 for r in runs)
-                if qs < 4:
-                    continue
-                sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
-                n += 1
-                if len(best) < 20 or sc > best[-1][0]:
-                    best.append((sc, name, "/".join(conv), P, runs))
-                    best.sort(reverse=True); best = best[:20]
-    return best, n
+def encrypt(plaintext, key):
+    text = sources()[key["source"]]
+    n = len(text); o = key["offset"]
+    pa, ca, ka, m = key["pa"], key["ca"], key["ka"], key["m"]
+    return "".join(encrypt_letter(p, text[(o + i) % n], pa, ca, ka, m) for i, p in enumerate(plaintext))
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    routes = route_set(list(ctx.vocabulary))
-    convs = list(conventions())
-    best, n = search(ct, known, routes, convs, ctx.english_score, ctx.time_left)
-    nulls = []
-    for seed in range(2):
-        letters_ = list(ct); random.Random(seed).shuffle(letters_)
-        nb, _ = search("".join(letters_), known, routes, convs, ctx.english_score, ctx.time_left)
-        nulls.append({"best": round(nb[0][0], 3), "route": nb[0][1], "period": nb[0][3], "runs": nb[0][4]} if nb else None)
+    src = sources()
+    trials = 0
+    best = []   # (mismatches, name, conv, offset)
+    candidates = []
+    for name, text in src.items():
+        n = len(text)
+        for conv in conventions():
+            pa, ca, ka, m = conv
+            for o in range(n):
+                trials += 1
+                mism = 0
+                for pos, p in known.items():
+                    if encrypt_letter(p, text[(o + pos - 1) % n], pa, ca, ka, m) != ct[pos - 1]:
+                        mism += 1
+                        if mism > 3:
+                            break
+                if mism <= 3:
+                    best.append((mism, name, "/".join(conv), o))
+                if mism == 0:
+                    key = {"source": name, "offset": o, "pa": pa, "ca": ca, "ka": ka, "m": m}
+                    pt = "".join(decrypt_letter(ct[i], text[(o + i) % n], pa, ca, ka, m) for i in range(N))
+                    candidates.append({"plaintext": pt, "key": key, "key_bits": 20, "key_description": f"running key {name} offset {o}, {pa}/{ca}/{ka} {m}"})
+        if ctx.time_left() < 30:
+            break
+    best.sort()
     return {
-        "candidates": [],
-        "bounds": {"family": "transposition then periodic tableau; forced key scored as English", "routes": len(routes),
-                   "conventions": 24, "periods": f"2-{MAXP}, live only", "scores": n,
-                   "best": [{"score": round(sc, 3), "route": nm, "convention": cv, "period": P, "runs": rs} for sc, nm, cv, P, rs in best],
-                   "shuffled_control": nulls},
-        "notes": f"Diagnostic, no candidates. {n} (route, convention, period) keys scored; best {best[0][0]:.3f} vs shuffled {[x['best'] for x in nulls if x]}.",
+        "candidates": candidates[:50],
+        "bounds": {"family": "running key from the sculpture's own texts", "sources": {k: len(v) for k, v in src.items()},
+                   "conventions": 24, "offsets": "all cyclic", "trials": trials,
+                   "fewest_mismatches": best[0][0] if best else "more than 3",
+                   "trials_with_at_most_3_mismatches": [{"mismatches": a, "source": b, "convention": c, "offset": d} for a, b, c, d in best[:20]],
+                   "survivors": len(candidates)},
+        "notes": f"{trials} trials; {len(candidates)} zero-mismatch survivors; {len(best)} trials with three or fewer mismatches.",
     }
 
 
 def worked_example(ctx, key):
-    from kryptos.ciphers import columnar_transposition_encrypt as enc
-    sigma = perm_of(lambda s: enc(s, list(range(7))))
-    where = {sigma[j]: j for j in range(N)}
-    lines = ["route: columnar width 7, read columns left to right; convention kry/kry/kry Vigenere; period 28", ""]
-    slots = {}
-    for pos in sorted(ctx.KNOWN):
-        j = where[pos - 1]
-        slots[j % 28] = key_letter_for(ctx.KNOWN[pos], ctx.K4[j], "kry", "kry", "kry", "vig")
-    lines.append("slot: " + " ".join(f"{s:>2}" for s in range(28)))
-    lines.append("key:  " + " ".join(f" {slots.get(s, '.')}" for s in range(28)))
-    runs = runs_in_slots(slots, 28)
-    lines.append("")
-    lines.append("runs scored: " + ", ".join(f"{r} ({ctx.english_score(r):.2f})" for r in runs))
+    text = sources()["tableau rows fwd"]
+    lines = ["key text: tableau rows, offset 0, KRYPTOS alphabet throughout, Vigenere", "", f"key text begins {text[:40]}...", "", "pos  plain  key letter  E+key  carved  match"]
+    for pos in (22, 23, 24, 25, 64, 65):
+        p = ctx.KNOWN[pos]; k = text[pos - 1]; c = encrypt_letter(p, k, "kry", "kry", "kry", "vig")
+        lines.append(f"{pos:>3}    {p}        {k}         {c}      {ctx.K4[pos-1]}     {'yes' if c == ctx.K4[pos-1] else 'no'}")
     return "\n".join(lines)

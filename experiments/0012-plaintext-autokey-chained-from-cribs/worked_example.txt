@@ -1,0 +1,6 @@
+lag 13, KRYPTOS alphabet throughout, Vigenere: chaining from the cribs
+
+consistent: False; letters forced: 28 of 97
+.....................EASTNORTHEASTS............N............K..BERLINCLOCK............K..........
+
+position 22 (E, cipher F) forces position 9 = R; key E at 22 decrypts cipher O at 35 to Q

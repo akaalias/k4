@@ -1,0 +1,11 @@
+forced key letters, period 28, plain kry / cipher std / key kry, Vigenere
+
+pos  plain  cipher  slot(pos-1 mod 28)  forced key letter
+ 22    E      F        21                 Q
+ 23    A      L        22                 T
+ 24    S      R        23                 E
+ 25    T      V        24                 L
+ 26    N      Q        25                 W
+ 64    B      N         7                 O
+ 65    E      Y         8                 G
+ 66    R      P         9                 H

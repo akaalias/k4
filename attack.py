@@ -1,145 +1,156 @@
-"""Experiment 0009. See program.md for the contract."""
+"""Experiment 0010. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "forced-key-stretches-read-as-english",
-    "title": "Do the two crib runs force a readable key, with the copper exact or off by one letter?",
+    "slug": "forced-key-stretches-mixed-alphabets",
+    "title": "The same two forced key stretches, with the tableau's alphabets mixed from the puzzle's own words",
     "family": "1-keyed-periodic",
-    "parent": "0005-quagmire-period-sweep-forced-keys",
-    "changed": "Instead of matching forced key fragments against a word list, score them as English. Add the one-letter-error parameter: a letter inserted or deleted at every position.",
+    "parent": "0009-forced-key-stretches-read-as-english",
+    "changed": "The plain, cipher and key alphabets may each be a keyword-mixed alphabet built from any vocabulary word by any of the four Friedman mixings, not only the standard and KRYPTOS alphabets.",
     "hypothesis_expert": (
-        "Under any periodic tableau whose period the cribs allow (27 and above, 0005), EASTNORTHEAST at "
-        "22-34 forces 13 consecutive key letters and BERLINCLOCK at 64-74 forces 11, under each of the 24 "
-        "conventions. If the key is a word or phrase, as Scheidt insists (C5, C6), those stretches must "
-        "read as English. Schridde 2017 found them gibberish under the plain tableau; 0005 matched them "
-        "against 62 vocabulary words and K1-K3 windows only. This experiment scores every stretch by "
-        "quadgram log-probability per letter and compares it with the distribution of random strings and "
-        "of true English windows of the same length from K1-K3. Then the one-letter-error parameter "
-        "(family G, C17, C18, the K2 precedent): a letter inserted or deleted at each of 97 positions "
-        "shifts the ciphertext under every crib past that point by one, giving new stretches. Expected "
-        "under the null: the best of about 9,400 stretches sits around two standard deviations above the "
-        "random mean and well below the English mean. Bounds: all 24 conventions, exact copper and every "
-        "single insertion or deletion, both crib runs, keys at any period of 27 or more."
+        "0009 showed that under the standard and KRYPTOS alphabets the key stretches forced by the two "
+        "crib runs read as noise. Scheidt taught the 1900-1945 hand systems (knowledge/03-scheidt-said.md), "
+        "whose tableaux use keyword-mixed alphabets: a keyword then the rest of the alphabet, or the same "
+        "written into a block and read by columns, by keyed columns, or alternately vertically (Friedman's "
+        "mixings, kryptos/alphabets.py). K1 and K2 used KRYPTOS; K4 may use another word from the puzzle's "
+        "world (C5, C6, C8, C29). Here the plain and cipher alphabets range over standard, KRYPTOS and the "
+        "keyword mixing of each vocabulary word, and the key alphabet over all four mixings of each word, "
+        "under Vigenere, Beaufort and variant Beaufort. For each triple the 13-letter stretch under "
+        "EASTNORTHEAST and the 11-letter stretch under BERLINCLOCK are scored as English against the 0009 "
+        "calibration. A key alphabet is a bijection on the stretch, so this is the test 0009 could not "
+        "do. Bounds: exact copper, periods 27 and above, every triple of alphabets drawn as stated."
     ),
     "hypothesis_eli5": (
-        "If the fourth message used a secret word with the sculpture's table, the 13 known letters of "
-        "EASTNORTHEAST pin down 13 letters of that secret word in a row, and BERLINCLOCK pins down 11 "
-        "more. A secret word made of English should look like English in those stretches. We read them "
-        "off under every way the table can be used and ask a simple question: does any stretch look like "
-        "English rather than noise? We also allow for the sculptor having dropped or added one letter "
-        "somewhere, as he did in the second message, which would shift everything after that point by one."
+        "The table on the sculpture starts with the word KRYPTOS and then the rest of the alphabet. The "
+        "old hand methods the designer taught allowed any word to start the alphabet, and four ways of "
+        "shuffling it afterwards. So we repeat the last experiment with every word from the puzzle's "
+        "world, PALIMPSEST, ABSCISSA, BERLIN, CLOCK and the rest, as the word that starts the alphabet, "
+        "for the message letters, the carved letters and the secret word alike. If some choice makes "
+        "the 13 pinned letters of the secret word read like English, that choice is probably the real one."
     ),
     "prediction": (
-        "No forced stretch scores as well as a typical English window of its length. The best stretch "
-        "scores below -4.5 per quadgram, against about -3.6 for English and about -6.5 for noise. "
-        "Allowing one inserted or deleted letter does not change that. Zero candidates pass."
+        "About 3 million stretch pairs are scored, so the best will sit around 4 standard deviations above "
+        "noise by chance alone and still below the English mean. No stretch scores above -4.3 per "
+        "quadgram. Zero candidates pass."
     ),
     "method": (
-        "1. For each convention, force the key letter at each crib position from the plaintext and the "
-        "ciphertext letter. 2. Join the forced letters of positions 22-34 into a 13-letter stretch and "
-        "64-74 into an 11-letter stretch. 3. Score each stretch by mean log10 quadgram probability. "
-        "4. Repeat with the ciphertext altered by one deleted letter at each position, then by one "
-        "inserted blank at each position, which shifts every crib beyond that point. 5. Calibrate: score "
-        "all 13- and 11-letter windows of the K1-K3 plaintexts, and 20,000 random strings. 6. Report "
-        "the best stretches with their z-scores against both distributions."
+        "1. Build the alphabet pools: plain and cipher from standard, KRYPTOS and the keyword mixing of each "
+        "vocabulary word; key from all four mixings of each word plus the two basics. 2. For each plain "
+        "alphabet, cipher alphabet and mode, compute the forced key index at each crib position of both "
+        "runs. 3. For each key alphabet, map the indices to letters and score the two stretches by mean "
+        "log10 quadgram probability. 4. Keep the best 20 overall and the best per mode; compare with the "
+        "English and noise distributions from 0009."
     ),
     "walkthrough": (
-        "1. Take the convention: plaintext and key on the sculpture's alphabet, Vigenere. 2. Position 22 "
-        "is plaintext E, ciphertext F. In the sculpture's alphabet E is index 10 and F is index 11, so the "
-        "key letter has index 1: R. 3. Position 23 is A against L: A is 7, L is 18, key index 11: D. "
-        "4. Carry on through position 34 to get 13 key letters in a row. 5. Read them aloud. A real key "
-        "word gives something like a word; noise gives something like RDQXJ. 6. Score it by counting how "
-        "common each run of four letters is in English. 7. Now suppose the sculptor dropped a letter "
-        "somewhere before position 22: shift the ciphertext one place and repeat. 8. The best stretch "
-        "across all of this is the answer; compare it with real English windows of the same length."
+        "1. Write the alphabet starting with PALIMPSEST, dropping repeats: PALIMSETBCDFGHJKNOQRUVWXYZ. "
+        "2. Use it for the plaintext; keep the carved KRYPTOS alphabet for the ciphertext. 3. Position 22 "
+        "is plaintext E, index 6 in the PALIMPSEST alphabet; ciphertext F, index 11 in KRYPTOS; Vigenere "
+        "gives key index 5. 4. Do the same for positions 23 to 34 to get 13 key indices. 5. Now choose a "
+        "key alphabet, say ABSCISSA mixed by columns, and read off the letter at each index. 6. Score the "
+        "13 letters by how common each run of four is in English. 7. Repeat for every choice of the three "
+        "alphabets. 8. A stretch that scores like English, about -4.3 or better, is the signal."
     ),
 }
 
-import random
-from kryptos.alphabets import conventions, key_letter_for, encrypt_letter
-from kryptos.facts import load_k1, load_k2, load_k3
+from kryptos.alphabets import (keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed,
+                               key_letter_for as lib_key_letter_for)
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
 
 RUNS = [(22, 34), (64, 74)]
-
-
-def letters(s):
-    return "".join(c for c in s if "A" <= c <= "Z")
+MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
+MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
 
 
 def encrypt(plaintext, key):
     pa, ca, ka, m, k = key["pa"], key["ca"], key["ka"], key["m"], key["key"]
-    return "".join(encrypt_letter(p, k[i % len(k)], pa, ca, ka, m) for i, p in enumerate(plaintext))
-
-
-def variants(ct):
-    """The copper as carved, then with one letter deleted at each position, then with one
-    blank inserted at each position. A blank pairs with nothing, so the crib there is skipped."""
-    yield "exact", ct
-    for i in range(len(ct)):
-        yield f"deleted {i+1}", ct[:i] + ct[i + 1:] + "-"
-    for i in range(len(ct) + 1):
-        yield f"inserted before {i+1}", ct[:i] + "-" + ct[i:]
+    enc = {"vig": lambda p, kk: (p + kk) % 26, "beau": lambda p, kk: (kk - p) % 26, "varbeau": lambda p, kk: (p - kk) % 26}[m]
+    return "".join(ca[enc(pa.index(p), ka.index(k[i % len(k)]))] for i, p in enumerate(plaintext))
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
     score = ctx.english_score
-    texts = letters(load_k1()["plaintext"]) + letters(load_k2()["plaintext_as_carved"]) + letters(load_k3()["plaintext"])
-    convs = list(conventions())
-    results = []
-    for vname, c in variants(ct):
-        for conv in convs:
-            pa, ca, ka, m = conv
-            for lo, hi in RUNS:
-                forced = []
-                for pos in range(lo, hi + 1):
-                    cc = c[pos - 1]
-                    if cc == "-":
-                        continue
-                    forced.append(key_letter_for(known[pos], cc, pa, ca, ka, m))
-                stretch = "".join(forced)
-                results.append((score(stretch), stretch, vname, "/".join(conv), f"{lo}-{hi}"))
-    results.sort(reverse=True)
-    rng = random.Random(4)
+    vocab = [w for w in ctx.vocabulary if len(set(w)) >= 3]
+    basics = {"std": STD, "kry": KRY}
+    plain_pool = dict(basics)
+    key_pool = dict(basics)
+    for w in vocab:
+        plain_pool[f"{w}/keyword"] = keyword_mixed(w)
+        for mname, fn in MIX.items():
+            key_pool[f"{w}/{mname}"] = fn(w)
+    # dedupe identical alphabets
+    def dedupe(pool):
+        seen, out = {}, {}
+        for name, a in pool.items():
+            if a not in seen:
+                seen[a] = name; out[name] = a
+        return out
+    plain_pool, key_pool = dedupe(plain_pool), dedupe(key_pool)
+    # self-check against the library on the basic alphabets
+    for m in MODES:
+        for pos in (22, 64):
+            p, c = known[pos], ct[pos - 1]
+            idx = MODES[m](KRY.index(p), STD.index(c))
+            assert KRY[idx] == lib_key_letter_for(p, c, "kry", "std", "kry", m)
+    cal = {"english_13": (-4.251, 0.466), "english_11": (-4.252, 0.518), "random_13": (-8.292, 0.98), "random_11": (-8.295, 1.08)}
+    index = {name: {ch: i for i, ch in enumerate(a)} for name, a in plain_pool.items()}
+    crib_letters = [[known[pos] for pos in range(lo, hi + 1)] for lo, hi in RUNS]
 
-    def dist(xs):
-        n = len(xs); mu = sum(xs) / n; sd = (sum((x - mu) ** 2 for x in xs) / n) ** 0.5
-        return mu, sd
+    def search(text):
+        cipher_letters = [[text[pos - 1] for pos in range(lo, hi + 1)] for lo, hi in RUNS]
+        best = []           # (score, stretch, run, pa, ca, ka, mode)
+        n = 0
+        for pname, pa in plain_pool.items():
+            pidx = index[pname]
+            for cname, ca in plain_pool.items():
+                cidx = index[cname]
+                for m, f in MODES.items():
+                    seqs = [[f(pidx[p], cidx[c]) for p, c in zip(ps, cs)] for ps, cs in zip(crib_letters, cipher_letters)]
+                    for kname, ka in key_pool.items():
+                        for r, seq in enumerate(seqs):
+                            stretch = "".join(ka[i] for i in seq)
+                            sc = score(stretch)
+                            n += 1
+                            if len(best) < 20 or sc > best[-1][0]:
+                                best.append((sc, stretch, f"{RUNS[r][0]}-{RUNS[r][1]}", pname, cname, kname, m))
+                                best.sort(reverse=True); best = best[:20]
+            if ctx.time_left() < 30:
+                break
+        return best, n
 
-    eng13 = [score(texts[i:i + 13]) for i in range(len(texts) - 12)]
-    eng11 = [score(texts[i:i + 11]) for i in range(len(texts) - 10)]
-    rnd13 = [score("".join(rng.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ") for _ in range(13))) for _ in range(20000)]
-    rnd11 = [score("".join(rng.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ") for _ in range(11))) for _ in range(20000)]
-    cal = {"english_13": dist(eng13), "english_11": dist(eng11), "random_13": dist(rnd13), "random_11": dist(rnd11)}
-    best = results[0]
-    exact_best = max(r for r in results if r[2] == "exact")
+    best, n = search(ct)
+    import random
+    nulls = []
+    for seed in range(3):
+        letters_ = list(ct); random.Random(seed).shuffle(letters_)
+        nb, _ = search("".join(letters_))
+        nulls.append((round(nb[0][0], 3), nb[0][1]))
 
     def z(r):
-        n = 13 if r[4] == "22-34" else 11
-        mu_e, sd_e = cal[f"english_{n}"]; mu_r, sd_r = cal[f"random_{n}"]
-        return {"score": round(r[0], 3), "stretch": r[1], "copper": r[2], "convention": r[3], "run": r[4],
-                "z_vs_random": round((r[0] - mu_r) / sd_r, 2), "z_vs_english": round((r[0] - mu_e) / sd_e, 2)}
-
+        sc, stretch, run_, pname, cname, kname, m = r
+        k = 13 if run_ == "22-34" else 11
+        mu_e, sd_e = cal[f"english_{k}"]; mu_r, sd_r = cal[f"random_{k}"]
+        return {"score": round(sc, 3), "stretch": stretch, "run": run_, "plain": pname, "cipher": cname, "key": kname, "mode": m,
+                "z_vs_random": round((sc - mu_r) / sd_r, 2), "z_vs_english": round((sc - mu_e) / sd_e, 2)}
     return {
         "candidates": [],
-        "bounds": {"family": "periodic tableau, separate alphabets, period 27+; forced key stretches scored as English",
-                   "conventions": 24, "copper_variants": 1 + 97 + 98, "stretches_scored": len(results),
-                   "calibration_mean_sd": {k: (round(a, 3), round(b, 3)) for k, (a, b) in cal.items()},
-                   "best_overall": z(best), "best_exact_copper": z(exact_best),
-                   "top_ten": [z(r) for r in results[:10]],
-                   "exact_copper_all_24": [z(r) for r in results if r[2] == "exact"]},
-        "notes": "Diagnostic: no full key is implied, so no candidates. The verdict is the gap between the best stretch and the English distribution.",
+        "bounds": {"family": "periodic tableau, period 27+, alphabets mixed from vocabulary; forced key stretches scored as English",
+                   "plain_cipher_alphabets": len(plain_pool), "key_alphabets": len(key_pool), "modes": 3,
+                   "stretches_scored": n, "calibration_from": "0009",
+                   "best_overall": z(best[0]), "top_twenty": [z(r) for r in best],
+                   "null_control_best": nulls, "null_control": "same search on three shuffles of the K4 letters; best score and stretch each"},
+        "notes": f"Diagnostic, no candidates. {n} stretches scored over {len(plain_pool)}^2 x {len(key_pool)} x 3 alphabet triples.",
     }
 
 
 def worked_example(ctx, key):
-    lines = ["forced key stretch under EASTNORTHEAST, convention kry/std/kry Vigenere, exact copper", ""]
-    lines.append("pos  plain  cipher  key letter")
+    pa = keyword_mixed("PALIMPSEST"); ca = KRY; ka = columnar_mixed("ABSCISSA")
+    lines = [f"plain alphabet  PALIMPSEST/keyword  {pa}", f"cipher alphabet KRYPTOS             {ca}", f"key alphabet    ABSCISSA/columnar   {ka}", "", "pos  plain  cipher  key index  key letter"]
     out = []
     for pos in range(22, 35):
         p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
-        k = key_letter_for(p, c, "kry", "std", "kry", "vig")
-        out.append(k)
-        lines.append(f"{pos:>3}    {p}      {c}       {k}")
+        i = (ca.index(c) - pa.index(p)) % 26
+        out.append(ka[i])
+        lines.append(f"{pos:>3}    {p}      {c}        {i:>2}         {ka[i]}")
     lines.append("")
-    lines.append("stretch: " + "".join(out) + f"   score {ctx.english_score(''.join(out)):.2f} per quadgram (English about -3.6, noise about -6.5)")
+    lines.append("stretch: " + "".join(out) + f"   score {ctx.english_score(''.join(out)):.2f} per quadgram (English about -4.3 at this length, noise about -8.3)")
     return "\n".join(lines)

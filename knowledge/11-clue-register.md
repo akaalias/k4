@@ -180,7 +180,7 @@ structure overlaid; or an artefact. Status: untested on K4.
 
 **C29. "P.S. It's as simple as ABC" (the keyword anagram), PALIMPSEST + ABSCISSA.**
 Readings: (a) a joke; (b) a standard-alphabet step; (c) the combined keyword alphabet.
-Status: untested.
+Status: as tableau alphabets for a periodic key, PALIMPSEST and ABSCISSA and every other vocabulary word are bounded by 0010 (forced key stretches read as noise); as key words, bounded by 0005.
 
 **C30. Sanborn 2019: not necessary to know K1-K3 to solve K4; 2013: K5 cannot be solved
 without K4.** Reading: the method stands alone; the content chains. Constraint on how

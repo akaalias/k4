@@ -292,14 +292,14 @@ def overview():
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
     scale_max = max((sum((r.get("phases") or {"run": r["seconds"]}).values()) for r in rows), default=0)
     trs = "".join(
-        f"""<tr><td><a href="/exp/{esc(r['tag'])}">{esc(r['tag'])}</a></td><td>{esc(r['title'])}</td><td class="muted">{esc(r['family'])}</td>
+        f"""<tr><td class="num">{int(r['tag'][:4])}</td><td><a href="/exp/{esc(r['tag'])}">{esc(r['title'])}</a></td><td class="muted">{esc(r['family'])}</td>
 <td class="{esc(r['decision'])}">{esc(r['decision'])}</td>
 <td class="num">{'' if r.get('best_loss') is None else f"{r['best_loss']:.1f}"}</td>
-<td class="num" title="{esc(words_str(r))}">{r['best_crib_hits']}/24 <span class="faint">{esc(words_short(r))}</span></td>
+<td class="num" title="{esc(words_str(r))}">{r['best_crib_hits']}/24</td>
 <td class="num">{r['n_candidates']}</td><td class="num" title="{esc(', '.join(f'{k} {fmt_dur(v)}' for k, v in (r.get('phases') or {}).items()))}">{fmt_dur(sum((r.get('phases') or {}).values()) or r['seconds'])}</td><td>{phase_bar(r.get('phases') or {'run': r['seconds']}, scale_max)}</td></tr>"""
         for r in reversed(rows)
     )
-    table = f"""<table><thead><tr><th>experiment</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="hits out of 24, then E N B C: capital = whole word in place, lower = partial">crib letters</th><th class="num">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
+    table = f"""<table><thead><tr><th class="num">id</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="known letters the best candidate got right, out of 24">crib letters</th><th class="num" title="full 97-letter decryptions the experiment handed to the gates">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
     by_parent = {}
     for r in rows:
         by_parent.setdefault(r["parent"], []).append(r)
@@ -312,16 +312,12 @@ def overview():
             f"<li><a href='/exp/{esc(k['tag'])}'>{esc(k['tag'])}</a> <span class='{esc(k['decision'])}'>{esc(k['decision'])}</span> "
             f"<span class='muted'>{esc(k['family'])}, loss {'' if k.get('best_loss') is None else f'{k['best_loss']:.1f}'}</span>{tree(k['tag'])}</li>" for k in kids) + "</ul>"
 
-    latest = rows[-1] if rows else None
-    plain = ""
-    if latest and latest.get("eli5"):
-        plain = f"""<div class="callout" style="border-left-color:var(--ochre)"><div class="callout-h" style="color:var(--ochre)">Latest experiment, in plain words: {esc(latest['tag'])}</div><p>{esc(latest['eli5'])}</p><p class="muted" style="font-size:13px;margin-top:6px">Outcome: {esc(latest['decision'])}, {latest['n_candidates']} candidates, best crib hits {latest['best_crib_hits']}/24. <a href="/exp/{esc(latest['tag'])}">Read the record.</a></p></div>"""
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
-            + hero + champ + plain
+            + hero + champ
             + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; hollow dots returned no candidate. A crib is a stretch of plaintext we already know: K4 has 24 such letters, EASTNORTHEAST and BERLINCLOCK. Each one a candidate gets wrong costs ten. The red line at ten is the crib gate: above it, at least one known letter is wrong; below it, all 24 are right and only English quality and key length remain. The axis breaks there so the band where a solution would appear has room.")
             + loss_chart(rows)
-            + sec(2, "Experiments", "Newest first. Crib letters: E N B C flags, a capital when a whole clue word is in place.")
+            + sec(2, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. Phase bars show run time only for experiments 1 to 5, which predate the clock.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
             + sec(3, "Lineage", "What each experiment inherits from.")
             + (tree(None) or "<p class='muted'>empty</p>"))

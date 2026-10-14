@@ -136,16 +136,21 @@ def fmt_dur(sec):
     return f"{sec/3600:.1f} h"
 
 
-def phase_bar(ph, width=140):
-    total = sum(ph.values()) or 1.0
+def phase_bar(ph, scale_max, width=160):
+    """Length is the experiment's total time against the longest experiment on the page;
+    segments are the phases in order. A one-second run is a sliver, by design."""
+    total = sum(ph.values())
+    if total <= 0 or scale_max <= 0:
+        return '<span class="faint">none</span>'
+    full = max(2.0, width * total / scale_max)
     x = 0.0
     parts = []
     for k in PHASE_ORDER:
         v = ph.get(k, 0.0)
         if v <= 0:
             continue
-        w = width * v / total
-        parts.append(f'<rect x="{x:.1f}" y="0" width="{max(w-1,0.5):.1f}" height="10" fill="{PHASE_FILL[k]}"><title>{k}: {fmt_dur(v)}</title></rect>')
+        w = full * v / total
+        parts.append(f'<rect x="{x:.1f}" y="0" width="{max(w-0.5,0.5):.1f}" height="10" fill="{PHASE_FILL[k]}"><title>{k}: {fmt_dur(v)}</title></rect>')
         x += w
     return f'<svg width="{width}" height="10" style="vertical-align:middle">{"".join(parts)}</svg>'
 
@@ -179,29 +184,43 @@ def k4_marked(pt, known):
 
 
 def loss_chart(rows):
-    """Loss per experiment, 0 at the bottom. Kept: ink dot, champion line in accent.
+    """Loss per experiment, 0 at the bottom. The axis breaks at 10, the crib gate: the band
+    0-10 gets 40% of the height, 10-240 the rest. Kept: ink dot, champion line in accent.
     Reverted: recessive grey dot. No valid candidate: hollow dot at the top."""
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
-    W, H = 960, 300
-    L, R, T, B = 96, 20, 18, 34
+    W, H = 960, 320
+    L, R, T, B = 56, 110, 20, 34
     n = len(rows)
-    ymax = 250.0
+    gate, ymax = 10.0, 240.0
+    plot_h = H - T - B
+    low_h = plot_h * 0.40
+    y_gate = T + plot_h - low_h
     xs = [L + (i + 0.5) * (W - L - R) / max(n, 1) for i in range(n)]
 
     def y(v):
-        return T + (H - T - B) * (1 - min(v, ymax) / ymax)
+        v = min(v, ymax)
+        if v <= gate:
+            return T + plot_h - low_h * (v / gate)
+        return y_gate - (plot_h - low_h) * ((v - gate) / (ymax - gate))
 
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Loss per experiment; zero is solved">']
-    # gridlines and ticks
-    for v, lab in ((0, "0 solved"), (10, "10 all cribs hit"), (100, "100"), (200, "200"), (240, "240 no cribs")):
+    for v in (0, 5, 10, 60, 120, 180, 240):
         yy = y(v)
-        col = "var(--accent)" if v == 10 else "var(--rule-soft)"
-        g.append(f'<line x1="{L}" x2="{W-R}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="{col}" stroke-width="1"/>')
-        g.append(f'<text x="{L-6}" y="{yy+4:.1f}" text-anchor="end" font-size="11" fill="var(--muted)">{lab}</text>')
-    # champion line: running minimum of kept experiments
-    pts = []
-    best = None
+        if v == gate:
+            g.append(f'<line x1="{L}" x2="{W-R}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="var(--accent)" stroke-width="1.5"/>')
+        else:
+            g.append(f'<line x1="{L}" x2="{W-R}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
+        g.append(f'<text x="{L-8}" y="{yy+4:.1f}" text-anchor="end" font-size="11.5" fill="var(--muted)">{v}</text>')
+    # axis break marks just above the gate line
+    bx = L - 2
+    g.append(f'<path d="M{bx-5},{y_gate-10:.1f} l10,-5 M{bx-5},{y_gate-6:.1f} l10,-5" stroke="var(--muted)" stroke-width="1" fill="none"/>')
+    # annotations at right, clear of the plot
+    ax = W - R + 10
+    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--accent)">crib gate: all 24 letters in place</text>')
+    g.append(f'<text x="{ax}" y="{y(0)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">solved</text>')
+    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">no crib letters</text>')
+    pts, best = [], None
     for i, r in enumerate(rows):
         if r.get("decision") == "kept" and r.get("best_loss") is not None:
             best = r["best_loss"] if best is None else min(best, r["best_loss"])
@@ -209,7 +228,6 @@ def loss_chart(rows):
             pts.append(f"{xs[i]:.1f},{y(best):.1f}")
     if len(pts) >= 2:
         g.append(f'<polyline points="{" ".join(pts)}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>')
-    # dots
     for i, r in enumerate(rows):
         v = r.get("best_loss")
         tip = f"{esc(r['tag'])}<br>{esc(r['title'])}<br>loss {'' if v is None else f'{v:.2f}'}; cribs {r['best_crib_hits']}/24 ({esc(words_str(r))})<br>{esc(r['decision'])}, {r['n_candidates']} candidates"
@@ -219,12 +237,11 @@ def loss_chart(rows):
         else:
             fill = "var(--kept)" if r["decision"] == "kept" else "var(--disc)"
             g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
-    # endpoint label
     last = rows[-1]
     if last.get("best_loss") is not None:
-        g.append(f'<text x="{xs[-1]+9:.1f}" y="{y(last["best_loss"])+4:.1f}" font-size="11" fill="var(--ink)">{last["best_loss"]:.1f}</text>')
-    g.append(f'<text x="{L}" y="{H-8}" font-size="11" fill="var(--faint)">experiment 1</text>')
-    g.append(f'<text x="{W-R}" y="{H-8}" font-size="11" fill="var(--faint)" text-anchor="end">experiment {n}</text>')
+        g.append(f'<text x="{xs[-1]+9:.1f}" y="{y(last["best_loss"])+4:.1f}" font-size="11.5" fill="var(--ink)">{last["best_loss"]:.1f}</text>')
+    g.append(f'<text x="{L}" y="{H-8}" font-size="11.5" fill="var(--faint)">experiment 1</text>')
+    g.append(f'<text x="{W-R}" y="{H-8}" font-size="11.5" fill="var(--faint)" text-anchor="end">experiment {n}</text>')
     g.append("</svg>")
     return "<figure class='chart'>" + "".join(g) + "</figure>"
 
@@ -271,15 +288,16 @@ def overview():
         champ = f"""<div class="callout"><div class="callout-h">Champion: {esc(ch['experiment'])}</div><p><code class="ct">{esc(ch['plaintext'])}</code></p><p class="muted" style="font-size:13px">{esc(ch['key_description'])}, fitness {ch['fitness']:.3f}</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
+    scale_max = max((sum((r.get("phases") or {"run": r["seconds"]}).values()) for r in rows), default=0)
     trs = "".join(
         f"""<tr><td><a href="/exp/{esc(r['tag'])}">{esc(r['tag'])}</a></td><td>{esc(r['title'])}</td><td class="muted">{esc(r['family'])}</td>
 <td class="{esc(r['decision'])}">{esc(r['decision'])}</td>
 <td class="num">{'' if r.get('best_loss') is None else f"{r['best_loss']:.1f}"}</td>
 <td class="num" title="{esc(words_str(r))}">{r['best_crib_hits']}/24 <span class="faint">{esc(words_short(r))}</span></td>
-<td class="num">{r['n_candidates']}</td><td class="num" title="{esc(', '.join(f'{k} {fmt_dur(v)}' for k, v in (r.get('phases') or {}).items()))}">{fmt_dur(sum((r.get('phases') or {}).values()) or r['seconds'])}</td><td>{phase_bar(r.get('phases') or {'run': r['seconds']})}</td></tr>"""
+<td class="num">{r['n_candidates']}</td><td class="num" title="{esc(', '.join(f'{k} {fmt_dur(v)}' for k, v in (r.get('phases') or {}).items()))}">{fmt_dur(sum((r.get('phases') or {}).values()) or r['seconds'])}</td><td>{phase_bar(r.get('phases') or {'run': r['seconds']}, scale_max)}</td></tr>"""
         for r in reversed(rows)
     )
-    table = f"""<table><thead><tr><th>experiment</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="hits out of 24, then E N B C: capital = whole word in place, lower = partial">crib letters</th><th class="num">candidates</th><th class="num">time</th><th>by phase</th></tr></thead><tbody>{trs}</tbody></table>"""
+    table = f"""<table><thead><tr><th>experiment</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="hits out of 24, then E N B C: capital = whole word in place, lower = partial">crib letters</th><th class="num">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
     by_parent = {}
     for r in rows:
         by_parent.setdefault(r["parent"], []).append(r)
@@ -295,7 +313,7 @@ def overview():
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
             + hero + champ
-            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate. The accent line is the champion. The line at ten is the crib gate.")
+            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; hollow dots returned no candidate. The axis breaks at the crib gate so the band below it, where a solution would appear, has room.")
             + loss_chart(rows)
             + sec(2, "Experiments", "Newest first. Crib letters: E N B C flags, a capital when a whole clue word is in place.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 

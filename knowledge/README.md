@@ -13,10 +13,11 @@ as a statistic.
 | `04-structure.md` | What the 97 letters and 24 cribs prove and suggest, with the numbers |
 | `05-attacks.md` | Everything tried, by whom, with bounds, and every refuted claim |
 | `06-hypotheses.md` | The live hypothesis families, evidence for and against, and open questions |
-| `07-people.md` | Who is who, what each one believes, and why it matters |
-| `08-timeline.md` | 1988 to 2026 |
+| `07-people.md` | Who is who in one paragraph each; full biographies in `people/` |
+| `08-timeline.md` | 1939 to 2026, dated to the day where the sources allow |
 | `09-contradictions.md` | Where the record disagrees with itself, and Sanborn's own disinformation warnings |
 | `10-sanborn-the-artist.md` | The oeuvre, the obsessions, the working habits |
+| `people/` | Biographies: Sanborn, Scheidt, and the solvers and community |
 | `sources/` | Full text of 71 primary sources. Open the one a hypothesis rests on before you trust the quote here. |
 
 Deeper layers, for when a family is opened or a claim needs checking:

@@ -1,5 +1,7 @@
 # 07. People
 
+Short entries. Full biographies: `people/sanborn.md`, `people/scheidt.md`, `people/solvers-and-community.md`.
+
 **Jim Sanborn** (Herbert James Sanborn Jr., born November 14, 1945, Washington). The
 author. Trained in archaeology, paleontology and anthropology before sculpture; Pratt MFA
 1971. Wrote all four plaintexts himself ("fiction writings of mine") in 1988, K4 last, on

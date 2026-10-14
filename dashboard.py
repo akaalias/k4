@@ -151,7 +151,7 @@ def loss_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     W, H = 960, 300
-    L, R, T, B = 48, 20, 18, 34
+    L, R, T, B = 96, 20, 18, 34
     n = len(rows)
     ymax = 250.0
     xs = [L + (i + 0.5) * (W - L - R) / max(n, 1) for i in range(n)]

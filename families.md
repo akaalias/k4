@@ -5,7 +5,7 @@ Re-read this top to bottom every few pivots and pick the family with the least c
 
 | # | Family | Status | Experiments | Bounds exhausted so far | Notes |
 |---|---|---|---|---|---|
-| 1 | Keyed periodic systems at crib-surviving periods 27, 28, 29, 53+: Quagmire I-IV, autokey, progressive key | active | 0001 (baseline) | none yet | Start here; cheapest bounded results. The crib sweep shows which periods survive for single-alphabet additive; nobody has run it for Quagmire with separate plain/cipher alphabets, autokey, or progressive key. |
+| 1 | Keyed periodic systems at crib-surviving periods 27, 28, 29, 53+: Quagmire I-IV, autokey, progressive key | active | 0001 (baseline), 0002 | ciphertext autokey excluded (24 conventions x 96 lags) | Start here; cheapest bounded results. The crib sweep shows which periods survive for single-alphabet additive; nobody has run it for Quagmire with separate plain/cipher alphabets, autokey, or progressive key. |
 | 2 | Masked plaintext, then a simple keyed cipher | untouched | | | Scheidt's own description. Stage-one output is scored on crib consistency only, since it is not English by design. Candidate masks: nulls, abbreviation, phonetic spelling, changed "language base". |
 | 3 | Two-component key with a combiner (Scheidt's CKM habit) | untouched | | | Keyword from the puzzle's vocabulary combined with a second element from the sculpture: the extra L position, the raised YAR, Morse E-padding counts, the K2 coordinates. |
 | 4 | Sanborn's "visual systems" | untouched | | | Mirrored tableau reading, routes through the carved grid, the HILL column as an index. Inspiration pool is `research_notes/.../sculpture_physical_form.md`. |
@@ -36,6 +36,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 | Approach | Why dead | Source |
 |---|---|---|
+| Ciphertext autokey, any lag 1-96, any of 24 alphabet/mode conventions | Exact crib check at every position beyond the lag; zero survivors | experiment 0002 |
 | Monoalphabetic substitution | Same ciphertext letter maps to different plaintext letters in the cribs | cribs |
 | Pure transposition, any route | Cribs need three E's, K4 has two; letter mismatch at fixed positions | cribs |
 | Rotor machines (Enigma class) | K encrypts to K at 74, S to S at 33 | cribs |

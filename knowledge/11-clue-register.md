@@ -87,6 +87,10 @@ the letters' direction, upside down (RQ reads YR). Status: untested.
 **C11. "The other 91 characters and their proper order are yet to be determined."**
 (NYT 2010 wording). Reading: a reordering step exists. Supports C1(a). Status: noted.
 
+**C11a. NSA 1992: "plain-text auto-key" and "interval 7"; NSA 2007: plaintext and ciphertext
+autokey tested without cribs.** Status: ciphertext autokey excluded under all 24 conventions
+and lags 1-96 (0002). Plaintext autokey: see 0003.
+
 **C12. "Delve into that particular clock" (2014) against "the World Clock in Berlin"
 (2025).** Readings: (a) the clock is plaintext content only; (b) the Weltzeituhr's
 structure (24 time zones on a rotating ring, a compass-rose mosaic on the ground) is a

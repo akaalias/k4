@@ -1,13 +1,31 @@
 {
  "id": 1,
  "tag": "0001-baseline-kryptos-keyword",
- "started": "2026-10-14T15:34:09+00:00",
+ "started": "2026-10-14T15:47:41+00:00",
  "seconds": 0.0,
  "status": "ran",
  "decision": "reverted",
  "n_candidates": 1,
  "n_passed": 0,
  "best_crib_hits": 2,
+ "best_crib_words": {
+  "EAST": [
+   0,
+   4
+  ],
+  "NORTHEAST": [
+   1,
+   9
+  ],
+  "BERLIN": [
+   1,
+   6
+  ],
+  "CLOCK": [
+   0,
+   5
+  ]
+ },
  "best_fitness": null,
  "champion_before": null,
  "bounds": {
@@ -32,6 +50,24 @@
    "gate_passed": false,
    "failed_at": "cribs",
    "crib_hits": 2,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
    "gate_details": {
     "mismatches": [
      [

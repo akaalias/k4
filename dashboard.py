@@ -72,6 +72,21 @@ def load_results():
     return rows
 
 
+def words_str(r):
+    w = r.get("best_crib_words") or {}
+    return ", ".join(f"{k} {h}/{n}" for k, (h, n) in w.items())
+
+
+def words_short(r):
+    """E N B C flags: letter shown bold-ish if the whole word matched, dot if none."""
+    w = r.get("best_crib_words") or {}
+    out = []
+    for k in ("EAST", "NORTHEAST", "BERLIN", "CLOCK"):
+        h, n = w.get(k, (0, 1))
+        out.append(k[0] if h == n else (k[0].lower() if h else "."))
+    return "".join(out)
+
+
 def champion():
     p = ROOT / "champion.json"
     return json.loads(p.read_text()) if p.exists() else None
@@ -119,12 +134,12 @@ def overview():
     trs = "".join(
         f"""<tr><td><a href="/exp/{esc(r['tag'])}">{esc(r['tag'])}</a></td><td>{esc(r['title'])}</td><td>{esc(r['family'])}</td>
 <td>{esc(r['parent'] or '-')}</td><td class="{esc(r['decision'])}">{esc(r['decision'])}</td>
-<td class="num">{r['n_candidates']}</td><td class="num">{r['n_passed']}</td><td class="num">{r['best_crib_hits']}/24</td>
+<td class="num">{r['n_candidates']}</td><td class="num">{r['n_passed']}</td><td class="num" title="{esc(words_str(r))}">{r['best_crib_hits']}/24 <span class="muted">{esc(words_short(r))}</span></td>
 <td class="num">{'' if r['best_fitness'] is None else f"{r['best_fitness']:.3f}"}</td><td class="num">{r['seconds']:.0f}</td></tr>"""
         for r in reversed(rows)
     )
     table = f"""<h2>Experiments (newest first)</h2><table><thead><tr><th>id</th><th>title</th><th>family</th><th>parent</th><th>decision</th>
-<th class="num">cands</th><th class="num">passed</th><th class="num">cribs</th><th class="num">fitness</th><th class="num">s</th></tr></thead><tbody>{trs}</tbody></table>"""
+<th class="num">cands</th><th class="num">passed</th><th class="num" title="hits/24, then E N B C: capital = whole word matched, lower = partial, dot = none">cribs</th><th class="num">fitness</th><th class="num">s</th></tr></thead><tbody>{trs}</tbody></table>"""
     # lineage as a tree
     by_parent = {}
     for r in rows:

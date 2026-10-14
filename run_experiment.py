@@ -83,7 +83,7 @@ def main():
     for c in raw["candidates"]:
         g = run_gates(c["plaintext"], c.get("reencrypted"))
         row = {**c, "gate_passed": g.passed, "failed_at": g.failed_at, "crib_hits": g.crib_hits,
-               "gate_details": g.details, "english_free": None, "fitness": None}
+               "crib_words": g.crib_words, "gate_details": g.details, "english_free": None, "fitness": None}
         if g.passed:
             row["english_free"] = english_score(free_text(c["plaintext"]))
             row["fitness"] = fitness(c["plaintext"], c["key_bits"])
@@ -92,6 +92,7 @@ def main():
     passed.sort(key=lambda r: r["fitness"], reverse=True)
     best = passed[0] if passed else None
     best_hits = max((r["crib_hits"] for r in scored), default=0)
+    best_words = max(scored, key=lambda r: r["crib_hits"])["crib_words"] if scored else {}
 
     champion = load_champion()
     if best and (champion is None or best["fitness"] > champion["fitness"]):
@@ -107,7 +108,7 @@ def main():
     result = {
         "id": exp_id, "tag": tag, "started": started, "seconds": round(seconds, 1), "status": status,
         "decision": decision, "n_candidates": len(scored), "n_passed": len(passed),
-        "best_crib_hits": best_hits, "best_fitness": best["fitness"] if best else None,
+        "best_crib_hits": best_hits, "best_crib_words": best_words, "best_fitness": best["fitness"] if best else None,
         "champion_before": champion, "bounds": raw.get("bounds", {}), "notes": raw.get("notes", ""),
         "error": raw.get("error"), "candidates": scored[:20],
     }
@@ -163,7 +164,8 @@ Inherits from {meta['parent'] or 'nothing; this is a root experiment'}. What cha
 
 ## Result
 
-Candidates returned: {result['n_candidates']}. Passed all gates: {result['n_passed']}. Best crib hits among all candidates: {result['best_crib_hits']}/24.
+Candidates returned: {result['n_candidates']}. Passed all gates: {result['n_passed']}. Best crib hits among all candidates: {result['best_crib_hits']}/24
+({', '.join(f"{w} {h}/{n}" for w, (h, n) in result.get('best_crib_words', {}).items()) or 'no candidates'}).
 Best fitness: {result['best_fitness']}. Champion before this run: {(result['champion_before'] or {}).get('experiment', 'none')}.
 
 | # | gate | cribs | fitness | plaintext | key |

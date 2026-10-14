@@ -62,6 +62,9 @@ buyer is not used.
   as the map of what did.
 - The chain of kept experiments must read as the derivation of the method, since method is
   part of success.
+- The loop's loss, lower is better, zero is solved: ten points per missed crib letter, plus
+  the English deficit of the 73 free letters, plus the cost of a key longer than a person
+  could remember. Lexicographic by construction: no English can buy a missed crib letter.
 - The crib check is a hard gate: a candidate that misses any of the 24 known letters fails
   before any English score is computed.
 - The worked-example illustration is the design figure: a few letters passing through the

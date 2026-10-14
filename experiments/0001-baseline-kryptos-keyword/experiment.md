@@ -3,7 +3,7 @@
 **Family:** 1-keyed-periodic  
 **Parent:** none (root)  
 **Decision:** reverted  
-**Run:** 2026-10-14T15:47:41+00:00, 0.0 s, status ran
+**Run:** 2026-10-14T16:08:01+00:00, 0.0 s, status ran
 
 ## Lineage
 
@@ -25,7 +25,7 @@ Decrypt K4 with keyed_vigenere_decrypt(K4, 'KRYPTOS', KRYPTOS_ALPHABET). Submit 
 
 Candidates returned: 1. Passed all gates: 0. Best crib hits among all candidates: 2/24
 (EAST 0/4, NORTHEAST 1/9, BERLIN 1/6, CLOCK 0/5).
-Best fitness: None. Champion before this run: none.
+Best loss: 224.67605782561338 (0 is solved; 10 per missed crib letter). Best fitness: None. Champion before this run: none.
 
 | # | gate | cribs | fitness | plaintext | key |
 |---|---|---|---|---|---|

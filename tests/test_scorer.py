@@ -32,3 +32,19 @@ def test_fitness_penalises_long_keys():
     long = fitness(pt97, key_bits_for_words(pt97))
     assert short > long
     assert long < english_score(K4)  # a message-length key is worse than raw ciphertext
+
+
+def test_loss_is_lexicographic():
+    from kryptos.scorer import loss
+    from kryptos.facts import KNOWN
+    k1 = load_k1()
+    pt = (letters(k1["plaintext"]) * 2)[:97]
+    # a fully English text missing all cribs must lose to a crib-perfect text of junk
+    junk = list("Q" * 97)
+    for pos, ch in KNOWN.items():
+        junk[pos - 1] = ch
+    junk = "".join(junk)
+    hits_pt = sum(1 for p, c in KNOWN.items() if pt[p - 1] == c)
+    assert loss(junk, 47.0, 24) < loss(pt, 47.0, hits_pt)
+    assert loss(junk, 47.0, 24) < 10.0
+    assert loss(pt, 47.0, hits_pt) >= 10.0 * (24 - hits_pt)

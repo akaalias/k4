@@ -16,7 +16,7 @@ from pathlib import Path
 
 from kryptos import facts
 from kryptos.gates import run_gates, crib_hits
-from kryptos.scorer import fitness, english_score, free_text
+from kryptos.scorer import fitness, english_score, free_text, loss
 
 ROOT = Path(__file__).resolve().parent
 EXPERIMENTS = ROOT / "experiments"
@@ -83,7 +83,10 @@ def main():
     for c in raw["candidates"]:
         g = run_gates(c["plaintext"], c.get("reencrypted"))
         row = {**c, "gate_passed": g.passed, "failed_at": g.failed_at, "crib_hits": g.crib_hits,
-               "crib_words": g.crib_words, "gate_details": g.details, "english_free": None, "fitness": None}
+               "crib_words": g.crib_words, "gate_details": g.details, "english_free": None, "fitness": None,
+               "loss": None}
+        if g.failed_at in (None, "cribs"):  # valid candidates get a loss; invalid ones do not
+            row["loss"] = loss(c["plaintext"], c["key_bits"], g.crib_hits)
         if g.passed:
             row["english_free"] = english_score(free_text(c["plaintext"]))
             row["fitness"] = fitness(c["plaintext"], c["key_bits"])
@@ -93,6 +96,8 @@ def main():
     best = passed[0] if passed else None
     best_hits = max((r["crib_hits"] for r in scored), default=0)
     best_words = max(scored, key=lambda r: r["crib_hits"])["crib_words"] if scored else {}
+    losses = [r["loss"] for r in scored if r["loss"] is not None]
+    best_loss = min(losses) if losses else None
 
     champion = load_champion()
     if best and (champion is None or best["fitness"] > champion["fitness"]):
@@ -109,6 +114,7 @@ def main():
         "id": exp_id, "tag": tag, "started": started, "seconds": round(seconds, 1), "status": status,
         "decision": decision, "n_candidates": len(scored), "n_passed": len(passed),
         "best_crib_hits": best_hits, "best_crib_words": best_words, "best_fitness": best["fitness"] if best else None,
+        "best_loss": best_loss,
         "champion_before": champion, "bounds": raw.get("bounds", {}), "notes": raw.get("notes", ""),
         "error": raw.get("error"), "candidates": scored[:20],
     }
@@ -117,9 +123,9 @@ def main():
     (outdir / "experiment.md").write_text(render_md(meta, result, raw))
 
     if not RESULTS.exists():
-        RESULTS.write_text("id\ttag\tfamily\tparent\tdecision\tn_candidates\tn_passed\tbest_crib_hits\tbest_fitness\tseconds\n")
+        RESULTS.write_text("id\ttag\tfamily\tparent\tdecision\tn_candidates\tn_passed\tbest_crib_hits\tbest_loss\tbest_fitness\tseconds\n")
     with RESULTS.open("a") as f:
-        f.write(f"{exp_id:04d}\t{tag}\t{meta['family']}\t{meta['parent'] or '-'}\t{decision}\t{len(scored)}\t{len(passed)}\t{best_hits}\t{'' if best is None else f'{best['fitness']:.4f}'}\t{seconds:.0f}\n")
+        f.write(f"{exp_id:04d}\t{tag}\t{meta['family']}\t{meta['parent'] or '-'}\t{decision}\t{len(scored)}\t{len(passed)}\t{best_hits}\t{'' if best_loss is None else f'{best_loss:.3f}'}\t{'' if best is None else f'{best['fitness']:.4f}'}\t{seconds:.0f}\n")
 
     print(f"[{tag}] decision={decision} candidates={len(scored)} passed={len(passed)} best_crib_hits={best_hits}/24"
           f" best_fitness={best['fitness'] if best else None} seconds={seconds:.0f}")
@@ -166,7 +172,7 @@ Inherits from {meta['parent'] or 'nothing; this is a root experiment'}. What cha
 
 Candidates returned: {result['n_candidates']}. Passed all gates: {result['n_passed']}. Best crib hits among all candidates: {result['best_crib_hits']}/24
 ({', '.join(f"{w} {h}/{n}" for w, (h, n) in result.get('best_crib_words', {}).items()) or 'no candidates'}).
-Best fitness: {result['best_fitness']}. Champion before this run: {(result['champion_before'] or {}).get('experiment', 'none')}.
+Best loss: {result['best_loss']} (0 is solved; 10 per missed crib letter). Best fitness: {result['best_fitness']}. Champion before this run: {(result['champion_before'] or {}).get('experiment', 'none')}.
 
 | # | gate | cribs | fitness | plaintext | key |
 |---|---|---|---|---|---|

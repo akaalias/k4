@@ -1,7 +1,7 @@
 {
  "id": 1,
  "tag": "0001-baseline-kryptos-keyword",
- "started": "2026-10-14T15:47:41+00:00",
+ "started": "2026-10-14T16:08:01+00:00",
  "seconds": 0.0,
  "status": "ran",
  "decision": "reverted",
@@ -27,6 +27,7 @@
   ]
  },
  "best_fitness": null,
+ "best_loss": 224.67605782561338,
  "champion_before": null,
  "bounds": {
   "family": "keyed Vigenere over KRYPTOS alphabet",
@@ -183,7 +184,8 @@
     ]
    },
    "english_free": null,
-   "fitness": null
+   "fitness": null,
+   "loss": 224.67605782561338
   }
  ]
 }

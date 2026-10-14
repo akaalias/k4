@@ -57,3 +57,17 @@ def key_bits_for_words(*words: str) -> float:
 
 def fitness(plaintext: str, key_bits: float) -> float:
     return english_score(free_text(plaintext)) - key_bits / 97.0
+
+
+# Loss: lower is better, 0 means solved. Lexicographic by construction: one missed
+# crib letter costs 10, more than any English deficit or key cost can add.
+ENGLISH_TARGET = -3.6      # mean log10 quadgram score of the K1-K3 plaintexts, roughly
+MEMORABLE_BITS = 60.0      # about twelve letters of English words
+
+
+def loss(plaintext: str, key_bits: float, crib_hits: int) -> float:
+    misses = 24 - crib_hits
+    english = english_score(free_text(plaintext))
+    deficit = max(0.0, ENGLISH_TARGET - english)
+    key_cost = max(0.0, key_bits - MEMORABLE_BITS) / MEMORABLE_BITS
+    return 10.0 * misses + deficit + key_cost

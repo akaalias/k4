@@ -1,0 +1,10 @@
+plaintext autokey, lag 3, all alphabets KRYPTOS, Vigenere
+alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
+
+pos  plain  key=p[pos-3]  idx(p)+idx(k)  predicted  carved
+ 25    T      E             4+11        I        V  x
+ 26    N      A            19+7         K        Q  x
+ 27    O      S             5+6         E        Q  x
+ 28    R      T             1+4         O        P  x
+ 29    T      N             4+19        W        R  x
+ 30    H      O            14+5         N        N  ok

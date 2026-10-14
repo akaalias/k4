@@ -1,0 +1,13 @@
+route: columnar width 7, read columns left to right, applied after the tableau; convention kry/kry/kry Vigenere
+
+plain pos  letter  its cipher sits at  cipher letter  forced key letter  key slot at period 13
+       22    E            4              R              J                  8
+       23    A           18              F              O                  9
+       24    S           32              K              Q                 10
+       25    T           46              K              V                 11
+       64    B           10              H              S                 11
+       65    E           24              R              J                 12
+       66    R           38              T              P                  0
+       67    L           52              J              Z                  1
+
+slots repeat at period 13: position 22 and 35 would share one, 64 and 77 another; the 24 cribs fill 13 slots with 11 collisions.

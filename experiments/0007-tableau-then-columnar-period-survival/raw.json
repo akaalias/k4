@@ -1,0 +1,98 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "periodic tableau (separate alphabets) then columnar transposition",
+  "routes": 2905,
+  "route_convention_pairs_checked": 69720,
+  "route_set": "plain columnar w=2..96 x {ltr, rtl} x {fwd, inv}; keyed columnar from each vocabulary word x {fwd, inv}; double plain columnar w1,w2 in 2..50",
+  "conventions": 24,
+  "periods": "1-97 by divisor rule on plaintext positions",
+  "key_pool": "vocabulary words and K1-K3 windows of length P for live P <= 30",
+  "min_live_period_histogram": {
+   "26": 2810,
+   "27": 66910
+  },
+  "fifteen_shortest": [
+   {
+    "min_period": 26,
+    "route": "columnar w=5 fwd",
+    "convention": "kry/std/std/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 fwd",
+    "convention": "kry/std/std/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 fwd",
+    "convention": "kry/std/kry/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 fwd",
+    "convention": "kry/std/kry/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 rtl fwd",
+    "convention": "std/kry/std/beau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 rtl fwd",
+    "convention": "std/kry/kry/beau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/kry/std/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/kry/std/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/kry/kry/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/kry/kry/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 rtl fwd",
+    "convention": "std/kry/std/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 rtl fwd",
+    "convention": "std/kry/std/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 rtl fwd",
+    "convention": "std/kry/kry/vig"
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "69720 route/convention pairs; 0 forced-fragment matches submitted.",
+ "error": null,
+ "worked_example": "route: columnar width 7, read columns left to right, applied after the tableau; convention kry/kry/kry Vigenere\n\nplain pos  letter  its cipher sits at  cipher letter  forced key letter  key slot at period 13\n       22    E            4              R              J                  8\n       23    A           18              F              O                  9\n       24    S           32              K              Q                 10\n       25    T           46              K              V                 11\n       64    B           10              H              S                 11\n       65    E           24              R              J                 12\n       66    R           38              T              P                  0\n       67    L           52              J              Z                  1\n\nslots repeat at period 13: position 22 and 35 would share one, 64 and 77 another; the 24 cribs fill 13 slots with 11 collisions.",
+ "seconds": 53.59614586830139
+}

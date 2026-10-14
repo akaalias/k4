@@ -1,0 +1,117 @@
+{
+ "id": 7,
+ "tag": "0007-tableau-then-columnar-period-survival",
+ "started": "2026-10-14T16:38:27+00:00",
+ "seconds": 53.7,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.1,
+  "test": 0.7,
+  "run": 53.7,
+  "record": 0.0
+ },
+ "ended_epoch": 1791995960.7945,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "periodic tableau (separate alphabets) then columnar transposition",
+  "routes": 2905,
+  "route_convention_pairs_checked": 69720,
+  "route_set": "plain columnar w=2..96 x {ltr, rtl} x {fwd, inv}; keyed columnar from each vocabulary word x {fwd, inv}; double plain columnar w1,w2 in 2..50",
+  "conventions": 24,
+  "periods": "1-97 by divisor rule on plaintext positions",
+  "key_pool": "vocabulary words and K1-K3 windows of length P for live P <= 30",
+  "min_live_period_histogram": {
+   "26": 2810,
+   "27": 66910
+  },
+  "fifteen_shortest": [
+   {
+    "min_period": 26,
+    "route": "columnar w=5 fwd",
+    "convention": "kry/std/std/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 fwd",
+    "convention": "kry/std/std/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 fwd",
+    "convention": "kry/std/kry/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 fwd",
+    "convention": "kry/std/kry/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 rtl fwd",
+    "convention": "std/kry/std/beau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=5 rtl fwd",
+    "convention": "std/kry/kry/beau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/kry/std/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/kry/std/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/kry/kry/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 inv",
+    "convention": "std/kry/kry/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 rtl fwd",
+    "convention": "std/kry/std/vig"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 rtl fwd",
+    "convention": "std/kry/std/varbeau"
+   },
+   {
+    "min_period": 26,
+    "route": "columnar w=6 rtl fwd",
+    "convention": "std/kry/kry/vig"
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "69720 route/convention pairs; 0 forced-fragment matches submitted.",
+ "error": null,
+ "candidates": []
+}

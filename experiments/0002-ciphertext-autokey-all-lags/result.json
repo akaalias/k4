@@ -1,0 +1,26 @@
+{
+ "id": 2,
+ "tag": "0002-ciphertext-autokey-all-lags",
+ "started": "2026-10-14T16:15:06+00:00",
+ "seconds": 0.1,
+ "status": "ran",
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "ciphertext autokey",
+  "conventions": 24,
+  "lags": "1-96",
+  "pairs_tested": 2304,
+  "survivors": 0,
+  "decidability": "exact at every crib position i > lag"
+ },
+ "notes": "A survivor must also reproduce the cribs inside the primer region, which the gate checks.",
+ "error": null,
+ "candidates": []
+}

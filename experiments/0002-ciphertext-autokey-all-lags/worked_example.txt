@@ -1,0 +1,10 @@
+ciphertext autokey, lag 7, all alphabets KRYPTOS, Vigenere
+alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
+
+pos  plain  key=c[pos-7]  idx(p)+idx(k)  predicted  carved
+ 64    B      I              8+15        W        N  x
+ 65    E      A             11+7         M        Y  x
+ 66    R      W              1+23        X        P  x
+ 67    L      I             17+15        S        V  x
+ 68    I      N             15+19        B        T  x
+ 69    N      F             19+12        O        T  x

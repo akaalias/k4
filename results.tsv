@@ -1,2 +1,3 @@
 id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	best_fitness	seconds
 0001	0001-baseline-kryptos-keyword	1-keyed-periodic	-	reverted	1	0	2	224.676		0
+0002	0002-ciphertext-autokey-all-lags	1-keyed-periodic	-	reverted	0	0	0			0

@@ -1,0 +1,15 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "ciphertext autokey",
+  "conventions": 24,
+  "lags": "1-96",
+  "pairs_tested": 2304,
+  "survivors": 0,
+  "decidability": "exact at every crib position i > lag"
+ },
+ "notes": "A survivor must also reproduce the cribs inside the primer region, which the gate checks.",
+ "error": null,
+ "worked_example": "ciphertext autokey, lag 7, all alphabets KRYPTOS, Vigenere\nalphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ\n\npos  plain  key=c[pos-7]  idx(p)+idx(k)  predicted  carved\n 64    B      I              8+15        W        N  x\n 65    E      A             11+7         M        Y  x\n 66    R      W              1+23        X        P  x\n 67    L      I             17+15        S        V  x\n 68    I      N             15+19        B        T  x\n 69    N      F             19+12        O        T  x",
+ "seconds": 0.006762027740478516
+}

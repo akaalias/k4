@@ -27,7 +27,7 @@ different grid whose other "shifts" (rotations, offsets, start positions) produc
 Hill-style numeric matrix. Experiments: recover every grid that reproduces K3 (widths 7,
 8, 14, 21, 24, 28, 42, 48, 86; Bauer's double rotation; Stehle's 192 rule), then apply
 each grid's family of shifts to K4 before and after tableau substitution. Status:
-0006 covered plain columnar at every width including the K3 widths, before the tableau; K3's double rotation and the 192 rule as routes, and the after-tableau order, untested.
+0006 covered plain columnar at every width including the K3 widths, before the tableau; 0008 covered reading (a) in full for the K3 rule at every shift and for double grid rotations, before the tableau: no shift admits a tableau key shorter than 22. The after-tableau order is weakly bounded by 0007. Reading (b) untested.
 
 **C3. "I like to use spatial systems of encoding and decoding... pattern, light and
 shadow... visual systems... individualistic."** (1999, 2005). Readings: (a) a route

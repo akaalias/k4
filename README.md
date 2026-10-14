@@ -52,6 +52,27 @@ buyer is not used.
 - The worked-example illustration is the design figure: a few letters passing through the
   cipher step, generated from the experiment's own code.
 - A patience budget forces a change of cipher family after repeated reverts.
+- The full list of hypothesis families is kept as a living document with status per family,
+  so the loop can be restarted with fresh eyes on an untouched family at any time.
+- Each experiment gets a 30-minute budget, with the design goal of reaching a verdict as
+  early as possible (the crib gate exists for this).
+
+## Hypothesis families (order decided 2026-10-14)
+
+1. Keyed periodic systems at the crib-surviving periods (27, 28, 29, 53 and up): Quagmire
+   variants, autokey, progressive key. Cheapest bounded results.
+2. Masked plaintext, then a simple keyed cipher. Stage-one output scored on crib
+   consistency only.
+3. Two-component key with a combiner, Scheidt's pattern: a keyword from the puzzle's own
+   vocabulary plus a second element from the sculpture.
+4. Sanborn's "visual systems": mirrored tableau reading, routes through the carved grid, the
+   HILL column as an index.
+5. Gromark and LFSR variants beyond base 10, with the raised YAR as a possible primer.
+
+Dead ends that need a stated reason before re-entry: monoalphabetic, pure transposition,
+rotor machines, single-alphabet periodic additive at periods 1 to 26 and 30 to 52, all 2x2
+Hill matrices, Gromark base-10 length-5, Wichmann-Hill seeds 0 to 50, Mengenlehreuhr key
+schedules, plain Vigenère with an English keyword under the tableau.
 - Dashboard, lineage graph and figures render from the record and come later.
 
 ## K4 ciphertext

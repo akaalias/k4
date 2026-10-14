@@ -5,14 +5,29 @@ unsolved fourth passage of Jim Sanborn's *Kryptos* sculpture at CIA headquarters
 
 ## Status (2026-10-14)
 
-Research and decisions phase. No loop code yet.
+Harness built; baseline experiment 0001 run. Ready for the first real experiments.
+
+- `program.md` is the agent's instruction set. `families.md` is the living list of
+  hypothesis families, dead ends and pivots.
+- `attack.py` is the only file the loop edits. `run_experiment.py` is the frozen harness.
+- `kryptos/` holds the frozen facts, cipher primitives verified against K1-K3, the gates,
+  the scorer and the crib sweep. `tests/` proves they match the sculpture.
+- `experiments/NNNN-slug/` holds one record per experiment, kept or reverted.
+  `results.tsv` is the log, `champion.json` the current best.
 
 - `research_notes/` holds the raw notes from a nine-researcher deep-research pass
   (K1 to K3 precedent, K4 ciphertext and cribs, Sanborn and Scheidt statements, the 2025
   auction and archive discovery, prior attacks and negative results, Sanborn's oeuvre,
   Scheidt's profile, the sculpture's physical form, a footnote-by-footnote check of the
   Wikipedia article).
-- `reports/` will hold the synthesized report.
+- `reports/` holds the synthesized report.
+- Work is tracked in GitHub issues at github.com/akaalias/cryptos.
+
+```
+uv run --with pytest pytest -q      # the ruler must match K1-K3 before any run
+uv run python run_experiment.py     # one experiment, 30-minute budget, writes the record
+python -m kryptos.cribsweep         # which periods the cribs allow
+```
 
 ## What success means
 

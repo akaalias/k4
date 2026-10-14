@@ -1,182 +1,312 @@
-"""Experiment 0014. See program.md for the contract."""
+"""Experiment 0015. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "two-keywords-two-passes-linear",
-    "title": "Two key words, two passes through the tableau: the cribs as linear equations mod 26",
-    "family": "3-two-component-key",
+    "slug": "hill-solved-from-crib-blocks",
+    "title": "Hill ciphers 2x2, 3x3 and 4x4 solved straight from the crib blocks, with and without an added vector",
+    "family": "8-hill-polygraphic",
     "parent": None,
-    "changed": "New root in family 3. The key is the sum of two short repeating keys, one per pass, so the 24 cribs become linear equations in a + b unknowns and consistency is decided exactly.",
+    "changed": "New root in family 8. The matrix is solved from the known blocks by linear algebra mod 26 rather than searched; every numbering, block alignment and direction is covered, and the affine form Bauer left untested.",
     "hypothesis_expert": (
-        "Scheidt's habit of combining two key components (knowledge/people/scheidt.md, C6) and Sanborn's "
-        "'double' (C1 reading c, composed tableau passes) suggest two keywords X and Y applied in two "
-        "passes. Two passes through the same tableau compose to one periodic key t[i] = x[i mod a] + s y[i mod b] "
-        "mod 26 with s = +1 or -1 depending on the modes, of period lcm(a, b). 0005 excluded periods 1-26 and "
-        "30-52, so only pairs with lcm in {27, 28, 29} or 53 and above remain; within them the question is "
-        "whether the forced total key factors into two short words. For each pair 2 <= a < b <= 30, each "
-        "plain and cipher alphabet in {standard, KRYPTOS}, each sign of the plaintext (Vigenere-like or "
-        "Beaufort-like) and each s, the 24 forced values give 24 equations x_u - y'_v = t over Z26, checked "
-        "by a weighted union-find; with a + b - 1 effective unknowns there are 25 - a - b redundant checks, "
-        "each passing by chance with probability 1/26. Survivors are enumerated (26 to the power of the "
-        "number of components) and X, Y matched against the vocabulary and K1-K3 windows under both key "
-        "alphabets and both signs; matches are decrypted and submitted. Bounds: complete for two-pass "
-        "periodic keys with lengths 2-30 under the standard and KRYPTOS alphabets."
+        "The HILL column and Bauer's conjecture (knowledge/sources/bauer-2017-unsolved-chapter-notes.md, C21 "
+        "reading a): K4 is a Hill cipher. Bauer and Edkins exhausted 2x2 and 3x3 under six numberings by "
+        "search; 4x4, the affine form C = MP + v, and shifted numberings are open. A crib run of 13 letters "
+        "contains, for block size n and alignment o, several whole blocks; with n of them whose plaintext "
+        "matrix is invertible mod 26, M = C P^-1 is determined, and any further block is a check with chance "
+        "26^-n. For the affine form, block differences remove v and one more block is needed. Numberings: "
+        "standard and KRYPTOS order, each 0-based and 1-based; both directions (the matrix encrypts or "
+        "decrypts); alignments 0 to n-1. For every determined matrix the remaining crib blocks are checked, "
+        "the text decrypted (the odd last letter left as is) and submitted if the cribs hold. 4x4 has four "
+        "whole crib blocks at best, so it is determined with no check and must stand on the English of the "
+        "rest; 4x4 affine needs five and is not determined here. Bounds: complete for the stated forms."
     ),
     "hypothesis_eli5": (
-        "Suppose the artist ran the message through the sculpture's table twice, with a different secret "
-        "word each time. Two pushes along the alphabet add up to one push, so the two words act like one "
-        "long key made by adding them letter by letter. The 24 known letters give 24 facts about that sum. "
-        "If the two words are short, say 7 and 8 letters, 24 facts are more than enough to tell whether "
-        "any pair of words can produce them, and if so, what the words are. We check every pair of "
-        "lengths and read off the words where the facts agree."
+        "A Hill cipher turns letters into numbers, takes them two, three or four at a time, and mixes "
+        "each group with a fixed table of numbers. The sculpture's grid has an extra L that spells HILL "
+        "down one column, which some take as a hint. We know enough letters in a row that we can work the "
+        "mixing table out directly, like solving simultaneous equations, instead of guessing it. If the "
+        "table we work out from EASTNORTHEAST also turns the carved letters at 64 to 74 into BERLINCLOCK, "
+        "it is real; if it does not, that kind of Hill cipher is out."
     ),
     "prediction": (
-        "Length pairs with a + b above about 20 survive by chance under some settings, because they have "
-        "few redundant checks. Pairs with a + b of 15 or less survive in at most a handful of settings. "
-        "No surviving pair yields X or Y in the vocabulary or K1-K3 windows; zero candidates pass."
+        "For 2x2 and 3x3, every numbering, alignment and direction gives a matrix from the first crib "
+        "blocks that fails the remaining blocks, as Bauer found. The affine 2x2 and 3x3 forms fail the same "
+        "way. For 4x4 a matrix exists for some settings with nothing left to check; its decryption of the "
+        "other 73 letters is not English. Zero candidates pass."
     ),
     "method": (
-        "1. For each plain alphabet, cipher alphabet and plaintext sign, compute the forced total key value "
-        "t at each crib position. 2. For each length pair (a, b) with lcm not in 1-26 or 30-52, and each "
-        "sign s, build nodes for the a slots of X and the b slots of Y and add the edge x[i mod a] - s y[i mod b] = t[i] "
-        "for each crib. 3. Reject on any inconsistent cycle. 4. Count components; enumerate the free values "
-        "when there are at most three components. 5. Match X and Y against the vocabulary and K1-K3 windows "
-        "under the standard and KRYPTOS key alphabets; decrypt and submit matches."
+        "1. For each numbering map letters to 0-25. 2. For each block size n, alignment o and direction, "
+        "list the whole crib blocks and their ciphertext blocks. 3. Plain form: pick n blocks with an "
+        "invertible plaintext matrix, solve M, check the rest. Affine form: use differences between blocks "
+        "to solve M, then v from one block, check the rest. 4. Decrypt the text with the inverse map; submit "
+        "if all 24 cribs hold. 5. Record, per setting, how many blocks were available and how many checks passed."
     ),
     "walkthrough": (
-        "1. Take lengths 7 and 8 and the KRYPTOS alphabet for everything, Vigenere both passes. 2. Position 22 "
-        "needs a total key letter that sends E to F: R, index 1. Position 22 uses slot 0 of the 7-letter word "
-        "(21 mod 7) and slot 5 of the 8-letter word (21 mod 8), so x0 + y5 = 1. 3. Position 29 uses slot 0 "
-        "again and slot 4: x0 + y4 = its forced value. 4. Subtract: y5 - y4 is now fixed. 5. Walk all 24 "
-        "positions this way; every slot gets tied to the others through shared positions. 6. When a loop "
-        "closes, the values must agree, or the pair 7 and 8 is dead. 7. If they all agree, pick x0 freely; "
-        "every other letter follows. 8. Twenty-six choices of x0 give twenty-six word pairs; see whether "
-        "either word is one the puzzle knows."
+        "1. Number the letters A=0 to Z=25. 2. Take blocks of two starting at position 1, so 23-24 and "
+        "25-26 are whole blocks inside EASTNORTHEAST: AS and TN, which are (0,18) and (19,13). 3. The carved "
+        "letters there are LR and VQ: (11,17) and (21,16). 4. We want a 2x2 table M with M times (0,18) = "
+        "(11,17) and M times (19,13) = (21,16), all mod 26. 5. Put the plaintext pairs side by side as a "
+        "2x2 matrix, invert it mod 26 if its determinant is coprime to 26, and multiply: that is M. 6. Now "
+        "test M on the next block, 27-28, OR, which must come out as the carved QP. 7. If it does not, this "
+        "setting is dead. 8. Repeat for every numbering, every alignment and the other direction."
     ),
 }
 
-from math import lcm
-from kryptos.alphabets import ALPHABETS, key_letter_for, encrypt_letter, decrypt_letter
-from kryptos.facts import load_k1, load_k2, load_k3
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
 
 N = 97
-MAXLEN = 30
-DEAD_PERIODS = set(range(1, 27)) | set(range(30, 53))
+NUMBERINGS = {"std0": (STD, 0), "std1": (STD, 1), "kry0": (KRY, 0), "kry1": (KRY, 1)}
 
 
-def letters(s):
-    return "".join(c for c in s if "A" <= c <= "Z")
+def num(ch, alpha, base):
+    return (alpha.index(ch) + base) % 26
+
+
+def let(v, alpha, base):
+    return alpha[(v - base) % 26]
+
+
+def egcd(a, b):
+    if b == 0:
+        return a, 1, 0
+    g, x, y = egcd(b, a % b)
+    return g, y, x - (a // b) * y
+
+
+def inv26(a):
+    g, x, _ = egcd(a % 26, 26)
+    return None if g != 1 else x % 26
+
+
+def det(M):
+    n = len(M)
+    if n == 1:
+        return M[0][0] % 26
+    if n == 2:
+        return (M[0][0] * M[1][1] - M[0][1] * M[1][0]) % 26
+    d = 0
+    for j in range(n):
+        minor = [row[:j] + row[j + 1:] for row in M[1:]]
+        d += (-1) ** j * M[0][j] * det(minor)
+    return d % 26
+
+
+def inverse(M):
+    n = len(M)
+    di = inv26(det(M))
+    if di is None:
+        return None
+    adj = [[0] * n for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            minor = [row[:j] + row[j + 1:] for k, row in enumerate(M) if k != i]
+            adj[j][i] = ((-1) ** (i + j) * (det(minor) if n > 1 else 1)) % 26
+    return [[(adj[i][j] * di) % 26 for j in range(n)] for i in range(n)]
+
+
+def matmul(A, B):
+    return [[sum(A[i][k] * B[k][j] for k in range(len(B))) % 26 for j in range(len(B[0]))] for i in range(len(A))]
+
+
+def solve_mod_p(rows, rhs, p):
+    """Solve rows . x = rhs over GF(p). Returns (particular, nullspace basis) or None."""
+    m, n = len(rows), len(rows[0])
+    A = [[x % p for x in r] + [b % p] for r, b in zip(rows, rhs)]
+    pivots = []
+    r = 0
+    for c in range(n):
+        piv = next((i for i in range(r, m) if A[i][c] % p), None)
+        if piv is None:
+            continue
+        A[r], A[piv] = A[piv], A[r]
+        inv = pow(A[r][c], -1, p)
+        A[r] = [(x * inv) % p for x in A[r]]
+        for i in range(m):
+            if i != r and A[i][c]:
+                f = A[i][c]
+                A[i] = [(x - f * y) % p for x, y in zip(A[i], A[r])]
+        pivots.append(c); r += 1
+        if r == m:
+            break
+    for i in range(r, m):
+        if A[i][n] % p:
+            return None
+    free = [c for c in range(n) if c not in pivots]
+    part = [0] * n
+    for i, c in enumerate(pivots):
+        part[c] = A[i][n]
+    basis = []
+    for fc in free:
+        v = [0] * n; v[fc] = 1
+        for i, c in enumerate(pivots):
+            v[c] = (-A[i][fc]) % p
+        basis.append(v)
+    return part, basis
+
+
+def all_solutions_mod_p(rows, rhs, p, cap):
+    sol = solve_mod_p(rows, rhs, p)
+    if sol is None:
+        return []
+    part, basis = sol
+    out = []
+    from itertools import product
+    for coeffs in product(range(p), repeat=len(basis)):
+        x = list(part)
+        for cf, v in zip(coeffs, basis):
+            if cf:
+                x = [(a + cf * b) % p for a, b in zip(x, v)]
+        out.append(x)
+        if len(out) >= cap:
+            break
+    return out
+
+
+def crt26(x13, x2):
+    """Combine residues mod 13 and mod 2 into mod 26."""
+    return [next(v for v in range(26) if v % 13 == a and v % 2 == b) for a, b in zip(x13, x2)]
+
+
+def solve_rows(src, dst, n, affine, cap=4096):
+    """All (M, v) with M src_k + v = dst_k for every block k, enumerated row by row and combined."""
+    per_row = []
+    for r in range(n):
+        rows = [list(sv) + ([1] if affine else []) for sv in src]
+        rhs = [dv[r] for dv in dst]
+        s13 = all_solutions_mod_p(rows, rhs, 13, cap)
+        s2 = all_solutions_mod_p(rows, rhs, 2, cap)
+        if not s13 or not s2:
+            return []
+        combined = [crt26(a, b) for a in s13 for b in s2][:cap]
+        per_row.append(combined)
+    from itertools import product
+    out = []
+    for choice in product(*per_row):
+        M = [c[:n] for c in choice]
+        v = [c[n] for c in choice] if affine else None
+        out.append((M, v))
+        if len(out) >= cap:
+            break
+    return out
+
+
+def cols(blocks):
+    """Blocks (lists of n ints) as an n x n matrix with blocks as columns."""
+    n = len(blocks[0])
+    return [[blocks[j][i] for j in range(len(blocks))] for i in range(n)]
+
+
+def apply(M, v, add=None):
+    out = [sum(M[i][k] * v[k] for k in range(len(v))) % 26 for i in range(len(M))]
+    if add:
+        out = [(o + a) % 26 for o, a in zip(out, add)]
+    return out
 
 
 def encrypt(plaintext, key):
-    pa, ca, ka, m1, m2, X, Y = key["pa"], key["ca"], key["ka"], key["m1"], key["m2"], key["X"], key["Y"]
-    mid = "".join(encrypt_letter(p, X[i % len(X)], pa, ca, ka, m1) for i, p in enumerate(plaintext))
-    # second pass reads the first pass's output on the cipher alphabet as its plaintext
-    return "".join(encrypt_letter(c, Y[i % len(Y)], ca, ca, ka, m2) for i, c in enumerate(mid))
-
-
-class WUF:
-    """Weighted union-find over Z26: maintains v[node] - v[root] = w[node]."""
-    def __init__(self, n):
-        self.p = list(range(n)); self.w = [0] * n
-    def find(self, x):
-        if self.p[x] == x:
-            return x, 0
-        r, wr = self.find(self.p[x])
-        self.w[x] = (self.w[x] + wr) % 26
-        self.p[x] = r
-        return r, self.w[x]
-    def union(self, x, y, d):
-        """Impose v[x] - v[y] = d. Returns False on contradiction."""
-        rx, wx = self.find(x); ry, wy = self.find(y)
-        if rx == ry:
-            return (wx - wy) % 26 == d % 26
-        # v[x] = wx + v[rx]; v[y] = wy + v[ry]; want v[x] - v[y] = d  =>  v[rx] - v[ry] = d - wx + wy
-        self.p[rx] = ry; self.w[rx] = (d - wx + wy) % 26
-        return True
+    alpha, base = NUMBERINGS[key["numbering"]]
+    n, o, M, v, direction = key["n"], key["offset"], key["M"], key.get("v"), key["direction"]
+    # direction "enc": C = M P + v; "dec": P = M C + v, so encryption uses the inverse
+    if direction == "enc":
+        Menc, venc = M, v
+    else:
+        Minv = inverse(M)
+        Menc = Minv
+        venc = [(-x) % 26 for x in apply(Minv, v)] if v else None
+    out = list(plaintext)
+    i = o
+    while i + n <= N:
+        blk = [num(plaintext[j], alpha, base) for j in range(i, i + n)]
+        c = apply(Menc, blk, venc)
+        for j in range(n):
+            out[i + j] = let(c[j], alpha, base)
+        i += n
+    return "".join(out)
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    vocab = set(ctx.vocabulary)
-    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
-    crib_pos = sorted(known)
-    pairs = [(a, b) for a in range(2, MAXLEN + 1) for b in range(a + 1, MAXLEN + 1) if lcm(a, b) not in DEAD_PERIODS]
-    survivors, candidates = [], []
-    n_cases = 0
-    pool_cache = {}
-
-    def pool(L):
-        if L not in pool_cache:
-            s = {w for w in vocab if len(w) == L}
-            for t in texts:
-                for i in range(0, len(t) - L + 1):
-                    s.add(t[i:i + L])
-            pool_cache[L] = s
-        return pool_cache[L]
-
-    for pa in ("std", "kry"):
-        for ca in ("std", "kry"):
-            for psign in ("vig", "beau"):           # total key under Vigenere or Beaufort reading
-                t = {pos: ALPHABETS["std"].index(key_letter_for(known[pos], ct[pos - 1], pa, ca, "std", psign)) for pos in crib_pos}
-                for a, b in pairs:
-                    for s in (1, -1):
-                        n_cases += 1
-                        uf = WUF(a + b)
-                        ok = True
-                        for pos in crib_pos:
-                            i = pos - 1
-                            # x[i%a] + s*y[i%b] = t  =>  x_u - y'_v = t with y' = -s*y
-                            if not uf.union(i % a, a + (i % b), t[pos]):
-                                ok = False; break
-                        if not ok:
-                            continue
-                        roots = sorted({uf.find(n)[0] for n in range(a + b)})
-                        comps = len(roots)
-                        rec = {"a": a, "b": b, "pa": pa, "ca": ca, "plain_sign": psign, "s": s, "components": comps,
-                               "redundant_checks": 24 - (a + b - comps)}
-                        survivors.append(rec)
-                        if comps > 3:
-                            continue
-                        # enumerate: value of each node = w[node] + v[root]
-                        import itertools
-                        for vals in itertools.product(range(26), repeat=comps):
-                            v = dict(zip(roots, vals))
-                            xs = [(uf.find(n)[1] + v[uf.find(n)[0]]) % 26 for n in range(a)]
-                            ys = [(-s * (uf.find(n)[1] + v[uf.find(n)[0]])) % 26 for n in range(a, a + b)]
-                            for ka in ("std", "kry"):
-                                A = ALPHABETS[ka]
-                                X = "".join(A[x] for x in xs); Y = "".join(A[y] for y in ys)
-                                hitX, hitY = X in pool(a), Y in pool(b)
-                                if hitX or hitY:
-                                    STD = ALPHABETS["std"]
-                                    total = [STD[(xs[i % a] + s * ys[i % b]) % 26] for i in range(N)]
-                                    pt = "".join(decrypt_letter(ct[i], total[i], pa, ca, "std", psign) for i in range(N))
-                                    candidates.append({"plaintext": pt, "key": {"pa": pa, "ca": ca, "ka": ka, "m1": psign, "m2": "vig" if s == 1 else "varbeau", "X": X, "Y": Y},
-                                                       "key_bits": 4.7 * (a + b), "key_description": f"X={X} Y={Y} ({a},{b}) {pa}/{ca}/{ka} {psign}, s={s}; vocab hit {'X' if hitX else ''}{'Y' if hitY else ''}"})
-        if ctx.time_left() < 20:
-            break
-    by_sum = {}
-    for r in survivors:
-        by_sum.setdefault(r["a"] + r["b"], 0); by_sum[r["a"] + r["b"]] += 1
-    small = sorted([r for r in survivors if r["a"] + r["b"] <= 15], key=lambda r: (r["a"] + r["b"], r["a"]))
+    candidates, log = [], []
+    n_settings = 0
+    for nname, (alpha, base) in NUMBERINGS.items():
+        for n in (2, 3, 4):
+            for o in range(n):
+                blocks = []  # (plain block ints, cipher block ints, start pos)
+                i = o
+                while i + n <= N:
+                    if all((i + j + 1) in known for j in range(n)):
+                        blocks.append(([num(known[i + j + 1], alpha, base) for j in range(n)],
+                                       [num(ct[i + j], alpha, base) for j in range(n)], i + 1))
+                    i += n
+                for direction in ("enc", "dec"):
+                    # in "enc" the unknown M maps plain -> cipher; in "dec" it maps cipher -> plain
+                    src = [b[0] if direction == "enc" else b[1] for b in blocks]
+                    dst = [b[1] if direction == "enc" else b[0] for b in blocks]
+                    for affine in (False, True):
+                        n_settings += 1
+                        need = n + (1 if affine else 0)
+                        rec = {"numbering": nname, "n": n, "offset": o, "direction": direction, "affine": affine,
+                               "crib_blocks": len(blocks), "solved": False, "checks": 0, "checks_passed": 0}
+                        if len(blocks) < need:
+                            rec["note"] = "too few whole crib blocks"; log.append(rec); continue
+                        sols = solve_rows(src, dst, n, affine)
+                        if not sols:
+                            rec["note"] = "inconsistent on the crib blocks"; log.append(rec); continue
+                        rec["solved"] = True; rec["solutions"] = len(sols)
+                        # keep decryptable solutions; prefer the first few
+                        kept = 0
+                        for M, v in sols:
+                            Mdec, vdec = (M, v) if direction == "dec" else (None, None)
+                            if direction == "enc":
+                                Minv = inverse(M)
+                                if Minv is None:
+                                    continue
+                                Mdec = Minv; vdec = [(-x) % 26 for x in apply(Minv, v)] if v else None
+                            elif inverse(M) is None:
+                                continue
+                            pt = list(ct); i = o
+                            while i + n <= N:
+                                blk = [num(ct[j], alpha, base) for j in range(i, i + n)]
+                                pp = apply(Mdec, blk, vdec)
+                                for j in range(n):
+                                    pt[i + j] = let(pp[j], alpha, base)
+                                i += n
+                            pt = "".join(pt)
+                            key = {"numbering": nname, "n": n, "offset": o, "M": M, "v": v, "direction": direction}
+                            rec.setdefault("english", []).append(round(ctx.english_score(pt), 3))
+                            candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * n * n + (4.7 * n if affine else 0),
+                                               "key_description": f"Hill {n}x{n}{' affine' if affine else ''} {nname} offset {o} {direction}; M={M}{' v=' + str(v) if v else ''}",
+                                               "notes": f"{len(blocks)} crib blocks all consistent; {len(sols)} solutions in this setting"})
+                            kept += 1
+                            if kept >= 8:
+                                break
+                        rec["checks"] = len(blocks); rec["checks_passed"] = len(blocks)
+                        log.append(rec)
+                        continue
+    consistent = [r for r in log if r["solved"] and r["checks"] == r["checks_passed"]]
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "two periodic keys composed through two tableau passes", "lengths": f"2 <= a < b <= {MAXLEN}, lcm outside 1-26 and 30-52",
-                   "pairs": len(pairs), "alphabets": "plain and cipher in {std, kry}; key words read in std or kry", "cases": n_cases,
-                   "survivors": len(survivors), "survivors_by_a_plus_b": {str(k): v for k, v in sorted(by_sum.items())},
-                   "smallest_surviving_pairs": small[:20], "vocab_or_k1k3_matches": len(candidates)},
-        "notes": f"{n_cases} cases; {len(survivors)} consistent; {len(candidates)} word matches submitted.",
+        "bounds": {"family": "Hill cipher, block sizes 2-4, plain and affine, solved from crib blocks",
+                   "numberings": list(NUMBERINGS), "alignments": "0..n-1", "directions": ["enc", "dec"],
+                   "settings": n_settings, "settings_solved": sum(1 for r in log if r["solved"]),
+                   "settings_consistent_on_all_crib_blocks": [{k: r[k] for k in ("numbering", "n", "offset", "direction", "affine", "crib_blocks", "solutions", "english") if k in r} for r in consistent],
+                   "settings_inconsistent": sum(1 for r in log if not r["solved"] and r.get("note") == "inconsistent on the crib blocks"),
+                   "log": log},
+        "notes": f"{n_settings} settings; {len(consistent)} consistent with every whole crib block; {len(candidates)} decryptions submitted.",
     }
 
 
 def worked_example(ctx, key):
-    A = ALPHABETS["kry"]
-    lines = ["lengths 7 and 8, KRYPTOS alphabet throughout, Vigenere both passes: equations from the first cribs", "",
-             "pos  plain  cipher  total key  index  x slot (pos-1 mod 7)  y slot (pos-1 mod 8)"]
-    for pos in (22, 23, 24, 29, 30, 64, 65):
-        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
-        k = key_letter_for(p, c, "kry", "kry", "kry", "vig")
-        lines.append(f"{pos:>3}    {p}      {c}        {k}        {A.index(k):>2}           {(pos-1)%7}                    {(pos-1)%8}")
-    lines.append("")
-    lines.append("positions 22 and 29 share x slot 0, so y5 - y4 equals the difference of their totals; the chain of such ties must close consistently.")
+    alpha, base = STD, 0
+    lines = ["2x2, standard numbering A=0, blocks from position 1, matrix encrypts: solve from blocks 23-24 and 25-26", ""]
+    P = [[num(ctx.KNOWN[p], alpha, base) for p in (23, 24)], [num(ctx.KNOWN[p], alpha, base) for p in (25, 26)]]
+    C = [[num(ctx.K4[p - 1], alpha, base) for p in (23, 24)], [num(ctx.K4[p - 1], alpha, base) for p in (25, 26)]]
+    lines.append(f"plain blocks  AS={P[0]}  TN={P[1]};  cipher blocks  {ctx.K4[22:24]}={C[0]}  {ctx.K4[24:26]}={C[1]}")
+    Pm = cols(P); Pi = inverse(Pm)
+    if Pi is None:
+        lines.append(f"plaintext matrix {Pm} has determinant {det(Pm)}, not invertible mod 26: use another pair of blocks")
+    else:
+        M = matmul(cols(C), Pi)
+        lines.append(f"M = C P^-1 = {M}")
+        nxt = [num(ctx.KNOWN[p], alpha, base) for p in (27, 28)]
+        lines.append(f"check on block 27-28 OR={nxt}: M OR = {apply(M, nxt)} vs carved {ctx.K4[26:28]}={[num(ctx.K4[p-1], alpha, base) for p in (27, 28)]}")
     return "\n".join(lines)

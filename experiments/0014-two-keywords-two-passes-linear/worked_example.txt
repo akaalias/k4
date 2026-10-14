@@ -1,0 +1,12 @@
+lengths 7 and 8, KRYPTOS alphabet throughout, Vigenere both passes: equations from the first cribs
+
+pos  plain  cipher  total key  index  x slot (pos-1 mod 7)  y slot (pos-1 mod 8)
+ 22    E      F        R         1           0                    5
+ 23    A      L        D        10           1                    6
+ 24    S      R        U        21           2                    7
+ 29    T      R        W        23           0                    4
+ 30    H      N        O         5           1                    5
+ 64    B      N        E        11           0                    7
+ 65    E      Y        L        17           1                    0
+
+positions 22 and 29 share x slot 0, so y5 - y4 equals the difference of their totals; the chain of such ties must close consistently.

@@ -176,7 +176,7 @@ against a repeating key written out underneath; (b) the BERLIN chart's layout sh
 one on Kryptos." Status: untested; images in `../research_notes/sanborn_charts/`.
 
 **C28. Stein's I.C. peak at m = 13 in both K1 and K2.** Reading: a 13-letter key or
-structure overlaid; or an artefact. Status: untested on K4.
+structure overlaid; or an artefact. Status: on K4, a period-13 tableau key is dead under all 24 conventions for a plain periodic key (0005) and for a progressive key at every step (0011).
 
 **C29. "P.S. It's as simple as ABC" (the keyword anagram), PALIMPSEST + ABSCISSA.**
 Readings: (a) a joke; (b) a standard-alphabet step; (c) the combined keyword alphabet.

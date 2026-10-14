@@ -83,3 +83,18 @@ def test_columnar_roundtrip():
     ct = columnar_transposition_encrypt(pt, order)
     assert len(ct) == len(pt)
     assert columnar_transposition_decrypt(ct, order) == pt
+
+
+def test_alphabet_mixings():
+    from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed, key_letter_for, encrypt_letter
+    assert keyword_mixed("KRYPTOS") == KRYPTOS_ALPHABET
+    # Friedman's HYDRAULIC examples (Military Cryptanalytics Part I)
+    assert keyword_mixed("HYDRAULIC") == "HYDRAULICBEFGJKMNOPQSTVWXZ"
+    assert columnar_mixed("HYDRAULIC") == "HBPYEQDFSRGTAJVUKWLMXINZCO"
+    assert keyed_columnar_mixed("HYDRAULIC") == "AJVCODFSHBPINZLMXRGTUKWYEQ"
+    assert alternate_vertical_mixed("HYDRAULIC") == "HBPQEYDFSTGRAJVWKULMXZNICO"
+    # K1 under the generalised tableau: plain kry, cipher kry, key kry, vig
+    k1 = load_k1()
+    assert all(encrypt_letter(p, k1["key"][i % 10], "kry", "kry", "kry", "vig") == c
+               for i, (p, c) in enumerate(zip(k1["plaintext"], k1["ciphertext"])))
+    assert "".join(key_letter_for(p, c, "kry", "kry", "kry", "vig") for p, c in zip(k1["plaintext"][:10], k1["ciphertext"][:10])) == "PALIMPSEST"

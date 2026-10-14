@@ -219,9 +219,9 @@ def loss_chart(rows):
     g.append(f'<path d="M{bx-5},{y_gate-10:.1f} l10,-5 M{bx-5},{y_gate-6:.1f} l10,-5" stroke="var(--muted)" stroke-width="1" fill="none"/>')
     # annotations at right, clear of the plot
     ax = W - R + 10
-    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--accent)">crib gate</text>')
+    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--accent)">all 24 known letters right</text>')
     g.append(f'<text x="{ax}" y="{y(0)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">solved</text>')
-    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">no cribs</text>')
+    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">no known letter right</text>')
     pts, best = [], None
     for i, r in enumerate(rows):
         if r.get("decision") == "kept" and r.get("best_loss") is not None:
@@ -277,7 +277,7 @@ def overview():
         for k, v in (r.get("phases") or {"run": r["seconds"]}).items():
             by_phase[k] = by_phase.get(k, 0.0) + v
     hero = f"""<div class="stat-hero"><b class="num">{'' if best_loss is None else f'{best_loss:.1f}'}</b><span>best loss so far. zero is solved</span></div>
-<p class="hero-sub">Ten per missed crib letter, plus how far the other 73 letters are from English, plus the cost of a key too long to remember. Below ten means every known letter is in place.</p>
+<p class="hero-sub">Ten per missed known letter (24 cribs: EASTNORTHEAST, BERLINCLOCK), plus how far the other 73 letters are from English, plus the cost of a key too long to remember. Below ten means every known letter is in place.</p>
 <div class="stats">
 <div class="stat"><b class="num">{n}</b><span>experiments</span></div>
 <div class="stat"><b class="num">{kept}</b><span>kept</span></div>
@@ -319,7 +319,7 @@ def overview():
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
             + hero + champ + plain
-            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; hollow dots returned no candidate. The axis breaks at the crib gate so the band below it, where a solution would appear, has room.")
+            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; hollow dots returned no candidate. A crib is a stretch of plaintext we already know: K4 has 24 such letters, EASTNORTHEAST and BERLINCLOCK. Each one a candidate gets wrong costs ten. The red line at ten is the crib gate: above it, at least one known letter is wrong; below it, all 24 are right and only English quality and key length remain. The axis breaks there so the band where a solution would appear has room.")
             + loss_chart(rows)
             + sec(2, "Experiments", "Newest first. Crib letters: E N B C flags, a capital when a whole clue word is in place.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 

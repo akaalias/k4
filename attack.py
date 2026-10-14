@@ -1,64 +1,53 @@
 """Experiment 0006. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "columnar-then-tableau-period-survival",
-    "title": "A matrix transposition first, the keyed tableau last: which routes let the 24 cribs force a short periodic key",
+    "slug": "tableau-then-columnar-period-survival",
+    "title": "The keyed tableau first, a matrix transposition last: the order the NSA guessed in 1992",
     "family": "6-transposition-then-tableau",
-    "parent": None,
-    "changed": "New root. Family 6 opens after five reverts in family 1. A columnar transposition stage runs before the periodic tableau, so the cribs constrain the key through the route.",
+    "parent": "0006-columnar-then-tableau-period-survival",
+    "changed": "Stage order reversed. The tableau runs on the plaintext in place, then the columnar route scrambles the result. Same 2,905 routes, same 24 conventions.",
     "hypothesis_expert": (
-        "Sanborn, CNN 2005 (knowledge/sources, clue C1 reading a): matrix code first, double and triple "
-        "matrixes sometimes, 'then went back to this table to do the ultimate'. Family A in "
-        "knowledge/06-hypotheses.md: K4 = tableau(T(P)) where T is a columnar transposition and the "
-        "tableau stage is periodic with separate alphabets. The cribs sit in P at 22-34 and 64-74. "
-        "Under T they land at intermediate positions j = T(pos); the ciphertext at j then forces the "
-        "key letter at slot j mod period under each of the 24 conventions. For each route T we find "
-        "the smallest period whose forced letters never conflict, by the divisor rule: period p is "
-        "dead if p divides the distance between two intermediate positions that force different key "
-        "letters. Routes searched: plain columnar at every width 2 to 96, read columns left to right or "
-        "right to left, applied forward or inverse; keyed columnar from every vocabulary word, forward "
-        "or inverse; and every double of two plain forward columnars at widths 2 to 50 (C1 'double "
-        "matrixes', C2 'all the possible shifts'). Survivors with a short period get their forced "
-        "fragment matched against the vocabulary and K1-K3 windows; matches are decrypted and submitted. "
-        "Bounds: complete for the route set above under 24 conventions and periods 1-97."
+        "The NSA's 1992 write-up (knowledge/sources, clue C11a) guessed substitution then transposition for "
+        "K4, the opposite of Sanborn's CNN 2005 order (C1). Under K4 = T(tableau(P)) the key slot of each "
+        "crib letter is its own plaintext position mod the period, and the ciphertext letter that pairs "
+        "with it sits where the route T sent that position. The 24 cribs occupy 13 consecutive slots at "
+        "22-34 and 11 at 64-74, so at any period of 13 or less at least 11 forced letters must agree with "
+        "an earlier one: chance survival is below one in 26 to the 11th power per route. For each route "
+        "and convention we find the smallest live period by the divisor rule on plaintext positions; "
+        "a survivor under 23 would be a strong signal, and the forced fragment is matched against the "
+        "vocabulary and K1-K3 windows. Bounds: complete for the 0006 route set in this order."
     ),
     "hypothesis_eli5": (
-        "The artist said he first scrambled the order of the letters by writing them in a grid and "
-        "reading it another way, and only then used the big table on the sculpture. If that is true, "
-        "the 24 letters we know are no longer where we think: the grid moved them. For each way of "
-        "making a grid, we work out where the known letters would have gone, and ask whether a short "
-        "secret word could then turn them into the carved letters at those spots. Most grids make "
-        "the known letters contradict each other, which rules them out. A grid that lets a short "
-        "secret word do the job would be a real find, and we then check whether any word from the "
-        "puzzle's own world fits."
+        "Last time we assumed the artist scrambled the letters first and used the table second. The "
+        "code-breakers at the NSA guessed the other way round: table first, scramble second. That "
+        "changes which carved letter belongs to which known letter. For every grid we try, we match "
+        "each of the 24 known letters with the carved letter the grid would have sent it to, and ask "
+        "whether one short secret word explains all 24 pairs. Because the known letters sit in two "
+        "unbroken runs, a short word has to pass a very strict test here, so a survivor would mean a lot."
     ),
     "prediction": (
-        "A dry run on 40 routes calibrated this. The smallest live period will cluster between 24 "
-        "and 50 for almost every route and convention. Any route with a live period of 15 or less "
-        "is rarer than one in a thousand and gets a follow-up. No forced fragment matches a "
-        "vocabulary word or K1-K3 window, so zero candidates pass."
+        "No route and convention admits a period under 23. The smallest live periods cluster from the "
+        "high 20s upward, with the floor set by the 13-letter run at 22-34. No forced fragment matches "
+        "a vocabulary word or K1-K3 window; zero candidates pass."
     ),
     "method": (
-        "1. Build the route set: plain columnar widths 2-96 in two column directions, forward and "
-        "inverse; keyed columnar from each vocabulary word, forward and inverse; doubles of plain "
-        "forward columnars at widths 2-50. 2. For each route, map each crib position to its "
-        "intermediate position. 3. For each convention, force the key letter at each intermediate "
-        "position from the crib plaintext and the ciphertext there. 4. Mark period p dead if it divides "
-        "a distance between two positions with different forced letters; the smallest live period is "
-        "the route's score. 5. For live periods up to 30, match the forced fragment against the "
-        "vocabulary and the K1-K3 windows; decrypt matches and submit."
+        "1. Build the 0006 route set. 2. For each route, find where each crib position is sent. "
+        "3. For each convention, force the key letter from the crib plaintext and the ciphertext at "
+        "that destination. 4. Key slots are the crib's own position mod the period: mark period p dead "
+        "if it divides the distance between two crib positions with different forced letters. "
+        "5. For live periods up to 30, match the forced fragment against the vocabulary and K1-K3 "
+        "windows; decrypt matches and submit."
     ),
     "walkthrough": (
-        "1. Pick a route: write the text in rows of 7 and read down the columns, left column first. "
-        "2. Position 22, the E of EAST, is row 4 column 1 (counting from 1). Column 1 holds rows 1 to 14, "
-        "so E lands at intermediate position 4. 3. Position 64, the B of BERLIN, is row 10 column 1, so "
-        "it lands at position 10. 4. The ciphertext at 4 is R and at 10 is H. Under the sculpture's "
-        "alphabet with Vigenere, the key letter that sends E to R and the one that sends B to H are "
-        "forced. 5. Do this for all 24 known letters; you get 24 forced key letters at 24 positions. "
-        "6. A period of 6 would make positions 4 and 10 share a key letter; if their forced letters "
-        "differ, period 6 is dead, and so is any period dividing 6. 7. Cross out every dead period; "
-        "the smallest survivor is the shortest secret word this route allows. 8. Write the survivors' "
-        "forced letters into a pattern with blanks and slide the puzzle's words across it."
+        "1. Pick a route: write in rows of 7, read down the columns. 2. Position 22, the E of EAST, is row 4 "
+        "column 1, so it is read out fourth: its enciphered letter is the carved R at position 4. "
+        "3. Position 23, the A, is row 4 column 2; column 2 holds 14 letters after column 1's 14, so A "
+        "sits at 18, the carved F. 4. Under the sculpture's alphabet and Vigenere, the key letter sending "
+        "E to R is forced, and so is the one sending A to F. 5. These two key letters sit at slots 22 and "
+        "23 of the key, so any period dividing 1 would need them equal: only period 1 is at stake here. "
+        "6. Do this for all 24 letters. The E at 22 and the E at 65 differ by 43, so if their forced "
+        "letters differ, period 43 and period 1 die. 7. Cross out every dead period; the smallest survivor "
+        "is the shortest key this route allows. 8. Slide the puzzle's words across the survivors' pattern."
     ),
 }
 
@@ -130,15 +119,15 @@ def apply_route(spec, s, inverse=False):
 
 
 def encrypt(plaintext, key):
-    inter = apply_route(key["route"], plaintext)
     pa, ca, ka, m, k = key["pa"], key["ca"], key["ka"], key["m"], key["key"]
-    return "".join(encrypt_letter(p, k[i % len(k)], pa, ca, ka, m) for i, p in enumerate(inter))
+    inter = "".join(encrypt_letter(p, k[i % len(k)], pa, ca, ka, m) for i, p in enumerate(plaintext))
+    return apply_route(key["route"], inter)
 
 
 def decrypt(ciphertext, key):
     pa, ca, ka, m, k = key["pa"], key["ca"], key["ka"], key["m"], key["key"]
-    inter = "".join(decrypt_letter(c, k[i % len(k)], pa, ca, ka, m) for i, c in enumerate(ciphertext))
-    return apply_route(key["route"], inter, inverse=True)
+    inter = apply_route(key["route"], ciphertext, inverse=True)
+    return "".join(decrypt_letter(c, k[i % len(k)], pa, ca, ka, m) for i, c in enumerate(inter))
 
 
 DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0] for d in range(1, N + 1)}
@@ -171,7 +160,7 @@ def run(ctx):
             for a in range(24):
                 for b in range(a + 1, 24):
                     if forced[a] != forced[b]:
-                        d = abs(inter_pos[a] - inter_pos[b])
+                        d = abs(crib_pos[a] - crib_pos[b])
                         dead.update(DIVISORS[d])
             live = [p for p in range(1, N + 1) if p not in dead]
             mp = live[0]
@@ -179,7 +168,7 @@ def run(ctx):
             hist[mp] = hist.get(mp, 0) + 1
             best.append((mp, name, conv))
             for P in [p for p in live if p <= MAX_KEY_PERIOD]:
-                slots = {j % P: l for j, l in zip(inter_pos, forced)}
+                slots = {(p - 1) % P: l for p, l in zip(crib_pos, forced)}
                 pool = set(w for w in vocab if len(w) == P)
                 for t in texts:
                     for i in range(0, len(t) - P + 1):
@@ -195,10 +184,10 @@ def run(ctx):
     top = [{"min_period": mp, "route": nm, "convention": "/".join(c)} for mp, nm, c in best[:15]]
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "columnar transposition then periodic tableau (separate alphabets)",
+        "bounds": {"family": "periodic tableau (separate alphabets) then columnar transposition",
                    "routes": len(routes), "route_convention_pairs_checked": n_checked,
                    "route_set": "plain columnar w=2..96 x {ltr, rtl} x {fwd, inv}; keyed columnar from each vocabulary word x {fwd, inv}; double plain columnar w1,w2 in 2..50",
-                   "conventions": 24, "periods": "1-97 by divisor rule",
+                   "conventions": 24, "periods": "1-97 by divisor rule on plaintext positions",
                    "key_pool": f"vocabulary words and K1-K3 windows of length P for live P <= {MAX_KEY_PERIOD}",
                    "min_live_period_histogram": {str(k): v for k, v in sorted(hist.items())},
                    "fifteen_shortest": top, "vocab_matches": len(matches)},
@@ -207,15 +196,15 @@ def run(ctx):
 
 
 def worked_example(ctx, key):
-    lines = ["route: columnar width 7, read columns left to right; convention kry/kry/kry Vigenere", ""]
+    lines = ["route: columnar width 7, read columns left to right, applied after the tableau; convention kry/kry/kry Vigenere", ""]
     spec = {"kind": "plain", "w": 7, "rtl": False, "dir": "fwd"}
     sigma = perm_of(lambda s: apply_route(spec, s))
     where = {sigma[j]: j for j in range(N)}
-    lines.append("plain pos  letter  lands at  cipher there  forced key letter")
+    lines.append("plain pos  letter  its cipher sits at  cipher letter  forced key letter  key slot at period 13")
     for pos in (22, 23, 24, 25, 64, 65, 66, 67):
         j = where[pos - 1]
         p, c = ctx.KNOWN[pos], ctx.K4[j]
-        lines.append(f"{pos:>9}    {p}       {j+1:>3}         {c}              {key_letter_for(p, c, 'kry', 'kry', 'kry', 'vig')}")
+        lines.append(f"{pos:>9}    {p}          {j+1:>3}              {c}              {key_letter_for(p, c, 'kry', 'kry', 'kry', 'vig')}                 {(pos-1)%13:>2}")
     lines.append("")
-    lines.append("positions 4 and 10 share a key slot at period 6, 3, 2 and 1; if their forced letters differ, those periods die.")
+    lines.append("slots repeat at period 13: position 22 and 35 would share one, 64 and 77 another; the 24 cribs fill 13 slots with 11 collisions.")
     return "\n".join(lines)

@@ -1,227 +1,180 @@
-"""Experiment 0019. See program.md for the contract."""
+"""Experiment 0020. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "substitution-then-route-crib-images-one-to-one",
-    "title": "Substitution first, a route last: do the 24 crib images stay one letter to one letter under any route?",
-    "family": "9-substitution-then-transposition",
-    "parent": "0018-construction-simulator-fingerprint",
-    "changed": "New family, opened by 0018's finding that only substitution followed by transposition reproduces K4's width-21 repeats. The cribs now constrain the ciphertext letters the route sends them to, not the letters at 22-34 and 64-74.",
+    "slug": "short-periods-mixed-alphabets-consistency",
+    "title": "The short periods come back: a periodic tableau at periods 1 to 52 with alphabets mixed from the puzzle's words",
+    "family": "1-keyed-periodic",
+    "parent": "0005-quagmire-period-sweep-forced-keys",
+    "changed": "0005 excluded periods 1-26 and 30-52 under the standard and KRYPTOS alphabets only. Here the plain and cipher alphabets range over the four Friedman mixings of every vocabulary word, which changes every forced key letter and so every consistency check. Family 1 re-entered with a new alphabet source.",
     "hypothesis_expert": (
-        "Zodiac 340 was a homophonic substitution followed by a transposition, and its width-19 repeats were "
-        "the trace (knowledge/04-structure.md). K4's eleven width-21 repeats have p about 0.005 under every "
-        "substitution-last generator and p near 1 under transposition of English (0018). Against: Sanborn's "
-        "secondhand 'one-to-one mapping' of NYPVTT to BERLIN (knowledge/02-sanborn-said.md, 2011 and 2013 "
-        "dinners), which says the letters at 64-69 are BERLIN's own images; this family contradicts that "
-        "reading and is tested because the statistic is the stronger evidence. Model: each plaintext letter "
-        "goes to one of its symbols (monoalphabetic, or homophonic over the same 26 symbols), then a route T "
-        "permutes positions. The image of crib position i is ct[T(i)]. Constraint: a ciphertext letter has "
-        "one plaintext source, so two crib positions with different plaintext letters must have different "
-        "images; under the stricter monoalphabetic reading, equal plaintext letters must also have equal "
-        "images. Routes: the 23,930 of 0016 plus the identity. For each route both conditions are checked; "
-        "survivors are counted against the same test on shuffled K4. A monoalphabetic survivor gets a "
-        "hill-climb over the unknown letters and a candidate. Bounds: complete for this route set."
+        "K4's eleven width-21 vertical repeats and the width-7 doublet column (0018, knowledge/04-structure.md) "
+        "are what a key of period 21 or 42 would leave: positions 21 apart share a key letter, so English "
+        "bigrams repeat vertically. 0005 and 0011 killed periods 1-26 and 30-52, but only with plain and "
+        "cipher alphabets in {standard, KRYPTOS}; a tableau built on PALIMPSEST, ABSCISSA or any other word "
+        "(Scheidt's keyword alphabets, C5, C29) gives different forced key indices and was never swept at these "
+        "periods. For each pair of alphabets from the pool (standard, KRYPTOS, four mixings of each vocabulary "
+        "word, 248 in all) and each of three modes, the forced key index at every crib position follows; for "
+        "each period 1-52 the slots that collide must agree. Period 21 has eleven collisions, so a surviving "
+        "pair there has chance probability 26 to the minus eleven per trial against 184,512 trials. Survivors "
+        "at any period get the forced key letters read in the standard, KRYPTOS and keyword-mixed alphabets and scored as "
+        "English; a vocabulary match is decrypted and submitted. Bounds: complete for this alphabet pool, "
+        "periods 1-52, and the three modes."
     ),
     "hypothesis_eli5": (
-        "Suppose each letter of the message was first swapped for another letter, and only then were the "
-        "letters shuffled into a new order by a grid. The 24 letters we know are then scattered somewhere "
-        "in the carved text, and each grid tells us where. One rule must hold: one carved letter cannot "
-        "stand for two different message letters. We check that rule for every grid we have, using the 24 "
-        "known letters, and count the grids that pass. If none pass, this whole way of building the cipher "
-        "is out, however the swapping was done."
+        "Earlier we ruled out short secret words because two known letters that would share a letter of the "
+        "word disagreed. But that reasoning assumed the table was built from the word KRYPTOS or the plain "
+        "alphabet. If the table was built from another word, say PALIMPSEST, the same two known letters make "
+        "a different demand and might agree. There is also a hint in the carved text that letters 21 apart "
+        "were treated alike. So we rebuild the table from every word the puzzle knows, in four standard ways, "
+        "and ask again which short lengths the 24 known letters allow."
     ),
     "prediction": (
-        "Under the homophonic condition, fewer than one route in a hundred survives, about the same rate as "
-        "on shuffled K4. Under the monoalphabetic condition no route survives. No candidate passes."
+        "No alphabet pair revives periods 1-26 or 30-52 except by chance at the periods with the fewest "
+        "collisions, 23 to 26, where a few survivors appear per period; 30 to 52 are counted only. Period 21 and 42 have "
+        "no survivor. No survivor's forced key matches the vocabulary; zero candidates pass."
     ),
     "method": (
-        "1. Build the route set. 2. For each route, find the ciphertext image of each crib position. "
-        "3. Homophonic condition: no ciphertext letter is the image of two different plaintext letters. "
-        "4. Monoalphabetic condition: in addition, equal plaintext letters have equal images. 5. Count "
-        "survivors of each; repeat on five shuffles of K4. 6. For monoalphabetic survivors, hill-climb the "
-        "unknown mappings by English score and submit the best text."
+        "1. Build the alphabet pool. 2. For each plain alphabet, cipher alphabet and mode, compute the forced "
+        "key index at each of the 24 crib positions. 3. For each period 1-52, group the positions by slot and "
+        "reject on any disagreement. 4. Count survivors by period, with a shuffled-K4 control. 5. For "
+        "survivors, read the forced indices in each keyword-mixed key alphabet, match the fragment against the vocabulary "
+        "and K1-K3 windows, score it as English, and decrypt any match."
     ),
     "walkthrough": (
-        "1. Take the route: write in rows of 7 and read down the columns. 2. The message letter at "
-        "position 22, the E of EAST, is written at row 4, column 1, and read out 4th: so the carved letter "
-        "at 4, R, is the swapped E. 3. Position 31, the other E, lands at 32: the carved K. 4. Under a plain "
-        "swap E must always become the same letter, so R and K already conflict: this route is dead for a "
-        "plain swap. 5. Under a swap with spare letters, E may have two symbols, so R and K is allowed, but "
-        "R must then never be the image of another letter. 6. Position 66, the R of BERLIN, lands at 38: "
-        "the carved T; no conflict. 7. Go through all 24; one clash kills the route."
+        "1. Build the alphabet from PALIMPSEST: PALIMSETBCDFGHJKNOQRUVWXYZ, and use it for the plaintext; "
+        "keep KRYPTOS for the ciphertext. 2. Position 22 is E, index 6; ciphertext F, index 11 in KRYPTOS; "
+        "Vigenere gives key index 5. 3. Position 64, which is 42 later, is B, index 8; ciphertext N, index 19; "
+        "key index 11. 4. At period 21 or 42 these two positions share a slot, so 5 must equal 11: it does "
+        "not, and this alphabet pair is dead at 21 and 42. 5. Try the next pair; eleven such checks apply "
+        "at period 21. 6. A pair that passes all eleven would be a real find: read off its forced key letters "
+        "and see whether they spell a word."
     ),
 }
 
 import random
-from kryptos.alphabets import numeric_order
-from kryptos.ciphers import columnar_transposition_encrypt, columnar_transposition_decrypt
+from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY, load_k1, load_k2, load_k3
 
 N = 97
+MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
+DEC = {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}
+ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
+MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
+PERIODS = list(range(1, 53))
 
 
-def perm_of(fn):
-    idx = [chr(0x100 + i) for i in range(N)]
-    return [ord(ch) - 0x100 for ch in fn("".join(idx))]
-
-
-def plain_order(w, rtl=False):
-    o = list(range(w))
-    return o[::-1] if rtl else o
-
-
-def affine_fwd(s, a, b):
-    n = len(s); out = [""] * n
-    for i in range(n):
-        out[(a + b * i) % n] = s[i]
-    return "".join(out)
-
-
-def affine_inv(s, a, b):
-    n = len(s)
-    return "".join(s[(a + b * i) % n] for i in range(n))
-
-
-def rotate(s, w):
-    rows = [s[i:i + w] for i in range(0, len(s), w)]
-    return "".join(r[col] for col in range(w) for r in reversed(rows) if col < len(r))
-
-
-def route_set(vocab):
-    routes = [("identity", lambda s: s)]
-    for w in range(2, N):
-        for rtl in (False, True):
-            order = plain_order(w, rtl)
-            routes.append((f"columnar w={w}{' rtl' if rtl else ''} fwd", lambda s, o=order: columnar_transposition_encrypt(s, o)))
-            routes.append((f"columnar w={w}{' rtl' if rtl else ''} inv", lambda s, o=order: columnar_transposition_decrypt(s, o)))
-    for word in vocab:
-        if 2 <= len(word) <= 40:
-            order = numeric_order(word)
-            routes.append((f"keyed columnar {word} fwd", lambda s, o=order: columnar_transposition_encrypt(s, o)))
-            routes.append((f"keyed columnar {word} inv", lambda s, o=order: columnar_transposition_decrypt(s, o)))
-    for w1 in range(2, 51):
-        for w2 in range(2, 51):
-            routes.append((f"double columnar w={w1} then w={w2}", lambda s, a=plain_order(w1), b=plain_order(w2): columnar_transposition_encrypt(columnar_transposition_encrypt(s, a), b)))
-            routes.append((f"double rotation w={w1} then w={w2}", lambda s, a=w1, b=w2: rotate(rotate(s, a), b)))
-    for b in range(1, N):
-        for a in range(N):
-            routes.append((f"K3 rule a={a} b={b} fwd", lambda s, a=a, b=b: affine_fwd(s, a, b)))
-            routes.append((f"K3 rule a={a} b={b} inv", lambda s, a=a, b=b: affine_inv(s, a, b)))
-    return routes
-
-
-ROUTE_FN = {}
+def letters(s):
+    return "".join(c for c in s if "A" <= c <= "Z")
 
 
 def encrypt(plaintext, key):
-    if not ROUTE_FN:
-        from kryptos.facts import load_vocabulary
-        for name, fn in route_set(list(load_vocabulary())):
-            ROUTE_FN[name] = fn
-    sub = key["substitution"]      # plaintext letter -> ciphertext letter
-    mid = "".join(sub[p] for p in plaintext)
-    return ROUTE_FN[key["route"]](mid)
+    pa, ca, ka, m, k = key["pa"], key["ca"], key["ka"], key["m"], key["key"]
+    return "".join(ca[ENC[m](pa.index(p), ka.index(k[i % len(k)]))] for i, p in enumerate(plaintext))
 
 
-def check(ct, known, where):
-    """Returns (homophonic_ok, mono_ok, images dict plain->set of cipher letters)."""
-    src = {}      # cipher letter -> plaintext letter
-    img = {}      # plaintext letter -> set of cipher letters
-    homo = True
-    for pos, p in known.items():
-        c = ct[where[pos - 1]]
-        if c in src and src[c] != p:
-            homo = False
-        src[c] = p
-        img.setdefault(p, set()).add(c)
-    mono = homo and all(len(v) == 1 for v in img.values())
-    return homo, mono, img
+def pool_of(vocab):
+    pool = {"std": STD, "kry": KRY}
+    for w in vocab:
+        if len(set(w)) >= 3:
+            for mname, fn in MIX.items():
+                pool[f"{w}/{mname}"] = fn(w)
+    seen, out = {}, {}
+    for name, A in pool.items():
+        if A not in seen:
+            seen[A] = name; out[name] = A
+    return out
 
 
-def hill_climb(ct, where, known, score, rng, iters=4000):
-    """Complete a monoalphabetic key from the crib images; climb the rest by English score."""
-    inv = {}   # cipher -> plain
-    for pos, p in known.items():
-        inv[ct[where[pos - 1]]] = p
-    free_c = [c for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if c not in inv]
-    free_p = [p for p in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if p not in inv.values()]
-    rng.shuffle(free_p)
-    assign = dict(zip(free_c, free_p))
+DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0 and k <= 52] for d in range(1, N + 1)}
 
-    def decrypt(assign):
-        full = {**inv, **assign}
-        mid = "".join(full[c] for c in ct)
-        return "".join(mid[where[i]] for i in range(N))
 
-    best = decrypt(assign); bs = score(best)
-    for _ in range(iters):
-        if len(free_c) < 2:
+def sweep(ct, known, pool, index, time_left):
+    """Period p is dead when it divides the distance between two crib positions whose forced
+    key indices differ. Survivors are returned per period with their forced slots."""
+    crib_pos = sorted(known)
+    survivors = {}
+    counts = {}
+    trials = 0
+    for pname, pa in pool.items():
+        pidx = index[pname]
+        for cname, ca in pool.items():
+            cidx = index[cname]
+            for m, f in MODES.items():
+                trials += 1
+                forced = [(pos - 1, f(pidx[known[pos]], cidx[ct[pos - 1]])) for pos in crib_pos]
+                dead = set()
+                for x in range(24):
+                    ix, kx = forced[x]
+                    for y in range(x + 1, 24):
+                        iy, ky = forced[y]
+                        if kx != ky:
+                            dead.update(DIVISORS[abs(ix - iy)])
+                for P in PERIODS:
+                    if P in dead:
+                        continue
+                    if P <= 26:
+                        survivors.setdefault(P, []).append((pname, cname, m, {i % P: k for i, k in forced}))
+                    else:
+                        counts[P] = counts.get(P, 0) + 1
+        if time_left() < 30:
             break
-        a, b = rng.sample(free_c, 2)
-        assign[a], assign[b] = assign[b], assign[a]
-        pt = decrypt(assign); s = score(pt)
-        if s >= bs:
-            best, bs = pt, s
-        else:
-            assign[a], assign[b] = assign[b], assign[a]
-    return best, bs, {**inv, **assign}
+    return survivors, counts, trials
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    routes = route_set(list(ctx.vocabulary))
-    for name, fn in routes:
-        ROUTE_FN[name] = fn
-    wheres = []
-    for name, fn in routes:
-        sigma = perm_of(fn)                      # out[j] = in[sigma[j]]
-        where = {sigma[j]: j for j in range(N)}  # input index -> output index
-        wheres.append((name, where))
-
-    def sweep(text):
-        homo, mono = [], []
-        for name, where in wheres:
-            h, m, _ = check(text, known, where)
-            if h: homo.append(name)
-            if m: mono.append(name)
-        return homo, mono
-
-    homo, mono = sweep(ct)
-    nulls = []
-    for seed in range(5):
-        letters_ = list(ct); random.Random(seed).shuffle(letters_)
-        h, m = sweep("".join(letters_))
-        nulls.append({"homophonic": len(h), "monoalphabetic": len(m)})
-    candidates = []
-    rng = random.Random(7)
-    wmap = dict(wheres)
-    for name in mono[:20]:
-        pt, sc, full = hill_climb(ct, wmap[name], known, ctx.english_score, rng)
-        inv_sub = {p: c for c, p in full.items()}
-        candidates.append({"plaintext": pt, "key": {"route": name, "substitution": inv_sub}, "key_bits": 88,
-                           "key_description": f"monoalphabetic then {name}; English {sc:.2f}"})
+    vocab = list(ctx.vocabulary)
+    pool = pool_of(vocab)
+    index = {name: {ch: i for i, ch in enumerate(A)} for name, A in pool.items()}
+    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
+    key_pool = {n: A for n, A in pool.items() if n in ("std", "kry") or n.endswith("/keyword")}
+    survivors, counts, trials = sweep(ct, known, pool, index, ctx.time_left)
+    by_period = {str(P): (len(survivors[P]) if P in survivors else counts.get(P, 0)) for P in PERIODS}
+    # control
+    letters_ = list(ct); random.Random(0).shuffle(letters_)
+    null_surv, null_counts, _ = sweep("".join(letters_), known, pool, index, ctx.time_left)
+    null_by_period = {str(P): (len(null_surv[P]) if P in null_surv else null_counts.get(P, 0)) for P in PERIODS}
+    # survivors: match and score
+    candidates, best = [], []
+    for P, lst in survivors.items():
+        wordpool = set(w for w in vocab if len(w) == P)
+        for t in texts:
+            for i in range(0, len(t) - P + 1):
+                wordpool.add(t[i:i + P])
+        for pname, cname, m, slots in lst:
+            for kname, ka in key_pool.items():
+                frag = "".join(ka[slots[s]] if s in slots else "." for s in range(P))
+                runs = [r for r in frag.split(".") if len(r) >= 5]
+                if runs:
+                    qs = sum(len(r) - 3 for r in runs)
+                    sc = sum(ctx.english_score(r) * (len(r) - 3) for r in runs) / qs
+                    if len(best) < 15 or sc > best[-1][0]:
+                        best.append((sc, P, pname, cname, kname, m, frag)); best.sort(reverse=True); best = best[:15]
+                for kw in wordpool:
+                    if all(ka[slots[s]] == kw[s] for s in slots):
+                        key = {"pa": pool[pname], "ca": pool[cname], "ka": ka, "m": m, "key": kw}
+                        pt = "".join(pool[pname][DEC[m](index[cname][c], ka.index(kw[i % P]))] for i, c in enumerate(ct))
+                        candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * P + 12,
+                                           "key_description": f"period {P} key {kw}; plain {pname}, cipher {cname}, key alphabet {kname}, {m}"})
+    short_live = {P: len(survivors[P]) for P in sorted(survivors)}
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "substitution (mono or homophonic over 26 symbols) then transposition", "routes": len(routes),
-                   "homophonic_survivors": len(homo), "homophonic_survivor_routes": homo[:40],
-                   "monoalphabetic_survivors": len(mono), "monoalphabetic_survivor_routes": mono[:40],
-                   "shuffled_k4_survivors": nulls},
-        "notes": f"{len(routes)} routes: {len(homo)} pass the homophonic condition, {len(mono)} the monoalphabetic one; shuffled K4 gives {[n['homophonic'] for n in nulls]} and {[n['monoalphabetic'] for n in nulls]}.",
+        "bounds": {"family": "periodic tableau, alphabets mixed from the vocabulary, periods 1-52", "alphabets": len(pool),
+                   "alphabet_pairs_x_modes": trials, "survivors_by_period": by_period,
+                   "shuffled_k4_survivors_by_period": null_by_period,
+                   "short_periods_with_survivors": {str(P): n for P, n in short_live.items()},
+                   "period_21_survivors": len(survivors.get(21, [])), "period_42_survivors": counts.get(42, 0),
+                   "best_english_fragments": [{"score": round(sc, 3), "period": P, "plain": a, "cipher": b, "key_alphabet": c, "mode": m, "fragment": fr} for sc, P, a, b, c, m, fr in best],
+                   "vocab_matches": len(candidates)},
+        "notes": f"{trials} alphabet pairs x modes, periods 1-52. Short periods with survivors: {short_live}. Period 21: {len(survivors.get(21, []))}, period 42: {counts.get(42, 0)}. {len(candidates)} vocabulary matches.",
     }
 
 
 def worked_example(ctx, key):
-    sigma = perm_of(lambda s: columnar_transposition_encrypt(s, list(range(7))))
-    where = {sigma[j]: j for j in range(N)}
-    h, m, img = check(ctx.K4, ctx.KNOWN, where)
-    lines = ["route: columnar width 7 read down the columns; images of the known letters", ""]
-    for p in sorted(img):
-        lines.append(f"plain {p}: carved images {' '.join(sorted(img[p]))}")
-    src = {}
-    clashes = []
-    for pos, p in ctx.KNOWN.items():
-        c = ctx.K4[where[pos - 1]]
-        if c in src and src[c] != p: clashes.append(f"{c} from {src[c]} and {p}")
-        src[c] = p
-    lines.append("")
-    lines.append(f"homophonic condition: {'passes' if h else 'fails'}; clashes: {', '.join(clashes) or 'none'}")
-    lines.append(f"monoalphabetic condition: {'passes' if m else 'fails'}")
+    pa = keyword_mixed("PALIMPSEST"); ca = KRY
+    lines = [f"plain alphabet PALIMPSEST/keyword {pa}", f"cipher alphabet KRYPTOS {ca}", "", "period 21 collisions: positions 42 apart share a slot", "", "pos  plain  cipher  key index    pos  plain  cipher  key index   agree?"]
+    for a, b in [(22, 64), (23, 65), (24, 66), (25, 67), (26, 68), (27, 69)]:
+        ka_ = (ca.index(ctx.K4[a - 1]) - pa.index(ctx.KNOWN[a])) % 26
+        kb_ = (ca.index(ctx.K4[b - 1]) - pa.index(ctx.KNOWN[b])) % 26
+        lines.append(f"{a:>3}    {ctx.KNOWN[a]}      {ctx.K4[a-1]}       {ka_:>2}        {b:>3}    {ctx.KNOWN[b]}      {ctx.K4[b-1]}       {kb_:>2}       {'yes' if ka_ == kb_ else 'no'}")
     return "\n".join(lines)

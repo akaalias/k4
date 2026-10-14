@@ -57,7 +57,7 @@ p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;l
 .rsec-n{font:italic 26px var(--serif);color:var(--rule);flex:none}.rsec-t{margin:0;font:400 26px/1.2 var(--serif)}
 .rsec-sub{margin:6px auto 16px;font:italic 15px/1.55 var(--serif);color:var(--muted)}
 table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:7px 9px;border-bottom:1px solid var(--rule-soft);text-align:left;vertical-align:top}
-th{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+th{white-space:nowrap;font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 td.num,th.num{text-align:right}
 .kept{color:var(--ink);font-weight:600}.reverted{color:var(--muted)}.timeout,.error{color:var(--ochre)}
 .live-row{background:rgba(140,47,31,.045);box-shadow:inset 0 0 0 1.5px var(--accent)}
@@ -241,7 +241,7 @@ def overview():
 <td class="num">{r['n_candidates']}</td><td class="num">{r['seconds']:.0f}</td></tr>"""
         for r in reversed(rows)
     )
-    table = f"""<table><thead><tr><th>id</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="hits/24, then E N B C: capital = whole word, lower = partial">cribs</th><th class="num">cands</th><th class="num">s</th></tr></thead><tbody>{trs}</tbody></table>"""
+    table = f"""<table><thead><tr><th>experiment</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="hits out of 24, then E N B C: capital = whole word in place, lower = partial">crib letters</th><th class="num">candidates</th><th class="num">seconds</th></tr></thead><tbody>{trs}</tbody></table>"""
     by_parent = {}
     for r in rows:
         by_parent.setdefault(r["parent"], []).append(r)

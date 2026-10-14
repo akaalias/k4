@@ -10,6 +10,30 @@
 
 Instead of a short secret word, the key might be a long piece of text the solver already knows, such as the first three messages on the sculpture. We slide each of those texts along the fourth message in every possible position, forwards and backwards, and check whether any position explains all 24 known letters. If none does, those texts are not the key, full stop.
 
+## Walkthrough, by hand
+
+1. Write K1's plaintext, BETWEENSUBTLE..., under the K4 ciphertext starting at some offset.
+2. At position 64 the plaintext must be B. Suppose the key letter above it is T.
+3. Under the sculpture's alphabet, B is 8 and T is 4; add, 12, read F.
+4. The carved letter is N, so this offset fails.
+5. Slide one letter and repeat, for every text, direction and alphabet convention.
+6. An offset that passes all 24 checks decrypts the rest at once.
+
+## Worked example (generated)
+
+```
+running key = K1 plaintext at offset 0, all alphabets KRYPTOS, Vigenere
+alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
+
+pos  plain  key          idx(p)+idx(k)  predicted  carved
+ 64    B      B            8+8         J        N  x
+ 65    E      E           11+11        V        Y  x
+ 66    R      T            1+4         O        P  x
+ 67    L      W           17+23        H        V  x
+ 68    I      E           15+11        K        T  x
+ 69    N      E           19+11        T        T  ok
+```
+
 ## Lineage
 
 Inherits from 0003-plaintext-autokey-all-lags. What changed: The key is a stretch of the solved sections or their ciphertext, not the message itself.
@@ -82,26 +106,3 @@ Best loss: None (0 is solved; 10 per missed crib letter). Best fitness: None. Ch
 Notes: Every trial is decided at all 24 crib positions.
 
 
-## Walkthrough, by hand
-
-1. Write K1's plaintext, BETWEENSUBTLE..., under the K4 ciphertext starting at some offset.
-2. At position 64 the plaintext must be B. Suppose the key letter above it is T.
-3. Under the sculpture's alphabet, B is 8 and T is 4; add, 12, read F.
-4. The carved letter is N, so this offset fails.
-5. Slide one letter and repeat, for every text, direction and alphabet convention.
-6. An offset that passes all 24 checks decrypts the rest at once.
-
-## Worked example (generated)
-
-```
-running key = K1 plaintext at offset 0, all alphabets KRYPTOS, Vigenere
-alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
-
-pos  plain  key          idx(p)+idx(k)  predicted  carved
- 64    B      B            8+8         J        N  x
- 65    E      E           11+11        V        Y  x
- 66    R      T            1+4         O        P  x
- 67    L      W           17+23        H        V  x
- 68    I      E           15+11        K        T  x
- 69    N      E           19+11        T        T  ok
-```

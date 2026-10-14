@@ -10,6 +10,32 @@
 
 In an autokey cipher the secret word only covers the first few letters. After that, the scrambled message itself becomes the key: to hide the twentieth letter you use the scrambled letter a fixed distance back. Because we know the scrambled text and we know 24 letters of the real message, we can check every possible distance back. If one works, most of the message falls out with no secret word at all. If none works, this whole kind of cipher is off the table for good.
 
+## Walkthrough, by hand
+
+1. Write the ciphertext in a row and number it 1 to
+97. 
+2. Pick a distance, say
+7. 
+3. Go to position 64, where the plaintext is B. Look seven back: position 57 is D.
+4. Under the sculpture's alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ, B is at 8 and D is at 10; add them, 18, and read the 18th letter, M.
+5. The carved letter at 64 is N, not M, so distance 7 under this convention is wrong.
+6. Repeat for every crib position, every distance, and every way of indexing the alphabets. One surviving distance would decrypt the rest by itself.
+
+## Worked example (generated)
+
+```
+ciphertext autokey, lag 7, all alphabets KRYPTOS, Vigenere
+alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
+
+pos  plain  key=c[pos-7]  idx(p)+idx(k)  predicted  carved
+ 64    B      I              8+15        W        N  x
+ 65    E      A             11+7         M        Y  x
+ 66    R      W              1+23        X        P  x
+ 67    L      I             17+15        S        V  x
+ 68    I      N             15+19        B        T  x
+ 69    N      F             19+12        O        T  x
+```
+
 ## Lineage
 
 Inherits from nothing; this is a root experiment. What changed: New root. Replaces keyword search with a decidable test the cribs settle outright.
@@ -52,28 +78,3 @@ Best loss: None (0 is solved; 10 per missed crib letter). Best fitness: None. Ch
 Notes: A survivor must also reproduce the cribs inside the primer region, which the gate checks.
 
 
-## Walkthrough, by hand
-
-1. Write the ciphertext in a row and number it 1 to
-97. 
-2. Pick a distance, say
-7. 
-3. Go to position 64, where the plaintext is B. Look seven back: position 57 is D.
-4. Under the sculpture's alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ, B is at 8 and D is at 10; add them, 18, and read the 18th letter, M.
-5. The carved letter at 64 is N, not M, so distance 7 under this convention is wrong.
-6. Repeat for every crib position, every distance, and every way of indexing the alphabets. One surviving distance would decrypt the rest by itself.
-
-## Worked example (generated)
-
-```
-ciphertext autokey, lag 7, all alphabets KRYPTOS, Vigenere
-alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
-
-pos  plain  key=c[pos-7]  idx(p)+idx(k)  predicted  carved
- 64    B      I              8+15        W        N  x
- 65    E      A             11+7         M        Y  x
- 66    R      W              1+23        X        P  x
- 67    L      I             17+15        S        V  x
- 68    I      N             15+19        B        T  x
- 69    N      F             19+12        O        T  x
-```

@@ -10,6 +10,26 @@
 
 The first two messages on the sculpture were locked with a simple scheme: a secret word is written over and over under the message, and each pair of letters is looked up in a table carved on the sculpture. We try the laziest possible secret word, KRYPTOS. We expect it to fail, and the way it fails tells us the checking machinery works: the 24 letters Sanborn has revealed will not show up where they should.
 
+## Walkthrough, by hand
+
+Take the keyed alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ. Number its letters 0 to
+25. For each ciphertext letter, find its number, subtract the number of the key letter beneath it (the key KRYPTOS repeating), wrap around 26, and read off the plaintext letter at that number. The harness then checks positions 22 to 34 for EASTNORTHEAST and 64 to 74 for BERLINCLOCK. If they are not there, the hypothesis is dead at that gate.
+
+## Worked example (generated)
+
+```
+alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
+key:      KRYPTOS (repeating)
+
+pos  cipher  key  (c - k) mod 26  plain
+  1    O      K      5 -  0 =  5     O
+  2    B      R      8 -  1 =  7     A
+  3    K      Y      0 -  2 = 24     X
+  4    R      P      1 -  3 = 24     X
+  5    U      T     21 -  4 = 17     L
+  6    O      O      5 -  5 =  0     K
+```
+
 ## Lineage
 
 Inherits from nothing; this is a root experiment. What changed: Root experiment; establishes the pipeline with the most naive attack.
@@ -53,22 +73,3 @@ Best loss: 224.67605782561338 (0 is solved; 10 per missed crib letter). Best fit
 Notes: Pipeline check only.
 
 
-## Walkthrough, by hand
-
-Take the keyed alphabet KRYPTOSABCDEFGHIJLMNQUVWXZ. Number its letters 0 to
-25. For each ciphertext letter, find its number, subtract the number of the key letter beneath it (the key KRYPTOS repeating), wrap around 26, and read off the plaintext letter at that number. The harness then checks positions 22 to 34 for EASTNORTHEAST and 64 to 74 for BERLINCLOCK. If they are not there, the hypothesis is dead at that gate.
-
-## Worked example (generated)
-
-```
-alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
-key:      KRYPTOS (repeating)
-
-pos  cipher  key  (c - k) mod 26  plain
-  1    O      K      5 -  0 =  5     O
-  2    B      R      8 -  1 =  7     A
-  3    K      Y      0 -  2 = 24     X
-  4    R      P      1 -  3 = 24     X
-  5    U      T     21 -  4 = 17     L
-  6    O      O      5 -  5 =  0     K
-```

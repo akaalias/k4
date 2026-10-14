@@ -182,6 +182,16 @@ def render_md(meta, result, raw):
 
 {meta['hypothesis_eli5']}
 
+## Walkthrough, by hand
+
+{steps(meta['walkthrough'])}
+
+## Worked example (generated)
+
+```
+{raw.get('worked_example', '')}
+```
+
 ## Lineage
 
 Inherits from {meta['parent'] or 'nothing; this is a root experiment'}. What changed: {meta['changed']}
@@ -217,15 +227,6 @@ Best loss: {result['best_loss']} (0 is solved; 10 per missed crib letter). Best 
 {('Notes: ' + result['notes']) if result['notes'] else ''}
 {('Error:\n```\n' + result['error'] + '\n```') if result['error'] else ''}
 
-## Walkthrough, by hand
-
-{steps(meta['walkthrough'])}
-
-## Worked example (generated)
-
-```
-{raw.get('worked_example', '')}
-```
 """
 
 

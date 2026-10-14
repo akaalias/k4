@@ -1,0 +1,812 @@
+DOCID: 4145037
+ CONFIDENTIALHREL TO USA, FVEYH20320108
+ (U) THE CIA KRYPTOS SCULPTURE:
+ A summary of previous work and new
+ revelations in working toward
+ its complete solution
+ by
+ PL 86-36/50 USC 3605
+ pprnved
+ or Release
+ v ~-~SA on
+ 9-16-2014.
+ OIA Case
+ .. 65414
+ CO~:FUltJ;NTIALh'IU;L TO USA, FYEY//20320108
+ 1
+DOCID: 4145037
+ CONFIBENTIALHREL T0 USA, FYEYH26326168
+ (U//FOUO) Back in 1990, the Central Intelligence Agency's Fine Arts Commission canvassed
+ Washington, DC, area artists, asking for proposals for costs and designs for a sculpture which
+ would be erected in the CIA's new Courtyard outside its cafeteria. The winning sculptor was
+ James Sanborn, and he created a nice little puzzle. It stands about 3 metres (10 feet) tall, and con-
+ sists of two curved copper plates standing side-by-side, forming an "S" shape if viewed from
+ above.
+ (U/IFOUC>) Before we look at the cipher on the sculpture, here's what James Sanborn had to say
+ about his creation on November 3, 1990, the day it was dedicated:
+ "The stonework at the entrance and in the courtyard served two functions. First, it
+ creates a natural framework for the project as a whole, and is part of a landscaping
+ scheme designed to recall the natural stone outcropping that existed on the site
+ before the Agency, and that will endure, as do mountains .
+ "Second, the tilted strata tell a story like pages of a document. Inserted between
+ these stone pages is a flat copper sheet through which letters and symbols have
+ been cut. This code, which includes certain ancient ciphers, begins as international
+ morse, and increases in complexity as you move through the piece at the entrance
+ a
+ and into the courtyard. Its placement in geologic context reinforces the text's hid-
+ denness as if it were a fossil, frozen in time."
+ (U//FOUOj On the left side of the sculpture are letters punched through the copper and reading
+ forward, creating a cipher message. On the right side are letters punched through in reverse and
+ form a "Vigenere Square." On the following page is the Vigenere square which appears .in
+ reverse on the right side when looking at the sculpture head-on as it appears in the picture on the
+ first page:
+ CONFIBENTIALHR£L TO U8l.1, FVEYNlQ~lQ1Q8
+ 2
+DOC ID: 4145037
+ CONFIDENTIALl+REL 'fO USA, FYE"l//26926168
+ (U//POUO) Fig. 1. Vigenere Square from KRYPTOS sculpture
+ A B c D E E G H I J K L M N 0 p Q R s T u v wx y z A B c D
+ AK R y p T 0 s A B c D E F G H I J L M N Q u v wx z K R y p
+ B R y p T 0 s AB c D E F G H I J L M N Q u v w x z K R y p T
+ c y p T 0 s A B c D E F G H I J L M N Q u v wx z K R y p T 0
+ D p T 0 s AB c D E F G H I J L M N Q u v w x z K R y p T 0 s
+ E T 0 s A B C D E F G H I J L M N Q u v w x z K R y p T 0 s A
+ F 0 s A B C D E F G H I J L M N Q u v w x z K R y p T 0 s A B
+ G s A B c D E F G H I J L M N Q u v w x z K R y p T 0 s A B c
+ H A B c D E F G H I J L M N Q u v wx z K R y p T 0 s A B c D
+ I B C D E F G H I J L M N Q u v w x z KR y p T 0 s AB c D E
+ J c D E F G H I J L M N Q u v wx z K R y p T 0 s A B c D E F
+ K D E F G H I J L M N Q u v w x z K R y p T 0 s AB c D E F G
+ L E F G H I J L M N Q u v wx z K R y p T 0 s A B c D E F G H
+ M F G H I J L M N Q u v w x z K R y p T 0 s A B C D E F G H I
+ N G H I J L M N Q u v w x z KR y p T 0 s A B c D E F G H I J L
+ 0 H I J L M N Q u v w x z K R y p T 0 s A B c D E F G H I J L
+ p I J .L M N Q u v wx z K R y p T 0 s A B c D E F G H I J L M
+ Q J L M N Q u v w x z K R y p T 0 s AB c D E F G H I J L M N
+ R L M N Q u v w x z K Ry p T 0 s A B C D E F G H I J L M N Q
+ s MN Q u v wx z K R y p T 0 s A B c D E F G H I J L M N Q u
+ T N Q u v w x z K R y p T 0 s A B c D E F G H I J L M N Q u v
+ u Q u v wx z K R y p T 0 S A B c D E F G H I J L M N Q u v w
+ vu v w x z K R y p T 0 s A B C D E F G H I J L M N Q u v w x
+ wv wx z K R y p T 0 s A B c D E F G H I J L M N Q u v wx z
+ x w x z K R y p T 0 s AB c D E F G H I J L M N Q u v w x z K
+ y x z K R y p T 0 s A B C D E F G H I J L M N Q u v wx z K R
+ z z K R y p T 0 s A B c D E F G H I J L MN Q u v wx z K R y
+ A B c D E F G H I J K L M N 0 p Q R s T u v wx y z A B c D
+ (U//FOUO) There are 28 lines on this side of the sculpture. On the top row is the A- z alphabet,
+ followed immediately by the first four letters of the alphabet, ABCD, making a total of 30 charac-
+ ters on the firstline. On each of the next 26 lines, the A-Z alphabet appears in the first position on
+ each of the lines. Following the "A" at the start of the second line, is a keyword-mixed alphabet
+ based on the word "KRYPTOS". After the Z at the end of the 26-long KRYPTOS alphabet, the first
+ four letters of KRYPTOS appear again, to make a total of 31 characters appearing on the line. On
+ the third line, following the "B," appears the same KRYPTOS alphabet, but shifted one spot so that
+ it begins with the letter R. Once the entire shifted 26-long KRYPTOS sequence is used (R through
+ Kin this instance), the first four letters of that shifted alphabet then reappear at the end o.fthe line
+ (RYPT in this case).
+ CONFIDENTIALHREL TO USA, FYEYi'/20320108
+ 3
+DOC ID: 4145037
+ CONFIBENTIALHREL TO USA, FYEYH20320108
+ (U //FOU01 This process continues through the rest of the 26 lines labeled A - z at the beginning
+ of each line, except for the line labeled "N." On this line, the shifted KRYPTOS sequence begins
+ GHIJ ... , and finishes ... CDEF... , but instead of following with the first four letters from that offset,
+ GHIJ, five letters appear instead, GHIJL.
+ (U//.li'OUeJ The 28th line of the Vigenere Square is just a repeat of the top line, the A- Z alphabet
+ followed by the letters ABCD. So we have two things to notice from this side of the sculpture: we
+ have the Direct Standard alphabet (A- Z), and a KRYPTOS keyword-mixed sequence.
+ (U//.FOUO) Below is a copy of the cipher side of the sculpture:
+ (U/.LfOUOJ-Fig. 2. Cipher side of sculpture
+ E M u F p H z L R F A x y u s D J K z L D K R N S H G N F I v J
+ y Q T Q u x Q B Q v y u v L L T R E v J y Q T M Ky R D M F D
+ v F p J u D E E H z wE T z y v G WH K K Q E T G F Q J N c E
+ G G w H K K ? D Q M c p F Q z D Q M M I A G p F x H Q R L G
+ T I M v M z J A N Q L v K Q E DA G D v F R p J u N G E U N A
+ Q z G z L E c G y u x u E E N J T B J L B Q c R T B J D F H R R
+ y I z E T K Z E M VD U F K s J H K F w H K u w Q L 8 z F T I
+ H H D D D u v H ? D WK B F u F p w N T D F I y c u Q z E R E
+ E v L D K F E z M 0 Q Q J L T T u G s y Q p F E UN L A v I D x
+ F L G G T E z ? F K z B s F D Q v G 0 G I p u F X H H D R K F
+ F H Q NT G p u A E c N u v p D J M Q c L Q u M u N E D F Q
+ E L z z v R R G K F F v 0 E E x B D M V p N F Q x E z L G R E
+ D N Q F M p N z G L F L p M R J Q y A L M G N u v p D xv K p
+ D Q u M E B E D M H D A F M J G z N u p L G E w J L L A E T G
+ E N DY A H R 0 H N L s R H E 0 c p T E 0 I B I D y 8 H NA I A
+ c H T N R E y u L D s L L s L L N 0 H s N 0 s M R w x M NE
+ T p RN G AT I H N R AR p E s L N N E L E B L p I I A C A E
+ WM T w N D I T E E N RA H c T E N E U D R E TN H A E 0 E
+ T F 0 L s E D T I w E N H A E I 0 y T E y Q H E E N c T A y c R
+ E I F T B R s p A M H N E w E N A T A M A T E G y E E R L B
+ T E E F 0 A s F I 0 T u E T u A E 0 'T 0 A R MA E E R TN R T I
+ B s E D D N I A A H T T M s T E w p I E R 0 A G R I E W F E B
+ A E c T D D H I L c E I H s I T E G 0 E A 0 8 D D R y D L 0 R I T
+ R K L M L E HAG T D H A R D p N E 0 H M . G F M F E u H E
+ E c D M R I p F E I M E H N L s s T T R T VD 0 H w ? 0 B K R
+ u 0 x 0 G H.U L B s 0 L I F B B w F L R v Q Q p R N G K s s 0
+ T w T Q s J Q s . s E K Z Z WA T J K L U D I A w I N F B N y p
+ VT T M Z F p KW G D K Z X T J c D I G KUH UA u E K C A R
+ (U//FOUO) There are 869 characters appearing on this side of the sculpture. That count includes
+ the four question marks which are scattered throughout.
+ CONFII>EN'fIALh'REL 'fO USA, F\rE"I¥f20320108
+ 4
+DOC ID: 4145037
+ CO:NFIBE:NTIAL//REL TO USA:, FVEY//29329198
+ (U/ffOUO) There are a few other things to point out here as well. The 15th line of the cipher
+ begins with the letters END, and of the letters YAHR which follow it, the Y, A, and Rare raised up
+ about 1 cm. (about 1/2 inch). This made analysts at NSA wonder is the END was perhaps the end
+ of a certain portion of Cipher. And maybe the Y, A and R floating in the air a bit higher than the
+ other letters on that line may signify something else as well.
+ (U//FOUO) Well, in February of 1999, a CIA employee named David Stein, stated to the world
+ that he had solved three of four sections of the sculpture. And the world pretty much ignored him.
+ Then just four months later in June 1999, a private citizen in California named James Gillogly,
+ who had a hand in developing the CRYSS software for the FBI, announced on the Internet that he
+ had also solved three of four parts.
+ (U//FOUO) Gillogly received all sorts of accolades for his accomplishments from the media,
+ which made Mr. Stein at the CIA a bit miffed. You see, Mr. Stein had used just a pencil and paper
+ to come up with his solution, but Mr. Gillogly in California had used his computer to arrive at his
+ answer. Mr. Stein believed it to be "cheating" to use a computer, but Mr. Gillogly was quickly
+ supported by <;>thers within the intelligence community as anyone working for such an Agency
+ would almost certainly use a computer when solving codes and ciphers.
+ (C\1£1) Back in 1992, William Webster, the Director of the CIA at the time, also challenged NSA
+ to read the cipher, and my fellow colleagues also read three of four parts. It's just that it was seven
+ years before these other individuals.
+ (U//FOUO) After the findings presented by Mr. Stein and Mr. Gillogly,j jpresented a
+ talk on September 14, 1999, on the work done by NSA seven years prior. The Intel1jiet was just
+ beginning to grow at that point in time, and he kept an eye out for someone who might be the first
+ to solve remaining portion of the cipher.
+ . .
+ (U//FOUO) This was one thing that Lance found: PL 86 - 36/50 use 3605
+ (U//fOUO) Fig. 3. From website claiming to have the solution to the KRYPTOS scuplture.
+ cipher beginning : E M U F p H z L R
+ repeating key: K R Y P T 0 s K R
+ ------- - ---------
+ plain: p E T v J w R w J
+ Line 1: p Q R s T u v w x y z A B c D E F G H I J KL M N 0
+ Line 2: E F G H I J K L M N 0 p Q R s T u v w x y z A B c D
+ Line 3: T u v w x y Z A B c D E F G H I J K L M N 0 p Q R s
+ Line 4: v wx y z A B c D E F G H I J K L M N 0 p Q R s T u
+ Line 5: J K L M N 0 p Q R s T u v w x y z A B c D E F G H I
+ Line 6: wx y z A B c D E F G H I J KL M N 0 p Q R s T u v
+ Line_ 7: R s T u v w x y z A B c D E F G H I J K L M N 0 p Q
+ Line 8: wx y z A B c D E F G H I J K L M N 0 p Q R s T u v
+ Line 9: J K L M N 0 p Q R s T u v w x y z A B c D E F G H I
+ CONFIBENTIALffREL TO USA, FVE¥H29329198
+ 5
+· DOCID: 4145037
+ CONFIDENTIALHR:BL TO USA:, Fl/EYH29329198
+ (U/if'OUO) This particular individual started with the beginning of the cipher itself, EMUFPH-
+ ZLR. He happened to notice the KRYPTOS alphabet in the Vigenere Square, and so he tried a very
+ reasonable thing, simple addition. E is the 5th letter of the alphabet, and K is the 11th letter of the
+ alphabet, so if we add 5 and 11 we get 16, and Pis the 16th letter of the alphabet. Then M, the 13th
+ letter, is added to R, the 18th letter. That adds up to 33, but in mod26 arithmetic, that's 5, which is
+ an E. The same process continues until PETVJWRWJ is obtained.
+ (U//FOUO) Now, that's not plaintext, but if you begin with each of those letters, and extend the
+ A-Z alphabet out beyond them, in one of the columns reading down you get GVKMANINA, and
+ JOB at the bottom of the column immediately to its right. According to the web site, GVK- MAN
+ IN A JOB is the solution. His website also highlights the word APE reading down in the first
+ three rows of one of the columns.
+ (U//FOUO) The website explains:
+ "The Sanborn sculpture is an homage to CIA agents at work, wherever they may
+ be. For those of you who want to know the rest, it gets somewhat tougher as you
+ move on.
+ "Good luck! P.S. I am not an agent. I am just ostensibly good at deciphering codes
+ and mysteries."
+ tCHSI) For most people at NSA, most thought there were three sections. The first section con-
+ tained the first 14 lines, and I'll talk about it in a bit. The next 11 lines were believed to be a trans-
+ position as they had a distribution of letters that resembled that of English plaintext. The final
+ three lines were unknown.
+ (U/,LfOUO) We'll examine the top 14 lines first:
+ (U//¥0UO) Fig. 4. Top 14 lines of cipher
+ E M u F p H z
+ L R F A x y u s D J K z L D K R N s H G N F I v J
+ y Q T Q u x Q B Q v y u v L L T R E v J y Q T M K y R D M F D
+ v F p J u D E E H wE T z z y v G WH K K Q E T G F Q J N c E
+ G G w H K K ? D Q M c p F Q z D Q M M I A G p F x H Q R L G
+ T I M v M z
+ J AN Q L v K Q E DA G D v F R p J UN G EU NA
+ Q zG z
+ L E C G y u x u E EN J T B J L B Q c R T B J D F H R R
+ y I z
+ E T K z
+ E M V D u F K S J H K F w H KU w Q L s z F T I
+ H H D D D u v H ? D W K B F u F p w N T D F I y c u Q z E R E
+ E v L D K F E M 0 Q Q z J L T T U G s y Q p F E UN L A v I D x
+ F L G G T E z ? F K z B s F D Q v G 0 G I p u F X H H D R K F
+ F H Q N T G p UA E c N u v p D J M Q c L Q UM UN E D F Q
+ E L z z v R R G K F F v 0 E E x B D M v p N F Q x E z L G R E
+ D N Q F M p N z G L F L p M R J Q y A L M G N u v p D x v K p
+ D Q u M E B E D M H D A F M J G z NU p L G E w J L L A E T G
+ CONFIDENTIALhML TO USA, FYEYH29329198
+ 6
+(b+.,.()J
+\b+.'('9'JC~DJ5c ~:J.±~;>037
+PL 86-36/50 USC 3605
+ CONFIBENTIAL/-/REL TO USA, FYE¥f/29329198
+ CONFII>RNJ'IAL/IREL J'O USA, FVEYH20329198
+ 7
+DOC ID: 4145037
+ CONflt>E:N'f'IALffl.tt:L l'O USA, FYE¥-H29329198
+ (U/IFCUO) The strength in polyalphabetic substitution is that the same plaintext letter will not
+ always be enciphered to the came cipher letter as each encipherment is dependent upon the alpha-
+ bet enciphering it. And with multiple alphabets, there are multiple ways for each plaintext value to
+ change. Similarly, identical ciphertext letters did not always evolve from the same plaintext value:
+ they can be spawned from two entirely different plaintext values.
+ (U//POUO~ The weakness of polyalphabetic substitution is if you have a rather long message,
+ then the frequency counts of each of the alphabets will begin to look like some offset of some
+ alphabet. Luckily for us we have 432 characters and eight alphabets, so that should be long
+ enough for us to make some headway in solving.
+ (U//FOUO) Given that the sculpture mentions the A- Z alphabet, as well as the KRYPTOS key-
+ word-mixed alphabet, these two alphabets seemed to be the reasonable places to begin. It may
+ very well be something different, but it pays to try the easiest thing first, and if that doesn't pro-
+ duce results, advance to something else.
+ (U//FOUO) Fig. 6. Alphabet frequencies for eight alphabets, Direct Standard order
+ A B c D E F G H I J K L M N 0 p Q R s T u v w x y z
+ - - 4 2 2 2 2 2 2 1 1 1 - 8 2 3 2 8 2 - 1 1 3 - .1 4
+ 2 1 - 3 5 4 3 4 - 5 1 4 2 - - 2 3 3 1 . 1 3 1 3 - 1 2
+ 3 - - 3 1 - 7 3 1 3 2 1 1 2 - - 10 2 1 3 1 3 1 1 4 1
+ 1 3 - 3 1 2 - - 1 2 7 4 - 4 - 5 2 - - 4 7 2 - 2 1 3
+ 3 1 1 11 3 7 2 - 2 2 - 2 3 1 - 3 3 - 1 - 3 1 - 1 2 2
+ 1 - - 4 7 9 1 1 1 1 1 6 2 - - - 4 1 - 1 4 - 1 3 1 5
+ - 2 - 1 6 4 2 3 1 - - 3 6 1 - 1 1 1 1 5 2 9 - 2 - 3
+ - 1 2 1 6 3 7 3 - 2 6 1 5 1 1 2 4 - - 2 3 3 - - 1 -
+ (U//FOUO) Fig. 7. Alphabet frequencies for eight alphabets, KRYPTOS keyword-mixed order
+ K R y p T 0 s A B c D E F G H I J L M N Q u v w x z
+ 1 8 1 3 - 2 2 - - 4 2 2 2 2 2 2 1 1 - 8 2 1 1 3 - 4
+ 1 3 1 2 1 - 1 2 1 - 3 5 4 3 4 - 5 4 2 - 3 3 1 3 - 2
+ 2 2 4 - 3 - 1 3 - - 3 1 - 7 3 1 3 1 1 2 10 1 3 1 1 1
+ 7 - 1 5 4 - - 1 3 - 3 1 2 - - 1 2 4 - 4 2 7 2 - 2 3
+ - - 2 3 - - 1 3 1 1 11 3 7 2 - 2 2 2 3 1 3 3 1 - 1 2
+ 1 1 1 - 1 - 1 1 - - 4 7 9 1 1 1 1 6 2 - 4 4 - 1 3 5
+ - 1 - 1 5 - 1 - 2 - 1 6 4 2 3 1 - 3 6 1 1 2 9 - 2 3
+ 6 - 1 2 2 1 - - 1 2 1 6 3 7 3 - 2 1 5 1 4 3 3 - - -
+ CONFIBENTIALHREL TO USA, FYBYJ/lQ3lQ1Q8
+ 8
+DOC ID: 4145037
+ · CONFIBEN'fIAL/fREL 'fO USA, FYEYH26326168
+ (U//FOUOj Looking at these frequency distributions, someone noticed that the sixth line of the
+ KRYPTOS alphabet frequ~ncies looked good when the alphabet was slid at this offset:
+ (lJ//FOUO~ Fig ~ 8. Sixth KRYPTOS alphabet frequencies slid against KRYPTOS sequence.
+ 111 1 11 47911116 2 4 4 1 3 5
+ Q U V W X Z K R Y P T 0 S A B C D E F G H I J L M N
+ (U//FOU01 And looking at the eighth KRYPTOS alphabet frequencies; they looked good when
+ the KRYPTOS alphabet was slid thusly:
+ (U//FOUO' Fig. 9. Eighth KRYPTOS alphabet frequencies slid against KRYPTOS sequence.
+ 6 l22l 1216373 2151433
+ N Q U V W X Z K R Y P T 0 S A B C D E F G H I J L M
+ (U//FOUO) These two alphabets matched decently, so they were filled in, and this was the result-
+ ing plaintext:
+ (U//.FOU01 Fig. 10. Plaintext recoveries for sixth and eighth alphabets.
+ EMUFPHZL RFAXYUSD JKZLDKRN SHGNFIVJ YQTQUXQB QVYUVLLT REVJYQTM
+ Q x R L S K u w T I WE K Z
+ KYRDMFDV FPJUDEEH ZWETZYVG WHKKQETG FQJNCEGG WHKK?DQMC PFQZDQMM
+ M I 0 A v s 0 s 0 s ? H y H E
+ IAGPFXHQ RLGTIMVM ZJANQLVK QEDAGDVF RPJUNGEU NAQZGZLE CGYUXUEE
+ MG F E E N T 0 A H N T I T
+ NJTBJLBQ CRTBJDFH RRYIZETK ZEMVDUFK SJHKFWHK UWQLSZFT IHHDDDUV
+ E G T A 0 N I N L N NW T I
+ H?DWKBFUF PWNTDFIY CUQZEREE VLDKFEZM OQQJLTTU GSYQPFEU NLAVIDXF
+ ? s 0 s u U T 0 E X H S H T 0
+ LGGTEZ?FK ZBSFDQVG OGIPUFXH HDRKFFHQ NTGPUAEC NUVPDJMQ CLQUMUNE
+ N? N H S S A S G R y D G I T
+ DFQELZZV RRGKFFVO EEXBDMVP NFQXEZLG REDNQFMP NZGLFLPM RJQYALMG
+ N I s x F V N S s v E E E S
+ NUVPDXVK PDQUMEBE DMHDAFMJ GZNUPLGE WJLLAETG
+ MN 0 T s c E T 0 s
+ (U//fOUe) One thing that needs to be pointed out: the question marks were ignored in the count-
+ ing of the alphabets. This work seems to have gone well. There are a limited number ofletters that
+ can be placed between the recoveries made to this point.
+ CONFIBENTIALf/R£L TO USA, FVEYil/29329198
+ 9
+DOCID: 4145037
+ CONFII>RN'f'IALh'REL 'f'O USA, FVEYH20320108
+ (U//fOUO) Continuing work in this fashion, if one guessed an "I" occurs between the "S" and
+ "X" on the next to last line, the resulting recoveries look like this:
+ (U//POUO) Fig. 11. Plaintext recoveries for sixth, seventh and eighth alphabets.
+ EMUFPHZL RFAXYUSD JKZLDKRN SHGNFIVJ YQTQUXQB QVYUVLLT REVJYQTM
+ QSX RGL SBK UPW TRI WXE KEZ
+ KYRDMFDV FPJUDEEH ZWETZYVG WHKKQETG FQJNCEGG WHKK?DQMC PFQZDQMM
+ MLI OTA VIS ows oss ? HEY HEE
+ IAGPFXHQ RLGTIMVM ZJANQLVK QEDAGDVF RPJUNGEU NAQZGZLE CGYUXUEE
+ MAG FIE EIN TIO ATH NDT ITT
+ NJTBJLBQ CRTBJDFH RRYIZETK ZEMVDUFK SJHKFWHK UWQLSZFT IHHDDDUV
+ ERG TOA OWN ION LAN NOW THI
+ H?DWKBFUF PWNTDFIY CUQZEREE VLDKFEZM OQQJLTTU GSYQPFEU NLAVIDXF
+ ? SHO. SBU UTT OME XWH STH TLO
+ LGGTEZ?FK ZBSFDQVG OGIPUFXH HDRKFFHQ NTGPUAEC NUVPDJMQ CLQUMUNE
+ N?ON HIS SLA SAG RTY DEG IFT
+ DFQELZZV RRGKFFVO EEXBDMVP NFQXEZLG REDNQFMP NZGLFLPM RJQYALMG
+ NMI SIX FIV NDS SEV EVE EES
+ NUVPDXVK PDQUMEBE DMHDAFMJ GZNUPLGE WJLLAETG
+ MIN ORT SEC EST ows
+ (U/1¥0UOj Work continued in this mode, adding on a letter to either end of the recoveries made
+ to this point. Staying with the next to last line, it appears numbers were being spelled out. SIX
+ already appeared, and it also looks as if FIVE, SEVEN, and THREE occur later on that line.
+ (UNFOU01 The only portion of the message where things don't look good is at the top. The
+ recoveries there are ugly! QSX. SBK. WXE. All nasty-looking trigraphs in English. But things look
+ pretty good from the second line forward.
+ CONFIBEN'f'IALfflIBL 'f'O USA, FVEYH26326168
+ 10
+DOCID: 4145037
+ CONFIBEN'f'IALh~L 'f'O USA, FT/E"lH28328188
+ (U//FOUO) Continuing to expand these trigraphs into longer stretches of plaintext, we eventually
+ get this:
+ (U/ffQ' 1 ~ Fig. 12. Plaintext recoveries for top 14 lines of KRYPTOS sculpture.
+ EMUFPHZL RFAXYUSD JKZLDKRN SHGNFIVJ YQTQUXQB QVYUVLLT REVJYQTM
+ NXTRCQSX CMJGBRGL XSBSJSBK HQVBMUPW DKGCRTRI YYEDYWXE CLOOBKEZ
+ KYRDMFDV FPJUDEEH ZWETZYVG WHKKQETG FQJNCEGG WHKK?DQMC PFQZDQMM
+ BBDZXMLI TWAS TOTA LLYINVIS IBLEHOWS THAT POSS IBLE?THEY USEDTHEE
+ IAGPFXHQ RLGTIMVM ZJANQLVK QEDAGDVF RPJUNGEU NAQZGZLE CGYUXUEE
+ ARTHSMAG NETICFIE LDXTHEIN FORMAT IO NWASGATH EREDANDT RANSMITT
+ NJTBJLBQ CRTBJDFH RRYIZETK ZEMVDUFK SJHKFWHK UWQLSZFT IHHDDDUV
+ EDUNDERG RUUNDTOA NUNKNOWN LOCATION XDOESLAN GLEYKNOW ABOUTTHI
+ H?DWKBFUF PWNTDFIY CUQZEREE VLDKFEZM OQQJLTTU GSYQPFEU NLAVIDXF
+ S?THEYSHO ULDITSBU RIEDOUTT HERE SOME WHEREXWH OKNOWSTH EEXACTLO
+ LGGTEZ?FK ZBSFDQVG OGIPUFXH HDRKFFHQ NTGPUAEC NUVPDJMQ CLQUMUNE
+ CATION? ON LYWWTHIS WASH ISLA STMESSAG EXTHIRTY EIGHTDEG REESFIFT
+ DFQELZZV RRGKFFVO EEXBDMVP NFQXEZLG REDNQFMP NZGLFLPM RJQYALMG
+ YSEVENMI NUTESSIX POINTFIV ESECONDS NORTHS EV ENTYSEVE NDEGREES
+ NUVPDXVK PDQUMEBE DMHDAFMJ GZNUPLGE WJLLAETG
+ EIGHTMIN UTESFORT YFOURSEC ONDSWEST IDBYROWS
+ (U//FOUO) The plaintext reads:
+ "IT WAS TOTALLY INVISIBLE HOW IS THAT POSSIBLE? THEY USED
+ THE EARTH'S MAGNETIC FIELD X THE INFORMATION WAS GATHERED
+ AND TRANSMITTED UNDERGRUUND TO AN UNKNOWN LOCATION X
+ DOES LANGLEY KNOW ABOUT THIS ? THEY SHOULD IT'S BURIED
+ OUT THERE SOMEWHERE X WHO KNOWS THE EXACT LOCATION ?
+ ONLY W W THIS WAS HIS LAST MESSAGE X THIRTY-EIGHT DEGREES
+ FIFTY-SEVEN MINUTES SIX POINT FIVE SECONDS NORTH SEVENT-
+ SEVEN DEGREES EIGHT MINUTES FORTY-FOUR SECONDS WEST ID
+ BY ROWS
+ (U//FOUO) It should be pointed out that UNDERGRUUND is a misspelling of"UNDER-
+ GROUND," but that's exactly how it decrypts.
+ CONFIDISNTIALHR:EL TO USA, FYl£Yh'29329198
+ 11
+DOC ID: 4145037
+ CONFIBEN'fIALHR:EL 'f'O USA, FVEY/1:?63:?6168
+ (Uf/FOOO) As to the information transmitted underground, and exactly what's buried out there,
+ your guess is as good as mine. However, the WW almost certainly refers to William Webster who
+ was director of the CIA when the sculpture was commissioned.
+ (U//FOUOj The meaning of the last portion, ID BY ROWS, was a stumper, and we'll return to
+ this later to see what it really means.
+ (U//FOUOJ If you follow through to obtain the matrix used to encipher this portion of the sculp-
+ ture, this is the periodic polyalphabetic matrix obtained:
+ (U//:fOUO) Fig. 13. Enciphering matrix for portion of KRYPOS Sculpture
+ P: K R y p T 0 S A B c D E F G H I J L M N Q v u wx z
+ Cl: A B c D E F G H I J L M N Q v xu w z
+ K R y p T 0 s
+ C2: B c D E F G H I J L M N Q v u wx z
+ K R y p T 0 S A
+ C3: S A B c D E F G H I J L M N Q v u wx z
+ K R y p T 0
+ C4: c D E F G H I J L M N Q vu wx z
+ K R y p T 0 s A B
+ CS: I J L M N Q u v w x zK R y p T 0 s A B D E F G H c
+ C6: s A B c D E F G H I J L M N Q v u wx z
+ K R y p T 0
+ C7: s A B c D E F G H I J L M N Q v u wx z
+ K R y p T 0
+ CS: A B c D E F G H I J L MN Q v u wx z
+ K R y p T 0 s
+ (U/,q:QUO) The plain and cipher components both use the keyword-mixed sequence based on
+ KRYPTOS, with the cipher offset according to the repeating key of ABSCISSA, which can be
+ seen reading down the column beneath the plaintext letter A. To refresh your memory, an abscissa
+ is the horizontal cartesian coordinate on a plane measured from the y-axis along the line parallel
+ to the x-axis at point p. How this fits in to the overall solution of the sculpture remains to be seen.
+ (U//FOU01 Originally we believed there were three portions to the cipher. Suddenly, the first part
+ has become two parts, and we've readjust one part of what is now a four-part puzzle.
+ (U//FOU~ Next, let's look at the section that contains lines 15-25 of the cipher. This section was
+ believed to be enciphered by a transposition.
+ CONFillENTIAL,£1-RJ!;L TO USA, FYEYl/29329198
+ 12
+DOCID: 4145037
+ CONFIHEN'fIALhltt:L 'f'O USA FVE"Yl/26~26168
+ ' I ;(3)-50 USC 3024(i)
+ (U/,ll20~Qt Fig. 14. Lines 15-25 of the KRYPTOS sculpture '\''•
+ 86-36/50 u SC 3605
+ E N D YA H R 0 H N L S R H E 0 c p T E 0 I B I D y s H NA I A
+ c H- T N R E y u L D s L L s L L N 0 H s N 0 s MR W X M N E
+ T p RN G A T I H N RA R p E s L N N E L E B L p I I A C A E
+ w M T WN D I T E E NRA H c T E N E u D R E T NH A E 0 E
+ T F 0 L s E D T I w E N HAE I 0 Y T E y Q H E E N c TAY C R
+ E I F T B R S PAM H N E w E NA T AMA T E G y E E R L B
+ T E E F 0 A s F I 0 T U E T U A E 0 T 0 A R MA E E RT N R T I
+ B s E DD N I AA H T T M s T E W p I E R 0 AG R I E W F E B
+ A E c TD DH I L C E I H s I T E G 0 EA 0 s D D RY D L 0 R I T
+ R K L M L E H A G T D H AR D P N E 0 H M G F M F E UH E
+ E C D M R I P F E I M E H N L s S T T RT VD 0 H W ? 0 B K R
+ \
+ CONFIDENTIAL//REL TO USA, FYEYH20320108
+ 13
+DOCID: 4145037
+ CONFIDEN1'1ALHR£L TO USA, FYEYJ/29329198
+ (U//fOUO) The approach tried by those working on the cipher was a reasonable one for those
+ attempting to solve a transposed message. It was noticed that there was exactly one Q appearing in
+ this section of the cipher. A letter U would probably follow it, and there were five Us appearing in
+ this portion of the cipher. So a reasonable thing to do when attempting to determine the transposi-
+ tion.matrix used is take the stretch of cipher containing the Q, and take a handful of letters before
+ and after it, and write them as a column. Then take all the occurrences of U, and also grab a couple
+ letters before and after them, writing them in as a column immediately to the right of the column
+ with the Q.
+ (U//FOU01 Fig. 16. Lines 15-25 with stretches of cipher containing the Q and the Us aligned
+ columnarly. Extracted stretches are underlined to assist the reader in finding their location within
+ the cipher. Stretches containing u are underlined once. The stretch with the Q is doubly under-
+ lined. ·
+ E N D Y A H R 0 H N L S R H E 0 C P T E 0 I B I D Y S H N A I A
+ C H T N R E Y U L D S L L S L L N 0 H S N 0 S MR WX MN E
+ T P R N G A T I H N R A R P E S L N N E L E B L P I I A C A E
+ WM T WN D I T E E N R A H C T E N E U D R E T N H A E 0 E
+ T F 0 L S E D T I WE N H A E I 0 Y T E Y Q H E E N C T A Y C R
+ E I F T B R S P A MH N E WE N A T A MA T E G Y E E R L B
+ T E E F 0 A S F I 0 T U E T U A E 0 T 0 A R MA E E R T N R T I
+ B S E D D N I A A H T T MS T E WP I E R 0 A G R I E WF E B
+ A E C T D D H I L C E I H S I T E G 0 E A 0 S D D R Y D L 0 R I T
+ R K L .M L E H A G T D H A R D P N E 0 H M G F M F E U H E
+ E C D MR I P F E I M E H N L S S T T R T V D 0 H W ? 0 B K R
+ y N y T y F y T y F
+ T R T E T I TU T M
+ E E EN E 0 E E E F
+ y y yE y T y T y E
+ Q u Q u Q u Q u Q u
+ H L H D H E HA H H
+ E D E R E T E E E E
+ E S E E E U E 0 E E
+ N L NT NA NT N C
+ (U/tfOU~ The idea is to find columns that look like portions of readable English text. None of
+ these looks too bad. Any of them could contain short stretches of English. The YY in the first col-
+ umn might be a little problematic, as is the HH (unless the plaintext is talking about Fishhooks or
+ something). The third alignment here looks pretty good. The EO could occur in the word PEO-
+ PLE, or THE ONLY if it was two words. Beneath the QU we have HE which looks really good for
+ THE. So it was decided to try to build upon that.
+ CONFIDEN1'IAL/tltEL 'f'O USA, FVR"1'h'26326168
+ 14
+DOC ID: 4145037
+ CONFIDl£NTIAL//REL TO USA, FYEY//20320108
+ (U//ffiU~ Another stretch of cipher that looked good when placed to the left of the QU was
+ found.
+ (Uh'f'etleJ Fig. 17. Three stretches of Lines 15-25 aligned columnarly.
+ E N D YA H R 0 H N L S R H E 0 c p T E 0 I B I D y SH NA I A
+ c H TN R E y u L D S L L s L L N 0 H s N 0 s M R W X MN E
+ T p R N G A T I H N RA R p E s L N N E L E B L p I I A C A E
+ w M T W ND I T E E NRA H c T E N E u D R E T NH A E 0 E
+ T F 0 L S E D T I w E N I:I A E I 0 y T E y Q H E E N c TA y c R
+ E I F T B R S p A M H N E w E NA T AM AT E G y E E R L B
+ T E E F 0 AS F I 0 T u E TU A E 0 T 0 AR M A E E R TN R T I
+ B s E D D N I AA H T T M S T E w p I E R 0 AG R I E w F E B
+ A E c T D D H I L c E I H S I T E G 0 EA 0 S D D R y D L 0 R I T
+ R K L M L E H A GT D H AR D p N E 0 H M G F M F E UH E
+ E c D M R I p F E I M E H N L s s T T R T V D 0 H W ? 0 B KR
+ L y F
+ E T I
+ H E 0
+ A y T
+ G Q u
+ T H E
+ D E T
+ H E u
+ A NA
+ (U//FOUO) Again, things look nice. Before the QU is a word ending with G. The AYT above it
+ could be from DAY TIME or something like that. HEO above it could be THE ONLY. ETI above
+ it could be SAME TIME, or soipething along those lines. More progress was made as additional
+ cipher stretches were extracted and added to the left of these three columns.
+ CONFIDENTIALHREL TO USA, FYEYH29329198
+ 15
+DOC ID: 4145037
+ CONFIBENTIALAREL TO USA, F\lEY/126326168
+ (U//'.rOUGt-Fig. 18. Five stretches of cipher from Lines 15-25 extracted and aligned columnarly
+ E N D YA H R 0 H N L s R H E 0 c p T E 0 I B I D y s H NA I A
+ c H T N R E y u L D s L L s L L N 0 H s N 0 s M R Wx MN E
+ T P R N G A T I H N R A R p E s L N NE L E B L p I I AC A E
+ WM T W N D I T E E NRA H c T E N E U D R E TN H A E 0 E
+ T F 0 L s E D T I • ' w E N H A E I 0 y T E y 0 H E E N c TAY C R
+ E I F T B R s p A M H N E w EN AT A MAT E G y E E R L B
+ T E E F 0 A s F I 0 T u E T UA E 0 T 0 A R MA E E R TN R T I
+ B s E D D N I A A H T T M s T E w p I E R 0 AG R I E W F E B
+ A E c T D D H I L c E I H s I T E G 0 EA 0 S D D R y D L 0 R I T
+ R K L M L E HAG T D H A R D P N E 0 H M G F M F E UH E
+ E c D M R I P F E I M E HNLSST T R T V D 0 H W ? 0 B K R
+ 0 wL y F
+ A ME T I
+ G T H E 0
+ R wA y T
+ I N G Q u
+ E D T H E
+ w I D E T
+ F T H E u
+ E E A NA
+ (U//fOUO) Still looks good! A word ending with ING precedes the QU. Above the QU it looks
+ · like UNDERWAY or STAIRWAY followed by a word starting with T.
+ (U//FOUO) Work continued in this fashion until finally, the plaintext and its matrix were found!
+ An incompletely filled transposition matrix with four rows and 86 columns was recovered. Here's
+ the matrix which was used, split in two so it would fit below:
+ (U//FOUO) Fig. 19. Incompletely filled 4x86 transposition matrix used to encipher lines 15-25.
+ 1 SLOWLYDESPARATLYSLOWLYTHEREMAINSOFPASSAGEDE .. .
+ 2 ASREMOVEDWITHTREMBLINGHANDSIMADEATINYBREACH .. .
+ 3 OLEALITTLEIINSERTEDTHECANDLEANDPEEREDINTHEH .. .
+ 4 FLICKERBUTPRESENTLYDETAILSOFTHEROOMWITHINEM .. .
+ .. . BRISTHATENCUMBEREDTHELOWERPARTOFTHEDOORWAYW 1
+ ... INTHEUPPERLEFTHANDCORNERANDTHENWIDENINGTHEH 2
+ ... OTAIRESCAPINGFROMTHECHAMBERCAUSEDTHEFLAMETO 3
+ ... ERGEDFROMTHEMISTXCANYOUSEEANYTHINGQ 4
+ CONFIBEN'fIALh'REL 'fO USA, FYE"lh'26326168
+ 16
+DOCID: 4145037
+ CONFIBENTIALi'ffi:EL TO USA, FVEYh'29329198
+ (U//FOU01 The plaintext from this portion of the cipher reads:
+ "SLOWLY DESPARATLY SLOWLY THE REMAINS OF PASSAGE DEBRIS
+ THAT ENCUMBERED THE LOWER PART OF THE DOORWAY WAS
+ REMOVED. WITH TREMBLING HANDS I MADE A TINY BREACH IN THE
+ UPPER LEFT HAND CORNER AND THEN WIDENING THE HOLE A LIT-
+ TLE I INSERTED THE CANDLE AND PEERED IN. THE HOT AIR ESCAP-
+ ING FROM THE CHAMBER CAUSED THE FLAME TO FLICKER BUT
+ PRESENTLY DETAILS OF THE ROOM WITHIN EMERGED FROM THE
+ MIST X CAN YOU SEE ANYTHING Q"
+ (U//fOUO) This passage is from a book written by Howard Carter, and it's referring to the open-
+ ing of King Tut's tomb back in November 1922.
+ (U//f06JO) ·\ .couple of other things also need to be pointed out. There's another misspelling. The
+ second word of the decrypting of this passage, DESPARATLY should be DESPERATELY, but it
+ did indeed decrypt as shown above. Also, remember how the solution to this portion of the cipher
+ began by placing a U next to the Q? Well, in the solution the Q is not followed by a U. Good luck
+ never hurts when doing cryptanalysis.
+ (U//FOUO) Working back to discover the order in which the columns were extracted from this
+ transposition matrix, we recall that the cipher began with END, followed by the YAHR in which
+ the Y, A and R were slightly raised on the sculpture. The END occurs near the right side of the
+ matrix, and reads from bottom to top. YAHR was the second column extracted from the matrix. It's
+ seven columns to the left of the END column, and also was extracted from bottom to top. Seven
+ more columns to the left we see OHNL reading upwards. In fact, this "seven columns to the left"
+ property continues throughout the entire process.
+ (U//.EIJUO)-fig. 20. Enumeration of the columns by the order in which they were extracted
+ 1 SLOWLYDESPARATLYSLOWLYTHEREMAINSOFPASSAGEDE .. .
+ 2 ASREMOVEDWITHTREMBLINGHANDSIMADEATINYBREACH .. .
+ 3 OLEALITTLEIINSERTEDTHECANDLEANDPEEREDINTHEH .. .
+ 4 FLICKERBUTPRESENTLYDETAILSOFTHEROOMWITHINEM .. .
+ 9 8 7
+ ... BRISTHATENCUMBEREDTHELOWERPARTOFTHEDOORWAYW 1
+ ... INTHEUPPERLEFTHANDCORNERANDTHENWIDENINGTHEH 2
+ ... OTAIRESCAPINGFROMTHECHAMBERCAUSEDTHEFLAMETO 3
+ ... ERGEDFROMTHEMISTXCANYOUSEEANYTHINGQ 4
+ 6 5 4 3 2 1
+ CONFIJ>ENTIALHREL TO USlt, FVEYJ/l9~l9108
+ 17
+DOCID: 4145037
+ CONFIBEN'f'IAL/JREL 'f'O USA, F'lE""l/126326168
+ (UNFOUO) Because of the values are occurring at an interval of seven, we can actually recreate a
+ matrix that's seven columns wide to represent the ordering of the columns. The number 49 repre-
+ sents the leftmost column, FAOS when reading from bottom to top. It was the 49th .column
+ extracted from this matrix. Next, the 12 represents the second column from the left, LLSL when
+ reading upward. It was the 12th column pulled from the matrix.
+ (U//FOUO) Fig. 21. Matrix containing the order in which the columns were extracted, reading left
+ to right, top to bottom.
+ 49 12 61 24 73 36 85
+ 48 11 60 23 72 35 84
+ 47 10 59 22 71 34 83
+ 46 9 58 21 70 33 82
+ 45 8 57 20 69 32 81
+ 44 7 56 19 68 31 80
+ 43 6 55 18 67 30 79
+ 42 5 54 17 66 29 78
+ 41 4 53 16 65 28 77.
+ 40 3 52 15 64 27 76
+ 39 2 51 14 63 26 75
+ 38 1 50 13 62 25 74
+ 37 86
+ (U/,',fOUO) Within this box there is a nice ordering. 1-12 in the second column, 13-24 in the 4th
+ column, 25-36 in the sixth column, 37-49 in the first column, 50-61 in the third column, 62-73 in
+ the fifth column, 74-85 in the seventh column, and at the very bottom of the second column is the
+ 86.
+ CONFIBENTIALfmEL 'fO USA, FYEY//29329198
+ 18
+DOCID: 4145037
+ CONFIDENTIAL//RBL TO U8A, FVEY//lQ3lQ1Q8
+ (U//FOUO) It was noticed that if these columns are ordered, they form a numeric key of
+ 4 1 5 2 6 3 7. If a numeric key is created form the word KRYPTOS, it would be 1 4 7 3 6 2 5. If
+ this order is written in reverse beginning with the R column, the one labeled with a 4, we would
+ get the 4 1 5 2 6 3 7 order..
+ (U//FOUO) Fig. 22. An attempt to explain the ordering of the column key values
+ R K s 0 T p y
+ 4 1 5 2 6 3 7
+ --------------------------
+ 49 12 61 24 73 36 85
+ 48 11 60 23 72 35 84
+ 47 10 59 22 71 34 83
+ 46 9 58 21 70 33 82
+ 45 8 57 20 69 32 81
+ 44 7 56 19 68 31 80
+ 43 6 55 18 67 30 79
+ 42 5 54 17 66 29 78
+ 41 4 53 16 65 28 77 (b) (1)
+ 40 3 52 15 64 27 76 (b) (3) -50 USC 3024 (i)
+ Pt 86-36/50 USC 3605
+ 39 2 51 14 63 26 75
+ 38 1 50 13 62 25 74
+ 37 86
+ (U//-fOUOJ At this point, having solved two of three parts, work returned to the first two\lines of
+ cipher on the sculpture, which consisted of 63 characters.
+ (U//~) Fig. 23. First two lines of KRYPTOS sculpture
+ E Mu F p H z L R F A x y u s D J K Z L D K R N s H G N F I v J
+ y Q T Q u x Q B Q v y u v L L T R E V J y Q T M Ky R D M F D
+ \\\
+ \\
+ CONFIDEN'f'IAL/tREL 'fO USA, FYEYH20320108
+ 19
+DOCID:· 4145037
+ (I:>) (1) . .
+ (b) (3) -50 USC 3024 (l)
+ CONFIDENTIALh'REL TO US:!'\: ' FUEY"lQ3lQ1Q8
+ " .,, PLl 86-36/50 USC 3605
+ CONF!DENTIALHREL TO USA, F' 7
+ ~ • E¥''20320108
+ n
+ 20
+DOCID: 4145037
+ CONFIDENTIAL/fREL TO USA, FYE'ih'28328188
+ (U//FOUO) Because it worked so well the last time, frequency counts were made for five alpha-
+ bets with the cipher arranged in KRYPTOS keyword-mixed order.
+ (U//Jl'OUGt-Fig. 25. Frequency counts using 5 alphabets for the first 63 characters of cipher.
+ K R Y P T 0 S A B C D E F G H 1 J L MN Q U V WX Z
+ - - 1 - - 2 1 - - 2 - - 1 2 - 2 - 2 -
+ 2 - - - 1 1 - - 3 1 1 - - 1 1 - 1 1
+ 1 1 5 - 1 - - - 1 - - - - - - 1 - 1 - 1 - - 1 -
+ -3--- - ------2- 132---1
+ - 1 2 - 2 - 1 - 1 1 1 - - 1 - 1 - - - - 1 -
+ (U/WOVOr Five occurrences of the cipher letter Y in the third alphabet were immediately noticed.
+ The easiest thing to tryis to match the most frequently occurring character in English, E, to the
+ cipher Y and see what happens. Using the KRYPTOS keyword-mixed alphabet again, just because
+ it worked so well last time, we get this alignment and plaintext:
+ (U//fOUO) Fig. 26. Alignment of KRYPTOS keyword-mixed alphabet with frequencies from
+ third cipher alphabet, and resulting plaintext:
+ 1 1 5 - 1 1 - 1 - 1 - 1 - - 1 -
+ c D E F G H I J L MN Q u v wx z K R y p T 0 s A B
+ EMUFP HZLRF AXYUS DJKZL DKRNS HGNFI VJYQT QUXQB
+ . . T .. . . K .. . . E .. . . c .. . . D .. . . Y .. . . E .. .. A ..
+ QVYUV LLTRE VJYQT MKYRD MFD
+ . . E .. .. G .. . . E .. .. E .. . .N
+ (U//.fOUO-) Nothing looks terrible here, but there's nothing really to build off, like a Q to place a U
+ aft.er. Eventually, it was discovered that the first alphabet frequencies matched pretty well with
+ this alignment, giving these recoveries:
+ (U//fOHO) fig. 27. Alignment of KRYPTOS keyword-mixed alphabet with frequencies from
+ first cipher alphabet, and resulting plaintext
+ - - - - - 1 - - 2 1 - - 2 - - 1 2 - 2 - 2 -
+ wx z K R y p T 0 s A B c D E F G H I J L MN Q u v
+ EMUFP HZLRF AXYUS DJKZL DKRNS HGNFI VJYQT QUXQB
+ B.T .. E.K .. T.E .. A.C .. A.D .. E.Y .. N.E .. L.A ..
+ QVYUV LLTRE VJYQT MKYRD MFD
+ L.E .. H.G .. N.E .. I.E .. I.N
+ CONFIDENTIALHREL TO USA, FYEYH29329198
+ 21
+DOCID: 4145037
+ CONFIBF;NTIALl{Rl;L TO USA, FYEYll~Q32QlQ8
+ (U//FOUO) This looks very good as there are a limited number of recoveries that can be placed
+ between 'some of these recoveries. Certainly a vowel needs to land between the Band Tat the
+ beginning in the second alphabet. And at the very end, maybe an 0 between the I and N. That was
+ attempted, and this is what happened:
+ (U/11"'CUO) Fig. 28. Alignment of KRYPTOS keyword-mixed alphabet with frequencies from
+ second cipher alphabet, and resulting plaintext:
+ 2 - - - - - - - - - - - 1 1 - - 3 1 1 - - 1 1 - 1 1
+ N Q u v w x z K R y p T 0 s A B c D E F G H I J L M
+ EMUFP HZLRF AXYUS DJKZL DKRNS HGNFI VJYQT QUXQB
+ BET .. EMK .. TLE .. ACC .. AND .. ESY .. NCE .. LHA ..
+ QVYUV LLTRE VJYQT MKYRD MFD
+ LIE .. HDG .. NCE .. INE .. ION
+ (U/ffOUO) We didn't do too badly. While we may have hoped for an H to land between the T and
+ E, we got TLE. But that's possible in a word like GENTLE or KETTLE. The ION at the end looks
+ great and we'd like to see a Tors land before it. And the two occurrences ofNCE, in words like
+ GLANCE and ONCE look super.
+ (U//fOUO) But there are some recoveries that don't look too great. EMK in the first line is not the
+ nicest letter combination, and the HDG in the bottom line is downright ugly. But then someone
+ thought that the first set of three recoveries (BET) looks good, the second (EMK) doesn't, the third
+ (TLE) looks good, the fourth (ACC) is not so good, the fifth (AND) is good, and so on. It seems to
+ alternate between good and not-so-good all the way thr01:1gh. So maybe it really was periodic
+ polyalphabetic with 10 alphabets.
+ (U//fOUO) If the assumption that 10 alphabets and polyalphabetic substitution is used, this is
+ what we have at this point:
+ (U//FOUO) Fig. 29. Recoveries for first three alphabets of 10-alphabet polyalphabetic substitu-
+ tion.
+ EMUFPHZLRF AXYUSDJKZL DKRNSHGNFI VJYQTQUXQB
+ BET . . . . . . . TLE . . . . . . . AND . . . . . . . NCE . . . . . . .
+ QVYUVLLTRE VJYQTMKYRD MFD
+ LIE . . . . . . . NCE . . . . . . . ION
+ (U//P'QUO) One nice thing that happens here is that the letter occurring before each of the NCEs is
+ different. They're both most likely vowels. The TLE will serves as a nice confirmation to show
+ this is the right track.
+ CONFIBEN'flAL/fflEL 'fO USA, FYEY/128328188
+ 22
+DOC ID: 4145037
+ CONFIBEN'fIALHR:EL 'fO USA, FYEY/126326168
+ (U//:f'OUO) This was done, and here's the resulting plaintext after all the letters were recovered.
+ (U/7':FOUO) Fig. 30. Plaintext for first two liries of KRYPTOS sculpture.
+ EMUFPHZLRF AXYUSDJKZL DKRNSHGNFI VJYQTQUXQB
+ BETWEENSUB TLESHADING ANDTHEABSE NCEOFLIGHT
+ QVYUVLLTRE VJYQTMKYRD MFD
+ LIESTHENUA NCEOFIQLUS ION
+ (U//FOUO) In a more readable form, the plaintext says:
+ "BETWEEN SUBTLE SHADING AND THE ABSENCE OF LIGHT LIES THE
+ NUANCE OF IQLUSION"
+ (U//fOUO) Yet another typographical error in the plaintext. The correct decryption is indeed
+ IQLUSION instead of ILLUSION, which is what is obviously meant.
+ (U//l"t:1t:te) Recovering the polyalphabetic substitution matrix used, the plain and cipher compo-
+ nents are the keyword-mixed sequence based on KRYPTOS, with a repeating key of PALIMP-
+ SEST.
+ (U/440U~ Fig. 31. Decryption matrix for first two lines of KRYPTOS sculpture.
+ P: K R y p T 0 s A B c D E F G H I J L M N Q u v w x z
+ Cl: p T 0 s A B c D E F G H I J L M N Q u v w x z K R y
+ C2: A B c D E F G H I J L M N Q u v wx z K R y p T 0 s
+ C3: L M N Q u v wx z K R y p T 0 s A B c D E F G H I J
+ C4: I J L M N Q u v wx z K R y p T 0 s A B c D E F G H
+ CS: M N Q u v w x z K R y p T 0 s AB c D E F G H I J L
+ C6: p T 0 s A B c D E F G H I J L MN Q u v w x z K R y
+ C7: s A B c D E F G H I J L M N Q u v wx z K R y p T 0
+ CB: E F G H I J L M N Q u v wx z K R y p T 0 s A B c D
+ C9: s A B c D E F G H I J L M N Q u v wx z K R y p T 0
+ ClO : T 0 s A B c D E F G H I J L M N Q u v wx z K R y p
+ (U/ffOUOt-Palimpsest is a noun which means a "parchment, tablet, etc., that has been written
+ upon two or three times, the previous text or texts having been imperfectly erased, and remaining
+ therefore still partly visible."
+ (U//fOUO) Between the definition of Palimpsest and the plaintext resulting from this passage, it
+ makes one wonder if there isn 't something else on the sculpture that may have been overlooked.
+ CONFIDENTIALHREL TO U8A, Fl/EYH29329l98
+ 23
+DOCID: 4145037
+ CONFlfDENTIALHREL 'fO USA, FYEYJ'/26326168
+ (U/1'-FOUOJ At this point, three of four sections had been decrypted, and for those of us at NSA
+ who've worked on this, and that numbers in the dozens, no one has ever gotten that last part.
+ (U/4"0UO:THowever, on April 19, 2006, the sculptor, James Sanborn, admitted publicly that there
+ was an.omitted letter in the second portion of the cipher, the section with the latitude and longi-
+ tude coordinates. Returning to that section, this was the polyalphabetic section with eight alpha-
+ bets using the repeating key of ABSCISSA. ·
+ (U/a<:OUOJ" Fig. 32. Decryption matrix for second portion of KRYPTOS cipher.
+ P: K R y p T 0 s A B c D E F G H I J L MN Q u v wx z
+ Cl: A B c D E F G H I J L MN Q u v wx z K R y p T 0 s
+ C2: B c D E F G H I J L MN Q u v wx z K R y p T 0 s A
+ C3: s A B c D E F G H I J L MN Q u v w x z K R y p T 0
+ C4: c D E F G H I J L M N Q u v w x z K R Y p T 0 s AB
+ C5: I J L MN Q u v w x z K R y p T 0 s A B c D E F G H
+ C6: s A B c D E F G H I J L MN Q u v w x z K R y p T 0
+ C7: s A B c D E F G H I J L MN Q u v w x z K R y p T 0
+ CB: A B c D E F G H I J L MN Q u v w x z K R y p T 0 s
+ (U//POUO) Recall that the section in question is the one that ends with the "ID BY ROWS"
+ (U//Ji:OUO)fig. 33. End of decryption of second part .
+ . .. GNUVPDXV KPDQUMEB EDMHDAFM JGZNUPLG EWJLLAET G
+ ... SEIGHTMI NUTESFOR TYFOURSE CONDSWES TIDBYROW S
+ (U//POUO) Mr. Sanborn's admission of an omitted letter came after seven years of hearing the
+ phrase "ID BY ROWS," and assuming all along it was some sort of "cryppie talk" used by solv-
+ ers to explain what they had dome to reach this point. He never intended the cipher to say that, fig-
+ uring by omitting a letter, it would merely cause the cipher to decrypt to random letters and not
+ really say anything with meaning. And Mr. Sanborn claims that the omitted letter was for "aes-
+ thetic reasons," refusing to claim any oversight.
+ (U//POUO) The missing letter was a missing cipher letter S which should occur between the E
+ and the W near the end of the cipher passage. By placing the missing s in its proper place, the new
+ resulting plaintext looks like this:
+ (U/;f.FOUOJ Fig. 34. Corrected decryption of second part after including missing cipher S .
+ . .. GNUVPDXV KPDQUMEB EDMHDAFM JGZNUPLG ESWJLLAE TG
+ ... SEIGHTMI NUTESFOR TYFOURSE CONDSWES TXLAYERT WO
+ (U//FOUO) Instead of ending with "ID BY ROWS", "LAYER TWO" is the new conclusion to
+ this section.
+ CONFIDEN'f'IALtfREL 'fO USA, F''lEYf/26328188
+ 24
+DOCID: 4145037 (b) (1)
+ (b) (3) -50 USC 3024 (i)
+ PL 86-36/50 USC 3605
+ CONf?:llf>l'.:N'fIAL//itt:L 'fO USA, f?Vl'.:"i//26326168
+ (U//FOUO) So this is where we stand today. There are several clues which may or may not pertain
+ to the solution of the missing fourth part. First, the three misspelled words, one from each section:
+ IQLUSION, UNDERGRUUND and DESPARATLY. One person, on their website, tries to be
+ helpful by pointing out that if you take the two words used as repeating keys, ABSCISSSA. and
+ PALIMPSEST, you can anagram them to say "P.S. It's as simple as ABC." While that's nice to
+ know, I don't know how it would figure into the actual solution of the fourth part. And we had a
+ missing letter in the second part of the cipher. Could there possibly be a missing letter in the
+ remaining section which is presently making it impossible to find a solution?
+ (U//'FOUO) Looking at the remaining 97 characters, they have a fairly flat distribution, although
+ there are eight Ks which appear.
+ CONFIDENTIAL/fREL TO USA, FYEYH29320108
+ 25
+DOCID: 4145037
+ CONFIDEN'f'IALh'REL 'f'O USA, FYEY1/28328188
+ (U//.POUO) There are no long repeats, but there is a slight interval 7 property.
+ (U//FOUO) I have tried a number of things which might cause an interval 7 propertyto appear,
+ including' Plaintext Autokey and Ciphertext Autokey, but I've yet to stumble upon something that
+ gives either readable plaintext, or hints at the presence of a second encipherment layer.
+ (U/fFOUOf.Work continues in spits and spurts, depending upon time, motivation, and ideas.
+ (b) (1)
+ (b) (3) -50 USC 3024 (i)
+ PL 86-36/50 USC 3605
+ CONFIDENTl1~L/.,'IU;L TO USA, FYEYH29329198
+ 26

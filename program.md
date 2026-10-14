@@ -1,8 +1,14 @@
 # program.md: instructions for the loop agent
 
-You are running an autoresearch loop against Kryptos K4. Read this whole file,
-then `README.md`, then `families.md`, then the most recent entries in
-`results.tsv` and their `experiments/*/experiment.md`, before your first edit.
+You are running an autoresearch loop against Kryptos K4. Before your first edit, read
+in full and in this order: this file; `README.md`; every numbered file in `knowledge/`
+(`01-facts.md` through `10-sanborn-the-artist.md`); `families.md`; `results.tsv` and the
+`experiments/*/experiment.md` records newest first. This is not optional and it is not
+skimmable. The record contains throwaway remarks from the artist and the cryptographer
+that no search strategy will rediscover; the clue that breaks K4 is as likely to be one of
+those as a statistic. When you open a hypothesis family, also read the primary sources in
+`knowledge/sources/` that the family's evidence rests on, and the matching research note in
+`research_notes/`. Quote sources by file name in `hypothesis_expert`.
 
 ## What success means
 
@@ -70,6 +76,19 @@ negative result: a precise statement of what was searched.
   how many keys, whether exhaustive. "Tried a few" is not a bound.
 - `key_bits`: honest entropy of the key. Words cost 4.7 bits per letter;
   arbitrary letters cost log2(26) each; a choice among N options costs log2(N).
+
+## How to think here
+
+Sanborn wrote the text and enciphered it himself, by hand, with charts, on a truck ride,
+after four months of lessons from a field-communications officer who thinks in keys built
+from parts and codes an agent could carry in his head under duress. He is an artist who
+thinks in strata, light, shadow, matrices and the sculpture as one object, who personalizes
+every instrument he is given, and who deals in misdirection. The system will be simple once
+seen and will look like him. Before writing search code, sit with `knowledge/06-hypotheses.md`
+and ask what this particular person would have done. Prefer experiments that test a
+specific reading of a specific quote over experiments that sweep a textbook cipher family.
+Both are needed; the second is cheap and should leave bounds behind; the first is where
+the odds are.
 
 ## Hard facts you can rely on
 

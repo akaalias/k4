@@ -10,6 +10,12 @@ Re-read this top to bottom every few pivots and pick the family with the least c
 | 3 | Two-component key with a combiner (Scheidt's CKM habit) | untouched | | | Keyword from the puzzle's vocabulary combined with a second element from the sculpture: the extra L position, the raised YAR, Morse E-padding counts, the K2 coordinates. |
 | 4 | Sanborn's "visual systems" | untouched | | | Mirrored tableau reading, routes through the carved grid, the HILL column as an index. Inspiration pool is `research_notes/.../sculpture_physical_form.md`. |
 | 5 | Gromark and LFSR variants beyond base 10 | untouched | | | Bean exhausted base-10 length-5 primers. Raised YAR as a possible primer. |
+| 6 | Matrix transposition stage(s), then the tableau last (Sanborn, CNN 2005: "double matrixes and triple matrixes... then went back to this table to do the ultimate") | untouched | | | The cribs then constrain the final keyed-substitution stage, not positions; the transposition must deliver plaintext letters into crib positions such that the forced key letters form a short key. See `knowledge/06-hypotheses.md` family A. |
+| 7 | Construction simulation: generate test ciphers by candidate systems and ask which reproduce K4's width-7 doublet column and width-21 repeat fingerprint (Oranchak's Zodiac 340 method) | untouched | | | Not a solver; a family-ranking tool. Results feed the patience rules. |
+
+Parameter applied to every family once it is otherwise exhausted: the copper may be wrong
+by one letter (K2 was). Re-run with one letter inserted or deleted at each position, and
+with the "?" counted (family G in `knowledge/06-hypotheses.md`).
 
 ## Key sources (cross-cutting: try in this order inside every family)
 

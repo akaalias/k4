@@ -1,0 +1,12 @@
+plain alphabet PALIMPSEST/keyword PALIMSETBCDFGHJKNOQRUVWXYZ
+cipher alphabet KRYPTOS KRYPTOSABCDEFGHIJLMNQUVWXZ
+
+period 21 collisions: positions 42 apart share a slot
+
+pos  plain  cipher  key index    pos  plain  cipher  key index   agree?
+ 22    E      F        6         64    B      N       11       no
+ 23    A      L       16         65    E      Y       22       no
+ 24    S      R       22         66    R      P       10       no
+ 25    T      V       15         67    L      V       20       no
+ 26    N      Q        4         68    I      T        1       no
+ 27    O      Q        3         69    N      T       14       no

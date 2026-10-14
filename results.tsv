@@ -11,3 +11,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0010	0010-forced-key-stretches-mixed-alphabets	1-keyed-periodic	0009-forced-key-stretches-read-as-english	reverted	0	0	0			80	design=13 implement=52 test=76 run=80 record=0
 0011	0011-progressive-key-period-sweep	1-keyed-periodic	0005-quagmire-period-sweep-forced-keys	reverted	0	0	0			1	design=15 implement=352 test=0 run=1 record=0
 0012	0012-plaintext-autokey-chained-from-cribs	1-keyed-periodic	0003-plaintext-autokey-all-lags	reverted	0	0	0			1	design=43 implement=56 test=1 run=0 record=0
+0013	0013-gromark-recurrence-on-crib-shifts	5-gromark-lfsr	-	reverted	0	0	0			2	design=19 implement=60 test=8 run=2 record=0

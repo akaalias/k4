@@ -1,0 +1,23 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "running numerical key, k[i] = k[i-a] + k[i-b] mod base",
+  "rules": "66 lag pairs, 1 <= b < a <= 12",
+  "bases": [
+   10,
+   26
+  ],
+  "alphabets": 248,
+  "alphabet_triples": 184512,
+  "modes": 3,
+  "base10_all_digit_triples": 0,
+  "min_checks": 6,
+  "survivors": [],
+  "n_survivors": 0,
+  "n_survivors_consistent_with_second_run": 0
+ },
+ "notes": "184512 alphabet triples x 66 rules x 2 bases. 0 survivors with >= 6 checks; 0 full-stream candidates submitted.",
+ "error": null,
+ "worked_example": "plain alphabet standard, cipher alphabet KRYPTOS, Vigenere: forced shifts at 22-34\n\npos  plain  cipher  shift\n 22    E      F       8\n 23    A      L      17\n 24    S      R       9\n 25    T      V       3\n 26    N      Q       7\n 27    O      Q       6\n 28    R      P      12\n 29    T      R       8\n 30    H      N      12\n 31    E      G       9\n 32    A      K       0\n 33    S      S      14\n 34    T      S      13\n\nshifts: 8 17 9 3 7 6 12 8 12 9 0 14 13\nGromark rule a=5 b=4 base 10: all digits? False; base 26 check at i=5: 6 vs 25",
+ "seconds": 2.0518009662628174
+}

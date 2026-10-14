@@ -1,0 +1,13 @@
+route: columnar width 7, read columns left to right; convention kry/kry/kry Vigenere
+
+plain pos  letter  lands at  cipher there  forced key letter
+       22    E         4         R              J
+       23    A        18         F              O
+       24    S        32         K              Q
+       25    T        46         K              V
+       64    B        10         H              S
+       65    E        24         R              J
+       66    R        38         T              P
+       67    L        52         J              Z
+
+positions 4 and 10 share a key slot at period 6, 3, 2 and 1; if their forced letters differ, those periods die.

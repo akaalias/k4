@@ -4,3 +4,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0003	0003-plaintext-autokey-all-lags	1-keyed-periodic	0002-ciphertext-autokey-all-lags	reverted	0	0	0			0
 0004	0004-running-key-from-k1-k3	1-keyed-periodic	0003-plaintext-autokey-all-lags	reverted	0	0	0			1
 0005	0005-quagmire-period-sweep-forced-keys	1-keyed-periodic	0004-running-key-from-k1-k3	reverted	0	0	0			0
+0006	0006-columnar-then-tableau-period-survival	6-transposition-then-tableau	-	reverted	0	0	0			7	design=175 implement=73 test=14 run=7 record=0

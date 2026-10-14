@@ -192,7 +192,7 @@ def loss_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     W, H = 960, 320
-    L, R, T, B = 56, 80, 20, 34
+    L, R, T, B = 76, 120, 20, 34
     n = len(rows)
     gate, ymax = 10.0, 240.0
     plot_h = H - T - B
@@ -219,9 +219,9 @@ def loss_chart(rows):
     g.append(f'<path d="M{bx-5},{y_gate-10:.1f} l10,-5 M{bx-5},{y_gate-6:.1f} l10,-5" stroke="var(--muted)" stroke-width="1" fill="none"/>')
     # annotations at right, clear of the plot
     ax = W - R + 10
-    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--accent)">all 24 known letters right</text>')
+    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--accent)">all 24 known right</text>')
     g.append(f'<text x="{ax}" y="{y(0)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">solved</text>')
-    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">no known letter right</text>')
+    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">none right</text>')
     pts, best = [], None
     for i, r in enumerate(rows):
         if r.get("decision") == "kept" and r.get("best_loss") is not None:
@@ -242,6 +242,7 @@ def loss_chart(rows):
     last = rows[-1]
     if last.get("best_loss") is not None:
         g.append(f'<text x="{xs[-1]+9:.1f}" y="{y(last["best_loss"])+4:.1f}" font-size="11.5" fill="var(--ink)">{last["best_loss"]:.1f}</text>')
+    g.append(f'<text transform="translate(14,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="11.5" fill="var(--muted)">loss, points: 10 per wrong known letter</text>')
     g.append(f'<text x="{L}" y="{H-8}" font-size="11.5" fill="var(--faint)">experiment 1</text>')
     g.append(f'<text x="{W-R}" y="{H-8}" font-size="11.5" fill="var(--faint)" text-anchor="end">experiment {n}</text>')
     g.append("</svg>")

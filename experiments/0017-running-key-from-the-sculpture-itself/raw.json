@@ -1,0 +1,30 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "running key from the sculpture's own texts",
+  "sources": {
+   "tableau rows fwd": 781,
+   "tableau rows bwd": 781,
+   "tableau rows with index column fwd": 807,
+   "tableau rows with index column bwd": 807,
+   "tableau columns fwd": 781,
+   "tableau columns bwd": 781,
+   "morse as carved fwd": 80,
+   "morse as carved bwd": 80,
+   "morse reversed order fwd": 80,
+   "morse reversed order bwd": 80,
+   "right panel ciphertexts K1-K4 fwd": 865,
+   "right panel ciphertexts K1-K4 bwd": 865
+  },
+  "conventions": 24,
+  "offsets": "all cyclic",
+  "trials": 162912,
+  "fewest_mismatches": "more than 3",
+  "trials_with_at_most_3_mismatches": [],
+  "survivors": 0
+ },
+ "notes": "162912 trials; 0 zero-mismatch survivors; 0 trials with three or fewer mismatches.",
+ "error": null,
+ "worked_example": "key text: tableau rows, offset 0, KRYPTOS alphabet throughout, Vigenere\n\nkey text begins KRYPTOSABCDEFGHIJLMNQUVWXZKRYPRYPTOSABCD...\n\npos  plain  key letter  E+key  carved  match\n 22    E        U         S      F     no\n 23    A        V         P      L     no\n 24    S        W         P      R     no\n 25    T        X         Y      V     no\n 64    B        O         G      N     no\n 65    E        S         L      Y     no",
+ "seconds": 0.1778099536895752
+}

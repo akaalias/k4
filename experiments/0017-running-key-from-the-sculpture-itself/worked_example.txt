@@ -1,0 +1,11 @@
+key text: tableau rows, offset 0, KRYPTOS alphabet throughout, Vigenere
+
+key text begins KRYPTOSABCDEFGHIJLMNQUVWXZKRYPRYPTOSABCD...
+
+pos  plain  key letter  E+key  carved  match
+ 22    E        U         S      F     no
+ 23    A        V         P      L     no
+ 24    S        W         P      R     no
+ 25    T        X         Y      V     no
+ 64    B        O         G      N     no
+ 65    E        S         L      Y     no

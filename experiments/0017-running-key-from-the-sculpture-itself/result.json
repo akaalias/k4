@@ -1,0 +1,49 @@
+{
+ "id": 17,
+ "tag": "0017-running-key-from-the-sculpture-itself",
+ "started": "2026-10-14T17:19:37+00:00",
+ "seconds": 0.3,
+ "status": "ran",
+ "phases": {
+  "design": 15.2,
+  "implement": 43.2,
+  "test": 0.5,
+  "run": 0.3,
+  "record": 0.0
+ },
+ "ended_epoch": 1791998378.014355,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "running key from the sculpture's own texts",
+  "sources": {
+   "tableau rows fwd": 781,
+   "tableau rows bwd": 781,
+   "tableau rows with index column fwd": 807,
+   "tableau rows with index column bwd": 807,
+   "tableau columns fwd": 781,
+   "tableau columns bwd": 781,
+   "morse as carved fwd": 80,
+   "morse as carved bwd": 80,
+   "morse reversed order fwd": 80,
+   "morse reversed order bwd": 80,
+   "right panel ciphertexts K1-K4 fwd": 865,
+   "right panel ciphertexts K1-K4 bwd": 865
+  },
+  "conventions": 24,
+  "offsets": "all cyclic",
+  "trials": 162912,
+  "fewest_mismatches": "more than 3",
+  "trials_with_at_most_3_mismatches": [],
+  "survivors": 0
+ },
+ "notes": "162912 trials; 0 zero-mismatch survivors; 0 trials with three or fewer mismatches.",
+ "error": null,
+ "candidates": []
+}

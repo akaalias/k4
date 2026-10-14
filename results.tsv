@@ -15,3 +15,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0014	0014-two-keywords-two-passes-linear	3-two-component-key	-	reverted	0	0	0			10	design=6 implement=87 test=72 run=10 record=0
 0015	0015-hill-solved-from-crib-blocks	8-hill-polygraphic	-	reverted	2	0	16	85.159		0	design=40 implement=71 test=70 run=0 record=0
 0016	0016-routes-then-tableau-forced-key-english	6-transposition-then-tableau	0008-k3-formula-all-shifts-then-tableau	reverted	0	0	0			81	design=11 implement=53 test=17 run=81 record=0
+0017	0017-running-key-from-the-sculpture-itself	1-keyed-periodic	0004-running-key-from-k1-k3	reverted	0	0	0			0	design=15 implement=43 test=0 run=0 record=0

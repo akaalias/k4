@@ -123,12 +123,12 @@ Status: partly confirmed by the cribs.
 
 **C17. "Whether it's 97, whether it's 100... I seem to like to manipulate the
 information."** (2005). Readings: (a) disinformation; (b) the working text had nulls or
-a different length before being cut to 97; (c) the "?" counts. Family G. Status:
+a different length before being cut to 97; (c) the "?" counts. Family G. Status: (a) and (b) partly bounded by 0009: one letter inserted or deleted at any position does not make the crib-forced tableau key readable under 24 conventions.
 parameter.
 
 **C18. "Scheidt's 'a bit of stego'" and "I think there are 98 characters left."** (2004,
 2005). Readings: (a) the plaintext is hidden among nulls; (b) a 98-character working
-text including "?"; (c) an even length for a digraphic or 7x14 layout. Status: untested.
+text including "?"; (c) an even length for a digraphic or 7x14 layout. Status: the 98-character reading is bounded by 0009 for periodic tableau keys; other families untested.
 
 **C19. "What's a period, because there's more than one sentence in there... special
 characters don't work."** (Scheidt, 2015). Readings: (a) K4 has sentence breaks marked

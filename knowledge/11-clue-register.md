@@ -16,7 +16,7 @@ or more columnar or route transpositions followed by keyed-tableau substitution;
 sentence describes the whole sculpture (K3 then K1-K2) and says nothing about K4; (c) the
 "matrix" is the KRYPTOS-shifted tableau itself and "double" means two tableau passes.
 Experiments: family A searches for (a); (c) means composed Quagmires, which the period
-sweep bounds. Status: untested.
+sweep bounds. Status: (a) bounded by 0006: columnar routes (plain, keyed, double plain) before a periodic tableau admit no key shorter than 23; route transpositions and triple stages untested. (c) untested.
 
 **C2. "No one has recovered the original matrix... surprised that no one had tried
 recovering the original matrix and running it through all the possible 'shifts'."**
@@ -27,7 +27,7 @@ different grid whose other "shifts" (rotations, offsets, start positions) produc
 Hill-style numeric matrix. Experiments: recover every grid that reproduces K3 (widths 7,
 8, 14, 21, 24, 28, 42, 48, 86; Bauer's double rotation; Stehle's 192 rule), then apply
 each grid's family of shifts to K4 before and after tableau substitution. Status:
-untested.
+0006 covered plain columnar at every width including the K3 widths, before the tableau; K3's double rotation and the 192 rule as routes, and the after-tableau order, untested.
 
 **C3. "I like to use spatial systems of encoding and decoding... pattern, light and
 shadow... visual systems... individualistic."** (1999, 2005). Readings: (a) a route

@@ -10,7 +10,7 @@ Re-read this top to bottom every few pivots and pick the family with the least c
 | 3 | Two-component key with a combiner (Scheidt's CKM habit) | untouched | | | Keyword from the puzzle's vocabulary combined with a second element from the sculpture: the extra L position, the raised YAR, Morse E-padding counts, the K2 coordinates. |
 | 4 | Sanborn's "visual systems" | untouched | | | Mirrored tableau reading, routes through the carved grid, the HILL column as an index. Inspiration pool is `research_notes/.../sculpture_physical_form.md`. |
 | 5 | Gromark and LFSR variants beyond base 10 | untouched | | | Bean exhausted base-10 length-5 primers. Raised YAR as a possible primer. |
-| 6 | Matrix transposition stage(s), then the tableau last (Sanborn, CNN 2005: "double matrixes and triple matrixes... then went back to this table to do the ultimate") | untouched | | | The cribs then constrain the final keyed-substitution stage, not positions; the transposition must deliver plaintext letters into crib positions such that the forced key letters form a short key. See `knowledge/06-hypotheses.md` family A. |
+| 6 | Matrix transposition stage(s), then the tableau last (Sanborn, CNN 2005: "double matrixes and triple matrixes... then went back to this table to do the ultimate") | active | 0006 | Columnar routes (plain widths 2-96 in both column directions, forward and inverse; keyed columnar from every vocabulary word, both directions; every double of plain forward columnars at widths 2-50: 2,905 routes) then a periodic tableau with separate alphabets: over 69,720 route/convention pairs the smallest period the cribs allow is 23; no route allows a period under 23; forced fragments for live periods up to 30 match no vocabulary word or K1-K3 window (0006). | The cribs constrain the final keyed-substitution stage, not positions. Note from 0006: the crib-consistency test depends only on the plain and cipher alphabets and on Beaufort versus the other two modes, so the 24 conventions are 8 distinct cases for any sweep of this kind. Next: route transpositions (spirals, boustrophedon, diagonals), K3-shaped grids (C2), and the reverse order (tableau first, transposition last). |
 | 7 | Construction simulation: generate test ciphers by candidate systems and ask which reproduce K4's width-7 doublet column and width-21 repeat fingerprint (Oranchak's Zodiac 340 method) | untouched | | | Not a solver; a family-ranking tool. Results feed the patience rules. |
 
 Parameter applied to every family once it is otherwise exhausted: the copper may be wrong
@@ -41,6 +41,7 @@ Every experiment's `bounds` should say which key source it drew from.
 | Running key from K1, K2, K3 plaintext or ciphertext, any offset, either direction | 165,216 trials, zero survivors | experiment 0004 |
 | Periodic tableau with separate alphabets at periods 1-26 and 30-52 | Forced key letters conflict under all 24 conventions | experiment 0005 |
 | Periodic tableau at surviving periods keyed by a vocabulary word or a K1-K3 phrase | Forced fragments match nothing in the pool | experiment 0005 |
+| Columnar transposition (plain, keyed by vocabulary, or double plain) then a periodic tableau with a key shorter than 23 | Smallest crib-consistent period over 2,905 routes and 24 conventions is 23 | experiment 0006 |
 | Monoalphabetic substitution | Same ciphertext letter maps to different plaintext letters in the cribs | cribs |
 | Pure transposition, any route | Cribs need three E's, K4 has two; letter mismatch at fixed positions | cribs |
 | Rotor machines (Enigma class) | K encrypts to K at 74, S to S at 33 | cribs |
@@ -55,3 +56,4 @@ Every experiment's `bounds` should say which key source it drew from.
 
 | Date | From | To | Reason |
 |---|---|---|---|
+| 2026-10-14 | 1 keyed periodic | 6 transposition then tableau | Five consecutive reverts in family 1 (0001-0005); program rule. Family 1 keeps its open bounds: plaintext autokey lags 12-29 and 53-96, progressive key. |

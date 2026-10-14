@@ -71,7 +71,7 @@ code,pre{font:12.5px/1.5 var(--mono)}pre{background:var(--wash);border:1px solid
 article{max-width:980px}article h1{font:400 30px/1.2 var(--serif);margin:10px 0 6px}
 article h2{font:400 22px/1.25 var(--serif);margin:34px 0 6px;padding-top:12px;border-top:1px solid var(--rule)}
 article h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}
-article p,article li{max-width:720px}article ol{padding-left:26px}article ol li{margin:0 0 8px}
+article p,article li{max-width:720px}article table{table-layout:fixed;width:100%}article td{vertical-align:top;overflow-wrap:anywhere}article td code{white-space:normal;word-break:break-all;letter-spacing:.04em}article ol{padding-left:26px}article ol li{margin:0 0 8px}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
 .chart-row{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:28px;align-items:start;margin-top:8px}
 .aside{font-size:13.5px;line-height:1.5;color:var(--muted);border-left:1px solid var(--rule);padding-left:16px;margin-top:16px}

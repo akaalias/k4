@@ -1,251 +1,227 @@
-"""Experiment 0018. See program.md for the contract."""
+"""Experiment 0019. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "construction-simulator-fingerprint",
-    "title": "Construction simulator: which cipher families produce texts with K4's statistical fingerprint?",
-    "family": "7-construction-simulation",
-    "parent": None,
-    "changed": "New root in family 7. Not a solver: fourteen generators encrypt English windows with random keys, and K4's statistics are placed in each family's distribution.",
+    "slug": "substitution-then-route-crib-images-one-to-one",
+    "title": "Substitution first, a route last: do the 24 crib images stay one letter to one letter under any route?",
+    "family": "9-substitution-then-transposition",
+    "parent": "0018-construction-simulator-fingerprint",
+    "changed": "New family, opened by 0018's finding that only substitution followed by transposition reproduces K4's width-21 repeats. The cribs now constrain the ciphertext letters the route sends them to, not the letters at 22-34 and 64-74.",
     "hypothesis_expert": (
-        "Oranchak, Blake and Van Eycke solved Zodiac 340 by simulating constructions until one reproduced "
-        "the ciphertext's fingerprint (knowledge/07-people.md). K4's fingerprint (knowledge/04-structure.md): "
-        "index of coincidence 0.0361; all 26 letters present; six doublets, five of them in one column at "
-        "width 7; eleven repeated vertical bigrams at width 21; top frequency 8; and Bean's closeness, the "
-        "crib plaintext letters sitting near their ciphertext letters on the standard alphabet. Each "
-        "generator takes a random 97-letter window of the K1-K3 plaintexts and a random key: periodic "
-        "Vigenere on the KRYPTOS alphabet at periods 27-30, Quagmire with random alphabets, progressive "
-        "key, plaintext autokey, running key, columnar then Vigenere, Vigenere then columnar, Hill 2x2 and "
-        "3x3, Gromark base 10, plus three calibration generators (random letters, pure transposition, "
-        "monoalphabetic). For each statistic and generator we record the two-sided empirical p-value of "
-        "K4's value and a combined distance. The result ranks families by plausibility; it decides none. "
-        "Bounds: 5,000 samples per generator, these twelve statistics."
+        "Zodiac 340 was a homophonic substitution followed by a transposition, and its width-19 repeats were "
+        "the trace (knowledge/04-structure.md). K4's eleven width-21 repeats have p about 0.005 under every "
+        "substitution-last generator and p near 1 under transposition of English (0018). Against: Sanborn's "
+        "secondhand 'one-to-one mapping' of NYPVTT to BERLIN (knowledge/02-sanborn-said.md, 2011 and 2013 "
+        "dinners), which says the letters at 64-69 are BERLIN's own images; this family contradicts that "
+        "reading and is tested because the statistic is the stronger evidence. Model: each plaintext letter "
+        "goes to one of its symbols (monoalphabetic, or homophonic over the same 26 symbols), then a route T "
+        "permutes positions. The image of crib position i is ct[T(i)]. Constraint: a ciphertext letter has "
+        "one plaintext source, so two crib positions with different plaintext letters must have different "
+        "images; under the stricter monoalphabetic reading, equal plaintext letters must also have equal "
+        "images. Routes: the 23,930 of 0016 plus the identity. For each route both conditions are checked; "
+        "survivors are counted against the same test on shuffled K4. A monoalphabetic survivor gets a "
+        "hill-climb over the unknown letters and a candidate. Bounds: complete for this route set."
     ),
     "hypothesis_eli5": (
-        "Instead of trying to break the message, we build a workshop. We take ordinary English text, "
-        "scramble it with each kind of cipher we suspect, using random keys, thousands of times, and "
-        "measure the results: how evenly the letters are spread, how often a letter repeats its "
-        "neighbour, how letters line up in columns. Then we ask which kind of cipher most often produces "
-        "text that measures like K4. The method that solved another famous cipher, the Zodiac killer's, "
-        "worked this way. It will not tell us the message, but it tells us where to dig."
+        "Suppose each letter of the message was first swapped for another letter, and only then were the "
+        "letters shuffled into a new order by a grid. The 24 letters we know are then scattered somewhere "
+        "in the carved text, and each grid tells us where. One rule must hold: one carved letter cannot "
+        "stand for two different message letters. We check that rule for every grid we have, using the 24 "
+        "known letters, and count the grids that pass. If none pass, this whole way of building the cipher "
+        "is out, however the swapping was done."
     ),
     "prediction": (
-        "K4's flat letter distribution sits comfortably inside every polyalphabetic family and outside "
-        "the monoalphabetic and pure-transposition calibrations. The width-7 doublet column and the "
-        "width-21 repeats are unusual under every generator, with p-values near 0.01 to 0.1, so no "
-        "family is singled out by them. Bean's closeness statistic separates families: letter-for-letter "
-        "systems on a near-standard alphabet reproduce it more often than transposed or Hill systems."
+        "Under the homophonic condition, fewer than one route in a hundred survives, about the same rate as "
+        "on shuffled K4. Under the monoalphabetic condition no route survives. No candidate passes."
     ),
     "method": (
-        "1. Define the statistics on a 97-letter text, with the plaintext available for the closeness "
-        "statistic at the 24 crib positions. 2. Build fourteen generators. 3. Draw 5,000 samples each. "
-        "4. For each statistic, compute K4's two-sided empirical p-value under each generator and a z-score. "
-        "5. Combine the z-scores into a distance and rank the generators."
+        "1. Build the route set. 2. For each route, find the ciphertext image of each crib position. "
+        "3. Homophonic condition: no ciphertext letter is the image of two different plaintext letters. "
+        "4. Monoalphabetic condition: in addition, equal plaintext letters have equal images. 5. Count "
+        "survivors of each; repeat on five shuffles of K4. 6. For monoalphabetic survivors, hill-climb the "
+        "unknown mappings by English score and submit the best text."
     ),
     "walkthrough": (
-        "1. Count each letter in K4: K appears 8 times, M and Y once. 2. The index of coincidence is the "
-        "chance two letters drawn at random match: add n(n-1) over the 26 counts and divide by 97 times 96; "
-        "K4 gives 0.0361. 3. Now take an English sentence of 97 letters and encipher it with a repeating "
-        "key of 28 random letters on the sculpture's table. 4. Count its letters the same way and compute "
-        "its index. 5. Do this 5,000 times and see where 0.0361 falls among the results. 6. Repeat for the "
-        "other statistics and the other ciphers. 7. A cipher that rarely produces K4's numbers is unlikely; "
-        "one that often does stays on the list."
+        "1. Take the route: write in rows of 7 and read down the columns. 2. The message letter at "
+        "position 22, the E of EAST, is written at row 4, column 1, and read out 4th: so the carved letter "
+        "at 4, R, is the swapped E. 3. Position 31, the other E, lands at 32: the carved K. 4. Under a plain "
+        "swap E must always become the same letter, so R and K already conflict: this route is dead for a "
+        "plain swap. 5. Under a swap with spare letters, E may have two symbols, so R and K is allowed, but "
+        "R must then never be the image of another letter. 6. Position 66, the R of BERLIN, lands at 38: "
+        "the carved T; no conflict. 7. Go through all 24; one clash kills the route."
     ),
 }
 
 import random
-from collections import Counter
-from kryptos.alphabets import encrypt_letter
-from kryptos.ciphers import columnar_transposition_encrypt
-from kryptos.facts import load_k1, load_k2, load_k3, STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
+from kryptos.alphabets import numeric_order
+from kryptos.ciphers import columnar_transposition_encrypt, columnar_transposition_decrypt
 
 N = 97
-SAMPLES = 5000
 
 
-def letters(s):
-    return "".join(c for c in s if "A" <= c <= "Z")
+def perm_of(fn):
+    idx = [chr(0x100 + i) for i in range(N)]
+    return [ord(ch) - 0x100 for ch in fn("".join(idx))]
+
+
+def plain_order(w, rtl=False):
+    o = list(range(w))
+    return o[::-1] if rtl else o
+
+
+def affine_fwd(s, a, b):
+    n = len(s); out = [""] * n
+    for i in range(n):
+        out[(a + b * i) % n] = s[i]
+    return "".join(out)
+
+
+def affine_inv(s, a, b):
+    n = len(s)
+    return "".join(s[(a + b * i) % n] for i in range(n))
+
+
+def rotate(s, w):
+    rows = [s[i:i + w] for i in range(0, len(s), w)]
+    return "".join(r[col] for col in range(w) for r in reversed(rows) if col < len(r))
+
+
+def route_set(vocab):
+    routes = [("identity", lambda s: s)]
+    for w in range(2, N):
+        for rtl in (False, True):
+            order = plain_order(w, rtl)
+            routes.append((f"columnar w={w}{' rtl' if rtl else ''} fwd", lambda s, o=order: columnar_transposition_encrypt(s, o)))
+            routes.append((f"columnar w={w}{' rtl' if rtl else ''} inv", lambda s, o=order: columnar_transposition_decrypt(s, o)))
+    for word in vocab:
+        if 2 <= len(word) <= 40:
+            order = numeric_order(word)
+            routes.append((f"keyed columnar {word} fwd", lambda s, o=order: columnar_transposition_encrypt(s, o)))
+            routes.append((f"keyed columnar {word} inv", lambda s, o=order: columnar_transposition_decrypt(s, o)))
+    for w1 in range(2, 51):
+        for w2 in range(2, 51):
+            routes.append((f"double columnar w={w1} then w={w2}", lambda s, a=plain_order(w1), b=plain_order(w2): columnar_transposition_encrypt(columnar_transposition_encrypt(s, a), b)))
+            routes.append((f"double rotation w={w1} then w={w2}", lambda s, a=w1, b=w2: rotate(rotate(s, a), b)))
+    for b in range(1, N):
+        for a in range(N):
+            routes.append((f"K3 rule a={a} b={b} fwd", lambda s, a=a, b=b: affine_fwd(s, a, b)))
+            routes.append((f"K3 rule a={a} b={b} inv", lambda s, a=a, b=b: affine_inv(s, a, b)))
+    return routes
+
+
+ROUTE_FN = {}
 
 
 def encrypt(plaintext, key):
-    raise NotImplementedError("diagnostic experiment: no candidate is submitted")
+    if not ROUTE_FN:
+        from kryptos.facts import load_vocabulary
+        for name, fn in route_set(list(load_vocabulary())):
+            ROUTE_FN[name] = fn
+    sub = key["substitution"]      # plaintext letter -> ciphertext letter
+    mid = "".join(sub[p] for p in plaintext)
+    return ROUTE_FN[key["route"]](mid)
 
 
-# ---- statistics ---------------------------------------------------------------------
-def stats(ct, pt, crib_positions):
-    c = Counter(ct)
-    ic = sum(v * (v - 1) for v in c.values()) / (N * (N - 1))
-    doublets = [i for i in range(N - 1) if ct[i] == ct[i + 1]]
-    col7 = max(Counter(i % 7 for i in doublets).values()) if doublets else 0
-    v21 = [ct[i] + ct[i + 21] for i in range(N - 21)]
-    rep21 = len(v21) - len(set(v21))
-    h = [ct[i] + ct[i + 1] for i in range(N - 1)]
-    rep_bigrams = len(h) - len(set(h))
-    close = sum(min((STD.index(pt[i - 1]) - STD.index(ct[i - 1])) % 26, (STD.index(ct[i - 1]) - STD.index(pt[i - 1])) % 26) for i in crib_positions) / len(crib_positions)
-    same = sum(1 for i in crib_positions if pt[i - 1] == ct[i - 1])
-    return {"ic": ic, "distinct": len(c), "doublets": len(doublets), "width7_doublet_column": col7,
-            "width21_vertical_repeats": rep21, "repeated_bigrams": rep_bigrams, "top_count": max(c.values()),
-            "singletons": sum(1 for v in c.values() if v == 1), "closeness_mean_distance": close, "self_encryptions": same}
+def check(ct, known, where):
+    """Returns (homophonic_ok, mono_ok, images dict plain->set of cipher letters)."""
+    src = {}      # cipher letter -> plaintext letter
+    img = {}      # plaintext letter -> set of cipher letters
+    homo = True
+    for pos, p in known.items():
+        c = ct[where[pos - 1]]
+        if c in src and src[c] != p:
+            homo = False
+        src[c] = p
+        img.setdefault(p, set()).add(c)
+    mono = homo and all(len(v) == 1 for v in img.values())
+    return homo, mono, img
 
 
-# ---- generators ---------------------------------------------------------------------
-def gen_plaintext(rng, texts):
-    t = "".join(texts)
-    i = rng.randrange(0, len(t) - N + 1)
-    return t[i:i + N]
+def hill_climb(ct, where, known, score, rng, iters=4000):
+    """Complete a monoalphabetic key from the crib images; climb the rest by English score."""
+    inv = {}   # cipher -> plain
+    for pos, p in known.items():
+        inv[ct[where[pos - 1]]] = p
+    free_c = [c for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if c not in inv]
+    free_p = [p for p in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if p not in inv.values()]
+    rng.shuffle(free_p)
+    assign = dict(zip(free_c, free_p))
 
+    def decrypt(assign):
+        full = {**inv, **assign}
+        mid = "".join(full[c] for c in ct)
+        return "".join(mid[where[i]] for i in range(N))
 
-def vig(pt, key, pa="kry", ca="kry", ka="kry", m="vig"):
-    return "".join(encrypt_letter(p, key[i % len(key)], pa, ca, ka, m) for i, p in enumerate(pt))
-
-
-def rand_key(rng, n):
-    return "".join(rng.choice(STD) for _ in range(n))
-
-
-def mixed(rng):
-    a = list(STD); rng.shuffle(a); return "".join(a)
-
-
-def g_vig_kry(rng, pt):
-    return vig(pt, rand_key(rng, rng.randint(27, 30)))
-
-
-def g_quagmire(rng, pt):
-    pa, ca = mixed(rng), mixed(rng); key = rand_key(rng, rng.randint(27, 30))
-    return "".join(ca[(pa.index(p) + STD.index(key[i % len(key)])) % 26] for i, p in enumerate(pt))
-
-
-def g_progressive(rng, pt):
-    P, d = rng.randint(7, 13), rng.randint(1, 25); key = rand_key(rng, P)
-    return "".join(KRY[(KRY.index(p) + KRY.index(key[i % P]) + d * (i // P)) % 26] for i, p in enumerate(pt))
-
-
-def g_autokey(rng, pt):
-    L = rng.randint(1, 30); primer = rand_key(rng, L)
-    return "".join(KRY[(KRY.index(p) + KRY.index(primer[i] if i < L else pt[i - L])) % 26] for i, p in enumerate(pt))
-
-
-def g_running(rng, pt, texts):
-    key = gen_plaintext(rng, texts)
-    return vig(pt, key)
-
-
-def g_columnar_then_vig(rng, pt):
-    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
-    return vig(columnar_transposition_encrypt(pt, order), rand_key(rng, rng.randint(27, 30)))
-
-
-def g_vig_then_columnar(rng, pt):
-    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
-    return columnar_transposition_encrypt(vig(pt, rand_key(rng, rng.randint(27, 30))), order)
-
-
-def det2(M):
-    return (M[0][0] * M[1][1] - M[0][1] * M[1][0]) % 26
-
-
-def det3(M):
-    return (M[0][0] * (M[1][1] * M[2][2] - M[1][2] * M[2][1]) - M[0][1] * (M[1][0] * M[2][2] - M[1][2] * M[2][0]) + M[0][2] * (M[1][0] * M[2][1] - M[1][1] * M[2][0])) % 26
-
-
-def g_hill(n):
-    def g(rng, pt):
-        while True:
-            M = [[rng.randrange(26) for _ in range(n)] for _ in range(n)]
-            d = det2(M) if n == 2 else det3(M)
-            if d % 2 and d % 13:
-                break
-        out = list(pt)
-        for i in range(0, N - n + 1, n):
-            blk = [STD.index(pt[i + j]) for j in range(n)]
-            for r in range(n):
-                out[i + r] = STD[sum(M[r][k] * blk[k] for k in range(n)) % 26]
-        return "".join(out)
-    return g
-
-
-def g_gromark(rng, pt):
-    k = [rng.randrange(10) for _ in range(5)]
-    while len(k) < N:
-        k.append((k[-5] + k[-4]) % 10)
-    ca = mixed(rng)
-    return "".join(ca[(STD.index(p) + k[i]) % 26] for i, p in enumerate(pt))
-
-
-def g_random(rng, pt):
-    return rand_key(rng, N)
-
-
-def g_transposition(rng, pt):
-    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
-    return columnar_transposition_encrypt(pt, order)
-
-
-def g_mono(rng, pt):
-    ca = mixed(rng)
-    return "".join(ca[STD.index(p)] for p in pt)
+    best = decrypt(assign); bs = score(best)
+    for _ in range(iters):
+        if len(free_c) < 2:
+            break
+        a, b = rng.sample(free_c, 2)
+        assign[a], assign[b] = assign[b], assign[a]
+        pt = decrypt(assign); s = score(pt)
+        if s >= bs:
+            best, bs = pt, s
+        else:
+            assign[a], assign[b] = assign[b], assign[a]
+    return best, bs, {**inv, **assign}
 
 
 def run(ctx):
-    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
-    crib_positions = sorted(ctx.KNOWN)
-    k4_pt = "".join(ctx.KNOWN.get(i, "A") for i in range(1, N + 1))   # only crib positions are used for plaintext statistics
-    k4 = stats(ctx.K4, k4_pt, crib_positions)
-    rng = random.Random(2026)
-    gens = {
-        "periodic Vigenere, KRYPTOS alphabet, period 27-30": g_vig_kry,
-        "Quagmire, random alphabets, period 27-30": g_quagmire,
-        "progressive key, period 7-13": g_progressive,
-        "plaintext autokey, lag 1-30": g_autokey,
-        "running key from K1-K3 English": lambda r, p: g_running(r, p, texts),
-        "columnar transposition then Vigenere": g_columnar_then_vig,
-        "Vigenere then columnar transposition": g_vig_then_columnar,
-        "Hill 2x2": g_hill(2),
-        "Hill 3x3": g_hill(3),
-        "Gromark base 10, random cipher alphabet": g_gromark,
-        "calibration: random letters": g_random,
-        "calibration: pure columnar transposition": g_transposition,
-        "calibration: monoalphabetic": g_mono,
-    }
-    table = {}
-    for name, g in gens.items():
-        samples = []
-        for _ in range(SAMPLES):
-            pt = gen_plaintext(rng, texts)
-            samples.append(stats(g(rng, pt), pt, crib_positions))
-            if ctx.time_left() < 20:
-                break
-        row = {}
-        dist2 = 0.0
-        for key, v in k4.items():
-            xs = [s[key] for s in samples]
-            mu = sum(xs) / len(xs); sd = (sum((x - mu) ** 2 for x in xs) / len(xs)) ** 0.5
-            z = 0.0 if sd == 0 else (v - mu) / sd
-            lo = sum(1 for x in xs if x <= v) / len(xs); hi = sum(1 for x in xs if x >= v) / len(xs)
-            p = min(1.0, 2 * min(lo, hi))
-            row[key] = {"mean": round(mu, 4), "sd": round(sd, 4), "z": round(z, 2), "p": round(p, 3)}
-            dist2 += z * z
-        row["_distance"] = round(dist2 ** 0.5, 2)
-        row["_n"] = len(samples)
-        table[name] = row
-    ranking = sorted(table, key=lambda n: table[n]["_distance"])
+    ct, known = ctx.K4, ctx.KNOWN
+    routes = route_set(list(ctx.vocabulary))
+    for name, fn in routes:
+        ROUTE_FN[name] = fn
+    wheres = []
+    for name, fn in routes:
+        sigma = perm_of(fn)                      # out[j] = in[sigma[j]]
+        where = {sigma[j]: j for j in range(N)}  # input index -> output index
+        wheres.append((name, where))
+
+    def sweep(text):
+        homo, mono = [], []
+        for name, where in wheres:
+            h, m, _ = check(text, known, where)
+            if h: homo.append(name)
+            if m: mono.append(name)
+        return homo, mono
+
+    homo, mono = sweep(ct)
+    nulls = []
+    for seed in range(5):
+        letters_ = list(ct); random.Random(seed).shuffle(letters_)
+        h, m = sweep("".join(letters_))
+        nulls.append({"homophonic": len(h), "monoalphabetic": len(m)})
+    candidates = []
+    rng = random.Random(7)
+    wmap = dict(wheres)
+    for name in mono[:20]:
+        pt, sc, full = hill_climb(ct, wmap[name], known, ctx.english_score, rng)
+        inv_sub = {p: c for c, p in full.items()}
+        candidates.append({"plaintext": pt, "key": {"route": name, "substitution": inv_sub}, "key_bits": 88,
+                           "key_description": f"monoalphabetic then {name}; English {sc:.2f}"})
     return {
-        "candidates": [],
-        "bounds": {"family": "construction simulation", "samples_per_generator": SAMPLES, "statistics": list(k4),
-                   "k4": {k: round(v, 4) for k, v in k4.items()},
-                   "ranking_by_distance": [(n, table[n]["_distance"]) for n in ranking],
-                   "table": table},
-        "notes": "Diagnostic, no candidates. Ranking nearest first: " + "; ".join(f"{n} ({table[n]['_distance']})" for n in ranking[:5]) + ".",
+        "candidates": candidates[:50],
+        "bounds": {"family": "substitution (mono or homophonic over 26 symbols) then transposition", "routes": len(routes),
+                   "homophonic_survivors": len(homo), "homophonic_survivor_routes": homo[:40],
+                   "monoalphabetic_survivors": len(mono), "monoalphabetic_survivor_routes": mono[:40],
+                   "shuffled_k4_survivors": nulls},
+        "notes": f"{len(routes)} routes: {len(homo)} pass the homophonic condition, {len(mono)} the monoalphabetic one; shuffled K4 gives {[n['homophonic'] for n in nulls]} and {[n['monoalphabetic'] for n in nulls]}.",
     }
 
 
 def worked_example(ctx, key):
-    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
-    rng = random.Random(1)
-    pt = gen_plaintext(rng, texts); ct = g_vig_kry(rng, pt)
-    k4_pt = "".join(ctx.KNOWN.get(i, "A") for i in range(1, N + 1))
-    a, b = stats(ctx.K4, k4_pt, sorted(ctx.KNOWN)), stats(ct, pt, sorted(ctx.KNOWN))
-    lines = ["one sample from the periodic-Vigenere generator against K4", "", f"plain  {pt}", f"cipher {ct}", "", f"{'statistic':<28}{'K4':>10}{'sample':>10}"]
-    for k in a:
-        lines.append(f"{k:<28}{a[k]:>10.4f}{b[k]:>10.4f}")
+    sigma = perm_of(lambda s: columnar_transposition_encrypt(s, list(range(7))))
+    where = {sigma[j]: j for j in range(N)}
+    h, m, img = check(ctx.K4, ctx.KNOWN, where)
+    lines = ["route: columnar width 7 read down the columns; images of the known letters", ""]
+    for p in sorted(img):
+        lines.append(f"plain {p}: carved images {' '.join(sorted(img[p]))}")
+    src = {}
+    clashes = []
+    for pos, p in ctx.KNOWN.items():
+        c = ctx.K4[where[pos - 1]]
+        if c in src and src[c] != p: clashes.append(f"{c} from {src[c]} and {p}")
+        src[c] = p
+    lines.append("")
+    lines.append(f"homophonic condition: {'passes' if h else 'fails'}; clashes: {', '.join(clashes) or 'none'}")
+    lines.append(f"monoalphabetic condition: {'passes' if m else 'fails'}")
     return "\n".join(lines)

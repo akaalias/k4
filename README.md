@@ -47,6 +47,10 @@ buyer is not used.
   as the map of what did.
 - The chain of kept experiments must read as the derivation of the method, since method is
   part of success.
+- The crib check is a hard gate: a candidate that misses any of the 24 known letters fails
+  before any English score is computed.
+- The worked-example illustration is the design figure: a few letters passing through the
+  cipher step, generated from the experiment's own code.
 - A patience budget forces a change of cipher family after repeated reverts.
 - Dashboard, lineage graph and figures render from the record and come later.
 

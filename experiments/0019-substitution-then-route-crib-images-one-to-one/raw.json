@@ -1,0 +1,37 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "substitution (mono or homophonic over 26 symbols) then transposition",
+  "routes": 23931,
+  "homophonic_survivors": 0,
+  "homophonic_survivor_routes": [],
+  "monoalphabetic_survivors": 0,
+  "monoalphabetic_survivor_routes": [],
+  "shuffled_k4_survivors": [
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   }
+  ]
+ },
+ "notes": "23931 routes: 0 pass the homophonic condition, 0 the monoalphabetic one; shuffled K4 gives [0, 0, 0, 0, 0] and [0, 0, 0, 0, 0].",
+ "error": null,
+ "worked_example": "route: columnar width 7 read down the columns; images of the known letters\n\nplain A: carved images F Z\nplain B: carved images H\nplain C: carved images K Q\nplain E: carved images R S\nplain H: carved images B\nplain I: carved images P\nplain K: carved images K\nplain L: carved images J U\nplain N: carved images I X\nplain O: carved images K V\nplain R: carved images T U\nplain S: carved images K N\nplain T: carved images K U W\n\nhomophonic condition: fails; clashes: K from S and T, K from T and O, U from R and T, K from O and C, U from T and L, K from C and K\nmonoalphabetic condition: fails",
+ "seconds": 1.2423372268676758
+}

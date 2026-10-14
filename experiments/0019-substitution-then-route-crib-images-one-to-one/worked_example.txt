@@ -1,0 +1,18 @@
+route: columnar width 7 read down the columns; images of the known letters
+
+plain A: carved images F Z
+plain B: carved images H
+plain C: carved images K Q
+plain E: carved images R S
+plain H: carved images B
+plain I: carved images P
+plain K: carved images K
+plain L: carved images J U
+plain N: carved images I X
+plain O: carved images K V
+plain R: carved images T U
+plain S: carved images K N
+plain T: carved images K U W
+
+homophonic condition: fails; clashes: K from S and T, K from T and O, U from R and T, K from O and C, U from T and L, K from C and K
+monoalphabetic condition: fails

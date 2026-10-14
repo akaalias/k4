@@ -1,0 +1,56 @@
+{
+ "id": 19,
+ "tag": "0019-substitution-then-route-crib-images-one-to-one",
+ "started": "2026-10-14T17:39:22+00:00",
+ "seconds": 1.3,
+ "status": "ran",
+ "phases": {
+  "design": 27.0,
+  "implement": 137.8,
+  "test": 12.5,
+  "run": 1.3,
+  "record": 0.0
+ },
+ "ended_epoch": 1791999563.497115,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "substitution (mono or homophonic over 26 symbols) then transposition",
+  "routes": 23931,
+  "homophonic_survivors": 0,
+  "homophonic_survivor_routes": [],
+  "monoalphabetic_survivors": 0,
+  "monoalphabetic_survivor_routes": [],
+  "shuffled_k4_survivors": [
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   }
+  ]
+ },
+ "notes": "23931 routes: 0 pass the homophonic condition, 0 the monoalphabetic one; shuffled K4 gives [0, 0, 0, 0, 0] and [0, 0, 0, 0, 0].",
+ "error": null,
+ "candidates": []
+}

@@ -1,0 +1,216 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "transposition then periodic tableau; forced key scored as English",
+  "routes": 23930,
+  "conventions": 24,
+  "periods": "2-40, live only",
+  "scores": 461692,
+  "best": [
+   {
+    "score": -3.547,
+    "route": "K3 rule a=78 b=11 fwd",
+    "convention": "kry/std/std/varbeau",
+    "period": 40,
+    "runs": [
+     "UHAVETHE"
+    ]
+   },
+   {
+    "score": -3.547,
+    "route": "K3 rule a=37 b=53 inv",
+    "convention": "kry/std/std/varbeau",
+    "period": 40,
+    "runs": [
+     "UHAVETHE"
+    ]
+   },
+   {
+    "score": -3.891,
+    "route": "K3 rule a=48 b=94 fwd",
+    "convention": "kry/std/std/beau",
+    "period": 34,
+    "runs": [
+     "VEDANGE"
+    ]
+   },
+   {
+    "score": -3.891,
+    "route": "K3 rule a=16 b=32 inv",
+    "convention": "kry/std/std/beau",
+    "period": 34,
+    "runs": [
+     "VEDANGE"
+    ]
+   },
+   {
+    "score": -3.949,
+    "route": "K3 rule a=27 b=11 fwd",
+    "convention": "std/kry/std/vig",
+    "period": 40,
+    "runs": [
+     "MTHESFI"
+    ]
+   },
+   {
+    "score": -3.949,
+    "route": "K3 rule a=24 b=53 inv",
+    "convention": "std/kry/std/vig",
+    "period": 40,
+    "runs": [
+     "MTHESFI"
+    ]
+   },
+   {
+    "score": -3.965,
+    "route": "K3 rule a=90 b=25 fwd",
+    "convention": "std/std/kry/varbeau",
+    "period": 34,
+    "runs": [
+     "POINGAA"
+    ]
+   },
+   {
+    "score": -3.965,
+    "route": "K3 rule a=74 b=66 inv",
+    "convention": "std/std/kry/varbeau",
+    "period": 34,
+    "runs": [
+     "POINGAA"
+    ]
+   },
+   {
+    "score": -4.162,
+    "route": "K3 rule a=88 b=51 fwd",
+    "convention": "std/kry/std/vig",
+    "period": 30,
+    "runs": [
+     "RENTHAPSS"
+    ]
+   },
+   {
+    "score": -4.162,
+    "route": "K3 rule a=23 b=78 inv",
+    "convention": "std/kry/std/vig",
+    "period": 30,
+    "runs": [
+     "RENTHAPSS"
+    ]
+   },
+   {
+    "score": -4.213,
+    "route": "K3 rule a=72 b=52 inv",
+    "convention": "kry/std/std/beau",
+    "period": 32,
+    "runs": [
+     "REATHL",
+     "OHARR"
+    ]
+   },
+   {
+    "score": -4.213,
+    "route": "K3 rule a=21 b=28 fwd",
+    "convention": "kry/std/std/beau",
+    "period": 32,
+    "runs": [
+     "REATHL",
+     "OHARR"
+    ]
+   },
+   {
+    "score": -4.232,
+    "route": "K3 rule a=86 b=31 inv",
+    "convention": "std/kry/std/beau",
+    "period": 34,
+    "runs": [
+     "DONITER"
+    ]
+   },
+   {
+    "score": -4.232,
+    "route": "K3 rule a=16 b=72 fwd",
+    "convention": "std/kry/std/beau",
+    "period": 34,
+    "runs": [
+     "DONITER"
+    ]
+   },
+   {
+    "score": -4.299,
+    "route": "keyed columnar WALL inv",
+    "convention": "kry/kry/kry/beau",
+    "period": 33,
+    "runs": [
+     "HECEOFM"
+    ]
+   },
+   {
+    "score": -4.352,
+    "route": "K3 rule a=59 b=94 fwd",
+    "convention": "kry/std/kry/varbeau",
+    "period": 34,
+    "runs": [
+     "HATORNS"
+    ]
+   },
+   {
+    "score": -4.352,
+    "route": "K3 rule a=52 b=32 inv",
+    "convention": "kry/std/kry/varbeau",
+    "period": 34,
+    "runs": [
+     "HATORNS"
+    ]
+   },
+   {
+    "score": -4.364,
+    "route": "K3 rule a=86 b=66 inv",
+    "convention": "std/std/std/vig",
+    "period": 34,
+    "runs": [
+     "OVENOTM"
+    ]
+   },
+   {
+    "score": -4.364,
+    "route": "K3 rule a=81 b=25 fwd",
+    "convention": "std/std/std/vig",
+    "period": 34,
+    "runs": [
+     "OVENOTM"
+    ]
+   },
+   {
+    "score": -4.365,
+    "route": "K3 rule a=94 b=72 fwd",
+    "convention": "kry/kry/kry/vig",
+    "period": 34,
+    "runs": [
+     "IANTIVA"
+    ]
+   }
+  ],
+  "shuffled_control": [
+   {
+    "best": -3.808,
+    "route": "K3 rule a=64 b=77 inv",
+    "period": 38,
+    "runs": [
+     "POSENTST"
+    ]
+   },
+   {
+    "best": -4.025,
+    "route": "K3 rule a=79 b=72 fwd",
+    "period": 38,
+    "runs": [
+     "STHEDNA"
+    ]
+   }
+  ]
+ },
+ "notes": "Diagnostic, no candidates. 461692 (route, convention, period) keys scored; best -3.547 vs shuffled [-3.808, -4.025].",
+ "error": null,
+ "worked_example": "route: columnar width 7, read columns left to right; convention kry/kry/kry Vigenere; period 28\n\nslot:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27\nkey:   .  .  .  Q  G  .  .  .  .  L  E  .  .  .  .  .  .  U  N  .  .  .  .  O  K  .  .  .\n\nruns scored: ",
+ "seconds": 80.48858213424683
+}

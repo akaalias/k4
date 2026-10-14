@@ -1,0 +1,9 @@
+{
+  "_note": "Positions are 1-indexed; position 1 is the O of OBKR. Released by Sanborn.",
+  "cribs": [
+    {"start": 22, "plaintext": "EAST",      "ciphertext": "FLRV",      "released": "2020-08-24", "via": "John Schwartz tweet, shared privately by Sanborn in April 2020"},
+    {"start": 26, "plaintext": "NORTHEAST", "ciphertext": "QQPRNGKSS", "released": "2020-01-29", "via": "New York Times"},
+    {"start": 64, "plaintext": "BERLIN",    "ciphertext": "NYPVTT",    "released": "2010-11-20", "via": "New York Times"},
+    {"start": 70, "plaintext": "CLOCK",     "ciphertext": "MZFPK",     "released": "2014-11-20", "via": "New York Times"}
+  ]
+}

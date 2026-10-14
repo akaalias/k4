@@ -1,0 +1,10 @@
+[project]
+name = "cryptos"
+version = "0.1.0"
+description = "Autoresearch loop for Kryptos K4"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+

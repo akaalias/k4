@@ -1,0 +1,9 @@
+{
+  "ciphertext": "EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJYQTQUXQBQVYUVLLTREVJYQTMKYRDMFD",
+  "plaintext": "BETWEENSUBTLESHADINGANDTHEABSENCEOFLIGHTLIESTHENUANCEOFIQLUSION",
+  "method": "keyed_vigenere",
+  "alphabet": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+  "key": "PALIMPSEST",
+  "misspelling": "IQLUSION",
+  "solved_by": "NSA 1992 (revealed 2013), David Stein 1998, Jim Gillogly 1999"
+}

@@ -1,0 +1,22 @@
+{
+  "_note": "Key-candidate vocabulary and physical features. Not constraints.",
+  "keyed_alphabet": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+  "tableau_anomaly": "Row N carries an extra L at its end; the rightmost column over rows L, M, N, O reads HILL. Sanborn omitted the extra L from replicas.",
+  "raised_letters": "YAR in ENDYAHR, first line of K3",
+  "morse": [
+    "VIRTUALLY INVISIBLE",
+    "DIGETAL INTERPRETATU",
+    "SHADOW FORCES",
+    "LUCID MEMORY",
+    "T IS YOUR POSITION",
+    "SOS",
+    "RQ"
+  ],
+  "morse_note": "Padded with E dits; DIGETAL misspelled; last word of the second fragment is cut off and transcribed variously as INTERPRETATU / INTERPRETATIT / INTERPRETATI.",
+  "k2_coordinates": "38 57 6.5 N, 77 8 44 W",
+  "compass_rose": "Needle points at a lodestone; dial deliberately offset per Sanborn; bearing contested.",
+  "k2_ending": "X LAYER TWO",
+  "ww": "William Webster",
+  "sanborn_2025_themes": ["1986 trip to Egypt", "1989 fall of the Berlin Wall", "World Clock (Weltzeituhr) on Alexanderplatz", "delivering a message"],
+  "scheidt_hints": ["masked the English language", "more than one stage", "not mathematical; simple; can be remembered; executed with the correct key word/s", "once it is readable it may have other encoding"]
+}

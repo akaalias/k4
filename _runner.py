@@ -1,0 +1,64 @@
+"""Child process: imports attack.py, runs it under the time budget, re-encrypts
+every candidate with the attack's own forward function, writes JSON.
+Invoked by run_experiment.py; not meant to be called by hand."""
+import importlib.util
+import json
+import sys
+import time
+import traceback
+from types import SimpleNamespace
+
+from kryptos import facts, ciphers, scorer
+
+
+def main(attack_path, out_path, budget_s):
+    t0 = time.time()
+    spec = importlib.util.spec_from_file_location("attack", attack_path)
+    attack = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(attack)
+
+    ctx = SimpleNamespace(
+        K4=facts.K4,
+        KNOWN=facts.KNOWN,
+        CRIBS=facts.CRIBS,
+        KRYPTOS_ALPHABET=facts.KRYPTOS_ALPHABET,
+        STANDARD_ALPHABET=facts.STANDARD_ALPHABET,
+        vocabulary=facts.load_vocabulary(),
+        ciphers=ciphers,
+        english_score=scorer.english_score,
+        deadline=t0 + budget_s,
+        time_left=lambda: (t0 + budget_s) - time.time(),
+    )
+    out = {"candidates": [], "bounds": {}, "notes": "", "error": None, "worked_example": ""}
+    try:
+        res = attack.run(ctx) or {}
+        out["bounds"] = res.get("bounds", {})
+        out["notes"] = res.get("notes", "")
+        for c in res.get("candidates", [])[:50]:
+            pt = c["plaintext"]
+            try:
+                re_ct = attack.encrypt(pt, c["key"])
+            except Exception as e:  # noqa: BLE001
+                re_ct = None
+                c["encrypt_error"] = repr(e)
+            out["candidates"].append({
+                "plaintext": pt,
+                "key": c["key"],
+                "key_bits": float(c.get("key_bits", 0.0)),
+                "key_description": c.get("key_description", ""),
+                "reencrypted": re_ct,
+                "notes": c.get("notes", ""),
+            })
+        example_key = out["candidates"][0]["key"] if out["candidates"] else None
+        try:
+            out["worked_example"] = attack.worked_example(ctx, example_key)
+        except Exception as e:  # noqa: BLE001
+            out["worked_example"] = f"(worked_example failed: {e!r})"
+    except Exception:  # noqa: BLE001
+        out["error"] = traceback.format_exc()
+    out["seconds"] = time.time() - t0
+    json.dump(out, open(out_path, "w"), indent=1)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1], sys.argv[2], float(sys.argv[3]))

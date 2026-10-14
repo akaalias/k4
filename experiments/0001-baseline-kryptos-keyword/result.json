@@ -1,0 +1,153 @@
+{
+ "id": 1,
+ "tag": "0001-baseline-kryptos-keyword",
+ "started": "2026-10-14T15:34:09+00:00",
+ "seconds": 0.0,
+ "status": "ran",
+ "decision": "reverted",
+ "n_candidates": 1,
+ "n_passed": 0,
+ "best_crib_hits": 2,
+ "best_fitness": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "keyed Vigenere over KRYPTOS alphabet",
+  "keys_tried": [
+   "KRYPTOS"
+  ],
+  "periods": [
+   7
+  ]
+ },
+ "notes": "Pipeline check only.",
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "OAXXLKMOFFMGPKOJGCTPLFJZNJIWRMEWYRZTVYLYEHSOCWUQLAPHWGJTISUFIAYNRRNKZFZERWNBTKXVRFTTIFXMDJRUDXSPV",
+   "key": "KRYPTOS",
+   "key_bits": 32.9,
+   "key_description": "keyed Vigenere, alphabet KRYPTOS, keyword KRYPTOS",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 2,
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "F"
+     ],
+     [
+      23,
+      "A",
+      "J"
+     ],
+     [
+      24,
+      "S",
+      "Z"
+     ],
+     [
+      25,
+      "T",
+      "N"
+     ],
+     [
+      26,
+      "N",
+      "J"
+     ],
+     [
+      27,
+      "O",
+      "I"
+     ],
+     [
+      28,
+      "R",
+      "W"
+     ],
+     [
+      29,
+      "T",
+      "R"
+     ],
+     [
+      30,
+      "H",
+      "M"
+     ],
+     [
+      32,
+      "A",
+      "W"
+     ],
+     [
+      33,
+      "S",
+      "Y"
+     ],
+     [
+      34,
+      "T",
+      "R"
+     ],
+     [
+      64,
+      "B",
+      "N"
+     ],
+     [
+      65,
+      "E",
+      "R"
+     ],
+     [
+      67,
+      "L",
+      "N"
+     ],
+     [
+      68,
+      "I",
+      "K"
+     ],
+     [
+      69,
+      "N",
+      "Z"
+     ],
+     [
+      70,
+      "C",
+      "F"
+     ],
+     [
+      71,
+      "L",
+      "Z"
+     ],
+     [
+      72,
+      "O",
+      "E"
+     ],
+     [
+      73,
+      "C",
+      "R"
+     ],
+     [
+      74,
+      "K",
+      "W"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null
+  }
+ ]
+}

@@ -63,13 +63,15 @@ words in K1-K3 are keys (PALIMPSEST: overwritten; ABSCISSA: the x-axis; LAYER TW
 ROWS was wrong but "by rows" was Sanborn's own reading of jargon); (b) the misspellings'
 positions are indices; (c) K2's coordinates are numbers for a key; (d) K3's Carter passage
 instructs: candle, breach in the upper left corner, widening the hole, "can you see
-anything." Key-source rule plus families C and D. Status: untested.
+anything." Key-source rule plus families C and D. Status: reading (a) as a running key from
+K1-K3 text or ciphertext is excluded at every offset and convention (0004); as a periodic
+keyword of a surviving period drawn from K1-K3 windows, excluded (0005); other readings untested.
 
 **C8. "The most obvious key to the sculpture, nobody has picked up on."** (2005). Readings:
 (a) KRYPTOS itself used in a way not yet tried (as a transposition key for K4, as it was
 for K3; as the K4 Vigenère key at a period other than 7; as a numeric key 1473625);
 (b) the tableau's own header A-Z; (c) the word on the entrance, the Morse, the compass;
-(d) the title's meaning, "hidden," as a word. Status: untested.
+(d) the title's meaning, "hidden," as a word. Status: KRYPTOS as a periodic tableau key at any period and convention is excluded by 0005; as a transposition key, untested.
 
 **C9. "Having the letters sitting there in plain sight is a pretty big clue."** (2005).
 Readings: (a) the ciphertext is already the plaintext in some reading order
@@ -89,7 +91,7 @@ the letters' direction, upside down (RQ reads YR). Status: untested.
 
 **C11a. NSA 1992: "plain-text auto-key" and "interval 7"; NSA 2007: plaintext and ciphertext
 autokey tested without cribs.** Status: ciphertext autokey excluded under all 24 conventions
-and lags 1-96 (0002). Plaintext autokey: see 0003.
+and lags 1-96 (0002). Plaintext autokey excluded at lags 1-11 and 30-52, undecided at 13-29 and 53-96, lag 12 consistent under one convention on a single check (0003).
 
 **C12. "Delve into that particular clock" (2014) against "the World Clock in Berlin"
 (2025).** Readings: (a) the clock is plaintext content only; (b) the Weltzeituhr's

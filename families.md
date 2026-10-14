@@ -5,7 +5,7 @@ Re-read this top to bottom every few pivots and pick the family with the least c
 
 | # | Family | Status | Experiments | Bounds exhausted so far | Notes |
 |---|---|---|---|---|---|
-| 1 | Keyed periodic systems at crib-surviving periods 27, 28, 29, 53+: Quagmire I-IV, autokey, progressive key | active | 0001 (baseline), 0002 | ciphertext autokey excluded (24 conventions x 96 lags) | Start here; cheapest bounded results. The crib sweep shows which periods survive for single-alphabet additive; nobody has run it for Quagmire with separate plain/cipher alphabets, autokey, or progressive key. |
+| 1 | Keyed periodic systems at crib-surviving periods 27, 28, 29, 53+: Quagmire I-IV, autokey, progressive key | active | 0001-0005 | Ciphertext autokey excluded (24 conventions x 96 lags, 0002). Plaintext autokey excluded at lags 1-11 and 30-52; lag 12 consistent in one convention on one check; 13-29 and 53-96 undecided (0003). Running key from K1-K3 plaintexts and ciphertexts, both directions, all cyclic offsets, 24 conventions: 165,216 trials, zero survivors, best 8/24 (0004). Periodic tableau with separate alphabets (Quagmire I-IV): periods 1-26 and 30-52 excluded under all 24 conventions; 1,152 surviving (convention, period) pairs force key fragments that match no vocabulary word or K1-K3 window (0005). | Start here; cheapest bounded results. The crib sweep shows which periods survive for single-alphabet additive; nobody has run it for Quagmire with separate plain/cipher alphabets, autokey, or progressive key. |
 | 2 | Masked plaintext, then a simple keyed cipher | untouched | | | Scheidt's own description. Stage-one output is scored on crib consistency only, since it is not English by design. Candidate masks: nulls, abbreviation, phonetic spelling, changed "language base". |
 | 3 | Two-component key with a combiner (Scheidt's CKM habit) | untouched | | | Keyword from the puzzle's vocabulary combined with a second element from the sculpture: the extra L position, the raised YAR, Morse E-padding counts, the K2 coordinates. |
 | 4 | Sanborn's "visual systems" | untouched | | | Mirrored tableau reading, routes through the carved grid, the HILL column as an index. Inspiration pool is `research_notes/.../sculpture_physical_form.md`. |
@@ -37,6 +37,10 @@ Every experiment's `bounds` should say which key source it drew from.
 | Approach | Why dead | Source |
 |---|---|---|
 | Ciphertext autokey, any lag 1-96, any of 24 alphabet/mode conventions | Exact crib check at every position beyond the lag; zero survivors | experiment 0002 |
+| Plaintext autokey at lags 1-11 and 30-52 | Crib pairs at those lags conflict under every convention | experiment 0003 |
+| Running key from K1, K2, K3 plaintext or ciphertext, any offset, either direction | 165,216 trials, zero survivors | experiment 0004 |
+| Periodic tableau with separate alphabets at periods 1-26 and 30-52 | Forced key letters conflict under all 24 conventions | experiment 0005 |
+| Periodic tableau at surviving periods keyed by a vocabulary word or a K1-K3 phrase | Forced fragments match nothing in the pool | experiment 0005 |
 | Monoalphabetic substitution | Same ciphertext letter maps to different plaintext letters in the cribs | cribs |
 | Pure transposition, any route | Cribs need three E's, K4 has two; letter mismatch at fixed positions | cribs |
 | Rotor machines (Enigma class) | K encrypts to K at 74, S to S at 33 | cribs |

@@ -1,0 +1,56 @@
+{
+ "id": 4,
+ "tag": "0004-running-key-from-k1-k3",
+ "started": "2026-10-14T16:16:30+00:00",
+ "seconds": 0.8,
+ "status": "ran",
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "running key from K1-K3",
+  "sources": [
+   "K123ct_fwd",
+   "K123ct_rev",
+   "K123pt_fwd",
+   "K123pt_rev",
+   "K1ct_fwd",
+   "K1ct_rev",
+   "K1pt_fwd",
+   "K1pt_rev",
+   "K2ct_fwd",
+   "K2ct_rev",
+   "K2pt_corr_fwd",
+   "K2pt_corr_rev",
+   "K2pt_fwd",
+   "K2pt_rev",
+   "K3ct_fwd",
+   "K3ct_rev",
+   "K3pt_fwd",
+   "K3pt_rev"
+  ],
+  "conventions": 24,
+  "offsets": "all, cyclic",
+  "trials": 165216,
+  "survivors": 0,
+  "best_mismatches_of_24": 16,
+  "best_alignment": [
+   "K1ct_fwd",
+   [
+    "std",
+    "std",
+    "kry",
+    "varbeau"
+   ],
+   48
+  ]
+ },
+ "notes": "Every trial is decided at all 24 crib positions.",
+ "error": null,
+ "candidates": []
+}

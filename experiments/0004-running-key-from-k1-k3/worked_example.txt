@@ -1,0 +1,10 @@
+running key = K1 plaintext at offset 0, all alphabets KRYPTOS, Vigenere
+alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ
+
+pos  plain  key          idx(p)+idx(k)  predicted  carved
+ 64    B      B            8+8         J        N  x
+ 65    E      E           11+11        V        Y  x
+ 66    R      T            1+4         O        P  x
+ 67    L      W           17+23        H        V  x
+ 68    I      E           15+11        K        T  x
+ 69    N      E           19+11        T        T  ok

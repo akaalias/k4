@@ -1,0 +1,45 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "running key from K1-K3",
+  "sources": [
+   "K123ct_fwd",
+   "K123ct_rev",
+   "K123pt_fwd",
+   "K123pt_rev",
+   "K1ct_fwd",
+   "K1ct_rev",
+   "K1pt_fwd",
+   "K1pt_rev",
+   "K2ct_fwd",
+   "K2ct_rev",
+   "K2pt_corr_fwd",
+   "K2pt_corr_rev",
+   "K2pt_fwd",
+   "K2pt_rev",
+   "K3ct_fwd",
+   "K3ct_rev",
+   "K3pt_fwd",
+   "K3pt_rev"
+  ],
+  "conventions": 24,
+  "offsets": "all, cyclic",
+  "trials": 165216,
+  "survivors": 0,
+  "best_mismatches_of_24": 16,
+  "best_alignment": [
+   "K1ct_fwd",
+   [
+    "std",
+    "std",
+    "kry",
+    "varbeau"
+   ],
+   48
+  ]
+ },
+ "notes": "Every trial is decided at all 24 crib positions.",
+ "error": null,
+ "worked_example": "running key = K1 plaintext at offset 0, all alphabets KRYPTOS, Vigenere\nalphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ\n\npos  plain  key          idx(p)+idx(k)  predicted  carved\n 64    B      B            8+8         J        N  x\n 65    E      E           11+11        V        Y  x\n 66    R      T            1+4         O        P  x\n 67    L      W           17+23        H        V  x\n 68    I      E           15+11        K        T  x\n 69    N      E           19+11        T        T  ok",
+ "seconds": 0.710705041885376
+}

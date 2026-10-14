@@ -1,0 +1,20 @@
+plain alphabet  PALIMPSEST/keyword  PALIMSETBCDFGHJKNOQRUVWXYZ
+cipher alphabet KRYPTOS             KRYPTOSABCDEFGHIJLMNQUVWXZ
+key alphabet    ABSCISSA/columnar   ADJOUZBEKPVSFLQWCGMRXIHNTY
+
+pos  plain  cipher  key index  key letter
+ 22    E      F         6         B
+ 23    A      L        16         C
+ 24    S      R        22         H
+ 25    T      V        15         W
+ 26    N      Q         4         U
+ 27    O      Q         3         O
+ 28    R      P        10         V
+ 29    T      R        20         X
+ 30    H      N         6         B
+ 31    E      G         7         E
+ 32    A      K        25         Y
+ 33    S      S         1         D
+ 34    T      S        25         Y
+
+stretch: BCHWUOVXBEYDY   score -8.44 per quadgram (English about -4.3 at this length, noise about -8.3)

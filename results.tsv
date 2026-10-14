@@ -8,3 +8,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0007	0007-tableau-then-columnar-period-survival	6-transposition-then-tableau	0006-columnar-then-tableau-period-survival	reverted	0	0	0			54	design=0 implement=0 test=1 run=54 record=0
 0008	0008-k3-formula-all-shifts-then-tableau	6-transposition-then-tableau	0006-columnar-then-tableau-period-survival	reverted	0	0	0			37	design=52 implement=0 test=6 run=38 record=0
 0009	0009-forced-key-stretches-read-as-english	1-keyed-periodic	0005-quagmire-period-sweep-forced-keys	reverted	0	0	0			0	design=14 implement=81 test=0 run=0 record=0
+0010	0010-forced-key-stretches-mixed-alphabets	1-keyed-periodic	0009-forced-key-stretches-read-as-english	reverted	0	0	0			80	design=13 implement=52 test=76 run=80 record=0

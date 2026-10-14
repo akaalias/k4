@@ -40,7 +40,11 @@ buyer is not used.
   fixed time budget per experiment, keep-or-revert against a champion.
 - Every experiment pre-registers hypothesis, method and prediction before code runs, makes
   one focused change, and records result and decision.
-- Every experiment carries an ELI5 paragraph and a generated worked-example illustration.
+- Every experiment, kept or reverted, carries three things: its lineage (what it inherits
+  from which parent and what it changes), a domain-expert statement of the hypothesis, and
+  a standalone human-readable walkthrough with a generated worked-example illustration.
+  Reverted experiments keep the full record so the map of what did not work is as complete
+  as the map of what did.
 - The chain of kept experiments must read as the derivation of the method, since method is
   part of success.
 - A patience budget forces a change of cipher family after repeated reverts.

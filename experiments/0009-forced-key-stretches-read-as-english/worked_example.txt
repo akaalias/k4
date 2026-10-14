@@ -1,0 +1,18 @@
+forced key stretch under EASTNORTHEAST, convention kry/std/kry Vigenere, exact copper
+
+pos  plain  cipher  key letter
+ 22    E      F       Q
+ 23    A      L       T
+ 24    S      R       E
+ 25    T      V       L
+ 26    N      Q       W
+ 27    O      Q       E
+ 28    R      P       H
+ 29    T      R       G
+ 30    H      N       Z
+ 31    E      G       U
+ 32    A      K       P
+ 33    S      S       F
+ 34    T      S       H
+
+stretch: QTELWEHGZUPFH   score -7.72 per quadgram (English about -3.6, noise about -6.5)

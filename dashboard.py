@@ -73,6 +73,11 @@ article h2{font:400 22px/1.25 var(--serif);margin:34px 0 6px;padding-top:12px;bo
 article h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}
 article p,article li{max-width:720px}article ol{padding-left:26px}article ol li{margin:0 0 8px}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
+.chart-row{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:28px;align-items:start;margin-top:8px}
+.aside{font-size:13.5px;line-height:1.5;color:var(--muted);border-left:1px solid var(--rule);padding-left:16px;margin-top:16px}
+.aside h4{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 6px}
+.aside p{margin:0 0 10px}.aside svg{display:block;width:100%;height:auto;margin:4px 0 10px}
+@media(max-width:860px){.chart-row{grid-template-columns:1fr}.aside{border-left:0;padding-left:0}}
 svg text{paint-order:stroke;stroke:var(--paper);stroke-width:2.8px;stroke-linejoin:round;font-family:var(--serif)}
 .tip{position:fixed;pointer-events:none;background:var(--paper);border:1px solid var(--rule);padding:6px 9px;font-size:12.5px;line-height:1.45;display:none;max-width:320px;z-index:9}
 .foot{position:fixed;left:0;right:0;bottom:0;padding:7px 18px;text-align:center;font:12.5px var(--serif);color:var(--muted);background:var(--paper);border-top:1px solid var(--rule-soft)}
@@ -154,7 +159,9 @@ def phase_bar(ph, scale_max, width=160):
         w = full * v / total
         parts.append(f'<rect x="{x:.1f}" y="0" width="{max(w-0.5,0.5):.1f}" height="10" fill="{PHASE_FILL[k]}"><title>{k}: {fmt_dur(v)}</title></rect>')
         x += w
-    return f'<svg width="{width}" height="10" style="vertical-align:middle">{"".join(parts)}</svg>'
+    pre = sum(ph.get(k, 0.0) for k in ("design", "implement", "test"))
+    note = '' if pre >= 10 else ' <span class="faint" style="font-size:11.5px">run only; earlier phases unclocked</span>'
+    return f'<svg width="{width}" height="10" style="vertical-align:middle">{"".join(parts)}</svg>' + note
 
 
 def phase_legend():
@@ -192,7 +199,7 @@ def loss_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     W, H = 960, 320
-    L, R, T, B = 76, 120, 20, 34
+    L, R, T, B = 100, 110, 20, 34
     n = len(rows)
     gate, ymax = 10.0, 240.0
     plot_h = H - T - B
@@ -213,7 +220,8 @@ def loss_chart(rows):
             g.append(f'<line x1="{L}" x2="{W-R}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="var(--accent)" stroke-width="1.5"/>')
         else:
             g.append(f'<line x1="{L}" x2="{W-R}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
-        g.append(f'<text x="{L-8}" y="{yy+4:.1f}" text-anchor="end" font-size="11.5" fill="var(--muted)">{v}</text>')
+        lab = f"{v}" if v < 60 else f"{v} = {v // 10} wrong"
+        g.append(f'<text x="{L-8}" y="{yy+4:.1f}" text-anchor="end" font-size="11.5" fill="var(--muted)">{lab}</text>')
     # axis break marks just above the gate line
     bx = L - 2
     g.append(f'<path d="M{bx-5},{y_gate-10:.1f} l10,-5 M{bx-5},{y_gate-6:.1f} l10,-5" stroke="var(--muted)" stroke-width="1" fill="none"/>')
@@ -242,7 +250,7 @@ def loss_chart(rows):
     last = rows[-1]
     if last.get("best_loss") is not None:
         g.append(f'<text x="{xs[-1]+9:.1f}" y="{y(last["best_loss"])+4:.1f}" font-size="11.5" fill="var(--ink)">{last["best_loss"]:.1f}</text>')
-    g.append(f'<text transform="translate(14,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="11.5" fill="var(--muted)">loss, points: 10 per wrong known letter</text>')
+    g.append(f'<text transform="translate(14,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="11.5" fill="var(--muted)">loss, points</text>')
     g.append(f'<text x="{L}" y="{H-8}" font-size="11.5" fill="var(--faint)">experiment 1</text>')
     g.append(f'<text x="{W-R}" y="{H-8}" font-size="11.5" fill="var(--faint)" text-anchor="end">experiment {n}</text>')
     g.append("</svg>")
@@ -257,6 +265,30 @@ def page(title, body, active="", refresh=True):
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
 <div class="foot"><span class="dot"></span>Rendered from the record. Refreshes every 20 seconds.</div>{JS}</body></html>"""
+
+
+def crib_strip():
+    """97 cells; the 24 known positions in accent."""
+    from kryptos.facts import KNOWN
+    known = set(KNOWN)
+    cw, gap = 9, 1.4
+    W = 97 * (cw + gap)
+    cells = "".join(
+        f'<rect x="{(i-1)*(cw+gap):.1f}" y="0" width="{cw}" height="14" rx="1" fill="{'var(--accent)' if i in known else 'var(--rule-soft)'}"><title>position {i}{': ' + KNOWN[i] if i in known else ''}</title></rect>'
+        for i in range(1, 98))
+    return f'<svg viewBox="0 0 {W:.0f} 14" aria-label="the 24 known letters among the 97">{cells}</svg>'
+
+
+def chart_aside():
+    return ('<aside class="aside">'
+            '<h4>The 24 known letters</h4>'
+            + crib_strip() +
+            '<p>EASTNORTHEAST at 22 to 34 and BERLINCLOCK at 64 to 74. A candidate pays ten points for each one it gets wrong, so the top of the axis, 240, is all 24 wrong.</p>'
+            '<h4>The line at ten</h4>'
+            '<p>Above it at least one known letter is wrong. Below it all 24 are right and the loss is only how far the other 73 letters sit from English, plus a key too long to remember. Zero is solved.</p>'
+            '<h4>Dots</h4>'
+            '<p>One per experiment, its best candidate. Hollow means the search ruled everything out before producing one.</p>'
+            '</aside>')
 
 
 def sec(n, title, sub=""):
@@ -316,8 +348,8 @@ def overview():
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
             + hero + champ
-            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; hollow dots returned no candidate. A crib is a stretch of plaintext we already know: K4 has 24 such letters, EASTNORTHEAST and BERLINCLOCK. Each one a candidate gets wrong costs ten. The red line at ten is the crib gate: above it, at least one known letter is wrong; below it, all 24 are right and only English quality and key length remain. The axis breaks there so the band where a solution would appear has room.")
-            + loss_chart(rows)
+            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate. The axis breaks at the line so the band where a solution would appear has room.")
+            + '<div class="chart-row">' + loss_chart(rows) + chart_aside() + '</div>'
             + sec(2, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. Phase bars show run time only for experiments 1 to 5, which predate the clock.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
             + sec(3, "Lineage", "What each experiment inherits from.")

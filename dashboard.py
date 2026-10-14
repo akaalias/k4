@@ -190,7 +190,7 @@ def loss_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     W, H = 960, 320
-    L, R, T, B = 56, 110, 20, 34
+    L, R, T, B = 56, 80, 20, 34
     n = len(rows)
     gate, ymax = 10.0, 240.0
     plot_h = H - T - B
@@ -217,9 +217,9 @@ def loss_chart(rows):
     g.append(f'<path d="M{bx-5},{y_gate-10:.1f} l10,-5 M{bx-5},{y_gate-6:.1f} l10,-5" stroke="var(--muted)" stroke-width="1" fill="none"/>')
     # annotations at right, clear of the plot
     ax = W - R + 10
-    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--accent)">crib gate: all 24 letters in place</text>')
+    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--accent)">crib gate</text>')
     g.append(f'<text x="{ax}" y="{y(0)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">solved</text>')
-    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">no crib letters</text>')
+    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">no cribs</text>')
     pts, best = [], None
     for i, r in enumerate(rows):
         if r.get("decision") == "kept" and r.get("best_loss") is not None:

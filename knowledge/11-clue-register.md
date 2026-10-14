@@ -90,7 +90,7 @@ the letters' direction, upside down (RQ reads YR). Status: untested.
 (NYT 2010 wording). Reading: a reordering step exists. Supports C1(a). Status: noted.
 
 **C11a. NSA 1992: "plain-text auto-key" and "interval 7"; NSA 2007: plaintext and ciphertext
-autokey tested without cribs.** Status: the substitution-then-transposition order is bounded by 0007 for columnar routes and keys of length 26-30 from the vocabulary or K1-K3; the interval-7 and autokey readings by 0002-0003.
+autokey tested without cribs.** Status: 'plain-text auto-key' is dead at lags 1-25 and 30-52 and gives noise at 26-29 (0003, 0012); 'interval 7' as a period is dead under plain and progressive keys (0005, 0011) and as an autokey lag (0012). The substitution-then-transposition order is weakly bounded by 0007.
 and lags 1-96 (0002). Plaintext autokey excluded at lags 1-11 and 30-52, undecided at 13-29 and 53-96, lag 12 consistent under one convention on a single check (0003).
 
 **C12. "Delve into that particular clock" (2014) against "the World Clock in Berlin"

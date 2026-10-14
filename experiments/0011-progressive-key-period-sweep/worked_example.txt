@@ -1,0 +1,13 @@
+period 13, step 1, per-repeat; plain/cipher/key all on the KRYPTOS alphabet, Vigenere
+
+pos  plain  cipher  forced key  index  repeat  minus step  base slot
+ 22    E      F        R         1      1         0 (K)     8
+ 23    A      L        D        10      1         9 (C)     9
+ 24    S      R        U        21      1        20 (Q)     10
+ 25    T      V        M        18      1        17 (L)     11
+ 26    N      Q        R         1      1         0 (K)     12
+ 64    B      N        E        11      4         7 (A)     11
+ 65    E      Y        L        17      4        13 (G)     12
+ 74    K      K        K         0      5        21 (U)     8
+
+positions 22 and 74 share slot 8; their base letters must agree for period 13 step 1 to live.

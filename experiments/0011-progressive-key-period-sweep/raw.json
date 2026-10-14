@@ -1,0 +1,91 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "progressive-key periodic tableau, separate alphabets",
+  "conventions": 24,
+  "periods": "1-97",
+  "steps": "0-25",
+  "forms": [
+   "per-repeat",
+   "per-letter"
+  ],
+  "combinations_checked": 121056,
+  "surviving_steps_by_period_up_to_30": {
+   "26": {
+    "per-repeat": 10,
+    "per-letter": 0
+   },
+   "27": {
+    "per-repeat": 26,
+    "per-letter": 26
+   },
+   "28": {
+    "per-repeat": 26,
+    "per-letter": 26
+   },
+   "29": {
+    "per-repeat": 26,
+    "per-letter": 26
+   },
+   "30": {
+    "per-repeat": 7,
+    "per-letter": 0
+   }
+  },
+  "period_13_survivors": {},
+  "periods_with_no_survivor_any_step": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51
+  ],
+  "fragment_matches": 0,
+  "key_pool": "vocabulary words and K1-K3 windows of length P for P <= 30"
+ },
+ "notes": "121056 (form, period, step, convention) combinations; 0 fragment matches submitted.",
+ "error": null,
+ "worked_example": "period 13, step 1, per-repeat; plain/cipher/key all on the KRYPTOS alphabet, Vigenere\n\npos  plain  cipher  forced key  index  repeat  minus step  base slot\n 22    E      F        R         1      1         0 (K)     8\n 23    A      L        D        10      1         9 (C)     9\n 24    S      R        U        21      1        20 (Q)     10\n 25    T      V        M        18      1        17 (L)     11\n 26    N      Q        R         1      1         0 (K)     12\n 64    B      N        E        11      4         7 (A)     11\n 65    E      Y        L        17      4        13 (G)     12\n 74    K      K        K         0      5        21 (U)     8\n\npositions 22 and 74 share slot 8; their base letters must agree for period 13 step 1 to live.",
+ "seconds": 1.240340232849121
+}

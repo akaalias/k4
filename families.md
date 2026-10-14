@@ -11,6 +11,21 @@ Re-read this top to bottom every few pivots and pick the family with the least c
 | 4 | Sanborn's "visual systems" | untouched | | | Mirrored tableau reading, routes through the carved grid, the HILL column as an index. Inspiration pool is `research_notes/.../sculpture_physical_form.md`. |
 | 5 | Gromark and LFSR variants beyond base 10 | untouched | | | Bean exhausted base-10 length-5 primers. Raised YAR as a possible primer. |
 
+## Key sources (cross-cutting: try in this order inside every family)
+
+Sanborn, 2006, on the K2 correction: the answers to the first three passages contain clues to the fourth.
+Sanborn, 2005: "I have left instructions in the earlier text that refer to later text." Sanborn, 2009 oral
+history: K4 "will come back to the first part". Counterweight, Sanborn to Schmeh, 2019: it is not
+necessary to know K1-K3 to solve K4. Read together: K1-K3 supply the key material, not the method.
+
+1. Words and phrases from the K1-K3 plaintexts, especially the anomalies: IQLUSION, UNDERGRUUND,
+   DESPARATLY, LAYERTWO, PALIMPSEST, ABSCISSA, the K2 coordinates as digits, WW, "can you see anything".
+2. The sculpture's own text: KRYPTOS, the Morse fragments, the HILL column, the raised YAR.
+3. Sanborn's named themes: BERLIN, CLOCK, WELTZEITUHR, EGYPT, CARTER, the 1989 wall.
+4. Only then generic English word lists.
+
+Every experiment's `bounds` should say which key source it drew from.
+
 ## Dead ends (need a stated reason before re-entry)
 
 | Approach | Why dead | Source |

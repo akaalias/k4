@@ -56,6 +56,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 49 | 1 | Shaped long keys from two puzzle words, mirrors and doublings, 272 of them under every alphabet pair: nothing. The record overestimated the key count by a hundredfold. |
 | 50 | 3 | The copper off by one letter, through the two-word test on vocabulary tables: survivors at the shuffled-copper rate, nothing below total length 21. |
 | 51 | 6 | Pure transposition: the cribs need three Es, the copper has two. Every rearrangement-only reading is dead at once. |
+| 52 | 8 | Ciphers on a 5x5 square or a 24-letter ring: K4 uses all 26 letters and has odd length, so Playfair, bifid, four-square, ADFGVX and kin are dead whatever the key. The walkthrough misplaces I by one (17, not 16). |
 
 ## 2026-10-14
 

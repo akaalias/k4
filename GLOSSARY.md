@@ -91,3 +91,5 @@ uses a word a stranger would not know.
 **the earlier messages** (also: K1, K2, K3, the first three messages, the third message): The three solved parts of the sculpture. K1 and K2 used the table with the secret words PALIMPSEST and ABSCISSA; K3 was a grid scramble. K3 retells Howard Carter opening Tutankhamun's tomb.
 
 **an anagram** (also: shuffled letters, a rearrangement): The same letters in a different order, with none added, removed or changed.
+
+**a five-by-five square** (also: a Polybius square, Playfair square): A 5 by 5 grid holding 25 of the 26 letters, used by Playfair, bifid and their relatives; one letter is always left out or merged.

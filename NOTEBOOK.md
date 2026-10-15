@@ -60,6 +60,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 53 | 1 | Periodic keys on tables rebuilt from every K1-K3 word and the 2025 letter's words: nothing. Period 26 runs high only because one equation, places 22 and 74, holds across many alphabets at once. |
 | 54 | 5 | Gromark on tables rebuilt from K1-K3 words: every pair forces a shift of at least 16, as scrambled coppers do, so base 10 is out again. |
 | 55 | 8 | Hill with letters numbered by alphabets from K1-K3 words: no 2x2 or 3x3 setting fits the known blocks; the 4x4 ones fit only for lack of checks and fail the remaining known letters. |
+| 56 | 7 | **Prediction failed.** The width-7 doublet column and width-21 repeats survive the look-elsewhere correction: corrected p 0.005 (0.018 given six doublets) and 0.010 against 10,000 shuffles. Two real fingerprints still lack a construction. |
 
 ## 2026-10-14
 

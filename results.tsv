@@ -105,3 +105,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0104	0104-the-message-keyed-by-itself-through-k3s-rule	1-keyed-periodic	0003-plaintext-autokey-chained	reverted	0	0	0			5	unattributed=1 run=5 record=0
 0105	0105-affine-hill-solved-letter-by-letter	8-hill-polygraphic	0015-hill-2x2-3x3-4x4-exact	reverted	0	0	0			0	unattributed=124 run=0 record=0
 0106	0106-one-to-one-substitution-with-every-move-so-far	9-substitution-then-transposition	0019-substitution-then-route-crib-images-one-to-one	reverted	0	0	0			23	unattributed=92 run=23 record=0
+0107	0107-three-term-gromark-with-a-free-alphabet	5-gromark-lfsr	0069-gromark-with-a-free-alphabet	reverted	0	0	0			50	unattributed=95 run=50 record=0

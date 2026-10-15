@@ -89,3 +89,5 @@ uses a word a stranger would not know.
 **the workshop** (also: the simulator, fake K4s): An experiment that builds thousands of pretend K4s by each suspected method and measures them, to learn which methods produce text that looks like the real one. It points, it does not solve.
 
 **the earlier messages** (also: K1, K2, K3, the first three messages, the third message): The three solved parts of the sculpture. K1 and K2 used the table with the secret words PALIMPSEST and ABSCISSA; K3 was a grid scramble. K3 retells Howard Carter opening Tutankhamun's tomb.
+
+**an anagram** (also: shuffled letters, a rearrangement): The same letters in a different order, with none added, removed or changed.

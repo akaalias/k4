@@ -55,6 +55,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 48 | 1 | Both alphabets mixed, key completion at 27-29, every pair reached: noise. Family 1 closed for vocabulary alphabets. |
 | 49 | 1 | Shaped long keys from two puzzle words, mirrors and doublings, 272 of them under every alphabet pair: nothing. The record overestimated the key count by a hundredfold. |
 | 50 | 3 | The copper off by one letter, through the two-word test on vocabulary tables: survivors at the shuffled-copper rate, nothing below total length 21. |
+| 51 | 6 | Pure transposition: the cribs need three Es, the copper has two. Every rearrangement-only reading is dead at once. |
 
 ## 2026-10-14
 

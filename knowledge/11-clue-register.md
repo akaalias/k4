@@ -69,13 +69,13 @@ anything." Key-source rule plus families C and D. Status: as a running key, K1-K
 (a) KRYPTOS itself used in a way not yet tried (as a transposition key for K4, as it was
 for K3; as the K4 Vigenère key at a period other than 7; as a numeric key 1473625);
 (b) the tableau's own header A-Z; (c) the word on the entrance, the Morse, the compass;
-(d) the title's meaning, "hidden," as a word. Status: KRYPTOS as a periodic tableau key at any period and convention is excluded by 0005; as a transposition key, untested.
+(d) the title's meaning, "hidden," as a word. Status: KRYPTOS as a periodic tableau key at any period and convention is excluded by 0005; as a transposition key alone, excluded with every other pure transposition by letter counts (0051).
 
 **C9. "Having the letters sitting there in plain sight is a pretty big clue."** (2005).
 Readings: (a) the ciphertext is already the plaintext in some reading order
 (contradicted by the cribs for pure transposition, but not for transposition plus a
 light substitution); (b) the tableau letters, including the extra L, are the key.
-Status: untested.
+Status: (a) as pure transposition excluded by letter counts: the cribs need three Es, the copper has two (0051); with a light substitution untested.
 
 **C10. "The misspellings... it's more the orientation of those letters that's useful
 there... the positioning."** "They're important" (the misaligned YAR). (2003). Readings:

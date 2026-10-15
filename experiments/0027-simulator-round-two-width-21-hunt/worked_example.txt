@@ -1,0 +1,16 @@
+one sample from the period-21 free-alphabet generator against K4
+
+plain  ORMATIONWASGATHEREDANDTRANSMITTEDUNDERGRUUNDTOANUNKNOWNLOCATIONXDOESLANGLEYKNOWABOUTTHISTHEYSHOUL
+cipher HVPMBRPGQPWHVTNBJBNNUODCGIUIUSXSEBSUKVLFZUHADEFSROVWHCBHHDOPYIFQTBSWPFUXNNZFYMGMRPSOMUOYMOXWMJPUN
+
+statistic                           K4    sample
+ic                              0.0361    0.0397
+distinct                       26.0000   26.0000
+doublets                        6.0000    3.0000
+width7_doublet_column           5.0000    1.0000
+width21_vertical_repeats       11.0000    1.0000
+repeated_bigrams               10.0000    8.0000
+top_count                       8.0000    8.0000
+singletons                      2.0000    3.0000
+closeness_mean_distance         5.5833    7.0000
+self_encryptions                2.0000    0.0000

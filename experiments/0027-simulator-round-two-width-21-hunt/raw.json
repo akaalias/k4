@@ -1,0 +1,1209 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "construction simulation, round two",
+  "samples_per_generator": 5000,
+  "statistics": [
+   "ic",
+   "distinct",
+   "doublets",
+   "width7_doublet_column",
+   "width21_vertical_repeats",
+   "repeated_bigrams",
+   "top_count",
+   "singletons",
+   "closeness_mean_distance",
+   "self_encryptions"
+  ],
+  "targets": {
+   "period 7, free alphabets": {
+    "width7_doublet_column": 0.005,
+    "width21_vertical_repeats": 0.047,
+    "closeness_mean_distance": 0.31
+   },
+   "period 21, KRYPTOS tableau": {
+    "width7_doublet_column": 0.002,
+    "width21_vertical_repeats": 0.012,
+    "closeness_mean_distance": 0.31
+   },
+   "period 21, free alphabets": {
+    "width7_doublet_column": 0.003,
+    "width21_vertical_repeats": 0.018,
+    "closeness_mean_distance": 0.27
+   },
+   "period 42, free alphabets": {
+    "width7_doublet_column": 0.003,
+    "width21_vertical_repeats": 0.006,
+    "closeness_mean_distance": 0.272
+   },
+   "period 42, KRYPTOS tableau": {
+    "width7_doublet_column": 0.001,
+    "width21_vertical_repeats": 0.006,
+    "closeness_mean_distance": 0.328
+   },
+   "Gromark base 8": {
+    "width7_doublet_column": 0.001,
+    "width21_vertical_repeats": 0.017,
+    "closeness_mean_distance": 0.392
+   },
+   "progressive key, period 7": {
+    "width7_doublet_column": 0.004,
+    "width21_vertical_repeats": 0.002,
+    "closeness_mean_distance": 0.237
+   },
+   "Vigenere then columnar width 21": {
+    "width7_doublet_column": 0.004,
+    "width21_vertical_repeats": 0.003,
+    "closeness_mean_distance": 0.25
+   },
+   "calibration: Vigenere period 27-30": {
+    "width7_doublet_column": 0.001,
+    "width21_vertical_repeats": 0.006,
+    "closeness_mean_distance": 0.252
+   },
+   "progressive key, period 21": {
+    "width7_doublet_column": 0.002,
+    "width21_vertical_repeats": 0.002,
+    "closeness_mean_distance": 0.236
+   },
+   "Gromark base 10": {
+    "width7_doublet_column": 0.001,
+    "width21_vertical_repeats": 0.005,
+    "closeness_mean_distance": 0.377
+   },
+   "Gromark base 2": {
+    "width7_doublet_column": 0.0,
+    "width21_vertical_repeats": 0.34,
+    "closeness_mean_distance": 0.437
+   },
+   "calibration: random letters": {
+    "width7_doublet_column": 0.001,
+    "width21_vertical_repeats": 0.004,
+    "closeness_mean_distance": 0.244
+   },
+   "Vigenere then columnar width 7": {
+    "width7_doublet_column": 0.001,
+    "width21_vertical_repeats": 0.005,
+    "closeness_mean_distance": 0.237
+   },
+   "autokey lag 7": {
+    "width7_doublet_column": 0.0,
+    "width21_vertical_repeats": 0.065,
+    "closeness_mean_distance": 0.022
+   },
+   "autokey lag 21": {
+    "width7_doublet_column": 0.0,
+    "width21_vertical_repeats": 0.004,
+    "closeness_mean_distance": 0.022
+   }
+  },
+  "k4": {
+   "ic": 0.0361,
+   "distinct": 26,
+   "doublets": 6,
+   "width7_doublet_column": 5,
+   "width21_vertical_repeats": 11,
+   "repeated_bigrams": 10,
+   "top_count": 8,
+   "singletons": 2,
+   "closeness_mean_distance": 5.5833,
+   "self_encryptions": 2
+  },
+  "ranking_by_distance": [
+   [
+    "period 7, free alphabets",
+    5.65
+   ],
+   [
+    "period 21, KRYPTOS tableau",
+    5.97
+   ],
+   [
+    "period 21, free alphabets",
+    6.03
+   ],
+   [
+    "period 42, free alphabets",
+    6.2
+   ],
+   [
+    "period 42, KRYPTOS tableau",
+    6.21
+   ],
+   [
+    "Gromark base 8",
+    6.29
+   ],
+   [
+    "progressive key, period 7",
+    6.32
+   ],
+   [
+    "Vigenere then columnar width 21",
+    6.41
+   ],
+   [
+    "calibration: Vigenere period 27-30",
+    6.42
+   ],
+   [
+    "progressive key, period 21",
+    6.56
+   ],
+   [
+    "Gromark base 10",
+    6.56
+   ],
+   [
+    "Gromark base 2",
+    6.6
+   ],
+   [
+    "calibration: random letters",
+    6.6
+   ],
+   [
+    "Vigenere then columnar width 7",
+    6.64
+   ],
+   [
+    "autokey lag 7",
+    8.58
+   ],
+   [
+    "autokey lag 21",
+    9.04
+   ]
+  ],
+  "table": {
+   "period 7, free alphabets": {
+    "ic": {
+     "mean": 0.043,
+     "sd": 0.0043,
+     "z": -1.6,
+     "p": 0.056
+    },
+    "distinct": {
+     "mean": 24.7792,
+     "sd": 1.0078,
+     "z": 1.21,
+     "p": 0.517
+    },
+    "doublets": {
+     "mean": 3.711,
+     "sd": 1.9645,
+     "z": 1.17,
+     "p": 0.357
+    },
+    "width7_doublet_column": {
+     "mean": 1.654,
+     "sd": 0.7866,
+     "z": 4.25,
+     "p": 0.005
+    },
+    "width21_vertical_repeats": {
+     "mean": 5.6846,
+     "sd": 2.3063,
+     "z": 2.3,
+     "p": 0.047
+    },
+    "repeated_bigrams": {
+     "mean": 10.7,
+     "sd": 3.521,
+     "z": -0.2,
+     "p": 1.0
+    },
+    "top_count": {
+     "mean": 9.1406,
+     "sd": 1.5699,
+     "z": -0.73,
+     "p": 0.772
+    },
+    "singletons": {
+     "mean": 3.001,
+     "sd": 1.4506,
+     "z": -0.69,
+     "p": 0.763
+    },
+    "closeness_mean_distance": {
+     "mean": 6.4802,
+     "sd": 0.848,
+     "z": -1.06,
+     "p": 0.31
+    },
+    "self_encryptions": {
+     "mean": 0.933,
+     "sd": 1.05,
+     "z": 1.02,
+     "p": 0.497
+    },
+    "_distance": 5.65,
+    "_n": 5000
+   },
+   "period 21, free alphabets": {
+    "ic": {
+     "mean": 0.0397,
+     "sd": 0.0033,
+     "z": -1.1,
+     "p": 0.263
+    },
+    "distinct": {
+     "mean": 25.2712,
+     "sd": 0.807,
+     "z": 0.9,
+     "p": 0.928
+    },
+    "doublets": {
+     "mean": 3.6934,
+     "sd": 1.9197,
+     "z": 1.2,
+     "p": 0.338
+    },
+    "width7_doublet_column": {
+     "mean": 1.6128,
+     "sd": 0.75,
+     "z": 4.52,
+     "p": 0.003
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.6968,
+     "sd": 2.0873,
+     "z": 3.02,
+     "p": 0.018
+    },
+    "repeated_bigrams": {
+     "mean": 7.6984,
+     "sd": 2.6862,
+     "z": 0.86,
+     "p": 0.482
+    },
+    "top_count": {
+     "mean": 8.3454,
+     "sd": 1.3249,
+     "z": -0.26,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.4834,
+     "sd": 1.3652,
+     "z": -0.35,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.4981,
+     "sd": 0.8053,
+     "z": -1.14,
+     "p": 0.27
+    },
+    "self_encryptions": {
+     "mean": 0.9386,
+     "sd": 0.9712,
+     "z": 1.09,
+     "p": 0.486
+    },
+    "_distance": 6.03,
+    "_n": 5000
+   },
+   "period 42, free alphabets": {
+    "ic": {
+     "mean": 0.039,
+     "sd": 0.003,
+     "z": -0.98,
+     "p": 0.328
+    },
+    "distinct": {
+     "mean": 25.3442,
+     "sd": 0.7409,
+     "z": 0.89,
+     "p": 0.974
+    },
+    "doublets": {
+     "mean": 3.7402,
+     "sd": 1.924,
+     "z": 1.17,
+     "p": 0.343
+    },
+    "width7_doublet_column": {
+     "mean": 1.6192,
+     "sd": 0.7493,
+     "z": 4.51,
+     "p": 0.003
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.3928,
+     "sd": 2.0008,
+     "z": 3.3,
+     "p": 0.006
+    },
+    "repeated_bigrams": {
+     "mean": 7.0178,
+     "sd": 2.5053,
+     "z": 1.19,
+     "p": 0.311
+    },
+    "top_count": {
+     "mean": 8.161,
+     "sd": 1.2441,
+     "z": -0.13,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.355,
+     "sd": 1.3257,
+     "z": -0.27,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.5022,
+     "sd": 0.7995,
+     "z": -1.15,
+     "p": 0.272
+    },
+    "self_encryptions": {
+     "mean": 0.906,
+     "sd": 0.9804,
+     "z": 1.12,
+     "p": 0.467
+    },
+    "_distance": 6.2,
+    "_n": 5000
+   },
+   "period 21, KRYPTOS tableau": {
+    "ic": {
+     "mean": 0.0397,
+     "sd": 0.0033,
+     "z": -1.1,
+     "p": 0.268
+    },
+    "distinct": {
+     "mean": 25.2812,
+     "sd": 0.8176,
+     "z": 0.88,
+     "p": 0.952
+    },
+    "doublets": {
+     "mean": 3.7274,
+     "sd": 1.9435,
+     "z": 1.17,
+     "p": 0.347
+    },
+    "width7_doublet_column": {
+     "mean": 1.6188,
+     "sd": 0.7509,
+     "z": 4.5,
+     "p": 0.002
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.7438,
+     "sd": 2.0597,
+     "z": 3.04,
+     "p": 0.012
+    },
+    "repeated_bigrams": {
+     "mean": 7.694,
+     "sd": 2.6772,
+     "z": 0.86,
+     "p": 0.469
+    },
+    "top_count": {
+     "mean": 8.3592,
+     "sd": 1.3396,
+     "z": -0.27,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.5086,
+     "sd": 1.3638,
+     "z": -0.37,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.5136,
+     "sd": 0.8937,
+     "z": -1.04,
+     "p": 0.31
+    },
+    "self_encryptions": {
+     "mean": 0.912,
+     "sd": 1.3113,
+     "z": 0.83,
+     "p": 0.69
+    },
+    "_distance": 5.97,
+    "_n": 5000
+   },
+   "period 42, KRYPTOS tableau": {
+    "ic": {
+     "mean": 0.039,
+     "sd": 0.003,
+     "z": -0.98,
+     "p": 0.344
+    },
+    "distinct": {
+     "mean": 25.3534,
+     "sd": 0.7677,
+     "z": 0.84,
+     "p": 1.0
+    },
+    "doublets": {
+     "mean": 3.6664,
+     "sd": 1.9158,
+     "z": 1.22,
+     "p": 0.332
+    },
+    "width7_doublet_column": {
+     "mean": 1.5822,
+     "sd": 0.7365,
+     "z": 4.64,
+     "p": 0.001
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.4642,
+     "sd": 2.0045,
+     "z": 3.26,
+     "p": 0.006
+    },
+    "repeated_bigrams": {
+     "mean": 6.9364,
+     "sd": 2.4987,
+     "z": 1.23,
+     "p": 0.298
+    },
+    "top_count": {
+     "mean": 8.1738,
+     "sd": 1.2363,
+     "z": -0.14,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.3264,
+     "sd": 1.3058,
+     "z": -0.25,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.4922,
+     "sd": 0.9037,
+     "z": -1.01,
+     "p": 0.328
+    },
+    "self_encryptions": {
+     "mean": 0.939,
+     "sd": 1.2928,
+     "z": 0.82,
+     "p": 0.727
+    },
+    "_distance": 6.21,
+    "_n": 5000
+   },
+   "autokey lag 21": {
+    "ic": {
+     "mean": 0.0384,
+     "sd": 0.0027,
+     "z": -0.88,
+     "p": 0.393
+    },
+    "distinct": {
+     "mean": 25.4096,
+     "sd": 0.7149,
+     "z": 0.83,
+     "p": 1.0
+    },
+    "doublets": {
+     "mean": 3.3608,
+     "sd": 1.5481,
+     "z": 1.7,
+     "p": 0.174
+    },
+    "width7_doublet_column": {
+     "mean": 1.465,
+     "sd": 0.689,
+     "z": 5.13,
+     "p": 0.0
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.6472,
+     "sd": 1.9762,
+     "z": 3.21,
+     "p": 0.004
+    },
+    "repeated_bigrams": {
+     "mean": 7.2622,
+     "sd": 2.0361,
+     "z": 1.34,
+     "p": 0.264
+    },
+    "top_count": {
+     "mean": 7.89,
+     "sd": 1.0748,
+     "z": 0.1,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.352,
+     "sd": 1.3065,
+     "z": -0.27,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 7.0594,
+     "sd": 0.6613,
+     "z": -2.23,
+     "p": 0.022
+    },
+    "self_encryptions": {
+     "mean": 0.119,
+     "sd": 0.3238,
+     "z": 5.81,
+     "p": 0.0
+    },
+    "_distance": 9.04,
+    "_n": 5000
+   },
+   "autokey lag 7": {
+    "ic": {
+     "mean": 0.0402,
+     "sd": 0.0038,
+     "z": -1.1,
+     "p": 0.246
+    },
+    "distinct": {
+     "mean": 25.111,
+     "sd": 0.8459,
+     "z": 1.05,
+     "p": 0.75
+    },
+    "doublets": {
+     "mean": 3.922,
+     "sd": 1.9356,
+     "z": 1.07,
+     "p": 0.353
+    },
+    "width7_doublet_column": {
+     "mean": 1.6102,
+     "sd": 0.6749,
+     "z": 5.02,
+     "p": 0.0
+    },
+    "width21_vertical_repeats": {
+     "mean": 5.4488,
+     "sd": 2.6499,
+     "z": 2.09,
+     "p": 0.065
+    },
+    "repeated_bigrams": {
+     "mean": 7.6772,
+     "sd": 2.6409,
+     "z": 0.88,
+     "p": 0.516
+    },
+    "top_count": {
+     "mean": 8.2644,
+     "sd": 1.0885,
+     "z": -0.24,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.7276,
+     "sd": 1.4132,
+     "z": -0.51,
+     "p": 0.957
+    },
+    "closeness_mean_distance": {
+     "mean": 7.188,
+     "sd": 0.653,
+     "z": -2.46,
+     "p": 0.022
+    },
+    "self_encryptions": {
+     "mean": 0.12,
+     "sd": 0.325,
+     "z": 5.79,
+     "p": 0.0
+    },
+    "_distance": 8.58,
+    "_n": 5000
+   },
+   "progressive key, period 21": {
+    "ic": {
+     "mean": 0.0383,
+     "sd": 0.0028,
+     "z": -0.81,
+     "p": 0.451
+    },
+    "distinct": {
+     "mean": 25.4386,
+     "sd": 0.7081,
+     "z": 0.79,
+     "p": 1.0
+    },
+    "doublets": {
+     "mean": 3.6546,
+     "sd": 1.885,
+     "z": 1.24,
+     "p": 0.323
+    },
+    "width7_doublet_column": {
+     "mean": 1.59,
+     "sd": 0.7351,
+     "z": 4.64,
+     "p": 0.002
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.05,
+     "sd": 1.8841,
+     "z": 3.69,
+     "p": 0.002
+    },
+    "repeated_bigrams": {
+     "mean": 6.4102,
+     "sd": 2.3489,
+     "z": 1.53,
+     "p": 0.196
+    },
+    "top_count": {
+     "mean": 8.006,
+     "sd": 1.1889,
+     "z": -0.01,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.23,
+     "sd": 1.2898,
+     "z": -0.18,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.5082,
+     "sd": 0.7678,
+     "z": -1.2,
+     "p": 0.236
+    },
+    "self_encryptions": {
+     "mean": 0.931,
+     "sd": 0.9478,
+     "z": 1.13,
+     "p": 0.488
+    },
+    "_distance": 6.56,
+    "_n": 5000
+   },
+   "progressive key, period 7": {
+    "ic": {
+     "mean": 0.0385,
+     "sd": 0.0029,
+     "z": -0.82,
+     "p": 0.444
+    },
+    "distinct": {
+     "mean": 25.4352,
+     "sd": 0.7226,
+     "z": 0.78,
+     "p": 1.0
+    },
+    "doublets": {
+     "mean": 3.6968,
+     "sd": 1.9451,
+     "z": 1.18,
+     "p": 0.357
+    },
+    "width7_doublet_column": {
+     "mean": 1.6446,
+     "sd": 0.768,
+     "z": 4.37,
+     "p": 0.004
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.1284,
+     "sd": 1.8847,
+     "z": 3.65,
+     "p": 0.002
+    },
+    "repeated_bigrams": {
+     "mean": 6.5236,
+     "sd": 2.4359,
+     "z": 1.43,
+     "p": 0.221
+    },
+    "top_count": {
+     "mean": 8.038,
+     "sd": 1.1774,
+     "z": -0.03,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.2478,
+     "sd": 1.2998,
+     "z": -0.19,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.5012,
+     "sd": 0.7643,
+     "z": -1.2,
+     "p": 0.237
+    },
+    "self_encryptions": {
+     "mean": 0.9224,
+     "sd": 0.9222,
+     "z": 1.17,
+     "p": 0.471
+    },
+    "_distance": 6.32,
+    "_n": 5000
+   },
+   "Gromark base 10": {
+    "ic": {
+     "mean": 0.0394,
+     "sd": 0.0032,
+     "z": -1.05,
+     "p": 0.296
+    },
+    "distinct": {
+     "mean": 25.308,
+     "sd": 0.7856,
+     "z": 0.88,
+     "p": 0.961
+    },
+    "doublets": {
+     "mean": 3.4576,
+     "sd": 1.8257,
+     "z": 1.39,
+     "p": 0.272
+    },
+    "width7_doublet_column": {
+     "mean": 1.5176,
+     "sd": 0.7094,
+     "z": 4.91,
+     "p": 0.001
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.3462,
+     "sd": 1.9719,
+     "z": 3.37,
+     "p": 0.005
+    },
+    "repeated_bigrams": {
+     "mean": 6.8574,
+     "sd": 2.4813,
+     "z": 1.27,
+     "p": 0.285
+    },
+    "top_count": {
+     "mean": 8.2828,
+     "sd": 1.2784,
+     "z": -0.22,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.4152,
+     "sd": 1.3346,
+     "z": -0.31,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.4808,
+     "sd": 0.978,
+     "z": -0.92,
+     "p": 0.377
+    },
+    "self_encryptions": {
+     "mean": 0.9454,
+     "sd": 1.0064,
+     "z": 1.05,
+     "p": 0.48
+    },
+    "_distance": 6.56,
+    "_n": 5000
+   },
+   "Gromark base 8": {
+    "ic": {
+     "mean": 0.0407,
+     "sd": 0.0036,
+     "z": -1.28,
+     "p": 0.162
+    },
+    "distinct": {
+     "mean": 25.1046,
+     "sd": 0.8949,
+     "z": 1.0,
+     "p": 0.771
+    },
+    "doublets": {
+     "mean": 3.522,
+     "sd": 1.8174,
+     "z": 1.36,
+     "p": 0.268
+    },
+    "width7_doublet_column": {
+     "mean": 1.5424,
+     "sd": 0.716,
+     "z": 4.83,
+     "p": 0.001
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.8038,
+     "sd": 2.1263,
+     "z": 2.91,
+     "p": 0.017
+    },
+    "repeated_bigrams": {
+     "mean": 7.3678,
+     "sd": 2.6631,
+     "z": 0.99,
+     "p": 0.408
+    },
+    "top_count": {
+     "mean": 8.5854,
+     "sd": 1.3575,
+     "z": -0.43,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.6716,
+     "sd": 1.3972,
+     "z": -0.48,
+     "p": 0.961
+    },
+    "closeness_mean_distance": {
+     "mean": 6.4957,
+     "sd": 1.0128,
+     "z": -0.9,
+     "p": 0.392
+    },
+    "self_encryptions": {
+     "mean": 0.9194,
+     "sd": 1.0269,
+     "z": 1.05,
+     "p": 0.483
+    },
+    "_distance": 6.29,
+    "_n": 5000
+   },
+   "Gromark base 2": {
+    "ic": {
+     "mean": 0.0541,
+     "sd": 0.0065,
+     "z": -2.79,
+     "p": 0.0
+    },
+    "distinct": {
+     "mean": 22.8428,
+     "sd": 1.5262,
+     "z": 2.07,
+     "p": 0.004
+    },
+    "doublets": {
+     "mean": 3.7204,
+     "sd": 1.9697,
+     "z": 1.16,
+     "p": 0.312
+    },
+    "width7_doublet_column": {
+     "mean": 1.5676,
+     "sd": 0.7423,
+     "z": 4.62,
+     "p": 0.0
+    },
+    "width21_vertical_repeats": {
+     "mean": 7.9932,
+     "sd": 2.7054,
+     "z": 1.11,
+     "p": 0.34
+    },
+    "repeated_bigrams": {
+     "mean": 15.1012,
+     "sd": 4.2678,
+     "z": -1.2,
+     "p": 0.218
+    },
+    "top_count": {
+     "mean": 11.5634,
+     "sd": 1.8611,
+     "z": -1.91,
+     "p": 0.031
+    },
+    "singletons": {
+     "mean": 3.6492,
+     "sd": 1.6205,
+     "z": -1.02,
+     "p": 0.5
+    },
+    "closeness_mean_distance": {
+     "mean": 6.5035,
+     "sd": 1.1372,
+     "z": -0.81,
+     "p": 0.437
+    },
+    "self_encryptions": {
+     "mean": 0.9138,
+     "sd": 1.2252,
+     "z": 0.89,
+     "p": 0.489
+    },
+    "_distance": 6.6,
+    "_n": 5000
+   },
+   "Vigenere then columnar width 21": {
+    "ic": {
+     "mean": 0.0392,
+     "sd": 0.003,
+     "z": -1.04,
+     "p": 0.302
+    },
+    "distinct": {
+     "mean": 25.336,
+     "sd": 0.7787,
+     "z": 0.85,
+     "p": 0.996
+    },
+    "doublets": {
+     "mean": 3.7862,
+     "sd": 1.8893,
+     "z": 1.17,
+     "p": 0.356
+    },
+    "width7_doublet_column": {
+     "mean": 1.6152,
+     "sd": 0.7351,
+     "z": 4.6,
+     "p": 0.004
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.2402,
+     "sd": 1.9424,
+     "z": 3.48,
+     "p": 0.003
+    },
+    "repeated_bigrams": {
+     "mean": 6.7342,
+     "sd": 2.4917,
+     "z": 1.31,
+     "p": 0.272
+    },
+    "top_count": {
+     "mean": 8.2666,
+     "sd": 1.2772,
+     "z": -0.21,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.4,
+     "sd": 1.3294,
+     "z": -0.3,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.5117,
+     "sd": 0.776,
+     "z": -1.2,
+     "p": 0.25
+    },
+    "self_encryptions": {
+     "mean": 0.9186,
+     "sd": 0.9459,
+     "z": 1.14,
+     "p": 0.469
+    },
+    "_distance": 6.41,
+    "_n": 5000
+   },
+   "Vigenere then columnar width 7": {
+    "ic": {
+     "mean": 0.0392,
+     "sd": 0.0031,
+     "z": -1.02,
+     "p": 0.316
+    },
+    "distinct": {
+     "mean": 25.3234,
+     "sd": 0.7725,
+     "z": 0.88,
+     "p": 0.973
+    },
+    "doublets": {
+     "mean": 3.6608,
+     "sd": 1.8856,
+     "z": 1.24,
+     "p": 0.327
+    },
+    "width7_doublet_column": {
+     "mean": 1.575,
+     "sd": 0.7085,
+     "z": 4.83,
+     "p": 0.001
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.1952,
+     "sd": 1.9158,
+     "z": 3.55,
+     "p": 0.005
+    },
+    "repeated_bigrams": {
+     "mean": 6.7764,
+     "sd": 2.4227,
+     "z": 1.33,
+     "p": 0.268
+    },
+    "top_count": {
+     "mean": 8.2504,
+     "sd": 1.3046,
+     "z": -0.19,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.4186,
+     "sd": 1.3374,
+     "z": -0.31,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.492,
+     "sd": 0.7651,
+     "z": -1.19,
+     "p": 0.237
+    },
+    "self_encryptions": {
+     "mean": 0.8958,
+     "sd": 0.9326,
+     "z": 1.18,
+     "p": 0.457
+    },
+    "_distance": 6.64,
+    "_n": 5000
+   },
+   "calibration: random letters": {
+    "ic": {
+     "mean": 0.0385,
+     "sd": 0.0028,
+     "z": -0.86,
+     "p": 0.403
+    },
+    "distinct": {
+     "mean": 25.4258,
+     "sd": 0.717,
+     "z": 0.8,
+     "p": 1.0
+    },
+    "doublets": {
+     "mean": 3.6658,
+     "sd": 1.8553,
+     "z": 1.26,
+     "p": 0.316
+    },
+    "width7_doublet_column": {
+     "mean": 1.584,
+     "sd": 0.7109,
+     "z": 4.81,
+     "p": 0.001
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.0996,
+     "sd": 1.9486,
+     "z": 3.54,
+     "p": 0.004
+    },
+    "repeated_bigrams": {
+     "mean": 6.476,
+     "sd": 2.3932,
+     "z": 1.47,
+     "p": 0.216
+    },
+    "top_count": {
+     "mean": 8.007,
+     "sd": 1.1836,
+     "z": -0.01,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.28,
+     "sd": 1.2836,
+     "z": -0.22,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.4916,
+     "sd": 0.7526,
+     "z": -1.21,
+     "p": 0.244
+    },
+    "self_encryptions": {
+     "mean": 0.934,
+     "sd": 0.9563,
+     "z": 1.11,
+     "p": 0.484
+    },
+    "_distance": 6.6,
+    "_n": 5000
+   },
+   "calibration: Vigenere period 27-30": {
+    "ic": {
+     "mean": 0.0392,
+     "sd": 0.0031,
+     "z": -1.0,
+     "p": 0.308
+    },
+    "distinct": {
+     "mean": 25.335,
+     "sd": 0.7784,
+     "z": 0.85,
+     "p": 0.998
+    },
+    "doublets": {
+     "mean": 3.7236,
+     "sd": 1.8868,
+     "z": 1.21,
+     "p": 0.335
+    },
+    "width7_doublet_column": {
+     "mean": 1.59,
+     "sd": 0.7299,
+     "z": 4.67,
+     "p": 0.001
+    },
+    "width21_vertical_repeats": {
+     "mean": 4.2524,
+     "sd": 1.9359,
+     "z": 3.49,
+     "p": 0.006
+    },
+    "repeated_bigrams": {
+     "mean": 7.0022,
+     "sd": 2.6059,
+     "z": 1.15,
+     "p": 0.326
+    },
+    "top_count": {
+     "mean": 8.2314,
+     "sd": 1.2987,
+     "z": -0.18,
+     "p": 1.0
+    },
+    "singletons": {
+     "mean": 2.4034,
+     "sd": 1.3287,
+     "z": -0.3,
+     "p": 1.0
+    },
+    "closeness_mean_distance": {
+     "mean": 6.4946,
+     "sd": 0.7755,
+     "z": -1.18,
+     "p": 0.252
+    },
+    "self_encryptions": {
+     "mean": 0.9292,
+     "sd": 0.9542,
+     "z": 1.12,
+     "p": 0.485
+    },
+    "_distance": 6.42,
+    "_n": 5000
+   }
+  }
+ },
+ "notes": "Diagnostic, no candidates. Target p-values (width-7 column, width-21 repeats, closeness): period 7, free alphabets: 0.005, 0.047, 0.31; period 21, KRYPTOS tableau: 0.002, 0.012, 0.31; period 21, free alphabets: 0.003, 0.018, 0.27; period 42, free alphabets: 0.003, 0.006, 0.272; period 42, KRYPTOS tableau: 0.001, 0.006, 0.328; Gromark base 8: 0.001, 0.017, 0.392; progressive key, period 7: 0.004, 0.002, 0.237; Vigenere then columnar width 21: 0.004, 0.003, 0.25; calibration: Vigenere period 27-30: 0.001, 0.006, 0.252; progressive key, period 21: 0.002, 0.002, 0.236; Gromark base 10: 0.001, 0.005, 0.377; Gromark base 2: 0.0, 0.34, 0.437; calibration: random letters: 0.001, 0.004, 0.244; Vigenere then columnar width 7: 0.001, 0.005, 0.237; autokey lag 7: 0.0, 0.065, 0.022; autokey lag 21: 0.0, 0.004, 0.022.",
+ "error": null,
+ "worked_example": "one sample from the period-21 free-alphabet generator against K4\n\nplain  ORMATIONWASGATHEREDANDTRANSMITTEDUNDERGRUUNDTOANUNKNOWNLOCATIONXDOESLANGLEYKNOWABOUTTHISTHEYSHOUL\ncipher HVPMBRPGQPWHVTNBJBNNUODCGIUIUSXSEBSUKVLFZUHADEFSROVWHCBHHDOPYIFQTBSWPFUXNNZFYMGMRPSOMUOYMOXWMJPUN\n\nstatistic                           K4    sample\nic                              0.0361    0.0397\ndistinct                       26.0000   26.0000\ndoublets                        6.0000    3.0000\nwidth7_doublet_column           5.0000    1.0000\nwidth21_vertical_repeats       11.0000    1.0000\nrepeated_bigrams               10.0000    8.0000\ntop_count                       8.0000    8.0000\nsingletons                      2.0000    3.0000\ncloseness_mean_distance         5.5833    7.0000\nself_encryptions                2.0000    0.0000",
+ "seconds": 5.818730115890503
+}

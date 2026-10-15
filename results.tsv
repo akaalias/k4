@@ -80,3 +80,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0079	0079-berlin-clock-as-a-key-schedule	1-keyed-periodic	0011-progressive-key-period-sweep	reverted	0	0	0			37	design=41 implement=0 test=16 run=37 record=0
 0080	0080-substitute-rotate-substitute-two-keys	6-transposition-then-tableau	0008-k3-formula-all-shifts-then-tableau	reverted	0	0	0			167	design=38 implement=86 test=88 run=167 record=0
 0081	0081-grid-turns-with-autokey	6-transposition-then-tableau	0063-transposition-and-ciphertext-autokey	reverted	0	0	0			466	design=32 implement=115 test=0 run=466 record=0
+0082	0082-where-the-blanks-go-in-the-grid	6-transposition-then-tableau	0008-k3-formula-all-shifts-then-tableau	reverted	0	0	0			57	design=65 implement=58 test=0 run=57 record=0

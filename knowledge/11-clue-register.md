@@ -40,7 +40,7 @@ need to solve the technique first and then go for the puzzle... more than one st
 (Scheidt, 2005, 2015). Readings: (a) a plaintext transform before a keyed cipher; (b) a
 non-standard alphabet or base ("base 16," "Mayan... base 60"); (c) "stego": the English is
 hidden inside something readable; (d) the mask is what Sanborn calls a matrix. Family B.
-Status: masks that only move or pad letters (reversal, regular nulls, prefix nulls) before a periodic tableau are dead (0023); nulls chosen by letter (every copy of one or two letters outside the cribs) behave like random strike-outs of the same size (0057); masks that change letters by an affine map of either alphabet (decimations, Atbash), before or after a periodic key or ciphertext autokey, are dead (0074); other letter-changing masks untested.
+Status: masks that only move or pad letters (reversal, regular nulls, prefix nulls) before a periodic tableau are dead (0023); writing the message into a grid along a snake, spiral or diagonal path and reading it along another, with a periodic key before or after, is dead below period 21 (0092); nulls chosen by letter (every copy of one or two letters outside the cribs) behave like random strike-outs of the same size (0057); masks that change letters by an affine map of either alphabet (decimations, Atbash), before or after a periodic key or ciphertext autokey, are dead (0074); other letter-changing masks untested.
 
 **C5. "Not mathematical... simple, can be remembered, and executed years later when used
 with the correct key word/s... similar to what would be provided agents or pilots in
@@ -95,7 +95,7 @@ and lags 1-96 (0002). Plaintext autokey excluded at lags 1-11 and 30-52, undecid
 (2025).** Readings: (a) the clock is plaintext content only; (b) the Weltzeituhr's
 structure (24 time zones on a rotating ring, a compass-rose mosaic on the ground) is a
 key: 24-letter alphabet, a rotating offset; (c) the 2014 steer was misdirection. Status:
-Mengenlehreuhr readings dead (key schedules from its lamp counts, hours, minutes and time digits at any start and step: best 8 of 24, as shuffled coppers, 0079); a cipher on the Weltzeituhr's 24-letter ring is excluded because K4 uses all 26 letters (0052); other Weltzeituhr readings untested.
+Mengenlehreuhr readings dead (key schedules from its lamp counts, hours, minutes and time digits at any start and step: best 8 of 24, as shuffled coppers, 0079; joined to any K3-style move before or after the table, no fit, 0091); a cipher on the Weltzeituhr's 24-letter ring is excluded because K4 uses all 26 letters (0052); other Weltzeituhr readings untested.
 
 **C13. "Two events... my second trip to Egypt in late 1986, and the fall of the Berlin
 Wall."** (2025). Readings: (a) plaintext content: the words EGYPT, WALL, CAIRO, LUXOR,

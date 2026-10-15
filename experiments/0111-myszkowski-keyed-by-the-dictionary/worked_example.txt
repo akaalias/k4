@@ -1,0 +1,9 @@
+ABSCISSA as a Myszkowski key: ranks [1, 2, 5, 3, 4, 5, 5, 1] (both A's rank 1, the S's rank 5)
+columns of equal rank are read together, row by row
+
+place  letter  lands at  copper there
+   22       E        69             T
+   23       A        70             M
+   24       S         6             O
+   25       T         7             X
+   64       B        16             L

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the alphabets",
+  "text": "K1 and K2 used a mixed alphabet on the table. Here the alphabets are left unknown, one (Quagmire III) or a pair (IV), with a key of 3, 7 or 21 letters, before or after each move."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known letter gives an equation between letter positions and a key shift. Solved mod 2 and mod 13, the equations show whether two letters are forced into one position; if none are, some alphabet fits."
+ },
+ {
+  "anchor": "measured after the run",
+  "text": "A pair of alphabets at period 3 after the move fits 16 settings against 1-12 on scrambled coppers; counted as distinct equation sets, 12 against 1-11. Marginal, and every other count sits inside the range."
+ }
+]

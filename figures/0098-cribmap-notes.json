@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key",
+  "text": "Experiment 17 used the sculpture's texts as a running key, but only on the two known alphabets. Sanborn called his table slightly different, so here its alphabet may be any order of the 26 letters."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known letter gives one equation: the carved letter's position equals the message letter's plus the key letter's. Solved mod 2 and mod 13, they show whether two letters are forced into one position."
+ },
+ {
+  "anchor": "the bound",
+  "text": "80,676 settings: no alphabet fits K4 for any of them, while the scrambled coppers manage 0 to 57. K4 sits at the bottom of the range."
+ }
+]

@@ -114,3 +114,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0113	0113-rail-fence-and-redefence	6-transposition-then-tableau	0092-plaintext-written-along-a-path	reverted	0	0	0			6	unattributed=74 run=6 record=0
 0114	0114-amsco-keyed-by-the-dictionary	6-transposition-then-tableau	0110-keyword-columnar-from-the-whole-dictionary	reverted	0	0	0			402	unattributed=66 run=402 record=0
 0115	0115-a-puzzle-word-plus-any-english-word	3-two-component-key	0059-two-keywords-two-passes-k1-k3-word-alphabets	reverted	0	0	0			6	unattributed=360 run=6 record=0
+0116	0116-hill-matrix-then-the-table	8-hill-polygraphic	0105-affine-hill-solved-letter-by-letter	reverted	0	0	0			7	unattributed=115 run=6 record=0

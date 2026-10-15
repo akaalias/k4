@@ -1,0 +1,16 @@
+2x2 Hill with a key of length 4, blocks from place 1, letters A = 0: equations for row 1
+
+block places  carved  numbers   block class  known first letter
+  23-24          LR  [11, 17]            2  A = 0
+  25-26          VQ  [21, 16]            0  T = 19
+  27-28          QP  [16, 15]            2  O = 14
+  29-30          RN  [17, 13]            0  T = 19
+  31-32          GK  [6, 10]             2  E = 4
+  33-34          SS  [18, 18]            0  S = 18
+  65-66          YP  [24, 15]            0  E = 4
+  67-68          VT  [21, 19]            2  L = 11
+  69-70          TM  [19, 12]            0  N = 13
+  71-72          ZF  [25, 5]             2  L = 11
+  73-74          PK  [15, 10]            0  C = 2
+
+row 1: two matrix entries and one shift per block class (2 classes) against the equations above

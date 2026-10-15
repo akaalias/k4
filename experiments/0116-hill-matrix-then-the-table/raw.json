@@ -1,0 +1,1497 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Hill matrix with a periodic tableau key, either order (p = B c + u_kappa), sizes 2-4, key lengths 1-26",
+  "by_size_and_key_length": {
+   "2x2 L=1": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=2": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=3": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=4": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=5": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=6": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=7": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=8": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=9": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=10": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=11": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=12": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=13": {
+    "k4": {
+     "alive": 0,
+     "dead": 4,
+     "open": 4
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=14": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=15": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 8
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=16": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=17": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=18": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=19": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=20": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=21": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=22": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=23": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=24": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=25": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 8
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 L=26": {
+    "k4": {
+     "alive": 0,
+     "dead": 4,
+     "open": 4
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=1": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=2": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=3": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=4": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=5": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=6": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=7": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=8": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 6
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=9": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=10": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=11": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=12": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=13": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=14": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=15": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=16": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 6
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=17": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=18": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=19": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=20": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=21": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=22": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=23": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=24": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 6
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=25": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 L=26": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=1": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=2": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=3": {
+    "k4": {
+     "alive": 0,
+     "dead": 14,
+     "open": 2
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=4": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=5": {
+    "k4": {
+     "alive": 0,
+     "dead": 4,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=6": {
+    "k4": {
+     "alive": 0,
+     "dead": 14,
+     "open": 2
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=7": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=8": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=9": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 10
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=10": {
+    "k4": {
+     "alive": 0,
+     "dead": 4,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=11": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 8
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=12": {
+    "k4": {
+     "alive": 0,
+     "dead": 14,
+     "open": 2
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=13": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 10
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=14": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=15": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=16": {
+    "k4": {
+     "alive": 0,
+     "dead": 4,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=17": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=18": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 10
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=19": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=20": {
+    "k4": {
+     "alive": 0,
+     "dead": 4,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=21": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=22": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 8
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=23": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=24": {
+    "k4": {
+     "alive": 0,
+     "dead": 4,
+     "open": 12
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=25": {
+    "k4": {
+     "alive": 0,
+     "dead": 0,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 L=26": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 10
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "k4_alive": [],
+  "n_k4_alive": 0,
+  "controls": "10 shuffled coppers (seed 116), identical test"
+ },
+ "notes": "78 (size, key length) cells x alignments x 4 numberings. K4: alive 0, dead 536, open 400; controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]. Largest key length with any decided setting per size: 2x2: 26, 3x3: 24, 4x4: 26.",
+ "error": null,
+ "worked_example": "2x2 Hill with a key of length 4, blocks from place 1, letters A = 0: equations for row 1\n\nblock places  carved  numbers   block class  known first letter\n  23-24          LR  [11, 17]            2  A = 0\n  25-26          VQ  [21, 16]            0  T = 19\n  27-28          QP  [16, 15]            2  O = 14\n  29-30          RN  [17, 13]            0  T = 19\n  31-32          GK  [6, 10]             2  E = 4\n  33-34          SS  [18, 18]            0  S = 18\n  65-66          YP  [24, 15]            0  E = 4\n  67-68          VT  [21, 19]            2  L = 11\n  69-70          TM  [19, 12]            0  N = 13\n  71-72          ZF  [25, 5]             2  L = 11\n  73-74          PK  [15, 10]            0  C = 2\n\nrow 1: two matrix entries and one shift per block class (2 classes) against the equations above",
+ "seconds": 6.486278772354126
+}

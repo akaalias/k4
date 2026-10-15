@@ -82,7 +82,7 @@ uses a word a stranger would not know.
 
 **the width-21 repeats** (also: letters 21 apart behaving alike, vertical pairs): When the carved letters are written in rows of 21, pairs of letters stacked one above the other repeat more often than chance allows. The same was true at width 19 in the Zodiac killer's 340-letter cipher and turned out to be a trace of its method.
 
-**the doublets** (also: a letter repeating its neighbour, the doublet column): Places where a carved letter is immediately followed by the same letter. K4 has six, and five of them fall in the same column when the text is written in rows of seven.
+**the doublets** (also: a letter repeating its neighbour, the doublet column, doubled letters, doubled letter): Places where a carved letter is immediately followed by the same letter. K4 has six, and five of them fall in the same column when the text is written in rows of seven.
 
 **the index of coincidence** (also: how evenly the letters are spread): The chance that two letters picked at random from the text are the same. English gives about 0.066, random letters 0.038, K4 0.036, so K4's letters are spread as flat as random.
 
@@ -93,3 +93,7 @@ uses a word a stranger would not know.
 **an anagram** (also: shuffled letters, a rearrangement): The same letters in a different order, with none added, removed or changed.
 
 **a five-by-five square** (also: a Polybius square, Playfair square): A 5 by 5 grid holding 25 of the 26 letters, used by Playfair, bifid and their relatives; one letter is always left out or merged.
+
+**the Berlin clocks** (also: the set-theory clock, the Mengenlehreuhr, the World Clock, the Weltzeituhr): Two famous Berlin timepieces. The set-theory clock shows the time with rows of lamps counting fives and ones of hours and minutes; the World Clock at Alexanderplatz shows the hour in 24 time zones and was where crowds gathered when the Wall fell. Sanborn has pointed at both.
+
+**a number base** (also: base 10, base 16, base 26, other number systems): How many different digits a counting system uses before it carries: ten for ordinary numbers, sixteen for hexadecimal, twenty for the Maya. A running-number key like Gromark's can be built in any base.

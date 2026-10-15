@@ -64,3 +64,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0063	0063-transposition-and-ciphertext-autokey	6-transposition-then-tableau	0062-which-constructions-make-the-width-fingerprints	reverted	0	0	0			75	design=0 implement=15 test=0 run=75 record=0
 0064	0064-ciphertext-autokey-k1-k3-word-alphabets	1-keyed-periodic	0025-autokeys-with-mixed-alphabets	reverted	0	0	0			90	design=0 implement=8 test=0 run=90 record=0
 0065	0065-constructions-that-line-up-doublets-in-sevens	7-construction-simulation	0062-which-constructions-make-the-width-fingerprints	reverted	0	0	0			1	design=46 implement=0 test=12 run=1 record=0
+0066	0066-ciphertext-autokey-plus-a-repeating-key	1-keyed-periodic	0065-constructions-that-line-up-doublets-in-sevens	reverted	0	0	0			2	design=36 implement=0 test=0 run=2 record=0

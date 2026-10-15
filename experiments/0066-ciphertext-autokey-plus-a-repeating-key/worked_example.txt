@@ -1,0 +1,7 @@
+lag 1, period 7, sculpture's alphabet throughout, Vigenere, s = +1
+
+place  known  carved  previous  key letter  slot
+   22      E       F         W           T     0
+   29      T       R         P           Q     0
+   64      B       N         B           P     0
+   71      L       Z         M           J     0

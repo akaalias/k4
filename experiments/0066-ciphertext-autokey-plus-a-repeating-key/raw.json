@@ -1,0 +1,95 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "ciphertext autokey at lag L plus a periodic key of period P",
+  "lags": "1-96",
+  "periods": "1-96",
+  "classes": 32,
+  "cases": 221184,
+  "controls": 10,
+  "survivors_by_checks": {
+   "P>26, checks 1": {
+    "k4": 101,
+    "controls": [
+     85,
+     90,
+     79,
+     84,
+     105,
+     91,
+     98,
+     84,
+     100,
+     100
+    ]
+   },
+   "P>26, checks 2": {
+    "k4": 5,
+    "controls": [
+     1,
+     2,
+     1,
+     1,
+     2,
+     5,
+     4,
+     4,
+     2,
+     4
+    ]
+   },
+   "P<=26, checks 1": {
+    "k4": 91,
+    "controls": [
+     105,
+     93,
+     95,
+     95,
+     91,
+     92,
+     94,
+     85,
+     86,
+     108
+    ]
+   },
+   "P<=26, checks 2": {
+    "k4": 5,
+    "controls": [
+     0,
+     0,
+     1,
+     2,
+     1,
+     6,
+     1,
+     0,
+     2,
+     1
+    ]
+   },
+   "P<=26, checks 3": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0
+    ]
+   }
+  },
+  "survivors_P_le_26_with_3plus_checks": [],
+  "lag1_period7_or_lag21_survivors": [],
+  "word_matches": []
+ },
+ "notes": "221184 cases, 32 classes. Survivors (K4 vs controls min-max): P>26, checks 1: 101 (79-105); P>26, checks 2: 5 (1-5); P<=26, checks 1: 91 (85-108); P<=26, checks 2: 5 (0-6); P<=26, checks 3: 0 (0-1). Lag 1 period 7 or lag 21 survivors: 0. Word matches: 0.",
+ "error": null,
+ "worked_example": "lag 1, period 7, sculpture's alphabet throughout, Vigenere, s = +1\n\nplace  known  carved  previous  key letter  slot\n   22      E       F         W           T     0\n   29      T       R         P           Q     0\n   64      B       N         B           P     0\n   71      L       Z         M           J     0",
+ "seconds": 2.0467259883880615
+}

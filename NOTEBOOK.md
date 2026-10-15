@@ -94,6 +94,42 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 87 | 3 | **Type 2, sub-variant 4.** A key that is one word's letter for the column plus a second key's letter for the row, on a grid of width 2-48: inside a row the row letter cancels, so this makes doublets pile up in one column by design. Solved exactly: on the copper as carved no width survives (width 7 fails with 14 checks; the first loop already gives 17 against 18 on the KRYPTOS alphabet); after or before each of 0080's 27,754 moves, counts at every level at the scrambled-copper rate and nothing at five checks. Prediction held. | 
 | 88 | 3 | **Type 2, continued.** The column word with a second shift that changes every m letters (m 2-50, any offset, word length 2-31), the sculpture's own 31-letter carved lines among them (m = 31, offset 27): 31,994 structures, one combination consistent on K4 at a single check, against 0-230 on the scrambled coppers; nothing at two. The carved-line case dies at every word length (with a 7-letter word places 22 and 29 already need 1 and 23). Prediction held. |
 
+### Experiments 80 to 88: types 1 and 2 of directions.md (2026-10-15 night)
+
+Alexis away; worked off type 1 (change plus move) and type 2 (sevens) in order, each checked first against the
+prior-work database. All nine reverted; no champion. Run issue #24.
+
+Findings worth keeping:
+- **Type 1 is closed for its four cheap gaps.** Two repeating keys around a move, solved as a linear system (0080);
+  autokeys of both kinds with K3's rule, grid turns and columnar (0081); hand padding, blanks on top or fillers carried
+  through a second turn (0082); every triple quarter turn, 1.7 million routes (0083). All at the scrambled-copper rate.
+- **Type 2's open items are closed too.** Double columnar with one width of 7 in all 5,040 orders (0084); the ? as a
+  98th symbol in a full 7 x 14 grid, with autokeys (0086); a column word plus a row key, the one construction found that
+  lines doublets up by column by design (0087), and the same with a shift per stretch of m letters or per carved
+  31-letter line (0088). The width-7 doublet column still has no construction that also fits the cribs.
+- **Issue #26:** ten records (0006-0081) read keyword column shuffles by the rank list, the inverse of the key order.
+  0085 reran true keyword columnar, single and double, with periodic and autokey keys: chance. The library's keyword
+  order also drops repeated letters (ABSCISSA reads as ABSCI); 0084 and 0085 test the whole-word reading as well.
+
+Mistakes:
+- Three predictions failed in detail at the margin (0080 low at three checks; 0081 four settings at four checks; 0082
+  and 0083 a period just above the control range, 0083 one coincidence at period 18 that decrypts to noise). In each
+  case the excess was examined after the run, not before.
+- 0086's three-check excess came from 34 distinct check sets repeated by look-alike routes. Counting distinct check
+  sets, not settings, should be the default for route sweeps.
+- Starting 0085 the first time, `cp` and `rm` prompted interactively and did nothing, so two aborted runs (0085 on
+  0084's code, then 0086) were started and killed within seconds and their folders removed before any record was
+  written. Use /bin/cp -f and /bin/rm -f.
+- Family 6 took seven reverts in a row (0080-0086), past the five-revert pivot rule, because directions.md fixes the
+  order of types; noted in the pivot log.
+- 0087's phase clock was not ticked, so it shows as unclocked.
+
+Open:
+- Type 1 left: the two stages on different alphabets (not linear), two free alphabets at periods 13-26 (needs English
+  scoring), turns with one carving error (type 7). Type 2 left: width 7 with two free alphabets, and a joint simulation
+  that must make both fingerprints and fit the cribs.
+- Next in directions.md: type 3, keys read off the sculpture.
+
 ### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
 
 All fifteen reverted; nothing was kept, and the champion is still experiment 34. Every run

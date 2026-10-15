@@ -1,0 +1,15 @@
+variant: the carved letter at 41 deleted
+plain PALIMSETBCDFGHJKNOQRUVWXYZ
+cipher ABSCIDEFGHJKLMNOPQRTUVWXYZ
+
+lengths 7 and 8, Vigenere: totals and slots
+
+pos  plain  carved  total  x slot  y slot
+ 22    E      F       1      0       5
+ 23    A      L      11      1       6
+ 29    T      R      11      0       4
+ 30    H      N       1      1       5
+ 64    B      Y      16      0       7
+ 65    E      P      10      1       0
+
+places 64 and later now read the letter carved one place further along

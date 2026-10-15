@@ -48,3 +48,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0047	0047-running-key-carter-and-sculpture-mixed-alphabets	1-keyed-periodic	0045-running-key-k1-k3-mixed-alphabets	reverted	0	0	0			399	design=0 implement=51 test=13 run=399 record=0
 0048	0048-complete-the-key-both-alphabets-mixed-sampled	1-keyed-periodic	0035-complete-the-key-mixed-alphabets-27-29	reverted	3	3	24	3.811	-7.5446	710	design=0 implement=34 test=1 run=710 record=0
 0049	0049-structured-long-keys-at-surviving-periods	1-keyed-periodic	0005-quagmire-period-sweep-forced-keys	reverted	0	0	0			12	design=0 implement=192 test=12 run=12 record=0
+0050	0050-copper-off-by-one-two-words-mixed-alphabets	3-two-component-key	0043-two-keywords-two-passes-mixed-alphabets	reverted	2	0	23			288	test=0 run=288 record=0

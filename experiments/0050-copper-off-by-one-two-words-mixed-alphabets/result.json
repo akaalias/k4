@@ -1,0 +1,361 @@
+{
+ "id": 50,
+ "tag": "0050-copper-off-by-one-two-words-mixed-alphabets",
+ "started": "2026-10-15T12:00:38+00:00",
+ "seconds": 288.1,
+ "status": "ran",
+ "phases": {
+  "test": 0.1,
+  "run": 288.1,
+  "record": 0.0
+ },
+ "ended_epoch": 1792065926.977828,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 2,
+ "n_passed": 0,
+ "best_crib_hits": 23,
+ "best_crib_words": {
+  "EAST": [
+   3,
+   4
+  ],
+  "NORTHEAST": [
+   9,
+   9
+  ],
+  "BERLIN": [
+   6,
+   6
+  ],
+  "CLOCK": [
+   5,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "one-letter error (insert or delete anywhere) x two words a + b <= 22 x keyword-mixed alphabet pairs",
+  "variants": 196,
+  "distinct_crib_tuples": 48,
+  "alphabets": 63,
+  "length_pairs": 29,
+  "cases": 22099392,
+  "stopped_early": false,
+  "survivors": 914,
+  "survivors_by_a_plus_b": {
+   "21": 64,
+   "22": 850
+  },
+  "smallest_surviving_sum": 21,
+  "smallest_survivors": [
+   {
+    "sum": 21,
+    "a": 8,
+    "b": 13,
+    "plain": "POSITION/keyword",
+    "cipher": "POSITION/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 22"
+   },
+   {
+    "sum": 21,
+    "a": 8,
+    "b": 13,
+    "plain": "POSITION/keyword",
+    "cipher": "POSITION/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 22"
+   },
+   {
+    "sum": 21,
+    "a": 8,
+    "b": 13,
+    "plain": "SCHEIDT/keyword",
+    "cipher": "BERLIN/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 22"
+   },
+   {
+    "sum": 21,
+    "a": 8,
+    "b": 13,
+    "plain": "SCHEIDT/keyword",
+    "cipher": "BERLIN/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 22"
+   },
+   {
+    "sum": 21,
+    "a": 5,
+    "b": 16,
+    "plain": "MYSTERY/keyword",
+    "cipher": "DIGITAL/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 24"
+   },
+   {
+    "sum": 21,
+    "a": 5,
+    "b": 16,
+    "plain": "MYSTERY/keyword",
+    "cipher": "DIGITAL/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 24"
+   },
+   {
+    "sum": 21,
+    "a": 5,
+    "b": 16,
+    "plain": "EAST/keyword",
+    "cipher": "DESPARATLY/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 25"
+   },
+   {
+    "sum": 21,
+    "a": 5,
+    "b": 16,
+    "plain": "EAST/keyword",
+    "cipher": "DESPARATLY/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 25"
+   },
+   {
+    "sum": 21,
+    "a": 8,
+    "b": 13,
+    "plain": "WEBSTER/keyword",
+    "cipher": "CARNARVON/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 26"
+   },
+   {
+    "sum": 21,
+    "a": 8,
+    "b": 13,
+    "plain": "WEBSTER/keyword",
+    "cipher": "CARNARVON/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 26"
+   },
+   {
+    "sum": 21,
+    "a": 5,
+    "b": 16,
+    "plain": "MAGNETIC/keyword",
+    "cipher": "std",
+    "mode": "vig",
+    "s": 1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 26"
+   },
+   {
+    "sum": 21,
+    "a": 5,
+    "b": 16,
+    "plain": "MAGNETIC/keyword",
+    "cipher": "std",
+    "mode": "vig",
+    "s": -1,
+    "components": 1,
+    "cribs": 23,
+    "variant": "inserted before 26"
+   }
+  ],
+  "control": {
+   "cases": 22559796,
+   "stopped_early": false,
+   "survivors": 878,
+   "survivors_by_a_plus_b": {
+    "20": 4,
+    "21": 50,
+    "22": 824
+   },
+   "smallest_surviving_sum": 20
+  },
+  "vocab_matches": 2
+ },
+ "notes": "48 distinct crib tuples from 196 variants; 22099392 cases; 914 consistent, by sum {21: 64, 22: 850}; shuffled copper: 22559796 cases, 878 consistent, by sum {20: 4, 21: 50, 22: 824}; 2 word matches.",
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "DRQUVOBEZACOPNWITCXML?ASTNORTHEASTJZYUNCMFTTTJGEGOEBNVCVJJQTJZSBERLINCLOCKNPAJSEMJYIDOCQTZQHJXPLUM",
+   "key": {
+    "pa": "INTERPAOBCDFGHJKLMQSUVWXYZ",
+    "ca": "TUANKHMBCDEFGIJLOPQRSVWXYZ",
+    "m": "vig",
+    "X": [
+     18,
+     4,
+     14,
+     11,
+     18
+    ],
+    "Y": [
+     14,
+     25,
+     24,
+     14,
+     14,
+     17,
+     11,
+     25,
+     2,
+     7,
+     0,
+     4,
+     14,
+     8,
+     2,
+     23,
+     7
+    ],
+    "s": 1
+   },
+   "key_bits": 103.4,
+   "key_description": "X=MTHEM Y=HZXHHLEZYAKTHBYWA (5,17) plain INTERPRETATION/keyword cipher TUTANKHAMUN/keyword vig s=1; copper inserted before 22",
+   "reencrypted": null,
+   "notes": "",
+   "gate_passed": false,
+   "failed_at": "length",
+   "crib_hits": 23,
+   "crib_words": {
+    "EAST": [
+     3,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "length": 98
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": null
+  },
+  {
+   "plaintext": "DRQUVOBEZACOPNWITCXML?ASTNORTHEASTJZYUNCMFTTTJGEGOEBNVCVJJQTJZSBERLINCLOCKNPAJSEMJYIDOCQTZQHJXPLUM",
+   "key": {
+    "pa": "INTERPAOBCDFGHJKLMQSUVWXYZ",
+    "ca": "TUANKHMBCDEFGIJLOPQRSVWXYZ",
+    "m": "vig",
+    "X": [
+     18,
+     4,
+     14,
+     11,
+     18
+    ],
+    "Y": [
+     12,
+     1,
+     2,
+     12,
+     12,
+     9,
+     15,
+     1,
+     24,
+     19,
+     0,
+     22,
+     12,
+     18,
+     24,
+     3,
+     19
+    ],
+    "s": -1
+   },
+   "key_bits": 103.4,
+   "key_description": "X=MTHEM Y=FRYFFCIRXNKVFMXPN (5,17) plain INTERPRETATION/keyword cipher TUTANKHAMUN/keyword vig s=-1; copper inserted before 22",
+   "reencrypted": null,
+   "notes": "",
+   "gate_passed": false,
+   "failed_at": "length",
+   "crib_hits": 23,
+   "crib_words": {
+    "EAST": [
+     3,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "length": 98
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": null
+  }
+ ]
+}

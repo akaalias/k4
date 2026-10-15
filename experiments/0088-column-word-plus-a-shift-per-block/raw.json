@@ -1,0 +1,257 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "key = a[j mod w] + b[(j + o) div m], one alphabet, either sign, no move",
+  "w": [
+   2,
+   31
+  ],
+  "m": [
+   2,
+   50
+  ],
+  "offsets": "all 0..m-1",
+  "structures_with_checks": 31994,
+  "structures_by_checks": {
+   "1": 1434,
+   "2": 1295,
+   "3": 352,
+   "4": 1177,
+   "5": 1285,
+   "6": 3214,
+   "7": 2000,
+   "8": 2728,
+   "9": 1986,
+   "10": 3373,
+   "11": 1276,
+   "12": 1272,
+   "13": 1272,
+   "14": 1271,
+   "15": 1269,
+   "16": 1267,
+   "17": 1263,
+   "18": 1251,
+   "19": 1238,
+   "20": 1109,
+   "21": 662
+  },
+  "carved_lines_m31_o27": {
+   "2": {
+    "checks": 20,
+    "consistent": []
+   },
+   "3": {
+    "checks": 19,
+    "consistent": []
+   },
+   "4": {
+    "checks": 18,
+    "consistent": []
+   },
+   "5": {
+    "checks": 17,
+    "consistent": []
+   },
+   "6": {
+    "checks": 16,
+    "consistent": []
+   },
+   "7": {
+    "checks": 15,
+    "consistent": []
+   },
+   "8": {
+    "checks": 14,
+    "consistent": []
+   },
+   "9": {
+    "checks": 13,
+    "consistent": []
+   },
+   "10": {
+    "checks": 12,
+    "consistent": []
+   },
+   "11": {
+    "checks": 11,
+    "consistent": []
+   },
+   "12": {
+    "checks": 10,
+    "consistent": []
+   },
+   "13": {
+    "checks": 9,
+    "consistent": []
+   },
+   "14": {
+    "checks": 9,
+    "consistent": []
+   },
+   "15": {
+    "checks": 7,
+    "consistent": []
+   },
+   "16": {
+    "checks": 6,
+    "consistent": []
+   },
+   "17": {
+    "checks": 5,
+    "consistent": []
+   },
+   "18": {
+    "checks": 5,
+    "consistent": []
+   },
+   "19": {
+    "checks": 7,
+    "consistent": []
+   },
+   "20": {
+    "checks": 9,
+    "consistent": []
+   },
+   "21": {
+    "checks": 9,
+    "consistent": []
+   },
+   "22": {
+    "checks": 7,
+    "consistent": []
+   },
+   "23": {
+    "checks": 6,
+    "consistent": []
+   },
+   "24": {
+    "checks": 4,
+    "consistent": []
+   },
+   "25": {
+    "checks": 2,
+    "consistent": []
+   },
+   "31": {
+    "checks": 1,
+    "consistent": []
+   }
+  },
+  "k4_at_least": {
+   "1": 1,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0
+  },
+  "controls_at_least": {
+   "1": [
+    89,
+    0,
+    108,
+    90,
+    0,
+    230,
+    90,
+    3,
+    20,
+    109
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "3": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "4": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "5": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "6": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "7": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "8": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "check_levels_outside_control_range": [],
+  "k4_survivors_3_plus": [],
+  "n_k4_3_plus": 0,
+  "controls": "10 shuffled coppers (seed 88), identical search"
+ },
+ "notes": "31,994 (w, m, offset) structures x 4 cases. K4 consistent with >= c checks, c = 1..8: [1, 0, 0, 0, 0, 0, 0, 0]; controls max [230, 1, 0, 0, 0, 0, 0, 0], min [0, 0, 0, 0, 0, 0, 0, 0]. Outside: []. Carved lines (m = 31, offset 27): widths alive none. K4 survivors with 3+ checks: 0.",
+ "error": null,
+ "worked_example": "the carved lines: K4 starts 4 letters before the end of a 31-letter line (offset 27)\nline 1: places 1-4, line 2: 5-35, line 3: 36-66, line 4: 67-97\n\nword of length 7 over the columns, one shift per carved line; sculpture's alphabet, s = +1\n\nplace  known  copper  column  line  copper - known\n   22      E       F       0     2     1\n   29      T       R       0     2    23\n   64      B       N       0     3    11\n   71      L       Z       0     4     8\n\n7 column slots, 3 line slots, 24 known letters: 15 checks",
+ "seconds": 1.3491168022155762
+}

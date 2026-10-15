@@ -1,0 +1,12 @@
+the carved lines: K4 starts 4 letters before the end of a 31-letter line (offset 27)
+line 1: places 1-4, line 2: 5-35, line 3: 36-66, line 4: 67-97
+
+word of length 7 over the columns, one shift per carved line; sculpture's alphabet, s = +1
+
+place  known  copper  column  line  copper - known
+   22      E       F       0     2     1
+   29      T       R       0     2    23
+   64      B       N       0     3    11
+   71      L       Z       0     4     8
+
+7 column slots, 3 line slots, 24 known letters: 15 checks

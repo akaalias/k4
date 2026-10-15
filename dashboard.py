@@ -899,6 +899,23 @@ def cribmap_figure(tag):
             f'<div class="fig-notes">{below}</div></div>')
 
 
+def worksheet_figure(tag):
+    """The experiment's worksheet (figures/NNNN-worksheet.svg), drawn at the same scale as the crib
+    map, under the walkthrough it illustrates."""
+    p = ROOT / "figures" / f"{tag[:4]}-worksheet.svg"
+    if not p.exists():
+        return ""
+    svg = p.read_text()
+    m = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg)
+    if m:
+        vx, vw = 26, 948                     # the sheet spans x 30 to 970 of the 1000-unit canvas
+        svg = svg.replace(m.group(0), f'viewBox="{vx} 0 {vw} {m.group(2)}"', 1)
+        w_, h_ = vw * FIG_SCALE, float(m.group(2)) * FIG_SCALE
+        svg = re.sub(r'(<svg[^>]*?)\swidth="[^"]*"\s+height="[^"]*"', rf'\1 width="{w_:.0f}" height="{h_:.0f}"', svg, count=1)
+    return (f'<div class="fig-row ws"><figure class="fig-main"><figcaption class="fig-eyebrow">the worksheet: the first steps by hand, on squared paper</figcaption>'
+            f'<div class="fig-scroll">{svg}</div></figure></div>')
+
+
 def experiment_page(tag):
     import re as _re
     rows = {r["tag"]: r for r in load_results()}
@@ -1011,7 +1028,8 @@ def experiment_page(tag):
         else:
             html_c = md(content)
             html_c = link_experiments(html_c, tags)
-        body.append(sec(n, title, sub) + f'<article class="rec-body">{html_c}</article>')
+        extra = worksheet_figure(tag) if key == "Walkthrough, by hand" else ""
+        body.append(sec(n, title, sub) + f'<article class="rec-body">{html_c}</article>' + extra)
         n += 1
     return page(f"experiment {num}", "".join(body))
 

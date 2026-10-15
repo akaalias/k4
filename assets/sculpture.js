@@ -12,7 +12,9 @@ import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const P = window.KRYPTOS_PANELS;
 const host = document.getElementById('sculpture');
-const W = host.clientWidth, H = Math.round(W * 0.58);
+// the viewport is 80% of the window wide; its height stays what it was at the text column's width
+const heightFor = () => Math.round(host.parentElement.clientWidth * 0.58);
+const W = host.clientWidth, H = heightFor();
 const paper = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim() || '#fffff8';
 const SCALE = 10 / 124.6;            // the sheet is 124.6 mm high in the model and about ten feet high
 
@@ -332,6 +334,6 @@ function frame(t) {
 }
 requestAnimationFrame(frame);
 window.addEventListener('resize', () => {
-  const w = host.clientWidth, h = Math.round(w * 0.58);
+  const w = host.clientWidth, h = heightFor();
   camera.aspect = w / h; camera.updateProjectionMatrix(); renderer.setSize(w, h);
 });

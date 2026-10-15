@@ -47,7 +47,7 @@ with the correct key word/s... similar to what would be provided agents or pilot
 case of capture."** (Scheidt, 2011). Readings: (a) keyword-driven classical system,
 no primers or arithmetic; (b) "key word/s" plural: two keywords, as K1 and K2 each had
 KRYPTOS plus one; (c) a duress code: two valid readings. Constraint on every family.
-Status: constraint.
+Status: constraint. 'Key word/s' as two words added (one from the puzzle, one from the whole dictionary, 3-24 letters): dead (0115).
 
 **C6. "The key is the algorithm... the keys were concealed at the sculpture... conveys not
 only the encrypted data, but also the key... part of the code was designed to be solved

@@ -40,7 +40,7 @@ need to solve the technique first and then go for the puzzle... more than one st
 (Scheidt, 2005, 2015). Readings: (a) a plaintext transform before a keyed cipher; (b) a
 non-standard alphabet or base ("base 16," "Mayan... base 60"); (c) "stego": the English is
 hidden inside something readable; (d) the mask is what Sanborn calls a matrix. Family B.
-Status: masks that only move or pad letters (reversal, regular nulls, prefix nulls) before a periodic tableau are dead (0023); nulls chosen by letter (every copy of one or two letters outside the cribs) behave like random strike-outs of the same size (0057); masks that change letters untested.
+Status: masks that only move or pad letters (reversal, regular nulls, prefix nulls) before a periodic tableau are dead (0023); nulls chosen by letter (every copy of one or two letters outside the cribs) behave like random strike-outs of the same size (0057); masks that change letters by an affine map of either alphabet (decimations, Atbash), before or after a periodic key or ciphertext autokey, are dead (0074); other letter-changing masks untested.
 
 **C5. "Not mathematical... simple, can be remembered, and executed years later when used
 with the correct key word/s... similar to what would be provided agents or pilots in

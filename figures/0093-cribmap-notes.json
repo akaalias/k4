@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the error",
+  "text": "Sanborn made at least one carving mistake in K2. If K4 has one too, a correct method could fail at exactly one of the 24 known letters, so here one miss is allowed."
+ },
+ {
+  "anchor": "the check",
+  "text": "Group the known letters by key slot after the move; within a slot they must share one key value. With a turn of 8 and a key of 9 they disagree 14 times; one carving error excuses one."
+ },
+ {
+  "anchor": "the bound",
+  "text": "27,852 moves, keys of 1 to 26 letters before or after, 8 tables: the shortest key that fits with one miss is 20 letters after the move and 24 before, as on scrambled coppers (19-21 and 24-25)."
+ }
+]

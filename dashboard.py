@@ -124,7 +124,7 @@ def esc(s):
 
 
 # records cannot be edited after their run, so spelling variants of a family slug are merged here
-FAMILY_ALIASES = {"8-hill-and-polygraphic": "8-hill-polygraphic", "2-masked-then-keyed": "2-masked-plaintext", "5-gromark": "5-gromark-lfsr"}
+FAMILY_ALIASES = {"8-hill-and-polygraphic": "8-hill-polygraphic", "2-masked-then-keyed": "2-masked-plaintext", "5-gromark": "5-gromark-lfsr", "4-visual-systems": "4-visual-spatial"}
 
 
 def rescore(r):
@@ -554,7 +554,7 @@ def page(title, body, active="", refresh=True):
     # place on the page survive quiet periods
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     nav = "".join(f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>' for h, t in
-                  (("/", "Overview"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
+                  (("/", "Overview"), ("/lineage", "Lineage"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
@@ -839,6 +839,7 @@ def overview():
             + sec(3, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
             + sec(4, "Lineage", "What each experiment inherits from.")
+            + '<p class="hero-sub" style="text-align:left;max-width:none;margin:0 0 6px"><a href="/lineage">See the lineage drawn as a family tree</a>, one lane per family, every experiment in the order it ran.</p>'
             + (tree(None) or "<p class='muted'>empty</p>"))
     return page("Kryptos K4 autoresearch", body, "/")
 
@@ -1121,6 +1122,280 @@ def experiment_page(tag):
     return page(f"experiment {num}", "".join(body))
 
 
+LIN_CSS = """
+.lin{--f0:#3d6b8c;--f1:#8a6a1e;--f2:#5b7f4a;--f3:#7a4f86;--f4:#b0603a;--f5:#2f7f7a;--f6:#9a5470;--f7:#5c5a8f;--f8:#7d7a3a;--f9:#6b6a60}
+@media(prefers-color-scheme:dark){.lin{--f0:#7fa8c9;--f1:#c9a227;--f2:#8fb87a;--f3:#b48cc0;--f4:#e0936b;--f5:#6cbfb8;--f6:#d08aa6;--f7:#9a98d0;--f8:#bdb86a;--f9:#a39f90}}
+.lin .f0{color:var(--f0)}.lin .f1{color:var(--f1)}.lin .f2{color:var(--f2)}.lin .f3{color:var(--f3)}.lin .f4{color:var(--f4)}
+.lin .f5{color:var(--f5)}.lin .f6{color:var(--f6)}.lin .f7{color:var(--f7)}.lin .f8{color:var(--f8)}.lin .f9{color:var(--f9)}
+.lin-head{max-width:980px;margin:0 auto}
+.lin-head h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}
+.lin-head .standfirst{max-width:760px}
+.lin-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin:6px 0 4px}
+.lin-legend .k{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.lin-legend .ldot{width:9px;height:9px;border-radius:50%;display:inline-block;background:currentColor}
+.lin-legend .lkept{width:11px;height:11px;background:var(--ink)}
+.lin-legend .lwas{width:13px;height:13px;border-radius:50%;border:1.3px dashed var(--ink);display:inline-block}
+.lin-legend .lerr{color:var(--accent);font:700 14px/1 var(--serif)}
+.lin-legend .larc{width:18px;height:9px;border-top:1.2px solid var(--muted);border-radius:9px 9px 0 0;display:inline-block}
+.lin-legend .lx{width:18px;height:0;border-top:1.2px dashed var(--muted);display:inline-block}
+.lin-box{position:relative;width:min(1600px,94vw);margin:16px 0 0 calc(50% - min(800px,47vw));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+#lin-diagram{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}
+#lin-diagram::-webkit-scrollbar{height:6px}#lin-diagram::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}
+#lin-lanes{position:absolute;left:0;top:0;width:0;pointer-events:none}
+.lane-lab{position:absolute;left:0;white-space:nowrap;pointer-events:auto;cursor:default;padding:2px 10px 2px 6px;background:linear-gradient(90deg,var(--paper) 80%,transparent);font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.lane-lab .sw{display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:0}
+.lane-lab .cnt{color:var(--faint);font-weight:400;margin-left:5px}
+.lane-lab.on{text-decoration:underline;text-underline-offset:3px}
+#lin{display:block}
+#lin .lband{fill:currentColor;fill-opacity:.05}
+#lin .lbound{stroke:var(--rule-soft);stroke-width:1}
+#lin .lbase{stroke:var(--rule-soft);stroke-width:1}
+#lin .edge{fill:none;stroke:var(--disc);stroke-width:1}
+#lin .edge.x{stroke-dasharray:3 3}
+#lin .ng{cursor:pointer;outline:none}
+#lin .nr{fill:currentColor}
+#lin .nk{fill:var(--ink)}
+#lin .nwas{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-dasharray:2 2}
+#lin .ne{stroke:var(--accent);stroke-width:1.8;stroke-linecap:round}
+#lin .nlab{fill:var(--faint);font:9.5px/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
+#lin .ng:focus-visible .hit{stroke:var(--accent);stroke-width:1.5}
+#lin.dim .ng,#lin.dim .edge{opacity:.1}
+#lin.dim .ng.lit{opacity:.6}
+#lin.dim .ng.lit-direct{opacity:1}
+#lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
+#lin.dim .edge.lit{opacity:.5;stroke:var(--muted)}
+#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
+#lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
+#lin-tip .pop-title{font-weight:700;font-size:14.5px;line-height:1.25;margin-bottom:3px}
+#lin-tip .pop-meta{color:var(--muted);font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
+#lin-tip .pop-h{font:600 10px/1 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-bottom:4px}
+#lin-tip p{margin:0;font:italic 13px/1.5 var(--serif);color:var(--muted)}
+#lin-tip .pop-sec+.pop-sec{margin-top:10px}
+#lin-tip .pop-parent{font:600 11px/1.35 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
+.lin-foot{max-width:980px;margin:12px auto 0;font-size:13.5px;color:var(--muted)}
+@media(max-width:640px){.lin-head h1{font-size:26px}.lin-box{width:calc(100vw - 28px);margin-left:0}}
+"""
+
+LIN_JS = r"""
+<script>
+(function(){
+  var data={};try{data=JSON.parse(document.getElementById('lin-data').textContent||'{}');}catch(e){}
+  var nodes=data.nodes||[],fams=data.families||[];
+  var host=document.getElementById('lin-diagram'),lanesEl=document.getElementById('lin-lanes'),tip=document.getElementById('lin-tip');
+  if(!host)return;
+  if(!nodes.length){host.innerHTML='<p class="muted">No experiments yet.</p>';return;}
+  var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+  var byKey={};nodes.forEach(function(n){byKey[n.key]=n;});
+  var short=function(t,n){if(t.length<=n)return t;var c=t.slice(0,n);return c.slice(0,c.lastIndexOf(' '))+'...';};
+  var parentOf=function(k){var p=byKey[k]&&byKey[k].parent;return p&&byKey[p]?p:null;};
+  var kids={};nodes.forEach(function(n){var p=parentOf(n.key);if(p)(kids[p]=kids[p]||[]).push(n.key);});
+  var svg=null,geo=null,shownKey=null,lastPointer='mouse';
+
+  // Geometry: x is run order, one lane per family. An arc's height is half its span, capped,
+  // so every lane is only as tall as its longest arc needs.
+  function layout(){
+    var n=nodes.length,padX=22,minSp=24,CAP=78,LABEL_H=24,NUM_H=22;
+    var avail=Math.max(300,(host.clientWidth||1000)-2*padX);
+    var sp=n>1?Math.max(minSp,avail/(n-1)):0;
+    var W=Math.round(2*padX+(n-1)*sp),x={};
+    nodes.forEach(function(nd,i){x[nd.key]=padX+i*sp;});
+    var ry=fams.map(function(){return 10;});
+    nodes.forEach(function(nd){var p=parentOf(nd.key);if(p&&byKey[p].fam===nd.fam)ry[nd.fam]=Math.max(ry[nd.fam],Math.min(CAP,(x[nd.key]-x[p])/2));});
+    var lanes=[],y=0;
+    fams.forEach(function(f,i){var top=y,base=top+LABEL_H+ry[i]+4,bot=base+NUM_H;lanes.push({top:top,base:base,bot:bot});y=bot;});
+    return {sp:sp,W:W,H:Math.ceil(y),x:x,lanes:lanes,CAP:CAP,padX:padX};
+  }
+
+  function render(){
+    geo=layout();
+    var x=geo.x,lanes=geo.lanes,W=geo.W,H=geo.H,g='';
+    var yOf=function(k){return lanes[byKey[k].fam].base;};
+    lanes.forEach(function(L,i){
+      g+='<rect class="lband f'+fams[i].c+'" x="0" y="'+L.top+'" width="'+W+'" height="'+(L.bot-L.top)+'"/>';
+      if(i)g+='<line class="lbound" x1="0" x2="'+W+'" y1="'+L.top+'" y2="'+L.top+'"/>';
+      g+='<line class="lbase" x1="'+geo.padX+'" x2="'+(W-geo.padX)+'" y1="'+L.base+'" y2="'+L.base+'"/>';
+    });
+    nodes.forEach(function(nd){
+      var p=parentOf(nd.key);if(!p)return;
+      var a=x[p],b=x[nd.key],d;
+      if(byKey[p].fam===nd.fam){var yb=yOf(nd.key),rx=(b-a)/2,r=Math.min(geo.CAP,rx);
+        d='M'+a.toFixed(1)+','+yb+' A'+rx.toFixed(1)+','+r.toFixed(1)+' 0 0 1 '+b.toFixed(1)+','+yb;
+        g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
+      else{var ya=yOf(p),yc=yOf(nd.key),h=(b-a)/2;
+        d='M'+a.toFixed(1)+','+ya+' C'+(a+h).toFixed(1)+','+ya+' '+(b-h).toFixed(1)+','+yc+' '+b.toFixed(1)+','+yc;
+        g+='<path class="edge x" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
+    });
+    nodes.forEach(function(nd){
+      var cx=x[nd.key].toFixed(1),cy=yOf(nd.key),k=esc(nd.key),m='';
+      if(nd.decision==='kept')m='<circle class="nk" cx="'+cx+'" cy="'+cy+'" r="5"/>';
+      else if(nd.decision==='reverted')m='<circle class="nr" cx="'+cx+'" cy="'+cy+'" r="3.6"/>';
+      else{var c=parseFloat(cx),s=3.6;m='<path class="ne" d="M'+(c-s)+','+(cy-s)+' L'+(c+s)+','+(cy+s)+' M'+(c+s)+','+(cy-s)+' L'+(c-s)+','+(cy+s)+'"/>';}
+      if(nd.recorded==='kept'&&nd.decision!=='kept')m+='<circle class="nwas" cx="'+cx+'" cy="'+cy+'" r="7.5"/>';
+      g+='<a class="ng f'+fams[nd.fam].c+'" data-key="'+k+'" href="/exp/'+encodeURIComponent(nd.key)+'" aria-label="'+esc(nd.n+': '+nd.title)+'">'+m
+        +'<circle class="hit" cx="'+cx+'" cy="'+cy+'" r="10" fill="transparent"/>'
+        +'<text class="nlab" x="'+cx+'" y="'+(cy+16)+'" text-anchor="middle">'+nd.n+'</text></a>';
+    });
+    host.innerHTML='<svg id="lin" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>';
+    svg=document.getElementById('lin');
+    lanesEl.innerHTML=lanes.map(function(L,i){var f=fams[i];
+      return '<div class="lane-lab f'+f.c+'" data-fam="'+i+'" title="'+esc(f.name)+'" style="top:'+(L.top+4)+'px"><span class="sw"></span>'+esc(f.label)+'<span class="cnt">'+f.count+'</span></div>';}).join('');
+  }
+
+  function clearLit(){svg.classList.remove('dim');svg.querySelectorAll('.lit,.lit-direct').forEach(function(el){el.classList.remove('lit','lit-direct');});
+    lanesEl.querySelectorAll('.on').forEach(function(el){el.classList.remove('on');});}
+  function mark(k,cls){var el=svg.querySelector('.ng[data-key="'+CSS.escape(k)+'"]');if(el)el.classList.add(cls);}
+  // Trace a node's line back to its root: the node and its parent in full, older ancestors half lit.
+  function lit(key){
+    clearLit();svg.classList.add('dim');
+    var chain=[key],cur=key;while((cur=parentOf(cur))&&chain.indexOf(cur)<0)chain.push(cur);
+    chain.forEach(function(k,i){mark(k,i<2?'lit-direct':'lit');});
+    svg.querySelectorAll('.edge').forEach(function(e){var c=e.getAttribute('data-c'),i=chain.indexOf(c);
+      if(i>=0&&e.getAttribute('data-p')===chain[i+1])e.classList.add(i===0?'lit-direct':'lit');});
+  }
+  function litFam(fi){
+    clearLit();svg.classList.add('dim');
+    nodes.forEach(function(nd){if(nd.fam===fi)mark(nd.key,'lit-direct');});
+    svg.querySelectorAll('.edge').forEach(function(e){if(byKey[e.getAttribute('data-c')].fam===fi)e.classList.add('lit');});
+    var lab=lanesEl.querySelector('[data-fam="'+fi+'"]');if(lab)lab.classList.add('on');
+  }
+
+  function placeTip(el){
+    var r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight,cx=r.left+r.width/2;
+    var left=Math.max(8,Math.min(cx-w/2,window.innerWidth-w-8)),top=r.bottom+6;
+    if(top+h>window.innerHeight-8)top=Math.max(8,r.top-h-6);
+    tip.style.left=left+'px';tip.style.top=top+'px';
+  }
+  function showTip(key,el){
+    var nd=byKey[key],f=fams[nd.fam],p=parentOf(key),ks=kids[key]||[];
+    var verdict=nd.decision==='kept'?'kept':nd.decision==='reverted'?'reverted':esc(nd.decision||'no verdict');
+    var meta='#'+nd.n+' · '+esc(f.label)+' · '+verdict+(nd.loss?' · loss '+esc(nd.loss):'')+' · '+nd.cribs+'/24 cribs';
+    var html='<div class="pop-title">'+esc(nd.title)+'</div><div class="pop-meta">'+meta+'</div>';
+    if(nd.summary)html+='<div class="pop-sec"><div class="pop-h">In plain words</div><p>'+esc(nd.summary)+'</p></div>';
+    if(nd.note)html+='<div class="pop-sec"><div class="pop-h">Kept when it ran, reverted under today\'s rules</div><p>'+esc(nd.note)+'</p></div>';
+    html+='<div class="pop-sec"><div class="pop-h">Built on</div>'+(p?'<span class="pop-parent">#'+byKey[p].n+' '+esc(short(byKey[p].title,60))+'</span>':'<p>Nothing: it starts a line.</p>')+'</div>';
+    if(ks.length)html+='<div class="pop-sec"><div class="pop-h">Built on by</div><p>'+ks.map(function(k){return '#'+byKey[k].n;}).join(', ')+'</p></div>';
+    tip.innerHTML=html;tip.style.opacity='1';shownKey=key;placeTip(el);
+  }
+  function hideTip(){tip.style.opacity='0';shownKey=null;}
+
+  function wire(){
+    svg.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse';});
+    svg.addEventListener('mouseover',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');lit(k);showTip(k,a);});
+    svg.addEventListener('mouseout',function(e){var a=e.target.closest('.ng');if(!a||a.contains(e.relatedTarget))return;clearLit();hideTip();});
+    svg.addEventListener('focusin',function(e){var a=e.target.closest('.ng');if(a){var k=a.getAttribute('data-key');lit(k);showTip(k,a);}});
+    svg.addEventListener('focusout',function(){clearLit();hideTip();});
+    // On a touch screen the first tap shows the popover and the second opens the record.
+    svg.addEventListener('click',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');
+      if(lastPointer==='touch'&&shownKey!==k){e.preventDefault();lit(k);showTip(k,a);}});
+    lanesEl.querySelectorAll('.lane-lab').forEach(function(el){
+      el.addEventListener('mouseenter',function(){litFam(+el.getAttribute('data-fam'));});
+      el.addEventListener('mouseleave',clearLit);});
+  }
+  var endScroll=function(){return Math.max(0,host.scrollWidth-host.clientWidth);};
+  render();wire();
+  host.addEventListener('scroll',function(){if(shownKey)hideTip();},{passive:true});
+  window.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
+  // Open on the newest experiments, as the ballpark page does: a short eased scroll to the right end.
+  var introRan=false;
+  function intro(){if(introRan)return;introRan=true;var start=host.scrollLeft,dist=endScroll()-start,dur=1100;if(Math.abs(dist)<1)return;
+    var ease=function(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;},t0=performance.now();
+    var step=function(now){var p=Math.min(1,(now-t0)/dur);host.scrollLeft=start+dist*ease(p);if(p<1)requestAnimationFrame(step);};
+    requestAnimationFrame(step);}
+  if(document.readyState==='complete')setTimeout(intro,300);else window.addEventListener('load',function(){setTimeout(intro,300);});
+  var rw=null,lastW=host.clientWidth;
+  window.addEventListener('resize',function(){clearTimeout(rw);rw=setTimeout(function(){if(host.clientWidth===lastW)return;lastW=host.clientWidth;
+    var atEnd=host.scrollLeft>=endScroll()-4;render();wire();if(atEnd)host.scrollLeft=endScroll();},150);});
+})();
+</script>"""
+
+
+def family_names():
+    """{number: full name} from the table at the top of families.md."""
+    p = ROOT / "families.md"
+    out = {}
+    if p.exists():
+        for m in re.finditer(r"^\| (\d+) \| ([^|]+?) \|", p.read_text(), re.M):
+            out.setdefault(m.group(1), m.group(2).strip())
+    return out
+
+
+def plain(text, limit=340):
+    """Markdown stripped to plain text, cut at a sentence end near the limit."""
+    t = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text or "")
+    t = re.sub(r"[*_`]+", "", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    if len(t) <= limit:
+        return t
+    cut = t.rfind(". ", 0, limit)
+    return t[:cut + 1] if cut > limit // 3 else t[:limit].rsplit(" ", 1)[0] + "..."
+
+
+def lineage_data(rows):
+    """Nodes and family lanes for the lineage page, built from the records on every request."""
+    names = family_names()
+
+    # a family is its number in families.md; slugs spelt two ways in the records share one lane
+    def lane_of(slug):
+        num = slug.split("-", 1)[0]
+        return num if num.isdigit() else slug
+
+    groups = {}
+    for r in rows:
+        groups.setdefault(lane_of(r["family"]), []).append(r["family"])
+    keys = sorted(groups, key=lambda k: (int(k) if k.isdigit() else 999, k))
+    fams = []
+    for i, k in enumerate(keys):
+        slug = max(set(groups[k]), key=lambda s: (groups[k].count(s), s))
+        num, _, rest = slug.partition("-")
+        label = f"{num} {rest.replace('-', ' ')}" if num.isdigit() and rest else slug
+        fams.append({"slug": slug, "label": label, "name": names.get(num, label), "c": i % 10,
+                     "count": len(groups[k])})
+    idx = {s: keys.index(lane_of(s)) for s in {r["family"] for r in rows}}
+    nodes = [{"key": r["tag"], "n": int(r["tag"][:4]) if r["tag"][:4].isdigit() else r["tag"],
+              "title": r["title"], "fam": idx[r["family"]], "parent": r["parent"],
+              "decision": r.get("decision"), "recorded": r.get("decision_recorded"),
+              "loss": pct(row_loss(r)), "cribs": r.get("best_crib_hits", 0),
+              "summary": plain(r.get("eli5", "")), "note": r.get("verdict_note", "")} for r in rows]
+    return {"nodes": nodes, "families": fams}
+
+
+def lineage_page():
+    rows = load_results()
+    data = lineage_data(rows)
+    tags = {r["tag"] for r in rows}
+    fam_of = {r["tag"]: r["family"] for r in rows}
+    built = [r for r in rows if r["parent"] in tags]
+    cross = sum(1 for r in built if fam_of[r["parent"]] != r["family"])
+    kids = {}
+    for r in built:
+        kids[r["parent"]] = kids.get(r["parent"], 0) + 1
+    top = max(kids.items(), key=lambda kv: (kv[1], kv[0]), default=None)
+    n, nf, roots = len(rows), len(data["families"]), len(rows) - len(built)
+    facts = (f"{n} experiments in {nf} families. {len(built)} built on an earlier one and {roots} started a line of their own. "
+             f"{cross} borrowed a parent from another family.")
+    if top:
+        facts += f' The most built-on is <a href="/exp/{esc(top[0])}">{int(top[0][:4])}</a>, with {top[1]} children.'
+    blob = json.dumps(data).replace("</", "<\\/")
+    body = f"""<style>{LIN_CSS}</style><div class="lin">
+<div class="lin-head"><p class="eyebrow">Research lineage</p>
+<h1>The family tree of the search</h1>
+<p class="standfirst">Every experiment, left to right in the order it ran, in the lane of its family. An arc joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its lane. Click a dot to open its record.</p>
+<p class="muted" style="font-size:14.5px;margin:0 0 12px">{facts}</p>
+<div class="lin-legend">
+<span class="k"><span class="ldot lkept"></span>kept</span>
+<span class="k"><span class="ldot" style="color:var(--disc)"></span>reverted, in its family's colour</span>
+<span class="k"><span class="lerr">&times;</span>error or timeout</span>
+<span class="k"><span class="lwas"></span>kept when it ran, reverted under today's rules</span>
+<span class="k"><span class="larc"></span>built on a parent in the same family</span>
+<span class="k"><span class="lx"></span>built on a parent in another family</span>
+</div></div>
+<div class="lin-box"><div id="lin-diagram"></div><div id="lin-lanes"></div></div>
+<p class="lin-foot">Families are described on the <a href="/families">families</a> page. The same tree as an indented list is at the foot of the <a href="/">overview</a>.</p>
+<div id="lin-tip" role="tooltip"></div>
+<script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}"""
+    return page("research lineage", body, "/lineage")
+
+
 def md_page(title, path, active, refresh=True):
     import re as _re
     text = (ROOT / path).read_text()
@@ -1142,6 +1417,8 @@ def route(path):
             return ("application/javascript", f.read_text())
         if f.exists() and f.suffix == ".glb":
             return ("model/gltf-binary", f.read_bytes())
+    if path == "/lineage":
+        return lineage_page()
     if path == "/glossary":
         return md_page("glossary", "GLOSSARY.md", "/glossary", refresh=False)
     if path == "/notebook":
@@ -1177,6 +1454,7 @@ class H(BaseHTTPRequestHandler):
 def build():
     STATIC.mkdir(exist_ok=True)
     (STATIC / "index.html").write_text(overview())
+    (STATIC / "lineage.html").write_text(lineage_page())
     for r in load_results():
         (STATIC / f"{r['tag']}.html").write_text(experiment_page(r["tag"]))
     print(f"wrote {STATIC}")

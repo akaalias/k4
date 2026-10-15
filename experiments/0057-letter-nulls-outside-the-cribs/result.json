@@ -1,0 +1,166 @@
+{
+ "id": 57,
+ "tag": "0057-letter-nulls-outside-the-cribs",
+ "started": "2026-10-15T12:18:20+00:00",
+ "seconds": 1.1,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.4,
+  "test": 0.1,
+  "run": 1.1,
+  "record": 0.0
+ },
+ "ended_epoch": 1792066701.491034,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "null letters (every copy of one or two letters outside the crib ranges), then periodic tableau",
+  "masks": 351,
+  "controls_per_mask": 10,
+  "periods": "1-52",
+  "alphabet_pairs": 4,
+  "modes": 3,
+  "smallest_period_histogram": {
+   "24": 18,
+   "25": 117,
+   "26": 168,
+   "27": 45,
+   "47": 3
+  },
+  "control_histogram_per_10": {
+   "24": 17.1,
+   "25": 104.6,
+   "26": 174.3,
+   "27": 48.4,
+   "45": 0.4,
+   "46": 1.0,
+   "47": 5.2
+  },
+  "masks_below_26": [
+   {
+    "letters": "AS",
+    "struck": 8,
+    "period": 24
+   },
+   {
+    "letters": "AT",
+    "struck": 8,
+    "period": 24
+   },
+   {
+    "letters": "AW",
+    "struck": 9,
+    "period": 24
+   },
+   {
+    "letters": "IS",
+    "struck": 8,
+    "period": 24
+   },
+   {
+    "letters": "IT",
+    "struck": 8,
+    "period": 24
+   },
+   {
+    "letters": "IW",
+    "struck": 9,
+    "period": 24
+   },
+   {
+    "letters": "JS",
+    "struck": 7,
+    "period": 24
+   },
+   {
+    "letters": "JT",
+    "struck": 7,
+    "period": 24
+   },
+   {
+    "letters": "JW",
+    "struck": 8,
+    "period": 24
+   },
+   {
+    "letters": "KS",
+    "struck": 10,
+    "period": 24
+   },
+   {
+    "letters": "KT",
+    "struck": 10,
+    "period": 24
+   },
+   {
+    "letters": "KW",
+    "struck": 11,
+    "period": 24
+   },
+   {
+    "letters": "QS",
+    "struck": 6,
+    "period": 24
+   },
+   {
+    "letters": "QT",
+    "struck": 6,
+    "period": 24
+   },
+   {
+    "letters": "QW",
+    "struck": 7,
+    "period": 24
+   },
+   {
+    "letters": "SZ",
+    "struck": 7,
+    "period": 24
+   },
+   {
+    "letters": "TZ",
+    "struck": 7,
+    "period": 24
+   },
+   {
+    "letters": "WZ",
+    "struck": 8,
+    "period": 24
+   },
+   {
+    "letters": "S",
+    "struck": 4,
+    "period": 25
+   },
+   {
+    "letters": "T",
+    "struck": 4,
+    "period": 25
+   }
+  ]
+ },
+ "notes": "351 letter masks; smallest consistent period per mask: {24: 18, 25: 117, 26: 168, 27: 45, 47: 3}; random strike-outs of the same size (per 10): {24: 17.1, 25: 104.6, 26: 174.3, 27: 48.4, 45: 0.4, 46: 1.0, 47: 5.2}. Masks below 26: 135.",
+ "error": null,
+ "candidates": []
+}

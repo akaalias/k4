@@ -1,0 +1,7 @@
+doublets (place of first letter, 1-based):
+  BB at 19-20: column (0-based index mod 7) 4
+  QQ at 26-27: column (0-based index mod 7) 4
+  SS at 33-34: column (0-based index mod 7) 4
+  SS at 43-44: column (0-based index mod 7) 0
+  ZZ at 47-48: column (0-based index mod 7) 4
+  TT at 68-69: column (0-based index mod 7) 4

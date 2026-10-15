@@ -1,0 +1,56 @@
+{
+ "id": 56,
+ "tag": "0056-width-7-and-21-fingerprints-look-elsewhere",
+ "started": "2026-10-15T12:16:21+00:00",
+ "seconds": 4.3,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 9.4,
+  "test": 0.1,
+  "run": 4.3,
+  "record": 0.0
+ },
+ "ended_epoch": 1792066585.6727061,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "look-elsewhere test of the width fingerprints",
+  "widths": "2-48",
+  "controls": 10000,
+  "k4_doublets": 6,
+  "k4_col7": 5,
+  "k4_rep21": 11,
+  "nominal_p_col7": 0.0005,
+  "nominal_p_rep21": 0.0004,
+  "k4_best_width_col": 7,
+  "k4_best_width_rep": 21,
+  "corrected_p_doublet_column": 0.0049,
+  "corrected_p_doublet_column_six_doublet_shuffles": 0.0178,
+  "six_doublet_shuffles": 729,
+  "corrected_p_vertical_repeats": 0.0099
+ },
+ "notes": "10000 shuffles, widths 2-48. Doublet column: nominal p at width 7 0.0005, corrected over widths 0.0049 (0.0178 among the 729 shuffles with 6 doublets). Vertical repeats: nominal p at width 21 0.0004, corrected 0.0099.",
+ "error": null,
+ "candidates": []
+}

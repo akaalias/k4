@@ -1,0 +1,23 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "look-elsewhere test of the width fingerprints",
+  "widths": "2-48",
+  "controls": 10000,
+  "k4_doublets": 6,
+  "k4_col7": 5,
+  "k4_rep21": 11,
+  "nominal_p_col7": 0.0005,
+  "nominal_p_rep21": 0.0004,
+  "k4_best_width_col": 7,
+  "k4_best_width_rep": 21,
+  "corrected_p_doublet_column": 0.0049,
+  "corrected_p_doublet_column_six_doublet_shuffles": 0.0178,
+  "six_doublet_shuffles": 729,
+  "corrected_p_vertical_repeats": 0.0099
+ },
+ "notes": "10000 shuffles, widths 2-48. Doublet column: nominal p at width 7 0.0005, corrected over widths 0.0049 (0.0178 among the 729 shuffles with 6 doublets). Vertical repeats: nominal p at width 21 0.0004, corrected 0.0099.",
+ "error": null,
+ "worked_example": "doublets (place of first letter, 1-based):\n  BB at 19-20: column (0-based index mod 7) 4\n  QQ at 26-27: column (0-based index mod 7) 4\n  SS at 33-34: column (0-based index mod 7) 4\n  SS at 43-44: column (0-based index mod 7) 0\n  ZZ at 47-48: column (0-based index mod 7) 4\n  TT at 68-69: column (0-based index mod 7) 4",
+ "seconds": 4.2543439865112305
+}

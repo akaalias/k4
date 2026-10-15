@@ -1,0 +1,8 @@
+{
+ "candidates": [],
+ "bounds": {},
+ "notes": "",
+ "error": "Traceback (most recent call last):\n  File \"/Users/alexisrondeau/Workshop/cryptos/_runner.py\", line 34, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 233, in run\n    \"notes\": f\"{len(rows)} settings; {sum(1 for r in rows if r['cubes'])} admit at least one cube; {sum(1 for r in rows if r['capped'])} hit a cap. Best English {best[0][0]:.3f} at period {best[0][1]} offset {best[0][2]}; shuffled K4 {controls}. {len(candidates)} candidates.\",\n                                                                                                                                                                  ~~~~^^^\nIndexError: list index out of range\n",
+ "worked_example": "",
+ "seconds": 0.04386305809020996
+}

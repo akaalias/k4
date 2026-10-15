@@ -162,7 +162,7 @@ Findings worth keeping:
   chance (0070).
 
 Mistakes:
-- Pre-registered counts were wrong three times and corrected before the run only once:
+- Pre-registered counts were wrong four times and corrected before the run only once:
   0071's variant count (975 to 925, corrected before), 0066's case count (294,912 counted lags
   with no equations; 221,184 tested), 0069's primer total (5,432,200 for 5,432,100), 0067's
   case count (5.2 million counted cases with no check; 1.93 million tested).

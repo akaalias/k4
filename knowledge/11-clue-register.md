@@ -16,7 +16,7 @@ or more columnar or route transpositions followed by keyed-tableau substitution;
 sentence describes the whole sculpture (K3 then K1-K2) and says nothing about K4; (c) the
 "matrix" is the KRYPTOS-shifted tableau itself and "double" means two tableau passes.
 Experiments: family A searches for (a); (c) means composed Quagmires, which the period
-sweep bounds. Status: (c) bounded by 0005 (composed period) and 0014 (two words of total length under 25 cannot compose to the forced key). (a) bounded by 0006: columnar routes (plain, keyed, double plain) before a periodic tableau admit no key shorter than 23; a fixed reshuffle of every row of seven, before or after the tableau, admits none shorter than 25 beyond chance (0070); route transpositions and triple stages untested. (c) untested.
+sweep bounds. Status: (c) bounded by 0005 (composed period) and 0014 (two words of total length under 25 cannot compose to the forced key). (a) and (c) together, a repeating key before and after K3's rule, a grid turn, two turns or a column shuffle, key lengths 2-14 each, one alphabet: dead (0080). (a) bounded by 0006: columnar routes (plain, keyed, double plain) before a periodic tableau admit no key shorter than 23; a fixed reshuffle of every row of seven, before or after the tableau, admits none shorter than 25 beyond chance (0070); route transpositions and triple stages untested. (c) untested.
 
 **C2. "No one has recovered the original matrix... surprised that no one had tried
 recovering the original matrix and running it through all the possible 'shifts'."**
@@ -27,7 +27,7 @@ different grid whose other "shifts" (rotations, offsets, start positions) produc
 Hill-style numeric matrix. Experiments: recover every grid that reproduces K3 (widths 7,
 8, 14, 21, 24, 28, 42, 48, 86; Bauer's double rotation; Stehle's 192 rule), then apply
 each grid's family of shifts to K4 before and after tableau substitution. Status:
-0006 covered plain columnar at every width including the K3 widths, before the tableau; 0008 covered reading (a) in full for the K3 rule at every shift and for double grid rotations, before the tableau: no shift admits a tableau key shorter than 22. The after-tableau order is weakly bounded by 0007. Reading (b) untested.
+0006 covered plain columnar at every width including the K3 widths, before the tableau; 0008 covered reading (a) in full for the K3 rule at every shift and for double grid rotations, before the tableau: no shift admits a tableau key shorter than 22. With a repeating key on both sides of the K3 rule at every shift, key lengths 2-14 each: dead (0080). The after-tableau order is weakly bounded by 0007. Reading (b) untested.
 
 **C3. "I like to use spatial systems of encoding and decoding... pattern, light and
 shadow... visual systems... individualistic."** (1999, 2005). Readings: (a) a route

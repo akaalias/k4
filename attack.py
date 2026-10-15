@@ -1,161 +1,282 @@
-"""Experiment 0026. See program.md for the contract."""
+"""Experiment 0027. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "double-keyed-columnar-then-tableau",
-    "title": "Two keyed columnar transpositions from the puzzle's words, then the tableau",
-    "family": "6-transposition-then-tableau",
-    "parent": "0016-routes-then-tableau-forced-key-english",
-    "changed": "Route set: every ordered pair of vocabulary words as two keyed columnar transpositions, each forward or inverse, instead of plain widths. Sanborn's 'double matrixes' with the matrices keyed by words.",
+    "slug": "simulator-round-two-width-21-hunt",
+    "title": "Simulator, round two: which constructions reproduce the width-21 repeats, the width-7 doublet column and the closeness together?",
+    "family": "7-construction-simulation",
+    "parent": "0018-construction-simulator-fingerprint",
+    "changed": "Generators chosen to share a key letter 21 or 7 positions apart: periodic systems at periods 7, 21 and 42 with free alphabets or the tableau, autokey at lag 21, progressive keys at period 21, Gromark with an even base, and transposition last at width 21. 5,000 samples each; the three unexplained statistics are the target.",
     "hypothesis_expert": (
-        "Sanborn, CNN 2005 (C1): 'double matrixes and triple matrixes... then went back to this table'. The "
-        "NSA's K3 reading was a keyed columnar with key KRYPTOS; 0006 and 0016 used plain widths and single "
-        "vocabulary keys. Here both stages are keyed by words from the vocabulary (C7 reading a, C8): 61 x 61 "
-        "ordered pairs x 4 direction combinations, 14,884 routes, each followed by a periodic tableau under "
-        "24 conventions. For each route the cribs land at known positions, the divisor rule gives the live "
-        "periods, and for live periods up to 40 the forced key is scored as English on runs of five or more "
-        "slots, with vocabulary matching and ten shuffled controls. Bounds: complete for this route set."
+        "0018 left three statistics unexplained by every generator: five of six doublets in one column at "
+        "width 7, eleven vertical bigram repeats at width 21, and Bean's closeness of crib plaintext to "
+        "ciphertext (knowledge/04-structure.md). Positions 21 apart that share a substitution alphabet make "
+        "vertical pairs at width 21 repeat at English rather than flat rates, so periodic systems with period "
+        "dividing 21 or 42, Gromark with an even base and a five-digit primer (Rogot, Deavours, Blackman), "
+        "and autokey at lag 21 are the natural suspects; period 7 died under every alphabet (R and C both "
+        "to P at 66 and 73), period 21 with vocabulary alphabets died in 0020, but a period-21 system with "
+        "free alphabets did not. Each generator is scored as in 0018 on the three target statistics and the "
+        "ten of 0018, with two-sided empirical p-values. A generator that gives all three targets p above "
+        "0.05 is a lead for a family. Bounds: 5,000 samples per generator; a ranking, not a verdict."
     ),
     "hypothesis_eli5": (
-        "The artist said he sometimes scrambled the letters through two grids before using the table. The "
-        "third message was scrambled through a grid whose columns were ordered by a key word. So we try two "
-        "such grids in a row, each ordered by a word the puzzle knows, in every combination, and ask the "
-        "usual question: where do the 24 known letters land, and could a short secret word on the table "
-        "then produce the carved letters there?"
+        "Yesterday's workshop found three things about K4 that none of our fake K4s reproduced, all to do "
+        "with letters 7 or 21 places apart behaving alike. So today we build fakes with methods that treat "
+        "letters 7, 21 or 42 places apart alike: a secret word of that length, a number stream with that "
+        "rhythm, a message keyed by itself 21 letters back. Then we measure the fakes the same way and ask "
+        "which method makes all three oddities look ordinary."
     ),
     "prediction": (
-        "No route lets the cribs force a tableau key shorter than 22, and the forced keys at periods up to "
-        "40 score inside the range of ten shuffled controls. No vocabulary match; zero candidates pass."
+        "Periodic systems at period 21 and 42 with free alphabets reproduce the width-21 repeats (p above "
+        "0.2) but not the width-7 doublet column. No generator makes all three targets ordinary at once; "
+        "the width-7 column stays below p 0.02 everywhere."
     ),
     "method": (
-        "1. Build the routes from ordered pairs of vocabulary words, each stage forward or inverse. 2. For "
-        "each route send the crib positions to their intermediate positions. 3. For each convention force "
-        "the key letters and find live periods by the divisor rule. 4. Score the forced key at live periods "
-        "up to 40 on runs of five or more slots; match against the vocabulary. 5. Repeat on ten shuffles."
+        "1. Keep the ten statistics of 0018. 2. Build the eleven generators. 3. Draw 5,000 samples each. "
+        "4. Report p-values for the three targets and the combined distance; rank."
     ),
     "walkthrough": (
-        "1. Take the words KRYPTOS and ABSCISSA. 2. Write the message in rows of 7 under KRYPTOS, number the "
-        "columns by alphabetical order of the letters (K=1, O=2, P=3, R=4, S=5, T=6, Y=7), and read the "
-        "columns out in that order. 3. Write the result in rows of 8 under ABSCISSA and read it out the same "
-        "way. 4. The E at position 22 of the message is now at some position j; the carved letter at j and "
-        "E force a key letter on the sculpture's table. 5. Do this for all 24 known letters. 6. Two landing "
-        "spots a multiple of p apart share a key letter at period p; a disagreement kills p. 7. For the "
-        "periods that survive, write the forced letters into their slots and read them."
+        "1. Take an English sentence of 97 letters and a key of 21 random letters repeated under it. 2. "
+        "Encipher on the sculpture's table. 3. Write the result in rows of 21 and count how many vertical "
+        "pairs, a letter and the one below it, occur twice or more; K4 has eleven. 4. Do this 5,000 times "
+        "and see how often eleven or more appears. 5. Count the doublets and note which column of a width-7 "
+        "layout they fall in; K4 has five of six in one column. 6. Repeat for the other methods."
     ),
 }
 
 import random
-from kryptos.alphabets import conventions, key_letter_for, numeric_order
-from kryptos.ciphers import columnar_transposition_encrypt, columnar_transposition_decrypt
+from collections import Counter
+from kryptos.alphabets import encrypt_letter
+from kryptos.ciphers import columnar_transposition_encrypt
+from kryptos.facts import load_k1, load_k2, load_k3, STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
 
 N = 97
-MAXP = 40
-DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0] for d in range(1, N + 1)}
+SAMPLES = 5000
 
 
-def perm_of(fn):
-    idx = [chr(0x100 + i) for i in range(N)]
-    return [ord(ch) - 0x100 for ch in fn("".join(idx))]
-
-
-def stage(word, inv):
-    order = numeric_order(word)
-    return (lambda s, o=order: columnar_transposition_decrypt(s, o)) if inv else (lambda s, o=order: columnar_transposition_encrypt(s, o))
-
-
-def route_set(vocab):
-    words = [w for w in vocab if 2 <= len(w) <= 40]
-    routes = []
-    for w1 in words:
-        for w2 in words:
-            for i1 in (False, True):
-                for i2 in (False, True):
-                    f1, f2 = stage(w1, i1), stage(w2, i2)
-                    routes.append((f"{w1}{' inv' if i1 else ''} then {w2}{' inv' if i2 else ''}", lambda s, a=f1, b=f2: b(a(s))))
-    return routes
+def letters(s):
+    return "".join(c for c in s if "A" <= c <= "Z")
 
 
 def encrypt(plaintext, key):
-    raise NotImplementedError("diagnostic experiment: no full key is implied, so no candidate is submitted")
+    raise NotImplementedError("diagnostic experiment: no candidate is submitted")
 
 
-def runs_in_slots(slots, P):
-    filled = [slots.get(s) for s in range(P)]
-    start = 0 if all(filled) else next(i for i in range(P) if filled[i] is None)
-    out, cur = [], []
-    for k in range(1, P + 1):
-        ch = filled[(start + k) % P]
-        if ch is None:
-            if len(cur) >= 5: out.append("".join(cur))
-            cur = []
-        else:
-            cur.append(ch)
-    if len(cur) >= 5: out.append("".join(cur))
-    return out
+# ---- statistics ---------------------------------------------------------------------
+def stats(ct, pt, crib_positions):
+    c = Counter(ct)
+    ic = sum(v * (v - 1) for v in c.values()) / (N * (N - 1))
+    doublets = [i for i in range(N - 1) if ct[i] == ct[i + 1]]
+    col7 = max(Counter(i % 7 for i in doublets).values()) if doublets else 0
+    v21 = [ct[i] + ct[i + 21] for i in range(N - 21)]
+    rep21 = len(v21) - len(set(v21))
+    h = [ct[i] + ct[i + 1] for i in range(N - 1)]
+    rep_bigrams = len(h) - len(set(h))
+    close = sum(min((STD.index(pt[i - 1]) - STD.index(ct[i - 1])) % 26, (STD.index(ct[i - 1]) - STD.index(pt[i - 1])) % 26) for i in crib_positions) / len(crib_positions)
+    same = sum(1 for i in crib_positions if pt[i - 1] == ct[i - 1])
+    return {"ic": ic, "distinct": len(c), "doublets": len(doublets), "width7_doublet_column": col7,
+            "width21_vertical_repeats": rep21, "repeated_bigrams": rep_bigrams, "top_count": max(c.values()),
+            "singletons": sum(1 for v in c.values() if v == 1), "closeness_mean_distance": close, "self_encryptions": same}
 
 
-def search(ct, known, routes, convs, score, time_left):
-    crib_pos = sorted(known)
-    best, n = [], 0
-    minp_hist = {}
-    for name, fn in routes:
-        if time_left() < 30:
-            break
-        sigma = perm_of(fn)
-        where = {sigma[j]: j for j in range(N)}
-        inter = [where[p - 1] for p in crib_pos]
-        for conv in convs:
-            pa, ca, ka, m = conv
-            forced = [key_letter_for(known[p], ct[j], pa, ca, ka, m) for p, j in zip(crib_pos, inter)]
-            dead = set()
-            for a in range(24):
-                for b in range(a + 1, 24):
-                    if forced[a] != forced[b]:
-                        dead.update(DIVISORS[abs(inter[a] - inter[b])])
-            minp = next(P for P in range(1, N + 1) if P not in dead)
-            minp_hist[minp] = minp_hist.get(minp, 0) + 1
-            for P in range(2, MAXP + 1):
-                if P in dead:
-                    continue
-                slots = {j % P: l for j, l in zip(inter, forced)}
-                runs = runs_in_slots(slots, P)
-                qs = sum(len(r) - 3 for r in runs)
-                if qs < 4:
-                    continue
-                sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
-                n += 1
-                if len(best) < 20 or sc > best[-1][0]:
-                    best.append((sc, name, "/".join(conv), P, runs)); best.sort(reverse=True); best = best[:20]
-    return best, n, minp_hist
+# ---- generators ---------------------------------------------------------------------
+def gen_plaintext(rng, texts):
+    t = "".join(texts)
+    i = rng.randrange(0, len(t) - N + 1)
+    return t[i:i + N]
+
+
+def vig(pt, key, pa="kry", ca="kry", ka="kry", m="vig"):
+    return "".join(encrypt_letter(p, key[i % len(key)], pa, ca, ka, m) for i, p in enumerate(pt))
+
+
+def rand_key(rng, n):
+    return "".join(rng.choice(STD) for _ in range(n))
+
+
+def mixed(rng):
+    a = list(STD); rng.shuffle(a); return "".join(a)
+
+
+def g_vig_kry(rng, pt):
+    return vig(pt, rand_key(rng, rng.randint(27, 30)))
+
+
+def g_quagmire(rng, pt):
+    pa, ca = mixed(rng), mixed(rng); key = rand_key(rng, rng.randint(27, 30))
+    return "".join(ca[(pa.index(p) + STD.index(key[i % len(key)])) % 26] for i, p in enumerate(pt))
+
+
+def g_progressive(rng, pt):
+    P, d = rng.randint(7, 13), rng.randint(1, 25); key = rand_key(rng, P)
+    return "".join(KRY[(KRY.index(p) + KRY.index(key[i % P]) + d * (i // P)) % 26] for i, p in enumerate(pt))
+
+
+def g_autokey(rng, pt):
+    L = rng.randint(1, 30); primer = rand_key(rng, L)
+    return "".join(KRY[(KRY.index(p) + KRY.index(primer[i] if i < L else pt[i - L])) % 26] for i, p in enumerate(pt))
+
+
+def g_running(rng, pt, texts):
+    key = gen_plaintext(rng, texts)
+    return vig(pt, key)
+
+
+def g_columnar_then_vig(rng, pt):
+    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
+    return vig(columnar_transposition_encrypt(pt, order), rand_key(rng, rng.randint(27, 30)))
+
+
+def g_vig_then_columnar(rng, pt):
+    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
+    return columnar_transposition_encrypt(vig(pt, rand_key(rng, rng.randint(27, 30))), order)
+
+
+def det2(M):
+    return (M[0][0] * M[1][1] - M[0][1] * M[1][0]) % 26
+
+
+def det3(M):
+    return (M[0][0] * (M[1][1] * M[2][2] - M[1][2] * M[2][1]) - M[0][1] * (M[1][0] * M[2][2] - M[1][2] * M[2][0]) + M[0][2] * (M[1][0] * M[2][1] - M[1][1] * M[2][0])) % 26
+
+
+def g_hill(n):
+    def g(rng, pt):
+        while True:
+            M = [[rng.randrange(26) for _ in range(n)] for _ in range(n)]
+            d = det2(M) if n == 2 else det3(M)
+            if d % 2 and d % 13:
+                break
+        out = list(pt)
+        for i in range(0, N - n + 1, n):
+            blk = [STD.index(pt[i + j]) for j in range(n)]
+            for r in range(n):
+                out[i + r] = STD[sum(M[r][k] * blk[k] for k in range(n)) % 26]
+        return "".join(out)
+    return g
+
+
+def g_gromark(rng, pt):
+    k = [rng.randrange(10) for _ in range(5)]
+    while len(k) < N:
+        k.append((k[-5] + k[-4]) % 10)
+    ca = mixed(rng)
+    return "".join(ca[(STD.index(p) + k[i]) % 26] for i, p in enumerate(pt))
+
+
+def g_random(rng, pt):
+    return rand_key(rng, N)
+
+
+def g_transposition(rng, pt):
+    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
+    return columnar_transposition_encrypt(pt, order)
+
+
+def g_mono(rng, pt):
+    ca = mixed(rng)
+    return "".join(ca[STD.index(p)] for p in pt)
 
 
 def run(ctx):
-    ct, known = ctx.K4, ctx.KNOWN
-    routes = route_set(list(ctx.vocabulary))
-    convs = list(conventions())
-    best, n, hist = search(ct, known, routes, convs, ctx.english_score, ctx.time_left)
-    nulls = []
-    for seed in range(10):
-        if ctx.time_left() < 120:
-            break
-        letters_ = list(ct); random.Random(seed).shuffle(letters_)
-        nb, _, _ = search("".join(letters_), known, routes, convs, ctx.english_score, ctx.time_left)
-        nulls.append(round(nb[0][0], 3) if nb else None)
+    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
+    crib_positions = sorted(ctx.KNOWN)
+    k4_pt = "".join(ctx.KNOWN.get(i, "A") for i in range(1, N + 1))   # only crib positions are used for plaintext statistics
+    k4 = stats(ctx.K4, k4_pt, crib_positions)
+    rng = random.Random(2026)
+    def free_periodic(P):
+        def g(rng, pt):
+            alphas = [mixed(rng) for _ in range(P)]
+            return "".join(alphas[i % P][STD.index(p)] for i, p in enumerate(pt))
+        return g
+
+    def vig_period(P):
+        return lambda rng, pt: vig(pt, rand_key(rng, P))
+
+    def autokey_lag(L):
+        def g(rng, pt):
+            primer = rand_key(rng, L)
+            return "".join(KRY[(KRY.index(p) + KRY.index(primer[i] if i < L else pt[i - L])) % 26] for i, p in enumerate(pt))
+        return g
+
+    def progressive(P):
+        def g(rng, pt):
+            d = rng.randint(1, 25); key = rand_key(rng, P)
+            return "".join(KRY[(KRY.index(p) + KRY.index(key[i % P]) + d * (i // P)) % 26] for i, p in enumerate(pt))
+        return g
+
+    def gromark_base(B):
+        def g(rng, pt):
+            k = [rng.randrange(B) for _ in range(5)]
+            while len(k) < N:
+                k.append((k[-5] + k[-4]) % B)
+            ca = mixed(rng)
+            return "".join(ca[(STD.index(p) + k[i]) % 26] for i, p in enumerate(pt))
+        return g
+
+    def vig_then_columnar_w(w):
+        def g(rng, pt):
+            order = list(range(w)); rng.shuffle(order)
+            return columnar_transposition_encrypt(vig(pt, rand_key(rng, rng.randint(27, 30))), order)
+        return g
+
+    gens = {
+        "period 7, free alphabets": free_periodic(7),
+        "period 21, free alphabets": free_periodic(21),
+        "period 42, free alphabets": free_periodic(42),
+        "period 21, KRYPTOS tableau": vig_period(21),
+        "period 42, KRYPTOS tableau": vig_period(42),
+        "autokey lag 21": autokey_lag(21),
+        "autokey lag 7": autokey_lag(7),
+        "progressive key, period 21": progressive(21),
+        "progressive key, period 7": progressive(7),
+        "Gromark base 10": gromark_base(10),
+        "Gromark base 8": gromark_base(8),
+        "Gromark base 2": gromark_base(2),
+        "Vigenere then columnar width 21": vig_then_columnar_w(21),
+        "Vigenere then columnar width 7": vig_then_columnar_w(7),
+        "calibration: random letters": g_random,
+        "calibration: Vigenere period 27-30": g_vig_kry,
+    }
+    table = {}
+    for name, g in gens.items():
+        samples = []
+        for _ in range(SAMPLES):
+            pt = gen_plaintext(rng, texts)
+            samples.append(stats(g(rng, pt), pt, crib_positions))
+            if ctx.time_left() < 20:
+                break
+        row = {}
+        dist2 = 0.0
+        for key, v in k4.items():
+            xs = [s[key] for s in samples]
+            mu = sum(xs) / len(xs); sd = (sum((x - mu) ** 2 for x in xs) / len(xs)) ** 0.5
+            z = 0.0 if sd == 0 else (v - mu) / sd
+            lo = sum(1 for x in xs if x <= v) / len(xs); hi = sum(1 for x in xs if x >= v) / len(xs)
+            p = min(1.0, 2 * min(lo, hi))
+            row[key] = {"mean": round(mu, 4), "sd": round(sd, 4), "z": round(z, 2), "p": round(p, 3)}
+            dist2 += z * z
+        row["_distance"] = round(dist2 ** 0.5, 2)
+        row["_n"] = len(samples)
+        table[name] = row
+    ranking = sorted(table, key=lambda n: table[n]["_distance"])
     return {
         "candidates": [],
-        "bounds": {"family": "double keyed columnar (vocabulary words) then periodic tableau", "routes": len(routes), "conventions": 24,
-                   "periods": f"2-{MAXP}, live only", "keys_scored": n, "smallest_live_period": min(hist) if hist else None,
-                   "min_live_period_histogram": {str(k): v for k, v in sorted(hist.items())[:12]},
-                   "best": [{"score": round(sc, 3), "route": nm, "convention": cv, "period": P, "runs": rs} for sc, nm, cv, P, rs in best[:10]],
-                   "shuffled_control_best": nulls},
-        "notes": f"Diagnostic, no candidates. {len(routes)} routes; smallest live period {min(hist) if hist else None}; best forced key {best[0][0]:.3f} vs shuffled {[x for x in nulls if x is not None]}.",
+        "bounds": {"family": "construction simulation, round two", "samples_per_generator": SAMPLES, "statistics": list(k4),
+                   "targets": {n: {k: table[n][k]["p"] for k in ("width7_doublet_column", "width21_vertical_repeats", "closeness_mean_distance")} for n in ranking},
+                   "k4": {k: round(v, 4) for k, v in k4.items()},
+                   "ranking_by_distance": [(n, table[n]["_distance"]) for n in ranking],
+                   "table": table},
+        "notes": "Diagnostic, no candidates. Target p-values (width-7 column, width-21 repeats, closeness): " + "; ".join(f"{n}: {table[n]['width7_doublet_column']['p']}, {table[n]['width21_vertical_repeats']['p']}, {table[n]['closeness_mean_distance']['p']}" for n in ranking) + ".",
     }
 
 
 def worked_example(ctx, key):
-    fn = lambda s: stage("ABSCISSA", False)(stage("KRYPTOS", False)(s))
-    sigma = perm_of(fn); where = {sigma[j]: j for j in range(N)}
-    lines = ["route: keyed columnar KRYPTOS then keyed columnar ABSCISSA; convention kry/kry/kry Vigenere", "", f"column order under KRYPTOS: {numeric_order('KRYPTOS')}; under ABSCISSA: {numeric_order('ABSCISSA')}", "", "plain pos  letter  lands at  carved  forced key letter"]
-    for pos in (22, 23, 24, 25, 64, 65, 66):
-        j = where[pos - 1]
-        lines.append(f"{pos:>9}    {ctx.KNOWN[pos]}       {j+1:>3}        {ctx.K4[j]}       {key_letter_for(ctx.KNOWN[pos], ctx.K4[j], 'kry', 'kry', 'kry', 'vig')}")
+    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
+    rng = random.Random(1)
+    pt = gen_plaintext(rng, texts); ct = "".join([mixed(rng) for _ in range(21)][i % 21][STD.index(p)] for i, p in enumerate(pt))
+    k4_pt = "".join(ctx.KNOWN.get(i, "A") for i in range(1, N + 1))
+    a, b = stats(ctx.K4, k4_pt, sorted(ctx.KNOWN)), stats(ct, pt, sorted(ctx.KNOWN))
+    lines = ["one sample from the period-21 free-alphabet generator against K4", "", f"plain  {pt}", f"cipher {ct}", "", f"{'statistic':<28}{'K4':>10}{'sample':>10}"]
+    for k in a:
+        lines.append(f"{k:<28}{a[k]:>10.4f}{b[k]:>10.4f}")
     return "\n".join(lines)

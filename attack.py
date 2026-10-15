@@ -1,11 +1,11 @@
-"""Experiment 0039. See program.md for the contract."""
+"""Experiment 0040. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "trifid-free-cubes-by-constraint-propagation",
+    "slug": "trifid-free-cubes-by-constraint-propagation-rerun",
     "title": "Trifid with a free cube: the 24 known letters as equations on the cube's coordinates, solved exactly",
     "family": "4-visual-spatial",
-    "parent": "0033-trifid-keyword-cubes-and-annealing",
-    "changed": "Experiment 33 searched free cubes by trial and error and plateaued at 17 of 24. Here the cube is not searched but solved: every known letter ties three cube coordinates to three carved letters' coordinates, the ties are merged, and the remaining freedom is enumerated under the rule that all 27 symbols have different addresses.",
+    "parent": "0039-trifid-free-cubes-by-constraint-propagation",
+    "changed": "Rerun of experiment 39, whose summary line crashed when no cube survived, so its record carries an error instead of a result; the solver and bounds are unchanged. Experiment 33 searched free cubes by trial and error and plateaued at 17 of 24. Here the cube is not searched but solved: every known letter ties three cube coordinates to three carved letters' coordinates, the ties are merged, and the remaining freedom is enumerated under the rule that all 27 symbols have different addresses.",
     "hypothesis_expert": (
         "Trifid over 27 symbols (A-Z and '?') with period p: the three coordinate rows of a block are "
         "concatenated and regrouped, so the k-th coordinate of ciphertext letter j equals coordinate m div p "
@@ -230,7 +230,7 @@ def run(ctx):
                    "node_cap": NODE_CAP, "solution_cap": SOL_CAP, "per_setting": rows,
                    "best": [{"english": round(sc, 3), "period": p, "offset": o, "hits": h, "text": pt} for sc, p, o, h, pt, _ in best[:8]],
                    "shuffled_control_best": controls},
-        "notes": f"{len(rows)} settings; {sum(1 for r in rows if r['cubes'])} admit at least one cube; {sum(1 for r in rows if r['capped'])} hit a cap. Best English {best[0][0]:.3f} at period {best[0][1]} offset {best[0][2]}; shuffled K4 {controls}. {len(candidates)} candidates.",
+        "notes": f"{len(rows)} settings; {sum(1 for r in rows if r['cubes'])} admit at least one cube; {sum(1 for r in rows if r['capped'])} hit a cap. " + (f"Best English {best[0][0]:.3f} at period {best[0][1]} offset {best[0][2]}" if best else "No cube is consistent with the known letters at any setting") + f"; shuffled K4 {controls}. {len(candidates)} candidates.",
     }
 
 

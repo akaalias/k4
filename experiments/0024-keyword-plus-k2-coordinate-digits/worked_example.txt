@@ -1,0 +1,11 @@
+digits 38576577844 repeated under the message, alignment 0; KRYPTOS alphabet throughout, Vigenere; word length 7
+
+pos  plain  carved  total key  index  digit  word index  slot
+ 22    E      F        B         1      4       23       0
+ 23    A      L        K        10      3        7       1
+ 24    S      R        V        21      8       13       2
+ 29    T      R        X        23      7       16       0
+ 30    H      N        F         5      7       24       1
+ 64    B      N        L        11      8        3       0
+
+positions 22 and 29 share slot 0: their word indices must agree, or length 7 is dead at this alignment.

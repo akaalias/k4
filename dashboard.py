@@ -84,6 +84,7 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .explain-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;max-width:980px;margin:22px auto 0}.explain-col h4{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 8px}.explain-col p{font-size:15.5px;line-height:1.65;margin:0;color:var(--ink)}
 @media(max-width:860px){.explain-row{grid-template-columns:1fr}}
 dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 18px;margin:6px 0 10px;font-size:14.5px}dl.bd dt{color:var(--muted)}dl.bd dd{margin:0;min-width:0;overflow-wrap:anywhere}dl.bd dl.bd{grid-template-columns:minmax(70px,max-content) 1fr;margin:0;padding-left:12px;border-left:2px solid var(--rule-soft);font-size:13.5px}.bd-text{font:12.5px var(--mono);letter-spacing:.06em;overflow-wrap:anywhere}ol.bd-list{margin:0;padding-left:20px}
+.ktabs{display:flex;gap:6px;margin:4px 0 2px}.ktab{font:600 12px var(--serif);letter-spacing:.1em;padding:5px 14px;border:1px solid var(--rule);background:var(--paper);color:var(--muted);border-radius:3px;cursor:pointer}.ktab.on{background:var(--accent);border-color:var(--accent);color:var(--paper)}.kpane .lp-box{min-width:574px;box-sizing:border-box}.kpane{display:none}.kpane.on{display:block}.kpane-notes{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:980px;margin:4px auto 0;font-size:15px;color:var(--ink)}.kpane-notes p{margin:0}.lrow.start{justify-content:flex-start}.lc.q,.lc.ink.q{color:var(--accent);font-weight:700}
 .res-notes{font-size:16px;margin:16px 0 6px;max-width:760px}.res-notes.err{color:var(--accent)}.res-stats{display:flex;gap:44px;flex-wrap:wrap;margin:6px 0 18px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.res-stats div{display:flex;flex-direction:column}.res-stats b{font:400 24px var(--serif)}.res-stats span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.res-card{display:flex;gap:26px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--rule-soft)}.res-side{display:flex;flex-direction:column;gap:3px;min-width:150px;font-size:14px;color:var(--muted)}.res-rank{font:400 26px var(--serif);color:var(--ink)}.res-loss{color:var(--accent);font-weight:600}.res-main{flex:1;min-width:0}.res-main .lp-box{display:inline-block}.res-key{font-size:13.5px;color:var(--muted);margin:8px 0 0;overflow-wrap:anywhere;max-width:620px}
 table.score{width:100%;max-width:760px;margin:10px 0 6px;border-collapse:collapse}table.score td,table.score th{padding:7px 10px;border-bottom:1px solid var(--rule-soft);font-size:15px}table.score td:first-child{font-weight:600}table.score tr.total td{border-top:1.5px solid var(--ink);border-bottom:none;font-weight:700}table.score .pct{color:var(--accent);margin-left:8px}table.score.ranks td:first-child{font-weight:400}table.score.ranks tr.kept td{font-weight:700;color:var(--accent)}table.score.ranks tr.gap td{color:var(--faint);border-bottom:none}.score-sub{font-size:14px;color:var(--muted);margin:16px 0 4px;max-width:760px}
 .panel-wrap{display:flex;gap:18px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;margin:16px 0 8px}.panel-wrap.wide{width:min(1360px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}.callout.wide{width:min(1400px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%);box-sizing:border-box}.callout .panel-wrap.wide{width:auto;left:0;transform:none}#sculpture-label{min-height:3.2em}.subsec{display:flex;align-items:baseline;gap:12px;margin:34px 0 10px;padding-top:12px;border-top:1px solid var(--rule-soft)}.subsec b{font:400 15px var(--serif);color:var(--faint)}.subsec h3{font:400 21px var(--serif);margin:0}.subsec-sub{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 6px}.lp-col{display:flex;flex-direction:column}.lp-eyebrow{font:600 11px/1.2 var(--serif)!important;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.lp-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:10px 14px 12px}.lp-title{font:600 13px var(--serif);color:var(--muted);text-align:center;margin:0 0 8px}.lrow{display:flex;gap:1.5px;margin:0 0 2.5px;justify-content:flex-end}.lc{display:inline-flex;align-items:center;justify-content:center;width:15px;height:19px;border-radius:2.5px;background:#ebe7d8;color:var(--muted);font:normal 11.5px/1 var(--mono)}.lc.tail{background:#f1eee3;color:#cfcab8}.lc.known{background:var(--accent);color:var(--paper);font-weight:700}.lc.miss{background:var(--paper);color:var(--accent);box-shadow:inset 0 0 0 1.3px var(--accent);font-weight:700}.lc.ink{color:var(--ink)}.lc.dot:after{content:"";width:2px;height:2px;border-radius:50%;background:var(--faint,#9b998c)}.lp-cap{font:italic 13px/1.4 var(--serif);color:var(--muted);text-align:center;margin:6px 0 0}.lp-cap.acc{color:var(--accent);margin-top:2px}.lp-arrow{color:var(--muted);padding-top:72px}.lp.mini .lp-box{padding:5px 6px;border-radius:4px;background:transparent;border-color:var(--rule-soft)}.lp.mini .lp-title{display:none}.lp.mini .lc{width:6.5px;height:9px;font-size:6px;border-radius:1px}.lp.mini .lrow{gap:1px;margin-bottom:1px}
@@ -549,6 +550,52 @@ def sculpture_block():
             '<script type="importmap">{"imports": {"three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>'
             '<script type="module" src="/assets/sculpture.js"></script>')
 
+def solved_messages_block():
+    """K1, K2, K3 as IN (the carved lines, as on the copper) and OUT (the solution laid out in the
+    same lines), behind three tabs, so a reader sees what a solved message looks like."""
+    from kryptos.facts import load_k1, load_k2, load_k3
+    k1, k2, k3 = load_k1(), load_k2(), load_k3()
+    ul = split_by_starts(k1["ciphertext"] + k2["ciphertext_as_carved"], UL_STARTS)
+    ll = split_by_starts(k3["ciphertext"] + (ROOT / "data" / "k4.txt").read_text().strip(), LL_STARTS)
+    obkr = ll[10].index("OBKR")
+    msgs = [
+        ("K1", ul[0:2], k1["plaintext"],
+         f"Keyed Vigen&egrave;re on the sculpture's own table, key word {k1['key']}. Each letter stays in its place; the table changes it.",
+         f"Solved by David Stein (1998) and Jim Gillogly (1999), and by the NSA in 1992. The misspelling {k1['misspelling']} is Sanborn's own."),
+        ("K2", ul[2:14], k2["plaintext_as_carved"],
+         f"The same table, key word {k2['key']}. The question marks are carved and stay where they are.",
+         f"Same solvers. {k2['misspelling']} is carved that way; in 2006 Sanborn said one letter was left out, which changes the last words to LAYER TWO."),
+        ("K3", ll[0:10] + [ll[10][:obkr]], k3["plaintext"],
+         "No table: the letters are moved, not changed. Written in a grid, turned, and read off in columns; the solution is laid out here in the copper's line shape, not letter for letter.",
+         f"Same solvers. It quotes Howard Carter opening Tutankhamun's tomb; {k3['misspelling']} is Sanborn's."),
+    ]
+
+    def block(lines, cls):
+        rows = []
+        for line in lines:
+            cells = "".join(f'<i class="lc {cls}{" q" if ch == "?" else ""}">{esc(ch)}</i>' for ch in line)
+            rows.append(f'<div class="lrow start">{cells}</div>')
+        return "".join(rows)
+
+    tabs, panes = [], []
+    for k, (name, lines, plain, how, who) in enumerate(msgs):
+        plain_lines, pos = [], 0
+        for line in lines:
+            plain_lines.append(plain[pos:pos + len(line)]); pos += len(line)
+        n = sum(len(l) for l in lines)
+        left = (f'<div class="lp-col"><p class="lp-eyebrow">in: {name} as carved</p><div class="lp"><div class="lp-box">'
+                f'<div class="lp-title">{n} letters, {len(lines)} lines of the copper</div>{block(lines, "")}</div></div></div>')
+        right = (f'<div class="lp-col"><p class="lp-eyebrow">out: {name} solved</p><div class="lp"><div class="lp-box">'
+                 f'<div class="lp-title">the message, readable English</div>{block(plain_lines, "ink")}</div></div></div>')
+        arrow = '<div class="lp-arrow"><svg width="34" height="14" viewBox="0 0 34 14"><path d="M1,7 L28,7" stroke="currentColor" stroke-width="1.4"/><path d="M26,2 L33,7 L26,12 z" fill="currentColor"/></svg></div>'
+        tabs.append(f'<button class="ktab{" on" if k == 0 else ""}" data-k="{name}">{name}</button>')
+        panes.append(f'<div class="kpane{" on" if k == 0 else ""}" data-k="{name}"><div class="panel-wrap wide">{left}{arrow}{right}</div>'
+                     f'<div class="kpane-notes"><p><b>How.</b> {how}</p><p><b>Who.</b> {who}</p></div></div>')
+    js = ("<script>document.querySelectorAll('.ktab').forEach(b=>b.addEventListener('click',()=>{"
+          "document.querySelectorAll('.ktab,.kpane').forEach(e=>e.classList.toggle('on',e.dataset.k===b.dataset.k));}));</script>")
+    return f'<div class="ktabs">{"".join(tabs)}</div>{"".join(panes)}{js}'
+
+
 def what_we_look_for():
     from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
     panel = panel_block(_K4, None, _KNOWN)
@@ -560,7 +607,8 @@ def what_we_look_for():
     html = "".join(f'<div class="explain-col"><h4>{esc(h)}</h4><p>{esc(t)}</p></div>' for h, t in cols)
     sub = lambda n, t, d: f'<div class="subsec"><b>1.{n}</b><h3>{t}</h3></div><p class="subsec-sub">{d}</p>'
     return (sub(1, "The sculpture", "Bret L Bowen's model of Kryptos. Hover a key below it, or a plate, to see which message it carries.") + sculpture_block()
-            + sub(2, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel
+            + sub(2, "What solved looks like", "The first three messages were solved in the 1990s. Each turns carved letters into readable English, and the method can be shown on paper. Pick one.") + solved_messages_block()
+            + sub(3, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel
             + f'<div class="explain-row">{html}</div>')
 
 

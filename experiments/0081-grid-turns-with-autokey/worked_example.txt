@@ -1,0 +1,15 @@
+order A: one quarter turn clockwise at width 7, then plaintext autokey at lag 14, sculpture's alphabet, Vigenere
+
+known place  letter  lands at  class mod 14
+         71       L         4             3
+         64       B         5             4
+         29       T        10             9
+         22       E        11            10
+         72       O        18             3
+         65       E        19             4
+         30       H        24             9
+         23       A        25            10
+
+pair in class 3: place 71 (L) lands at 4, place 72 (O) at 18
+  letter at 18 = copper F (12) minus previous (17) = 21 = U
+  chain gives U, known letter O: disagrees, dead

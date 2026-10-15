@@ -38,6 +38,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 33 | 4 | Trifid: keyword cubes best 7 of 24; the annealer plateaus at 17 even on a planted cube, so free cubes stay open. |
 | 34 | 1 | Key completed by English climb at periods 27-29 and 53-95: K4 behaves exactly like shuffled K4. First gate-passing candidates; the harness kept a gibberish period-95 text as champion at loss 4.4. Scorer case filed. |
 | 35 | 1 | Key completion at 27-29 with one vocabulary-mixed alphabet: noise, equal to shuffled K4. Design clock polluted by dashboard work, 19 min of it. |
+| 36 | 8 | Bauer's open Hill variants, chained and paired, solved exactly: dead. |
 
 ## 2026-10-14
 

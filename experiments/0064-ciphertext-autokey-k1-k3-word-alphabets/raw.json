@@ -1,0 +1,36 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "ciphertext autokey on K1-K3-word and C13/C14-word alphabets",
+  "alphabets": 102,
+  "key_alphabets": "standard, KRYPTOS, plain, cipher",
+  "modes": 3,
+  "lags": "1-95 (at least 6 cribs past the primer)",
+  "fewest_mismatches": 3,
+  "best_setting": {
+   "plain": "kry",
+   "cipher": "LOWER/keyword",
+   "key": "cipher",
+   "mode": "vig",
+   "lag": 68,
+   "cribs_checked": 6
+  },
+  "full_matches": 0,
+  "control_fewest_mismatches": [
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   3,
+   2
+  ]
+ },
+ "notes": "Fewest mismatches over all settings: 3 (('kry', 'LOWER/keyword', 'cipher', 'vig', 68, 6)); ten shuffled coppers: [2, 2, 2, 2, 2, 2, 2, 2, 3, 3]. Full matches: 0.",
+ "error": null,
+ "worked_example": "place  plain  carved  key letter needed (KRYPTOS)  carved 21 back\n   22    E      F               R                    O\n   23    A      L               P                    B\n   24    S      R               N                    K\n   25    T      V               C                    R",
+ "seconds": 90.4318196773529
+}

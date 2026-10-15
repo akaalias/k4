@@ -1,0 +1,69 @@
+{
+ "id": 64,
+ "tag": "0064-ciphertext-autokey-k1-k3-word-alphabets",
+ "started": "2026-10-15T12:33:15+00:00",
+ "seconds": 90.5,
+ "status": "ran",
+ "phases": {
+  "design": 0.1,
+  "implement": 8.4,
+  "test": 0.1,
+  "run": 90.5,
+  "record": 0.0
+ },
+ "ended_epoch": 1792067685.493293,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "ciphertext autokey on K1-K3-word and C13/C14-word alphabets",
+  "alphabets": 102,
+  "key_alphabets": "standard, KRYPTOS, plain, cipher",
+  "modes": 3,
+  "lags": "1-95 (at least 6 cribs past the primer)",
+  "fewest_mismatches": 3,
+  "best_setting": {
+   "plain": "kry",
+   "cipher": "LOWER/keyword",
+   "key": "cipher",
+   "mode": "vig",
+   "lag": 68,
+   "cribs_checked": 6
+  },
+  "full_matches": 0,
+  "control_fewest_mismatches": [
+   2,
+   2,
+   2,
+   3,
+   2,
+   2,
+   2,
+   2,
+   3,
+   2
+  ]
+ },
+ "notes": "Fewest mismatches over all settings: 3 (('kry', 'LOWER/keyword', 'cipher', 'vig', 68, 6)); ten shuffled coppers: [2, 2, 2, 2, 2, 2, 2, 2, 3, 3]. Full matches: 0.",
+ "error": null,
+ "candidates": []
+}

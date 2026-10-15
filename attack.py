@@ -1,220 +1,163 @@
-"""Experiment 0033. See program.md for the contract."""
+"""Experiment 0034. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "trifid-keyword-cubes-and-annealing",
-    "title": "Trifid: the 27-cell cube that fractionates letters, with keyword cubes tested exactly and free cubes annealed",
-    "family": "4-visual-spatial",
-    "parent": None,
-    "changed": "New root in family 4. Trifid is the one classical fractionating cipher that fits 26 letters plus the question mark; the 25-letter-square systems are dead because all 26 letters occur in K4. Keyword-built cubes are tested exactly; free cubes are searched by simulated annealing on crib hits.",
+    "slug": "complete-the-key-at-surviving-periods",
+    "title": "Finish the job at the surviving periods: fix the 24 forced key letters, climb the rest by English, and see how English the text can get",
+    "family": "1-keyed-periodic",
+    "parent": "0005-quagmire-period-sweep-forced-keys",
+    "changed": "The first experiment that produces full candidates. At every period the cribs allow (27-29, and 53-95 sampled every third) under the 24 conventions, the forced key slots are fixed and the free slots are chosen to maximise the English score of the other 73 letters. The question is how English the best text is, against the same procedure on shuffled K4.",
     "hypothesis_expert": (
-        "Delastelle's trifid (1901; in the ACA list and the manuals Scheidt taught from, C5) maps each of 27 "
-        "symbols to a point in a 3x3x3 cube, writes a block of p letters as three coordinate rows, and reads "
-        "the rows off in triples: a spatial system in Sanborn's sense (C3) and a matrix in his (C1), with the "
-        "sculpture's own '?' as the 27th symbol. Playfair, bifid and the four-square family are dead because "
-        "K4 uses all 26 letters (knowledge/04-structure.md); a 2x13 grid cannot fractionate; trifid can. "
-        "Two tests. Exact: cubes built from every vocabulary word by the four Friedman mixings with '?' first "
-        "or last, periods 2-20, every alignment, scored by crib hits after decryption. Search: for periods "
-        "2-15 and every alignment, simulated annealing over free cubes with crib hits as the objective, two "
-        "restarts each, then more iterations for the best settings. A true cube gives 24 of 24; chance gives "
-        "about 1 of 24 per decryption. In a dry run the annealer, with a coordinate-level objective, reached "
-        "only 17 of 24 on a planted free cube at the planted cube's own period and alignment, so the search is "
-        "weak and its result is not a bound. Bounds: complete for keyword cubes only; free cubes stay open."
+        "0005 left periods 27-29 and 53-97 alive under every convention, and 0009 showed the forced key "
+        "stretches are noise; but noise in the key is compatible with a real periodic cipher if the key is "
+        "not a word. The remaining test is the plaintext: fix the 24 forced slots, choose the 3 to 73 free "
+        "slots by coordinate descent on the quadgram score of the 73 non-crib letters, with twenty random "
+        "restarts, and record the best score per period and convention. A true periodic cipher at one of "
+        "these periods would give a text scoring near English, about -3.6, at that period and convention; "
+        "the same climb on shuffled K4 calibrates what overfitting achieves, which rises with the number of "
+        "free slots. Candidates are submitted; they pass the crib gate by construction, so the English "
+        "deficit and the key cost carry the verdict, and a 27-letter random key costs about 67 points of "
+        "loss on its own. Bounds: coordinate descent is not exhaustive above period 27; period 27 is close "
+        "to exhaustive with twenty restarts over 3 free slots."
     ),
     "hypothesis_eli5": (
-        "Trifid turns each letter into three small digits, like an address with floor, row and seat in a "
-        "27-seat cube, writes the addresses of a few letters in rows, and then reads the digits off in a "
-        "different grouping, so each new letter is made from pieces of three old ones. It is one of the few "
-        "old ciphers that can handle all 26 letters plus the question mark the sculpture already uses. We "
-        "first try cubes built from the puzzle's words, then let a computer rearrange the cube by trial and "
-        "error, rewarding every known letter it gets right."
+        "For a repeating secret word of length 27, 28 or 29, the 24 known letters fix 24 letters of the "
+        "word and leave a few unknown. We fill the unknown ones in every way and read the message that "
+        "comes out, keeping the one that reads most like English. If the cipher really were of this kind, "
+        "one filling would read like a real message. We also run the same game on scrambled versions of "
+        "the carved text, to see how English-looking a text can be made by filling alone."
     ),
     "prediction": (
-        "No keyword cube at any period and alignment gets more than 5 of 24 crib letters right. Annealing "
-        "on free cubes reaches at most 10 of 24 at its best setting, the same as on shuffled K4. Zero "
-        "candidates pass."
+        "At periods 27-29 the best English score is below -5.0 per quadgram under every convention, the "
+        "same as on shuffled K4, far from the -3.6 of English. At periods 53-97 the climb reaches -4.5 or "
+        "better on both K4 and shuffled K4 because of the many free slots; the gap between them is under "
+        "0.2. Candidates pass the gates but carry a loss above 60 from the key cost; none reads as English."
     ),
     "method": (
-        "1. Build keyword cubes: for each vocabulary word and mixing, the 26-letter mixed alphabet with '?' "
-        "appended or prepended, filled into the cube in order. 2. For each cube, period 2-20 and alignment, "
-        "decrypt and count crib hits. 3. For periods 2-15 and alignments, anneal a random cube by swapping "
-        "two symbols, accepting by crib hits with a temperature schedule, two restarts of 4,000 steps. "
-        "4. Re-anneal the five best settings with 20,000 steps. 5. Repeat the search on two shuffles of K4 "
-        "for calibration. 6. Submit any decryption with all 24 cribs."
+        "1. For each convention and live period, force the key letters at the crib slots. 2. Start the free "
+        "slots at random; repeat: for each free slot in turn, try all 26 letters and keep the one giving the "
+        "best score of the non-crib letters; stop when a pass changes nothing. 3. Twenty restarts; keep the "
+        "best. 4. Submit the best text per period as a candidate. 5. Repeat the whole procedure on three "
+        "shuffles of K4."
     ),
     "walkthrough": (
-        "1. Fill a cube with KRYPTOSABCDEFGHIJLMNQUVWXZ? in order: K is at (0,0,0), R at (0,0,1), ... the 27th "
-        "symbol ? at (2,2,2). 2. Take period 5 and the first carved block OBKRU. 3. Write each letter's three "
-        "digits in a column: O gives (0,1,2) in this cube, and so on for five letters. 4. Read the 15 digits "
-        "row by row into one line and cut it into five triples: those are the five message letters' "
-        "addresses. 5. Look them up in the cube. 6. Do this for every block, then check positions 22 to 34 "
-        "and 64 to 74 against EASTNORTHEAST and BERLINCLOCK. 7. Count the hits; 24 means the cube and "
-        "period are right."
+        "1. Take period 27 and the sculpture's alphabet with Vigenere. 2. The 24 known letters force 24 of "
+        "the 27 key letters; say slots 0, 9 and 17 are free. 3. Put any letters in the three free slots and "
+        "decrypt all 97 letters. 4. Change slot 0 through A to Z, decrypting each time, and keep the letter "
+        "that makes the 73 unknown letters read most like English. 5. Do the same for slots 9 and 17, then "
+        "go round again until nothing changes. 6. Read the result. 7. Start again from different letters "
+        "a few times and keep the best."
     ),
 }
 
-import math
 import random
-from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
+from kryptos.alphabets import ALPHABETS, conventions, key_letter_for, decrypt_letter, encrypt_letter
 
 N = 97
-SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?"
-MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
-
-
-def coords_of(cube):
-    """cube: 27-symbol string in cube order (layer, row, col). Returns symbol -> (l, r, c) and inverse."""
-    to = {}
-    frm = {}
-    for i, ch in enumerate(cube):
-        t = (i // 9, (i // 3) % 3, i % 3)
-        to[ch] = t; frm[t] = ch
-    return to, frm
-
-
-def trifid(text, cube, p, o, decrypt):
-    to, frm = coords_of(cube)
-    out = list(text)
-    i = o
-    # the leading partial block (positions before o) is treated as its own block of length o
-    blocks = []
-    if o:
-        blocks.append((0, o))
-    while i < N:
-        blocks.append((i, min(i + p, N))); i += p
-    for s, e in blocks:
-        blk = text[s:e]; n = len(blk)
-        if n < 2:
-            continue
-        if not decrypt:
-            rows = [[to[ch][k] for ch in blk] for k in range(3)]
-            digits = rows[0] + rows[1] + rows[2]
-            out[s:e] = [frm[tuple(digits[3 * j:3 * j + 3])] for j in range(n)]
-        else:
-            digits = [d for ch in blk for d in to[ch]]
-            rows = [digits[0:n], digits[n:2 * n], digits[2 * n:3 * n]]
-            out[s:e] = [frm[(rows[0][j], rows[1][j], rows[2][j])] for j in range(n)]
-    return "".join(out)
+PERIODS = [27, 28, 29] + list(range(53, 98, 3))
+RESTARTS = 20
 
 
 def encrypt(plaintext, key):
-    return trifid(plaintext, key["cube"], key["period"], key["offset"], False)
+    pa, ca, ka, m, k = key["pa"], key["ca"], key["ka"], key["m"], key["key"]
+    return "".join(encrypt_letter(p, k[i % len(k)], pa, ca, ka, m) for i, p in enumerate(plaintext))
 
 
-def hits(pt, known):
-    return sum(1 for pos, ch in known.items() if pt[pos - 1] == ch)
+def climb(ct, known, P, conv, score, rng, restarts):
+    pa, ca, ka, m = conv
+    A = ALPHABETS[ka]
+    fixed = {}
+    for pos, p in known.items():
+        s = (pos - 1) % P
+        k = key_letter_for(p, ct[pos - 1], pa, ca, ka, m)
+        if s in fixed and fixed[s] != k:
+            return None
+        fixed[s] = k
+    free = [s for s in range(P) if s not in fixed]
+    crib_idx = {pos - 1 for pos in known}
+    dec_table = {(c, k): decrypt_letter(c, k, pa, ca, ka, m) for c in ALPHABETS["std"] for k in A}
+
+    def text(key):
+        return "".join(dec_table[(ct[i], key[i % P])] for i in range(N))
+
+    def free_score(pt):
+        return score("".join(ch for i, ch in enumerate(pt) if i not in crib_idx))
+
+    best_pt, best_sc, best_key = None, -99, None
+    for _ in range(restarts):
+        key = [fixed.get(s, rng.choice(A)) for s in range(P)]
+        cur = free_score(text(key))
+        changed = True
+        while changed:
+            changed = False
+            for s in free:
+                orig = key[s]; best_l, best_v = orig, cur
+                for l in A:
+                    if l == orig:
+                        continue
+                    key[s] = l
+                    v = free_score(text(key))
+                    if v > best_v:
+                        best_l, best_v = l, v
+                key[s] = best_l
+                if best_l != orig:
+                    cur = best_v; changed = True
+        if cur > best_sc:
+            best_sc, best_key = cur, "".join(key); best_pt = text(key)
+    return best_pt, best_sc, best_key, len(free)
 
 
-def coord_score(ct, cube, p, o, known):
-    """Finer objective for annealing: at each crib position, how many of the three cube coordinates
-    of the decrypted symbol agree with those of the known letter (0-72)."""
-    to, _ = coords_of(cube)
-    pt = trifid(ct, cube, p, o, True)
-    return sum(sum(1 for x, y in zip(to[pt[pos - 1]], to[ch]) if x == y) for pos, ch in known.items())
-
-
-def anneal(ct, known, p, o, rng, steps, cube=None):
-    """Start from the given cube, or a random one, and swap symbols to raise crib hits."""
-    if cube is None:
-        cube = list(SYMBOLS); rng.shuffle(cube)
-    else:
-        cube = list(cube)
-    cur = "".join(cube); cur_s = coord_score(ct, cur, p, o, known)
-    best, best_h = cur, hits(trifid(ct, cur, p, o, True), known)
-    for t in range(steps):
-        T = max(0.1, 3.0 * (1 - t / steps))
-        a, b = rng.sample(range(27), 2)
-        lst = list(cur); lst[a], lst[b] = lst[b], lst[a]
-        cand = "".join(lst); sc = coord_score(ct, cand, p, o, known)
-        if sc >= cur_s or rng.random() < math.exp((sc - cur_s) / T):
-            cur, cur_s = cand, sc
-            h = hits(trifid(ct, cur, p, o, True), known)
-            if h > best_h:
-                best, best_h = cur, h
-    return best, best_h
+def sweep(ct, known, convs, score, rng, restarts, time_left, periods):
+    out = []
+    for P in periods:
+        for conv in convs:
+            if time_left() < 60:
+                return out
+            r = climb(ct, known, P, conv, score, rng, restarts)
+            if r is None:
+                continue
+            pt, sc, key, nfree = r
+            out.append((sc, P, conv, pt, key, nfree))
+    return out
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    vocab = list(ctx.vocabulary)
-    rng = random.Random(33)
-    # exact: keyword cubes
-    cubes = {}
-    for w in vocab:
-        if len(set(w)) >= 3:
-            for mname, fn in MIX.items():
-                A = fn(w)
-                cubes[f"{w}/{mname}/?last"] = A + "?"
-                cubes[f"{w}/{mname}/?first"] = "?" + A
-    cubes["KRYPTOS order ?last"] = "KRYPTOSABCDEFGHIJLMNQUVWXZ?"
-    cubes["standard ?last"] = SYMBOLS
-    exact_best = []
+    convs = list(conventions())
+    rng = random.Random(34)
+    res = sweep(ct, known, convs, ctx.english_score, rng, RESTARTS, ctx.time_left, PERIODS)
+    res.sort(key=lambda t: -t[0])
+    by_period = {}
+    for sc, P, conv, pt, key, nfree in res:
+        if P not in by_period or sc > by_period[P][0]:
+            by_period[P] = (sc, "/".join(conv), pt, key, nfree)
     candidates = []
-    n_exact = 0
-    for name, cube in cubes.items():
-        for p in range(2, 21):
-            for o in range(p):
-                n_exact += 1
-                pt = trifid(ct, cube, p, o, True)
-                h = hits(pt, known)
-                if len(exact_best) < 10 or h > exact_best[-1][0]:
-                    exact_best.append((h, name, p, o)); exact_best.sort(reverse=True); exact_best = exact_best[:10]
-                if h == 24:
-                    candidates.append({"plaintext": pt, "key": {"cube": cube, "period": p, "offset": o}, "key_bits": 30, "key_description": f"trifid cube {name} period {p} offset {o}"})
-    # search: annealing
-    settings = []
-    for p in range(2, 16):
-        for o in range(p):
-            if ctx.time_left() < 400:
-                break
-            bh = 0; bc = None
-            for restart in range(4):
-                c, h = anneal(ct, known, p, o, rng, 4000)
-                if h > bh:
-                    bh, bc = h, c
-            settings.append((bh, p, o, bc))
-    settings.sort(reverse=True)
-    refined = []
-    for bh, p, o, bc in settings[:5]:
-        if ctx.time_left() < 200:
+    for P in sorted(by_period):
+        sc, cv, pt, key, nfree = by_period[P]
+        pa, ca, ka, m = cv.split("/")
+        candidates.append({"plaintext": pt, "key": {"pa": pa, "ca": ca, "ka": ka, "m": m, "key": key}, "key_bits": 4.7 * P,
+                           "key_description": f"period {P} key {key} ({nfree} free slots climbed); {cv}", "notes": f"English of the 73 free letters {sc:.3f}"})
+    candidates.sort(key=lambda c: -float(c["notes"].split()[-1]))
+    controls = {}
+    for seed in range(3):
+        if ctx.time_left() < 300:
             break
-        c, h = anneal(ct, known, p, o, rng, 20000, bc)
-        refined.append((h, p, o, c))
-        if h == 24:
-            pt = trifid(ct, c, p, o, True)
-            candidates.append({"plaintext": pt, "key": {"cube": c, "period": p, "offset": o}, "key_bits": 94, "key_description": f"trifid annealed cube period {p} offset {o}"})
-    refined.sort(reverse=True)
-    control = []
-    for seed in range(2):
-        if ctx.time_left() < 120:
-            break
-        letters_ = list(ct); random.Random(seed).shuffle(letters_); sct = "".join(letters_)
-        bh = 0
-        for bh0, p, o, _ in settings[:3]:
-            c, h = anneal(sct, known, p, o, rng, 4000); bh = max(bh, h)
-        control.append(bh)
+        letters_ = list(ct); random.Random(seed).shuffle(letters_)
+        cres = sweep("".join(letters_), known, convs, ctx.english_score, rng, 5, ctx.time_left, [27, 28, 29, 53, 60, 70, 80, 97])
+        for sc, P, conv, pt, key, nfree in cres:
+            controls[P] = max(controls.get(P, -99), sc)
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "trifid, 27-symbol cube, periods 2-20", "keyword_cubes": len(cubes), "exact_decryptions": n_exact,
-                   "exact_best_hits": [{"hits": h, "cube": n, "period": p, "offset": o} for h, n, p, o in exact_best],
-                   "annealing_settings": len(settings), "annealing_best_by_setting": [{"hits": h, "period": p, "offset": o} for h, p, o, _ in settings[:10]],
-                   "refined_best": [{"hits": h, "period": p, "offset": o, "cube": c} for h, p, o, c in refined[:3]],
-                   "shuffled_control_best_hits": control},
-        "notes": f"Keyword cubes: best {exact_best[0][0]} of 24 hits over {n_exact} decryptions. Annealing: best {refined[0][0] if refined else None} of 24 after refinement (settings best {settings[0][0] if settings else None}); shuffled K4 reaches {control}.",
+        "bounds": {"family": "periodic tableau at surviving periods, key completed by English climb", "conventions": 24, "periods": "27-29, then 53-95 every third",
+                   "restarts": RESTARTS, "best_by_period": {str(P): {"english": round(v[0], 3), "convention": v[1], "free_slots": v[4], "text": v[2]} for P, v in sorted(by_period.items())},
+                   "shuffled_k4_best_by_period": {str(P): round(v, 3) for P, v in sorted(controls.items())},
+                   "english_reference": -3.6},
+        "notes": f"Best English at 27-29: {[round(by_period[P][0], 3) for P in (27, 28, 29) if P in by_period]}; shuffled K4 at 27-29: {[round(controls[P], 3) for P in (27, 28, 29) if P in controls]}. Best overall {res[0][0]:.3f} at period {res[0][1]} vs shuffled best {max(controls.values()) if controls else None}.",
     }
 
 
 def worked_example(ctx, key):
-    cube = "KRYPTOSABCDEFGHIJLMNQUVWXZ?"
-    to, frm = coords_of(cube)
-    blk = ctx.K4[:5]
-    lines = [f"cube in KRYPTOS order with ? last; period 5, first block {blk}", ""]
-    for ch in blk:
-        lines.append(f"{ch} -> {to[ch]}")
-    digits = [d for ch in blk for d in to[ch]]
-    rows = [digits[0:5], digits[5:10], digits[10:15]]
-    lines.append(f"digits in a line: {''.join(map(str, digits))}; cut into rows of 5: {rows}")
-    lines.append("message letters: " + "".join(frm[(rows[0][j], rows[1][j], rows[2][j])] for j in range(5)))
-    lines.append("")
-    pt = trifid(ctx.K4, cube, 5, 0, True)
-    lines.append(f"full decryption at period 5: {pt}; crib hits {hits(pt, ctx.KNOWN)} of 24")
+    conv = ("kry", "kry", "kry", "vig")
+    r = climb(ctx.K4, ctx.KNOWN, 27, conv, ctx.english_score, random.Random(1), 3)
+    pt, sc, k, nfree = r
+    lines = ["period 27, KRYPTOS alphabet throughout, Vigenere; 24 slots forced, 3 free, climbed by English (3 restarts)", "", f"key   {k}", f"text  {pt}", f"English of the free letters {sc:.3f} (English about -3.6, noise about -6.5)"]
     return "\n".join(lines)

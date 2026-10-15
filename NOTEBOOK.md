@@ -19,6 +19,8 @@ From 0027: the width-7 doublet column is reproduced by nothing, random letters i
 
 From 0033: simulated annealing over trifid cubes with crib hits, even at coordinate level, plateaus at about 17 of 24 on a planted cube. A proper trifid solver needs constraint propagation on the cube coordinates, not local search. Parked.
 
+From 0034: the loss function's key-cost term is too weak. A 95-letter random key with 71 free slots climbed to fit English gives a crib-perfect text that the harness scores at loss 4.4, below the crib gate, and keeps as champion. The text is overfitting, as the identical score on shuffled K4 shows. Per program.md the ruler is not changed mid-run: the case is in issue #11 for a human decision, and the champion stands as a warning until then. Also: the key alphabet does not affect decryption under a fixed plain and cipher alphabet, so the 24 conventions were 8 distinct classes here; the extra 16 were wasted time.
+
 | # | Family | One line |
 |---|---|---|
 | 21 | 1 | Carter's book as a running key, 13.7 million offsets and conventions: none within two mismatches. |
@@ -34,6 +36,7 @@ From 0033: simulated annealing over trifid cubes with crib hits, even at coordin
 | 31 | 1 | Copper off by one letter, 195 variants, through the chained autokey and two-word tests: nothing. |
 | 32 | 6 | A grid keyed by row, widths 2-48, 63 alphabets: no width survives. |
 | 33 | 4 | Trifid: keyword cubes best 7 of 24; the annealer plateaus at 17 even on a planted cube, so free cubes stay open. |
+| 34 | 1 | Key completed by English climb at periods 27-29 and 53-95: K4 behaves exactly like shuffled K4. First gate-passing candidates; the harness kept a gibberish period-95 text as champion at loss 4.4. Scorer case filed. |
 
 ## 2026-10-14
 

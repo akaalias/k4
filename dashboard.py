@@ -85,6 +85,7 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 @media(max-width:860px){.explain-row{grid-template-columns:1fr}}
 .panel-wrap{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin:14px 0 6px}.panel{padding:0}.panel-h{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px}.panel pre{margin:0;padding:12px 16px;font:15px/1.75 var(--mono);letter-spacing:.14em;background:var(--wash);border:1px solid var(--rule-soft);border-radius:2px}.panel u{text-decoration:none;border-bottom:2px solid var(--rule)}.panel b{color:var(--ink);background:var(--hl);font-weight:700}.panel i{color:var(--accent);font-style:normal;background:var(--hl)}.k3tail{color:var(--rule)}
 .gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
+.chart-wide{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin:10px 0 6px}.chart-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px;padding-top:10px;border-top:1px solid var(--rule)}.chart-legend{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13px;color:var(--muted);margin:6px 0 0}.chart-legend span{white-space:nowrap}.mk{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:6px}.mk-kept{background:var(--ink)}.mk-disc{background:var(--disc)}.mk-none{background:var(--paper);border:2px solid var(--disc);width:8px;height:8px}.mk-err{background:none;border-radius:0;position:relative;width:11px;height:11px}.mk-err:before,.mk-err:after{content:'';position:absolute;left:5px;top:-1px;width:2px;height:13px;background:var(--accent)}.mk-err:before{transform:rotate(45deg)}.mk-err:after{transform:rotate(-45deg)}.mk-line{border-radius:0;height:2px;width:18px;background:var(--ink);vertical-align:3px}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
 .chart-row{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:28px;align-items:start;margin-top:8px}
 .aside{font-size:13.5px;line-height:1.5;color:var(--muted);border-left:1px solid var(--rule);padding-left:16px;margin-top:16px}
@@ -290,8 +291,8 @@ def loss_chart(rows):
     Reverted: recessive grey dot. No valid candidate: hollow dot at the top."""
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
-    W, H = 980, 360
-    L, R, T, B = 130, 150, 24, 40
+    W, H = 1400, 440
+    L, R, T, B = 110, 150, 58, 44
     n = len(rows)
     gate, ymax = 10.0, 240.0
     plot_h = H - T - B
@@ -306,6 +307,21 @@ def loss_chart(rows):
         return y_gate - (plot_h - low_h) * ((v - gate) / (ymax - gate))
 
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Loss per experiment; zero is solved">']
+    # bands: one per working day, from the run start stamps
+    days = []
+    for i, r in enumerate(rows):
+        d = (r.get("started") or "")[:10]
+        if not days or days[-1][0] != d:
+            days.append([d, i, i])
+        else:
+            days[-1][2] = i
+    half = (xs[1] - xs[0]) / 2 if n > 1 else 10
+    for k, (d, i0, i1) in enumerate(days):
+        x0, x1 = xs[i0] - half, xs[i1] + half
+        g.append(f'<rect x="{x0:.1f}" y="{T}" width="{x1 - x0:.1f}" height="{plot_h}" fill="{"var(--wash)" if k % 2 == 0 else "var(--paper)"}"/>')
+        if k > 0:
+            g.append(f'<line x1="{x0:.1f}" x2="{x0:.1f}" y1="{T}" y2="{T + plot_h}" stroke="var(--rule)" stroke-width="1"/>')
+        g.append(f'<text x="{x0 + 6:.1f}" y="{T - 10}" font-size="14" font-weight="600" fill="var(--muted)">day {k + 1} &middot; {i1 - i0 + 1} experiments</text>')
     for v in (0, 5, 10, 60, 120, 180, 240):
         yy = y(v)
         if v == gate:
@@ -356,11 +372,15 @@ def loss_chart(rows):
         v = r.get("best_loss")
         tip = f"{esc(r['tag'])}<br>{esc(r['title'])}<br>loss {'' if v is None else f'{v:.2f}'}; cribs {r['best_crib_hits']}/24 ({esc(words_str(r))})<br>{esc(r['decision'])}, {r['n_candidates']} candidates"
         href = f"/exp/{esc(r['tag'])}"
-        if v is None:
+        dec = r.get("decision")
+        if dec in ("error", "timeout"):
+            cx, cy = xs[i], y(ymax)
+            g.append(f'<a href="{href}"><path d="M{cx-4:.1f},{cy-4:.1f} L{cx+4:.1f},{cy+4:.1f} M{cx-4:.1f},{cy+4:.1f} L{cx+4:.1f},{cy-4:.1f}" stroke="var(--accent)" stroke-width="2" fill="none" data-tip="{tip}"/></a>')
+        elif v is None:
             g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(ymax):.1f}" r="5" fill="var(--paper)" stroke="var(--disc)" stroke-width="2" data-tip="{tip}"/></a>')
         else:
-            fill = "var(--kept)" if r["decision"] == "kept" else "var(--disc)"
-            g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
+            fill = "var(--ink)" if dec == "kept" else "var(--disc)"
+            g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5.5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
     if best is not None:
         g.append(f'<text x="{xs[-1]+16:.1f}" y="{y(best)+5:.1f}" font-size="14" fill="var(--ink)">{100.0 * best / ymax:.1f}% best so far</text>')
     g.append(f'<text transform="translate(18,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="14" fill="var(--muted)">loss, as % of the worst possible</text>')
@@ -369,7 +389,14 @@ def loss_chart(rows):
             g.append(f'<text x="{xs[i]:.1f}" y="{H-8}" font-size="13" fill="var(--faint)" text-anchor="middle">{i + 1}</text>')
     g.append(f'<text x="{L-8}" y="{H-8}" font-size="13" fill="var(--faint)" text-anchor="end">experiment</text>')
     g.append("</svg>")
-    return "<figure class='chart'>" + "".join(g) + "</figure>"
+    legend = ('<div class="chart-legend">'
+              '<span><i class="mk mk-kept"></i>kept: passed every gate and beat the champion</span>'
+              '<span><i class="mk mk-disc"></i>reverted, with a candidate</span>'
+              '<span><i class="mk mk-none"></i>reverted, no candidate: ruled out before one was built</span>'
+              '<span><i class="mk mk-err"></i>errored</span>'
+              '<span><i class="mk mk-line"></i>best so far</span></div>')
+    eyebrow = f'<p class="chart-eyebrow">Loss per experiment, all {n} of them &middot; share of the worst possible, 24 known letters wrong &middot; lower is better</p>'
+    return "<div class='chart-wide'>" + eyebrow + "<figure class='chart'>" + "".join(g) + "</figure>" + legend + "</div>"
 
 
 GL_JS = """<script>

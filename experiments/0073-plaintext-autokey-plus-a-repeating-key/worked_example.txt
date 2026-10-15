@@ -1,0 +1,7 @@
+lag 3, 7-letter word, sculpture's alphabet throughout, Vigenere
+
+place  known  carved  3 back  word letter  slot
+   25      T       V       E            7     3
+   32      A       K       T           15     3
+   26      N       Q       A           20     4
+   33      S       S       H           12     4

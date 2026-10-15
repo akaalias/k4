@@ -1,0 +1,333 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "plaintext autokey plus a periodic key",
+  "lags": "1-12 and 30-52 (where two known letters pair)",
+  "periods": "1-96",
+  "setups": 1320,
+  "word_alphabets": 161,
+  "cases": 4055040,
+  "survivors_by_checks": {
+   "checks 1": {
+    "k4": 3171,
+    "controls": [
+     3462,
+     3603,
+     3296,
+     3215,
+     3733,
+     3128,
+     3214,
+     3784,
+     3069,
+     3329
+    ]
+   },
+   "checks 2": {
+    "k4": 135,
+    "controls": [
+     152,
+     110,
+     135,
+     100,
+     106,
+     113,
+     101,
+     111,
+     96,
+     76
+    ]
+   },
+   "checks 3": {
+    "k4": 12,
+    "controls": [
+     3,
+     0,
+     6,
+     6,
+     0,
+     5,
+     2,
+     4,
+     0,
+     1
+    ]
+   },
+   "checks 4": {
+    "k4": 0,
+    "controls": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "survivors_3plus": [
+   {
+    "setup": "DELIVERING/same/vig/-1",
+    "lag": 47,
+    "period": 3,
+    "checks": 3
+   },
+   {
+    "setup": "PRESENTLY/std/beau/1",
+    "lag": 33,
+    "period": 1,
+    "checks": 3
+   },
+   {
+    "setup": "ROWS/same/vig/-1",
+    "lag": 8,
+    "period": 5,
+    "checks": 3
+   },
+   {
+    "setup": "ROWS/same/vig/-1",
+    "lag": 8,
+    "period": 8,
+    "checks": 3
+   },
+   {
+    "setup": "ROWS/same/vig/-1",
+    "lag": 8,
+    "period": 10,
+    "checks": 3
+   },
+   {
+    "setup": "ROWS/same/vig/-1",
+    "lag": 8,
+    "period": 20,
+    "checks": 3
+   },
+   {
+    "setup": "ROWS/same/vig/-1",
+    "lag": 8,
+    "period": 40,
+    "checks": 3
+   },
+   {
+    "setup": "SEVENTY/std/vig/1",
+    "lag": 8,
+    "period": 5,
+    "checks": 3
+   },
+   {
+    "setup": "SEVENTY/std/vig/1",
+    "lag": 8,
+    "period": 8,
+    "checks": 3
+   },
+   {
+    "setup": "SEVENTY/std/vig/1",
+    "lag": 8,
+    "period": 10,
+    "checks": 3
+   },
+   {
+    "setup": "SEVENTY/std/vig/1",
+    "lag": 8,
+    "period": 20,
+    "checks": 3
+   },
+   {
+    "setup": "SEVENTY/std/vig/1",
+    "lag": 8,
+    "period": 40,
+    "checks": 3
+   }
+  ],
+  "lag7_lag21_survivors": [
+   {
+    "setup": "ABSCISSA/same/vig/-1",
+    "lag": 7,
+    "period": 19,
+    "checks": 2
+   },
+   {
+    "setup": "ABSCISSA/same/vig/-1",
+    "lag": 7,
+    "period": 38,
+    "checks": 2
+   },
+   {
+    "setup": "AIR/same/vig/1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "ANYTHING/same/beau/1",
+    "lag": 7,
+    "period": 9,
+    "checks": 1
+   },
+   {
+    "setup": "ANYTHING/same/beau/1",
+    "lag": 7,
+    "period": 15,
+    "checks": 1
+   },
+   {
+    "setup": "ANYTHING/same/beau/1",
+    "lag": 7,
+    "period": 45,
+    "checks": 1
+   },
+   {
+    "setup": "BURIED/std/vig/1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "BURIED/std/vig/-1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "BUT/same/beau/-1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "CAIRO/same/beau/1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "CAIRO/std/vig/1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "CAIRO/std/vig/-1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "CANDLE/same/beau/1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "CARNARVON/same/beau/1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "CARTER/std/beau/-1",
+    "lag": 7,
+    "period": 9,
+    "checks": 1
+   },
+   {
+    "setup": "CARTER/std/beau/-1",
+    "lag": 7,
+    "period": 15,
+    "checks": 1
+   },
+   {
+    "setup": "CARTER/std/beau/-1",
+    "lag": 7,
+    "period": 45,
+    "checks": 1
+   },
+   {
+    "setup": "CHAMBER/std/vig/1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "CHAMBER/std/vig/-1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "CIA/same/vig/1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "DEBRIS/same/beau/-1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "DELIVER/same/beau/1",
+    "lag": 7,
+    "period": 9,
+    "checks": 1
+   },
+   {
+    "setup": "DELIVER/same/beau/1",
+    "lag": 7,
+    "period": 15,
+    "checks": 1
+   },
+   {
+    "setup": "DELIVER/same/beau/1",
+    "lag": 7,
+    "period": 45,
+    "checks": 1
+   },
+   {
+    "setup": "DELIVERING/same/vig/-1",
+    "lag": 7,
+    "period": 11,
+    "checks": 2
+   },
+   {
+    "setup": "DELIVERING/same/vig/-1",
+    "lag": 7,
+    "period": 22,
+    "checks": 2
+   },
+   {
+    "setup": "DELIVERING/same/vig/-1",
+    "lag": 7,
+    "period": 44,
+    "checks": 2
+   },
+   {
+    "setup": "DIGETAL/same/beau/-1",
+    "lag": 7,
+    "period": 37,
+    "checks": 1
+   },
+   {
+    "setup": "DIGITAL/same/beau/-1",
+    "lag": 7,
+    "period": 9,
+    "checks": 1
+   },
+   {
+    "setup": "DIGITAL/same/beau/-1",
+    "lag": 7,
+    "period": 15,
+    "checks": 1
+   }
+  ]
+ },
+ "notes": "4,055,040 cases, 1320 setups. Survivors by checks, K4 (controls min-max): checks 1: 3171 (3069-3784); checks 2: 135 (76-152); checks 3: 12 (0-6); checks 4: 0 (0-1). Three or more checks: 12.",
+ "error": null,
+ "worked_example": "lag 3, 7-letter word, sculpture's alphabet throughout, Vigenere\n\nplace  known  carved  3 back  word letter  slot\n   25      T       V       E            7     3\n   32      A       K       T           15     3\n   26      N       Q       A           20     4\n   33      S       S       H           12     4",
+ "seconds": 21.332828998565674
+}

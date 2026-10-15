@@ -45,6 +45,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 38 | 3 | A word plus seventeen dates and counts from the story: shortest consistent word 26; nothing. |
 | 39 | 4 | Trifid solved exactly: the run found no cube at any setting, then crashed writing its own summary. Record kept as an error. |
 | 40 | 4 | Rerun of 39 with the summary fixed: no cube is consistent at any period 2-15, on K4 or on shuffled K4. Trifid dead. |
+| 41 | 6, 9 | Spirals, snakes and diagonals at every width, both orders: chance before the table, clashes after a swap. |
 
 ## 2026-10-14
 

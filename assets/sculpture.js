@@ -185,7 +185,11 @@ function noiseCanvas(base, speck, n = 900, size = 512) {
   g.strokeStyle = 'rgba(80,75,65,0.16)'; g.lineWidth = 3;
   for (let i = 0; i <= 512; i += 128) { g.beginPath(); g.moveTo(i, 0); g.lineTo(i, 512); g.stroke(); g.beginPath(); g.moveTo(0, i); g.lineTo(512, i); g.stroke(); }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(14, 14);
-  const ground = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), new THREE.MeshStandardMaterial({ map: t, roughness: 1 }));
+  const gshape = new THREE.Shape(); gshape.moveTo(-60, -60); gshape.lineTo(60, -60); gshape.lineTo(60, 60); gshape.lineTo(-60, 60); gshape.closePath();
+  const holePath = new THREE.Path(); holePath.absarc(7.8, -1.4, 3.4, 0, Math.PI * 2, false); gshape.holes.push(holePath);
+  const ggeo = new THREE.ShapeGeometry(gshape, 48);
+  const guv = ggeo.attributes.uv; for (let i = 0; i < guv.count; i++) guv.setXY(i, (guv.getX(i) + 60) / 120 * 14, (guv.getY(i) + 60) / 120 * 14);
+  const ground = new THREE.Mesh(ggeo, new THREE.MeshStandardMaterial({ map: t, roughness: 1 }));
   ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; scene.add(ground);
 })();
 // the building: a green-tinted glass wall with mullions, well behind, and a stone band
@@ -201,46 +205,92 @@ function noiseCanvas(base, speck, n = 900, size = 512) {
   const band = new THREE.Mesh(new THREE.BoxGeometry(120, 3.5, 2), new THREE.MeshStandardMaterial({ color: 0xe3dfd6, roughness: 1 }));
   band.position.set(0, 1.75, -34.5); scene.add(band);
 })();
-// petrified-wood column at the left end: eleven feet, irregular, dark red-brown
-(() => {
-  const geo = new THREE.CylinderGeometry(1.25, 1.55, 11.4, 18, 8);
-  const p = geo.attributes.position;
-  for (let i = 0; i < p.count; i++) {
-    const x = p.getX(i), z = p.getZ(i), y = p.getY(i);
-    const r = 1 + 0.08 * Math.sin(y * 2.1 + x * 3) + 0.06 * Math.cos(z * 4 + y);
-    p.setX(i, x * r); p.setZ(i, z * r);
+// ---- the sculpture's own parts, in their true colours ----------------------------------------
+function roughen(geo, amp, freq) {
+  const pp = geo.attributes.position;
+  for (let i = 0; i < pp.count; i++) {
+    const x = pp.getX(i), y = pp.getY(i), z = pp.getZ(i);
+    const d = amp * (Math.sin(x * freq + y * 1.7) + Math.cos(z * freq * 1.3 + y * 0.9) + Math.sin((x + z) * freq * 0.7));
+    pp.setXYZ(i, x + d * Math.sign(x || 1) * 0.6, y + d * 0.25, z + d * Math.sign(z || 1) * 0.6);
   }
   geo.computeVertexNormals();
-  const tex = noiseCanvas('#d9d3c9', v => `rgba(${120 + v * 60},${115 + v * 50},${105 + v * 40},0.25)`, 2500);
+  return geo;
+}
+// petrified wood: a tall tapering trunk, dark red-brown with vertical fissures, taller than the screen,
+// standing at the screen's left end and a little in front of it
+(() => {
+  const geo = new THREE.CylinderGeometry(1.1, 1.6, 13.2, 22, 12);
+  const pp = geo.attributes.position;
+  for (let i = 0; i < pp.count; i++) {
+    const x = pp.getX(i), y = pp.getY(i), z = pp.getZ(i);
+    const ang = Math.atan2(z, x);
+    const r = 1 + 0.10 * Math.sin(ang * 7 + y * 0.6) + 0.05 * Math.cos(ang * 13) + 0.04 * Math.sin(y * 2.3);
+    pp.setX(i, x * r); pp.setZ(i, z * r);
+  }
+  geo.computeVertexNormals();
+  const c = document.createElement('canvas'); c.width = 512; c.height = 1024; const g = c.getContext('2d');
+  g.fillStyle = '#7b3f2e'; g.fillRect(0, 0, 512, 1024);
+  for (let i = 0; i < 900; i++) {
+    g.fillStyle = `rgba(${40 + Math.random() * 50},${15 + Math.random() * 25},${10 + Math.random() * 20},${0.25 + Math.random() * 0.5})`;
+    g.fillRect(Math.random() * 512, Math.random() * 1024, 1 + Math.random() * 3, 20 + Math.random() * 220);
+  }
+  for (let i = 0; i < 400; i++) {
+    g.fillStyle = `rgba(${160 + Math.random() * 60},${90 + Math.random() * 40},${60 + Math.random() * 30},${0.2 + Math.random() * 0.3})`;
+    g.fillRect(Math.random() * 512, Math.random() * 1024, 2, 6 + Math.random() * 60);
+  }
+  const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
   const col = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.95 }));
   const end = curve.getPoint(0);
-  col.position.set(end.x - 0.9, 5.7, end.y - 1.2); col.castShadow = true; col.receiveShadow = true; scene.add(col);
+  col.position.set(end.x - 1.3, 6.6, end.y + 1.6); col.rotation.y = 0.4; col.castShadow = true; col.receiveShadow = true; scene.add(col);
 })();
-// stones at the foot: red sandstone slab in front, grey granite slab at the left, a curb
+// the white marble block: pale, veined, angular, lying in front of the screen's left half
 (() => {
-  const red = noiseCanvas('#e2ddd4', v => `rgba(${150 + v * 60},${145 + v * 50},${135 + v * 40},0.3)`, 2500);
-  const mk = (w, h, d, x, y, z, ry, tex) => {
-    const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), new THREE.MeshStandardMaterial({ map: tex, roughness: 1 }));
-    m.position.set(x, y, z); m.rotation.y = ry; m.castShadow = true; m.receiveShadow = true; scene.add(m); return m;
-  };
-  mk(9.5, 1.3, 3.2, -0.5, 0.65, 4.6, -0.08, red);
-  mk(6.5, 0.9, 2.4, 1.0, 1.75, 4.9, 0.05, red);
-  const grey = noiseCanvas('#e8e5de', v => `rgba(${150 + v * 60},${150 + v * 50},${145 + v * 40},0.3)`, 2500);
-  mk(4.2, 2.2, 2.6, -9.2, 1.1, 2.6, 0.35, grey);
-  mk(3.0, 1.0, 2.0, -7.2, 0.5, 4.2, -0.2, grey);
-  // the far red bench-slab by the planting bed, as in the courtyard
-  mk(7, 1.1, 2.4, 19, 0.55, -6, 0.1, red);
-})();
-// the pool inside the curl: a dark disc with rings and a stone rim
-(() => {
+  const geo = roughen(new THREE.BoxGeometry(5.2, 2.6, 3.0, 6, 4, 4), 0.16, 1.9);
   const c = document.createElement('canvas'); c.width = c.height = 512; const g = c.getContext('2d');
-  g.fillStyle = '#d6dad8'; g.fillRect(0, 0, 512, 512);
-  for (let r = 250; r > 10; r -= 11) { g.strokeStyle = `rgba(90,110,110,${0.08 + 0.1 * Math.random()})`; g.lineWidth = 3; g.beginPath(); g.arc(256, 256, r, 0, Math.PI * 2); g.stroke(); }
+  g.fillStyle = '#e4e2dc'; g.fillRect(0, 0, 512, 512);
+  for (let i = 0; i < 40; i++) {
+    g.strokeStyle = `rgba(110,118,120,${0.15 + Math.random() * 0.25})`; g.lineWidth = 1 + Math.random() * 2;
+    g.beginPath(); let x = Math.random() * 512, y = Math.random() * 512; g.moveTo(x, y);
+    for (let k = 0; k < 6; k++) { x += (Math.random() - 0.5) * 160; y += (Math.random() - 0.5) * 160; g.lineTo(x, y); }
+    g.stroke();
+  }
+  for (let i = 0; i < 2500; i++) { g.fillStyle = `rgba(120,125,120,${Math.random() * 0.12})`; g.fillRect(Math.random() * 512, Math.random() * 512, 2, 2); }
+  const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+  const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.75 }));
+  m.position.set(-5.2, 1.25, 4.4); m.rotation.set(0.05, -0.35, 0.08); m.castShadow = true; m.receiveShadow = true; scene.add(m);
+})();
+// the red sandstone log: long, low, ridged, dark red, in front of the screen's middle
+(() => {
+  const geo = roughen(new THREE.BoxGeometry(10.5, 1.7, 3.0, 12, 4, 4), 0.22, 1.3);
+  const c = document.createElement('canvas'); c.width = 1024; c.height = 256; const g = c.getContext('2d');
+  g.fillStyle = '#8a3b2c'; g.fillRect(0, 0, 1024, 256);
+  for (let i = 0; i < 1400; i++) {
+    g.fillStyle = `rgba(${60 + Math.random() * 60},${20 + Math.random() * 25},${15 + Math.random() * 20},${0.2 + Math.random() * 0.4})`;
+    g.fillRect(Math.random() * 1024, Math.random() * 256, 20 + Math.random() * 200, 1 + Math.random() * 3);
+  }
+  for (let i = 0; i < 600; i++) { g.fillStyle = `rgba(190,110,80,${0.15 + Math.random() * 0.25})`; g.fillRect(Math.random() * 1024, Math.random() * 256, 10 + Math.random() * 80, 1); }
+  const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+  const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.95 }));
+  m.position.set(2.0, 0.85, 5.4); m.rotation.set(0, -0.12, 0.03); m.castShadow = true; m.receiveShadow = true; scene.add(m);
+})();
+// the pool: a round hollow sunk into the plaza inside the screen's curl, a black ring at the rim,
+// dark water at the bottom
+(() => {
+  const cx = 7.8, cz = 1.4, rad = 3.4;
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(rad + 0.22, 0.22, 12, 72), new THREE.MeshStandardMaterial({ color: 0x141414, roughness: 0.55, metalness: 0.3 }));
+  ring.rotation.x = Math.PI / 2; ring.position.set(cx, 0.08, cz); ring.castShadow = true; scene.add(ring);
+  const wallGeo = new THREE.CylinderGeometry(rad, rad, 1.6, 72, 1, true);
+  const wall = new THREE.Mesh(wallGeo, new THREE.MeshStandardMaterial({ color: 0x2a2a28, roughness: 0.9, side: THREE.BackSide }));
+  wall.position.set(cx, -0.8, cz); scene.add(wall);
+  const c = document.createElement('canvas'); c.width = c.height = 512; const g = c.getContext('2d');
+  g.fillStyle = '#17282c'; g.fillRect(0, 0, 512, 512);
+  for (let r = 250; r > 10; r -= 9) { g.strokeStyle = `rgba(150,190,190,${0.05 + 0.12 * Math.random()})`; g.lineWidth = 2; g.beginPath(); g.arc(256, 256, r, 0, Math.PI * 2); g.stroke(); }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
-  const pool = new THREE.Mesh(new THREE.CircleGeometry(3.6, 64), new THREE.MeshStandardMaterial({ map: t, roughness: 0.3, metalness: 0.1 }));
-  pool.rotation.x = -Math.PI / 2; pool.position.set(7.2, 0.02, 1.0); pool.receiveShadow = true; scene.add(pool);
-  const rim = new THREE.Mesh(new THREE.RingGeometry(3.6, 4.2, 64), new THREE.MeshStandardMaterial({ color: 0xdedad1, roughness: 1 }));
-  rim.rotation.x = -Math.PI / 2; rim.position.set(7.2, 0.03, 1.0); rim.receiveShadow = true; scene.add(rim);
+  const water = new THREE.Mesh(new THREE.CircleGeometry(rad, 72), new THREE.MeshStandardMaterial({ map: t, roughness: 0.15, metalness: 0.5 }));
+  water.rotation.x = -Math.PI / 2; water.position.set(cx, -1.5, cz); scene.add(water);
+  // the plaza has a hole there: a dark disc at ground level hides the paving inside the ring
+  const hole = new THREE.Mesh(new THREE.CircleGeometry(rad, 72), new THREE.MeshBasicMaterial({ color: 0x0c0c0c, transparent: true, opacity: 0.0 }));
+  hole.rotation.x = -Math.PI / 2; hole.position.set(cx, 0.015, cz); scene.add(hole);
 })();
 // planting: tall grasses as soft clumps to the right, a tree behind
 (() => {

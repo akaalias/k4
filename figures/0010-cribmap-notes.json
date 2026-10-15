@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the alphabets",
+  "text": "The table can be rebuilt from any word: the word first, then the rest of the alphabet. The run tried every puzzle word for the plain and carved alphabets and four mixings of each word for the key alphabet."
+ },
+ {
+  "anchor": "the stretch",
+  "text": "The best run, under BERLINCLOCK, reads EFORMESTATU and scores -3.81, inside the English band."
+ },
+ {
+  "anchor": "the control",
+  "text": "The same search on shuffled K4 letters finds OISTATTHEBY at -3.80. With this many alphabets something always reads like English, so the stretch says nothing about the key."
+ }
+]

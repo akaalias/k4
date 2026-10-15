@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the rule",
+  "text": "K3 was solved by reading its letters with a fixed start and step. Here every start and step is tried before the table: drawn for start 5, step 7, where the E at place 22 comes from carved place 55."
+ },
+ {
+  "anchor": "the forced letters",
+  "text": "Each known letter and the carved letter it lands on force one key letter. Two places whose distance is a multiple of the key length share a slot, so their letters must agree."
+ },
+ {
+  "anchor": "the histogram",
+  "text": "Over 21,025 rules, and double rotations, under 24 ways of using the table, no secret word shorter than 22 letters survives, and no puzzle word fits the forced letters."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the route",
+  "text": "Write the 97 letters in rows of 7 and read the columns down. Every known letter is carried to a new place, and the carved letter there is its enciphered form. Drawn for one route; the E at place 22 lands at place 4."
+ },
+ {
+  "anchor": "the pair",
+  "text": "With the table and a repeating secret word, each landed pair forces one key letter. Thirteen neighbours end up 14 apart, so at a period of 28 they share key slots in pairs, and the forced letters must agree."
+ },
+ {
+  "anchor": "the histogram",
+  "text": "The experiment ran 2,905 routes under all 24 ways of using the table. No route lets a secret word shorter than 23 letters explain the known letters, and no puzzle word fits the forced letters of any route."
+ }
+]

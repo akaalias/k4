@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the blocks",
+  "text": "A Hill cipher mixes blocks of letters with a table of numbers. Whole blocks inside the known letters give equations that pin the table; the known letters in partial blocks are left over to test it."
+ },
+ {
+  "anchor": "the test",
+  "text": "Drawn for blocks of 4: four whole blocks, sixteen letters, exactly enough to pin the table. For blocks of 2 and 3 the whole blocks outnumber the unknowns, and the extra blocks are the test."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Block sizes 2 to 4, plain or with an added vector, four numberings, every alignment, both directions: 144 settings, 12 consistent with the whole blocks, and every one fails the remaining known letters."
+ }
+]

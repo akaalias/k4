@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the fold",
+  "text": "A progressive key shifts the whole secret word one step further on each repeat. Folding the message into rows of 13 puts the places that share a key slot in one column."
+ },
+ {
+  "anchor": "slot 8",
+  "text": "Places 22 and 74 share slot 8. Undoing one and five steps, they need base letters K and U: a contradiction, so period 13, step 1, is dead on the sculpture's table."
+ },
+ {
+  "anchor": "the verdict",
+  "text": "Over 121,056 combinations, periods 1 to 25 and 31 to 51 die at every step. Only 26 to 30 and 52 upwards survive, as without the steps, and no puzzle word fits."
+ }
+]

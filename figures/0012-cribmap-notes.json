@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the chain",
+  "text": "In a plaintext autokey each letter is keyed by the message letter 13 places before it. So each known letter reveals the letter 13 places later and the one 13 places earlier, and those reveal more."
+ },
+ {
+  "anchor": "where chains meet",
+  "text": "Step by step the chains reach every place, and two routes to one place must give the same letter. At lag 13 they disagree under every way of using the table, so lag 13 is dead."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Lags 1 to 25 and 30 to 52 die under all 24 ways of using the table. Lags 26 to 29 and 53 upwards survive but force too little to build a reading."
+ }
+]

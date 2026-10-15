@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the order",
+  "text": "Here the table comes first and the route second. A known letter is enciphered with the key slot of its own place, then rows of 7 move it to where it is carved. The arcs run from each known place up to its carved letter."
+ },
+ {
+  "anchor": "the two Es",
+  "text": "Places 22 and 65 both hold E and sit 43 apart, so a secret word of length 43 gives them one key slot. Here both are carved R and force J, so this pair allows length 43; the next pair, places 23 and 66, forces two different letters and rules it out."
+ },
+ {
+  "anchor": "the verdict",
+  "text": "Over 2,905 routes and 24 ways of using the table, no secret word shorter than 26 letters survives, and none of the puzzle's words fits the forced letters at 26 or 27."
+ }
+]

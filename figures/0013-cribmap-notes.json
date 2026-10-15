@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the shifts",
+  "text": "Under EASTNORTHEAST each known letter and its carved letter give a shift: plain alphabet for the message, the sculpture's for the carving. Thirteen shifts in a row."
+ },
+ {
+  "anchor": "the rule",
+  "text": "A Gromark key builds itself: each shift is the sum of two earlier ones. Drawn for the rule 5 back plus 4 back. In base 10 every shift must be a single digit; in base 26 each sum must match."
+ },
+ {
+  "anchor": "the bound",
+  "text": "All 66 rules with lags up to 12, bases 10 and 26, over 184,512 alphabet choices and three ways of combining: 0 survivors with six or more checks."
+ }
+]

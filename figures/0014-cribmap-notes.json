@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the slots",
+  "text": "Two secret words, used one after the other on the table, add up: each place uses one slot of the 7-letter word and one of the 8-letter word, and each known letter forces their total."
+ },
+ {
+  "anchor": "the loop",
+  "text": "Places that share a slot tie the other slots together; when a chain of ties comes back to a slot, the totals must agree. For lengths 7 and 8 they first disagree at place 64."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every pair of lengths from 2 to 30 was tried, plain and carved alphabets standard or the sculpture's: no pair with total length below 25 survives, and no survivor is made of puzzle words."
+ }
+]

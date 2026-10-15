@@ -1,0 +1,11 @@
+ciphertext self-key, stride 3, start 5, KRYPTOS alphabet throughout, Vigenere
+
+pos  plain  key pos  key  E+key  carved  match
+ 22    E       69     T     I      F     no
+ 23    A       72     F     N      L     no
+ 24    S       75     W     P      R     no
+ 64    B        1     O     G      N     no
+ 65    E        4     R     F      Y     no
+
+mirror key, centre 97 (position i keyed by position 98-i): position 24 (S) is keyed by 74 (K), 25 (T) by 73 (C), ... 34 (T) by 64 (B)
+chain under kry/kry/kry Vigenere: breaks after 24 letters

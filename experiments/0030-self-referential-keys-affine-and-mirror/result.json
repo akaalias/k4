@@ -1,0 +1,49 @@
+{
+ "id": 30,
+ "tag": "0030-self-referential-keys-affine-and-mirror",
+ "started": "2026-10-15T07:40:37+00:00",
+ "seconds": 0.3,
+ "status": "ran",
+ "phases": {
+  "design": 12.5,
+  "implement": 65.0,
+  "test": 0.8,
+  "run": 0.3,
+  "record": 0.0
+ },
+ "ended_epoch": 1792050038.182165,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "self-referential keys: ciphertext at a i + b, plaintext at o - i",
+  "conventions": 24,
+  "ciphertext_rules": 223488,
+  "ciphertext_best_mismatches": 6,
+  "ciphertext_survivors": 0,
+  "mirror_centres": 97,
+  "mirror_consistent_pairs": 0,
+  "mirror_fully_forced": 0,
+  "mirror_best_closures": [],
+  "shuffled_control_best": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+  ]
+ },
+ "notes": "Ciphertext self-key: 223488 rules, best 6 mismatches, 0 survivors. Mirror key: 0 consistent (centre, convention) pairs, 0 fully forced; best closure None vs shuffled [].",
+ "error": null,
+ "candidates": []
+}

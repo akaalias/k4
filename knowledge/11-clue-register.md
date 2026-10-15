@@ -95,7 +95,7 @@ and lags 1-96 (0002). Plaintext autokey excluded at lags 1-11 and 30-52, undecid
 (2025).** Readings: (a) the clock is plaintext content only; (b) the Weltzeituhr's
 structure (24 time zones on a rotating ring, a compass-rose mosaic on the ground) is a
 key: 24-letter alphabet, a rotating offset; (c) the 2014 steer was misdirection. Status:
-Mengenlehreuhr readings dead; a cipher on the Weltzeituhr's 24-letter ring is excluded because K4 uses all 26 letters (0052); other Weltzeituhr readings untested.
+Mengenlehreuhr readings dead (key schedules from its lamp counts, hours, minutes and time digits at any start and step: best 8 of 24, as shuffled coppers, 0079); a cipher on the Weltzeituhr's 24-letter ring is excluded because K4 uses all 26 letters (0052); other Weltzeituhr readings untested.
 
 **C13. "Two events... my second trip to Egypt in late 1986, and the fall of the Berlin
 Wall."** (2025). Readings: (a) plaintext content: the words EGYPT, WALL, CAIRO, LUXOR,

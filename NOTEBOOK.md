@@ -83,6 +83,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 76 | 5 | Gromark with any scrambled alphabet in every base from 2 to 16 and in base 26 (Scheidt's other number systems, the Berlin clock's fives): no starting number fits in any base, on the copper or on scrambled coppers. Family 5 is closed for two-term rules. |
 | 77 | 1 | The two fingerprints joined in one recipe, every row of seven reshuffled plus the self-feeding autokey at every distance, both orders, 31 million exact checks: all at the scrambled-copper rate, nothing passes four checks, and distance 21 never passes three. |
 | 78 | 1 | Sanborn's own letters as a running key, the 1989 note to CIA staff, the 1991 dedication pages and the 2025 open letter, at every offset both ways: the best gets 9 of 24 known letters, exactly what scrambled coppers get. |
+| 79 | 1 | The Berlin clocks as the key, lit lamps or hours or minutes or the digits of the time, the clock moving on a fixed step per letter from every start minute: the best fit agrees at 8 of 24 known letters, as scrambled coppers do. The prediction's guess of 19-20 mismatches was removed before the run, after a dry run on the copper showed 16; the verdict does not depend on it. |
 
 ### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
 

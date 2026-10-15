@@ -63,6 +63,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 56 | 7 | **Prediction failed.** The width-7 doublet column and width-21 repeats survive the look-elsewhere correction: corrected p 0.005 (0.018 given six doublets) and 0.010 against 10,000 shuffles. Two real fingerprints still lack a construction. |
 | 57 | 2 | Filler letters chosen by letter: no different from random strike-outs. Striking letters before BERLINCLOCK makes lengths 24-25 consistent at the chance rate, which the prediction did not foresee; their fragments were not word-checked. |
 | 58 | 6 | The table, then a column shuffle keyed by K1-K3 words, once or twice: 355,008 route-convention pairs, a handful live at length 25 and no word fits. The prediction missed those 16, and no control measured their chance rate. |
+| 59 | 3 | Two secret words in two passes on tables rebuilt from K1-K3 words: nothing below a combined length of 21, survivors above at chance rates, no word. |
 
 ## 2026-10-14
 

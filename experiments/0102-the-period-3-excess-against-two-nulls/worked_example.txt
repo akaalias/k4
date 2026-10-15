@@ -1,0 +1,15 @@
+K4 in rows of 21, and one copy with its columns shuffled (13 short-row columns among themselves, 8 among themselves)
+
+  OBKRUOXOGHULBSOLIFBBW
+  FLRVQQPRNGKSSOTWTQSJQ
+  SSEKZZWATJKLUDIAWINFB
+  NYPVTTMZFPKWGDKZXTJCD
+  IGKUHUAUEKCAR
+
+  KHBUUOXROLOBGSBIBWLOF
+  RGLQKRPVQSFSNOJTSQWTQ
+  EJSZKAWKZLSUTDFWNBAII
+  PPYTKZMVTWNGFDCXJDZKT
+  KKGHCUAUUAIRE
+
+letter pairs 21 apart that repeat: K4 11, the copy 11

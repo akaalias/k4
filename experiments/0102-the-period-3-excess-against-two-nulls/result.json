@@ -1,0 +1,74 @@
+{
+ "id": 102,
+ "tag": "0102-the-period-3-excess-against-two-nulls",
+ "started": "2026-10-15T20:10:39+00:00",
+ "seconds": 120.1,
+ "status": "ran",
+ "phases": {
+  "unattributed": 71.9,
+  "run": 120.1,
+  "record": 0.0
+ },
+ "ended_epoch": 1792095160.171329,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "period-3 free-alphabet cells against two nulls",
+  "routes_done": 27853,
+  "routes": 27853,
+  "nullA": "400 letter shuffles (seed 102)",
+  "nullB": "400 column permutations of K4 at width 21 (keep all 76 vertical pairs)",
+  "cells": {
+   "III A": {
+    "k4": 0,
+    "nullA_mean": 0.01,
+    "nullA_max": 1,
+    "p_nullA": 1.0,
+    "nullB_mean": 0.01,
+    "nullB_max": 1,
+    "p_nullB": 1.0
+   },
+   "III B": {
+    "k4": 0,
+    "nullA_mean": 0.0,
+    "nullA_max": 0,
+    "p_nullA": 1.0,
+    "nullB_mean": 0.0,
+    "nullB_max": 0,
+    "p_nullB": 1.0
+   },
+   "IV A": {
+    "k4": 12,
+    "nullA_mean": 4.81,
+    "nullA_max": 23,
+    "p_nullA": 0.0425,
+    "nullB_mean": 6.21,
+    "nullB_max": 26,
+    "p_nullB": 0.1
+   },
+   "IV B": {
+    "k4": 0,
+    "nullA_mean": 0.0,
+    "nullA_max": 0,
+    "p_nullA": 1.0,
+    "nullB_mean": 0.0,
+    "nullB_max": 0,
+    "p_nullB": 1.0
+   }
+  },
+  "k4_smallest_p_nullA": 0.0425,
+  "look_elsewhere_p_nullA": 0.0475
+ },
+ "notes": "III A: K4 0, shuffles mean 0.01 max 1 p 1.000, 21-column permutations mean 0.01 max 1 p 1.000; III B: K4 0, shuffles mean 0.0 max 0 p 1.000, 21-column permutations mean 0.0 max 0 p 1.000; IV A: K4 12, shuffles mean 4.81 max 23 p 0.043, 21-column permutations mean 6.21 max 26 p 0.100; IV B: K4 0, shuffles mean 0.0 max 0 p 1.000, 21-column permutations mean 0.0 max 0 p 1.000. Look-elsewhere over the four cells under shuffles: p 0.048.",
+ "error": null,
+ "candidates": []
+}

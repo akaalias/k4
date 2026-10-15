@@ -1,0 +1,50 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "pure transposition (any permutation of the 97 carved letters)",
+  "need": {
+   "E": 3,
+   "A": 2,
+   "S": 2,
+   "T": 3,
+   "N": 2,
+   "O": 2,
+   "R": 2,
+   "H": 1,
+   "B": 1,
+   "L": 2,
+   "I": 1,
+   "C": 2,
+   "K": 1
+  },
+  "short_carved": {
+   "E": [
+    3,
+    2
+   ]
+  },
+  "short_98_with_question_mark": {
+   "E": [
+    3,
+    2
+   ]
+  },
+  "deletions_that_fit": [],
+  "replacements_that_fit": 93,
+  "replacement_letters_that_fit": [
+   "E"
+  ],
+  "replacement_examples": [
+   "place 1: O to E",
+   "place 2: B to E",
+   "place 3: K to E",
+   "place 4: R to E",
+   "place 5: U to E",
+   "place 6: O to E"
+  ]
+ },
+ "notes": "Crib letters short on the copper: {'E': (3, 2)}; with the question mark: {'E': (3, 2)}; one-letter deletions that fit: 0. A single carved letter changed to E would make the counts fit (93 ways).",
+ "error": null,
+ "worked_example": "letter  needed by the cribs  on the copper\n  A            2                4\n  B            1                5\n  C            2                2\n  E            3                2   short\n  H            1                2\n  I            1                4\n  K            1                8\n  L            2                4\n  N            2                3\n  O            2                5\n  R            2                4\n  S            2                6\n  T            3                6",
+ "seconds": 0.005378007888793945
+}

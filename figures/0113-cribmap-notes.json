@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the move",
+  "text": "The rail fence writes the message in a zigzag across a few lines and reads each line in turn; the redefence reads the lines in a chosen order. Both are classic hand transpositions."
+ },
+ {
+  "anchor": "the check",
+  "text": "After the move a repeating secret word on the table must give the copper's letters where the known letters landed; two known letters in one slot of the word must agree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "12,784 settings of 2 to 6 rails, every start and rail order, keys of 1 to 26 before or after: nothing below period 22, and every count inside the range of ten scrambled coppers."
+ }
+]

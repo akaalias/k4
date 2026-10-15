@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the paths",
+  "text": "Write the message into a grid in an odd order, snaking, spiralling in from a corner or along the diagonals, then copy it out in another: 30 paths each way at every width from 2 to 96, then a short secret word on the table."
+ },
+ {
+  "anchor": "the check",
+  "text": "After the move, known letters that fall in the same slot of the secret word must agree. No route keeps a word shorter than 21 letters alive, on the copper or on the scrambled coppers."
+ },
+ {
+  "anchor": "measured after the run",
+  "text": "Periods 22 and 23 looked high: 47 and 405 live settings against a scrambled-copper maximum of 32 and 339. Counted as distinct sets of checks they are 13 and 88, inside the scrambled coppers' 8-15 and 74-98: look-alike routes repeat the same checks."
+ }
+]

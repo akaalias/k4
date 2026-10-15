@@ -1,179 +1,161 @@
-"""Experiment 0037. See program.md for the contract."""
+"""Experiment 0038. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "triple-matrix-routes-sampled-then-tableau",
-    "title": "Sanborn's triple matrixes: three grid stages in a row, sampled, then the tableau",
-    "family": "6-transposition-then-tableau",
-    "parent": "0016-routes-then-tableau-forced-key-english",
-    "changed": "Three transposition stages instead of one or two. The space is too large to enumerate, so 200,000 triples are drawn at random from plain columnar widths 2-30, rotations, and keyed columnar from vocabulary words, each stage forward or inverse. The survival test and English scoring of experiments 6 and 16 are unchanged.",
+    "slug": "keyword-plus-dates-and-counts-from-the-story",
+    "title": "A key word plus a number from the sculpture's own story: dates, the Morse counts, and 97 itself as the second component",
+    "family": "3-two-component-key",
+    "parent": "0024-keyword-plus-k2-coordinate-digits",
+    "changed": "Same exact test as experiment 24, with the digit stream drawn from the sculpture's story instead of the K2 coordinates: the dedication date, the fall of the Wall, Carter's discovery, the Morse padding counts, the letter counts of the four parts, and 1990 itself.",
     "hypothesis_expert": (
-        "Sanborn, CNN 2005 (C1): 'double matrixes and triple matrixes... then went back to this table'. "
-        "Experiments 6, 8, 16 and 26 covered single and double stages exhaustively for their route sets. "
-        "Triples of 110 stage choices number about 1.3 million, beyond the budget with the English "
-        "scoring, so this is a sample: 200,000 triples drawn uniformly, with a fixed seed, each stage one of "
-        "plain columnar at widths 2-30 forward or inverse, a quarter-turn rotation at widths 2-30, or a "
-        "keyed columnar from a vocabulary word forward or inverse. For each triple under the 8 distinct "
-        "plain-cipher conventions the forced tableau key letters give the live periods by the divisor rule; "
-        "the smallest live period is recorded, and the forced key at live periods up to 40 is scored as "
-        "English on runs of five or more slots against ten shuffled controls. A triple with a live period "
-        "under 20 or an English key above the controls would be a lead. Bounds: a 15 percent sample, not "
-        "exhaustive; the smallest-period distribution says whether triples behave as random permutations."
+        "Experiment 24 killed a word plus the K2 coordinate digits under every reading. Scheidt's two-component "
+        "habit (C6) admits any memorable number as the second component, and Sanborn's own anchors are dates and "
+        "counts: the dedication on 3 November 1990, the Wall's fall on 9 November 1989, his Egypt trip of 1986, "
+        "Carter's breach on 26 November 1922 (C13, C7), the Morse messages' E-padding counts 5, 10, 1, 7, 9 "
+        "(C25), the four parts' letter counts 63, 372, 337, 97, and 97 and 98 alone (C17). Each reading, in "
+        "day-month-year and year-month-day forms, is a repeating digit key d; the word key x of length 2-30 "
+        "then satisfies x[i mod a] = t[i] - s d[(i + o) mod L] mod 26 at every crib, with 24 - a redundant "
+        "checks. Standard or KRYPTOS alphabets, both plaintext signs, both s, every alignment; survivors have "
+        "their forced word matched against the vocabulary and K1-K3 windows and scored as English against ten "
+        "shuffled controls. Bounds: complete for these seventeen digit readings."
     ),
     "hypothesis_eli5": (
-        "The artist said he sometimes scrambled the letters through three grids before using the table. "
-        "There are over a million ways to pick three grids from our set, too many to try with the slow "
-        "English check, so we draw two hundred thousand at random. For each, we follow the 24 known letters "
-        "through all three grids, ask whether a short secret word could then produce the carved letters "
-        "where they land, and whether the letters of that word look like English. Three grids in a row "
-        "behave like a random shuffle, so the answer should look like the earlier grid experiments."
+        "Experiment 24 tried adding the map coordinates to a secret word. The sculpture's story has other "
+        "numbers a person would remember: the day it was unveiled, the day the Berlin Wall fell, the day "
+        "Carter broke into the tomb, the little counts hidden in the Morse code outside, and the number 97 "
+        "itself. We add each of these to an unknown secret word, letter by letter, and let the 24 known "
+        "letters tell us what the word would have to be. If two tellings disagree, that number is out."
     ),
     "prediction": (
-        "The smallest live period over the sample is 22 or 23, as for single and double stages. The best "
-        "forced key scores inside the range of ten shuffled controls. No candidate."
+        "No word length under 24 survives for any reading, alignment or sign; survivors from 24 up are chance "
+        "and their forced words are noise against the shuffled controls. Zero candidates pass."
     ),
     "method": (
-        "1. Build the stage list. 2. Draw 200,000 triples with a fixed seed. 3. For each triple compose the "
-        "three permutations and send the crib positions through. 4. For each of the 8 conventions force the "
-        "key letters, find live periods by the divisor rule, and score the forced key at live periods up to "
-        "40. 5. Keep the twenty best keys and the smallest-period histogram. 6. Repeat on ten shuffles."
+        "1. List the digit readings. 2. For each alphabet pair and plaintext sign, compute the forced total "
+        "key index at each crib. 3. For each reading, alignment, sign s and word length a, subtract the digit "
+        "term and reduce to the word slot; reject on any disagreement. 4. For survivors, read the word in "
+        "the standard and KRYPTOS alphabets, match it against the vocabulary and K1-K3 windows, and score it "
+        "as English. 5. Repeat the scoring on ten shuffles of K4."
     ),
     "walkthrough": (
-        "1. Pick three grids: rows of 7 read down, then a quarter turn of a 12-wide grid, then columns in "
-        "the order of the letters of KRYPTOS. 2. Follow position 22, the E of EAST, through the first grid "
-        "to its new place, then through the second, then the third. 3. Do this for all 24 known letters. "
-        "4. The carved letter at each final place, with the known letter, forces one key letter on the table. "
-        "5. Two final places a multiple of p apart share a key letter at period p; a disagreement kills p. "
-        "6. The smallest surviving p is this triple's score; write its forced letters into their slots and "
-        "read them."
+        "1. Read the coordinates as the digits 3 8 5 7 6 5 7 7 8 4 4 and repeat them under the message. "
+        "2. Position 22 is E against the carved F; under the sculpture's alphabet with Vigenere the total key "
+        "letter is R, index 1. 3. The digit under position 22 at alignment 0 is the 22nd digit, 3; subtract it: "
+        "index 24 is the word letter for slot 21 mod a. 4. With a 7-letter word that is slot 0. 5. Position 29 "
+        "also uses slot 0: do the same there; the two values must agree. 6. Go through all 24 known letters; "
+        "one disagreement kills this length and alignment. 7. A survivor's forced letters spell the word; "
+        "see whether it is one the puzzle knows."
     ),
 }
 
 import random
-from kryptos.alphabets import key_letter_for, numeric_order
-from kryptos.ciphers import columnar_transposition_encrypt, columnar_transposition_decrypt
+from kryptos.alphabets import ALPHABETS, key_letter_for, decrypt_letter, encrypt_letter
+from kryptos.facts import load_k1, load_k2, load_k3
 
 N = 97
-MAXP = 40
-SAMPLE = 200000
-DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0] for d in range(1, N + 1)}
-CONVS = [(pa, ca, "kry", m) for pa in ("std", "kry") for ca in ("std", "kry") for m in ("vig", "beau")]   # ka drops out; varbeau = vig for the test
+READINGS = {
+    "dedication 3 Nov 1990, dmy": "3111990", "dedication, ymd": "19901103", "dedication, dmy padded": "03111990",
+    "Wall fell 9 Nov 1989, dmy": "9111989", "Wall, ymd": "19891109",
+    "Carter breach 26 Nov 1922, dmy": "26111922", "Carter, ymd": "19221126",
+    "1990": "1990", "1989": "1989", "1986": "1986", "1922": "1922",
+    "Morse E-padding counts 5 10 1 7 9": "510179", "Morse counts reversed": "971015",
+    "letter counts 63 372 337 97": "6337233797", "97": "97", "98": "98", "97 and 24 known": "9724",
+}
+STD = ALPHABETS["std"]
 
 
-def perm_of(fn):
-    idx = [chr(0x100 + i) for i in range(N)]
-    return [ord(ch) - 0x100 for ch in fn("".join(idx))]
+def letters(s):
+    return "".join(c for c in s if "A" <= c <= "Z")
 
 
-def rotate(s, w):
-    rows = [s[i:i + w] for i in range(0, len(s), w)]
-    return "".join(r[col] for col in range(w) for r in reversed(rows) if col < len(r))
-
-
-def stages(vocab):
-    out = []
-    for w in range(2, 31):
-        o = list(range(w))
-        out.append((f"columnar {w}", lambda s, o=o: columnar_transposition_encrypt(s, o)))
-        out.append((f"columnar {w} inv", lambda s, o=o: columnar_transposition_decrypt(s, o)))
-        out.append((f"rotate {w}", lambda s, w=w: rotate(s, w)))
-    for word in vocab:
-        if 2 <= len(word) <= 30:
-            o = numeric_order(word)
-            out.append((f"keyed {word}", lambda s, o=o: columnar_transposition_encrypt(s, o)))
-            out.append((f"keyed {word} inv", lambda s, o=o: columnar_transposition_decrypt(s, o)))
-    return out
+def total_key(i, key):
+    a = len(key["word"]); d = key["digits"]; L = len(d)
+    x = ALPHABETS[key["ka"]].index(key["word"][i % a])
+    return (x + key["s"] * int(d[(i + key["o"]) % L])) % 26
 
 
 def encrypt(plaintext, key):
-    raise NotImplementedError("diagnostic experiment: no full key is implied, so no candidate is submitted")
+    pa, ca, m = key["pa"], key["ca"], key["m"]
+    return "".join(encrypt_letter(p, STD[total_key(i, key)], pa, ca, "std", m) for i, p in enumerate(plaintext))
 
 
-def runs_in_slots(slots, P):
-    filled = [slots.get(s) for s in range(P)]
-    start = 0 if all(filled) else next(i for i in range(P) if filled[i] is None)
-    out, cur = [], []
-    for k in range(1, P + 1):
-        ch = filled[(start + k) % P]
-        if ch is None:
-            if len(cur) >= 5: out.append("".join(cur))
-            cur = []
-        else:
-            cur.append(ch)
-    if len(cur) >= 5: out.append("".join(cur))
-    return out
-
-
-def search(ct, known, triples, stage_perms, score, time_left):
+def search(ct, known, score, vocab, texts, collect):
     crib_pos = sorted(known)
-    best, hist, n = [], {}, 0
-    for t in triples:
-        if time_left() < 30:
-            break
-        # compose: out3[j] = in[sigma1[sigma2[sigma3[j]]]]
-        s1, s2, s3 = stage_perms[t[0]], stage_perms[t[1]], stage_perms[t[2]]
-        sigma = [s1[s2[s3[j]]] for j in range(N)]
-        where = {sigma[j]: j for j in range(N)}
-        inter = [where[p - 1] for p in crib_pos]
-        for conv in CONVS:
-            pa, ca, ka, m = conv
-            forced = [key_letter_for(known[p], ct[j], pa, ca, ka, m) for p, j in zip(crib_pos, inter)]
-            dead = set()
-            for a in range(24):
-                for b in range(a + 1, 24):
-                    if forced[a] != forced[b]:
-                        dead.update(DIVISORS[abs(inter[a] - inter[b])])
-            minp = next(P for P in range(1, N + 1) if P not in dead)
-            hist[minp] = hist.get(minp, 0) + 1
-            for P in range(2, MAXP + 1):
-                if P in dead:
-                    continue
-                slots = {j % P: l for j, l in zip(inter, forced)}
-                runs = runs_in_slots(slots, P)
-                qs = sum(len(r) - 3 for r in runs)
-                if qs < 4:
-                    continue
-                sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
-                n += 1
-                if len(best) < 20 or sc > best[-1][0]:
-                    best.append((sc, t, "/".join(conv), P, runs)); best.sort(reverse=True); best = best[:20]
-    return best, hist, n
+    survivors, best, candidates = [], [], []
+    cases = 0
+    for pa in ("std", "kry"):
+        for ca in ("std", "kry"):
+            for m in ("vig", "beau"):
+                t = {pos: STD.index(key_letter_for(known[pos], ct[pos - 1], pa, ca, "std", m)) for pos in crib_pos}
+                for rname, d in READINGS.items():
+                    L = len(d)
+                    for o in range(L):
+                        for s in (1, -1):
+                            for a in range(2, 31):
+                                cases += 1
+                                slots = {}
+                                ok = True
+                                for pos in crib_pos:
+                                    i = pos - 1
+                                    x = (t[pos] - s * int(d[(i + o) % L])) % 26
+                                    if (i % a) in slots and slots[i % a] != x:
+                                        ok = False; break
+                                    slots[i % a] = x
+                                if not ok:
+                                    continue
+                                survivors.append((a, rname, o, s, pa, ca, m))
+                                for ka in ("std", "kry"):
+                                    A = ALPHABETS[ka]
+                                    word = "".join(A[slots[k]] if k in slots else "." for k in range(a))
+                                    runs = [r for r in word.split(".") if len(r) >= 5]
+                                    if runs:
+                                        qs = sum(len(r) - 3 for r in runs)
+                                        sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
+                                        if len(best) < 15 or sc > best[-1][0]:
+                                            best.append((sc, a, rname, o, s, pa, ca, m, ka, word)); best.sort(reverse=True); best = best[:15]
+                                    if collect and "." not in word:
+                                        pool = set(w for w in vocab if len(w) == a)
+                                        for tx in texts:
+                                            for i in range(0, len(tx) - a + 1):
+                                                pool.add(tx[i:i + a])
+                                        if word in pool:
+                                            key = {"word": word, "digits": d, "o": o, "s": s, "ka": ka, "pa": pa, "ca": ca, "m": m}
+                                            pt = "".join(decrypt_letter(ct[i], STD[total_key(i, key)], pa, ca, "std", m) for i in range(N))
+                                            candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * a + 10, "key_description": f"word {word} + digits {rname} at {o}, s={s}; {pa}/{ca}/{ka} {m}"})
+    return survivors, best, candidates, cases
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    st = stages(list(ctx.vocabulary))
-    names = [nm for nm, _ in st]
-    perms = [perm_of(fn) for _, fn in st]
-    rng = random.Random(37)
-    triples = [(rng.randrange(len(st)), rng.randrange(len(st)), rng.randrange(len(st))) for _ in range(SAMPLE)]
-    best, hist, n = search(ct, known, triples, perms, ctx.english_score, ctx.time_left)
+    vocab = list(ctx.vocabulary)
+    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
+    survivors, best, candidates, cases = search(ct, known, ctx.english_score, vocab, texts, True)
     nulls = []
     for seed in range(10):
-        if ctx.time_left() < 150:
-            break
         letters_ = list(ct); random.Random(seed).shuffle(letters_)
-        nb, _, _ = search("".join(letters_), known, triples[:6000], perms, ctx.english_score, ctx.time_left)
+        _, nb, _, _ = search("".join(letters_), known, ctx.english_score, vocab, texts, False)
         nulls.append(round(nb[0][0], 3) if nb else None)
+    by_len = {}
+    for a, *_ in survivors:
+        by_len[a] = by_len.get(a, 0) + 1
     return {
-        "candidates": [],
-        "bounds": {"family": "three transposition stages (sampled) then periodic tableau", "stages": len(st), "triples_sampled": len(triples), "conventions": len(CONVS),
-                   "keys_scored": n, "smallest_live_period": min(hist) if hist else None,
-                   "min_live_period_histogram": {str(k): v for k, v in sorted(hist.items())[:12]},
-                   "best": [{"score": round(sc, 3), "stages": [names[i] for i in t], "convention": cv, "period": P, "runs": rs} for sc, t, cv, P, rs in best[:10]],
-                   "shuffled_control_best": nulls, "control_note": "controls use the first 6,000 triples of the same sample"},
-        "notes": f"Diagnostic, no candidates. {len(triples)} triples x {len(CONVS)} conventions; smallest live period {min(hist) if hist else None}; best forced key {best[0][0]:.3f} vs shuffled {[x for x in nulls if x is not None]}.",
+        "candidates": candidates[:50],
+        "bounds": {"family": "word key plus known digit key (K2 coordinates), additive", "digit_readings": READINGS, "word_lengths": "2-30",
+                   "alphabets": "plain and cipher in {std, kry}; word read in std or kry", "cases": cases,
+                   "survivors_by_word_length": {str(k): v for k, v in sorted(by_len.items())},
+                   "shortest_surviving_word_length": min(by_len) if by_len else None,
+                   "best_forced_words": [{"score": round(sc, 3), "length": a, "reading": r, "offset": o, "s": s, "plain": pa, "cipher": ca, "mode": m, "word_alphabet": ka, "word": w} for sc, a, r, o, s, pa, ca, m, ka, w in best],
+                   "shuffled_control_best": nulls, "vocab_matches": len(candidates)},
+        "notes": f"{cases} cases; shortest surviving word length {min(by_len) if by_len else None}; best forced word {best[0][0]:.3f} vs shuffled best {max(x for x in nulls if x is not None):.3f}; {len(candidates)} matches.",
     }
 
 
 def worked_example(ctx, key):
-    st = stages(["KRYPTOS"])
-    names = [nm for nm, _ in st]
-    i1, i2, i3 = names.index("columnar 7"), names.index("rotate 12"), names.index("keyed KRYPTOS")
-    perms = {i: perm_of(st[i][1]) for i in (i1, i2, i3)}
-    sigma = [perms[i1][perms[i2][perms[i3][j]]] for j in range(N)]
-    where = {sigma[j]: j for j in range(N)}
-    lines = ["stages: columnar 7, then rotate 12, then keyed columnar KRYPTOS; convention kry/kry/kry Vigenere", "", "plain pos  letter  final place  carved  forced key letter"]
-    for pos in (22, 23, 24, 64, 65, 66):
-        j = where[pos - 1]
-        lines.append(f"{pos:>9}    {ctx.KNOWN[pos]}        {j+1:>3}        {ctx.K4[j]}       {key_letter_for(ctx.KNOWN[pos], ctx.K4[j], 'kry', 'kry', 'kry', 'vig')}")
+    d = READINGS["38 57 65 77 8 44"]
+    lines = [f"digits {d} repeated under the message, alignment 0; KRYPTOS alphabet throughout, Vigenere; word length 7", "", "pos  plain  carved  total key  index  digit  word index  slot"]
+    for pos in (22, 23, 24, 29, 30, 64):
+        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
+        k = key_letter_for(p, c, "kry", "kry", "std", "vig"); idx = STD.index(k); dg = int(d[(pos - 1) % len(d)])
+        lines.append(f"{pos:>3}    {p}      {c}        {k}        {idx:>2}      {dg}       {(idx - dg) % 26:>2}       {(pos-1) % 7}")
+    lines.append("")
+    lines.append("positions 22 and 29 share slot 0: their word indices must agree, or length 7 is dead at this alignment.")
     return "\n".join(lines)

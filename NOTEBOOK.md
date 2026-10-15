@@ -42,6 +42,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 35 | 1 | Key completion at 27-29 with one vocabulary-mixed alphabet: noise, equal to shuffled K4. Design clock polluted by dashboard work, 19 min of it. |
 | 36 | 8 | Bauer's open Hill variants, chained and paired, solved exactly: dead. |
 | 37 | 6 | Three grid stages, 200,000 sampled triples: best key -3.61 against thirteen shuffles topping at -3.63. Chance by a whisker; the record's own controls were undersized, fixed after the run. |
+| 38 | 3 | A word plus seventeen dates and counts from the story: shortest consistent word 26; nothing. |
 
 ## 2026-10-14
 

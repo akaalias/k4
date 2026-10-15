@@ -1,0 +1,68 @@
+{
+ "id": 52,
+ "tag": "0052-small-alphabet-and-digraph-systems-structural",
+ "started": "2026-10-15T12:09:17+00:00",
+ "seconds": 0.0,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.4,
+  "test": 0.1,
+  "run": 0.0,
+  "record": 0.0
+ },
+ "ended_epoch": 1792066157.255682,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "ciphers with fewer than 26 output symbols or an even-length rule",
+  "distinct_letters": 26,
+  "length": 97,
+  "rarest_letters": {
+   "Y": 1,
+   "M": 1,
+   "X": 2,
+   "H": 2,
+   "V": 2,
+   "E": 2
+  },
+  "verdicts": {
+   "Playfair": "excluded: emits at most 25 letters; K4 has 26; needs an even length; K4 has 97",
+   "two-square": "excluded: emits at most 25 letters; K4 has 26; needs an even length; K4 has 97",
+   "four-square": "excluded: emits at most 25 letters; K4 has 26; needs an even length; K4 has 97",
+   "bifid 5x5": "excluded: emits at most 25 letters; K4 has 26",
+   "ADFGX": "excluded: emits at most 5 letters; K4 has 26; needs an even length; K4 has 97",
+   "ADFGVX": "excluded: emits at most 6 letters; K4 has 26; needs an even length; K4 has 97",
+   "Weltzeituhr 24-letter ring": "excluded: emits at most 24 letters; K4 has 26",
+   "Polybius 5x5 to letters": "excluded: emits at most 25 letters; K4 has 26"
+  },
+  "escape_routes": [
+   "a null letter appended to make the length even (then the 25-letter rule still applies)",
+   "a 6x6 square with digits written out as words",
+   "a variant on a 26-letter rectangle"
+  ]
+ },
+ "notes": "K4 uses all 26 letters and has 97 letters; every listed system is excluded: Playfair; two-square; four-square; bifid 5x5; ADFGX; ADFGVX; Weltzeituhr 24-letter ring; Polybius 5x5 to letters.",
+ "error": null,
+ "candidates": []
+}

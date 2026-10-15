@@ -1,0 +1,35 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "ciphers with fewer than 26 output symbols or an even-length rule",
+  "distinct_letters": 26,
+  "length": 97,
+  "rarest_letters": {
+   "Y": 1,
+   "M": 1,
+   "X": 2,
+   "H": 2,
+   "V": 2,
+   "E": 2
+  },
+  "verdicts": {
+   "Playfair": "excluded: emits at most 25 letters; K4 has 26; needs an even length; K4 has 97",
+   "two-square": "excluded: emits at most 25 letters; K4 has 26; needs an even length; K4 has 97",
+   "four-square": "excluded: emits at most 25 letters; K4 has 26; needs an even length; K4 has 97",
+   "bifid 5x5": "excluded: emits at most 25 letters; K4 has 26",
+   "ADFGX": "excluded: emits at most 5 letters; K4 has 26; needs an even length; K4 has 97",
+   "ADFGVX": "excluded: emits at most 6 letters; K4 has 26; needs an even length; K4 has 97",
+   "Weltzeituhr 24-letter ring": "excluded: emits at most 24 letters; K4 has 26",
+   "Polybius 5x5 to letters": "excluded: emits at most 25 letters; K4 has 26"
+  },
+  "escape_routes": [
+   "a null letter appended to make the length even (then the 25-letter rule still applies)",
+   "a 6x6 square with digits written out as words",
+   "a variant on a 26-letter rectangle"
+  ]
+ },
+ "notes": "K4 uses all 26 letters and has 97 letters; every listed system is excluded: Playfair; two-square; four-square; bifid 5x5; ADFGX; ADFGVX; Weltzeituhr 24-letter ring; Polybius 5x5 to letters.",
+ "error": null,
+ "worked_example": "letter counts on the copper:\nA4  B5  C2  D3  E2  F4  G4  H2  I4  J3  K8  L4  M1  N3  O5  P3  Q4  R4  S6  T6  U6  V2  W5  X2  Y1  Z4\nlength 97",
+ "seconds": 0.0005772113800048828
+}

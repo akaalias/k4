@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "In a self-feeding key each letter is locked with a letter carved some distance before. Experiment 2 started this fresh at K4, but on the sculpture K4 continues K3's lines, so its first letters could take their key from K3."
+ },
+ {
+  "anchor": "the check",
+  "text": "For each distance from 1 to 200, or the letter straight above on the plate, carved letter minus key letter must give the known letter at all 24 places."
+ },
+ {
+  "anchor": "the bound",
+  "text": "At best 5 of 24 by distance (scrambled coppers 5-6) and 3 of 24 for the letter above (coppers 2-5): no setting comes near."
+ }
+]

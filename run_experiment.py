@@ -16,7 +16,7 @@ from pathlib import Path
 
 from kryptos import facts
 from kryptos.gates import run_gates, crib_hits
-from kryptos.scorer import fitness, english_score, free_text, loss
+from kryptos.scorer import fitness, english_score, free_text, loss, key_bits_of, MEMORABLE_MAX_BITS
 import phase as phaseclock
 
 ROOT = Path(__file__).resolve().parent
@@ -91,18 +91,33 @@ def main():
     if raw.get("error"):
         status = "error"
 
-    # Gate and score
+    # Gate and score. Gates in order: length, alphabet, the 24 known letters, re-encryption
+    # (kryptos.gates), then two decided 2026-10-15 (issue #11):
+    #   memorable: the key, counted by the harness (key_bits_of; the attack's own figure counts
+    #     only if larger), must be at most MEMORABLE_MAX_BITS;
+    #   baseline: the reading's English score must beat every shuffled-copper control the attack
+    #     ran with the same method (raw["controls"], at least 10 scores); no controls, no keep.
+    controls = [float(x) for x in raw.get("controls", []) if x is not None]
     scored = []
     for c in raw["candidates"]:
         g = run_gates(c["plaintext"], c.get("reencrypted"))
-        row = {**c, "gate_passed": g.passed, "failed_at": g.failed_at, "crib_hits": g.crib_hits,
+        bits = max(key_bits_of(c.get("key")), float(c.get("key_bits") or 0))
+        row = {**c, "key_bits_declared": c.get("key_bits"), "key_bits": bits, "gate_passed": g.passed,
+               "failed_at": g.failed_at, "crib_hits": g.crib_hits,
                "crib_words": g.crib_words, "gate_details": g.details, "english_free": None, "fitness": None,
                "loss": None}
         if g.failed_at in (None, "cribs"):  # valid candidates get a loss; invalid ones do not
-            row["loss"] = loss(c["plaintext"], c["key_bits"], g.crib_hits)
+            row["loss"] = loss(c["plaintext"], bits, g.crib_hits)
         if g.passed:
             row["english_free"] = english_score(free_text(c["plaintext"]))
-            row["fitness"] = fitness(c["plaintext"], c["key_bits"])
+            row["fitness"] = fitness(c["plaintext"], bits)
+            if bits > MEMORABLE_MAX_BITS:
+                row.update(gate_passed=False, failed_at="memorable",
+                           gate_details={"key_bits": round(bits, 1), "max": MEMORABLE_MAX_BITS})
+            elif len(controls) < 10 or row["english_free"] <= max(controls):
+                row.update(gate_passed=False, failed_at="baseline",
+                           gate_details={"english": round(row["english_free"], 3), "controls": len(controls),
+                                         "best_control": round(max(controls), 3) if controls else None})
         scored.append(row)
     passed = [r for r in scored if r["gate_passed"]]
     passed.sort(key=lambda r: r["loss"])          # one number everywhere: lowest loss wins
@@ -143,7 +158,8 @@ def main():
         "phases": phases, "ended_epoch": time.time(),
         "decision": decision, "decision_rule": "loss", "n_candidates": len(scored), "n_passed": len(passed),
         "best_crib_hits": best_hits, "best_crib_words": best_words, "best_fitness": best["fitness"] if best else None,
-        "best_loss": best_loss,
+        "best_loss": best_loss, "gates": "length, alphabet, cribs, reencryption, memorable, baseline",
+        "controls": controls,
         "champion_before": champion, "bounds": raw.get("bounds", {}), "notes": raw.get("notes", ""),
         "error": raw.get("error"), "candidates": scored,
     }

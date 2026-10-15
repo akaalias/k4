@@ -190,6 +190,18 @@ Open questions:
 - The scorer decision (key cost, shuffled baseline) is still pending in #11; no
   key-completion climbs were run.
 
+### Scoring settled (2026-10-15, afternoon)
+
+Alexis decided the three open scoring questions (issue #11). The memorable key is a hard
+requirement, so it is now a gate, not a charge: the harness counts the key's size from the key
+itself and anything over 100 bits fails (K1 82 bits, K2 73; experiment 34's champion 383). A
+reading must also beat the same method on at least ten shuffled coppers; an experiment that
+returns no controls cannot keep anything. All records were re-scored (tools/replay_rules.py,
+records untouched): every one of the 24 readings that ever passed the old gates fails the
+memorable-key gate. There is no champion. Experiment 34 is shown as kept under the old rule
+and reverted under the current one. Lesson: a success criterion written in the README has to be
+a gate in the harness from day one, or the loop optimises around it.
+
 ## 2026-10-14
 
 ### Decisions

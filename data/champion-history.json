@@ -1,0 +1,20 @@
+[
+ {
+  "until": "2026-10-15",
+  "rule": "lowest loss, gates without the memorable-key and baseline checks",
+  "champion": {
+   "experiment": "0034-complete-the-key-at-surviving-periods",
+   "fitness": -7.289312943594226,
+   "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "ka": "kry",
+    "m": "vig",
+    "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+   },
+   "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+   "loss": 4.900412599951614
+  }
+ }
+]

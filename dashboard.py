@@ -88,6 +88,7 @@ dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 1
 .fig-row{clear:both;width:min(1640px,98vw);margin-top:30px!important;position:relative;left:50%;transform:translateX(-50%);margin:26px 0 8px}.fig-main{margin:0}.fig-scroll{overflow-x:auto;padding-bottom:6px}.fig-main svg{display:block;margin:0 auto;max-width:none}.fig-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.fig-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:980px;margin:14px auto 0}.fig-note{margin:0}.fig-note b{display:block;font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 3px}.fig-note p{margin:0;font-size:14px;line-height:1.5;color:var(--muted)}
 .plain.tufte{position:relative;display:flow-root}.plain.tufte p{max-width:620px}.sidenote{float:right;clear:right;margin-right:-300px;width:270px;margin-top:.35em;margin-bottom:.9em;font-size:13.5px;line-height:1.45;color:var(--muted);padding-left:12px;border-left:1px solid var(--rule)}.sidenote b{color:var(--ink);font-weight:600}.sidenote-more{max-width:620px;font-size:13px;color:var(--faint);margin:4px 0 0}@media(max-width:980px){.sidenote{float:none;display:block;margin:6px 0 10px;width:auto;max-width:620px}}
 .word{display:flex;gap:1.5px;border-radius:3px;box-shadow:0 0 0 1px #cfc8ae}
+.verdict-note{max-width:760px;margin:10px 0 0;padding:8px 12px;border-left:3px solid var(--accent);background:var(--wash);font-size:14.5px}
 .res-notes{font-size:16px;margin:16px 0 6px;max-width:760px}.res-notes.err{color:var(--accent)}.res-stats{display:flex;gap:44px;flex-wrap:wrap;margin:6px 0 18px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.res-stats div{display:flex;flex-direction:column}.res-stats b{font:400 24px var(--serif)}.res-stats span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.res-card{display:flex;gap:26px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--rule-soft)}.res-side{display:flex;flex-direction:column;gap:3px;min-width:150px;font-size:14px;color:var(--muted)}.res-rank{font:400 26px var(--serif);color:var(--ink)}.res-loss{color:var(--accent);font-weight:600}.res-main{flex:1;min-width:0}.res-main .lp-box{display:inline-block}.res-key{font-size:13.5px;color:var(--muted);margin:8px 0 0;overflow-wrap:anywhere;max-width:620px}
 table.score{width:100%;max-width:760px;margin:10px 0 6px;border-collapse:collapse}table.score td,table.score th{padding:7px 10px;border-bottom:1px solid var(--rule-soft);font-size:15px}table.score td:first-child{font-weight:600}table.score tr.total td{border-top:1.5px solid var(--ink);border-bottom:none;font-weight:700}table.score .pct{color:var(--accent);margin-left:8px}table.score.ranks td:first-child{font-weight:400}table.score.ranks tr.kept td{font-weight:700;color:var(--accent)}table.score.ranks tr.gap td{color:var(--faint);border-bottom:none}.score-sub{font-size:14px;color:var(--muted);margin:16px 0 4px;max-width:760px}
 .panel-wrap{display:flex;gap:18px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;margin:16px 0 8px}.panel-wrap.wide{width:min(1360px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}.callout.wide{width:min(1400px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%);box-sizing:border-box}.callout .panel-wrap.wide{width:auto;left:0;transform:none}#sculpture-label{min-height:3.2em}.subsec{display:flex;align-items:baseline;gap:12px;margin:34px 0 10px;padding-top:12px;border-top:1px solid var(--rule-soft)}.subsec b{font:400 15px var(--serif);color:var(--faint)}.subsec h3{font:400 21px var(--serif);margin:0}.subsec-sub{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 6px}.lp-col{display:flex;flex-direction:column}.lp-eyebrow{font:600 11px/1.2 var(--serif)!important;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.lp-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:10px 14px 12px;width:573px;box-sizing:border-box}.lp.mini .lp-box{width:auto}.lp-title{font:600 13px var(--serif);color:var(--muted);text-align:center;margin:0 0 8px}.lrow{display:flex;gap:1.5px;margin:0 0 2.5px;justify-content:flex-start}.lc{display:inline-flex;align-items:center;justify-content:center;width:15px;height:19px;border-radius:2.5px;background:#ebe7d8;color:var(--muted);font:normal 11.5px/1 var(--mono)}.lc.tail{background:#f1eee3;color:#cfcab8}.lc.known{background:var(--accent);color:var(--paper);font-weight:700}.lc.miss{background:var(--paper);color:var(--accent);box-shadow:inset 0 0 0 1.3px var(--accent);font-weight:700}.lc.ink{color:var(--ink)}.lc.dot:after{content:"";width:2px;height:2px;border-radius:50%;background:var(--faint,#9b998c)}.lp-cap{font:italic 13px/1.4 var(--serif);color:var(--muted);text-align:center;margin:6px 0 0}.lp-cap.acc{color:var(--accent);margin-top:2px}.lp-arrow{color:var(--muted);padding-top:72px}.lp.mini .lp-box{padding:5px 6px;border-radius:4px;background:transparent;border-color:var(--rule-soft)}.lp.mini .lp-title{display:none}.lp.mini .lc{width:6.5px;height:9px;font-size:6px;border-radius:1px}.lp.mini .lrow{gap:1px;margin-bottom:1px}
@@ -125,6 +126,12 @@ def esc(s):
 FAMILY_ALIASES = {"8-hill-and-polygraphic": "8-hill-polygraphic", "2-masked-then-keyed": "2-masked-plaintext", "5-gromark": "5-gromark-lfsr"}
 
 
+def replay():
+    """Current verdicts from tools/replay_rules.py: {tag: {...}} (records keep their own decision)."""
+    p = ROOT / "data" / "replay.json"
+    return json.loads(p.read_text()).get("experiments", {}) if p.exists() else {}
+
+
 def load_results():
     rows = []
     if not EXPERIMENTS.exists():
@@ -144,6 +151,11 @@ def load_results():
             r["title"] = m.group(1).strip() if m else r["tag"]
             m = re.search(r"## In plain words\n\n(.+?)\n\n## ", r["_md"], re.S)
             r["eli5"] = m.group(1).strip() if m else ""
+            v = replay().get(r["tag"])
+            r["decision_recorded"] = r.get("decision")
+            if v and v["verdict_now"] != r.get("decision") and r.get("decision") in ("kept", "reverted"):
+                r["decision"] = v["verdict_now"]
+                r["verdict_note"] = v["reason"]
             rows.append(r)
     return rows
 
@@ -706,8 +718,10 @@ def overview():
     for r in rows:
         for k, v in (r.get("phases") or {"run": r["seconds"]}).items():
             by_phase[k] = by_phase.get(k, 0.0) + v
-    hero = f"""<div class="stat-hero"><b class="num">{pct(best_loss) or '&ndash;'}</b><span>the champion's loss, as a share of the worst possible{'' if best_loss is None else f' ({best_loss:.1f} of {WORST:.0f})'}. zero is solved</span></div>
-<p class="hero-sub">Ten per missed known letter (24 cribs: EASTNORTHEAST, BERLINCLOCK), plus how far the other 73 letters are from English, plus the cost of a key too long to remember; 240 is every known letter wrong. Below ten, or 4.2%, means every known letter is in place.</p>
+    hero = (f"""<div class="stat-hero"><b class="num">{pct(best_loss)}</b><span>the champion's loss, as a share of the worst possible ({best_loss:.1f} of {WORST:.0f}). zero is solved</span></div>""" if best_loss is not None else
+            """<div class="stat-hero"><b class="num">none</b><span>no champion: no reading has passed every gate, including a memorable key and beating shuffled coppers</span></div>""")
+    hero += f"""
+<p class="hero-sub">Ten per missed known letter (24 cribs: EASTNORTHEAST, BERLINCLOCK), plus how far the other 73 letters are from English, plus the cost of a key too long to remember; 240 is every known letter wrong. Below ten, or 4.2%, means every known letter is in place. To be kept a reading must also have a key a person could remember (at most 100 bits) and score better English than the same method on ten shuffled coppers.</p>
 <div class="stats">
 <div class="stat"><b class="num">{n}</b><span>experiments</span></div>
 <div class="stat"><b class="num">{kept}</b><span>kept</span></div>
@@ -953,7 +967,7 @@ def experiment_page(tag):
 <div class="rec-head">
 <p class="eyebrow">Experiment {num} &middot; family {esc(fam_num)}, {esc(fam_label)} &middot; <span class="{esc(decision)}">{esc(decision)}</span></p>
 <h1 class="rec-title">{esc(r['title'])}</h1>
-<p class="standfirst">{esc(changed)}</p>
+<p class="standfirst">{esc(changed)}</p>{f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: {esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else ""}
 <div class="meta-row">
 <div><b>{parent_html}</b><span>builds on</span></div>
 <div><b>{fmt_dur(total)}</b><span>time, all phases</span><div class="meta-bar">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=190, height=8)}</div></div>

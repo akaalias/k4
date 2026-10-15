@@ -1,0 +1,31 @@
+{
+ "date": "2026-10-15",
+ "rules": "original gates; key at most 100 bits counted by the harness; English above every shuffled-copper control (10 or more); lowest loss wins",
+ "champion": null,
+ "experiments": {
+  "0034-complete-the-key-at-surviving-periods": {
+   "decision_recorded": "kept",
+   "verdict_now": "reverted",
+   "reason": "18 candidate(s) fail the memorable-key gate, 0 the shuffled-copper baseline",
+   "memorable": 18,
+   "baseline": 0,
+   "kept_now": 0
+  },
+  "0035-complete-the-key-mixed-alphabets-27-29": {
+   "decision_recorded": "reverted",
+   "verdict_now": "reverted",
+   "reason": "3 candidate(s) fail the memorable-key gate, 0 the shuffled-copper baseline",
+   "memorable": 3,
+   "baseline": 0,
+   "kept_now": 0
+  },
+  "0048-complete-the-key-both-alphabets-mixed-sampled": {
+   "decision_recorded": "reverted",
+   "verdict_now": "reverted",
+   "reason": "3 candidate(s) fail the memorable-key gate, 0 the shuffled-copper baseline",
+   "memorable": 3,
+   "baseline": 0,
+   "kept_now": 0
+  }
+ }
+}

@@ -48,3 +48,14 @@ def test_loss_is_lexicographic():
     assert loss(junk, 47.0, 24) < loss(pt, 47.0, hits_pt)
     assert loss(junk, 47.0, 24) < 10.0
     assert loss(pt, 47.0, hits_pt) >= 10.0 * (24 - hits_pt)
+
+
+def test_memorable_gate_admits_k1_k2_and_rejects_climbed_keys():
+    from kryptos.scorer import key_bits_of, MEMORABLE_MAX_BITS
+    k1 = {"pa": "kry", "ca": "kry", "ka": "kry", "m": "vig", "key": "PALIMPSEST"}
+    k2 = {"pa": "kry", "ca": "kry", "ka": "kry", "m": "vig", "key": "ABSCISSA"}
+    assert key_bits_of(k1) <= MEMORABLE_MAX_BITS
+    assert key_bits_of(k2) <= MEMORABLE_MAX_BITS
+    climbed = {"pa": "kry", "ca": "std", "ka": "kry", "m": "vig", "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"}
+    assert key_bits_of(climbed) > MEMORABLE_MAX_BITS
+    assert key_bits_of({"key": list(range(26)) + [0]}) > MEMORABLE_MAX_BITS   # 27 free key letters

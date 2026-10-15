@@ -1,168 +1,121 @@
-"""Experiment 0028. See program.md for the contract."""
+"""Experiment 0029. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "gromark-small-bases-two-to-nine",
-    "title": "Gromark in bases 2 to 9: the even bases that reproduce the width-21 repeats",
-    "family": "5-gromark-lfsr",
-    "parent": "0013-gromark-recurrence-on-crib-shifts",
-    "changed": "Bases 2 to 9 instead of 10 and 26. 0027 showed Gromark base 2 is the only simulated construction that reproduces K4's width-21 repeats, and Bean found base-8 primers that fit the cribs. Every forced shift must now be below the base, a filter of (base/26) to the 24th power per alphabet triple.",
+    "slug": "small-shift-keys-closeness-under-all-alphabets",
+    "title": "Bean's closeness made a test: is there an alphabet pair under which every known letter moves only a little?",
+    "family": "1-keyed-periodic",
+    "parent": "0028-gromark-small-bases-two-to-nine",
+    "changed": "The statistic is the size of the forced shift, not its recurrence. For every alphabet pair and mode the 24 forced shifts are reduced to circular magnitudes 0-13, and the pair with the smallest largest magnitude is the lead; ten shuffled controls say what chance gives.",
     "hypothesis_expert": (
-        "Rogot, Deavours and Blackman: a Gromark key in an even base with a five-digit primer has an "
-        "underlying period-21 structure, and Bean found base-8 primers that fit the cribs with period 84 "
-        "(knowledge/04-structure.md, 05-attacks.md). 0027 confirmed that base 2 reproduces the width-21 "
-        "repeats (p 0.34) where nothing else does. 0013 tested bases 10 and 26 only. Here the bases are 2 "
-        "to 9, every lag pair 1 <= b < a <= 12, under the same 248-alphabet pool for plain and cipher and "
-        "three modes. In base B every one of the 24 forced shifts must be below B, which alone has chance "
-        "(B/26)^24 per triple, from 10^-27 at base 2 to 10^-11 at base 9; a triple passing that and six "
-        "recurrence checks would be decisive. For each survivor the recurrence runs from the 22-34 window "
-        "to a full key stream, the text is decrypted and submitted. Bounds: complete for these bases, "
-        "rules and alphabets; Bean's free annealed alphabets remain his."
+        "Bean (knowledge/04-structure.md): the ten crib plaintext letters that lie in KRYPTOS sit within 0-2 "
+        "places of their ciphertext letters on the standard alphabet, about one permutation in 5,520, and "
+        "he reads K4 as letter-for-letter with a cipher alphabet near the standard one. A Gronsfeld-like key "
+        "of small digits, or any system whose shifts are small under the right pair of alphabets, would show "
+        "as a pair under which all 24 forced shifts have small circular magnitude. Over the 248-alphabet pool "
+        "squared and three modes, 184,512 pairs, the chance that a pair keeps all 24 magnitudes at or below "
+        "3 is (7/26)^24, about 10^-14 per pair; at or below 6 it is (13/26)^24, about 6 x 10^-8 per pair, "
+        "so a largest magnitude of 6 or less would be a lead and 3 or less decisive. Ten shuffles of K4 "
+        "calibrate the smallest largest-magnitude. Bounds: complete for this pool; diagnostic, no candidate."
     ),
     "hypothesis_eli5": (
-        "Yesterday's workshop found one kind of fake that shares a real oddity of K4: a Gromark cipher "
-        "whose growing number stream uses only the digits 0 and 1. Such streams repeat their rhythm every "
-        "21 letters, which is just what K4 shows. A Gromark in base 2 pushes each letter along by 0 or 1 "
-        "only; in base 8, by 0 to 7. We already know the 24 pushes that the known letters demand under "
-        "each alphabet, so we simply check whether any alphabet keeps all 24 pushes small enough, and then "
-        "whether they follow the adding rule."
+        "A cryptanalyst noticed that several known letters barely move: S becomes R, T becomes V, K stays "
+        "K. If the whole cipher only nudged letters a little along some alphabet, that alphabet would make "
+        "every one of the 24 known moves small. We try every alphabet the puzzle's words can build, measure "
+        "the biggest nudge each needs, and keep the alphabet with the smallest biggest nudge. Random letters "
+        "tell us how small that can get by luck."
     ),
     "prediction": (
-        "No alphabet triple keeps all 24 forced shifts below 9, let alone below 2, so no base from 2 to 9 "
-        "reaches the recurrence test. Zero candidates pass."
+        "The smallest largest magnitude over all pairs is 9 or 10, the same as on shuffled K4. Under the "
+        "standard-standard pair the KRYPTOS-letter cribs are close, as Bean found, but the other fourteen "
+        "cribs are not, and no pair makes all 24 small."
     ),
     "method": (
-        "1. Build the alphabet pool. 2. For each plain alphabet, cipher alphabet and mode, compute the "
-        "forced shift at each of the 24 crib positions and record the largest. 3. For each base B from 2 "
-        "to 9, keep triples whose largest shift is below B. 4. For those, check every lag pair's recurrence "
-        "on both crib runs. 5. Extend survivors to a full stream, decrypt and submit."
+        "1. Build the alphabet pool. 2. For each plain and cipher alphabet and mode, compute the 24 forced "
+        "shifts and their circular magnitudes. 3. Record the largest magnitude per pair and keep the ten "
+        "smallest, with the shift sequences. 4. Repeat on ten shuffles of K4. 5. Report Bean's own "
+        "statistic, the magnitudes under the standard pair, for reference."
     ),
     "walkthrough": (
-        "1. Take the standard alphabet for the plaintext and the KRYPTOS alphabet for the ciphertext, "
-        "Vigenere. 2. Position 22: plaintext E is index 4 in the standard alphabet; ciphertext F is index 11 "
-        "in KRYPTOS; the shift is 11 - 4 = 7. 3. Position 23: A is 0, L is 18; shift 18. 4. Continue to "
-        "position 34 for 13 shifts in a row. 5. Try the Gromark rule, a = 5, b = 4: the sixth shift must "
-        "equal the first plus the second, mod 10, and all shifts must be digits. The shift 18 already fails "
-        "base 10. 6. In base 26, check the sixth against the first plus the second mod 26, the seventh "
-        "against the second plus the third, and so on: eight checks. 7. One failure kills the rule under "
-        "this alphabet pair; try the next pair."
+        "1. Take the plain alphabet for both message and carved letters, Vigenere. 2. Position 24 is S, "
+        "carved R: R is one place before S, a nudge of 1. 3. Position 25 is T, carved V: a nudge of 2. "
+        "4. Position 23 is A, carved L: a nudge of 11, which is large. 5. Write down all 24 nudges and keep "
+        "the biggest: 12 or more here. 6. Now rebuild the alphabet from a word, say PALIMPSEST, and measure "
+        "again; the nudges change. 7. The alphabet with the smallest biggest nudge is the one to look at."
     ),
 }
 
+import random
 from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
 from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
 
-N = 97
-RUNS = [(22, 34), (64, 74)]
 MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
-ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
 MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
-MIN_CHECKS = 6
-
-
-def stream_from_window(window, start, a, b, base):
-    """Given key values at positions start..start+len(window)-1 (0-indexed), extend the recurrence
-    k[i] = k[i-a] + k[i-b] mod base backward and forward over 0..N-1."""
-    k = {start + j: v for j, v in enumerate(window)}
-    lo, hi = start, start + len(window) - 1
-    while hi + 1 < N:
-        i = hi + 1
-        k[i] = (k[i - a] + k[i - b]) % base
-        hi = i
-    while lo - 1 >= 0:
-        i = lo - 1
-        # k[i+a] = k[i] + k[i+a-b]  =>  k[i] = k[i+a] - k[i+a-b]
-        k[i] = (k[i + a] - k[i + a - b]) % base
-        lo = i
-    return [k[i] for i in range(N)]
 
 
 def encrypt(plaintext, key):
-    pa, ca, m, a, b, base, primer = key["pa"], key["ca"], key["m"], key["a"], key["b"], key["base"], key["primer"]
-    k = list(primer)
-    while len(k) < N:
-        k.append((k[-a] + k[-b]) % base)
-    return "".join(ca[ENC[m](pa.index(p), k[i])] for i, p in enumerate(plaintext))
+    raise NotImplementedError("diagnostic experiment: no candidate is submitted")
+
+
+def pool_of(vocab):
+    pool = {"std": STD, "kry": KRY}
+    for w in vocab:
+        if len(set(w)) >= 3:
+            for mname, fn in MIX.items():
+                pool[f"{w}/{mname}"] = fn(w)
+    seen, out = {}, {}
+    for name, A in pool.items():
+        if A not in seen:
+            seen[A] = name; out[name] = A
+    return out
+
+
+def mag(s):
+    return min(s, 26 - s)
+
+
+def sweep(ct, known, pool, index):
+    crib_pos = sorted(known)
+    best = []
+    for pname in pool:
+        pidx = index[pname]
+        for cname in pool:
+            cidx = index[cname]
+            for m, f in MODES.items():
+                shifts = [f(pidx[known[pos]], cidx[ct[pos - 1]]) for pos in crib_pos]
+                mags = [mag(s) for s in shifts]
+                big = max(mags)
+                if len(best) < 10 or big < best[-1][0]:
+                    best.append((big, sum(mags) / 24, pname, cname, m, shifts)); best.sort(key=lambda t: (t[0], t[1])); best = best[:10]
+    return best
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    vocab = [w for w in ctx.vocabulary if len(set(w)) >= 3]
-    pool = {"std": STD, "kry": KRY}
-    for w in vocab:
-        for mname, fn in MIX.items():
-            pool[f"{w}/{mname}"] = fn(w)
-    seen, dedup = {}, {}
-    for name, A in pool.items():
-        if A not in seen:
-            seen[A] = name; dedup[name] = A
-    pool = dedup
-    index = {name: {ch: i for i, ch in enumerate(A)} for name, A in pool.items()}
-    crib = [[(known[pos], ct[pos - 1]) for pos in range(lo, hi + 1)] for lo, hi in RUNS]
-    rules = [(a, b) for a in range(2, 13) for b in range(1, a)]
-    survivors = []
-    candidates = []
-    n_triples = 0
-    digit_ok = 0
-    smallest_max = 99
-    for pname, pa in pool.items():
-        pidx = index[pname]
-        for cname, ca in pool.items():
-            cidx = index[cname]
-            for m, f in MODES.items():
-                n_triples += 1
-                shifts = [[f(pidx[p], cidx[c]) for p, c in pairs] for pairs in crib]
-                all_digits = all(s <= 8 for run_ in shifts for s in run_)
-                digit_ok += all_digits
-                smallest_max = min(smallest_max, max(s for run_ in shifts for s in run_))
-                biggest = max(s for run_ in shifts for s in run_)
-                for base in range(2, 10):
-                    if biggest >= base:
-                        continue
-                    for a, b in rules:
-                        checks = 0; ok = True
-                        for run_ in shifts:
-                            for i in range(a, len(run_)):
-                                checks += 1
-                                if run_[i] != (run_[i - a] + run_[i - b]) % base:
-                                    ok = False; break
-                            if not ok:
-                                break
-                        if ok and checks >= MIN_CHECKS:
-                            stream = stream_from_window(shifts[0], RUNS[0][0] - 1, a, b, base)
-                            second_ok = all(stream[RUNS[1][0] - 1 + j] == v for j, v in enumerate(shifts[1]))
-                            survivors.append({"plain": pname, "cipher": cname, "mode": m, "base": base, "a": a, "b": b,
-                                              "checks": checks, "stream_matches_second_run": second_ok})
-                            if second_ok:
-                                pt = "".join(pa[MODES_DEC(m)(cidx[c], stream[i])] for i, c in enumerate(ct))
-                                key = {"pa": pa, "ca": ca, "m": m, "a": a, "b": b, "base": base, "primer": stream[:a]}
-                                candidates.append({"plaintext": pt, "key": key, "key_bits": a * (3.33 if base == 10 else 4.7) + 10,
-                                                   "key_description": f"Gromark-style a={a} b={b} base {base}, primer {stream[:a]}; plain {pname}, cipher {cname}, {m}"})
-        if ctx.time_left() < 20:
-            break
+    pool = pool_of(list(ctx.vocabulary))
+    index = {n: {ch: i for i, ch in enumerate(A)} for n, A in pool.items()}
+    best = sweep(ct, known, pool, index)
+    nulls = []
+    for seed in range(10):
+        letters_ = list(ct); random.Random(seed).shuffle(letters_)
+        nb = sweep("".join(letters_), known, pool, index)
+        nulls.append(nb[0][0])
+    crib_pos = sorted(known)
+    bean = [(pos, known[pos], ct[pos - 1], mag((STD.index(ct[pos - 1]) - STD.index(known[pos])) % 26)) for pos in crib_pos]
     return {
-        "candidates": candidates[:50],
-        "bounds": {"family": "running numerical key, k[i] = k[i-a] + k[i-b] mod base", "rules": f"{len(rules)} lag pairs, 1 <= b < a <= 12",
-                   "bases": list(range(2, 10)), "smallest_largest_shift_over_all_triples": smallest_max, "alphabets": len(pool), "alphabet_triples": n_triples, "modes": 3,
-                   "triples_with_all_shifts_below_9": digit_ok, "min_checks": MIN_CHECKS,
-                   "survivors": survivors[:40], "n_survivors": len(survivors),
-                   "n_survivors_consistent_with_second_run": sum(1 for s in survivors if s["stream_matches_second_run"])},
-        "notes": f"{n_triples} alphabet triples; smallest largest-shift over all triples {smallest_max}; bases 2-9 x {len(rules)} rules. {len(survivors)} survivors with >= {MIN_CHECKS} checks; {len(candidates)} full-stream candidates submitted.",
+        "candidates": [],
+        "bounds": {"family": "small-shift keys under all alphabet pairs (Bean's closeness)", "alphabets": len(pool), "pairs_x_modes": len(pool) ** 2 * 3,
+                   "smallest_largest_magnitude": best[0][0],
+                   "ten_best_pairs": [{"largest": b, "mean": round(mn, 2), "plain": p, "cipher": c, "mode": m, "shifts": s} for b, mn, p, c, m, s in best],
+                   "shuffled_k4_smallest_largest_magnitude": nulls,
+                   "bean_statistic_standard_pair": [{"pos": a, "plain": b, "cipher": c, "magnitude": d} for a, b, c, d in bean],
+                   "bean_kryptos_letters_sum": sum(d for _, b, _, d in bean if b in "KRYPTOS")},
+        "notes": f"Diagnostic, no candidates. Smallest largest magnitude over {len(pool) ** 2 * 3} pairs: {best[0][0]} ({best[0][2]} / {best[0][3]} {best[0][4]}); shuffled K4 gives {nulls}.",
     }
 
 
-def MODES_DEC(m):
-    return {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}[m]
-
-
 def worked_example(ctx, key):
-    pa, ca = STD, KRY
-    lines = ["plain alphabet standard, cipher alphabet KRYPTOS, Vigenere: forced shifts at 22-34", "", "pos  plain  cipher  shift"]
-    shifts = []
-    for pos in range(22, 35):
+    lines = ["standard alphabet for both message and carved letters, Vigenere: nudge per known letter", "", "pos  plain  carved  nudge"]
+    for pos in sorted(ctx.KNOWN):
         p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
-        s = (ca.index(c) - pa.index(p)) % 26; shifts.append(s)
-        lines.append(f"{pos:>3}    {p}      {c}      {s:>2}")
-    lines.append("")
-    lines.append("shifts: " + " ".join(map(str, shifts)))
-    lines.append(f"largest shift {max(shifts)}: base 8 needs all below 8, so this alphabet pair is out at once")
+        lines.append(f"{pos:>3}    {p}      {c}      {mag((STD.index(c) - STD.index(p)) % 26):>2}{'   (KRYPTOS letter)' if p in 'KRYPTOS' else ''}")
     return "\n".join(lines)

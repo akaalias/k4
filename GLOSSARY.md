@@ -56,7 +56,7 @@ uses a word a stranger would not know.
 
 **a shuffled control** (also: shuffled K4, random letters, the control, a scrambled version of the carved text): The same experiment run on the carved letters shuffled into a random order. Whatever the experiment finds on the shuffle is what luck alone can produce, so a result on the real text counts only if it beats the shuffles.
 
-**the English score** (also: reads like English, how English, quadgram score): A number saying how much a stretch of letters looks like English, computed from how common each run of four letters is in English text. Real English scores about -3.6, random letters about -6.5; higher is better.
+**the English score** (also: reads like English, reads most like English, quadgram score): A number saying how much a stretch of letters looks like English, computed from how common each run of four letters is in English text. Real English scores about -3.6, random letters about -6.5; higher is better.
 
 **loss** (also: the loss, the hero number): The single number the loop tries to drive to zero: ten points for each of the 24 known letters a candidate gets wrong, plus how far the other 73 letters are from English, plus a charge for a secret word too long to remember.
 

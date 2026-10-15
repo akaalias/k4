@@ -76,7 +76,7 @@ article p,article li{max-width:720px}article table{table-layout:fixed;width:100%
 .rec-head{max-width:980px;margin:18px auto 0}.eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}.eyebrow .kept{color:var(--accent)}
 h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.005em;max-width:900px}
 .standfirst{font:italic 16.5px/1.6 var(--serif);color:var(--muted);margin:0 0 18px;max-width:820px}
-.meta-row{display:flex;flex-wrap:wrap;gap:10px 34px;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule-soft)}.meta-row div{display:flex;flex-direction:column}.meta-row b{font-weight:600;font-size:14.5px;line-height:1.3}.meta-row span{font:600 10px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
+.meta-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0 24px;padding:14px 0 12px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule-soft)}.meta-row>div{display:flex;flex-direction:column}.meta-bar{margin-top:7px}.meta-bar svg rect{cursor:help}.meta-bar .faint{display:block;margin-top:3px}.meta-row b{font-weight:600;font-size:14.5px;line-height:1.3}.meta-row span{font:600 10px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
 .plain p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:640px}
 .gl{border-bottom:1px dotted var(--accent);cursor:help;transition:background .15s}.gl.on,.gl:hover{background:var(--hl)}.gl-entry{border-left:2px solid transparent;padding-left:6px;margin-left:-8px;transition:background .15s}.gl-entry.on,.gl-entry:hover{background:var(--hl);border-left-color:var(--accent)}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
 .rec-body{max-width:980px}.rec-body h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}.rec-body p,.rec-body li{max-width:720px;font-size:15.5px;line-height:1.6}
@@ -155,7 +155,7 @@ def fmt_dur(sec):
     return f"{sec/3600:.1f} h"
 
 
-def phase_bar(ph, scale_max, width=160):
+def phase_bar(ph, scale_max, width=160, height=10):
     """Length is the experiment's total time against the longest experiment on the page;
     segments are the phases in order. A one-second run is a sliver, by design."""
     total = sum(ph.values())
@@ -169,11 +169,12 @@ def phase_bar(ph, scale_max, width=160):
         if v <= 0:
             continue
         w = full * v / total
-        parts.append(f'<rect x="{x:.1f}" y="0" width="{max(w-0.5,0.5):.1f}" height="10" fill="{PHASE_FILL[k]}"><title>{k}: {fmt_dur(v)}</title></rect>')
+        share = 100.0 * v / total
+        parts.append(f'<rect x="{x:.1f}" y="0" width="{max(w-0.5,0.5):.1f}" height="{height}" fill="{PHASE_FILL[k]}" data-tip="<b>{k}</b> {fmt_dur(v)}, {share:.0f}% of {fmt_dur(total)}"/>')
         x += w
     pre = sum(ph.get(k, 0.0) for k in ("design", "implement", "test"))
     note = '' if pre >= 10 else ' <span class="faint" style="font-size:11.5px;white-space:nowrap" title="design, implement and test were not clocked; the bar is run time only">unclocked</span>'
-    return f'<svg width="{width}" height="10" style="vertical-align:middle">{"".join(parts)}</svg>' + note
+    return f'<svg width="{width}" height="{height}" style="vertical-align:middle;overflow:visible">{"".join(parts)}</svg>' + note
 
 
 def phase_legend():
@@ -496,12 +497,10 @@ def experiment_page(tag):
 <p class="standfirst">{esc(changed)}</p>
 <div class="meta-row">
 <div><b>{parent_html}</b><span>builds on</span></div>
-<div><b>{esc(started) or 'n/a'}</b><span>run started</span></div>
-<div><b>{fmt_dur(total)}</b><span>time, all phases</span></div>
-<div><b>{', '.join(f"{k} {fmt_dur(v)}" for k, v in ph.items() if v >= 1) or 'unclocked'}</b><span>by phase</span></div>
+<div><b>{fmt_dur(total)}</b><span>time, all phases</span><div class="meta-bar">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=190, height=8)}</div></div>
 <div><b>{r['n_candidates']}</b><span>candidates</span></div>
 <div><b>{r['best_crib_hits']}/24</b><span>known letters right</span></div>
-{'' if r.get('best_loss') is None else f"<div><b>{r['best_loss']:.1f}</b><span>best loss</span></div>"}
+<div><b>{'' if r.get('best_loss') is None else f"{r['best_loss']:.1f}"}</b><span>best loss</span></div>
 </div></div>"""
     # section 1: plain words with the glossary rail
     eli5 = r.get("eli5") or ""

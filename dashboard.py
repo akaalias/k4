@@ -83,7 +83,8 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .sculpture-wrap{max-width:980px;margin:14px auto 22px}#sculpture{width:100%;border:1px solid var(--rule-soft);border-radius:2px;overflow:hidden;cursor:grab}#sculpture canvas{display:block}.sculpture-foot{display:flex;gap:22px;align-items:baseline;margin-top:8px}.sculpture-key span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-right:14px;cursor:pointer;border-bottom:2px solid transparent}.sculpture-key span.on{color:var(--accent);border-bottom-color:var(--accent)}#sculpture-label{margin:0;font-size:13.5px;flex:1}
 .explain-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;max-width:980px;margin:22px auto 0}.explain-col h4{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 8px}.explain-col p{font-size:15.5px;line-height:1.65;margin:0;color:var(--ink)}
 @media(max-width:860px){.explain-row{grid-template-columns:1fr}}
-.panel-wrap{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin:14px 0 6px}.panel{padding:0}.panel-h{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px}.panel pre{margin:0;padding:12px 16px;font:15px/1.75 var(--mono);letter-spacing:.14em;background:var(--wash);border:1px solid var(--rule-soft);border-radius:2px}.panel u{text-decoration:none;border-bottom:2px solid var(--rule)}.panel b{color:var(--ink);background:var(--hl);font-weight:700}.panel i{color:var(--accent);font-style:normal;background:var(--hl)}.k3tail{color:var(--rule)}
+table.score{width:100%;max-width:760px;margin:10px 0 6px;border-collapse:collapse}table.score td,table.score th{padding:7px 10px;border-bottom:1px solid var(--rule-soft);font-size:15px}table.score td:first-child{font-weight:600}table.score tr.total td{border-top:1.5px solid var(--ink);border-bottom:none;font-weight:700}table.score .pct{color:var(--accent);margin-left:8px}table.score.ranks td:first-child{font-weight:400}table.score.ranks tr.kept td{font-weight:700;color:var(--accent)}table.score.ranks tr.gap td{color:var(--faint);border-bottom:none}.score-sub{font-size:14px;color:var(--muted);margin:16px 0 4px;max-width:760px}
+.panel-wrap{display:flex;gap:18px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;margin:16px 0 8px}.panel-wrap.wide{width:min(1360px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}.callout.wide{width:min(1400px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%);box-sizing:border-box}.callout .panel-wrap.wide{width:auto;left:0;transform:none}#sculpture-label{min-height:3.2em}.subsec{display:flex;align-items:baseline;gap:12px;margin:34px 0 10px;padding-top:12px;border-top:1px solid var(--rule-soft)}.subsec b{font:400 15px var(--serif);color:var(--faint)}.subsec h3{font:400 21px var(--serif);margin:0}.subsec-sub{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 6px}.lp-col{display:flex;flex-direction:column}.lp-eyebrow{font:600 11px/1.2 var(--serif)!important;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.lp-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:10px 14px 12px}.lp-title{font:600 13px var(--serif);color:var(--muted);text-align:center;margin:0 0 8px}.lrow{display:flex;gap:1.5px;margin:0 0 2.5px;justify-content:flex-end}.lc{display:inline-flex;align-items:center;justify-content:center;width:15px;height:19px;border-radius:2.5px;background:#ebe7d8;color:var(--muted);font:normal 11.5px/1 var(--mono)}.lc.tail{background:#f1eee3;color:#cfcab8}.lc.known{background:var(--accent);color:var(--paper);font-weight:700}.lc.miss{background:var(--paper);color:var(--accent);box-shadow:inset 0 0 0 1.3px var(--accent);font-weight:700}.lc.ink{color:var(--ink)}.lc.dot:after{content:"";width:2px;height:2px;border-radius:50%;background:var(--faint,#9b998c)}.lp-cap{font:italic 13px/1.4 var(--serif);color:var(--muted);text-align:center;margin:6px 0 0}.lp-cap.acc{color:var(--accent);margin-top:2px}.lp-arrow{color:var(--muted);padding-top:72px}.lp.mini .lp-box{padding:5px 6px;border-radius:4px;background:transparent;border-color:var(--rule-soft)}.lp.mini .lp-title{display:none}.lp.mini .lc{width:6.5px;height:9px;font-size:6px;border-radius:1px}.lp.mini .lrow{gap:1px;margin-bottom:1px}
 .gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
 .chart-wide{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin:10px 0 6px}.chart-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px;padding-top:10px;border-top:1px solid var(--rule)}.chart-legend{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13px;color:var(--muted);margin:6px 0 0}.chart-legend span{white-space:nowrap}.mk{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:6px}.mk-kept{background:var(--ink)}.mk-disc{background:var(--disc)}.mk-none{background:var(--paper);border:2px solid var(--disc);width:8px;height:8px}.mk-err{background:none;border-radius:0;position:relative;width:11px;height:11px}.mk-err:before,.mk-err:after{content:'';position:absolute;left:5px;top:-1px;width:2px;height:13px;background:var(--accent)}.mk-err:before{transform:rotate(45deg)}.mk-err:after{transform:rotate(-45deg)}.mk-line{border-radius:0;height:2px;width:18px;background:var(--ink);vertical-align:3px}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
@@ -208,29 +209,57 @@ def panel_lines(text):
     return out
 
 
-def panel_block(ct, pt, known):
-    """Two blocks side by side, laid out as the copper carries K4: the K3 tail and OBKR on the
-    first line, then three lines of 31. Left: as carved, known positions underlined. Right: the
-    candidate, matches bold on a wash, misses in the accent."""
-    def block(text, label, carved):
-        lines = []
-        offset = 0
-        for k, chunk in enumerate(panel_lines(text)):
-            cells = []
-            for j, ch in enumerate(chunk):
-                i = offset + j + 1
-                if carved:
-                    cells.append(f'<u>{esc(ch)}</u>' if i in known else esc(ch))
-                elif i in known:
-                    cells.append(f'<b>{esc(ch)}</b>' if ch == known[i] else f'<i>{esc(ch)}</i>')
+def letter_panel(text, known, mode, title, captions=()):
+    """One panel in the house letter-cell style, laid out as the copper carries K4: the K3 tail
+    (faint) and OBKR on the first line, then three lines of 31.
+    mode 'carved': every carved letter in a wash cell, the 24 known places in accent cells.
+    mode 'reading': unknown places as dots, the 24 known letters in accent cells.
+    mode 'candidate': every letter in a cell; a known place that matches is an accent cell, one
+    that misses is outlined in accent."""
+    rows = []
+    offset = 0
+    for k, chunk in enumerate(panel_lines(text if text else "?" * 97)):
+        cells = []
+        if k == 0:
+            cells += [f'<i class="lc tail">{esc(c)}</i>' for c in K3_TAIL]
+        for j, ch in enumerate(chunk):
+            i = offset + j + 1
+            if mode == "carved":
+                cells.append(f'<i class="lc known">{esc(ch)}</i>' if i in known else f'<i class="lc">{esc(ch)}</i>')
+            elif mode == "reading":
+                cells.append(f'<i class="lc known">{esc(known[i])}</i>' if i in known else '<i class="lc dot"></i>')
+            else:
+                if i in known:
+                    cells.append(f'<i class="lc known">{esc(ch)}</i>' if ch == known[i] else f'<i class="lc miss" title="should be {esc(known[i])}">{esc(ch)}</i>')
                 else:
-                    cells.append(esc(ch))
-            lead = f'<span class="k3tail">{esc(K3_TAIL) if carved else "&nbsp;" * len(K3_TAIL)}</span>' if k == 0 else ""
-            lines.append(lead + "".join(cells))
-            offset += len(chunk)
-        return f'<div class="panel"><div class="panel-h">{label}</div><pre>{chr(10).join(lines)}</pre></div>'
-    right = block(pt, "candidate", False) if pt else ""
-    return f'<div class="panel-wrap">{block(ct, "as carved", True)}{right}</div>'
+                    cells.append(f'<i class="lc ink">{esc(ch)}</i>')
+        rows.append(f'<div class="lrow">{"".join(cells)}</div>')
+        offset += len(chunk)
+    caps = "".join(f'<p class="lp-cap{" acc" if c.startswith("scored") else ""}">{esc(c)}</p>' for c in captions)
+    return f'<div class="lp"><div class="lp-box"><div class="lp-title">{esc(title)}</div>{"".join(rows)}</div>{caps}</div>'
+
+
+def panel_block(ct, pt, known, in_caption=True):
+    """IN: the copper as carved; OUT: a reading of the same 97 places, either the empty reading
+    (the known letters where they must land) or a candidate."""
+    left = ('<div class="lp-col"><p class="lp-eyebrow">in: the copper, always the same</p>'
+            + letter_panel(ct, known, "carved", "as carved, 97 letters; the 24 known places in accent",
+                           ("OBKR ends the line that finishes K3, then three lines of 31",) if in_caption else ()) + '</div>')
+    if pt:
+        right = ('<div class="lp-col"><p class="lp-eyebrow">out: the candidate</p>'
+                 + letter_panel(pt, known, "candidate", "every place read; known places in accent, misses outlined",
+                                ("checked: the known letters in place, and the reading turns back into the copper",)) + '</div>')
+    else:
+        right = ('<div class="lp-col"><p class="lp-eyebrow">out: a reading of the same 97 places</p>'
+                 + letter_panel(None, known, "reading", "the 24 known letters must land here; the rest is read",
+                                ("checked: the known letters in place, and the reading turns back into the copper", "scored: the loss, zero is solved")) + '</div>')
+    arrow = '<div class="lp-arrow"><svg width="34" height="14" viewBox="0 0 34 14"><path d="M1,7 L28,7" stroke="currentColor" stroke-width="1.4"/><path d="M26,2 L33,7 L26,12 z" fill="currentColor"/></svg></div>'
+    return f'<div class="panel-wrap wide">{left}{arrow}{right}</div>'
+
+
+def mini_panel(pt, known):
+    """A small candidate panel for tables: the three lines of 31 plus OBKR's line, letters in cells."""
+    return letter_panel(pt, known, "candidate", "").replace('<div class="lp">', '<div class="lp mini">', 1)
 
 
 WORST = 240.0   # the loss with all 24 known letters wrong
@@ -522,12 +551,15 @@ def what_we_look_for():
     from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
     panel = panel_block(_K4, None, _KNOWN)
     cols = [
-        ("The 24 known letters", "Jim Sanborn has confirmed two stretches of the hidden message: EASTNORTHEAST at positions 22 to 34 and BERLINCLOCK at 64 to 74, underlined in the panel. They are the only hard facts about the message, and every experiment leans on them."),
+        ("The 24 known letters", "Jim Sanborn has confirmed two stretches of the hidden message: EASTNORTHEAST at positions 22 to 34 and BERLINCLOCK at 64 to 74, in accent in the panels. They are the only hard facts about the message, and every experiment leans on them."),
         ("What the loss counts", "A candidate is a full 97-letter reading of the panel. It pays ten points for each known letter it gets wrong, then a little for how far the other 73 letters sit from English, then a charge for a secret word too long to remember. Zero would be solved."),
         ("The line at ten", "Above it, at least one known letter is wrong. Below it, all 24 are right and only the English of the rest and the length of the key remain. A dot below the line is not a solution until the text reads as English and the key is one a person could remember."),
     ]
     html = "".join(f'<div class="explain-col"><h4>{esc(h)}</h4><p>{esc(t)}</p></div>' for h, t in cols)
-    return sculpture_block() + panel + f'<div class="explain-row">{html}</div>'
+    sub = lambda n, t, d: f'<div class="subsec"><b>1.{n}</b><h3>{t}</h3></div><p class="subsec-sub">{d}</p>'
+    return (sub(1, "The sculpture", "Bret L Bowen's model of Kryptos. Hover a key below it, or a plate, to see which message it carries.") + sculpture_block()
+            + sub(2, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel
+            + f'<div class="explain-row">{html}</div>')
 
 
 def sec(n, title, sub=""):
@@ -559,7 +591,7 @@ def overview():
 <p class="hero-sub">Time by phase across the run: {', '.join(f"{k} {fmt_dur(v)}" for k, v in sorted(by_phase.items(), key=lambda kv: PHASE_ORDER.index(kv[0]) if kv[0] in PHASE_ORDER else 9) if v >= 1) or 'none yet'}.</p>"""
     if ch:
         from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
-        champ = f"""<div class="callout"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}; loss {ch.get('loss', 0):.2f}, {pct(ch.get('loss'))} of the worst possible. A champion is the lowest-loss candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.{' Experiments 0001-0049 were kept by a different number, fitness, which is why a reverted experiment can sit below the champion in the chart; from 0050 the harness keeps by loss.' if ch['experiment'][:4] <= '0049' else ''}</p></div>"""
+        champ = f"""<div class="callout wide"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}; loss {ch.get('loss', 0):.2f}, {pct(ch.get('loss'))} of the worst possible. A champion is the lowest-loss candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.{' Experiments 0001-0049 were kept by a different number, fitness, which is why a reverted experiment can sit below the champion in the chart; from 0050 the harness keeps by loss.' if ch['experiment'][:4] <= '0049' else ''}</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
     scale_max = max((sum((r.get("phases") or {"run": r["seconds"]}).values()) for r in rows), default=0)
@@ -596,6 +628,52 @@ def overview():
             + sec(4, "Lineage", "What each experiment inherits from.")
             + (tree(None) or "<p class='muted'>empty</p>"))
     return page("Kryptos K4 autoresearch", body, "/")
+
+
+def score_parts(c):
+    """The loss of one candidate, taken apart the way kryptos.scorer.loss adds it up."""
+    from kryptos.scorer import english_score, free_text, ENGLISH_TARGET, MEMORABLE_BITS
+    misses = 24 - c.get("crib_hits", 0)
+    eng = english_score(free_text(c["plaintext"]))
+    deficit = max(0.0, ENGLISH_TARGET - eng)
+    bits = c.get("key_bits") or 0.0
+    key = max(0.0, bits - MEMORABLE_BITS) / MEMORABLE_BITS
+    return {"misses": misses, "crib": 10.0 * misses, "english": eng, "deficit": deficit, "bits": bits, "key": key,
+            "total": 10.0 * misses + deficit + key}
+
+
+def score_section(n, r, best):
+    """How the loss was reached: the kept or best candidate's three parts, then the other
+    candidates that passed every gate, ranked by loss."""
+    from kryptos.scorer import ENGLISH_TARGET, MEMORABLE_BITS
+    if not best or best.get("loss") is None:
+        return ""
+    p = score_parts(best)
+    rows = [
+        ("Known letters missed", f"{p['misses']} of 24, ten points each", p["crib"]),
+        ("English", f"the 73 free letters score {p['english']:.2f}; English text scores {ENGLISH_TARGET:.1f}", p["deficit"]),
+        ("Key", f"{p['bits']:.0f} bits; a person remembers about {MEMORABLE_BITS:.0f}; each 60 beyond costs a point", p["key"]),
+    ]
+    trs = "".join(f'<tr><td>{a}</td><td class="muted">{esc(b)}</td><td class="num">{v:.2f}</td></tr>' for a, b, v in rows)
+    trs += f'<tr class="total"><td>Loss</td><td class="muted">of {WORST:.0f}, the worst possible</td><td class="num">{p["total"]:.2f} <span class="pct">{pct(p["total"])}</span></td></tr>'
+    who = "the candidate kept" if r.get("decision") == "kept" else "the best candidate"
+    out = sec(n, "How the score is made", f"The loss of {who}, part by part. Zero is solved.") + f'<table class="score">{trs}</table>'
+    passed = sorted([c for c in r.get("candidates", []) if c.get("gate_passed") and c.get("loss") is not None], key=lambda c: c["loss"])
+    if len(passed) > 1:
+        lines = []
+        shown = [(k, c) for k, c in enumerate(passed, 1) if k <= 6 or c is best]
+        for j, (k, c) in enumerate(shown):
+            if j and k != shown[j - 1][0] + 1:
+                lines.append(f'<tr class="gap"><td class="num">&middot;&middot;&middot;</td><td colspan="6"></td></tr>')
+            q = score_parts(c)
+            mark = ("kept" if r.get("decision") == "kept" else "best") if c is best else ""
+            lines.append(f'<tr{" class=kept" if mark else ""}><td class="num">{k}</td><td class="num">{q["crib"]:.0f}</td><td class="num">{q["deficit"]:.2f}</td><td class="num">{q["key"]:.2f}</td><td class="num">{q["total"]:.2f}</td><td class="num">{pct(q["total"])}</td><td class="muted">{mark}</td></tr>')
+        out += (f'<p class="score-sub">All {len(passed)} candidates that passed every gate, lowest loss first; the top six and the one kept.</p>'
+                '<table class="score ranks"><thead><tr><th class="num">rank</th><th class="num">missed</th><th class="num">English</th><th class="num">key</th><th class="num">loss</th><th class="num">share</th><th></th></tr></thead><tbody>'
+                + "".join(lines) + "</tbody></table>")
+        if r.get("decision") == "kept" and passed[0] is not best:
+            out += f'<p class="score-sub">Rank 1 has the lower loss. This experiment ran before experiment 50, when the harness kept by a different number, fitness, which charges long keys less; it kept the candidate marked kept.</p>'
+    return out
 
 
 def experiment_page(tag):
@@ -641,20 +719,20 @@ def experiment_page(tag):
 <div><b>{fmt_dur(total)}</b><span>time, all phases</span><div class="meta-bar">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=190, height=8)}</div></div>
 <div><b>{r['n_candidates']}</b><span>candidates</span></div>
 <div><b>{r['best_crib_hits']}/24</b><span>known letters right</span></div>
-<div><b>{pct(shown_loss) or '&ndash;'}</b><span>{'loss of the candidate kept' if kl is not None else 'best loss'}, of the worst possible{'' if shown_loss is None else f" ({shown_loss:.1f} of {WORST:.0f})"}{loss_note}</span></div>
+<div><b>{pct(shown_loss) or '&ndash;'}</b><span>loss</span></div>
 </div></div>"""
     # section 1: plain words with the glossary rail
     eli5 = r.get("eli5") or ""
     low = eli5.lower()
     found = []   # (start, end, term_id, term, definition)
     for k, (term, names, definition) in enumerate(load_glossary()):
-        best = None
+        hit = None
         for n in names:
             m = _re.search(r"(?<![a-z])" + _re.escape(n.lower()) + r"(?![a-z])", low)
-            if m and (best is None or m.start() < best[0]):
-                best = (m.start(), m.end())
-        if best:
-            found.append((best[0], best[1], f"g{k}", term, definition))
+            if m and (hit is None or m.start() < hit[0]):
+                hit = (m.start(), m.end())
+        if hit:
+            found.append((hit[0], hit[1], f"g{k}", term, definition))
     found.sort()
     kept, last_end = [], -1
     for f in found:
@@ -681,7 +759,7 @@ def experiment_page(tag):
     cand = ""
     if best:
         how = ("the harness's best among gate passers: lowest loss" if r.get("decision_rule") == "loss" else "the harness's best among gate passers: highest fitness, the rule before experiment 0050") if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
-        cand = sec(2, "Best candidate against the known letters", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, with the 24 known positions underlined. Right, the candidate: a letter on a wash sits at a known position and matches, a red one sits there and misses. This is {how}.") + panel_block(K4, best["plaintext"], KNOWN)
+        cand = sec(2, "Best candidate against the known letters", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, the 24 known places in accent. Right, the candidate: a known place it gets right is an accent cell, one it misses is outlined. This is {how}.") + panel_block(K4, best["plaintext"], KNOWN).replace('class="panel-wrap"', 'class="panel-wrap wide"', 1)
     else:
         cand = sec(2, "Best candidate against the known letters", "This experiment produced no candidate: the search ruled everything out before a full text was built. Its product is the bounded negative in section 7.")
     # remaining sections from the record, numbered
@@ -693,12 +771,17 @@ def experiment_page(tag):
              ("Result", "Result and bounds", "The harness's record: candidates, gates, loss, and the negative result this experiment leaves behind.")]
     body = [head, plain, cand]
     n = 3
+    sc = score_section(n, r, best)
+    if sc:
+        body.append(sc); n += 1
     for key, title, sub in order:
         content = section(key)
         if not content:
             continue
         html_c = md(content)
         html_c = link_experiments(html_c, tags)
+        if key == "Result":
+            html_c = re.sub(r"<code>([A-Z?]{97})</code>", lambda m: mini_panel(m.group(1), KNOWN), html_c)
         body.append(sec(n, title, sub) + f'<article class="rec-body">{html_c}</article>')
         n += 1
     return page(f"experiment {num}", "".join(body))

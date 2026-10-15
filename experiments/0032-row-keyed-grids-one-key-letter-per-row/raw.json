@@ -1,0 +1,19 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "grid with one key letter per row, rows cycling through a key word",
+  "widths": "2-48",
+  "key_lengths": "1-48",
+  "alphabets": 63,
+  "modes": 3,
+  "cases": 559629,
+  "widths_surviving_row_test": {},
+  "smallest_width_surviving": null,
+  "survivors_by_key_length": {},
+  "vocab_matches": 0
+ },
+ "notes": "559629 (alphabet pair, mode, width) cases. Widths surviving the row test: []. Survivors by key length (first 12): {}. 0 matches.",
+ "error": null,
+ "worked_example": "width 7, plain alphabet for both message and carved letters, Vigenere: shifts within row 22-28\n\npos  plain  carved  shift\n 22    E      F       1\n 23    A      L      11\n 24    S      R      25\n 25    T      V       2\n 26    N      Q       3\n 27    O      Q       2\n 28    R      P      24\n\none row, seven different shifts: width 7 cannot have one key letter per row under this alphabet.",
+ "seconds": 0.11987876892089844
+}

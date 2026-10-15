@@ -1,0 +1,12 @@
+width 7, plain alphabet for both message and carved letters, Vigenere: shifts within row 22-28
+
+pos  plain  carved  shift
+ 22    E      F       1
+ 23    A      L      11
+ 24    S      R      25
+ 25    T      V       2
+ 26    N      Q       3
+ 27    O      Q       2
+ 28    R      P      24
+
+one row, seven different shifts: width 7 cannot have one key letter per row under this alphabet.

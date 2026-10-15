@@ -1,0 +1,38 @@
+{
+ "id": 32,
+ "tag": "0032-row-keyed-grids-one-key-letter-per-row",
+ "started": "2026-10-15T07:43:40+00:00",
+ "seconds": 0.2,
+ "status": "ran",
+ "phases": {
+  "design": 3.6,
+  "implement": 49.6,
+  "test": 0.7,
+  "run": 0.2,
+  "record": 0.0
+ },
+ "ended_epoch": 1792050220.9854012,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "grid with one key letter per row, rows cycling through a key word",
+  "widths": "2-48",
+  "key_lengths": "1-48",
+  "alphabets": 63,
+  "modes": 3,
+  "cases": 559629,
+  "widths_surviving_row_test": {},
+  "smallest_width_surviving": null,
+  "survivors_by_key_length": {},
+  "vocab_matches": 0
+ },
+ "notes": "559629 (alphabet pair, mode, width) cases. Widths surviving the row test: []. Survivors by key length (first 12): {}. 0 matches.",
+ "error": null,
+ "candidates": []
+}

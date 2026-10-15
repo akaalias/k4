@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key row",
+  "text": "A running key is a long text written under the message, one letter per place. Drawn here: the K1 solution, with the BERLIN alphabet for the message and the CLOCK alphabet for the copper."
+ },
+ {
+  "anchor": "the rule",
+  "text": "The search slides the text one letter at a time along the message, forwards and backwards; three misses among the 24 known places end an offset."
+ },
+ {
+  "anchor": "the bound",
+  "text": "146,932,380 trials over every offset, both directions, every table pair and three modes: no offset comes within two misses."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Experiment 62 found that ciphertext autokey at distance 21 makes the copper's width-21 repeats. On its own it cannot produce the known letters, so this asks whether a column shuffle before or after it can."
+ },
+ {
+  "anchor": "the start",
+  "text": "In a ciphertext autokey each letter is keyed by the carved letter a fixed distance before it, so the first 21 letters have an unknown key. Known letters that land there cannot be checked."
+ },
+ {
+  "anchor": "the bound",
+  "text": "3,107 shuffles, distances 1 to 95, all 24 ways of using the table, both orders: 0 fits, best 9 of 24."
+ }
+]

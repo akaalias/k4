@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the routes",
+  "text": "Spirals, snakes and diagonals over grids of width 2 to 48, read forwards or backwards: 1,128 ways of shuffling the 97 letters before the sculpture's table."
+ },
+ {
+  "anchor": "the arcs",
+  "text": "Drawn for one route, a clockwise spiral on rows of 10. Each known letter moves to a new place; the carved letter there must be its enciphered form."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No route lets a secret word shorter than 23 letters explain the known letters, and the best forced key run, GLEBRIM at -4.937, is no more English than on shuffled coppers. After a letter swap instead of the table, no route passes at all."
+ }
+]

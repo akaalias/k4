@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the slots",
+  "text": "Two secret words used one after the other on the table add up: each place uses one slot of each word, and each known letter forces their total."
+ },
+ {
+  "anchor": "the tables",
+  "text": "Drawn for SHADING on the message and INVISIBLE on the copper; the experiment tried all 102 x 102 pairs built from K1 to K3 words and the 2025 words."
+ },
+ {
+  "anchor": "the bound",
+  "text": "1,747,872 cases: 2,042 pairs of lengths survive, none with a total below 21, which is what chance leaves; no survivor is made of puzzle words."
+ }
+]

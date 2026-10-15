@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the forced slots",
+  "text": "At period 27, on the sculpture's table, each known letter forces the key letter in its slot (place p uses slot p mod 27); three slots stay free."
+ },
+ {
+  "anchor": "the shapes",
+  "text": "A 27 to 29 letter key is unlikely to be one word, so the experiment built 272 keys from the puzzle's words: two joined, joined with an X or a Q, a word and its mirror, a word doubled."
+ },
+ {
+  "anchor": "the bound",
+  "text": "9,716,112 trials over every shaped key, 63 x 63 tables, three modes and three key readings: none comes within three misses of the forced letters."
+ }
+]

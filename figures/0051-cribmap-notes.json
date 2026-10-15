@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the count",
+  "text": "A pure transposition only moves letters, so the message must use exactly the copper's letters. EASTNORTHEAST and BERLINCLOCK together need three Es; the copper has two."
+ },
+ {
+  "anchor": "the escape",
+  "text": "Deleting any one carved letter does not help, and neither does the question mark before OBKR. Changing one carved letter into an E would: 93 ways."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every pure transposition, every route and every key, is dead at once by counting, unless the copper has a carving error."
+ }
+]

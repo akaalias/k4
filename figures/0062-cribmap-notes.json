@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the patterns",
+  "text": "Experiment 56 showed that two patterns on the copper are real: five of six doubled letters in one column at width 7, and pairs of letters 21 apart repeating eleven times."
+ },
+ {
+  "anchor": "the recipes",
+  "text": "Each recipe enciphered 4,000 stretches of Carter's book and K1 to K3, and the experiment counted how often each pattern came out as strong as on the copper."
+ },
+ {
+  "anchor": "the result",
+  "text": "Ciphertext autokey at distance 21 makes the repeats 5.5% of the time, against well under 1% for most recipes, but nothing made both patterns together, and nothing makes the width-7 column."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "26 letters",
+  "text": "K4 uses every letter of the alphabet. Playfair, two-square, four-square, bifid and ADFGX all work from a 5 x 5 square of 25 letters, so they cannot have produced it."
+ },
+ {
+  "anchor": "97 letters",
+  "text": "Playfair and the square ciphers also encipher two letters at a time, which needs an even length; K4 has 97."
+ },
+ {
+  "anchor": "the escape",
+  "text": "A padding letter, a 6 x 6 square with digits spelled out, or a 26-letter rectangle would get round these counts; none is a standard system."
+ }
+]

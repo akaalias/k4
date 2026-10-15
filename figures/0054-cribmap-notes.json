@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the shifts",
+  "text": "A Gromark key is a stream of digits. Each known letter under its carved letter tells the shift used there; a shift of 10 or more cannot be a single digit, so it needs a bigger number base."
+ },
+ {
+  "anchor": "the base",
+  "text": "Over all 10,404 pairs of tables built from K1 to K3 words, the smallest base any pair allows is 17; ten shuffled coppers give 17 to 19."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No pair allows base 15 or less, so the ordinary base-10 Gromark is out on every one of these tables."
+ }
+]

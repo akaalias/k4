@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key row",
+  "text": "A running key is a long text written under the message, one letter per place. Drawn here: the opening of Carter's The Tomb of Tut-ankh-Amen, volume 1, with the BERLIN alphabet for the message and the standard one for the copper."
+ },
+ {
+  "anchor": "the rule",
+  "text": "The search slides the text one letter at a time along the message, forwards and backwards; three misses among the 24 known places end an offset."
+ },
+ {
+  "anchor": "the bound",
+  "text": "855,602,976 trials: Carter's book and the sculpture's own texts, every offset, both directions, one alphabet built from a puzzle word: no offset comes within two misses."
+ }
+]

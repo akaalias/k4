@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the autokey",
+  "text": "In a ciphertext autokey the key at each place is the carved letter a fixed distance before it, so once the start is past, the copper itself is the key."
+ },
+ {
+  "anchor": "the check",
+  "text": "Drawn for distance 21 with SHADING for the message and INVISIBLE for the copper: place 22 needs key R, and the carved letter 21 places back is O."
+ },
+ {
+  "anchor": "the bound",
+  "text": "All 102 x 102 tables, four key alphabets, three modes, distances 1 to 95: never fewer than 3 misses, while shuffled coppers searched the same way reach 2."
+ }
+]

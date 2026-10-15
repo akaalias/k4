@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the route",
+  "text": "Encipher on the table first, then shuffle: write the result in rows and read the columns in the order of a keyword's letters, once or twice. The keywords here are every K1 to K3 word of 3 to 20 letters."
+ },
+ {
+  "anchor": "the arcs",
+  "text": "Drawn for MAGNETIC, from K2: each known letter moves to a new place, and the carved letter there is its enciphered form."
+ },
+ {
+  "anchor": "the bound",
+  "text": "14,792 routes under all 24 ways of using the table: the shortest secret word any of them allows is 25 letters (16 settings), and no puzzle word fits what it forces. No shuffled copper was run, so whether 16 is chance is open."
+ }
+]

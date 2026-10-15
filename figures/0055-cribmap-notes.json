@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the blocks",
+  "text": "A Hill cipher numbers the letters, cuts the message into blocks and mixes each block with a fixed table of numbers. Whole blocks of known letters give equations that pin the table."
+ },
+ {
+  "anchor": "the numberings",
+  "text": "Here the letters were numbered in 200 K1 to K3 word orders instead of A=0 to Z=25, with blocks of 2, 3 and 4, every alignment, plain or with an added vector."
+ },
+ {
+  "anchor": "the bound",
+  "text": "7,200 settings, 557 consistent with every whole block; every one of them fails the known letters left over, and the best decryption lands 21 of 24."
+ }
+]

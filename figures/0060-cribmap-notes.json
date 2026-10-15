@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "K2 ends with map coordinates. The experiment read their numbers as the table of a Hill cipher, which mixes letters in blocks, in every order and window, as 2 x 2 and 3 x 3 tables."
+ },
+ {
+  "anchor": "the table",
+  "text": "Drawn for the first four numbers: 38, 57, 6, 5 become 12, 5, 6, 5. Its determinant is even, so it has no inverse and can only be used to encipher."
+ },
+ {
+  "anchor": "the bound",
+  "text": "72 coordinate tables: the best lands 4 of 24 known letters, below random tables tried the same way (best 7, average 2.72)."
+ }
+]

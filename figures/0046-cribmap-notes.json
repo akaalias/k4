@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the shifts",
+  "text": "A Gromark key is a stream of digits, each the sum of earlier digits. Each known letter under its carved letter tells the shift used there; a shift of 10 or more cannot be a digit."
+ },
+ {
+  "anchor": "the rule",
+  "text": "Drawn for the rule 'five back plus four back' in base 26 on the standard and KRYPTOS alphabets: the stream must reproduce each later shift, and it does not."
+ },
+ {
+  "anchor": "the bound",
+  "text": "184,512 alphabet triples, 364 two- and three-term rules with lags up to 13, bases 16 to 26: no rule survives six checks under any triple."
+ }
+]

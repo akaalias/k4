@@ -121,6 +121,8 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 114 | 6 | **AMSCO.** Cells alternating one and two letters under every dictionary word of 3-15 columns, either cell size first (445,680 settings, 891,360 routes), repeating key 1-26 before or after: nothing below period 22. Period 23 after the move sits above the coppers: 21 settings against 1-15, 15 distinct check sets against 1-9 (counted after the run). The keys are obscure words (ADULTEROUSLY, MATCHLESS, THIOPHOSPHATE), and with 52 cells and ten controls about 4.7 cells should top the range by chance; one does. Noted, not followed. |
 | 115 | 3 | **Key word/s.** A puzzle word (171: vocabulary, K1-K3 words, theme words) added to any dictionary word of 3-24 letters, every start of each, 24 table rules (KRYPTOS + ABSCISSA repeats every 56, inside the lengths the cribs allow): subtracting the puzzle word never leaves a key that repeats with any length 3-24, on K4 or on a copper, so no second word is even forced. Two-word sums with one puzzle word are dead. |
 | 116 | 8 | **Matrix codes, then the table.** A Hill matrix of size 2-4 with a repeating key of length 1-26 on the table, either order (one numbering: p = B c + a shift per block class), solved row by row mod 2 and mod 13: no setting alive on K4 or any copper; every setting dead for 2x2 at key lengths 1-12, 14 and 16-24, for 3x3 at 1-7, 9, 12-15, 18 and 21, for 4x4 at 1, 2, 4 and 8; the rest partly open (too few equations). A planted text is recovered. |
+| 117 | 1 | **'All the possible shifts' (C2(b)).** The sculpture's texts (the K1/K2 block among them) as a running key plus one constant shift of the table, both key numberings, with no move and with every move of the type-1 library before or after the table, tested through difference signatures: no full match, no whole crib stretch; the deepest partial match is 8 checks on K4 and 7-9 on the coppers. |
+| 118 | 1 | **Autokey running on from K3.** Ciphertext autokey whose key is the carved letter 1-200 places back in the whole carved stream (K1-K3 and the ? before K4), so every known place is a check, and the letter carved one or two lines above on the plate: best 5 of 24 by distance and 3 by the plate (coppers 5-6 and 2-5). |
 
 ### Experiments 80 to 88: types 1 and 2 of directions.md (2026-10-15 night)
 
@@ -159,7 +161,7 @@ Open:
 - Next in directions.md: type 3, keys read off the sculpture.
 
 
-### Experiments 89 to 115: types 3 to 8, the free-alphabet follow-up, then hand routes keyed by the dictionary (2026-10-15 night)
+### Experiments 89 to 118: types 3 to 8, the free-alphabet follow-up, then hand routes keyed by the dictionary (2026-10-15 night)
 
 Alexis away overnight, asked to continue past 100. Worked through types 3-8 of directions.md once each, then
 followed the one cell that stood out. All eighteen reverted; no champion. Issue #24; issue #28 (source-text search).

@@ -27,13 +27,13 @@ different grid whose other "shifts" (rotations, offsets, start positions) produc
 Hill-style numeric matrix. Experiments: recover every grid that reproduces K3 (widths 7,
 8, 14, 21, 24, 28, 42, 48, 86; Bauer's double rotation; Stehle's 192 rule), then apply
 each grid's family of shifts to K4 before and after tableau substitution. Status:
-0006 covered plain columnar at every width including the K3 widths, before the tableau; 0008 covered reading (a) in full for the K3 rule at every shift and for double grid rotations, before the tableau: no shift admits a tableau key shorter than 22. With a repeating key on both sides of the K3 rule at every shift, key lengths 2-14 each: dead (0080). Three quarter turns at every width triple, then or before a periodic key 1-26: dead (0083). The after-tableau order is weakly bounded by 0007. Reading (b) untested.
+0006 covered plain columnar at every width including the K3 widths, before the tableau; 0008 covered reading (a) in full for the K3 rule at every shift and for double grid rotations, before the tableau: no shift admits a tableau key shorter than 22. With a repeating key on both sides of the K3 rule at every shift, key lengths 2-14 each: dead (0080). Three quarter turns at every width triple, then or before a periodic key 1-26: dead (0083). The after-tableau order is weakly bounded by 0007. Reading (b), the sculpture's texts (the K1/K2 block among them) as a running key under each of the 26 shifts of the table, with or without a type-1 move: dead (0117).
 
 **C3. "I like to use spatial systems of encoding and decoding... pattern, light and
 shadow... visual systems... individualistic."** (1999, 2005). Readings: (a) a route
 through the carved grid (31-wide lines, the four plates) rather than an abstract matrix;
 (b) the tableau read mirrored, as it reads from behind; (c) positions of the physical
-anomalies as the key. Experiments: family D. Status: untested.
+anomalies as the key. Experiments: family D. Status: (a) the carved lines laid over the tableau and cipher plates, straight or folded, as a positional key: dead (0089); grid paths (snake, spiral, diagonal) with periodic keys: dead below 21 (0092); hand padding of a 31-wide carved grid: 0082. (b) K4 read from behind, line by line, with periodic keys and autokeys: dead (0108). (c) untested.
 
 **C4. "I masked the English language... the masking technique may not be known... you
 need to solve the technique first and then go for the puzzle... more than one stage."**
@@ -63,7 +63,7 @@ words in K1-K3 are keys (PALIMPSEST: overwritten; ABSCISSA: the x-axis; LAYER TW
 ROWS was wrong but "by rows" was Sanborn's own reading of jargon); (b) the misspellings'
 positions are indices; (c) K2's coordinates are numbers for a key; (d) K3's Carter passage
 instructs: candle, breach in the upper left corner, widening the hole, "can you see
-anything." Key-source rule plus families C and D. Status: as a running key, K1-K3 plaintexts and ciphertexts (0004), the sculpture's own texts (0017) and Carter's book (0021) are dead at every offset; as key words, the K1-K3 vocabulary is dead for periodic keys (0005, 0009-0011). Other readings untested.
+anything." Key-source rule plus families C and D. Status: as a running key, K1-K3 plaintexts and ciphertexts (0004), the sculpture's own texts (0017) and Carter's book (0021) are dead at every offset; as key words, the K1-K3 vocabulary is dead for periodic keys (0005, 0009-0011). Other readings untested. Ciphertext autokey continuing the carved stream from K3 (every lag 1-200) and the letter above on the plate: at chance (0118).
 
 **C8. "The most obvious key to the sculpture, nobody has picked up on."** (2005). Readings:
 (a) KRYPTOS itself used in a way not yet tried (as a transposition key for K4, as it was
@@ -135,7 +135,7 @@ Constraint on the scorer: tolerate X and Q. Status: constraint.
 
 **C20. "Layer two."** (K2, confirmed 2006). Readings: (a) a second layer of encryption
 on K4; (b) fold the halves; (c) the second plate; (d) the tableau row two; (e) K5.
-Status: untested.
+Status: (a) as a second stage: types 1 and 2 of directions.md, 0080-0099 and 0110-0116 (moves with periodic, autokey, running and clock keys; Hill with a periodic key), all dead or at chance; as two key words added, dead (0115). (b) the screen folded: dead as a positional key (0089). (c)-(e) untested.
 
 **C21. The extra L and HILL.** Readings: (a) Hill cipher (2x2 and 3x3 exhausted under
 the alignments tested; affine, chaining, 4x4, shifting numberings, paired 2x2 open); (b)

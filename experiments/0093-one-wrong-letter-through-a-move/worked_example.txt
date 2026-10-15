@@ -1,0 +1,14 @@
+clockwise quarter turn of a grid 8 wide, then a key of length 9; sculpture's alphabet, Vigenere
+
+place  letter  lands at  copper  key value  slot (mod 9)
+   22       E        71       Z         14             7
+   23       A        83       C          2             1
+   24       S        95       C          3             4
+   25       T        10       H         10             0
+   26       N        22       F         19             3
+   27       O        34       S          1             6
+   64       B        90       U         13             8
+   65       E         5       U         10             4
+   66       R        17       I         14             7
+
+disagreements at period 9: 2 (2 means two or more)

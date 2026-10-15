@@ -1,0 +1,118 @@
+{
+ "candidates": [],
+ "bounds": {
+  "routes_distinct": 27852,
+  "conventions": 12,
+  "sources": {
+   "tableau rows fwd": 781,
+   "tableau rows bwd": 781,
+   "tableau rows with index column fwd": 807,
+   "tableau rows with index column bwd": 807,
+   "tableau columns fwd": 781,
+   "tableau columns bwd": 781,
+   "morse as carved fwd": 80,
+   "morse as carved bwd": 80,
+   "morse reversed order fwd": 80,
+   "morse reversed order bwd": 80,
+   "panel ciphertexts K1-K4 fwd": 865,
+   "panel ciphertexts K1-K4 bwd": 865,
+   "K1-K3 plaintexts fwd": 768,
+   "K1-K3 plaintexts bwd": 768,
+   "Sanborn 1989 letter fwd": 2176,
+   "Sanborn 1989 letter bwd": 2176,
+   "1991 dedication texts fwd": 4880,
+   "1991 dedication texts bwd": 4880,
+   "2025 open letter fwd": 2228,
+   "2025 open letter bwd": 2228,
+   "Carter vol 1 fwd": 284914,
+   "Carter vol 1 bwd": 284914
+  },
+  "change_then_move": {
+   "k4_full_matches": 0,
+   "controls_full": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch13_matches": 0,
+   "controls_stretch13": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch11_matches": 0,
+   "controls_stretch11": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch_hits": []
+  },
+  "move_then_change": {
+   "sources": "all but Carter",
+   "k4_full": 0,
+   "k4_best_depth": 7,
+   "controls_best_depth": [
+    7,
+    7,
+    7,
+    6,
+    7,
+    6,
+    7,
+    6,
+    6,
+    7
+   ],
+   "k4_depth_histogram": {
+    "1": 8874,
+    "2": 202095,
+    "3": 111542,
+    "4": 11288,
+    "5": 407,
+    "6": 16,
+    "7": 2
+   },
+   "k4_top": [
+    {
+     "route": "K3 rule a=14 b=12 inverse",
+     "conv": "varb/kry/std",
+     "depth": 7
+    },
+    {
+     "route": "two turns cw 8,95 inverse",
+     "conv": "varb/kry/std",
+     "depth": 7
+    }
+   ],
+   "route_convention_pairs_on_k4": 334224,
+   "key_letters_searched": 26892
+  },
+  "controls": "10 shuffled coppers (seed 90), identical search"
+ },
+ "notes": "27,852 distinct routes x 12 conventions. Change then move (22 key texts incl. Carter): full matches K4 0, controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; EASTNORTHEAST stretch 0 (controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), BERLINCLOCK stretch 0 (controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]). Move then change (20 key texts): full 0, deepest K4 7, controls [7, 7, 7, 6, 7, 6, 7, 6, 6, 7].",
+ "error": null,
+ "worked_example": "(worked_example failed: IndexError('string index out of range'))",
+ "seconds": 60.25851917266846
+}

@@ -1,230 +1,161 @@
-"""Experiment 0025. See program.md for the contract."""
+"""Experiment 0026. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "autokeys-with-mixed-alphabets",
-    "title": "Both autokeys again, with the tableau built from the puzzle's own words",
-    "family": "1-keyed-periodic",
-    "parent": "0012-plaintext-autokey-chained-from-cribs",
-    "changed": "0002 and 0012 used the standard and KRYPTOS alphabets only. Here the plain and cipher alphabets are the keyword mixings of every vocabulary word, with the key letters read in the standard, KRYPTOS or the same mixed alphabet.",
+    "slug": "double-keyed-columnar-then-tableau",
+    "title": "Two keyed columnar transpositions from the puzzle's words, then the tableau",
+    "family": "6-transposition-then-tableau",
+    "parent": "0016-routes-then-tableau-forced-key-english",
+    "changed": "Route set: every ordered pair of vocabulary words as two keyed columnar transpositions, each forward or inverse, instead of plain widths. Sanborn's 'double matrixes' with the matrices keyed by words.",
     "hypothesis_expert": (
-        "Ciphertext autokey, c[i] = E(p[i], c[i-L]), is decided by the cribs alone: at every crib position "
-        "past the lag the key letter is a known ciphertext letter, so each (lag, convention) gets up to 24 "
-        "exact checks. Plaintext autokey, c[i] = E(p[i], p[i-L]), is decided by the chained closure of 0012. "
-        "Both were dead under the standard and KRYPTOS alphabets (0002, 0003, 0012); the NSA's 1992 "
-        "'plain-text auto-key' guess (C11a) and Scheidt's keyword alphabets (C5) leave the mixed-alphabet "
-        "case open. Alphabet pool: standard, KRYPTOS and the keyword mixing of each vocabulary word (63); "
-        "plain and cipher alphabets range over the pool, the key alphabet over standard, KRYPTOS and the "
-        "plain alphabet itself; three modes; lags 1-96. Ciphertext autokey: zero mismatches is a survivor. "
-        "Plaintext autokey: a consistent closure with 60 or more forced letters is scored as English on its "
-        "non-crib runs against ten shuffled controls, and a fully forced text is submitted. Bounds: complete "
-        "for this pool and these key-alphabet choices."
+        "Sanborn, CNN 2005 (C1): 'double matrixes and triple matrixes... then went back to this table'. The "
+        "NSA's K3 reading was a keyed columnar with key KRYPTOS; 0006 and 0016 used plain widths and single "
+        "vocabulary keys. Here both stages are keyed by words from the vocabulary (C7 reading a, C8): 61 x 61 "
+        "ordered pairs x 4 direction combinations, 14,884 routes, each followed by a periodic tableau under "
+        "24 conventions. For each route the cribs land at known positions, the divisor rule gives the live "
+        "periods, and for live periods up to 40 the forced key is scored as English on runs of five or more "
+        "slots, with vocabulary matching and ten shuffled controls. Bounds: complete for this route set."
     ),
     "hypothesis_eli5": (
-        "An autokey cipher uses the message itself, or the scrambled text itself, as the secret word. We "
-        "ruled that out yesterday with the sculpture's two alphabets. But the table could have been built "
-        "from another word, which changes every sum. So we rebuild the table from each word the puzzle "
-        "knows and run both autokey checks again: for the scrambled-text version the 24 known letters "
-        "decide at once; for the message version, each known letter reveals another, and the chain either "
-        "breaks or fills the whole message."
+        "The artist said he sometimes scrambled the letters through two grids before using the table. The "
+        "third message was scrambled through a grid whose columns were ordered by a key word. So we try two "
+        "such grids in a row, each ordered by a word the puzzle knows, in every combination, and ask the "
+        "usual question: where do the 24 known letters land, and could a short secret word on the table "
+        "then produce the carved letters there?"
     ),
     "prediction": (
-        "Ciphertext autokey: no alphabet triple, mode and lag passes all its checks; the best passes about "
-        "6 of 24. Plaintext autokey: every lag up to 25 breaks under every triple; closures with 60 or more "
-        "letters read as noise against the controls. Zero candidates pass."
+        "No route lets the cribs force a tableau key shorter than 22, and the forced keys at periods up to "
+        "40 score inside the range of ten shuffled controls. No vocabulary match; zero candidates pass."
     ),
     "method": (
-        "1. Build the alphabet pool and the key-alphabet choices. 2. Ciphertext autokey: for each triple, "
-        "mode and lag, compare the enciphered crib letter with the carved letter at every crib position past "
-        "the lag; count mismatches. 3. Plaintext autokey: for each triple, mode and lag, chain forced letters "
-        "from the cribs to closure; reject on conflict; record forced-letter count. 4. Score large closures "
-        "as English on non-crib runs; repeat on ten shuffles. 5. Submit fully forced texts."
+        "1. Build the routes from ordered pairs of vocabulary words, each stage forward or inverse. 2. For "
+        "each route send the crib positions to their intermediate positions. 3. For each convention force "
+        "the key letters and find live periods by the divisor rule. 4. Score the forced key at live periods "
+        "up to 40 on runs of five or more slots; match against the vocabulary. 5. Repeat on ten shuffles."
     ),
     "walkthrough": (
-        "1. Build the alphabet from ABSCISSA: ABSCIDEFGHJKLMNOPQRTUVWXYZ, and use it for both the message "
-        "letters and the carved letters, Vigenere. 2. Ciphertext autokey, lag 10: the key for position 22 is "
-        "the carved letter at 12, L. 3. Look up E in the ABSCISSA alphabet, index 5, and L, index 12; add: "
-        "17, which is R in that alphabet. The carved letter at 22 is F, so this is a mismatch. 4. Count "
-        "mismatches over all known letters past position 10; any mismatch kills this lag for this alphabet. "
-        "5. Plaintext autokey, lag 10: the key for position 32 is the message letter at 22, E, which we know, "
-        "so position 32's message letter must be A; it is, so no conflict yet; position 42's letter follows "
-        "from position 32's, and so on down the chain."
+        "1. Take the words KRYPTOS and ABSCISSA. 2. Write the message in rows of 7 under KRYPTOS, number the "
+        "columns by alphabetical order of the letters (K=1, O=2, P=3, R=4, S=5, T=6, Y=7), and read the "
+        "columns out in that order. 3. Write the result in rows of 8 under ABSCISSA and read it out the same "
+        "way. 4. The E at position 22 of the message is now at some position j; the carved letter at j and "
+        "E force a key letter on the sculpture's table. 5. Do this for all 24 known letters. 6. Two landing "
+        "spots a multiple of p apart share a key letter at period p; a disagreement kills p. 7. For the "
+        "periods that survive, write the forced letters into their slots and read them."
     ),
 }
 
 import random
-from kryptos.alphabets import keyword_mixed
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
+from kryptos.alphabets import conventions, key_letter_for, numeric_order
+from kryptos.ciphers import columnar_transposition_encrypt, columnar_transposition_decrypt
 
 N = 97
-MODES_ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
-MODES_DEC = {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}
-MODES_KEY = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
+MAXP = 40
+DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0] for d in range(1, N + 1)}
 
 
-def pool_of(vocab):
-    pool = {"std": STD, "kry": KRY}
-    for w in vocab:
-        if len(set(w)) >= 3:
-            pool[f"{w}/keyword"] = keyword_mixed(w)
-    seen, out = {}, {}
-    for name, A in pool.items():
-        if A not in seen:
-            seen[A] = name; out[name] = A
-    return out
+def perm_of(fn):
+    idx = [chr(0x100 + i) for i in range(N)]
+    return [ord(ch) - 0x100 for ch in fn("".join(idx))]
+
+
+def stage(word, inv):
+    order = numeric_order(word)
+    return (lambda s, o=order: columnar_transposition_decrypt(s, o)) if inv else (lambda s, o=order: columnar_transposition_encrypt(s, o))
+
+
+def route_set(vocab):
+    words = [w for w in vocab if 2 <= len(w) <= 40]
+    routes = []
+    for w1 in words:
+        for w2 in words:
+            for i1 in (False, True):
+                for i2 in (False, True):
+                    f1, f2 = stage(w1, i1), stage(w2, i2)
+                    routes.append((f"{w1}{' inv' if i1 else ''} then {w2}{' inv' if i2 else ''}", lambda s, a=f1, b=f2: b(a(s))))
+    return routes
 
 
 def encrypt(plaintext, key):
-    pa, ca, ka, m, L, primer, kind = key["pa"], key["ca"], key["ka"], key["m"], key["lag"], key["primer"], key["kind"]
-    f = MODES_ENC[m]
-    out = []
-    for i, p in enumerate(plaintext):
-        if i < L:
-            k = primer[i]
-        else:
-            k = plaintext[i - L] if kind == "plaintext" else out[i - L]
-        out.append(ca[f(pa.index(p), ka.index(k))])
-    return "".join(out)
+    raise NotImplementedError("diagnostic experiment: no full key is implied, so no candidate is submitted")
 
 
-def ct_autokey_mismatches(ct, known, L, pa, ca, ka, m, limit):
-    f = MODES_ENC[m]
-    mism = checks = 0
-    for pos, p in known.items():
-        i = pos - 1
-        if i < L:
-            continue
-        checks += 1
-        if ca[f(pa.index(p), ka.index(ct[i - L]))] != ct[i]:
-            mism += 1
-            if mism > limit:
-                break
-    return mism, checks
-
-
-def closure(ct, known, L, pa, ca, ka, m):
-    """Plaintext autokey: propagate forced plaintext letters from the cribs."""
-    fk, fd = MODES_KEY[m], MODES_DEC[m]
-    pidx, cidx, kidx = {ch: i for i, ch in enumerate(pa)}, {ch: i for i, ch in enumerate(ca)}, {ch: i for i, ch in enumerate(ka)}
-    forced = {pos - 1: p for pos, p in known.items()}
-    queue = list(forced)
-    while queue:
-        i = queue.pop()
-        p = forced[i]
-        if i - L >= 0:
-            k = ka[fk(pidx[p], cidx[ct[i]])]        # the plaintext letter at i-L, as a key letter
-            j = i - L
-            if j in forced:
-                if forced[j] != k:
-                    return False, forced
-            else:
-                forced[j] = k; queue.append(j)
-        if i + L < N:
-            q = pa[fd(cidx[ct[i + L]], kidx[p])]
-            j = i + L
-            if j in forced:
-                if forced[j] != q:
-                    return False, forced
-            else:
-                forced[j] = q; queue.append(j)
-    return True, forced
-
-
-def runs_of(forced, skip):
-    out, cur, prev = [], [], None
-    for i in sorted(forced):
-        if i in skip:
+def runs_in_slots(slots, P):
+    filled = [slots.get(s) for s in range(P)]
+    start = 0 if all(filled) else next(i for i in range(P) if filled[i] is None)
+    out, cur = [], []
+    for k in range(1, P + 1):
+        ch = filled[(start + k) % P]
+        if ch is None:
             if len(cur) >= 5: out.append("".join(cur))
-            cur = []; prev = i; continue
-        if prev is not None and i == prev + 1:
-            cur.append(forced[i])
+            cur = []
         else:
-            if len(cur) >= 5: out.append("".join(cur))
-            cur = [forced[i]]
-        prev = i
+            cur.append(ch)
     if len(cur) >= 5: out.append("".join(cur))
     return out
 
 
-def sweep(ct, known, pool, score, collect):
-    crib_idx = {p - 1 for p in known}
-    best_ct = (99, None)
-    ct_survivors = []
-    pt_best = []
-    pt_full = []
-    dead_lags_all = set(range(1, N))
-    trials = 0
-    for pname, pa in pool.items():
-        for cname, ca in pool.items():
-            for kname in ("std", "kry", pname):
-                ka = pool[kname] if kname in pool else pa
-                for m in MODES_ENC:
-                    for L in range(1, N):
-                        trials += 1
-                        mism, checks = ct_autokey_mismatches(ct, known, L, pa, ca, ka, m, 3)
-                        if checks >= 12 and mism < best_ct[0]:
-                            best_ct = (mism, (pname, cname, kname, m, L, checks))
-                        if mism == 0 and checks >= 12:
-                            ct_survivors.append((pname, cname, kname, m, L, checks))
-                        ok, forced = closure(ct, known, L, pa, ca, ka, m)
-                        if not ok:
-                            continue
-                        dead_lags_all.discard(L)
-                        if len(forced) >= 60:
-                            runs = runs_of({i: c for i, c in forced.items() if i not in crib_idx}, set())
-                            qs = sum(len(r) - 3 for r in runs)
-                            if qs >= 4:
-                                sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
-                                if len(pt_best) < 10 or sc > pt_best[-1][0]:
-                                    pt_best.append((sc, pname, cname, kname, m, L, len(forced), runs[:3])); pt_best.sort(reverse=True); pt_best = pt_best[:10]
-                        if collect and len(forced) == N:
-                            pt = "".join(forced[i] for i in range(N))
-                            fk = MODES_KEY[m]
-                            primer = "".join(ka[fk(pa.index(pt[i]), ca.index(ct[i]))] for i in range(L))
-                            pt_full.append({"plaintext": pt, "key": {"pa": pa, "ca": ca, "ka": ka, "m": m, "lag": L, "primer": primer, "kind": "plaintext"},
-                                            "key_bits": 4.7 * L, "key_description": f"plaintext autokey lag {L} primer {primer}; {pname}/{cname}/{kname} {m}"})
-    return trials, best_ct, ct_survivors, pt_best, pt_full, sorted(dead_lags_all)
+def search(ct, known, routes, convs, score, time_left):
+    crib_pos = sorted(known)
+    best, n = [], 0
+    minp_hist = {}
+    for name, fn in routes:
+        if time_left() < 30:
+            break
+        sigma = perm_of(fn)
+        where = {sigma[j]: j for j in range(N)}
+        inter = [where[p - 1] for p in crib_pos]
+        for conv in convs:
+            pa, ca, ka, m = conv
+            forced = [key_letter_for(known[p], ct[j], pa, ca, ka, m) for p, j in zip(crib_pos, inter)]
+            dead = set()
+            for a in range(24):
+                for b in range(a + 1, 24):
+                    if forced[a] != forced[b]:
+                        dead.update(DIVISORS[abs(inter[a] - inter[b])])
+            minp = next(P for P in range(1, N + 1) if P not in dead)
+            minp_hist[minp] = minp_hist.get(minp, 0) + 1
+            for P in range(2, MAXP + 1):
+                if P in dead:
+                    continue
+                slots = {j % P: l for j, l in zip(inter, forced)}
+                runs = runs_in_slots(slots, P)
+                qs = sum(len(r) - 3 for r in runs)
+                if qs < 4:
+                    continue
+                sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
+                n += 1
+                if len(best) < 20 or sc > best[-1][0]:
+                    best.append((sc, name, "/".join(conv), P, runs)); best.sort(reverse=True); best = best[:20]
+    return best, n, minp_hist
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    pool = pool_of(list(ctx.vocabulary))
-    trials, best_ct, ct_surv, pt_best, pt_full, dead = sweep(ct, known, pool, ctx.english_score, True)
-    candidates = []
-    for c in ct_surv[:20]:
-        pname, cname, kname, m, L, checks = c
-        pa, ca = pool[pname], pool[cname]; ka = pool[kname] if kname in pool else pa
-        fd = MODES_DEC[m]
-        # primer unknown: decrypt positions past the lag only, mark the rest with X
-        pt = ["X"] * N
-        for i in range(L, N):
-            pt[i] = pa[fd(ca.index(ct[i]), ka.index(ct[i - L]))]
-        candidates.append({"plaintext": "".join(pt), "key": {"pa": pa, "ca": ca, "ka": ka, "m": m, "lag": L, "primer": "X" * L, "kind": "ciphertext"},
-                           "key_bits": 4.7 * L, "key_description": f"ciphertext autokey lag {L}; {pname}/{cname}/{kname} {m}; primer unknown"})
-    candidates += pt_full[:30]
+    routes = route_set(list(ctx.vocabulary))
+    convs = list(conventions())
+    best, n, hist = search(ct, known, routes, convs, ctx.english_score, ctx.time_left)
     nulls = []
     for seed in range(10):
+        if ctx.time_left() < 120:
+            break
         letters_ = list(ct); random.Random(seed).shuffle(letters_)
-        _, _, _, nb, _, _ = sweep("".join(letters_), known, pool, ctx.english_score, False)
+        nb, _, _ = search("".join(letters_), known, routes, convs, ctx.english_score, ctx.time_left)
         nulls.append(round(nb[0][0], 3) if nb else None)
     return {
-        "candidates": candidates[:50],
-        "bounds": {"family": "ciphertext and plaintext autokey with keyword-mixed alphabets", "alphabets": len(pool),
-                   "key_alphabet_choices": "standard, KRYPTOS, or the plain alphabet", "modes": 3, "lags": "1-96", "trials": trials,
-                   "ciphertext_autokey_best": {"mismatches": best_ct[0], "setting": best_ct[1]}, "ciphertext_autokey_survivors": len(ct_surv),
-                   "plaintext_autokey_lags_dead_under_every_triple": dead,
-                   "plaintext_autokey_best_closures": [{"score": round(sc, 3), "plain": a, "cipher": b, "key": c, "mode": m, "lag": L, "forced": n, "runs": r} for sc, a, b, c, m, L, n, r in pt_best],
-                   "plaintext_autokey_fully_forced": len(pt_full), "shuffled_control_best": nulls},
-        "notes": f"{trials} (triple, mode, lag) cases. Ciphertext autokey: best {best_ct[0]} mismatches, {len(ct_surv)} survivors. Plaintext autokey: lags dead under every triple {dead[:30]}{'...' if len(dead) > 30 else ''}; {len(pt_full)} fully forced; best closure {pt_best[0][0] if pt_best else None} vs shuffled {max(x for x in nulls if x is not None) if any(nulls) else None}.",
+        "candidates": [],
+        "bounds": {"family": "double keyed columnar (vocabulary words) then periodic tableau", "routes": len(routes), "conventions": 24,
+                   "periods": f"2-{MAXP}, live only", "keys_scored": n, "smallest_live_period": min(hist) if hist else None,
+                   "min_live_period_histogram": {str(k): v for k, v in sorted(hist.items())[:12]},
+                   "best": [{"score": round(sc, 3), "route": nm, "convention": cv, "period": P, "runs": rs} for sc, nm, cv, P, rs in best[:10]],
+                   "shuffled_control_best": nulls},
+        "notes": f"Diagnostic, no candidates. {len(routes)} routes; smallest live period {min(hist) if hist else None}; best forced key {best[0][0]:.3f} vs shuffled {[x for x in nulls if x is not None]}.",
     }
 
 
 def worked_example(ctx, key):
-    A = keyword_mixed("ABSCISSA")
-    lines = [f"alphabet from ABSCISSA: {A}; used for message, carved text and key; Vigenere", "", "ciphertext autokey, lag 10:", "pos  plain  key = carved at pos-10  E+key  carved  match"]
-    for pos in (22, 23, 24, 64, 65):
-        p = ctx.KNOWN[pos]; k = ctx.K4[pos - 11]; c = A[(A.index(p) + A.index(k)) % 26]
-        lines.append(f"{pos:>3}    {p}         {k}                  {c}      {ctx.K4[pos-1]}     {'yes' if c == ctx.K4[pos-1] else 'no'}")
-    ok, forced = closure(ctx.K4, ctx.KNOWN, 10, A, A, A, "vig")
-    lines.append("")
-    lines.append(f"plaintext autokey, lag 10: chain from the cribs {'is consistent' if ok else 'breaks'} after forcing {len(forced)} letters")
+    fn = lambda s: stage("ABSCISSA", False)(stage("KRYPTOS", False)(s))
+    sigma = perm_of(fn); where = {sigma[j]: j for j in range(N)}
+    lines = ["route: keyed columnar KRYPTOS then keyed columnar ABSCISSA; convention kry/kry/kry Vigenere", "", f"column order under KRYPTOS: {numeric_order('KRYPTOS')}; under ABSCISSA: {numeric_order('ABSCISSA')}", "", "plain pos  letter  lands at  carved  forced key letter"]
+    for pos in (22, 23, 24, 25, 64, 65, 66):
+        j = where[pos - 1]
+        lines.append(f"{pos:>9}    {ctx.KNOWN[pos]}       {j+1:>3}        {ctx.K4[j]}       {key_letter_for(ctx.KNOWN[pos], ctx.K4[j], 'kry', 'kry', 'kry', 'vig')}")
     return "\n".join(lines)

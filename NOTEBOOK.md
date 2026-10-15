@@ -65,6 +65,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 58 | 6 | The table, then a column shuffle keyed by K1-K3 words, once or twice: 355,008 route-convention pairs, a handful live at length 25 and no word fits. The prediction missed those 16, and no control measured their chance rate. |
 | 59 | 3 | Two secret words in two passes on tables rebuilt from K1-K3 words: nothing below a combined length of 21, survivors above at chance rates, no word. |
 | 60 | 8 | The K2 map reference poured into a Hill number table, every reading: at most 4 of 24 known letters, worse than random tables. |
+| 61 | 3 | A puzzle word plus the misspelt letters (QUA, LOE) or the raised YAR as a second short key: best 8 of 24 known letters, no better than scrambled coppers. |
 
 ## 2026-10-14
 

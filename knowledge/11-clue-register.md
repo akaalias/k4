@@ -82,7 +82,7 @@ there... the positioning."** "They're important" (the misaligned YAR). (2003). R
 (a) the positions of Q in IQLUSION, U in UNDERGRUUND, A in DESPARATLY (and the missing E),
 and the raised YAR, read as indices into the tableau or the K4 text; (b) Bauer's error
 coordinates (25,2), (24,6), (11,15), (15,15) as a matrix; (c) "orientation" literally:
-the letters' direction, upside down (RQ reads YR). Status: untested.
+the letters' direction, upside down (RQ reads YR). Status: (a) the misspelt letters QUA, the corrections LOE (with and without the dropped E) as a short second key added to any word: best 8 of 24 known letters, against 7-11 on shuffled coppers (0061); index readings untested.
 
 **C11. "The other 91 characters and their proper order are yet to be determined."**
 (NYT 2010 wording). Reading: a reordering step exists. Supports C1(a). Status: noted.

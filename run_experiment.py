@@ -132,7 +132,7 @@ def main():
         "best_crib_hits": best_hits, "best_crib_words": best_words, "best_fitness": best["fitness"] if best else None,
         "best_loss": best_loss,
         "champion_before": champion, "bounds": raw.get("bounds", {}), "notes": raw.get("notes", ""),
-        "error": raw.get("error"), "candidates": scored[:20],
+        "error": raw.get("error"), "candidates": scored,
     }
     (outdir / "result.json").write_text(json.dumps(result, indent=1))
     (outdir / "worked_example.txt").write_text(raw.get("worked_example", "") or "")

@@ -689,6 +689,26 @@ def overview():
     return page("Kryptos K4 autoresearch", body, "/")
 
 
+def all_candidates(r):
+    """Every candidate the experiment returned. Records before experiment 50 stored only the first
+    20; where the raw output holds more, the rest are gated and scored here with the same functions."""
+    stored = [c for c in r.get("candidates", []) if c.get("plaintext")]
+    raw_p = r["_dir"] / "raw.json"
+    if len(stored) >= r.get("n_candidates", 0) or not raw_p.exists():
+        return stored
+    from kryptos.gates import run_gates
+    from kryptos.scorer import loss as _loss
+    out = list(stored)
+    # the harness scored the raw candidates in order and kept the first 20, so the rest follow on
+    for c in json.loads(raw_p.read_text()).get("candidates", [])[len(r.get("candidates", [])):]:
+        if not c.get("plaintext"):
+            continue
+        g = run_gates(c["plaintext"], c.get("reencrypted"))
+        out.append({**c, "gate_passed": g.passed, "failed_at": g.failed_at, "crib_hits": g.crib_hits,
+                    "loss": _loss(c["plaintext"], c.get("key_bits", 0), g.crib_hits) if g.failed_at in (None, "cribs") else None})
+    return out
+
+
 def bounds_html(b):
     """The bounds record as a readable list: names in words, numbers with separators, nested
     records indented, long letter strings wrapped in monospace."""
@@ -718,7 +738,7 @@ def bounds_html(b):
 def result_section_html(r, tags, known):
     """The harness's record as a reader wants it: a row of figures, then each candidate as a
     full-size panel with its score and key, lowest loss first. Replaces the generated table."""
-    cands = [c for c in r.get("candidates", []) if c.get("plaintext")]
+    cands = all_candidates(r)
     passed = [c for c in cands if c.get("gate_passed")]
     ranked = sorted(cands, key=lambda c: (not c.get("gate_passed"), c.get("loss") if c.get("loss") is not None else 1e9, -c.get("crib_hits", 0)))
     cb = (r.get("champion_before") or {}).get("experiment")
@@ -729,15 +749,14 @@ def result_section_html(r, tags, known):
     if not ranked:
         return out
     cards = []
-    for k, c in enumerate(ranked[:6], 1):
+    for k, c in enumerate(ranked, 1):
         status = "passed every gate" if c.get("gate_passed") else f"failed at {esc(c.get('failed_at') or '?')}"
         loss_s = pct(c.get("loss")) or "&ndash;"
         pt = c["plaintext"]
         body = letter_panel(pt, known, "candidate", "").replace('<div class="lp-title"></div>', "") if len(pt) == 97 and pt.isalpha() else f'<code>{esc(pt)}</code>'
         cards.append(f'<div class="res-card"><div class="res-side"><b class="res-rank">{k}</b><span>{status}</span><span>{c.get("crib_hits", 0)}/24 known letters</span><span class="res-loss">loss {loss_s}</span></div>'
                      f'<div class="res-main">{body}<p class="res-key">{esc(c.get("key_description", ""))}</p></div></div>')
-    more = f'<p class="score-sub">{len(ranked) - 6} more candidates in the record.</p>' if len(ranked) > 6 else ""
-    return out + '<p class="score-sub">Candidates, lowest loss first.</p>' + "".join(cards) + more
+    return out + f'<p class="score-sub">All {len(ranked)} candidates, lowest loss first.</p>' + "".join(cards)
 
 
 def score_parts(c):
@@ -771,14 +790,14 @@ def score_section(n, r, best):
     passed = sorted([c for c in r.get("candidates", []) if c.get("gate_passed") and c.get("loss") is not None], key=lambda c: c["loss"])
     if len(passed) > 1:
         lines = []
-        shown = [(k, c) for k, c in enumerate(passed, 1) if k <= 6 or c is best]
+        shown = list(enumerate(passed, 1))
         for j, (k, c) in enumerate(shown):
             if j and k != shown[j - 1][0] + 1:
                 lines.append(f'<tr class="gap"><td class="num">&middot;&middot;&middot;</td><td colspan="6"></td></tr>')
             q = score_parts(c)
             mark = ("kept" if r.get("decision") == "kept" else "best") if c is best else ""
             lines.append(f'<tr{" class=kept" if mark == "kept" else ""}><td class="num">{k}</td><td class="num">{q["crib"]:.0f}</td><td class="num">{q["deficit"]:.2f}</td><td class="num">{q["key"]:.2f}</td><td class="num">{q["total"]:.2f}</td><td class="num">{pct(q["total"])}</td><td class="muted">{mark}</td></tr>')
-        out += (f'<p class="score-sub">All {len(passed)} candidates that passed every gate, lowest loss first' + ('; the top six and the one kept' if len(passed) > 6 and r.get('decision') == 'kept' else '') + '.</p>'
+        out += (f'<p class="score-sub">All {len(passed)} candidates that passed every gate, lowest loss first' + '.</p>'
                 '<table class="score ranks"><thead><tr><th class="num">rank</th><th class="num">missed</th><th class="num">English</th><th class="num">key</th><th class="num">loss</th><th class="num">share</th><th></th></tr></thead><tbody>'
                 + "".join(lines) + "</tbody></table>")
         if r.get("decision") == "kept" and passed[0] is not best:

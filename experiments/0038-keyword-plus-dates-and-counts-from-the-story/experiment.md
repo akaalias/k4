@@ -1,0 +1,294 @@
+# 0038-keyword-plus-dates-and-counts-from-the-story: A key word plus a number from the sculpture's own story: dates, the Morse counts, and 97 itself as the second component
+
+**Family:** 3-two-component-key  
+**Parent:** 0024-keyword-plus-k2-coordinate-digits  
+**Decision:** reverted  
+**Run:** 2026-10-15T09:03:14+00:00, 2.3 s, status ran  
+**Time by phase:** design 53 s, implement 0 s, test 3 s, run 2 s, record 0 s
+
+## In plain words
+
+Experiment 24 tried adding the map coordinates to a secret word. The sculpture's story has other numbers a person would remember: the day it was unveiled, the day the Berlin Wall fell, the day Carter broke into the tomb, the little counts hidden in the Morse code outside, and the number 97 itself. We add each of these to an unknown secret word, letter by letter, and let the 24 known letters tell us what the word would have to be. If two tellings disagree, that number is out.
+
+## Walkthrough, by hand
+
+1. Read the coordinates as the digits 3 8 5 7 6 5 7 7 8 4 4 and repeat them under the message.
+2. Position 22 is E against the carved F; under the sculpture's alphabet with Vigenere the total key letter is R, index 1.
+3. The digit under position 22 at alignment 0 is the 22nd digit, 3; subtract it: index 24 is the word letter for slot 21 mod a.
+4. With a 7-letter word that is slot 0.
+5. Position 29 also uses slot 0: do the same there; the two values must agree.
+6. Go through all 24 known letters; one disagreement kills this length and alignment.
+7. A survivor's forced letters spell the word; see whether it is one the puzzle knows.
+
+## Worked example (generated)
+
+```
+(worked_example failed: KeyError('38 57 65 77 8 44'))
+```
+
+## Lineage
+
+Inherits from 0024-keyword-plus-k2-coordinate-digits. What changed: Same exact test as experiment 24, with the digit stream drawn from the sculpture's story instead of the K2 coordinates: the dedication date, the fall of the Wall, Carter's discovery, the Morse padding counts, the letter counts of the four parts, and 1990 itself.
+
+## Hypothesis (domain expert)
+
+Experiment 24 killed a word plus the K2 coordinate digits under every reading. Scheidt's two-component habit (C6) admits any memorable number as the second component, and Sanborn's own anchors are dates and counts: the dedication on 3 November 1990, the Wall's fall on 9 November 1989, his Egypt trip of 1986, Carter's breach on 26 November 1922 (C13, C7), the Morse messages' E-padding counts 5, 10, 1, 7, 9 (C25), the four parts' letter counts 63, 372, 337, 97, and 97 and 98 alone (C17). Each reading, in day-month-year and year-month-day forms, is a repeating digit key d; the word key x of length 2-30 then satisfies x[i mod a] = t[i] - s d[(i + o) mod L] mod 26 at every crib, with 24 - a redundant checks. Standard or KRYPTOS alphabets, both plaintext signs, both s, every alignment; survivors have their forced word matched against the vocabulary and K1-K3 windows and scored as English against ten shuffled controls. Bounds: complete for these seventeen digit readings.
+
+## Prediction
+
+No word length under 24 survives for any reading, alignment or sign; survivors from 24 up are chance and their forced words are noise against the shuffled controls. Zero candidates pass.
+
+## Method
+
+1. List the digit readings.
+2. For each alphabet pair and plaintext sign, compute the forced total key index at each crib.
+3. For each reading, alignment, sign s and word length a, subtract the digit term and reduce to the word slot; reject on any disagreement.
+4. For survivors, read the word in the standard and KRYPTOS alphabets, match it against the vocabulary and K1-K3 windows, and score it as English.
+5. Repeat the scoring on ten shuffles of K4.
+
+## Result
+
+Candidates returned: 0. Passed all gates: 0. Best crib hits among all candidates: 0/24
+(no candidates).
+Best loss: None (0 is solved; 10 per missed crib letter). Best fitness: None. Champion before this run: 0034-complete-the-key-at-surviving-periods.
+
+| # | gate | cribs | fitness | plaintext | key |
+|---|---|---|---|---|---|
+| - | no candidates | | | | |
+
+### Bounds searched (the negative result this experiment leaves behind)
+
+```
+{
+ "family": "word key plus known digit key (K2 coordinates), additive",
+ "digit_readings": {
+  "dedication 3 Nov 1990, dmy": "3111990",
+  "dedication, ymd": "19901103",
+  "dedication, dmy padded": "03111990",
+  "Wall fell 9 Nov 1989, dmy": "9111989",
+  "Wall, ymd": "19891109",
+  "Carter breach 26 Nov 1922, dmy": "26111922",
+  "Carter, ymd": "19221126",
+  "1990": "1990",
+  "1989": "1989",
+  "1986": "1986",
+  "1922": "1922",
+  "Morse E-padding counts 5 10 1 7 9": "510179",
+  "Morse counts reversed": "971015",
+  "letter counts 63 372 337 97": "6337233797",
+  "97": "97",
+  "98": "98",
+  "97 and 24 known": "9724"
+ },
+ "word_lengths": "2-30",
+ "alphabets": "plain and cipher in {std, kry}; word read in std or kry",
+ "cases": 46400,
+ "survivors_by_word_length": {
+  "26": 63,
+  "27": 1600,
+  "28": 1600,
+  "29": 1600,
+  "30": 45
+ },
+ "shortest_surviving_word_length": 26,
+ "best_forced_words": [
+  {
+   "score": -5.86,
+   "length": 29,
+   "reading": "Morse E-padding counts 5 10 1 7 9",
+   "offset": 0,
+   "s": -1,
+   "plain": "std",
+   "cipher": "std",
+   "mode": "beau",
+   "word_alphabet": "kry",
+   "word": "PIEDFICIEYSILYVU.....DMMNTTAL"
+  },
+  {
+   "score": -6.016,
+   "length": 27,
+   "reading": "dedication, ymd",
+   "offset": 2,
+   "s": 1,
+   "plain": "kry",
+   "cipher": "kry",
+   "mode": "vig",
+   "word_alphabet": "kry",
+   "word": "RWYRDLY..YBYTHESAXEK.XCFCRH"
+  },
+  {
+   "score": -6.029,
+   "length": 29,
+   "reading": "1990",
+   "offset": 0,
+   "s": -1,
+   "plain": "kry",
+   "cipher": "kry",
+   "mode": "vig",
+   "word_alphabet": "kry",
+   "word": "HENREEMEHIFMLAUC.....DNUNDXYX"
+  },
+  {
+   "score": -6.032,
+   "length": 27,
+   "reading": "dedication, ymd",
+   "offset": 2,
+   "s": -1,
+   "plain": "std",
+   "cipher": "std",
+   "mode": "beau",
+   "word_alphabet": "kry",
+   "word": "ADWENNE..WESAYSLEYKQ.FFMWPO"
+  },
+  {
+   "score": -6.054,
+   "length": 29,
+   "reading": "dedication, ymd",
+   "offset": 2,
+   "s": -1,
+   "plain": "std",
+   "cipher": "std",
+   "mode": "beau",
+   "word_alphabet": "kry",
+   "word": "WENNEWESAYSLEYKQ.....FFMWPOAD"
+  },
+  {
+   "score": -6.074,
+   "length": 30,
+   "reading": "dedication, ymd",
+   "offset": 2,
+   "s": 1,
+   "plain": "kry",
+   "cipher": "kry",
+   "mode": "vig",
+   "word_alphabet": "kry",
+   "word": "RDLYBYTHESAXEK.......XCFCRHRWY"
+  },
+  {
+   "score": -6.09,
+   "length": 28,
+   "reading": "dedication, ymd",
+   "offset": 2,
+   "s": 1,
+   "plain": "kry",
+   "cipher": "kry",
+   "mode": "vig",
+   "word_alphabet": "kry",
+   "word": "WYRDLY.YBYTHESAXEK...XCFCRHR"
+  },
+  {
+   "score": -6.092,
+   "length": 27,
+   "reading": "98",
+   "offset": 0,
+   "s": -1,
+   "plain": "std",
+   "cipher": "kry",
+   "mode": "beau",
+   "word_alphabet": "std",
+   "word": "CDIAIHH..CPCQUACTIOS.YABYPR"
+  },
+  {
+   "score": -6.106,
+   "length": 28,
+   "reading": "Morse E-padding counts 5 10 1 7 9",
+   "offset": 0,
+   "s": -1,
+   "plain": "std",
+   "cipher": "std",
+   "mode": "beau",
+   "word_alphabet": "kry",
+   "word": "LPIEDF.ICIEYSILYVU...DMMNTTA"
+  },
+  {
+   "score": -6.121,
+   "length": 27,
+   "reading": "Morse E-padding counts 5 10 1 7 9",
+   "offset": 0,
+   "s": -1,
+   "plain": "std",
+   "cipher": "std",
+   "mode": "beau",
+   "word_alphabet": "kry",
+   "word": "ALPIEDF..ICIEYSILYVU.DMMNTT"
+  },
+  {
+   "score": -6.126,
+   "length": 28,
+   "reading": "Wall, ymd",
+   "offset": 4,
+   "s": -1,
+   "plain": "std",
+   "cipher": "std",
+   "mode": "beau",
+   "word_alphabet": "kry",
+   "word": "EPMNEF.WPASDAWMYMU...MNMITTI"
+  },
+  {
+   "score": -6.147,
+   "length": 29,
+   "reading": "1990",
+   "offset": 2,
+   "s": -1,
+   "plain": "std",
+   "cipher": "std",
+   "mode": "beau",
+   "word_alphabet": "kry",
+   "word": "QENNEWESADIHEYKQ.....CFMWPOIN"
+  },
+  {
+   "score": -6.159,
+   "length": 28,
+   "reading": "letter counts 63 372 337 97",
+   "offset": 0,
+   "s": 1,
+   "plain": "std",
+   "cipher": "kry",
+   "mode": "beau",
+   "word_alphabet": "std",
+   "word": "LTLXVS.NEREFINEXCD...NOMNEFN"
+  },
+  {
+   "score": -6.17,
+   "length": 27,
+   "reading": "letter counts 63 372 337 97",
+   "offset": 0,
+   "s": 1,
+   "plain": "std",
+   "cipher": "kry",
+   "mode": "beau",
+   "word_alphabet": "std",
+   "word": "NLTLXVS..NEREFINEXCD.NOMNEF"
+  },
+  {
+   "score": -6.178,
+   "length": 29,
+   "reading": "letter counts 63 372 337 97",
+   "offset": 0,
+   "s": 1,
+   "plain": "std",
+   "cipher": "kry",
+   "mode": "beau",
+   "word_alphabet": "std",
+   "word": "TLXVSNEREFINEXCD.....NOMNEFNL"
+  }
+ ],
+ "shuffled_control_best": [
+  -5.586,
+  -5.239,
+  -5.629,
+  -5.898,
+  -5.769,
+  -5.511,
+  -5.83,
+  -5.886,
+  -5.953,
+  -5.415
+ ],
+ "vocab_matches": 0
+}
+```
+
+Notes: 46400 cases; shortest surviving word length 26; best forced word -5.860 vs shuffled best -5.239; 0 matches.
+
+

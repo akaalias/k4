@@ -148,6 +148,46 @@ Open:
   that must make both fingerprints and fit the cribs.
 - Next in directions.md: type 3, keys read off the sculpture.
 
+
+### Experiments 89 to 106: types 3 to 8, then the free-alphabet follow-up (2026-10-15 night)
+
+Alexis away overnight, asked to continue past 100. Worked through types 3-8 of directions.md once each, then
+followed the one cell that stood out. All eighteen reverted; no champion. Issue #24; issue #28 (source-text search).
+
+Findings worth keeping:
+- **Types 3-8 have each had a first exact pass, all at chance.** Keys read off the sculpture by position (0089) or
+  as running keys joined to every move (0090, and on an unknown alphabet, 0098); the Berlin clock with every move
+  (0091); the message written along grid paths (0092); one wrong, missing or extra carved letter through moves
+  (0093, 0094); riddle words dragged under every live periodic key (0095, weak); an interrupted key (0101); the
+  copper or the message as its own key through K3's rule (0103, 0104).
+- **Type 5 is closed by algebra, not by a run.** Any reading of a cyclic table (by columns, diagonals, mirrored, from
+  another start row) is an affine map of the alphabets with the key scaled or shifted; those are covered by 0071 and
+  0074, and a diagonal reading only restricts the key to even values.
+- **No published text carries both cribs** (issue #28: Internet Archive full text, 44 Gutenberg books, the web).
+- **The width-21 repeats have a cheap explanation**: any key repeating every 3, 7 or 21 carved letters, after any
+  move, makes them about 50 times more often than chance (0096). On fixed alphabets those periods are dead; on free
+  alphabets the test is weak (0097). The one free-alphabet cell above the coppers (Quagmire IV, period 3, after a
+  move) went from p < 0.02 against 50 coppers (0100) to 0.043 against 400, and 0.10 against copies that keep
+  K4's width-21 columns (0102): not a signal, and partly the repeats themselves.
+- **0087's premise was wrong** (0096): a column word plus a row key does not line doublets up by column, because the
+  row letter cancels inside a row.
+- Family 9 and the affine Hill are closed for every route set built so far (0105, 0106).
+
+Mistakes:
+- My wait loops used `pgrep -f run_experiment.py`, which matched their own command lines, so they never ended
+  and were killed by hand. Wait on the run log's `decision=` line instead.
+- 0089 and 0090 recorded misspelt family slugs (4-visual-systems, 6-matrix-transposition-then-tableau); the
+  dashboard maps them. Check `cut -f3 results.tsv | sort -u` before choosing a slug.
+- 0090's worked example crashed (the Morse text is shorter than K4), so that record has none; the figure
+  rebuilt one from the record's own functions.
+- 0092, 0093, 0096, 0101, 0102 and 0103 missed their predictions in detail; 0096's miss is the 0087 correction.
+- 0095's first dry run let words overlap the cribs and counted those as checks; fixed before the run.
+
+Open:
+- Free alphabets at periods 7 and 21 need a stronger test than consistency (English scoring cannot beat its
+  controls; a test on the forced partial alphabets might).
+- Routes outside every set built so far; three-term Gromark rules; plaintext masks that change letters by a code.
+
 ### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
 
 All fifteen reverted; nothing was kept, and the champion is still experiment 34. Every run

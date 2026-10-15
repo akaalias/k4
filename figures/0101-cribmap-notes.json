@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key",
+  "text": "Some hand ciphers restart the key at every word, so word boundaries leave a mark. Here the known letters are split into words in all five sensible ways and the key starts again at each."
+ },
+ {
+  "anchor": "the check",
+  "text": "Letters at the same place in their words take the same key letter. With the sculpture's table the first letters of EAST, NORTH and EAST need 1, 1 and 2: already a clash."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No key of 1 to 26 letters fits any split in any of the 8 tables, on K4 or on any of ten scrambled coppers: the cribs alone rule the idea out."
+ }
+]

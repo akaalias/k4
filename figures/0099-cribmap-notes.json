@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the move",
+  "text": "Experiment 83 turned the grid clockwise twice. Here one turn goes each way, or both anticlockwise, at every pair of widths from 2 to 96: 53,743 new scrambles."
+ },
+ {
+  "anchor": "the check",
+  "text": "After the two turns a repeating secret word on the table must give the copper's letters where the known letters landed; two known letters in one slot of the word must agree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No word shorter than 22 letters fits, on the copper or the scrambled coppers, and from 22 up K4 sits inside their range, counted as settings or as distinct check sets."
+ }
+]

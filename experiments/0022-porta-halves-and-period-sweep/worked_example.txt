@@ -1,0 +1,11 @@
+halves test on the standard order: A-M above, N-Z below
+
+pos  plain  half   carved  half   swapped across?
+ 22    E    top      F    top      NO
+ 23    A    top      L    top      NO
+ 24    S    bottom   R    bottom   NO
+ 25    T    bottom   V    bottom   NO
+ 26    N    bottom   Q    bottom   NO
+ 64    B    top      N    bottom   yes
+ 65    E    top      Y    bottom   yes
+ 66    R    bottom   P    bottom   NO

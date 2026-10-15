@@ -1,0 +1,77 @@
+{
+ "id": 22,
+ "tag": "0022-porta-halves-and-period-sweep",
+ "started": "2026-10-15T06:37:53+00:00",
+ "seconds": 0.1,
+ "status": "ran",
+ "phases": {
+  "design": 6.7,
+  "implement": 63.2,
+  "test": 0.5,
+  "run": 0.1,
+  "record": 0.0
+ },
+ "ended_epoch": 1792046273.578449,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "Porta over standard, KRYPTOS and vocabulary-mixed alphabet orders",
+  "alphabets": 248,
+  "halves_test": "crib positions whose plaintext and ciphertext share a half; zero required",
+  "best_orders": [
+   {
+    "same_half_positions": 7,
+    "alphabet": "CARTER/alt_vertical"
+   },
+   {
+    "same_half_positions": 7,
+    "alphabet": "CARTER/columnar"
+   },
+   {
+    "same_half_positions": 7,
+    "alphabet": "CLOCK/alt_vertical"
+   },
+   {
+    "same_half_positions": 7,
+    "alphabet": "HILL/alt_vertical"
+   },
+   {
+    "same_half_positions": 8,
+    "alphabet": "SECRET/keyed_columnar"
+   },
+   {
+    "same_half_positions": 8,
+    "alphabet": "WORLDCLOCK/alt_vertical"
+   },
+   {
+    "same_half_positions": 8,
+    "alphabet": "WORLDCLOCK/columnar"
+   },
+   {
+    "same_half_positions": 8,
+    "alphabet": "WORLDCLOCK/keyed_columnar"
+   },
+   {
+    "same_half_positions": 9,
+    "alphabet": "ABSCISSAE/keyed_columnar"
+   },
+   {
+    "same_half_positions": 9,
+    "alphabet": "CARNARVON/keyword"
+   }
+  ],
+  "orders_passing_halves": [],
+  "period_survivors": [],
+  "n_period_survivors": 0,
+  "vocab_matches": 0
+ },
+ "notes": "248 alphabet orders; 0 pass the halves test (best has 7 same-half positions); 0 (order, direction, period) survivors; 0 matches.",
+ "error": null,
+ "candidates": []
+}

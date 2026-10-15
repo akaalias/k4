@@ -1,0 +1,58 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Porta over standard, KRYPTOS and vocabulary-mixed alphabet orders",
+  "alphabets": 248,
+  "halves_test": "crib positions whose plaintext and ciphertext share a half; zero required",
+  "best_orders": [
+   {
+    "same_half_positions": 7,
+    "alphabet": "CARTER/alt_vertical"
+   },
+   {
+    "same_half_positions": 7,
+    "alphabet": "CARTER/columnar"
+   },
+   {
+    "same_half_positions": 7,
+    "alphabet": "CLOCK/alt_vertical"
+   },
+   {
+    "same_half_positions": 7,
+    "alphabet": "HILL/alt_vertical"
+   },
+   {
+    "same_half_positions": 8,
+    "alphabet": "SECRET/keyed_columnar"
+   },
+   {
+    "same_half_positions": 8,
+    "alphabet": "WORLDCLOCK/alt_vertical"
+   },
+   {
+    "same_half_positions": 8,
+    "alphabet": "WORLDCLOCK/columnar"
+   },
+   {
+    "same_half_positions": 8,
+    "alphabet": "WORLDCLOCK/keyed_columnar"
+   },
+   {
+    "same_half_positions": 9,
+    "alphabet": "ABSCISSAE/keyed_columnar"
+   },
+   {
+    "same_half_positions": 9,
+    "alphabet": "CARNARVON/keyword"
+   }
+  ],
+  "orders_passing_halves": [],
+  "period_survivors": [],
+  "n_period_survivors": 0,
+  "vocab_matches": 0
+ },
+ "notes": "248 alphabet orders; 0 pass the halves test (best has 7 same-half positions); 0 (order, direction, period) survivors; 0 matches.",
+ "error": null,
+ "worked_example": "halves test on the standard order: A-M above, N-Z below\n\npos  plain  half   carved  half   swapped across?\n 22    E    top      F    top      NO\n 23    A    top      L    top      NO\n 24    S    bottom   R    bottom   NO\n 25    T    bottom   V    bottom   NO\n 26    N    bottom   Q    bottom   NO\n 64    B    top      N    bottom   yes\n 65    E    top      Y    bottom   yes\n 66    R    bottom   P    bottom   NO",
+ "seconds": 0.002723217010498047
+}

@@ -839,7 +839,7 @@ def overview():
             + sec(3, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
             + sec(4, "Lineage", "What each experiment inherits from.")
-            + '<p class="hero-sub" style="text-align:left;max-width:none;margin:0 0 6px"><a href="/lineage">See the lineage drawn as a family tree</a>, one lane per family, every experiment in the order it ran.</p>'
+            + '<p class="hero-sub" style="text-align:left;max-width:none;margin:0 0 6px"><a href="/lineage">See the lineage drawn as a family tree</a>, every experiment on one line in the order it ran, coloured by family.</p>'
             + (tree(None) or "<p class='muted'>empty</p>"))
     return page("Kryptos K4 autoresearch", body, "/")
 
@@ -1123,8 +1123,8 @@ def experiment_page(tag):
 
 
 LIN_CSS = """
-.lin{--f0:#3d6b8c;--f1:#8a6a1e;--f2:#5b7f4a;--f3:#7a4f86;--f4:#b0603a;--f5:#2f7f7a;--f6:#9a5470;--f7:#5c5a8f;--f8:#7d7a3a;--f9:#6b6a60}
-@media(prefers-color-scheme:dark){.lin{--f0:#7fa8c9;--f1:#c9a227;--f2:#8fb87a;--f3:#b48cc0;--f4:#e0936b;--f5:#6cbfb8;--f6:#d08aa6;--f7:#9a98d0;--f8:#bdb86a;--f9:#a39f90}}
+.lin{--f0:#2f5f8a;--f1:#b08a1e;--f2:#4f8a3a;--f3:#8a4f9a;--f4:#c0622e;--f5:#1f8a8a;--f6:#b04a6a;--f7:#4a4aa0;--f8:#7a5230;--f9:#6b6a60}
+@media(prefers-color-scheme:dark){.lin{--f0:#7fb0e0;--f1:#e0b84a;--f2:#8fca78;--f3:#c89ad8;--f4:#f0956a;--f5:#5fcaca;--f6:#e88aa8;--f7:#a0a0f0;--f8:#c49a70;--f9:#a39f90}}
 .lin .f0{color:var(--f0)}.lin .f1{color:var(--f1)}.lin .f2{color:var(--f2)}.lin .f3{color:var(--f3)}.lin .f4{color:var(--f4)}
 .lin .f5{color:var(--f5)}.lin .f6{color:var(--f6)}.lin .f7{color:var(--f7)}.lin .f8{color:var(--f8)}.lin .f9{color:var(--f9)}
 .lin-head{max-width:980px;margin:0 auto}
@@ -1133,38 +1133,32 @@ LIN_CSS = """
 .lin-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin:6px 0 4px}
 .lin-legend .k{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
 .lin-legend .ldot{width:9px;height:9px;border-radius:50%;display:inline-block;background:currentColor}
-.lin-legend .lkept{width:11px;height:11px;background:var(--ink)}
+.lin-legend .lkept{width:12px;height:12px;background:var(--disc);box-shadow:0 0 0 2px var(--ink) inset}
 .lin-legend .lwas{width:13px;height:13px;border-radius:50%;border:1.3px dashed var(--ink);display:inline-block}
-.lin-legend .lerr{color:var(--accent);font:700 14px/1 var(--serif)}
-.lin-legend .larc{width:18px;height:9px;border-top:1.2px solid var(--muted);border-radius:9px 9px 0 0;display:inline-block}
+.lin-legend .lerr{color:var(--muted);font:700 14px/1 var(--serif)}
+.lin-legend .larc{width:18px;height:9px;border-top:1.2px solid var(--f0);border-radius:9px 9px 0 0;display:inline-block}
+.lin-fams{margin-top:2px}.lin-fams .k{cursor:default;padding:1px 0;border-bottom:1px solid transparent}.lin-fams .k.on{border-bottom-color:currentColor}.lin-fams .cnt{color:var(--faint)}
 .lin-legend .lx{width:18px;height:0;border-top:1.2px dashed var(--muted);display:inline-block}
-.lin-box{position:relative;width:min(1600px,94vw);margin:16px 0 0 calc(50% - min(800px,47vw));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.lin-box{position:relative;width:min(1600px,94vw);margin:16px 0 0 calc(50% - min(800px,47vw));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:18px 0 6px}
 #lin-diagram{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}
 #lin-diagram::-webkit-scrollbar{height:6px}#lin-diagram::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}
-#lin-lanes{position:absolute;left:0;top:0;width:0;pointer-events:none}
-.lane-lab{position:absolute;left:0;white-space:nowrap;pointer-events:auto;cursor:default;padding:2px 10px 2px 6px;background:linear-gradient(90deg,var(--paper) 80%,transparent);font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.lane-lab .sw{display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:0}
-.lane-lab .cnt{color:var(--faint);font-weight:400;margin-left:5px}
-.lane-lab.on{text-decoration:underline;text-underline-offset:3px}
 #lin{display:block}
-#lin .lband{fill:currentColor;fill-opacity:.05}
-#lin .lbound{stroke:var(--rule-soft);stroke-width:1}
-#lin .lbase{stroke:var(--rule-soft);stroke-width:1}
-#lin .edge{fill:none;stroke:var(--disc);stroke-width:1}
-#lin .edge.x{stroke-dasharray:3 3}
+#lin .base{stroke:var(--rule-soft);stroke-width:1}
+#lin .edge{fill:none;stroke:currentColor;stroke-opacity:.55;stroke-width:1}
+#lin .edge.x{stroke:var(--disc);stroke-opacity:1;stroke-dasharray:3 3}
 #lin .ng{cursor:pointer;outline:none}
 #lin .nr{fill:currentColor}
-#lin .nk{fill:var(--ink)}
+#lin .nk{fill:currentColor;stroke:var(--ink);stroke-width:2}
 #lin .nwas{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-dasharray:2 2}
-#lin .ne{stroke:var(--accent);stroke-width:1.8;stroke-linecap:round}
-#lin .nlab{fill:var(--faint);font:9.5px/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
+#lin .ne{stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+#lin .nlab{fill:var(--faint);font:10px/1 var(--serif)}
 #lin .ng:focus-visible .hit{stroke:var(--accent);stroke-width:1.5}
 #lin.dim .ng,#lin.dim .edge{opacity:.1}
 #lin.dim .ng.lit{opacity:.6}
 #lin.dim .ng.lit-direct{opacity:1}
 #lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
-#lin.dim .edge.lit{opacity:.5;stroke:var(--muted)}
-#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
+#lin.dim .edge.lit{opacity:.6;stroke:var(--muted);stroke-opacity:1}
+#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-opacity:1;stroke-width:2}
 #lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
 #lin-tip .pop-title{font-weight:700;font-size:14.5px;line-height:1.25;margin-bottom:3px}
 #lin-tip .pop-meta{color:var(--muted);font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
@@ -1181,7 +1175,7 @@ LIN_JS = r"""
 (function(){
   var data={};try{data=JSON.parse(document.getElementById('lin-data').textContent||'{}');}catch(e){}
   var nodes=data.nodes||[],fams=data.families||[];
-  var host=document.getElementById('lin-diagram'),lanesEl=document.getElementById('lin-lanes'),tip=document.getElementById('lin-tip');
+  var host=document.getElementById('lin-diagram'),famEls=document.querySelectorAll('.lin-fams [data-fam]'),tip=document.getElementById('lin-tip');
   if(!host)return;
   if(!nodes.length){host.innerHTML='<p class="muted">No experiments yet.</p>';return;}
   var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
@@ -1191,58 +1185,49 @@ LIN_JS = r"""
   var kids={};nodes.forEach(function(n){var p=parentOf(n.key);if(p)(kids[p]=kids[p]||[]).push(n.key);});
   var svg=null,geo=null,shownKey=null,lastPointer='mouse';
 
-  // Geometry: x is run order, one lane per family. An arc's height is half its span, capped,
-  // so every lane is only as tall as its longest arc needs.
+  // Geometry, as on the ballpark page: x is run order on one baseline, an arc rises from each
+  // parent to its child with a height of half its span, capped; titles hang below, rotated.
+  var labelOf=function(nd){return '#'+nd.n+'  '+short(nd.title,34);};
   function layout(){
-    var n=nodes.length,padX=22,minSp=24,CAP=78,LABEL_H=24,NUM_H=22;
+    var n=nodes.length,padX=28,minSp=22,CAP=220;
     var avail=Math.max(300,(host.clientWidth||1000)-2*padX);
     var sp=n>1?Math.max(minSp,avail/(n-1)):0;
     var W=Math.round(2*padX+(n-1)*sp),x={};
     nodes.forEach(function(nd,i){x[nd.key]=padX+i*sp;});
-    var ry=fams.map(function(){return 10;});
-    nodes.forEach(function(nd){var p=parentOf(nd.key);if(p&&byKey[p].fam===nd.fam)ry[nd.fam]=Math.max(ry[nd.fam],Math.min(CAP,(x[nd.key]-x[p])/2));});
-    var lanes=[],y=0;
-    fams.forEach(function(f,i){var top=y,base=top+LABEL_H+ry[i]+4,bot=base+NUM_H;lanes.push({top:top,base:base,bot:bot});y=bot;});
-    return {sp:sp,W:W,H:Math.ceil(y),x:x,lanes:lanes,CAP:CAP,padX:padX};
+    var maxRy=10;
+    nodes.forEach(function(nd){var p=parentOf(nd.key);if(p)maxRy=Math.max(maxRy,Math.min(CAP,(x[nd.key]-x[p])/2));});
+    var maxLab=Math.max.apply(null,nodes.map(function(nd){return labelOf(nd).length;}));
+    var labelH=Math.min(260,Math.round(maxLab*5.4)+14);
+    var base=Math.ceil(maxRy)+10;
+    return {sp:sp,W:W,H:base+14+labelH,x:x,base:base,CAP:CAP,padX:padX};
   }
 
   function render(){
     geo=layout();
-    var x=geo.x,lanes=geo.lanes,W=geo.W,H=geo.H,g='';
-    var yOf=function(k){return lanes[byKey[k].fam].base;};
-    lanes.forEach(function(L,i){
-      g+='<rect class="lband f'+fams[i].c+'" x="0" y="'+L.top+'" width="'+W+'" height="'+(L.bot-L.top)+'"/>';
-      if(i)g+='<line class="lbound" x1="0" x2="'+W+'" y1="'+L.top+'" y2="'+L.top+'"/>';
-      g+='<line class="lbase" x1="'+geo.padX+'" x2="'+(W-geo.padX)+'" y1="'+L.base+'" y2="'+L.base+'"/>';
-    });
+    var x=geo.x,W=geo.W,H=geo.H,y=geo.base,g='';
+    g+='<line class="base" x1="'+geo.padX+'" x2="'+(W-geo.padX)+'" y1="'+y+'" y2="'+y+'"/>';
     nodes.forEach(function(nd){
       var p=parentOf(nd.key);if(!p)return;
-      var a=x[p],b=x[nd.key],d;
-      if(byKey[p].fam===nd.fam){var yb=yOf(nd.key),rx=(b-a)/2,r=Math.min(geo.CAP,rx);
-        d='M'+a.toFixed(1)+','+yb+' A'+rx.toFixed(1)+','+r.toFixed(1)+' 0 0 1 '+b.toFixed(1)+','+yb;
-        g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
-      else{var ya=yOf(p),yc=yOf(nd.key),h=(b-a)/2;
-        d='M'+a.toFixed(1)+','+ya+' C'+(a+h).toFixed(1)+','+ya+' '+(b-h).toFixed(1)+','+yc+' '+b.toFixed(1)+','+yc;
-        g+='<path class="edge x" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
+      var a=x[p],b=x[nd.key],rx=(b-a)/2,r=Math.min(geo.CAP,rx),same=byKey[p].fam===nd.fam;
+      var d='M'+a.toFixed(1)+','+y+' A'+rx.toFixed(1)+','+r.toFixed(1)+' 0 0 1 '+b.toFixed(1)+','+y;
+      g+='<path class="edge'+(same?' f'+fams[nd.fam].c:' x')+'" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';
     });
     nodes.forEach(function(nd){
-      var cx=x[nd.key].toFixed(1),cy=yOf(nd.key),k=esc(nd.key),m='';
-      if(nd.decision==='kept')m='<circle class="nk" cx="'+cx+'" cy="'+cy+'" r="5"/>';
-      else if(nd.decision==='reverted')m='<circle class="nr" cx="'+cx+'" cy="'+cy+'" r="3.6"/>';
-      else{var c=parseFloat(cx),s=3.6;m='<path class="ne" d="M'+(c-s)+','+(cy-s)+' L'+(c+s)+','+(cy+s)+' M'+(c+s)+','+(cy-s)+' L'+(c-s)+','+(cy+s)+'"/>';}
-      if(nd.recorded==='kept'&&nd.decision!=='kept')m+='<circle class="nwas" cx="'+cx+'" cy="'+cy+'" r="7.5"/>';
+      var cx=x[nd.key].toFixed(1),k=esc(nd.key),m='',c=parseFloat(cx);
+      if(nd.decision==='kept')m='<circle class="nk" cx="'+cx+'" cy="'+y+'" r="5.5"/>';
+      else if(nd.decision==='reverted')m='<circle class="nr" cx="'+cx+'" cy="'+y+'" r="4"/>';
+      else{var s=3.8;m='<path class="ne" d="M'+(c-s)+','+(y-s)+' L'+(c+s)+','+(y+s)+' M'+(c+s)+','+(y-s)+' L'+(c-s)+','+(y+s)+'"/>';}
+      if(nd.recorded==='kept'&&nd.decision!=='kept')m+='<circle class="nwas" cx="'+cx+'" cy="'+y+'" r="8"/>';
       g+='<a class="ng f'+fams[nd.fam].c+'" data-key="'+k+'" href="/exp/'+encodeURIComponent(nd.key)+'" aria-label="'+esc(nd.n+': '+nd.title)+'">'+m
-        +'<circle class="hit" cx="'+cx+'" cy="'+cy+'" r="10" fill="transparent"/>'
-        +'<text class="nlab" x="'+cx+'" y="'+(cy+16)+'" text-anchor="middle">'+nd.n+'</text></a>';
+        +'<circle class="hit" cx="'+cx+'" cy="'+y+'" r="9" fill="transparent"/>'
+        +'<text class="nlab" x="'+cx+'" y="'+(y+12)+'" transform="rotate(90 '+cx+' '+(y+12)+')" dy="3.5">'+esc(labelOf(nd))+'</text></a>';
     });
     host.innerHTML='<svg id="lin" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>';
     svg=document.getElementById('lin');
-    lanesEl.innerHTML=lanes.map(function(L,i){var f=fams[i];
-      return '<div class="lane-lab f'+f.c+'" data-fam="'+i+'" title="'+esc(f.name)+'" style="top:'+(L.top+4)+'px"><span class="sw"></span>'+esc(f.label)+'<span class="cnt">'+f.count+'</span></div>';}).join('');
   }
 
   function clearLit(){svg.classList.remove('dim');svg.querySelectorAll('.lit,.lit-direct').forEach(function(el){el.classList.remove('lit','lit-direct');});
-    lanesEl.querySelectorAll('.on').forEach(function(el){el.classList.remove('on');});}
+    famEls.forEach(function(el){el.classList.remove('on');});}
   function mark(k,cls){var el=svg.querySelector('.ng[data-key="'+CSS.escape(k)+'"]');if(el)el.classList.add(cls);}
   // Trace a node's line back to its root: the node and its parent in full, older ancestors half lit.
   function lit(key){
@@ -1256,7 +1241,7 @@ LIN_JS = r"""
     clearLit();svg.classList.add('dim');
     nodes.forEach(function(nd){if(nd.fam===fi)mark(nd.key,'lit-direct');});
     svg.querySelectorAll('.edge').forEach(function(e){if(byKey[e.getAttribute('data-c')].fam===fi)e.classList.add('lit');});
-    var lab=lanesEl.querySelector('[data-fam="'+fi+'"]');if(lab)lab.classList.add('on');
+    famEls.forEach(function(el){if(+el.getAttribute('data-fam')===fi)el.classList.add('on');});
   }
 
   function placeTip(el){
@@ -1287,12 +1272,12 @@ LIN_JS = r"""
     // On a touch screen the first tap shows the popover and the second opens the record.
     svg.addEventListener('click',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');
       if(lastPointer==='touch'&&shownKey!==k){e.preventDefault();lit(k);showTip(k,a);}});
-    lanesEl.querySelectorAll('.lane-lab').forEach(function(el){
-      el.addEventListener('mouseenter',function(){litFam(+el.getAttribute('data-fam'));});
-      el.addEventListener('mouseleave',clearLit);});
   }
+  function wireFams(){famEls.forEach(function(el){
+    el.addEventListener('mouseenter',function(){litFam(+el.getAttribute('data-fam'));});
+    el.addEventListener('mouseleave',clearLit);});}
   var endScroll=function(){return Math.max(0,host.scrollWidth-host.clientWidth);};
-  render();wire();
+  render();wire();wireFams();
   host.addEventListener('scroll',function(){if(shownKey)hideTip();},{passive:true});
   window.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
   // Open on the newest experiments, as the ballpark page does: a short eased scroll to the right end.
@@ -1331,10 +1316,10 @@ def plain(text, limit=340):
 
 
 def lineage_data(rows):
-    """Nodes and family lanes for the lineage page, built from the records on every request."""
+    """Nodes and families for the lineage page, built from the records on every request."""
     names = family_names()
 
-    # a family is its number in families.md; slugs spelt two ways in the records share one lane
+    # a family is its number in families.md; slugs spelt two ways in the records share one colour
     def lane_of(slug):
         num = slug.split("-", 1)[0]
         return num if num.isdigit() else slug
@@ -1376,20 +1361,23 @@ def lineage_page():
     if top:
         facts += f' The most built-on is <a href="/exp/{esc(top[0])}">{int(top[0][:4])}</a>, with {top[1]} children.'
     blob = json.dumps(data).replace("</", "<\\/")
+    fam_keys = "".join(f'<span class="k f{f["c"]}" data-fam="{i}" title="{esc(f["name"])}"><span class="ldot"></span>{esc(f["label"])} <span class="cnt">{f["count"]}</span></span>'
+                       for i, f in enumerate(data["families"]))
     body = f"""<style>{LIN_CSS}</style><div class="lin">
 <div class="lin-head"><p class="eyebrow">Research lineage</p>
 <h1>The family tree of the search</h1>
-<p class="standfirst">Every experiment, left to right in the order it ran, in the lane of its family. An arc joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its lane. Click a dot to open its record.</p>
+<p class="standfirst">Every experiment on one line, left to right in the order it ran, coloured by its family. An arc joins an experiment to the one it built on. A dashed arc means the parent belongs to another family. Hover a dot to trace its line back to the root, or a family's name to light its members. Click a dot to open its record.</p>
 <p class="muted" style="font-size:14.5px;margin:0 0 12px">{facts}</p>
 <div class="lin-legend">
-<span class="k"><span class="ldot lkept"></span>kept</span>
-<span class="k"><span class="ldot" style="color:var(--disc)"></span>reverted, in its family's colour</span>
+<span class="k"><span class="ldot lkept"></span>kept: larger, ringed in ink</span>
+<span class="k"><span class="ldot" style="color:var(--disc)"></span>reverted</span>
 <span class="k"><span class="lerr">&times;</span>error or timeout</span>
 <span class="k"><span class="lwas"></span>kept when it ran, reverted under today's rules</span>
 <span class="k"><span class="larc"></span>built on a parent in the same family</span>
 <span class="k"><span class="lx"></span>built on a parent in another family</span>
-</div></div>
-<div class="lin-box"><div id="lin-diagram"></div><div id="lin-lanes"></div></div>
+</div>
+<div class="lin-legend lin-fams">{fam_keys}</div></div>
+<div class="lin-box"><div id="lin-diagram"></div></div>
 <p class="lin-foot">Families are described on the <a href="/families">families</a> page. The same tree as an indented list is at the foot of the <a href="/">overview</a>.</p>
 <div id="lin-tip" role="tooltip"></div>
 <script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}"""

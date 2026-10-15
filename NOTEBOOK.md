@@ -131,6 +131,65 @@ Open questions:
   key-completion climbs were run.
 
 
+### Experiments 65 to 79, run in the background (2026-10-15 evening)
+
+All fifteen reverted; nothing was kept, and the champion is still experiment 34. Every run
+finished inside the budget (longest 0077 at 4 minutes). Run issue #22.
+
+Findings worth keeping:
+- **The fingerprint constructions are dead under the cribs.** Only one recipe was found that
+  lines doublets up in sevens: ciphertext autokey at lag 1 with a period-7 key, and it does so
+  weakly (1.5% of samples against 0.1-0.3% by chance, 0065). Tested exactly, ciphertext autokey
+  plus a periodic key at any lag and period is dead (0066), and so are lag 1 with period 7 and
+  lag 21 at every period. Two-lag letter feedback, the one-stage way to make both marks, is at
+  chance (0067); so is ciphertext autokey with one carved letter wrong, missing or extra (0068),
+  and every block-of-seven reshuffle joined to it, in both orders (0077). The two fingerprints
+  remain real and unexplained.
+- **Gromark is closed for two-term rules whatever the alphabet.** With a completely free mixed
+  alphabet, base 10 (lags up to 6, 0069) and bases 2-16 and 26 (lags up to 5, 0076) leave no
+  consistent primer on K4 or on shuffled coppers; planted texts are recovered. Same-letter cribs
+  fix exact digit differences, which makes the test decisive. Family 5 marked
+  exhausted-bounded; three-term rules with a free alphabet stay open.
+- **New key sources revive nothing:** alphabets one swap or one move from KRYPTOS, the C27(c)
+  'slightly different tableau' (0071); the 32 compass points and the 'what's the point?'
+  letter's words (0072); plaintext autokey plus a periodic key on 161 word alphabets (0073);
+  affine masks, Atbash included (0074); Sanborn's 1989 letter, the 1991 dedication pages and
+  the 2025 open letter as running keys (0078, best 15 mismatches as on shuffles); key schedules
+  from the Berlin set-theory clock (0079, best 8 of 24 agreeing, as on shuffles).
+- **The doublets are real letters.** QQ, SS and TT inside the known stretches carry NO, ST and
+  IN, so the doublets cannot be fillers, and striking out the other three changes nothing (0075).
+- A block-of-seven reshuffle before or after a periodic key admits no period below 25 beyond
+  chance (0070).
+
+Mistakes:
+- Pre-registered counts were wrong three times and corrected before the run only once:
+  0071's variant count (975 to 925, corrected before), 0066's case count (294,912 counted lags
+  with no equations; 221,184 tested), 0069's primer total (5,432,200 for 5,432,100), 0067's
+  case count (5.2 million counted cases with no check; 1.93 million tested).
+- Two predictions failed in detail at the three-check level, 0067 (15 survivors against 3-12)
+  and 0073 (12 against 0-6). Both resolve into scattered or nested coincidences, but a
+  prediction should allow for chance survivors at three checks when millions of cases run.
+- 0068's substitution tally counts the residuals a replacement letter is fitted to as checks,
+  overstating redundancy by one or two.
+- 0070's fragments at periods 25-26 were word-checked only after the run.
+- 0079's prediction carried a numeric guess (19-20 mismatches) that a dry run on the copper
+  showed wrong (16); it was removed before the run and is disclosed here.
+- The recorder stopped once on a clue-register match (0071) after writing families.md and the
+  notebook; the commit was finished by hand.
+- The harness once hung on an interactive cp prompt when restoring attack.py; /bin/cp -f
+  avoids it.
+
+Open questions:
+- What makes the width-7 doublet column? Every construction with a period-7 element that
+  passes the cribs has now failed; one not yet tried is a second, independent stage such as
+  nulls placed by a period-7 rule after encryption, or a homophonic substitution.
+- The width-21 repeats: ciphertext autokey at lag 21 made them, but it is dead with every
+  addition tried (periodic key, second lag, one error, block reshuffle, word alphabets).
+- Three-term Gromark with a free alphabet; Hill with a free numbering; Sanborn's own charts
+  (C27) beyond the alphabet.
+- The scorer decision (key cost, shuffled baseline) is still pending in #11; no
+  key-completion climbs were run.
+
 ## 2026-10-14
 
 ### Decisions

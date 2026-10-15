@@ -1,0 +1,7 @@
+1989 letter from its first letter under place 1; sculpture's alphabet, Vigenere
+
+place  known  key  would carve  carved
+   22      E    M            P       F
+   23      A    W            T       L
+   24      S    R            A       R
+   64      B    U            P       N

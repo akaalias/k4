@@ -1,0 +1,77 @@
+{
+ "id": 78,
+ "tag": "0078-running-key-from-sanborns-own-letters",
+ "started": "2026-10-15T13:42:15+00:00",
+ "seconds": 78.6,
+ "status": "ran",
+ "phases": {
+  "design": 64.5,
+  "implement": 0.0,
+  "test": 16.6,
+  "run": 78.6,
+  "record": 0.1
+ },
+ "ended_epoch": 1792071813.736515,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "running key from Sanborn's own letters",
+  "sources": {
+   "letter 1989": 2179,
+   "Cryptogram 1991 (Webster remarks, Cryptolog story)": 4887,
+   "open letter 2025": 2228
+  },
+  "setups": 390,
+  "trials": 7249320,
+  "k4_fewest_mismatches": 15,
+  "k4_within_3": [],
+  "k4_within_3_count": 0,
+  "controls_fewest": [
+   15,
+   15,
+   16,
+   16,
+   16,
+   15,
+   15,
+   16,
+   16,
+   15
+  ],
+  "controls_within_3": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "notes": "Sources letter 1989 (2179 letters), Cryptogram 1991 (Webster remarks, Cryptolog story) (4887 letters), open letter 2025 (2228 letters); 390 setups; 7,249,320 trials. K4: fewest mismatches 15, 0 within 3. Ten shuffled coppers: fewest [15, 15, 16, 16, 16, 15, 15, 16, 16, 15], within 3 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0].",
+ "error": null,
+ "candidates": []
+}

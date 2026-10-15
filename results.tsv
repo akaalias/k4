@@ -76,3 +76,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0075	0075-doublets-as-nulls	2-masked-then-keyed	0057-letter-nulls-outside-the-cribs	reverted	0	0	0			3	design=42 implement=0 test=11 run=3 record=0
 0076	0076-gromark-free-alphabet-other-bases	5-gromark	0069-gromark-with-a-free-alphabet	reverted	0	0	0			123	design=37 implement=0 test=13 run=123 record=0
 0077	0077-rows-of-seven-reshuffled-and-ciphertext-autokey	1-keyed-periodic	0070-reshuffle-every-block-of-seven-and-the-table	reverted	0	0	0			241	design=32 implement=0 test=18 run=241 record=0
+0078	0078-running-key-from-sanborns-own-letters	1-keyed-periodic	0004-running-key-from-k1-k3	reverted	0	0	0			79	design=64 implement=0 test=17 run=79 record=0

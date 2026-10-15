@@ -1,0 +1,105 @@
+{
+ "candidates": [],
+ "bounds": {
+  "routes_distinct": 27852,
+  "conventions": 12,
+  "schedules": 60480,
+  "readings": [
+   "lit lamps",
+   "hour",
+   "minute",
+   "hour plus minute",
+   "five-minute row",
+   "time digits"
+  ],
+  "steps_minutes": [
+   1,
+   2,
+   3,
+   5,
+   10,
+   15,
+   30
+  ],
+  "start_minutes": 1440,
+  "change_then_move": {
+   "k4_full": 0,
+   "controls_full": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch13": 0,
+   "controls_stretch13": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch11": 0,
+   "controls_stretch11": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch_hits": []
+  },
+  "move_then_change": {
+   "clock_families": 36,
+   "time_digits_steps": [
+    1
+   ],
+   "k4_full": 0,
+   "k4_best_depth": 7,
+   "controls_best_depth": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "controls_completed": 10,
+   "k4_depth_histogram": {
+    "1": 10513339,
+    "2": 1352764,
+    "3": 145672,
+    "4": 19110,
+    "5": 1123,
+    "6": 54,
+    "7": 2
+   },
+   "k4_top": []
+  },
+  "carter_dates": "periodic keys of period at most 10: covered exactly by 0080 and 0083",
+  "controls": "10 shuffled coppers (seed 91), identical search"
+ },
+ "notes": "27,852 routes x 12 conventions x 60,480 clock schedules. Change then move: full K4 0, controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; EASTNORTHEAST stretch 0 (controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]); BERLINCLOCK stretch 0 (controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]). Move then change: full 0, deepest K4 7, controls [7, 7, 7, 7, 7, 7, 7, 7, 7, 7] (10 completed).",
+ "error": null,
+ "worked_example": "clock from 00:00, one minute per letter, lit lamps; move: clockwise quarter turn of a grid 8 wide;\nsculpture's alphabet, Vigenere\n\nchange then move: needed number minus lamps at the message place must be constant\nplace  known  moved to  carved  needed  lamps  difference\n   22      E        71       Z      14      5           9\n   23      A        83       C       2      6          22\n   24      S        95       C       3      7          22\n   25      T        10       H      10      8           2\n   64      B        90       U      13      4           9\n\nmove then change: the lamps are read at the carved place instead\nplace  known  moved to  carved  needed  lamps  difference\n   22      E        71       Z      14      3          11\n   23      A        83       C       2      7          21\n   24      S        95       C       3     11          18\n   25      T        10       H      10      5           5\n   64      B        90       U      13     10           3",
+ "seconds": 758.3716447353363
+}

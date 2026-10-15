@@ -1,0 +1,18 @@
+clock from 00:00, one minute per letter, lit lamps; move: clockwise quarter turn of a grid 8 wide;
+sculpture's alphabet, Vigenere
+
+change then move: needed number minus lamps at the message place must be constant
+place  known  moved to  carved  needed  lamps  difference
+   22      E        71       Z      14      5           9
+   23      A        83       C       2      6          22
+   24      S        95       C       3      7          22
+   25      T        10       H      10      8           2
+   64      B        90       U      13      4           9
+
+move then change: the lamps are read at the carved place instead
+place  known  moved to  carved  needed  lamps  difference
+   22      E        71       Z      14      3          11
+   23      A        83       C       2      7          21
+   24      S        95       C       3     11          18
+   25      T        10       H      10      5           5
+   64      B        90       U      13     10           3

@@ -89,3 +89,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0088	0088-column-word-plus-a-shift-per-block	3-two-component-key	0087-column-word-plus-row-word	reverted	0	0	0			1	design=0 implement=10 test=0 run=1 record=0
 0089	0089-the-screen-folded-onto-itself	4-visual-systems	0017-running-key-from-the-sculpture-itself	reverted	0	0	0			1	implement=64 test=12 run=0 record=0
 0090	0090-sculpture-running-key-with-a-k3-move	6-matrix-transposition-then-tableau	0017-running-key-from-the-sculpture-itself	reverted	0	0	0			60	test=167 run=60 record=0
+0091	0091-berlin-clock-schedule-with-a-k3-move	6-transposition-then-tableau	0079-berlin-clock-as-a-key-schedule	reverted	0	0	0			758	unattributed=398 run=758 record=0

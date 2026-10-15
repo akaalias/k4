@@ -26,3 +26,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0025	0025-autokeys-with-mixed-alphabets	1-keyed-periodic	0012-plaintext-autokey-chained-from-cribs	reverted	0	0	0			2737	design=0 implement=68 test=6 run=2737 record=0
 0026	0026-double-keyed-columnar-then-tableau	6-transposition-then-tableau	0016-routes-then-tableau-forced-key-english	reverted	0	0	0			175	design=0 implement=44 test=5 run=175 record=0
 0027	0027-simulator-round-two-width-21-hunt	7-construction-simulation	0018-construction-simulator-fingerprint	reverted	0	0	0			6	design=0 implement=39 test=6 run=6 record=0
+0028	0028-gromark-small-bases-two-to-nine	5-gromark-lfsr	0013-gromark-recurrence-on-crib-shifts	reverted	0	0	0			1	design=0 implement=0 test=6 run=1 record=0

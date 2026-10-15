@@ -1,0 +1,19 @@
+plain alphabet standard, cipher alphabet KRYPTOS, Vigenere: forced shifts at 22-34
+
+pos  plain  cipher  shift
+ 22    E      F       8
+ 23    A      L      17
+ 24    S      R       9
+ 25    T      V       3
+ 26    N      Q       7
+ 27    O      Q       6
+ 28    R      P      12
+ 29    T      R       8
+ 30    H      N      12
+ 31    E      G       9
+ 32    A      K       0
+ 33    S      S      14
+ 34    T      S      13
+
+shifts: 8 17 9 3 7 6 12 8 12 9 0 14 13
+largest shift 17: base 8 needs all below 8, so this alphabet pair is out at once

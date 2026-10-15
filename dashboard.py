@@ -80,6 +80,7 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .plain p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:640px}
 .gl{border-bottom:1px dotted var(--accent);cursor:help;transition:background .15s}.gl.on,.gl:hover{background:var(--hl)}.gl-entry{border-left:2px solid transparent;padding-left:6px;margin-left:-8px;transition:background .15s}.gl-entry.on,.gl-entry:hover{background:var(--hl);border-left-color:var(--accent)}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
 .rec-body{max-width:980px}.rec-body h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}.rec-body p,.rec-body li{max-width:720px;font-size:15.5px;line-height:1.6}
+.sculpture-wrap{max-width:980px;margin:14px auto 22px}#sculpture{width:100%;border:1px solid var(--rule-soft);border-radius:2px;overflow:hidden;cursor:grab}#sculpture canvas{display:block}.sculpture-foot{display:flex;gap:22px;align-items:baseline;margin-top:8px}.sculpture-key span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-right:14px;cursor:pointer;border-bottom:2px solid transparent}.sculpture-key span.on{color:var(--accent);border-bottom-color:var(--accent)}#sculpture-label{margin:0;font-size:13.5px;flex:1}
 .explain-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;max-width:980px;margin:22px auto 0}.explain-col h4{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 8px}.explain-col p{font-size:15.5px;line-height:1.65;margin:0;color:var(--ink)}
 @media(max-width:860px){.explain-row{grid-template-columns:1fr}}
 .panel-wrap{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin:14px 0 6px}.panel{padding:0}.panel-h{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px}.panel pre{margin:0;padding:12px 16px;font:15px/1.75 var(--mono);letter-spacing:.14em;background:var(--wash);border:1px solid var(--rule-soft);border-radius:2px}.panel u{text-decoration:none;border-bottom:2px solid var(--rule)}.panel b{color:var(--ink);background:var(--hl);font-weight:700}.panel i{color:var(--accent);font-style:normal;background:var(--hl)}.k3tail{color:var(--rule)}
@@ -321,14 +322,22 @@ def loss_chart(rows):
     g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="14" font-style="italic" fill="var(--accent)">all 24 known right</text>')
     g.append(f'<text x="{ax}" y="{y(0)+4:.1f}" font-size="14" font-style="italic" fill="var(--muted)">solved</text>')
     g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="14" font-style="italic" fill="var(--muted)">none right</text>')
-    pts, best = [], None
+    # best-so-far step line in ink: starts at the first experiment with a candidate, steps down
+    # when a later candidate beats it, runs flat otherwise; hollow dots never move it
+    best = None
+    path = []
     for i, r in enumerate(rows):
-        if r.get("decision") == "kept" and r.get("best_loss") is not None:
-            best = r["best_loss"] if best is None else min(best, r["best_loss"])
-        if best is not None:
-            pts.append(f"{xs[i]:.1f},{y(best):.1f}")
-    if len(pts) >= 2:
-        g.append(f'<polyline points="{" ".join(pts)}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>')
+        v = r.get("best_loss")
+        if v is None:
+            continue
+        if best is None:
+            best = v; path.append((xs[i], y(best)))
+        elif v < best:
+            path.append((xs[i], y(best))); best = v; path.append((xs[i], y(best)))
+    if path:
+        path.append((xs[-1] + 12, y(best)))
+        d = "M" + " L".join(f"{x:.1f},{yy:.1f}" for x, yy in path)
+        g.append(f'<path d="{d}" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="miter"/>')
     for i, r in enumerate(rows):
         v = r.get("best_loss")
         tip = f"{esc(r['tag'])}<br>{esc(r['title'])}<br>loss {'' if v is None else f'{v:.2f}'}; cribs {r['best_crib_hits']}/24 ({esc(words_str(r))})<br>{esc(r['decision'])}, {r['n_candidates']} candidates"
@@ -338,12 +347,13 @@ def loss_chart(rows):
         else:
             fill = "var(--kept)" if r["decision"] == "kept" else "var(--disc)"
             g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
-    last = rows[-1]
-    if last.get("best_loss") is not None:
-        g.append(f'<text x="{xs[-1]+9:.1f}" y="{y(last["best_loss"])+4:.1f}" font-size="14" fill="var(--ink)">{last["best_loss"]:.1f}</text>')
+    if best is not None:
+        g.append(f'<text x="{xs[-1]+16:.1f}" y="{y(best)+5:.1f}" font-size="14" fill="var(--ink)">{best:.1f} best so far</text>')
     g.append(f'<text transform="translate(18,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="14" fill="var(--muted)">loss, points</text>')
-    g.append(f'<text x="{L}" y="{H-8}" font-size="14" fill="var(--faint)">experiment 1</text>')
-    g.append(f'<text x="{W-R}" y="{H-8}" font-size="14" fill="var(--faint)" text-anchor="end">experiment {n}</text>')
+    for i in range(n):
+        if i == 0 or (i + 1) % 3 == 0 or i == n - 1:
+            g.append(f'<text x="{xs[i]:.1f}" y="{H-8}" font-size="13" fill="var(--faint)" text-anchor="middle">{i + 1}</text>')
+    g.append(f'<text x="{L-8}" y="{H-8}" font-size="13" fill="var(--faint)" text-anchor="end">experiment</text>')
     g.append("</svg>")
     return "<figure class='chart'>" + "".join(g) + "</figure>"
 
@@ -381,6 +391,56 @@ def crib_strip():
     return f'<svg viewBox="0 0 {W:.0f} 14" aria-label="the 24 known letters among the 97">{cells}</svg>'
 
 
+
+# ---- the sculpture's four plates, line by line as carved --------------------------------------
+UL_STARTS = ["EMUFPHZ", "YQTQUXQ", "VFPJUDE", "GGWHKK?", "TIMVMZJ", "QZGZLEC", "YIZETKZ", "HHDDDUV", "EVLDKFE", "FLGGTEZ", "FHQNTGP", "ELZZVRR", "DNQFMPN", "DQUMEBE"]
+LL_STARTS = ["ENDYAHR", "CHTNREY", "TPRNGAT", "WMTWNDI", "TFOLSED", "EIFTBRS", "TEEFOAS", "BSEDDNI", "AECTDDH", "RKLMLEH", "ECDMRIP", "UOXOGHU", "TWTQSJQ", "VTTMZFP"]
+
+
+def split_by_starts(text, starts):
+    cuts = []
+    pos = 0
+    for st in starts:
+        i = text.index(st, pos)
+        cuts.append(i); pos = i + 1
+    cuts.append(len(text))
+    return [text[cuts[k]:cuts[k + 1]] for k in range(len(starts))]
+
+
+def sculpture_panels():
+    from kryptos.facts import load_k1, load_k2, load_k3, KRYPTOS_ALPHABET as KRY, STANDARD_ALPHABET as STD
+    k4 = (ROOT / "data" / "k4.txt").read_text().strip()
+    ul = split_by_starts(load_k1()["ciphertext"] + load_k2()["ciphertext_as_carved"], UL_STARTS)
+    ll = split_by_starts(load_k3()["ciphertext"] + k4, LL_STARTS)
+    rows = []
+    for i in range(26):
+        sh = KRY[i:] + KRY[:i]
+        row = STD[i] + sh + sh[:4] + ("L" if STD[i] == "N" else "")
+        rows.append(row)
+    top = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCD"
+    ur = [top] + rows[:13]
+    lr = rows[13:] + [top]
+    obkr = ll[10].index("OBKR")
+    regions = [
+        {"name": "K1", "quad": "ul", "spans": [[0, 0, 99], [1, 0, 99]], "caption": "K1, the first message: 63 letters, two lines. Solved: a keyed table with the word PALIMPSEST. Its text has the misspelling IQLUSION."},
+        {"name": "K2", "quad": "ul", "spans": [[r, 0, 99] for r in range(2, 14)], "caption": "K2, the second message: 372 letters with three question marks. Solved: the same table with the word ABSCISSA. It ends with map coordinates and the words LAYER TWO."},
+        {"name": "K3", "quad": "ll", "spans": [[r, 0, 99] for r in range(10)] + [[10, 0, obkr]], "caption": "K3, the third message: 337 letters. Solved: a grid scramble, no table. It retells Howard Carter opening Tutankhamun's tomb, down to the question mark after CAN YOU SEE ANYTHING."},
+        {"name": "K4", "quad": "ll", "spans": [[10, obkr, 99], [11, 0, 99], [12, 0, 99], [13, 0, 99]], "caption": "K4, the fourth message: 97 letters from OBKR to the end, unsolved since 1990. The 24 known letters sit on the last three lines."},
+        {"name": "the table", "quad": "ur", "spans": [[r, 0, 99] for r in range(14)], "caption": "The table: 26 rows of the alphabet, each starting one letter further along KRYPTOSABCDEFGHIJLMNQUVWXZ, with the plain alphabet down the left edge. K1 and K2 were enciphered on it."},
+        {"name": "the table", "quad": "lr", "spans": [[r, 0, 99] for r in range(14)], "caption": "The table, lower half. Row N carries an extra L at its end, which makes the right-hand column read HILL over four rows."},
+    ]
+    return {"ul": ul, "ll": ll, "ur": ur, "lr": lr, "regions": regions}
+
+
+def sculpture_block():
+    data = json.dumps(sculpture_panels())
+    keys = "".join(f'<span data-region="{esc(n)}">{esc(n)}</span>' for n in ("K1", "K2", "K3", "K4", "the table"))
+    return (f'<div class="sculpture-wrap"><div id="sculpture"></div>'
+            f'<div class="sculpture-foot"><div class="sculpture-key">{keys}</div><p id="sculpture-label" class="muted">Hover a plate to see which part of the puzzle it carries. Drag to turn.</p></div></div>'
+            f'<script>window.KRYPTOS_PANELS = {data};</script>'
+            '<script type="importmap">{"imports": {"three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>'
+            '<script type="module" src="/assets/sculpture.js"></script>')
+
 def what_we_look_for():
     from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
     panel = panel_block(_K4, None, _KNOWN)
@@ -390,7 +450,7 @@ def what_we_look_for():
         ("The line at ten", "Above it, at least one known letter is wrong. Below it, all 24 are right and only the English of the rest and the length of the key remain. A dot below the line is not a solution until the text reads as English and the key is one a person could remember."),
     ]
     html = "".join(f'<div class="explain-col"><h4>{esc(h)}</h4><p>{esc(t)}</p></div>' for h, t in cols)
-    return panel + f'<div class="explain-row">{html}</div>'
+    return sculpture_block() + panel + f'<div class="explain-row">{html}</div>'
 
 
 def sec(n, title, sub=""):
@@ -572,6 +632,10 @@ def route(path):
         return overview()
     if path.startswith("/exp/"):
         return experiment_page(path[5:].strip("/"))
+    if path.startswith("/assets/"):
+        f = ROOT / "assets" / path[len("/assets/"):]
+        if f.exists() and f.suffix == ".js":
+            return ("application/javascript", f.read_text())
     if path == "/glossary":
         return md_page("glossary", "GLOSSARY.md", "/glossary", refresh=False)
     if path == "/notebook":
@@ -590,9 +654,12 @@ class H(BaseHTTPRequestHandler):
         out = route(self.path.split("?")[0])
         if out is None:
             self.send_response(404); self.end_headers(); return
+        ctype = "text/html; charset=utf-8"
+        if isinstance(out, tuple):
+            ctype, out = out
         data = out.encode()
         self.send_response(200)
-        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(data)))
         self.end_headers()
         self.wfile.write(data)

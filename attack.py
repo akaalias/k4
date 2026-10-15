@@ -1,345 +1,179 @@
-"""Experiment 0036. See program.md for the contract."""
+"""Experiment 0037. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "hill-variants-chained-and-paired",
-    "title": "The Hill variants Bauer left open: blocks chained to their neighbours, and two matrices taking turns",
-    "family": "8-hill-polygraphic",
-    "parent": "0015-hill-solved-from-crib-blocks",
-    "changed": "Four variants of the Hill cipher instead of the plain and affine forms: each block also adds the previous carved block, or the previous message block, or is mixed together with it, or alternates between two matrices. The exact solver of experiment 15 handles every one.",
+    "slug": "triple-matrix-routes-sampled-then-tableau",
+    "title": "Sanborn's triple matrixes: three grid stages in a row, sampled, then the tableau",
+    "family": "6-transposition-then-tableau",
+    "parent": "0016-routes-then-tableau-forced-key-english",
+    "changed": "Three transposition stages instead of one or two. The space is too large to enumerate, so 200,000 triples are drawn at random from plain columnar widths 2-30, rotations, and keyed columnar from vocabulary words, each stage forward or inverse. The survival test and English scoring of experiments 6 and 16 are unchanged.",
     "hypothesis_expert": (
-        "Bauer (knowledge/sources/bauer-2017-unsolved-chapter-notes.md, C21) lists chaining and paired 2x2 "
-        "matrices as untested Hill variants. Chained forms: c_i = M p_i + c_(i-1) (ciphertext feedback), "
-        "c_i = M p_i + p_(i-1) (plaintext feedback), c_i = M (p_i + p_(i-1)) (summed input), with the "
-        "first block's predecessor taken as zeros. Paired form: M_A on even blocks, M_B on odd. Each is "
-        "linear in the matrix given the known blocks, since the previous carved block is always known and "
-        "the previous message block is known inside a crib run, so the whole crib blocks give rows of "
-        "equations and the exact mod-13 and mod-2 solver of experiment 15 enumerates every matrix. "
-        "Block sizes 2-4, four numberings, every alignment, matrix encrypting or decrypting. A matrix "
-        "consistent with all its blocks decrypts the text and the partial-block cribs test it. Bounds: "
-        "complete for these four variants under the stated settings."
+        "Sanborn, CNN 2005 (C1): 'double matrixes and triple matrixes... then went back to this table'. "
+        "Experiments 6, 8, 16 and 26 covered single and double stages exhaustively for their route sets. "
+        "Triples of 110 stage choices number about 1.3 million, beyond the budget with the English "
+        "scoring, so this is a sample: 200,000 triples drawn uniformly, with a fixed seed, each stage one of "
+        "plain columnar at widths 2-30 forward or inverse, a quarter-turn rotation at widths 2-30, or a "
+        "keyed columnar from a vocabulary word forward or inverse. For each triple under the 8 distinct "
+        "plain-cipher conventions the forced tableau key letters give the live periods by the divisor rule; "
+        "the smallest live period is recorded, and the forced key at live periods up to 40 is scored as "
+        "English on runs of five or more slots against ten shuffled controls. A triple with a live period "
+        "under 20 or an English key above the controls would be a lead. Bounds: a 15 percent sample, not "
+        "exhaustive; the smallest-period distribution says whether triples behave as random permutations."
     ),
     "hypothesis_eli5": (
-        "Experiment 15 ruled out the plain Hill cipher, where every group of letters is mixed by the same "
-        "table of numbers on its own. A cryptologist who studied the sculpture listed the variants nobody "
-        "had tried: mixing each group together with the group before it, or using two tables that take "
-        "turns. Because the carved letters are all known, and the known message letters come in two long "
-        "runs, each variant can be solved directly from the known groups rather than guessed."
+        "The artist said he sometimes scrambled the letters through three grids before using the table. "
+        "There are over a million ways to pick three grids from our set, too many to try with the slow "
+        "English check, so we draw two hundred thousand at random. For each, we follow the 24 known letters "
+        "through all three grids, ask whether a short secret word could then produce the carved letters "
+        "where they land, and whether the letters of that word look like English. Three grids in a row "
+        "behave like a random shuffle, so the answer should look like the earlier grid experiments."
     ),
     "prediction": (
-        "No variant, size, numbering, alignment or direction gives a matrix consistent with all its whole "
-        "crib blocks that also reproduces the known letters in partial blocks. Zero candidates pass."
+        "The smallest live period over the sample is 22 or 23, as for single and double stages. The best "
+        "forced key scores inside the range of ten shuffled controls. No candidate."
     ),
     "method": (
-        "1. For each numbering, block size, alignment and variant, list the whole crib blocks and their "
-        "partners (previous carved block or previous message block). 2. Build the linear rows for the "
-        "matrix, in each direction. 3. Enumerate all solutions mod 26 by elimination mod 13 and mod 2. "
-        "4. Decrypt the text with each invertible solution and count known letters right. 5. Submit any "
-        "decryption with all 24."
+        "1. Build the stage list. 2. Draw 200,000 triples with a fixed seed. 3. For each triple compose the "
+        "three permutations and send the crib positions through. 4. For each of the 8 conventions force the "
+        "key letters, find live periods by the divisor rule, and score the forced key at live periods up to "
+        "40. 5. Keep the twenty best keys and the smallest-period histogram. 6. Repeat on ten shuffles."
     ),
     "walkthrough": (
-        "1. Number the letters A=0 to Z=25, blocks of two from position 1. 2. Ciphertext feedback: the "
-        "carved pair at 25-26 equals M times the message pair at 25-26 plus the carved pair at 23-24. "
-        "3. Subtract the carved 23-24 from the carved 25-26: that difference is M times TN. 4. Do the same "
-        "for the next whole pairs inside EASTNORTHEAST and BERLINCLOCK: six equations in four unknowns. "
-        "5. Solve; if no M fits all of them, this setting is dead. 6. For two matrices taking turns, split "
-        "the pairs into even and odd and solve each separately."
+        "1. Pick three grids: rows of 7 read down, then a quarter turn of a 12-wide grid, then columns in "
+        "the order of the letters of KRYPTOS. 2. Follow position 22, the E of EAST, through the first grid "
+        "to its new place, then through the second, then the third. 3. Do this for all 24 known letters. "
+        "4. The carved letter at each final place, with the known letter, forces one key letter on the table. "
+        "5. Two final places a multiple of p apart share a key letter at period p; a disagreement kills p. "
+        "6. The smallest surviving p is this triple's score; write its forced letters into their slots and "
+        "read them."
     ),
 }
 
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
+import random
+from kryptos.alphabets import key_letter_for, numeric_order
+from kryptos.ciphers import columnar_transposition_encrypt, columnar_transposition_decrypt
 
 N = 97
-NUMBERINGS = {"std0": (STD, 0), "std1": (STD, 1), "kry0": (KRY, 0), "kry1": (KRY, 1)}
-VARIANTS = ("chain-c", "chain-p", "sum-p", "paired")
+MAXP = 40
+SAMPLE = 200000
+DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0] for d in range(1, N + 1)}
+CONVS = [(pa, ca, "kry", m) for pa in ("std", "kry") for ca in ("std", "kry") for m in ("vig", "beau")]   # ka drops out; varbeau = vig for the test
 
 
-def num(ch, alpha, base):
-    return (alpha.index(ch) + base) % 26
+def perm_of(fn):
+    idx = [chr(0x100 + i) for i in range(N)]
+    return [ord(ch) - 0x100 for ch in fn("".join(idx))]
 
 
-def let(v, alpha, base):
-    return alpha[(v - base) % 26]
+def rotate(s, w):
+    rows = [s[i:i + w] for i in range(0, len(s), w)]
+    return "".join(r[col] for col in range(w) for r in reversed(rows) if col < len(r))
 
 
-def egcd(a, b):
-    if b == 0:
-        return a, 1, 0
-    g, x, y = egcd(b, a % b)
-    return g, y, x - (a // b) * y
-
-
-def inv26(a):
-    g, x, _ = egcd(a % 26, 26)
-    return None if g != 1 else x % 26
-
-
-def det(M):
-    n = len(M)
-    if n == 1:
-        return M[0][0] % 26
-    if n == 2:
-        return (M[0][0] * M[1][1] - M[0][1] * M[1][0]) % 26
-    d = 0
-    for j in range(n):
-        minor = [row[:j] + row[j + 1:] for row in M[1:]]
-        d += (-1) ** j * M[0][j] * det(minor)
-    return d % 26
-
-
-def inverse(M):
-    n = len(M)
-    di = inv26(det(M))
-    if di is None:
-        return None
-    adj = [[0] * n for _ in range(n)]
-    for i in range(n):
-        for j in range(n):
-            minor = [row[:j] + row[j + 1:] for k, row in enumerate(M) if k != i]
-            adj[j][i] = ((-1) ** (i + j) * (det(minor) if n > 1 else 1)) % 26
-    return [[(adj[i][j] * di) % 26 for j in range(n)] for i in range(n)]
-
-
-def matmul(A, B):
-    return [[sum(A[i][k] * B[k][j] for k in range(len(B))) % 26 for j in range(len(B[0]))] for i in range(len(A))]
-
-
-def solve_mod_p(rows, rhs, p):
-    """Solve rows . x = rhs over GF(p). Returns (particular, nullspace basis) or None."""
-    m, n = len(rows), len(rows[0])
-    A = [[x % p for x in r] + [b % p] for r, b in zip(rows, rhs)]
-    pivots = []
-    r = 0
-    for c in range(n):
-        piv = next((i for i in range(r, m) if A[i][c] % p), None)
-        if piv is None:
-            continue
-        A[r], A[piv] = A[piv], A[r]
-        inv = pow(A[r][c], -1, p)
-        A[r] = [(x * inv) % p for x in A[r]]
-        for i in range(m):
-            if i != r and A[i][c]:
-                f = A[i][c]
-                A[i] = [(x - f * y) % p for x, y in zip(A[i], A[r])]
-        pivots.append(c); r += 1
-        if r == m:
-            break
-    for i in range(r, m):
-        if A[i][n] % p:
-            return None
-    free = [c for c in range(n) if c not in pivots]
-    part = [0] * n
-    for i, c in enumerate(pivots):
-        part[c] = A[i][n]
-    basis = []
-    for fc in free:
-        v = [0] * n; v[fc] = 1
-        for i, c in enumerate(pivots):
-            v[c] = (-A[i][fc]) % p
-        basis.append(v)
-    return part, basis
-
-
-def all_solutions_mod_p(rows, rhs, p, cap):
-    sol = solve_mod_p(rows, rhs, p)
-    if sol is None:
-        return []
-    part, basis = sol
+def stages(vocab):
     out = []
-    from itertools import product
-    for coeffs in product(range(p), repeat=len(basis)):
-        x = list(part)
-        for cf, v in zip(coeffs, basis):
-            if cf:
-                x = [(a + cf * b) % p for a, b in zip(x, v)]
-        out.append(x)
-        if len(out) >= cap:
-            break
-    return out
-
-
-def crt26(x13, x2):
-    """Combine residues mod 13 and mod 2 into mod 26."""
-    return [next(v for v in range(26) if v % 13 == a and v % 2 == b) for a, b in zip(x13, x2)]
-
-
-def solve_rows(src, dst, n, affine, cap=4096):
-    """All (M, v) with M src_k + v = dst_k for every block k, enumerated row by row and combined."""
-    per_row = []
-    for r in range(n):
-        rows = [list(sv) + ([1] if affine else []) for sv in src]
-        rhs = [dv[r] for dv in dst]
-        s13 = all_solutions_mod_p(rows, rhs, 13, cap)
-        s2 = all_solutions_mod_p(rows, rhs, 2, cap)
-        if not s13 or not s2:
-            return []
-        combined = [crt26(a, b) for a in s13 for b in s2][:cap]
-        per_row.append(combined)
-    from itertools import product
-    out = []
-    for choice in product(*per_row):
-        M = [c[:n] for c in choice]
-        v = [c[n] for c in choice] if affine else None
-        out.append((M, v))
-        if len(out) >= cap:
-            break
-    return out
-
-
-
-
-def apply(M, v, add=None):
-    out = [sum(M[i][k] * v[k] for k in range(len(v))) % 26 for i in range(len(M))]
-    if add:
-        out = [(o + a) % 26 for o, a in zip(out, add)]
-    return out
-
-
-def vsub(a, b):
-    return [(x - y) % 26 for x, y in zip(a, b)]
-
-
-def vadd(a, b):
-    return [(x + y) % 26 for x, y in zip(a, b)]
-
-
-def blocks_of(text, n, o, alpha, base):
-    """Whole blocks from offset o as lists of ints; index -> (start, ints)."""
-    out = []
-    i = o
-    while i + n <= N:
-        out.append((i, [num(text[j], alpha, base) for j in range(i, i + n)]))
-        i += n
+    for w in range(2, 31):
+        o = list(range(w))
+        out.append((f"columnar {w}", lambda s, o=o: columnar_transposition_encrypt(s, o)))
+        out.append((f"columnar {w} inv", lambda s, o=o: columnar_transposition_decrypt(s, o)))
+        out.append((f"rotate {w}", lambda s, w=w: rotate(s, w)))
+    for word in vocab:
+        if 2 <= len(word) <= 30:
+            o = numeric_order(word)
+            out.append((f"keyed {word}", lambda s, o=o: columnar_transposition_encrypt(s, o)))
+            out.append((f"keyed {word} inv", lambda s, o=o: columnar_transposition_decrypt(s, o)))
     return out
 
 
 def encrypt(plaintext, key):
-    alpha, base = NUMBERINGS[key["numbering"]]
-    n, o, variant = key["n"], key["offset"], key["variant"]
-    Ms = key["M"] if variant == "paired" else [key["M"]]
-    out = list(plaintext)
-    prev_c = [0] * n; prev_p = [0] * n
-    for k, (s, p) in enumerate(blocks_of(plaintext, n, o, alpha, base)):
-        M = Ms[k % len(Ms)]
-        if variant == "chain-c":
-            c = vadd(apply(M, p), prev_c)
-        elif variant == "chain-p":
-            c = vadd(apply(M, p), prev_p)
-        elif variant == "sum-p":
-            c = apply(M, vadd(p, prev_p))
-        else:
-            c = apply(M, p)
-        for j in range(n):
-            out[s + j] = let(c[j], alpha, base)
-        prev_c, prev_p = c, p
-    return "".join(out)
+    raise NotImplementedError("diagnostic experiment: no full key is implied, so no candidate is submitted")
 
 
-def decrypt_with(ct, Minvs, n, o, variant, alpha, base):
-    out = list(ct)
-    prev_c = [0] * n; prev_p = [0] * n
-    for k, (s, c) in enumerate(blocks_of(ct, n, o, alpha, base)):
-        Mi = Minvs[k % len(Minvs)]
-        if variant == "chain-c":
-            p = apply(Mi, vsub(c, prev_c))
-        elif variant == "chain-p":
-            p = apply(Mi, vsub(c, prev_p))
-        elif variant == "sum-p":
-            p = vsub(apply(Mi, c), prev_p)
+def runs_in_slots(slots, P):
+    filled = [slots.get(s) for s in range(P)]
+    start = 0 if all(filled) else next(i for i in range(P) if filled[i] is None)
+    out, cur = [], []
+    for k in range(1, P + 1):
+        ch = filled[(start + k) % P]
+        if ch is None:
+            if len(cur) >= 5: out.append("".join(cur))
+            cur = []
         else:
-            p = apply(Mi, c)
-        for j in range(n):
-            out[s + j] = let(p[j], alpha, base)
-        prev_c, prev_p = c, p
-    return "".join(out)
+            cur.append(ch)
+    if len(cur) >= 5: out.append("".join(cur))
+    return out
+
+
+def search(ct, known, triples, stage_perms, score, time_left):
+    crib_pos = sorted(known)
+    best, hist, n = [], {}, 0
+    for t in triples:
+        if time_left() < 30:
+            break
+        # compose: out3[j] = in[sigma1[sigma2[sigma3[j]]]]
+        s1, s2, s3 = stage_perms[t[0]], stage_perms[t[1]], stage_perms[t[2]]
+        sigma = [s1[s2[s3[j]]] for j in range(N)]
+        where = {sigma[j]: j for j in range(N)}
+        inter = [where[p - 1] for p in crib_pos]
+        for conv in CONVS:
+            pa, ca, ka, m = conv
+            forced = [key_letter_for(known[p], ct[j], pa, ca, ka, m) for p, j in zip(crib_pos, inter)]
+            dead = set()
+            for a in range(24):
+                for b in range(a + 1, 24):
+                    if forced[a] != forced[b]:
+                        dead.update(DIVISORS[abs(inter[a] - inter[b])])
+            minp = next(P for P in range(1, N + 1) if P not in dead)
+            hist[minp] = hist.get(minp, 0) + 1
+            for P in range(2, MAXP + 1):
+                if P in dead:
+                    continue
+                slots = {j % P: l for j, l in zip(inter, forced)}
+                runs = runs_in_slots(slots, P)
+                qs = sum(len(r) - 3 for r in runs)
+                if qs < 4:
+                    continue
+                sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
+                n += 1
+                if len(best) < 20 or sc > best[-1][0]:
+                    best.append((sc, t, "/".join(conv), P, runs)); best.sort(reverse=True); best = best[:20]
+    return best, hist, n
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    candidates, log = [], []
-    n_settings = 0
-    for nname, (alpha, base) in NUMBERINGS.items():
-        for n in (2, 3, 4):
-            for o in range(n):
-                cblocks = blocks_of(ct, n, o, alpha, base)
-                # whole crib blocks with their index k
-                crib_k = [k for k, (s, _) in enumerate(cblocks) if all((s + j + 1) in known for j in range(n))]
-                pblock = {k: [num(known[cblocks[k][0] + j + 1], alpha, base) for j in range(n)] for k in crib_k}
-                for variant in VARIANTS:
-                    n_settings += 1
-                    rec = {"numbering": nname, "n": n, "offset": o, "variant": variant, "crib_blocks": len(crib_k), "solved": False}
-                    # rows: M x src = dst, grouped by matrix index (paired: 2 groups)
-                    groups = {0: ([], []), 1: ([], [])} if variant == "paired" else {0: ([], [])}
-                    for k in crib_k:
-                        c = cblocks[k][1]
-                        if variant == "chain-c":
-                            prev = cblocks[k - 1][1] if k > 0 else [0] * n
-                            src, dst = pblock[k], vsub(c, prev)
-                        elif variant == "chain-p":
-                            if k == 0:
-                                prevp = [0] * n
-                            elif (k - 1) in pblock:
-                                prevp = pblock[k - 1]
-                            else:
-                                continue
-                            src, dst = pblock[k], vsub(c, prevp)
-                        elif variant == "sum-p":
-                            if k == 0:
-                                prevp = [0] * n
-                            elif (k - 1) in pblock:
-                                prevp = pblock[k - 1]
-                            else:
-                                continue
-                            src, dst = vadd(pblock[k], prevp), c
-                        else:
-                            src, dst = pblock[k], c
-                        g = (k % 2) if variant == "paired" else 0
-                        groups[g][0].append(src); groups[g][1].append(dst)
-                    need = n
-                    if any(len(groups[g][0]) < need for g in groups):
-                        rec["note"] = "too few usable crib blocks"; log.append(rec); continue
-                    sols = {}
-                    ok = True
-                    for g in groups:
-                        s_ = solve_rows(groups[g][0], groups[g][1], n, False, cap=512)
-                        if not s_:
-                            ok = False; break
-                        sols[g] = [M for M, _ in s_ if inverse(M) is not None][:64]
-                        if not sols[g]:
-                            ok = False; break
-                    if not ok:
-                        rec["note"] = "inconsistent or singular"; log.append(rec); continue
-                    rec["solved"] = True
-                    rec["solutions"] = {str(g): len(v) for g, v in sols.items()}
-                    best_hits = 0
-                    from itertools import product
-                    for combo in product(*[sols[g] for g in sorted(sols)]):
-                        Minvs = [inverse(M) for M in combo]
-                        pt = decrypt_with(ct, Minvs, n, o, variant, alpha, base)
-                        hits = sum(1 for pos, ch in known.items() if pt[pos - 1] == ch)
-                        best_hits = max(best_hits, hits)
-                        if hits == 24:
-                            key = {"numbering": nname, "n": n, "offset": o, "variant": variant, "M": list(combo) if variant == "paired" else combo[0]}
-                            candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * n * n * len(combo), "key_description": f"Hill {variant} {n}x{n} {nname} offset {o}; M={combo}"})
-                    rec["best_hits"] = best_hits
-                    log.append(rec)
-    solved = [r for r in log if r["solved"]]
+    st = stages(list(ctx.vocabulary))
+    names = [nm for nm, _ in st]
+    perms = [perm_of(fn) for _, fn in st]
+    rng = random.Random(37)
+    triples = [(rng.randrange(len(st)), rng.randrange(len(st)), rng.randrange(len(st))) for _ in range(SAMPLE)]
+    best, hist, n = search(ct, known, triples, perms, ctx.english_score, ctx.time_left)
+    nulls = []
+    for seed in range(10):
+        if ctx.time_left() < 150:
+            break
+        letters_ = list(ct); random.Random(seed).shuffle(letters_)
+        nb, _, _ = search("".join(letters_), known, triples[:6000], perms, ctx.english_score, ctx.time_left)
+        nulls.append(round(nb[0][0], 3) if nb else None)
     return {
-        "candidates": candidates[:50],
-        "bounds": {"family": "Hill variants: ciphertext feedback, plaintext feedback, summed input, paired matrices; sizes 2-4", "numberings": list(NUMBERINGS),
-                   "settings": n_settings, "settings_solved": len(solved),
-                   "solved_settings": [{k: r[k] for k in ("numbering", "n", "offset", "variant", "crib_blocks", "solutions", "best_hits")} for r in solved[:30]],
-                   "best_hits_over_solved": max((r["best_hits"] for r in solved), default=0)},
-        "notes": f"{n_settings} settings; {len(solved)} consistent on their whole crib blocks; best known-letter count among them {max((r['best_hits'] for r in solved), default=0)} of 24; {len(candidates)} full hits.",
+        "candidates": [],
+        "bounds": {"family": "three transposition stages (sampled) then periodic tableau", "stages": len(st), "triples_sampled": len(triples), "conventions": len(CONVS),
+                   "keys_scored": n, "smallest_live_period": min(hist) if hist else None,
+                   "min_live_period_histogram": {str(k): v for k, v in sorted(hist.items())[:12]},
+                   "best": [{"score": round(sc, 3), "stages": [names[i] for i in t], "convention": cv, "period": P, "runs": rs} for sc, t, cv, P, rs in best[:10]],
+                   "shuffled_control_best": nulls, "control_note": "controls use the first 6,000 triples of the same sample"},
+        "notes": f"Diagnostic, no candidates. {len(triples)} triples x {len(CONVS)} conventions; smallest live period {min(hist) if hist else None}; best forced key {best[0][0]:.3f} vs shuffled {[x for x in nulls if x is not None]}.",
     }
 
 
 def worked_example(ctx, key):
-    alpha, base = STD, 0
-    cb = blocks_of(ctx.K4, 2, 0, alpha, base)
-    lines = ["ciphertext feedback, blocks of two from position 1, A=0: the equation for the pair at 25-26", ""]
-    k = 12   # block index of positions 25-26
-    c, prev = cb[k][1], cb[k - 1][1]
-    lines.append(f"carved 25-26 {ctx.K4[24:26]} = {c};  carved 23-24 {ctx.K4[22:24]} = {prev};  difference {vsub(c, prev)}")
-    lines.append(f"message 25-26 TN = {[num('T', alpha, base), num('N', alpha, base)]}")
-    lines.append(f"so M x (19, 13) = {tuple(vsub(c, prev))} mod 26; the pairs 27-28, 29-30, 31-32 and 33-34 give four more such equations.")
+    st = stages(["KRYPTOS"])
+    names = [nm for nm, _ in st]
+    i1, i2, i3 = names.index("columnar 7"), names.index("rotate 12"), names.index("keyed KRYPTOS")
+    perms = {i: perm_of(st[i][1]) for i in (i1, i2, i3)}
+    sigma = [perms[i1][perms[i2][perms[i3][j]]] for j in range(N)]
+    where = {sigma[j]: j for j in range(N)}
+    lines = ["stages: columnar 7, then rotate 12, then keyed columnar KRYPTOS; convention kry/kry/kry Vigenere", "", "plain pos  letter  final place  carved  forced key letter"]
+    for pos in (22, 23, 24, 64, 65, 66):
+        j = where[pos - 1]
+        lines.append(f"{pos:>9}    {ctx.KNOWN[pos]}        {j+1:>3}        {ctx.K4[j]}       {key_letter_for(ctx.KNOWN[pos], ctx.K4[j], 'kry', 'kry', 'kry', 'vig')}")
     return "\n".join(lines)

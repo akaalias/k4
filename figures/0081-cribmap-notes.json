@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cipher",
+  "text": "In an autokey the secret word only starts the key; then each letter is keyed by the message (or the cipher) a fixed distance back. The NSA suggested it for K4 in 1992."
+ },
+ {
+  "anchor": "the check",
+  "text": "After a turn in rows of 7, the L and O of CLOCK land 14 places apart; at lag 14 the copper gives U where O should be."
+ },
+ {
+  "anchor": "the bound",
+  "text": "27,752 scramblings, lags 1 to 96, both orders, both kinds: nothing passes five checks; the four settings at four checks are scattered and match the scrambled coppers."
+ }
+]

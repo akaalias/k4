@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the sandwich",
+  "text": "The message is shifted along the table with one repeating word, scrambled by K3's grid turn, then shifted again with a second word: Sanborn's 'double matrixes', then 'back to this table'."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known letter fixes the sum of one letter of each word. With words of 2 and 3 letters the 24 known letters leave 20 independent checks; one disagreement kills the setting."
+ },
+ {
+  "anchor": "the bound",
+  "text": "26,158 different scramblings, word lengths 2 to 14 each, standard or KRYPTOS table: no setting passes five checks, and the counts at three and four match ten scrambled coppers."
+ }
+]

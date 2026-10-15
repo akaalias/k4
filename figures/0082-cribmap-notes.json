@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the grid",
+  "text": "97 letters fill no grid. By hand the blank cells can go at the start instead of the end, or travel as dummy letters into a second grid and be struck out at the end."
+ },
+ {
+  "anchor": "the move",
+  "text": "With rows of 10 and the blanks on top, the E of place 22 comes out at 45 instead of 18: each choice is a different scramble."
+ },
+ {
+  "anchor": "the bound",
+  "text": "120,871 such scrambles with a repeating key of 1 to 26 letters before or after: no period below 22 fits, on the copper or the scrambled coppers. Period 23 runs a little high, spread evenly over every choice: chance."
+ }
+]

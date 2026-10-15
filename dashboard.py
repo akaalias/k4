@@ -83,6 +83,8 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .sculpture-wrap{max-width:980px;margin:14px auto 22px}#sculpture{width:100%;border:1px solid var(--rule-soft);border-radius:2px;overflow:hidden;cursor:grab}#sculpture canvas{display:block}.sculpture-foot{display:flex;gap:22px;align-items:baseline;margin-top:8px}.sculpture-key span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-right:14px;cursor:pointer;border-bottom:2px solid transparent}.sculpture-key span.on{color:var(--accent);border-bottom-color:var(--accent)}#sculpture-label{margin:0;font-size:13.5px;flex:1}
 .explain-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;max-width:980px;margin:22px auto 0}.explain-col h4{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 8px}.explain-col p{font-size:15.5px;line-height:1.65;margin:0;color:var(--ink)}
 @media(max-width:860px){.explain-row{grid-template-columns:1fr}}
+dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 18px;margin:6px 0 10px;font-size:14.5px}dl.bd dt{color:var(--muted)}dl.bd dd{margin:0;min-width:0;overflow-wrap:anywhere}dl.bd dl.bd{grid-template-columns:minmax(70px,max-content) 1fr;margin:0;padding-left:12px;border-left:2px solid var(--rule-soft);font-size:13.5px}.bd-text{font:12.5px var(--mono);letter-spacing:.06em;overflow-wrap:anywhere}ol.bd-list{margin:0;padding-left:20px}
+.res-notes{font-size:16px;margin:16px 0 6px;max-width:760px}.res-notes.err{color:var(--accent)}.res-stats{display:flex;gap:44px;flex-wrap:wrap;margin:6px 0 18px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.res-stats div{display:flex;flex-direction:column}.res-stats b{font:400 24px var(--serif)}.res-stats span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.res-card{display:flex;gap:26px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--rule-soft)}.res-side{display:flex;flex-direction:column;gap:3px;min-width:150px;font-size:14px;color:var(--muted)}.res-rank{font:400 26px var(--serif);color:var(--ink)}.res-loss{color:var(--accent);font-weight:600}.res-main{flex:1;min-width:0}.res-main .lp-box{display:inline-block}.res-key{font-size:13.5px;color:var(--muted);margin:8px 0 0;overflow-wrap:anywhere;max-width:620px}
 table.score{width:100%;max-width:760px;margin:10px 0 6px;border-collapse:collapse}table.score td,table.score th{padding:7px 10px;border-bottom:1px solid var(--rule-soft);font-size:15px}table.score td:first-child{font-weight:600}table.score tr.total td{border-top:1.5px solid var(--ink);border-bottom:none;font-weight:700}table.score .pct{color:var(--accent);margin-left:8px}table.score.ranks td:first-child{font-weight:400}table.score.ranks tr.kept td{font-weight:700;color:var(--accent)}table.score.ranks tr.gap td{color:var(--faint);border-bottom:none}.score-sub{font-size:14px;color:var(--muted);margin:16px 0 4px;max-width:760px}
 .panel-wrap{display:flex;gap:18px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;margin:16px 0 8px}.panel-wrap.wide{width:min(1360px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}.callout.wide{width:min(1400px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%);box-sizing:border-box}.callout .panel-wrap.wide{width:auto;left:0;transform:none}#sculpture-label{min-height:3.2em}.subsec{display:flex;align-items:baseline;gap:12px;margin:34px 0 10px;padding-top:12px;border-top:1px solid var(--rule-soft)}.subsec b{font:400 15px var(--serif);color:var(--faint)}.subsec h3{font:400 21px var(--serif);margin:0}.subsec-sub{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 6px}.lp-col{display:flex;flex-direction:column}.lp-eyebrow{font:600 11px/1.2 var(--serif)!important;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.lp-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:10px 14px 12px}.lp-title{font:600 13px var(--serif);color:var(--muted);text-align:center;margin:0 0 8px}.lrow{display:flex;gap:1.5px;margin:0 0 2.5px;justify-content:flex-end}.lc{display:inline-flex;align-items:center;justify-content:center;width:15px;height:19px;border-radius:2.5px;background:#ebe7d8;color:var(--muted);font:normal 11.5px/1 var(--mono)}.lc.tail{background:#f1eee3;color:#cfcab8}.lc.known{background:var(--accent);color:var(--paper);font-weight:700}.lc.miss{background:var(--paper);color:var(--accent);box-shadow:inset 0 0 0 1.3px var(--accent);font-weight:700}.lc.ink{color:var(--ink)}.lc.dot:after{content:"";width:2px;height:2px;border-radius:50%;background:var(--faint,#9b998c)}.lp-cap{font:italic 13px/1.4 var(--serif);color:var(--muted);text-align:center;margin:6px 0 0}.lp-cap.acc{color:var(--accent);margin-top:2px}.lp-arrow{color:var(--muted);padding-top:72px}.lp.mini .lp-box{padding:5px 6px;border-radius:4px;background:transparent;border-color:var(--rule-soft)}.lp.mini .lp-title{display:none}.lp.mini .lc{width:6.5px;height:9px;font-size:6px;border-radius:1px}.lp.mini .lrow{gap:1px;margin-bottom:1px}
 .gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
@@ -618,7 +620,7 @@ def overview():
 
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
-            + hero + champ
+            + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
             + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
             + what_we_look_for()
             + sec(2, "Loss over the run", "Each dot is one experiment's best candidate; a hollow dot means the search ruled everything out before producing one. The axis breaks at the line so the band where a solution would appear has room.")
@@ -628,6 +630,57 @@ def overview():
             + sec(4, "Lineage", "What each experiment inherits from.")
             + (tree(None) or "<p class='muted'>empty</p>"))
     return page("Kryptos K4 autoresearch", body, "/")
+
+
+def bounds_html(b):
+    """The bounds record as a readable list: names in words, numbers with separators, nested
+    records indented, long letter strings wrapped in monospace."""
+    def name(k):
+        return esc(str(k).replace("_", " "))
+    def val(v, depth=0):
+        if isinstance(v, bool):
+            return "yes" if v else "no"
+        if isinstance(v, int):
+            return f"{v:,}"
+        if isinstance(v, float):
+            return f"{v:,.3f}".rstrip("0").rstrip(".") if abs(v) < 1e6 else f"{v:,.0f}"
+        if isinstance(v, str):
+            return f'<code class="bd-text">{esc(v)}</code>' if v.isupper() and v.isalpha() and len(v) > 20 else esc(v)
+        if isinstance(v, list):
+            if all(not isinstance(x, (dict, list)) for x in v):
+                return ", ".join(val(x) for x in v) or "none"
+            return '<ol class="bd-list">' + "".join(f"<li>{val(x, depth + 1)}</li>" for x in v[:12]) + "</ol>" + (f'<span class="muted">and {len(v) - 12} more</span>' if len(v) > 12 else "")
+        if isinstance(v, dict):
+            return '<dl class="bd">' + "".join(f"<dt>{name(k)}</dt><dd>{val(x, depth + 1)}</dd>" for k, x in v.items()) + "</dl>"
+        return esc(str(v))
+    if not b:
+        return ""
+    return '<p class="score-sub">What was searched, as the harness recorded it.</p>' + val(b)
+
+
+def result_section_html(r, tags, known):
+    """The harness's record as a reader wants it: a row of figures, then each candidate as a
+    full-size panel with its score and key, lowest loss first. Replaces the generated table."""
+    cands = [c for c in r.get("candidates", []) if c.get("plaintext")]
+    passed = [c for c in cands if c.get("gate_passed")]
+    ranked = sorted(cands, key=lambda c: (not c.get("gate_passed"), c.get("loss") if c.get("loss") is not None else 1e9, -c.get("crib_hits", 0)))
+    cb = (r.get("champion_before") or {}).get("experiment")
+    cb_html = f'<a href="/exp/{esc(cb)}">{int(cb[:4])}</a>' if cb else "none"
+    stats = [(str(r.get("n_candidates", len(cands))), "candidates returned"), (str(r.get("n_passed", len(passed))), "passed every gate"),
+             (f"{r.get('best_crib_hits', 0)}/24", "known letters, best"), (pct(r.get("best_loss")) or "&ndash;", "lowest loss"), (cb_html, "champion before")]
+    out = '<div class="res-stats">' + "".join(f"<div><b>{v}</b><span>{k}</span></div>" for v, k in stats) + "</div>"
+    if not ranked:
+        return out
+    cards = []
+    for k, c in enumerate(ranked[:6], 1):
+        status = "passed every gate" if c.get("gate_passed") else f"failed at {esc(c.get('failed_at') or '?')}"
+        loss_s = pct(c.get("loss")) or "&ndash;"
+        pt = c["plaintext"]
+        body = letter_panel(pt, known, "candidate", "").replace('<div class="lp-title"></div>', "") if len(pt) == 97 and pt.isalpha() else f'<code>{esc(pt)}</code>'
+        cards.append(f'<div class="res-card"><div class="res-side"><b class="res-rank">{k}</b><span>{status}</span><span>{c.get("crib_hits", 0)}/24 known letters</span><span class="res-loss">loss {loss_s}</span></div>'
+                     f'<div class="res-main">{body}<p class="res-key">{esc(c.get("key_description", ""))}</p></div></div>')
+    more = f'<p class="score-sub">{len(ranked) - 6} more candidates in the record.</p>' if len(ranked) > 6 else ""
+    return out + '<p class="score-sub">Candidates, lowest loss first.</p>' + "".join(cards) + more
 
 
 def score_parts(c):
@@ -778,10 +831,16 @@ def experiment_page(tag):
         content = section(key)
         if not content:
             continue
-        html_c = md(content)
-        html_c = link_experiments(html_c, tags)
         if key == "Result":
-            html_c = re.sub(r"<code>([A-Z?]{97})</code>", lambda m: mini_panel(m.group(1), KNOWN), html_c)
+            notes = r.get("notes") or ""
+            err = r.get("error") or ""
+            html_c = (result_section_html(r, tags, KNOWN)
+                      + (f'<p class="res-notes">{link_experiments(esc(notes), tags)}</p>' if notes else "")
+                      + (f'<p class="res-notes err">The run stopped with an error: <code>{esc(err.splitlines()[-1] if err else "")}</code></p>' if err else "")
+                      + bounds_html(r.get("bounds")))
+        else:
+            html_c = md(content)
+            html_c = link_experiments(html_c, tags)
         body.append(sec(n, title, sub) + f'<article class="rec-body">{html_c}</article>')
         n += 1
     return page(f"experiment {num}", "".join(body))

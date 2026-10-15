@@ -1,0 +1,27 @@
+standard alphabet for both message and carved letters, Vigenere: nudge per known letter
+
+pos  plain  carved  nudge
+ 22    E      F       1
+ 23    A      L      11
+ 24    S      R       1   (KRYPTOS letter)
+ 25    T      V       2   (KRYPTOS letter)
+ 26    N      Q       3
+ 27    O      Q       2   (KRYPTOS letter)
+ 28    R      P       2   (KRYPTOS letter)
+ 29    T      R       2   (KRYPTOS letter)
+ 30    H      N       6
+ 31    E      G       2
+ 32    A      K      10
+ 33    S      S       0   (KRYPTOS letter)
+ 34    T      S       1   (KRYPTOS letter)
+ 64    B      N      12
+ 65    E      Y       6
+ 66    R      P       2   (KRYPTOS letter)
+ 67    L      V      10
+ 68    I      T      11
+ 69    N      T       6
+ 70    C      M      10
+ 71    L      Z      12
+ 72    O      F       9   (KRYPTOS letter)
+ 73    C      P      13
+ 74    K      K       0   (KRYPTOS letter)

@@ -112,7 +112,7 @@ NORTHEAST, or the key is a direction word; (b) "point" as the decimal point in K
 point five"; (c) "the point" as the place on the grounds: "find that place"; (d) "point"
 as a punctuation mark: the "?" or the X stop, Scheidt's "what's a period"; (e) POWER,
 SECRET, RESIDES, WITHOUT as keys; (f) the parenthetical marks only that the sentence is a
-clue to K5's theme. Status: untested.
+clue to K5's theme. Status: (a) and (e) as keyword alphabets (the 32 compass points; POINT, POWER, RESIDES, WITHOUT, DIRECTIONS, BEARING) for a periodic key, ciphertext autokey or both: nothing beyond chance (0072); other readings untested.
 
 **C16. "The final passage will lead in several directions. The word directions is, I use
 intentionally."** (2010). Readings: (a) the plaintext contains compass directions (EAST,

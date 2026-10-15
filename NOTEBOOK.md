@@ -76,6 +76,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 69 | 5 | Gromark with any scrambled alphabet at all, every rule up to six digits back and every primer: none fits the known letters, and none fits scrambled coppers; a planted Gromark text is found uniquely. Base-10 Gromark is dead whatever the alphabet. The record's primer count has a typo: 5,432,100, not 5,432,200. |
 | 70 | 6 | Every row of seven reshuffled the same way, before or after a repeating secret word, all 5,040 orders: periods up to 24 die, 25-26 survive only as often as on scrambled coppers, and no forced fragment holds a word (checked after the run). Family 6 back to rest. |
 | 71 | 1 | A table slightly different from the carved one, as Sanborn said his was: all 925 alphabets one swap or one move from KRYPTOS, with a repeating word or the self-feeding autokey: nothing beyond the scrambled-copper rate and no word in 16,671 fragments. The count was corrected from 975 to 925 before the run. |
+| 72 | 1 | The 32 compass points and the words of Sanborn's 'what's the point?' letter as table alphabets, with a repeating word, the self-feeding autokey, or both: everything at the scrambled-copper rate, and no word in 10,671 fragments. |
 
 ### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
 

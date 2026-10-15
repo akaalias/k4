@@ -1,0 +1,1 @@
+first window 38 57 6 5 mod 26 = 12 5 6 5; by rows [[12, 5], [6, 5]]; determinant 4; inverse None

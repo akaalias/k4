@@ -1,0 +1,709 @@
+{
+ "id": 60,
+ "tag": "0060-k2-coordinates-as-hill-matrix",
+ "started": "2026-10-15T12:26:36+00:00",
+ "seconds": 5.1,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.5,
+  "test": 0.1,
+  "run": 5.1,
+  "record": 0.2
+ },
+ "ended_epoch": 1792067202.2047858,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 4,
+ "n_passed": 0,
+ "best_crib_hits": 4,
+ "best_crib_words": {
+  "EAST": [
+   1,
+   4
+  ],
+  "NORTHEAST": [
+   1,
+   9
+  ],
+  "BERLIN": [
+   2,
+   6
+  ],
+  "CLOCK": [
+   0,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 204.303482107847,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "Hill with the key matrix filled from the K2 coordinates",
+  "matrices": 72,
+  "numberings": [
+   "std0",
+   "std1",
+   "kry0",
+   "kry1"
+  ],
+  "directions": 2,
+  "best_hits": 4,
+  "best_reading": "numbers window 1 by rows",
+  "top": [
+   {
+    "hits": 4,
+    "reading": "numbers window 1 by rows"
+   },
+   {
+    "hits": 4,
+    "reading": "numbers window 2 by rows"
+   },
+   {
+    "hits": 4,
+    "reading": "numbers reversed window 3 by rows"
+   },
+   {
+    "hits": 4,
+    "reading": "digits window 0 by rows"
+   },
+   {
+    "hits": 4,
+    "reading": "digits window 2 by columns"
+   },
+   {
+    "hits": 4,
+    "reading": "digits window 3 by rows"
+   },
+   {
+    "hits": 4,
+    "reading": "digits window 7 by rows"
+   },
+   {
+    "hits": 4,
+    "reading": "digits reversed window 4 by columns"
+   }
+  ],
+  "control_best_2x2": 7,
+  "control_best_3x3": 7,
+  "control_mean_2x2": 2.72,
+  "control_mean_3x3": 3.06,
+  "control_matrices": {
+   "2": 2000,
+   "3": 2000
+  }
+ },
+ "notes": "72 coordinate matrices; best 4/24 known letters (numbers window 1 by rows). Random invertible matrices under the same settings: 2x2 best 7 (mean 2.72), 3x3 best 7 (mean 3.06).",
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "YRWHCIRXUXKLJNGHSJLEKBBMTLONHUMUQUCZQNGKLDQUCKPWGGTIMNOTOOCYRIFSCBLILFZQFNQAXFDYTICHYIOEZPQGCKKKR",
+   "key": {
+    "numbering": "std0",
+    "M": [
+     [
+      3,
+      18
+     ],
+     [
+      15,
+      11
+     ]
+    ],
+    "offset": 0
+   },
+   "key_bits": 20.0,
+   "key_description": "Hill from K2 coordinates, numbers window 1 by rows, std0, offset 0, matrix decrypts",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 4,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     2,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "B"
+     ],
+     [
+      23,
+      "A",
+      "B"
+     ],
+     [
+      24,
+      "S",
+      "M"
+     ],
+     [
+      26,
+      "N",
+      "L"
+     ],
+     [
+      28,
+      "R",
+      "N"
+     ],
+     [
+      29,
+      "T",
+      "H"
+     ],
+     [
+      30,
+      "H",
+      "U"
+     ],
+     [
+      31,
+      "E",
+      "M"
+     ],
+     [
+      32,
+      "A",
+      "U"
+     ],
+     [
+      33,
+      "S",
+      "Q"
+     ],
+     [
+      34,
+      "T",
+      "U"
+     ],
+     [
+      64,
+      "B",
+      "S"
+     ],
+     [
+      65,
+      "E",
+      "C"
+     ],
+     [
+      66,
+      "R",
+      "B"
+     ],
+     [
+      69,
+      "N",
+      "L"
+     ],
+     [
+      70,
+      "C",
+      "F"
+     ],
+     [
+      71,
+      "L",
+      "Z"
+     ],
+     [
+      72,
+      "O",
+      "Q"
+     ],
+     [
+      73,
+      "C",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "N"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 204.35857424695203
+  },
+  {
+   "plaintext": "OMPMNZCGEKDHXYEYNLREJNZHTYOLTYDSUYESBWRXAOAWWJKOHLQYXQHMFWIBOLRMHRRHJZMTXYSJEJKNNMBMFAUXQGAMYUCVE",
+   "key": {
+    "numbering": "std1",
+    "M": [
+     [
+      6,
+      5
+     ],
+     [
+      25,
+      8
+     ]
+    ],
+    "offset": 1
+   },
+   "key_bits": 20.0,
+   "key_description": "Hill from K2 coordinates, numbers window 2 by rows, std1, offset 1, matrix encrypts",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 4,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     2,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "N"
+     ],
+     [
+      23,
+      "A",
+      "Z"
+     ],
+     [
+      24,
+      "S",
+      "H"
+     ],
+     [
+      26,
+      "N",
+      "Y"
+     ],
+     [
+      28,
+      "R",
+      "L"
+     ],
+     [
+      30,
+      "H",
+      "Y"
+     ],
+     [
+      31,
+      "E",
+      "D"
+     ],
+     [
+      32,
+      "A",
+      "S"
+     ],
+     [
+      33,
+      "S",
+      "U"
+     ],
+     [
+      34,
+      "T",
+      "Y"
+     ],
+     [
+      64,
+      "B",
+      "M"
+     ],
+     [
+      65,
+      "E",
+      "H"
+     ],
+     [
+      67,
+      "L",
+      "R"
+     ],
+     [
+      68,
+      "I",
+      "H"
+     ],
+     [
+      69,
+      "N",
+      "J"
+     ],
+     [
+      70,
+      "C",
+      "Z"
+     ],
+     [
+      71,
+      "L",
+      "M"
+     ],
+     [
+      72,
+      "O",
+      "T"
+     ],
+     [
+      73,
+      "C",
+      "X"
+     ],
+     [
+      74,
+      "K",
+      "Y"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 204.72224598124623
+  },
+  {
+   "plaintext": "YJYPEOHXYVAJZHURGPLWUFZSZDKVRMCAQGWNELOANTQGAUPEWOFUQFYNIYYKLEBQSTDIJZXOLBEYZRVSFUGLQICUZLSQAUCGR",
+   "key": {
+    "numbering": "std0",
+    "M": [
+     [
+      3,
+      8
+     ],
+     [
+      5,
+      7
+     ]
+    ],
+    "offset": 0
+   },
+   "key_bits": 20.0,
+   "key_description": "Hill from K2 coordinates, digits window 0 by rows, std0, offset 0, matrix encrypts",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 4,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "F"
+     ],
+     [
+      23,
+      "A",
+      "Z"
+     ],
+     [
+      25,
+      "T",
+      "Z"
+     ],
+     [
+      26,
+      "N",
+      "D"
+     ],
+     [
+      27,
+      "O",
+      "K"
+     ],
+     [
+      28,
+      "R",
+      "V"
+     ],
+     [
+      29,
+      "T",
+      "R"
+     ],
+     [
+      30,
+      "H",
+      "M"
+     ],
+     [
+      31,
+      "E",
+      "C"
+     ],
+     [
+      33,
+      "S",
+      "Q"
+     ],
+     [
+      34,
+      "T",
+      "G"
+     ],
+     [
+      64,
+      "B",
+      "Q"
+     ],
+     [
+      65,
+      "E",
+      "S"
+     ],
+     [
+      66,
+      "R",
+      "T"
+     ],
+     [
+      67,
+      "L",
+      "D"
+     ],
+     [
+      69,
+      "N",
+      "J"
+     ],
+     [
+      70,
+      "C",
+      "Z"
+     ],
+     [
+      71,
+      "L",
+      "X"
+     ],
+     [
+      73,
+      "C",
+      "L"
+     ],
+     [
+      74,
+      "K",
+      "B"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 204.303482107847
+  },
+  {
+   "plaintext": "YZWZCCRXUZKNJTGXSDLMKXBGTTOFHCMOQICLQPGULNQICAPOGYTWMVOZOECMRMFUCJLILLZSFZQCXTDETWCDYIOOZTQWCAKOR",
+   "key": {
+    "numbering": "std0",
+    "M": [
+     [
+      15,
+      8
+     ],
+     [
+      5,
+      15
+     ]
+    ],
+    "offset": 0
+   },
+   "key_bits": 20.0,
+   "key_description": "Hill from K2 coordinates, digits window 2 by columns, std0, offset 0, matrix decrypts",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 4,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     2,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "X"
+     ],
+     [
+      23,
+      "A",
+      "B"
+     ],
+     [
+      24,
+      "S",
+      "G"
+     ],
+     [
+      26,
+      "N",
+      "T"
+     ],
+     [
+      28,
+      "R",
+      "F"
+     ],
+     [
+      29,
+      "T",
+      "H"
+     ],
+     [
+      30,
+      "H",
+      "C"
+     ],
+     [
+      31,
+      "E",
+      "M"
+     ],
+     [
+      32,
+      "A",
+      "O"
+     ],
+     [
+      33,
+      "S",
+      "Q"
+     ],
+     [
+      34,
+      "T",
+      "I"
+     ],
+     [
+      64,
+      "B",
+      "U"
+     ],
+     [
+      65,
+      "E",
+      "C"
+     ],
+     [
+      66,
+      "R",
+      "J"
+     ],
+     [
+      69,
+      "N",
+      "L"
+     ],
+     [
+      70,
+      "C",
+      "L"
+     ],
+     [
+      71,
+      "L",
+      "Z"
+     ],
+     [
+      72,
+      "O",
+      "S"
+     ],
+     [
+      73,
+      "C",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 205.00747695306248
+  }
+ ]
+}

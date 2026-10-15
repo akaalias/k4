@@ -70,3 +70,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0069	0069-gromark-with-a-free-alphabet	5-gromark	0046-gromark-three-term-rules-and-higher-bases	reverted	0	0	0			29	design=84 implement=0 test=11 run=29 record=0
 0070	0070-reshuffle-every-block-of-seven-and-the-table	6-transposition-then-tableau	0006-columnar-then-tableau-period-survival	reverted	0	0	0			42	design=37 implement=0 test=10 run=42 record=0
 0071	0071-a-slightly-different-tableau	1-keyed-periodic	0005-quagmire-period-sweep-forced-keys	reverted	0	0	0			39	design=35 implement=0 test=20 run=39 record=0
+0072	0072-compass-points-and-the-point-letter	1-keyed-periodic	0053-periodic-tableau-k1-k3-word-alphabets	reverted	0	0	0			7	design=56 implement=0 test=9 run=7 record=0

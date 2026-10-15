@@ -1,0 +1,7 @@
+alphabet EASTNORHBCDFGIJKLMPQUVWXYZ on both sides, Vigenere, 7-letter key
+
+place  known  carved  key  slot
+   22      E       F    F     0
+   29      T       R    T     0
+   23      A       L    K     1
+   30      H       N    X     1

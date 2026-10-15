@@ -1,0 +1,261 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "compass-point and C15 word alphabets: periodic key, ciphertext autokey, autokey plus periodic key",
+  "alphabets": 42,
+  "pairs": 1764,
+  "periods": "1-52",
+  "periodic_consistent_by_period": {
+   "25": {
+    "k4": 0,
+    "controls": [
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0
+    ]
+   },
+   "26": {
+    "k4": 87,
+    "controls": [
+     164,
+     393,
+     224,
+     308,
+     163,
+     140,
+     17,
+     79,
+     275,
+     61
+    ]
+   },
+   "27": {
+    "k4": 3528,
+    "controls": [
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528
+    ]
+   },
+   "28": {
+    "k4": 3528,
+    "controls": [
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528
+    ]
+   },
+   "29": {
+    "k4": 3528,
+    "controls": [
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528,
+     3528
+    ]
+   },
+   "30": {
+    "k4": 125,
+    "controls": [
+     71,
+     293,
+     55,
+     151,
+     245,
+     199,
+     50,
+     101,
+     95,
+     0
+    ]
+   },
+   "31": {
+    "k4": 5,
+    "controls": [
+     0,
+     2,
+     0,
+     5,
+     0,
+     5,
+     2,
+     4,
+     1,
+     3
+    ]
+   },
+   "32": {
+    "k4": 2,
+    "controls": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "50": {
+    "k4": 0,
+    "controls": [
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0
+    ]
+   },
+   "51": {
+    "k4": 0,
+    "controls": [
+     7,
+     4,
+     0,
+     5,
+     14,
+     6,
+     10,
+     2,
+     6,
+     8
+    ]
+   },
+   "52": {
+    "k4": 87,
+    "controls": [
+     164,
+     393,
+     224,
+     308,
+     163,
+     140,
+     17,
+     79,
+     275,
+     61
+    ]
+   }
+  },
+  "autokey_constant_by_checks": {
+   "1": {
+    "k4": 19,
+    "controls": [
+     19,
+     8,
+     7,
+     16,
+     8,
+     18,
+     15,
+     10,
+     16,
+     8
+    ]
+   },
+   "2": {
+    "k4": 0,
+    "controls": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0
+    ]
+   }
+  },
+  "autokey_plus_periodic_by_checks": {
+   "1": {
+    "k4": 998,
+    "controls": [
+     1079,
+     967,
+     1027,
+     993,
+     1008,
+     852,
+     1008,
+     1057,
+     1094,
+     1011
+    ]
+   },
+   "2": {
+    "k4": 27,
+    "controls": [
+     25,
+     23,
+     33,
+     30,
+     20,
+     28,
+     15,
+     24,
+     29,
+     32
+    ]
+   },
+   "3": {
+    "k4": 0,
+    "controls": [
+     5,
+     1,
+     5,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "fragments": 10671,
+  "word_matches": []
+ },
+ "notes": "42 alphabets, 1764 pairs. Periodic consistent at P <= 26: {'25': (0, 0, 2), '26': (87, 17, 393)}. Autokey (checks: K4, control min, max): {'1': (19, 7, 19), '2': (0, 0, 1)}. Autokey plus periodic: {'1': (998, 852, 1094), '2': (27, 15, 33), '3': (0, 0, 5)}. Word matches in 10671 fragments: 0.",
+ "error": null,
+ "worked_example": "alphabet EASTNORHBCDFGIJKLMPQUVWXYZ on both sides, Vigenere, 7-letter key\n\nplace  known  carved  key  slot\n   22      E       F    F     0\n   29      T       R    T     0\n   23      A       L    K     1\n   30      H       N    X     1",
+ "seconds": 7.183143854141235
+}

@@ -85,7 +85,7 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 @media(max-width:860px){.explain-row{grid-template-columns:1fr}}
 dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 18px;margin:6px 0 10px;font-size:14.5px}dl.bd dt{color:var(--muted)}dl.bd dd{margin:0;min-width:0;overflow-wrap:anywhere}dl.bd dl.bd{grid-template-columns:minmax(70px,max-content) 1fr;margin:0;padding-left:12px;border-left:2px solid var(--rule-soft);font-size:13.5px}.bd-text{font:12.5px var(--mono);letter-spacing:.06em;overflow-wrap:anywhere}ol.bd-list{margin:0;padding-left:20px}
 .ktabs{display:flex;gap:6px;margin:4px 0 2px}.ktab{font:600 12px var(--serif);letter-spacing:.1em;padding:5px 14px;border:1px solid var(--rule);background:var(--paper);color:var(--muted);border-radius:3px;cursor:pointer}.ktab.on{background:var(--accent);border-color:var(--accent);color:var(--paper)}.kpane-notes{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:980px;margin:4px auto 0;font-size:15px;color:var(--ink)}.kpane-notes p{margin:0}.lrow.start{justify-content:flex-start}.inl{display:inline-flex;align-items:flex-end;gap:1px;white-space:nowrap;height:.78em;line-height:1;vertical-align:-0.06em}.inl .lc{width:1.22em;height:1.42em;font-size:.56em;border-radius:2px}.lp-note{width:573px;box-sizing:border-box;font-size:15px;line-height:1.5;margin:10px 0 0;padding:0 2px}.lc.q,.lc.ink.q{color:var(--accent);font-weight:700}
-.fig-row{clear:both;width:min(1200px,94vw);margin-top:30px!important;position:relative;left:50%;transform:translateX(-50%);margin:26px 0 8px}.fig-main{margin:0}.fig-main svg{display:block;width:100%;height:auto}.fig-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.fig-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:980px;margin:14px auto 0}.fig-note{margin:0}.fig-note b{display:block;font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 3px}.fig-note p{margin:0;font-size:14px;line-height:1.5;color:var(--muted)}
+.fig-row{clear:both;width:min(1640px,98vw);margin-top:30px!important;position:relative;left:50%;transform:translateX(-50%);margin:26px 0 8px}.fig-main{margin:0}.fig-scroll{overflow-x:auto;padding-bottom:6px}.fig-main svg{display:block;margin:0 auto;max-width:none}.fig-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.fig-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:980px;margin:14px auto 0}.fig-note{margin:0}.fig-note b{display:block;font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 3px}.fig-note p{margin:0;font-size:14px;line-height:1.5;color:var(--muted)}
 .plain.tufte{position:relative;display:flow-root}.plain.tufte p{max-width:620px}.sidenote{float:right;clear:right;margin-right:-300px;width:270px;margin-top:.35em;margin-bottom:.9em;font-size:13.5px;line-height:1.45;color:var(--muted);padding-left:12px;border-left:1px solid var(--rule)}.sidenote b{color:var(--ink);font-weight:600}.sidenote-more{max-width:620px;font-size:13px;color:var(--faint);margin:4px 0 0}@media(max-width:980px){.sidenote{float:none;display:block;margin:6px 0 10px;width:auto;max-width:620px}}
 .word{display:flex;gap:1.5px;border-radius:3px;box-shadow:0 0 0 1px #cfc8ae}
 .res-notes{font-size:16px;margin:16px 0 6px;max-width:760px}.res-notes.err{color:var(--accent)}.res-stats{display:flex;gap:44px;flex-wrap:wrap;margin:6px 0 18px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.res-stats div{display:flex;flex-direction:column}.res-stats b{font:400 24px var(--serif)}.res-stats span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.res-card{display:flex;gap:26px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--rule-soft)}.res-side{display:flex;flex-direction:column;gap:3px;min-width:150px;font-size:14px;color:var(--muted)}.res-rank{font:400 26px var(--serif);color:var(--ink)}.res-loss{color:var(--accent);font-weight:600}.res-main{flex:1;min-width:0}.res-main .lp-box{display:inline-block}.res-key{font-size:13.5px;color:var(--muted);margin:8px 0 0;overflow-wrap:anywhere;max-width:620px}
@@ -837,6 +837,9 @@ def score_section(n, r, best):
     return out
 
 
+FIG_SCALE = 1.48   # 7.5-unit letters become 11 px, the panels' 11.5 px; the figure is about 1,400 px wide
+
+
 def cribmap_figure(tag):
     """The experiment's crib map, if one has been drawn (figures/NNNN-cribmap.svg), wide, with its
     notes in short blocks underneath."""
@@ -845,11 +848,18 @@ def cribmap_figure(tag):
     if not svg_p.exists():
         return ""
     svg = svg_p.read_text()
-    svg = re.sub(r'(<svg[^>]*?)\swidth="[^"]*"\s+height="[^"]*"', r"\1", svg, count=1)   # let CSS size it
+    # draw it at the panels' letter size: the figures' cells are 8.2 x 12 units with 7.5-unit letters,
+    m = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg)
+    if m:
+        # trim the empty side margins: the drawing spans x 26 to 970 of the 1000-unit canvas
+        vx, vw = 26, 944
+        svg = svg.replace(m.group(0), f'viewBox="{vx} 0 {vw} {m.group(2)}"', 1)
+        w_, h_ = vw * FIG_SCALE, float(m.group(2)) * FIG_SCALE
+        svg = re.sub(r'(<svg[^>]*?)\swidth="[^"]*"\s+height="[^"]*"', rf'\1 width="{w_:.0f}" height="{h_:.0f}"', svg, count=1)
     notes_p = ROOT / "figures" / f"{num}-cribmap-notes.json"
     notes = json.loads(notes_p.read_text()) if notes_p.exists() else []
     below = "".join(f'<div class="fig-note"><b>{esc(n.get("anchor", ""))}</b><p>{crib_cells(esc(n.get("text", "")))}</p></div>' for n in notes)
-    return (f'<div class="fig-row"><figure class="fig-main"><figcaption class="fig-eyebrow">the crib map: what the method does with the 24 known letters</figcaption>{svg}</figure>'
+    return (f'<div class="fig-row"><figure class="fig-main"><figcaption class="fig-eyebrow">the crib map: what the method does with the 24 known letters</figcaption><div class="fig-scroll">{svg}</div></figure>'
             f'<div class="fig-notes">{below}</div></div>')
 
 

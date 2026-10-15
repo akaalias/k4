@@ -1,0 +1,262 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "affine and plain Hill, sizes 2-5, every alignment, four numberings, solved row by row from every known letter",
+  "by_size": {
+   "2x2 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5x5 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 20,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5x5 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 14
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     12,
+     16,
+     10,
+     12,
+     20,
+     16,
+     10,
+     14,
+     12,
+     20
+    ]
+   }
+  },
+  "k4_alive": [],
+  "controls": "10 shuffled coppers (seed 105), identical test"
+ },
+ "notes": "2x2 plain: K4 {'alive': 0, 'dead': 8, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 2x2 affine: K4 {'alive': 0, 'dead': 8, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 3x3 plain: K4 {'alive': 0, 'dead': 12, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 3x3 affine: K4 {'alive': 0, 'dead': 12, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 4x4 plain: K4 {'alive': 0, 'dead': 16, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 4x4 affine: K4 {'alive': 0, 'dead': 16, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 5x5 plain: K4 {'alive': 0, 'dead': 20, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; 5x5 affine: K4 {'alive': 0, 'dead': 6, 'open': 14}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]. K4 alive with checks: 0.",
+ "error": null,
+ "worked_example": "4x4 affine Hill, blocks from place 1, letters A = 0: equations for row 2 (the second letter of each block)\n\nblock places  carved block  numbers          known second letter\n  21-24              WFLR  [22, 5, 11, 17]  E = 4\n  25-28              VQQP  [21, 16, 16, 15] N = 13\n  29-32              RNGK  [17, 13, 6, 10]  H = 7\n  33-36              SSOT  [18, 18, 14, 19] T = 19\n  65-68              YPVT  [24, 15, 21, 19] R = 17\n  69-72              TMZF  [19, 12, 25, 5]  C = 2\n  73-76              PKWG  [15, 10, 22, 6]  K = 10\n\nrow 2 has five unknowns (four table entries and a shift); each line above is one equation",
+ "seconds": 0.20090389251708984
+}

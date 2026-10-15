@@ -1,0 +1,282 @@
+{
+ "id": 105,
+ "tag": "0105-affine-hill-solved-letter-by-letter",
+ "started": "2026-10-15T20:15:19+00:00",
+ "seconds": 0.3,
+ "status": "ran",
+ "phases": {
+  "unattributed": 123.7,
+  "run": 0.3,
+  "record": 0.0
+ },
+ "ended_epoch": 1792095320.046816,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "affine and plain Hill, sizes 2-5, every alignment, four numberings, solved row by row from every known letter",
+  "by_size": {
+   "2x2 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5x5 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 20,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5x5 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 6,
+     "open": 14
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     12,
+     16,
+     10,
+     12,
+     20,
+     16,
+     10,
+     14,
+     12,
+     20
+    ]
+   }
+  },
+  "k4_alive": [],
+  "controls": "10 shuffled coppers (seed 105), identical test"
+ },
+ "notes": "2x2 plain: K4 {'alive': 0, 'dead': 8, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 2x2 affine: K4 {'alive': 0, 'dead': 8, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 3x3 plain: K4 {'alive': 0, 'dead': 12, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 3x3 affine: K4 {'alive': 0, 'dead': 12, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 4x4 plain: K4 {'alive': 0, 'dead': 16, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 4x4 affine: K4 {'alive': 0, 'dead': 16, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 5x5 plain: K4 {'alive': 0, 'dead': 20, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; 5x5 affine: K4 {'alive': 0, 'dead': 6, 'open': 14}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]. K4 alive with checks: 0.",
+ "error": null,
+ "candidates": []
+}

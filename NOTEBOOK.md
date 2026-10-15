@@ -77,6 +77,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 70 | 6 | Every row of seven reshuffled the same way, before or after a repeating secret word, all 5,040 orders: periods up to 24 die, 25-26 survive only as often as on scrambled coppers, and no forced fragment holds a word (checked after the run). Family 6 back to rest. |
 | 71 | 1 | A table slightly different from the carved one, as Sanborn said his was: all 925 alphabets one swap or one move from KRYPTOS, with a repeating word or the self-feeding autokey: nothing beyond the scrambled-copper rate and no word in 16,671 fragments. The count was corrected from 975 to 925 before the run. |
 | 72 | 1 | The 32 compass points and the words of Sanborn's 'what's the point?' letter as table alphabets, with a repeating word, the self-feeding autokey, or both: everything at the scrambled-copper rate, and no word in 10,671 fragments. |
+| 73 | 1 | **Prediction failed in detail.** The message as its own key plus a repeating word: twelve cases pass three checks against 0-6 on scrambled coppers, but they are four coincidences counted at nested periods (ROWS and SEVENTY alphabets at lag 8, each at periods 5, 8, 10, 20, 40), none passes four, and the NSA's lag 7 and the fingerprint lag 21 have nothing. Chance. |
 
 ### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
 

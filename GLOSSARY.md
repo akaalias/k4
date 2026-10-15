@@ -8,7 +8,7 @@ uses a word a stranger would not know.
 
 **the message** (also: plaintext, the English, the fourth message): The 97 letters of English that Jim Sanborn wrote and enciphered. Nobody outside a few people has read them. Recovering them, and the method that hides them, is the goal.
 
-**the carved letters** (also: ciphertext, the scrambled text, the carved text, K4): The 97 letters OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR cut into the copper at the CIA. They are the message after the cipher was applied.
+**the carved letters** (also: ciphertext, the scrambled text, the carved text, K4): The 97 letters cut into the copper at the CIA, shown at the top of every experiment page. They are the message after the cipher was applied.
 
 **the known letters** (also: cribs, the 24 known letters, the clue words): Sanborn has confirmed that positions 22 to 34 of the message read EASTNORTHEAST and positions 64 to 74 read BERLINCLOCK. These 24 letters are the only hard facts about the message, and every experiment leans on them.
 

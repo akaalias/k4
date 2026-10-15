@@ -72,8 +72,8 @@ article{max-width:980px}article h1{font:400 30px/1.2 var(--serif);margin:10px 0 
 article h2{font:400 22px/1.25 var(--serif);margin:34px 0 6px;padding-top:12px;border-top:1px solid var(--rule)}
 article h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}
 article p,article li{max-width:720px}article table{table-layout:fixed;width:100%}article td{vertical-align:top;overflow-wrap:anywhere}article td code{white-space:normal;word-break:break-all;letter-spacing:.04em}article ol{padding-left:26px}article ol li{margin:0 0 8px}
-pre.panel{line-height:1.7}.k3tail{color:var(--rule);letter-spacing:.1em}
-.gloss{margin:8px 0 26px;padding:12px 16px 6px;border-left:3px solid var(--rule);background:var(--wash)}.gloss dl{margin:0}.gloss dt{font-weight:600;margin-top:8px}.gloss dd{margin:2px 0 0 0;color:var(--muted);font-size:14.5px;line-height:1.55}
+.panel-wrap{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin:14px 0 6px}.panel{padding:0}.panel-h{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px}.panel pre{margin:0;padding:12px 16px;font:15px/1.75 var(--mono);letter-spacing:.14em;background:var(--wash);border:1px solid var(--rule-soft);border-radius:2px}.panel u{text-decoration:none;border-bottom:2px solid var(--rule)}.panel b{color:var(--ink);background:var(--hl);font-weight:700}.panel i{color:var(--accent);font-style:normal;background:var(--hl)}.k3tail{color:var(--rule)}
+.gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
 .chart-row{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:28px;align-items:start;margin-top:8px}
 .aside{font-size:13.5px;line-height:1.5;color:var(--muted);border-left:1px solid var(--rule);padding-left:16px;margin-top:16px}
@@ -196,26 +196,28 @@ def panel_lines(text):
 
 
 def panel_block(ct, pt, known):
-    """The four carved lines of K4 as laid out on the sculpture, ciphertext faint above each
-    candidate line. The K3 tail that shares the first line is shown fainter still."""
-    rows = []
-    cl, pl = panel_lines(ct), panel_lines(pt) if pt else [None] * 4
-    offset = 0
-    for k, (c, p) in enumerate(zip(cl, pl)):
-        pad = f'<span class="k3tail">{esc(K3_TAIL)}</span>' if k == 0 else ""
-        padp = f'<span class="k3tail">{" " * len(K3_TAIL)}</span>' if k == 0 else ""
-        rows.append(f'{pad}<span class="ct faint">{esc(c)}</span>')
-        if p is not None:
-            marked = []
-            for j, ch in enumerate(p):
+    """Two blocks side by side, laid out as the copper carries K4: the K3 tail and OBKR on the
+    first line, then three lines of 31. Left: as carved, known positions underlined. Right: the
+    candidate, matches bold on a wash, misses in the accent."""
+    def block(text, label, carved):
+        lines = []
+        offset = 0
+        for k, chunk in enumerate(panel_lines(text)):
+            cells = []
+            for j, ch in enumerate(chunk):
                 i = offset + j + 1
-                if i in known:
-                    marked.append(f"<b>{esc(ch)}</b>" if ch == known[i] else f"<i>{esc(ch)}</i>")
+                if carved:
+                    cells.append(f'<u>{esc(ch)}</u>' if i in known else esc(ch))
+                elif i in known:
+                    cells.append(f'<b>{esc(ch)}</b>' if ch == known[i] else f'<i>{esc(ch)}</i>')
                 else:
-                    marked.append(esc(ch))
-            rows.append(f'{padp}<span class="ct">{"".join(marked)}</span>')
-        offset += len(c)
-    return "<pre class='panel'>" + "\n".join(rows) + "</pre>"
+                    cells.append(esc(ch))
+            lead = f'<span class="k3tail">{esc(K3_TAIL) if carved else "&nbsp;" * len(K3_TAIL)}</span>' if k == 0 else ""
+            lines.append(lead + "".join(cells))
+            offset += len(chunk)
+        return f'<div class="panel"><div class="panel-h">{label}</div><pre>{chr(10).join(lines)}</pre></div>'
+    right = block(pt, "candidate", False) if pt else ""
+    return f'<div class="panel-wrap">{block(ct, "as carved", True)}{right}</div>'
 
 
 def best_candidate(r):
@@ -249,7 +251,7 @@ def glossary_for(text):
             hits.append((term, definition))
     if not hits:
         return ""
-    items = "".join(f"<dt>{esc(t)}</dt><dd>{esc(d)}</dd>" for t, d in hits)
+    items = "".join(f"<div class='entry'><dt>{esc(t)}</dt><dd>{esc(d)}</dd></div>" for t, d in hits)
     return f'<div class="gloss"><div class="callout-h">Words used above</div><dl>{items}</dl><p class="muted" style="font-size:13px">The full list is on the <a href="/glossary">glossary</a> page.</p></div>'
 
 
@@ -396,7 +398,7 @@ def overview():
 <div class="stat"><b class="num">{fams}</b><span>families touched</span></div>
 <div class="stat"><b class="num">{secs/3600:.1f}</b><span>hours, all phases</span></div>
 </div>
-<p class="hero-sub">Time by phase across the run: {', '.join(f"{k} {fmt_dur(v)}" for k, v in sorted(by_phase.items(), key=lambda kv: PHASE_ORDER.index(kv[0]) if kv[0] in PHASE_ORDER else 9)) or 'none yet'}.</p>"""
+<p class="hero-sub">Time by phase across the run: {', '.join(f"{k} {fmt_dur(v)}" for k, v in sorted(by_phase.items(), key=lambda kv: PHASE_ORDER.index(kv[0]) if kv[0] in PHASE_ORDER else 9) if v >= 1) or 'none yet'}.</p>"""
     if ch:
         from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
         champ = f"""<div class="callout"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}, fitness {ch['fitness']:.3f}. A champion is the best candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.</p></div>"""
@@ -446,7 +448,7 @@ def experiment_page(tag):
     marked = ""
     if best:
         how = "the harness's best by fitness among gate passers" if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
-        marked = f"""{sec("", "Best candidate against the cribs", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. The carved letters sit faint above each line of the candidate. Highlighted letters sit at known positions and match; red ones sit there and miss. This is {how}.")}
+        marked = f"""{sec("", "Best candidate against the cribs", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, with the 24 known positions underlined. Right, the candidate: a letter on a wash sits at a known position and matches, a red one sits there and misses. This is {how}.")}
 {panel_block(K4, best['plaintext'], KNOWN)}"""
     html_md = md(r["_md"])
     tags = list(rows)

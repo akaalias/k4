@@ -1,0 +1,8 @@
+write in snake rows of 10, read by columns: where the first known letters land
+
+place  letter  grid cell (row, col)  lands at  copper there
+   22       E                (3, 2)        13             B
+   23       A                (3, 3)        23             L
+   24       S                (3, 4)        33             S
+   25       T                (3, 5)        43             S
+   64       B                (7, 4)        37             W

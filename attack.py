@@ -1,282 +1,168 @@
-"""Experiment 0027. See program.md for the contract."""
+"""Experiment 0028. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "simulator-round-two-width-21-hunt",
-    "title": "Simulator, round two: which constructions reproduce the width-21 repeats, the width-7 doublet column and the closeness together?",
-    "family": "7-construction-simulation",
-    "parent": "0018-construction-simulator-fingerprint",
-    "changed": "Generators chosen to share a key letter 21 or 7 positions apart: periodic systems at periods 7, 21 and 42 with free alphabets or the tableau, autokey at lag 21, progressive keys at period 21, Gromark with an even base, and transposition last at width 21. 5,000 samples each; the three unexplained statistics are the target.",
+    "slug": "gromark-small-bases-two-to-nine",
+    "title": "Gromark in bases 2 to 9: the even bases that reproduce the width-21 repeats",
+    "family": "5-gromark-lfsr",
+    "parent": "0013-gromark-recurrence-on-crib-shifts",
+    "changed": "Bases 2 to 9 instead of 10 and 26. 0027 showed Gromark base 2 is the only simulated construction that reproduces K4's width-21 repeats, and Bean found base-8 primers that fit the cribs. Every forced shift must now be below the base, a filter of (base/26) to the 24th power per alphabet triple.",
     "hypothesis_expert": (
-        "0018 left three statistics unexplained by every generator: five of six doublets in one column at "
-        "width 7, eleven vertical bigram repeats at width 21, and Bean's closeness of crib plaintext to "
-        "ciphertext (knowledge/04-structure.md). Positions 21 apart that share a substitution alphabet make "
-        "vertical pairs at width 21 repeat at English rather than flat rates, so periodic systems with period "
-        "dividing 21 or 42, Gromark with an even base and a five-digit primer (Rogot, Deavours, Blackman), "
-        "and autokey at lag 21 are the natural suspects; period 7 died under every alphabet (R and C both "
-        "to P at 66 and 73), period 21 with vocabulary alphabets died in 0020, but a period-21 system with "
-        "free alphabets did not. Each generator is scored as in 0018 on the three target statistics and the "
-        "ten of 0018, with two-sided empirical p-values. A generator that gives all three targets p above "
-        "0.05 is a lead for a family. Bounds: 5,000 samples per generator; a ranking, not a verdict."
+        "Rogot, Deavours and Blackman: a Gromark key in an even base with a five-digit primer has an "
+        "underlying period-21 structure, and Bean found base-8 primers that fit the cribs with period 84 "
+        "(knowledge/04-structure.md, 05-attacks.md). 0027 confirmed that base 2 reproduces the width-21 "
+        "repeats (p 0.34) where nothing else does. 0013 tested bases 10 and 26 only. Here the bases are 2 "
+        "to 9, every lag pair 1 <= b < a <= 12, under the same 248-alphabet pool for plain and cipher and "
+        "three modes. In base B every one of the 24 forced shifts must be below B, which alone has chance "
+        "(B/26)^24 per triple, from 10^-27 at base 2 to 10^-11 at base 9; a triple passing that and six "
+        "recurrence checks would be decisive. For each survivor the recurrence runs from the 22-34 window "
+        "to a full key stream, the text is decrypted and submitted. Bounds: complete for these bases, "
+        "rules and alphabets; Bean's free annealed alphabets remain his."
     ),
     "hypothesis_eli5": (
-        "Yesterday's workshop found three things about K4 that none of our fake K4s reproduced, all to do "
-        "with letters 7 or 21 places apart behaving alike. So today we build fakes with methods that treat "
-        "letters 7, 21 or 42 places apart alike: a secret word of that length, a number stream with that "
-        "rhythm, a message keyed by itself 21 letters back. Then we measure the fakes the same way and ask "
-        "which method makes all three oddities look ordinary."
+        "Yesterday's workshop found one kind of fake that shares a real oddity of K4: a Gromark cipher "
+        "whose growing number stream uses only the digits 0 and 1. Such streams repeat their rhythm every "
+        "21 letters, which is just what K4 shows. A Gromark in base 2 pushes each letter along by 0 or 1 "
+        "only; in base 8, by 0 to 7. We already know the 24 pushes that the known letters demand under "
+        "each alphabet, so we simply check whether any alphabet keeps all 24 pushes small enough, and then "
+        "whether they follow the adding rule."
     ),
     "prediction": (
-        "Periodic systems at period 21 and 42 with free alphabets reproduce the width-21 repeats (p above "
-        "0.2) but not the width-7 doublet column. No generator makes all three targets ordinary at once; "
-        "the width-7 column stays below p 0.02 everywhere."
+        "No alphabet triple keeps all 24 forced shifts below 9, let alone below 2, so no base from 2 to 9 "
+        "reaches the recurrence test. Zero candidates pass."
     ),
     "method": (
-        "1. Keep the ten statistics of 0018. 2. Build the eleven generators. 3. Draw 5,000 samples each. "
-        "4. Report p-values for the three targets and the combined distance; rank."
+        "1. Build the alphabet pool. 2. For each plain alphabet, cipher alphabet and mode, compute the "
+        "forced shift at each of the 24 crib positions and record the largest. 3. For each base B from 2 "
+        "to 9, keep triples whose largest shift is below B. 4. For those, check every lag pair's recurrence "
+        "on both crib runs. 5. Extend survivors to a full stream, decrypt and submit."
     ),
     "walkthrough": (
-        "1. Take an English sentence of 97 letters and a key of 21 random letters repeated under it. 2. "
-        "Encipher on the sculpture's table. 3. Write the result in rows of 21 and count how many vertical "
-        "pairs, a letter and the one below it, occur twice or more; K4 has eleven. 4. Do this 5,000 times "
-        "and see how often eleven or more appears. 5. Count the doublets and note which column of a width-7 "
-        "layout they fall in; K4 has five of six in one column. 6. Repeat for the other methods."
+        "1. Take the standard alphabet for the plaintext and the KRYPTOS alphabet for the ciphertext, "
+        "Vigenere. 2. Position 22: plaintext E is index 4 in the standard alphabet; ciphertext F is index 11 "
+        "in KRYPTOS; the shift is 11 - 4 = 7. 3. Position 23: A is 0, L is 18; shift 18. 4. Continue to "
+        "position 34 for 13 shifts in a row. 5. Try the Gromark rule, a = 5, b = 4: the sixth shift must "
+        "equal the first plus the second, mod 10, and all shifts must be digits. The shift 18 already fails "
+        "base 10. 6. In base 26, check the sixth against the first plus the second mod 26, the seventh "
+        "against the second plus the third, and so on: eight checks. 7. One failure kills the rule under "
+        "this alphabet pair; try the next pair."
     ),
 }
 
-import random
-from collections import Counter
-from kryptos.alphabets import encrypt_letter
-from kryptos.ciphers import columnar_transposition_encrypt
-from kryptos.facts import load_k1, load_k2, load_k3, STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
+from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
 
 N = 97
-SAMPLES = 5000
+RUNS = [(22, 34), (64, 74)]
+MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
+ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
+MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
+MIN_CHECKS = 6
 
 
-def letters(s):
-    return "".join(c for c in s if "A" <= c <= "Z")
+def stream_from_window(window, start, a, b, base):
+    """Given key values at positions start..start+len(window)-1 (0-indexed), extend the recurrence
+    k[i] = k[i-a] + k[i-b] mod base backward and forward over 0..N-1."""
+    k = {start + j: v for j, v in enumerate(window)}
+    lo, hi = start, start + len(window) - 1
+    while hi + 1 < N:
+        i = hi + 1
+        k[i] = (k[i - a] + k[i - b]) % base
+        hi = i
+    while lo - 1 >= 0:
+        i = lo - 1
+        # k[i+a] = k[i] + k[i+a-b]  =>  k[i] = k[i+a] - k[i+a-b]
+        k[i] = (k[i + a] - k[i + a - b]) % base
+        lo = i
+    return [k[i] for i in range(N)]
 
 
 def encrypt(plaintext, key):
-    raise NotImplementedError("diagnostic experiment: no candidate is submitted")
-
-
-# ---- statistics ---------------------------------------------------------------------
-def stats(ct, pt, crib_positions):
-    c = Counter(ct)
-    ic = sum(v * (v - 1) for v in c.values()) / (N * (N - 1))
-    doublets = [i for i in range(N - 1) if ct[i] == ct[i + 1]]
-    col7 = max(Counter(i % 7 for i in doublets).values()) if doublets else 0
-    v21 = [ct[i] + ct[i + 21] for i in range(N - 21)]
-    rep21 = len(v21) - len(set(v21))
-    h = [ct[i] + ct[i + 1] for i in range(N - 1)]
-    rep_bigrams = len(h) - len(set(h))
-    close = sum(min((STD.index(pt[i - 1]) - STD.index(ct[i - 1])) % 26, (STD.index(ct[i - 1]) - STD.index(pt[i - 1])) % 26) for i in crib_positions) / len(crib_positions)
-    same = sum(1 for i in crib_positions if pt[i - 1] == ct[i - 1])
-    return {"ic": ic, "distinct": len(c), "doublets": len(doublets), "width7_doublet_column": col7,
-            "width21_vertical_repeats": rep21, "repeated_bigrams": rep_bigrams, "top_count": max(c.values()),
-            "singletons": sum(1 for v in c.values() if v == 1), "closeness_mean_distance": close, "self_encryptions": same}
-
-
-# ---- generators ---------------------------------------------------------------------
-def gen_plaintext(rng, texts):
-    t = "".join(texts)
-    i = rng.randrange(0, len(t) - N + 1)
-    return t[i:i + N]
-
-
-def vig(pt, key, pa="kry", ca="kry", ka="kry", m="vig"):
-    return "".join(encrypt_letter(p, key[i % len(key)], pa, ca, ka, m) for i, p in enumerate(pt))
-
-
-def rand_key(rng, n):
-    return "".join(rng.choice(STD) for _ in range(n))
-
-
-def mixed(rng):
-    a = list(STD); rng.shuffle(a); return "".join(a)
-
-
-def g_vig_kry(rng, pt):
-    return vig(pt, rand_key(rng, rng.randint(27, 30)))
-
-
-def g_quagmire(rng, pt):
-    pa, ca = mixed(rng), mixed(rng); key = rand_key(rng, rng.randint(27, 30))
-    return "".join(ca[(pa.index(p) + STD.index(key[i % len(key)])) % 26] for i, p in enumerate(pt))
-
-
-def g_progressive(rng, pt):
-    P, d = rng.randint(7, 13), rng.randint(1, 25); key = rand_key(rng, P)
-    return "".join(KRY[(KRY.index(p) + KRY.index(key[i % P]) + d * (i // P)) % 26] for i, p in enumerate(pt))
-
-
-def g_autokey(rng, pt):
-    L = rng.randint(1, 30); primer = rand_key(rng, L)
-    return "".join(KRY[(KRY.index(p) + KRY.index(primer[i] if i < L else pt[i - L])) % 26] for i, p in enumerate(pt))
-
-
-def g_running(rng, pt, texts):
-    key = gen_plaintext(rng, texts)
-    return vig(pt, key)
-
-
-def g_columnar_then_vig(rng, pt):
-    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
-    return vig(columnar_transposition_encrypt(pt, order), rand_key(rng, rng.randint(27, 30)))
-
-
-def g_vig_then_columnar(rng, pt):
-    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
-    return columnar_transposition_encrypt(vig(pt, rand_key(rng, rng.randint(27, 30))), order)
-
-
-def det2(M):
-    return (M[0][0] * M[1][1] - M[0][1] * M[1][0]) % 26
-
-
-def det3(M):
-    return (M[0][0] * (M[1][1] * M[2][2] - M[1][2] * M[2][1]) - M[0][1] * (M[1][0] * M[2][2] - M[1][2] * M[2][0]) + M[0][2] * (M[1][0] * M[2][1] - M[1][1] * M[2][0])) % 26
-
-
-def g_hill(n):
-    def g(rng, pt):
-        while True:
-            M = [[rng.randrange(26) for _ in range(n)] for _ in range(n)]
-            d = det2(M) if n == 2 else det3(M)
-            if d % 2 and d % 13:
-                break
-        out = list(pt)
-        for i in range(0, N - n + 1, n):
-            blk = [STD.index(pt[i + j]) for j in range(n)]
-            for r in range(n):
-                out[i + r] = STD[sum(M[r][k] * blk[k] for k in range(n)) % 26]
-        return "".join(out)
-    return g
-
-
-def g_gromark(rng, pt):
-    k = [rng.randrange(10) for _ in range(5)]
+    pa, ca, m, a, b, base, primer = key["pa"], key["ca"], key["m"], key["a"], key["b"], key["base"], key["primer"]
+    k = list(primer)
     while len(k) < N:
-        k.append((k[-5] + k[-4]) % 10)
-    ca = mixed(rng)
-    return "".join(ca[(STD.index(p) + k[i]) % 26] for i, p in enumerate(pt))
-
-
-def g_random(rng, pt):
-    return rand_key(rng, N)
-
-
-def g_transposition(rng, pt):
-    w = rng.randint(2, 30); order = list(range(w)); rng.shuffle(order)
-    return columnar_transposition_encrypt(pt, order)
-
-
-def g_mono(rng, pt):
-    ca = mixed(rng)
-    return "".join(ca[STD.index(p)] for p in pt)
+        k.append((k[-a] + k[-b]) % base)
+    return "".join(ca[ENC[m](pa.index(p), k[i])] for i, p in enumerate(plaintext))
 
 
 def run(ctx):
-    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
-    crib_positions = sorted(ctx.KNOWN)
-    k4_pt = "".join(ctx.KNOWN.get(i, "A") for i in range(1, N + 1))   # only crib positions are used for plaintext statistics
-    k4 = stats(ctx.K4, k4_pt, crib_positions)
-    rng = random.Random(2026)
-    def free_periodic(P):
-        def g(rng, pt):
-            alphas = [mixed(rng) for _ in range(P)]
-            return "".join(alphas[i % P][STD.index(p)] for i, p in enumerate(pt))
-        return g
-
-    def vig_period(P):
-        return lambda rng, pt: vig(pt, rand_key(rng, P))
-
-    def autokey_lag(L):
-        def g(rng, pt):
-            primer = rand_key(rng, L)
-            return "".join(KRY[(KRY.index(p) + KRY.index(primer[i] if i < L else pt[i - L])) % 26] for i, p in enumerate(pt))
-        return g
-
-    def progressive(P):
-        def g(rng, pt):
-            d = rng.randint(1, 25); key = rand_key(rng, P)
-            return "".join(KRY[(KRY.index(p) + KRY.index(key[i % P]) + d * (i // P)) % 26] for i, p in enumerate(pt))
-        return g
-
-    def gromark_base(B):
-        def g(rng, pt):
-            k = [rng.randrange(B) for _ in range(5)]
-            while len(k) < N:
-                k.append((k[-5] + k[-4]) % B)
-            ca = mixed(rng)
-            return "".join(ca[(STD.index(p) + k[i]) % 26] for i, p in enumerate(pt))
-        return g
-
-    def vig_then_columnar_w(w):
-        def g(rng, pt):
-            order = list(range(w)); rng.shuffle(order)
-            return columnar_transposition_encrypt(vig(pt, rand_key(rng, rng.randint(27, 30))), order)
-        return g
-
-    gens = {
-        "period 7, free alphabets": free_periodic(7),
-        "period 21, free alphabets": free_periodic(21),
-        "period 42, free alphabets": free_periodic(42),
-        "period 21, KRYPTOS tableau": vig_period(21),
-        "period 42, KRYPTOS tableau": vig_period(42),
-        "autokey lag 21": autokey_lag(21),
-        "autokey lag 7": autokey_lag(7),
-        "progressive key, period 21": progressive(21),
-        "progressive key, period 7": progressive(7),
-        "Gromark base 10": gromark_base(10),
-        "Gromark base 8": gromark_base(8),
-        "Gromark base 2": gromark_base(2),
-        "Vigenere then columnar width 21": vig_then_columnar_w(21),
-        "Vigenere then columnar width 7": vig_then_columnar_w(7),
-        "calibration: random letters": g_random,
-        "calibration: Vigenere period 27-30": g_vig_kry,
-    }
-    table = {}
-    for name, g in gens.items():
-        samples = []
-        for _ in range(SAMPLES):
-            pt = gen_plaintext(rng, texts)
-            samples.append(stats(g(rng, pt), pt, crib_positions))
-            if ctx.time_left() < 20:
-                break
-        row = {}
-        dist2 = 0.0
-        for key, v in k4.items():
-            xs = [s[key] for s in samples]
-            mu = sum(xs) / len(xs); sd = (sum((x - mu) ** 2 for x in xs) / len(xs)) ** 0.5
-            z = 0.0 if sd == 0 else (v - mu) / sd
-            lo = sum(1 for x in xs if x <= v) / len(xs); hi = sum(1 for x in xs if x >= v) / len(xs)
-            p = min(1.0, 2 * min(lo, hi))
-            row[key] = {"mean": round(mu, 4), "sd": round(sd, 4), "z": round(z, 2), "p": round(p, 3)}
-            dist2 += z * z
-        row["_distance"] = round(dist2 ** 0.5, 2)
-        row["_n"] = len(samples)
-        table[name] = row
-    ranking = sorted(table, key=lambda n: table[n]["_distance"])
+    ct, known = ctx.K4, ctx.KNOWN
+    vocab = [w for w in ctx.vocabulary if len(set(w)) >= 3]
+    pool = {"std": STD, "kry": KRY}
+    for w in vocab:
+        for mname, fn in MIX.items():
+            pool[f"{w}/{mname}"] = fn(w)
+    seen, dedup = {}, {}
+    for name, A in pool.items():
+        if A not in seen:
+            seen[A] = name; dedup[name] = A
+    pool = dedup
+    index = {name: {ch: i for i, ch in enumerate(A)} for name, A in pool.items()}
+    crib = [[(known[pos], ct[pos - 1]) for pos in range(lo, hi + 1)] for lo, hi in RUNS]
+    rules = [(a, b) for a in range(2, 13) for b in range(1, a)]
+    survivors = []
+    candidates = []
+    n_triples = 0
+    digit_ok = 0
+    smallest_max = 99
+    for pname, pa in pool.items():
+        pidx = index[pname]
+        for cname, ca in pool.items():
+            cidx = index[cname]
+            for m, f in MODES.items():
+                n_triples += 1
+                shifts = [[f(pidx[p], cidx[c]) for p, c in pairs] for pairs in crib]
+                all_digits = all(s <= 8 for run_ in shifts for s in run_)
+                digit_ok += all_digits
+                smallest_max = min(smallest_max, max(s for run_ in shifts for s in run_))
+                biggest = max(s for run_ in shifts for s in run_)
+                for base in range(2, 10):
+                    if biggest >= base:
+                        continue
+                    for a, b in rules:
+                        checks = 0; ok = True
+                        for run_ in shifts:
+                            for i in range(a, len(run_)):
+                                checks += 1
+                                if run_[i] != (run_[i - a] + run_[i - b]) % base:
+                                    ok = False; break
+                            if not ok:
+                                break
+                        if ok and checks >= MIN_CHECKS:
+                            stream = stream_from_window(shifts[0], RUNS[0][0] - 1, a, b, base)
+                            second_ok = all(stream[RUNS[1][0] - 1 + j] == v for j, v in enumerate(shifts[1]))
+                            survivors.append({"plain": pname, "cipher": cname, "mode": m, "base": base, "a": a, "b": b,
+                                              "checks": checks, "stream_matches_second_run": second_ok})
+                            if second_ok:
+                                pt = "".join(pa[MODES_DEC(m)(cidx[c], stream[i])] for i, c in enumerate(ct))
+                                key = {"pa": pa, "ca": ca, "m": m, "a": a, "b": b, "base": base, "primer": stream[:a]}
+                                candidates.append({"plaintext": pt, "key": key, "key_bits": a * (3.33 if base == 10 else 4.7) + 10,
+                                                   "key_description": f"Gromark-style a={a} b={b} base {base}, primer {stream[:a]}; plain {pname}, cipher {cname}, {m}"})
+        if ctx.time_left() < 20:
+            break
     return {
-        "candidates": [],
-        "bounds": {"family": "construction simulation, round two", "samples_per_generator": SAMPLES, "statistics": list(k4),
-                   "targets": {n: {k: table[n][k]["p"] for k in ("width7_doublet_column", "width21_vertical_repeats", "closeness_mean_distance")} for n in ranking},
-                   "k4": {k: round(v, 4) for k, v in k4.items()},
-                   "ranking_by_distance": [(n, table[n]["_distance"]) for n in ranking],
-                   "table": table},
-        "notes": "Diagnostic, no candidates. Target p-values (width-7 column, width-21 repeats, closeness): " + "; ".join(f"{n}: {table[n]['width7_doublet_column']['p']}, {table[n]['width21_vertical_repeats']['p']}, {table[n]['closeness_mean_distance']['p']}" for n in ranking) + ".",
+        "candidates": candidates[:50],
+        "bounds": {"family": "running numerical key, k[i] = k[i-a] + k[i-b] mod base", "rules": f"{len(rules)} lag pairs, 1 <= b < a <= 12",
+                   "bases": list(range(2, 10)), "smallest_largest_shift_over_all_triples": smallest_max, "alphabets": len(pool), "alphabet_triples": n_triples, "modes": 3,
+                   "triples_with_all_shifts_below_9": digit_ok, "min_checks": MIN_CHECKS,
+                   "survivors": survivors[:40], "n_survivors": len(survivors),
+                   "n_survivors_consistent_with_second_run": sum(1 for s in survivors if s["stream_matches_second_run"])},
+        "notes": f"{n_triples} alphabet triples; smallest largest-shift over all triples {smallest_max}; bases 2-9 x {len(rules)} rules. {len(survivors)} survivors with >= {MIN_CHECKS} checks; {len(candidates)} full-stream candidates submitted.",
     }
+
+
+def MODES_DEC(m):
+    return {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}[m]
 
 
 def worked_example(ctx, key):
-    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
-    rng = random.Random(1)
-    pt = gen_plaintext(rng, texts); ct = "".join([mixed(rng) for _ in range(21)][i % 21][STD.index(p)] for i, p in enumerate(pt))
-    k4_pt = "".join(ctx.KNOWN.get(i, "A") for i in range(1, N + 1))
-    a, b = stats(ctx.K4, k4_pt, sorted(ctx.KNOWN)), stats(ct, pt, sorted(ctx.KNOWN))
-    lines = ["one sample from the period-21 free-alphabet generator against K4", "", f"plain  {pt}", f"cipher {ct}", "", f"{'statistic':<28}{'K4':>10}{'sample':>10}"]
-    for k in a:
-        lines.append(f"{k:<28}{a[k]:>10.4f}{b[k]:>10.4f}")
+    pa, ca = STD, KRY
+    lines = ["plain alphabet standard, cipher alphabet KRYPTOS, Vigenere: forced shifts at 22-34", "", "pos  plain  cipher  shift"]
+    shifts = []
+    for pos in range(22, 35):
+        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
+        s = (ca.index(c) - pa.index(p)) % 26; shifts.append(s)
+        lines.append(f"{pos:>3}    {p}      {c}      {s:>2}")
+    lines.append("")
+    lines.append("shifts: " + " ".join(map(str, shifts)))
+    lines.append(f"largest shift {max(shifts)}: base 8 needs all below 8, so this alphabet pair is out at once")
     return "\n".join(lines)

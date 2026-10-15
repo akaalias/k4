@@ -1,0 +1,10 @@
+98 cells in rows of 14 (7 rows, full), read right to left, each column bottom-up: the first cell read is the last one,
+so the ? must be the last symbol of the message (q = 97) to be carved first.
+
+? position in the message: 97
+place  letter  row  column  carved place
+   22       E    1       7            47  (Z)
+   23       A    1       8            40  (S)
+   64       B    4       7            44  (S)
+   65       E    4       8            37  (W)
+   74       K    5       3            71  (Z)

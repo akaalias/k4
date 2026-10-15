@@ -17,6 +17,8 @@ Lesson from 0025: every sweep must check the clock inside its innermost loop tha
 
 From 0027: the width-7 doublet column is reproduced by nothing, random letters included, so it is either a fluke of about one in 300 or the trace of a construction outside everything simulated. Doublets at 19, 26, 33, 47, 68 are all 5 mod 7; in a period-7 additive system a doublet is a plaintext digraph with a fixed letter difference falling in one column, which is a natural mechanism, but period 7 is dead under every alphabet by the cribs alone (R and C both to P at 66 and 73). Gromark base 2 reproduces the width-21 repeats; 0013 tested only bases 10 and 26, so bases 2 to 9 are 0028.
 
+From 0033: simulated annealing over trifid cubes with crib hits, even at coordinate level, plateaus at about 17 of 24 on a planted cube. A proper trifid solver needs constraint propagation on the cube coordinates, not local search. Parked.
+
 | # | Family | One line |
 |---|---|---|
 | 21 | 1 | Carter's book as a running key, 13.7 million offsets and conventions: none within two mismatches. |
@@ -31,6 +33,7 @@ From 0027: the width-7 doublet column is reproduced by nothing, random letters i
 | 30 | 1 | Ciphertext as its own key under every index rule, and the message mirrored as key: nothing. |
 | 31 | 1 | Copper off by one letter, 195 variants, through the chained autokey and two-word tests: nothing. |
 | 32 | 6 | A grid keyed by row, widths 2-48, 63 alphabets: no width survives. |
+| 33 | 4 | Trifid: keyword cubes best 7 of 24; the annealer plateaus at 17 even on a planted cube, so free cubes stay open. |
 
 ## 2026-10-14
 

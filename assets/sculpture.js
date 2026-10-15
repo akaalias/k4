@@ -71,15 +71,19 @@ const MATERIALS = {
   'Kryptos.Part.Rock.Sandstone': new THREE.MeshStandardMaterial({ color: 0x8a3b2c, roughness: 0.95, flatShading: true }),
 };
 
-// ---- the glow: the sheet drawn a second time, warm and translucent, only inside the region ----
+// ---- the light behind the letters: a warm unlit surface built along the sheet's centreline and
+// hidden inside its thickness, so it shows only through the cut letters, and only in the region ----
 const glowUniforms = { uMin: { value: new THREE.Vector3(0, 0, 0) }, uMax: { value: new THREE.Vector3(0, 0, 0) } };
-const glowMaterial = new THREE.MeshBasicMaterial({ color: 0xfff0c8, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
-glowMaterial.onBeforeCompile = (sh) => {
+const glowMaterial = new THREE.MeshBasicMaterial({ color: 0xffd98a, side: THREE.DoubleSide, fog: false });
+// and a faint warm halo on the copper around the lit letters
+const haloMaterial = new THREE.MeshBasicMaterial({ color: 0xffd98a, transparent: true, opacity: 0.16, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
+const cutToRegion = (sh) => {
   sh.uniforms.uMin = glowUniforms.uMin; sh.uniforms.uMax = glowUniforms.uMax;
   sh.vertexShader = 'attribute float arc; varying float vArc; varying float vY;\n' + sh.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\nvArc = arc; vY = position.y;');
   sh.fragmentShader = 'uniform vec3 uMin; uniform vec3 uMax; varying float vArc; varying float vY;\n' + sh.fragmentShader.replace('#include <clipping_planes_fragment>',
     '#include <clipping_planes_fragment>\nif (vArc < uMin.x || vArc > uMax.x || vY < uMin.y || vY > uMax.y) discard;');
 };
+glowMaterial.onBeforeCompile = cutToRegion; haloMaterial.onBeforeCompile = cutToRegion;
 
 // regions on the sheet. The sheet is an S-curve, so a point on it is located by its fraction of
 // the way along the arc (0 at the tree, 1 at the far end) and its height. The text occupies 28
@@ -167,7 +171,23 @@ function arcParameter(geo, treeCentre) {
   const arc = new Float32Array(n);
   for (let i = 0; i < n; i++) arc[i] = arcOfU(u[i]);
   geo.setAttribute('arc', new THREE.BufferAttribute(arc, 1));
-  return { axis: new THREE.Vector2(ax, az), arcOf: (x, z) => arcOfU((x - mx) * ax + (z - mz) * az) };
+  // the centreline, smoothed, back in local coordinates, with its arc fraction
+  const centreline = [];
+  for (let k = 0; k < cu.length; k++) {
+    let vv = 0, c = 0; for (let j = -2; j <= 2; j++) if (k + j >= 0 && k + j < cu.length) { vv += cv[k + j]; c++; } vv /= c;
+    centreline.push({ x: mx + cu[k] * ax + vv * px, z: mz + cu[k] * az + vv * pz, arc: S[k] / total });
+  }
+  return { axis: new THREE.Vector2(ax, az), arcOf: (x, z) => arcOfU((x - mx) * ax + (z - mz) * az), centreline };
+}
+// A ribbon along the centreline from the sheet's bottom to its top, carrying the arc attribute.
+function lightRibbon(centreline, yMin, yMax) {
+  const pos = [], arc = [], idx = [];
+  centreline.forEach((p, k) => { pos.push(p.x, yMin, p.z, p.x, yMax, p.z); arc.push(p.arc, p.arc); if (k) idx.push(2 * k - 2, 2 * k - 1, 2 * k, 2 * k - 1, 2 * k + 1, 2 * k); });
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setAttribute('arc', new THREE.Float32BufferAttribute(arc, 1));
+  g.setIndex(idx);
+  return g;
 }
 
 const draco = new DRACOLoader(); draco.setDecoderPath('https://unpkg.com/three@0.160.0/examples/jsm/libs/draco/');
@@ -190,12 +210,14 @@ loader.load('/assets/kryptos.glb', (gltf) => {
     const b = sheet.geometry.boundingBox, h = b.max.y - b.min.y;
     let treeCentre = null;
     if (tree) { tree.geometry.computeBoundingBox(); treeCentre = tree.geometry.boundingBox.getCenter(new THREE.Vector3()); }
-    const { axis, arcOf } = arcParameter(sheet.geometry, treeCentre);
+    const { axis, arcOf, centreline } = arcParameter(sheet.geometry, treeCentre);
     // turn the whole model so the sheet's long axis runs left to right, tree on the left
     group.rotation.y = Math.atan2(axis.y, axis.x);
     // the seam: the two halves meet at the middle of the arc
     layout = { seam: 0.5, edges: lineEdges(sheet.geometry, b.min.y, b.max.y), arcOf };
-    glow = new THREE.Mesh(sheet.geometry, glowMaterial); glow.visible = false;
+    glow = new THREE.Group(); glow.visible = false;
+    glow.add(new THREE.Mesh(lightRibbon(centreline, b.min.y, b.max.y), glowMaterial));
+    glow.add(new THREE.Mesh(sheet.geometry, haloMaterial));
     sheet.add(glow);
   }
   group.scale.setScalar(SCALE);

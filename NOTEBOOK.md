@@ -13,12 +13,15 @@ Bean's closeness), then the untouched families (2 masking, 4 visual), then the o
 error reruns of the strongest sweeps. Every diagnostic experiment gets ten or more shuffled
 controls. The notebook gets a line per experiment as it lands.
 
+Lesson from 0025: every sweep must check the clock inside its innermost loop that can run long; the harness budget is advisory, not a kill switch.
+
 | # | Family | One line |
 |---|---|---|
 | 21 | 1 | Carter's book as a running key, 13.7 million offsets and conventions: none within two mismatches. |
 | 22 | 1 | Porta over 248 alphabet orders: no order separates all 24 crib pairs across the halves. |
 | 23 | 2 | Reversal and null padding before a periodic tableau, 648 masks: smallest live period 26; nothing. |
 | 24 | 3 | A word plus the K2 coordinate digits, seven readings: shortest consistent word length 26; nothing. |
+| 25 | 1 | Both autokeys with 63 keyword-mixed alphabets, 3.4 million cases: nothing; ran 46 minutes because the sweep ignored the clock. |
 
 ## 2026-10-14
 

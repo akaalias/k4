@@ -58,7 +58,8 @@ negative result: a precise statement of what was searched.
    `reverted`, restore `attack.py` from the champion's snapshot or start the
    next root. Either way the record stays.
 6. Commit is automatic (one commit per experiment). Push after each.
-7. Add one line to today's entry in `NOTEBOOK.md`: number, family, finding. Add a
+7. Add any new technical word in `hypothesis_eli5` to `GLOSSARY.md` before the run.
+8. Add one line to today's entry in `NOTEBOOK.md`: number, family, finding. Add a
    paragraph when something was decided, went wrong, or changed the plan.
 
 ## Patience and pivots

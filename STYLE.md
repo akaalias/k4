@@ -35,7 +35,10 @@ layout and graphic language are borrowed from the ballpark project; the prose is
   under test, the clue-register entries it reads. Three to six sentences.
 - **ELI5.** Written for a curious adult who has never seen a cipher. One short paragraph.
   Start from what the reader already knows (a secret word, a table, a grid). Say what we
-  tried and what it would mean if it worked.
+  tried and what it would mean if it worked. Refer to earlier experiments by number
+  ("experiments 2 and 12"), never by "yesterday" or "earlier"; the dashboard links the
+  numbers. Every technical word must have an entry in `GLOSSARY.md`, which the dashboard
+  shows under the paragraph; add the entry before the run if it is missing.
 - **Walkthrough.** A standalone guide a reader could follow with pencil and paper on a
   few letters. Numbered steps, each one action. Show the letters.
 

@@ -72,6 +72,8 @@ article{max-width:980px}article h1{font:400 30px/1.2 var(--serif);margin:10px 0 
 article h2{font:400 22px/1.25 var(--serif);margin:34px 0 6px;padding-top:12px;border-top:1px solid var(--rule)}
 article h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}
 article p,article li{max-width:720px}article table{table-layout:fixed;width:100%}article td{vertical-align:top;overflow-wrap:anywhere}article td code{white-space:normal;word-break:break-all;letter-spacing:.04em}article ol{padding-left:26px}article ol li{margin:0 0 8px}
+pre.panel{line-height:1.7}.k3tail{color:var(--rule);letter-spacing:.1em}
+.gloss{margin:8px 0 26px;padding:12px 16px 6px;border-left:3px solid var(--rule);background:var(--wash)}.gloss dl{margin:0}.gloss dt{font-weight:600;margin-top:8px}.gloss dd{margin:2px 0 0 0;color:var(--muted);font-size:14.5px;line-height:1.55}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
 .chart-row{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:28px;align-items:start;margin-top:8px}
 .aside{font-size:13.5px;line-height:1.5;color:var(--muted);border-left:1px solid var(--rule);padding-left:16px;margin-top:16px}
@@ -182,6 +184,82 @@ def words_short(r):
     return "".join(out)
 
 
+K3_TAIL = "ECDMRIPFEIMEHNLSSTTRTVDOHW?"
+PANEL_CUTS = (4, 35, 66, 97)   # K4 on the copper: OBKR ends the K3 line, then three lines of 31
+
+
+def panel_lines(text):
+    out, start = [], 0
+    for cut in PANEL_CUTS:
+        out.append(text[start:cut]); start = cut
+    return out
+
+
+def panel_block(ct, pt, known):
+    """The four carved lines of K4 as laid out on the sculpture, ciphertext faint above each
+    candidate line. The K3 tail that shares the first line is shown fainter still."""
+    rows = []
+    cl, pl = panel_lines(ct), panel_lines(pt) if pt else [None] * 4
+    offset = 0
+    for k, (c, p) in enumerate(zip(cl, pl)):
+        pad = f'<span class="k3tail">{esc(K3_TAIL)}</span>' if k == 0 else ""
+        padp = f'<span class="k3tail">{" " * len(K3_TAIL)}</span>' if k == 0 else ""
+        rows.append(f'{pad}<span class="ct faint">{esc(c)}</span>')
+        if p is not None:
+            marked = []
+            for j, ch in enumerate(p):
+                i = offset + j + 1
+                if i in known:
+                    marked.append(f"<b>{esc(ch)}</b>" if ch == known[i] else f"<i>{esc(ch)}</i>")
+                else:
+                    marked.append(esc(ch))
+            rows.append(f'{padp}<span class="ct">{"".join(marked)}</span>')
+        offset += len(c)
+    return "<pre class='panel'>" + "\n".join(rows) + "</pre>"
+
+
+def best_candidate(r):
+    """The candidate the harness ranked best: top fitness among gate passers, else most crib hits."""
+    cands = r.get("candidates", [])
+    if not cands:
+        return None
+    passed = [c for c in cands if c.get("gate_passed")]
+    if passed:
+        return max(passed, key=lambda c: c.get("fitness") if c.get("fitness") is not None else -99)
+    return max(cands, key=lambda c: c.get("crib_hits", 0))
+
+
+def load_glossary():
+    import re as _re
+    entries = []
+    for line in (ROOT / "GLOSSARY.md").read_text().splitlines():
+        m = _re.match(r"\*\*(.+?)\*\*\s*(?:\((?:also:)?\s*(.*?)\))?\s*:\s*(.+)", line)
+        if m:
+            term, aliases, definition = m.group(1), m.group(2) or "", m.group(3)
+            names = [term] + [a.strip() for a in aliases.split(",") if a.strip()]
+            entries.append((term, names, definition))
+    return entries
+
+
+def glossary_for(text):
+    low = text.lower()
+    hits = []
+    for term, names, definition in load_glossary():
+        if any(n.lower() in low for n in names):
+            hits.append((term, definition))
+    if not hits:
+        return ""
+    items = "".join(f"<dt>{esc(t)}</dt><dd>{esc(d)}</dd>" for t, d in hits)
+    return f'<div class="gloss"><div class="callout-h">Words used above</div><dl>{items}</dl><p class="muted" style="font-size:13px">The full list is on the <a href="/glossary">glossary</a> page.</p></div>'
+
+
+def link_experiments(html_text, tags):
+    """Turn bare experiment numbers like 0012 into links where such a record exists."""
+    import re as _re
+    by_id = {t[:4]: t for t in tags}
+    return _re.sub(r"(?<![\w/-])(\d{4})(?![\w-])", lambda m: f'<a href="/exp/{by_id[m.group(1)]}">{m.group(1)}</a>' if m.group(1) in by_id else m.group(1), html_text)
+
+
 def k4_marked(pt, known):
     out = []
     for i, ch in enumerate(pt, start=1):
@@ -260,7 +338,7 @@ def loss_chart(rows):
 def page(title, body, active="", refresh=True):
     meta = '<meta http-equiv="refresh" content="20">' if refresh else ""
     nav = "".join(f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>' for h, t in
-                  (("/", "Overview"), ("/notebook", "Notebook"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
+                  (("/", "Overview"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
@@ -320,7 +398,8 @@ def overview():
 </div>
 <p class="hero-sub">Time by phase across the run: {', '.join(f"{k} {fmt_dur(v)}" for k, v in sorted(by_phase.items(), key=lambda kv: PHASE_ORDER.index(kv[0]) if kv[0] in PHASE_ORDER else 9)) or 'none yet'}.</p>"""
     if ch:
-        champ = f"""<div class="callout"><div class="callout-h">Champion: {esc(ch['experiment'])}</div><p><code class="ct">{esc(ch['plaintext'])}</code></p><p class="muted" style="font-size:13px">{esc(ch['key_description'])}, fitness {ch['fitness']:.3f}</p></div>"""
+        from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
+        champ = f"""<div class="callout"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}, fitness {ch['fitness']:.3f}. A champion is the best candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
     scale_max = max((sum((r.get("phases") or {"run": r["seconds"]}).values()) for r in rows), default=0)
@@ -363,14 +442,21 @@ def experiment_page(tag):
     if not r:
         return page("not found", f"<p>No experiment {esc(tag)}</p>")
     from kryptos.facts import KNOWN, K4
-    cands = r.get("candidates", [])
-    best = cands[0] if cands else None
+    best = best_candidate(r)
     marked = ""
     if best:
-        marked = f"""{sec("", "Best candidate against the cribs", "Highlighted letters sit at crib positions and match. Red letters sit at crib positions and miss. Ciphertext above for reference.")}
-<pre><span class="ct faint">{esc(K4)}</span>
-{k4_marked(best['plaintext'], KNOWN)}</pre>"""
-    body = f"<p class='muted'><a href='/'>Overview</a> / {esc(tag)}</p>" + marked + "<article>" + md(r["_md"]) + "</article>"
+        how = "the harness's best by fitness among gate passers" if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
+        marked = f"""{sec("", "Best candidate against the cribs", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. The carved letters sit faint above each line of the candidate. Highlighted letters sit at known positions and match; red ones sit there and miss. This is {how}.")}
+{panel_block(K4, best['plaintext'], KNOWN)}"""
+    html_md = md(r["_md"])
+    tags = list(rows)
+    html_md = link_experiments(html_md, tags)
+    eli5 = r.get("eli5") or ""
+    gl = glossary_for(eli5)
+    anchor = "<h2>Walkthrough, by hand</h2>"
+    if gl and anchor in html_md:
+        html_md = html_md.replace(anchor, gl + anchor, 1)
+    body = f"<p class='muted'><a href='/'>Overview</a> / {esc(tag)}</p>" + marked + "<article>" + html_md + "</article>"
     return page(tag, body)
 
 
@@ -383,6 +469,8 @@ def route(path):
         return overview()
     if path.startswith("/exp/"):
         return experiment_page(path[5:].strip("/"))
+    if path == "/glossary":
+        return md_page("glossary", "GLOSSARY.md", "/glossary", refresh=False)
     if path == "/notebook":
         return md_page("lab notebook", "NOTEBOOK.md", "/notebook")
     if path == "/families":

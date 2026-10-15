@@ -53,6 +53,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 46 | 5 | Gromark three-term rules, lags to 13, bases 16-26: nothing. |
 | 47 | 1 | Carter and the sculpture texts as running keys with one mixed alphabet, 858 million trials: nothing. |
 | 48 | 1 | Both alphabets mixed, key completion at 27-29, every pair reached: noise. Family 1 closed for vocabulary alphabets. |
+| 49 | 1 | Shaped long keys from two puzzle words, mirrors and doublings, 272 of them under every alphabet pair: nothing. The record overestimated the key count by a hundredfold. |
 
 ## 2026-10-14
 

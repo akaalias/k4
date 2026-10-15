@@ -121,6 +121,10 @@ def esc(s):
     return html.escape(str(s))
 
 
+# records cannot be edited after their run, so spelling variants of a family slug are merged here
+FAMILY_ALIASES = {"8-hill-and-polygraphic": "8-hill-polygraphic", "2-masked-then-keyed": "2-masked-plaintext", "5-gromark": "5-gromark-lfsr"}
+
+
 def load_results():
     rows = []
     if not EXPERIMENTS.exists():
@@ -132,7 +136,7 @@ def load_results():
             r["_dir"] = d
             r["_md"] = (d / "experiment.md").read_text() if (d / "experiment.md").exists() else ""
             m = re.search(r"\*\*Family:\*\* (.+?)  ", r["_md"])
-            r["family"] = m.group(1).strip() if m else "?"
+            r["family"] = FAMILY_ALIASES.get(m.group(1).strip(), m.group(1).strip()) if m else "?"
             m = re.search(r"\*\*Parent:\*\* (.+?)  ", r["_md"])
             p = m.group(1).strip() if m else "none"
             r["parent"] = None if p.startswith("none") else p

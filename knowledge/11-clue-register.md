@@ -54,7 +54,7 @@ only the encrypted data, but also the key... part of the code was designed to be
 with multiple keys."** (Scheidt, 2003, secondhand). Readings: (a) the keyword is
 written on the sculpture (KRYPTOS, the Morse words, HILL, DYAHR); (b) the method is
 recoverable from the sculpture's layout; (c) the K1-K3 keys are reused in combination.
-Family C. Status: 'keys concealed at the sculpture' as a running key from the carved tableau or the Morse is bounded by 0017; as a key read by position, the letter of another plate at the same or the folded place of each K4 letter, by 0089; as a running key joined to any K3-style move before or after the table, by 0090; as a keyword in a periodic tableau by 0005 and 0009-0011. Family C otherwise untested.
+Family C. Status: 'keys concealed at the sculpture' as a running key from the carved tableau or the Morse is bounded by 0017; as a key read by position, the letter of another plate at the same or the folded place of each K4 letter, by 0089; as a running key joined to any K3-style move before or after the table, by 0090; on an unknown mixed alphabet (any of 26! orders), by 0098; as a keyword in a periodic tableau by 0005 and 0009-0011. Family C otherwise untested.
 
 **C7. "Instructions in the earlier text that refer to later text"; "clues to the last
 section are contained in previously deciphered parts... getting those first three sections
@@ -89,7 +89,7 @@ the letters' direction, upside down (RQ reads YR). Status: (a) the misspelt lett
 
 **C11a. NSA 1992: "plain-text auto-key" and "interval 7"; NSA 2007: plaintext and ciphertext
 autokey tested without cribs.** Status: 'plain-text auto-key' joined to a K3-rule, grid-turn or columnar move, either order, every lag, one alphabet: dead (0081). 'interval 7' as a structure that lines doublets up in sevens: only ciphertext autokey at lag 1 with a period-7 key raises the doublet column, to 1.5% against 0.1-0.3% by chance (0065); ciphertext autokey at lag 1 with a period-7 key, and at lag 21 with any period, is dead under the cribs (0066). 'plain-text auto-key' is dead at lags 1-25 and 30-52 and gives noise at 26-29 (0003, 0012); 'interval 7' as a period is dead under plain and progressive keys (0005, 0011) and as an autokey lag (0012). The substitution-then-transposition order is weakly bounded by 0007.
-and lags 1-96 (0002). Plaintext autokey excluded at lags 1-11 and 30-52, undecided at 13-29 and 53-96, lag 12 consistent under one convention on a single check (0003).
+and lags 1-96 (0002). Plaintext autokey excluded at lags 1-11 and 30-52, undecided at 13-29 and 53-96, lag 12 consistent under one convention on a single check (0003). Any mixed alphabet at all, unknown: with the sculpture's running keys, no fit (0098); with a periodic key 3, 7 or 21 after or before a type-1 move, at the scrambled-copper rate, one marginal cell at period 3 (0097).
 
 **C12. "Delve into that particular clock" (2014) against "the World Clock in Berlin"
 (2025).** Readings: (a) the clock is plaintext content only; (b) the Weltzeituhr's

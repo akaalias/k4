@@ -1,0 +1,165 @@
+{
+ "id": 59,
+ "tag": "0059-two-keywords-two-passes-k1-k3-word-alphabets",
+ "started": "2026-10-15T12:25:26+00:00",
+ "seconds": 13.9,
+ "status": "ran",
+ "phases": {
+  "design": 0.1,
+  "implement": 0.4,
+  "test": 0.1,
+  "run": 13.9,
+  "record": 0.0
+ },
+ "ended_epoch": 1792067140.33257,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "two periodic keys composed through two tableau passes, alphabets from K1-K3 words and C13/C14 words",
+  "alphabets": 102,
+  "length_pairs": 42,
+  "cases": 1747872,
+  "survivors": 2042,
+  "survivors_by_a_plus_b": {
+   "21": 2,
+   "22": 8,
+   "23": 306,
+   "24": 1726
+  },
+  "smallest_surviving_sum": 21,
+  "smallest_survivors": [
+   {
+    "a": 10,
+    "b": 11,
+    "plain": "GATHERED/keyword",
+    "cipher": "FORTY/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 10,
+    "b": 11,
+    "plain": "GATHERED/keyword",
+    "cipher": "FORTY/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "NUANCE/keyword",
+    "cipher": "FOUR/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "NUANCE/keyword",
+    "cipher": "FOUR/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "NUANCE/keyword",
+    "cipher": "FROM/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "NUANCE/keyword",
+    "cipher": "FROM/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "PEERED/keyword",
+    "cipher": "HOT/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "PEERED/keyword",
+    "cipher": "HOT/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "REMOVED/keyword",
+    "cipher": "DOES/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "REMOVED/keyword",
+    "cipher": "DOES/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 18,
+    "plain": "AND/keyword",
+    "cipher": "MADE/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 2
+   },
+   {
+    "a": 5,
+    "b": 18,
+    "plain": "AND/keyword",
+    "cipher": "MADE/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 2
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "1747872 cases; 2042 consistent; smallest surviving a + b 21; survivors by sum {21: 2, 22: 8, 23: 306, 24: 1726}; 0 word matches.",
+ "error": null,
+ "candidates": []
+}

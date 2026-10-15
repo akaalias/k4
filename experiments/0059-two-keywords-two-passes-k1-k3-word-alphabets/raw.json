@@ -1,0 +1,132 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "two periodic keys composed through two tableau passes, alphabets from K1-K3 words and C13/C14 words",
+  "alphabets": 102,
+  "length_pairs": 42,
+  "cases": 1747872,
+  "survivors": 2042,
+  "survivors_by_a_plus_b": {
+   "21": 2,
+   "22": 8,
+   "23": 306,
+   "24": 1726
+  },
+  "smallest_surviving_sum": 21,
+  "smallest_survivors": [
+   {
+    "a": 10,
+    "b": 11,
+    "plain": "GATHERED/keyword",
+    "cipher": "FORTY/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 10,
+    "b": 11,
+    "plain": "GATHERED/keyword",
+    "cipher": "FORTY/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "NUANCE/keyword",
+    "cipher": "FOUR/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "NUANCE/keyword",
+    "cipher": "FOUR/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "NUANCE/keyword",
+    "cipher": "FROM/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "NUANCE/keyword",
+    "cipher": "FROM/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "PEERED/keyword",
+    "cipher": "HOT/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "PEERED/keyword",
+    "cipher": "HOT/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "REMOVED/keyword",
+    "cipher": "DOES/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "REMOVED/keyword",
+    "cipher": "DOES/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 18,
+    "plain": "AND/keyword",
+    "cipher": "MADE/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 2
+   },
+   {
+    "a": 5,
+    "b": 18,
+    "plain": "AND/keyword",
+    "cipher": "MADE/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 2
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "1747872 cases; 2042 consistent; smallest surviving a + b 21; survivors by sum {21: 2, 22: 8, 23: 306, 24: 1726}; 0 word matches.",
+ "error": null,
+ "worked_example": "plain SHADINGBCEFJKLMOPQRTUVWXYZ\ncipher INVSBLEACDFGHJKMOPQRTUWXYZ\n\nlengths 7 and 8, Vigenere: totals and slots\n\npos  plain  carved  total  x slot  y slot\n 22    E      F       1      0       5\n 23    A      L       3      1       6\n 29    T      R       0      0       4\n 30    H      N       0      1       5\n 64    B      N      20      0       7",
+ "seconds": 13.790373802185059
+}

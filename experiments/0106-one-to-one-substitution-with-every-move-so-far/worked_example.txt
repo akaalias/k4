@@ -1,0 +1,18 @@
+snake rows of 10, read by columns: the known letters and the carved letters where they land
+
+letter  places (lands at: carved)
+     A  23 (23: L), 32 (83: C)
+     B  64 (37: W)
+     C  70 (95: C), 73 (78: K)
+     E  22 (13: B), 31 (92: U), 65 (47: Z)
+     H  30 (91: A)
+     I  68 (77: D)
+     K  74 (68: T)
+     L  67 (67: V), 71 (96: A)
+     N  26 (53: K), 69 (86: G)
+     O  27 (63: B), 72 (87: K)
+     R  28 (73: P), 66 (57: I)
+     S  24 (33: S), 33 (74: K)
+     T  25 (43: S), 29 (82: J), 34 (64: N)
+
+a single swap table needs every row to show one carved letter, different from every other row

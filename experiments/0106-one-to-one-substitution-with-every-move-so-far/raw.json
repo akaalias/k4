@@ -1,0 +1,21 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "one-to-one substitution (commutes with the move) with four route sets",
+  "routes_by_set": {
+   "type-1 library": 27852,
+   "grid paths": 42978,
+   "mixed double turns": 53214,
+   "triple clockwise turns": 1711697
+  },
+  "stopped": null,
+  "consistent_by_set": {},
+  "k4_survivors": [],
+  "n_k4_survivors": 0,
+  "controls": "10 shuffled coppers (seed 106), identical test"
+ },
+ "notes": "Routes tested: {'type-1 library': 27852, 'grid paths': 42978, 'mixed double turns': 53214, 'triple clockwise turns': 1711697}. Consistent (K4 / controls): none on any text.",
+ "error": null,
+ "worked_example": "snake rows of 10, read by columns: the known letters and the carved letters where they land\n\nletter  places (lands at: carved)\n     A  23 (23: L), 32 (83: C)\n     B  64 (37: W)\n     C  70 (95: C), 73 (78: K)\n     E  22 (13: B), 31 (92: U), 65 (47: Z)\n     H  30 (91: A)\n     I  68 (77: D)\n     K  74 (68: T)\n     L  67 (67: V), 71 (96: A)\n     N  26 (53: K), 69 (86: G)\n     O  27 (63: B), 72 (87: K)\n     R  28 (73: P), 66 (57: I)\n     S  24 (33: S), 33 (74: K)\n     T  25 (43: S), 29 (82: J), 34 (64: N)\n\na single swap table needs every row to show one carved letter, different from every other row",
+ "seconds": 22.517497777938843
+}

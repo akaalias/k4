@@ -1,0 +1,41 @@
+{
+ "id": 106,
+ "tag": "0106-one-to-one-substitution-with-every-move-so-far",
+ "started": "2026-10-15T20:16:52+00:00",
+ "seconds": 22.6,
+ "status": "ran",
+ "phases": {
+  "unattributed": 92.5,
+  "run": 22.6,
+  "record": 0.1
+ },
+ "ended_epoch": 1792095435.265264,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "one-to-one substitution (commutes with the move) with four route sets",
+  "routes_by_set": {
+   "type-1 library": 27852,
+   "grid paths": 42978,
+   "mixed double turns": 53214,
+   "triple clockwise turns": 1711697
+  },
+  "stopped": null,
+  "consistent_by_set": {},
+  "k4_survivors": [],
+  "n_k4_survivors": 0,
+  "controls": "10 shuffled coppers (seed 106), identical test"
+ },
+ "notes": "Routes tested: {'type-1 library': 27852, 'grid paths': 42978, 'mixed double turns': 53214, 'triple clockwise turns': 1711697}. Consistent (K4 / controls): none on any text.",
+ "error": null,
+ "candidates": []
+}

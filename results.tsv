@@ -104,3 +104,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0103	0103-the-copper-keyed-by-itself-through-k3s-rule	1-keyed-periodic	0002-ciphertext-autokey	reverted	0	0	0			10	unattributed=19 run=10 record=0
 0104	0104-the-message-keyed-by-itself-through-k3s-rule	1-keyed-periodic	0003-plaintext-autokey-chained	reverted	0	0	0			5	unattributed=1 run=5 record=0
 0105	0105-affine-hill-solved-letter-by-letter	8-hill-polygraphic	0015-hill-2x2-3x3-4x4-exact	reverted	0	0	0			0	unattributed=124 run=0 record=0
+0106	0106-one-to-one-substitution-with-every-move-so-far	9-substitution-then-transposition	0019-substitution-then-route-crib-images-one-to-one	reverted	0	0	0			23	unattributed=92 run=23 record=0

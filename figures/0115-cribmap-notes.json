@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Using the table twice, with one secret word and then another, is the same as one key made by adding the two words. If one is a puzzle word such as KRYPTOS, the known letters spell out the other, letter by letter."
+ },
+ {
+  "anchor": "the check",
+  "text": "Take the puzzle word away at the 24 known places: what is left must repeat with the second word's length. Two known places in one slot that ask for different letters rule that length out."
+ },
+ {
+  "anchor": "the bound",
+  "text": "572,880 cases per text: not one leaves a second word fully forced without a clash, on K4 or on any scrambled copper, and no dictionary word turns up."
+ }
+]

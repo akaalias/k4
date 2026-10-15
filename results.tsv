@@ -96,3 +96,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0095	0095-riddle-words-dragged-at-the-live-periods	1-keyed-periodic	0001-crib-consistent-periods	reverted	0	0	0			16	unattributed=9 run=16 record=0
 0096	0096-both-fingerprints-from-two-stage-recipes	7-construction-simulation	0065-constructions-that-line-up-doublets-in-sevens	reverted	0	0	0			15	unattributed=7 run=15 record=0
 0097	0097-free-mixed-alphabets-after-a-move	6-transposition-then-tableau	0096-both-fingerprints-from-two-stage-recipes	reverted	0	0	0			606	unattributed=359 run=606 record=0
+0098	0098-sculpture-running-key-on-an-unknown-alphabet	1-keyed-periodic	0017-running-key-from-the-sculpture-itself	reverted	0	0	0			472	unattributed=35 run=472 record=0

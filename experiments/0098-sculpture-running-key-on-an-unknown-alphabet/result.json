@@ -1,0 +1,73 @@
+{
+ "id": 98,
+ "tag": "0098-sculpture-running-key-on-an-unknown-alphabet",
+ "started": "2026-10-15T19:58:10+00:00",
+ "seconds": 472.5,
+ "status": "ran",
+ "phases": {
+  "unattributed": 34.9,
+  "run": 472.5,
+  "record": 0.1
+ },
+ "ended_epoch": 1792094763.446224,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "running key from the sculpture's texts on an unknown mixed alphabet (Quagmire III)",
+  "sources": {
+   "tableau rows fwd": 781,
+   "tableau rows bwd": 781,
+   "tableau rows with index column fwd": 807,
+   "tableau rows with index column bwd": 807,
+   "tableau columns fwd": 781,
+   "tableau columns bwd": 781,
+   "morse as carved fwd": 80,
+   "morse as carved bwd": 80,
+   "morse reversed order fwd": 80,
+   "morse reversed order bwd": 80,
+   "panel ciphertexts K1-K4 fwd": 865,
+   "panel ciphertexts K1-K4 bwd": 865,
+   "K1-K3 plaintexts fwd": 768,
+   "K1-K3 plaintexts bwd": 768,
+   "Sanborn 1989 letter fwd": 2176,
+   "Sanborn 1989 letter bwd": 2176,
+   "1991 dedication texts fwd": 4880,
+   "1991 dedication texts bwd": 4880,
+   "2025 open letter fwd": 2228,
+   "2025 open letter bwd": 2228
+  },
+  "rules": [
+   "vigenere",
+   "variant",
+   "beaufort"
+  ],
+  "settings": 80676,
+  "k4_consistent": 0,
+  "controls_consistent": [
+   57,
+   0,
+   0,
+   40,
+   0,
+   0,
+   30,
+   1,
+   6,
+   43
+  ],
+  "k4_consistent_settings": [],
+  "controls": "10 shuffled coppers (seed 98), identical search"
+ },
+ "notes": "80,676 (text, offset, rule) settings. Consistent with some alphabet: K4 0, controls [57, 0, 0, 40, 0, 0, 30, 1, 6, 43].",
+ "error": null,
+ "candidates": []
+}

@@ -1,0 +1,11 @@
+key text: the Morse as carved, offset 0, Vigenere on an unknown alphabet X
+
+place  known  carved  key  equation
+   22      E       F    E  X(F) = X(E) + X(E)
+   23      A       L    T  X(L) = X(A) + X(T)
+   24      S       R    A  X(R) = X(S) + X(A)
+   25      T       V    L  X(V) = X(T) + X(L)
+   64      B       N    Y  X(N) = X(B) + X(Y)
+   65      E       Y    O  X(Y) = X(E) + X(O)
+
+some alphabet fits all 24: False

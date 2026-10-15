@@ -1,0 +1,206 @@
+{
+ "id": 37,
+ "tag": "0037-triple-matrix-routes-sampled-then-tableau",
+ "started": "2026-10-15T08:42:16+00:00",
+ "seconds": 86.2,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 59.9,
+  "test": 9.5,
+  "run": 86.2,
+  "record": 0.0
+ },
+ "ended_epoch": 1792053822.440257,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig"
+ },
+ "bounds": {
+  "family": "three transposition stages (sampled) then periodic tableau",
+  "stages": 211,
+  "triples_sampled": 200000,
+  "conventions": 8,
+  "keys_scored": 123792,
+  "smallest_live_period": 20,
+  "min_live_period_histogram": {
+   "20": 1,
+   "23": 32,
+   "24": 492,
+   "25": 211,
+   "26": 1001,
+   "27": 1412,
+   "28": 3483,
+   "29": 1643,
+   "30": 5053,
+   "31": 3371,
+   "32": 9537,
+   "33": 8251
+  },
+  "best": [
+   {
+    "score": -3.613,
+    "stages": [
+     "keyed ABSCISSAE inv",
+     "keyed HILL",
+     "keyed VIRTUALLYINVISIBLE"
+    ],
+    "convention": "kry/kry/kry/beau",
+    "period": 35,
+    "runs": [
+     "INDERSH"
+    ]
+   },
+   {
+    "score": -3.894,
+    "stages": [
+     "keyed NORTH inv",
+     "rotate 11",
+     "rotate 5"
+    ],
+    "convention": "std/kry/kry/vig",
+    "period": 39,
+    "runs": [
+     "TWEREPA"
+    ]
+   },
+   {
+    "score": -4.155,
+    "stages": [
+     "keyed PALIMPSEST",
+     "columnar 18 inv",
+     "columnar 26"
+    ],
+    "convention": "kry/kry/kry/beau",
+    "period": 36,
+    "runs": [
+     "ORCESCO"
+    ]
+   },
+   {
+    "score": -4.181,
+    "stages": [
+     "keyed SHADOW inv",
+     "columnar 12",
+     "columnar 18 inv"
+    ],
+    "convention": "kry/kry/kry/vig",
+    "period": 39,
+    "runs": [
+     "DARTHTH"
+    ]
+   },
+   {
+    "score": -4.251,
+    "stages": [
+     "columnar 15",
+     "keyed BERLINWALL inv",
+     "keyed CARTER inv"
+    ],
+    "convention": "kry/kry/kry/vig",
+    "period": 40,
+    "runs": [
+     "RORIF",
+     "EMONTI"
+    ]
+   },
+   {
+    "score": -4.281,
+    "stages": [
+     "keyed WEST",
+     "rotate 2",
+     "keyed BURIED"
+    ],
+    "convention": "std/std/kry/vig",
+    "period": 40,
+    "runs": [
+     "ETINASCR"
+    ]
+   },
+   {
+    "score": -4.281,
+    "stages": [
+     "keyed WEST",
+     "rotate 2",
+     "keyed BURIED"
+    ],
+    "convention": "std/std/kry/vig",
+    "period": 38,
+    "runs": [
+     "ETINASCR"
+    ]
+   },
+   {
+    "score": -4.281,
+    "stages": [
+     "keyed WEST",
+     "rotate 2",
+     "keyed BURIED"
+    ],
+    "convention": "std/std/kry/vig",
+    "period": 36,
+    "runs": [
+     "ETINASCR"
+    ]
+   },
+   {
+    "score": -4.281,
+    "stages": [
+     "keyed WEST",
+     "rotate 2",
+     "keyed BURIED"
+    ],
+    "convention": "std/std/kry/vig",
+    "period": 34,
+    "runs": [
+     "ETINASCR"
+    ]
+   },
+   {
+    "score": -4.281,
+    "stages": [
+     "keyed WEST",
+     "rotate 2",
+     "keyed BURIED"
+    ],
+    "convention": "std/std/kry/vig",
+    "period": 32,
+    "runs": [
+     "ETINASCR"
+    ]
+   }
+  ],
+  "shuffled_control_best": [
+   -4.821,
+   -4.937,
+   -5.151,
+   -4.484,
+   -4.663,
+   -4.922,
+   -4.484,
+   -4.857,
+   -4.623,
+   -4.478
+  ],
+  "control_note": "controls use the first 6,000 triples of the same sample"
+ },
+ "notes": "Diagnostic, no candidates. 200000 triples x 8 conventions; smallest live period 20; best forced key -3.613 vs shuffled [-4.821, -4.937, -5.151, -4.484, -4.663, -4.922, -4.484, -4.857, -4.623, -4.478].",
+ "error": null,
+ "candidates": []
+}

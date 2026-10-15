@@ -1,0 +1,9 @@
+stages: columnar 7, then rotate 12, then keyed columnar KRYPTOS; convention kry/kry/kry Vigenere
+
+plain pos  letter  final place  carved  forced key letter
+       22    E         88        U       D
+       23    A         62        F       O
+       24    S         37        W       L
+       64    B         26        Q       F
+       65    E         97        R       J
+       66    R         30        N       M

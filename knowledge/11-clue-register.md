@@ -64,8 +64,6 @@ ROWS was wrong but "by rows" was Sanborn's own reading of jargon); (b) the missp
 positions are indices; (c) K2's coordinates are numbers for a key; (d) K3's Carter passage
 instructs: candle, breach in the upper left corner, widening the hole, "can you see
 anything." Key-source rule plus families C and D. Status: as a running key, K1-K3 plaintexts and ciphertexts (0004), the sculpture's own texts (0017) and Carter's book (0021) are dead at every offset; as key words, the K1-K3 vocabulary is dead for periodic keys (0005, 0009-0011). Other readings untested.
-K1-K3 text or ciphertext is excluded at every offset and convention (0004); as a periodic
-keyword of a surviving period drawn from K1-K3 windows, excluded (0005); other readings untested.
 
 **C8. "The most obvious key to the sculpture, nobody has picked up on."** (2005). Readings:
 (a) KRYPTOS itself used in a way not yet tried (as a transposition key for K4, as it was

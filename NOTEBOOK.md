@@ -16,6 +16,7 @@ controls. The notebook gets a line per experiment as it lands.
 | # | Family | One line |
 |---|---|---|
 | 21 | 1 | Carter's book as a running key, 13.7 million offsets and conventions: none within two mismatches. |
+| 22 | 1 | Porta over 248 alphabet orders: no order separates all 24 crib pairs across the halves. |
 
 ## 2026-10-14
 

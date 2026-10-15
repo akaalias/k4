@@ -1,0 +1,28 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Gromark-type digit keys, k[i] = k[i-a] + k[i-b] mod B, on K1-K3-word and C13/C14-word alphabets",
+  "alphabets": 102,
+  "pairs": 10404,
+  "modes": 3,
+  "smallest_admissible_base_k4": 17,
+  "smallest_admissible_base_controls": [
+   19,
+   17,
+   17,
+   18,
+   18,
+   18,
+   19,
+   18,
+   19,
+   19
+  ],
+  "pairs_admissible_at_15_or_less": 0,
+  "rules_consistent": 0
+ },
+ "notes": "Smallest base any pair admits on K4: 17; on ten shuffles: [17, 17, 18, 18, 18, 18, 19, 19, 19, 19]. Pairs admissible at base 15 or less: 0; consistent rules among them: 0.",
+ "error": null,
+ "worked_example": "plain  SHADINGBCEFJKLMOPQRTUVWXYZ\ncipher INVSBLEACDFGHJKMOPQRTUWXYZ\n\nplace  plain  carved  shift (Vigenere)\n   22    E      F       1\n   23    A      L       3\n   24    S      R      19\n   25    T      V       9\n   26    N      Q      13",
+ "seconds": 1.0116190910339355
+}

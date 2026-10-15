@@ -1,0 +1,9 @@
+plain  SHADINGBCEFJKLMOPQRTUVWXYZ
+cipher INVSBLEACDFGHJKMOPQRTUWXYZ
+
+place  plain  carved  shift (Vigenere)
+   22    E      F       1
+   23    A      L       3
+   24    S      R      19
+   25    T      V       9
+   26    N      Q      13

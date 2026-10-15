@@ -1,0 +1,61 @@
+{
+ "id": 54,
+ "tag": "0054-gromark-bases-k1-k3-word-alphabets",
+ "started": "2026-10-15T12:13:19+00:00",
+ "seconds": 1.1,
+ "status": "ran",
+ "phases": {
+  "design": 0.1,
+  "implement": 10.6,
+  "test": 0.1,
+  "run": 1.1,
+  "record": 0.0
+ },
+ "ended_epoch": 1792066400.21105,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "Gromark-type digit keys, k[i] = k[i-a] + k[i-b] mod B, on K1-K3-word and C13/C14-word alphabets",
+  "alphabets": 102,
+  "pairs": 10404,
+  "modes": 3,
+  "smallest_admissible_base_k4": 17,
+  "smallest_admissible_base_controls": [
+   19,
+   17,
+   17,
+   18,
+   18,
+   18,
+   19,
+   18,
+   19,
+   19
+  ],
+  "pairs_admissible_at_15_or_less": 0,
+  "rules_consistent": 0
+ },
+ "notes": "Smallest base any pair admits on K4: 17; on ten shuffles: [17, 17, 18, 18, 18, 18, 19, 19, 19, 19]. Pairs admissible at base 15 or less: 0; consistent rules among them: 0.",
+ "error": null,
+ "candidates": []
+}

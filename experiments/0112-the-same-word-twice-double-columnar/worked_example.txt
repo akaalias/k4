@@ -1,0 +1,8 @@
+SHADOW twice: columns read in the order [3, 4, 2, 5, 1, 6], then again
+
+place  letter  after one  after two  copper there
+   22       E         20         36             T
+   23       A         52         25             V
+   24       S         85         79             Z
+   25       T         69         12             L
+   64       B         27          5             U

@@ -110,3 +110,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0109	0109-keyword-tables-from-the-whole-dictionary	1-keyed-periodic	0053-periodic-tableau-k1-k3-word-alphabets	reverted	0	0	0			73	unattributed=195 run=73 record=0
 0110	0110-keyword-columnar-from-the-whole-dictionary	6-transposition-then-tableau	0085-true-keyword-columnar-rerun	reverted	0	0	0			202	unattributed=265 run=202 record=0
 0111	0111-myszkowski-keyed-by-the-dictionary	6-transposition-then-tableau	0110-keyword-columnar-from-the-whole-dictionary	reverted	0	0	0			150	unattributed=160 run=150 record=0
+0112	0112-the-same-word-twice-double-columnar	6-transposition-then-tableau	0110-keyword-columnar-from-the-whole-dictionary	reverted	0	0	0			203	unattributed=1 run=203 record=0

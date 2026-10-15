@@ -85,7 +85,9 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 @media(max-width:860px){.explain-row{grid-template-columns:1fr}}
 dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 18px;margin:6px 0 10px;font-size:14.5px}dl.bd dt{color:var(--muted)}dl.bd dd{margin:0;min-width:0;overflow-wrap:anywhere}dl.bd dl.bd{grid-template-columns:minmax(70px,max-content) 1fr;margin:0;padding-left:12px;border-left:2px solid var(--rule-soft);font-size:13.5px}.bd-text{font:12.5px var(--mono);letter-spacing:.06em;overflow-wrap:anywhere}ol.bd-list{margin:0;padding-left:20px}
 .ktabs{display:flex;gap:6px;margin:4px 0 2px}.ktab{font:600 12px var(--serif);letter-spacing:.1em;padding:5px 14px;border:1px solid var(--rule);background:var(--paper);color:var(--muted);border-radius:3px;cursor:pointer}.ktab.on{background:var(--accent);border-color:var(--accent);color:var(--paper)}.kpane-notes{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:980px;margin:4px auto 0;font-size:15px;color:var(--ink)}.kpane-notes p{margin:0}.lrow.start{justify-content:flex-start}.inl{display:inline-flex;align-items:flex-end;gap:1px;white-space:nowrap;height:.78em;line-height:1;vertical-align:-0.06em}.inl .lc{width:1.22em;height:1.42em;font-size:.56em;border-radius:2px}.lp-note{width:573px;box-sizing:border-box;font-size:15px;line-height:1.5;margin:10px 0 0;padding:0 2px}.lc.q,.lc.ink.q{color:var(--accent);font-weight:700}
-.fig-row{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:30px;align-items:start;width:min(1380px,94vw);position:relative;left:50%;transform:translateX(-50%);margin:26px 0 8px}.fig-main{margin:0}.fig-main svg{display:block;width:100%;height:auto}.fig-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.fig-side{border-left:1px solid var(--rule);padding:22px 0 0 16px}.fig-note{margin:0 0 18px}.fig-note b{display:block;font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 3px}.fig-note p{margin:0;font-size:14px;line-height:1.5;color:var(--muted)}
+.fig-row{clear:both;width:min(1200px,94vw);margin-top:30px!important;position:relative;left:50%;transform:translateX(-50%);margin:26px 0 8px}.fig-main{margin:0}.fig-main svg{display:block;width:100%;height:auto}.fig-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.fig-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:980px;margin:14px auto 0}.fig-note{margin:0}.fig-note b{display:block;font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 3px}.fig-note p{margin:0;font-size:14px;line-height:1.5;color:var(--muted)}
+.plain.tufte{position:relative;display:flow-root}.plain.tufte p{max-width:620px}.sidenote{float:right;clear:right;margin-right:-300px;width:270px;margin-top:.35em;margin-bottom:.9em;font-size:13.5px;line-height:1.45;color:var(--muted);padding-left:12px;border-left:1px solid var(--rule)}.sidenote b{color:var(--ink);font-weight:600}.sidenote-more{max-width:620px;font-size:13px;color:var(--faint);margin:4px 0 0}@media(max-width:980px){.sidenote{float:none;display:block;margin:6px 0 10px;width:auto;max-width:620px}}
+.word{display:flex;gap:1.5px;border-radius:3px;box-shadow:0 0 0 1px #c9c2a8;background:#ebe7d8}.word .lc{background:transparent}
 .res-notes{font-size:16px;margin:16px 0 6px;max-width:760px}.res-notes.err{color:var(--accent)}.res-stats{display:flex;gap:44px;flex-wrap:wrap;margin:6px 0 18px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.res-stats div{display:flex;flex-direction:column}.res-stats b{font:400 24px var(--serif)}.res-stats span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.res-card{display:flex;gap:26px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--rule-soft)}.res-side{display:flex;flex-direction:column;gap:3px;min-width:150px;font-size:14px;color:var(--muted)}.res-rank{font:400 26px var(--serif);color:var(--ink)}.res-loss{color:var(--accent);font-weight:600}.res-main{flex:1;min-width:0}.res-main .lp-box{display:inline-block}.res-key{font-size:13.5px;color:var(--muted);margin:8px 0 0;overflow-wrap:anywhere;max-width:620px}
 table.score{width:100%;max-width:760px;margin:10px 0 6px;border-collapse:collapse}table.score td,table.score th{padding:7px 10px;border-bottom:1px solid var(--rule-soft);font-size:15px}table.score td:first-child{font-weight:600}table.score tr.total td{border-top:1.5px solid var(--ink);border-bottom:none;font-weight:700}table.score .pct{color:var(--accent);margin-left:8px}table.score.ranks td:first-child{font-weight:400}table.score.ranks tr.kept td{font-weight:700;color:var(--accent)}table.score.ranks tr.gap td{color:var(--faint);border-bottom:none}.score-sub{font-size:14px;color:var(--muted);margin:16px 0 4px;max-width:760px}
 .panel-wrap{display:flex;gap:18px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;margin:16px 0 8px}.panel-wrap.wide{width:min(1360px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}.callout.wide{width:min(1400px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%);box-sizing:border-box}.callout .panel-wrap.wide{width:auto;left:0;transform:none}#sculpture-label{min-height:3.2em}.subsec{display:flex;align-items:baseline;gap:12px;margin:34px 0 10px;padding-top:12px;border-top:1px solid var(--rule-soft)}.subsec b{font:400 15px var(--serif);color:var(--faint)}.subsec h3{font:400 21px var(--serif);margin:0}.subsec-sub{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 6px}.lp-col{display:flex;flex-direction:column}.lp-eyebrow{font:600 11px/1.2 var(--serif)!important;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.lp-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:10px 14px 12px;width:573px;box-sizing:border-box}.lp.mini .lp-box{width:auto}.lp-title{font:600 13px var(--serif);color:var(--muted);text-align:center;margin:0 0 8px}.lrow{display:flex;gap:1.5px;margin:0 0 2.5px;justify-content:flex-start}.lc{display:inline-flex;align-items:center;justify-content:center;width:15px;height:19px;border-radius:2.5px;background:#ebe7d8;color:var(--muted);font:normal 11.5px/1 var(--mono)}.lc.tail{background:#f1eee3;color:#cfcab8}.lc.known{background:var(--accent);color:var(--paper);font-weight:700}.lc.miss{background:var(--paper);color:var(--accent);box-shadow:inset 0 0 0 1.3px var(--accent);font-weight:700}.lc.ink{color:var(--ink)}.lc.dot:after{content:"";width:2px;height:2px;border-radius:50%;background:var(--faint,#9b998c)}.lp-cap{font:italic 13px/1.4 var(--serif);color:var(--muted);text-align:center;margin:6px 0 0}.lp-cap.acc{color:var(--accent);margin-top:2px}.lp-arrow{color:var(--muted);padding-top:72px}.lp.mini .lp-box{padding:5px 6px;border-radius:4px;background:transparent;border-color:var(--rule-soft)}.lp.mini .lp-title{display:none}.lp.mini .lc{width:6.5px;height:9px;font-size:6px;border-radius:1px}.lp.mini .lrow{gap:1px;margin-bottom:1px}
@@ -97,7 +99,7 @@ figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:blo
 .aside h4{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 6px}
 .aside p{margin:0 0 10px}.aside svg{display:block;width:100%;height:auto;margin:4px 0 10px}
 @media(max-width:860px){.chart-row{grid-template-columns:1fr}.aside{border-left:0;padding-left:0}}
-svg text{paint-order:stroke;stroke:var(--paper);stroke-width:2.8px;stroke-linejoin:round;font-family:var(--serif)}
+figure.chart svg text{paint-order:stroke;stroke:var(--paper);stroke-width:2.8px;stroke-linejoin:round;font-family:var(--serif)}
 .tip{position:fixed;pointer-events:none;background:var(--paper);border:1px solid var(--rule);padding:6px 9px;font-size:12.5px;line-height:1.45;display:none;max-width:320px;z-index:9}
 .foot{position:fixed;left:0;right:0;bottom:0;padding:7px 18px;text-align:center;font:12.5px var(--serif);color:var(--muted);background:var(--paper);border-top:1px solid var(--rule-soft)}
 .foot .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:8px;animation:p 1.8s ease-out infinite}
@@ -552,6 +554,14 @@ def sculpture_block():
             '<script type="importmap">{"imports": {"three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>'
             '<script type="module" src="/assets/sculpture.js"></script>')
 
+# K1-K3 solutions with word breaks, for the word boxes; each joins back to the record's text exactly
+SPACED = {
+    "K1": "BETWEEN SUBTLE SHADING AND THE ABSENCE OF LIGHT LIES THE NUANCE OF IQLUSION",
+    "K2": "IT WAS TOTALLY INVISIBLE HOWS THAT POSSIBLE ? THEY USED THE EARTHS MAGNETIC FIELD X THE INFORMATION WAS GATHERED AND TRANSMITTED UNDERGRUUND TO AN UNKNOWN LOCATION X DOES LANGLEY KNOW ABOUT THIS ? THEY SHOULD ITS BURIED OUT THERE SOMEWHERE X WHO KNOWS THE EXACT LOCATION ? ONLY WW THIS WAS HIS LAST MESSAGE X THIRTY EIGHT DEGREES FIFTY SEVEN MINUTES SIX POINT FIVE SECONDS NORTH SEVENTY SEVEN DEGREES EIGHT MINUTES FORTY FOUR SECONDS WEST ID BY ROWS",
+    "K3": "SLOWLY DESPARATLY SLOWLY THE REMAINS OF PASSAGE DEBRIS THAT ENCUMBERED THE LOWER PART OF THE DOORWAY WAS REMOVED WITH TREMBLING HANDS I MADE A TINY BREACH IN THE UPPER LEFT HAND CORNER AND THEN WIDENING THE HOLE A LITTLE I INSERTED THE CANDLE AND PEERED IN THE HOT AIR ESCAPING FROM THE CHAMBER CAUSED THE FLAME TO FLICKER BUT PRESENTLY DETAILS OF THE ROOM WITHIN EMERGED FROM THE MIST X CAN YOU SEE ANYTHING Q ?",
+}
+
+
 def solved_messages_block():
     """K1, K2, K3 as IN (the carved lines, as on the copper) and OUT (the solution laid out in the
     same lines), one block each, so a reader sees what a solved message looks like."""
@@ -572,12 +582,33 @@ def solved_messages_block():
          f"Same solvers. It quotes Howard Carter opening Tutankhamun's tomb; {k3['misspelling']} is Sanborn's."),
     ]
 
-    def block(lines, cls):
-        rows = []
+    def block(lines, cls, words=None):
+        """Rows of cells. With `words` (a word number per letter), each word's letters sit in one
+        rounded box, split where a word runs onto the next line; the letter pitch is unchanged, so
+        the solution stays aligned with the carved panel cell for cell."""
+        rows, pos = [], 0
         for line in lines:
-            cells = "".join(f'<i class="lc {cls}{" q" if ch == "?" else ""}">{esc(ch)}</i>' for ch in line)
-            rows.append(f'<div class="lrow start">{cells}</div>')
+            cell = lambda ch: f'<i class="lc {cls}{" q" if ch == "?" else ""}">{esc(ch)}</i>'
+            if words is None:
+                rows.append(f'<div class="lrow start">{"".join(cell(ch) for ch in line)}</div>')
+            else:
+                parts, run, cur = [], [], None
+                for j, ch in enumerate(line):
+                    w = words[pos + j]
+                    if run and w != cur:
+                        parts.append(run); run = []
+                    run.append(ch); cur = w
+                if run:
+                    parts.append(run)
+                rows.append('<div class="lrow start">' + "".join(f'<span class="word">{"".join(cell(ch) for ch in run)}</span>' for run in parts) + "</div>")
+            pos += len(line)
         return "".join(rows)
+
+    def word_numbers(spaced):
+        out = []
+        for k, w in enumerate(spaced.split()):
+            out += [k] * len(w)
+        return out
 
     out = []
     for name, lines, plain, how, who in msgs:
@@ -588,7 +619,7 @@ def solved_messages_block():
         left = (f'<div class="lp-col"><p class="lp-eyebrow">in: {name} as carved</p><div class="lp"><div class="lp-box">'
                 f'<div class="lp-title">{n} letters, {len(lines)} lines of the copper</div>{block(lines, "")}</div></div><p class="lp-note"><b>How.</b> {how}</p></div>')
         right = (f'<div class="lp-col"><p class="lp-eyebrow">out: {name} solved</p><div class="lp"><div class="lp-box">'
-                 f'<div class="lp-title">the message, readable English</div>{block(plain_lines, "ink")}</div></div><p class="lp-note"><b>Who.</b> {who}</p></div>')
+                 f'<div class="lp-title">the message, readable English; each word boxed</div>{block(plain_lines, "ink", word_numbers(SPACED[name]))}</div></div><p class="lp-note"><b>Who.</b> {who}</p></div>')
         arrow = '<div class="lp-arrow"><svg width="34" height="14" viewBox="0 0 34 14"><path d="M1,7 L28,7" stroke="currentColor" stroke-width="1.4"/><path d="M26,2 L33,7 L26,12 z" fill="currentColor"/></svg></div>'
         out.append((name, f'<div class="kpane"><div class="panel-wrap wide">{left}{arrow}{right}</div></div>'))
     return out
@@ -807,9 +838,8 @@ def score_section(n, r, best):
 
 
 def cribmap_figure(tag):
-    """The experiment's crib map, if one has been drawn (figures/NNNN-cribmap.svg), with its notes in
-    a side column beside it, Tufte style: the figure at full width of the main column, the notes in
-    the margin next to the parts they explain."""
+    """The experiment's crib map, if one has been drawn (figures/NNNN-cribmap.svg), wide, with its
+    notes in short blocks underneath."""
     num = tag[:4]
     svg_p = ROOT / "figures" / f"{num}-cribmap.svg"
     if not svg_p.exists():
@@ -818,9 +848,9 @@ def cribmap_figure(tag):
     svg = re.sub(r'(<svg[^>]*?)\swidth="[^"]*"\s+height="[^"]*"', r"\1", svg, count=1)   # let CSS size it
     notes_p = ROOT / "figures" / f"{num}-cribmap-notes.json"
     notes = json.loads(notes_p.read_text()) if notes_p.exists() else []
-    side = "".join(f'<div class="fig-note"><b>{esc(n.get("anchor", ""))}</b><p>{crib_cells(esc(n.get("text", "")))}</p></div>' for n in notes)
+    below = "".join(f'<div class="fig-note"><b>{esc(n.get("anchor", ""))}</b><p>{crib_cells(esc(n.get("text", "")))}</p></div>' for n in notes)
     return (f'<div class="fig-row"><figure class="fig-main"><figcaption class="fig-eyebrow">the crib map: what the method does with the 24 known letters</figcaption>{svg}</figure>'
-            f'<aside class="fig-side">{side}</aside></div>')
+            f'<div class="fig-notes">{below}</div></div>')
 
 
 def experiment_page(tag):
@@ -894,14 +924,14 @@ def experiment_page(tag):
     out, pos = [], 0
     for st, en, gid, term, definition in kept:
         out.append(esc(eli5[pos:st]))
-        out.append(f'<span class="gl" data-gl="{gid}" title="{esc(first_sentence(definition))}">{esc(eli5[st:en])}</span>')
+        out.append(f'<span class="gl" data-gl="{gid}">{esc(eli5[st:en])}</span>'
+                   f'<span class="sidenote gl-entry" data-gl="{gid}"><b>{esc(term)}</b> {esc(first_sentence(definition))}</span>')
         pos = en
     out.append(esc(eli5[pos:]))
     eli5_html = "<p>" + "".join(out).replace("\n\n", "</p><p>") + "</p>"
-    rail = ""
-    if kept:
-        rail = '<aside class="aside"><h4>Words used here</h4>' + "".join(f'<p class="gl-entry" data-gl="{gid}"><b>{esc(term)}</b> {esc(first_sentence(definition))}</p>' for _, _, gid, term, definition in kept) + '<p class="faint">Full list on the <a href="/glossary">glossary</a> page.</p></aside>'
-    plain = sec(1, "In plain words", "") + f'<div class="chart-row"><div class="plain">{eli5_html}</div>{rail}</div>' + cribmap_figure(tag)
+    # Tufte sidenotes: each word's definition sits in the margin beside the line where it appears
+    more = '<p class="sidenote-more">Words in the margin are defined on the <a href="/glossary">glossary</a> page.</p>' if kept else ""
+    plain = cribmap_figure(tag) + sec(1, "In plain words", "") + f'<div class="plain tufte">{eli5_html}{more}</div>'
     # section 2: best candidate
     cand = ""
     if best:

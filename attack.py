@@ -1,161 +1,246 @@
-"""Experiment 0038. See program.md for the contract."""
+"""Experiment 0039. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "keyword-plus-dates-and-counts-from-the-story",
-    "title": "A key word plus a number from the sculpture's own story: dates, the Morse counts, and 97 itself as the second component",
-    "family": "3-two-component-key",
-    "parent": "0024-keyword-plus-k2-coordinate-digits",
-    "changed": "Same exact test as experiment 24, with the digit stream drawn from the sculpture's story instead of the K2 coordinates: the dedication date, the fall of the Wall, Carter's discovery, the Morse padding counts, the letter counts of the four parts, and 1990 itself.",
+    "slug": "trifid-free-cubes-by-constraint-propagation",
+    "title": "Trifid with a free cube: the 24 known letters as equations on the cube's coordinates, solved exactly",
+    "family": "4-visual-spatial",
+    "parent": "0033-trifid-keyword-cubes-and-annealing",
+    "changed": "Experiment 33 searched free cubes by trial and error and plateaued at 17 of 24. Here the cube is not searched but solved: every known letter ties three cube coordinates to three carved letters' coordinates, the ties are merged, and the remaining freedom is enumerated under the rule that all 27 symbols have different addresses.",
     "hypothesis_expert": (
-        "Experiment 24 killed a word plus the K2 coordinate digits under every reading. Scheidt's two-component "
-        "habit (C6) admits any memorable number as the second component, and Sanborn's own anchors are dates and "
-        "counts: the dedication on 3 November 1990, the Wall's fall on 9 November 1989, his Egypt trip of 1986, "
-        "Carter's breach on 26 November 1922 (C13, C7), the Morse messages' E-padding counts 5, 10, 1, 7, 9 "
-        "(C25), the four parts' letter counts 63, 372, 337, 97, and 97 and 98 alone (C17). Each reading, in "
-        "day-month-year and year-month-day forms, is a repeating digit key d; the word key x of length 2-30 "
-        "then satisfies x[i mod a] = t[i] - s d[(i + o) mod L] mod 26 at every crib, with 24 - a redundant "
-        "checks. Standard or KRYPTOS alphabets, both plaintext signs, both s, every alignment; survivors have "
-        "their forced word matched against the vocabulary and K1-K3 windows and scored as English against ten "
-        "shuffled controls. Bounds: complete for these seventeen digit readings."
+        "Trifid over 27 symbols (A-Z and '?') with period p: the three coordinate rows of a block are "
+        "concatenated and regrouped, so the k-th coordinate of ciphertext letter j equals coordinate m div p "
+        "of plaintext letter m mod p, with m = 3j + k. Each known plaintext letter therefore gives three "
+        "equalities between coordinate variables of symbols, 81 variables in all; a union-find merges them "
+        "into classes, and the bijection, 27 distinct triples with each axis value used exactly nine times, "
+        "is enforced by backtracking over class values with counting prunes. Every surviving cube decrypts "
+        "the text with all 24 known letters right by construction, so the English score of the other 73 "
+        "letters decides, against the same procedure on shuffled K4. Periods 2-15, every alignment. A "
+        "planted trifid text must be recovered exactly. Bounds: complete for trifid with any cube at periods "
+        "2-15, within the node cap of the search."
     ),
     "hypothesis_eli5": (
-        "Experiment 24 tried adding the map coordinates to a secret word. The sculpture's story has other "
-        "numbers a person would remember: the day it was unveiled, the day the Berlin Wall fell, the day "
-        "Carter broke into the tomb, the little counts hidden in the Morse code outside, and the number 97 "
-        "itself. We add each of these to an unknown secret word, letter by letter, and let the 24 known "
-        "letters tell us what the word would have to be. If two tellings disagree, that number is out."
+        "In trifid every letter has a three-digit address in a 27-seat cube, and the cipher shuffles the "
+        "digits of a few letters at a time. Experiment 33 tried to find the cube by guessing and nudging, "
+        "and could not. This time we do algebra instead: each known letter says 'this carved letter's first "
+        "digit equals that message letter's second digit', and so on. Chaining all those equalities leaves "
+        "only a little freedom, and the rule that no two letters share an address closes most of it. Every "
+        "cube that survives is tried, and the one whose message reads most like English wins, if any does."
     ),
     "prediction": (
-        "No word length under 24 survives for any reading, alignment or sign; survivors from 24 up are chance "
-        "and their forced words are noise against the shuffled controls. Zero candidates pass."
+        "At every period and alignment the equalities either contradict the bijection or leave a handful "
+        "of cubes, none of whose decryptions read better than -5.5 per quadgram; shuffled K4 behaves the "
+        "same. Zero candidates pass."
     ),
     "method": (
-        "1. List the digit readings. 2. For each alphabet pair and plaintext sign, compute the forced total "
-        "key index at each crib. 3. For each reading, alignment, sign s and word length a, subtract the digit "
-        "term and reduce to the word slot; reject on any disagreement. 4. For survivors, read the word in "
-        "the standard and KRYPTOS alphabets, match it against the vocabulary and K1-K3 windows, and score it "
-        "as English. 5. Repeat the scoring on ten shuffles of K4."
+        "1. For each period and alignment, list the blocks and, for every known plaintext letter in a "
+        "block, the three coordinate equalities it implies. 2. Merge equalities with union-find over the "
+        "81 coordinate variables. 3. Backtrack over the classes' values in {0,1,2}, pruning when two symbols "
+        "would share an address or an axis value would exceed nine symbols. 4. Decrypt the text under each "
+        "surviving cube, score the free letters as English, keep the best. 5. Repeat on two shuffles."
     ),
     "walkthrough": (
-        "1. Read the coordinates as the digits 3 8 5 7 6 5 7 7 8 4 4 and repeat them under the message. "
-        "2. Position 22 is E against the carved F; under the sculpture's alphabet with Vigenere the total key "
-        "letter is R, index 1. 3. The digit under position 22 at alignment 0 is the 22nd digit, 3; subtract it: "
-        "index 24 is the word letter for slot 21 mod a. 4. With a 7-letter word that is slot 0. 5. Position 29 "
-        "also uses slot 0: do the same there; the two values must agree. 6. Go through all 24 known letters; "
-        "one disagreement kills this length and alignment. 7. A survivor's forced letters spell the word; "
-        "see whether it is one the puzzle knows."
+        "1. Period 5, blocks from position 1: the block 21-25 holds the known letters E A S T at 22-25. "
+        "2. Carved letters of that block: J Q S S E, each with a three-digit address. 3. The rule says: the "
+        "first digit of J is the first digit of the block's first letter, the second digit of J is the first "
+        "digit of its second letter E, the third digit of J the first digit of A, and so on round the block. "
+        "4. Write each such tie as 'this digit equals that digit'. 5. Chain the ties: if J's second digit "
+        "equals E's first, and E's first equals K's third, then J's second equals K's third. 6. Give each "
+        "chain a value 0, 1 or 2 so that no two letters end with the same address. 7. Decrypt and read."
     ),
 }
 
 import random
-from kryptos.alphabets import ALPHABETS, key_letter_for, decrypt_letter, encrypt_letter
-from kryptos.facts import load_k1, load_k2, load_k3
 
 N = 97
-READINGS = {
-    "dedication 3 Nov 1990, dmy": "3111990", "dedication, ymd": "19901103", "dedication, dmy padded": "03111990",
-    "Wall fell 9 Nov 1989, dmy": "9111989", "Wall, ymd": "19891109",
-    "Carter breach 26 Nov 1922, dmy": "26111922", "Carter, ymd": "19221126",
-    "1990": "1990", "1989": "1989", "1986": "1986", "1922": "1922",
-    "Morse E-padding counts 5 10 1 7 9": "510179", "Morse counts reversed": "971015",
-    "letter counts 63 372 337 97": "6337233797", "97": "97", "98": "98", "97 and 24 known": "9724",
-}
-STD = ALPHABETS["std"]
+SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?"
+NODE_CAP = 3000000
+SOL_CAP = 5000
 
 
-def letters(s):
-    return "".join(c for c in s if "A" <= c <= "Z")
+def coords_of(cube):
+    to, frm = {}, {}
+    for i, ch in enumerate(cube):
+        t = (i // 9, (i // 3) % 3, i % 3); to[ch] = t; frm[t] = ch
+    return to, frm
 
 
-def total_key(i, key):
-    a = len(key["word"]); d = key["digits"]; L = len(d)
-    x = ALPHABETS[key["ka"]].index(key["word"][i % a])
-    return (x + key["s"] * int(d[(i + key["o"]) % L])) % 26
+def blocks(p, o):
+    out = []
+    if o:
+        out.append((0, o))
+    i = o
+    while i < N:
+        out.append((i, min(i + p, N))); i += p
+    return [(s, e) for s, e in out if e - s >= 2]
+
+
+def trifid(text, cube, p, o, decrypt):
+    to, frm = coords_of(cube)
+    out = list(text)
+    for s, e in blocks(p, o):
+        blk = text[s:e]; n = len(blk)
+        if not decrypt:
+            rows = [[to[ch][k] for ch in blk] for k in range(3)]
+            digits = rows[0] + rows[1] + rows[2]
+            out[s:e] = [frm[tuple(digits[3 * j:3 * j + 3])] for j in range(n)]
+        else:
+            digits = [d for ch in blk for d in to[ch]]
+            rows = [digits[0:n], digits[n:2 * n], digits[2 * n:3 * n]]
+            out[s:e] = [frm[(rows[0][j], rows[1][j], rows[2][j])] for j in range(n)]
+    return "".join(out)
 
 
 def encrypt(plaintext, key):
-    pa, ca, m = key["pa"], key["ca"], key["m"]
-    return "".join(encrypt_letter(p, STD[total_key(i, key)], pa, ca, "std", m) for i, p in enumerate(plaintext))
+    return trifid(plaintext, key["cube"], key["period"], key["offset"], False)
 
 
-def search(ct, known, score, vocab, texts, collect):
-    crib_pos = sorted(known)
-    survivors, best, candidates = [], [], []
-    cases = 0
-    for pa in ("std", "kry"):
-        for ca in ("std", "kry"):
-            for m in ("vig", "beau"):
-                t = {pos: STD.index(key_letter_for(known[pos], ct[pos - 1], pa, ca, "std", m)) for pos in crib_pos}
-                for rname, d in READINGS.items():
-                    L = len(d)
-                    for o in range(L):
-                        for s in (1, -1):
-                            for a in range(2, 31):
-                                cases += 1
-                                slots = {}
-                                ok = True
-                                for pos in crib_pos:
-                                    i = pos - 1
-                                    x = (t[pos] - s * int(d[(i + o) % L])) % 26
-                                    if (i % a) in slots and slots[i % a] != x:
-                                        ok = False; break
-                                    slots[i % a] = x
-                                if not ok:
-                                    continue
-                                survivors.append((a, rname, o, s, pa, ca, m))
-                                for ka in ("std", "kry"):
-                                    A = ALPHABETS[ka]
-                                    word = "".join(A[slots[k]] if k in slots else "." for k in range(a))
-                                    runs = [r for r in word.split(".") if len(r) >= 5]
-                                    if runs:
-                                        qs = sum(len(r) - 3 for r in runs)
-                                        sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
-                                        if len(best) < 15 or sc > best[-1][0]:
-                                            best.append((sc, a, rname, o, s, pa, ca, m, ka, word)); best.sort(reverse=True); best = best[:15]
-                                    if collect and "." not in word:
-                                        pool = set(w for w in vocab if len(w) == a)
-                                        for tx in texts:
-                                            for i in range(0, len(tx) - a + 1):
-                                                pool.add(tx[i:i + a])
-                                        if word in pool:
-                                            key = {"word": word, "digits": d, "o": o, "s": s, "ka": ka, "pa": pa, "ca": ca, "m": m}
-                                            pt = "".join(decrypt_letter(ct[i], STD[total_key(i, key)], pa, ca, "std", m) for i in range(N))
-                                            candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * a + 10, "key_description": f"word {word} + digits {rname} at {o}, s={s}; {pa}/{ca}/{ka} {m}"})
-    return survivors, best, candidates, cases
+class UF:
+    def __init__(self, n):
+        self.p = list(range(n))
+    def find(self, x):
+        while self.p[x] != x:
+            self.p[x] = self.p[self.p[x]]; x = self.p[x]
+        return x
+    def union(self, a, b):
+        ra, rb = self.find(a), self.find(b)
+        if ra != rb:
+            self.p[ra] = rb
+
+
+def var(sym, k):
+    return SYMBOLS.index(sym) * 3 + k
+
+
+def solve_setting(ct, known, p, o):
+    """Returns (cubes, nodes, classes): all cubes consistent with the known letters, up to caps."""
+    uf = UF(81)
+    for s, e in blocks(p, o):
+        n = e - s
+        for j in range(n):
+            for k in range(3):
+                m = 3 * j + k
+                pi, pk = m % n, m // n          # plaintext letter index in block, its coordinate
+                pos = s + pi + 1
+                if pos in known:
+                    uf.union(var(ct[s + j], k), var(known[pos], pk))
+    roots = sorted({uf.find(v) for v in range(81)})
+    cls = {r: i for i, r in enumerate(roots)}
+    of = [cls[uf.find(v)] for v in range(81)]       # variable -> class
+    nc = len(roots)
+    # order classes so that symbols complete early: by first symbol index
+    order = sorted(range(nc), key=lambda c: min(v // 3 for v in range(81) if of[v] == c))
+    val = [-1] * nc
+    axis_count = [[0] * 3 for _ in range(3)]        # per axis, per value: symbols fully assigned on that axis
+    used = set()
+    sols, nodes = [], 0
+    sym_classes = [[of[3 * s + k] for k in range(3)] for s in range(27)]
+
+    def addr(sym):
+        t = tuple(val[c] for c in sym_classes[sym])
+        return None if -1 in t else t
+
+    def rec(i):
+        nonlocal nodes
+        nodes += 1
+        if nodes > NODE_CAP or len(sols) >= SOL_CAP:
+            return
+        if i == nc:
+            sols.append([SYMBOLS[s] for s in sorted(range(27), key=lambda s: addr(s))]); return
+        c = order[i]
+        for v in range(3):
+            val[c] = v
+            ok = True
+            touched = []
+            for s in range(27):
+                if c in sym_classes[s]:
+                    a = addr(s)
+                    if a is not None:
+                        if a in used:
+                            ok = False; break
+                        used.add(a); touched.append(a)
+            if ok:
+                # axis count prune: no value on any axis may exceed 9 symbols with that value fixed
+                cnt = [[0] * 3 for _ in range(3)]
+                for s in range(27):
+                    for k in range(3):
+                        vv = val[sym_classes[s][k]]
+                        if vv >= 0:
+                            cnt[k][vv] += 1
+                if all(cnt[k][vv] <= 9 for k in range(3) for vv in range(3)):
+                    rec(i + 1)
+            for a in touched:
+                used.discard(a)
+            val[c] = -1
+            if nodes > NODE_CAP or len(sols) >= SOL_CAP:
+                return
+
+    rec(0)
+    cubes = []
+    for order_syms in sols:
+        # the sorted-by-address list is the cube in address order
+        cubes.append("".join(order_syms))
+    return cubes, nodes, nc
+
+
+def hits(pt, known):
+    return sum(1 for pos, ch in known.items() if pt[pos - 1] == ch)
+
+
+def sweep(ct, known, score, time_left):
+    rows, best = [], []
+    for p in range(2, 16):
+        for o in range(p):
+            if time_left() < 60:
+                return rows, best
+            cubes, nodes, nc = solve_setting(ct, known, p, o)
+            crib_idx = {pos - 1 for pos in known}
+            top = None
+            for cube in cubes:
+                pt = trifid(ct, cube, p, o, True)
+                h = hits(pt, known)
+                sc = score("".join(ch for i, ch in enumerate(pt) if i not in crib_idx and ch != "?"))
+                if top is None or sc > top[0]:
+                    top = (sc, h, pt, cube)
+            rows.append({"period": p, "offset": o, "classes": nc, "nodes": nodes, "cubes": len(cubes), "capped": nodes > NODE_CAP or len(cubes) >= SOL_CAP,
+                         "best_english": None if top is None else round(top[0], 3), "best_hits": None if top is None else top[1]})
+            if top:
+                best.append((top[0], p, o, top[1], top[2], top[3]))
+    best.sort(key=lambda t: -t[0])
+    return rows, best
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    vocab = list(ctx.vocabulary)
-    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
-    survivors, best, candidates, cases = search(ct, known, ctx.english_score, vocab, texts, True)
-    nulls = []
-    for seed in range(10):
+    rows, best = sweep(ct, known, ctx.english_score, ctx.time_left)
+    candidates = []
+    for sc, p, o, h, pt, cube in best[:20]:
+        if h == 24 and "?" not in pt:
+            candidates.append({"plaintext": pt, "key": {"cube": cube, "period": p, "offset": o}, "key_bits": 94, "key_description": f"trifid cube {cube} period {p} offset {o}; English {sc:.3f}"})
+    controls = []
+    for seed in range(2):
+        if ctx.time_left() < 300:
+            break
         letters_ = list(ct); random.Random(seed).shuffle(letters_)
-        _, nb, _, _ = search("".join(letters_), known, ctx.english_score, vocab, texts, False)
-        nulls.append(round(nb[0][0], 3) if nb else None)
-    by_len = {}
-    for a, *_ in survivors:
-        by_len[a] = by_len.get(a, 0) + 1
+        _, cb = sweep("".join(letters_), known, ctx.english_score, ctx.time_left)
+        controls.append(round(cb[0][0], 3) if cb else None)
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "word key plus known digit key (K2 coordinates), additive", "digit_readings": READINGS, "word_lengths": "2-30",
-                   "alphabets": "plain and cipher in {std, kry}; word read in std or kry", "cases": cases,
-                   "survivors_by_word_length": {str(k): v for k, v in sorted(by_len.items())},
-                   "shortest_surviving_word_length": min(by_len) if by_len else None,
-                   "best_forced_words": [{"score": round(sc, 3), "length": a, "reading": r, "offset": o, "s": s, "plain": pa, "cipher": ca, "mode": m, "word_alphabet": ka, "word": w} for sc, a, r, o, s, pa, ca, m, ka, w in best],
-                   "shuffled_control_best": nulls, "vocab_matches": len(candidates)},
-        "notes": f"{cases} cases; shortest surviving word length {min(by_len) if by_len else None}; best forced word {best[0][0]:.3f} vs shuffled best {max(x for x in nulls if x is not None):.3f}; {len(candidates)} matches.",
+        "bounds": {"family": "trifid, free 27-symbol cube, periods 2-15, every alignment, solved by constraint propagation and backtracking",
+                   "settings": len(rows), "settings_with_cubes": sum(1 for r in rows if r["cubes"]), "settings_capped": sum(1 for r in rows if r["capped"]),
+                   "node_cap": NODE_CAP, "solution_cap": SOL_CAP, "per_setting": rows,
+                   "best": [{"english": round(sc, 3), "period": p, "offset": o, "hits": h, "text": pt} for sc, p, o, h, pt, _ in best[:8]],
+                   "shuffled_control_best": controls},
+        "notes": f"{len(rows)} settings; {sum(1 for r in rows if r['cubes'])} admit at least one cube; {sum(1 for r in rows if r['capped'])} hit a cap. Best English {best[0][0]:.3f} at period {best[0][1]} offset {best[0][2]}; shuffled K4 {controls}. {len(candidates)} candidates.",
     }
 
 
 def worked_example(ctx, key):
-    d = READINGS["38 57 65 77 8 44"]
-    lines = [f"digits {d} repeated under the message, alignment 0; KRYPTOS alphabet throughout, Vigenere; word length 7", "", "pos  plain  carved  total key  index  digit  word index  slot"]
-    for pos in (22, 23, 24, 29, 30, 64):
-        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
-        k = key_letter_for(p, c, "kry", "kry", "std", "vig"); idx = STD.index(k); dg = int(d[(pos - 1) % len(d)])
-        lines.append(f"{pos:>3}    {p}      {c}        {k}        {idx:>2}      {dg}       {(idx - dg) % 26:>2}       {(pos-1) % 7}")
-    lines.append("")
-    lines.append("positions 22 and 29 share slot 0: their word indices must agree, or length 7 is dead at this alignment.")
+    cubes, nodes, nc = solve_setting(ctx.K4, ctx.KNOWN, 5, 0)
+    lines = ["period 5, blocks from position 1: the block 21-25 carries E A S T at 22-25 against the carved " + ctx.K4[20:25], "",
+             f"81 coordinate variables merge into {nc} classes under all the ties from the 24 known letters",
+             f"backtracking over the classes with the all-different rule visited {nodes} nodes and found {len(cubes)} cube(s)"]
+    if cubes:
+        pt = trifid(ctx.K4, cubes[0], 5, 0, True)
+        lines.append(f"first cube in address order: {cubes[0]}")
+        lines.append(f"its decryption: {pt}  ({hits(pt, ctx.KNOWN)} of 24 known letters right)")
     return "\n".join(lines)

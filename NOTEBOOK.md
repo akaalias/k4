@@ -19,7 +19,7 @@ From 0037: a diagnostic's controls must run at the same trial count as the real 
 
 From 0027: the width-7 doublet column is reproduced by nothing, random letters included, so it is either a fluke of about one in 300 or the trace of a construction outside everything simulated. Doublets at 19, 26, 33, 47, 68 are all 5 mod 7; in a period-7 additive system a doublet is a plaintext digraph with a fixed letter difference falling in one column, which is a natural mechanism, but period 7 is dead under every alphabet by the cribs alone (R and C both to P at 66 and 73). Gromark base 2 reproduces the width-21 repeats; 0013 tested only bases 10 and 26, so bases 2 to 9 are 0028.
 
-From 0033: simulated annealing over trifid cubes with crib hits, even at coordinate level, plateaus at about 17 of 24 on a planted cube. A proper trifid solver needs constraint propagation on the cube coordinates, not local search. Parked.
+From 0033: simulated annealing over trifid cubes with crib hits, even at coordinate level, plateaus at about 17 of 24 on a planted cube. A proper trifid solver needs constraint propagation on the cube coordinates, not local search. Built as 0039: the equalities plus the all-different rule leave no cube at all for K4, while planted texts are recovered. The lesson generalises: when a cipher's key is a structure the cribs constrain algebraically, solve, do not search.
 
 From 0034: the loss function's key-cost term is too weak. A 95-letter random key with 71 free slots climbed to fit English gives a crib-perfect text that the harness scores at loss 4.4, below the crib gate, and keeps as champion. The text is overfitting, as the identical score on shuffled K4 shows. Per program.md the ruler is not changed mid-run: the case is in issue #11 for a human decision, and the champion stands as a warning until then. Also: the key alphabet does not affect decryption under a fixed plain and cipher alphabet, so the 24 conventions were 8 distinct classes here; the extra 16 were wasted time.
 
@@ -43,6 +43,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 36 | 8 | Bauer's open Hill variants, chained and paired, solved exactly: dead. |
 | 37 | 6 | Three grid stages, 200,000 sampled triples: best key -3.61 against thirteen shuffles topping at -3.63. Chance by a whisker; the record's own controls were undersized, fixed after the run. |
 | 38 | 3 | A word plus seventeen dates and counts from the story: shortest consistent word 26; nothing. |
+| 39 | 4 | Trifid solved exactly by constraint propagation: no cube is consistent at any period 2-15. Dead. |
 
 ## 2026-10-14
 

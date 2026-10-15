@@ -1,0 +1,106 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "ciphertext autokey with a constant shift, copper with one letter wrong, missing or extra",
+  "lags": "1-96",
+  "classes": 32,
+  "variants": "97 x 25 substitutions (decided exactly), 97 deletions, 98 insertions",
+  "cases": 602112,
+  "complete": true,
+  "controls": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "survivors_by_checks": {
+   "exact, checks 1": {
+    "k4": 3,
+    "controls": [
+     0,
+     1,
+     1,
+     1,
+     0,
+     4,
+     3,
+     1,
+     4,
+     2
+    ]
+   },
+   "shift, checks 1": {
+    "k4": 225,
+    "controls": [
+     16,
+     197,
+     131,
+     199,
+     300,
+     202,
+     293,
+     480,
+     415,
+     248
+    ]
+   },
+   "shift, checks 2": {
+    "k4": 0,
+    "controls": [
+     0,
+     1,
+     0,
+     0,
+     72,
+     1,
+     1,
+     3,
+     0,
+     0
+    ]
+   },
+   "substitution, checks 2": {
+    "k4": 6,
+    "controls": [
+     6,
+     2,
+     8,
+     14,
+     4,
+     4,
+     6,
+     6,
+     6,
+     8
+    ]
+   },
+   "substitution, checks 3": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     2,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "survivors_3plus": [],
+  "lag21_survivors": []
+ },
+ "notes": "602112 lag-class-variant cases (complete). Survivors, K4 (controls min-max): exact, checks 1: 3 (0-4); shift, checks 1: 225 (16-480); shift, checks 2: 0 (0-72); substitution, checks 2: 6 (2-14); substitution, checks 3: 0 (0-2). Three or more checks: 0. Lag 21: 0.",
+ "error": null,
+ "worked_example": "lag 21, sculpture's alphabet throughout, Vigenere\n\nplace  known  carved  21 back  residual\n   22      E       F        O        22\n   23      A       L        B         2\n   24      S       R        K        21\n   25      T       V        R        17\n   26      N       Q        U         6",
+ "seconds": 36.94055509567261
+}

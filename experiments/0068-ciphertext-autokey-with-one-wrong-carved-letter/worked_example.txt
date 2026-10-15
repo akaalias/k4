@@ -1,0 +1,8 @@
+lag 21, sculpture's alphabet throughout, Vigenere
+
+place  known  carved  21 back  residual
+   22      E       F        O        22
+   23      A       L        B         2
+   24      S       R        K        21
+   25      T       V        R        17
+   26      N       Q        U         6

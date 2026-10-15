@@ -105,7 +105,7 @@ def main():
             row["fitness"] = fitness(c["plaintext"], c["key_bits"])
         scored.append(row)
     passed = [r for r in scored if r["gate_passed"]]
-    passed.sort(key=lambda r: r["fitness"], reverse=True)
+    passed.sort(key=lambda r: r["loss"])          # one number everywhere: lowest loss wins
     best = passed[0] if passed else None
     best_hits = max((r["crib_hits"] for r in scored), default=0)
     best_words = max(scored, key=lambda r: r["crib_hits"])["crib_words"] if scored else {}
@@ -113,9 +113,9 @@ def main():
     best_loss = min(losses) if losses else None
 
     champion = load_champion()
-    if best and (champion is None or best["fitness"] > champion["fitness"]):
+    if best and (champion is None or best["loss"] < champion.get("loss", float("inf"))):
         decision = "kept"
-        CHAMPION.write_text(json.dumps({"experiment": tag, "fitness": best["fitness"],
+        CHAMPION.write_text(json.dumps({"experiment": tag, "loss": best["loss"], "fitness": best["fitness"],
                                         "plaintext": best["plaintext"], "key": best["key"],
                                         "key_description": best["key_description"]}, indent=1))
     else:
@@ -128,7 +128,7 @@ def main():
     result = {
         "id": exp_id, "tag": tag, "started": started, "seconds": round(seconds, 1), "status": status,
         "phases": phases, "ended_epoch": time.time(),
-        "decision": decision, "n_candidates": len(scored), "n_passed": len(passed),
+        "decision": decision, "decision_rule": "loss", "n_candidates": len(scored), "n_passed": len(passed),
         "best_crib_hits": best_hits, "best_crib_words": best_words, "best_fitness": best["fitness"] if best else None,
         "best_loss": best_loss,
         "champion_before": champion, "bounds": raw.get("bounds", {}), "notes": raw.get("notes", ""),

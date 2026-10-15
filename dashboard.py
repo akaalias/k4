@@ -233,15 +233,37 @@ def panel_block(ct, pt, known):
     return f'<div class="panel-wrap">{block(ct, "as carved", True)}{right}</div>'
 
 
+WORST = 240.0   # the loss with all 24 known letters wrong
+
+
+def pct(v):
+    return "" if v is None else f"{100.0 * v / WORST:.1f}%"
+
+
 def best_candidate(r):
-    """The candidate the harness ranked best: top fitness among gate passers, else most crib hits."""
+    """The candidate the harness ranked best among gate passers: lowest loss since the rule changed
+    at experiment 0050, highest fitness before (experiments 0001-0049). Else most crib hits."""
     cands = r.get("candidates", [])
     if not cands:
         return None
     passed = [c for c in cands if c.get("gate_passed")]
     if passed:
+        if r.get("decision_rule") == "loss":
+            return min(passed, key=lambda c: c.get("loss") if c.get("loss") is not None else 1e9)
         return max(passed, key=lambda c: c.get("fitness") if c.get("fitness") is not None else -99)
     return max(cands, key=lambda c: c.get("crib_hits", 0))
+
+
+def row_loss(r):
+    """What a row is marked at: the kept candidate's loss for a kept experiment, else its best."""
+    kl = kept_loss(r)
+    return kl if kl is not None else r.get("best_loss")
+
+
+def kept_loss(r):
+    """The loss of the candidate that became champion, for a kept experiment."""
+    b = best_candidate(r) if r.get("decision") == "kept" else None
+    return b.get("loss") if b else None
 
 
 def load_glossary():
@@ -352,12 +374,12 @@ def loss_chart(rows):
     best = None
     path = []
     for i, r in enumerate(rows):
-        v = r.get("best_loss")
+        v = kept_loss(r)
         if v is None:
             continue
         if best is None:
             best = v; path.append((xs[i], y(best)))
-        elif v < best:
+        else:
             path.append((xs[i], y(best))); best = v; path.append((xs[i], y(best)))
     if path:
         path.append((xs[-1] + 12, y(best)))
@@ -379,7 +401,10 @@ def loss_chart(rows):
         g.append(f'<path d="{d}" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>')
     for i, r in enumerate(rows):
         v = r.get("best_loss")
-        tip = f"{esc(r['tag'])}<br>{esc(r['title'])}<br>loss {'' if v is None else f'{v:.2f}'}; cribs {r['best_crib_hits']}/24 ({esc(words_str(r))})<br>{esc(r['decision'])}, {r['n_candidates']} candidates"
+        kl = kept_loss(r)
+        if kl is not None:
+            v = kl                      # a kept experiment is marked at the loss of the candidate it kept
+        tip = f"{esc(r['tag'])}<br>{esc(r['title'])}<br>loss {pct(v)} of the worst possible ({'' if v is None else f'{v:.2f}'}); cribs {r['best_crib_hits']}/24 ({esc(words_str(r))})<br>{esc(r['decision'])}, {r['n_candidates']} candidates"
         href = f"/exp/{esc(r['tag'])}"
         dec = r.get("decision")
         if dec in ("error", "timeout"):
@@ -391,7 +416,7 @@ def loss_chart(rows):
             fill = "var(--ink)" if dec == "kept" else "var(--disc)"
             g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5.5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
     if best is not None:
-        g.append(f'<text x="{xs[-1]+16:.1f}" y="{y(best)+5:.1f}" font-size="14" fill="var(--ink)">{100.0 * best / ymax:.1f}% best so far</text>')
+        g.append(f'<text x="{xs[-1]+16:.1f}" y="{y(best)+5:.1f}" font-size="14" fill="var(--ink)">{100.0 * best / ymax:.1f}% the champion</text>')
     g.append(f'<text transform="translate(18,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="14" fill="var(--muted)">loss, as % of the worst possible</text>')
     for i in range(n):
         if i == 0 or (i + 1) % 3 == 0 or i == n - 1:
@@ -399,11 +424,11 @@ def loss_chart(rows):
     g.append(f'<text x="{L-8}" y="{H-8}" font-size="13" fill="var(--faint)" text-anchor="end">experiment</text>')
     g.append("</svg>")
     legend = ('<div class="chart-legend">'
-              '<span><i class="mk mk-kept"></i>kept: passed every gate and beat the champion</span>'
+              '<span><i class="mk mk-kept"></i>kept: passed every gate and beat the champion; marked at the loss of the candidate it kept</span>'
               '<span><i class="mk mk-disc"></i>reverted, with a candidate</span>'
               '<span><i class="mk mk-none"></i>reverted, no candidate: ruled out before one was built</span>'
               '<span><i class="mk mk-err"></i>errored</span>'
-              '<span><i class="mk mk-line"></i>best so far</span></div>')
+              '<span><i class="mk mk-line"></i>the champion\'s loss; it moves only when an experiment is kept</span></div>')
     eyebrow = f'<p class="chart-eyebrow">Loss per experiment, all {n} of them &middot; share of the worst possible, 24 known letters wrong &middot; lower is better</p>'
     return "<div class='chart-wide'>" + eyebrow + "<figure class='chart'>" + "".join(g) + "</figure>" + legend + "</div>"
 
@@ -420,13 +445,15 @@ GL_JS = """<script>
 
 
 def page(title, body, active="", refresh=True):
-    meta = '<meta http-equiv="refresh" content="20">' if refresh else ""
+    # reload only when the record changes: poll a version stamp so the 3D model and a reader's
+    # place on the page survive quiet periods
+    meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     nav = "".join(f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>' for h, t in
                   (("/", "Overview"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
-<div class="foot"><span class="dot"></span>Rendered from the record. Refreshes every 20 seconds.</div>{JS}{GL_JS}</body></html>"""
+<div class="foot"><span class="dot"></span>Rendered from the record. Reloads when a new experiment lands.</div>{JS}{GL_JS}</body></html>"""
 
 
 def crib_strip():
@@ -513,16 +540,15 @@ def overview():
     n = len(rows)
     kept = sum(1 for r in rows if r["decision"] == "kept")
     best_hits = max((r["best_crib_hits"] for r in rows), default=0)
-    losses = [r["best_loss"] for r in rows if r.get("best_loss") is not None]
-    best_loss = min(losses) if losses else None
+    best_loss = ch.get("loss") if ch else None
     fams = len({r["family"] for r in rows})
     secs = sum(sum((r.get("phases") or {}).values()) or r["seconds"] for r in rows)
     by_phase = {}
     for r in rows:
         for k, v in (r.get("phases") or {"run": r["seconds"]}).items():
             by_phase[k] = by_phase.get(k, 0.0) + v
-    hero = f"""<div class="stat-hero"><b class="num">{'' if best_loss is None else f'{best_loss:.1f}'}</b><span>best loss so far. zero is solved</span></div>
-<p class="hero-sub">Ten per missed known letter (24 cribs: EASTNORTHEAST, BERLINCLOCK), plus how far the other 73 letters are from English, plus the cost of a key too long to remember. Below ten means every known letter is in place.</p>
+    hero = f"""<div class="stat-hero"><b class="num">{pct(best_loss) or '&ndash;'}</b><span>the champion's loss, as a share of the worst possible{'' if best_loss is None else f' ({best_loss:.1f} of {WORST:.0f})'}. zero is solved</span></div>
+<p class="hero-sub">Ten per missed known letter (24 cribs: EASTNORTHEAST, BERLINCLOCK), plus how far the other 73 letters are from English, plus the cost of a key too long to remember; 240 is every known letter wrong. Below ten, or 4.2%, means every known letter is in place.</p>
 <div class="stats">
 <div class="stat"><b class="num">{n}</b><span>experiments</span></div>
 <div class="stat"><b class="num">{kept}</b><span>kept</span></div>
@@ -533,19 +559,19 @@ def overview():
 <p class="hero-sub">Time by phase across the run: {', '.join(f"{k} {fmt_dur(v)}" for k, v in sorted(by_phase.items(), key=lambda kv: PHASE_ORDER.index(kv[0]) if kv[0] in PHASE_ORDER else 9) if v >= 1) or 'none yet'}.</p>"""
     if ch:
         from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
-        champ = f"""<div class="callout"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}, fitness {ch['fitness']:.3f}. A champion is the best candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.</p></div>"""
+        champ = f"""<div class="callout"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}; loss {ch.get('loss', 0):.2f}, {pct(ch.get('loss'))} of the worst possible. A champion is the lowest-loss candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.{' Experiments 0001-0049 were kept by a different number, fitness, which is why a reverted experiment can sit below the champion in the chart; from 0050 the harness keeps by loss.' if ch['experiment'][:4] <= '0049' else ''}</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
     scale_max = max((sum((r.get("phases") or {"run": r["seconds"]}).values()) for r in rows), default=0)
     trs = "".join(
         f"""<tr><td class="num">{int(r['tag'][:4])}</td><td><a href="/exp/{esc(r['tag'])}">{esc(r['title'])}</a></td><td class="muted">{esc(r['family'])}</td>
 <td class="{esc(r['decision'])}">{esc(r['decision'])}</td>
-<td class="num">{'' if r.get('best_loss') is None else f"{r['best_loss']:.1f}"}</td>
+<td class="num" title="{'' if row_loss(r) is None else f"{row_loss(r):.2f} of {WORST:.0f}"}">{pct(row_loss(r))}</td>
 <td class="num" title="{esc(words_str(r))}">{r['best_crib_hits']}/24</td>
 <td class="num">{r['n_candidates']}</td><td class="num" title="{esc(', '.join(f'{k} {fmt_dur(v)}' for k, v in (r.get('phases') or {}).items()))}">{fmt_dur(sum((r.get('phases') or {}).values()) or r['seconds'])}</td><td>{phase_bar(r.get('phases') or {'run': r['seconds']}, scale_max)}</td></tr>"""
         for r in reversed(rows)
     )
-    table = f"""<table><thead><tr><th class="num">id</th><th>title</th><th>family</th><th>decision</th><th class="num">loss</th><th class="num" title="known letters the best candidate got right, out of 24">crib letters</th><th class="num" title="full 97-letter decryptions the experiment handed to the gates">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
+    table = f"""<table><thead><tr><th class="num">id</th><th>title</th><th>family</th><th>decision</th><th class="num" title="the best candidate's loss as a share of the worst possible, 240">loss</th><th class="num" title="known letters the best candidate got right, out of 24">crib letters</th><th class="num" title="full 97-letter decryptions the experiment handed to the gates">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
     by_parent = {}
     for r in rows:
         by_parent.setdefault(r["parent"], []).append(r)
@@ -556,7 +582,7 @@ def overview():
             return ""
         return "<ul class='lineage'>" + "".join(
             f"<li><a href='/exp/{esc(k['tag'])}'>{esc(k['tag'])}</a> <span class='{esc(k['decision'])}'>{esc(k['decision'])}</span> "
-            f"<span class='muted'>{esc(k['family'])}, loss {'' if k.get('best_loss') is None else f'{k['best_loss']:.1f}'}</span>{tree(k['tag'])}</li>" for k in kids) + "</ul>"
+            f"<span class='muted'>{esc(k['family'])}, loss {pct(row_loss(k))}</span>{tree(k['tag'])}</li>" for k in kids) + "</ul>"
 
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
@@ -600,6 +626,11 @@ def experiment_page(tag):
     decision = r["decision"]
     best = best_candidate(r)
     # header
+    kl = kept_loss(r)
+    shown_loss = kl if kl is not None else r.get("best_loss")
+    loss_note = ""
+    if kl is not None and r.get("best_loss") is not None and r["best_loss"] < kl - 1e-9:
+        loss_note = f"; its lowest candidate scored {pct(r['best_loss'])} ({r['best_loss']:.1f}), but the rule then in force, highest fitness, kept this one"
     head = f"""<p class="crumb"><a href="/">Overview</a> / experiment {num}</p>
 <div class="rec-head">
 <p class="eyebrow">Experiment {num} &middot; family {esc(fam_num)}, {esc(fam_label)} &middot; <span class="{esc(decision)}">{esc(decision)}</span></p>
@@ -610,7 +641,7 @@ def experiment_page(tag):
 <div><b>{fmt_dur(total)}</b><span>time, all phases</span><div class="meta-bar">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=190, height=8)}</div></div>
 <div><b>{r['n_candidates']}</b><span>candidates</span></div>
 <div><b>{r['best_crib_hits']}/24</b><span>known letters right</span></div>
-<div><b>{'' if r.get('best_loss') is None else f"{r['best_loss']:.1f}"}</b><span>best loss</span></div>
+<div><b>{pct(shown_loss) or '&ndash;'}</b><span>{'loss of the candidate kept' if kl is not None else 'best loss'}, of the worst possible{'' if shown_loss is None else f" ({shown_loss:.1f} of {WORST:.0f})"}{loss_note}</span></div>
 </div></div>"""
     # section 1: plain words with the glossary rail
     eli5 = r.get("eli5") or ""
@@ -649,7 +680,7 @@ def experiment_page(tag):
     # section 2: best candidate
     cand = ""
     if best:
-        how = "the harness's best by fitness among gate passers" if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
+        how = ("the harness's best among gate passers: lowest loss" if r.get("decision_rule") == "loss" else "the harness's best among gate passers: highest fitness, the rule before experiment 0050") if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
         cand = sec(2, "Best candidate against the known letters", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, with the 24 known positions underlined. Right, the candidate: a letter on a wash sits at a known position and matches, a red one sits there and misses. This is {how}.") + panel_block(K4, best["plaintext"], KNOWN)
     else:
         cand = sec(2, "Best candidate against the known letters", "This experiment produced no candidate: the search ruled everything out before a full text was built. Its product is the bounded negative in section 7.")
@@ -685,10 +716,15 @@ def route(path):
         return overview()
     if path.startswith("/exp/"):
         return experiment_page(path[5:].strip("/"))
+    if path == "/version":
+        stamp = "|".join(str(int(p.stat().st_mtime)) for p in (ROOT / "results.tsv", ROOT / "champion.json", ROOT / "NOTEBOOK.md") if p.exists())
+        return ("text/plain", stamp)
     if path.startswith("/assets/"):
         f = ROOT / "assets" / path[len("/assets/"):]
         if f.exists() and f.suffix == ".js":
             return ("application/javascript", f.read_text())
+        if f.exists() and f.suffix == ".glb":
+            return ("model/gltf-binary", f.read_bytes())
     if path == "/glossary":
         return md_page("glossary", "GLOSSARY.md", "/glossary", refresh=False)
     if path == "/notebook":
@@ -710,7 +746,7 @@ class H(BaseHTTPRequestHandler):
         ctype = "text/html; charset=utf-8"
         if isinstance(out, tuple):
             ctype, out = out
-        data = out.encode()
+        data = out if isinstance(out, bytes) else out.encode()
         self.send_response(200)
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(data)))

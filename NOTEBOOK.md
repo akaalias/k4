@@ -29,6 +29,7 @@ From 0027: the width-7 doublet column is reproduced by nothing, random letters i
 | 28 | 5 | Gromark bases 2-9: every vocabulary alphabet triple forces a shift of 15 or more, so bases up to 15 are dead. Clocks batched, so design and implement times are lost. |
 | 29 | 1 | Bean's closeness over all alphabet pairs: smallest largest shift 8, same as shuffled K4. Chance. |
 | 30 | 1 | Ciphertext as its own key under every index rule, and the message mirrored as key: nothing. |
+| 31 | 1 | Copper off by one letter, 195 variants, through the chained autokey and two-word tests: nothing. |
 
 ## 2026-10-14
 

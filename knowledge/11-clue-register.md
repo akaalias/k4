@@ -121,7 +121,7 @@ Status: partly confirmed by the cribs.
 
 **C17. "Whether it's 97, whether it's 100... I seem to like to manipulate the
 information."** (2005). Readings: (a) disinformation; (b) the working text had nulls or
-a different length before being cut to 97; (c) the "?" counts. Family G. Status: (a) and (b) partly bounded by 0009: one letter inserted or deleted at any position does not make the crib-forced tableau key readable under 24 conventions.
+a different length before being cut to 97; (c) the "?" counts. Family G. Status: (a) and (b) bounded by 0009 (periodic key stretches) and 0031 (chained autokey, two-word composition): one letter inserted or deleted anywhere revives nothing.
 parameter.
 
 **C18. "Scheidt's 'a bit of stego'" and "I think there are 98 characters left."** (2004,

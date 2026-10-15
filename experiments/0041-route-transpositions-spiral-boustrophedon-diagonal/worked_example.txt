@@ -1,0 +1,11 @@
+route: rows of 10, read out in a clockwise spiral from the top left
+
+first twelve positions read out: 1 2 3 4 5 6 7 8 9 10 20 30
+
+plain pos  letter  lands at  carved there
+       22    E        61        N
+       23    A        62        F
+       24    S        63        B
+       64    B        91        A
+       65    E        90        U
+       66    R        89        H

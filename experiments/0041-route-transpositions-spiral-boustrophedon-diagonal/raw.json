@@ -1,0 +1,159 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "route transpositions (spiral, snake, diagonal), widths 2-48, forward and inverse; before a periodic tableau and after a substitution",
+  "routes": 1128,
+  "conventions_before": 8,
+  "before_smallest_live_period": 23,
+  "before_min_period_histogram": {
+   "23": 19,
+   "24": 93,
+   "25": 138,
+   "26": 268,
+   "27": 469,
+   "28": 261,
+   "29": 167,
+   "30": 180,
+   "31": 217,
+   "32": 206
+  },
+  "before_best": [
+   {
+    "score": -4.937,
+    "route": "spiral w=5 from bl ccw inv",
+    "convention": "kry/kry/kry/beau",
+    "period": 38,
+    "runs": [
+     "GLEBRIM"
+    ]
+   },
+   {
+    "score": -5.078,
+    "route": "diagonal zigzag w=36 inv",
+    "convention": "kry/std/kry/beau",
+    "period": 40,
+    "runs": [
+     "LFULORAC"
+    ]
+   },
+   {
+    "score": -5.438,
+    "route": "diagonal zigzag w=34 inv",
+    "convention": "kry/std/kry/beau",
+    "period": 28,
+    "runs": [
+     "BEOPLFULOWEVE",
+     "YDLUNDT"
+    ]
+   },
+   {
+    "score": -5.491,
+    "route": "spiral w=27 from bl ccw inv",
+    "convention": "std/kry/kry/beau",
+    "period": 40,
+    "runs": [
+     "AILDADCITYU",
+     "FBIOTIGGR"
+    ]
+   },
+   {
+    "score": -5.516,
+    "route": "diagonal zigzag w=31 inv",
+    "convention": "std/std/kry/beau",
+    "period": 34,
+    "runs": [
+     "NDOMETZRANEQ"
+    ]
+   },
+   {
+    "score": -5.531,
+    "route": "spiral w=5 from bl ccw inv",
+    "convention": "std/std/kry/vig",
+    "period": 33,
+    "runs": [
+     "DASLYPH"
+    ]
+   },
+   {
+    "score": -5.549,
+    "route": "spiral w=28 from tr cw inv",
+    "convention": "kry/std/kry/beau",
+    "period": 37,
+    "runs": [
+     "UTIPACITTISPUKUB"
+    ]
+   },
+   {
+    "score": -5.581,
+    "route": "spiral w=40 from tl ccw",
+    "convention": "std/kry/kry/vig",
+    "period": 40,
+    "runs": [
+     "IONTOGNPAOE",
+     "RERISAIMMEOTJ"
+    ]
+   },
+   {
+    "score": -5.581,
+    "route": "spiral w=40 from tl ccw",
+    "convention": "std/kry/kry/vig",
+    "period": 39,
+    "runs": [
+     "IONTOGNPAOE",
+     "RERISAIMMEOTJ"
+    ]
+   },
+   {
+    "score": -5.581,
+    "route": "spiral w=40 from tl ccw",
+    "convention": "std/kry/kry/vig",
+    "period": 38,
+    "runs": [
+     "IONTOGNPAOE",
+     "RERISAIMMEOTJ"
+    ]
+   }
+  ],
+  "before_shuffled_best": [
+   -5.305,
+   -4.473,
+   -4.909,
+   -4.614,
+   -4.791,
+   -5.019,
+   -5.015,
+   -4.968,
+   -4.85,
+   -4.858
+  ],
+  "before_shuffled_smallest_period": [
+   22,
+   22,
+   22,
+   22,
+   22,
+   23,
+   22,
+   23,
+   23,
+   22
+  ],
+  "after_survivors": [],
+  "after_shuffled_survivor_counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "notes": "1128 routes. Before the tableau: smallest live period 23, best forced key -4.937 vs shuffled [-5.305, -4.473, -4.909, -4.614, -4.791, -5.019, -5.015, -4.968, -4.85, -4.858]. After a substitution: 0 routes pass the one-to-one test vs shuffled [0, 0, 0, 0, 0, 0, 0, 0, 0, 0].",
+ "error": null,
+ "worked_example": "route: rows of 10, read out in a clockwise spiral from the top left\n\nfirst twelve positions read out: 1 2 3 4 5 6 7 8 9 10 20 30\n\nplain pos  letter  lands at  carved there\n       22    E        61        N\n       23    A        62        F\n       24    S        63        B\n       64    B        91        A\n       65    E        90        U\n       66    R        89        H",
+ "seconds": 5.978293180465698
+}

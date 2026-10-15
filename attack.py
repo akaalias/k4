@@ -1,180 +1,118 @@
-"""Experiment 0020. See program.md for the contract."""
+"""Experiment 0021. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "short-periods-mixed-alphabets-consistency",
-    "title": "The short periods come back: a periodic tableau at periods 1 to 52 with alphabets mixed from the puzzle's words",
+    "slug": "running-key-from-carter-tomb-of-tutankhamen",
+    "title": "A running key from Howard Carter's book: the text K3 paraphrases, slid past K4 at every offset",
     "family": "1-keyed-periodic",
-    "parent": "0005-quagmire-period-sweep-forced-keys",
-    "changed": "0005 excluded periods 1-26 and 30-52 under the standard and KRYPTOS alphabets only. Here the plain and cipher alphabets range over the four Friedman mixings of every vocabulary word, which changes every forced key letter and so every consistency check. Family 1 re-entered with a new alphabet source.",
+    "parent": "0017-running-key-from-the-sculpture-itself",
+    "changed": "Key source is Carter's The Tomb of Tut-ankh-Amen, volume one, the book K3 paraphrases, instead of the sculpture's own texts. About 330,000 letters, both directions, every offset.",
     "hypothesis_expert": (
-        "K4's eleven width-21 vertical repeats and the width-7 doublet column (0018, knowledge/04-structure.md) "
-        "are what a key of period 21 or 42 would leave: positions 21 apart share a key letter, so English "
-        "bigrams repeat vertically. 0005 and 0011 killed periods 1-26 and 30-52, but only with plain and "
-        "cipher alphabets in {standard, KRYPTOS}; a tableau built on PALIMPSEST, ABSCISSA or any other word "
-        "(Scheidt's keyword alphabets, C5, C29) gives different forced key indices and was never swept at these "
-        "periods. For each pair of alphabets from the pool (standard, KRYPTOS, four mixings of each vocabulary "
-        "word, 248 in all) and each of three modes, the forced key index at every crib position follows; for "
-        "each period 1-52 the slots that collide must agree. Period 21 has eleven collisions, so a surviving "
-        "pair there has chance probability 26 to the minus eleven per trial against 184,512 trials. Survivors "
-        "at any period get the forced key letters read in the standard, KRYPTOS and keyword-mixed alphabets and scored as "
-        "English; a vocabulary match is decrypted and submitted. Bounds: complete for this alphabet pool, "
-        "periods 1-52, and the three modes."
+        "Sanborn: 'I have left instructions in the earlier text that refer to later text' and the K1-K3 answers "
+        "'contain clues to the fourth' (C7); K3 is Carter's account of opening the tomb, paraphrased, and the "
+        "misspelt DESPARATLY and the 'can you see anything' line point at the book itself "
+        "(knowledge/sources/carter-1923-tomb-of-tutankhamen-vol1.txt, an OCR scan). A running key from a "
+        "printed book is the classic 1900-1945 hand system Scheidt taught (C5). Test: the book's letters, "
+        "forward and backward, at every offset, under the 24 conventions, scored by crib mismatches; zero "
+        "mismatches is a survivor and is decrypted; one or two are reported for the one-letter-error "
+        "reading (C17) and for OCR damage. About 16 million trials; chance survival is 26 to the minus 24 "
+        "each, and a near miss at two mismatches has chance about 10 to the minus 28 per trial. Bounds: "
+        "complete for this text as scanned, both directions."
     ),
     "hypothesis_eli5": (
-        "Earlier we ruled out short secret words because two known letters that would share a letter of the "
-        "word disagreed. But that reasoning assumed the table was built from the word KRYPTOS or the plain "
-        "alphabet. If the table was built from another word, say PALIMPSEST, the same two known letters make "
-        "a different demand and might agree. There is also a hint in the carved text that letters 21 apart "
-        "were treated alike. So we rebuild the table from every word the puzzle knows, in four standard ways, "
-        "and ask again which short lengths the 24 known letters allow."
+        "The third message retells the moment Howard Carter first looked into Tutankhamun's tomb. The "
+        "artist has said the earlier messages hold instructions for the last one. One old trick is to use "
+        "a book as the key: line the book's letters up under the message and add them. We take Carter's "
+        "own book, every page of it, and slide it along the fourth message at every possible starting "
+        "point, forwards and backwards, asking whether any position explains all 24 known letters."
     ),
     "prediction": (
-        "No alphabet pair revives periods 1-26 or 30-52 except by chance at the periods with the fewest "
-        "collisions, 23 to 26, where a few survivors appear per period; 30 to 52 are counted only. Period 21 and 42 have "
-        "no survivor. No survivor's forced key matches the vocabulary; zero candidates pass."
+        "No offset in either direction explains all 24 known letters, and none comes within two. The "
+        "best trial has four or more mismatches, which is chance among 16 million trials. Zero candidates pass."
     ),
     "method": (
-        "1. Build the alphabet pool. 2. For each plain alphabet, cipher alphabet and mode, compute the forced "
-        "key index at each of the 24 crib positions. 3. For each period 1-52, group the positions by slot and "
-        "reject on any disagreement. 4. Count survivors by period, with a shuffled-K4 control. 5. For "
-        "survivors, read the forced indices in each keyword-mixed key alphabet, match the fragment against the vocabulary "
-        "and K1-K3 windows, score it as English, and decrypt any match."
+        "1. Strip the scan to letters A-Z. 2. For each direction, convention and offset, encrypt the 24 known "
+        "plaintext letters with the book letters at their positions and count mismatches against the carved "
+        "letters, stopping at the third mismatch. 3. Keep every trial with two or fewer mismatches. "
+        "4. Decrypt and submit any zero-mismatch trial."
     ),
     "walkthrough": (
-        "1. Build the alphabet from PALIMPSEST: PALIMSETBCDFGHJKNOQRUVWXYZ, and use it for the plaintext; "
-        "keep KRYPTOS for the ciphertext. 2. Position 22 is E, index 6; ciphertext F, index 11 in KRYPTOS; "
-        "Vigenere gives key index 5. 3. Position 64, which is 42 later, is B, index 8; ciphertext N, index 19; "
-        "key index 11. 4. At period 21 or 42 these two positions share a slot, so 5 must equal 11: it does "
-        "not, and this alphabet pair is dead at 21 and 42. 5. Try the next pair; eleven such checks apply "
-        "at period 21. 6. A pair that passes all eleven would be a real find: read off its forced key letters "
-        "and see whether they spell a word."
+        "1. Open the book at any point, say the words THE TOMB OF TUT ANKH AMEN, and write its letters under "
+        "the message starting at position 1: T under O, H under B, E under K, and so on. 2. Position 22 of the "
+        "message is E; the book letter under it is the 22nd letter from where you opened. 3. On the sculpture's "
+        "table, find the row of that book letter and the column of E; the letter there should be the carved F. "
+        "4. If it is not, count one miss and go on to the next known letter. 5. After three misses, give up "
+        "on this opening and move the book one letter along. 6. Do this for every opening in the book, "
+        "then with the book read backwards."
     ),
 }
 
-import random
-from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY, load_k1, load_k2, load_k3
+from pathlib import Path
+from kryptos.alphabets import conventions, encrypt_letter, decrypt_letter
 
 N = 97
-MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
-DEC = {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}
-ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
-MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
-PERIODS = list(range(1, 53))
+SRC = Path(__file__).resolve().parent / "knowledge" / "sources" / "carter-1923-tomb-of-tutankhamen-vol1.txt"
 
 
 def letters(s):
-    return "".join(c for c in s if "A" <= c <= "Z")
+    return "".join(c for c in s.upper() if "A" <= c <= "Z")
+
+
+def sources():
+    t = letters(SRC.read_text(errors="ignore"))
+    return {"carter vol1 fwd": t, "carter vol1 bwd": t[::-1]}
 
 
 def encrypt(plaintext, key):
-    pa, ca, ka, m, k = key["pa"], key["ca"], key["ka"], key["m"], key["key"]
-    return "".join(ca[ENC[m](pa.index(p), ka.index(k[i % len(k)]))] for i, p in enumerate(plaintext))
-
-
-def pool_of(vocab):
-    pool = {"std": STD, "kry": KRY}
-    for w in vocab:
-        if len(set(w)) >= 3:
-            for mname, fn in MIX.items():
-                pool[f"{w}/{mname}"] = fn(w)
-    seen, out = {}, {}
-    for name, A in pool.items():
-        if A not in seen:
-            seen[A] = name; out[name] = A
-    return out
-
-
-DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0 and k <= 52] for d in range(1, N + 1)}
-
-
-def sweep(ct, known, pool, index, time_left):
-    """Period p is dead when it divides the distance between two crib positions whose forced
-    key indices differ. Survivors are returned per period with their forced slots."""
-    crib_pos = sorted(known)
-    survivors = {}
-    counts = {}
-    trials = 0
-    for pname, pa in pool.items():
-        pidx = index[pname]
-        for cname, ca in pool.items():
-            cidx = index[cname]
-            for m, f in MODES.items():
-                trials += 1
-                forced = [(pos - 1, f(pidx[known[pos]], cidx[ct[pos - 1]])) for pos in crib_pos]
-                dead = set()
-                for x in range(24):
-                    ix, kx = forced[x]
-                    for y in range(x + 1, 24):
-                        iy, ky = forced[y]
-                        if kx != ky:
-                            dead.update(DIVISORS[abs(ix - iy)])
-                for P in PERIODS:
-                    if P in dead:
-                        continue
-                    if P <= 26:
-                        survivors.setdefault(P, []).append((pname, cname, m, {i % P: k for i, k in forced}))
-                    else:
-                        counts[P] = counts.get(P, 0) + 1
-        if time_left() < 30:
-            break
-    return survivors, counts, trials
+    text = sources()[key["source"]]
+    n = len(text); o = key["offset"]
+    pa, ca, ka, m = key["pa"], key["ca"], key["ka"], key["m"]
+    return "".join(encrypt_letter(p, text[(o + i) % n], pa, ca, ka, m) for i, p in enumerate(plaintext))
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    vocab = list(ctx.vocabulary)
-    pool = pool_of(vocab)
-    index = {name: {ch: i for i, ch in enumerate(A)} for name, A in pool.items()}
-    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
-    key_pool = {n: A for n, A in pool.items() if n in ("std", "kry") or n.endswith("/keyword")}
-    survivors, counts, trials = sweep(ct, known, pool, index, ctx.time_left)
-    by_period = {str(P): (len(survivors[P]) if P in survivors else counts.get(P, 0)) for P in PERIODS}
-    # control
-    letters_ = list(ct); random.Random(0).shuffle(letters_)
-    null_surv, null_counts, _ = sweep("".join(letters_), known, pool, index, ctx.time_left)
-    null_by_period = {str(P): (len(null_surv[P]) if P in null_surv else null_counts.get(P, 0)) for P in PERIODS}
-    # survivors: match and score
-    candidates, best = [], []
-    for P, lst in survivors.items():
-        wordpool = set(w for w in vocab if len(w) == P)
-        for t in texts:
-            for i in range(0, len(t) - P + 1):
-                wordpool.add(t[i:i + P])
-        for pname, cname, m, slots in lst:
-            for kname, ka in key_pool.items():
-                frag = "".join(ka[slots[s]] if s in slots else "." for s in range(P))
-                runs = [r for r in frag.split(".") if len(r) >= 5]
-                if runs:
-                    qs = sum(len(r) - 3 for r in runs)
-                    sc = sum(ctx.english_score(r) * (len(r) - 3) for r in runs) / qs
-                    if len(best) < 15 or sc > best[-1][0]:
-                        best.append((sc, P, pname, cname, kname, m, frag)); best.sort(reverse=True); best = best[:15]
-                for kw in wordpool:
-                    if all(ka[slots[s]] == kw[s] for s in slots):
-                        key = {"pa": pool[pname], "ca": pool[cname], "ka": ka, "m": m, "key": kw}
-                        pt = "".join(pool[pname][DEC[m](index[cname][c], ka.index(kw[i % P]))] for i, c in enumerate(ct))
-                        candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * P + 12,
-                                           "key_description": f"period {P} key {kw}; plain {pname}, cipher {cname}, key alphabet {kname}, {m}"})
-    short_live = {P: len(survivors[P]) for P in sorted(survivors)}
+    src = sources()
+    crib = sorted(known.items())
+    trials = 0
+    near = []
+    candidates = []
+    for name, text in src.items():
+        n = len(text)
+        for conv in conventions():
+            pa, ca, ka, m = conv
+            table = {(p, k): encrypt_letter(p, k, pa, ca, ka, m) for p in set(known.values()) for k in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
+            for o in range(n):
+                trials += 1
+                mism = 0
+                for pos, p in crib:
+                    if table[(p, text[(o + pos - 1) % n])] != ct[pos - 1]:
+                        mism += 1
+                        if mism > 2:
+                            break
+                if mism <= 2:
+                    near.append((mism, name, "/".join(conv), o, text[o:o + 40]))
+                    if mism == 0:
+                        key = {"source": name, "offset": o, "pa": pa, "ca": ca, "ka": ka, "m": m}
+                        pt = "".join(decrypt_letter(ct[i], text[(o + i) % n], pa, ca, ka, m) for i in range(N))
+                        candidates.append({"plaintext": pt, "key": key, "key_bits": 25, "key_description": f"running key {name} offset {o}, {pa}/{ca}/{ka} {m}"})
+            if ctx.time_left() < 30:
+                break
+    near.sort()
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "periodic tableau, alphabets mixed from the vocabulary, periods 1-52", "alphabets": len(pool),
-                   "alphabet_pairs_x_modes": trials, "survivors_by_period": by_period,
-                   "shuffled_k4_survivors_by_period": null_by_period,
-                   "short_periods_with_survivors": {str(P): n for P, n in short_live.items()},
-                   "period_21_survivors": len(survivors.get(21, [])), "period_42_survivors": counts.get(42, 0),
-                   "best_english_fragments": [{"score": round(sc, 3), "period": P, "plain": a, "cipher": b, "key_alphabet": c, "mode": m, "fragment": fr} for sc, P, a, b, c, m, fr in best],
-                   "vocab_matches": len(candidates)},
-        "notes": f"{trials} alphabet pairs x modes, periods 1-52. Short periods with survivors: {short_live}. Period 21: {len(survivors.get(21, []))}, period 42: {counts.get(42, 0)}. {len(candidates)} vocabulary matches.",
+        "bounds": {"family": "running key from Carter 1923 vol. 1 (OCR scan)", "letters": {k: len(v) for k, v in src.items()},
+                   "conventions": 24, "trials": trials, "fewest_mismatches": near[0][0] if near else "more than 2",
+                   "near_misses": [{"mismatches": a, "source": b, "convention": c, "offset": d, "key_text": e} for a, b, c, d, e in near[:20]],
+                   "survivors": len(candidates)},
+        "notes": f"{trials} trials; {len(candidates)} survivors; {len(near)} trials within two mismatches.",
     }
 
 
 def worked_example(ctx, key):
-    pa = keyword_mixed("PALIMPSEST"); ca = KRY
-    lines = [f"plain alphabet PALIMPSEST/keyword {pa}", f"cipher alphabet KRYPTOS {ca}", "", "period 21 collisions: positions 42 apart share a slot", "", "pos  plain  cipher  key index    pos  plain  cipher  key index   agree?"]
-    for a, b in [(22, 64), (23, 65), (24, 66), (25, 67), (26, 68), (27, 69)]:
-        ka_ = (ca.index(ctx.K4[a - 1]) - pa.index(ctx.KNOWN[a])) % 26
-        kb_ = (ca.index(ctx.K4[b - 1]) - pa.index(ctx.KNOWN[b])) % 26
-        lines.append(f"{a:>3}    {ctx.KNOWN[a]}      {ctx.K4[a-1]}       {ka_:>2}        {b:>3}    {ctx.KNOWN[b]}      {ctx.K4[b-1]}       {kb_:>2}       {'yes' if ka_ == kb_ else 'no'}")
+    text = sources()["carter vol1 fwd"]
+    i = max(text.find("TOMBOFTUT"), 0)
+    lines = [f"book opened at letter {i}: {text[i:i+50]}", "", "pos  plain  book letter  E+key  carved  match"]
+    for pos in (22, 23, 24, 25, 64, 65):
+        p = ctx.KNOWN[pos]; k = text[i + pos - 1]; c = encrypt_letter(p, k, "kry", "kry", "kry", "vig")
+        lines.append(f"{pos:>3}    {p}        {k}          {c}      {ctx.K4[pos-1]}     {'yes' if c == ctx.K4[pos-1] else 'no'}")
     return "\n".join(lines)

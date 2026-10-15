@@ -13,6 +13,10 @@ Bean's closeness), then the untouched families (2 masking, 4 visual), then the o
 error reruns of the strongest sweeps. Every diagnostic experiment gets ten or more shuffled
 controls. The notebook gets a line per experiment as it lands.
 
+| # | Family | One line |
+|---|---|---|
+| 21 | 1 | Carter's book as a running key, 13.7 million offsets and conventions: none within two mismatches. |
+
 ## 2026-10-14
 
 ### Decisions

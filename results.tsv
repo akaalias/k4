@@ -19,3 +19,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0018	0018-construction-simulator-fingerprint	7-construction-simulation	-	reverted	0	0	0			4	design=776 implement=78 test=19 run=4 record=0
 0019	0019-substitution-then-route-crib-images-one-to-one	9-substitution-then-transposition	0018-construction-simulator-fingerprint	reverted	0	0	0			1	design=27 implement=138 test=12 run=1 record=0
 0020	0020-short-periods-mixed-alphabets-consistency	1-keyed-periodic	0005-quagmire-period-sweep-forced-keys	reverted	0	0	0			89	design=28 implement=60 test=1366 run=89 record=0
+0021	0021-running-key-from-carter-tomb-of-tutankhamen	1-keyed-periodic	0017-running-key-from-the-sculpture-itself	reverted	0	0	0			6	design=15 implement=71 test=10 run=6 record=0

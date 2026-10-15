@@ -1,0 +1,9 @@
+book opened at letter 40: TOMBOFTUTANKHAMENHOWARDCARTERANDACMACETHEFIRSTVOLU
+
+pos  plain  book letter  E+key  carved  match
+ 22    E        R          F      F     yes
+ 23    A        D          L      L     yes
+ 24    S        C          I      R     no
+ 25    T        A          E      V     no
+ 64    B        O          G      N     no
+ 65    E        G          X      Y     no

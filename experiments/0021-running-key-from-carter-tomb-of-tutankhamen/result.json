@@ -1,0 +1,38 @@
+{
+ "id": 21,
+ "tag": "0021-running-key-from-carter-tomb-of-tutankhamen",
+ "started": "2026-10-15T06:36:02+00:00",
+ "seconds": 5.9,
+ "status": "ran",
+ "phases": {
+  "design": 14.7,
+  "implement": 70.6,
+  "test": 10.5,
+  "run": 5.9,
+  "record": 0.0
+ },
+ "ended_epoch": 1792046168.833291,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "running key from Carter 1923 vol. 1 (OCR scan)",
+  "letters": {
+   "carter vol1 fwd": 284914,
+   "carter vol1 bwd": 284914
+  },
+  "conventions": 24,
+  "trials": 13675872,
+  "fewest_mismatches": "more than 2",
+  "near_misses": [],
+  "survivors": 0
+ },
+ "notes": "13675872 trials; 0 survivors; 0 trials within two mismatches.",
+ "error": null,
+ "candidates": []
+}

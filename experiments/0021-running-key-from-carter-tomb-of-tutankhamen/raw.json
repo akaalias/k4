@@ -1,0 +1,19 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "running key from Carter 1923 vol. 1 (OCR scan)",
+  "letters": {
+   "carter vol1 fwd": 284914,
+   "carter vol1 bwd": 284914
+  },
+  "conventions": 24,
+  "trials": 13675872,
+  "fewest_mismatches": "more than 2",
+  "near_misses": [],
+  "survivors": 0
+ },
+ "notes": "13675872 trials; 0 survivors; 0 trials within two mismatches.",
+ "error": null,
+ "worked_example": "book opened at letter 40: TOMBOFTUTANKHAMENHOWARDCARTERANDACMACETHEFIRSTVOLU\n\npos  plain  book letter  E+key  carved  match\n 22    E        R          F      F     yes\n 23    A        D          L      L     yes\n 24    S        C          I      R     no\n 25    T        A          E      V     no\n 64    B        O          G      N     no\n 65    E        G          X      Y     no",
+ "seconds": 5.887912034988403
+}

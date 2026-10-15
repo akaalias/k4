@@ -1,0 +1,2549 @@
+{
+ "id": 44,
+ "tag": "0044-hill-with-keyword-numberings",
+ "started": "2026-10-15T09:37:45+00:00",
+ "seconds": 0.5,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 31.1,
+  "test": 1.1,
+  "run": 0.5,
+  "record": 0.2
+ },
+ "ended_epoch": 1792057066.5521972,
+ "decision": "reverted",
+ "n_candidates": 50,
+ "n_passed": 0,
+ "best_crib_hits": 21,
+ "best_crib_words": {
+  "EAST": [
+   3,
+   4
+  ],
+  "NORTHEAST": [
+   9,
+   9
+  ],
+  "BERLIN": [
+   4,
+   6
+  ],
+  "CLOCK": [
+   5,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 35.31137144950235,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig"
+ },
+ "bounds": {
+  "family": "Hill cipher, block sizes 2-4, plain and affine, solved from crib blocks",
+  "numberings": [
+   "std0",
+   "std1",
+   "kry0",
+   "kry1",
+   "PALIMPSEST0",
+   "PALIMPSEST1",
+   "ABSCISSA0",
+   "ABSCISSA1",
+   "ABSCISSAE0",
+   "ABSCISSAE1",
+   "ORDINATE0",
+   "ORDINATE1",
+   "LAYERTWO0",
+   "LAYERTWO1",
+   "LAYER0",
+   "LAYER1",
+   "TWO0",
+   "TWO1",
+   "WEBSTER0",
+   "WEBSTER1",
+   "WILLIAMWEBSTER0",
+   "WILLIAMWEBSTER1",
+   "LANGLEY0",
+   "LANGLEY1",
+   "BERLIN0",
+   "BERLIN1",
+   "CLOCK0",
+   "CLOCK1",
+   "BERLINCLOCK0",
+   "BERLINCLOCK1",
+   "WELTZEITUHR0",
+   "WELTZEITUHR1",
+   "ALEXANDERPLATZ0",
+   "ALEXANDERPLATZ1",
+   "WORLDCLOCK0",
+   "WORLDCLOCK1",
+   "EGYPT0",
+   "EGYPT1",
+   "CARTER0",
+   "CARTER1",
+   "HOWARDCARTER0",
+   "HOWARDCARTER1",
+   "TUTANKHAMUN0",
+   "TUTANKHAMUN1",
+   "TUTANKHAMEN0",
+   "TUTANKHAMEN1",
+   "CARNARVON0",
+   "CARNARVON1",
+   "WONDERFUL0",
+   "WONDERFUL1",
+   "WONDERFULTHINGS0",
+   "WONDERFULTHINGS1",
+   "INVISIBLE0",
+   "INVISIBLE1",
+   "VIRTUALLYINVISIBLE0",
+   "VIRTUALLYINVISIBLE1",
+   "SHADOW0",
+   "SHADOW1",
+   "SHADOWFORCES0",
+   "SHADOWFORCES1",
+   "LUCID0",
+   "LUCID1",
+   "LUCIDMEMORY0",
+   "LUCIDMEMORY1",
+   "POSITION0",
+   "POSITION1",
+   "DIGETAL0",
+   "DIGETAL1",
+   "DIGITAL0",
+   "DIGITAL1",
+   "INTERPRETATION0",
+   "INTERPRETATION1",
+   "MAGNETIC0",
+   "MAGNETIC1",
+   "LODESTONE0",
+   "LODESTONE1",
+   "COMPASS0",
+   "COMPASS1",
+   "IQLUSION0",
+   "IQLUSION1",
+   "ILLUSION0",
+   "ILLUSION1",
+   "UNDERGRUUND0",
+   "UNDERGRUUND1",
+   "UNDERGROUND0",
+   "UNDERGROUND1",
+   "DESPARATLY0",
+   "DESPARATLY1",
+   "DESPERATELY0",
+   "DESPERATELY1",
+   "BURIED0",
+   "BURIED1",
+   "SOMEWHERE0",
+   "SOMEWHERE1",
+   "LOCATION0",
+   "LOCATION1",
+   "MESSAGE0",
+   "MESSAGE1",
+   "SECRET0",
+   "SECRET1",
+   "SANBORN0",
+   "SANBORN1",
+   "SCHEIDT0",
+   "SCHEIDT1",
+   "CIA0",
+   "CIA1",
+   "NORTHEAST0",
+   "NORTHEAST1",
+   "EAST0",
+   "EAST1",
+   "WEST0",
+   "WEST1",
+   "NORTH0",
+   "NORTH1",
+   "SOUTH0",
+   "SOUTH1",
+   "HILL0",
+   "HILL1",
+   "WALL0",
+   "WALL1",
+   "BERLINWALL0",
+   "BERLINWALL1",
+   "MYSTERY0",
+   "MYSTERY1",
+   "RIDDLE0",
+   "RIDDLE1"
+  ],
+  "alignments": "0..n-1",
+  "directions": [
+   "enc",
+   "dec"
+  ],
+  "settings": 4536,
+  "settings_solved": 369,
+  "settings_consistent_on_all_crib_blocks": [
+   {
+    "numbering": "std0",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 16
+   },
+   {
+    "numbering": "std0",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 0,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.862
+    ]
+   },
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.862
+    ]
+   },
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "kry0",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "kry0",
+    "n": 4,
+    "offset": 1,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "kry0",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "kry0",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "kry1",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "kry1",
+    "n": 4,
+    "offset": 1,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "kry1",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "PALIMPSEST0",
+    "n": 4,
+    "offset": 1,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "PALIMPSEST0",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "PALIMPSEST0",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "PALIMPSEST1",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "PALIMPSEST1",
+    "n": 4,
+    "offset": 1,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "PALIMPSEST1",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "PALIMPSEST1",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.448
+    ]
+   },
+   {
+    "numbering": "PALIMPSEST1",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.448
+    ]
+   },
+   {
+    "numbering": "ABSCISSA0",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSCISSA0",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSCISSA1",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 0,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 16,
+    "english": [
+     -7.566,
+     -7.749,
+     -7.796,
+     -7.45,
+     -7.549,
+     -7.988,
+     -7.743,
+     -7.772
+    ]
+   },
+   {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 16,
+    "english": [
+     -7.566,
+     -7.45,
+     -7.988,
+     -7.743,
+     -7.772,
+     -7.549,
+     -7.796,
+     -7.749
+    ]
+   },
+   {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSCISSAE1",
+    "n": 4,
+    "offset": 0,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSCISSAE1",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 16,
+    "english": [
+     -7.988,
+     -7.549,
+     -7.772,
+     -7.743,
+     -7.749,
+     -7.566,
+     -7.45,
+     -7.796
+    ]
+   },
+   {
+    "numbering": "ABSCISSAE1",
+    "n": 4,
+    "offset": 1,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 16,
+    "english": [
+     -7.988,
+     -7.743,
+     -7.566,
+     -7.45,
+     -7.796,
+     -7.749,
+     -7.772,
+     -7.549
+    ]
+   },
+   {
+    "numbering": "ABSCISSAE1",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSCISSAE1",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ORDINATE0",
+    "n": 4,
+    "offset": 0,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.51
+    ]
+   },
+   {
+    "numbering": "ORDINATE0",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.51
+    ]
+   },
+   {
+    "numbering": "ORDINATE0",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1,
+    "english": [
+     -7.364
+    ]
+   },
+   {
+    "numbering": "ORDINATE0",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1,
+    "english": [
+     -7.364
+    ]
+   },
+   {
+    "numbering": "ORDINATE1",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ORDINATE1",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1,
+    "english": [
+     -7.364
+    ]
+   },
+   {
+    "numbering": "ORDINATE1",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1,
+    "english": [
+     -7.364
+    ]
+   },
+   {
+    "numbering": "ORDINATE1",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   }
+  ],
+  "settings_inconsistent": 3663,
+  "log_size": 4536,
+  "numberings_count": 126
+ },
+ "notes": "4536 settings; 369 consistent with every whole crib block; 214 decryptions submitted.",
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "MQMHCZPDGGADDVUBAZRSIBRGTNORTHEAOPUWKBKRXSSHCYHFEOBNKMMRQUYCLTBFERLINCLOBMSPJGHQNWCECYUQHOGBUWEWR",
+   "key": {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      9,
+      24,
+      18,
+      24
+     ],
+     [
+      25,
+      16,
+      25,
+      15
+     ],
+     [
+      18,
+      4,
+      19,
+      14
+     ],
+     [
+      1,
+      19,
+      18,
+      9
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 std1 offset 0 enc; M=[[9, 24, 18, 24], [25, 16, 25, 15], [18, 4, 19, 14], [1, 19, 18, 9]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 16,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     7,
+     9
+    ],
+    "BERLIN": [
+     5,
+     6
+    ],
+    "CLOCK": [
+     3,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "B"
+     ],
+     [
+      23,
+      "A",
+      "R"
+     ],
+     [
+      24,
+      "S",
+      "G"
+     ],
+     [
+      33,
+      "S",
+      "O"
+     ],
+     [
+      34,
+      "T",
+      "P"
+     ],
+     [
+      64,
+      "B",
+      "F"
+     ],
+     [
+      73,
+      "C",
+      "B"
+     ],
+     [
+      74,
+      "K",
+      "M"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 85.1588316638355
+  },
+  {
+   "plaintext": "MQMHCZPDGGADDVUBAZRSIBRGTNORTHEAOPUWKBKRXSSHCYHFEOBNKMMRQUYCLTBFERLINCLOBMSPJGHQNWCECYUQHOGBUWEWR",
+   "key": {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      25,
+      22,
+      20,
+      10
+     ],
+     [
+      10,
+      19,
+      11,
+      17
+     ],
+     [
+      16,
+      10,
+      19,
+      18
+     ],
+     [
+      25,
+      1,
+      3,
+      8
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 std1 offset 0 dec; M=[[25, 22, 20, 10], [10, 19, 11, 17], [16, 10, 19, 18], [25, 1, 3, 8]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 16,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     7,
+     9
+    ],
+    "BERLIN": [
+     5,
+     6
+    ],
+    "CLOCK": [
+     3,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "B"
+     ],
+     [
+      23,
+      "A",
+      "R"
+     ],
+     [
+      24,
+      "S",
+      "G"
+     ],
+     [
+      33,
+      "S",
+      "O"
+     ],
+     [
+      34,
+      "T",
+      "P"
+     ],
+     [
+      64,
+      "B",
+      "F"
+     ],
+     [
+      73,
+      "C",
+      "B"
+     ],
+     [
+      74,
+      "K",
+      "M"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 85.1588316638355
+  },
+  {
+   "plaintext": "OBKESYBUMZHBIXOAMKSBQGESTNORTHEVFOVGERRYDPXLXMJYCLWZHFGHLVABYOOBERLINCLUDXOGSHRHPIPCLDZRWWKQSAHAR",
+   "key": {
+    "numbering": "PALIMPSEST1",
+    "n": 4,
+    "offset": 3,
+    "M": [
+     [
+      11,
+      1,
+      12,
+      3
+     ],
+     [
+      25,
+      8,
+      18,
+      20
+     ],
+     [
+      0,
+      20,
+      17,
+      5
+     ],
+     [
+      10,
+      17,
+      9,
+      25
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 PALIMPSEST1 offset 3 enc; M=[[11, 1, 12, 3], [25, 8, 18, 20], [0, 20, 17, 5], [10, 17, 9, 25]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 16,
+   "crib_words": {
+    "EAST": [
+     2,
+     4
+    ],
+    "NORTHEAST": [
+     6,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     2,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "G"
+     ],
+     [
+      23,
+      "A",
+      "E"
+     ],
+     [
+      32,
+      "A",
+      "V"
+     ],
+     [
+      33,
+      "S",
+      "F"
+     ],
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      72,
+      "O",
+      "U"
+     ],
+     [
+      73,
+      "C",
+      "D"
+     ],
+     [
+      74,
+      "K",
+      "X"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 84.78073156618689
+  },
+  {
+   "plaintext": "OBKESYBUMZHBIXOAMKSBQGESTNORTHEVFOVGERRYDPXLXMJYCLWZHFGHLVABYOOBERLINCLUDXOGSHRHPIPCLDZRWWKQSAHAR",
+   "key": {
+    "numbering": "PALIMPSEST1",
+    "n": 4,
+    "offset": 3,
+    "M": [
+     [
+      20,
+      13,
+      0,
+      8
+     ],
+     [
+      20,
+      6,
+      19,
+      15
+     ],
+     [
+      15,
+      15,
+      6,
+      11
+     ],
+     [
+      25,
+      3,
+      13,
+      17
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 PALIMPSEST1 offset 3 dec; M=[[20, 13, 0, 8], [20, 6, 19, 15], [15, 15, 6, 11], [25, 3, 13, 17]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 16,
+   "crib_words": {
+    "EAST": [
+     2,
+     4
+    ],
+    "NORTHEAST": [
+     6,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     2,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "G"
+     ],
+     [
+      23,
+      "A",
+      "E"
+     ],
+     [
+      32,
+      "A",
+      "V"
+     ],
+     [
+      33,
+      "S",
+      "F"
+     ],
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      72,
+      "O",
+      "U"
+     ],
+     [
+      73,
+      "C",
+      "D"
+     ],
+     [
+      74,
+      "K",
+      "X"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 84.78073156618689
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBOFFZMGXEEASTNORTHEASSWSKJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCZGNIESOWEFMFKZTGRIZTAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      23,
+      17,
+      14,
+      16
+     ],
+     [
+      17,
+      8,
+      19,
+      12
+     ],
+     [
+      11,
+      3,
+      25,
+      4
+     ],
+     [
+      11,
+      2,
+      21,
+      11
+     ]
+    ],
+    "v": [
+     2,
+     25,
+     19,
+     1
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 enc; M=[[23, 17, 14, 16], [17, 8, 19, 12], [11, 3, 25, 4], [11, 2, 21, 11]] v=[2, 25, 19, 1]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.270648879149725
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBSUUZMGXEEASTNORTHEASOHOKJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCLVBIROSWRUAFKZTGEQLTAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      23,
+      17,
+      14,
+      16
+     ],
+     [
+      17,
+      8,
+      19,
+      12
+     ],
+     [
+      24,
+      16,
+      25,
+      17
+     ],
+     [
+      11,
+      2,
+      21,
+      11
+     ]
+    ],
+    "v": [
+     2,
+     25,
+     19,
+     1
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 enc; M=[[23, 17, 14, 16], [17, 8, 19, 12], [24, 16, 25, 17], [11, 2, 21, 11]] v=[2, 25, 19, 1]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.6270159007164
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBSUFZMGXEEASTNORTHEASOHSKJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCLVNIROOWRUMFKZTGEQZTAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      23,
+      17,
+      14,
+      16
+     ],
+     [
+      4,
+      21,
+      19,
+      25
+     ],
+     [
+      11,
+      3,
+      25,
+      4
+     ],
+     [
+      24,
+      15,
+      21,
+      24
+     ]
+    ],
+    "v": [
+     2,
+     25,
+     19,
+     1
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 enc; M=[[23, 17, 14, 16], [4, 21, 19, 25], [11, 3, 25, 4], [24, 15, 21, 24]] v=[2, 25, 19, 1]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.6979071426409
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBOFUZMGXEEASTNORTHEASSWOKJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCZGBIESSWEFAFKZTGRILTAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      23,
+      17,
+      14,
+      16
+     ],
+     [
+      4,
+      21,
+      19,
+      25
+     ],
+     [
+      24,
+      16,
+      25,
+      17
+     ],
+     [
+      24,
+      15,
+      21,
+      24
+     ]
+    ],
+    "v": [
+     2,
+     25,
+     19,
+     1
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 enc; M=[[23, 17, 14, 16], [4, 21, 19, 25], [24, 16, 25, 17], [24, 15, 21, 24]] v=[2, 25, 19, 1]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.17504586768993
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBSFULMGXEEASTNORTHEASOWOYJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCLGBQRSSHRFAUKZTGEILDAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      10,
+      4,
+      14,
+      3
+     ],
+     [
+      17,
+      8,
+      19,
+      12
+     ],
+     [
+      11,
+      3,
+      25,
+      4
+     ],
+     [
+      24,
+      15,
+      21,
+      24
+     ]
+    ],
+    "v": [
+     2,
+     25,
+     19,
+     1
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 enc; M=[[10, 4, 14, 3], [17, 8, 19, 12], [11, 3, 25, 4], [24, 15, 21, 24]] v=[2, 25, 19, 1]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.37967365574269
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBOUFLMGXEEASTNORTHEASSHSYJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCZVNQEOOHEUMUKZTGRQZDAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      10,
+      4,
+      14,
+      3
+     ],
+     [
+      17,
+      8,
+      19,
+      12
+     ],
+     [
+      24,
+      16,
+      25,
+      17
+     ],
+     [
+      24,
+      15,
+      21,
+      24
+     ]
+    ],
+    "v": [
+     2,
+     25,
+     19,
+     1
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 enc; M=[[10, 4, 14, 3], [17, 8, 19, 12], [24, 16, 25, 17], [24, 15, 21, 24]] v=[2, 25, 19, 1]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.89536443848143
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBOUULMGXEEASTNORTHEASSHOYJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCZVBQEOSHEUAUKZTGRQLDAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      10,
+      4,
+      14,
+      3
+     ],
+     [
+      4,
+      21,
+      19,
+      25
+     ],
+     [
+      11,
+      3,
+      25,
+      4
+     ],
+     [
+      11,
+      2,
+      21,
+      11
+     ]
+    ],
+    "v": [
+     2,
+     25,
+     19,
+     1
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 enc; M=[[10, 4, 14, 3], [4, 21, 19, 25], [11, 3, 25, 4], [11, 2, 21, 11]] v=[2, 25, 19, 1]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.60941686533075
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBSFFLMGXEEASTNORTHEASOWSYJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCLGNQRSOHRFMUKZTGEIZDAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      10,
+      4,
+      14,
+      3
+     ],
+     [
+      4,
+      21,
+      19,
+      25
+     ],
+     [
+      24,
+      16,
+      25,
+      17
+     ],
+     [
+      11,
+      2,
+      21,
+      11
+     ]
+    ],
+    "v": [
+     2,
+     25,
+     19,
+     1
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 enc; M=[[10, 4, 14, 3], [4, 21, 19, 25], [24, 16, 25, 17], [11, 2, 21, 11]] v=[2, 25, 19, 1]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.66595769828095
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBOFFZMGXEEASTNORTHEASSWSKJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCZGNIESOWEFMFKZTGRIZTAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      13,
+      19,
+      7,
+      24
+     ],
+     [
+      2,
+      7,
+      19,
+      18
+     ],
+     [
+      19,
+      0,
+      7,
+      10
+     ],
+     [
+      0,
+      1,
+      14,
+      1
+     ]
+    ],
+    "v": [
+     18,
+     14,
+     1,
+     20
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 dec; M=[[13, 19, 7, 24], [2, 7, 19, 18], [19, 0, 7, 10], [0, 1, 14, 1]] v=[18, 14, 1, 20]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.270648879149725
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBOFUZMGXEEASTNORTHEASSWOKJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCZGBIESSWEFAFKZTGRILTAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      13,
+      19,
+      7,
+      24
+     ],
+     [
+      2,
+      7,
+      19,
+      18
+     ],
+     [
+      6,
+      13,
+      7,
+      23
+     ],
+     [
+      0,
+      1,
+      14,
+      1
+     ]
+    ],
+    "v": [
+     18,
+     14,
+     1,
+     20
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 dec; M=[[13, 19, 7, 24], [2, 7, 19, 18], [6, 13, 7, 23], [0, 1, 14, 1]] v=[18, 14, 1, 20]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.17504586768993
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBOUFLMGXEEASTNORTHEASSHSYJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCZVNQEOOHEUMUKZTGRQZDAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      13,
+      19,
+      7,
+      24
+     ],
+     [
+      15,
+      20,
+      19,
+      5
+     ],
+     [
+      19,
+      0,
+      7,
+      10
+     ],
+     [
+      13,
+      14,
+      14,
+      14
+     ]
+    ],
+    "v": [
+     18,
+     14,
+     1,
+     20
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 dec; M=[[13, 19, 7, 24], [15, 20, 19, 5], [19, 0, 7, 10], [13, 14, 14, 14]] v=[18, 14, 1, 20]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.89536443848143
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBOUULMGXEEASTNORTHEASSHOYJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCZVBQEOSHEUAUKZTGRQLDAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      13,
+      19,
+      7,
+      24
+     ],
+     [
+      15,
+      20,
+      19,
+      5
+     ],
+     [
+      6,
+      13,
+      7,
+      23
+     ],
+     [
+      13,
+      14,
+      14,
+      14
+     ]
+    ],
+    "v": [
+     18,
+     14,
+     1,
+     20
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 dec; M=[[13, 19, 7, 24], [15, 20, 19, 5], [6, 13, 7, 23], [13, 14, 14, 14]] v=[18, 14, 1, 20]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "Z"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.60941686533075
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBSFFLMGXEEASTNORTHEASOWSYJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCLGNQRSOHRFMUKZTGEIZDAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      0,
+      6,
+      7,
+      11
+     ],
+     [
+      2,
+      7,
+      19,
+      18
+     ],
+     [
+      19,
+      0,
+      7,
+      10
+     ],
+     [
+      13,
+      14,
+      14,
+      14
+     ]
+    ],
+    "v": [
+     18,
+     14,
+     1,
+     20
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 dec; M=[[0, 6, 7, 11], [2, 7, 19, 18], [19, 0, 7, 10], [13, 14, 14, 14]] v=[18, 14, 1, 20]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.66595769828095
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBSFULMGXEEASTNORTHEASOWOYJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCLGBQRSSHRFAUKZTGEILDAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      0,
+      6,
+      7,
+      11
+     ],
+     [
+      2,
+      7,
+      19,
+      18
+     ],
+     [
+      6,
+      13,
+      7,
+      23
+     ],
+     [
+      13,
+      14,
+      14,
+      14
+     ]
+    ],
+    "v": [
+     18,
+     14,
+     1,
+     20
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 dec; M=[[0, 6, 7, 11], [2, 7, 19, 18], [6, 13, 7, 23], [13, 14, 14, 14]] v=[18, 14, 1, 20]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.37967365574269
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBSUFZMGXEEASTNORTHEASOHSKJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCLVNIROOWRUMFKZTGEQZTAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      0,
+      6,
+      7,
+      11
+     ],
+     [
+      15,
+      20,
+      19,
+      5
+     ],
+     [
+      19,
+      0,
+      7,
+      10
+     ],
+     [
+      0,
+      1,
+      14,
+      1
+     ]
+    ],
+    "v": [
+     18,
+     14,
+     1,
+     20
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 dec; M=[[0, 6, 7, 11], [15, 20, 19, 5], [19, 0, 7, 10], [0, 1, 14, 1]] v=[18, 14, 1, 20]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.6979071426409
+  },
+  {
+   "plaintext": "ONOGQKJCBZSDBSUUZMGXEEASTNORTHEASOHOKJZGXVGYCMPFBKOZGPAZYUSMGWEIFRLINCLOCLVBIROSWRUAFKZTGEQLTAQAO",
+   "key": {
+    "numbering": "ABSCISSAE0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      0,
+      6,
+      7,
+      11
+     ],
+     [
+      15,
+      20,
+      19,
+      5
+     ],
+     [
+      6,
+      13,
+      7,
+      23
+     ],
+     [
+      0,
+      1,
+      14,
+      1
+     ]
+    ],
+    "v": [
+     18,
+     14,
+     1,
+     20
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine ABSCISSAE0 offset 1 dec; M=[[0, 6, 7, 11], [15, 20, 19, 5], [6, 13, 7, 23], [0, 1, 14, 1]] v=[18, 14, 1, 20]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 20,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     8,
+     9
+    ],
+    "BERLIN": [
+     4,
+     6
+    ],
+    "CLOCK": [
+     4,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 45.6270159007164
+  }
+ ]
+}

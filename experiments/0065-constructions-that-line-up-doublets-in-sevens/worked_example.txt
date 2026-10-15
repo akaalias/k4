@@ -1,0 +1,4 @@
+plaintext SLOWLYDESPARATLYSLOWLYTHEREMAINSOFPASSAGEDEBRIS
+key KRYPTOS repeating, plus the previous carved letter
+carved   DYCCTERFNXBGZCKPEOHJGIQDXPNLXHCMRMRBIWAXHTIXRNP
+doublets at 0-based [2]; mod 7 [2]

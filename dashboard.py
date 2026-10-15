@@ -72,6 +72,13 @@ article{max-width:980px}article h1{font:400 30px/1.2 var(--serif);margin:10px 0 
 article h2{font:400 22px/1.25 var(--serif);margin:34px 0 6px;padding-top:12px;border-top:1px solid var(--rule)}
 article h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}
 article p,article li{max-width:720px}article table{table-layout:fixed;width:100%}article td{vertical-align:top;overflow-wrap:anywhere}article td code{white-space:normal;word-break:break-all;letter-spacing:.04em}article ol{padding-left:26px}article ol li{margin:0 0 8px}
+.crumb{max-width:980px;margin:10px auto 0;color:var(--muted);font-size:14px}
+.rec-head{max-width:980px;margin:18px auto 0}.eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}.eyebrow .kept{color:var(--accent)}
+h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.005em;max-width:900px}
+.standfirst{font:italic 16.5px/1.6 var(--serif);color:var(--muted);margin:0 0 18px;max-width:820px}
+.meta-row{display:flex;flex-wrap:wrap;gap:10px 34px;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule-soft)}.meta-row div{display:flex;flex-direction:column}.meta-row b{font-weight:600;font-size:14.5px;line-height:1.3}.meta-row span{font:600 10px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
+.plain p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:640px}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
+.rec-body{max-width:980px}.rec-body h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}.rec-body p,.rec-body li{max-width:720px;font-size:15.5px;line-height:1.6}
 .panel-wrap{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin:14px 0 6px}.panel{padding:0}.panel-h{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px}.panel pre{margin:0;padding:12px 16px;font:15px/1.75 var(--mono);letter-spacing:.14em;background:var(--wash);border:1px solid var(--rule-soft);border-radius:2px}.panel u{text-decoration:none;border-bottom:2px solid var(--rule)}.panel b{color:var(--ink);background:var(--hl);font-weight:700}.panel i{color:var(--accent);font-style:normal;background:var(--hl)}.k3tail{color:var(--rule)}
 .gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
@@ -439,27 +446,89 @@ def overview():
 
 
 def experiment_page(tag):
+    import re as _re
     rows = {r["tag"]: r for r in load_results()}
     r = rows.get(tag)
     if not r:
         return page("not found", f"<p>No experiment {esc(tag)}</p>")
     from kryptos.facts import KNOWN, K4
+    tags = list(rows)
+    num = int(tag[:4])
+    fam = r["family"]
+    fam_label = fam.split("-", 1)[1].replace("-", " ") if "-" in fam else fam
+    fam_num = fam.split("-", 1)[0]
+    ph = r.get("phases") or {}
+    total = sum(ph.values()) or r.get("seconds", 0)
+    started = (r.get("started") or "")[:16].replace("T", " ")
+    # pull the prose fields out of the record markdown
+    def section(name):
+        m = _re.search(r"## " + _re.escape(name) + r"\n\n(.+?)(?=\n\n## |\Z)", r["_md"], _re.S)
+        return m.group(1).strip() if m else ""
+    changed = ""
+    m = _re.search(r"What changed: (.+?)(?=\n\n## )", r["_md"], _re.S)
+    if m:
+        changed = m.group(1).strip()
+    parent = r.get("parent")
+    parent_html = f'<a href="/exp/{esc(parent)}">experiment {int(parent[:4])}</a>' if parent and parent in rows else "a new root"
+    decision = r["decision"]
     best = best_candidate(r)
-    marked = ""
+    # header
+    head = f"""<p class="crumb"><a href="/">Overview</a> / experiment {num}</p>
+<div class="rec-head">
+<p class="eyebrow">Experiment {num} &middot; family {esc(fam_num)}, {esc(fam_label)} &middot; <span class="{esc(decision)}">{esc(decision)}</span></p>
+<h1 class="rec-title">{esc(r['title'])}</h1>
+<p class="standfirst">{esc(changed)}</p>
+<div class="meta-row">
+<div><b>{parent_html}</b><span>builds on</span></div>
+<div><b>{esc(started) or 'n/a'}</b><span>run started</span></div>
+<div><b>{fmt_dur(total)}</b><span>time, all phases</span></div>
+<div><b>{', '.join(f"{k} {fmt_dur(v)}" for k, v in ph.items() if v >= 1) or 'unclocked'}</b><span>by phase</span></div>
+<div><b>{r['n_candidates']}</b><span>candidates</span></div>
+<div><b>{r['best_crib_hits']}/24</b><span>known letters right</span></div>
+{'' if r.get('best_loss') is None else f"<div><b>{r['best_loss']:.1f}</b><span>best loss</span></div>"}
+</div></div>"""
+    # section 1: plain words with the glossary rail
+    eli5 = r.get("eli5") or ""
+    gl_items = []
+    low = eli5.lower()
+    for term, names, definition in load_glossary():
+        hits = [low.find(n.lower()) for n in names if n.lower() in low]
+        if hits:
+            gl_items.append((min(hits), term, definition))
+    def first_sentence(d):
+        import re as _r
+        m = _r.match(r"(.+?[.!?])(\s|$)", d)
+        return m.group(1) if m else d
+    gl_items = [(t, first_sentence(d)) for _, t, d in sorted(gl_items)[:5]]
+    rail = ""
+    if gl_items:
+        rail = '<aside class="aside"><h4>Words used here</h4>' + "".join(f'<p><b>{esc(t)}</b> {esc(d)}</p>' for t, d in gl_items) + '<p class="faint">Full list on the <a href="/glossary">glossary</a> page.</p></aside>'
+    plain = sec(1, "In plain words", "") + f'<div class="chart-row"><div class="plain">{md(eli5)}</div>{rail}</div>'
+    # section 2: best candidate
+    cand = ""
     if best:
         how = "the harness's best by fitness among gate passers" if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
-        marked = f"""{sec("", "Best candidate against the cribs", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, with the 24 known positions underlined. Right, the candidate: a letter on a wash sits at a known position and matches, a red one sits there and misses. This is {how}.")}
-{panel_block(K4, best['plaintext'], KNOWN)}"""
-    html_md = md(r["_md"])
-    tags = list(rows)
-    html_md = link_experiments(html_md, tags)
-    eli5 = r.get("eli5") or ""
-    gl = glossary_for(eli5)
-    anchor = "<h2>Walkthrough, by hand</h2>"
-    if gl and anchor in html_md:
-        html_md = html_md.replace(anchor, gl + anchor, 1)
-    body = f"<p class='muted'><a href='/'>Overview</a> / {esc(tag)}</p>" + marked + "<article>" + html_md + "</article>"
-    return page(tag, body)
+        cand = sec(2, "Best candidate against the known letters", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, with the 24 known positions underlined. Right, the candidate: a letter on a wash sits at a known position and matches, a red one sits there and misses. This is {how}.") + panel_block(K4, best["plaintext"], KNOWN)
+    else:
+        cand = sec(2, "Best candidate against the known letters", "This experiment produced no candidate: the search ruled everything out before a full text was built. Its product is the bounded negative in section 7.")
+    # remaining sections from the record, numbered
+    order = [("Walkthrough, by hand", "Walkthrough, by hand", "Redo the method on a few letters with pencil and paper."),
+             ("Worked example (generated)", "Worked example, generated", "The same steps run by the code on the real letters."),
+             ("Hypothesis (domain expert)", "Hypothesis, for a cryptanalyst", "Family, key space, the constraint under test, and the clues it reads."),
+             ("Prediction", "Prediction", "Written before the run; the result decides it."),
+             ("Method", "Method", ""),
+             ("Result", "Result and bounds", "The harness's record: candidates, gates, loss, and the negative result this experiment leaves behind.")]
+    body = [head, plain, cand]
+    n = 3
+    for key, title, sub in order:
+        content = section(key)
+        if not content:
+            continue
+        html_c = md(content)
+        html_c = link_experiments(html_c, tags)
+        body.append(sec(n, title, sub) + f'<article class="rec-body">{html_c}</article>')
+        n += 1
+    return page(f"experiment {num}", "".join(body))
 
 
 def md_page(title, path, active, refresh=True):

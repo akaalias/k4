@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cipher",
+  "text": "The simplest two-step cipher swaps each letter for another by a fixed table, then moves the letters around. Experiment 19 tried about 24,000 moves; since then the project has built them by the million."
+ },
+ {
+  "anchor": "the check",
+  "text": "For each move, the same known letter must always land on the same carved letter, and two different known letters never on the same one. E alone, three times among the cribs, is a strong test."
+ },
+ {
+  "anchor": "the bound",
+  "text": "1,835,741 moves in four sets: not one admits a swap table, on K4 or on any of ten scrambled coppers."
+ }
+]

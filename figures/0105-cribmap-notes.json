@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cipher",
+  "text": "A Hill cipher mixes each block of a few letters with a small table of numbers, sometimes plus a shift. Earlier runs solved it only from blocks whose letters were all known, too few for the 4-letter version with a shift."
+ },
+ {
+  "anchor": "the method",
+  "text": "Every single known letter gives one equation for one row of the table, even in a partly known block. Solved mod 2 and mod 13, each row either has a solution or does not."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Plain and affine tables of size 2 to 4 are dead at every alignment and numbering. At size 5 the plain table is dead; the affine one is mostly open, too few equations, as on the scrambled coppers."
+ }
+]

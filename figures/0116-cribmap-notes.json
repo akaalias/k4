@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Sanborn spoke of matrix codes and then going back to the table. A Hill cipher is a matrix code; here a Hill matrix of size 2 to 4 is joined to a repeating key of 1 to 26 letters, in either order, which comes to one model: message = matrix x carved block + a shift."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every known letter gives one equation for one row of the matrix and one shift. Solved exactly mod 2 and mod 13, a setting is dead if the equations contradict or the matrix cannot be undone."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Nothing is alive on K4 or on ten scrambled coppers. 536 settings are dead; 400 stay open where the key is long and the equations too few. A planted text of this kind is recovered."
+ }
+]

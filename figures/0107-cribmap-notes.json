@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cipher",
+  "text": "Gromark grows a long stream of key digits from a short primer, each digit the sum of earlier ones, and enciphers on a mixed alphabet. Experiment 69 tried every two-term rule; here each digit sums three earlier ones."
+ },
+ {
+  "anchor": "the check",
+  "text": "With the alphabet free, the test is a clash: Q carved at 26 and 27 from N and O must sit in one slot, but this primer puts them in slots 19 and 15."
+ },
+ {
+  "anchor": "the bound",
+  "text": "All 20 three-term rules, 10,631,000 primers of up to six digits, four ways of applying the digit: no primer survives on K4, nor on any of ten scrambled coppers."
+ }
+]

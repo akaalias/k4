@@ -70,6 +70,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 63 | 6 | Column shuffles before or after the self-feeding autokey: 14.2 million exact checks, no fit, best 9 of 24. |
 | 64 | 1 | The self-feeding autokey on tables rebuilt from K1-K3 words, every distance: never closer than three wrong known letters, as scrambled coppers manage. |
 | 65 | 7 | **Prediction failed in size.** Recipes built to line doublets up in sevens: only ciphertext autokey at lag 1 with a period-7 key raises the doublet column, to 1.5% of samples against 0.1-0.3% by chance, not the 5% predicted; the other six recipes stay at chance. |
+| 66 | 1 | The self-feeding autokey plus a repeating secret word on top, every lag and word length, solved exactly: nothing survives with three or more checks; lag 1 with 7 (the doublet recipe) and lag 21 (the repeat recipe) are dead. The record's case count, 294,912, counts lags with no known letter past them; 221,184 were tested. |
 
 ### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
 

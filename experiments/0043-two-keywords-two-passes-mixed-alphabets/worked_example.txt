@@ -1,0 +1,11 @@
+plain PALIMSETBCDFGHJKNOQRUVWXYZ
+cipher ABSCIDEFGHJKLMNOPQRTUVWXYZ
+
+lengths 7 and 8, Vigenere: totals and slots
+
+pos  plain  carved  total  x slot  y slot
+ 22    E      F       1      0       5
+ 23    A      L      11      1       6
+ 29    T      R      11      0       4
+ 30    H      N       1      1       5
+ 64    B      N       6      0       7

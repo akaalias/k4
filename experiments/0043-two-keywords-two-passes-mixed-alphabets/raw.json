@@ -1,0 +1,131 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "two periodic keys composed through two tableau passes, keyword-mixed alphabets",
+  "alphabets": 63,
+  "length_pairs": 42,
+  "cases": 666792,
+  "survivors": 770,
+  "survivors_by_a_plus_b": {
+   "22": 2,
+   "23": 122,
+   "24": 646
+  },
+  "smallest_surviving_sum": 22,
+  "smallest_survivors": [
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "SOUTH/keyword",
+    "cipher": "WONDERFUL/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "SOUTH/keyword",
+    "cipher": "WONDERFUL/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "ALEXANDERPLATZ/keyword",
+    "cipher": "HOWARDCARTER/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "ALEXANDERPLATZ/keyword",
+    "cipher": "HOWARDCARTER/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLIN/keyword",
+    "cipher": "SANBORN/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLIN/keyword",
+    "cipher": "SANBORN/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLIN/keyword",
+    "cipher": "UNDERGROUND/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLIN/keyword",
+    "cipher": "UNDERGROUND/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLINCLOCK/keyword",
+    "cipher": "DESPARATLY/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLINCLOCK/keyword",
+    "cipher": "DESPARATLY/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLINCLOCK/keyword",
+    "cipher": "DESPERATELY/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLINCLOCK/keyword",
+    "cipher": "DESPERATELY/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "666792 cases; 770 consistent; smallest surviving a + b 22; survivors by sum {22: 2, 23: 122, 24: 646}; 0 word matches.",
+ "error": null,
+ "worked_example": "plain PALIMSETBCDFGHJKNOQRUVWXYZ\ncipher ABSCIDEFGHJKLMNOPQRTUVWXYZ\n\nlengths 7 and 8, Vigenere: totals and slots\n\npos  plain  carved  total  x slot  y slot\n 22    E      F       1      0       5\n 23    A      L      11      1       6\n 29    T      R      11      0       4\n 30    H      N       1      1       5\n 64    B      N       6      0       7",
+ "seconds": 5.236353874206543
+}

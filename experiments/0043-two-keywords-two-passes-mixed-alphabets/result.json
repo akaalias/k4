@@ -1,0 +1,162 @@
+{
+ "id": 43,
+ "tag": "0043-two-keywords-two-passes-mixed-alphabets",
+ "started": "2026-10-15T09:36:36+00:00",
+ "seconds": 5.3,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 59.8,
+  "test": 10.8,
+  "run": 5.3,
+  "record": 0.0
+ },
+ "ended_epoch": 1792057001.743915,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig"
+ },
+ "bounds": {
+  "family": "two periodic keys composed through two tableau passes, keyword-mixed alphabets",
+  "alphabets": 63,
+  "length_pairs": 42,
+  "cases": 666792,
+  "survivors": 770,
+  "survivors_by_a_plus_b": {
+   "22": 2,
+   "23": 122,
+   "24": 646
+  },
+  "smallest_surviving_sum": 22,
+  "smallest_survivors": [
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "SOUTH/keyword",
+    "cipher": "WONDERFUL/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 7,
+    "b": 15,
+    "plain": "SOUTH/keyword",
+    "cipher": "WONDERFUL/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "ALEXANDERPLATZ/keyword",
+    "cipher": "HOWARDCARTER/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "ALEXANDERPLATZ/keyword",
+    "cipher": "HOWARDCARTER/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLIN/keyword",
+    "cipher": "SANBORN/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLIN/keyword",
+    "cipher": "SANBORN/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLIN/keyword",
+    "cipher": "UNDERGROUND/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLIN/keyword",
+    "cipher": "UNDERGROUND/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLINCLOCK/keyword",
+    "cipher": "DESPARATLY/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLINCLOCK/keyword",
+    "cipher": "DESPARATLY/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLINCLOCK/keyword",
+    "cipher": "DESPERATELY/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 6,
+    "b": 17,
+    "plain": "BERLINCLOCK/keyword",
+    "cipher": "DESPERATELY/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "666792 cases; 770 consistent; smallest surviving a + b 22; survivors by sum {22: 2, 23: 122, 24: 646}; 0 word matches.",
+ "error": null,
+ "candidates": []
+}

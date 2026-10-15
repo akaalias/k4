@@ -80,6 +80,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 73 | 1 | **Prediction failed in detail.** The message as its own key plus a repeating word: twelve cases pass three checks against 0-6 on scrambled coppers, but they are four coincidences counted at nested periods (ROWS and SEVENTY alphabets at lag 8, each at periods 5, 8, 10, 20, 40), none passes four, and the NSA's lag 7 and the fingerprint lag 21 have nothing. Chance. |
 | 74 | 2 | Masks that change letters: the alphabet counted in steps of 3, 5, 7 ... or backwards (Atbash), on both alphabets, before or after a repeating word or the self-feeding autokey: nothing at three checks, periods up to 25 dead, no word. A one-check excess in the plain autokey comes from two-equation lags counted per key alphabet. |
 | 75 | 2 | The doubled letters as fillers: QQ, SS and TT inside the known stretches each carry two different known letters, so they are real letters; striking out BB, the second SS or ZZ in any combination changes nothing for a repeating word or the self-feeding autokey. |
+| 76 | 5 | Gromark with any scrambled alphabet in every base from 2 to 16 and in base 26 (Scheidt's other number systems, the Berlin clock's fives): no starting number fits in any base, on the copper or on scrambled coppers. Family 5 is closed for two-term rules. |
 
 ### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
 

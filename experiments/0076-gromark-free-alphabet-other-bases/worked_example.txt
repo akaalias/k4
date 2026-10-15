@@ -1,0 +1,8 @@
+base 2, digits 5 and 4 back, primer 10110
+stream 1011011011011011011011011011011011
+
+place  known  carved  digit  slot (M[P+d]=c)
+   26      N       Q      0    13
+   27      O       Q      1    15
+   22      E       F      1     5
+   23      A       L      0     0

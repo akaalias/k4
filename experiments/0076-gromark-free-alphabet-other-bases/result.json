@@ -1,0 +1,295 @@
+{
+ "id": 76,
+ "tag": "0076-gromark-free-alphabet-other-bases",
+ "started": "2026-10-15T13:30:55+00:00",
+ "seconds": 123.4,
+ "status": "ran",
+ "phases": {
+  "design": 37.2,
+  "implement": 0.0,
+  "test": 13.2,
+  "run": 123.4,
+  "record": 0.0
+ },
+ "ended_epoch": 1792071178.770216,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "Gromark, free mixed alphabet, bases 2-9, 11-16 and 26",
+  "rules": "two-term, lags up to 5 (base 26: up to 4)",
+  "settings_done": 146,
+  "settings_planned": 146,
+  "primers": 15135782,
+  "forms": [
+   "M[P+d]=c",
+   "M[P-d]=c",
+   "M[C-d]=p",
+   "M[C+d]=p"
+  ],
+  "by_base": {
+   "2": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 196
+   },
+   "3": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 1278
+   },
+   "4": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 5008
+   },
+   "5": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 14650
+   },
+   "6": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 35460
+   },
+   "7": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 75166
+   },
+   "8": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 144448
+   },
+   "9": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 257418
+   },
+   "11": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 690910
+   },
+   "12": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 1061136
+   },
+   "13": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 1575418
+   },
+   "14": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 2272228
+   },
+   "15": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 3196350
+   },
+   "16": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 4399360
+   },
+   "26": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 1406756
+   }
+  }
+ },
+ "notes": "146 of 146 base-rule settings, 15,135,782 primers x 4 forms. Consistent primers by base, K4 (controls): base 2: 0 (0-0); base 3: 0 (0-0); base 4: 0 (0-0); base 5: 0 (0-0); base 6: 0 (0-0); base 7: 0 (0-0); base 8: 0 (0-0); base 9: 0 (0-0); base 11: 0 (0-0); base 12: 0 (0-0); base 13: 0 (0-0); base 14: 0 (0-0); base 15: 0 (0-0); base 16: 0 (0-0); base 26: 0 (0-0).",
+ "error": null,
+ "candidates": []
+}

@@ -80,6 +80,8 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .plain p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:640px}
 .gl{border-bottom:1px dotted var(--accent);cursor:help;transition:background .15s}.gl.on,.gl:hover{background:var(--hl)}.gl-entry{border-left:2px solid transparent;padding-left:6px;margin-left:-8px;transition:background .15s}.gl-entry.on,.gl-entry:hover{background:var(--hl);border-left-color:var(--accent)}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
 .rec-body{max-width:980px}.rec-body h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}.rec-body p,.rec-body li{max-width:720px;font-size:15.5px;line-height:1.6}
+.explain-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;max-width:980px;margin:22px auto 0}.explain-col h4{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 8px}.explain-col p{font-size:15.5px;line-height:1.65;margin:0;color:var(--ink)}
+@media(max-width:860px){.explain-row{grid-template-columns:1fr}}
 .panel-wrap{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin:14px 0 6px}.panel{padding:0}.panel-h{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px}.panel pre{margin:0;padding:12px 16px;font:15px/1.75 var(--mono);letter-spacing:.14em;background:var(--wash);border:1px solid var(--rule-soft);border-radius:2px}.panel u{text-decoration:none;border-bottom:2px solid var(--rule)}.panel b{color:var(--ink);background:var(--hl);font-weight:700}.panel i{color:var(--accent);font-style:normal;background:var(--hl)}.k3tail{color:var(--rule)}
 .gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
@@ -286,8 +288,8 @@ def loss_chart(rows):
     Reverted: recessive grey dot. No valid candidate: hollow dot at the top."""
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
-    W, H = 960, 320
-    L, R, T, B = 100, 110, 20, 34
+    W, H = 980, 360
+    L, R, T, B = 130, 150, 24, 40
     n = len(rows)
     gate, ymax = 10.0, 240.0
     plot_h = H - T - B
@@ -309,15 +311,15 @@ def loss_chart(rows):
         else:
             g.append(f'<line x1="{L}" x2="{W-R}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
         lab = f"{v}" if v < 60 else f"{v} = {v // 10} wrong"
-        g.append(f'<text x="{L-8}" y="{yy+4:.1f}" text-anchor="end" font-size="11.5" fill="var(--muted)">{lab}</text>')
+        g.append(f'<text x="{L-8}" y="{yy+4:.1f}" text-anchor="end" font-size="14" fill="var(--muted)">{lab}</text>')
     # axis break marks just above the gate line
     bx = L - 2
     g.append(f'<path d="M{bx-5},{y_gate-10:.1f} l10,-5 M{bx-5},{y_gate-6:.1f} l10,-5" stroke="var(--muted)" stroke-width="1" fill="none"/>')
     # annotations at right, clear of the plot
     ax = W - R + 10
-    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--accent)">all 24 known right</text>')
-    g.append(f'<text x="{ax}" y="{y(0)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">solved</text>')
-    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="11.5" font-style="italic" fill="var(--muted)">none right</text>')
+    g.append(f'<text x="{ax}" y="{y(gate)+4:.1f}" font-size="14" font-style="italic" fill="var(--accent)">all 24 known right</text>')
+    g.append(f'<text x="{ax}" y="{y(0)+4:.1f}" font-size="14" font-style="italic" fill="var(--muted)">solved</text>')
+    g.append(f'<text x="{ax}" y="{y(ymax)+4:.1f}" font-size="14" font-style="italic" fill="var(--muted)">none right</text>')
     pts, best = [], None
     for i, r in enumerate(rows):
         if r.get("decision") == "kept" and r.get("best_loss") is not None:
@@ -337,10 +339,10 @@ def loss_chart(rows):
             g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
     last = rows[-1]
     if last.get("best_loss") is not None:
-        g.append(f'<text x="{xs[-1]+9:.1f}" y="{y(last["best_loss"])+4:.1f}" font-size="11.5" fill="var(--ink)">{last["best_loss"]:.1f}</text>')
-    g.append(f'<text transform="translate(14,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="11.5" fill="var(--muted)">loss, points</text>')
-    g.append(f'<text x="{L}" y="{H-8}" font-size="11.5" fill="var(--faint)">experiment 1</text>')
-    g.append(f'<text x="{W-R}" y="{H-8}" font-size="11.5" fill="var(--faint)" text-anchor="end">experiment {n}</text>')
+        g.append(f'<text x="{xs[-1]+9:.1f}" y="{y(last["best_loss"])+4:.1f}" font-size="14" fill="var(--ink)">{last["best_loss"]:.1f}</text>')
+    g.append(f'<text transform="translate(18,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="14" fill="var(--muted)">loss, points</text>')
+    g.append(f'<text x="{L}" y="{H-8}" font-size="14" fill="var(--faint)">experiment 1</text>')
+    g.append(f'<text x="{W-R}" y="{H-8}" font-size="14" fill="var(--faint)" text-anchor="end">experiment {n}</text>')
     g.append("</svg>")
     return "<figure class='chart'>" + "".join(g) + "</figure>"
 
@@ -378,16 +380,16 @@ def crib_strip():
     return f'<svg viewBox="0 0 {W:.0f} 14" aria-label="the 24 known letters among the 97">{cells}</svg>'
 
 
-def chart_aside():
-    return ('<aside class="aside">'
-            '<h4>The 24 known letters</h4>'
-            + crib_strip() +
-            '<p>EASTNORTHEAST at 22 to 34 and BERLINCLOCK at 64 to 74. A candidate pays ten points for each one it gets wrong, so the top of the axis, 240, is all 24 wrong.</p>'
-            '<h4>The line at ten</h4>'
-            '<p>Above it at least one known letter is wrong. Below it all 24 are right and the loss is only how far the other 73 letters sit from English, plus a key too long to remember. Zero is solved.</p>'
-            '<h4>Dots</h4>'
-            '<p>One per experiment, its best candidate. Hollow means the search ruled everything out before producing one.</p>'
-            '</aside>')
+def what_we_look_for():
+    from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
+    panel = panel_block(_K4, None, _KNOWN)
+    cols = [
+        ("The 24 known letters", "Jim Sanborn has confirmed two stretches of the hidden message: EASTNORTHEAST at positions 22 to 34 and BERLINCLOCK at 64 to 74, underlined in the panel. They are the only hard facts about the message, and every experiment leans on them."),
+        ("What the loss counts", "A candidate is a full 97-letter reading of the panel. It pays ten points for each known letter it gets wrong, then a little for how far the other 73 letters sit from English, then a charge for a secret word too long to remember. Zero would be solved."),
+        ("The line at ten", "Above it, at least one known letter is wrong. Below it, all 24 are right and only the English of the rest and the length of the key remain. A dot below the line is not a solution until the text reads as English and the key is one a person could remember."),
+    ]
+    html = "".join(f'<div class="explain-col"><h4>{esc(h)}</h4><p>{esc(t)}</p></div>' for h, t in cols)
+    return panel + f'<div class="explain-row">{html}</div>'
 
 
 def sec(n, title, sub=""):
@@ -448,11 +450,13 @@ def overview():
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
             + hero + champ
-            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate. The axis breaks at the line so the band where a solution would appear has room.")
-            + '<div class="chart-row">' + loss_chart(rows) + chart_aside() + '</div>'
-            + sec(2, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
+            + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
+            + what_we_look_for()
+            + sec(2, "Loss over the run", "Each dot is one experiment's best candidate; a hollow dot means the search ruled everything out before producing one. The axis breaks at the line so the band where a solution would appear has room.")
+            + loss_chart(rows)
+            + sec(3, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
-            + sec(3, "Lineage", "What each experiment inherits from.")
+            + sec(4, "Lineage", "What each experiment inherits from.")
             + (tree(None) or "<p class='muted'>empty</p>"))
     return page("Kryptos K4 autoresearch", body, "/")
 

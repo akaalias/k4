@@ -1,0 +1,88 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "construction simulation for the width-7 and width-21 fingerprints",
+  "samples_per_generator": 4000,
+  "k4": {
+   "column": true,
+   "repeats": true
+  },
+  "plaintext_source": "Carter vol. 1 (284,914 letters) and K1-K3",
+  "rates": {
+   "Vigenere, period 7": {
+    "column": 0.003,
+    "repeats": 0.0155,
+    "both": 0.0
+   },
+   "Vigenere, period 14": {
+    "column": 0.0022,
+    "repeats": 0.0043,
+    "both": 0.0
+   },
+   "Vigenere, period 21": {
+    "column": 0.0018,
+    "repeats": 0.0045,
+    "both": 0.0
+   },
+   "Vigenere, period 28": {
+    "column": 0.0013,
+    "repeats": 0.0025,
+    "both": 0.0
+   },
+   "plaintext autokey, lag 7": {
+    "column": 0.0015,
+    "repeats": 0.004,
+    "both": 0.0
+   },
+   "ciphertext autokey, lag 7": {
+    "column": 0.0022,
+    "repeats": 0.0015,
+    "both": 0.0
+   },
+   "plaintext autokey, lag 21": {
+    "column": 0.0032,
+    "repeats": 0.0015,
+    "both": 0.0
+   },
+   "ciphertext autokey, lag 21": {
+    "column": 0.0013,
+    "repeats": 0.0545,
+    "both": 0.0
+   },
+   "Vigenere 27-29 then columnar width 7": {
+    "column": 0.002,
+    "repeats": 0.0015,
+    "both": 0.0
+   },
+   "columnar width 7 then Vigenere 27-29": {
+    "column": 0.0022,
+    "repeats": 0.0018,
+    "both": 0.0
+   },
+   "Vigenere 27-29 then columnar width 21": {
+    "column": 0.0022,
+    "repeats": 0.0022,
+    "both": 0.0
+   },
+   "columnar width 21 then Vigenere 27-29": {
+    "column": 0.0032,
+    "repeats": 0.0022,
+    "both": 0.0
+   },
+   "calibration: random letters": {
+    "column": 0.0015,
+    "repeats": 0.0015,
+    "both": 0.0
+   },
+   "calibration: shuffled K4": {
+    "column": 0.001,
+    "repeats": 0.0003,
+    "both": 0.0
+   }
+  }
+ },
+ "notes": "Rates (column / repeats / both): ciphertext autokey, lag 21: 0.001 / 0.054 / 0.0000; Vigenere, period 7: 0.003 / 0.015 / 0.0000; Vigenere, period 14: 0.002 / 0.004 / 0.0000; Vigenere, period 21: 0.002 / 0.004 / 0.0000; plaintext autokey, lag 7: 0.002 / 0.004 / 0.0000; columnar width 21 then Vigenere 27-29: 0.003 / 0.002 / 0.0000; plaintext autokey, lag 21: 0.003 / 0.002 / 0.0000; Vigenere 27-29 then columnar width 21: 0.002 / 0.002 / 0.0000; columnar width 7 then Vigenere 27-29: 0.002 / 0.002 / 0.0000; Vigenere, period 28: 0.001 / 0.003 / 0.0000; ciphertext autokey, lag 7: 0.002 / 0.002 / 0.0000; Vigenere 27-29 then columnar width 7: 0.002 / 0.002 / 0.0000; calibration: random letters: 0.002 / 0.002 / 0.0000; calibration: shuffled K4: 0.001 / 0.000 / 0.0000.",
+ "error": null,
+ "worked_example": "K4: doublet column mark True, width-21 repeat mark True",
+ "seconds": 1.5565159320831299
+}

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the shuffle",
+  "text": "A keyword column shuffle writes the message in rows under a word and reads the columns in the word's alphabetical order. Here every word in the dictionary is the key, once forwards and once as the undoing."
+ },
+ {
+  "anchor": "the check",
+  "text": "After the shuffle a repeating secret word on the table must give the copper's letters where the known letters landed; two known letters in one slot of the word must agree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "459,268 routes, keys of 1 to 26 letters before or after: nothing below 22. The one count outside the scrambled coppers' range, period 23 after the move, is below it."
+ }
+]

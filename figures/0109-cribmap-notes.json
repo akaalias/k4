@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the table",
+  "text": "K1 and K2 used a table keyed by a word, KRYPTOS. Here every dictionary word of four letters or more keys the table, as K1-K3 did, with a repeating secret word on top."
+ },
+ {
+  "anchor": "the check",
+  "text": "On SHADOW's table each known place needs one key value; with a key of p letters, places p apart must need the same. With p = 7, places 22 and 29 need 1 and 25."
+ },
+ {
+  "anchor": "the bound",
+  "text": "208,062 tables, keys of 1 to 26 letters, 10 rules: nothing fits a key shorter than 26 on K4, while scrambled coppers reach 25. K4 is if anything harder to fit."
+ }
+]

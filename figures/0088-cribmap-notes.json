@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key",
+  "text": "A word over the columns plus a shift that changes every so many letters, for instance once per carved line: the sculpture's K4 sits on lines of 31 letters."
+ },
+ {
+  "anchor": "the check",
+  "text": "Two known letters in the same column of the word and the same stretch need the same key; with a 7-letter word and the carved lines, places 22 and 29 already disagree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Word lengths 2-31, stretches 2-50 at every offset, both tables: no combination with two checks survives on the copper."
+ }
+]

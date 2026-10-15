@@ -34,6 +34,10 @@ uses a word a stranger would not know.
 
 **a grid** (also: a matrix, a scramble, a transposition, a route, a columnar transposition): Writing the message into rows of some width and reading it out in another order, column by column for instance, which shuffles the letters without changing them. The third message on the sculpture was hidden this way. A keyed grid reads the columns in the order given by a word.
 
+**a quarter turn** (also: a grid turn, turning the grid, the grid turned, three turns): Writing the text in rows of a given width and reading the columns out, each from the bottom up, left column first, as if the grid had been turned on its side. The third message was scrambled this way, twice. When the letters do not fill the last row, the empty cells are skipped.
+
+**a column shuffle** (also: keyed column shuffle, column key, double transposition, two column shuffles): Writing the text in rows under a key word and reading the columns in the alphabetical order of the key's letters. Doing it twice, with two keys, is the classic double transposition.
+
 **a mask** (also: disguise): Something done to the English before the cipher proper, such as writing it backwards or slipping in meaningless letters, that is not itself a cipher but moves or hides the letters.
 
 **nulls** (also: meaningless letters, padding): Letters inserted into a message that carry no meaning, used to pad it or to disguise it.

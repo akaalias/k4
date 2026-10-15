@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key",
+  "text": "Each letter is shifted by its column's letter of one key word and by its row's letter of a second key. Inside a row the row letter is the same for neighbours, so doubled letters can only collect in particular columns, as K4's do in rows of seven."
+ },
+ {
+  "anchor": "the check",
+  "text": "Two known letters in one row differ by the difference of their column letters; the same two columns one row down must differ by the same amount. In rows of 7 the first such pair already disagrees."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every width 2-48, both tables, with no scrambling and after or before 27,754 scramblings: nothing fits beyond what scrambled coppers show."
+ }
+]

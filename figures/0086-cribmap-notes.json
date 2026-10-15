@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the grid",
+  "text": "Counted with the ? before it, K4 has 98 symbols, which fill seven rows of 14 exactly, the way K3's 336 letters filled its grid."
+ },
+ {
+  "anchor": "the move",
+  "text": "Read from the right, each column bottom-up, the last cell comes out first: a ? that ends the message is carved in front, as on the sculpture."
+ },
+ {
+  "anchor": "the bound",
+  "text": "300,651 moves that bring the ? to the front, with a repeating key or an autokey: nothing beyond chance. The 72 three-check settings are 34 distinct sets of checks repeated by look-alike shuffles."
+ }
+]

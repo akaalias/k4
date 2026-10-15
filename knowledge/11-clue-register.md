@@ -99,11 +99,11 @@ Mengenlehreuhr readings dead; a cipher on the Weltzeituhr's 24-letter ring is ex
 
 **C13. "Two events... my second trip to Egypt in late 1986, and the fall of the Berlin
 Wall."** (2025). Readings: (a) plaintext content: the words EGYPT, WALL, CAIRO, LUXOR,
-TUTANKHAMUN, NOVEMBER; (b) keys: the same words. Status: untested as keys.
+TUTANKHAMUN, NOVEMBER; (b) keys: the same words. Status: as keyword alphabets for a periodic tableau, periods 1-52, nothing beyond the shuffled-copper rate (0053); other uses untested.
 
 **C14. "The codes of Kryptos from the morse code at the beginning through K5 are about
 delivering a message."** (2025). Readings: (a) theme only; (b) MESSAGE, DELIVER, TRANSMIT
-as keys; (c) K2's "last message" is the hinge. Status: untested.
+as keys; (c) K2's "last message" is the hinge. Status: (b) MESSAGE, DELIVER, DELIVERING, TRANSMIT as keyword alphabets for a periodic tableau, periods 1-52: nothing (0053); other uses untested.
 
 **C15. "If they don't, then (CLUE) what's the point? Power resides with a secret, not
 without it."** (open letter, August 2025; the FT called it "one final hint"). Readings:

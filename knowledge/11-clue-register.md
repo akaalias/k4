@@ -121,7 +121,7 @@ Status: partly confirmed by the cribs.
 
 **C17. "Whether it's 97, whether it's 100... I seem to like to manipulate the
 information."** (2005). Readings: (a) disinformation; (b) the working text had nulls or
-a different length before being cut to 97 (the doublets as nulls: dead, 0075); (c) the "?" counts. Family G. Status: (a) and (b) bounded by 0009 (periodic key stretches) and 0031 (chained autokey, two-word composition): one letter inserted or deleted anywhere revives nothing; ciphertext autokey with one letter wrong, missing or extra is dead too (0068).
+a different length before being cut to 97 (the doublets as nulls: dead, 0075); (c) the "?" counts. Family G. Status: (b) as hand padding of a K3-style grid (blanks at the top, or fillers carried through a second turn) before or after a periodic key: dead below period 22 (0082). (a) and (b) bounded by 0009 (periodic key stretches) and 0031 (chained autokey, two-word composition): one letter inserted or deleted anywhere revives nothing; ciphertext autokey with one letter wrong, missing or extra is dead too (0068).
 parameter.
 
 **C18. "Scheidt's 'a bit of stego'" and "I think there are 98 characters left."** (2004,

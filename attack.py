@@ -1,233 +1,151 @@
-"""Experiment 0041. See program.md for the contract."""
+"""Experiment 0042. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "route-transpositions-spiral-boustrophedon-diagonal",
-    "title": "Routes beyond columns: spirals, snakes and diagonals through a grid, tested in both orders",
-    "family": "6-transposition-then-tableau",
-    "parent": "0016-routes-then-tableau-forced-key-english",
-    "changed": "The route set is the one gap the columnar experiments left: writing in rows and reading out along a spiral, a snake (alternate rows reversed), or diagonals, at every width. Each route is tested before the tableau, as in experiments 6 and 16, and after a substitution, as in experiment 19.",
+    "slug": "progressive-key-with-mixed-alphabets",
+    "title": "A progressive key on a table rebuilt from the puzzle's words",
+    "family": "1-keyed-periodic",
+    "parent": "0011-progressive-key-period-sweep",
+    "changed": "Experiment 11 killed progressive keys at periods 1 to 25 and 31 to 51 under the standard and KRYPTOS alphabets. Here the plain and cipher alphabets are the keyword mixings of every vocabulary word; the key alphabet drops out of the consistency test. Periods 1 to 30, steps 1 to 25, the per-repeat form.",
     "hypothesis_expert": (
-        "Experiments 6, 8, 16, 26 and 37 covered columnar, keyed columnar, rotation and affine routes; 19 "
-        "covered substitution then those routes. The classical route transpositions of the manuals, spiral "
-        "inward and outward from each corner in either turn, boustrophedon by rows and by columns, and the "
-        "two diagonal zigzags, at widths 2-48 (about 700 routes), remain. Two tests per route. Before a "
-        "periodic tableau: the forced key letters at the crib landing places give the live periods by the "
-        "divisor rule and the forced key at live periods up to 40 is scored as English, 8 conventions, with "
-        "ten full-size shuffled controls. After any one-to-one substitution: the 24 crib images must never "
-        "put two different plaintext letters on one carved letter, as in experiment 19, with ten shuffles. "
-        "Bounds: complete for these route families at these widths, both orders."
+        "The Trithemius progression on a keyword alphabet is the classical combination the manuals teach "
+        "(C5): key index at position i is base[i mod P] plus d times the repeat number. Experiment 11 swept "
+        "it under 24 conventions; the consistency test depends only on the plain and cipher alphabets, so "
+        "the 63 x 63 keyword-mixed pairs from the vocabulary are the untested corner. For each pair, mode, "
+        "period 1-30 and step 1-25, every crib forces the base letter of its slot after the progression is "
+        "subtracted; a slot forced two ways kills the combination. About 9 million combinations, 24 checks "
+        "each, with early exit. Survivors at periods up to 30 have their forced base fragment matched against "
+        "the vocabulary and K1-K3 windows. Bounds: complete for this pool, these periods and steps, the "
+        "per-repeat form; the per-letter form and periods above 30 are not covered."
     ),
     "hypothesis_eli5": (
-        "So far the grids were read out by columns. The old manuals also read them out in a spiral from a "
-        "corner, in a snake that turns at the end of each row, or along diagonals. We try all of those, at "
-        "every width, and ask the two questions as before: if the scramble came first, could a short secret "
-        "word on the table then explain the carved letters; and if the letters were swapped first and "
-        "scrambled after, do the 24 known letters ever land without clashing."
+        "Experiment 11 tried the trick where the secret word slides one notch further each time it repeats, "
+        "and found that no short word works with the sculpture's own table. The table could have been built "
+        "from another word, which changes the sums. So we rebuild the table from every word the puzzle knows "
+        "and try every word length up to 30 and every slide again."
     ),
     "prediction": (
-        "Before the tableau: smallest live period 22 to 24, forced keys inside the range of the shuffled "
-        "controls. After a substitution: no route passes the one-to-one test, and no shuffle does either. "
-        "No candidate."
+        "Periods 1 to 25 die at every step under every alphabet pair, as they did under the sculpture's "
+        "alphabets; a scatter of chance survivors appears at 26 to 30. No forced fragment matches a word; "
+        "zero candidates pass."
     ),
     "method": (
-        "1. Build the routes as permutations of 97 positions: for each width, spirals from four corners in "
-        "two turns inward, boustrophedon by rows and by columns, and the two diagonal zigzags; each also "
-        "inverted. 2. Test one, before the tableau: send the cribs through, force key letters under 8 "
-        "conventions, live periods by the divisor rule, score the forced key at live periods up to 40. "
-        "3. Test two, after a substitution: check the crib images for clashes. 4. Ten shuffles for each test."
+        "1. Build the alphabet pool. 2. For each plain and cipher alphabet and mode, compute the forced key "
+        "index at each crib. 3. For each period and step, subtract the progression and reduce to the slot; "
+        "reject on disagreement. 4. Count survivors by period; match surviving fragments against the "
+        "vocabulary and K1-K3 windows; decrypt and submit matches."
     ),
     "walkthrough": (
-        "1. Width 10: write the 97 positions in rows of 10. 2. Spiral: start at the top left, read along the "
-        "top row, down the right edge, back along the bottom, up the left edge, then inward. 3. Note where "
-        "position 22, the E of EAST, comes out, and where each of the other known letters comes out. "
-        "4. Before-the-table test: the carved letter at each landing place and the known letter force a key "
-        "letter; landing places a multiple of p apart must agree. 5. After-a-swap test: if the carved letter "
-        "at E's landing place also sits at the landing place of a different known letter, the route is dead "
-        "for any letter swap. 6. Snake and diagonals the same way, at every width."
+        "1. Build the alphabet from ABSCISSA: ABSCIDEFGHJKLMNOPQRTUVWXYZ, and use it for the message; keep "
+        "KRYPTOS for the carved letters; Vigenere. 2. Period 13, step 2: position 22 is E, index 5 in the "
+        "ABSCISSA alphabet; carved F is index 11 in KRYPTOS; the key index is 6; position 22 lies in repeat "
+        "1 (positions 14 to 26), so subtract one step: base index 4 for slot 8. 3. Position 74, the K of "
+        "CLOCK, is repeat 5, slot 8: its key index minus five steps must also give 4. 4. If not, period 13 "
+        "step 2 is dead for this pair of alphabets. 5. Try every step and every pair; a survivor gives a "
+        "pattern of base letters with blanks to slide the puzzle's words across."
     ),
 }
 
-import random
-from kryptos.alphabets import key_letter_for
+from kryptos.alphabets import keyword_mixed
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY, load_k1, load_k2, load_k3
 
 N = 97
-MAXP = 40
-DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0] for d in range(1, N + 1)}
-CONVS = [(pa, ca, "kry", m) for pa in ("std", "kry") for ca in ("std", "kry") for m in ("vig", "beau")]
+MAXP, MAXD = 30, 25
+MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
+DEC = {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}
+ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
 
 
-def grid_cells(w):
-    rows = (N + w - 1) // w
-    return [[(r * w + c) if r * w + c < N else None for c in range(w)] for r in range(rows)]
+def letters(s):
+    return "".join(c for c in s if "A" <= c <= "Z")
 
 
-def spiral(w, corner, clockwise):
-    g = grid_cells(w); R, C = len(g), w
-    top, left, bottom, right = 0, 0, R - 1, C - 1
-    order = []
-    # generic clockwise spiral from top-left; other corners by flipping the grid
-    def flip(cells):
-        if corner in ("tr", "br"):
-            cells = [row[::-1] for row in cells]
-        if corner in ("bl", "br"):
-            cells = cells[::-1]
-        return cells
-    g = flip(g)
-    if not clockwise:
-        g = [list(x) for x in zip(*g)]          # transpose turns the spiral the other way
-        R, C = len(g), len(g[0]); top, left, bottom, right = 0, 0, R - 1, C - 1
-    while top <= bottom and left <= right:
-        for c in range(left, right + 1): order.append(g[top][c])
-        for r in range(top + 1, bottom + 1): order.append(g[r][right])
-        if top < bottom:
-            for c in range(right - 1, left - 1, -1): order.append(g[bottom][c])
-        if left < right:
-            for r in range(bottom - 1, top, -1): order.append(g[r][left])
-        top += 1; bottom -= 1; left += 1; right -= 1
-    return [x for x in order if x is not None]
-
-
-def snake_rows(w):
-    g = grid_cells(w); out = []
-    for r, row in enumerate(g):
-        out += row if r % 2 == 0 else row[::-1]
-    return [x for x in out if x is not None]
-
-
-def snake_cols(w):
-    g = grid_cells(w); R, C = len(g), w; out = []
-    for c in range(C):
-        col = [g[r][c] for r in range(R)]
-        out += col if c % 2 == 0 else col[::-1]
-    return [x for x in out if x is not None]
-
-
-def diagonals(w, zigzag):
-    g = grid_cells(w); R, C = len(g), w; out = []
-    for d in range(R + C - 1):
-        cells = [g[r][d - r] for r in range(R) if 0 <= d - r < C]
-        if zigzag and d % 2:
-            cells = cells[::-1]
-        out += cells
-    return [x for x in out if x is not None]
-
-
-def route_set():
-    routes = []
-    for w in range(2, 49):
-        for corner in ("tl", "tr", "bl", "br"):
-            for cw in (True, False):
-                routes.append((f"spiral w={w} from {corner} {'cw' if cw else 'ccw'}", spiral(w, corner, cw)))
-        routes.append((f"snake rows w={w}", snake_rows(w)))
-        routes.append((f"snake columns w={w}", snake_cols(w)))
-        routes.append((f"diagonals w={w}", diagonals(w, False)))
-        routes.append((f"diagonal zigzag w={w}", diagonals(w, True)))
-    # each order list means out[j] = in[order[j]]; add inverses
-    inv = []
-    for name, order in routes:
-        where = [0] * N
-        for j, i in enumerate(order): where[i] = j
-        inv.append((name + " inv", where))
-    return routes + inv
-
-
-def encrypt(plaintext, key):
-    raise NotImplementedError("diagnostic experiment: no full key is implied, so no candidate is submitted")
-
-
-def runs_in_slots(slots, P):
-    filled = [slots.get(s) for s in range(P)]
-    start = 0 if all(filled) else next(i for i in range(P) if filled[i] is None)
-    out, cur = [], []
-    for k in range(1, P + 1):
-        ch = filled[(start + k) % P]
-        if ch is None:
-            if len(cur) >= 5: out.append("".join(cur))
-            cur = []
-        else:
-            cur.append(ch)
-    if len(cur) >= 5: out.append("".join(cur))
+def pool_of(vocab):
+    pool = {"std": STD, "kry": KRY}
+    for w in vocab:
+        if len(set(w)) >= 3:
+            pool[f"{w}/keyword"] = keyword_mixed(w)
+    seen, out = {}, {}
+    for name, A in pool.items():
+        if A not in seen:
+            seen[A] = name; out[name] = A
     return out
 
 
-def test_before(ct, known, routes, score):
-    crib_pos = sorted(known)
-    best, hist = [], {}
-    for name, order in routes:
-        where = {order[j]: j for j in range(N)}
-        inter = [where[p - 1] for p in crib_pos]
-        for conv in CONVS:
-            pa, ca, ka, m = conv
-            forced = [key_letter_for(known[p], ct[j], pa, ca, ka, m) for p, j in zip(crib_pos, inter)]
-            dead = set()
-            for a in range(24):
-                for b in range(a + 1, 24):
-                    if forced[a] != forced[b]:
-                        dead.update(DIVISORS[abs(inter[a] - inter[b])])
-            minp = next(P for P in range(1, N + 1) if P not in dead)
-            hist[minp] = hist.get(minp, 0) + 1
-            for P in range(2, MAXP + 1):
-                if P in dead:
-                    continue
-                slots = {j % P: l for j, l in zip(inter, forced)}
-                runs = runs_in_slots(slots, P)
-                qs = sum(len(r) - 3 for r in runs)
-                if qs < 4:
-                    continue
-                sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
-                if len(best) < 10 or sc > best[-1][0]:
-                    best.append((sc, name, "/".join(conv), P, runs)); best.sort(reverse=True); best = best[:10]
-    return best, hist
-
-
-def test_after(ct, known, routes):
-    """Substitution then route: the carved letter at each crib's landing place is its image; one carved
-    letter cannot be the image of two different plaintext letters."""
-    survivors = []
-    for name, order in routes:
-        where = {order[j]: j for j in range(N)}
-        src = {}
-        ok = True
-        for pos, p in known.items():
-            c = ct[where[pos - 1]]
-            if c in src and src[c] != p:
-                ok = False; break
-            src[c] = p
-        if ok:
-            survivors.append(name)
-    return survivors
+def encrypt(plaintext, key):
+    pa, ca, m, k, d = key["pa"], key["ca"], key["m"], key["key"], key["step"]   # key: list of base indices
+    P = len(k)
+    return "".join(ca[ENC[m](pa.index(p), (k[i % P] + d * (i // P)) % 26)] for i, p in enumerate(plaintext))
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    routes = route_set()
-    best, hist = test_before(ct, known, routes, ctx.english_score)
-    after = test_after(ct, known, routes)
-    ctrl_before, ctrl_after, ctrl_minp = [], [], []
-    for seed in range(10):
-        if ctx.time_left() < 120:
+    vocab = list(ctx.vocabulary)
+    pool = pool_of(vocab)
+    index = {n: {ch: i for i, ch in enumerate(A)} for n, A in pool.items()}
+    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
+    crib = sorted(known.items())
+    reps = [None] + [[(pos - 1) % P for pos, _ in crib] for P in range(1, MAXP + 1)]
+    repn = [None] + [[(pos - 1) // P for pos, _ in crib] for P in range(1, MAXP + 1)]
+    survivors = {}
+    candidates, matches = [], []
+    checked = 0
+    for pname, pa in pool.items():
+        pidx = index[pname]
+        for cname, ca in pool.items():
+            cidx = index[cname]
+            for m, f in MODES.items():
+                forced = [f(pidx[p], cidx[ct[pos - 1]]) for pos, p in crib]
+                for P in range(1, MAXP + 1):
+                    slots_of, rep_of = reps[P], repn[P]
+                    for d in range(1, MAXD + 1):
+                        checked += 1
+                        base = {}
+                        ok = True
+                        for k in range(24):
+                            b = (forced[k] - d * rep_of[k]) % 26
+                            s = slots_of[k]
+                            if s in base:
+                                if base[s] != b:
+                                    ok = False; break
+                            else:
+                                base[s] = b
+                        if not ok:
+                            continue
+                        survivors[P] = survivors.get(P, 0) + 1
+                        for ka_name in ("std", "kry"):
+                            A = pool[ka_name]
+                            wordpool = set(x for x in vocab if len(x) == P)
+                            for t in texts:
+                                for i in range(0, len(t) - P + 1):
+                                    wordpool.add(t[i:i + P])
+                            for kw in wordpool:
+                                if all(A.index(kw[s]) == b for s, b in base.items()):
+                                    kidx = [A.index(ch) for ch in kw]
+                                    key = {"pa": pa, "ca": ca, "m": m, "key": kidx, "step": d}
+                                    pt = "".join(pa[DEC[m](cidx[c], (kidx[i % P] + d * (i // P)) % 26)] for i, c in enumerate(ct))
+                                    matches.append((pname, cname, m, P, d, kw))
+                                    candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * P + 8, "key_description": f"period {P} key {kw} step {d}; plain {pname}, cipher {cname}, key alphabet {ka_name}, {m}"})
+            if ctx.time_left() < 60:
+                break
+        if ctx.time_left() < 60:
             break
-        letters_ = list(ct); random.Random(seed).shuffle(letters_); sct = "".join(letters_)
-        b, h = test_before(sct, known, routes, ctx.english_score)
-        ctrl_before.append(round(b[0][0], 3) if b else None); ctrl_minp.append(min(h))
-        ctrl_after.append(len(test_after(sct, known, routes)))
     return {
-        "candidates": [],
-        "bounds": {"family": "route transpositions (spiral, snake, diagonal), widths 2-48, forward and inverse; before a periodic tableau and after a substitution",
-                   "routes": len(routes), "conventions_before": len(CONVS),
-                   "before_smallest_live_period": min(hist), "before_min_period_histogram": {str(k): v for k, v in sorted(hist.items())[:10]},
-                   "before_best": [{"score": round(sc, 3), "route": nm, "convention": cv, "period": P, "runs": rs} for sc, nm, cv, P, rs in best],
-                   "before_shuffled_best": ctrl_before, "before_shuffled_smallest_period": ctrl_minp,
-                   "after_survivors": after, "after_shuffled_survivor_counts": ctrl_after},
-        "notes": f"{len(routes)} routes. Before the tableau: smallest live period {min(hist)}, best forced key {best[0][0]:.3f} vs shuffled {ctrl_before}. After a substitution: {len(after)} routes pass the one-to-one test vs shuffled {ctrl_after}.",
+        "candidates": candidates[:50],
+        "bounds": {"family": "progressive key (per-repeat), keyword-mixed alphabets from the vocabulary", "alphabets": len(pool), "periods": f"1-{MAXP}", "steps": f"1-{MAXD}",
+                   "combinations_checked": checked, "survivors_by_period": {str(P): n for P, n in sorted(survivors.items())},
+                   "periods_dead_at_every_step_and_pair": [P for P in range(1, MAXP + 1) if P not in survivors],
+                   "vocab_matches": len(matches)},
+        "notes": f"{checked} combinations. Periods dead under every pair and step: {[P for P in range(1, MAXP + 1) if P not in survivors]}. Survivors by period: {dict(sorted(survivors.items()))}. {len(matches)} matches.",
     }
 
 
 def worked_example(ctx, key):
-    order = spiral(10, "tl", True)
-    where = {order[j]: j for j in range(N)}
-    lines = ["route: rows of 10, read out in a clockwise spiral from the top left", "", "first twelve positions read out: " + " ".join(str(i + 1) for i in order[:12]), "", "plain pos  letter  lands at  carved there"]
-    for pos in (22, 23, 24, 64, 65, 66):
-        j = where[pos - 1]
-        lines.append(f"{pos:>9}    {ctx.KNOWN[pos]}       {j+1:>3}        {ctx.K4[j]}")
+    pa, ca = keyword_mixed("ABSCISSA"), KRY
+    lines = [f"plain alphabet ABSCISSA/keyword {pa}; cipher KRYPTOS; Vigenere; period 13, step 2", "", "pos  plain  carved  key index  repeat  base index  slot"]
+    for pos in (22, 23, 24, 64, 74):
+        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
+        k = (ca.index(c) - pa.index(p)) % 26; rep = (pos - 1) // 13
+        lines.append(f"{pos:>3}    {p}      {c}       {k:>2}        {rep}        {(k - 2 * rep) % 26:>2}       {(pos - 1) % 13}")
+    lines.append("")
+    lines.append("positions 22 and 74 share slot 8: their base indices must agree, or period 13 step 2 is dead for this pair.")
     return "\n".join(lines)

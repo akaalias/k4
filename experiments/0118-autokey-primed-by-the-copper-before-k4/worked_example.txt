@@ -1,0 +1,9 @@
+the carved stream before K4 has 772 characters; lag 31 (one carved line), sculpture's alphabet, Vigenere
+
+place  known  carved  key letter (31 back)  carved - key  hit
+   22      E       F                     T             B  no
+   23      A       L                     T             G  no
+   24      S       R                     R             K  no
+   25      T       V                     T             M  no
+   26      N       Q                     V             X  no
+   64      B       N                     S             G  no

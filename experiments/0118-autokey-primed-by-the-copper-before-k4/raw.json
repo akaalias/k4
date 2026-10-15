@@ -1,0 +1,60 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "ciphertext autokey continuing the carved stream from K3, and the letter above on the plate",
+  "streams": {
+   "with ?": 772,
+   "letters only": 768
+  },
+  "lags": [
+   1,
+   200
+  ],
+  "rules": 12,
+  "k4_best_lag_hits": 5,
+  "controls_best_lag_hits": [
+   5,
+   5,
+   5,
+   5,
+   6,
+   5,
+   5,
+   6,
+   5,
+   6
+  ],
+  "k4_best_geometric_hits": 3,
+  "controls_best_geometric_hits": [
+   4,
+   4,
+   4,
+   4,
+   5,
+   4,
+   4,
+   2,
+   4,
+   2
+  ],
+  "k4_full": [],
+  "k4_top": [],
+  "k4_geometric": {
+   "2 up, right, beau/std/std": 3,
+   "1 up, left, vig/kry/std": 2,
+   "1 up, left, beau/std/kry": 2,
+   "1 up, left, var/std/std": 2,
+   "1 up, left, var/kry/std": 2,
+   "1 up, right, vig/kry/std": 2,
+   "1 up, right, beau/std/kry": 2,
+   "1 up, right, var/std/std": 2,
+   "1 up, right, var/kry/std": 2,
+   "2 up, left, var/kry/std": 2
+  },
+  "controls": "10 shuffled coppers (K4 shuffled, earlier text fixed; seed 118), identical search"
+ },
+ "notes": "Lags 1-200 x 12 rules x 2 streams: K4 best 5/24, controls [5, 5, 5, 5, 6, 5, 5, 6, 5, 6]; full 0. Letter above on the plate: K4 best 3/24, controls [4, 4, 4, 4, 5, 4, 4, 2, 4, 2].",
+ "error": null,
+ "worked_example": "the carved stream before K4 has 772 characters; lag 31 (one carved line), sculpture's alphabet, Vigenere\n\nplace  known  carved  key letter (31 back)  carved - key  hit\n   22      E       F                     T             B  no\n   23      A       L                     T             G  no\n   24      S       R                     R             K  no\n   25      T       V                     T             M  no\n   26      N       Q                     V             X  no\n   64      B       N                     S             G  no",
+ "seconds": 0.43539929389953613
+}

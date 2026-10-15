@@ -116,3 +116,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0115	0115-a-puzzle-word-plus-any-english-word	3-two-component-key	0059-two-keywords-two-passes-k1-k3-word-alphabets	reverted	0	0	0			6	unattributed=360 run=6 record=0
 0116	0116-hill-matrix-then-the-table	8-hill-polygraphic	0105-affine-hill-solved-letter-by-letter	reverted	0	0	0			7	unattributed=115 run=6 record=0
 0117	0117-running-keys-through-all-the-shifts	1-keyed-periodic	0090-sculpture-running-key-with-a-k3-move	reverted	0	0	0			757	unattributed=354 run=758 record=0
+0118	0118-autokey-primed-by-the-copper-before-k4	1-keyed-periodic	0002-ciphertext-autokey	reverted	0	0	0			1	unattributed=7 run=0 record=0

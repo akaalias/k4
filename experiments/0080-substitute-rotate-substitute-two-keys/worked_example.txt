@@ -1,0 +1,11 @@
+one quarter turn clockwise at width 7; first key length 2, second key length 3; sculpture's alphabet, s = +1
+
+place  known  new place  copper there  first slot  second slot  sum of the two key letters
+   22      E         11             U           1            1  U-E = 10
+   23      A         25             V           0            0  V-A = 15
+   24      S         39             Q           1            2  Q-S = 14
+   25      T         53             K           0            1  K-T = 22
+   26      N         67             V           1            0  V-N = 3
+   27      O         81             T           0            2  T-O = 25
+
+24 sums over 2 + 3 slots: 20 independent checks

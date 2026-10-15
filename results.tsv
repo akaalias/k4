@@ -78,3 +78,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0077	0077-rows-of-seven-reshuffled-and-ciphertext-autokey	1-keyed-periodic	0070-reshuffle-every-block-of-seven-and-the-table	reverted	0	0	0			241	design=32 implement=0 test=18 run=241 record=0
 0078	0078-running-key-from-sanborns-own-letters	1-keyed-periodic	0004-running-key-from-k1-k3	reverted	0	0	0			79	design=64 implement=0 test=17 run=79 record=0
 0079	0079-berlin-clock-as-a-key-schedule	1-keyed-periodic	0011-progressive-key-period-sweep	reverted	0	0	0			37	design=41 implement=0 test=16 run=37 record=0
+0080	0080-substitute-rotate-substitute-two-keys	6-transposition-then-tableau	0008-k3-formula-all-shifts-then-tableau	reverted	0	0	0			167	design=38 implement=86 test=88 run=167 record=0

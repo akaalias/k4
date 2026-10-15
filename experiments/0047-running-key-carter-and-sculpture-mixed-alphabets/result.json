@@ -1,0 +1,67 @@
+{
+ "id": 47,
+ "tag": "0047-running-key-carter-and-sculpture-mixed-alphabets",
+ "started": "2026-10-15T09:49:23+00:00",
+ "seconds": 399.4,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 51.4,
+  "test": 12.8,
+  "run": 399.4,
+  "record": 0.0
+ },
+ "ended_epoch": 1792058162.841203,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig"
+ },
+ "bounds": {
+  "family": "running key from Carter and the sculpture texts, one alphabet keyword-mixed",
+  "alphabet_pairs": 248,
+  "alphabets": 63,
+  "key_alphabets": [
+   "std",
+   "kry"
+  ],
+  "modes": 3,
+  "sources": {
+   "carter vol1 fwd": 284914,
+   "carter vol1 bwd": 284914,
+   "tableau rows fwd": 781,
+   "tableau rows bwd": 781,
+   "tableau columns fwd": 781,
+   "tableau columns bwd": 781,
+   "morse as carved fwd": 80,
+   "morse as carved bwd": 80,
+   "morse reversed order fwd": 80,
+   "morse reversed order bwd": 80,
+   "right panel K1-K4 fwd": 865,
+   "right panel K1-K4 bwd": 865
+  },
+  "trials": 855602976,
+  "stopped_by_clock": false,
+  "fewest_mismatches": "more than 2",
+  "near_misses": [],
+  "survivors": 0
+ },
+ "notes": "855602976 trials; 0 survivors; 0 within two mismatches.",
+ "error": null,
+ "candidates": []
+}

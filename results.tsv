@@ -45,3 +45,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0044	0044-hill-with-keyword-numberings	8-hill-polygraphic	0015-hill-solved-from-crib-blocks	reverted	50	0	21	35.311		0	design=0 implement=31 test=1 run=0 record=0
 0045	0045-running-key-k1-k3-mixed-alphabets	1-keyed-periodic	0004-running-key-from-k1-k3	reverted	0	0	0			63	design=0 implement=53 test=5 run=63 record=0
 0046	0046-gromark-three-term-rules-and-higher-bases	5-gromark-lfsr	0028-gromark-small-bases-two-to-nine	reverted	0	0	0			37	design=10 implement=52 test=41 run=37 record=0
+0047	0047-running-key-carter-and-sculpture-mixed-alphabets	1-keyed-periodic	0045-running-key-k1-k3-mixed-alphabets	reverted	0	0	0			399	design=0 implement=51 test=13 run=399 record=0

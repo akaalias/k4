@@ -1,0 +1,11 @@
+plain alphabet BERLIN/keyword BERLINACDFGHJKMOPQSTUVWXYZ
+cipher alphabet CLOCK/keyword CLOKABDEFGHIJMNPQRSTUVWXYZ
+key text: Carter volume one at offset 0, key letters on the standard order; Vigenere
+
+pos  plain  key  result  carved  match
+ 22    E     U     V       F     no
+ 23    A     M     S       L     no
+ 24    S     L     K       R     no
+ 25    T     I     L       V     no
+ 64    B     C     O       N     no
+ 65    E     A     L       Y     no

@@ -1,0 +1,5 @@
+plain alphabet PALIMPSEST/keyword PALIMSETBCDFGHJKNOQRUVWXYZ; cipher alphabet KRYPTOS; Vigenere; period 27; 3 free slots climbed
+
+key indices [10, 20, 6, 7, 25, 1, 25, 11, 14, 11, 22, 10, 20, 1, 14, 9, 23, 21, 20, 11, 18, 6, 16, 22, 15, 4, 3]
+text       VJUUWMZUZIZTJSOBQOJXSEASTNORTHEASTUNGBDGKEXCNEJTOOBAWJFNCPYJUAUBERLINCLOCKSTUMDUAEKMBJZWITWZAEBRQ
+English of the free letters -8.243 (English about -3.6, noise about -6.8)

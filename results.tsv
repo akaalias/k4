@@ -33,3 +33,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0032	0032-row-keyed-grids-one-key-letter-per-row	6-transposition-then-tableau	0026-double-keyed-columnar-then-tableau	reverted	0	0	0			0	design=4 implement=50 test=1 run=0 record=0
 0033	0033-trifid-keyword-cubes-and-annealing	4-visual-spatial	-	reverted	0	0	0			107	design=17 implement=67 test=84 run=108 record=0
 0034	0034-complete-the-key-at-surviving-periods	1-keyed-periodic	0005-quagmire-period-sweep-forced-keys	kept	18	18	24	4.381	-7.2893	1408	design=12 implement=89 test=14 run=1408 record=0
+0035	0035-complete-the-key-mixed-alphabets-27-29	1-keyed-periodic	0034-complete-the-key-at-surviving-periods	reverted	3	3	24	4.208	-7.9714	98	design=1148 implement=63 test=7 run=98 record=0

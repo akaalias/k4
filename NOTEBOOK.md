@@ -73,6 +73,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 66 | 1 | The self-feeding autokey plus a repeating secret word on top, every lag and word length, solved exactly: nothing survives with three or more checks; lag 1 with 7 (the doublet recipe) and lag 21 (the repeat recipe) are dead. The record's case count, 294,912, counts lags with no known letter past them; 221,184 were tested. |
 | 67 | 1 | **Prediction failed in detail.** Two earlier carved letters as the key, every pair of distances, with or without a short word: 15 cases survive three checks against 3-12 on scrambled coppers, and one survives four (0-2). Listed after the run, the 16 are scattered with no pattern, and distances 1 and 21 never pass more than one check. Chance, but the record's own prediction said none. |
 | 68 | 1 | The self-feeding autokey with one carved letter wrong, missing or extra: no variant at any lag passes three checks, lag 21 has no survivor at all, and the counts sit inside the scrambled coppers'. The substitution tally counts the residuals a replacement letter is fitted to as checks, overstating them by one or two. |
+| 69 | 5 | Gromark with any scrambled alphabet at all, every rule up to six digits back and every primer: none fits the known letters, and none fits scrambled coppers; a planted Gromark text is found uniquely. Base-10 Gromark is dead whatever the alphabet. The record's primer count has a typo: 5,432,100, not 5,432,200. |
 
 ### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
 

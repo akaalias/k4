@@ -73,7 +73,7 @@ const MATERIALS = {
 
 // ---- the glow: the sheet drawn a second time, warm and translucent, only inside the region ----
 const glowUniforms = { uMin: { value: new THREE.Vector3(0, 0, 0) }, uMax: { value: new THREE.Vector3(0, 0, 0) } };
-const glowMaterial = new THREE.MeshBasicMaterial({ color: 0xffdd8c, transparent: true, opacity: 0.85, depthWrite: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
+const glowMaterial = new THREE.MeshBasicMaterial({ color: 0xfff0c8, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
 glowMaterial.onBeforeCompile = (sh) => {
   sh.uniforms.uMin = glowUniforms.uMin; sh.uniforms.uMax = glowUniforms.uMax;
   sh.vertexShader = 'attribute float arc; varying float vArc; varying float vY;\n' + sh.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\nvArc = arc; vY = position.y;');
@@ -88,20 +88,47 @@ glowMaterial.onBeforeCompile = (sh) => {
 // table fills the right half.
 let sheet = null, glow = null, layout = null;
 function regionBox(name) {
-  const { seam, yTop, yBot } = layout;
-  const lh = (yTop - yBot) / 28;
-  const lineY = (a, b) => [yTop - b * lh, yTop - (a - 1) * lh];       // lines a..b, 1-based from the top
-  const bands = { 'K1': lineY(1, 2), 'K2': lineY(3, 14), 'K3': lineY(15, 24), 'K4': lineY(25, 28), 'the table': [yBot, yTop] };
+  const { seam, edges } = layout;                                      // edges[0] top of line 1 ... edges[28] bottom of line 28
+  const lineY = (a, b) => [edges[b], edges[a - 1]];                    // lines a..b, 1-based from the top
+  const bands = { 'K1': lineY(1, 2), 'K2': lineY(3, 14), 'K3': lineY(15, 24), 'K4': lineY(25, 28), 'the table': [edges[28], edges[0]] };
   const [y0, y1] = bands[name];
   return name === 'the table' ? [seam, 1.01, y0, y1] : [-0.01, seam, y0, y1];
 }
 function regionAt(localPoint) {
-  const { seam, yTop, yBot, arcOf } = layout;
+  const { seam, edges, arcOf } = layout;
   const t = arcOf(localPoint.x, localPoint.z), y = localPoint.y;
-  if (y > yTop || y < yBot) return null;
+  if (y > edges[0] || y < edges[28]) return null;
   if (t >= seam) return 'the table';
-  const line = Math.floor((yTop - y) / ((yTop - yBot) / 28)) + 1;
+  let line = 1; while (line < 28 && y < edges[line]) line++;
   return line <= 2 ? 'K1' : line <= 14 ? 'K2' : line <= 24 ? 'K3' : 'K4';
+}
+// The 28 lines of text, measured: the cut letters carry nearly all of the sheet's vertices, so a
+// histogram of vertex height over the cipher half peaks once per line. Returns 29 edges, top down.
+function lineEdges(geo, yMin, yMax) {
+  const pos = geo.attributes.position, arc = geo.attributes.arc, B = 600, hist = new Float64Array(B);
+  for (let i = 0; i < pos.count; i++) {
+    if (arc.getX(i) > 0.48) continue;
+    const b = Math.min(B - 1, Math.floor((pos.getY(i) - yMin) / (yMax - yMin) * B)); hist[b]++;
+  }
+  const sm = new Float64Array(B);
+  for (let b = 0; b < B; b++) { let a = 0, c = 0; for (let k = -4; k <= 4; k++) if (b + k >= 0 && b + k < B) { a += hist[b + k]; c++; } sm[b] = a / c; }
+  const peakMin = Math.max(...sm) * 0.25, centres = [];
+  for (let b = 1; b < B - 1; b++) {
+    if (sm[b] >= peakMin && sm[b] >= sm[b - 1] && sm[b] > sm[b + 1]) {
+      const y = yMin + (b + 0.5) / B * (yMax - yMin);
+      if (!centres.length || y - centres[centres.length - 1] > (yMax - yMin) / 60) centres.push(y); else centres[centres.length - 1] = (centres[centres.length - 1] + y) / 2;
+    }
+  }
+  centres.sort((a, b) => b - a);                                       // top first
+  console.log('[sculpture] lines found', centres.length);
+  if (centres.length !== 28) {                                         // fall back to even spacing between the outermost lines found
+    const top = centres[0] ?? yMax - 0.04 * (yMax - yMin), bot = centres[centres.length - 1] ?? yMin + 0.04 * (yMax - yMin);
+    centres.length = 0; for (let k = 0; k < 28; k++) centres.push(top - k * (top - bot) / 27);
+  }
+  const edges = [centres[0] + (centres[0] - centres[1]) / 2];
+  for (let k = 1; k < 28; k++) edges.push((centres[k - 1] + centres[k]) / 2);
+  edges.push(centres[27] - (centres[26] - centres[27]) / 2);
+  return edges;
 }
 // The arc parameter: project the sheet's footprint onto its long axis (the principal direction
 // of its vertices seen from above), trace the centreline bin by bin, and measure arc length
@@ -167,7 +194,7 @@ loader.load('/assets/kryptos.glb', (gltf) => {
     // turn the whole model so the sheet's long axis runs left to right, tree on the left
     group.rotation.y = Math.atan2(axis.y, axis.x);
     // the seam: the two halves meet at the middle of the arc
-    layout = { seam: 0.5, yTop: b.max.y - 0.04 * h, yBot: b.min.y + 0.04 * h, arcOf };
+    layout = { seam: 0.5, edges: lineEdges(sheet.geometry, b.min.y, b.max.y), arcOf };
     glow = new THREE.Mesh(sheet.geometry, glowMaterial); glow.visible = false;
     sheet.add(glow);
   }

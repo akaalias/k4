@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the solve",
+  "text": "For each period and alignment the known letters become equations between cube coordinates; a search fills the cube cell by cell and backs up at every contradiction."
+ },
+ {
+  "anchor": "the result",
+  "text": "119 settings: not one admits a cube, and none hit the search's limits, so the answer is exact. Shuffled coppers admit none either."
+ },
+ {
+  "anchor": "the verdict",
+  "text": "Trifid is dead at periods 2 to 15 for any cube, not just for cubes built from words."
+ }
+]

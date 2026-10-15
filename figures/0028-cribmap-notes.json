@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "Gromark",
+  "text": "A Gromark key is a running number: each digit is the sum of two earlier digits, in some base. Each digit shifts one letter along the alphabet, so a base-b key can only shift by 0 to b-1."
+ },
+ {
+  "anchor": "the bars",
+  "text": "Drawn for the sculpture's table: many known letters need a shift of 10 or more. On some table built from the puzzle's words the shifts might all be small."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Over 184,512 combinations of alphabets the smallest possible largest shift is 15. Bases 2 to 9 are dead before any rule is tried; base 10 and up were tested in experiments 46 and later."
+ }
+]

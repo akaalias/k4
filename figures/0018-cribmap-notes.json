@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the fingerprints",
+  "text": "Ten numbers describe the copper: how evenly letters are used, doubled letters, and two oddities. Five of the six doubled letters line up in one column when the copper is written in rows of 7, and eleven vertical pairs repeat in rows of 21."
+ },
+ {
+  "anchor": "the simulator",
+  "text": "Each candidate method was run 5,000 times on English messages, and its outputs measured the same way. The closest method is the one whose outputs look most like K4."
+ },
+ {
+  "anchor": "the result",
+  "text": "Hill ciphers and transposition with a table come closest overall, but none of them makes the width-7 column or the width-21 repeats often. Those two marks are still unexplained."
+ }
+]

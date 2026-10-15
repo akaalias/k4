@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the question",
+  "text": "Experiment 18 found two marks in the copper that no simple method explains. This round tried methods built to make them: keys of length 7, 21 and 42, Gromark, progressive keys, column shuffles of width 21."
+ },
+ {
+  "anchor": "the dots",
+  "text": "Each dot is the share of a method's simulated outputs that show the mark at least as strongly as K4. A method that made K4 would put both dots well to the right."
+ },
+ {
+  "anchor": "the result",
+  "text": "All dots sit at the left, below 1 in 20 and mostly below 1 in 100. The marks remain unexplained; only Gromark with base 2 later reproduced the width-21 repeats."
+ }
+]

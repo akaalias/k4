@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the routes",
+  "text": "The message is written in rows, its columns shuffled by one puzzle word, and again by a second, then enciphered on the table with a repeating key: 15,376 routes."
+ },
+ {
+  "anchor": "the histogram",
+  "text": "For each route, the shortest key length the known letters allow. The floor is 23, lower than with one shuffle, but the key fragments there read as noise."
+ },
+ {
+  "anchor": "the scale",
+  "text": "The best key run on the copper scores below the best on one of the ten shuffled coppers. Double shuffles of this kind are chance."
+ }
+]

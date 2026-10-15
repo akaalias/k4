@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the variants",
+  "text": "Experiment 15 tried plain Hill ciphers. Here each block is mixed with the previous block's output or input, or two tables alternate, for blocks of 2 to 4 under four ways of numbering the letters."
+ },
+ {
+  "anchor": "the solve",
+  "text": "Whole blocks inside the known letters give exact equations for the table; the known letters in partial blocks are the test."
+ },
+ {
+  "anchor": "the bound",
+  "text": "144 settings: 2 solve on their whole blocks, and both then miss 8 of the 24 known letters."
+ }
+]

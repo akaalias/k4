@@ -1,0 +1,10 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Instead of trying cubes, solve for one: each known letter, with its carved letter, ties three digits to a cell of the cube, and the cube must satisfy all 24 ties at once."
+ },
+ {
+  "anchor": "what happened",
+  "text": "The search ran but the code failed on its last line, so the record holds no result. Experiment 40 is the same design, fixed and rerun."
+ }
+]

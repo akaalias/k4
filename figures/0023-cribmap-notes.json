@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the masks",
+  "text": "Sanborn spoke of a masking step. Tried: the message reversed, a null letter at a regular interval, or nulls at the start, 648 masks in all, each followed by the table with a repeating key."
+ },
+ {
+  "anchor": "the histogram",
+  "text": "For each mask, the shortest key length the known letters still allow. None goes below 26, the same floor as with no mask at all."
+ },
+ {
+  "anchor": "the scale",
+  "text": "The best key fragment the known letters force under any mask scores -5.38 as English, worse than the best on a shuffled copper. Masks of this kind add nothing."
+ }
+]

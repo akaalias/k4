@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the routes",
+  "text": "The message is first moved by a route (23,930 of them: grids, rotations, the K3 rule with every start and step), then enciphered on the table with a repeating key. Under each route the known letters force key letters; where they sit side by side they form runs."
+ },
+ {
+  "anchor": "the runs",
+  "text": "Each run was scored as English. The best, UHAVETHE, looks like words but is eight letters long out of 461,692 tries; short English-looking runs turn up by chance."
+ },
+ {
+  "anchor": "the verdict",
+  "text": "The best run on the copper beats the best on two shuffled coppers by a little, which is what a long search produces. Recorded as chance, not a lead."
+ }
+]

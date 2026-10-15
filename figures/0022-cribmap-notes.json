@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "Porta",
+  "text": "Porta is a table cipher in which every letter of the first half of the alphabet becomes one of the second half, and the other way round, whatever the key."
+ },
+ {
+  "anchor": "the test",
+  "text": "So each known letter and the letter carved over it must sit in opposite halves. Tried for 248 letter orders; the best still has 7 places where they share a half."
+ },
+ {
+  "anchor": "the verdict",
+  "text": "One shared half is enough to rule an order out, so Porta is dead before any key is tried."
+ }
+]

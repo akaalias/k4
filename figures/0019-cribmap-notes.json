@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the test",
+  "text": "If the message were first put through a simple substitution, each letter always becoming the same other letter, and then moved by a route, every copy of a known letter would land on the same carved letter, and different letters on different ones."
+ },
+ {
+  "anchor": "drawn for no route",
+  "text": "Without moving anything, the three Es of the known text sit over three different carved letters. Each route moves them somewhere else; the test asks whether any route lines them up."
+ },
+ {
+  "anchor": "the bound",
+  "text": "23,931 routes: none passes, for a one-for-one substitution or for one with several cipher letters per plain letter. Shuffled coppers pass none either."
+ }
+]

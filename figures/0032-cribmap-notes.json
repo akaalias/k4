@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the grid",
+  "text": "Write the message in rows of a fixed width and give each row a single key letter, the rows cycling through a key word. Every letter in a row is shifted the same way."
+ },
+ {
+  "anchor": "the test",
+  "text": "So all known letters in one row must force the same key letter. On the sculpture's table at width 7, every row that holds two known letters forces two or more."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Widths 2 to 48 under 63 alphabets and three ways of adding: 559,629 cases, and no width survives."
+ }
+]

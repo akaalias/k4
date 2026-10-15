@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the sweep",
+  "text": "Repeating keys of length 1 to 52, with the plain and carved alphabets each rebuilt from a puzzle word in four ways (248 alphabets). A setting survives if no two known letters that share a key slot demand different key letters."
+ },
+ {
+  "anchor": "the counts",
+  "text": "Below 24 nothing survives. At 26 thousands do, but just as many survive on a shuffled copper, so they say nothing about K4. From 27 up almost everything survives, because few known letters share a slot."
+ },
+ {
+  "anchor": "the width-21 question",
+  "text": "Lengths 21 and 42 have no survivor at all, so the repeats seen when the copper is written in rows of 21 do not come from a repeating key of that length on these alphabets."
+ }
+]

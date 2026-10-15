@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the two autokeys",
+  "text": "In an autokey the message, or the scrambled text, becomes its own key after a short start. Experiments 2 and 3 tried them on the sculpture's table; this one rebuilds the table from every puzzle word."
+ },
+ {
+  "anchor": "the strip",
+  "text": "For the plaintext autokey, short lags and lags 33 to 49 die under every alphabet pair. The ciphertext autokey never comes within three letters of the known ones at any lag."
+ },
+ {
+  "anchor": "the scale",
+  "text": "Where a lag survives, the letters it forces read as noise: -6.47 as English, worse than the best on a shuffled copper."
+ }
+]

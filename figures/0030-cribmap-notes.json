@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the rule",
+  "text": "The key for place i is the carved letter at place a times i plus b, wrapping round 97. That covers every lag (the letter before, the one 10 back) and every mirror of the copper."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known letter, with its key, predicts its carved letter. Over 223,488 rules and 24 ways of using the table, the best still misses 6 of 24."
+ },
+ {
+  "anchor": "the mirror",
+  "text": "The message read backwards from a centre was tried as its own key too: the chain of forced letters breaks under every way of using the table."
+ }
+]

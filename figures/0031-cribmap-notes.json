@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the slip",
+  "text": "K2 has a carving error. If K4 has one too, a missing or extra letter shifts every later known letter against its carved letter, and tests that count places fail for the wrong reason."
+ },
+ {
+  "anchor": "the variants",
+  "text": "The copper with one letter taken out at each of 97 places, or an unknown letter put in at each of 98: 196 versions, each run through two exact tests."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Neither the chained plaintext autokey (lags 1 to 25) nor two secret words of total length up to 20 fits any version."
+ }
+]

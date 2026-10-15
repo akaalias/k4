@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the source",
+  "text": "K3 quotes Howard Carter's account of opening Tutankhamun's tomb, so his book is a natural running key: the text written under the message, one letter per place, starting anywhere."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known place needs one key letter. Drawn for one way of using the table at the start that matches most: 8 of 24."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every start, forwards and backwards, under 24 ways of using the table: 13,675,872 trials, none within two of the 24."
+ }
+]

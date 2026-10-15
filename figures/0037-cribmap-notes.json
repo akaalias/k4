@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the routes",
+  "text": "Three transposition stages in a row, drawn from 211 single stages (keyed column shuffles, rotations, grids), sampled 200,000 times, each followed by the table."
+ },
+ {
+  "anchor": "the scale",
+  "text": "The best key run on the copper scores above every shuffled copper, but the shuffles were run with far fewer samples than the copper, so the comparison is unfair."
+ },
+ {
+  "anchor": "the lesson",
+  "text": "Recorded as chance, and a rule added to the loop: every diagnostic needs at least ten shuffled controls run at full size, with the same number of trials as the copper."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "trifid",
+  "text": "Trifid puts 27 symbols in a 3 by 3 by 3 cube. Each letter becomes three digits; the digits of a block of letters are written out in rows, read across, and turned back into letters."
+ },
+ {
+  "anchor": "keyword cubes",
+  "text": "Cubes filled from 498 puzzle words, every period 2 to 20 and every alignment: 104,082 decryptions, the best getting 7 of 24 known letters."
+ },
+ {
+  "anchor": "annealing",
+  "text": "Letting a search rearrange the cube freely reached 17 of 24 on the copper and 14 on a shuffled copper. Experiment 40 then solved the cube exactly from the known letters."
+ }
+]

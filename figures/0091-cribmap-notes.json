@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the stack",
+  "text": "Experiment 79 read the key off Berlin's set-theory clock and found nothing. Sanborn said he moved letters in grids before going back to the table, so here each clock schedule is joined to each K3-style move, before or after the table."
+ },
+ {
+  "anchor": "the check",
+  "text": "A schedule plus one constant leaves no free letter: key needed minus the clock's number must be the same at all 24 known places, read at the message place or at the carved place."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Six clock readings, steps of 1 to 30 minutes, every start minute: 60,480 schedules with 27,852 moves. No full match either way, and the deepest run, 7 checks, is what every scrambled copper reaches."
+ }
+]

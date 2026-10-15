@@ -1,0 +1,9 @@
+key DIGITALINTERPRETATIONEGYPT, length 26: a 26-letter join falls short of 27, so it is not tried; take instead
+
+joined ABSCISSA+DIGITALINTERPRETATION: ABSCISSADIGITALINTERPRETATION (29 letters)
+
+sculpture's alphabet throughout, Vigenere: forced key letters at the first slots
+pos 22: slot 21 must be R; the key has R
+pos 23: slot 22 must be D; the key has E
+pos 24: slot 23 must be U; the key has T
+pos 25: slot 24 must be M; the key has A

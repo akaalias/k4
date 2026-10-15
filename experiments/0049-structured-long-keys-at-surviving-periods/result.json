@@ -1,0 +1,52 @@
+{
+ "id": 49,
+ "tag": "0049-structured-long-keys-at-surviving-periods",
+ "started": "2026-10-15T10:13:12+00:00",
+ "seconds": 11.8,
+ "status": "ran",
+ "phases": {
+  "design": 0.1,
+  "implement": 192.4,
+  "test": 12.5,
+  "run": 11.8,
+  "record": 0.0
+ },
+ "ended_epoch": 1792059203.956626,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig"
+ },
+ "bounds": {
+  "family": "shaped keys of length 27-29 from the vocabulary, periodic tableau, vocabulary-mixed alphabets",
+  "keys": 272,
+  "keys_by_length": {
+   "27": 124,
+   "28": 70,
+   "29": 78
+  },
+  "alphabets": 63,
+  "trials": 9716112,
+  "fewest_mismatches": "more than 3",
+  "nearest": [],
+  "survivors": 0
+ },
+ "notes": "272 shaped keys x 63^2 alphabet pairs x 3 modes x 3 key readings: 9716112 trials; fewest mismatches more than 3; 0 exact matches.",
+ "error": null,
+ "candidates": []
+}

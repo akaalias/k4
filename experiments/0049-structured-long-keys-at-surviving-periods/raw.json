@@ -1,0 +1,21 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "shaped keys of length 27-29 from the vocabulary, periodic tableau, vocabulary-mixed alphabets",
+  "keys": 272,
+  "keys_by_length": {
+   "27": 124,
+   "28": 70,
+   "29": 78
+  },
+  "alphabets": 63,
+  "trials": 9716112,
+  "fewest_mismatches": "more than 3",
+  "nearest": [],
+  "survivors": 0
+ },
+ "notes": "272 shaped keys x 63^2 alphabet pairs x 3 modes x 3 key readings: 9716112 trials; fewest mismatches more than 3; 0 exact matches.",
+ "error": null,
+ "worked_example": "key DIGITALINTERPRETATIONEGYPT, length 26: a 26-letter join falls short of 27, so it is not tried; take instead\n\njoined ABSCISSA+DIGITALINTERPRETATION: ABSCISSADIGITALINTERPRETATION (29 letters)\n\nsculpture's alphabet throughout, Vigenere: forced key letters at the first slots\npos 22: slot 21 must be R; the key has R\npos 23: slot 22 must be D; the key has E\npos 24: slot 23 must be U; the key has T\npos 25: slot 24 must be M; the key has A",
+ "seconds": 11.672498941421509
+}

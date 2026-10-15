@@ -272,7 +272,16 @@ def link_experiments(html_text, tags):
     """Turn bare experiment numbers like 0012 into links where such a record exists."""
     import re as _re
     by_id = {t[:4]: t for t in tags}
-    return _re.sub(r"(?<![\w/-])(\d{4})(?![\w-])", lambda m: f'<a href="/exp/{by_id[m.group(1)]}">{m.group(1)}</a>' if m.group(1) in by_id else m.group(1), html_text)
+    by_num = {str(int(k)): v for k, v in by_id.items()}
+
+    def link(num):
+        tag = by_num.get(str(int(num)))
+        return f'<a href="/exp/{tag}">{num}</a>' if tag else num
+
+    out = _re.sub(r"(?<![\w/-])(\d{4})(?![\w-])", lambda m: link(m.group(1)) if m.group(1) in by_id else m.group(1), html_text)
+    # "experiment 34", "Experiments 34 and 35", "experiments 6, 12 and 15": link every number in the phrase
+    phrase = _re.compile(r"(?i)(?<![\w/-])(experiments?\s+)(\d{1,3}(?:\s*,\s*\d{1,3})*(?:\s+(?:and|to)\s+\d{1,3})?)(?![\w-])")
+    return phrase.sub(lambda m: m.group(1) + _re.sub(r"\d{1,3}", lambda n: link(n.group(0)) if "<a" not in n.group(0) else n.group(0), m.group(2)), out)
 
 
 def k4_marked(pt, known):

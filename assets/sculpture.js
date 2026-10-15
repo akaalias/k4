@@ -1,8 +1,8 @@
 // Explorable model of Kryptos. Scale: one unit is one foot. The screen is a half-inch copper
 // sheet about 10 feet high and 20 feet long on an S-shaped path, four plates (upper and
 // lower, cipher half and table half), letters cut through, an eleven-foot petrified-wood
-// column at the left end, a bubbling pool inside the curl, red sandstone and grey granite
-// slabs at the foot, a paved plaza, the green glass of the building behind.
+// column hard against the left end, a round pit with a loose black ring under the right end,
+// white marble and red sandstone at the foot, a paved plaza, the green glass of the building behind.
 // Data arrives in window.KRYPTOS_PANELS: {ul, ll, ur, lr: [lines], regions: [{name, quad, spans, caption}]}.
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -16,7 +16,7 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color(paper);
 scene.fog = new THREE.Fog(new THREE.Color(paper), 70, 160);
 const camera = new THREE.PerspectiveCamera(30, W / H, 0.1, 400);
-camera.position.set(6, 7.5, 36);
+camera.position.set(5, 10.5, 36);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(W, H);
@@ -63,8 +63,12 @@ function panelTexture(lines, highlight) {
     for (const [r, c0, c1] of highlight) g.fillRect(ox + c0 * cw, oy + r * ch, (Math.min(c1, COLS) - c0) * cw, ch);
   }
   // letters are cut out of the copper: punch them through so the plate is transparent there
-  g.font = `700 ${Math.round(ch * 0.8)}px 'Helvetica Neue', Helvetica, Arial, sans-serif`;
-  g.textBaseline = 'middle'; g.textAlign = 'center';
+  // the copper's letters are bold Roman capitals with bracketed serifs; Georgia Bold is the closest
+  // face on this machine. Capitals fill most of the line height, each centred in its cell, wide
+  // letters (M, W) squeezed to the cell rather than spilling into their neighbours.
+  g.font = `700 ${Math.round(ch * 0.92)}px Georgia, 'Times New Roman', Times, serif`;
+  g.textBaseline = 'alphabetic'; g.textAlign = 'center';
+  const capH = g.measureText('H').actualBoundingBoxAscent;
   g.globalCompositeOperation = 'destination-out';
   g.fillStyle = 'rgba(0,0,0,1)';
   for (let r = 0; r < ROWS; r++) {
@@ -73,7 +77,8 @@ function panelTexture(lines, highlight) {
     const pad = (COLS - line.length) / 2;
     for (let k = 0; k < line.length; k++) {
       const ch_ = line[k]; if (ch_ === ' ') continue;
-      g.save(); g.translate(ox + (pad + k) * cw + cw / 2, oy + r * ch + ch / 2); g.scale(1.0, 1); g.fillText(ch_, 0, 0); g.restore();
+      const wd = g.measureText(ch_).width, sx = Math.min(1, (cw * 0.96) / wd);
+      g.save(); g.translate(ox + (pad + k) * cw + cw / 2, oy + r * ch + ch / 2 + capH / 2); g.scale(sx, 1); g.fillText(ch_, 0, 0); g.restore();
     }
   }
   g.globalCompositeOperation = 'source-over';
@@ -186,7 +191,7 @@ function noiseCanvas(base, speck, n = 900, size = 512) {
   for (let i = 0; i <= 512; i += 128) { g.beginPath(); g.moveTo(i, 0); g.lineTo(i, 512); g.stroke(); g.beginPath(); g.moveTo(0, i); g.lineTo(512, i); g.stroke(); }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(14, 14);
   const gshape = new THREE.Shape(); gshape.moveTo(-60, -60); gshape.lineTo(60, -60); gshape.lineTo(60, 60); gshape.lineTo(-60, 60); gshape.closePath();
-  const holePath = new THREE.Path(); holePath.absarc(7.8, -1.4, 3.4, 0, Math.PI * 2, false); gshape.holes.push(holePath);
+  const holePath = new THREE.Path(); holePath.absarc(7.4, -2.6, 3.1, 0, Math.PI * 2, false); gshape.holes.push(holePath);
   const ggeo = new THREE.ShapeGeometry(gshape, 48);
   const guv = ggeo.attributes.uv; for (let i = 0; i < guv.count; i++) guv.setXY(i, (guv.getX(i) + 60) / 120 * 14, (guv.getY(i) + 60) / 120 * 14);
   const ground = new THREE.Mesh(ggeo, new THREE.MeshStandardMaterial({ map: t, roughness: 1 }));
@@ -206,6 +211,12 @@ function noiseCanvas(base, speck, n = 900, size = 512) {
   band.position.set(0, 1.75, -34.5); scene.add(band);
 })();
 // ---- the sculpture's own parts, in their true colours ----------------------------------------
+// Placement, from the photographs: the petrified trunk stands hard against the screen's left
+// end; the pool is a round pit in the paving under the screen's right end, with a separate thin
+// black ring lying on the plaza and overhanging the pit; the white marble lies in front of the
+// seam, left of the pit; the red sandstone lies to the right of the pit, pointing at the viewer.
+const POOL = { cx: 7.4, cz: 2.6, rad: 3.1, depth: 2.0 };
+const RING = { cx: 6.3, cz: 3.9, rad: 2.55, tube: 0.12 };
 function roughen(geo, amp, freq) {
   const pp = geo.attributes.position;
   for (let i = 0; i < pp.count; i++) {
@@ -216,10 +227,24 @@ function roughen(geo, amp, freq) {
   geo.computeVertexNormals();
   return geo;
 }
+function facet(geo, cuts) {
+  // slice corners off a box: for each cut {n: [x,y,z], d}, points with n.p > d are pulled back onto the plane
+  const pp = geo.attributes.position;
+  for (let i = 0; i < pp.count; i++) {
+    let x = pp.getX(i), y = pp.getY(i), z = pp.getZ(i);
+    for (const c of cuts) {
+      const v = c.n[0] * x + c.n[1] * y + c.n[2] * z;
+      if (v > c.d) { const k = (v - c.d) / (c.n[0] ** 2 + c.n[1] ** 2 + c.n[2] ** 2); x -= c.n[0] * k; y -= c.n[1] * k; z -= c.n[2] * k; }
+    }
+    pp.setXYZ(i, x, y, z);
+  }
+  geo.computeVertexNormals();
+  return geo;
+}
 // petrified wood: a tall tapering trunk, dark red-brown with vertical fissures, taller than the screen,
-// standing at the screen's left end and a little in front of it
+// standing hard against the screen's left end
 (() => {
-  const geo = new THREE.CylinderGeometry(1.1, 1.6, 13.2, 22, 12);
+  const geo = new THREE.CylinderGeometry(1.15, 1.5, 13.0, 24, 14);
   const pp = geo.attributes.position;
   for (let i = 0; i < pp.count; i++) {
     const x = pp.getX(i), y = pp.getY(i), z = pp.getZ(i);
@@ -240,28 +265,37 @@ function roughen(geo, amp, freq) {
   }
   const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
   const col = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.95 }));
-  const end = curve.getPoint(0);
-  col.position.set(end.x - 1.3, 6.6, end.y + 1.6); col.rotation.y = 0.4; col.castShadow = true; col.receiveShadow = true; scene.add(col);
+  const end = curve.getPoint(0), d = curve.getTangent(0);
+  // one radius back along the path, so the trunk's flank meets the sheet's end edge
+  col.position.set(end.x - d.x * 1.1, 6.5, end.y - d.y * 1.1); col.rotation.y = 0.4; col.castShadow = true; col.receiveShadow = true; scene.add(col);
 })();
-// the white marble block: pale, veined, angular, lying in front of the screen's left half
+// the white marble: a pale, veined, split block with one sharp sloping face, lying in front of the
+// seam and left of the pit
 (() => {
-  const geo = roughen(new THREE.BoxGeometry(5.2, 2.6, 3.0, 6, 4, 4), 0.16, 1.9);
+  const geo = facet(new THREE.BoxGeometry(4.8, 1.7, 2.8, 8, 4, 5), [
+    { n: [0.45, 1.0, 0.0], d: 1.3 }, { n: [-0.35, 1.0, 0.5], d: 1.15 }, { n: [0.0, 1.0, -0.9], d: 1.5 }, { n: [0.9, 0.0, 0.9], d: 2.9 }, { n: [-0.9, 0.0, -0.6], d: 2.7 },
+  ]);
+  roughen(geo, 0.035, 2.6);
   const c = document.createElement('canvas'); c.width = c.height = 512; const g = c.getContext('2d');
-  g.fillStyle = '#e4e2dc'; g.fillRect(0, 0, 512, 512);
-  for (let i = 0; i < 40; i++) {
-    g.strokeStyle = `rgba(110,118,120,${0.15 + Math.random() * 0.25})`; g.lineWidth = 1 + Math.random() * 2;
+  g.fillStyle = '#e3e6df'; g.fillRect(0, 0, 512, 512);
+  for (let i = 0; i < 46; i++) {
+    g.strokeStyle = `rgba(105,125,118,${0.12 + Math.random() * 0.28})`; g.lineWidth = 1 + Math.random() * 2.5;
     g.beginPath(); let x = Math.random() * 512, y = Math.random() * 512; g.moveTo(x, y);
     for (let k = 0; k < 6; k++) { x += (Math.random() - 0.5) * 160; y += (Math.random() - 0.5) * 160; g.lineTo(x, y); }
     g.stroke();
   }
-  for (let i = 0; i < 2500; i++) { g.fillStyle = `rgba(120,125,120,${Math.random() * 0.12})`; g.fillRect(Math.random() * 512, Math.random() * 512, 2, 2); }
+  for (let i = 0; i < 2500; i++) { g.fillStyle = `rgba(120,135,125,${Math.random() * 0.12})`; g.fillRect(Math.random() * 512, Math.random() * 512, 2, 2); }
   const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
-  const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.75 }));
-  m.position.set(-5.2, 1.25, 4.4); m.rotation.set(0.05, -0.35, 0.08); m.castShadow = true; m.receiveShadow = true; scene.add(m);
+  const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.7 }));
+  m.position.set(0.8, 0.75, 4.4); m.rotation.set(0.0, -0.5, 0.0); m.castShadow = true; m.receiveShadow = true; scene.add(m);
 })();
-// the red sandstone log: long, low, ridged, dark red, in front of the screen's middle
+// the red sandstone: a long, layered, dark red block, to the right of the pit, its length
+// pointing toward the viewer, with a sloping top
 (() => {
-  const geo = roughen(new THREE.BoxGeometry(10.5, 1.7, 3.0, 12, 4, 4), 0.22, 1.3);
+  const geo = facet(new THREE.BoxGeometry(6.0, 2.2, 2.6, 10, 4, 5), [
+    { n: [0.0, 1.0, 0.7], d: 1.35 }, { n: [0.4, 1.0, 0.0], d: 1.45 }, { n: [-0.45, 1.0, -0.3], d: 1.5 }, { n: [0.9, 0.0, -0.8], d: 3.0 },
+  ]);
+  roughen(geo, 0.09, 1.6);
   const c = document.createElement('canvas'); c.width = 1024; c.height = 256; const g = c.getContext('2d');
   g.fillStyle = '#8a3b2c'; g.fillRect(0, 0, 1024, 256);
   for (let i = 0; i < 1400; i++) {
@@ -271,26 +305,24 @@ function roughen(geo, amp, freq) {
   for (let i = 0; i < 600; i++) { g.fillStyle = `rgba(190,110,80,${0.15 + Math.random() * 0.25})`; g.fillRect(Math.random() * 1024, Math.random() * 256, 10 + Math.random() * 80, 1); }
   const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
   const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, roughness: 0.95 }));
-  m.position.set(2.0, 0.85, 5.4); m.rotation.set(0, -0.12, 0.03); m.castShadow = true; m.receiveShadow = true; scene.add(m);
+  m.position.set(11.2, 0.95, 5.0); m.rotation.set(0, -0.95, 0.0); m.castShadow = true; m.receiveShadow = true; scene.add(m);
 })();
-// the pool: a round hollow sunk into the plaza inside the screen's curl, a black ring at the rim,
-// dark water at the bottom
+// the pool: a round pit cut into the paving under the screen's right end, dark walls, water at
+// the bottom; and, as a separate piece, a thin black ring lying on the plaza, overhanging the pit
 (() => {
-  const cx = 7.8, cz = 1.4, rad = 3.4;
-  const ring = new THREE.Mesh(new THREE.TorusGeometry(rad + 0.22, 0.22, 12, 72), new THREE.MeshStandardMaterial({ color: 0x141414, roughness: 0.55, metalness: 0.3 }));
-  ring.rotation.x = Math.PI / 2; ring.position.set(cx, 0.08, cz); ring.castShadow = true; scene.add(ring);
-  const wallGeo = new THREE.CylinderGeometry(rad, rad, 1.6, 72, 1, true);
-  const wall = new THREE.Mesh(wallGeo, new THREE.MeshStandardMaterial({ color: 0x2a2a28, roughness: 0.9, side: THREE.BackSide }));
-  wall.position.set(cx, -0.8, cz); scene.add(wall);
+  const { cx, cz, rad, depth } = POOL;
+  const wall = new THREE.Mesh(new THREE.CylinderGeometry(rad, rad, depth, 72, 1, true), new THREE.MeshStandardMaterial({ color: 0x2a2a28, roughness: 0.9, side: THREE.BackSide }));
+  wall.position.set(cx, -depth / 2, cz); scene.add(wall);
+  const lip = new THREE.Mesh(new THREE.RingGeometry(rad, rad + 0.12, 72), new THREE.MeshStandardMaterial({ color: 0xd8d4cb, roughness: 1 }));
+  lip.rotation.x = -Math.PI / 2; lip.position.set(cx, 0.012, cz); scene.add(lip);
   const c = document.createElement('canvas'); c.width = c.height = 512; const g = c.getContext('2d');
   g.fillStyle = '#17282c'; g.fillRect(0, 0, 512, 512);
   for (let r = 250; r > 10; r -= 9) { g.strokeStyle = `rgba(150,190,190,${0.05 + 0.12 * Math.random()})`; g.lineWidth = 2; g.beginPath(); g.arc(256, 256, r, 0, Math.PI * 2); g.stroke(); }
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
   const water = new THREE.Mesh(new THREE.CircleGeometry(rad, 72), new THREE.MeshStandardMaterial({ map: t, roughness: 0.15, metalness: 0.5 }));
-  water.rotation.x = -Math.PI / 2; water.position.set(cx, -1.5, cz); scene.add(water);
-  // the plaza has a hole there: a dark disc at ground level hides the paving inside the ring
-  const hole = new THREE.Mesh(new THREE.CircleGeometry(rad, 72), new THREE.MeshBasicMaterial({ color: 0x0c0c0c, transparent: true, opacity: 0.0 }));
-  hole.rotation.x = -Math.PI / 2; hole.position.set(cx, 0.015, cz); scene.add(hole);
+  water.rotation.x = -Math.PI / 2; water.position.set(cx, -depth + 0.3, cz); scene.add(water);
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(RING.rad, RING.tube, 12, 96), new THREE.MeshStandardMaterial({ color: 0x141414, roughness: 0.5, metalness: 0.35 }));
+  ring.rotation.x = Math.PI / 2; ring.position.set(RING.cx, RING.tube, RING.cz); ring.castShadow = true; scene.add(ring);
 })();
 // planting: tall grasses as soft clumps to the right, a tree behind
 (() => {

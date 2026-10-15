@@ -46,7 +46,7 @@ uses a word a stranger would not know.
 
 **a collision** (also: two known letters that would use the same letter, a clash): Two known letters that land on the same slot or the same cell and therefore must agree.
 
-**dead** (also: ruled out, out, killed): Said of a period, grid or method when the known letters contradict it: no secret word of that kind can produce the carved letters.
+**dead** (also: ruled out, ruled that out, killed): Said of a period, grid or method when the known letters contradict it: no secret word of that kind can produce the carved letters.
 
 **the chain** (also: the chain closes, the chain breaks, fills the whole message): In an autokey cipher each known letter reveals the letter one lag later and the letter one lag earlier; those reveal more, and so on. If two revelations disagree the chain breaks; if they never do and reach every position, the chain fills the whole message.
 

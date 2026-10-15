@@ -77,7 +77,8 @@ article p,article li{max-width:720px}article table{table-layout:fixed;width:100%
 h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.005em;max-width:900px}
 .standfirst{font:italic 16.5px/1.6 var(--serif);color:var(--muted);margin:0 0 18px;max-width:820px}
 .meta-row{display:flex;flex-wrap:wrap;gap:10px 34px;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule-soft)}.meta-row div{display:flex;flex-direction:column}.meta-row b{font-weight:600;font-size:14.5px;line-height:1.3}.meta-row span{font:600 10px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
-.plain p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:640px}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
+.plain p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:640px}
+.gl{border-bottom:1px dotted var(--accent);cursor:help;transition:background .15s}.gl.on,.gl:hover{background:var(--hl)}.gl-entry{border-left:2px solid transparent;padding-left:6px;margin-left:-8px;transition:background .15s}.gl-entry.on,.gl-entry:hover{background:var(--hl);border-left-color:var(--accent)}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
 .rec-body{max-width:980px}.rec-body h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}.rec-body p,.rec-body li{max-width:720px;font-size:15.5px;line-height:1.6}
 .panel-wrap{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin:14px 0 6px}.panel{padding:0}.panel-h{font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px}.panel pre{margin:0;padding:12px 16px;font:15px/1.75 var(--mono);letter-spacing:.14em;background:var(--wash);border:1px solid var(--rule-soft);border-radius:2px}.panel u{text-decoration:none;border-bottom:2px solid var(--rule)}.panel b{color:var(--ink);background:var(--hl);font-weight:700}.panel i{color:var(--accent);font-style:normal;background:var(--hl)}.k3tail{color:var(--rule)}
 .gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
@@ -344,6 +345,17 @@ def loss_chart(rows):
     return "<figure class='chart'>" + "".join(g) + "</figure>"
 
 
+GL_JS = """<script>
+(function(){
+  var all=document.querySelectorAll('[data-gl]');
+  all.forEach(function(el){
+    el.addEventListener('mouseenter',function(){var id=el.getAttribute('data-gl');document.querySelectorAll('[data-gl="'+id+'"]').forEach(function(x){x.classList.add('on');});});
+    el.addEventListener('mouseleave',function(){var id=el.getAttribute('data-gl');document.querySelectorAll('[data-gl="'+id+'"]').forEach(function(x){x.classList.remove('on');});});
+  });
+})();
+</script>"""
+
+
 def page(title, body, active="", refresh=True):
     meta = '<meta http-equiv="refresh" content="20">' if refresh else ""
     nav = "".join(f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>' for h, t in
@@ -351,7 +363,7 @@ def page(title, body, active="", refresh=True):
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
-<div class="foot"><span class="dot"></span>Rendered from the record. Refreshes every 20 seconds.</div>{JS}</body></html>"""
+<div class="foot"><span class="dot"></span>Rendered from the record. Refreshes every 20 seconds.</div>{JS}{GL_JS}</body></html>"""
 
 
 def crib_strip():
@@ -489,21 +501,38 @@ def experiment_page(tag):
 </div></div>"""
     # section 1: plain words with the glossary rail
     eli5 = r.get("eli5") or ""
-    gl_items = []
     low = eli5.lower()
-    for term, names, definition in load_glossary():
-        hits = [low.find(n.lower()) for n in names if n.lower() in low]
-        if hits:
-            gl_items.append((min(hits), term, definition))
+    found = []   # (start, end, term_id, term, definition)
+    for k, (term, names, definition) in enumerate(load_glossary()):
+        best = None
+        for n in names:
+            m = _re.search(r"(?<![a-z])" + _re.escape(n.lower()) + r"(?![a-z])", low)
+            if m and (best is None or m.start() < best[0]):
+                best = (m.start(), m.end())
+        if best:
+            found.append((best[0], best[1], f"g{k}", term, definition))
+    found.sort()
+    kept, last_end = [], -1
+    for f in found:
+        if f[0] >= last_end:
+            kept.append(f); last_end = f[1]
+    kept = kept[:7]
+
     def first_sentence(d):
-        import re as _r
-        m = _r.match(r"(.+?[.!?])(\s|$)", d)
+        m = _re.match(r"(.+?[.!?])(\s|$)", d)
         return m.group(1) if m else d
-    gl_items = [(t, first_sentence(d)) for _, t, d in sorted(gl_items)[:5]]
+    # wrap the terms in the text
+    out, pos = [], 0
+    for st, en, gid, term, definition in kept:
+        out.append(esc(eli5[pos:st]))
+        out.append(f'<span class="gl" data-gl="{gid}" title="{esc(first_sentence(definition))}">{esc(eli5[st:en])}</span>')
+        pos = en
+    out.append(esc(eli5[pos:]))
+    eli5_html = "<p>" + "".join(out).replace("\n\n", "</p><p>") + "</p>"
     rail = ""
-    if gl_items:
-        rail = '<aside class="aside"><h4>Words used here</h4>' + "".join(f'<p><b>{esc(t)}</b> {esc(d)}</p>' for t, d in gl_items) + '<p class="faint">Full list on the <a href="/glossary">glossary</a> page.</p></aside>'
-    plain = sec(1, "In plain words", "") + f'<div class="chart-row"><div class="plain">{md(eli5)}</div>{rail}</div>'
+    if kept:
+        rail = '<aside class="aside"><h4>Words used here</h4>' + "".join(f'<p class="gl-entry" data-gl="{gid}"><b>{esc(term)}</b> {esc(first_sentence(definition))}</p>' for _, _, gid, term, definition in kept) + '<p class="faint">Full list on the <a href="/glossary">glossary</a> page.</p></aside>'
+    plain = sec(1, "In plain words", "") + f'<div class="chart-row"><div class="plain">{eli5_html}</div>{rail}</div>'
     # section 2: best candidate
     cand = ""
     if best:

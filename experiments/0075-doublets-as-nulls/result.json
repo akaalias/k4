@@ -1,0 +1,398 @@
+{
+ "id": 75,
+ "tag": "0075-doublets-as-nulls",
+ "started": "2026-10-15T13:29:17+00:00",
+ "seconds": 3.0,
+ "status": "ran",
+ "phases": {
+  "design": 41.6,
+  "implement": 0.0,
+  "test": 10.7,
+  "run": 3.0,
+  "record": 0.1
+ },
+ "ended_epoch": 1792070960.697758,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "doublet letters as nulls",
+  "inside_crib_doublets": [
+   {
+    "place": 26,
+    "carved": "Q",
+    "known": "NO"
+   },
+   {
+    "place": 33,
+    "carved": "S",
+    "known": "ST"
+   },
+   {
+    "place": 68,
+    "carved": "T",
+    "known": "IN"
+   }
+  ],
+  "null_combinations": 7,
+  "periods": "1-52",
+  "results": [
+   {
+    "nulls": [
+     19
+    ],
+    "periodic_le26": 0,
+    "smallest_period": 27,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    }
+   },
+   {
+    "nulls": [
+     43
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     43
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     43,
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      9,
+      10,
+      8,
+      8,
+      8,
+      9,
+      8,
+      9
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     43,
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      9,
+      10,
+      8,
+      8,
+      8,
+      9,
+      8,
+      9
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  ]
+ },
+ "notes": "Doublets inside the cribs carrying two different known letters: [(26, 'QQ', 'NO'), (33, 'SS', 'ST'), (68, 'TT', 'IN')], so not nulls. nulls [19]: periodic P<=26 0 (controls 0-2), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-1); nulls [43]: periodic P<=26 8 (controls 8-8), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-0); nulls [47]: periodic P<=26 8 (controls 8-8), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-0); nulls [19, 43]: periodic P<=26 8 (controls 8-8), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-0); nulls [19, 47]: periodic P<=26 8 (controls 8-8), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-0); nulls [43, 47]: periodic P<=26 8 (controls 8-10), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-2); nulls [19, 43, 47]: periodic P<=26 8 (controls 8-10), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-1).",
+ "error": null,
+ "candidates": []
+}

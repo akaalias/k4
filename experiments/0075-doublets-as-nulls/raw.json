@@ -1,0 +1,365 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "doublet letters as nulls",
+  "inside_crib_doublets": [
+   {
+    "place": 26,
+    "carved": "Q",
+    "known": "NO"
+   },
+   {
+    "place": 33,
+    "carved": "S",
+    "known": "ST"
+   },
+   {
+    "place": 68,
+    "carved": "T",
+    "known": "IN"
+   }
+  ],
+  "null_combinations": 7,
+  "periods": "1-52",
+  "results": [
+   {
+    "nulls": [
+     19
+    ],
+    "periodic_le26": 0,
+    "smallest_period": 27,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    }
+   },
+   {
+    "nulls": [
+     43
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     43
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     43,
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      9,
+      10,
+      8,
+      8,
+      8,
+      9,
+      8,
+      9
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     43,
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      9,
+      10,
+      8,
+      8,
+      8,
+      9,
+      8,
+      9
+     ],
+     "autokey_2plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  ]
+ },
+ "notes": "Doublets inside the cribs carrying two different known letters: [(26, 'QQ', 'NO'), (33, 'SS', 'ST'), (68, 'TT', 'IN')], so not nulls. nulls [19]: periodic P<=26 0 (controls 0-2), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-1); nulls [43]: periodic P<=26 8 (controls 8-8), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-0); nulls [47]: periodic P<=26 8 (controls 8-8), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-0); nulls [19, 43]: periodic P<=26 8 (controls 8-8), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-0); nulls [19, 47]: periodic P<=26 8 (controls 8-8), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-0); nulls [43, 47]: periodic P<=26 8 (controls 8-10), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-2); nulls [19, 43, 47]: periodic P<=26 8 (controls 8-10), autokey 2+ checks 0 (0-0), autokey+periodic 3+ 0 (0-1).",
+ "error": null,
+ "worked_example": "null at carved place 43 (S): text of 96 letters\ncarved place 22 (F, known E) -> reduced place 22; carved place 64 (N, known B) -> reduced place 63\ndistance 22 to 64: 42 before, 41 after",
+ "seconds": 2.9110052585601807
+}

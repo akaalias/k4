@@ -1,0 +1,3 @@
+null at carved place 43 (S): text of 96 letters
+carved place 22 (F, known E) -> reduced place 22; carved place 64 (N, known B) -> reduced place 63
+distance 22 to 64: 42 before, 41 after

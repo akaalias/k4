@@ -73,3 +73,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0072	0072-compass-points-and-the-point-letter	1-keyed-periodic	0053-periodic-tableau-k1-k3-word-alphabets	reverted	0	0	0			7	design=56 implement=0 test=9 run=7 record=0
 0073	0073-plaintext-autokey-plus-a-repeating-key	1-keyed-periodic	0012-plaintext-autokey-chained-from-cribs	reverted	0	0	0			21	design=33 implement=0 test=59 run=21 record=0
 0074	0074-letter-changing-masks-decimated-alphabets	2-masked-then-keyed	0057-letter-nulls-outside-the-cribs	reverted	0	0	0			18	design=36 implement=0 test=10 run=18 record=0
+0075	0075-doublets-as-nulls	2-masked-then-keyed	0057-letter-nulls-outside-the-cribs	reverted	0	0	0			3	design=42 implement=0 test=11 run=3 record=0

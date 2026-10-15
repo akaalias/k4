@@ -260,7 +260,7 @@ def loss_chart(rows):
 def page(title, body, active="", refresh=True):
     meta = '<meta http-equiv="refresh" content="20">' if refresh else ""
     nav = "".join(f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>' for h, t in
-                  (("/", "Overview"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
+                  (("/", "Overview"), ("/notebook", "Notebook"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
@@ -383,6 +383,8 @@ def route(path):
         return overview()
     if path.startswith("/exp/"):
         return experiment_page(path[5:].strip("/"))
+    if path == "/notebook":
+        return md_page("lab notebook", "NOTEBOOK.md", "/notebook")
     if path == "/families":
         return md_page("families", "families.md", "/families")
     if path == "/clues":

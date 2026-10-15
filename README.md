@@ -101,3 +101,8 @@ OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZX
 
 Four clues released by Sanborn: BERLIN (2010), CLOCK (2014), NORTHEAST (January 2020),
 EAST (August 2020).
+
+
+## Lab notebook
+
+`NOTEBOOK.md` holds one entry per working day: decisions, what ran, findings, mistakes, open questions. The dashboard serves it at /notebook.

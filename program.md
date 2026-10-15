@@ -15,32 +15,33 @@ those as a statistic. When you open a hypothesis family, also read the primary s
 A reproducible procedure that turns the 97-letter K4 ciphertext into 97 letters
 that (1) contain EASTNORTHEAST at positions 22-34 and BERLINCLOCK at 64-74,
 (2) read as English allowing one or two deliberate misspellings and X as a
-separator, (3) re-encrypt to the exact ciphertext when run forward, and (4) use
-a key a person could remember and a method a person could execute by hand in
-1990. Words without a method is not success. There is no external oracle.
+separator, (3) re-encrypt to the exact ciphertext when run forward, and (4) come
+from a procedure a person could carry out by hand in 1990, written down step by
+step, keyed by something with a short description (key words, a named text and a
+place in it) rather than letters fitted to the known places. Scheidt, 2011, via
+Bean: "simple, can be remembered, and executed years later when used with the
+correct key word/s" (C5). Words without a method is not success. There is no external oracle.
 
 The guaranteed output of every experiment, including failures, is a bounded
 negative result: a precise statement of what was searched.
 
-## The gates a reading must pass to be kept (decided 2026-10-15, issue #11)
+## The gates a reading must pass to be kept (decided 2026-10-15, issue #23)
 
 1. Length 97, letters A-Z only.
 2. All 24 known letters in place.
 3. Re-encrypts to the exact carved text under the stated key.
-4. A memorable key: the harness counts the key's size itself from the `key` you
-   return (`kryptos.scorer.key_bits_of`: 4.7 bits per letter of a word or letter
-   key, alphabets by how they are built, numbers by their range). At most 100 bits,
-   about the KRYPTOS alphabet plus a 14-letter keyword. K1 is 82, K2 73. Your
-   `key_bits` counts only if it is larger. Return keys in a form the count can read
-   (letter strings or index lists for keys, alphabet names or 26-letter strings).
-5. Beats shuffled coppers: return `"controls"` from `run`, a list of at least ten
+4. Beats shuffled coppers: return `"controls"` from `run`, a list of at least ten
    English scores, each the best your same method reaches on a shuffled copy of the
    carved text at the same trial count. A reading is kept only if its English score
    is above all of them. No controls, no keep.
 
-Among readings that pass all five, the lowest loss wins. A search that fills free
-key letters to make English (a key-completion climb) cannot pass gate 4; that is the
-point. `tools/replay_rules.py` re-scores every record whenever a rule changes; records
+Among readings that pass all four, the lowest loss wins. The loss charges the key by
+the length of its description, which the harness counts itself from the `key` you
+return (`kryptos.scorer.key_bits_of`): key words cost a few bits each, arbitrary
+letters 4.7 bits each, a named text and an offset a few bits. Return keys in a form
+the count can read. A search that fills free key letters to make English (a
+key-completion climb) pays heavily for its key and, more to the point, cannot beat
+its own shuffled controls. `tools/replay_rules.py` re-scores every record whenever a rule changes; records
 are never edited, and the dashboard shows each experiment's current verdict.
 
 ## What you may and may not touch

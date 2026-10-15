@@ -39,7 +39,7 @@ Decided 2026-10-14. A reproducible procedure that turns the 97-letter K4 ciphert
 2. read as English, allowing the one or two deliberate mistakes Sanborn puts in every
    section, and X as a separator;
 3. re-encrypt to the exact sculpture ciphertext when the procedure is run forward;
-4. use a key a person could remember and a method a person could execute by hand in 1990.
+4. come from a procedure a person could carry out by hand in 1990, written down step by step, keyed by something with a short description (key words, a named text and a place in it) rather than letters fitted to the known places. Scheidt, the system's designer, in 2011 (secondhand, Hannon via Bean): "simple, can be remembered, and executed years later when used with the correct key word/s" (C5).
 
 Words without a method is not success. The riddle the phrase poses, and K5, are out of
 scope. Every cipher family the loop abandons must leave behind a bounded, rerunnable
@@ -67,10 +67,12 @@ buyer is not used.
   could remember. Lexicographic by construction: no English can buy a missed crib letter.
 - The crib check is a hard gate: a candidate that misses any of the 24 known letters fails
   before any English score is computed.
-- Two more hard gates, decided 2026-10-15 (issue #11): the key, counted by the harness, must
-  be memorable (at most 100 bits; K1's key is 82, K2's 73), and the reading's English must
-  beat the same method run on ten shuffled coppers. Every record was re-scored under them
-  (`tools/replay_rules.py`); no past reading passes, so there is no champion.
+- A second hard gate, decided 2026-10-15 (issue #23): the reading's English must beat the same
+  method run on at least ten shuffled coppers, so a search that makes English out of noise
+  cannot win. The key is charged by the length of its description, counted by the harness
+  (key words are cheap, letters fitted to the known places are expensive); it is not a gate.
+  Every record was re-scored (`tools/replay_rules.py`); no past reading passes, so there is
+  no champion.
 - The worked-example illustration is the design figure: a few letters passing through the
   cipher step, generated from the experiment's own code.
 - A patience budget forces a change of cipher family after repeated reverts.

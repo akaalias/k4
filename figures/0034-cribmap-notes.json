@@ -9,6 +9,6 @@
  },
  {
   "anchor": "why it is not a solution",
-  "text": "The reading scores -3.70 on the English scale, where real English is about -3.6, and the same climb on a shuffled copper scores as well. Its loss, 4.90, is almost all key: 348 bits against about 60 a person can remember."
+  "text": "The reading scores -3.70 on the English scale, where real English is about -3.6, and the same climb on a shuffled copper scores better, -3.23, so under the rules of 2026-10-15 it fails the baseline gate. Its key takes 356 bits to write down, almost all of its loss of 5.03."
  }
 ]

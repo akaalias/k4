@@ -192,15 +192,33 @@ Open questions:
 
 ### Scoring settled (2026-10-15, afternoon)
 
-Alexis decided the three open scoring questions (issue #11). The memorable key is a hard
-requirement, so it is now a gate, not a charge: the harness counts the key's size from the key
-itself and anything over 100 bits fails (K1 82 bits, K2 73; experiment 34's champion 383). A
-reading must also beat the same method on at least ten shuffled coppers; an experiment that
-returns no controls cannot keep anything. All records were re-scored (tools/replay_rules.py,
-records untouched): every one of the 24 readings that ever passed the old gates fails the
-memorable-key gate. There is no champion. Experiment 34 is shown as kept under the old rule
-and reverted under the current one. Lesson: a success criterion written in the README has to be
-a gate in the harness from day one, or the loop optimises around it.
+Alexis decided the open scoring questions (issue #23). First version, same afternoon: a hard
+gate on key size (100 bits). Withdrawn within the hour. Alexis asked where the requirement came
+from: it was criterion 4 of our own success definition ("a key a person could remember"),
+justified by K1-K3's short keywords and Sanborn's "words without a method is not solved". Neither
+holds up as a basis for a size limit. Three sections are a thin precedent and do not agree (K3
+has no keyword), and Sanborn's remark is about showing the method, not the size of the key. A
+long key can have a short description: a running key from a named book.
+
+Final rules: (1) the original four gates; (2) a reading must beat the same method on at least
+ten shuffled coppers (run() returns "controls"); no controls, no keep; (3) the harness counts the
+key by the length of its description (key words a few bits each, a named text and offset a few
+bits, arbitrary letters 4.7 bits each) and charges it in the loss, not as a gate; (4) lowest loss
+wins. Criterion 4 of the success definition now reads: a hand procedure from 1990, written down
+step by step, keyed by something with a short description rather than letters fitted to the
+known places; its source is Scheidt's 2011 remark (secondhand, via Bean, C5): "simple, can be
+remembered, and executed years later when used with the correct key word/s".
+
+All records re-scored (tools/replay_rules.py, records untouched): no past reading passes the
+baseline, because no record carries a set of ten or more controls. Experiment 34 would fail on
+its own numbers anyway (its reading -3.70 against a shuffled best of -3.23). Experiment 48's best,
+-6.14, beat its smaller control set (-6.36 to -6.88), but that set was not ten full-size runs.
+There is no champion. The dashboard now recomputes every loss under the current rules, keeping
+each record's own figure as history, so one number shows everywhere.
+
+Lessons: a success criterion has to be a gate or a score in the harness from day one, or the loop
+optimises around it; and a criterion needs its source written next to it, or it hardens into a
+rule nobody chose.
 
 ## 2026-10-14
 

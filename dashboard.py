@@ -126,6 +126,25 @@ def esc(s):
 FAMILY_ALIASES = {"8-hill-and-polygraphic": "8-hill-polygraphic", "2-masked-then-keyed": "2-masked-plaintext", "5-gromark": "5-gromark-lfsr"}
 
 
+def rescore(r):
+    """Recompute every candidate's loss under the current rules (key charged by the length of its
+    description, counted by the harness), so every page shows one number. The record's own figure
+    is kept as loss_recorded."""
+    from kryptos.scorer import loss as _loss, key_bits_of
+    best = None
+    for c in r.get("candidates", []):
+        if c.get("loss") is None or not c.get("plaintext"):
+            continue
+        c.setdefault("loss_recorded", c["loss"])
+        bits = key_bits_of(c.get("key"))
+        c["key_bits"] = bits
+        c["loss"] = _loss(c["plaintext"], bits, c.get("crib_hits", 0))
+        best = c["loss"] if best is None else min(best, c["loss"])
+    if best is not None:
+        r["best_loss_recorded"] = r.get("best_loss")
+        r["best_loss"] = best
+
+
 def replay():
     """Current verdicts from tools/replay_rules.py: {tag: {...}} (records keep their own decision)."""
     p = ROOT / "data" / "replay.json"
@@ -151,6 +170,7 @@ def load_results():
             r["title"] = m.group(1).strip() if m else r["tag"]
             m = re.search(r"## In plain words\n\n(.+?)\n\n## ", r["_md"], re.S)
             r["eli5"] = m.group(1).strip() if m else ""
+            rescore(r)
             v = replay().get(r["tag"])
             r["decision_recorded"] = r.get("decision")
             if v and v["verdict_now"] != r.get("decision") and r.get("decision") in ("kept", "reverted"):
@@ -332,9 +352,9 @@ def best_candidate(r):
         return None
     passed = [c for c in cands if c.get("gate_passed")]
     if passed:
-        if r.get("decision_rule") == "loss":
-            return min(passed, key=lambda c: c.get("loss") if c.get("loss") is not None else 1e9)
-        return max(passed, key=lambda c: c.get("fitness") if c.get("fitness") is not None else -99)
+        # the current rule everywhere: lowest loss (records before experiment 50 were kept by
+        # fitness; their own decision is shown as history, not used to pick the candidate here)
+        return min(passed, key=lambda c: c.get("loss") if c.get("loss") is not None else 1e9)
     return max(cands, key=lambda c: c.get("crib_hits", 0))
 
 
@@ -719,9 +739,9 @@ def overview():
         for k, v in (r.get("phases") or {"run": r["seconds"]}).items():
             by_phase[k] = by_phase.get(k, 0.0) + v
     hero = (f"""<div class="stat-hero"><b class="num">{pct(best_loss)}</b><span>the champion's loss, as a share of the worst possible ({best_loss:.1f} of {WORST:.0f}). zero is solved</span></div>""" if best_loss is not None else
-            """<div class="stat-hero"><b class="num">none</b><span>no champion: no reading has passed every gate, including a memorable key and beating shuffled coppers</span></div>""")
+            """<div class="stat-hero"><b class="num">none</b><span>no champion: no reading has passed every gate, including beating the same method on shuffled coppers</span></div>""")
     hero += f"""
-<p class="hero-sub">Ten per missed known letter (24 cribs: EASTNORTHEAST, BERLINCLOCK), plus how far the other 73 letters are from English, plus the cost of a key too long to remember; 240 is every known letter wrong. Below ten, or 4.2%, means every known letter is in place. To be kept a reading must also have a key a person could remember (at most 100 bits) and score better English than the same method on ten shuffled coppers.</p>
+<p class="hero-sub">Ten per missed known letter (24 cribs: EASTNORTHEAST, BERLINCLOCK), plus how far the other 73 letters are from English, plus the cost of a key too long to remember; 240 is every known letter wrong. Below ten, or 4.2%, means every known letter is in place. To be kept a reading must also score better English than the same method on ten shuffled coppers.</p>
 <div class="stats">
 <div class="stat"><b class="num">{n}</b><span>experiments</span></div>
 <div class="stat"><b class="num">{kept}</b><span>kept</span></div>
@@ -779,7 +799,7 @@ def all_candidates(r):
     if len(stored) >= r.get("n_candidates", 0) or not raw_p.exists():
         return stored
     from kryptos.gates import run_gates
-    from kryptos.scorer import loss as _loss
+    from kryptos.scorer import loss as _loss, key_bits_of
     out = list(stored)
     # the harness scored the raw candidates in order and kept the first 20, so the rest follow on
     for c in json.loads(raw_p.read_text()).get("candidates", [])[len(r.get("candidates", [])):]:
@@ -787,7 +807,8 @@ def all_candidates(r):
             continue
         g = run_gates(c["plaintext"], c.get("reencrypted"))
         out.append({**c, "gate_passed": g.passed, "failed_at": g.failed_at, "crib_hits": g.crib_hits,
-                    "loss": _loss(c["plaintext"], c.get("key_bits", 0), g.crib_hits) if g.failed_at in (None, "cribs") else None})
+                    "loss": _loss(c["plaintext"], key_bits_of(c.get("key")), g.crib_hits) if g.failed_at in (None, "cribs") else None,
+                    "key_bits": key_bits_of(c.get("key"))})
     return out
 
 
@@ -863,7 +884,7 @@ def score_section(n, r, best):
     rows = [
         ("Known letters missed", f"{p['misses']} of 24, ten points each", p["crib"]),
         ("English", f"the 73 free letters score {p['english']:.2f}; English text scores {ENGLISH_TARGET:.1f}", p["deficit"]),
-        ("Key", f"{p['bits']:.0f} bits; a person remembers about {MEMORABLE_BITS:.0f}; each 60 beyond costs a point", p["key"]),
+        ("Key", f"{p['bits']:.0f} bits to write it down (key words are cheap, arbitrary letters 4.7 bits each); each 60 beyond {MEMORABLE_BITS:.0f} costs a point", p["key"]),
     ]
     trs = "".join(f'<tr><td>{a}</td><td class="muted">{esc(b)}</td><td class="num">{v:.2f}</td></tr>' for a, b, v in rows)
     trs += f'<tr class="total"><td>Loss</td><td class="muted">of {WORST:.0f}, the worst possible</td><td class="num">{p["total"]:.2f} <span class="pct">{pct(p["total"])}</span></td></tr>'
@@ -1012,7 +1033,7 @@ def experiment_page(tag):
     # section 2: best candidate
     cand = ""
     if best:
-        how = ("the harness's best among gate passers: lowest loss" if r.get("decision_rule") == "loss" else "the harness's best among gate passers: highest fitness, the rule before experiment 0050") if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
+        how = "the lowest-loss reading that passed the original gates" if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
         cand = sec(2, "Best candidate against the known letters", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, the 24 known places in accent. Right, the candidate: a known place it gets right is an accent cell, one it misses is outlined. This is {how}.") + panel_block(K4, best["plaintext"], KNOWN).replace('class="panel-wrap"', 'class="panel-wrap wide"', 1)
     else:
         cand = sec(2, "Best candidate against the known letters", "This experiment produced no candidate: the search ruled everything out before a full text was built. Its product is the bounded negative in section 7.")

@@ -171,7 +171,7 @@ from here, but it's also possible you couldn't."** Readings: (a) the extra L mat
 Berlin."** Readings: (a) the PALIMPCEST slip shows how he worked, one word at a time
 against a repeating key written out underneath; (b) the BERLIN chart's layout shows the
 97 as 31-character lines he counted on; (c) his tableau was "slightly different from the
-one on Kryptos." Status: untested; images in `../research_notes/sanborn_charts/`.
+one on Kryptos." Status: (c) as an alphabet one swap or one move from KRYPTOS, under a periodic key (periods 1-52) or ciphertext autokey (every lag): nothing beyond chance, no word in 16,671 fragments (0071); otherwise untested; images in `../research_notes/sanborn_charts/`.
 
 **C28. Stein's I.C. peak at m = 13 in both K1 and K2.** Reading: a 13-letter key or
 structure overlaid; or an artefact. Status: on K4, a period-13 tableau key is dead under all 24 conventions for a plain periodic key (0005) and for a progressive key at every step (0011).

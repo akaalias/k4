@@ -1,0 +1,2823 @@
+{
+ "candidates": [
+  {
+   "plaintext": "GCICLIOUNBXKIRKOSXJYZPPITNORTHEAYXEKOAGPUCQHCMKWTIUELZRHHTRSLBQAERLINCLOWNVFSXHLDORHQDDEKPUEFSWZR",
+   "key": {
+    "numbering": "BREACH0",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      15,
+      11,
+      15,
+      7
+     ],
+     [
+      0,
+      21,
+      10,
+      15
+     ],
+     [
+      5,
+      22,
+      23,
+      23
+     ],
+     [
+      6,
+      12,
+      7,
+      19
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 BREACH0 offset 0 enc; M=[[15, 11, 15, 7], [0, 21, 10, 15], [5, 22, 23, 23], [6, 12, 7, 19]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "GCICLIOUNBXKIRKOSXJYZPPITNORTHEAYXEKOAGPUCQHCMKWTIUELZRHHTRSLBQAERLINCLOWNVFSXHLDORHQDDEKPUEFSWZR",
+   "key": {
+    "numbering": "BREACH0",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      2,
+      0,
+      3,
+      23
+     ],
+     [
+      3,
+      18,
+      21,
+      14
+     ],
+     [
+      21,
+      19,
+      13,
+      19
+     ],
+     [
+      13,
+      9,
+      7,
+      18
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 BREACH0 offset 0 dec; M=[[2, 0, 3, 23], [3, 18, 21, 14], [21, 19, 13, 19], [13, 9, 7, 18]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OBKOPDDUHSVXJLCGFFTLPOASTNORTHEQMYQGEEMVPMCYUOZTNZQISZXCRLYGFTGBERLINCLCBUWZOODQFAYADNERFFZFRVKAR",
+   "key": {
+    "numbering": "BUT0",
+    "n": 4,
+    "offset": 3,
+    "M": [
+     [
+      16,
+      6,
+      3,
+      2
+     ],
+     [
+      18,
+      19,
+      11,
+      23
+     ],
+     [
+      3,
+      5,
+      0,
+      13
+     ],
+     [
+      8,
+      2,
+      8,
+      11
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 BUT0 offset 3 enc; M=[[16, 6, 3, 2], [18, 19, 11, 23], [3, 5, 0, 13], [8, 2, 8, 11]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OBKOPDDUHSVXJLCGFFTLPOASTNORTHEQMYQGEEMVPMCYUOZTNZQISZXCRLYGFTGBERLINCLCBUWZOODQFAYADNERFFZFRVKAR",
+   "key": {
+    "numbering": "BUT0",
+    "n": 4,
+    "offset": 3,
+    "M": [
+     [
+      9,
+      21,
+      25,
+      10
+     ],
+     [
+      5,
+      3,
+      6,
+      7
+     ],
+     [
+      17,
+      4,
+      12,
+      24
+     ],
+     [
+      18,
+      12,
+      24,
+      19
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 BUT0 offset 3 dec; M=[[9, 21, 25, 10], [5, 3, 6, 7], [17, 4, 12, 24], [18, 12, 24, 19]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OKFAVVMIRTTUCKWSGSHKCEASTNORTHEASHUMXBYAVBPQCUUFFYPBKMNANVORFFSIMRLINCLOCKPONGVHLIAEXSGXZXMPRQJDO",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      24,
+      0,
+      7,
+      24
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      5,
+      21,
+      6,
+      4
+     ],
+     [
+      13,
+      10,
+      24,
+      6
+     ]
+    ],
+    "v": [
+     12,
+     1,
+     23,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 enc; M=[[24, 0, 7, 24], [25, 8, 6, 25], [5, 21, 6, 4], [13, 10, 24, 6]] v=[12, 1, 23, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZVAFVMIRDDULZGSWSHKCEASTNORTHEASXEMHBYAVSRQLUUFFYPBKAIAIFQRVFSIMRLINCLOCZROIGVHLNMEHBWXKXMPROYDQ",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      24,
+      0,
+      7,
+      24
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      5,
+      21,
+      6,
+      4
+     ],
+     [
+      0,
+      10,
+      24,
+      19
+     ]
+    ],
+    "v": [
+     12,
+     1,
+     23,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 enc; M=[[24, 0, 7, 24], [25, 8, 6, 25], [5, 21, 6, 4], [0, 10, 24, 19]] v=[12, 1, 23, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKVAVVMIRTDUCKGSGSHKCEASTNORTHEASHEMXBYAVBRQCUUFFYPBKMIANVQRFFSIMRLINCLOCKRONGVHLIMEXSWXZXMPRQYDO",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      24,
+      0,
+      7,
+      24
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      18,
+      21,
+      6,
+      17
+     ],
+     [
+      13,
+      10,
+      24,
+      6
+     ]
+    ],
+    "v": [
+     12,
+     1,
+     23,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 enc; M=[[24, 0, 7, 24], [25, 8, 6, 25], [18, 21, 6, 17], [13, 10, 24, 6]] v=[12, 1, 23, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZFAFVMIRDTULZWSWSHKCEASTNORTHEASXUMHBYAVSPQLUUFFYPBKANAIFORVFSIMRLINCLOCZPOIGVHLNAEHBGXKXMPROJDQ",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      24,
+      0,
+      7,
+      24
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      18,
+      21,
+      6,
+      17
+     ],
+     [
+      0,
+      10,
+      24,
+      19
+     ]
+    ],
+    "v": [
+     12,
+     1,
+     23,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 enc; M=[[24, 0, 7, 24], [25, 8, 6, 25], [18, 21, 6, 17], [0, 10, 24, 19]] v=[12, 1, 23, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKFMVVMIRTTECKWBGSHKCEASTNORTHEASHUAXBYAVBPOCUUFFYPBKMNMNVOPFFSIMRLINCLOCKPQNGVHLIAUXSGHZXMPRQJTO",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      11,
+      0,
+      7,
+      11
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      5,
+      21,
+      6,
+      4
+     ],
+     [
+      13,
+      10,
+      24,
+      6
+     ]
+    ],
+    "v": [
+     12,
+     1,
+     23,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 enc; M=[[11, 0, 7, 11], [25, 8, 6, 25], [5, 21, 6, 4], [13, 10, 24, 6]] v=[12, 1, 23, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZVMFVMIRDDELZGBWSHKCEASTNORTHEASXEAHBYAVSROLUUFFYPBKAIMIFQPVFSIMRLINCLOCZRQIGVHLNMUHBWHKXMPROYTQ",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      11,
+      0,
+      7,
+      11
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      5,
+      21,
+      6,
+      4
+     ],
+     [
+      0,
+      10,
+      24,
+      19
+     ]
+    ],
+    "v": [
+     12,
+     1,
+     23,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 enc; M=[[11, 0, 7, 11], [25, 8, 6, 25], [5, 21, 6, 4], [0, 10, 24, 19]] v=[12, 1, 23, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKVMVVMIRTDECKGBGSHKCEASTNORTHEASHEAXBYAVBROCUUFFYPBKMIMNVQPFFSIMRLINCLOCKRQNGVHLIMUXSWHZXMPRQYTO",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      11,
+      0,
+      7,
+      11
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      18,
+      21,
+      6,
+      17
+     ],
+     [
+      13,
+      10,
+      24,
+      6
+     ]
+    ],
+    "v": [
+     12,
+     1,
+     23,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 enc; M=[[11, 0, 7, 11], [25, 8, 6, 25], [18, 21, 6, 17], [13, 10, 24, 6]] v=[12, 1, 23, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZFMFVMIRDTELZWBWSHKCEASTNORTHEASXUAHBYAVSPOLUUFFYPBKANMIFOPVFSIMRLINCLOCZPQIGVHLNAUHBGHKXMPROJTQ",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      11,
+      0,
+      7,
+      11
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      18,
+      21,
+      6,
+      17
+     ],
+     [
+      0,
+      10,
+      24,
+      19
+     ]
+    ],
+    "v": [
+     12,
+     1,
+     23,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 enc; M=[[11, 0, 7, 11], [25, 8, 6, 25], [18, 21, 6, 17], [0, 10, 24, 19]] v=[12, 1, 23, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKVAVVMIRTDUCKGSGSHKCEASTNORTHEASHEMXBYAVBRQCUUFFYPBKMIANVQRFFSIMRLINCLOCKRONGVHLIMEXSWXZXMPRQYDO",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      20,
+      2,
+      11
+     ],
+     [
+      2,
+      7,
+      23,
+      19
+     ],
+     [
+      9,
+      4,
+      20,
+      12
+     ],
+     [
+      4,
+      7,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     22,
+     24,
+     24,
+     3
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 dec; M=[[14, 20, 2, 11], [2, 7, 23, 19], [9, 4, 20, 12], [4, 7, 16, 5]] v=[22, 24, 24, 3]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKVMVVMIRTDECKGBGSHKCEASTNORTHEASHEAXBYAVBROCUUFFYPBKMIMNVQPFFSIMRLINCLOCKRQNGVHLIMUXSWHZXMPRQYTO",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      20,
+      2,
+      11
+     ],
+     [
+      2,
+      7,
+      23,
+      19
+     ],
+     [
+      9,
+      17,
+      20,
+      12
+     ],
+     [
+      4,
+      7,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     22,
+     24,
+     11,
+     3
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 dec; M=[[14, 20, 2, 11], [2, 7, 23, 19], [9, 17, 20, 12], [4, 7, 16, 5]] v=[22, 24, 11, 3]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKFAVVMIRTTUCKWSGSHKCEASTNORTHEASHUMXBYAVBPQCUUFFYPBKMNANVORFFSIMRLINCLOCKPONGVHLIAEXSGXZXMPRQJDO",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      20,
+      2,
+      11
+     ],
+     [
+      2,
+      20,
+      23,
+      19
+     ],
+     [
+      9,
+      4,
+      20,
+      12
+     ],
+     [
+      4,
+      7,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     22,
+     11,
+     24,
+     3
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 dec; M=[[14, 20, 2, 11], [2, 20, 23, 19], [9, 4, 20, 12], [4, 7, 16, 5]] v=[22, 11, 24, 3]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKFMVVMIRTTECKWBGSHKCEASTNORTHEASHUAXBYAVBPOCUUFFYPBKMNMNVOPFFSIMRLINCLOCKPQNGVHLIAUXSGHZXMPRQJTO",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      20,
+      2,
+      11
+     ],
+     [
+      2,
+      20,
+      23,
+      19
+     ],
+     [
+      9,
+      17,
+      20,
+      12
+     ],
+     [
+      4,
+      7,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     22,
+     11,
+     11,
+     3
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 dec; M=[[14, 20, 2, 11], [2, 20, 23, 19], [9, 17, 20, 12], [4, 7, 16, 5]] v=[22, 11, 11, 3]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZVAFVMIRDDULZGSWSHKCEASTNORTHEASXEMHBYAVSRQLUUFFYPBKAIAIFQRVFSIMRLINCLOCZROIGVHLNMEHBWXKXMPROYDQ",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      7,
+      2,
+      11
+     ],
+     [
+      2,
+      7,
+      23,
+      19
+     ],
+     [
+      9,
+      4,
+      20,
+      12
+     ],
+     [
+      4,
+      20,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     9,
+     24,
+     24,
+     16
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 dec; M=[[14, 7, 2, 11], [2, 7, 23, 19], [9, 4, 20, 12], [4, 20, 16, 5]] v=[9, 24, 24, 16]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZVMFVMIRDDELZGBWSHKCEASTNORTHEASXEAHBYAVSROLUUFFYPBKAIMIFQPVFSIMRLINCLOCZRQIGVHLNMUHBWHKXMPROYTQ",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      7,
+      2,
+      11
+     ],
+     [
+      2,
+      7,
+      23,
+      19
+     ],
+     [
+      9,
+      17,
+      20,
+      12
+     ],
+     [
+      4,
+      20,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     9,
+     24,
+     11,
+     16
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 dec; M=[[14, 7, 2, 11], [2, 7, 23, 19], [9, 17, 20, 12], [4, 20, 16, 5]] v=[9, 24, 11, 16]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZFAFVMIRDTULZWSWSHKCEASTNORTHEASXUMHBYAVSPQLUUFFYPBKANAIFORVFSIMRLINCLOCZPOIGVHLNAEHBGXKXMPROJDQ",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      7,
+      2,
+      11
+     ],
+     [
+      2,
+      20,
+      23,
+      19
+     ],
+     [
+      9,
+      4,
+      20,
+      12
+     ],
+     [
+      4,
+      20,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     9,
+     11,
+     24,
+     16
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 dec; M=[[14, 7, 2, 11], [2, 20, 23, 19], [9, 4, 20, 12], [4, 20, 16, 5]] v=[9, 11, 24, 16]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZFMFVMIRDTELZWBWSHKCEASTNORTHEASXUAHBYAVSPOLUUFFYPBKANMIFOPVFSIMRLINCLOCZPQIGVHLNAUHBGHKXMPROJTQ",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      7,
+      2,
+      11
+     ],
+     [
+      2,
+      20,
+      23,
+      19
+     ],
+     [
+      9,
+      17,
+      20,
+      12
+     ],
+     [
+      4,
+      20,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     9,
+     11,
+     11,
+     16
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO0 offset 1 dec; M=[[14, 7, 2, 11], [2, 20, 23, 19], [9, 17, 20, 12], [4, 20, 16, 5]] v=[9, 11, 11, 16]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OBKNVNXVOLKSFORZGRATZATSTNORTHEMOIKGQPMEOPQVLXDBZDCTIIOKIEBEQEWBERLINCLOKHHXGVBPKQSMUQZOLWMEPEUAR",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 3,
+    "M": [
+     [
+      17,
+      12,
+      5,
+      11
+     ],
+     [
+      24,
+      18,
+      17,
+      21
+     ],
+     [
+      23,
+      10,
+      13,
+      6
+     ],
+     [
+      8,
+      11,
+      20,
+      10
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 CAIRO0 offset 3 enc; M=[[17, 12, 5, 11], [24, 18, 17, 21], [23, 10, 13, 6], [8, 11, 20, 10]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OBKNVNXVOLKSFORZGRATZATSTNORTHEMOIKGQPMEOPQVLXDBZDCTIIOKIEBEQEWBERLINCLOKHHXGVBPKQSMUQZOLWMEPEUAR",
+   "key": {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 3,
+    "M": [
+     [
+      17,
+      1,
+      2,
+      4
+     ],
+     [
+      4,
+      20,
+      22,
+      21
+     ],
+     [
+      15,
+      23,
+      25,
+      6
+     ],
+     [
+      17,
+      4,
+      23,
+      6
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 CAIRO0 offset 3 dec; M=[[17, 1, 2, 4], [4, 20, 22, 21], [15, 23, 25, 6], [17, 4, 23, 6]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OKFAVVMIRTTUCKWSGSHKCEASTNORTHEASHUMXBYAVBPQCUUFFYPBKMNANVORFFSIMRLINCLOCKPONGVHLIAEXSGXZXMPRQJDO",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      24,
+      0,
+      7,
+      24
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      5,
+      21,
+      6,
+      4
+     ],
+     [
+      13,
+      10,
+      24,
+      6
+     ]
+    ],
+    "v": [
+     10,
+     16,
+     14,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 enc; M=[[24, 0, 7, 24], [25, 8, 6, 25], [5, 21, 6, 4], [13, 10, 24, 6]] v=[10, 16, 14, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZVAFVMIRDDULZGSWSHKCEASTNORTHEASXEMHBYAVSRQLUUFFYPBKAIAIFQRVFSIMRLINCLOCZROIGVHLNMEHBWXKXMPROYDQ",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      24,
+      0,
+      7,
+      24
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      5,
+      21,
+      6,
+      4
+     ],
+     [
+      0,
+      10,
+      24,
+      19
+     ]
+    ],
+    "v": [
+     10,
+     16,
+     14,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 enc; M=[[24, 0, 7, 24], [25, 8, 6, 25], [5, 21, 6, 4], [0, 10, 24, 19]] v=[10, 16, 14, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKVAVVMIRTDUCKGSGSHKCEASTNORTHEASHEMXBYAVBRQCUUFFYPBKMIANVQRFFSIMRLINCLOCKRONGVHLIMEXSWXZXMPRQYDO",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      24,
+      0,
+      7,
+      24
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      18,
+      21,
+      6,
+      17
+     ],
+     [
+      13,
+      10,
+      24,
+      6
+     ]
+    ],
+    "v": [
+     10,
+     16,
+     14,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 enc; M=[[24, 0, 7, 24], [25, 8, 6, 25], [18, 21, 6, 17], [13, 10, 24, 6]] v=[10, 16, 14, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZFAFVMIRDTULZWSWSHKCEASTNORTHEASXUMHBYAVSPQLUUFFYPBKANAIFORVFSIMRLINCLOCZPOIGVHLNAEHBGXKXMPROJDQ",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      24,
+      0,
+      7,
+      24
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      18,
+      21,
+      6,
+      17
+     ],
+     [
+      0,
+      10,
+      24,
+      19
+     ]
+    ],
+    "v": [
+     10,
+     16,
+     14,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 enc; M=[[24, 0, 7, 24], [25, 8, 6, 25], [18, 21, 6, 17], [0, 10, 24, 19]] v=[10, 16, 14, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKFMVVMIRTTECKWBGSHKCEASTNORTHEASHUAXBYAVBPOCUUFFYPBKMNMNVOPFFSIMRLINCLOCKPQNGVHLIAUXSGHZXMPRQJTO",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      11,
+      0,
+      7,
+      11
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      5,
+      21,
+      6,
+      4
+     ],
+     [
+      13,
+      10,
+      24,
+      6
+     ]
+    ],
+    "v": [
+     10,
+     16,
+     14,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 enc; M=[[11, 0, 7, 11], [25, 8, 6, 25], [5, 21, 6, 4], [13, 10, 24, 6]] v=[10, 16, 14, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZVMFVMIRDDELZGBWSHKCEASTNORTHEASXEAHBYAVSROLUUFFYPBKAIMIFQPVFSIMRLINCLOCZRQIGVHLNMUHBWHKXMPROYTQ",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      11,
+      0,
+      7,
+      11
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      5,
+      21,
+      6,
+      4
+     ],
+     [
+      0,
+      10,
+      24,
+      19
+     ]
+    ],
+    "v": [
+     10,
+     16,
+     14,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 enc; M=[[11, 0, 7, 11], [25, 8, 6, 25], [5, 21, 6, 4], [0, 10, 24, 19]] v=[10, 16, 14, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKVMVVMIRTDECKGBGSHKCEASTNORTHEASHEAXBYAVBROCUUFFYPBKMIMNVQPFFSIMRLINCLOCKRQNGVHLIMUXSWHZXMPRQYTO",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      11,
+      0,
+      7,
+      11
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      18,
+      21,
+      6,
+      17
+     ],
+     [
+      13,
+      10,
+      24,
+      6
+     ]
+    ],
+    "v": [
+     10,
+     16,
+     14,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 enc; M=[[11, 0, 7, 11], [25, 8, 6, 25], [18, 21, 6, 17], [13, 10, 24, 6]] v=[10, 16, 14, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZFMFVMIRDTELZWBWSHKCEASTNORTHEASXUAHBYAVSPOLUUFFYPBKANMIFOPVFSIMRLINCLOCZPQIGVHLNAUHBGHKXMPROJTQ",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      11,
+      0,
+      7,
+      11
+     ],
+     [
+      25,
+      8,
+      6,
+      25
+     ],
+     [
+      18,
+      21,
+      6,
+      17
+     ],
+     [
+      0,
+      10,
+      24,
+      19
+     ]
+    ],
+    "v": [
+     10,
+     16,
+     14,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 enc; M=[[11, 0, 7, 11], [25, 8, 6, 25], [18, 21, 6, 17], [0, 10, 24, 19]] v=[10, 16, 14, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKFAVVMIRTTUCKWSGSHKCEASTNORTHEASHUMXBYAVBPQCUUFFYPBKMNANVORFFSIMRLINCLOCKPONGVHLIAEXSGXZXMPRQJDO",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      20,
+      2,
+      11
+     ],
+     [
+      2,
+      20,
+      23,
+      19
+     ],
+     [
+      9,
+      4,
+      20,
+      12
+     ],
+     [
+      4,
+      7,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     2,
+     0,
+     6,
+     24
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 dec; M=[[14, 20, 2, 11], [2, 20, 23, 19], [9, 4, 20, 12], [4, 7, 16, 5]] v=[2, 0, 6, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKFMVVMIRTTECKWBGSHKCEASTNORTHEASHUAXBYAVBPOCUUFFYPBKMNMNVOPFFSIMRLINCLOCKPQNGVHLIAUXSGHZXMPRQJTO",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      20,
+      2,
+      11
+     ],
+     [
+      2,
+      20,
+      23,
+      19
+     ],
+     [
+      9,
+      17,
+      20,
+      12
+     ],
+     [
+      4,
+      7,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     2,
+     0,
+     6,
+     24
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 dec; M=[[14, 20, 2, 11], [2, 20, 23, 19], [9, 17, 20, 12], [4, 7, 16, 5]] v=[2, 0, 6, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKVAVVMIRTDUCKGSGSHKCEASTNORTHEASHEMXBYAVBRQCUUFFYPBKMIANVQRFFSIMRLINCLOCKRONGVHLIMEXSWXZXMPRQYDO",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      20,
+      2,
+      11
+     ],
+     [
+      2,
+      7,
+      23,
+      19
+     ],
+     [
+      9,
+      4,
+      20,
+      12
+     ],
+     [
+      4,
+      7,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     2,
+     0,
+     6,
+     24
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 dec; M=[[14, 20, 2, 11], [2, 7, 23, 19], [9, 4, 20, 12], [4, 7, 16, 5]] v=[2, 0, 6, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OKVMVVMIRTDECKGBGSHKCEASTNORTHEASHEAXBYAVBROCUUFFYPBKMIMNVQPFFSIMRLINCLOCKRQNGVHLIMUXSWHZXMPRQYTO",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      20,
+      2,
+      11
+     ],
+     [
+      2,
+      7,
+      23,
+      19
+     ],
+     [
+      9,
+      17,
+      20,
+      12
+     ],
+     [
+      4,
+      7,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     2,
+     0,
+     6,
+     24
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 dec; M=[[14, 20, 2, 11], [2, 7, 23, 19], [9, 17, 20, 12], [4, 7, 16, 5]] v=[2, 0, 6, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZFAFVMIRDTULZWSWSHKCEASTNORTHEASXUMHBYAVSPQLUUFFYPBKANAIFORVFSIMRLINCLOCZPOIGVHLNAEHBGXKXMPROJDQ",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      7,
+      2,
+      11
+     ],
+     [
+      2,
+      20,
+      23,
+      19
+     ],
+     [
+      9,
+      4,
+      20,
+      12
+     ],
+     [
+      4,
+      20,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     2,
+     0,
+     6,
+     24
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 dec; M=[[14, 7, 2, 11], [2, 20, 23, 19], [9, 4, 20, 12], [4, 20, 16, 5]] v=[2, 0, 6, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZFMFVMIRDTELZWBWSHKCEASTNORTHEASXUAHBYAVSPOLUUFFYPBKANMIFOPVFSIMRLINCLOCZPQIGVHLNAUHBGHKXMPROJTQ",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      7,
+      2,
+      11
+     ],
+     [
+      2,
+      20,
+      23,
+      19
+     ],
+     [
+      9,
+      17,
+      20,
+      12
+     ],
+     [
+      4,
+      20,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     2,
+     0,
+     6,
+     24
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 dec; M=[[14, 7, 2, 11], [2, 20, 23, 19], [9, 17, 20, 12], [4, 20, 16, 5]] v=[2, 0, 6, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZVAFVMIRDDULZGSWSHKCEASTNORTHEASXEMHBYAVSRQLUUFFYPBKAIAIFQRVFSIMRLINCLOCZROIGVHLNMEHBWXKXMPROYDQ",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      7,
+      2,
+      11
+     ],
+     [
+      2,
+      7,
+      23,
+      19
+     ],
+     [
+      9,
+      4,
+      20,
+      12
+     ],
+     [
+      4,
+      20,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     2,
+     0,
+     6,
+     24
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 dec; M=[[14, 7, 2, 11], [2, 7, 23, 19], [9, 4, 20, 12], [4, 20, 16, 5]] v=[2, 0, 6, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OZVMFVMIRDDELZGBWSHKCEASTNORTHEASXEAHBYAVSROLUUFFYPBKAIMIFQPVFSIMRLINCLOCZRQIGVHLNMUHBWHKXMPROYTQ",
+   "key": {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      7,
+      2,
+      11
+     ],
+     [
+      2,
+      7,
+      23,
+      19
+     ],
+     [
+      9,
+      17,
+      20,
+      12
+     ],
+     [
+      4,
+      20,
+      16,
+      5
+     ]
+    ],
+    "v": [
+     2,
+     0,
+     6,
+     24
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAIRO1 offset 1 dec; M=[[14, 7, 2, 11], [2, 7, 23, 19], [9, 17, 20, 12], [4, 20, 16, 5]] v=[2, 0, 6, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 16 solutions in this setting"
+  },
+  {
+   "plaintext": "OQYZBSJAJKKEUMGITYOANEASTNORTHEASYCSLVTFOJNEOXJOUOEYOTYTYVCZLCBKMRLINCLOCXGOLLVKKMIYBXQKRFRNLVKVB",
+   "key": {
+    "numbering": "CAUSED0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      12,
+      1,
+      11,
+      5
+     ],
+     [
+      24,
+      7,
+      0,
+      4
+     ],
+     [
+      0,
+      18,
+      22,
+      1
+     ],
+     [
+      17,
+      13,
+      2,
+      2
+     ]
+    ],
+    "v": [
+     7,
+     12,
+     19,
+     24
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAUSED0 offset 1 enc; M=[[12, 1, 11, 5], [24, 7, 0, 4], [0, 18, 22, 1], [17, 13, 2, 2]] v=[7, 12, 19, 24]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OQYZBSJAJKKEUMGITYOANEASTNORTHEASYCSLVTFOJNEOXJOUOEYOTYTYVCZLCBKMRLINCLOCXGOLLVKKMIYBXQKRFRNLVKVB",
+   "key": {
+    "numbering": "CAUSED0",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      15,
+      10,
+      21
+     ],
+     [
+      8,
+      25,
+      0,
+      8
+     ],
+     [
+      5,
+      19,
+      1,
+      14
+     ],
+     [
+      6,
+      16,
+      5,
+      16
+     ]
+    ],
+    "v": [
+     16,
+     24,
+     6,
+     15
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAUSED0 offset 1 dec; M=[[14, 15, 10, 21], [8, 25, 0, 8], [5, 19, 1, 14], [6, 16, 5, 16]] v=[16, 24, 6, 15]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OQYZBSJAJKKEUMGITYOANEASTNORTHEASYCSLVTFOJNEOXJOUOEYOTYTYVCZLCBKMRLINCLOCXGOLLVKKMIYBXQKRFRNLVKVB",
+   "key": {
+    "numbering": "CAUSED1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      12,
+      1,
+      11,
+      5
+     ],
+     [
+      24,
+      7,
+      0,
+      4
+     ],
+     [
+      0,
+      18,
+      22,
+      1
+     ],
+     [
+      17,
+      13,
+      2,
+      2
+     ]
+    ],
+    "v": [
+     5,
+     4,
+     5,
+     17
+    ],
+    "direction": "enc"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAUSED1 offset 1 enc; M=[[12, 1, 11, 5], [24, 7, 0, 4], [0, 18, 22, 1], [17, 13, 2, 2]] v=[5, 4, 5, 17]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OQYZBSJAJKKEUMGITYOANEASTNORTHEASYCSLVTFOJNEOXJOUOEYOTYTYVCZLCBKMRLINCLOCXGOLLVKKMIYBXQKRFRNLVKVB",
+   "key": {
+    "numbering": "CAUSED1",
+    "n": 4,
+    "offset": 1,
+    "M": [
+     [
+      14,
+      15,
+      10,
+      21
+     ],
+     [
+      8,
+      25,
+      0,
+      8
+     ],
+     [
+      5,
+      19,
+      1,
+      14
+     ],
+     [
+      6,
+      16,
+      5,
+      16
+     ]
+    ],
+    "v": [
+     9,
+     10,
+     20,
+     25
+    ],
+    "direction": "dec"
+   },
+   "key_bits": 94.0,
+   "key_description": "Hill 4x4 affine CAUSED1 offset 1 dec; M=[[14, 15, 10, 21], [8, 25, 0, 8], [5, 19, 1, 14], [6, 16, 5, 16]] v=[9, 10, 20, 25]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "5 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OBKYOBUEMOGWMYSXUAZUXNLSTNORTHEHWUXGWYYQRZAJXHIUDXOSLCHVBVZGSBEBERLINCLSJHFXYOOBYROHJTXKMPHUOBXAR",
+   "key": {
+    "numbering": "DELIVER0",
+    "n": 4,
+    "offset": 3,
+    "M": [
+     [
+      18,
+      22,
+      1,
+      22
+     ],
+     [
+      20,
+      8,
+      14,
+      7
+     ],
+     [
+      19,
+      15,
+      15,
+      1
+     ],
+     [
+      7,
+      4,
+      15,
+      16
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 DELIVER0 offset 3 enc; M=[[18, 22, 1, 22], [20, 8, 14, 7], [19, 15, 15, 1], [7, 4, 15, 16]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "OBKYOBUEMOGWMYSXUAZUXNLSTNORTHEHWUXGWYYQRZAJXHIUDXOSLCHVBVZGSBEBERLINCLSJHFXYOOBYROHJTXKMPHUOBXAR",
+   "key": {
+    "numbering": "DELIVER0",
+    "n": 4,
+    "offset": 3,
+    "M": [
+     [
+      21,
+      8,
+      0,
+      5
+     ],
+     [
+      14,
+      3,
+      25,
+      25
+     ],
+     [
+      23,
+      22,
+      24,
+      6
+     ],
+     [
+      8,
+      19,
+      20,
+      12
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 DELIVER0 offset 3 dec; M=[[21, 8, 0, 5], [14, 3, 25, 25], [23, 22, 24, 6], [8, 19, 20, 12]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "EQJGKKJCTFYGTFDEROCWLWJQTNORTHEAOQQWJGIQGTYIVQVVYCXQDQSRIIZTKGALERLINCLOYWIZEOYWGIYQKZUOZAAKMXBXR",
+   "key": {
+    "numbering": "DETAILS0",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      6,
+      10,
+      0,
+      9
+     ],
+     [
+      7,
+      9,
+      13,
+      15
+     ],
+     [
+      1,
+      24,
+      12,
+      6
+     ],
+     [
+      11,
+      17,
+      2,
+      12
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 DETAILS0 offset 0 enc; M=[[6, 10, 0, 9], [7, 9, 13, 15], [1, 24, 12, 6], [11, 17, 2, 12]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "EQJGKKJCTFYGTFDEROCWLWJQTNORTHEAOQQWJGIQGTYIVQVVYCXQDQSRIIZTKGALERLINCLOYWIZEOYWGIYQKZUOZAAKMXBXR",
+   "key": {
+    "numbering": "DETAILS0",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      10,
+      12,
+      23,
+      18
+     ],
+     [
+      24,
+      24,
+      17,
+      15
+     ],
+     [
+      1,
+      3,
+      8,
+      11
+     ],
+     [
+      13,
+      0,
+      12,
+      6
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 DETAILS0 offset 0 dec; M=[[10, 12, 23, 18], [24, 24, 17, 15], [1, 3, 8, 11], [13, 0, 12, 6]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "LCDWAZOIYSGYWHQFZMOMFJDITNORTHEAYHUUMLYYCBIYRXENULFSGSTXCBKMRVHXERLINCLOIUJPHIUDMBJIRXTCKUKAYHAER",
+   "key": {
+    "numbering": "DETAILS1",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      18,
+      8,
+      18,
+      17
+     ],
+     [
+      22,
+      13,
+      3,
+      12
+     ],
+     [
+      9,
+      14,
+      24,
+      20
+     ],
+     [
+      12,
+      19,
+      10,
+      17
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 DETAILS1 offset 0 enc; M=[[18, 8, 18, 17], [22, 13, 3, 12], [9, 14, 24, 20], [12, 19, 10, 17]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "LCDWAZOIYSGYWHQFZMOMFJDITNORTHEAYHUUMLYYCBIYRXENULFSGSTXCBKMRVHXERLINCLOIUJPHIUDMBJIRXTCKUKAYHAER",
+   "key": {
+    "numbering": "DETAILS1",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      2,
+      16,
+      5,
+      16
+     ],
+     [
+      5,
+      14,
+      10,
+      7
+     ],
+     [
+      25,
+      17,
+      10,
+      17
+     ],
+     [
+      15,
+      12,
+      10,
+      0
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 DETAILS1 offset 0 dec; M=[[2, 16, 5, 16], [5, 14, 10, 7], [25, 17, 10, 17], [15, 12, 10, 0]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "WLRNDHQEJQEJTQFBCJHPGFQNTNORTHEAQNFFPSNDTHFQIKVGUUBAVTIUJGPMLZVOERLINCLOTAYCYALGKZALNPRYWDRXZWGYR",
+   "key": {
+    "numbering": "DOES1",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      11,
+      4,
+      9,
+      14
+     ],
+     [
+      0,
+      23,
+      16,
+      10
+     ],
+     [
+      4,
+      8,
+      25,
+      12
+     ],
+     [
+      7,
+      0,
+      6,
+      23
+     ]
+    ],
+    "v": null,
+    "direction": "enc"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 DOES1 offset 0 enc; M=[[11, 4, 9, 14], [0, 23, 16, 10], [4, 8, 25, 12], [7, 0, 6, 23]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  },
+  {
+   "plaintext": "WLRNDHQEJQEJTQFBCJHPGFQNTNORTHEAQNFFPSNDTHFQIKVGUUBAVTIUJGPMLZVOERLINCLOTAYCYALGKZALNPRYWDRXZWGYR",
+   "key": {
+    "numbering": "DOES1",
+    "n": 4,
+    "offset": 0,
+    "M": [
+     [
+      21,
+      14,
+      11,
+      24
+     ],
+     [
+      0,
+      7,
+      6,
+      4
+     ],
+     [
+      16,
+      12,
+      3,
+      14
+     ],
+     [
+      3,
+      22,
+      23,
+      23
+     ]
+    ],
+    "v": null,
+    "direction": "dec"
+   },
+   "key_bits": 75.2,
+   "key_description": "Hill 4x4 DOES1 offset 0 dec; M=[[21, 14, 11, 24], [0, 7, 6, 4], [16, 12, 3, 14], [3, 22, 23, 23]]",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "4 crib blocks all consistent; 1 solutions in this setting"
+  }
+ ],
+ "bounds": {
+  "family": "Hill cipher, block sizes 2-4, plain and affine, solved from crib blocks",
+  "numberings": [
+   "ABOUT0",
+   "ABOUT1",
+   "ABSENCE0",
+   "ABSENCE1",
+   "AIR0",
+   "AIR1",
+   "AND0",
+   "AND1",
+   "ANYTHING0",
+   "ANYTHING1",
+   "BETWEEN0",
+   "BETWEEN1",
+   "BREACH0",
+   "BREACH1",
+   "BUT0",
+   "BUT1",
+   "CAIRO0",
+   "CAIRO1",
+   "CAN0",
+   "CAN1",
+   "CANDLE0",
+   "CANDLE1",
+   "CAUSED0",
+   "CAUSED1",
+   "CHAMBER0",
+   "CHAMBER1",
+   "CORNER0",
+   "CORNER1",
+   "DEBRIS0",
+   "DEBRIS1",
+   "DEGREES0",
+   "DEGREES1",
+   "DELIVER0",
+   "DELIVER1",
+   "DELIVERING0",
+   "DELIVERING1",
+   "DETAILS0",
+   "DETAILS1",
+   "DOES0",
+   "DOES1",
+   "DOORWAY0",
+   "DOORWAY1",
+   "EARTHS0",
+   "EARTHS1",
+   "EIGHT0",
+   "EIGHT1",
+   "EMERGED0",
+   "EMERGED1",
+   "ENCUMBERED0",
+   "ENCUMBERED1",
+   "ESCAPING0",
+   "ESCAPING1",
+   "EXACT0",
+   "EXACT1",
+   "FIELD0",
+   "FIELD1",
+   "FIFTY0",
+   "FIFTY1",
+   "FIVE0",
+   "FIVE1",
+   "FLAME0",
+   "FLAME1",
+   "FLICKER0",
+   "FLICKER1",
+   "FORTY0",
+   "FORTY1",
+   "FOUR0",
+   "FOUR1",
+   "FROM0",
+   "FROM1",
+   "GATHERED0",
+   "GATHERED1",
+   "HAND0",
+   "HAND1",
+   "HANDS0",
+   "HANDS1",
+   "HIS0",
+   "HIS1",
+   "HOLE0",
+   "HOLE1",
+   "HOT0",
+   "HOT1",
+   "HOWS0",
+   "HOWS1",
+   "INFORMATION0",
+   "INFORMATION1",
+   "INSERTED0",
+   "INSERTED1",
+   "ITS0",
+   "ITS1",
+   "KNOW0",
+   "KNOW1",
+   "KNOWS0",
+   "KNOWS1",
+   "LAST0",
+   "LAST1",
+   "LEFT0",
+   "LEFT1",
+   "LIES0",
+   "LIES1",
+   "LIGHT0",
+   "LIGHT1",
+   "LITTLE0",
+   "LITTLE1",
+   "LOWER0",
+   "LOWER1",
+   "LUXOR0",
+   "LUXOR1",
+   "MADE0",
+   "MADE1",
+   "MINUTES0",
+   "MINUTES1",
+   "MIST0",
+   "MIST1",
+   "NOVEMBER0",
+   "NOVEMBER1",
+   "NUANCE0",
+   "NUANCE1",
+   "ONLY0",
+   "ONLY1",
+   "OUT0",
+   "OUT1",
+   "PART0",
+   "PART1",
+   "PASSAGE0",
+   "PASSAGE1",
+   "PEERED0",
+   "PEERED1",
+   "POINT0",
+   "POINT1",
+   "POSSIBLE0",
+   "POSSIBLE1",
+   "PRESENTLY0",
+   "PRESENTLY1",
+   "REMAINS0",
+   "REMAINS1",
+   "REMOVED0",
+   "REMOVED1",
+   "ROOM0",
+   "ROOM1",
+   "ROWS0",
+   "ROWS1",
+   "SECONDS0",
+   "SECONDS1",
+   "SEVEN0",
+   "SEVEN1",
+   "SEVENTY0",
+   "SEVENTY1",
+   "SHADING0",
+   "SHADING1",
+   "SHOULD0",
+   "SHOULD1",
+   "SIX0",
+   "SIX1",
+   "SLOWLY0",
+   "SLOWLY1",
+   "SUBTLE0",
+   "SUBTLE1",
+   "THAT0",
+   "THAT1",
+   "THE0",
+   "THE1",
+   "THEN0",
+   "THEN1",
+   "THERE0",
+   "THERE1",
+   "THEY0",
+   "THEY1",
+   "THIRTY0",
+   "THIRTY1",
+   "THIS0",
+   "THIS1",
+   "TINY0",
+   "TINY1",
+   "TOTALLY0",
+   "TOTALLY1",
+   "TRANSMIT0",
+   "TRANSMIT1",
+   "TRANSMITTED0",
+   "TRANSMITTED1",
+   "TREMBLING0",
+   "TREMBLING1",
+   "UNKNOWN0",
+   "UNKNOWN1",
+   "UPPER0",
+   "UPPER1",
+   "USED0",
+   "USED1",
+   "WAS0",
+   "WAS1",
+   "WHO0",
+   "WHO1",
+   "WIDENING0",
+   "WIDENING1",
+   "WITH0",
+   "WITH1",
+   "WITHIN0",
+   "WITHIN1",
+   "YOU0",
+   "YOU1"
+  ],
+  "alignments": "0..n-1",
+  "directions": [
+   "enc",
+   "dec"
+  ],
+  "settings": 7200,
+  "settings_solved": 557,
+  "settings_consistent_on_all_crib_blocks": [
+   {
+    "numbering": "ABOUT0",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABOUT0",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABOUT1",
+    "n": 4,
+    "offset": 0,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABOUT1",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABOUT1",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABOUT1",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSENCE0",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSENCE0",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSENCE0",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSENCE1",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSENCE1",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSENCE1",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ABSENCE1",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "AIR0",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "AIR1",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "AND0",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "AND0",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "AND1",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "ANYTHING0",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "ANYTHING0",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "BETWEEN0",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "BETWEEN1",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "BREACH0",
+    "n": 4,
+    "offset": 0,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.575
+    ]
+   },
+   {
+    "numbering": "BREACH0",
+    "n": 4,
+    "offset": 0,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.575
+    ]
+   },
+   {
+    "numbering": "BREACH0",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "BREACH0",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "BREACH1",
+    "n": 4,
+    "offset": 2,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "BUT0",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.693
+    ]
+   },
+   {
+    "numbering": "BUT0",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.693
+    ]
+   },
+   {
+    "numbering": "BUT1",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 0,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1
+   },
+   {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 16,
+    "english": [
+     -7.109,
+     -7.42,
+     -7.067,
+     -7.181,
+     -7.266,
+     -7.315,
+     -7.188,
+     -7.277
+    ]
+   },
+   {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 1,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 16,
+    "english": [
+     -7.067,
+     -7.188,
+     -7.109,
+     -7.266,
+     -7.42,
+     -7.315,
+     -7.181,
+     -7.277
+    ]
+   },
+   {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 3,
+    "direction": "enc",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.554
+    ]
+   },
+   {
+    "numbering": "CAIRO0",
+    "n": 4,
+    "offset": 3,
+    "direction": "dec",
+    "affine": false,
+    "crib_blocks": 4,
+    "solutions": 1,
+    "english": [
+     -7.554
+    ]
+   },
+   {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 16,
+    "english": [
+     -7.109,
+     -7.42,
+     -7.067,
+     -7.181,
+     -7.266,
+     -7.315,
+     -7.188,
+     -7.277
+    ]
+   },
+   {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 1,
+    "direction": "dec",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 16,
+    "english": [
+     -7.109,
+     -7.266,
+     -7.067,
+     -7.188,
+     -7.181,
+     -7.277,
+     -7.42,
+     -7.315
+    ]
+   },
+   {
+    "numbering": "CAIRO1",
+    "n": 4,
+    "offset": 2,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   },
+   {
+    "numbering": "CAN0",
+    "n": 4,
+    "offset": 1,
+    "direction": "enc",
+    "affine": true,
+    "crib_blocks": 5,
+    "solutions": 1
+   }
+  ],
+  "settings_inconsistent": 5843,
+  "log_size": 7200,
+  "numberings_count": 200
+ },
+ "notes": "7200 settings; 557 consistent with every whole crib block; 346 decryptions submitted.",
+ "error": null,
+ "worked_example": "2x2, standard numbering A=0, blocks from position 1, matrix encrypts: solve from blocks 23-24 and 25-26\n\nplain blocks  AS=[0, 18]  TN=[19, 13];  cipher blocks  LR=[11, 17]  VQ=[21, 16]\nplaintext matrix [[0, 19], [18, 13]] has determinant 22, not invertible mod 26: use another pair of blocks",
+ "seconds": 0.459852933883667
+}

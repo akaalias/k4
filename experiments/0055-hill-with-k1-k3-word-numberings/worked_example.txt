@@ -1,0 +1,4 @@
+2x2, standard numbering A=0, blocks from position 1, matrix encrypts: solve from blocks 23-24 and 25-26
+
+plain blocks  AS=[0, 18]  TN=[19, 13];  cipher blocks  LR=[11, 17]  VQ=[21, 16]
+plaintext matrix [[0, 19], [18, 13]] has determinant 22, not invertible mod 26: use another pair of blocks

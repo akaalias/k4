@@ -1,0 +1,5 @@
+place  word letter  short letter  key  carved  reads  message
+   22      K            Q         0     F      F      E
+   23      R            U        11     L      A      A
+   24      Y            A        24     R      T      S
+   25      P            Q         5     V      Q      T

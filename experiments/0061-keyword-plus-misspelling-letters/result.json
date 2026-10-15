@@ -1,0 +1,305 @@
+{
+ "id": 61,
+ "tag": "0061-keyword-plus-misspelling-letters",
+ "started": "2026-10-15T12:28:11+00:00",
+ "seconds": 1.4,
+ "status": "ran",
+ "phases": {
+  "design": 0.1,
+  "implement": 0.5,
+  "test": 29.5,
+  "run": 1.4,
+  "record": 0.2
+ },
+ "ended_epoch": 1792067293.081198,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 1,
+ "n_passed": 0,
+ "best_crib_hits": 8,
+ "best_crib_words": {
+  "EAST": [
+   1,
+   4
+  ],
+  "NORTHEAST": [
+   1,
+   9
+  ],
+  "BERLIN": [
+   3,
+   6
+  ],
+  "CLOCK": [
+   3,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 164.41576998481048,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "two-component key: a word plus a short key from the misspelt or raised letters",
+  "long_words": 171,
+  "short_keys": 55,
+  "settings": 451440,
+  "best_hits": 8,
+  "best_setting": {
+   "word": "KNOWS",
+   "short": "QEAU",
+   "sign": -1,
+   "key_alphabet": "std",
+   "plain": "std",
+   "cipher": "std",
+   "mode": "beau"
+  },
+  "control_best_hits": [
+   8,
+   8,
+   11,
+   7,
+   8,
+   8,
+   9,
+   7,
+   7,
+   7
+  ]
+ },
+ "notes": "451,440 settings; best 8/24 known letters; ten shuffled coppers best [7, 7, 7, 7, 8, 8, 8, 8, 9, 11].",
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "GIELISQGAHQIXAEFPFVXYEDLHQXFPBEJGAEXBRGGLTWKYWOVKORKOHYNPKAQHENPERSBNCLOJIWKUAXBBAMZUADAZUKZUIQQG",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "k": [
+     20,
+     9,
+     14,
+     2,
+     2,
+     6,
+     13,
+     20,
+     6,
+     14,
+     10,
+     19,
+     24,
+     18,
+     18,
+     16,
+     23,
+     10,
+     22,
+     24,
+     20,
+     9,
+     14,
+     2,
+     2,
+     6,
+     13,
+     20,
+     6,
+     14,
+     10,
+     19,
+     24,
+     18,
+     18,
+     16,
+     23,
+     10,
+     22,
+     24,
+     20,
+     9,
+     14,
+     2,
+     2,
+     6,
+     13,
+     20,
+     6,
+     14,
+     10,
+     19,
+     24,
+     18,
+     18,
+     16,
+     23,
+     10,
+     22,
+     24,
+     20,
+     9,
+     14,
+     2,
+     2,
+     6,
+     13,
+     20,
+     6,
+     14,
+     10,
+     19,
+     24,
+     18,
+     18,
+     16,
+     23,
+     10,
+     22,
+     24,
+     20,
+     9,
+     14,
+     2,
+     2,
+     6,
+     13,
+     20,
+     6,
+     14,
+     10,
+     19,
+     24,
+     18,
+     18,
+     16,
+     23
+    ]
+   },
+   "key_bits": 42.300000000000004,
+   "key_description": "KNOWS - QEAU on std; plain std, cipher std, beau",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 8,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     3,
+     6
+    ],
+    "CLOCK": [
+     3,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      23,
+      "A",
+      "D"
+     ],
+     [
+      24,
+      "S",
+      "L"
+     ],
+     [
+      25,
+      "T",
+      "H"
+     ],
+     [
+      26,
+      "N",
+      "Q"
+     ],
+     [
+      27,
+      "O",
+      "X"
+     ],
+     [
+      28,
+      "R",
+      "F"
+     ],
+     [
+      29,
+      "T",
+      "P"
+     ],
+     [
+      30,
+      "H",
+      "B"
+     ],
+     [
+      32,
+      "A",
+      "J"
+     ],
+     [
+      33,
+      "S",
+      "G"
+     ],
+     [
+      34,
+      "T",
+      "A"
+     ],
+     [
+      64,
+      "B",
+      "P"
+     ],
+     [
+      67,
+      "L",
+      "S"
+     ],
+     [
+      68,
+      "I",
+      "B"
+     ],
+     [
+      73,
+      "C",
+      "J"
+     ],
+     [
+      74,
+      "K",
+      "I"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 164.41576998481048
+  }
+ ]
+}

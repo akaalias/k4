@@ -106,3 +106,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0105	0105-affine-hill-solved-letter-by-letter	8-hill-polygraphic	0015-hill-2x2-3x3-4x4-exact	reverted	0	0	0			0	unattributed=124 run=0 record=0
 0106	0106-one-to-one-substitution-with-every-move-so-far	9-substitution-then-transposition	0019-substitution-then-route-crib-images-one-to-one	reverted	0	0	0			23	unattributed=92 run=23 record=0
 0107	0107-three-term-gromark-with-a-free-alphabet	5-gromark-lfsr	0069-gromark-with-a-free-alphabet	reverted	0	0	0			50	unattributed=95 run=50 record=0
+0108	0108-the-copper-read-from-behind	4-visual-spatial	0089-the-screen-folded-onto-itself	reverted	0	0	0			0	unattributed=84 run=0 record=0

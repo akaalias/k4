@@ -1,0 +1,8 @@
+rail fence of 3 rails from the top: rails 1 2 3 2 1 2 3 ..., read rail 1, then 2, then 3
+
+place  letter  rail  lands at  copper there
+   22       E     2        36             T
+   23       A     3        79             Z
+   24       S     2        37             W
+   25       T     1         7             X
+   64       B     2        57             I

@@ -68,3 +68,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0067	0067-two-lag-ciphertext-feedback	1-keyed-periodic	0066-ciphertext-autokey-plus-a-repeating-key	reverted	0	0	0			9	design=36 implement=0 test=12 run=9 record=0
 0068	0068-ciphertext-autokey-with-one-wrong-carved-letter	1-keyed-periodic	0002-ciphertext-autokey-all-lags	reverted	0	0	0			37	design=40 implement=0 test=26 run=37 record=0
 0069	0069-gromark-with-a-free-alphabet	5-gromark	0046-gromark-three-term-rules-and-higher-bases	reverted	0	0	0			29	design=84 implement=0 test=11 run=29 record=0
+0070	0070-reshuffle-every-block-of-seven-and-the-table	6-transposition-then-tableau	0006-columnar-then-tableau-period-survival	reverted	0	0	0			42	design=37 implement=0 test=10 run=42 record=0

@@ -1,0 +1,7 @@
+every row of seven reversed, after a 7-letter key; sculpture's alphabet, Vigenere
+
+place  carved at  carved  known  key  slot
+   22        28       P      E    M     0
+   29        35       O      T    R     0
+   23        27       Q      A    G     1
+   30        34       S      H    M     1

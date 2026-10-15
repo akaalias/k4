@@ -312,7 +312,7 @@ def loss_chart(rows):
             g.append(f'<line x1="{L}" x2="{W-R}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="var(--accent)" stroke-width="1.5"/>')
         else:
             g.append(f'<line x1="{L}" x2="{W-R}" y1="{yy:.1f}" y2="{yy:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
-        lab = f"{v}" if v < 60 else f"{v} = {v // 10} wrong"
+        lab = f"{100.0 * v / ymax:.0f}%" if v >= 10 else f"{100.0 * v / ymax:.0f}%"
         g.append(f'<text x="{L-8}" y="{yy+4:.1f}" text-anchor="end" font-size="14" fill="var(--muted)">{lab}</text>')
     # axis break marks just above the gate line
     bx = L - 2
@@ -336,8 +336,22 @@ def loss_chart(rows):
             path.append((xs[i], y(best))); best = v; path.append((xs[i], y(best)))
     if path:
         path.append((xs[-1] + 12, y(best)))
-        d = "M" + " L".join(f"{x:.1f},{yy:.1f}" for x, yy in path)
-        g.append(f'<path d="{d}" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="miter"/>')
+        r_ = 6.0
+        d = f"M{path[0][0]:.1f},{path[0][1]:.1f}"
+        for k in range(1, len(path)):
+            x0, y0 = path[k - 1]; x1, y1 = path[k]
+            if k < len(path) - 1:
+                x2, y2 = path[k + 1]
+                # approach the corner, stop r_ short, bend with a quadratic through the corner
+                if x1 != x0:
+                    d += f" L{x1 - min(r_, abs(x1 - x0)) * (1 if x1 > x0 else -1):.1f},{y1:.1f}"
+                    d += f" Q{x1:.1f},{y1:.1f} {x1:.1f},{y1 + min(r_, abs(y2 - y1)) * (1 if y2 > y1 else -1):.1f}"
+                else:
+                    d += f" L{x1:.1f},{y1 - min(r_, abs(y1 - y0)) * (1 if y1 > y0 else -1):.1f}"
+                    d += f" Q{x1:.1f},{y1:.1f} {x1 + min(r_, abs(x2 - x1)) * (1 if x2 > x1 else -1):.1f},{y1:.1f}"
+            else:
+                d += f" L{x1:.1f},{y1:.1f}"
+        g.append(f'<path d="{d}" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>')
     for i, r in enumerate(rows):
         v = r.get("best_loss")
         tip = f"{esc(r['tag'])}<br>{esc(r['title'])}<br>loss {'' if v is None else f'{v:.2f}'}; cribs {r['best_crib_hits']}/24 ({esc(words_str(r))})<br>{esc(r['decision'])}, {r['n_candidates']} candidates"
@@ -348,8 +362,8 @@ def loss_chart(rows):
             fill = "var(--kept)" if r["decision"] == "kept" else "var(--disc)"
             g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
     if best is not None:
-        g.append(f'<text x="{xs[-1]+16:.1f}" y="{y(best)+5:.1f}" font-size="14" fill="var(--ink)">{best:.1f} best so far</text>')
-    g.append(f'<text transform="translate(18,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="14" fill="var(--muted)">loss, points</text>')
+        g.append(f'<text x="{xs[-1]+16:.1f}" y="{y(best)+5:.1f}" font-size="14" fill="var(--ink)">{100.0 * best / ymax:.1f}% best so far</text>')
+    g.append(f'<text transform="translate(18,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="14" fill="var(--muted)">loss, as % of the worst possible</text>')
     for i in range(n):
         if i == 0 or (i + 1) % 3 == 0 or i == n - 1:
             g.append(f'<text x="{xs[i]:.1f}" y="{H-8}" font-size="13" fill="var(--faint)" text-anchor="middle">{i + 1}</text>')
@@ -624,7 +638,10 @@ def experiment_page(tag):
 
 
 def md_page(title, path, active, refresh=True):
-    return page(title, "<article>" + md((ROOT / path).read_text()) + "</article>", active, refresh)
+    import re as _re
+    text = (ROOT / path).read_text()
+    text = _re.sub(r"^# \d+\.\s+", "# ", text, count=1, flags=_re.M)   # knowledge files carry a study number in their title
+    return page(title, "<article>" + md(text) + "</article>", active, refresh)
 
 
 def route(path):

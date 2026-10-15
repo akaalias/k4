@@ -48,6 +48,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 41 | 6, 9 | Spirals, snakes and diagonals at every width, both orders: chance before the table, clashes after a swap. |
 | 42 | 1 | Progressive key on vocabulary tables, 8.9 million combinations: periods 1-24 dead at every step; nothing. Test clock includes 8 minutes of dry run. |
 | 43 | 3 | Two words in two passes on vocabulary tables: nothing below total length 22; chance above. |
+| 44 | 8 | Hill under 126 keyword numberings: 4x4 solutions exist without redundancy and all break the partial-block cribs. Dead. |
 
 ## 2026-10-14
 

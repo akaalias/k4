@@ -1,0 +1,10 @@
+plain alphabet ABSCISSA/keyword ABSCIDEFGHJKLMNOPQRTUVWXYZ; cipher KRYPTOS; Vigenere; period 13, step 2
+
+pos  plain  carved  key index  repeat  base index  slot
+ 22    E      F        6        1         4       8
+ 23    A      L       17        1        15       9
+ 24    S      R       25        1        23       10
+ 64    B      N       18        4        10       11
+ 74    K      K       15        5         5       8
+
+positions 22 and 74 share slot 8: their base indices must agree, or period 13 step 2 is dead for this pair.

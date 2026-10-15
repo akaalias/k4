@@ -1,0 +1,49 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "progressive key (per-repeat), keyword-mixed alphabets from the vocabulary",
+  "alphabets": 63,
+  "periods": "1-30",
+  "steps": "1-25",
+  "combinations_checked": 8930250,
+  "survivors_by_period": {
+   "25": 44,
+   "26": 11176,
+   "27": 297675,
+   "28": 297675,
+   "29": 297675,
+   "30": 11435
+  },
+  "periods_dead_at_every_step_and_pair": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "8930250 combinations. Periods dead under every pair and step: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]. Survivors by period: {25: 44, 26: 11176, 27: 297675, 28: 297675, 29: 297675, 30: 11435}. 0 matches.",
+ "error": null,
+ "worked_example": "plain alphabet ABSCISSA/keyword ABSCIDEFGHJKLMNOPQRTUVWXYZ; cipher KRYPTOS; Vigenere; period 13, step 2\n\npos  plain  carved  key index  repeat  base index  slot\n 22    E      F        6        1         4       8\n 23    A      L       17        1        15       9\n 24    S      R       25        1        23       10\n 64    B      N       18        4        10       11\n 74    K      K       15        5         5       8\n\npositions 22 and 74 share slot 8: their base indices must agree, or period 13 step 2 is dead for this pair.",
+ "seconds": 980.8085849285126
+}

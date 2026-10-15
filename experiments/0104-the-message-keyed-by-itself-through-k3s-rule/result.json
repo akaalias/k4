@@ -1,0 +1,48 @@
+{
+ "id": 104,
+ "tag": "0104-the-message-keyed-by-itself-through-k3s-rule",
+ "started": "2026-10-15T20:13:10+00:00",
+ "seconds": 5.2,
+ "status": "ran",
+ "phases": {
+  "unattributed": 0.8,
+  "run": 5.2,
+  "record": 0.1
+ },
+ "ended_epoch": 1792095196.057159,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "the message as its own key through K3's rule f(i) = a + b i mod 97",
+  "maps": 7031,
+  "rules": 12,
+  "k4_survivors": 0,
+  "controls_survivors": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "k4_checks_histogram": {},
+  "k4_top_survivors": [],
+  "controls": "10 shuffled coppers (seed 104), identical search"
+ },
+ "notes": "7,031 maps x 12 rules. Settings with no contradiction: K4 0, controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]. K4 survivors' checks: {}. Full decryptions returned: 0.",
+ "error": null,
+ "candidates": []
+}

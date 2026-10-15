@@ -1,0 +1,28 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "the message as its own key through K3's rule f(i) = a + b i mod 97",
+  "maps": 7031,
+  "rules": 12,
+  "k4_survivors": 0,
+  "controls_survivors": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "k4_checks_histogram": {},
+  "k4_top_survivors": [],
+  "controls": "10 shuffled coppers (seed 104), identical search"
+ },
+ "notes": "7,031 maps x 12 rules. Settings with no contradiction: K4 0, controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]. K4 survivors' checks: {}. Full decryptions returned: 0.",
+ "error": null,
+ "worked_example": "a = 0, b = 96 (the mirror): place i takes its key from the message letter at place 99 - i\nsculpture's alphabet, Vigenere: carved = message + key\n\nplace  known  carved  key place  message letter there = carved - known\n   22      E       F         77             R\n   23      A       L         76             D\n   24      S       R         75             U\n   25      T       V         74             M\n   64      B       N         35             E\n   65      E       Y         34             L",
+ "seconds": 5.115210056304932
+}

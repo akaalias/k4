@@ -1,0 +1,10 @@
+a = 0, b = 96 (the mirror): place i takes its key from the message letter at place 99 - i
+sculpture's alphabet, Vigenere: carved = message + key
+
+place  known  carved  key place  message letter there = carved - known
+   22      E       F         77             R
+   23      A       L         76             D
+   24      S       R         75             U
+   25      T       V         74             M
+   64      B       N         35             E
+   65      E       Y         34             L

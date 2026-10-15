@@ -51,3 +51,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0050	0050-copper-off-by-one-two-words-mixed-alphabets	3-two-component-key	0043-two-keywords-two-passes-mixed-alphabets	reverted	2	0	23			288	test=0 run=288 record=0
 0051	0051-pure-transposition-letter-counts	6-transposition-then-tableau	0006-columnar-then-tableau-period-survival	reverted	0	0	0			0	design=0 implement=1 test=0 run=0 record=0
 0052	0052-small-alphabet-and-digraph-systems-structural	8-hill-and-polygraphic	0015-hill-solved-from-crib-blocks	reverted	0	0	0			0	design=0 implement=0 test=0 run=0 record=0
+0053	0053-periodic-tableau-k1-k3-word-alphabets	1-keyed-periodic	0020-short-periods-mixed-alphabets-consistency	reverted	0	0	0			73	design=0 implement=13 test=0 run=73 record=0

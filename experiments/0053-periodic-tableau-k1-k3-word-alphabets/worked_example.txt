@@ -1,0 +1,8 @@
+plain  SHADINGBCEFJKLMOPQRTUVWXYZ
+cipher INVSBLEACDFGHJKMOPQRTUWXYZ
+
+place  plain  carved  key (Vigenere)  slot at period 7
+   22    E      F          1               0
+   29    T      R          0               0
+   23    A      L          3               1
+   30    H      N          0               1

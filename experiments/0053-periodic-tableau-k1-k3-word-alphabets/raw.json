@@ -1,0 +1,55 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "periodic tableau, alphabets keyword-mixed from K1-K3 words and C13/C14 words",
+  "alphabets": 102,
+  "pairs": 10404,
+  "modes": 3,
+  "periods": "1-52",
+  "controls": 10,
+  "consistent_by_period_k4": {
+   "25": 0,
+   "26": 2139,
+   "27": 31212,
+   "28": 31212,
+   "29": 31212,
+   "30": 1339,
+   "31": 47,
+   "32": 6,
+   "50": 0,
+   "51": 10,
+   "52": 2139
+  },
+  "consistent_by_period_controls_mean": {
+   "25": 0.4,
+   "26": 1166.2,
+   "27": 31212.0,
+   "28": 31212.0,
+   "29": 31212.0,
+   "30": 1163.2,
+   "31": 38.1,
+   "32": 0.5,
+   "50": 0.4,
+   "51": 26.1,
+   "52": 1166.2
+  },
+  "consistent_by_period_controls_max": {
+   "25": 2,
+   "26": 1554,
+   "27": 31212,
+   "28": 31212,
+   "29": 31212,
+   "30": 1699,
+   "31": 59,
+   "32": 3,
+   "50": 2,
+   "51": 74,
+   "52": 1554
+  },
+  "word_matches": 0
+ },
+ "notes": "102 alphabets, 10404 pairs, 3 modes, periods 1-52. Consistent cases on K4 by period (shown where K4 or a control has any): 25: 0 (controls mean 0.4, max 2), 26: 2139 (controls mean 1166.2, max 1554), 27: 31212 (controls mean 31212.0, max 31212), 28: 31212 (controls mean 31212.0, max 31212), 29: 31212 (controls mean 31212.0, max 31212), 30: 1339 (controls mean 1163.2, max 1699), 31: 47 (controls mean 38.1, max 59), 32: 6 (controls mean 0.5, max 3), 50: 0 (controls mean 0.4, max 2), 51: 10 (controls mean 26.1, max 74), 52: 2139 (controls mean 1166.2, max 1554). Word matches: 0.",
+ "error": null,
+ "worked_example": "plain  SHADINGBCEFJKLMOPQRTUVWXYZ\ncipher INVSBLEACDFGHJKMOPQRTUWXYZ\n\nplace  plain  carved  key (Vigenere)  slot at period 7\n   22    E      F          1               0\n   29    T      R          0               0\n   23    A      L          3               1\n   30    H      N          0               1",
+ "seconds": 72.96823906898499
+}

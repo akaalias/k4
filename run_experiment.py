@@ -226,7 +226,7 @@ Inherits from {meta['parent'] or 'nothing; this is a root experiment'}. What cha
 
 Candidates returned: {result['n_candidates']}. Passed all gates: {result['n_passed']}. Best crib hits among all candidates: {result['best_crib_hits']}/24
 ({', '.join(f"{w} {h}/{n}" for w, (h, n) in result.get('best_crib_words', {}).items()) or 'no candidates'}).
-Best loss: {result['best_loss']} (0 is solved; 10 per missed crib letter). Best fitness: {result['best_fitness']}. Champion before this run: {(result['champion_before'] or {}).get('experiment', 'none')}.
+Best loss: {result['best_loss']} (0 is solved; 10 per missed crib letter; the harness keeps by lowest loss). Best fitness, diagnostic only: {result['best_fitness']}. Champion before this run: {(result['champion_before'] or {}).get('experiment', 'none')}.
 
 | # | gate | cribs | fitness | plaintext | key |
 |---|---|---|---|---|---|

@@ -62,7 +62,7 @@ uses a word a stranger would not know.
 
 **the crib gate** (also: the line at ten): The point on the loss scale below which every one of the 24 known letters is in place.
 
-**the champion** (also: kept): The candidate with the best score so far that passed every check. An experiment is kept when it produces a new champion, reverted otherwise. Reverted is the normal outcome; a reverted experiment still leaves a bounded negative.
+**the champion** (also: kept): The candidate with the lowest loss so far among those that passed every check. An experiment is kept when it produces a new champion, reverted otherwise. Reverted is the normal outcome; a reverted experiment still leaves a bounded negative.
 
 **a bounded negative** (also: a dead end with a stated reason): The guaranteed product of every experiment: a precise statement of what was tried and found impossible, so nobody has to try it again.
 

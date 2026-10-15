@@ -1,0 +1,18 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "one-letter error (insert or delete anywhere) x chained plaintext autokey lags 1-25 x two words a + b <= 20",
+  "variants": 196,
+  "conventions": 24,
+  "two_word_pairs": 19,
+  "autokey_variants_with_a_consistent_lag": 0,
+  "autokey_consistent_cases": {},
+  "autokey_fully_forced": 0,
+  "two_word_consistent_cases": [],
+  "n_two_word_consistent": 0
+ },
+ "notes": "196 variants. Autokey lags 1-25: 0 variants have a consistent lag, 0 fully forced (97-letter variants only). Two words with a + b <= 20: 0 consistent cases.",
+ "error": null,
+ "worked_example": "variant: the carved letter at 41 deleted; lag 13; KRYPTOS alphabet throughout, Vigenere\n\nchain from the cribs breaks after forcing 28 letters\n.....................EASTNORTHEASTB............I............W..BERLINCLOCK............U.........",
+ "seconds": 0.757861852645874
+}

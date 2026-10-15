@@ -1,0 +1,37 @@
+{
+ "id": 31,
+ "tag": "0031-copper-off-by-one-autokey-and-two-words",
+ "started": "2026-10-15T07:42:15+00:00",
+ "seconds": 0.8,
+ "status": "ran",
+ "phases": {
+  "design": 3.3,
+  "implement": 56.6,
+  "test": 5.2,
+  "run": 0.8,
+  "record": 0.0
+ },
+ "ended_epoch": 1792050136.470706,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "one-letter error (insert or delete anywhere) x chained plaintext autokey lags 1-25 x two words a + b <= 20",
+  "variants": 196,
+  "conventions": 24,
+  "two_word_pairs": 19,
+  "autokey_variants_with_a_consistent_lag": 0,
+  "autokey_consistent_cases": {},
+  "autokey_fully_forced": 0,
+  "two_word_consistent_cases": [],
+  "n_two_word_consistent": 0
+ },
+ "notes": "196 variants. Autokey lags 1-25: 0 variants have a consistent lag, 0 fully forced (97-letter variants only). Two words with a + b <= 20: 0 consistent cases.",
+ "error": null,
+ "candidates": []
+}

@@ -1,0 +1,4 @@
+variant: the carved letter at 41 deleted; lag 13; KRYPTOS alphabet throughout, Vigenere
+
+chain from the cribs breaks after forcing 28 letters
+.....................EASTNORTHEASTB............I............W..BERLINCLOCK............U.........

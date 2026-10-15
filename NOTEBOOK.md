@@ -70,6 +70,52 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 63 | 6 | Column shuffles before or after the self-feeding autokey: 14.2 million exact checks, no fit, best 9 of 24. |
 | 64 | 1 | The self-feeding autokey on tables rebuilt from K1-K3 words, every distance: never closer than three wrong known letters, as scrambled coppers manage. |
 
+### Experiments 50 to 64, run in the background (2026-10-15 afternoon)
+
+All fifteen reverted; nothing was kept, and the champion is still experiment 34. Every run
+finished well inside the 30-minute budget (longest 0050 at 5 minutes).
+
+Findings worth keeping:
+- **The two fingerprints are real (0056).** The width-7 doublet column and the width-21
+  repeats survive the look-elsewhere correction over widths 2-48 against 10,000 shuffles:
+  corrected p 0.005 (0.018 among six-doublet shuffles) and 0.010. The pre-registered
+  prediction said they would not. They still lack a construction.
+- **Only ciphertext feedback makes the width-21 mark (0062).** Of fourteen generators, only
+  ciphertext autokey at lag 21 raises the repeats well above chance (5.4% against 0.2%);
+  none makes the doublet column, and none makes both. Ciphertext autokey stayed dead when
+  combined with columnar routes in either order (0063) and on tables rebuilt from K1-K3
+  words (0064).
+- **Two structural exclusions, no key search needed.** Pure transposition is dead because
+  the cribs need three Es and the copper has two (0051). Every cipher with at most 25 output
+  letters or an even-length rule (Playfair, bifid, four-square, ADFGVX, a 24-letter
+  Weltzeituhr ring) is dead because K4 uses all 26 letters and has 97 (0052).
+- **Tables rebuilt from every K1-K3 word and the 2025 letter's words** add nothing for
+  periodic keys (0053), Gromark (0054, smallest base 17), Hill (0055), two-word keys (0059)
+  or ciphertext autokey (0064). The vocabulary was not the limiting factor.
+- The copper off by one letter through the two-word test (0050), filler letters chosen by
+  letter (0057), the table then keyed column shuffles from K1-K3 words (0058), the K2
+  coordinates as a Hill matrix (0060) and the misspelt letters as a second key (0061): all
+  at chance.
+
+Mistakes:
+- Walkthrough arithmetic slipped four times and was caught by checking the numbers before
+  the run (0053, 0054, 0055, 0056), and once after it: 0052's record puts I at place 16,
+  not 17. Checking the walkthrough against the code before running is now routine.
+- Two predictions were wrong in detail: 0057 and 0058 expected nothing below period 26
+  and got periods 24-25 at chance rates; 0058 ran no control to measure that rate, and
+  the forced fragments at 24-25 were not word-checked in 0057.
+- 0050's pre-registered count of distinct crib tuples was corrected to "about 50" before
+  the run; the measured value is 48.
+
+Open questions:
+- What construction makes both fingerprints? Ciphertext feedback at lag 21 plus a stage
+  that also lines up doublets at period 7 is the lead; it must still pass the cribs.
+- Family 3 has now reverted seven times in a row (0014-0061) and family 6 eleven times;
+  both should rest until a new key source appears.
+- The scorer decision (key cost, shuffled baseline) is still pending in issue #11; no
+  key-completion climbs were run.
+
+
 ## 2026-10-14
 
 ### Decisions

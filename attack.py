@@ -1,156 +1,163 @@
-"""Experiment 0049. See program.md for the contract."""
+"""Experiment 0034. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "structured-long-keys-at-surviving-periods",
-    "title": "Long keys with a shape: two puzzle words joined, a word and its mirror, a word doubled, at the periods the cribs allow",
+    "slug": "complete-the-key-at-surviving-periods",
+    "title": "Finish the job at the surviving periods: fix the 24 forced key letters, climb the rest by English, and see how English the text can get",
     "family": "1-keyed-periodic",
     "parent": "0005-quagmire-period-sweep-forced-keys",
-    "changed": "Experiment 5 matched the forced key fragments at periods 27 to 29 against single vocabulary words and K1-K3 windows. A 27 to 29 letter key is unlikely to be one word; here it is built from two: joined, joined with a separator letter, a word followed by its mirror, or a word doubled. The forced fragments are matched exactly under the standard, KRYPTOS and vocabulary-mixed alphabets.",
+    "changed": "The first experiment that produces full candidates. At every period the cribs allow (27-29, and 53-95 sampled every third) under the 24 conventions, the forced key slots are fixed and the free slots are chosen to maximise the English score of the other 73 letters. The question is how English the best text is, against the same procedure on shuffled K4.",
     "hypothesis_expert": (
-        "Periods 27-29 survive the crib sweep under every alphabet pair (0005, 0020), and their forced key "
-        "fragments read as noise (0009, 0010), which rules out an English phrase as key but not a key made of "
-        "two puzzle words with no English transition, or a word and its reverse (Sanborn's mirrors, C3), or "
-        "a doubled word. Key shapes: X+Y, X+c+Y for a separator letter c, X+reverse(X), X+X, X+reverse(Y), "
-        "over the 62-word vocabulary and its K1-K3 windows, kept when the length is 27, 28 or 29. Under each "
-        "plain-cipher alphabet pair (standard, KRYPTOS, 61 keyword mixings) and mode, the 24 forced key "
-        "indices are compared with the key read in the standard, KRYPTOS or the plain alphabet; a match "
-        "decrypts and submits. About 20,000 key shapes x 12,000 alphabet classes, exact. Bounds: complete for "
-        "these shapes and alphabets."
+        "0005 left periods 27-29 and 53-97 alive under every convention, and 0009 showed the forced key "
+        "stretches are noise; but noise in the key is compatible with a real periodic cipher if the key is "
+        "not a word. The remaining test is the plaintext: fix the 24 forced slots, choose the 3 to 73 free "
+        "slots by coordinate descent on the quadgram score of the 73 non-crib letters, with twenty random "
+        "restarts, and record the best score per period and convention. A true periodic cipher at one of "
+        "these periods would give a text scoring near English, about -3.6, at that period and convention; "
+        "the same climb on shuffled K4 calibrates what overfitting achieves, which rises with the number of "
+        "free slots. Candidates are submitted; they pass the crib gate by construction, so the English "
+        "deficit and the key cost carry the verdict, and a 27-letter random key costs about 67 points of "
+        "loss on its own. Bounds: coordinate descent is not exhaustive above period 27; period 27 is close "
+        "to exhaustive with twenty restarts over 3 free slots."
     ),
     "hypothesis_eli5": (
-        "A secret word of 27 to 29 letters is probably not one word. It could be two of the puzzle's words "
-        "joined, a word followed by itself, or a word followed by its mirror image. Each such key fixes the "
-        "24 letters that the known letters demand, so we simply build every key of that kind and check it "
-        "against the 24 demands, on the sculpture's table and on tables rebuilt from the puzzle's words."
+        "For a repeating secret word of length 27, 28 or 29, the 24 known letters fix 24 letters of the "
+        "word and leave a few unknown. We fill the unknown ones in every way and read the message that "
+        "comes out, keeping the one that reads most like English. If the cipher really were of this kind, "
+        "one filling would read like a real message. We also run the same game on scrambled versions of "
+        "the carved text, to see how English-looking a text can be made by filling alone."
     ),
     "prediction": (
-        "No shaped key of length 27 to 29 matches all 24 forced letters under any alphabet pair and mode. "
-        "Zero candidates pass."
+        "At periods 27-29 the best English score is below -5.0 per quadgram under every convention, the "
+        "same as on shuffled K4, far from the -3.6 of English. At periods 53-97 the climb reaches -4.5 or "
+        "better on both K4 and shuffled K4 because of the many free slots; the gap between them is under "
+        "0.2. Candidates pass the gates but carry a loss above 60 from the key cost; none reads as English."
     ),
     "method": (
-        "1. Build the shaped keys of length 27-29 from the vocabulary. 2. For each plain and cipher alphabet "
-        "and mode, compute the 24 forced key indices and their slots at each period. 3. For each key, read "
-        "it in each key alphabet as indices and compare at the forced slots; count mismatches. 4. Decrypt "
-        "and submit exact matches; report the fewest mismatches."
+        "1. For each convention and live period, force the key letters at the crib slots. 2. Start the free "
+        "slots at random; repeat: for each free slot in turn, try all 26 letters and keep the one giving the "
+        "best score of the non-crib letters; stop when a pass changes nothing. 3. Twenty restarts; keep the "
+        "best. 4. Submit the best text per period as a candidate. 5. Repeat the whole procedure on three "
+        "shuffles of K4."
     ),
     "walkthrough": (
-        "1. Join BERLIN and ALEXANDERPLATZ: BERLINALEXANDERPLATZ is 20 letters, too short; join "
-        "WILLIAMWEBSTER and PALIMPSEST: 24, too short; join TUTANKHAMUN and SHADOWFORCES: 23. 2. Keep the "
-        "pairs that reach 27, 28 or 29 letters, such as DIGITALINTERPRETATION joined with EGYPT. 3. On the "
-        "sculpture's table with Vigenere, position 22 forces key letter R at slot 21 of a 27-letter key; "
-        "position 23 forces D at slot 22, and so on for all 24 known letters. 4. Compare the joined key's "
-        "letters at those slots; one mismatch and the key is out. 5. Repeat for every pair, every mirror and "
-        "every doubling, under every table."
+        "1. Take period 27 and the sculpture's alphabet with Vigenere. 2. The 24 known letters force 24 of "
+        "the 27 key letters; say slots 0, 9 and 17 are free. 3. Put any letters in the three free slots and "
+        "decrypt all 97 letters. 4. Change slot 0 through A to Z, decrypting each time, and keep the letter "
+        "that makes the 73 unknown letters read most like English. 5. Do the same for slots 9 and 17, then "
+        "go round again until nothing changes. 6. Read the result. 7. Start again from different letters "
+        "a few times and keep the best."
     ),
 }
 
-from kryptos.alphabets import keyword_mixed
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY, load_k1, load_k2, load_k3
+import random
+from kryptos.alphabets import ALPHABETS, conventions, key_letter_for, decrypt_letter, encrypt_letter
 
 N = 97
-PERIODS = (27, 28, 29)
-MODES_KEY = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
-MODES_DEC = {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}
-MODES_ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
-
-
-def letters(s):
-    return "".join(c for c in s if "A" <= c <= "Z")
-
-
-def pool_of(vocab):
-    pool = {"std": STD, "kry": KRY}
-    for w in vocab:
-        if len(set(w)) >= 3:
-            pool[f"{w}/keyword"] = keyword_mixed(w)
-    seen, out = {}, {}
-    for name, A in pool.items():
-        if A not in seen:
-            seen[A] = name; out[name] = A
-    return out
-
-
-def shaped_keys(vocab):
-    words = sorted(set(w for w in vocab if 2 <= len(w) <= 27))
-    keys = {}
-    for x in words:
-        for y in words:
-            for shape, k in (("joined", x + y), ("mirror", x + y[::-1])):
-                if len(k) in PERIODS:
-                    keys.setdefault(k, f"{shape} {x}+{y}")
-            for c in "XQ":
-                k = x + c + y
-                if len(k) in PERIODS:
-                    keys.setdefault(k, f"joined with {c} {x}+{y}")
-        for shape, k in (("doubled", x + x), ("own mirror", x + x[::-1])):
-            if len(k) in PERIODS:
-                keys.setdefault(k, f"{shape} {x}")
-    return keys
+PERIODS = [27, 28, 29] + list(range(53, 98, 3))
+RESTARTS = 20
 
 
 def encrypt(plaintext, key):
-    pa, ca, m, k = key["pa"], key["ca"], key["m"], key["key"]   # key as index list
-    f = MODES_ENC[m]
-    return "".join(ca[f(pa.index(p), k[i % len(k)])] for i, p in enumerate(plaintext))
+    pa, ca, ka, m, k = key["pa"], key["ca"], key["ka"], key["m"], key["key"]
+    return "".join(encrypt_letter(p, k[i % len(k)], pa, ca, ka, m) for i, p in enumerate(plaintext))
+
+
+def climb(ct, known, P, conv, score, rng, restarts):
+    pa, ca, ka, m = conv
+    A = ALPHABETS[ka]
+    fixed = {}
+    for pos, p in known.items():
+        s = (pos - 1) % P
+        k = key_letter_for(p, ct[pos - 1], pa, ca, ka, m)
+        if s in fixed and fixed[s] != k:
+            return None
+        fixed[s] = k
+    free = [s for s in range(P) if s not in fixed]
+    crib_idx = {pos - 1 for pos in known}
+    dec_table = {(c, k): decrypt_letter(c, k, pa, ca, ka, m) for c in ALPHABETS["std"] for k in A}
+
+    def text(key):
+        return "".join(dec_table[(ct[i], key[i % P])] for i in range(N))
+
+    def free_score(pt):
+        return score("".join(ch for i, ch in enumerate(pt) if i not in crib_idx))
+
+    best_pt, best_sc, best_key = None, -99, None
+    for _ in range(restarts):
+        key = [fixed.get(s, rng.choice(A)) for s in range(P)]
+        cur = free_score(text(key))
+        changed = True
+        while changed:
+            changed = False
+            for s in free:
+                orig = key[s]; best_l, best_v = orig, cur
+                for l in A:
+                    if l == orig:
+                        continue
+                    key[s] = l
+                    v = free_score(text(key))
+                    if v > best_v:
+                        best_l, best_v = l, v
+                key[s] = best_l
+                if best_l != orig:
+                    cur = best_v; changed = True
+        if cur > best_sc:
+            best_sc, best_key = cur, "".join(key); best_pt = text(key)
+    return best_pt, best_sc, best_key, len(free)
+
+
+def sweep(ct, known, convs, score, rng, restarts, time_left, periods):
+    out = []
+    for P in periods:
+        for conv in convs:
+            if time_left() < 60:
+                return out
+            r = climb(ct, known, P, conv, score, rng, restarts)
+            if r is None:
+                continue
+            pt, sc, key, nfree = r
+            out.append((sc, P, conv, pt, key, nfree))
+    return out
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    vocab = list(ctx.vocabulary)
-    pool = pool_of(vocab)
-    keys = shaped_keys(vocab)
-    crib = sorted(known.items())
-    key_alphas = {"std": STD, "kry": KRY}
-    # key indices under each key alphabet, grouped by length
-    by_len = {P: [] for P in PERIODS}
-    for k, desc in keys.items():
-        by_len[len(k)].append((k, desc, {kn: [A.index(ch) for ch in k] for kn, A in key_alphas.items()}))
-    best, candidates = [], []
-    trials = 0
-    for pname, pa in pool.items():
-        pidx = {ch: i for i, ch in enumerate(pa)}
-        for cname, ca in pool.items():
-            cidx = {ch: i for i, ch in enumerate(ca)}
-            for m, f in MODES_KEY.items():
-                forced = [(pos - 1, f(pidx[p], cidx[ct[pos - 1]])) for pos, p in crib]
-                for P in PERIODS:
-                    slots = [(i % P, v) for i, v in forced]
-                    for k, desc, idx_by in by_len[P]:
-                        for kn in ("std", "kry", "plain"):
-                            kidx = idx_by[kn] if kn in idx_by else [pidx[ch] for ch in k]
-                            trials += 1
-                            mism = sum(1 for s_, v in slots if kidx[s_] != v)
-                            if mism <= 3 and (len(best) < 15 or mism < best[-1][0]):
-                                best.append((mism, k, desc, pname, cname, kn, m)); best.sort(); best = best[:15]
-                            if mism == 0:
-                                fd = MODES_DEC[m]
-                                pt = "".join(pa[fd(cidx[c], kidx[i % P])] for i, c in enumerate(ct))
-                                candidates.append({"plaintext": pt, "key": {"pa": pa, "ca": ca, "m": m, "key": kidx}, "key_bits": 4.7 * 12,
-                                                   "key_description": f"{desc} = {k}; plain {pname}, cipher {cname}, key on {kn}, {m}"})
-            if ctx.time_left() < 60:
-                break
-        if ctx.time_left() < 60:
+    convs = list(conventions())
+    rng = random.Random(34)
+    res = sweep(ct, known, convs, ctx.english_score, rng, RESTARTS, ctx.time_left, PERIODS)
+    res.sort(key=lambda t: -t[0])
+    by_period = {}
+    for sc, P, conv, pt, key, nfree in res:
+        if P not in by_period or sc > by_period[P][0]:
+            by_period[P] = (sc, "/".join(conv), pt, key, nfree)
+    candidates = []
+    for P in sorted(by_period):
+        sc, cv, pt, key, nfree = by_period[P]
+        pa, ca, ka, m = cv.split("/")
+        candidates.append({"plaintext": pt, "key": {"pa": pa, "ca": ca, "ka": ka, "m": m, "key": key}, "key_bits": 4.7 * P,
+                           "key_description": f"period {P} key {key} ({nfree} free slots climbed); {cv}", "notes": f"English of the 73 free letters {sc:.3f}"})
+    candidates.sort(key=lambda c: -float(c["notes"].split()[-1]))
+    controls = {}
+    for seed in range(3):
+        if ctx.time_left() < 300:
             break
+        letters_ = list(ct); random.Random(seed).shuffle(letters_)
+        cres = sweep("".join(letters_), known, convs, ctx.english_score, rng, 5, ctx.time_left, [27, 28, 29, 53, 60, 70, 80, 97])
+        for sc, P, conv, pt, key, nfree in cres:
+            controls[P] = max(controls.get(P, -99), sc)
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "shaped keys of length 27-29 from the vocabulary, periodic tableau, vocabulary-mixed alphabets", "keys": len(keys),
-                   "keys_by_length": {str(P): len(by_len[P]) for P in PERIODS}, "alphabets": len(pool), "trials": trials,
-                   "fewest_mismatches": best[0][0] if best else "more than 3",
-                   "nearest": [{"mismatches": a, "key": k, "shape": d, "plain": p, "cipher": c, "key_alphabet": kn, "mode": m} for a, k, d, p, c, kn, m in best],
-                   "survivors": len(candidates)},
-        "notes": f"{len(keys)} shaped keys x {len(pool)}^2 alphabet pairs x 3 modes x 3 key readings: {trials} trials; fewest mismatches {best[0][0] if best else 'more than 3'}; {len(candidates)} exact matches.",
+        "bounds": {"family": "periodic tableau at surviving periods, key completed by English climb", "conventions": 24, "periods": "27-29, then 53-95 every third",
+                   "restarts": RESTARTS, "best_by_period": {str(P): {"english": round(v[0], 3), "convention": v[1], "free_slots": v[4], "text": v[2]} for P, v in sorted(by_period.items())},
+                   "shuffled_k4_best_by_period": {str(P): round(v, 3) for P, v in sorted(controls.items())},
+                   "english_reference": -3.6},
+        "notes": f"Best English at 27-29: {[round(by_period[P][0], 3) for P in (27, 28, 29) if P in by_period]}; shuffled K4 at 27-29: {[round(controls[P], 3) for P in (27, 28, 29) if P in controls]}. Best overall {res[0][0]:.3f} at period {res[0][1]} vs shuffled best {max(controls.values()) if controls else None}.",
     }
 
 
 def worked_example(ctx, key):
-    k = "DIGITALINTERPRETATION" + "EGYPT"
-    lines = [f"key {k}, length {len(k)}: a 26-letter join falls short of 27, so it is not tried; take instead", ""]
-    keys = shaped_keys(["KRYPTOS", "PALIMPSEST", "ABSCISSA", "WILLIAMWEBSTER", "DIGITALINTERPRETATION", "SHADOWFORCES", "LUCIDMEMORY", "TUTANKHAMUN", "ALEXANDERPLATZ", "BERLINCLOCK", "WELTZEITUHR", "CARNARVON"])
-    k, desc = next(iter(keys.items()))
-    lines.append(f"{desc}: {k} ({len(k)} letters)")
-    lines.append("")
-    lines.append("sculpture's alphabet throughout, Vigenere: forced key letters at the first slots")
-    for pos in (22, 23, 24, 25):
-        f = MODES_KEY["vig"]; v = f(KRY.index(ctx.KNOWN[pos]), KRY.index(ctx.K4[pos - 1]))
-        lines.append(f"pos {pos}: slot {(pos - 1) % len(k)} must be {KRY[v]}; the key has {k[(pos - 1) % len(k)]}")
+    conv = ("kry", "kry", "kry", "vig")
+    r = climb(ctx.K4, ctx.KNOWN, 27, conv, ctx.english_score, random.Random(1), 3)
+    pt, sc, k, nfree = r
+    lines = ["period 27, KRYPTOS alphabet throughout, Vigenere; 24 slots forced, 3 free, climbed by English (3 restarts)", "", f"key   {k}", f"text  {pt}", f"English of the free letters {sc:.3f} (English about -3.6, noise about -6.5)"]
     return "\n".join(lines)

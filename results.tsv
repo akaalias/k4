@@ -92,3 +92,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0091	0091-berlin-clock-schedule-with-a-k3-move	6-transposition-then-tableau	0079-berlin-clock-as-a-key-schedule	reverted	0	0	0			758	unattributed=398 run=758 record=0
 0092	0092-plaintext-written-along-a-path	2-masked-plaintext	0023-masks-reversal-and-nulls-then-tableau	reverted	0	0	0			20	unattributed=202 run=20 record=0
 0093	0093-one-wrong-letter-through-a-move	6-transposition-then-tableau	0080-substitute-rotate-substitute-two-keys	reverted	0	0	0			296	unattributed=429 run=296 record=0
+0094	0094-a-letter-dropped-or-added-then-a-move	6-transposition-then-tableau	0093-one-wrong-letter-through-a-move	reverted	0	0	0			293	unattributed=476 run=293 record=0

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the move",
+  "text": "Sanborn spoke of 'triple matrixes'. Here K3's grid turn is done three times, at every width from 2 to 96 each time: 1.7 million different scrambles."
+ },
+ {
+  "anchor": "the check",
+  "text": "After the turns, a repeating secret word on the table must give the copper's letters at the places the known letters reached; two known letters in one slot of the word must agree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No word of 1 to 26 letters fits beyond what scrambled coppers show. One setting fits a word of 18, but that word is VTYPETGCEVGYPLDEPG and the message it gives is noise."
+ }
+]

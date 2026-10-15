@@ -93,3 +93,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0092	0092-plaintext-written-along-a-path	2-masked-plaintext	0023-masks-reversal-and-nulls-then-tableau	reverted	0	0	0			20	unattributed=202 run=20 record=0
 0093	0093-one-wrong-letter-through-a-move	6-transposition-then-tableau	0080-substitute-rotate-substitute-two-keys	reverted	0	0	0			296	unattributed=429 run=296 record=0
 0094	0094-a-letter-dropped-or-added-then-a-move	6-transposition-then-tableau	0093-one-wrong-letter-through-a-move	reverted	0	0	0			293	unattributed=476 run=293 record=0
+0095	0095-riddle-words-dragged-at-the-live-periods	1-keyed-periodic	0001-crib-consistent-periods	reverted	0	0	0			16	unattributed=9 run=16 record=0

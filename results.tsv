@@ -61,3 +61,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0060	0060-k2-coordinates-as-hill-matrix	8-hill-polygraphic	0015-hill-solved-from-crib-blocks	reverted	4	0	4	204.303		5	design=0 implement=0 test=0 run=5 record=0
 0061	0061-keyword-plus-misspelling-letters	3-two-component-key	0024-keyword-plus-k2-coordinate-digits	reverted	1	0	8	164.416		1	design=0 implement=0 test=30 run=1 record=0
 0062	0062-which-constructions-make-the-width-fingerprints	7-construction-simulation	0056-width-7-and-21-fingerprints-look-elsewhere	reverted	0	0	0			2	design=0 implement=0 test=0 run=2 record=0
+0063	0063-transposition-and-ciphertext-autokey	6-transposition-then-tableau	0062-which-constructions-make-the-width-fingerprints	reverted	0	0	0			75	design=0 implement=15 test=0 run=75 record=0

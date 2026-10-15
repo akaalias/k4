@@ -1,0 +1,33 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "transposition composed with ciphertext autokey, either order",
+  "routes": 3107,
+  "lags": "1-95",
+  "conventions": 24,
+  "checked": 14167920,
+  "full_matches": 0,
+  "best_order_A": {
+   "hits_past_primer": 8,
+   "setting": [
+    "A",
+    "double columnar w=12 then w=49",
+    16,
+    "kry/kry/kry/vig"
+   ]
+  },
+  "best_order_B": {
+   "hits": 9,
+   "setting": [
+    "B",
+    "double columnar w=34 then w=23",
+    13,
+    "kry/kry/kry/varbeau"
+   ]
+  }
+ },
+ "notes": "3107 routes x 95 lags x 24 conventions x 2 orders (14,167,920 checks): 0 full matches. Best order A: 8 cribs past the primer (('A', 'double columnar w=12 then w=49', 16, 'kry/kry/kry/vig')); best order B: 9/24 (('B', 'double columnar w=34 then w=23', 13, 'kry/kry/kry/varbeau')).",
+ "error": null,
+ "worked_example": "lag 21, kry/kry/kry/vig, autokey undone on the copper (first 21 unknown):\n?????????????????????ACRUZIOVSZOIXZZSIBXBWQIDTOOQSEPKEIOEDNUGVHGVMVOOUMBGKSMKEMRIWWYVEWZDLIVZWCDH",
+ "seconds": 75.09607601165771
+}

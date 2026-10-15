@@ -1,0 +1,66 @@
+{
+ "id": 63,
+ "tag": "0063-transposition-and-ciphertext-autokey",
+ "started": "2026-10-15T12:30:55+00:00",
+ "seconds": 75.2,
+ "status": "ran",
+ "phases": {
+  "design": 0.1,
+  "implement": 14.8,
+  "test": 0.1,
+  "run": 75.2,
+  "record": 0.0
+ },
+ "ended_epoch": 1792067530.832999,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "transposition composed with ciphertext autokey, either order",
+  "routes": 3107,
+  "lags": "1-95",
+  "conventions": 24,
+  "checked": 14167920,
+  "full_matches": 0,
+  "best_order_A": {
+   "hits_past_primer": 8,
+   "setting": [
+    "A",
+    "double columnar w=12 then w=49",
+    16,
+    "kry/kry/kry/vig"
+   ]
+  },
+  "best_order_B": {
+   "hits": 9,
+   "setting": [
+    "B",
+    "double columnar w=34 then w=23",
+    13,
+    "kry/kry/kry/varbeau"
+   ]
+  }
+ },
+ "notes": "3107 routes x 95 lags x 24 conventions x 2 orders (14,167,920 checks): 0 full matches. Best order A: 8 cribs past the primer (('A', 'double columnar w=12 then w=49', 16, 'kry/kry/kry/vig')); best order B: 9/24 (('B', 'double columnar w=34 then w=23', 13, 'kry/kry/kry/varbeau')).",
+ "error": null,
+ "candidates": []
+}

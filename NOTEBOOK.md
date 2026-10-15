@@ -18,6 +18,7 @@ controls. The notebook gets a line per experiment as it lands.
 | 21 | 1 | Carter's book as a running key, 13.7 million offsets and conventions: none within two mismatches. |
 | 22 | 1 | Porta over 248 alphabet orders: no order separates all 24 crib pairs across the halves. |
 | 23 | 2 | Reversal and null padding before a periodic tableau, 648 masks: smallest live period 26; nothing. |
+| 24 | 3 | A word plus the K2 coordinate digits, seven readings: shortest consistent word length 26; nothing. |
 
 ## 2026-10-14
 

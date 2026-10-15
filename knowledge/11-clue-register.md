@@ -150,7 +150,7 @@ Sanborn's reported "1-2-3" spacing as an ordering. Status: (a) as a Gromark prim
 **C23. The K2 coordinates, the USGS marker "no longer there," "an act I could have
 carried out," "buried out there somewhere."** Readings: (a) riddle layer, out of scope;
 (b) the digits 38 57 6 5 77 8 44 as a key or matrix; (c) the marker's crosshairs as the
-compass-point reading of C15. Status: (b) untested.
+compass-point reading of C15. Status: (b) as an additive digit key beside a word is dead for seven readings of the digits (0024); as a matrix untested.
 
 **C24. The compass rose "offset... there's a mystery there."** Readings: (a) the offset
 angle is a shift value; (b) the lodestone direction names a word; (c) riddle layer.

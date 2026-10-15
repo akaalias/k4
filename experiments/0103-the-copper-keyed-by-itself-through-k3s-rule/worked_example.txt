@@ -1,0 +1,11 @@
+the copper read backwards as its own key: place i takes its key from place 99 - i (a = 0, b = 96)
+sculpture's alphabet, Vigenere
+
+place  known  carved  key place  key letter  carved - key  hit
+   22      E       F         77           D             Y  no
+   23      A       L         76           G             T  no
+   24      S       R         75           W             T  no
+   25      T       V         74           K             V  no
+   64      B       N         35           O             H  no
+   65      E       Y         34           S             V  no
+   74      K       K         25           V             T  no

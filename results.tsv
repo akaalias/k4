@@ -101,3 +101,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0100	0100-replicating-the-marginal-cells	6-transposition-then-tableau	0097-free-mixed-alphabets-after-a-move	reverted	0	0	0			73	unattributed=48 run=73 record=0
 0101	0101-key-restarted-at-every-word	1-keyed-periodic	0001-crib-consistent-periods	reverted	0	0	0			0	unattributed=41 run=0 record=0
 0102	0102-the-period-3-excess-against-two-nulls	6-transposition-then-tableau	0100-replicating-the-marginal-cells	reverted	0	0	0			120	unattributed=72 run=120 record=0
+0103	0103-the-copper-keyed-by-itself-through-k3s-rule	1-keyed-periodic	0002-ciphertext-autokey	reverted	0	0	0			10	unattributed=19 run=10 record=0

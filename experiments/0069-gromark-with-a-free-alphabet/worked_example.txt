@@ -1,0 +1,9 @@
+Rogers' rule (5 and 4 back), primer 12345
+stream 1234535798826760833681694975336286
+
+place  known  carved  digit  slot (M[P+d]=c)
+   22      E       F      1     5
+   23      A       L      6     6
+   26      N       Q      9    22
+   27      O       Q      7    21
+   31      E       G      6    10

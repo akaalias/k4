@@ -56,3 +56,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0055	0055-hill-with-k1-k3-word-numberings	8-hill-polygraphic	0044-hill-with-keyword-numberings	reverted	50	0	21	34.890		1	design=0 implement=10 test=0 run=1 record=0
 0056	0056-width-7-and-21-fingerprints-look-elsewhere	7-construction-simulation	0027-simulator-round-two-width-21-hunt	reverted	0	0	0			4	design=0 implement=9 test=0 run=4 record=0
 0057	0057-letter-nulls-outside-the-cribs	2-masked-then-keyed	0023-masks-reversal-and-nulls-then-tableau	reverted	0	0	0			1	design=0 implement=0 test=0 run=1 record=0
+0058	0058-tableau-then-keyed-columnar-k1-k3-words	6-transposition-then-tableau	0007-tableau-then-columnar-period-survival	reverted	0	0	0			277	design=0 implement=11 test=0 run=277 record=0

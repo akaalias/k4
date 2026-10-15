@@ -1,0 +1,11 @@
+route: keyed columnar MAGNETIC, applied after the tableau; convention kry/kry/kry Vigenere
+
+plain pos  letter  its cipher sits at  cipher letter  forced key letter  key slot at period 13
+       22    E            3              K              I                  8
+       23    A           40              S              Z                  9
+       24    S           64              N              G                 10
+       25    T           16              L              G                 11
+       64    B           69              T              V                 11
+       65    E           21              W              F                 12
+       66    R           94              K              Z                  0
+       67    L           58              A              J                  1

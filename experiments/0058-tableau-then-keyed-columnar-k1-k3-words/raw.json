@@ -1,0 +1,99 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "periodic tableau (separate alphabets) then keyed columnar transposition, single or double, keys from K1-K3 and C13/C14 words",
+  "routes": 14792,
+  "route_convention_pairs_checked": 355008,
+  "route_set": "keyed columnar from K1-K3 words (3-20 letters) and C13/C14 words x {fwd, inv}; keyed double columnar over ordered pairs of distinct such orders x {fwd, inv}",
+  "conventions": 24,
+  "periods": "1-97 by divisor rule on plaintext positions",
+  "key_pool": "vocabulary words and K1-K3 windows of length P for live P <= 30",
+  "min_live_period_histogram": {
+   "25": 16,
+   "26": 14352,
+   "27": 340640
+  },
+  "fifteen_shortest": [
+   {
+    "min_period": 25,
+    "route": "keyed double DESPARATLY then REMAINS inv",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double DESPARATLY then REMAINS inv",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double INFORMATION then ENCUMBERED inv",
+    "convention": "std/kry/std/vig"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double INFORMATION then ENCUMBERED inv",
+    "convention": "std/kry/std/varbeau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double INFORMATION then ENCUMBERED inv",
+    "convention": "std/kry/kry/vig"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double INFORMATION then ENCUMBERED inv",
+    "convention": "std/kry/kry/varbeau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double LANGLEY then WITH inv",
+    "convention": "std/kry/std/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double LANGLEY then WITH inv",
+    "convention": "std/kry/kry/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double REMAINS then NORTH inv",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double REMAINS then NORTH inv",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SEE then FLICKER fwd",
+    "convention": "kry/kry/std/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SEE then FLICKER fwd",
+    "convention": "kry/kry/kry/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SOMEWHERE then TRANSMIT fwd",
+    "convention": "kry/std/std/vig"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SOMEWHERE then TRANSMIT fwd",
+    "convention": "kry/std/std/varbeau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SOMEWHERE then TRANSMIT fwd",
+    "convention": "kry/std/kry/vig"
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "355008 route/convention pairs; 0 forced-fragment matches submitted.",
+ "error": null,
+ "worked_example": "route: keyed columnar MAGNETIC, applied after the tableau; convention kry/kry/kry Vigenere\n\nplain pos  letter  its cipher sits at  cipher letter  forced key letter  key slot at period 13\n       22    E            3              K              I                  8\n       23    A           40              S              Z                  9\n       24    S           64              N              G                 10\n       25    T           16              L              G                 11\n       64    B           69              T              V                 11\n       65    E           21              W              F                 12\n       66    R           94              K              Z                  0\n       67    L           58              A              J                  1\n",
+ "seconds": 276.60107803344727
+}

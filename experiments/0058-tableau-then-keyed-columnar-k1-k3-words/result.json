@@ -1,0 +1,132 @@
+{
+ "id": 58,
+ "tag": "0058-tableau-then-keyed-columnar-k1-k3-words",
+ "started": "2026-10-15T12:19:40+00:00",
+ "seconds": 276.7,
+ "status": "ran",
+ "phases": {
+  "design": 0.1,
+  "implement": 11.3,
+  "test": 0.1,
+  "run": 276.7,
+  "record": 0.0
+ },
+ "ended_epoch": 1792067057.626845,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "periodic tableau (separate alphabets) then keyed columnar transposition, single or double, keys from K1-K3 and C13/C14 words",
+  "routes": 14792,
+  "route_convention_pairs_checked": 355008,
+  "route_set": "keyed columnar from K1-K3 words (3-20 letters) and C13/C14 words x {fwd, inv}; keyed double columnar over ordered pairs of distinct such orders x {fwd, inv}",
+  "conventions": 24,
+  "periods": "1-97 by divisor rule on plaintext positions",
+  "key_pool": "vocabulary words and K1-K3 windows of length P for live P <= 30",
+  "min_live_period_histogram": {
+   "25": 16,
+   "26": 14352,
+   "27": 340640
+  },
+  "fifteen_shortest": [
+   {
+    "min_period": 25,
+    "route": "keyed double DESPARATLY then REMAINS inv",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double DESPARATLY then REMAINS inv",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double INFORMATION then ENCUMBERED inv",
+    "convention": "std/kry/std/vig"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double INFORMATION then ENCUMBERED inv",
+    "convention": "std/kry/std/varbeau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double INFORMATION then ENCUMBERED inv",
+    "convention": "std/kry/kry/vig"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double INFORMATION then ENCUMBERED inv",
+    "convention": "std/kry/kry/varbeau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double LANGLEY then WITH inv",
+    "convention": "std/kry/std/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double LANGLEY then WITH inv",
+    "convention": "std/kry/kry/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double REMAINS then NORTH inv",
+    "convention": "std/std/std/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double REMAINS then NORTH inv",
+    "convention": "std/std/kry/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SEE then FLICKER fwd",
+    "convention": "kry/kry/std/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SEE then FLICKER fwd",
+    "convention": "kry/kry/kry/beau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SOMEWHERE then TRANSMIT fwd",
+    "convention": "kry/std/std/vig"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SOMEWHERE then TRANSMIT fwd",
+    "convention": "kry/std/std/varbeau"
+   },
+   {
+    "min_period": 25,
+    "route": "keyed double SOMEWHERE then TRANSMIT fwd",
+    "convention": "kry/std/kry/vig"
+   }
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "355008 route/convention pairs; 0 forced-fragment matches submitted.",
+ "error": null,
+ "candidates": []
+}

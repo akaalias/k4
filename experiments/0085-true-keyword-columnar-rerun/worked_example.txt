@@ -1,0 +1,9 @@
+KRYPTOS as a column key: K R Y P T O S ranks 0 3 6 2 5 1 4, so the columns are read 0 5 3 1 6 4 2
+(the earlier records read 0 3 6 2 5 1 4, the ranks themselves)
+
+place  letter  column  lands at (true)  lands at (earlier)
+   22       E       0                4                   4
+   23       A       1               46                  73
+   24       S       2               87                  45
+   25       T       3               32                  18
+   64       B       0               10                  10

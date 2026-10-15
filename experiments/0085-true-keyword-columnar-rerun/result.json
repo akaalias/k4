@@ -1,0 +1,618 @@
+{
+ "id": 85,
+ "tag": "0085-true-keyword-columnar-rerun",
+ "started": "2026-10-15T16:18:54+00:00",
+ "seconds": 718.8,
+ "status": "ran",
+ "phases": {
+  "test": 0.1,
+  "run": 718.8,
+  "record": 0.1
+ },
+ "ended_epoch": 1792081853.502483,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "true keyword columnar (issue #26), once or twice, with a periodic key 1-26 or plaintext/ciphertext autokey, both orders",
+  "keyword_sequences": 201,
+  "distinct_routes": 40771,
+  "routes_done": 40771,
+  "periodic": {
+   "k4_live_by_period": {
+    "A": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     7,
+     74,
+     23,
+     482
+    ],
+    "B": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     22,
+     12924
+    ]
+   },
+   "controls_min": {
+    "A": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     67,
+     15,
+     469
+    ],
+    "B": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     14,
+     12165
+    ]
+   },
+   "controls_max": {
+    "A": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4,
+     8,
+     90,
+     45,
+     489
+    ],
+    "B": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     24,
+     12923
+    ]
+   },
+   "periods_outside_control_range": {
+    "A": [],
+    "B": [
+     26
+    ]
+   },
+   "k4_live_below_20": [],
+   "n_k4_live_below_20": 0,
+   "controls_live_below_20": {
+    "A": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "B": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "autokey": {
+   "by_kind_and_order": {
+    "ptak order A": {
+     "k4_at_least_c": {
+      "1": 114744,
+      "2": 4018,
+      "3": 135,
+      "4": 3,
+      "5": 0,
+      "6": 0
+     },
+     "controls_at_least_c": {
+      "1": [
+       117417,
+       116458,
+       113926,
+       114585,
+       117225,
+       115933,
+       112456,
+       115523,
+       118127,
+       111861
+      ],
+      "2": [
+       3959,
+       3906,
+       3873,
+       3979,
+       4110,
+       4083,
+       3851,
+       3979,
+       3879,
+       3855
+      ],
+      "3": [
+       116,
+       149,
+       118,
+       98,
+       138,
+       135,
+       113,
+       96,
+       135,
+       123
+      ],
+      "4": [
+       2,
+       12,
+       4,
+       4,
+       4,
+       5,
+       5,
+       4,
+       4,
+       7
+      ],
+      "5": [
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "6": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    "ptak order B": {
+     "k4_at_least_c": {
+      "1": 31166,
+      "2": 585,
+      "3": 37,
+      "4": 0,
+      "5": 0,
+      "6": 0
+     },
+     "controls_at_least_c": {
+      "1": [
+       31004,
+       30076,
+       29697,
+       31389,
+       31456,
+       32560,
+       30384,
+       32001,
+       30752,
+       31152
+      ],
+      "2": [
+       645,
+       695,
+       564,
+       674,
+       670,
+       608,
+       526,
+       539,
+       603,
+       557
+      ],
+      "3": [
+       48,
+       53,
+       44,
+       58,
+       56,
+       55,
+       35,
+       41,
+       63,
+       49
+      ],
+      "4": [
+       1,
+       0,
+       0,
+       0,
+       2,
+       1,
+       1,
+       0,
+       1,
+       1
+      ],
+      "5": [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "6": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    "ctak order A": {
+     "k4_at_least_c": {
+      "1": 31451,
+      "2": 1132,
+      "3": 50,
+      "4": 0,
+      "5": 0,
+      "6": 0
+     },
+     "controls_at_least_c": {
+      "1": [
+       34096,
+       29577,
+       35805,
+       34693,
+       29560,
+       30097,
+       33605,
+       30298,
+       37509,
+       36289
+      ],
+      "2": [
+       1720,
+       1685,
+       1510,
+       1404,
+       1736,
+       1511,
+       1546,
+       1324,
+       2109,
+       1898
+      ],
+      "3": [
+       53,
+       68,
+       25,
+       44,
+       64,
+       69,
+       57,
+       76,
+       46,
+       67
+      ],
+      "4": [
+       3,
+       0,
+       1,
+       2,
+       3,
+       0,
+       3,
+       0,
+       4,
+       0
+      ],
+      "5": [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "6": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    "ctak order B": {
+     "k4_at_least_c": {
+      "1": 9627,
+      "2": 369,
+      "3": 11,
+      "4": 0,
+      "5": 0,
+      "6": 0
+     },
+     "controls_at_least_c": {
+      "1": [
+       9929,
+       9909,
+       9879,
+       10091,
+       9815,
+       9835,
+       9457,
+       9782,
+       10080,
+       9836
+      ],
+      "2": [
+       384,
+       390,
+       379,
+       446,
+       443,
+       347,
+       339,
+       361,
+       347,
+       405
+      ],
+      "3": [
+       14,
+       23,
+       13,
+       17,
+       16,
+       12,
+       12,
+       13,
+       15,
+       17
+      ],
+      "4": [
+       1,
+       1,
+       0,
+       2,
+       1,
+       4,
+       0,
+       1,
+       0,
+       0
+      ],
+      "5": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "6": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   },
+   "levels_outside_control_range": [
+    "ctak A: [2]",
+    "ctak B: [3]"
+   ],
+   "k4_settings_with_4_plus_checks": [
+    {
+     "kind": "plaintext autokey",
+     "order": "A",
+     "route": "FOUR (repeats dropped) then ABOUT (repeats dropped)",
+     "alphabet": "kry",
+     "mode": "vig",
+     "lag": 50,
+     "checks": 4
+    },
+    {
+     "kind": "plaintext autokey",
+     "order": "A",
+     "route": "INVISIBLE (repeats dropped) then SCHEIDT (repeats dropped)",
+     "alphabet": "kry",
+     "mode": "vig",
+     "lag": 42,
+     "checks": 4
+    },
+    {
+     "kind": "plaintext autokey",
+     "order": "A",
+     "route": "INVISIBLE (repeats dropped) then UNDERGROUND (repeats dropped)",
+     "alphabet": "kry",
+     "mode": "vig",
+     "lag": 42,
+     "checks": 4
+    }
+   ],
+   "n_k4_4_plus": 3
+  },
+  "controls": "10 shuffled coppers (seed 85), identical search"
+ },
+ "notes": "40,771 distinct routes from 201 keyword sequences. Periodic: K4 live below 20: 0; controls {'A': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'B': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}; periods outside the control range {'A': [], 'B': [26]}. Autokey: ptak order A: K4 >=1..6 [114744, 4018, 135, 3, 0, 0], controls max [118127, 4110, 149, 12, 1, 0]; ptak order B: K4 >=1..6 [31166, 585, 37, 0, 0, 0], controls max [32560, 695, 63, 2, 1, 0]; ctak order A: K4 >=1..6 [31451, 1132, 50, 0, 0, 0], controls max [37509, 2109, 76, 4, 1, 0]; ctak order B: K4 >=1..6 [9627, 369, 11, 0, 0, 0], controls max [10091, 446, 23, 4, 0, 0]. Outside: ['ctak A: [2]', 'ctak B: [3]']. K4 autokey settings with 4+ checks: 3.",
+ "error": null,
+ "candidates": []
+}

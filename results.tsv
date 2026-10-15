@@ -83,3 +83,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0082	0082-where-the-blanks-go-in-the-grid	6-transposition-then-tableau	0008-k3-formula-all-shifts-then-tableau	reverted	0	0	0			57	design=65 implement=58 test=0 run=57 record=0
 0083	0083-every-triple-grid-turn	6-transposition-then-tableau	0037-triple-matrix-routes-sampled-then-tableau	reverted	0	0	0			758	design=0 implement=25 test=0 run=758 record=0
 0084	0084-double-columnar-with-a-width-of-seven	6-transposition-then-tableau	0026-double-keyed-columnar-then-tableau	reverted	0	0	0			856	design=125 implement=108 test=0 run=856 record=0
+0085	0085-true-keyword-columnar-rerun	6-transposition-then-tableau	0026-double-keyed-columnar-then-tableau	reverted	0	0	0			719	test=0 run=719 record=0

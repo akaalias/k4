@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the shuffle",
+  "text": "Myszkowski's column shuffle lets a key word repeat letters: columns under the same letter are read together, row by row. Every dictionary word with a repeated letter is a key here, forwards and as the undoing."
+ },
+ {
+  "anchor": "the check",
+  "text": "After the shuffle a repeating secret word on the table must give the copper's letters where the known letters landed; two known letters in one slot of the word must agree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "343,964 routes, keys of 1 to 26 letters before or after: one setting at period 21, as on a copper, and the only count outside the scrambled coppers' range, period 25 after the move (1,499 against 1,540-1,650), is below it."
+ }
+]

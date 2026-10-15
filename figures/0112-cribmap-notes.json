@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the shuffle",
+  "text": "The double column shuffle was the classic hand cipher of the 20th century, and often used one key word twice. Here every dictionary word is that word, the shuffle run twice and also undone."
+ },
+ {
+  "anchor": "the check",
+  "text": "After both shuffles a repeating secret word on the table must give the copper's letters where the known letters landed; two known letters in one slot of the word must agree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "459,267 routes, keys of 1 to 26 letters before or after: nothing below period 22, and every count sits inside the range of ten scrambled coppers."
+ }
+]

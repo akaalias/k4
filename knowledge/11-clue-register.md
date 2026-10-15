@@ -99,7 +99,7 @@ Mengenlehreuhr readings dead (key schedules from its lamp counts, hours, minutes
 
 **C13. "Two events... my second trip to Egypt in late 1986, and the fall of the Berlin
 Wall."** (2025). Readings: (a) plaintext content: the words EGYPT, WALL, CAIRO, LUXOR,
-TUTANKHAMUN, NOVEMBER; (b) keys: the same words. Status: as keyword alphabets for a periodic tableau, periods 1-52, nothing beyond the shuffled-copper rate (0053); other uses untested. Mirrored self-keys: the copper or the message read through a + b i mod 97, the mirror b = -1 included, as its own key: dead (0103, 0104).
+TUTANKHAMUN, NOVEMBER; (b) keys: the same words. Status: as keyword alphabets for a periodic tableau, periods 1-52, nothing beyond the shuffled-copper rate (0053); other uses untested. Mirrored self-keys: the copper or the message read through a + b i mod 97, the mirror b = -1 included, as its own key: dead (0103, 0104). K4 read from behind the screen, line by line right to left, with periodic keys and autokeys: dead (0108).
 
 **C14. "The codes of Kryptos from the morse code at the beginning through K5 are about
 delivering a message."** (2025). Readings: (a) theme only; (b) MESSAGE, DELIVER, TRANSMIT

@@ -1,0 +1,160 @@
+{
+ "id": 77,
+ "tag": "0077-rows-of-seven-reshuffled-and-ciphertext-autokey",
+ "started": "2026-10-15T13:34:55+00:00",
+ "seconds": 241.4,
+ "status": "ran",
+ "phases": {
+  "design": 32.1,
+  "implement": 0.0,
+  "test": 18.2,
+  "run": 241.4,
+  "record": 0.1
+ },
+ "ended_epoch": 1792071536.785165,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "block-of-7 permutation with ciphertext autokey (constant shift), both orders",
+  "permutations": 5040,
+  "lags": "1-96",
+  "classes": 32,
+  "cases": 30965760,
+  "complete": true,
+  "controls_complete": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "survivors_by_checks": {
+   "A": {
+    "1": {
+     "k4": 5760,
+     "controls": [
+      6744,
+      5856,
+      5832,
+      6528,
+      6792,
+      6432,
+      6240,
+      5976,
+      5640,
+      5952
+     ]
+    },
+    "2": {
+     "k4": 168,
+     "controls": [
+      240,
+      264,
+      168,
+      180,
+      210,
+      222,
+      258,
+      282,
+      240,
+      204
+     ]
+    },
+    "3": {
+     "k4": 6,
+     "controls": [
+      6,
+      18,
+      18,
+      0,
+      6,
+      12,
+      0,
+      6,
+      24,
+      12
+     ]
+    }
+   },
+   "B": {
+    "1": {
+     "k4": 8640,
+     "controls": [
+      9552,
+      8376,
+      9000,
+      8376,
+      9528,
+      7872,
+      11400,
+      9408,
+      9840,
+      11184
+     ]
+    },
+    "2": {
+     "k4": 426,
+     "controls": [
+      204,
+      198,
+      228,
+      300,
+      276,
+      288,
+      438,
+      384,
+      312,
+      432
+     ]
+    },
+    "3": {
+     "k4": 12,
+     "controls": [
+      6,
+      18,
+      24,
+      0,
+      6,
+      12,
+      0,
+      6,
+      36,
+      18
+     ]
+    }
+   }
+  },
+  "lag21_3plus": {
+   "A": 0,
+   "B": 0
+  }
+ },
+ "notes": "30,965,760 cases (complete), 10 controls. Order A: 1 checks 5760 (5640-6792); 2 checks 168 (168-282); 3 checks 6 (0-24). Order B: 1 checks 8640 (7872-11400); 2 checks 426 (198-438); 3 checks 12 (0-36). Lag 21 with 3+ checks: {'A': 0, 'B': 0}.",
+ "error": null,
+ "candidates": []
+}

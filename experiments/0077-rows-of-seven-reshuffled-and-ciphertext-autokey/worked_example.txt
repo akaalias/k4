@@ -1,0 +1,8 @@
+every row of seven reversed after the autokey; undone: XOURKBOSBLUHGOWBBFILOPQQVRLFOSSKGNR...
+lag 21, sculpture's alphabet, Vigenere
+
+place  known  letter  21 back  residual
+   22      E       P        X        20
+   23      A       Q        O         8
+   24      S       Q        U        19
+   25      T       V        R        17

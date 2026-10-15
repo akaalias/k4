@@ -1,0 +1,51 @@
+{
+ "id": 46,
+ "tag": "0046-gromark-three-term-rules-and-higher-bases",
+ "started": "2026-10-15T09:47:27+00:00",
+ "seconds": 36.8,
+ "status": "ran",
+ "phases": {
+  "design": 10.4,
+  "implement": 51.9,
+  "test": 41.4,
+  "run": 36.8,
+  "record": 0.0
+ },
+ "ended_epoch": 1792057683.8750532,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig"
+ },
+ "bounds": {
+  "family": "running numerical key, k[i] = k[i-a] + k[i-b] mod base",
+  "rules": "364 two- and three-term rules with lags up to 13",
+  "bases": "16-26 as each triple allows",
+  "alphabets": 248,
+  "alphabet_triples": 184512,
+  "modes": 3,
+  "triples_with_all_shifts_below_16": 1,
+  "min_checks": 6,
+  "survivors": [],
+  "n_survivors": 0,
+  "n_survivors_consistent_with_second_run": 0
+ },
+ "notes": "184512 alphabet triples x 364 rules, bases 16-26. 0 survivors with >= 6 checks; 0 full-stream candidates submitted.",
+ "error": null,
+ "candidates": []
+}

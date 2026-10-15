@@ -1,0 +1,41 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "running key from K1-K3 plaintexts and ciphertexts, keyword-mixed alphabets",
+  "alphabets": 63,
+  "key_alphabets": [
+   "std",
+   "kry"
+  ],
+  "modes": 3,
+  "sources": {
+   "K1 plain fwd": 63,
+   "K1 plain bwd": 63,
+   "K2 plain fwd": 369,
+   "K2 plain bwd": 369,
+   "K3 plain fwd": 336,
+   "K3 plain bwd": 336,
+   "K1+K2+K3 plain fwd": 768,
+   "K1+K2+K3 plain bwd": 768,
+   "K1 cipher fwd": 63,
+   "K1 cipher bwd": 63,
+   "K2 cipher fwd": 369,
+   "K2 cipher bwd": 369,
+   "K3 cipher fwd": 336,
+   "K3 cipher bwd": 336,
+   "K1+K2+K3 cipher fwd": 768,
+   "K1+K2+K3 cipher bwd": 768,
+   "K2 plain corrected ending fwd": 13,
+   "K2 plain corrected ending bwd": 13
+  },
+  "trials": 146932380,
+  "stopped_by_clock": false,
+  "fewest_mismatches": "more than 2",
+  "near_misses": [],
+  "survivors": 0
+ },
+ "notes": "146932380 trials; 0 survivors; 0 within two mismatches.",
+ "error": null,
+ "worked_example": "(worked_example failed: IndexError('string index out of range'))",
+ "seconds": 62.64194321632385
+}

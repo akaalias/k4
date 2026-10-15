@@ -88,7 +88,7 @@ the letters' direction, upside down (RQ reads YR). Status: (a) the misspelt lett
 (NYT 2010 wording). Reading: a reordering step exists. Supports C1(a). Status: noted.
 
 **C11a. NSA 1992: "plain-text auto-key" and "interval 7"; NSA 2007: plaintext and ciphertext
-autokey tested without cribs.** Status: 'plain-text auto-key' is dead at lags 1-25 and 30-52 and gives noise at 26-29 (0003, 0012); 'interval 7' as a period is dead under plain and progressive keys (0005, 0011) and as an autokey lag (0012). The substitution-then-transposition order is weakly bounded by 0007.
+autokey tested without cribs.** Status: 'interval 7' as a structure that lines doublets up in sevens: only ciphertext autokey at lag 1 with a period-7 key raises the doublet column, to 1.5% against 0.1-0.3% by chance (0065). 'plain-text auto-key' is dead at lags 1-25 and 30-52 and gives noise at 26-29 (0003, 0012); 'interval 7' as a period is dead under plain and progressive keys (0005, 0011) and as an autokey lag (0012). The substitution-then-transposition order is weakly bounded by 0007.
 and lags 1-96 (0002). Plaintext autokey excluded at lags 1-11 and 30-52, undecided at 13-29 and 53-96, lag 12 consistent under one convention on a single check (0003).
 
 **C12. "Delve into that particular clock" (2014) against "the World Clock in Berlin"

@@ -1,0 +1,18 @@
+K4's two marks
+
+doublets (place of first letter) and place mod 7:
+  BB at 19-20: column 4
+  QQ at 26-27: column 4
+  SS at 33-34: column 4
+  SS at 43-44: column 0
+  ZZ at 47-48: column 4
+  TT at 68-69: column 4
+
+letter pairs 21 apart that repeat: 11
+
+rows of 21:
+  OBKRUOXOGHULBSOLIFBBW
+  FLRVQQPRNGKSSOTWTQSJQ
+  SSEKZZWATJKLUDIAWINFB
+  NYPVTTMZFPKWGDKZXTJCD
+  IGKUHUAUEKCAR

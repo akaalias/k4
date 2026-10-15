@@ -1,0 +1,196 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "joint construction simulation of the width-7 doublet column and the width-21 repeats",
+  "samples_per_recipe": 20000,
+  "recipes": 29,
+  "k4": {
+   "column": true,
+   "repeats21": 11
+  },
+  "plaintext_source": "Carter vol. 1 (284,914 letters) and K1-K3",
+  "rates": {
+   "width-7 columnar, then ciphertext autokey lag 1 + period-7 key": {
+    "column": 0.0086,
+    "repeats": 0.0019,
+    "both": 0.0001,
+    "both_if_independent": 2e-05
+   },
+   "K3-rule move, then period-14 key": {
+    "column": 0.0023,
+    "repeats": 0.0054,
+    "both": 0.0001,
+    "both_if_independent": 1e-05
+   },
+   "width-7 quarter turn, then period-14 key": {
+    "column": 0.0022,
+    "repeats": 0.0029,
+    "both": 0.0001,
+    "both_if_independent": 1e-05
+   },
+   "K3-rule move, then column-plus-row key, width 7": {
+    "column": 0.0021,
+    "repeats": 0.0022,
+    "both": 0.0001,
+    "both_if_independent": 0.0
+   },
+   "period-14 key, then width-7 quarter turn": {
+    "column": 0.0019,
+    "repeats": 0.0043,
+    "both": 0.0001,
+    "both_if_independent": 1e-05
+   },
+   "calibration: period-7 key alone": {
+    "column": 0.0019,
+    "repeats": 0.0147,
+    "both": 0.0001,
+    "both_if_independent": 3e-05
+   },
+   "width-7 quarter turn, then period-21 key": {
+    "column": 0.0017,
+    "repeats": 0.004,
+    "both": 0.0001,
+    "both_if_independent": 1e-05
+   },
+   "width-7 columnar, then ciphertext autokey lag 21 + period-7 key": {
+    "column": 0.0013,
+    "repeats": 0.0029,
+    "both": 0.0001,
+    "both_if_independent": 0.0
+   },
+   "period-21 key, then width-7 quarter turn": {
+    "column": 0.0011,
+    "repeats": 0.0033,
+    "both": 0.0001,
+    "both_if_independent": 0.0
+   },
+   "ciphertext autokey lag 1 + period-7 key": {
+    "column": 0.014,
+    "repeats": 0.0024,
+    "both": 0.0,
+    "both_if_independent": 3e-05
+   },
+   "period-7 key, then width-7 quarter turn": {
+    "column": 0.0035,
+    "repeats": 0.0137,
+    "both": 0.0,
+    "both_if_independent": 5e-05
+   },
+   "column-plus-row key, width 7": {
+    "column": 0.0026,
+    "repeats": 0.0014,
+    "both": 0.0,
+    "both_if_independent": 0.0
+   },
+   "period-7 key, then width-7 columnar": {
+    "column": 0.0024,
+    "repeats": 0.0132,
+    "both": 0.0,
+    "both_if_independent": 3e-05
+   },
+   "K3-rule move, then period-7 key": {
+    "column": 0.0022,
+    "repeats": 0.0146,
+    "both": 0.0,
+    "both_if_independent": 3e-05
+   },
+   "width-7 columnar, then period-7 key": {
+    "column": 0.0021,
+    "repeats": 0.0097,
+    "both": 0.0,
+    "both_if_independent": 2e-05
+   },
+   "width-7 quarter turn, then period-7 key": {
+    "column": 0.002,
+    "repeats": 0.009,
+    "both": 0.0,
+    "both_if_independent": 2e-05
+   },
+   "period-14 key, then width-7 columnar": {
+    "column": 0.0019,
+    "repeats": 0.005,
+    "both": 0.0,
+    "both_if_independent": 1e-05
+   },
+   "width-7 columnar, then period-14 key": {
+    "column": 0.0019,
+    "repeats": 0.0027,
+    "both": 0.0,
+    "both_if_independent": 1e-05
+   },
+   "period-21 key, then K3-rule move": {
+    "column": 0.0019,
+    "repeats": 0.0031,
+    "both": 0.0,
+    "both_if_independent": 1e-05
+   },
+   "ciphertext autokey lag 21 + period-7 key": {
+    "column": 0.0019,
+    "repeats": 0.0034,
+    "both": 0.0,
+    "both_if_independent": 1e-05
+   },
+   "calibration: shuffled K4": {
+    "column": 0.0019,
+    "repeats": 0.0003,
+    "both": 0.0,
+    "both_if_independent": 0.0
+   },
+   "period-14 key, then K3-rule move": {
+    "column": 0.0018,
+    "repeats": 0.0056,
+    "both": 0.0,
+    "both_if_independent": 1e-05
+   },
+   "width-7 columnar, then period-21 key": {
+    "column": 0.0018,
+    "repeats": 0.0037,
+    "both": 0.0,
+    "both_if_independent": 1e-05
+   },
+   "period-21 key, then width-7 columnar": {
+    "column": 0.0017,
+    "repeats": 0.0034,
+    "both": 0.0,
+    "both_if_independent": 1e-05
+   },
+   "K3-rule move, then column-plus-row key, width 21": {
+    "column": 0.0017,
+    "repeats": 0.0018,
+    "both": 0.0,
+    "both_if_independent": 0.0
+   },
+   "calibration: random letters": {
+    "column": 0.0016,
+    "repeats": 0.0016,
+    "both": 0.0,
+    "both_if_independent": 0.0
+   },
+   "K3-rule move, then period-21 key": {
+    "column": 0.0015,
+    "repeats": 0.0046,
+    "both": 0.0,
+    "both_if_independent": 1e-05
+   },
+   "column-plus-row key, width 21": {
+    "column": 0.0015,
+    "repeats": 0.0015,
+    "both": 0.0,
+    "both_if_independent": 0.0
+   },
+   "period-7 key, then K3-rule move": {
+    "column": 0.0014,
+    "repeats": 0.0116,
+    "both": 0.0,
+    "both_if_independent": 2e-05
+   }
+  },
+  "best_both": "width-7 columnar, then ciphertext autokey lag 1 + period-7 key",
+  "best_column": "ciphertext autokey lag 1 + period-7 key",
+  "best_repeats": "calibration: period-7 key alone"
+ },
+ "notes": "Rates column / repeats / both: width-7 columnar, then ciphertext autokey lag 1 + period-7 key: 0.0086 / 0.0019 / 0.0001; K3-rule move, then period-14 key: 0.0023 / 0.0054 / 0.0001; width-7 quarter turn, then period-14 key: 0.0022 / 0.0029 / 0.0001; K3-rule move, then column-plus-row key, width 7: 0.0021 / 0.0022 / 0.0001; period-14 key, then width-7 quarter turn: 0.0019 / 0.0043 / 0.0001; calibration: period-7 key alone: 0.0019 / 0.0147 / 0.0001; width-7 quarter turn, then period-21 key: 0.0017 / 0.0040 / 0.0001; width-7 columnar, then ciphertext autokey lag 21 + period-7 key: 0.0013 / 0.0029 / 0.0001; period-21 key, then width-7 quarter turn: 0.0011 / 0.0033 / 0.0001; ciphertext autokey lag 1 + period-7 key: 0.0140 / 0.0024 / 0.0000; period-7 key, then width-7 quarter turn: 0.0035 / 0.0137 / 0.0000; column-plus-row key, width 7: 0.0026 / 0.0014 / 0.0000.",
+ "error": null,
+ "worked_example": "K4's two marks\n\ndoublets (place of first letter) and place mod 7:\n  BB at 19-20: column 4\n  QQ at 26-27: column 4\n  SS at 33-34: column 4\n  SS at 43-44: column 0\n  ZZ at 47-48: column 4\n  TT at 68-69: column 4\n\nletter pairs 21 apart that repeat: 11\n\nrows of 21:\n  OBKRUOXOGHULBSOLIFBBW\n  FLRVQQPRNGKSSOTWTQSJQ\n  SSEKZZWATJKLUDIAWINFB\n  NYPVTTMZFPKWGDKZXTJCD\n  IGKUHUAUEKCAR",
+ "seconds": 15.363499879837036
+}

@@ -1,0 +1,43 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Hill variants: ciphertext feedback, plaintext feedback, summed input, paired matrices; sizes 2-4",
+  "numberings": [
+   "std0",
+   "std1",
+   "kry0",
+   "kry1"
+  ],
+  "settings": 144,
+  "settings_solved": 2,
+  "solved_settings": [
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 0,
+    "variant": "chain-c",
+    "crib_blocks": 4,
+    "solutions": {
+     "0": 1
+    },
+    "best_hits": 16
+   },
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 3,
+    "variant": "chain-c",
+    "crib_blocks": 4,
+    "solutions": {
+     "0": 1
+    },
+    "best_hits": 16
+   }
+  ],
+  "best_hits_over_solved": 16
+ },
+ "notes": "144 settings; 2 consistent on their whole crib blocks; best known-letter count among them 16 of 24; 0 full hits.",
+ "error": null,
+ "worked_example": "ciphertext feedback, blocks of two from position 1, A=0: the equation for the pair at 25-26\n\ncarved 25-26 VQ = [21, 16];  carved 23-24 LR = [11, 17];  difference [10, 25]\nmessage 25-26 TN = [19, 13]\nso M x (19, 13) = (10, 25) mod 26; the pairs 27-28, 29-30, 31-32 and 33-34 give four more such equations.",
+ "seconds": 0.004021167755126953
+}

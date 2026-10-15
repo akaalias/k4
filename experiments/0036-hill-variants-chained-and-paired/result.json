@@ -1,0 +1,74 @@
+{
+ "id": 36,
+ "tag": "0036-hill-variants-chained-and-paired",
+ "started": "2026-10-15T08:40:45+00:00",
+ "seconds": 0.1,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 87.1,
+  "test": 6.6,
+  "run": 0.1,
+  "record": 0.0
+ },
+ "ended_epoch": 1792053645.768192,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig"
+ },
+ "bounds": {
+  "family": "Hill variants: ciphertext feedback, plaintext feedback, summed input, paired matrices; sizes 2-4",
+  "numberings": [
+   "std0",
+   "std1",
+   "kry0",
+   "kry1"
+  ],
+  "settings": 144,
+  "settings_solved": 2,
+  "solved_settings": [
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 0,
+    "variant": "chain-c",
+    "crib_blocks": 4,
+    "solutions": {
+     "0": 1
+    },
+    "best_hits": 16
+   },
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 3,
+    "variant": "chain-c",
+    "crib_blocks": 4,
+    "solutions": {
+     "0": 1
+    },
+    "best_hits": 16
+   }
+  ],
+  "best_hits_over_solved": 16
+ },
+ "notes": "144 settings; 2 consistent on their whole crib blocks; best known-letter count among them 16 of 24; 0 full hits.",
+ "error": null,
+ "candidates": []
+}

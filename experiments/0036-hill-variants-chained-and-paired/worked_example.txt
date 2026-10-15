@@ -1,0 +1,5 @@
+ciphertext feedback, blocks of two from position 1, A=0: the equation for the pair at 25-26
+
+carved 25-26 VQ = [21, 16];  carved 23-24 LR = [11, 17];  difference [10, 25]
+message 25-26 TN = [19, 13]
+so M x (19, 13) = (10, 25) mod 26; the pairs 27-28, 29-30, 31-32 and 33-34 give four more such equations.

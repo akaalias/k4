@@ -1,0 +1,8 @@
+three clockwise quarter turns at widths 7, 9, 13: where the first known letters go
+
+place  letter  after 7  after 9  after 13  copper there
+   22       E       11       21        61             N
+   23       A       25       75        71             Z
+   24       S       39       29        22             F
+   64       B        5       55        20             B
+   65       E       19        9        69             T

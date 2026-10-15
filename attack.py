@@ -1,155 +1,198 @@
-"""Experiment 0022. See program.md for the contract."""
+"""Experiment 0023. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "porta-halves-and-period-sweep",
-    "title": "Porta: the reciprocal half-alphabet tableau, which the 24 conventions never covered",
-    "family": "1-keyed-periodic",
-    "parent": "0020-short-periods-mixed-alphabets-consistency",
-    "changed": "A different tableau. Porta splits the alphabet into two halves and always sends a letter to the other half; the key letter chooses one of 13 reciprocal alphabets. Tested with the alphabet in standard, KRYPTOS and every vocabulary-mixed order.",
+    "slug": "masks-reversal-and-nulls-then-tableau",
+    "title": "Masks that move the known letters: the message written backwards, or padded with nulls, before a periodic tableau",
+    "family": "2-masked-plaintext",
+    "parent": None,
+    "changed": "New root in family 2. The mask is a known rearrangement or padding of the plaintext applied before a periodic tableau: reversal, a null before every k-th letter, or a run of nulls at the start. The cribs then sit at computable intermediate positions.",
     "hypothesis_expert": (
-        "Porta (1563; in Friedman and Hitt, so in what Scheidt taught, C5) is reciprocal: with the alphabet "
-        "A split into halves H1 and H2, key letter k selects j = index(k) div 2, and p in H1 at index i goes to "
-        "H2[(i + j) mod 13], p in H2 at index i goes to H1[(i - j) mod 13]. Our 24 conventions are Vigenere, "
-        "Beaufort and variant Beaufort over full alphabets and do not contain it. Two tests. First the "
-        "halves: every crib plaintext letter must sit in the opposite half from its ciphertext letter; under "
-        "the standard order E and F are both in A-M, so standard Porta dies at position 22 at once, and each "
-        "of the 248 vocabulary-mixed orders passes with chance 2 to the minus 24. Second, for any order that "
-        "passes, the forced j at each crib position gives a period sweep 1-52 by the divisor rule, with the "
-        "forced key fragment matched against the vocabulary. Both the ACA direction and its mirror are "
-        "tried. Bounds: complete for Porta over this alphabet pool."
+        "Scheidt: 'I masked the English language' (C4); the NPR 2005 guesses were nulls and phonetic "
+        "spelling, and reversal is the simplest Sanborn-style 'visual system' (C3). A mask that only moves "
+        "letters or inserts nulls is a monotone or mirrored map from plaintext position to intermediate "
+        "position; after it a periodic tableau with separate alphabets forces key letters at the mapped "
+        "positions, and the divisor rule gives the live periods exactly as in 0006. Masks: reversal; a null "
+        "before every k-th letter for k = 2 to 24 at every phase; a prefix of 1 to 24 nulls; and reversal "
+        "combined with each. For each mask and each of the 24 conventions the smallest live period is found; "
+        "periods up to 30 have their forced fragments matched against the vocabulary and K1-K3 windows and "
+        "scored as English, with ten shuffled controls. Bounds: complete for these masks and conventions."
     ),
     "hypothesis_eli5": (
-        "Porta is an old cipher that cuts the alphabet in two halves and always swaps a letter into the "
-        "other half: a letter from the first half always lands in the second, and back. That gives a quick "
-        "check: every known letter must have been swapped across the halves. With the ordinary alphabet, E "
-        "and its carved partner F are both in the first half, so Porta fails at the very first known letter. "
-        "But if the alphabet was first reordered by a secret word, the halves change, so we try every "
-        "reordering the puzzle's words allow."
+        "The cipher's designer said he first disguised the English before enciphering it. Two simple "
+        "disguises change where the known letters sit without changing them: writing the message backwards, "
+        "or slipping a meaningless letter in after every few real ones. We try each disguise, work out where "
+        "EASTNORTHEAST and BERLINCLOCK would then sit, and ask again whether a short repeating secret word "
+        "could have produced the carved letters at those spots."
     ),
     "prediction": (
-        "No alphabet order passes the halves test for all 24 cribs; the best passes about 18 of 24. So no "
-        "period sweep runs and zero candidates pass."
+        "Reversal and every null pattern leave the smallest live period in the 20s or above, as random "
+        "position maps do. No forced fragment matches a word or beats the shuffled controls. Zero candidates pass."
     ),
     "method": (
-        "1. Build the alphabet pool. 2. For each order, split into halves and count crib positions whose "
-        "plaintext and ciphertext letters are in the same half. 3. For any order with zero such positions, "
-        "derive the forced alphabet number j at each crib and sweep periods 1-52 by the divisor rule in "
-        "both directions. 4. Match forced fragments against the vocabulary; decrypt and submit matches."
+        "1. Build the masks as position maps from plaintext index to intermediate index. 2. For each mask and "
+        "convention, force the key letter at each crib's intermediate position. 3. Find live periods by the "
+        "divisor rule. 4. For live periods up to 30, match the forced fragment against the vocabulary and "
+        "K1-K3 windows and score it as English. 5. Repeat the scoring on ten shuffles of K4."
     ),
     "walkthrough": (
-        "1. Write the alphabet in two rows: A to M above, N to Z below. 2. Position 22 is plaintext E and "
-        "carved F; both are in the top row. 3. In Porta a top-row letter always becomes a bottom-row letter, "
-        "so this cannot be Porta on the plain alphabet. 4. Now reorder the alphabet by a word, say "
-        "PALIMPSEST: PALIMSETBCDFG above, HJKNOQRUVWXYZ below. 5. E and F are again both above: dead. "
-        "6. Try every reordering the puzzle's words give; a reordering that separates all 24 pairs would "
-        "then get its key letters worked out one position at a time."
+        "1. Write the message backwards: the E of EAST at position 22 is now at position 76, and the K of "
+        "CLOCK at 74 is now at 24. 2. Under the sculpture's alphabet with Vigenere, the carved letter at 76 "
+        "and plaintext E force one key letter; the carved letter at 24 and plaintext K force another. "
+        "3. The reversed EASTNORTHEAST occupies 64 to 76 and the reversed BERLINCLOCK 24 to 34. 4. Positions "
+        "whose distance is a multiple of the period share a key letter; if their forced letters differ, that "
+        "period is dead. 5. Now try padding instead: a null after every third letter pushes position 22 to "
+        "29 and position 64 to 85. 6. Repeat the forcing and the period test for each padding pattern."
     ),
 }
 
-from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY, load_k1, load_k2, load_k3
+import random
+from kryptos.alphabets import conventions, key_letter_for, decrypt_letter, encrypt_letter
+from kryptos.facts import load_k1, load_k2, load_k3
 
 N = 97
-MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
-DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0 and k <= 52] for d in range(1, N + 1)}
+DIVISORS = {d: [k for k in range(1, d + 1) if d % k == 0] for d in range(1, N + 1)}
+MAX_KEY_PERIOD = 30
+NULL = "X"
 
 
 def letters(s):
     return "".join(c for c in s if "A" <= c <= "Z")
 
 
-def pool_of(vocab):
-    pool = {"std": STD, "kry": KRY}
-    for w in vocab:
-        if len(set(w)) >= 3:
-            for mname, fn in MIX.items():
-                pool[f"{w}/{mname}"] = fn(w)
-    seen, out = {}, {}
-    for name, A in pool.items():
-        if A not in seen:
-            seen[A] = name; out[name] = A
+def mask_set():
+    """Each mask: (name, spec). A spec maps a plaintext string to the intermediate string of length <= 97
+    (padded with nulls to 97 when shorter) and also gives the position map."""
+    masks = [("identity", {"rev": False, "k": 0, "phase": 0, "prefix": 0})]
+    masks.append(("reversed", {"rev": True, "k": 0, "phase": 0, "prefix": 0}))
+    for rev in (False, True):
+        for k in range(2, 25):
+            for phase in range(k):
+                masks.append((f"{'reversed, ' if rev else ''}null before every {k}th letter, phase {phase}", {"rev": rev, "k": k, "phase": phase, "prefix": 0}))
+        for prefix in range(1, 25):
+            masks.append((f"{'reversed, ' if rev else ''}{prefix} nulls first", {"rev": rev, "k": 0, "phase": 0, "prefix": prefix}))
+    return masks
+
+
+def position_map(spec):
+    """Plaintext index (0-based, 97 long) -> intermediate index, or None if pushed past 97."""
+    order = list(range(N))[::-1] if spec["rev"] else list(range(N))
+    out = {}
+    j = spec["prefix"]
+    k, phase = spec["k"], spec["phase"]
+    for n, i in enumerate(order):
+        if k and n % k == phase:
+            j += 1
+        if j >= N:
+            break
+        out[i] = j
+        j += 1
     return out
 
 
-def porta_letter(p, j, A, mirror=False):
-    h1, h2 = A[:13], A[13:]
-    if p in h1:
-        i = h1.index(p)
-        return h2[(i - j) % 13] if mirror else h2[(i + j) % 13]
-    i = h2.index(p)
-    return h1[(i + j) % 13] if mirror else h1[(i - j) % 13]
-
-
-def forced_j(p, c, A, mirror=False):
-    """The alphabet number j (0-12) that sends p to c, or None if p and c share a half."""
-    h1, h2 = A[:13], A[13:]
-    if p in h1 and c in h2:
-        return ((h2.index(c) - h1.index(p)) * (-1 if mirror else 1)) % 13
-    if p in h2 and c in h1:
-        return ((h2.index(p) - h1.index(c)) * (-1 if mirror else 1)) % 13
-    return None
+def apply_mask(plaintext, spec):
+    pm = position_map(spec)
+    inter = [NULL] * N
+    for i, j in pm.items():
+        inter[j] = plaintext[i]
+    return "".join(inter)
 
 
 def encrypt(plaintext, key):
-    A, k, mirror = key["alphabet"], key["key"], key["mirror"]
-    return "".join(porta_letter(p, A.index(k[i % len(k)]) // 2, A, mirror) for i, p in enumerate(plaintext))
+    inter = apply_mask(plaintext, key["mask"])
+    pa, ca, ka, m, k = key["pa"], key["ca"], key["ka"], key["m"], key["key"]
+    return "".join(encrypt_letter(p, k[i % len(k)], pa, ca, ka, m) for i, p in enumerate(inter))
+
+
+def score_fragment(slots, P, score):
+    frag = [slots.get(s) for s in range(P)]
+    runs, cur = [], []
+    for ch in frag + [None]:
+        if ch is None:
+            if len(cur) >= 5: runs.append("".join(cur))
+            cur = []
+        else:
+            cur.append(ch)
+    qs = sum(len(r) - 3 for r in runs)
+    return None if qs < 4 else sum(score(r) * (len(r) - 3) for r in runs) / qs
+
+
+def search(ct, known, masks, convs, score, texts, vocab, collect):
+    crib_pos = sorted(known)
+    best, results, candidates = [], [], []
+    for name, spec in masks:
+        pm = position_map(spec)
+        if any((p - 1) not in pm for p in crib_pos):
+            results.append({"mask": name, "note": "a crib pushed past position 97"}); continue
+        inter = [pm[p - 1] for p in crib_pos]
+        minp = 99
+        for conv in convs:
+            pa, ca, ka, m = conv
+            forced = [key_letter_for(known[p], ct[j], pa, ca, ka, m) for p, j in zip(crib_pos, inter)]
+            dead = set()
+            for a in range(24):
+                for b in range(a + 1, 24):
+                    if forced[a] != forced[b]:
+                        dead.update(DIVISORS[abs(inter[a] - inter[b])])
+            live = [P for P in range(1, N + 1) if P not in dead]
+            minp = min(minp, live[0])
+            for P in [P for P in live if P <= MAX_KEY_PERIOD]:
+                slots = {j % P: l for j, l in zip(inter, forced)}
+                sc = score_fragment(slots, P, score)
+                if sc is not None and (len(best) < 15 or sc > best[-1][0]):
+                    best.append((sc, name, "/".join(conv), P, "".join(slots.get(s, ".") for s in range(P)))); best.sort(reverse=True); best = best[:15]
+                if collect:
+                    pool = set(w for w in vocab if len(w) == P)
+                    for t in texts:
+                        for i in range(0, len(t) - P + 1):
+                            pool.add(t[i:i + P])
+                    for kw in pool:
+                        if all(kw[s] == l for s, l in slots.items()):
+                            key = {"mask": spec, "pa": pa, "ca": ca, "ka": ka, "m": m, "key": kw}
+                            inter_pt = "".join(decrypt_letter(ct[i], kw[i % P], pa, ca, ka, m) for i in range(N))
+                            pt = [NULL] * N
+                            for i, j in pm.items():
+                                pt[i] = inter_pt[j]
+                            candidates.append({"plaintext": "".join(pt), "key": key, "key_bits": 4.7 * P + 8, "key_description": f"{name}; period {P} key {kw}; {pa}/{ca}/{ka} {m}"})
+        results.append({"mask": name, "smallest_live_period": minp})
+    return best, results, candidates
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
+    masks = mask_set()
+    convs = list(conventions())
     vocab = list(ctx.vocabulary)
-    pool = pool_of(vocab)
     texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
-    crib_pos = sorted(known)
-    halves = []
-    passing = []
-    for name, A in pool.items():
-        h1 = set(A[:13])
-        same = sum(1 for pos in crib_pos if (known[pos] in h1) == (ct[pos - 1] in h1))
-        halves.append((same, name))
-        if same == 0:
-            passing.append(name)
-    halves.sort()
-    survivors, candidates = [], []
-    for name in passing:
-        A = pool[name]
-        for mirror in (False, True):
-            forced = [(pos - 1, forced_j(known[pos], ct[pos - 1], A, mirror)) for pos in crib_pos]
-            dead = set()
-            for x in range(24):
-                for y in range(x + 1, 24):
-                    if forced[x][1] != forced[y][1]:
-                        dead.update(DIVISORS[abs(forced[x][0] - forced[y][0])])
-            for P in range(1, 53):
-                if P in dead:
-                    continue
-                slots = {i % P: j for i, j in forced}
-                survivors.append({"alphabet": name, "mirror": mirror, "period": P})
-                if P <= 30:
-                    wordpool = set(w for w in vocab if len(w) == P)
-                    for t in texts:
-                        for i in range(0, len(t) - P + 1):
-                            wordpool.add(t[i:i + P])
-                    for kw in wordpool:
-                        if all(A.index(kw[s]) // 2 == j for s, j in slots.items()):
-                            key = {"alphabet": A, "key": kw, "mirror": mirror}
-                            pt = encrypt(ct, key)   # Porta is reciprocal: decrypting is encrypting again
-                            candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * P + 8, "key_description": f"Porta key {kw} on {name}{' mirrored' if mirror else ''}"})
+    best, results, candidates = search(ct, known, masks, convs, ctx.english_score, texts, vocab, True)
+    nulls = []
+    for seed in range(10):
+        letters_ = list(ct); random.Random(seed).shuffle(letters_)
+        nb, _, _ = search("".join(letters_), known, masks, convs, ctx.english_score, texts, vocab, False)
+        nulls.append(round(nb[0][0], 3) if nb else None)
+    minp_hist = {}
+    for r in results:
+        if "smallest_live_period" in r:
+            minp_hist[r["smallest_live_period"]] = minp_hist.get(r["smallest_live_period"], 0) + 1
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "Porta over standard, KRYPTOS and vocabulary-mixed alphabet orders", "alphabets": len(pool),
-                   "halves_test": "crib positions whose plaintext and ciphertext share a half; zero required",
-                   "best_orders": [{"same_half_positions": a, "alphabet": b} for a, b in halves[:10]],
-                   "orders_passing_halves": passing, "period_survivors": survivors[:40], "n_period_survivors": len(survivors),
-                   "vocab_matches": len(candidates)},
-        "notes": f"{len(pool)} alphabet orders; {len(passing)} pass the halves test (best has {halves[0][0]} same-half positions); {len(survivors)} (order, direction, period) survivors; {len(candidates)} matches.",
+        "bounds": {"family": "masked plaintext (reversal, regular nulls, prefix nulls) then periodic tableau", "masks": len(masks), "conventions": 24,
+                   "smallest_live_period_histogram": {str(k): v for k, v in sorted(minp_hist.items())},
+                   "masks_dropping_a_crib": sum(1 for r in results if "note" in r),
+                   "best_forced_fragments": [{"score": round(sc, 3), "mask": n, "convention": c, "period": P, "fragment": f} for sc, n, c, P, f in best],
+                   "shuffled_control_best": nulls, "vocab_matches": len(candidates)},
+        "notes": f"{len(masks)} masks x 24 conventions. Smallest live period over all masks: {min(minp_hist) if minp_hist else None}. Best fragment {best[0][0]:.3f} vs shuffled best {max(x for x in nulls if x is not None):.3f}. {len(candidates)} matches.",
     }
 
 
 def worked_example(ctx, key):
-    lines = ["halves test on the standard order: A-M above, N-Z below", "", "pos  plain  half   carved  half   swapped across?"]
-    h1 = set(STD[:13])
-    for pos in (22, 23, 24, 25, 26, 64, 65, 66):
-        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
-        lines.append(f"{pos:>3}    {p}    {'top' if p in h1 else 'bottom':<6}   {c}    {'top' if c in h1 else 'bottom':<6}   {'yes' if (p in h1) != (c in h1) else 'NO'}")
+    spec = {"rev": True, "k": 0, "phase": 0, "prefix": 0}
+    pm = position_map(spec)
+    lines = ["mask: the message written backwards; convention kry/kry/kry Vigenere", "", "plain pos  letter  sits at  carved there  forced key letter"]
+    for pos in (22, 23, 24, 64, 65, 74):
+        j = pm[pos - 1]
+        lines.append(f"{pos:>9}    {ctx.KNOWN[pos]}       {j+1:>3}        {ctx.K4[j]}            {key_letter_for(ctx.KNOWN[pos], ctx.K4[j], 'kry', 'kry', 'kry', 'vig')}")
+    spec2 = {"rev": False, "k": 3, "phase": 0, "prefix": 0}
+    pm2 = position_map(spec2)
+    lines.append("")
+    lines.append(f"mask: a null before every 3rd letter: position 22 sits at {pm2[21]+1}, position 64 at {pm2[63]+1}")
     return "\n".join(lines)

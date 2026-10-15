@@ -1,0 +1,27 @@
+keyword SHADOW: alphabet SHADOWBCEFGIJKLMNPQRTUVXYZ; both sides, Vigenere
+
+place  known  carved  key value
+   22      E       F          1
+   23      A       L         12
+   24      S       R         19
+   25      T       V          2
+   26      N       Q          2
+   27      O       Q         14
+   28      R       P         24
+   29      T       R         25
+   30      H       N         15
+   31      E       G          2
+   32      A       K         11
+   33      S       S          0
+   34      T       S          6
+   64      B       N         10
+   65      E       Y         16
+   66      R       P         24
+   67      L       V          8
+   68      I       T          9
+   69      N       T          4
+   70      C       M          8
+   71      L       Z         11
+   72      O       F          5
+   73      C       P         10
+   74      K       K          0

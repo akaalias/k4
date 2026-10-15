@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key",
+  "text": "A cipher can take its key from its own letters. Here each letter's key is another carved letter, picked by K3's counting rule: start somewhere, step a fixed amount, wrap at 97. Step 96 reads the copper backwards, like a mirror."
+ },
+ {
+  "anchor": "the check",
+  "text": "Carved letter minus key letter must give the known letter at all 24 places, or, with a secret word added, the leftovers must repeat with the word's length."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every start and step, 16 table rules: at best 7 of 24 alone, as on scrambled coppers (7-9). With a word added nothing shorter than 25 fits, and at 25 K4 has fewer settings than any copper."
+ }
+]

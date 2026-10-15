@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key",
+  "text": "Here the message is its own key: each letter is shifted by another message letter, picked by K3's counting rule. The rule runs in loops, so one known letter forces the next letter round its loop."
+ },
+ {
+  "anchor": "the check",
+  "text": "When a loop comes back to a known letter, or closes on itself, the forced letter must agree. With the mirror rule every loop is two places long and gives a check at once."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every start and step, 12 table rules: no setting survives on K4, and none on ten scrambled coppers either. The idea is ruled out by the known letters alone."
+ }
+]

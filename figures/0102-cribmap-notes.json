@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the doubt",
+  "text": "Experiment 100 left one count higher on K4 than on fifty scrambles. K4 also repeats letter pairs 21 apart more than chance, and 21 is a multiple of 3, which could raise a period-3 count by itself."
+ },
+ {
+  "anchor": "the test",
+  "text": "So K4 is compared with 400 ordinary scrambles and with 400 copies that move whole columns of a 21-wide grid, which keeps every pair 21 apart."
+ },
+ {
+  "anchor": "the result",
+  "text": "K4's 12 beats the ordinary scrambles with p 0.043, but against copies that keep the pairs p is 0.10, and allowing for four cells it is 0.048 even under scrambles. Not significant."
+ }
+]

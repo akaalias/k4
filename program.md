@@ -61,6 +61,18 @@ negative result: a precise statement of what was searched.
 7. Add any new technical word in `hypothesis_eli5` to `GLOSSARY.md` before the run.
 8. Add one line to today's entry in `NOTEBOOK.md`: number, family, finding. Add a
    paragraph when something was decided, went wrong, or changed the plan.
+9. Draw the experiment's two illustrations, the crib map and the worksheet, in
+   `design/make_experiment_figures.py` (or a script beside it), writing
+   `figures/NNNN-cribmap.svg`, `figures/NNNN-cribmap-notes.json` and
+   `figures/NNNN-worksheet.svg`. Follow the style guide (`design/style-guide-v5.pdf`):
+   the frame with the method on a wash panel, short labels with leaders, two to four
+   notes, worksheets on the grid, real letters and numbers from the record. Render
+   each figure and look at it before committing. Every experiment has illustrations.
+10. The readable-words pass runs by itself: after every run the harness asks a
+   language model to mark the English words in the readings that passed every gate
+   and the five closest, checks each against the dictionary, and stores them in the
+   record (`readable_words`). The dashboard boxes them. It never changes a score or
+   a decision; a climbed key makes English fragments by construction.
 
 ## Patience and pivots
 

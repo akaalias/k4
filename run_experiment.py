@@ -123,6 +123,19 @@ def main():
     if status in ("timeout", "error"):
         decision = status
 
+    # readable words: a language model marks the English words in the readings that passed every
+    # gate (and the five closest that did not), checked against the dictionary; best effort, never
+    # fatal, and it never changes the score or the decision. See tools/readable_words.py.
+    try:
+        from tools.readable_words import words_for
+        pick = [c for c in scored if c.get("gate_passed")]
+        pick += sorted([c for c in scored if not c.get("gate_passed") and c.get("loss") is not None], key=lambda c: c["loss"])[:5]
+        found = words_for([c["plaintext"] for c in pick if len(c.get("plaintext", "")) == 97])
+        for c in scored:
+            if c.get("plaintext") in found:
+                c["readable_words"] = found[c["plaintext"]]
+    except Exception as e:  # noqa: BLE001
+        print("readable words skipped:", e)
     phases["record"] = time.time() - t_record
     phases = {k: round(v, 1) for k, v in phases.items()}
     result = {

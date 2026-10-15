@@ -219,6 +219,21 @@ def panel_lines(text):
     return out
 
 
+_READABLE = {"mtime": None, "data": {}}
+
+
+def readable_words(text):
+    """Readable-word spans [[start, end, word], ...] (0-based) for a 97-letter reading, from
+    data/readable_words.json, which the harness fills after every run (tools/readable_words.py)."""
+    p = ROOT / "data" / "readable_words.json"
+    if not p.exists():
+        return []
+    m = p.stat().st_mtime
+    if _READABLE["mtime"] != m:
+        _READABLE["data"] = json.loads(p.read_text()); _READABLE["mtime"] = m
+    return (_READABLE["data"].get(text) or {}).get("words", [])
+
+
 def letter_panel(text, known, mode, title, captions=()):
     """Every panel box is 33 cells wide, the longest line on the copper (K3's ninth), so all panels match.
     One panel in the house letter-cell style, laid out as the copper carries K4: the K3 tail
@@ -229,6 +244,11 @@ def letter_panel(text, known, mode, title, captions=()):
     that misses is outlined in accent."""
     rows = []
     offset = 0
+    word_of = {}
+    if mode == "candidate" and text:
+        for n, (a, b, _w) in enumerate(readable_words(text)):
+            for q in range(a, b):
+                word_of[q + 1] = n            # 1-based place -> word number
     for k, chunk in enumerate(panel_lines(text if text else "?" * 97)):
         cells = []
         if k == 0:
@@ -244,6 +264,18 @@ def letter_panel(text, known, mode, title, captions=()):
                     cells.append(f'<i class="lc known">{esc(ch)}</i>' if ch == known[i] else f'<i class="lc miss" title="should be {esc(known[i])}">{esc(ch)}</i>')
                 else:
                     cells.append(f'<i class="lc ink">{esc(ch)}</i>')
+        if word_of:
+            # box the readable words: group this line's cells by word, as in the K1-K3 panels
+            tail_n = len(K3_TAIL) if k == 0 else 0
+            grouped, run, cur = cells[:tail_n], [], None
+            for j, cell in enumerate(cells[tail_n:]):
+                w = word_of.get(offset + j + 1)
+                if run and w != cur:
+                    grouped.append(f'<span class="word">{"".join(run)}</span>' if cur is not None else "".join(run)); run = []
+                run.append(cell); cur = w
+            if run:
+                grouped.append(f'<span class="word">{"".join(run)}</span>' if cur is not None else "".join(run))
+            cells = grouped
         rows.append(f'<div class="lrow">{"".join(cells)}</div>')
         offset += len(chunk)
     caps = "".join(f'<p class="lp-cap{" acc" if c.startswith("scored") else ""}">{esc(c)}</p>' for c in captions)

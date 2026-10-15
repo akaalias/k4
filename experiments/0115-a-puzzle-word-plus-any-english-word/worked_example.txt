@@ -1,0 +1,12 @@
+first word KRYPTOS from its K at place 1; sculpture's alphabet, Vigenere; second word of length 8
+
+place  known  carved  key value  KRYPTOS letter  second word's letter  slot (mod 8)
+   22      E       F          1               K                     R             5
+   23      A       L         10               R                     C             6
+   24      S       R         21               Y                     N             7
+   25      T       V         18               P                     I             0
+   30      H       N          5               R                     T             5
+   31      E       G          2               Y                     K             6
+   64      B       N         11               K                     E             7
+
+slots asked for two different letters: [0, 1, 2, 3, 4, 5, 6, 7]

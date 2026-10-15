@@ -69,7 +69,7 @@ anything." Key-source rule plus families C and D. Status: as a running key, K1-K
 (a) KRYPTOS itself used in a way not yet tried (as a transposition key for K4, as it was
 for K3; as the K4 Vigenère key at a period other than 7; as a numeric key 1473625);
 (b) the tableau's own header A-Z; (c) the word on the entrance, the Morse, the compass;
-(d) the title's meaning, "hidden," as a word. Status: KRYPTOS as a periodic tableau key at any period and convention is excluded by 0005; as a transposition key alone, excluded with every other pure transposition by letter counts (0051).
+(d) the title's meaning, "hidden," as a word. Status: KRYPTOS as a periodic tableau key at any period and convention is excluded by 0005; as a transposition key alone, excluded with every other pure transposition by letter counts (0051). As one stage of a double column shuffle (every order of seven columns, KRYPTOS's among them) with a plain or word-keyed second stage and a periodic key: dead (0084).
 
 **C9. "Having the letters sitting there in plain sight is a pretty big clue."** (2005).
 Readings: (a) the ciphertext is already the plaintext in some reading order

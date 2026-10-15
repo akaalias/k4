@@ -1,182 +1,155 @@
-"""Experiment 0031. See program.md for the contract."""
+"""Experiment 0032. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "copper-off-by-one-autokey-and-two-words",
-    "title": "The copper off by one letter: the chained autokey and the two-word tests rerun with a letter dropped or added anywhere",
-    "family": "1-keyed-periodic",
-    "parent": "0012-plaintext-autokey-chained-from-cribs",
-    "changed": "The one-letter-error parameter applied to two exact tests at once. The carved text is taken with one letter deleted at each of 97 positions or one unknown letter inserted at each of 98, and the chained plaintext autokey (0012) and the two-word linear test (0014, total length up to 20) run on every variant.",
+    "slug": "row-keyed-grids-one-key-letter-per-row",
+    "title": "Sanborn's matrix with a key letter per row: write the message in rows of width w, encipher each row with one letter of the key",
+    "family": "6-transposition-then-tableau",
+    "parent": "0026-double-keyed-columnar-then-tableau",
+    "changed": "Not a transposition this time but a grid-shaped key: every letter in a row shares one key letter, and the rows take the key word's letters in turn. A column-shaped key is an ordinary periodic key and is dead; the row-shaped one was never swept.",
     "hypothesis_expert": (
-        "K2 was carved with a letter dropped, and Sanborn has said 97, 98 and 100 in the same breath (C17, "
-        "C18, family G). 0009 applied the parameter to the stretch scores only. The two tests most able to "
-        "decide a family exactly are the chained plaintext autokey, where every crib forces letters up and "
-        "down the chain, and the two-word composition, where 24 equations fall on a + b unknowns. Each runs "
-        "here on 195 variants under the 24 conventions (autokey) and the standard and KRYPTOS alphabets "
-        "with both signs (two words). An inserted unknown letter breaks the autokey chain where it sits and "
-        "drops the equation at its position; a deleted letter shifts every later position by one. "
-        "Convention: crib positions are kept as given in the variant's own numbering, since Sanborn's "
-        "positions refer to the carved text. Bounds: complete for one insertion or deletion anywhere."
+        "Sanborn's 'matrix code' is text written in rows and read another way (C1). A natural hand variant "
+        "keeps the reading order and keys by row: position i takes key letter key[(i div w) mod L], so all w "
+        "letters of a row share one key letter and rows cycle through the word. EASTNORTHEAST occupies 13 "
+        "consecutive positions, so for w up to 13 at least one row holds several cribs that must force the "
+        "same key letter, with chance 26 to the minus (k - 1) for k cribs in a row; the row-length L then adds "
+        "collisions between rows. Swept: w = 2 to 48, L = 1 to 48, plain and cipher alphabets from the "
+        "standard, KRYPTOS and keyword-mixed vocabulary alphabets (63), three modes; the key alphabet drops "
+        "out of the consistency test. Survivors with a short L have their forced key read in the standard "
+        "and KRYPTOS alphabets and matched against the vocabulary and K1-K3 windows. Bounds: complete for "
+        "these widths, lengths and alphabets."
     ),
     "hypothesis_eli5": (
-        "The second message on the sculpture was carved with one letter missing, and the artist has been "
-        "vague about whether the fourth has 97 or 98 letters. So we redo the two sharpest tests from "
-        "yesterday on every version of the text that has one letter removed, or one unknown letter slipped "
-        "in, at every possible place. If a single carving slip was hiding the method, one of these versions "
-        "would suddenly chain together or solve."
+        "Imagine writing the message in a grid, say seven letters per line, and putting one letter of a "
+        "secret word beside each line: every letter on that line is shifted by that one letter. The 13 "
+        "known letters of EASTNORTHEAST fill a whole line or two, and every letter on a line must agree on "
+        "the shift. We try every line width and every secret-word length, with every table the puzzle's "
+        "words can build, and see whether the known letters ever agree."
     ),
     "prediction": (
-        "No variant makes the autokey chain consistent at any lag up to 25, and no variant makes a word pair "
-        "of total length up to 20 consistent. Larger closures and longer pairs behave as on the carved text. "
-        "Zero candidates pass."
+        "No width up to 13 survives under any alphabet pair, because a row full of cribs disagrees. Widths "
+        "above 13 survive only where no row holds two cribs with different shifts, and then only for key "
+        "lengths that avoid pairing the two crib runs; no forced key matches a word. Zero candidates pass."
     ),
     "method": (
-        "1. Build the 195 variants. 2. Autokey: for each variant, lag and convention, chain forced letters "
-        "from the cribs, treating an inserted unknown as a wall; reject on conflict; record consistent lags. "
-        "3. Two words: for each variant, alphabet pair, sign and length pair with a + b <= 20, solve the crib "
-        "equations by weighted union-find; record consistent pairs. 4. Submit fully forced autokey texts "
-        "and vocabulary word matches."
+        "1. Build the alphabet pool. 2. For each plain alphabet, cipher alphabet and mode, compute the forced "
+        "key index at each crib. 3. For each width w, group cribs by row and reject on disagreement within a "
+        "row. 4. For surviving widths, for each key length L, group rows by L and reject on disagreement. "
+        "5. Read surviving forced keys in the standard and KRYPTOS alphabets; match against the vocabulary."
     ),
     "walkthrough": (
-        "1. Suppose the carver dropped a letter right after position 40. Then the carved letters from 41 on "
-        "are one place early: the true position 65 is the carved 64, and so on. 2. Take lag 13 and the "
-        "sculpture's alphabet with Vigenere. 3. Position 22 (E) is keyed by position 9, and in turn keys "
-        "position 35, exactly as before, because the slip is after 40. 4. But position 64 (B) is now keyed "
-        "by the true position 51, which is the carved 50, and keys the true 77, the carved 76. 5. Chain "
-        "every known letter through its lag with the corrected numbering and see whether the chain closes "
-        "without contradiction. 6. Repeat for a slip at every position, and for an extra letter at every position."
+        "1. Width 7: the rows are positions 1-7, 8-14, 15-21, 22-28, 29-35, and so on. 2. Row 22-28 holds E A S "
+        "T N O R against the carved F L R V Q Q P. 3. On the plain alphabet with Vigenere, E to F is a shift "
+        "of 1, A to L a shift of 11: the row cannot have one key letter, so width 7 is dead for this alphabet. "
+        "4. Width 20: rows 21-40 and 61-80; the first holds 13 cribs, the second 11; each row must agree "
+        "internally. 5. Try every alphabet the puzzle's words build; a surviving width then gets every key "
+        "length tried, which ties rows together."
     ),
 }
 
-from math import lcm
-from kryptos.alphabets import ALPHABETS, conventions, key_letter_for, decrypt_letter, encrypt_letter
-from kryptos.facts import load_k1, load_k2, load_k3
+from kryptos.alphabets import keyword_mixed
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY, load_k1, load_k2, load_k3
 
 N = 97
-DEAD_PERIODS = set(range(1, 27)) | set(range(30, 53))
+MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
+ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
+DEC = {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}
 
 
 def letters(s):
     return "".join(c for c in s if "A" <= c <= "Z")
 
 
-def variants(ct):
-    yield "carved", ct
-    for i in range(len(ct)):
-        yield f"deleted {i+1}", ct[:i] + ct[i + 1:]
-    for i in range(len(ct) + 1):
-        yield f"inserted before {i+1}", ct[:i] + "-" + ct[i:]
+def pool_of(vocab):
+    pool = {"std": STD, "kry": KRY}
+    for w in vocab:
+        if len(set(w)) >= 3:
+            pool[f"{w}/keyword"] = keyword_mixed(w)
+    seen, out = {}, {}
+    for name, A in pool.items():
+        if A not in seen:
+            seen[A] = name; out[name] = A
+    return out
 
 
 def encrypt(plaintext, key):
-    pa, ca, ka, m = key["pa"], key["ca"], key["ka"], key["m"]
-    if key["kind"] == "autokey":
-        L, primer = key["lag"], key["primer"]
-        return "".join(encrypt_letter(p, primer[i] if i < L else plaintext[i - L], pa, ca, ka, m) for i, p in enumerate(plaintext))
-    raise NotImplementedError
-
-
-def closure(ct, known, L, conv):
-    n = len(ct)
-    pa, ca, ka, m = conv
-    forced = {pos - 1: p for pos, p in known.items() if pos - 1 < n and ct[pos - 1] != "-"}
-    queue = list(forced)
-    while queue:
-        i = queue.pop()
-        p = forced[i]
-        if i - L >= 0 and ct[i] != "-":
-            k = key_letter_for(p, ct[i], pa, ca, ka, m); j = i - L
-            if ct[j] != "-":
-                if j in forced:
-                    if forced[j] != k: return False, forced
-                else:
-                    forced[j] = k; queue.append(j)
-        if i + L < n and ct[i + L] != "-":
-            q = decrypt_letter(ct[i + L], p, pa, ca, ka, m); j = i + L
-            if j in forced:
-                if forced[j] != q: return False, forced
-            else:
-                forced[j] = q; queue.append(j)
-    return True, forced
-
-
-class WUF:
-    def __init__(self, n):
-        self.p = list(range(n)); self.w = [0] * n
-    def find(self, x):
-        if self.p[x] == x: return x, 0
-        r, wr = self.find(self.p[x]); self.w[x] = (self.w[x] + wr) % 26; self.p[x] = r
-        return r, self.w[x]
-    def union(self, x, y, d):
-        rx, wx = self.find(x); ry, wy = self.find(y)
-        if rx == ry: return (wx - wy) % 26 == d % 26
-        self.p[rx] = ry; self.w[rx] = (d - wx + wy) % 26
-        return True
-
-
-def two_words(ct, known, pairs):
-    """Consistent (a, b, pa, ca, sign, s) cases on this variant."""
-    out = []
-    for pa in ("std", "kry"):
-        for ca in ("std", "kry"):
-            for psign in ("vig", "beau"):
-                t = {pos: ALPHABETS["std"].index(key_letter_for(known[pos], ct[pos - 1], pa, ca, "std", psign)) for pos in known if pos - 1 < len(ct) and ct[pos - 1] != "-"}
-                for a, b in pairs:
-                    for s in (1, -1):
-                        uf = WUF(a + b); ok = True
-                        for pos, tv in t.items():
-                            i = pos - 1
-                            if not uf.union(i % a, a + (i % b), tv):
-                                ok = False; break
-                        if ok:
-                            out.append((a, b, pa, ca, psign, s))
-    return out
+    pa, ca, ka, m, w, k = key["pa"], key["ca"], key["ka"], key["m"], key["w"], key["key"]
+    return "".join(ca[ENC[m](pa.index(p), ka.index(k[(i // w) % len(k)]))] for i, p in enumerate(plaintext))
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    convs = list(conventions())
-    pairs = [(a, b) for a in range(2, 19) for b in range(a + 1, 19) if a + b <= 20 and lcm(a, b) not in DEAD_PERIODS]
-    auto_consistent = {}     # variant -> consistent lags <= 25
-    auto_full = []
-    tw_consistent = []
-    n_var = 0
-    for vname, c in variants(ct):
-        n_var += 1
-        lags = []
-        for L in range(1, 26):
-            for conv in convs:
-                ok, forced = closure(c, known, L, conv)
-                if ok:
-                    lags.append((L, "/".join(conv), len(forced)))
-                    if len(forced) == len(c) and "-" not in c:
-                        pa, ca, ka, m = conv
-                        pt = "".join(forced[i] for i in range(len(c)))
-                        primer = "".join(key_letter_for(pt[i], c[i], pa, ca, ka, m) for i in range(L))
-                        auto_full.append({"plaintext": pt, "key": {"kind": "autokey", "lag": L, "primer": primer, "pa": pa, "ca": ca, "ka": ka, "m": m},
-                                          "key_bits": 4.7 * L, "key_description": f"{vname}; autokey lag {L} primer {primer}; {pa}/{ca}/{ka} {m}"})
-        if lags:
-            auto_consistent[vname] = lags[:10]
-        for case in two_words(c, known, pairs):
-            tw_consistent.append((vname,) + case)
-        if ctx.time_left() < 60:
+    vocab = list(ctx.vocabulary)
+    pool = pool_of(vocab)
+    index = {n: {ch: i for i, ch in enumerate(A)} for n, A in pool.items()}
+    texts = [letters(load_k1()["plaintext"]), letters(load_k2()["plaintext_as_carved"]), letters(load_k3()["plaintext"])]
+    crib_pos = sorted(known)
+    width_surv = {}      # w -> count of (pa, ca, m) surviving the row test
+    full_surv = []       # (w, L, pa, ca, m, slots)
+    candidates = []
+    cases = 0
+    for pname, pa in pool.items():
+        pidx = index[pname]
+        for cname, ca in pool.items():
+            cidx = index[cname]
+            for m, f in MODES.items():
+                forced = [(pos - 1, f(pidx[known[pos]], cidx[ct[pos - 1]])) for pos in crib_pos]
+                for w in range(2, 49):
+                    cases += 1
+                    rows = {}
+                    ok = True
+                    for i, k in forced:
+                        r = i // w
+                        if r in rows and rows[r] != k:
+                            ok = False; break
+                        rows[r] = k
+                    if not ok:
+                        continue
+                    width_surv[w] = width_surv.get(w, 0) + 1
+                    for L in range(1, 49):
+                        slots = {}
+                        ok2 = True
+                        for r, k in rows.items():
+                            s = r % L
+                            if s in slots and slots[s] != k:
+                                ok2 = False; break
+                            slots[s] = k
+                        if not ok2:
+                            continue
+                        full_surv.append((w, L, pname, cname, m, slots))
+                        if L <= 30 and len(slots) >= 3:
+                            for ka_name in ("std", "kry"):
+                                A = pool[ka_name]
+                                wordpool = set(x for x in vocab if len(x) == L)
+                                for t in texts:
+                                    for i in range(0, len(t) - L + 1):
+                                        wordpool.add(t[i:i + L])
+                                for kw in wordpool:
+                                    if all(A.index(kw[s]) == k for s, k in slots.items()):
+                                        key = {"pa": pa, "ca": ca, "ka": A, "m": m, "w": w, "key": kw}
+                                        pt = "".join(pa[DEC[m](cidx[c], A.index(kw[(i // w) % L]))] for i, c in enumerate(ct))
+                                        candidates.append({"plaintext": pt, "key": key, "key_bits": 4.7 * L + 6, "key_description": f"rows of {w}, key {kw} per row; {pname}/{cname}/{ka_name} {m}"})
+        if ctx.time_left() < 30:
             break
+    by_L = {}
+    for w, L, *_ in full_surv:
+        by_L[L] = by_L.get(L, 0) + 1
     return {
-        "candidates": auto_full[:50],
-        "bounds": {"family": "one-letter error (insert or delete anywhere) x chained plaintext autokey lags 1-25 x two words a + b <= 20",
-                   "variants": n_var, "conventions": 24, "two_word_pairs": len(pairs),
-                   "autokey_variants_with_a_consistent_lag": len(auto_consistent),
-                   "autokey_consistent_cases": {k: v for k, v in list(auto_consistent.items())[:20]},
-                   "autokey_fully_forced": len(auto_full),
-                   "two_word_consistent_cases": [{"variant": v, "a": a, "b": b, "plain": pa, "cipher": ca, "plain_sign": ps, "s": s} for v, a, b, pa, ca, ps, s in tw_consistent[:40]],
-                   "n_two_word_consistent": len(tw_consistent)},
-        "notes": f"{n_var} variants. Autokey lags 1-25: {len(auto_consistent)} variants have a consistent lag, {len(auto_full)} fully forced (97-letter variants only). Two words with a + b <= 20: {len(tw_consistent)} consistent cases.",
+        "candidates": candidates[:50],
+        "bounds": {"family": "grid with one key letter per row, rows cycling through a key word", "widths": "2-48", "key_lengths": "1-48",
+                   "alphabets": len(pool), "modes": 3, "cases": cases,
+                   "widths_surviving_row_test": {str(w): n for w, n in sorted(width_surv.items())},
+                   "smallest_width_surviving": min(width_surv) if width_surv else None,
+                   "survivors_by_key_length": {str(L): n for L, n in sorted(by_L.items())},
+                   "vocab_matches": len(candidates)},
+        "notes": f"{cases} (alphabet pair, mode, width) cases. Widths surviving the row test: {sorted(width_surv)}. Survivors by key length (first 12): {dict(list(sorted(by_L.items()))[:12])}. {len(candidates)} matches.",
     }
 
 
 def worked_example(ctx, key):
-    c = ctx.K4[:40] + ctx.K4[41:]
-    lines = ["variant: the carved letter at 41 deleted; lag 13; KRYPTOS alphabet throughout, Vigenere", ""]
-    ok, forced = closure(c, ctx.KNOWN, 13, ("kry", "kry", "kry", "vig"))
-    lines.append(f"chain from the cribs {'closes' if ok else 'breaks'} after forcing {len(forced)} letters")
-    lines.append("".join(forced.get(i, ".") for i in range(len(c))))
+    lines = ["width 7, plain alphabet for both message and carved letters, Vigenere: shifts within row 22-28", "", "pos  plain  carved  shift"]
+    for pos in range(22, 29):
+        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
+        lines.append(f"{pos:>3}    {p}      {c}      {(STD.index(c) - STD.index(p)) % 26:>2}")
+    lines.append("")
+    lines.append("one row, seven different shifts: width 7 cannot have one key letter per row under this alphabet.")
     return "\n".join(lines)

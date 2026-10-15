@@ -23,3 +23,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0022	0022-porta-halves-and-period-sweep	1-keyed-periodic	0020-short-periods-mixed-alphabets-consistency	reverted	0	0	0			0	design=7 implement=63 test=0 run=0 record=0
 0023	0023-masks-reversal-and-nulls-then-tableau	2-masked-plaintext	-	reverted	0	0	0			18	design=12 implement=64 test=23 run=18 record=0
 0024	0024-keyword-plus-k2-coordinate-digits	3-two-component-key	0014-two-keywords-two-passes-linear	reverted	0	0	0			1	design=4 implement=54 test=2 run=1 record=0
+0025	0025-autokeys-with-mixed-alphabets	1-keyed-periodic	0012-plaintext-autokey-chained-from-cribs	reverted	0	0	0			2737	design=0 implement=68 test=6 run=2737 record=0

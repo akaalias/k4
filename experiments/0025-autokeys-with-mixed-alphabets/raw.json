@@ -1,0 +1,218 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "ciphertext and plaintext autokey with keyword-mixed alphabets",
+  "alphabets": 63,
+  "key_alphabet_choices": "standard, KRYPTOS, or the plain alphabet",
+  "modes": 3,
+  "lags": "1-96",
+  "trials": 3429216,
+  "ciphertext_autokey_best": {
+   "mismatches": 99,
+   "setting": null
+  },
+  "ciphertext_autokey_survivors": 0,
+  "plaintext_autokey_lags_dead_under_every_triple": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49
+  ],
+  "plaintext_autokey_best_closures": [
+   {
+    "score": -6.469,
+    "plain": "CARNARVON/keyword",
+    "cipher": "SOMEWHERE/keyword",
+    "key": "kry",
+    "mode": "vig",
+    "lag": 29,
+    "forced": 82,
+    "runs": [
+     "STHASNALNGEJFADR",
+     "EJJABLYDSMR",
+     "FDFIROINMRGOV"
+    ]
+   },
+   {
+    "score": -6.488,
+    "plain": "LUCIDMEMORY/keyword",
+    "cipher": "TWO/keyword",
+    "key": "LUCIDMEMORY/keyword",
+    "mode": "varbeau",
+    "lag": 28,
+    "forced": 84,
+    "runs": [
+     "CXWWLU",
+     "TONFYMTOMDK",
+     "TRNDINGUZBI"
+    ]
+   },
+   {
+    "score": -6.518,
+    "plain": "HOWARDCARTER/keyword",
+    "cipher": "TUTANKHAMUN/keyword",
+    "key": "HOWARDCARTER/keyword",
+    "mode": "beau",
+    "lag": 28,
+    "forced": 84,
+    "runs": [
+     "HASTKO",
+     "IWUWCDRECTV",
+     "ICUFINIKIXP"
+    ]
+   },
+   {
+    "score": -6.527,
+    "plain": "DESPARATLY/keyword",
+    "cipher": "SOMEWHERE/keyword",
+    "key": "std",
+    "mode": "beau",
+    "lag": 28,
+    "forced": 84,
+    "runs": [
+     "MENTCG",
+     "YDSTOFKMBNA",
+     "AZXDIMMGECF"
+    ]
+   },
+   {
+    "score": -6.536,
+    "plain": "WALL/keyword",
+    "cipher": "PALIMPSEST/keyword",
+    "key": "std",
+    "mode": "varbeau",
+    "lag": 28,
+    "forced": 84,
+    "runs": [
+     "BTUMOP",
+     "HOMRAVJABAI",
+     "NISHDHADEEX"
+    ]
+   },
+   {
+    "score": -6.542,
+    "plain": "NORTHEAST/keyword",
+    "cipher": "LAYER/keyword",
+    "key": "kry",
+    "mode": "vig",
+    "lag": 28,
+    "forced": 84,
+    "runs": [
+     "RETAFJ",
+     "HRAEGNLDGUJ",
+     "AWISAQOCABX"
+    ]
+   },
+   {
+    "score": -6.561,
+    "plain": "HOWARDCARTER/keyword",
+    "cipher": "BERLINWALL/keyword",
+    "key": "kry",
+    "mode": "beau",
+    "lag": 27,
+    "forced": 86,
+    "runs": [
+     "UCONLGK",
+     "SHGRAKHNCJW",
+     "HSUESEUHEWY"
+    ]
+   },
+   {
+    "score": -6.581,
+    "plain": "LOCATION/keyword",
+    "cipher": "WALL/keyword",
+    "key": "std",
+    "mode": "varbeau",
+    "lag": 28,
+    "forced": 84,
+    "runs": [
+     "MYBRAL",
+     "KAISHEZOBJQ",
+     "TLCELMPBUMC"
+    ]
+   },
+   {
+    "score": -6.583,
+    "plain": "NORTHEAST/keyword",
+    "cipher": "CARTER/keyword",
+    "key": "NORTHEAST/keyword",
+    "mode": "vig",
+    "lag": 29,
+    "forced": 82,
+    "runs": [
+     "FTAGLCDSYRLACIFS",
+     "SQKELTECABX",
+     "YEEDUEBYPECNR"
+    ]
+   },
+   {
+    "score": -6.583,
+    "plain": "WONDERFUL/keyword",
+    "cipher": "SOUTH/keyword",
+    "key": "kry",
+    "mode": "vig",
+    "lag": 29,
+    "forced": 82,
+    "runs": [
+     "TAOSOMDDLOUFEILF",
+     "AQGGIROLCAX",
+     "PFLCADCOLOBEN"
+    ]
+   }
+  ],
+  "plaintext_autokey_fully_forced": 0,
+  "shuffled_control_best": [
+   -6.608,
+   -6.336,
+   -6.404,
+   -6.472,
+   -6.387,
+   -6.184,
+   -6.257,
+   -6.157,
+   -6.422,
+   -6.442
+  ]
+ },
+ "notes": "3429216 (triple, mode, lag) cases. Ciphertext autokey: best 99 mismatches, 0 survivors. Plaintext autokey: lags dead under every triple [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 33, 34, 35, 36, 37, 38]...; 0 fully forced; best closure -6.469426635667049 vs shuffled -6.157.",
+ "error": null,
+ "worked_example": "alphabet from ABSCISSA: ABSCIDEFGHJKLMNOPQRTUVWXYZ; used for message, carved text and key; Vigenere\n\nciphertext autokey, lag 10:\npos  plain  key = carved at pos-10  E+key  carved  match\n 22    E         L                  R      F     no\n 23    A         B                  B      L     no\n 24    S         S                  I      R     no\n 64    B         L                  M      N     no\n 65    E         U                  A      Y     no\n\nplaintext autokey, lag 10: chain from the cribs breaks after forcing 24 letters",
+ "seconds": 2737.3409118652344
+}

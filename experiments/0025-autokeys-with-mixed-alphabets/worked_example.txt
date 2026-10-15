@@ -1,0 +1,11 @@
+alphabet from ABSCISSA: ABSCIDEFGHJKLMNOPQRTUVWXYZ; used for message, carved text and key; Vigenere
+
+ciphertext autokey, lag 10:
+pos  plain  key = carved at pos-10  E+key  carved  match
+ 22    E         L                  R      F     no
+ 23    A         B                  B      L     no
+ 24    S         S                  I      R     no
+ 64    B         L                  M      N     no
+ 65    E         U                  A      Y     no
+
+plaintext autokey, lag 10: chain from the cribs breaks after forcing 24 letters

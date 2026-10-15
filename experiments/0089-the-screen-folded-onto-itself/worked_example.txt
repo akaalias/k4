@@ -1,0 +1,11 @@
+K4 over the lower-right tableau plate (rows N-Z, footer), natural lines, no shift
+sculpture's alphabet, Vigenere: carved = known + key
+
+place  known  carved  line  col  straight key  ->  folded key  ->
+   22      E       F    12   18             H  Z           D  U
+   23      A       L    12   19             I  V           C  J
+   24      S       R    12   20             J  V           B  H
+   25      T       V    12   21             L  U           A  E
+   64      B       N    13   29             K  B           K  B
+   65      E       Y    13   30             R  F           Z  D
+   74      K       K    14    8             G  G           W  W

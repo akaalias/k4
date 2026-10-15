@@ -1,0 +1,170 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "running key read by position off the carved screen",
+  "sources": "tableau plates (header, 26 labelled rows, extra L in row N, footer) and cipher plates, 28 lines each",
+  "line_windows": 25,
+  "straight_or_folded": 2,
+  "column_shifts": [
+   -4,
+   4
+  ],
+  "conventions": 12,
+  "trials": 10800,
+  "k4_best_hits": 5,
+  "controls_best_hits": [
+   5,
+   6,
+   6,
+   6,
+   7,
+   6,
+   5,
+   5,
+   5,
+   5
+  ],
+  "k4_hit_histogram": {
+   "0": 4872,
+   "1": 3828,
+   "2": 1595,
+   "3": 387,
+   "4": 98,
+   "5": 20
+  },
+  "natural_alignment_hits": {
+   "tableau straight": 2,
+   "tableau folded": 2,
+   "cipher straight": 2,
+   "cipher folded": 3
+  },
+  "k4_top": [
+   {
+    "source": "tableau",
+    "start_line": 6,
+    "folded": false,
+    "shift": 4,
+    "convention": "vig/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 7,
+    "folded": false,
+    "shift": 3,
+    "convention": "vig/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 8,
+    "folded": false,
+    "shift": 2,
+    "convention": "vig/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 9,
+    "folded": false,
+    "shift": 1,
+    "convention": "vig/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 12,
+    "folded": false,
+    "shift": 2,
+    "convention": "varb/kry/kry",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 13,
+    "folded": false,
+    "shift": 1,
+    "convention": "varb/kry/kry",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 14,
+    "folded": false,
+    "shift": 0,
+    "convention": "varb/kry/kry",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 15,
+    "folded": false,
+    "shift": -1,
+    "convention": "varb/kry/kry",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 16,
+    "folded": false,
+    "shift": -2,
+    "convention": "varb/kry/kry",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 25,
+    "folded": false,
+    "shift": 4,
+    "convention": "vig/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 1,
+    "folded": false,
+    "shift": 0,
+    "convention": "beau/std/std",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 8,
+    "folded": true,
+    "shift": 1,
+    "convention": "beau/std/std",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 9,
+    "folded": false,
+    "shift": 0,
+    "convention": "vig/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 10,
+    "folded": true,
+    "shift": -3,
+    "convention": "beau/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 11,
+    "folded": true,
+    "shift": 1,
+    "convention": "vig/kry/std",
+    "hits": 5
+   }
+  ],
+  "full_24": 0,
+  "controls": "10 shuffled coppers (seed 89), identical search"
+ },
+ "notes": "10,800 overlays. K4 best 5/24; controls best 5-7. Overlays hitting all 24: 0. Natural alignment (lower plates, no shift), best hits: {'tableau straight': 2, 'tableau folded': 2, 'cipher straight': 2, 'cipher folded': 3}.",
+ "error": null,
+ "worked_example": "K4 over the lower-right tableau plate (rows N-Z, footer), natural lines, no shift\nsculpture's alphabet, Vigenere: carved = known + key\n\nplace  known  carved  line  col  straight key  ->  folded key  ->\n   22      E       F    12   18             H  Z           D  U\n   23      A       L    12   19             I  V           C  J\n   24      S       R    12   20             J  V           B  H\n   25      T       V    12   21             L  U           A  E\n   64      B       N    13   29             K  B           K  B\n   65      E       Y    13   30             R  F           Z  D\n   74      K       K    14    8             G  G           W  W",
+ "seconds": 0.4545722007751465
+}

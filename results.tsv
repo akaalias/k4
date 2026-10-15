@@ -87,3 +87,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0086	0086-the-question-mark-as-the-98th-cell	6-transposition-then-tableau	0082-where-the-blanks-go-in-the-grid	reverted	0	0	0			433	test=0 run=433 record=0
 0087	0087-column-word-plus-row-word	3-two-component-key	0032-row-keyed-grids-one-key-letter-per-row	reverted	0	0	0			113	test=0 run=113 record=0
 0088	0088-column-word-plus-a-shift-per-block	3-two-component-key	0087-column-word-plus-row-word	reverted	0	0	0			1	design=0 implement=10 test=0 run=1 record=0
+0089	0089-the-screen-folded-onto-itself	4-visual-systems	0017-running-key-from-the-sculpture-itself	reverted	0	0	0			1	implement=64 test=12 run=0 record=0

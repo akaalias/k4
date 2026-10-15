@@ -1,0 +1,156 @@
+{
+ "id": 26,
+ "tag": "0026-double-keyed-columnar-then-tableau",
+ "started": "2026-10-15T07:30:27+00:00",
+ "seconds": 175.3,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 43.5,
+  "test": 5.4,
+  "run": 175.3,
+  "record": 0.0
+ },
+ "ended_epoch": 1792049602.3934321,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "double keyed columnar (vocabulary words) then periodic tableau",
+  "routes": 15376,
+  "conventions": 24,
+  "periods": "2-40, live only",
+  "keys_scored": 108372,
+  "smallest_live_period": 23,
+  "min_live_period_histogram": {
+   "23": 16,
+   "24": 450,
+   "25": 262,
+   "26": 438,
+   "27": 6808,
+   "28": 5128,
+   "29": 670,
+   "30": 3428,
+   "31": 1270,
+   "32": 5616,
+   "33": 3448,
+   "34": 3358
+  },
+  "best": [
+   {
+    "score": -3.797,
+    "route": "MYSTERY then HILL inv",
+    "convention": "std/std/kry/beau",
+    "period": 39,
+    "runs": [
+     "ETHEMEP"
+    ]
+   },
+   {
+    "score": -4.26,
+    "route": "WONDERFUL then RIDDLE",
+    "convention": "kry/std/std/beau",
+    "period": 37,
+    "runs": [
+     "HOULD",
+     "GBLET"
+    ]
+   },
+   {
+    "score": -4.403,
+    "route": "HOWARDCARTER inv then WORLDCLOCK inv",
+    "convention": "kry/kry/kry/beau",
+    "period": 39,
+    "runs": [
+     "MTHEV",
+     "OIREH"
+    ]
+   },
+   {
+    "score": -4.443,
+    "route": "EAST then NORTHEAST inv",
+    "convention": "kry/std/std/beau",
+    "period": 40,
+    "runs": [
+     "ESCRACKP"
+    ]
+   },
+   {
+    "score": -4.443,
+    "route": "EAST then NORTHEAST inv",
+    "convention": "kry/std/std/beau",
+    "period": 38,
+    "runs": [
+     "ESCRACKP"
+    ]
+   },
+   {
+    "score": -4.443,
+    "route": "EAST then NORTHEAST inv",
+    "convention": "kry/std/std/beau",
+    "period": 35,
+    "runs": [
+     "ESCRACKP"
+    ]
+   },
+   {
+    "score": -4.49,
+    "route": "WELTZEITUHR inv then POSITION",
+    "convention": "std/kry/kry/beau",
+    "period": 33,
+    "runs": [
+     "ILETRED"
+    ]
+   },
+   {
+    "score": -4.55,
+    "route": "SANBORN inv then SHADOWFORCES inv",
+    "convention": "kry/kry/kry/varbeau",
+    "period": 40,
+    "runs": [
+     "OMEOFFAO"
+    ]
+   },
+   {
+    "score": -4.562,
+    "route": "ABSCISSAE inv then SECRET inv",
+    "convention": "kry/std/std/varbeau",
+    "period": 40,
+    "runs": [
+     "MMERK",
+     "EAMAG"
+    ]
+   },
+   {
+    "score": -4.61,
+    "route": "DIGITAL inv then WALL",
+    "convention": "kry/kry/kry/beau",
+    "period": 33,
+    "runs": [
+     "ILYATOSETC",
+     "KBLESTH"
+    ]
+   }
+  ],
+  "shuffled_control_best": [
+   -4.315,
+   -4.088,
+   -4.057,
+   -4.118,
+   -3.819,
+   -3.579,
+   -3.993,
+   -4.23,
+   -3.713,
+   -4.077
+  ]
+ },
+ "notes": "Diagnostic, no candidates. 15376 routes; smallest live period 23; best forced key -3.797 vs shuffled [-4.315, -4.088, -4.057, -4.118, -3.819, -3.579, -3.993, -4.23, -3.713, -4.077].",
+ "error": null,
+ "candidates": []
+}

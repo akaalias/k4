@@ -1,0 +1,12 @@
+route: keyed columnar KRYPTOS then keyed columnar ABSCISSA; convention kry/kry/kry Vigenere
+
+column order under KRYPTOS: [0, 3, 6, 2, 5, 1, 4]; under ABSCISSA: [0, 1, 4, 2, 3]
+
+plain pos  letter  lands at  carved  forced key letter
+       22    E        79        Z       H
+       23    A        74        K       N
+       24    S        49        W       L
+       25    T        63        B       T
+       64    B        42        Q       F
+       65    E        94        K       I
+       66    R        11        U       Q

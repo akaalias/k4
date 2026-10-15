@@ -141,7 +141,7 @@ Status: untested.
 the alignments tested; affine, chaining, 4x4, shifting numberings, paired 2x2 open); (b)
 a marker at row N, the first line of the lower-right plate, matching YAR on the first line
 of the lower-left plate; (c) a production error (Sanborn omitted it from replicas; also
-missing on Antipodes). Status: (a) 2x2, 3x3 and 4x4 Hill, plain and affine, dead under four numberings, all alignments and both directions (0015); paired 2x2, chained Hill and larger blocks open. (b) untested.
+missing on Antipodes). Status: (a) 2x2, 3x3 and 4x4 Hill, plain and affine, dead under four numberings, all alignments and both directions (0015), under 124 vocabulary keyword numberings (0044) and under 200 numberings from K1-K3 words and the 2025 letter's words (0055); paired 2x2, chained Hill and larger blocks open. (b) untested.
 
 **C22. The raised YAR / DYAHR / "1-2-3".** Readings: (a) a Gromark primer; (b) HYDRA
 anagram, a keyword; (c) the column-extraction marker for K3 only (NSA's reading); (d)

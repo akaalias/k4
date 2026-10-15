@@ -1,0 +1,5 @@
+period 27, KRYPTOS alphabet throughout, Vigenere; 24 slots forced, 3 free, climbed by English (3 restarts)
+
+key   YWOYNKYUYELYOIECBAQKMRDUMRI
+text  PEUZYOVDEPTIPLQBAOHBOEASTNORTHEASTDYFGMRRCWXTSZAVWCXZYNGDOTILLSBERLINCLOCKOFKOAWIHFOGQKNNNVTCUQVM
+English of the free letters -7.790 (English about -3.6, noise about -6.5)

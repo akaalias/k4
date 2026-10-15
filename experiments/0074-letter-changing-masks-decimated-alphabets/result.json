@@ -1,0 +1,264 @@
+{
+ "id": 74,
+ "tag": "0074-letter-changing-masks-decimated-alphabets",
+ "started": "2026-10-15T13:27:32+00:00",
+ "seconds": 18.0,
+ "status": "ran",
+ "phases": {
+  "design": 35.5,
+  "implement": 0.0,
+  "test": 9.5,
+  "run": 18.0,
+  "record": 0.1
+ },
+ "ended_epoch": 1792070870.847664,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "affine (decimated-alphabet) masks before a periodic key, ciphertext autokey, or both",
+  "decimated_alphabets": 22,
+  "pairings": 110,
+  "periods": "1-52",
+  "periodic_consistent_by_period": {
+   "26": {
+    "k4": 8,
+    "controls": [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     0,
+     8
+    ]
+   },
+   "27": {
+    "k4": 220,
+    "controls": [
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220
+    ]
+   },
+   "28": {
+    "k4": 220,
+    "controls": [
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220
+    ]
+   },
+   "29": {
+    "k4": 220,
+    "controls": [
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220
+    ]
+   },
+   "30": {
+    "k4": 0,
+    "controls": [
+     0,
+     6,
+     8,
+     16,
+     23,
+     8,
+     8,
+     8,
+     17,
+     0
+    ]
+   },
+   "31": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4
+    ]
+   },
+   "51": {
+    "k4": 0,
+    "controls": [
+     0,
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "52": {
+    "k4": 8,
+    "controls": [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     0,
+     8
+    ]
+   }
+  },
+  "autokey_constant_by_checks": {
+   "1": {
+    "k4": 79,
+    "controls": [
+     50,
+     46,
+     50,
+     56,
+     33,
+     52,
+     47,
+     48,
+     52,
+     52
+    ]
+   },
+   "2": {
+    "k4": 2,
+    "controls": [
+     2,
+     4,
+     0,
+     0,
+     2,
+     5,
+     4,
+     4,
+     2,
+     0
+    ]
+   }
+  },
+  "autokey_plus_periodic_by_checks": {
+   "1": {
+    "k4": 3682,
+    "controls": [
+     3937,
+     4152,
+     3998,
+     3723,
+     3844,
+     4046,
+     3754,
+     3845,
+     3823,
+     3795
+    ]
+   },
+   "2": {
+    "k4": 128,
+    "controls": [
+     92,
+     74,
+     151,
+     88,
+     92,
+     109,
+     104,
+     41,
+     121,
+     80
+    ]
+   },
+   "3": {
+    "k4": 0,
+    "controls": [
+     4,
+     6,
+     2,
+     4,
+     16,
+     2,
+     4,
+     8,
+     6,
+     6
+    ]
+   },
+   "4": {
+    "k4": 0,
+    "controls": [
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "fragments": 668,
+  "word_matches": []
+ },
+ "notes": "22 decimated alphabets, 110 pairings. Periodic at P <= 26 (K4, control min, max): {'26': (8, 0, 8)}. Autokey: {'1': (79, 33, 56), '2': (2, 0, 5)}. Autokey plus periodic: {'1': (3682, 3723, 4152), '2': (128, 41, 151), '3': (0, 2, 16), '4': (0, 0, 2)}. Word matches in 668 fragments: 0.",
+ "error": null,
+ "candidates": []
+}

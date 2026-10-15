@@ -1,0 +1,7 @@
+message on AZYXWVUTSRQPONMLKJIHGFEDCB, carved letters on the ordinary alphabet, Vigenere, 7-letter key
+
+place  known  carved  key  slot
+   22      E       F    J     0
+   29      T       R    K     0
+   23      A       L    L     1
+   30      H       N    U     1

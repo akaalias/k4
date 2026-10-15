@@ -1,0 +1,12 @@
+key text: the four ciphertexts as one panel (the K1/K2 block first), offset 0; sculpture's alphabet, Vigenere
+
+place  known  carved  needed  key text  offered  needed - offered
+   22      E       F       1         K        0                1
+   23      A       L      10         R        1                9
+   24      S       R      21         N       19                2
+   25      T       V      18         S        6               12
+   64      B       N      11         V       22               15
+   65      E       Y      17         F       12                5
+   74      K       K       0         W       23                3
+
+a constant shift would make the last column the same at all 24 places

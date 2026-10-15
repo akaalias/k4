@@ -1,0 +1,14 @@
+AMSCO under SHADOW, first cell one letter: the first rows of cells (place numbers)
+
+  1  2-3  4  5-6  7  8-9
+  10-11  12  13-14  15  16-17  18
+  19  20-21  22  23-24  25  26-27
+  28-29  30  31-32  33  34-35  36
+
+columns read in the order [3, 4, 2, 5, 1, 6]
+place  letter  lands at  copper there
+   22       E         4             R
+   23       A        20             B
+   24       S        21             W
+   25       T        54             L
+   64       B        77             D

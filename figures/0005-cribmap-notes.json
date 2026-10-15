@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the slot row",
+  "text": "A repeating key of length 28: place p uses slot p mod 28. Each known letter and the carved letter under it force the key letter in its slot. Drawn for one way of using the table."
+ },
+ {
+  "anchor": "the blanks",
+  "text": "At period 28 the 24 known letters fall in 24 different slots, so nothing clashes and the period survives; 4 slots stay unknown."
+ },
+ {
+  "anchor": "the verdict strip",
+  "text": "Periods 1 to 26 and 30 to 52 die under every one of the 24 ways of using the table. 27, 28, 29 and 53 upwards survive somewhere, and no word from the puzzle fits their forced letters."
+ }
+]

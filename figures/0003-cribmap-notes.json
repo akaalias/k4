@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the arcs",
+  "text": "In a plaintext autokey each letter is keyed by the message letter a fixed distance before it. Where two known letters sit that far apart, one must carve the other's place. Drawn for distance 3."
+ },
+ {
+  "anchor": "the check row",
+  "text": "At distance 3, on the sculpture's table, 17 of 18 checks fail. Under the other 23 ways of using the table it fails too."
+ },
+ {
+  "anchor": "the verdict strip",
+  "text": "34 distances die under every way of using the table. Distance 12 passes its single check in one way. Distances with no two known letters that far apart stay open: the cribs say nothing about them."
+ }
+]

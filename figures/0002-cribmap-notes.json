@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the key row",
+  "text": "In a ciphertext autokey, each letter is enciphered with the carved letter a fixed distance before it. Drawn here for distance 7: the key row is the copper shifted 7 places right."
+ },
+ {
+  "anchor": "the check row",
+  "text": "Each known letter plus its key must give the carved letter. At distance 7, on the sculpture's table, 24 of 24 fail. One failure is enough to kill a distance."
+ },
+ {
+  "anchor": "the bound",
+  "text": "The experiment ran every distance from 1 to 96 under all 24 ways of using the table: 2,304 pairs, 0 survivors. The family is closed."
+ }
+]

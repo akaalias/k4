@@ -1,0 +1,7 @@
+distances 1 and 21, both added, sculpture's alphabet throughout, Vigenere
+
+place  known  carved  1 back  21 back  constant
+   22      E       F       W        O         Z
+   23      A       L       F        B         J
+   24      S       R       L        K         T
+   25      T       V       R        R         J

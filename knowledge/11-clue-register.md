@@ -54,7 +54,7 @@ only the encrypted data, but also the key... part of the code was designed to be
 with multiple keys."** (Scheidt, 2003, secondhand). Readings: (a) the keyword is
 written on the sculpture (KRYPTOS, the Morse words, HILL, DYAHR); (b) the method is
 recoverable from the sculpture's layout; (c) the K1-K3 keys are reused in combination.
-Family C. Status: 'keys concealed at the sculpture' as a running key from the carved tableau or the Morse is bounded by 0017; as a key read by position, the letter of another plate at the same or the folded place of each K4 letter, by 0089; as a keyword in a periodic tableau by 0005 and 0009-0011. Family C otherwise untested.
+Family C. Status: 'keys concealed at the sculpture' as a running key from the carved tableau or the Morse is bounded by 0017; as a key read by position, the letter of another plate at the same or the folded place of each K4 letter, by 0089; as a running key joined to any K3-style move before or after the table, by 0090; as a keyword in a periodic tableau by 0005 and 0009-0011. Family C otherwise untested.
 
 **C7. "Instructions in the earlier text that refer to later text"; "clues to the last
 section are contained in previously deciphered parts... getting those first three sections

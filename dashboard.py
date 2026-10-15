@@ -124,7 +124,7 @@ def esc(s):
 
 
 # records cannot be edited after their run, so spelling variants of a family slug are merged here
-FAMILY_ALIASES = {"8-hill-and-polygraphic": "8-hill-polygraphic", "2-masked-then-keyed": "2-masked-plaintext", "5-gromark": "5-gromark-lfsr", "4-visual-systems": "4-visual-spatial"}
+FAMILY_ALIASES = {"8-hill-and-polygraphic": "8-hill-polygraphic", "2-masked-then-keyed": "2-masked-plaintext", "5-gromark": "5-gromark-lfsr", "4-visual-systems": "4-visual-spatial", "6-matrix-transposition-then-tableau": "6-transposition-then-tableau"}
 
 
 def rescore(r):

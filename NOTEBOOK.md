@@ -66,6 +66,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 59 | 3 | Two secret words in two passes on tables rebuilt from K1-K3 words: nothing below a combined length of 21, survivors above at chance rates, no word. |
 | 60 | 8 | The K2 map reference poured into a Hill number table, every reading: at most 4 of 24 known letters, worse than random tables. |
 | 61 | 3 | A puzzle word plus the misspelt letters (QUA, LOE) or the raised YAR as a second short key: best 8 of 24 known letters, no better than scrambled coppers. |
+| 62 | 7 | Fake coppers by recipes with a 7 or a 21: none makes both marks. Ciphertext autokey at lag 21 makes the width-21 repeats 27 times more often than chance; nothing tried makes the doublet column. |
 
 ## 2026-10-14
 

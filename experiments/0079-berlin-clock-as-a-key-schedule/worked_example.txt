@@ -1,0 +1,7 @@
+set-theory clock from 00:00, one minute per letter, lit lamps as the key; sculpture's alphabet, Vigenere
+
+place  time   lamps  needed  constant
+   22  00:21      5       1        22
+   23  00:22      6      10         4
+   24  00:23      7      21        14
+   25  00:24      8      18        10

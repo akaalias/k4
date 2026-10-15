@@ -1,0 +1,78 @@
+{
+ "id": 79,
+ "tag": "0079-berlin-clock-as-a-key-schedule",
+ "started": "2026-10-15T13:45:08+00:00",
+ "seconds": 37.0,
+ "status": "ran",
+ "phases": {
+  "design": 41.1,
+  "implement": 0.0,
+  "test": 15.8,
+  "run": 37.0,
+  "record": 0.1
+ },
+ "ended_epoch": 1792071945.588877,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "Berlin clock key schedules",
+  "schedules": [
+   "lit lamps",
+   "hour",
+   "minute",
+   "hour plus minute",
+   "five-minute row",
+   "time digits"
+  ],
+  "steps_minutes": [
+   1,
+   2,
+   3,
+   5,
+   10,
+   15,
+   30
+  ],
+  "starts": 1440,
+  "setups": 12,
+  "trials": 725760,
+  "k4_best_agreeing": 8,
+  "k4_fewest_mismatches": 16,
+  "survivors": [],
+  "controls_fewest_mismatches": [
+   16,
+   16,
+   16,
+   16,
+   17,
+   16,
+   16,
+   16,
+   17,
+   16
+  ]
+ },
+ "notes": "725,760 trials. K4: at most 8 of 24 residuals agree (fewest mismatches 16); survivors 0. Ten shuffled coppers: fewest mismatches [16, 16, 16, 16, 17, 16, 16, 16, 17, 16].",
+ "error": null,
+ "candidates": []
+}

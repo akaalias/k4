@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the shuffle",
+  "text": "A column shuffle writes the message in rows under a key and reads the columns in the key's alphabetical order. Done twice, with one key seven letters long, it is the double transposition nobody had run with a 7."
+ },
+ {
+  "anchor": "the check",
+  "text": "After both shuffles, a repeating secret word on the table must give the copper's letters where the known letters landed; two known letters in one slot of the word must agree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "All 5,040 orders of seven columns with 253 second shuffles, either first: no word of 1 to 20 letters fits, and 21-26 fit as often as on scrambled coppers."
+ }
+]

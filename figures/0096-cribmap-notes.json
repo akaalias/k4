@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the marks",
+  "text": "K4 has two oddities: five of its six doubled letters fall in one column of a 7-wide grid, and in rows of 21 eleven letter pairs repeat straight down. Either alone turns up by chance now and then."
+ },
+ {
+  "anchor": "the test",
+  "text": "Twenty-nine recipes, moves and keys in both orders, each enciphered 20,000 stretches of English. A recipe that made K4 should produce both marks together far more often than chance."
+ },
+ {
+  "anchor": "the result",
+  "text": "No recipe produces both more than twice in 20,000. The column-plus-row key at width 7 makes the doublet column only at the chance rate, so 0087's premise that it explains the column does not hold."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the slip",
+  "text": "If the carver added or dropped one letter, K4 is really 96 or 98 letters long, and every grid move on 97 letters is the wrong shape. 96 fills 8 rows of 12; 98 fills 7 rows of 14."
+ },
+ {
+  "anchor": "the check",
+  "text": "Strike each carved letter in turn, or put back an unknown at each place, apply every single move on that length, then a repeating key: known letters on one key letter must agree."
+ },
+ {
+  "anchor": "the bound",
+  "text": "149 variants, 648,709 variant and move pairs, keys of 1 to 26 before or after: nothing below period 20, and every period sits inside the scrambled coppers' range."
+ }
+]

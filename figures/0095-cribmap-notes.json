@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the drag",
+  "text": "Lay a word Sanborn might have used, a number, a unit, a compass point or a theme word, at every place, and see whether a repeating key consistent with the 24 known letters can carry it."
+ },
+ {
+  "anchor": "the check",
+  "text": "Under a 60-letter key the word's letters that fall on already fixed slots must need the same key letters. DEGREES at place 80 fails at its first fixed slot."
+ },
+ {
+  "anchor": "the bound",
+  "text": "93 words, 376 key lengths and tables that fit the known letters: no word does better than random strings. The test has little power: a word meets few fixed slots, so a miss proves little."
+ }
+]

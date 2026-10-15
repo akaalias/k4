@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cipher",
+  "text": "Gromark adds a running stream of digits to the message on a mixed alphabet. The stream starts from a short primer and grows by adding earlier digits."
+ },
+ {
+  "anchor": "the check",
+  "text": "With the primer 12345, places 26 and 27 both carve Q but land in two different slots of the alphabet: impossible, so this primer is dead whatever the alphabet."
+ },
+ {
+  "anchor": "the bound",
+  "text": "All 15 two-term rules up to 6 back, every 5-digit primer, four forms, a completely free alphabet: no fit on K4 or on any shuffled copper."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Experiment 69 closed Gromark in base 10 with a free alphabet. This runs the same exact test in every other base up to 16, and in base 26."
+ },
+ {
+  "anchor": "the check",
+  "text": "In base 2 with primer 10110, places 26 and 27 both carve Q but land in slots 13 and 15: dead whatever the alphabet."
+ },
+ {
+  "anchor": "the bound",
+  "text": "15,135,782 primers across 146 base-and-rule settings, four forms: none consistent on K4 or on any shuffled copper. Two-term Gromark is exhausted."
+ }
+]

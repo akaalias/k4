@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cipher",
+  "text": "Each carved letter is the message letter plus a repeating secret word plus the previous carved letter, so the copper keys itself and a short word is added on top."
+ },
+ {
+  "anchor": "the check",
+  "text": "At distance 1 with a 7-letter word, places 22, 29, 64 and 71 share the word's first letter but force T, Q, P, J: dead."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every distance and word length from 1 to 96, all 32 ways of using the table: no setting passes three checks, the same as ten shuffled coppers. Distance 1 with 7, and distance 21 at any length, are dead."
+ }
+]

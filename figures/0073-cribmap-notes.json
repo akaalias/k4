@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cipher",
+  "text": "In a plaintext autokey each message letter is keyed by the message letter a fixed distance before it; here a short repeating word is added on top."
+ },
+ {
+  "anchor": "the check",
+  "text": "At distance 3 with a 7-letter word, places 25 and 32 share a slot but need A and I: dead."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every distance where two known letters pair, every word length, 161 word alphabets: 12 settings pass three checks against 0 to 6 on shuffled coppers, but they are four coincidences repeated at nested lengths and none passes four."
+ }
+]

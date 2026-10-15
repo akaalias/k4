@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A mask changes every letter of the message by a fixed rule before the main cipher. Here the rules are the decimated alphabets: every step size through the alphabet, reading backwards included."
+ },
+ {
+  "anchor": "the check",
+  "text": "With the message read backwards from A, places 22 and 29 force J and K in the same slot: dead for a 7-letter word."
+ },
+ {
+  "anchor": "the bound",
+  "text": "22 masks before a repeating key, ciphertext autokey or both: dead or at chance, and no word in 668 fragments. The 79 single-check survivors are above the controls but never reach a second check together."
+ }
+]

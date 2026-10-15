@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "If Sanborn miscarved one letter, a cipher could look dead when it is not. A ciphertext autokey with a constant shift is the simplest cipher that makes the width-21 repeats."
+ },
+ {
+  "anchor": "the residuals",
+  "text": "At distance 21 the residuals at the 24 known places should all be equal; the commonest value, L, turns up only 2 times, so more than two would have to change."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every distance, all 32 ways of using the table, every carved letter changed, deleted or doubled: nothing passes three checks, and distance 21 has no survivor at all."
+ }
+]

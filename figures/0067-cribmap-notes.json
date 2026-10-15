@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cipher",
+  "text": "Each carved letter takes two earlier carved letters as its key, here the ones 1 and 21 places back, plus a short repeating word or a constant."
+ },
+ {
+  "anchor": "the check",
+  "text": "With a constant, places 22 and 23 leave Z and J: they differ, so this pair of distances is dead."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every pair of distances, both signs, word lengths to 30: 15 settings pass three checks against 3 to 12 on shuffled coppers. They are scattered with no common distance, and distances 1 and 21 together never pass more than one."
+ }
+]

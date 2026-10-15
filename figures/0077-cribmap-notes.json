@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The reshuffle of every block of seven could make the width-7 column; ciphertext autokey at distance 21 makes the width-21 repeats. Together they might make both."
+ },
+ {
+  "anchor": "the check",
+  "text": "Reversing each row and undoing the autokey at distance 21, places 22 and 23 leave 20 and 8; a constant shift needs them equal."
+ },
+ {
+  "anchor": "the bound",
+  "text": "All 5,040 reshuffles, both orders, every distance, all 32 ways of using the table: survivors at three checks match the shuffled coppers, and distance 21 never passes three."
+ }
+]

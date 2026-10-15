@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the clue",
+  "text": "BERLINCLOCK points at the set-theory clock in Berlin, whose lamps count hours and minutes in fives and ones. Its lamps could drive a key, one setting per letter."
+ },
+ {
+  "anchor": "the check",
+  "text": "Moving one minute per letter, places 22 and 23 leave constants 22 and 4: they differ, so this schedule is dead."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Lit lamps, hour, minute, their sum, the five-minute row and the time digits, steps of 1 to 30 minutes, every start: at most 8 of 24 known places agree, as on shuffled coppers."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Doubled letters could be fillers, nulls added to break up the text. Striking them out would then reveal a simpler cipher underneath."
+ },
+ {
+  "anchor": "inside the known stretches",
+  "text": "Three of the six doublets, QQ, SS and TT, fall inside EASTNORTHEAST and BERLINCLOCK, where each half carries a different known letter. They are real letters, not fillers."
+ },
+ {
+  "anchor": "the bound",
+  "text": "The other three, BB, SS and ZZ, were struck in all seven combinations and tested with repeating keys, ciphertext autokey and both: nothing changes beyond the shuffled rate."
+ }
+]

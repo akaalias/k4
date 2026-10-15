@@ -89,6 +89,7 @@ dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 1
 .plain.tufte{position:relative;display:flow-root}.plain.tufte p{max-width:620px}.sidenote{float:right;clear:right;margin-right:-300px;width:270px;margin-top:.35em;margin-bottom:.9em;font-size:13.5px;line-height:1.45;color:var(--muted);padding-left:12px;border-left:1px solid var(--rule)}.sidenote b{color:var(--ink);font-weight:600}.sidenote-more{max-width:620px;font-size:13px;color:var(--faint);margin:4px 0 0}@media(max-width:980px){.sidenote{float:none;display:block;margin:6px 0 10px;width:auto;max-width:620px}}
 .word{display:flex;gap:1.5px;border-radius:3px;box-shadow:0 0 0 1px #cfc8ae}
 .verdict-note{max-width:760px;margin:10px 0 0;padding:8px 12px;border-left:3px solid var(--accent);background:var(--wash);font-size:14.5px}
+.how{width:min(1200px,94vw);position:relative;left:50%;transform:translateX(-50%);margin:22px 0 6px;padding-top:14px;border-top:1px solid var(--rule-soft)}.how-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:start}.how-steps{margin:0;padding-left:20px;font-size:15.5px;line-height:1.55;max-width:560px}.how-steps li{margin:0 0 8px}.how-figure{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:12px 14px}.how-row{display:flex;align-items:center;gap:10px;margin:0 0 4px}.how-label{width:150px;text-align:right;font:italic 12.5px var(--serif);color:var(--muted)}.lc.keyc{background:#8a6d1f;color:var(--paper);font-weight:700}.lc.num{font-size:10px;background:transparent;color:var(--muted)}.how-figure.k3 .lc{width:26px}.how-worked{font-size:14px;color:var(--muted);margin:8px 0 0;max-width:520px}
 .res-notes{font-size:16px;margin:16px 0 6px;max-width:760px}.res-notes.err{color:var(--accent)}.res-stats{display:flex;gap:44px;flex-wrap:wrap;margin:6px 0 18px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.res-stats div{display:flex;flex-direction:column}.res-stats b{font:400 24px var(--serif)}.res-stats span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.res-card{display:flex;gap:26px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--rule-soft)}.res-side{display:flex;flex-direction:column;gap:3px;min-width:150px;font-size:14px;color:var(--muted)}.res-rank{font:400 26px var(--serif);color:var(--ink)}.res-loss{color:var(--accent);font-weight:600}.res-main{flex:1;min-width:0}.res-main .lp-box{display:inline-block}.res-key{font-size:13.5px;color:var(--muted);margin:8px 0 0;overflow-wrap:anywhere;max-width:620px}
 table.score{width:100%;max-width:760px;margin:10px 0 6px;border-collapse:collapse}table.score td,table.score th{padding:7px 10px;border-bottom:1px solid var(--rule-soft);font-size:15px}table.score td:first-child{font-weight:600}table.score tr.total td{border-top:1.5px solid var(--ink);border-bottom:none;font-weight:700}table.score .pct{color:var(--accent);margin-left:8px}table.score.ranks td:first-child{font-weight:400}table.score.ranks tr.kept td{font-weight:700;color:var(--accent)}table.score.ranks tr.gap td{color:var(--faint);border-bottom:none}.score-sub{font-size:14px;color:var(--muted);margin:16px 0 4px;max-width:760px}
 .panel-wrap{display:flex;gap:18px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;margin:16px 0 8px}.panel-wrap.wide{width:min(1360px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}.callout.wide{width:min(1400px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%);box-sizing:border-box}.callout .panel-wrap.wide{width:auto;left:0;transform:none}#sculpture-label{min-height:3.2em}.subsec{display:flex;align-items:baseline;gap:12px;margin:34px 0 10px;padding-top:12px;border-top:1px solid var(--rule-soft)}.subsec b{font:400 15px var(--serif);color:var(--faint)}.subsec h3{font:400 21px var(--serif);margin:0}.subsec-sub{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 6px}.lp-col{display:flex;flex-direction:column}.lp-eyebrow{font:600 11px/1.2 var(--serif)!important;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.lp-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:10px 14px 12px;width:573px;box-sizing:border-box}.lp.mini .lp-box{width:auto}.lp-title{font:600 13px var(--serif);color:var(--muted);text-align:center;margin:0 0 8px}.lrow{display:flex;gap:1.5px;margin:0 0 2.5px;justify-content:flex-start}.lc{display:inline-flex;align-items:center;justify-content:center;width:15px;height:19px;border-radius:2.5px;background:#ebe7d8;color:var(--muted);font:normal 11.5px/1 var(--mono)}.lc.tail{background:#f1eee3;color:#cfcab8}.lc.known{background:var(--accent);color:var(--paper);font-weight:700}.lc.miss{background:var(--paper);color:var(--accent);box-shadow:inset 0 0 0 1.3px var(--accent);font-weight:700}.lc.ink{color:var(--ink)}.lc.dot:after{content:"";width:2px;height:2px;border-radius:50%;background:var(--faint,#9b998c)}.lp-cap{font:italic 13px/1.4 var(--serif);color:var(--muted);text-align:center;margin:6px 0 0}.lp-cap.acc{color:var(--accent);margin-top:2px}.lp-arrow{color:var(--muted);padding-top:72px}.lp.mini .lp-box{padding:5px 6px;border-radius:4px;background:transparent;border-color:var(--rule-soft)}.lp.mini .lp-title{display:none}.lp.mini .lc{width:6.5px;height:9px;font-size:6px;border-radius:1px}.lp.mini .lrow{gap:1px;margin-bottom:1px}
@@ -630,6 +631,57 @@ SPACED = {
 }
 
 
+def how_solved_html(name):
+    """How K1, K2 or K3 was solved: short steps, and the first letters worked by hand."""
+    from kryptos.facts import load_k1, load_k2, load_k3, KRYPTOS_ALPHABET as KRY
+    from kryptos.ciphers import keyed_vigenere_decrypt
+
+    def row(label, letters, cls):
+        cells = "".join(f'<i class="lc {cls}">{esc(ch)}</i>' for ch in letters)
+        return f'<div class="how-row"><span class="how-label">{esc(label)}</span><div class="lrow start">{cells}</div></div>'
+
+    if name in ("K1", "K2"):
+        d = load_k1() if name == "K1" else load_k2()
+        ct = d["ciphertext"] if name == "K1" else d["ciphertext_as_carved"]
+        key = d["key"]
+        n = 14
+        carved = ct[:n]
+        keyrow = (key * 3)[:n]
+        plain = keyed_vigenere_decrypt(carved, key, KRY)
+        c0, k0, p0 = carved[0], key[0], plain[0]
+        ci, ki = KRY.index(c0), KRY.index(k0)
+        steps = [
+            "The table carved on the sculpture's right half gives the alphabet: KRYPTOSABCDEFGHIJLMNQUVWXZ, each row shifted one place further.",
+            "Letter counts in the carved text rise and fall with a short period, the mark of a repeating key word. Its length came from the statistics; K2's 372 letters made that easy, and the same table opened K1.",
+            f"Each letter is then undone by hand: find the carved letter's place in the KRYPTOS alphabet, take away the key letter's place, and read the letter at the difference.",
+        ]
+        worked = (row("carved", carved, "") + row(f"key: {key}, repeated", keyrow, "keyc") + row("message", plain, "ink")
+                  + f'<p class="how-worked">First letter: {c0} is {ci} in the KRYPTOS alphabet, key {k0} is {ki}; {ci} take away {ki} is {(ci - ki) % 26}, which is {p0}.</p>')
+        if name == "K2":
+            steps[1] = "The same table and the same kind of key as K1, with a different key word; the longer text makes the key word's length plain from the letter statistics."
+            steps.append("The question marks are carved and left alone; X marks the end of a sentence. In 2006 Sanborn said a letter was left out of the carving near the end, which turns ID BY ROWS into LAYER TWO.")
+    else:
+        d = load_k3()
+        ct, pt = d["ciphertext"], d["plaintext"]
+        a, b, n_ = d["formula"]["a"], d["formula"]["b"], d["formula"]["n"]
+        places = [(a + b * i) % n_ + 1 for i in range(10)]
+        steps = [
+            "The letter counts are those of ordinary English, so no letter was changed: they were only moved. That makes K3 a transposition.",
+            "Sanborn wrote the message into a grid, turned it a quarter turn, wrote it into a grid of another width, and turned it again, then carved the result.",
+            f"The two turns come to a simple rule: each letter of the message is the carved letter {b} places on from the last, counting round the {n_} letters and starting at place {a + 1}.",
+        ]
+        cells_pl = "".join(f'<i class="lc ink">{esc(pt[i])}</i>' for i in range(10))
+        cells_ct = "".join(f'<i class="lc">{esc(ct[p_ - 1])}</i>' for p_ in places)
+        nums = "".join(f'<i class="lc num">{p_}</i>' for p_ in places)
+        worked = (f'<div class="how-row"><span class="how-label">carved place</span><div class="lrow start">{nums}</div></div>'
+                  f'<div class="how-row"><span class="how-label">carved letter</span><div class="lrow start">{cells_ct}</div></div>'
+                  f'<div class="how-row"><span class="how-label">message</span><div class="lrow start">{cells_pl}</div></div>'
+                  f'<p class="how-worked">Start at place {places[0]}, then count {b} on each time: {places[0]}, {places[1]}, {places[2]}, ... wrapping past {n_}. The letters read {pt[:10]}.</p>')
+    steps_html = "".join(f"<li>{esc(st_) if 'Sanborn said' not in st_ else esc(st_)}</li>" for st_ in steps)
+    return (f'<div class="how"><p class="lp-eyebrow">how it was solved</p><div class="how-grid"><ol class="how-steps">{steps_html}</ol>'
+            f'<div class="how-figure{" k3" if name == "K3" else ""}">{worked}</div></div></div>')
+
+
 def solved_messages_block():
     """K1, K2, K3 as IN (the carved lines, as on the copper) and OUT (the solution laid out in the
     same lines), one block each, so a reader sees what a solved message looks like."""
@@ -689,7 +741,7 @@ def solved_messages_block():
         right = (f'<div class="lp-col"><p class="lp-eyebrow">out: {name} solved</p><div class="lp"><div class="lp-box">'
                  f'<div class="lp-title">the message, readable English; each word boxed</div>{block(plain_lines, "ink", word_numbers(SPACED[name]))}</div></div><p class="lp-note"><b>Who.</b> {who}</p></div>')
         arrow = '<div class="lp-arrow"><svg width="34" height="14" viewBox="0 0 34 14"><path d="M1,7 L28,7" stroke="currentColor" stroke-width="1.4"/><path d="M26,2 L33,7 L26,12 z" fill="currentColor"/></svg></div>'
-        out.append((name, f'<div class="kpane"><div class="panel-wrap wide">{left}{arrow}{right}</div></div>'))
+        out.append((name, f'<div class="kpane"><div class="panel-wrap wide">{left}{arrow}{right}</div>{how_solved_html(name)}</div>'))
     return out
 
 

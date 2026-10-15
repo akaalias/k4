@@ -1,0 +1,1212 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "trifid, free 27-symbol cube, periods 2-15, every alignment, solved by constraint propagation and backtracking",
+  "settings": 119,
+  "settings_with_cubes": 0,
+  "settings_capped": 0,
+  "node_cap": 3000000,
+  "solution_cap": 5000,
+  "per_setting": [
+   {
+    "period": 2,
+    "offset": 0,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 2,
+    "offset": 1,
+    "classes": 21,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 3,
+    "offset": 0,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 3,
+    "offset": 1,
+    "classes": 21,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 3,
+    "offset": 2,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 4,
+    "offset": 0,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 4,
+    "offset": 1,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 4,
+    "offset": 2,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 4,
+    "offset": 3,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 5,
+    "offset": 0,
+    "classes": 21,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 5,
+    "offset": 1,
+    "classes": 23,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 5,
+    "offset": 2,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 5,
+    "offset": 3,
+    "classes": 21,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 5,
+    "offset": 4,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 6,
+    "offset": 0,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 6,
+    "offset": 1,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 6,
+    "offset": 2,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 6,
+    "offset": 3,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 6,
+    "offset": 4,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 6,
+    "offset": 5,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 7,
+    "offset": 0,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 7,
+    "offset": 1,
+    "classes": 19,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 7,
+    "offset": 2,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 7,
+    "offset": 3,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 7,
+    "offset": 4,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 7,
+    "offset": 5,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 7,
+    "offset": 6,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 8,
+    "offset": 0,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 8,
+    "offset": 1,
+    "classes": 22,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 8,
+    "offset": 2,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 8,
+    "offset": 3,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 8,
+    "offset": 4,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 8,
+    "offset": 5,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 8,
+    "offset": 6,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 8,
+    "offset": 7,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 0,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 1,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 2,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 3,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 4,
+    "classes": 25,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 5,
+    "classes": 23,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 6,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 7,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 9,
+    "offset": 8,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 0,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 1,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 2,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 3,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 4,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 5,
+    "classes": 21,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 6,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 7,
+    "classes": 23,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 8,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 10,
+    "offset": 9,
+    "classes": 16,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 0,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 1,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 2,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 3,
+    "classes": 19,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 4,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 5,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 6,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 7,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 8,
+    "classes": 20,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 9,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 11,
+    "offset": 10,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 0,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 1,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 2,
+    "classes": 19,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 3,
+    "classes": 23,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 4,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 5,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 6,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 7,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 8,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 9,
+    "classes": 21,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 10,
+    "classes": 17,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 12,
+    "offset": 11,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 0,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 1,
+    "classes": 23,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 2,
+    "classes": 27,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 3,
+    "classes": 23,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 4,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 5,
+    "classes": 14,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 6,
+    "classes": 15,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 7,
+    "classes": 18,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 8,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 9,
+    "classes": 23,
+    "nodes": 4,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 10,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 11,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 13,
+    "offset": 12,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 0,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 1,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 2,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 3,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 4,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 5,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 6,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 7,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 8,
+    "classes": 17,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 9,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 10,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 11,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 12,
+    "classes": 24,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 14,
+    "offset": 13,
+    "classes": 25,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 0,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 1,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 2,
+    "classes": 21,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 3,
+    "classes": 19,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 4,
+    "classes": 16,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 5,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 6,
+    "classes": 27,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 7,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 8,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 9,
+    "classes": 25,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 10,
+    "classes": 20,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 11,
+    "classes": 16,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 12,
+    "classes": 22,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 13,
+    "classes": 26,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   },
+   {
+    "period": 15,
+    "offset": 14,
+    "classes": 27,
+    "nodes": 1,
+    "cubes": 0,
+    "capped": false,
+    "best_english": null,
+    "best_hits": null
+   }
+  ],
+  "best": [],
+  "shuffled_control_best": [
+   null,
+   null
+  ]
+ },
+ "notes": "119 settings; 0 admit at least one cube; 0 hit a cap. No cube is consistent with the known letters at any setting; shuffled K4 [None, None]. 0 candidates.",
+ "error": null,
+ "worked_example": "period 5, blocks from position 1: the block 21-25 carries E A S T at 22-25 against the carved WFLRV\n\n81 coordinate variables merge into 21 classes under all the ties from the 24 known letters\nbacktracking over the classes with the all-different rule visited 4 nodes and found 0 cube(s)",
+ "seconds": 0.04384326934814453
+}

@@ -38,3 +38,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0037	0037-triple-matrix-routes-sampled-then-tableau	6-transposition-then-tableau	0016-routes-then-tableau-forced-key-english	reverted	0	0	0			86	design=0 implement=60 test=10 run=86 record=0
 0038	0038-keyword-plus-dates-and-counts-from-the-story	3-two-component-key	0024-keyword-plus-k2-coordinate-digits	reverted	0	0	0			2	design=53 implement=0 test=3 run=2 record=0
 0039	0039-trifid-free-cubes-by-constraint-propagation	4-visual-spatial	0033-trifid-keyword-cubes-and-annealing	error	0	0	0			0	design=0 implement=73 test=44 run=0 record=0
+0040	0040-trifid-free-cubes-by-constraint-propagation-rerun	4-visual-spatial	0039-trifid-free-cubes-by-constraint-propagation	reverted	0	0	0			0	design=0 implement=31 test=0 run=0 record=0

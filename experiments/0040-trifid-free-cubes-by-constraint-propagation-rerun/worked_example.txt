@@ -1,0 +1,4 @@
+period 5, blocks from position 1: the block 21-25 carries E A S T at 22-25 against the carved WFLRV
+
+81 coordinate variables merge into 21 classes under all the ties from the 24 known letters
+backtracking over the classes with the all-different rule visited 4 nodes and found 0 cube(s)

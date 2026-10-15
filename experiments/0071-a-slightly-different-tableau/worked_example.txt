@@ -1,0 +1,7 @@
+alphabet KRYPTOSBACDEFGHIJLMNQUVWXZ (A and B swapped), message and carved letters both on it, Vigenere, 7-letter key
+
+place  known  carved  key  slot
+   22      E       F    R     0
+   29      T       R    W     0
+   23      A       L    C     1
+   30      H       N    O     1

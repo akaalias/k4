@@ -1,0 +1,246 @@
+{
+ "id": 71,
+ "tag": "0071-a-slightly-different-tableau",
+ "started": "2026-10-15T13:19:53+00:00",
+ "seconds": 38.6,
+ "status": "ran",
+ "phases": {
+  "design": 35.2,
+  "implement": 0.0,
+  "test": 19.7,
+  "run": 38.6,
+  "record": 0.1
+ },
+ "ended_epoch": 1792070432.487206,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": {
+  "experiment": "0034-complete-the-key-at-surviving-periods",
+  "fitness": -7.289312943594226,
+  "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+  "key": {
+   "pa": "kry",
+   "ca": "std",
+   "ka": "kry",
+   "m": "vig",
+   "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+  },
+  "key_description": "period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free slots climbed); kry/std/kry/vig",
+  "loss": 4.900412599951614
+ },
+ "bounds": {
+  "family": "periodic key and ciphertext autokey on alphabets one swap or one move from KRYPTOS",
+  "variants": 925,
+  "variants_done": 925,
+  "setups_per_variant": 6,
+  "periods": "1-52",
+  "lags": "1-96",
+  "periodic_consistent_by_period": {
+   "26": {
+    "k4": 21,
+    "controls": [
+     137,
+     0,
+     548,
+     462,
+     21,
+     387,
+     33,
+     33,
+     0,
+     32
+    ]
+   },
+   "27": {
+    "k4": 5550,
+    "controls": [
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550
+    ]
+   },
+   "28": {
+    "k4": 5550,
+    "controls": [
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550
+    ]
+   },
+   "29": {
+    "k4": 5550,
+    "controls": [
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550,
+     5550
+    ]
+   },
+   "30": {
+    "k4": 113,
+    "controls": [
+     38,
+     52,
+     710,
+     496,
+     32,
+     38,
+     0,
+     161,
+     34,
+     38
+    ]
+   },
+   "31": {
+    "k4": 2,
+    "controls": [
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     3,
+     0,
+     3,
+     2
+    ]
+   },
+   "51": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     13,
+     3,
+     0,
+     1,
+     3,
+     3,
+     0,
+     0
+    ]
+   },
+   "52": {
+    "k4": 21,
+    "controls": [
+     137,
+     0,
+     548,
+     462,
+     21,
+     387,
+     33,
+     33,
+     0,
+     32
+    ]
+   }
+  },
+  "autokey_survivors_by_checks": {
+   "1": {
+    "k4": 391,
+    "controls": [
+     838,
+     361,
+     80,
+     142,
+     284,
+     492,
+     92,
+     336,
+     84,
+     38
+    ]
+   },
+   "2": {
+    "k4": 1,
+    "controls": [
+     4,
+     11,
+     3,
+     0,
+     4,
+     4,
+     4,
+     292,
+     1,
+     2
+    ]
+   },
+   "3": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     3
+    ]
+   },
+   "4": {
+    "k4": 0,
+    "controls": [
+     29,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "fragments_checked": 16671,
+  "word_matches": [],
+  "controls_done": [
+   925,
+   925,
+   925,
+   925,
+   925,
+   925,
+   925,
+   925,
+   925,
+   925
+  ]
+ },
+ "notes": "925 of 925 variants. Periodic, consistent cases at P <= 26: K4 {'26': 21}; controls {'26': (0, 548)}. Autokey survivors by checks: {'1': (391, 38, 838), '2': (1, 0, 292), '3': (0, 0, 3), '4': (0, 0, 29)}. Word matches in 16671 fragments: 0.",
+ "error": null,
+ "candidates": []
+}

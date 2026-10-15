@@ -108,3 +108,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0107	0107-three-term-gromark-with-a-free-alphabet	5-gromark-lfsr	0069-gromark-with-a-free-alphabet	reverted	0	0	0			50	unattributed=95 run=50 record=0
 0108	0108-the-copper-read-from-behind	4-visual-spatial	0089-the-screen-folded-onto-itself	reverted	0	0	0			0	unattributed=84 run=0 record=0
 0109	0109-keyword-tables-from-the-whole-dictionary	1-keyed-periodic	0053-periodic-tableau-k1-k3-word-alphabets	reverted	0	0	0			73	unattributed=195 run=73 record=0
+0110	0110-keyword-columnar-from-the-whole-dictionary	6-transposition-then-tableau	0085-true-keyword-columnar-rerun	reverted	0	0	0			202	unattributed=265 run=202 record=0

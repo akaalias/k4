@@ -1,0 +1,162 @@
+{
+ "id": 23,
+ "tag": "0023-masks-reversal-and-nulls-then-tableau",
+ "started": "2026-10-15T06:39:50+00:00",
+ "seconds": 17.6,
+ "status": "ran",
+ "phases": {
+  "design": 12.2,
+  "implement": 63.5,
+  "test": 23.3,
+  "run": 17.6,
+  "record": 0.0
+ },
+ "ended_epoch": 1792046407.791009,
+ "decision": "reverted",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "champion_before": null,
+ "bounds": {
+  "family": "masked plaintext (reversal, regular nulls, prefix nulls) then periodic tableau",
+  "masks": 648,
+  "conventions": 24,
+  "smallest_live_period_histogram": {
+   "26": 11,
+   "27": 41,
+   "28": 403,
+   "29": 110,
+   "30": 36,
+   "31": 21,
+   "32": 6,
+   "33": 6
+  },
+  "masks_dropping_a_crib": 14,
+  "best_forced_fragments": [
+   {
+    "score": -5.378,
+    "mask": "reversed, null before every 10th letter, phase 2",
+    "convention": "kry/kry/kry/vig",
+    "period": 30,
+    "fragment": "TALIT.FV..USVICCCUS.KDYZ..QQVY"
+   },
+   {
+    "score": -5.473,
+    "mask": "null before every 9th letter, phase 7",
+    "convention": "std/kry/std/varbeau",
+    "period": 30,
+    "fragment": "ETBYVOW...CSOLLAS.MQYU.DEYZ.MV"
+   },
+   {
+    "score": -5.519,
+    "mask": "null before every 10th letter, phase 0",
+    "convention": "std/kry/std/vig",
+    "period": 30,
+    "fragment": "WHZ.BEFL..YIMPPAI.OKCG..SUCKOF"
+   },
+   {
+    "score": -5.617,
+    "mask": "reversed, 10 nulls first",
+    "convention": "std/kry/kry/beau",
+    "period": 28,
+    "fragment": "IL...JAMBSAHREDA.NIGHAMIMPYY"
+   },
+   {
+    "score": -5.682,
+    "mask": "reversed, null before every 10th letter, phase 3",
+    "convention": "kry/kry/kry/vig",
+    "period": 30,
+    "fragment": "TALITN.V..USVICCCUSQ.DYZ..QQVY"
+   },
+   {
+    "score": -5.683,
+    "mask": "reversed, 10 nulls first",
+    "convention": "std/kry/kry/beau",
+    "period": 29,
+    "fragment": "....JAMBSAHREDANIGHAMIMPYYIL."
+   },
+   {
+    "score": -5.704,
+    "mask": "null before every 10th letter, phase 3",
+    "convention": "std/kry/std/varbeau",
+    "period": 30,
+    "fragment": "ETBYVO.P..CSOLLASLPE.U.DE.YQMV"
+   },
+   {
+    "score": -5.719,
+    "mask": "null before every 13th letter, phase 6",
+    "convention": "kry/kry/std/beau",
+    "period": 29,
+    "fragment": "URORN.KB..MDADSTGE.FIY.MDAYWG"
+   },
+   {
+    "score": -5.727,
+    "mask": "null before every 10th letter, phase 1",
+    "convention": "std/kry/std/vig",
+    "period": 30,
+    "fragment": "WHZC.EFL..YIMPPAIP.KCG..SUCKOF"
+   },
+   {
+    "score": -5.731,
+    "mask": "reversed, null before every 11th letter, phase 10",
+    "convention": "kry/kry/std/beau",
+    "period": 30,
+    "fragment": "GPXH.PF.IY.TOOBOPTDELB...UDISC"
+   },
+   {
+    "score": -5.738,
+    "mask": "reversed, null before every 11th letter, phase 9",
+    "convention": "kry/kry/std/beau",
+    "period": 30,
+    "fragment": "GPX.GPF.I.FTOOBOPTDEL.U..UDISC"
+   },
+   {
+    "score": -5.766,
+    "mask": "reversed, 10 nulls first",
+    "convention": "std/kry/kry/beau",
+    "period": 27,
+    "fragment": "PYYIL.JAMBSAHREDA..NIGHAMIM"
+   },
+   {
+    "score": -5.768,
+    "mask": "reversed, null before every 12th letter, phase 7",
+    "convention": "kry/kry/std/beau",
+    "period": 30,
+    "fragment": "GPX.GPF.IYGX.OBOPTDELB...UDISC"
+   },
+   {
+    "score": -5.79,
+    "mask": "reversed, null before every 10th letter, phase 2",
+    "convention": "std/kry/std/beau",
+    "period": 30,
+    "fragment": "PNORW.BF..SEDEEGBOM.XIJO..EFPE"
+   },
+   {
+    "score": -5.806,
+    "mask": "null before every 22th letter, phase 1",
+    "convention": "kry/kry/std/beau",
+    "period": 28,
+    "fragment": "GURORNLI..EPFJ.BWJOSTACI.AYW"
+   }
+  ],
+  "shuffled_control_best": [
+   -5.209,
+   -5.11,
+   -4.894,
+   -5.524,
+   -5.188,
+   -5.528,
+   -5.534,
+   -4.888,
+   -5.255,
+   -5.415
+  ],
+  "vocab_matches": 0
+ },
+ "notes": "648 masks x 24 conventions. Smallest live period over all masks: 26. Best fragment -5.378 vs shuffled best -4.888. 0 matches.",
+ "error": null,
+ "candidates": []
+}

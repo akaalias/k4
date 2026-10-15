@@ -1,0 +1,11 @@
+mask: the message written backwards; convention kry/kry/kry Vigenere
+
+plain pos  letter  sits at  carved there  forced key letter
+       22    E        76        G            Y
+       23    A        75        W            J
+       24    S        74        K            Q
+       64    B        34        S            X
+       65    E        33        S            U
+       74    K        24        R            R
+
+mask: a null before every 3rd letter: position 22 sits at 30, position 64 at 86

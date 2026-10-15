@@ -1,0 +1,12 @@
+no move, key length 7, unknown alphabets: known letters grouped by slot (place mod 7)
+
+slot 0: E->F (22), T->R (29), B->N (64), L->Z (71)
+slot 1: A->L (23), H->N (30), E->Y (65), O->F (72)
+slot 2: S->R (24), E->G (31), R->P (66), C->P (73)
+slot 3: T->V (25), A->K (32), L->V (67), K->K (74)
+slot 4: N->Q (26), S->S (33), I->T (68)
+slot 5: O->Q (27), T->S (34), N->T (69)
+slot 6: R->P (28), C->M (70)
+
+free alphabet per slot (functional and one-to-one): False
+one mixed alphabet pair shifted by the key (Quagmire IV): not reached

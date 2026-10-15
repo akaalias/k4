@@ -12,7 +12,7 @@ import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const P = window.KRYPTOS_PANELS;
 const host = document.getElementById('sculpture');
-// the viewport is 80% of the window wide; its height stays what it was at the text column's width
+// the viewport is 90% of the window wide; its height stays what it was at the text column's width
 const heightFor = () => Math.round(host.parentElement.clientWidth * 0.58);
 const W = host.clientWidth, H = heightFor();
 const paper = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim() || '#fffff8';

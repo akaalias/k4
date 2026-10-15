@@ -1,0 +1,8 @@
+the four counts replicated, with what ten coppers showed in the original runs
+
+0092  paths, after the move, period 22: K4 13 distinct check sets, ten coppers 8-15
+0092  paths, after the move, period 23: K4 88, ten coppers 74-98
+0093  one miss, after the move, period 22: K4 980 settings, ten coppers 526-859
+0097  Quagmire IV, after the move, period 3: K4 12 distinct equation sets, ten coppers 1-11
+
+here: the same counts as distinct sets, against fifty new coppers

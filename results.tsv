@@ -98,3 +98,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0097	0097-free-mixed-alphabets-after-a-move	6-transposition-then-tableau	0096-both-fingerprints-from-two-stage-recipes	reverted	0	0	0			606	unattributed=359 run=606 record=0
 0098	0098-sculpture-running-key-on-an-unknown-alphabet	1-keyed-periodic	0017-running-key-from-the-sculpture-itself	reverted	0	0	0			472	unattributed=35 run=472 record=0
 0099	0099-two-turns-in-mixed-directions	6-transposition-then-tableau	0083-every-triple-grid-turn	reverted	0	0	0			24	unattributed=18 run=24 record=0
+0100	0100-replicating-the-marginal-cells	6-transposition-then-tableau	0097-free-mixed-alphabets-after-a-move	reverted	0	0	0			73	unattributed=48 run=73 record=0

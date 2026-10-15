@@ -1,0 +1,44 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "replication of marginal cells with fresh controls",
+  "controls": "50 shuffled coppers (seed 100)",
+  "path_routes": 43579,
+  "library_routes": 27852,
+  "cells": {
+   "0092 paths, after the move, period 22": {
+    "k4": 13,
+    "controls_min": 4,
+    "controls_max": 20,
+    "controls_mean": 11.02,
+    "p_at_least_k4": 0.24
+   },
+   "0092 paths, after the move, period 23": {
+    "k4": 88,
+    "controls_min": 67,
+    "controls_max": 116,
+    "controls_mean": 88.66,
+    "p_at_least_k4": 0.48
+   },
+   "0093 one miss, after the move, period 22": {
+    "k4": 183,
+    "controls_min": 134,
+    "controls_max": 195,
+    "controls_mean": 160.94,
+    "p_at_least_k4": 0.1
+   },
+   "0097 Quagmire IV, after the move, period 3": {
+    "k4": 12,
+    "controls_min": 0,
+    "controls_max": 11,
+    "controls_mean": 4.8,
+    "p_at_least_k4": 0.0
+   }
+  },
+  "threshold_note": "four counts: p < 0.0125 would be needed for any one to stand"
+ },
+ "notes": "0092 paths, after the move, period 22: K4 13, coppers 4-20 (mean 11.02), p 0.24; 0092 paths, after the move, period 23: K4 88, coppers 67-116 (mean 88.66), p 0.48; 0093 one miss, after the move, period 22: K4 183, coppers 134-195 (mean 160.94), p 0.1; 0097 Quagmire IV, after the move, period 3: K4 12, coppers 0-11 (mean 4.8), p 0.0.",
+ "error": null,
+ "worked_example": "the four counts replicated, with what ten coppers showed in the original runs\n\n0092  paths, after the move, period 22: K4 13 distinct check sets, ten coppers 8-15\n0092  paths, after the move, period 23: K4 88, ten coppers 74-98\n0093  one miss, after the move, period 22: K4 980 settings, ten coppers 526-859\n0097  Quagmire IV, after the move, period 3: K4 12 distinct equation sets, ten coppers 1-11\n\nhere: the same counts as distinct sets, against fifty new coppers",
+ "seconds": 73.21576285362244
+}

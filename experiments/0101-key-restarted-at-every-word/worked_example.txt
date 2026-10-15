@@ -1,0 +1,27 @@
+words EAST NORTH EAST BERLIN CLOCK, key restarted at each; sculpture's alphabet, Vigenere
+
+place  letter  copper  offset in word  key value
+   22       E       F               0          1
+   23       A       L               1         10
+   24       S       R               2         21
+   25       T       V               3         18
+   26       N       Q               0          1
+   27       O       Q               1         15
+   28       R       P               2          2
+   29       T       R               3         23
+   30       H       N               4          5
+   31       E       G               0          2
+   32       A       K               1         19
+   33       S       S               2          0
+   34       T       S               3          2
+   64       B       N               0         11
+   65       E       Y               1         17
+   66       R       P               2          2
+   67       L       V               3          5
+   68       I       T               4         15
+   69       N       T               5         11
+   70       C       M               0          9
+   71       L       Z               1          8
+   72       O       F               2          7
+   73       C       P               3         20
+   74       K       K               4          0

@@ -1,0 +1,122 @@
+{
+ "id": 101,
+ "tag": "0101-key-restarted-at-every-word",
+ "started": "2026-10-15T20:09:27+00:00",
+ "seconds": 0.1,
+ "status": "ran",
+ "phases": {
+  "unattributed": 41.4,
+  "run": 0.1,
+  "record": 0.0
+ },
+ "ended_epoch": 1792094968.095619,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "interrupted key restarting at every plaintext word",
+  "segmentations": [
+   "EAST|NORTH|EAST + BERLIN|CLOCK",
+   "EAST|NORTH|EAST + BERLINCLOCK",
+   "EAST|NORTHEAST + BERLIN|CLOCK",
+   "EAST|NORTHEAST + BERLINCLOCK",
+   "EASTNORTHEAST + BERLIN|CLOCK"
+  ],
+  "key_lengths": [
+   1,
+   26
+  ],
+  "classes": 8,
+  "by_segmentation": {
+   "EAST|NORTH|EAST + BERLIN|CLOCK": {
+    "k4_smallest_L_with_checks": null,
+    "controls": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   },
+   "EAST|NORTH|EAST + BERLINCLOCK": {
+    "k4_smallest_L_with_checks": null,
+    "controls": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   },
+   "EAST|NORTHEAST + BERLIN|CLOCK": {
+    "k4_smallest_L_with_checks": null,
+    "controls": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   },
+   "EAST|NORTHEAST + BERLINCLOCK": {
+    "k4_smallest_L_with_checks": null,
+    "controls": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   },
+   "EASTNORTHEAST + BERLIN|CLOCK": {
+    "k4_smallest_L_with_checks": null,
+    "controls": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   }
+  },
+  "k4_live_with_3_plus_checks": [],
+  "n_k4_live_with_3_plus_checks": 0,
+  "controls": "10 shuffled coppers (seed 101), identical test"
+ },
+ "notes": "Smallest key length consistent with at least one check (None: no length 1-26 fits), K4 vs controls: EAST|NORTH|EAST + BERLIN|CLOCK: None vs [None, None, None, None, None, None, None, None, None, None]; EAST|NORTH|EAST + BERLINCLOCK: None vs [None, None, None, None, None, None, None, None, None, None]; EAST|NORTHEAST + BERLIN|CLOCK: None vs [None, None, None, None, None, None, None, None, None, None]; EAST|NORTHEAST + BERLINCLOCK: None vs [None, None, None, None, None, None, None, None, None, None]; EASTNORTHEAST + BERLIN|CLOCK: None vs [None, None, None, None, None, None, None, None, None, None]. K4 settings consistent with 3+ checks: 0.",
+ "error": null,
+ "candidates": []
+}

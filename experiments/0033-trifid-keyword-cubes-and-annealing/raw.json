@@ -1,0 +1,151 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "trifid, 27-symbol cube, periods 2-20",
+  "keyword_cubes": 498,
+  "exact_decryptions": 104082,
+  "exact_best_hits": [
+   {
+    "hits": 7,
+    "cube": "CARNARVON/alt_vertical/?first",
+    "period": 14,
+    "offset": 9
+   },
+   {
+    "hits": 6,
+    "cube": "WONDERFULTHINGS/keyed_columnar/?last",
+    "period": 10,
+    "offset": 6
+   },
+   {
+    "hits": 6,
+    "cube": "WEBSTER/keyword/?last",
+    "period": 8,
+    "offset": 2
+   },
+   {
+    "hits": 6,
+    "cube": "SHADOWFORCES/keyed_columnar/?last",
+    "period": 12,
+    "offset": 9
+   },
+   {
+    "hits": 6,
+    "cube": "SHADOW/keyed_columnar/?first",
+    "period": 14,
+    "offset": 11
+   },
+   {
+    "hits": 6,
+    "cube": "INTERPRETATION/columnar/?last",
+    "period": 2,
+    "offset": 0
+   },
+   {
+    "hits": 6,
+    "cube": "DIGETAL/columnar/?first",
+    "period": 19,
+    "offset": 4
+   },
+   {
+    "hits": 6,
+    "cube": "CARTER/columnar/?first",
+    "period": 16,
+    "offset": 8
+   },
+   {
+    "hits": 6,
+    "cube": "BERLIN/columnar/?last",
+    "period": 7,
+    "offset": 5
+   },
+   {
+    "hits": 6,
+    "cube": "ALEXANDERPLATZ/keyword/?last",
+    "period": 19,
+    "offset": 17
+   }
+  ],
+  "annealing_settings": 119,
+  "annealing_best_by_setting": [
+   {
+    "hits": 17,
+    "period": 14,
+    "offset": 8
+   },
+   {
+    "hits": 17,
+    "period": 2,
+    "offset": 0
+   },
+   {
+    "hits": 16,
+    "period": 15,
+    "offset": 7
+   },
+   {
+    "hits": 16,
+    "period": 14,
+    "offset": 7
+   },
+   {
+    "hits": 16,
+    "period": 8,
+    "offset": 2
+   },
+   {
+    "hits": 16,
+    "period": 7,
+    "offset": 5
+   },
+   {
+    "hits": 16,
+    "period": 5,
+    "offset": 3
+   },
+   {
+    "hits": 15,
+    "period": 15,
+    "offset": 4
+   },
+   {
+    "hits": 15,
+    "period": 14,
+    "offset": 4
+   },
+   {
+    "hits": 15,
+    "period": 13,
+    "offset": 7
+   }
+  ],
+  "refined_best": [
+   {
+    "hits": 17,
+    "period": 14,
+    "offset": 8,
+    "cube": "GDUSW?RNBLTPXJAKQVHYMCZFOIE"
+   },
+   {
+    "hits": 17,
+    "period": 2,
+    "offset": 0,
+    "cube": "UKBJSYEVGL?AZTQORMFPWCINXDH"
+   },
+   {
+    "hits": 16,
+    "period": 15,
+    "offset": 7,
+    "cube": "LMEFTKISZWJDNRO?HCQYBVUPAGX"
+   }
+  ],
+  "shuffled_control_best_hits": [
+   14,
+   11
+  ]
+ },
+ "notes": "Keyword cubes: best 7 of 24 hits over 104082 decryptions. Annealing: best 17 of 24 after refinement (settings best 17); shuffled K4 reaches [14, 11].",
+ "error": null,
+ "worked_example": "cube in KRYPTOS order with ? last; period 5, first block OBKRU\n\nO -> (0, 1, 2)\nB -> (0, 2, 2)\nK -> (0, 0, 0)\nR -> (0, 0, 1)\nU -> (2, 1, 0)\ndigits in a line: 012022000001210; cut into rows of 5: [[0, 1, 2, 0, 2], [2, 0, 0, 0, 0], [0, 1, 2, 1, 0]]\nmessage letters: SDQRM\n\nfull decryption at period 5: SDQRMRDVZW?CSJQEWUEQMG?JDXRWMRECIRYSEFWILMJMYTBSWZOEEDUDYJHXMRIILTDOUCMMHDEHDEESPGDEUDLHRPKUDXCPN; crib hits 2 of 24",
+ "seconds": 107.41577005386353
+}

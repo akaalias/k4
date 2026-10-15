@@ -1,57 +1,60 @@
-"""Experiment 0047. See program.md for the contract."""
+"""Experiment 0048. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "running-key-carter-and-sculpture-mixed-alphabets",
-    "title": "Carter's book and the sculpture's own texts as running keys, on tables rebuilt from the puzzle's words",
+    "slug": "complete-the-key-both-alphabets-mixed-sampled",
+    "title": "The last corner of family 1: both alphabets rebuilt from the puzzle's words, key completed at periods 27 to 29, sampled",
     "family": "1-keyed-periodic",
-    "parent": "0045-running-key-k1-k3-mixed-alphabets",
-    "changed": "The key texts are Carter's Tomb of Tut-ankh-Amen and the sculpture's carved texts (experiments 17 and 21) instead of K1-K3; one of the two alphabets is standard or KRYPTOS and the other the keyword mixing of a vocabulary word, since the full 63 x 63 pool over 570,000 offsets is beyond the budget.",
+    "parent": "0035-complete-the-key-mixed-alphabets-27-29",
+    "changed": "Experiment 35 mixed one alphabet at a time. Here both the message alphabet and the carved alphabet are keyword mixings of vocabulary words, 61 x 61 pairs, drawn in random order with a fixed seed until the budget runs out; the record says how many pairs were reached. Periods 27 to 29, three restarts.",
     "hypothesis_expert": (
-        "Experiments 17 and 21 killed the sculpture's texts and Carter's book as running keys under 24 "
-        "conventions; 45 killed K1-K3 under keyword-mixed alphabets. The remaining corner is these longer "
-        "texts under mixed alphabets (C5, C7, C25). Sources: Carter volume one as scanned, the carved "
-        "tableau by rows and columns, the Morse plaintexts, the right-hand panel, each forward and backward, "
-        "every cyclic offset. Alphabet pairs: one side standard or KRYPTOS, the other any of the 61 keyword "
-        "mixings, both ways round, with the key letters on the standard or KRYPTOS order and three modes. "
-        "About 900 million trials with early exit at three mismatches. Bounds: complete for these texts and "
-        "this restricted pool; both sides mixed is not covered."
+        "Experiments 34 and 35 found the key completion at periods 27-29 reads as noise under every pair "
+        "with at most one keyword-mixed side. The remaining corner is both sides mixed: 3,721 pairs x 3 modes "
+        "x 3 periods, about 33,000 climbs at 0.1 s each with three restarts, more than the budget allows, "
+        "so pairs are visited in a fixed random order and the run stops at the clock; coverage is reported. "
+        "A true periodic cipher on such a pair would give a text near -3.6 at its period; shuffled K4 gives "
+        "about -6.8. Bounds: a stated fraction of the pair space, not exhaustive; the seed makes the sample "
+        "reproducible and a later run can continue it."
     ),
     "hypothesis_eli5": (
-        "Experiments 17 and 21 slid the sculpture's own texts and Howard Carter's book along the fourth "
-        "message as a long secret word, using the sculpture's table, and found nothing. Here the table is "
-        "rebuilt from each word the puzzle knows, on one side at a time, and the sliding is done again, "
-        "forwards and backwards, at every starting point."
+        "Experiments 34 and 35 filled in the few unknown letters of a secret word of length 27 to 29 and "
+        "found only nonsense, with the sculpture's table and with tables rebuilt from one puzzle word on one "
+        "side. The last version has both sides of the table rebuilt from puzzle words. There are too many "
+        "pairs of words to finish in one sitting, so we draw pairs at random for half an hour and report "
+        "how far we got."
     ),
     "prediction": (
-        "No text, offset, direction or alphabet pair explains all 24 known letters, and none comes within "
-        "two mismatches. Zero candidates pass."
+        "Within the budget about a third of the pairs are reached. No pair and period gives a text better "
+        "than -5.5 per quadgram; the best is within 0.4 of shuffled K4. Candidates pass the gates by "
+        "construction but none reads as English or beats the current champion's fitness."
     ),
     "method": (
-        "1. Build the key texts and the alphabet pool. 2. For each plain and cipher alphabet, key alphabet "
-        "and mode, precompute the cipher letter for every (plain, key) pair. 3. For each text, direction and "
-        "offset, count mismatches at the 24 cribs, stopping at the third. 4. Keep trials within two "
-        "mismatches; decrypt and submit any with zero."
+        "1. Build the alphabet pool: standard, KRYPTOS and the keyword mixing of each vocabulary word. "
+        "2. For each pair with one side standard or KRYPTOS, each mode and each period 27-29, force the 24 "
+        "key slots from the cribs; skip the pair if two cribs disagree on a slot. 3. Climb the free slots "
+        "by coordinate descent on the English score of the 73 non-crib letters, five restarts. 4. Keep the "
+        "best text per period and submit it. 5. Repeat on one shuffle of K4 for calibration."
     ),
     "walkthrough": (
-        "1. Build the alphabet from BERLIN for the message letters and from CLOCK for the carved letters. "
-        "2. Lay the K1 plaintext under the fourth message starting at some offset, so each position has a key "
-        "letter. 3. Position 22 is E: find E in the BERLIN alphabet, add the key letter's place in the plain "
-        "alphabet, and read the result in the CLOCK alphabet; compare with the carved F. 4. A miss counts "
-        "one; three misses end this offset. 5. Slide the offset along the whole text, then reverse the text, "
-        "then try the next pair of alphabets."
+        "1. Build the alphabet from PALIMPSEST: PALIMSETBCDFGHJKNOQRUVWXYZ, and use it for the message; "
+        "keep KRYPTOS for the carved letters; Vigenere. 2. Period 27: position 22 is E, index 6 in the "
+        "PALIMPSEST alphabet; carved F is index 11 in KRYPTOS; the key index is 5. 3. Do this for all 24 "
+        "known letters; positions 22 and 49 share slot 21, but 49 is unknown, so no clash. 4. Three slots "
+        "stay free. 5. Try every letter in each free slot in turn, decrypting the whole text each time, and "
+        "keep the one that makes the 73 unknown letters read most like English. 6. Compare the best text's "
+        "score with English, about -3.6, and with what the same game gives on shuffled letters, about -6.8."
     ),
 }
 
+import random
 from kryptos.alphabets import keyword_mixed
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY, load_k1, load_k2, load_k3
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
 
 N = 97
-MODES_ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
+PERIODS = [27, 28, 29]
+RESTARTS = 3
+MODES_KEY = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
 MODES_DEC = {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}
-
-
-def letters(s):
-    return "".join(c for c in s if "A" <= c <= "Z")
+MODES_ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
 
 
 def pool_of(vocab):
@@ -66,102 +69,116 @@ def pool_of(vocab):
     return out
 
 
-def sources():
-    import json
-    from pathlib import Path
-    from kryptos.ciphers import tableau_rows
-    root = Path(__file__).resolve().parent
-    carter = letters((root / "knowledge" / "sources" / "carter-1923-tomb-of-tutankhamen-vol1.txt").read_text(errors="ignore").upper())
-    site = json.loads((root / "data" / "site_texts.json").read_text())
-    rows = tableau_rows(carved=True)
-    k1, k2, k3 = load_k1(), load_k2(), load_k3()
-    k4 = letters((root / "data" / "k4.txt").read_text())
-    morse = [letters(m.upper()) for m in site["morse"]]
-    src = {"carter vol1": carter, "tableau rows": "".join(rows),
-           "tableau columns": "".join(r[c] for c in range(max(len(r) for r in rows)) for r in rows if c < len(r)),
-           "morse as carved": "".join(morse), "morse reversed order": "".join(reversed(morse)),
-           "right panel K1-K4": letters(k1["ciphertext"]) + letters(k2["ciphertext_as_carved"]) + letters(k3["ciphertext"]) + k4}
-    out = {}
-    for name, t in src.items():
-        out[name + " fwd"] = t; out[name + " bwd"] = t[::-1]
-    return out
-
-
-def _unused_sources():
-    k1, k2, k3 = load_k1(), load_k2(), load_k3()
-    p1, p2, p2c, p3 = letters(k1["plaintext"]), letters(k2["plaintext_as_carved"]), letters(k2.get("plaintext_corrected_ending", "") or ""), letters(k3["plaintext"])
-    c1, c2, c3 = letters(k1["ciphertext"]), letters(k2["ciphertext_as_carved"]), letters(k3["ciphertext"])
-    src = {"K1 plain": p1, "K2 plain": p2, "K3 plain": p3, "K1+K2+K3 plain": p1 + p2 + p3,
-           "K1 cipher": c1, "K2 cipher": c2, "K3 cipher": c3, "K1+K2+K3 cipher": c1 + c2 + c3}
-    if p2c and p2c != p2:
-        src["K2 plain corrected ending"] = p2c
-    out = {}
-    for name, t in src.items():
-        out[name + " fwd"] = t; out[name + " bwd"] = t[::-1]
-    return out
-
-
 def encrypt(plaintext, key):
-    text = sources()[key["source"]]; n = len(text); o = key["offset"]
-    pa, ca, ka, m = key["pa"], key["ca"], key["ka"], key["m"]
+    pa, ca, m, k = key["pa"], key["ca"], key["m"], key["key"]   # key is a list of indices
     f = MODES_ENC[m]
-    return "".join(ca[f(pa.index(p), ka.index(text[(o + i) % n]))] for i, p in enumerate(plaintext))
+    return "".join(ca[f(pa.index(p), k[i % len(k)])] for i, p in enumerate(plaintext))
+
+
+def climb(ct, known, P, pa, ca, m, score, rng, restarts):
+    fk, fd = MODES_KEY[m], MODES_DEC[m]
+    pidx = {ch: i for i, ch in enumerate(pa)}
+    cidx = {ch: i for i, ch in enumerate(ca)}
+    fixed = {}
+    for pos, p in known.items():
+        s = (pos - 1) % P
+        k = fk(pidx[p], cidx[ct[pos - 1]])
+        if s in fixed and fixed[s] != k:
+            return None
+        fixed[s] = k
+    free = [s for s in range(P) if s not in fixed]
+    crib_idx = {pos - 1 for pos in known}
+    cts = [cidx[c] for c in ct]
+
+    def text(key):
+        return "".join(pa[fd(cts[i], key[i % P])] for i in range(N))
+
+    def free_score(pt):
+        return score("".join(ch for i, ch in enumerate(pt) if i not in crib_idx))
+
+    best_pt, best_sc, best_key = None, -99, None
+    for _ in range(restarts):
+        key = [fixed.get(s, rng.randrange(26)) for s in range(P)]
+        cur = free_score(text(key))
+        changed = True
+        while changed:
+            changed = False
+            for s in free:
+                orig = key[s]; best_l, best_v = orig, cur
+                for l in range(26):
+                    if l == orig:
+                        continue
+                    key[s] = l
+                    v = free_score(text(key))
+                    if v > best_v:
+                        best_l, best_v = l, v
+                key[s] = best_l
+                if best_l != orig:
+                    cur = best_v; changed = True
+        if cur > best_sc:
+            best_sc, best_key, best_pt = cur, list(key), text(key)
+    return best_pt, best_sc, best_key, len(free)
+
+
+def pairs_of(pool):
+    mixed = [n for n in pool if n not in ("std", "kry")]
+    out = [(p_, c_) for p_ in mixed for c_ in mixed]
+    random.Random(48).shuffle(out)
+    return out
+
+
+def sweep(ct, known, pool, score, rng, restarts, time_left, reserve=90):
+    res = []
+    for pname, cname in pairs_of(pool):
+        for m in MODES_KEY:
+            for P in PERIODS:
+                if time_left() < reserve:
+                    return res
+                r = climb(ct, known, P, pool[pname], pool[cname], m, score, rng, restarts)
+                if r is None:
+                    continue
+                pt, sc, key, nfree = r
+                res.append((sc, P, pname, cname, m, pt, key, nfree))
+    return res
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
     pool = pool_of(list(ctx.vocabulary))
-    src = sources()
-    crib = sorted(known.items())
-    trials, near, candidates = 0, [], []
-    stopped = False
-    pairs = [(p_, c_) for p_ in pool for c_ in pool if p_ in ("std", "kry") or c_ in ("std", "kry")]
-    for pname, cname in pairs:
-        pa, ca = pool[pname], pool[cname]
-        pidx = {ch: i for i, ch in enumerate(pa)}
-        if True:
-            for ka_name in ("std", "kry"):
-                ka = pool[ka_name]; kidx = {ch: i for i, ch in enumerate(ka)}
-                for m, f in MODES_ENC.items():
-                    table = {(p, k): ca[f(pidx[p], kidx[k])] for p in set(known.values()) for k in STD}
-                    for name, text in src.items():
-                        n = len(text)
-                        for o in range(n):
-                            trials += 1
-                            mism = 0
-                            for pos, p in crib:
-                                if table[(p, text[(o + pos - 1) % n])] != ct[pos - 1]:
-                                    mism += 1
-                                    if mism > 2:
-                                        break
-                            if mism <= 2:
-                                near.append((mism, name, pname, cname, ka_name, m, o))
-                                if mism == 0:
-                                    fd = MODES_DEC[m]; cidx = {ch: i for i, ch in enumerate(ca)}
-                                    pt = "".join(pa[fd(cidx[ct[i]], kidx[text[(o + i) % n]])] for i in range(N))
-                                    candidates.append({"plaintext": pt, "key": {"source": name, "offset": o, "pa": pa, "ca": ca, "ka": ka, "m": m}, "key_bits": 25,
-                                                       "key_description": f"running key {name} offset {o}; plain {pname}, cipher {cname}, key {ka_name}, {m}"})
-            if ctx.time_left() < 90:
-                stopped = True; break
-        if stopped:
-            break
-    near.sort()
+    rng = random.Random(35)
+    res = sweep(ct, known, pool, ctx.english_score, rng, RESTARTS, ctx.time_left, reserve=260)
+    pairs_reached = len({(r[2], r[3]) for r in res})
+    res.sort(key=lambda t: -t[0])
+    by_period = {}
+    for sc, P, pname, cname, m, pt, key, nfree in res:
+        if P not in by_period or sc > by_period[P][0]:
+            by_period[P] = (sc, pname, cname, m, pt, key, nfree)
+    candidates = []
+    for P, (sc, pname, cname, m, pt, key, nfree) in sorted(by_period.items()):
+        candidates.append({"plaintext": pt, "key": {"pa": pool[pname], "ca": pool[cname], "m": m, "key": key}, "key_bits": 4.7 * P,
+                           "key_description": f"period {P}, plain {pname}, cipher {cname}, {m}; {nfree} free slots climbed", "notes": f"English of the 73 free letters {sc:.3f}"})
+    control = {}
+    if ctx.time_left() > 120:
+        letters_ = list(ct); random.Random(0).shuffle(letters_)
+        small = {k: pool[k] for k in list(pool)[2:12]}
+        cres = sweep("".join(letters_), known, small, ctx.english_score, rng, RESTARTS, ctx.time_left, reserve=30)
+        for sc, P, *_ in cres:
+            control[P] = max(control.get(P, -99), sc)
     return {
         "candidates": candidates[:50],
-        "bounds": {"family": "running key from Carter and the sculpture texts, one alphabet keyword-mixed", "alphabet_pairs": len(pairs), "alphabets": len(pool), "key_alphabets": ["std", "kry"], "modes": 3,
-                   "sources": {k: len(v) for k, v in src.items()}, "trials": trials, "stopped_by_clock": stopped,
-                   "fewest_mismatches": near[0][0] if near else "more than 2",
-                   "near_misses": [{"mismatches": a, "source": b, "plain": c, "cipher": d, "key": e, "mode": f_, "offset": g} for a, b, c, d, e, f_, g in near[:20]],
-                   "survivors": len(candidates)},
-        "notes": f"{trials} trials{' (stopped by the clock)' if stopped else ''}; {len(candidates)} survivors; {len(near)} within two mismatches.",
+        "bounds": {"family": "periodic tableau at periods 27-29, one alphabet standard or KRYPTOS and the other keyword-mixed from the vocabulary, key completed by English climb",
+                   "alphabets": len(pool), "pairs_total": len(pairs_of(pool)), "pairs_reached": pairs_reached, "coverage": round(pairs_reached / len(pairs_of(pool)), 3), "periods": PERIODS, "restarts": RESTARTS, "climbs": len(res),
+                   "best_by_period": {str(P): {"english": round(v[0], 3), "plain": v[1], "cipher": v[2], "mode": v[3], "free_slots": v[6], "text": v[4]} for P, v in sorted(by_period.items())},
+                   "top_ten": [{"english": round(sc, 3), "period": P, "plain": a, "cipher": b, "mode": m} for sc, P, a, b, m, *_ in res[:10]],
+                   "shuffled_k4_best_by_period": {str(P): round(v, 3) for P, v in sorted(control.items())}, "english_reference": -3.6},
+        "notes": f"{len(res)} climbs over {pairs_reached} of {len(pairs_of(pool))} pairs. Best by period: {[(P, round(v[0], 3)) for P, v in sorted(by_period.items())]}; shuffled K4 (22-alphabet subset): {[(P, round(v, 3)) for P, v in sorted(control.items())]}.",
     }
 
 
 def worked_example(ctx, key):
-    pa, ca = keyword_mixed("BERLIN"), keyword_mixed("CLOCK")
-    text = sources()["carter vol1 fwd"]
-    lines = [f"plain alphabet BERLIN/keyword {pa}", f"cipher alphabet CLOCK/keyword {ca}", "key text: Carter volume one at offset 0, key letters on the standard order; Vigenere", "", "pos  plain  key  result  carved  match"]
-    for pos in (22, 23, 24, 25, 64, 65):
-        p = ctx.KNOWN[pos]; k = text[pos - 1]; c = ca[(pa.index(p) + STD.index(k)) % 26]
-        lines.append(f"{pos:>3}    {p}     {k}     {c}       {ctx.K4[pos-1]}     {'yes' if c == ctx.K4[pos-1] else 'no'}")
-    return "\n".join(lines)
+    pa, ca = keyword_mixed("PALIMPSEST"), KRY
+    r = climb(ctx.K4, ctx.KNOWN, 27, pa, ca, "vig", ctx.english_score, random.Random(1), 2)
+    if r is None:
+        return "PALIMPSEST / KRYPTOS at period 27 under Vigenere: two known letters clash on one slot, so this pair is out before any climb."
+    pt, sc, k, nfree = r
+    return "\n".join([f"plain alphabet PALIMPSEST/keyword {pa}; cipher alphabet KRYPTOS; Vigenere; period 27; {nfree} free slots climbed", "", f"key indices {k}", f"text       {pt}", f"English of the free letters {sc:.3f} (English about -3.6, noise about -6.8)"])

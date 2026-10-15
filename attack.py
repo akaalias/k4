@@ -1,121 +1,187 @@
-"""Experiment 0029. See program.md for the contract."""
+"""Experiment 0030. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "small-shift-keys-closeness-under-all-alphabets",
-    "title": "Bean's closeness made a test: is there an alphabet pair under which every known letter moves only a little?",
+    "slug": "self-referential-keys-affine-and-mirror",
+    "title": "The text as its own key: the ciphertext under every index rule, and the message keyed by itself backwards",
     "family": "1-keyed-periodic",
-    "parent": "0028-gromark-small-bases-two-to-nine",
-    "changed": "The statistic is the size of the forced shift, not its recurrence. For every alphabet pair and mode the 24 forced shifts are reduced to circular magnitudes 0-13, and the pair with the smallest largest magnitude is the lead; ten shuffled controls say what chance gives.",
+    "parent": "0025-autokeys-with-mixed-alphabets",
+    "changed": "Autokey generalised. The key letter for position i is the ciphertext letter at a i + b mod 97 for every a and b, which includes every lag and every mirror of the ciphertext; or the plaintext letter at o - i mod 97, the message read backwards from any point.",
     "hypothesis_expert": (
-        "Bean (knowledge/04-structure.md): the ten crib plaintext letters that lie in KRYPTOS sit within 0-2 "
-        "places of their ciphertext letters on the standard alphabet, about one permutation in 5,520, and "
-        "he reads K4 as letter-for-letter with a cipher alphabet near the standard one. A Gronsfeld-like key "
-        "of small digits, or any system whose shifts are small under the right pair of alphabets, would show "
-        "as a pair under which all 24 forced shifts have small circular magnitude. Over the 248-alphabet pool "
-        "squared and three modes, 184,512 pairs, the chance that a pair keeps all 24 magnitudes at or below "
-        "3 is (7/26)^24, about 10^-14 per pair; at or below 6 it is (13/26)^24, about 6 x 10^-8 per pair, "
-        "so a largest magnitude of 6 or less would be a lead and 3 or less decisive. Ten shuffles of K4 "
-        "calibrate the smallest largest-magnitude. Bounds: complete for this pool; diagnostic, no candidate."
+        "Sanborn's mirrors and 'spatial systems' (C3) and the NSA's autokey guess (C11a) meet in self-keyed "
+        "systems. Ciphertext self-key: c[i] = E(p[i], c[(a i + b) mod 97]); since every key letter is a "
+        "carved letter, all 24 cribs are exact checks for each (a, b) and convention, 9,312 rules x 24 "
+        "conventions, and a survivor decrypts the whole text at once. Plaintext mirror key: c[i] = E(p[i], "
+        "p[(o - i) mod 97]) for every o; a crib forces its partner's plaintext letter and the chain closes "
+        "as in 0012, with up to eleven exact checks where EASTNORTHEAST and BERLINCLOCK mirror onto each "
+        "other. Survivors with 60 or more forced letters are scored as English against ten shuffled "
+        "controls; fully forced texts are submitted. Bounds: complete for these rules and 24 conventions."
     ),
     "hypothesis_eli5": (
-        "A cryptanalyst noticed that several known letters barely move: S becomes R, T becomes V, K stays "
-        "K. If the whole cipher only nudged letters a little along some alphabet, that alphabet would make "
-        "every one of the 24 known moves small. We try every alphabet the puzzle's words can build, measure "
-        "the biggest nudge each needs, and keep the alphabet with the smallest biggest nudge. Random letters "
-        "tell us how small that can get by luck."
+        "An autokey uses the text itself as the secret word, a fixed distance back. We widen that: the key "
+        "for each letter may be the carved letter at any fixed stride and start, forwards or backwards, or "
+        "the message letter the same distance from the other end. Because the carved letters are all known, "
+        "the first kind is checked at every known letter at once. The second kind pairs the two known "
+        "words with each other in the mirror, which gives a direct check too."
     ),
     "prediction": (
-        "The smallest largest magnitude over all pairs is 9 or 10, the same as on shuffled K4. Under the "
-        "standard-standard pair the KRYPTOS-letter cribs are close, as Bean found, but the other fourteen "
-        "cribs are not, and no pair makes all 24 small."
+        "No ciphertext rule passes all 24 checks; the best passes 5 or 6. No mirror centre keeps the chain "
+        "consistent beyond chance, and the large closures read as noise. Zero candidates pass."
     ),
     "method": (
-        "1. Build the alphabet pool. 2. For each plain and cipher alphabet and mode, compute the 24 forced "
-        "shifts and their circular magnitudes. 3. Record the largest magnitude per pair and keep the ten "
-        "smallest, with the shift sequences. 4. Repeat on ten shuffles of K4. 5. Report Bean's own "
-        "statistic, the magnitudes under the standard pair, for reference."
+        "1. For each (a, b) with a in 1-96 and b in 0-96 and each convention, encipher each known letter "
+        "with the carved letter at a i + b and count mismatches. 2. Decrypt any zero-mismatch rule and submit. "
+        "3. For each mirror centre o and convention, chain forced plaintext letters from the cribs through "
+        "the mirror; reject on conflict. 4. Score closures of 60 or more letters as English; repeat on ten "
+        "shuffles; submit fully forced texts."
     ),
     "walkthrough": (
-        "1. Take the plain alphabet for both message and carved letters, Vigenere. 2. Position 24 is S, "
-        "carved R: R is one place before S, a nudge of 1. 3. Position 25 is T, carved V: a nudge of 2. "
-        "4. Position 23 is A, carved L: a nudge of 11, which is large. 5. Write down all 24 nudges and keep "
-        "the biggest: 12 or more here. 6. Now rebuild the alphabet from a word, say PALIMPSEST, and measure "
-        "again; the nudges change. 7. The alphabet with the smallest biggest nudge is the one to look at."
+        "1. Rule: stride 3, start 5. The key for position 1 is the carved letter at 5, for position 2 at 8, "
+        "and so on, wrapping past 97. 2. Position 22 (E) gets the carved letter at 5 + 3 x 21 = 68, T. 3. On "
+        "the sculpture's table with Vigenere, E under T gives some letter; compare with the carved F at 22. "
+        "4. Do this for all 24 known letters; count the misses; any miss kills the rule. 5. Mirror: with "
+        "centre 97, position 22 is keyed by position 75, which is not known, but position 24 is keyed by 73, "
+        "the C of CLOCK, which is known: S under C must give the carved R. 6. Eleven such pairs decide the "
+        "mirror at once."
     ),
 }
 
 import random
-from kryptos.alphabets import keyword_mixed, columnar_mixed, keyed_columnar_mixed, alternate_vertical_mixed
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
+from kryptos.alphabets import conventions, key_letter_for, decrypt_letter, encrypt_letter
 
-MODES = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
-MIX = {"keyword": keyword_mixed, "columnar": columnar_mixed, "keyed_columnar": keyed_columnar_mixed, "alt_vertical": alternate_vertical_mixed}
+N = 97
 
 
 def encrypt(plaintext, key):
-    raise NotImplementedError("diagnostic experiment: no candidate is submitted")
+    pa, ca, ka, m = key["pa"], key["ca"], key["ka"], key["m"]
+    if key["kind"] == "ciphertext-affine":
+        a, b = key["a"], key["b"]
+        # ciphertext self-key is defined as a fixed point: solve by iteration over an index order where
+        # key positions are known; here we re-encrypt using the recorded ciphertext as the key source
+        src = key["ciphertext"]
+        return "".join(encrypt_letter(p, src[(a * i + b) % N], pa, ca, ka, m) for i, p in enumerate(plaintext))
+    o = key["o"]
+    return "".join(encrypt_letter(p, plaintext[(o - i) % N], pa, ca, ka, m) for i, p in enumerate(plaintext))
 
 
-def pool_of(vocab):
-    pool = {"std": STD, "kry": KRY}
-    for w in vocab:
-        if len(set(w)) >= 3:
-            for mname, fn in MIX.items():
-                pool[f"{w}/{mname}"] = fn(w)
-    seen, out = {}, {}
-    for name, A in pool.items():
-        if A not in seen:
-            seen[A] = name; out[name] = A
+def mirror_closure(ct, known, o, conv):
+    pa, ca, ka, m = conv
+    forced = {pos - 1: p for pos, p in known.items()}
+    queue = list(forced)
+    while queue:
+        i = queue.pop()
+        p = forced[i]
+        j = (o - i) % N                       # p[j] is the key for position i
+        k = key_letter_for(p, ct[i], pa, ca, ka, m)
+        if j in forced:
+            if forced[j] != k:
+                return False, forced
+        else:
+            forced[j] = k; queue.append(j)
+        # p[i] is the key for position j' with (o - j') = i, i.e. j' = (o - i) = j: same pair, so
+        # position j's plaintext decrypts with key p[i]
+        q = decrypt_letter(ct[j], p, pa, ca, ka, m)
+        if j in forced:
+            if forced[j] != q:
+                return False, forced
+        else:
+            forced[j] = q; queue.append(j)
+    return True, forced
+
+
+def runs_of(forced, skip):
+    out, cur, prev = [], [], None
+    for i in sorted(forced):
+        if i in skip:
+            if len(cur) >= 5: out.append("".join(cur))
+            cur = []; prev = i; continue
+        if prev is not None and i == prev + 1:
+            cur.append(forced[i])
+        else:
+            if len(cur) >= 5: out.append("".join(cur))
+            cur = [forced[i]]
+        prev = i
+    if len(cur) >= 5: out.append("".join(cur))
     return out
-
-
-def mag(s):
-    return min(s, 26 - s)
-
-
-def sweep(ct, known, pool, index):
-    crib_pos = sorted(known)
-    best = []
-    for pname in pool:
-        pidx = index[pname]
-        for cname in pool:
-            cidx = index[cname]
-            for m, f in MODES.items():
-                shifts = [f(pidx[known[pos]], cidx[ct[pos - 1]]) for pos in crib_pos]
-                mags = [mag(s) for s in shifts]
-                big = max(mags)
-                if len(best) < 10 or big < best[-1][0]:
-                    best.append((big, sum(mags) / 24, pname, cname, m, shifts)); best.sort(key=lambda t: (t[0], t[1])); best = best[:10]
-    return best
 
 
 def run(ctx):
     ct, known = ctx.K4, ctx.KNOWN
-    pool = pool_of(list(ctx.vocabulary))
-    index = {n: {ch: i for i, ch in enumerate(A)} for n, A in pool.items()}
-    best = sweep(ct, known, pool, index)
+    convs = list(conventions())
+    crib = sorted(known.items())
+    crib_idx = {p - 1 for p in known}
+    # ciphertext affine self-key
+    best_ct, survivors, candidates = 99, [], []
+    trials = 0
+    for conv in convs:
+        pa, ca, ka, m = conv
+        table = {(p, k): encrypt_letter(p, k, pa, ca, ka, m) for p in set(known.values()) for k in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
+        for a in range(1, N):
+            for b in range(N):
+                trials += 1
+                mism = 0
+                for pos, p in crib:
+                    i = pos - 1
+                    if table[(p, ct[(a * i + b) % N])] != ct[i]:
+                        mism += 1
+                        if mism > 5:
+                            break
+                best_ct = min(best_ct, mism)
+                if mism == 0:
+                    survivors.append((a, b, conv))
+                    pt = "".join(decrypt_letter(ct[i], ct[(a * i + b) % N], pa, ca, ka, m) for i in range(N))
+                    candidates.append({"plaintext": pt, "key": {"kind": "ciphertext-affine", "a": a, "b": b, "pa": pa, "ca": ca, "ka": ka, "m": m, "ciphertext": ct},
+                                       "key_bits": 14, "key_description": f"ciphertext self-key at {a} i + {b}; {pa}/{ca}/{ka} {m}"})
+        if ctx.time_left() < 200:
+            break
+    # plaintext mirror key
+
+    def mirror_sweep(text, score):
+        best, full, consistent = [], [], 0
+        for o in range(N):
+            for conv in convs:
+                ok, forced = mirror_closure(text, known, o, conv)
+                if not ok:
+                    continue
+                consistent += 1
+                if len(forced) >= 60:
+                    runs = runs_of({i: c for i, c in forced.items() if i not in crib_idx}, set())
+                    qs = sum(len(r) - 3 for r in runs)
+                    if qs >= 4:
+                        sc = sum(score(r) * (len(r) - 3) for r in runs) / qs
+                        if len(best) < 10 or sc > best[-1][0]:
+                            best.append((sc, o, "/".join(conv), len(forced), runs[:3])); best.sort(reverse=True); best = best[:10]
+                if len(forced) == N:
+                    full.append((o, conv, "".join(forced[i] for i in range(N))))
+        return best, full, consistent
+
+    best, full, consistent = mirror_sweep(ct, ctx.english_score)
+    for o, conv, pt in full[:20]:
+        pa, ca, ka, m = conv
+        candidates.append({"plaintext": pt, "key": {"kind": "plaintext-mirror", "o": o, "pa": pa, "ca": ca, "ka": ka, "m": m}, "key_bits": 7,
+                           "key_description": f"plaintext mirror key, centre {o}; {pa}/{ca}/{ka} {m}; fully forced"})
     nulls = []
     for seed in range(10):
         letters_ = list(ct); random.Random(seed).shuffle(letters_)
-        nb = sweep("".join(letters_), known, pool, index)
-        nulls.append(nb[0][0])
-    crib_pos = sorted(known)
-    bean = [(pos, known[pos], ct[pos - 1], mag((STD.index(ct[pos - 1]) - STD.index(known[pos])) % 26)) for pos in crib_pos]
+        nb, _, _ = mirror_sweep("".join(letters_), ctx.english_score)
+        nulls.append(round(nb[0][0], 3) if nb else None)
     return {
-        "candidates": [],
-        "bounds": {"family": "small-shift keys under all alphabet pairs (Bean's closeness)", "alphabets": len(pool), "pairs_x_modes": len(pool) ** 2 * 3,
-                   "smallest_largest_magnitude": best[0][0],
-                   "ten_best_pairs": [{"largest": b, "mean": round(mn, 2), "plain": p, "cipher": c, "mode": m, "shifts": s} for b, mn, p, c, m, s in best],
-                   "shuffled_k4_smallest_largest_magnitude": nulls,
-                   "bean_statistic_standard_pair": [{"pos": a, "plain": b, "cipher": c, "magnitude": d} for a, b, c, d in bean],
-                   "bean_kryptos_letters_sum": sum(d for _, b, _, d in bean if b in "KRYPTOS")},
-        "notes": f"Diagnostic, no candidates. Smallest largest magnitude over {len(pool) ** 2 * 3} pairs: {best[0][0]} ({best[0][2]} / {best[0][3]} {best[0][4]}); shuffled K4 gives {nulls}.",
+        "candidates": candidates[:50],
+        "bounds": {"family": "self-referential keys: ciphertext at a i + b, plaintext at o - i", "conventions": 24,
+                   "ciphertext_rules": trials, "ciphertext_best_mismatches": best_ct, "ciphertext_survivors": len(survivors),
+                   "mirror_centres": N, "mirror_consistent_pairs": consistent, "mirror_fully_forced": len(full),
+                   "mirror_best_closures": [{"score": round(sc, 3), "centre": o, "convention": c, "forced": n, "runs": r} for sc, o, c, n, r in best],
+                   "shuffled_control_best": nulls},
+        "notes": f"Ciphertext self-key: {trials} rules, best {best_ct} mismatches, {len(survivors)} survivors. Mirror key: {consistent} consistent (centre, convention) pairs, {len(full)} fully forced; best closure {best[0][0] if best else None} vs shuffled {[x for x in nulls if x is not None]}.",
     }
 
 
 def worked_example(ctx, key):
-    lines = ["standard alphabet for both message and carved letters, Vigenere: nudge per known letter", "", "pos  plain  carved  nudge"]
-    for pos in sorted(ctx.KNOWN):
-        p, c = ctx.KNOWN[pos], ctx.K4[pos - 1]
-        lines.append(f"{pos:>3}    {p}      {c}      {mag((STD.index(c) - STD.index(p)) % 26):>2}{'   (KRYPTOS letter)' if p in 'KRYPTOS' else ''}")
+    lines = ["ciphertext self-key, stride 3, start 5, KRYPTOS alphabet throughout, Vigenere", "", "pos  plain  key pos  key  E+key  carved  match"]
+    for pos in (22, 23, 24, 64, 65):
+        i = pos - 1; j = (3 * i + 5) % N; k = ctx.K4[j]; c = encrypt_letter(ctx.KNOWN[pos], k, "kry", "kry", "kry", "vig")
+        lines.append(f"{pos:>3}    {ctx.KNOWN[pos]}      {j+1:>3}     {k}     {c}      {ctx.K4[i]}     {'yes' if c == ctx.K4[i] else 'no'}")
+    lines.append("")
+    lines.append("mirror key, centre 97 (position i keyed by position 98-i): position 24 (S) is keyed by 74 (K), 25 (T) by 73 (C), ... 34 (T) by 64 (B)")
+    ok, forced = mirror_closure(ctx.K4, ctx.KNOWN, 96, ("kry", "kry", "kry", "vig"))
+    lines.append(f"chain under kry/kry/kry Vigenere: {'consistent' if ok else 'breaks'} after {len(forced)} letters")
     return "\n".join(lines)

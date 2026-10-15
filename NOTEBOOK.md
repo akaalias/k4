@@ -28,6 +28,7 @@ From 0027: the width-7 doublet column is reproduced by nothing, random letters i
 | 27 | 7 | Simulator round two: only Gromark base 2 reproduces the width-21 repeats; nothing reproduces the width-7 doublet column. |
 | 28 | 5 | Gromark bases 2-9: every vocabulary alphabet triple forces a shift of 15 or more, so bases up to 15 are dead. Clocks batched, so design and implement times are lost. |
 | 29 | 1 | Bean's closeness over all alphabet pairs: smallest largest shift 8, same as shuffled K4. Chance. |
+| 30 | 1 | Ciphertext as its own key under every index rule, and the message mirrored as key: nothing. |
 
 ## 2026-10-14
 

@@ -51,6 +51,7 @@ From 0034: the loss function's key-cost term is too weak. A 95-letter random key
 | 44 | 8 | Hill under 126 keyword numberings: 4x4 solutions exist without redundancy and all break the partial-block cribs. Dead. |
 | 45 | 1 | K1-K3 as running keys on vocabulary tables, 147 million trials: nothing within two mismatches. |
 | 46 | 5 | Gromark three-term rules, lags to 13, bases 16-26: nothing. |
+| 47 | 1 | Carter and the sculpture texts as running keys with one mixed alphabet, 858 million trials: nothing. |
 
 ## 2026-10-14
 

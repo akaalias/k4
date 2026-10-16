@@ -1,0 +1,257 @@
+{
+ "id": 126,
+ "tag": "0126-hand-key-schedules-listed-and-tested",
+ "started": "2026-10-16T08:51:17+00:00",
+ "seconds": 1815.6,
+ "status": "ran",
+ "phases": {
+  "design": 0.1,
+  "implement": 10.1,
+  "test": 0.7,
+  "run": 1815.6,
+  "record": 0.1
+ },
+ "ended_epoch": 1792142492.826544,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "hand key schedules with an unknown keyword (skip, stutter, back and forth, triangle, square, line restart), and the tableau rows as keys",
+  "partitions": {
+   "B skip": {
+    "distinct": 3729,
+    "with_checks": 3729
+   },
+   "C stutter": {
+    "distinct": 207,
+    "with_checks": 207
+   },
+   "E triangle": {
+    "distinct": 350,
+    "with_checks": 350
+   },
+   "E square": {
+    "distinct": 229,
+    "with_checks": 229
+   },
+   "F line restart": {
+    "distinct": 30,
+    "with_checks": 30
+   },
+   "D back and forth": {
+    "distinct": 509,
+    "with_checks": 509
+   }
+  },
+  "cells": {
+   "B skip | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "B skip | free V": {
+    "k4": 67,
+    "coppers": [
+     22,
+     390
+    ]
+   },
+   "B skip | free B": {
+    "k4": 173,
+    "coppers": [
+     101,
+     229
+    ]
+   },
+   "B skip | two free": {
+    "k4": 461,
+    "coppers": [
+     305,
+     449
+    ]
+   },
+   "C stutter | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "C stutter | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "C stutter | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "C stutter | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E triangle | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E triangle | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E triangle | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E triangle | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E square | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E square | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E square | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E square | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "F line restart | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "F line restart | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "F line restart | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "F line restart | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "D back and forth | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "D back and forth | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "D back and forth | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "D back and forth | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   }
+  },
+  "outside_copper_range": [
+   "B skip | two free: K4 461 vs 305-449"
+  ],
+  "k4_consistent_on_standard_or_kryptos_tables": [],
+  "n_k4_consistent_on_tables": 0,
+  "tableau_rows_as_keys": {
+   "keys": 52,
+   "starts": "every",
+   "tables": 16,
+   "k4_best_hits": 6,
+   "coppers_best_hits_first_3": [
+    6,
+    6,
+    5
+   ]
+  },
+  "covered_elsewhere": {
+   "Berlin clock": "0079",
+   "Carter dates": "0038",
+   "progressive": "0011, 0042",
+   "restart per word": "0101",
+   "autokey": "0002, 0003, 0012, 0118",
+   "C20(c) second plate / sculpture texts": "0017, 0090, 0117",
+   "shift per carved line": "0088"
+  },
+  "blocked": {
+   "C20(e) K5 as key": "no text"
+  },
+  "controls": "10 shuffled coppers (seed 126), identical tests"
+ },
+ "notes": "Outside the copper range: ['B skip | two free: K4 461 vs 305-449']. K4 consistent on std/KRYPTOS tables: 0 partitions (max checks 0). Tableau rows as keys: K4 best 6/24, coppers [6, 6, 5].",
+ "error": null,
+ "candidates": []
+}

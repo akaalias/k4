@@ -1,0 +1,235 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "hand key schedules with an unknown keyword (skip, stutter, back and forth, triangle, square, line restart), and the tableau rows as keys",
+  "partitions": {
+   "B skip": {
+    "distinct": 3729,
+    "with_checks": 3729
+   },
+   "C stutter": {
+    "distinct": 207,
+    "with_checks": 207
+   },
+   "E triangle": {
+    "distinct": 350,
+    "with_checks": 350
+   },
+   "E square": {
+    "distinct": 229,
+    "with_checks": 229
+   },
+   "F line restart": {
+    "distinct": 30,
+    "with_checks": 30
+   },
+   "D back and forth": {
+    "distinct": 509,
+    "with_checks": 509
+   }
+  },
+  "cells": {
+   "B skip | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "B skip | free V": {
+    "k4": 67,
+    "coppers": [
+     22,
+     390
+    ]
+   },
+   "B skip | free B": {
+    "k4": 173,
+    "coppers": [
+     101,
+     229
+    ]
+   },
+   "B skip | two free": {
+    "k4": 461,
+    "coppers": [
+     305,
+     449
+    ]
+   },
+   "C stutter | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "C stutter | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "C stutter | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "C stutter | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E triangle | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E triangle | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E triangle | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E triangle | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E square | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E square | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E square | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "E square | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "F line restart | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "F line restart | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "F line restart | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "F line restart | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "D back and forth | tables": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "D back and forth | free V": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "D back and forth | free B": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   },
+   "D back and forth | two free": {
+    "k4": 0,
+    "coppers": [
+     0,
+     0
+    ]
+   }
+  },
+  "outside_copper_range": [
+   "B skip | two free: K4 461 vs 305-449"
+  ],
+  "k4_consistent_on_standard_or_kryptos_tables": [],
+  "n_k4_consistent_on_tables": 0,
+  "tableau_rows_as_keys": {
+   "keys": 52,
+   "starts": "every",
+   "tables": 16,
+   "k4_best_hits": 6,
+   "coppers_best_hits_first_3": [
+    6,
+    6,
+    5
+   ]
+  },
+  "covered_elsewhere": {
+   "Berlin clock": "0079",
+   "Carter dates": "0038",
+   "progressive": "0011, 0042",
+   "restart per word": "0101",
+   "autokey": "0002, 0003, 0012, 0118",
+   "C20(c) second plate / sculpture texts": "0017, 0090, 0117",
+   "shift per carved line": "0088"
+  },
+  "blocked": {
+   "C20(e) K5 as key": "no text"
+  },
+  "controls": "10 shuffled coppers (seed 126), identical tests"
+ },
+ "notes": "Outside the copper range: ['B skip | two free: K4 461 vs 305-449']. K4 consistent on std/KRYPTOS tables: 0 partitions (max checks 0). Tableau rows as keys: K4 best 6/24, coppers [6, 6, 5].",
+ "error": null,
+ "worked_example": "skip schedule: key word of 7 letters, one key letter skipped every 5 letters; KRYPTOS on both sides, Vigenere\n\nplace  known  carved  key letter no.  key value\n   22      E       F               4          1\n   23      A       L               5         10\n   24      S       R               6         21\n   25      T       V               0         18\n   26      N       Q               2          1\n   27      O       Q               3         15\n   28      R       P               4          2\n   29      T       R               5         23\n   30      H       N               6          5\n   31      E       G               1          2\n   32      A       K               2         19\n   33      S       S               3          0\n   34      T       S               4          2\n   64      B       N               5         11\n   65      E       Y               6         17\n   66      R       P               1          2\n   67      L       V               2          5\n   68      I       T               3         15\n   69      N       T               4         11\n   70      C       M               5          9\n   71      L       Z               0          8\n   72      O       F               1          7\n   73      C       P               2         20\n   74      K       K               3          0\n\nkey letter numbers with clashing values: [0, 1, 2, 3, 4, 5, 6]: dead",
+ "seconds": 1815.5478870868683
+}

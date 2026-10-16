@@ -1161,6 +1161,7 @@ OUTCOME_ROWS = [
     ("ruled-out", "ruled out"),
     ("diagnostic", "not a decryption test"),
     ("other", "no comparison run"),
+    ("error", "errored: the run crashed"),
     ("ungraded", "not graded yet"),
 ]
 
@@ -1183,7 +1184,8 @@ def outcome_chart(rows):
         elif r.get("decision") == "kept":
             kinds[r["tag"]] = "champion"
         else:
-            kinds[r["tag"]] = oc if oc in ("beat-chance", "chance", "ruled-out", "diagnostic") else ("ungraded" if not oc else "other")
+            kinds[r["tag"]] = ("error" if r.get("decision") in ("error", "timeout") else
+                               oc if oc in ("beat-chance", "chance", "ruled-out", "diagnostic") else ("ungraded" if not oc else "other"))
     shown = [(k, lab) for k, lab in OUTCOME_ROWS if k != "ungraded" or "ungraded" in kinds.values()]
     yrow = {k: T + j * band for j, (k, _) in enumerate(shown)}
     H = T + band * len(shown) + 58
@@ -1254,9 +1256,7 @@ def live_page():
     cand = sum(1 for r in rows if (r.get("n_candidates") or 0) > 0)
     none = n - cand - errs
     facts = (f"{n} experiments in {len(fams)} families over {days} days, {hours:.1f} hours of work. {none} ruled everything out before building a reading; "
-             f"{cand} produced readings, and none of them beat the same search on scrambled copies of the carved text. {errs} errored."
-             + (f' Latest: <a href="/exp/{esc(latest["tag"])}">{int(latest["tag"][:4])}</a>, {esc(latest["title"])}'
-                + ("" if latest["title"].rstrip()[-1:] in ".?!" else ".") if latest else ""))
+             f"{cand} produced readings, and none of them beat the same search on scrambled copies of the carved text. {errs} errored.")
     names = {}
     for r in rows:
         k, _, rest = r["family"].partition("-")

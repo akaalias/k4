@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The other order of 0129: the table first, on one alphabet in an unknown order, then every move of the type-1 library."
+ },
+ {
+  "anchor": "the check",
+  "text": "With the table first, each known letter's key slot is its own place in the message, as with no move; only the carved letter it sits under changes with the move. Lengths 9, 15, 17 and 19 are dead or nearly so for that reason."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No fit below key length 6. K4 is above all twelve coppers in none of the 52 cells; a copper manages 0-10 against the rest. Chance."
+ }
+]

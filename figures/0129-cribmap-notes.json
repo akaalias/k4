@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Sanborn wrote of matrix codes and then going back to the table, and said his table was slightly different from the carved one. Here every move of the type-1 library comes first, then a table on one alphabet in any of its 26! orders."
+ },
+ {
+  "anchor": "the check",
+  "text": "For each move, key length 1-26 and form, the 24 known letters give 24 equations, solved exactly mod 13 and mod 2: either no one-to-one alphabet fits, or one is found and checked."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No move admits an alphabet below key length 6. Above that, K4 fits as often as scrambled coppers: above all twelve in 7 of 52 cells, while a copper manages 0-8 against the rest."
+ }
+]

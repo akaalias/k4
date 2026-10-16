@@ -1111,6 +1111,73 @@ def experiments_table(rows):
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>')
 
 
+OUTCOME_ROWS = [
+    ("beat-chance", "beat the scrambled copies"),
+    ("chance", "at chance"),
+    ("ruled-out", "ruled out"),
+    ("other", "no comparison run"),
+    ("ungraded", "not graded yet"),
+]
+
+
+def outcome_chart(rows):
+    """One row per outcome against the scrambled copies (grades.tsv), one tick per experiment in run
+    order, a running count at the end of each row. Built to stay legible at a thousand experiments."""
+    if not rows:
+        return "<p class='muted'>No experiments yet.</p>"
+    grades = load_grades()
+    W, L, R, T, band = 1400, 20, 230, 34, 46
+    n = len(rows)
+    step = (W - L - R) / n
+    tw = max(1.0, min(4.0, step * 0.55))
+    kinds = {}
+    for r in rows:
+        oc = grades.get(r["tag"][:4], {}).get("outcome")
+        kinds[r["tag"]] = oc if oc in ("beat-chance", "chance", "ruled-out") else ("ungraded" if not oc else "other")
+    shown = [(k, lab) for k, lab in OUTCOME_ROWS if k != "ungraded" or "ungraded" in kinds.values()]
+    yrow = {k: T + j * band for j, (k, _) in enumerate(shown)}
+    H = T + band * len(shown) + 34
+    g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="What each experiment found against the scrambled copies, in run order">']
+    for j, (k, _) in enumerate(shown):
+        y0 = yrow[k]
+        if j % 2 == 0:
+            g.append(f'<rect x="{L}" y="{y0}" width="{W - L - R}" height="{band}" fill="var(--wash)"/>')
+    # day separators along the top, from the run stamps
+    prev = None
+    for i, r in enumerate(rows):
+        d = (r.get("started") or "")[:10]
+        if d != prev:
+            x = L + i * step
+            if prev is not None:
+                g.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{T - 6}" y2="{H - 34}" stroke="var(--rule)" stroke-width="1"/>')
+            g.append(f'<text x="{x + 4:.1f}" y="{T - 10}" font-size="12.5" fill="var(--muted)">{esc(d)}</text>')
+            prev = d
+    counts = {k: 0 for k, _ in shown}
+    for i, r in enumerate(rows):
+        k = kinds[r["tag"]]
+        counts[k] += 1
+        gr = grades.get(r["tag"][:4], {})
+        x = L + (i + 0.5) * step
+        y0 = yrow[k] + 9
+        col = "var(--accent)" if k == "beat-chance" else ("var(--faint)" if k == "ungraded" else "var(--muted)")
+        tip = (f"{esc(r['tag'])}<br>{esc(r['title'])}<br><b>{esc(gr.get('outcome') or 'not graded yet')}</b>"
+               f"{', ' + esc(gr['strength']) + ' test' if gr.get('strength') else ''}<br>{esc(gr.get('note', ''))}")
+        g.append(f'<a href="/exp/{esc(r["tag"])}"><g data-tip="{tip}"><rect x="{x - tw / 2:.2f}" y="{y0}" width="{tw:.2f}" height="{band - 18}" fill="{col}"/>'
+                 f'<rect x="{x - max(step, 4) / 2:.2f}" y="{yrow[k]}" width="{max(step, 4):.2f}" height="{band}" fill="transparent"/></g></a>')
+    for k, lab in shown:
+        cy = yrow[k] + band / 2
+        col = "var(--accent)" if k == "beat-chance" else "var(--ink)"
+        g.append(f'<text x="{W - R + 14}" y="{cy - 3:.1f}" font-size="15" fill="{col}">{lab}</text>')
+        g.append(f'<text x="{W - R + 14}" y="{cy + 15:.1f}" font-size="13" fill="var(--muted)">{counts[k]}</text>')
+    tick_every = next(t for t in (10, 20, 50, 100, 200, 500, 1000) if n / t <= 14)
+    for i, r in enumerate(rows):
+        num = int(r["tag"][:4]) if r["tag"][:4].isdigit() else i + 1
+        if num == 1 or num % tick_every == 0:
+            g.append(f'<text x="{L + (i + 0.5) * step:.1f}" y="{H - 12}" font-size="12.5" fill="var(--faint)" text-anchor="middle">{num}</text>')
+    g.append("</svg>")
+    return "<div class='chart-wide' style='border-top:1px solid var(--rule);padding-top:14px'><figure class='chart'>" + "".join(g) + "</figure></div>"
+
+
 def fam_num(r):
     return r["family"].split("-", 1)[0]
 
@@ -1134,18 +1201,18 @@ def live_page():
     for r in rows:
         k, _, rest = r["family"].partition("-")
         names.setdefault(k, rest.replace("-", " "))
-    mk = lambda inner: f'<svg width="14" height="14" viewBox="0 0 14 14" style="flex:none">{inner}</svg>'
     key = ('<div class="ph-legend">'
-           f'<span>{mk("<circle cx=7 cy=7 r=5 fill=var(--ink)></circle>")}kept</span>'
-           f'<span>{mk("<circle cx=7 cy=7 r=5 fill=var(--disc)></circle>")}a reading, at its loss</span>'
-           f'<span>{mk("<circle cx=7 cy=7 r=4 fill=var(--paper) stroke=var(--muted) stroke-width=2></circle>")}no reading: the search ruled everything out</span>'
-           f'<span>{mk("<path d=\'M3,3 L11,11 M3,11 L11,3\' stroke=\'var(--accent)\' stroke-width=\'2\'></path>")}error or timeout</span>'
-           f'<span>{mk("<line x1=\'0\' x2=\'14\' y1=\'7\' y2=\'7\' stroke=\'var(--accent)\' stroke-width=\'1.5\'></line>")}below the line all 24 known letters are right; the three dots there got them because their keys were fitted to them</span></div>')
+           '<span><b>Beat the scrambled copies</b>: K4 did better than every scrambled copy under the same search.</span>'
+           '<span><b>At chance</b>: settings or readings exist, but scrambled copies produce them just as well.</span>'
+           '<span><b>Ruled out</b>: nothing in the searched space fits the 24 known letters.</span>'
+           '<span><b>No comparison run</b>: early experiments without scrambled copies.</span></div>'
+           '<p class="facts" style="margin-top:4px">The one tick in the top row, 0056, is a pattern in the carved text itself, '
+           'doubled letters lining up in columns of seven, not a reading of it. Hover a tick for the finding; click to open it.</p>')
     body = (page_head("Live dashboard", "The run, experiment by experiment",
-                      "Every experiment's best reading, placed by its loss: ten points for each of the 24 known letters it misses, plus how far "
-                      "the rest is from English and how long its key is. Then the table of all of them, newest first. The page reloads when a "
-                      "new experiment lands.", facts, key)
-            + loss_chart(rows, bare=True)
+                      "Every experiment, in the order it ran, placed by what it found against scrambled copies of the carved text: the "
+                      "same search on the same letters in a random order. A result counts only if K4 does better than all of them. Then the "
+                      "table of all experiments, newest first. The page reloads when a new experiment lands.", facts, key)
+            + outcome_chart(rows)
             + experiments_table(rows)
             + page_foot('How the experiments built on each other is on the <a href="/lineage">lineage</a> page; what is still open is on the <a href="/families">families</a> page.'))
     return page("live dashboard", body, "/live")

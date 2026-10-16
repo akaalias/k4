@@ -1,0 +1,126 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "running key from Carter's book (both directions, every offset) on one unknown alphabet, three forms; two-alphabet check counts for every running-key source",
+  "carter_letters": 284914,
+  "offsets_per_direction": 284818,
+  "solver": "compiled propagation search, limit 20,000 then 100,000; agrees with a Python solver on 300 random offsets; a planted text fits",
+  "k4": {
+   "fwd": {
+    "V": {
+     "fit": 0,
+     "undecided_after_second_pass": 10
+    },
+    "B": {
+     "fit": 0,
+     "undecided_after_second_pass": 460
+    },
+    "R": {
+     "fit": 0,
+     "undecided_after_second_pass": 6
+    }
+   },
+   "rev": {
+    "V": {
+     "fit": 0,
+     "undecided_after_second_pass": 11
+    },
+    "B": {
+     "fit": 0,
+     "undecided_after_second_pass": 460
+    },
+    "R": {
+     "fit": 0,
+     "undecided_after_second_pass": 6
+    }
+   }
+  },
+  "k4_fits_total": 0,
+  "k4_fit_list": [
+   [],
+   []
+  ],
+  "controls_fits_total": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "k4_undecided_left": 953,
+  "controls_undecided_left": [
+   2842,
+   99,
+   4093,
+   603,
+   2798,
+   194,
+   1040,
+   2269,
+   3854,
+   20675
+  ],
+  "two_alphabets_checks_by_source": {
+   "carter": {
+    "P": {
+     "min": 0,
+     "mean": 0.16,
+     "max": 4
+    },
+    "C": {
+     "min": 0,
+     "mean": 0.09,
+     "max": 2
+    }
+   },
+   "k2": {
+    "P": {
+     "min": 0,
+     "mean": 0.11,
+     "max": 1
+    },
+    "C": {
+     "min": 0,
+     "mean": 0.07,
+     "max": 1
+    }
+   },
+   "k3": {
+    "P": {
+     "min": 0,
+     "mean": 0.11,
+     "max": 2
+    },
+    "C": {
+     "min": 0,
+     "mean": 0.11,
+     "max": 1
+    }
+   },
+   "cipher_panel": {
+    "P": {
+     "min": 0,
+     "mean": 0.13,
+     "max": 2
+    },
+    "C": {
+     "min": 0,
+     "mean": 0.07,
+     "max": 2
+    }
+   }
+  },
+  "controls": "10 shuffled coppers (seed 148), identical scan",
+  "exhaustive": "exact per offset; undecided counted"
+ },
+ "notes": "K4 fitting offsets 0 (coppers 0-0), undecided left 953; two alphabets, checks by source: carter 4/2 max, k2 1/1 max, k3 2/1 max, cipher_panel 2/2 max",
+ "controls": [],
+ "error": null,
+ "worked_example": "Carter's book from letter 1001, under K4; one unknown alphabet, added form\n\nplace 22: place(F) = place(E) + place(Y)\nplace 23: place(L) = place(A) + place(P)\nplace 24: place(R) = place(S) + place(R)\nplace 25: place(V) = place(T) + place(E)\nplace 64: place(N) = place(B) + place(N)\nplace 65: place(Y) = place(E) + place(A)\n...\n24 equations in the unknown places, decided exactly at every starting letter",
+ "seconds": 1426.5498912334442
+}

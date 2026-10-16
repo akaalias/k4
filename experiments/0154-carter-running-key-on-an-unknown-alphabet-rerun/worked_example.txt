@@ -1,0 +1,10 @@
+Carter's book from letter 1001, under K4; one unknown alphabet, added form
+
+place 22: place(F) = place(E) + place(Y)
+place 23: place(L) = place(A) + place(P)
+place 24: place(R) = place(S) + place(R)
+place 25: place(V) = place(T) + place(E)
+place 64: place(N) = place(B) + place(N)
+place 65: place(Y) = place(E) + place(A)
+...
+24 equations in the unknown places, decided exactly at every starting letter

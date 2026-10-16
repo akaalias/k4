@@ -910,6 +910,18 @@ def overview():
         champ = f"""<div class="callout wide"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}; loss {ch.get('loss', 0):.2f}, {pct(ch.get('loss'))} of the worst possible. A champion is the lowest-loss candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.{' Experiments 0001-0049 were kept by a different number, fitness, which is why a reverted experiment can sit below the champion in the chart; from 0050 the harness keeps by loss.' if ch['experiment'][:4] <= '0049' else ''}</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
+    body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
+            '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
+            + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
+            + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
+            + what_we_look_for()
+            + sec(2, "What each experiment found", "Each dot is one experiment, placed by what it found against scrambled copies of the carved text. The loss chart that stood here made fitted readings look like partial hits; it was replaced on 2026-10-16 (issue #29).")
+            + findings_chart(rows))
+    return page("Kryptos K4 autoresearch", body, "/")
+
+
+def experiments_table(rows):
+    """Every experiment, newest first, with its loss, crib letters, candidates and time by phase."""
     scale_max = max((sum((r.get("phases") or {"run": r["seconds"]}).values()) for r in rows), default=0)
     trs = "".join(
         f"""<tr><td class="num">{int(r['tag'][:4])}</td><td><a href="/exp/{esc(r['tag'])}">{esc(r['title'])}</a></td><td class="muted">{esc(r['family'])}</td>
@@ -920,25 +932,18 @@ def overview():
         for r in reversed(rows)
     )
     table = f"""<table><thead><tr><th class="num">id</th><th>title</th><th>family</th><th>decision</th><th class="num" title="the best candidate's loss as a share of the worst possible, 240">loss</th><th class="num" title="known letters the best candidate got right, out of 24">crib letters</th><th class="num" title="full 97-letter decryptions the experiment handed to the gates">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
-    body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
-            '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
-            + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
-            + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
-            + what_we_look_for()
-            + sec(2, "What each experiment found", "Each dot is one experiment, placed by what it found against scrambled copies of the carved text. The loss chart that stood here made fitted readings look like partial hits; it was replaced on 2026-10-16 (issue #29).")
-            + findings_chart(rows)
-            + sec(3, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
+    return (sec(2, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>')
-    return page("Kryptos K4 autoresearch", body, "/")
 
 
 def live_page():
-    """The run as it goes: every experiment's best loss, newest on the right. Reloads when a new
-    experiment lands."""
+    """The run as it goes: every experiment's best loss, newest on the right, then the table of
+    experiments. Reloads when a new experiment lands."""
     rows = load_results()
     body = ('<h1 class="home">Live dashboard</h1>'
             + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; a hollow dot means the search ruled everything out before producing one. The axis breaks at the line so the band where a solution would appear has room.")
-            + loss_chart(rows))
+            + loss_chart(rows)
+            + experiments_table(rows))
     return page("live dashboard", body, "/live")
 
 

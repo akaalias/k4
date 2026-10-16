@@ -892,55 +892,91 @@ def crib_cells(html_text):
     return html_text
 
 
-# The history under the sculpture model on the overview: (date, era, kind, title, text, source).
-# kind: place, making, dedication, solved, clue, endgame, us. Sources: knowledge/08-timeline.md unless noted.
+# The history under the sculpture model on the overview: (date, era, kind, title, text, [(source, url)]).
+# kind: place, making, dedication, solved, clue, endgame, us. Sources checked in research_notes/timeline-sources.md.
 HISTORY = [
     ("November 3, 1959", "The building", "place", "A cornerstone at Langley",
-     "President Eisenhower lays the cornerstone of the CIA's headquarters in Langley, Virginia.", "cia.gov, About the OHB Cornerstone"),
+     "President Eisenhower lays the cornerstone of the CIA's headquarters in Langley, Virginia.",
+     [("CIA, About the OHB Cornerstone", "https://www.cia.gov/legacy/headquarters/ohb-cornerstone/")]),
     ("1961", "The building", "place", "The Original Headquarters Building opens",
-     "Construction finishes in 1961; the CIA gives March, other accounts late 1961. Kryptos will stand in the courtyard between this building and the next.", "cia.gov, Original Headquarters Building"),
+     "The CIA's own pages give March 1961 for completion and the autumn of 1961 for staff moving in. Kryptos will stand in the courtyard between this building and the next.",
+     [("CIA, Original Headquarters Building", "https://www.cia.gov/legacy/headquarters/original-headquarters-building-ohb"),
+      ("CIA, Sites to See (PDF)", "https://www.cia.gov/static/Sites-to-See.pdf")]),
     ("1988", "The commission", "making", "Art for the new building",
-     "Part of the New Headquarters Building's budget is set aside for art under the GSA's Art-in-Architecture programme. A panel reviews 700 slides from 275 artists.", "08-timeline"),
+     "A small part of the New Headquarters Building's cost is set aside for art. The CIA's Fine Arts Commission recommends the GSA's Art-in-Architecture programme, and the GSA forms a selection team led by the NEA.",
+     [("CIA, About the Kryptos Sculpture", "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/")]),
     ("November 1988", "The commission", "making", "Jim Sanborn is chosen",
-     "A combined NEA and CIA panel picks the Washington sculptor for a $250,000 commission. He spends the next months reading everything he can find on the agency.", "08-timeline; cia.gov, About the Kryptos Sculpture"),
+     "A combined NEA and CIA panel picks the Washington sculptor for a $250,000 commission. He reads extensively on intelligence and cryptography.",
+     [("CIA, About the Kryptos Sculpture", "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/")]),
     ("1989", "The making", "making", "Lessons from Ed Scheidt",
-     "The CIA pairs Sanborn with Ed Scheidt, a field-communications officer about to retire. Over four months, by voice and at secret locations, Scheidt teaches him “matrix codes”; Sanborn later says he changed what he was taught.", "08-timeline; 03-scheidt-said"),
+     "Sanborn works for four months with Ed Scheidt, the retiring chairman of the CIA's Cryptographic Center, to devise the codes; Scheidt teaches him \u201cmatrix codes.\u201d",
+     [("CIA, About the Kryptos Sculpture", "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/"),
+      ("Washington Post, July 19, 1999", "https://www.washingtonpost.com/wp-srv/national/daily/july99/kryptos19.htm")]),
     ("November 9, 1989", "The making", "making", "The Berlin Wall falls",
-     "Sanborn is mid-construction and says he was “influenced by all that going on simultaneously.” BERLIN and CLOCK will turn out to be in K4.", "08-timeline"),
-    ("1989–90", "The making", "making", "K4 is enciphered on the road",
-     "Sanborn writes and enciphers K4 on the drive back from Arizona with the petrified tree, then spends two and a half years cutting the copper.", "08-timeline"),
+     "Sanborn is at work on Kryptos the year the Wall falls. BERLIN and CLOCK will turn out to be in K4.",
+     [("Wired, November 20, 2014", "https://www.wired.com/2014/11/second-kryptos-clue/")]),
+    ("1989\u201390", "The making", "making", "The text is enciphered on the road",
+     "Sanborn does the encryption on his own during a four-day drive trucking the petrified tree from Arizona. The whole project, by his count, took two and a half years.",
+     [("Washington Post, July 19, 1999", "https://www.washingtonpost.com/wp-srv/national/daily/july99/kryptos19.htm")]),
     ("November 3, 1990", "The dedication", "dedication", "Kryptos is dedicated",
-     "Director William Webster receives the solution in a sealed envelope. “We like to be tested.”", "08-timeline (sources give November 1, 3 or 5)"),
-    ("1991", "The dedication", "place", "The New Headquarters Building is finished",
-     "The building behind the sculpture is completed.", "cia.gov, About the Kryptos Sculpture"),
+     "Director William Webster receives the solution in a sealed envelope. \u201cWe like to be tested.\u201d Other records give November 1 or 5, and the 1999 New York Times October.",
+     [("CIA, About the Kryptos Sculpture", "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/"),
+      ("CIA, Sites to See (PDF)", "https://www.cia.gov/static/Sites-to-See.pdf")]),
+    ("March 1991", "The dedication", "place", "The New Headquarters Building is finished",
+     "The building behind the sculpture is completed.",
+     [("CIA, Sites to See (PDF)", "https://www.cia.gov/static/Sites-to-See.pdf")]),
     ("November 1992", "The first solutions", "solved", "The NSA solves K1, K2 and K3, quietly",
-     "A task force breaks the first three messages in days, spends one day on K4 and stops. The result stays inside the agency until 2000.", "08-timeline"),
-    ("February 1998", "The first solutions", "solved", "David Stein solves them by hand",
-     "A CIA analyst works out K1 to K3 with pencil and paper and briefs the agency.", "08-timeline"),
+     "A task force breaks the first three messages within two days, spends one more on K4 and stops. The NSA says so publicly only in June 1999, after Gillogly; the team's names come out in March 2000.",
+     [("NSA, staff processing form Z-054-98 (PDF)", "https://media.defense.gov/2021/Jul/12/2002760460/-1/-1/0/DOC_2.PDF"),
+      ("NSA FOIA releases, CIA Kryptos Sculpture", "https://www.nsa.gov/Helpful-Links/NSA-FOIA/Declassification-Transparency-Initiatives/FOIA-Reports-and-Releases/FOIA-Reports-and-Releases-List/")]),
+    ("February\u2013March 1998", "The first solutions", "solved", "David Stein solves them by hand",
+     "A CIA analyst breaks K2 with pencil and paper on February 21, 1998, and presents K1 to K3 to a packed headquarters auditorium on March 20.",
+     [("Stein, Cracking the Courtyard Crypto (CIA)", "https://www.cia.gov/readingroom/document/06712772"),
+      ("CIA Intellipedia, archived", "https://web.archive.org/web/20240107223455/https://www.cia.gov/readingroom/document/06498615")]),
     ("June 1999", "The first solutions", "solved", "Jim Gillogly solves them by computer, and the solutions go public",
-     "Gillogly announces his solution; Stein's is published days later. The three messages, as carved and as read:", "08-timeline"),
-    ("1999", "The first solutions", "place", "The compound becomes the George Bush Center for Intelligence",
-     "Named for George H. W. Bush, director of the CIA in 1976–77.", "Wikipedia, George Bush Center for Intelligence"),
+     "Gillogly announces his solution on June 16; the New York Times reports Stein's earlier one the same day. The three messages, as carved and as read:",
+     [("New York Times, June 16, 1999", "https://www.nytimes.com/library/tech/99/06/biztech/articles/16code.html"),
+      ("Gillogly's post, June 16, 1999", "https://www.elonka.com/kryptos/mirrors/cypherpunks/1999/0930.html")]),
+    ("April 26, 1999", "The first solutions", "place", "The compound becomes the George Bush Center for Intelligence",
+     "Named by Act of Congress in October 1998 for George H. W. Bush, director of the CIA in 1976\u201377, and dedicated in April 1999.",
+     [("Public Law 105-272, \u00a7309", "https://www.govinfo.gov/content/pkg/PLAW-105publ272/html/PLAW-105publ272.htm"),
+      ("CIA, archived by NARA", "https://www.webharvest.gov/peth04/20041015010959/http://cia.gov/cia/information/bush.html")]),
     ("January 2005", "Clues from the creators", "clue", "Matrix codes, masking, instructions in the earlier text",
-     "In interviews Sanborn speaks of “matrix codes” and “instructions in the earlier text”; Scheidt says he “masked the English language.”", "08-timeline; 02-sanborn-said; 03-scheidt-said"),
+     "In interviews Sanborn says he used \u201csome matrix codes Ed gave me\u201d and \u201cleft instructions in the earlier text that refer to later text\u201d; Scheidt says he \u201cmasked the English language.\u201d",
+     [("Wired, January 20, 2005", "https://www.wired.com/2005/01/questions-for-kryptos-creator/"),
+      ("Scheidt Q&A, mirrored", "https://scirealm.org/KryptosHints.html")]),
     ("April 2006", "Clues from the creators", "clue", "A letter left out of K2",
-     "Sanborn says the end of K2 is wrong: one letter was dropped, and it reads LAYER TWO.", "08-timeline"),
+     "Sanborn says he left a letter out of K2: what was read as ID BY ROWS should read X LAYER TWO.",
+     [("Wired, April 20, 2006", "https://www.wired.com/2006/04/typo-confounds-kryptos-sleuths/")]),
     ("November 2010", "Clues from the creators", "clue", "BERLIN",
-     "Letters 64–69 of K4 read BERLIN.", "08-timeline"),
+     "Letters 64\u201369 of K4, NYPVTT, read BERLIN.",
+     [("New York Times, November 20, 2010", "https://www.nytimes.com/2010/11/21/us/21code.html")]),
     ("November 2014", "Clues from the creators", "clue", "CLOCK",
-     "Letters 70–74 read CLOCK: “delve into that particular clock.”", "08-timeline"),
+     "Letters 70\u201374 read CLOCK, on the 25th anniversary of the Wall's fall; the Berlin clock is named.",
+     [("New York Times, November 20, 2014", "https://www.nytimes.com/2014/11/21/us/another-kryptos-clue-is-offered-in-a-24-year-old-mystery-at-the-cia.html"),
+      ("Wired, November 20, 2014", "https://www.wired.com/2014/11/second-kryptos-clue/")]),
     ("January 2020", "Clues from the creators", "clue", "NORTHEAST",
-     "Letters 26–34 read NORTHEAST; the message is “in itself a riddle.”", "08-timeline"),
+     "Letters 26\u201334 read NORTHEAST; the phrase is \u201cin itself a riddle.\u201d",
+     [("New York Times, January 29, 2020", "https://www.nytimes.com/interactive/2020/01/29/climate/kryptos-sculpture-final-clue.html"),
+      ("NPR, January 29, 2020", "https://www.npr.org/2020/01/29/801323608/")]),
     ("August 2020", "Clues from the creators", "clue", "EAST",
-     "Letters 22–25 read EAST, completing EASTNORTHEAST.", "08-timeline"),
+     "Letters 22\u201325 read EAST, completing EASTNORTHEAST. Sanborn had sent it privately since April; it became public on August 24.",
+     [("John Schwartz (NYT), August 24, 2020", "https://twitter.com/jswatz/status/1297658577914667008"),
+      ("Schmeh, Klausis Krypto Kolumne", "https://scienceblogs.de/klausis-krypto-kolumne/2020/08/24/jim-sanborn-publishes-another-new-kryptos-clue/")]),
     ("August 2025", "Endgame", "endgame", "The solution goes to auction",
-     "For his 80th birthday Sanborn announces he will sell the archive, solution included.", "08-timeline"),
+     "Sanborn announces he will sell the K4 solution at an auction timed to his 80th birthday.",
+     [("Washington Post, August 14, 2025", "https://www.washingtonpost.com/entertainment/art/2025/08/14/kryptos-code-k4-solution-jim-sanborn-auction/"),
+      ("Sanborn's open letter", "https://www.elonka.com/kryptos/OpenLetterAug2025.html")]),
     ("September 2025", "Endgame", "endgame", "The plaintext is found in an archive",
-     "Two writers find K4's plaintext among Sanborn's papers at the Smithsonian and tell him; they do not publish it. The method is still unknown.", "08-timeline"),
+     "Two journalists find K4's plaintext on scraps of paper among Sanborn's papers at the Smithsonian's Archives of American Art and tell him; they do not publish it. The method is still unknown.",
+     [("Smithsonian, Office of the Secretary", "https://www.smithsonianmag.com/blogs/office-of-the-secretary-of-the-smithsonian/2026/02/17/smithsonian-archives-help-unlock-mysteries-connect-americans-history/"),
+      ("Scientific American, October 16, 2025", "https://www.scientificamerican.com/article/a-solution-to-the-cias-kryptos-code-is-found-after-35-years/")]),
     ("November 2025", "Endgame", "clue", "The World Clock, Egypt and the Wall",
-     "At the Spy Museum Sanborn names the Weltzeituhr, his 1986 Egypt trip and the Wall as part of K4. The archive sells for $962,500.", "08-timeline"),
+     "On November 12, in an open letter and at the International Spy Museum, Sanborn names his 1986 Egypt trip, the 1989 fall of the Wall and the World Clock in Berlin as part of K4. On November 20 the archive sells for $962,500.",
+     [("Scientific American, November 12, 2025", "https://www.scientificamerican.com/article/cia-kryptos-puzzle-creator-releases-final-clues/"),
+      ("RR Auction, November 21, 2025", "https://content.rrauction.com/jim-sanborns-complete-kryptos-archive-sells-for-962500-at-auction/")]),
     ("October 2026", "Endgame", "us", "This loop starts",
-     "An autoresearch loop sets out to find the method from the record alone.", "this project"),
+     "An autoresearch loop sets out to find the method from the record alone.", []),
 ]
 
 TL_CSS = """<style>
@@ -959,7 +995,7 @@ TL_CSS = """<style>
 .tl-body{padding:0 0 18px 6px;min-width:0}
 .tl-body h4{font:400 18px/1.3 var(--serif);margin:0 0 3px}
 .tl-body p{margin:0;font-size:15px;color:var(--muted);max-width:640px}
-.tl-body p.tl-src{font-size:12px;color:var(--faint);margin-top:3px}
+.tl-body p.tl-src{font-size:12px;color:var(--faint);margin-top:3px}.tl-src a{color:var(--faint);border-bottom:1px dotted var(--faint);text-decoration:none}.tl-src a:hover{color:var(--accent)}
 .tl-era{display:grid;grid-template-columns:150px 28px minmax(0,1fr)}
 .tl-era span{grid-column:3;font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--accent);padding:10px 0 8px 6px}
 .tl-era .tl-rail{grid-column:2;grid-row:1}
@@ -989,7 +1025,8 @@ def history_timeline():
         last = " last" if i == len(HISTORY) - 1 else ""
         out.append(f'<div class="tl-ev k-{kind}{last}"><div class="tl-date">{esc(date)}</div><div class="tl-rail"><i class="tl-dot"></i></div>'
                    f'<div class="tl-body"><span class="tl-d">{esc(date)}</span><h4>{esc(title)}</h4><p>{crib_cells(esc(text))}</p>'
-                   f'<p class="tl-src">{esc(src)}</p>{insert}</div></div>')
+                   + (f'<p class="tl-src">{" &middot; ".join(f"<a href=\"{esc(u)}\" target=\"_blank\" rel=\"noopener\">{esc(t)}</a>" for t, u in src)}</p>' if src else "")
+                   + f'{insert}</div></div>')
     key = ('<div class="tl-key"><span><i style="border:2px solid var(--muted)"></i>place and making</span>'
            '<span><i style="background:var(--ink)"></i>the dedication</span>'
            '<span><i style="background:var(--accent)"></i>a message solved</span>'

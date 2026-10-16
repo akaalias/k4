@@ -1934,7 +1934,8 @@ def lineage_page():
         facts += f' The most built-on is <a href="/exp/{esc(top[0])}">{int(top[0][:4])}</a>, with {top[1]} children.'
     blob = json.dumps(data).replace("</", "<\\/")
     body = f"""<style>{LIN_CSS}</style><div class="lin">
-{page_head("Research lineage", "The family tree of the search", "Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.", facts, extra=LIN_LEGEND)}
+{page_head("Research lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.")}
+{sec(1, "Every experiment by family")}<div style="max-width:980px;margin:0 auto"><p class="facts" style="font-size:14.5px;color:var(--muted);margin:4px 0 12px;max-width:820px">{facts}</p>{LIN_LEGEND}</div>
 <div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
 {page_foot('Each family and its hypotheses are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/priorities">Priorities</a>.')}
 <div id="lin-tip" role="tooltip"></div>

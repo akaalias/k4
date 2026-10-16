@@ -1763,8 +1763,8 @@ LIN_JS = r"""
     pivots.forEach(function(pv){if(!(pv.id in geo.py))return;
       var ty=geo.py[pv.id];
       var W2=geo.W;
-      g+='<a href="/pivot/'+encodeURIComponent(pv.id)+'"><path d="M'+(W2-18)+','+(ty-4)+' L'+(W2-8)+','+(ty-4)+' L'+(W2-13)+','+(ty+4)+' z" fill="var(--accent)"/>'
-        +'<text class="lpivot-lab" x="'+(W2-24)+'" y="'+(ty+3.6)+'" text-anchor="end">'+esc(pv.label)+'</text></a>';});
+      g+='<a href="/pivot/'+encodeURIComponent(pv.id)+'"><path d="M'+(W2-15)+','+(ty-2.8)+' L'+(W2-8)+','+(ty-2.8)+' L'+(W2-11.5)+','+(ty+2.8)+' z" fill="var(--accent)"/>'
+        +'<text class="lpivot-lab" x="'+(W2-20)+'" y="'+(ty+3.6)+'" text-anchor="end">'+esc(pv.label)+'</text></a>';});
     host.innerHTML='<svg id="lin" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>';
     svg=document.getElementById('lin');
     lanesEl.style.width=W+'px';lanesEl.style.height='';

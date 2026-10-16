@@ -1239,7 +1239,7 @@ def live_page():
         k, _, rest = r["family"].partition("-")
         names.setdefault(k, rest.replace("-", " "))
     key = ('<div class="explain-row" style="row-gap:26px;margin-top:40px">'
-           '<div class="explain-col"><h4>Solved</h4><p>Meets the success definition: the known letters in place, readable English (a deliberate misspelling or two and X as a separator allowed, as in K1 to K3), and a procedure a person could do by hand with a short key. A winning experiment lands in the dashed band.</p></div>'
+           '<div class="explain-col"><h4>Solved</h4><p>Meets the success definition: the known letters in place, readable English, and a procedure a person could do by hand with a short key. A winning experiment lands in the dashed band.</p></div>'
            '<div class="explain-col"><h4>Champion</h4><p>Passes every gate: all 24 known letters, re-encrypts to the copper, beats every scrambled copy. Not yet shown to read as English from a memorable method.</p></div>'
            '<div class="explain-col"><h4>A lead</h4><p>K4 did better than every scrambled copy under the same search, but the reading fails another gate.</p></div>'
            '<div class="explain-col"><h4>At chance</h4><p>Settings or readings exist, but scrambled copies produce them just as well.</p></div>'

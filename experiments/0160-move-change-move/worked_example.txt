@@ -1,0 +1,9 @@
+move 1: rows of 9 read down the columns; key on the table; move 2: rows of 13 read up, right first
+
+place  letter  after move 1  slot mod 11  carved place  carved
+   22       E            36            2            26       Q
+   23       A            47            2            39       Q
+   24       S            58            2            53       K
+   64       B             8            7            42       Q
+   65       E            19            7            56       D
+   74       K            20            8            48       Z

@@ -158,3 +158,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0157	0157-split-key-phrase	1-keyed-periodic	0123-two-free-alphabets-exact-at-every-key-length	reverted	0	0	0			24	unattributed=12 run=24 record=0
 0158	0158-mixed-matrix-triples-at-wide-widths	6-transposition-then-tableau	0134-mixed-matrix-readings-two-and-three-stages	reverted	0	0	0			209	unattributed=141 run=209 record=0
 0159	0159-compass-directions-as-reading-routes	6-transposition-then-tableau	0134-mixed-matrix-readings-two-and-three-stages	reverted	0	0	0			15	unattributed=20 run=15 record=0
+0160	0160-move-change-move	6-transposition-then-tableau	0080-key-on-both-sides-of-the-move	reverted	0	0	0			11	unattributed=84 run=11 record=0

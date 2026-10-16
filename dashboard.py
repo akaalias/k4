@@ -100,6 +100,14 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .famhead .cnt{display:block;color:var(--faint);font-weight:400;margin-top:2px}
 .xchip{display:inline-block;font:12px/1.2 var(--serif);font-variant-numeric:lining-nums tabular-nums;color:var(--fc,var(--muted));border:1px solid color-mix(in srgb,var(--fc,var(--muted)) 40%,transparent);border-radius:3px;padding:1px 4px;margin:0 3px 3px 0;text-decoration:none}
 .xchip:hover{background:var(--fc,var(--muted));color:var(--paper)}
+.lin-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin:6px 0 4px}
+.lin-legend .k{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.lin-legend .ldot{width:9px;height:9px;border-radius:50%;display:inline-block;background:currentColor}
+.lin-legend .lkept{width:11px;height:11px;background:var(--ink)}
+.lin-legend .lwas{width:13px;height:13px;border-radius:50%;border:1.3px dashed var(--ink);display:inline-block}
+.lin-legend .lerr{color:var(--accent);font:700 14px/1 var(--serif)}
+.lin-legend .larc{width:9px;height:16px;border-right:1.2px solid var(--muted);border-radius:0 9px 9px 0;display:inline-block}
+.lin-legend .lx{width:0;height:16px;border-left:1.2px dashed var(--muted);display:inline-block;margin:0 4px}
 .ph{max-width:980px;margin:0 auto 40px}.ph h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}.ph .standfirst{max-width:760px}
 .ph .standfirst{margin-bottom:0}.ph-meta{margin-top:56px}
 .ph .facts{font-size:14.5px;color:var(--muted);margin:0 0 12px;max-width:820px}
@@ -581,7 +589,7 @@ def loss_chart(rows, bare=False):
               '<span><i class="mk mk-line"></i>the champion\'s loss; it moves only when an experiment is kept</span></div>')
     eyebrow = f'<p class="chart-eyebrow">Loss per experiment, all {n} of them &middot; share of the worst possible, 24 known letters wrong &middot; lower is better</p>'
     if bare:
-        return "<div class='chart-wide' style='border-top:1px solid var(--rule);padding-top:14px'><figure class='chart'>" + "".join(g) + "</figure></div>"
+        return "<div class='chart-wide' style='padding-top:14px'><figure class='chart'>" + "".join(g) + "</figure></div>"
     return "<div class='chart-wide'>" + eyebrow + "<figure class='chart'>" + "".join(g) + "</figure>" + legend + "</div>"
 
 
@@ -1193,7 +1201,18 @@ def outcome_chart(rows):
         col = "var(--accent)" if k in ("solved", "champion", "beat-chance") else ("var(--faint)" if k == "ungraded" else "var(--disc)")
         tip = (f"{esc(r['tag'])}<br>{esc(r['title'])}<br><b>{esc(gr.get('outcome') or 'not graded yet')}</b>"
                f"{', ' + esc(gr['strength']) + ' test' if gr.get('strength') else ''}<br>{esc(gr.get('note', ''))}")
-        g.append(f'<a href="/exp/{esc(r["tag"])}"><g data-tip="{tip}"><circle cx="{x:.2f}" cy="{yrow[k] + band / 2:.1f}" r="{dot_r:.1f}" fill="{col}"/>'
+        cy = yrow[k] + band / 2
+        dec, rec = r.get("decision"), r.get("decision_recorded")
+        if dec == "kept":
+            mark = f'<circle cx="{x:.2f}" cy="{cy:.1f}" r="{dot_r * 1.4:.1f}" fill="var(--ink)"/>'
+        elif dec in ("error", "timeout"):
+            e = dot_r
+            mark = f'<path d="M{x - e:.2f},{cy - e:.1f} L{x + e:.2f},{cy + e:.1f} M{x + e:.2f},{cy - e:.1f} L{x - e:.2f},{cy + e:.1f}" stroke="var(--accent)" stroke-width="1.6"/>'
+        else:
+            mark = f'<circle cx="{x:.2f}" cy="{cy:.1f}" r="{dot_r:.1f}" fill="var(--disc)"/>'
+        if rec == "kept" and dec != "kept":
+            mark += f'<circle cx="{x:.2f}" cy="{cy:.1f}" r="{dot_r * 2:.1f}" fill="none" stroke="var(--ink)" stroke-width="1" stroke-dasharray="2 2"/>'
+        g.append(f'<a href="/exp/{esc(r["tag"])}"><g data-tip="{tip}">{mark}'
                  f'<rect x="{x - max(step, 4) / 2:.2f}" y="{yrow[k]}" width="{max(step, 4):.2f}" height="{band}" fill="transparent"/></g></a>')
     for k, lab in shown:
         cy = yrow[k] + band / 2
@@ -1208,11 +1227,18 @@ def outcome_chart(rows):
     g.append(f'<text x="{L + (W - L - R) / 2:.1f}" y="{H - 8}" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">experiment number, in the order it ran</text>')
     g.append(f'<text transform="translate({L - 24},{T + band * len(shown) / 2:.1f}) rotate(-90)" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">outcome against the scrambled copies</text>')
     g.append("</svg>")
-    return "<div class='chart-wide' style='border-top:1px solid var(--rule);padding-top:14px'><figure class='chart'>" + "".join(g) + "</figure></div>"
+    return "<div class='chart-wide' style='padding-top:14px'><figure class='chart'>" + "".join(g) + "</figure></div>"
 
 
 def fam_num(r):
     return r["family"].split("-", 1)[0]
+
+
+DECISION_LEGEND = ('<div class="lin-legend">'
+                   '<span class="k"><span class="ldot lkept"></span>kept</span>'
+                   '<span class="k"><span class="ldot" style="color:var(--disc)"></span>reverted</span>'
+                   '<span class="k"><span class="lerr">&times;</span>error or timeout</span>'
+                   '<span class="k"><span class="lwas"></span>kept when it ran, reverted under today&rsquo;s rules</span></div>')
 
 
 def live_page():
@@ -1245,7 +1271,7 @@ def live_page():
     body = (page_head("Experiments", "The autonomous research loop, experiment by experiment",
                       "Every experiment, in the order it ran, placed by what it found against scrambled copies of the carved text: the "
                       "same search on the same letters in a random order. A result counts only if K4 does better than all of them. Then the "
-                      "table of all experiments, newest first. The page reloads when a new experiment lands.", facts)
+                      "table of all experiments, newest first. The page reloads when a new experiment lands.", facts, DECISION_LEGEND)
             + outcome_chart(rows) + key
             + experiments_table(rows)
             + page_foot('How the experiments built on each other is on the <a href="/lineage">lineage</a> page; what is still open is on the <a href="/families">families</a> page.'))
@@ -1539,14 +1565,6 @@ LIN_CSS = """
 .lin-head{max-width:980px;margin:0 auto}
 .lin-head h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}
 .lin-head .standfirst{max-width:760px}
-.lin-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin:6px 0 4px}
-.lin-legend .k{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
-.lin-legend .ldot{width:9px;height:9px;border-radius:50%;display:inline-block;background:currentColor}
-.lin-legend .lkept{width:11px;height:11px;background:var(--ink)}
-.lin-legend .lwas{width:13px;height:13px;border-radius:50%;border:1.3px dashed var(--ink);display:inline-block}
-.lin-legend .lerr{color:var(--accent);font:700 14px/1 var(--serif)}
-.lin-legend .larc{width:9px;height:16px;border-right:1.2px solid var(--muted);border-radius:0 9px 9px 0;display:inline-block}
-.lin-legend .lx{width:0;height:16px;border-left:1.2px dashed var(--muted);display:inline-block;margin:0 4px}
 .lin-box{position:relative;width:min(1600px,94vw);margin:16px 0 0 calc(50% - min(800px,47vw));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 #lin-heads{position:sticky;top:0;z-index:5;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--rule)}
 #lin-lanes{position:relative;will-change:transform}

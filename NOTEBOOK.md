@@ -12,6 +12,9 @@ F1 continued (ticket #14), after the run that started on 2026-10-16 (0136-0153 a
 | # | Item | One line |
 |---|---|---|
 | 154 | F1.8 | **Carter as a running key on one unknown alphabet, exact (rerun of 0153).** Every offset of Carter's book, both directions, three forms, compiled solver (checked against Python on 300 offsets and a planted text): no offset fits K4 or any of 10 copies; 953 of about 1.7 million undecided on K4 (copies 99-20,675). Two unknown alphabets leave 0.1 checks on average (at most 4) for every running-key source sampled: blocked by structure. Prediction held. |
+| 155 | F1.9 | **Progressive keys on a million tables.** Per-letter and per-repeat, steps 1-25, periods 1-52, on the 8 sculpture tables and 0109's dictionary keyword alphabets (1,040,314 tables x 2 forms, compiled). Shortest consistent period 25 on K4 (copies 24). K4 above every copper in 4 of 104 cells (periods 34 and 47), null 0-5: chance. Period 34 noted (K4 40 and 20 against copier maxima 10 and 7), not chased. Kryha's step 3 at 31-52 included. Prediction held. |
+| 156 | F1.10 | **Friedman's key-advance schedules, exact, with copies.** Run length by letter value (A=1, A=0), CHRISTMAS expansion, EXTINGUISHER windows 2-5, each with every dictionary word on 12 tables x 2 numberings: no word fits K4 or any copy. Ciphertext interruptor and fraction digits (key letters free): no consistent setting on K4 (copies 0-14). Plaintext interruptor inside the known runs: K4 160, copies 120-7,165. Closed. Prediction held. |
+| 157 | F1.11 | **Split key phrase (EMC par. 59d).** 29,880 phrases (pairs of puzzle words; runs of 2-4 K1-K3 words split at each boundary): part one mixes the plain alphabet, part two the cipher alphabet, the whole phrase the key; 3 numberings x 3 rules. Best 7 of 24 on K4, copies 7-8; no full hit anywhere. Closed. Prediction held. **Every F1 item is now closed or blocked.** |
 
 ## 2026-10-16
 

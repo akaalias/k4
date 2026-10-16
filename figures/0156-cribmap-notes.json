@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "US Army training texts give simple rules for when the next key letter comes into use: run lengths from letter values, a counting expansion, overlapping windows of the word, restarts at a chosen letter, digits of a fraction. Each needs only a word and a rule."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every rule with every dictionary word on the sculpture's tables, or with the word's letters left unknown, against the 24 known letters and ten scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No word fits any word rule; the restart and fraction rules fit K4 never, or no more often than the copies. Closed."
+ }
+]

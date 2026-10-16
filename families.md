@@ -18,16 +18,17 @@ Update the leaf when an experiment works on it.
       - Key lengths 27-29 and 53+ on alphabets from the puzzle's words; the completed key reads as noise {closed · exact · 0034, 0035, 0048, 0053}
       - Alphabets from any dictionary word, key lengths 1-26 {closed · exact · 0109}
       - Alphabets one swap or move from KRYPTOS {closed · exact · 0071}
-      - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {blocked · exact · 0097, 0100, 0102, 0119, 0120}
+      - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {closed · sampled · 0097, 0100, 0102, 0119, 0120, 0139, 0140, 0142}
         - Added form (Quagmire III proper, and variant Beaufort), lengths 1-26: S under S and K under K force key 0 in slots another known letter shares {closed · exact · 0119}
         - Beaufort form, lengths 1-22, 24, 25: no alphabet fits {closed · exact · 0119}
-        - Beaufort form, length 23 (7 checks): English climb against coppers, K4 inside their range; weak, plants found 3 of 6 and never recovered; no climber at this size has power, so blocked (2026-10-16) {blocked · sampled · 0119, 0120}
-        - Beaufort form, length 26 (1 check): no climb can decide; plants found 1 of 6 {blocked · sampled · 0119, 0120}
-      - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26 {blocked · exact · 0097, 0123, 0124}
+        - Beaufort form, length 23 (7 checks): design 2 (F1.5) puts K4 9th of 13 among copies of itself; planted texts beat all their own copies 6 of 8 (0139) {closed · sampled · 0119, 0120, 0139, 0140}
+        - Beaufort form, length 26 (1 check): K4 12th of 13 among copies of itself; power 5 of 6 (0140) {closed · sampled · 0119, 0140, 0142}
+      - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26 {closed · sampled · 0097, 0123, 0124, 0143, 0144, 0145, 0146}
         - Lengths 1-7, 9-12, 14, 15, 17, 18, 21, 22, 25: no pair of alphabets fits {closed · exact · 0123}
-        - Lengths 8, 13, 16, 20, 23, 24, 26: a pair fits, as for most coppers; only an English climb is left and it has no power here (0120) {blocked · exact · 0123}
+        - Lengths 8, 13, 16: design 2 on two alphabets puts K4 2nd, 13th and 7th of 13 among kept-place copies; power 4/4, 5/5, 4/5 {closed · sampled · 0143, 0144, 0145, 0146}
+        - Lengths 20, 23, 24, 26: above 0136's bound, only a better English model could decide {blocked · exact · 0123, 0136}
         - Length 19: a pair fits, 26 of 1,000 coppers do (R under P at 28 and 66, 38 apart) {noted · exact · 0123, 0124}
-    - A progressive key {closed · exact · 0011, 0042}
+    - A progressive key {closed · exact · 0011, 0042, 0155}
     - A self-feeding key (autokey)
       - Ciphertext autokey, any lag, on 1,092 keyword tables {closed · exact · 0002, 0025, 0064, 0118}
       - Plaintext autokey, lags 1-52 {closed · exact · 0003, 0012}
@@ -44,16 +45,27 @@ Update the leaf when an experiment works on it.
       - **F1.4** Other hand schedules (C20(c)-(e)) {closed · exact · 0126, 0127, 0128}
         - The tableau rows as repeating keys ("layer two", C20(d)): 6 of 24 known letters, coppers 5-8 {closed · exact · 0126, 0128}
         - A key word stepped by skip, stutter, back and forth, triangle or square numbers, or restarted at each carved line, on standard or KRYPTOS tables: no setting fits {closed · exact · 0127, 0128}
-        - The same rules on free alphabets: consistent at the coppers' rate, no climb can decide {blocked · exact · 0127, 0128}
+        - The same rules on free alphabets: consistent at the coppers' rate; a decider exists (F1.5) but about 1,900 settings at 20-30 min each: blocked by cost {blocked · exact · 0127, 0128}
         - K5 as the key (C20(e)): no text {blocked}
-    - **F1.5** A decider for cells the known letters cannot decide (the shared blocker of F1.1, F1.2, F1.4's free alphabets, autokey lags 53-96, F6.1, F6.2, F8): bound each cell by key bits against English redundancy, then a climb that passes 0120's power bar on planted texts (P6) {open · exact · 0136}
+    - **F1.5** A decider for cells the known letters cannot decide (the shared blocker of F1.1, F1.2, F1.4's free alphabets, autokey lags 53-96, F6.1, F6.2, F8): bound each cell by key bits against English redundancy, then a climb that passes 0120's power bar on planted texts (P6) {closed · sampled · 0136-0146}
+      - Step 2, design 1 (check-keeping climb, compiled): plants beat K4's copies 10 of 12 but only 6 of 12 their own: power came from letter counts, fails {closed · sampled · 0137, 0138}
+      - Step 2, design 2 (parallel tempering in the check-keeping set): plants beat their own copies 6 of 8 at 23, 5 of 6 at 26, 4/4-5/5 with two alphabets; decides F1.1 and F1.2's cells {closed · sampled · 0139, 0140, 0143, 0145}
       - Step 1, the bound: the quadgram scorer extracts 1.78 bits per letter (130 bits in 73 letters); one free alphabet at every length, two to 16 (14 with a move), Hill with any key decidable in principle; two alphabets from 19 (15 with a move) and autokey 53-84 only with a better model; autokey 85-96 by none {closed · exact · 0136}
-    - **F1.6** One carved letter wrong, missing or extra, through the exact unknown-alphabet tests {open}
-    - **F1.7** Autokey on one unknown alphabet, with no move, then after each move {open}
-    - **F1.8** Carter's book as a running key on an unknown alphabet {open}
-    - **F1.9** The per-letter progressive key; its periods 26-30 against coppers {open}
-    - **F1.10** Friedman's keyword-only key-advance schedules {open}
-    - **F1.11** A split key phrase: one part mixes the plain alphabet, the other the cipher alphabet {open}
+    - **F1.6** One carved letter wrong, missing or extra, through the exact unknown-alphabet tests {closed · exact · 0147, 0148, 0150, 0151, 0152}
+      - One and two free alphabets, periodic, 604 variants: at the coppers' rate {closed · exact · 0147}
+      - K1/K2's system revived at length 19 by a slip at 33: decider power 3 of 5, too weak {blocked · sampled · 0148}
+      - Gromark (all free-alphabet rules and bases), 605 variants: no fit {closed · exact · 0150}
+      - Trifid and Hill, every single-letter error anywhere (5,044): no cube; Hill at the coppers' rate {closed · exact · 0151, 0152}
+    - **F1.7** Autokey on one unknown alphabet, with no move, then after each move {closed · exact · 0149}
+      - No move: dead lags closed; fitting lags at the coppers' rate {closed · exact · 0149}
+      - Fitting lags judged by English, and the move-first version: blocked by cost {blocked}
+    - **F1.8** Carter's book as a running key on an unknown alphabet {closed · exact · 0153, 0154}
+      - One alphabet, every offset both ways: no fit on K4 or copies {closed · exact · 0154}
+      - Two alphabets, any running key: almost no checks; undecidable by the known letters {blocked · exact · 0154}
+    - **F1.9** The per-letter progressive key; its periods 26-30 against coppers {closed · exact · 0155}
+      - Period 34 (K4 40 and 20 consistent pairs against copy maxima 10 and 7), inside the fixed statistic {noted · exact · 0155}
+    - **F1.10** Friedman's keyword-only key-advance schedules {closed · exact · 0156}
+    - **F1.11** A split key phrase: one part mixes the plain alphabet, the other the cipher alphabet {closed · exact · 0157}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}
@@ -280,7 +292,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P6 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P7 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -290,3 +302,4 @@ Each pivot has a details page in `pivots/` (P1-P6 so far), rendered on the Pivot
 | 2026-10-16 | sweep across the types of directions.md (0089-0118) | F1 first, then the ranked order in order-of-work.md | No result had beaten chance, so there was nothing to follow; the user found the switching unsystematic. Families are now worked in a fixed rank order and left only when every item is closed or blocked (issue #29). |
 | 2026-10-16 | F1 one keyed stage (0119-0128) | F6 a move, then the table | Every F1 item closed or blocked; F1.1's last cells (Beaufort 23, 26) can only be tested by an English climb with no power (0120), so blocked. Ranking unchanged (P5). |
 | 2026-10-16 | F6 a move, then the table (0129-0135) | F1 again, reopened, then every family through F9 | Every F6 item closed or blocked. Alexis asked to start over at F1 and unblock what is blocked. Most blocked cells share one blocker, no decider where the known letters give too few checks: F1.5 works on it. F6.3b and F9.1 were blocked only for want of a list. Ranking unchanged (P6, issue #50). |
+| 2026-10-17 | F1 one keyed stage, reopened (0136-0157) | F6 a move, then the table | Every F1 item closed or blocked: F1.5 built a decider with measured power (design 2) and decided F1.1 and F1.2's cells; F1.6-F1.11 closed exactly; the residues are blocked by the English bound (0136) or by cost. Ranking unchanged (F1, F6, F12, F3, F2, F4, F10, F11, F8, F5, F9) (P7). |

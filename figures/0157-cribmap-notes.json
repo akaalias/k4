@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A US Army manual (1935, 1943) cuts a key phrase in two: the first part reorders the message alphabet, the second the carved alphabet, and the whole phrase is the repeating key."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every pair of the puzzle's words and every short run of words from K1-K3, split at each word boundary: 29,880 phrases, three ways of numbering the key, three table rules, on K4 and ten scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "The best phrase gives 7 of the 24 known letters, as on the copies (7-8). Closed."
+ }
+]

@@ -153,3 +153,6 @@ id	outcome	strength	cribs_forced	space	note
 0152	chance	exact	no	F1.6 Hill controls: 5,044 one-letter variants of 10 coppers through 0105	coppers 30-6,384 alive-with-check (5x5 plain); K4 257 rank 4/11: chance
 0153	error	weak	no	F1.8 Carter running key on one unknown alphabet (first attempt)	second pass without a clock check ran past the budget; killed; no result
 0154	ruled-out	exact	no	F1.8 Carter running key (both directions, every offset) on one unknown alphabet, 3 forms, 10 coppers; two-alphabet check counts per source	K4 0 fits (coppers 0); 953 undecided; two alphabets leave ~0 checks: blocked by structure
+0155	chance	exact	no	F1.9 progressive key per-letter and per-repeat, steps 1-25, periods 1-52, 1,040,314 tables x 2 forms, 10 coppers	shortest live 25 (coppers 24); K4 above all coppers 4/104 cells, null 0-5; period 34 noted
+0156	ruled-out	exact	no	F1.10 Friedman key-advance schedules (run length, CHRISTMAS, EXTINGUISHER 2-5 with 233k words; ct/pt interruptor, fraction digits with free letters), 12 tables x 2 numberings, 10 coppers	no word fits K4 or coppers; ct interruptor and fractions 0 on K4; pt interruptor 160 vs 120-7,165
+0157	ruled-out	exact	no	F1.11 split key phrase: 29,880 phrases x 3 numberings x 3 rules, 10 coppers	K4 best 7/24, coppers 7-8; no full hit

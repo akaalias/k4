@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A progressive key slides the secret word along the table by a fixed step, after every letter or after every pass of the word, as some cipher machines (Kryha) did. Only part of this had been tried."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every step 1-25 and word length 1-52, both kinds of stepping, on 1,040,314 tables (the sculpture's and every dictionary word's), against the 24 known letters and ten scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Nothing fits below length 25, on K4 as on the copies; K4 leads the copies in 4 of 104 cells, within what a copy manages against the rest. Length 34 noted."
+ }
+]

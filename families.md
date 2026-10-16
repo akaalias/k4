@@ -53,6 +53,7 @@ Update the leaf when an experiment works on it.
     - **F1.8** Carter's book as a running key on an unknown alphabet {open}
     - **F1.9** The per-letter progressive key; its periods 26-30 against coppers {open}
     - **F1.10** Friedman's keyword-only key-advance schedules {open}
+    - **F1.11** A split key phrase: one part mixes the plain alphabet, the other the cipher alphabet {open}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}
@@ -87,6 +88,10 @@ Update the leaf when an experiment works on it.
     - **F6.13** Chiffre XIII's keyword-shaped five-row mask, then its period-5 table {open}
     - **F6.14** Nihilist transposition on a 10 x 10 square with three blanks {open}
     - **F6.15** YAR's "1-2-3" spacing as an ordering, then the table {open}
+    - **F6.16** Interrupted-key columnar transposition, then the table {open}
+    - **F6.17** Trapezoid transposition, then the table {open}
+    - **F6.18** Letters reshuffled inside each row at widths other than 7, then the table {open}
+    - **F6.19** The French diagonal method, then the table {open}
   - F12 Stein's way: look, quantify, then crib
     - **F12.1** The 97 letters and the "?" checked against images of the copper {open}
     - **F12.2** K4's statistics by segment and width against shuffles {open}
@@ -113,6 +118,7 @@ Update the leaf when an experiment works on it.
     - The message written along a grid path {closed · exact · 0092}
     - **F2.1** Fragments from 0057's letter strike-outs at key lengths 24-25 not yet matched against words {open}
     - **F2.2** Nulls placed by a rule {open}
+    - **F2.3** A plain component with repeated letters: homophones that keep the length {open}
     - A code layer, phonetic spelling, another language: these change the known letters or need a codebook {blocked}
   - F4 Sanborn's visual systems
     - Trifid, any cube, periods 2-15 {closed · exact · 0040}

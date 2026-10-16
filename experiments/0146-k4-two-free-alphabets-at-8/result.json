@@ -1,0 +1,82 @@
+{
+ "id": 146,
+ "tag": "0146-k4-two-free-alphabets-at-8",
+ "started": "2026-10-16T20:10:33+00:00",
+ "seconds": 405.9,
+ "status": "ran",
+ "phases": {
+  "unattributed": 27.1,
+  "run": 405.9,
+  "record": 0.1
+ },
+ "ended_epoch": 1792181839.6735392,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -5.9044,
+  -5.8328,
+  -5.5364,
+  -6.0527,
+  -6.1387,
+  -6.2255,
+  -5.9028,
+  -6.0236,
+  -5.9617,
+  -5.7502,
+  -5.8728,
+  -5.9306
+ ],
+ "champion_before": null,
+ "bounds": {
+  "family": "two free alphabets (Quagmire IV), key length 8, no move: K4 against 12 kept-place copies of itself (design 2)",
+  "search": "parallel tempering, 10 runs x 16 replicas x 625 rounds x 1000 moves per text; start from K4's exact witness (0123) randomised by 400 check-keeping swaps",
+  "not_exhaustive": true,
+  "runs_done": {
+   "min": 10,
+   "max": 10
+  },
+  "texts_with_no_finished_run": 0,
+  "c_decryption_checked": true,
+  "by_length": {
+   "8": {
+    "k4": {
+     "score": -5.3391,
+     "plaintext": "ZEMYBMWDBURGHAPTGCWEDEASTNORTHEASTYIDWCKUNDTOFLYPSHAYKINGSADVERBERLINCLOCKAVEFLIVATQUODEMOGOOFGLA",
+     "english_free": -5.7126,
+     "runs": 10
+    },
+    "copies": [
+     -5.7181,
+     -5.6145,
+     -5.5193,
+     -5.5123,
+     -5.5076,
+     -5.5048,
+     -5.468,
+     -5.4558,
+     -5.4364,
+     -5.4188,
+     -5.3533,
+     -5.2338
+    ],
+    "k4_rank_of_13": 2,
+    "k4_above_all_copies": false
+   }
+  },
+  "stop_queue": false,
+  "power_measured_0145": {
+   "8": "4 of 4 against 4 kept-place copies"
+  },
+  "controls": "12 kept-place copies of K4 per length (seed 146)"
+ },
+ "notes": "L8: K4 -5.339 rank 2 of 13; stop False",
+ "error": null,
+ "candidates": []
+}

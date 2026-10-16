@@ -1,0 +1,63 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "two free alphabets (Quagmire IV), key length 8, no move: K4 against 12 kept-place copies of itself (design 2)",
+  "search": "parallel tempering, 10 runs x 16 replicas x 625 rounds x 1000 moves per text; start from K4's exact witness (0123) randomised by 400 check-keeping swaps",
+  "not_exhaustive": true,
+  "runs_done": {
+   "min": 10,
+   "max": 10
+  },
+  "texts_with_no_finished_run": 0,
+  "c_decryption_checked": true,
+  "by_length": {
+   "8": {
+    "k4": {
+     "score": -5.3391,
+     "plaintext": "ZEMYBMWDBURGHAPTGCWEDEASTNORTHEASTYIDWCKUNDTOFLYPSHAYKINGSADVERBERLINCLOCKAVEFLIVATQUODEMOGOOFGLA",
+     "english_free": -5.7126,
+     "runs": 10
+    },
+    "copies": [
+     -5.7181,
+     -5.6145,
+     -5.5193,
+     -5.5123,
+     -5.5076,
+     -5.5048,
+     -5.468,
+     -5.4558,
+     -5.4364,
+     -5.4188,
+     -5.3533,
+     -5.2338
+    ],
+    "k4_rank_of_13": 2,
+    "k4_above_all_copies": false
+   }
+  },
+  "stop_queue": false,
+  "power_measured_0145": {
+   "8": "4 of 4 against 4 kept-place copies"
+  },
+  "controls": "12 kept-place copies of K4 per length (seed 146)"
+ },
+ "notes": "L8: K4 -5.339 rank 2 of 13; stop False",
+ "controls": [
+  -5.9044,
+  -5.8328,
+  -5.5364,
+  -6.0527,
+  -6.1387,
+  -6.2255,
+  -5.9028,
+  -6.0236,
+  -5.9617,
+  -5.7502,
+  -5.8728,
+  -5.9306
+ ],
+ "error": null,
+ "worked_example": "key length 23, Beaufort form: K4 in rows of 23; each column is one key slot\n\n  O B K R U O X O G H U L B S O L I F B B W F L\n  R V Q Q P R N G K S S O T W T Q S J Q S S E K\n  Z Z W A T J K L U D I A W I N F B N Y P V T T\n  M Z F P K W G D K Z X T J C D I G K U H U A U\n  E K C A R\n\nthe seven checks every move keeps (place(carved) + place(known) equal within a column):\n  column 0: R+S (24) = M+C (70)\n  column 1: V+T (25) = Z+L (71)\n  column 2: Q+N (26) = F+O (72)\n  column 3: Q+O (27) = P+C (73)\n  column 4: P+R (28) = K+K (74)\n  column 21: F+E (22) = T+I (68)\n  column 22: L+A (23) = T+N (69)",
+ "seconds": 405.8267650604248
+}

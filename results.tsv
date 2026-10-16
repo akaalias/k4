@@ -144,3 +144,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0143	0143-two-free-alphabets-climb-power	1-keyed-periodic	0139-parallel-tempering-climb-against-own-copies	reverted	0	0	0			1728	unattributed=19 run=1728 record=0
 0144	0144-k4-two-free-alphabets-at-13-and-16	1-keyed-periodic	0143-two-free-alphabets-climb-power	reverted	0	0	0			765	unattributed=61 run=765 record=0
 0145	0145-two-free-alphabets-climb-power-at-8	1-keyed-periodic	0143-two-free-alphabets-climb-power	reverted	0	0	0			698	unattributed=20 run=698 record=0
+0146	0146-k4-two-free-alphabets-at-8	1-keyed-periodic	0145-two-free-alphabets-climb-power-at-8	reverted	0	0	0			406	unattributed=27 run=406 record=0

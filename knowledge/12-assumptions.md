@@ -25,7 +25,13 @@ against scrambled coppers under the same tolerance.
 
 **A2. The known letters stand exactly where stated, letter for letter, at the last step.**
 EASTNORTHEAST at 22-34 and BERLINCLOCK at 64-74 are fixed constraints in every test.
-Source: Sanborn's clues (2010, 2014, 2020). Firmness: contested. "One-to-one" was affirmed
+Source: Sanborn's clues (2010, 2014, 2020), given as ciphertext strings, not numbers: FLRV is
+EAST, QQPRNGKSS NORTHEAST, NYPVTT BERLIN, MZFPK CLOCK (`01-facts.md`), so they do not depend
+on where K4 starts (A4). Two parts with different firmness. The plaintext positions are firm:
+Sanborn vets claims by position ("What do you have in letter-position 27?", `01-facts.md`).
+The alignment, carved letter i becoming plaintext letter i, is contested; F6 already tests
+the reading without it (a move first, the known letters defined on the final text), for the
+moves in its library. Firmness: contested. "One-to-one" was affirmed
 at dinners (2011, 2013) and walked back in 2019 to "97 characters and BERLIN at 64"
 (`04-structure.md`, `09-contradictions.md`); Sanborn on his own clues: they "work in a sort
 of disinformational way" (2005). Weakened by: any reading where the clue positions hold on
@@ -126,3 +132,18 @@ candidate. Cheapest check: collect every 24-of-24 candidate from the experiments
 and test for structure other than fluent English (English letter frequencies out of order,
 regular X separators, English after a simple unmasking such as reversal, dropping every nth
 letter or an affine shift), against the coppers' candidates under the same tests.
+
+**A14. The known words are only content.** (Alexis, 2026-10-16)
+EAST, NORTHEAST, BERLIN and CLOCK are treated as words of the message and nothing more.
+Source: ours. Firmness: ours. Sanborn: "The final passage will lead in several directions.
+The word directions is, I use intentionally" (2010, C16). Other readings: (a) an instruction
+for the method, for instance "east, then northeast" as the route through a grid (rows, then
+up the diagonals); C16(c) records "directions as instructions" and it has never been tested;
+(b) a number: east-northeast is a bearing of 67.5 degrees, point 6 of 32, point 3 of 16;
+direction words were tried as keyword alphabets only (C15, 0072); (c) the clock as a
+mechanism: the Mengenlehreuhr readings are dead (0079, 0091), and the Weltzeituhr named in
+2025 is excluded only as a 24-letter cipher alphabet (0052), not as a rotating offset over 26
+letters (C12(b)); (d) a marker where one stage or part of the message ends (see A7); (e) a
+pointer outside the text, which is the riddle layer and out of scope unless it feeds the key.
+Stands on it: the key-source order and every family's key list. Cheapest check: (b) as
+numeric keys, exact and cheap like F3.2; (a) as routes added to the F6 move library.

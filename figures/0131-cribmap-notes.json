@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A table with two scrambled alphabets, one to look up the message letter and one to write the carved letter, after every move of the type-1 library: the two-alphabet form of 0129."
+ },
+ {
+  "anchor": "the check",
+  "text": "The same exact algebra as 0123, run at every key length 1-26. At long keys almost every setting fits and each fit takes a long search, so the run spent its budget there."
+ },
+ {
+  "anchor": "the bound",
+  "text": "None: 10,625 moves done on K4 only, no scrambled copies finished. On those, fits from key length 3. Rerun as 0132 and 0133."
+ }
+]

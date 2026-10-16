@@ -59,7 +59,10 @@ Update the leaf when an experiment works on it.
       - **F6.1** One unknown alphabet (Quagmire III) {blocked · exact · 0097, 0129, 0130}
         - Every type-1 move, either order, added or Beaufort form, key lengths 1-5: no alphabet fits {closed · exact · 0129, 0130}
         - Lengths 6-26: settings fit at the scrambled-copper rate; only an English climb could judge them (0120) {blocked · exact · 0129, 0130}
-      - **F6.2** Two unknown alphabets (Quagmire IV) {open · weak · 0097}
+      - **F6.2** Two unknown alphabets (Quagmire IV) {blocked · exact · 0097, 0131, 0132, 0133}
+        - Every type-1 move, either order, key lengths 1-2 (and 3 with the table first): no pair fits {closed · exact · 0133}
+        - The rest: fits at the scrambled-copper rate (exact to 10, per-slot above); only an English climb could judge {blocked · exact · 0133}
+        - Move first, key length 3: K4 at the top of its coppers in 0097, 0100, 0133; p 0.04-0.10 (0102) {noted · exact · 0100, 0102, 0133}
     - **F6.4** Padding at each grid stage; nulls dropped between grids {open · sampled · 0082}
   - F3 A two-part key with a combiner
     - Two words added: both from the puzzle, or one from the dictionary {closed · exact · 0014, 0043, 0059, 0115}

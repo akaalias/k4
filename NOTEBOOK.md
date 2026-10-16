@@ -76,6 +76,33 @@ closed or blocked; pivot P5 to F6, ranking unchanged.
 |---|---|---|
 | 129 | F6.1 | **One free alphabet after every move, exact (order A).** 27,852 type-1 moves x key lengths 1-26 x added and Beaufort forms, 0119's decider (38 undecided of about 390,000 settings): no fit below length 6, 3 settings at 6, 64 at 7. On 800 sampled moves K4 is above all 12 coppers in 7 of 52 cells; each copper against the rest 0-8. Chance. Prediction held (it said 1-5 dead; the first fits came at 6). |
 | 130 | F6.1 | **The same, order B (table, then move).** 78 undecided of about 500,000. No fit below 6; length 9 dead for every move and 15, 17, 19 nearly so, because with the table first the slots are the message places. K4 above every copper in 0 of 52 cells, null 0-10. Chance. Prediction held. F6.1 closed where dead, blocked where it fits at the coppers' rate. |
+| 131 | F6.2 | **Two free alphabets after every move, exact at every length: incomplete.** The run hit its 30-minute budget after 10,625 of 27,852 moves on K4 and finished no copper comparison, so it has no verdict and the item stays open. On the part done: fits from key length 3 (6 moves), and at 26, 7,072 of 7,152 settings passing the per-slot test fit. |
+| 132 | F6.2 | **Second attempt, exact at 1-10 and the per-slot test above: incomplete again.** No move was finished for every text, so again no verdict. Measured afterwards: the search has a heavy tail even at short keys (a few settings per thousand ran to 200,000 nodes, up to 21 s each), and the 300-move long-key sample shared the workers. Left behind: on 64 sampled K4 moves, 97-98% of settings passing the per-slot test at 11-26 fit. |
+| 133 | F6.2 | **Third attempt, complete.** Every move, both orders, K4 and 10 coppers; exact at key lengths 1-10 with the search capped at 2,000 nodes (undecided 220-302 per text, K4 249, so even), per-slot test at 11-26. No pair of alphabets fits at 1-2 in either order or at 3 with the table first; first fits at 3 (move first, 16 moves) and 4 (table first, 3). K4 above every copper in 5 of 52 cells, each copper against the rest 2-7: chance. F6.2 blocked like F1.2. Prediction held. |
+
+List for F6.4, written before 0135 ran: the hand ways of padding a grid of 97 letters, per stage. Where the h w - 97
+blank cells go: P1 end of the last row (the usual ragged grid, 0008, 0083); P2 start of the first row (0082); P3 start
+of the last row; P4 end of the first row; P5/P6 down the last column from the top or the bottom; P7/P8 down the first
+column from the top or the bottom (only when there are no more blanks than rows). Between two grids the blanks either
+vanish (drop: the second grid gets 97 letters again) or are copied out as dummy letters and struck out at the very end
+(keep: the second grid gets h w symbols). Completing the grid with nulls that stay in the carved text is not on the list,
+because 97 is prime and every rectangle would leave nulls among the 97 carved letters, which the known places rule out
+only case by case; the "?" as the 98th cell is 0086.
+
+Paragraph on 0133. The cell that keeps coming back: two unknown alphabets, the move first, key length 3. 0097 (by a
+relaxation), 0100 (50 fresh coppers) and now 0133 (exact, 10 more) all put K4 at or above the top of its coppers there
+(16 moves here against 1-12). These are not three independent replications of a signal: K4's count is the same
+object each time and only the coppers are fresh, and the cell was first picked out of 52 by looking. 0102 measured it
+against 400 shuffles at p 0.043 and against 400 copies keeping the width-21 columns at p 0.10. By the rule fixed before
+this run (K4's count of cells above every copper against each copper's count against the rest) it is inside chance,
+so the queue did not stop. Recorded as the most persistent marginal cell in F6, not chased.
+
+Mistake in 0131. I timed the two-alphabet decider on 60 moves while 0130 was running and read 0.46 s per move as
+"about 0.2 s unloaded", then sized the run on that. The cost is not spread evenly: lengths 1-10 take about 3 ms per
+move, 11 and 12 about 0.2 s, and the long lengths more, with rare 60-second searches at the node limit. The workers
+stopped on the clock with the coppers' share of moves barely started, and the comparison needs moves done for every
+text, so it came out empty. Lesson: time each part of the parameter range separately, unloaded, before sizing a run,
+and make the comparison robust to a short run. 0132 repeated the mistake in a new form: I timed 60 K4 moves, saw a mean of 1.2 s on the long sample, and did not look at the shuffled texts' tail at short keys, where one setting in a few hundred costs seconds. 0133 caps the search at 2,000 nodes (undecided counted per text) and groups each move's eleven texts in one worker, so a cut-off still leaves whole moves to compare.
 
 Paragraph on 0129-0130. 0129 and 0130 are one test split in two, because both orders did not fit one 30-minute
 budget: the exact decider costs about 7 ms per fitting setting and most settings from length 10 up fit. A random

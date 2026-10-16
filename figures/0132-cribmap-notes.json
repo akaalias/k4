@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The second attempt at F6.2: decide two unknown alphabets exactly only where it is cheap (key lengths 1-10) and use the per-slot test above, on K4 and ten scrambled coppers."
+ },
+ {
+  "anchor": "the check",
+  "text": "A move counts only when K4 and every copper are done for it; none was, because a heavy tail of slow searches and a long-key sample filled the budget."
+ },
+ {
+  "anchor": "the bound",
+  "text": "None. What it measured: at long keys 97-98% of settings passing the per-slot test fit, so the per-slot test is nearly the whole story there."
+ }
+]

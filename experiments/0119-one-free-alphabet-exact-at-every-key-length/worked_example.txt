@@ -1,0 +1,26 @@
+key length 7: known letters by slot (place mod 7)
+  slot 0: E->F (22), T->R (29), B->N (64), L->Z (71)
+  slot 1: A->L (23), H->N (30), E->Y (65), O->F (72)
+  slot 2: S->R (24), E->G (31), R->P (66), C->P (73)
+  slot 3: T->V (25), A->K (32), L->V (67), K->K (74)
+  slot 4: N->Q (26), S->S (33), I->T (68)
+  slot 5: O->Q (27), T->S (34), N->T (69)
+  slot 6: R->P (28), C->M (70)
+  form V: no alphabet fits
+  form B: no alphabet fits
+
+key length 12: known letters by slot (place mod 12)
+  slot 0: T->V (25), C->P (73)
+  slot 1: N->Q (26), K->K (74)
+  slot 2: O->Q (27)
+  slot 3: R->P (28), B->N (64)
+  slot 4: T->R (29), E->Y (65)
+  slot 5: H->N (30), R->P (66)
+  slot 6: E->G (31), L->V (67)
+  slot 7: A->K (32), I->T (68)
+  slot 8: S->S (33), N->T (69)
+  slot 9: E->F (22), T->S (34), C->M (70)
+  slot 10: A->L (23), L->Z (71)
+  slot 11: S->R (24), O->F (72)
+  form V: no alphabet fits
+  form B: no alphabet fits

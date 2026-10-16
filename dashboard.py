@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Live dashboard, rendered from the experiment record on every request.
+"""The project's dashboard, rendered from the experiment record on every request.
 
     uv run --with markdown python dashboard.py          # serves http://127.0.0.1:8765
     uv run --with markdown python dashboard.py --build  # writes static html to dashboard/
@@ -111,8 +111,8 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .gl{border-bottom:1px dotted var(--accent);cursor:help;transition:background .15s}.gl.on,.gl:hover{background:var(--hl)}.gl-entry{border-left:2px solid transparent;padding-left:6px;margin-left:-8px;transition:background .15s}.gl-entry.on,.gl-entry:hover{background:var(--hl);border-left-color:var(--accent)}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
 .rec-body{max-width:980px}.rec-body h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}.rec-body p,.rec-body li{max-width:720px;font-size:15.5px;line-height:1.6}
 .sculpture-wrap{max-width:980px;margin:14px auto 22px}#sculpture{width:90vw;position:relative;left:50%;transform:translateX(-50%);border:1px solid var(--rule-soft);border-radius:2px;overflow:hidden;cursor:grab}#sculpture canvas{display:block}.sculpture-foot{display:flex;gap:22px;align-items:baseline;margin-top:8px}.sculpture-key span{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-right:14px;cursor:pointer;border-bottom:2px solid transparent}.sculpture-key span.on{color:var(--accent);border-bottom-color:var(--accent)}#sculpture-label{margin:0;font-size:13.5px;flex:1}
-.explain-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;max-width:980px;margin:22px auto 0}.explain-col h4 a{color:inherit;text-decoration:none}.explain-col h4 a:hover{text-decoration:underline}.explain-col h4{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 8px}.explain-col p{font-size:15.5px;line-height:1.65;margin:0;color:var(--ink)}
-@media(max-width:860px){.explain-row{grid-template-columns:1fr}}
+.explain-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;max-width:980px;margin:22px auto 0}.explain-row.cols-2{grid-template-columns:1fr 1fr}.explain-row.cols-4{grid-template-columns:repeat(4,1fr);gap:28px;margin-top:6px}.explain-col h4 a{color:inherit;text-decoration:none}.explain-col h4 a:hover{text-decoration:underline}.explain-col h4{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:0 0 8px}.explain-col p{font-size:15.5px;line-height:1.65;margin:0;color:var(--ink)}
+@media(max-width:860px){.explain-row,.explain-row.cols-2,.explain-row.cols-4{grid-template-columns:1fr}}
 dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 18px;margin:6px 0 10px;font-size:14.5px}dl.bd dt{color:var(--muted)}dl.bd dd{margin:0;min-width:0;overflow-wrap:anywhere}dl.bd dl.bd{grid-template-columns:minmax(70px,max-content) 1fr;margin:0;padding-left:12px;border-left:2px solid var(--rule-soft);font-size:13.5px}.bd-text{font:12.5px var(--mono);letter-spacing:.06em;overflow-wrap:anywhere}ol.bd-list{margin:0;padding-left:20px}
 .ktabs{display:flex;gap:6px;margin:4px 0 2px}.ktab{font:600 12px var(--serif);letter-spacing:.1em;padding:5px 14px;border:1px solid var(--rule);background:var(--paper);color:var(--muted);border-radius:3px;cursor:pointer}.ktab.on{background:var(--accent);border-color:var(--accent);color:var(--paper)}.kpane-notes{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:980px;margin:4px auto 0;font-size:15px;color:var(--ink)}.kpane-notes p{margin:0}.lrow.start{justify-content:flex-start}.inl{display:inline-flex;align-items:flex-end;gap:1px;white-space:nowrap;height:.78em;line-height:1;vertical-align:-0.06em}.inl .lc{width:1.22em;height:1.42em;font-size:.56em;border-radius:2px}.lp-note{width:573px;box-sizing:border-box;font-size:15px;line-height:1.5;margin:10px 0 0;padding:0 2px}.lc.q,.lc.ink.q{color:var(--accent);font-weight:700}
 .fig-row{clear:both;width:min(1640px,98vw);margin-top:30px!important;position:relative;left:50%;transform:translateX(-50%);margin:26px 0 8px}.fig-main{margin:0}.fig-scroll{overflow-x:auto;padding-bottom:6px}.fig-main svg{display:block;margin:0 auto;max-width:none}.fig-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.fig-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:980px;margin:14px auto 0}.fig-note{margin:0}.fig-note b{display:block;font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 3px}.fig-note p{margin:0;font-size:14px;line-height:1.5;color:var(--muted)}
@@ -716,7 +716,7 @@ def page(title, body, active="", refresh=True):
     # place on the page survive quiet periods
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
-    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage")))
+    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/experiments", "Experiments"), ("/lineage", "Lineage")))
            + '<span class="spacer"></span><span class="sec">'
            + "".join(link(h, t) for h, t in (("/families", "Families"), ("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
            + "</span>")
@@ -1122,8 +1122,8 @@ def overview():
                '<p class="sec-lead">That method is what this loop is looking for.</p>')
             + what_we_look_for()
             + sec(2, "Where do you go from here?", "Two ways to follow the work as it goes.")
-            + '<div class="explain-row" style="grid-template-columns:1fr 1fr">'
-            + f'<div class="explain-col"><h4><a href="/live">The live dashboard &rarr;</a></h4><p>Every experiment so far, {n} of them, placed by what it found against scrambled copies of the carved text, updated as each new one lands.</p></div>'
+            + '<div class="explain-row cols-2">'
+            + f'<div class="explain-col"><h4><a href="/experiments">The experiments &rarr;</a></h4><p>Every experiment so far, {n} of them, placed by what it found against scrambled copies of the carved text, updated as each new one lands.</p></div>'
             + '<div class="explain-col"><h4><a href="/lineage">The lineage &rarr;</a></h4><p>How each experiment built on an earlier one, family by family, in the order they ran.</p></div>'
             + '</div>')
     return page("Kryptos K4 autoresearch", body, "/")
@@ -1235,21 +1235,21 @@ def live_page():
     for r in rows:
         k, _, rest = r["family"].partition("-")
         names.setdefault(k, rest.replace("-", " "))
-    key = ('<div class="ph-legend">'
-           '<span><b>Beat the scrambled copies</b>: K4 did better than every scrambled copy under the same search.</span>'
-           '<span><b>At chance</b>: settings or readings exist, but scrambled copies produce them just as well.</span>'
-           '<span><b>Ruled out</b>: nothing in the searched space fits the 24 known letters.</span>'
-           '<span><b>No comparison run</b>: early experiments without scrambled copies.</span></div>'
-           '<p class="facts" style="margin-top:4px">The one tick in the top row, 0056, is a pattern in the carved text itself, '
-           'doubled letters lining up in columns of seven, not a reading of it. Hover a tick for the finding; click to open it.</p>')
-    body = (page_head("Live dashboard", "The run, experiment by experiment",
+    key = ('<div class="explain-row cols-4">'
+           '<div class="explain-col"><h4>Beat the scrambled copies</h4><p>K4 did better than every scrambled copy under the same search.</p></div>'
+           '<div class="explain-col"><h4>At chance</h4><p>Settings or readings exist, but scrambled copies produce them just as well.</p></div>'
+           '<div class="explain-col"><h4>Ruled out</h4><p>Nothing in the searched space fits the 24 known letters.</p></div>'
+           '<div class="explain-col"><h4>No comparison run</h4><p>Early experiments that ran no scrambled copies.</p></div></div>'
+           '<p class="muted" style="max-width:980px;margin:18px auto 0;font-size:14.5px">The one tick in the top row, 0056, is a pattern in '
+           'the carved text itself, doubled letters lining up in columns of seven, not a reading of it. Hover a tick for the finding; click it to open the experiment.</p>')
+    body = (page_head("Experiments", "The run, experiment by experiment",
                       "Every experiment, in the order it ran, placed by what it found against scrambled copies of the carved text: the "
                       "same search on the same letters in a random order. A result counts only if K4 does better than all of them. Then the "
-                      "table of all experiments, newest first. The page reloads when a new experiment lands.", facts, key)
-            + outcome_chart(rows)
+                      "table of all experiments, newest first. The page reloads when a new experiment lands.", facts)
+            + outcome_chart(rows) + key
             + experiments_table(rows)
             + page_foot('How the experiments built on each other is on the <a href="/lineage">lineage</a> page; what is still open is on the <a href="/families">families</a> page.'))
-    return page("live dashboard", body, "/live")
+    return page("experiments", body, "/experiments")
 
 
 def all_candidates(r):
@@ -2163,7 +2163,7 @@ PROG_CSS = """<style>
 
 FILE_PAGES = {"order-of-work.md": "/priorities", "families.md": "/families", "11-clue-register.md": "/clues",
               "knowledge/11-clue-register.md": "/clues", "NOTEBOOK.md": "/notebook", "GLOSSARY.md": "/glossary",
-              "results.tsv": "/live", "grades.tsv": "/live", "program.md": "/program"}
+              "results.tsv": "/experiments", "grades.tsv": "/experiments", "program.md": "/program"}
 
 
 def program_page():
@@ -2247,7 +2247,7 @@ def route(path):
             return ("model/gltf-binary", f.read_bytes())
     if path == "/lineage":
         return lineage_page()
-    if path == "/live":
+    if path in ("/experiments", "/live"):
         return live_page()
     if path == "/glossary":
         g = load_glossary()

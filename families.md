@@ -29,7 +29,7 @@ Update the leaf when an experiment works on it.
         - Length 19: a pair fits, 26 of 1,000 coppers do (R under P at 28 and 66, 38 apart) {noted · exact · 0123, 0124}
     - A progressive key {closed · exact · 0011, 0042}
     - A self-feeding key (autokey)
-      - Ciphertext autokey, any lag, every alphabet tried {closed · exact · 0002, 0025, 0064, 0118}
+      - Ciphertext autokey, any lag, on 1,092 keyword tables {closed · exact · 0002, 0025, 0064, 0118}
       - Plaintext autokey, lags 1-52 {closed · exact · 0003, 0012}
       - Plaintext autokey, lags 53-96: the known letters force too little {blocked · exact · 0012, 0136}
         - Lags 85-96: open bits above what 73 letters of English carry at Shannon's lowest entropy; no English test can decide {blocked · exact · 0136}
@@ -48,11 +48,16 @@ Update the leaf when an experiment works on it.
         - K5 as the key (C20(e)): no text {blocked}
     - **F1.5** A decider for cells the known letters cannot decide (the shared blocker of F1.1, F1.2, F1.4's free alphabets, autokey lags 53-96, F6.1, F6.2, F8): bound each cell by key bits against English redundancy, then a climb that passes 0120's power bar on planted texts (P6) {open · exact · 0136}
       - Step 1, the bound: the quadgram scorer extracts 1.78 bits per letter (130 bits in 73 letters); one free alphabet at every length, two to 16 (14 with a move), Hill with any key decidable in principle; two alphabets from 19 (15 with a move) and autokey 53-84 only with a better model; autokey 85-96 by none {closed · exact · 0136}
+    - **F1.6** One carved letter wrong, missing or extra, through the exact unknown-alphabet tests {open}
+    - **F1.7** Autokey on one unknown alphabet, with no move, then after each move {open}
+    - **F1.8** Carter's book as a running key on an unknown alphabet {open}
+    - **F1.9** The per-letter progressive key; its periods 26-30 against coppers {open}
+    - **F1.10** Friedman's keyword-only key-advance schedules {open}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}
       - K3's rule, quarter turns, grid paths, the ? as a 98th symbol {closed · exact · 0008, 0041, 0082, 0083, 0086, 0099}
-      - Key on both sides of the move {closed · exact · 0080}
+      - Key on both sides of the move, the same table both sides {closed · exact · 0080}
       - AMSCO at key length 23: above the coppers, within the number expected by chance {noted · exact · 0114}
     - One move with an autokey, running key or clock schedule {closed · exact · 0063, 0081, 0090, 0091}
     - One carved letter wrong, missing or extra, through every move {closed · exact · 0093, 0094}
@@ -72,6 +77,16 @@ Update the leaf when an experiment works on it.
     - **F6.4** Padding at each grid stage; nulls dropped between grids {closed · exact · 0082, 0135}
       - Blanks in any of eight places per grid, dropped or kept as dummies, one stage (widths 2-96) or two (2-48), periodic key 1-26 on standard/KRYPTOS tables: nothing live below 21 {closed · exact · 0135}
     - **F6.5** Direction words as routes through the grid ("east, then northeast"), then the table {open}
+    - **F6.6** Move, change, move again {open}
+    - **F6.7** Change, move, change on two different tables {open}
+    - **F6.8** Three-stage routes with a keyword columnar stage {open}
+    - **F6.9** Both autokeys with 0084's width-7 double columnar routes {open}
+    - **F6.10** Blank cells chosen by a key, then the table {open}
+    - **F6.11** Keyword-disrupted and triangle columnar transpositions, then the table {open}
+    - **F6.12** EVA's double triangle transposition, then the table {open}
+    - **F6.13** Chiffre XIII's keyword-shaped five-row mask, then its period-5 table {open}
+    - **F6.14** Nihilist transposition on a 10 x 10 square with three blanks {open}
+    - **F6.15** YAR's "1-2-3" spacing as an ordering, then the table {open}
   - F12 Stein's way: look, quantify, then crib
     - **F12.1** The 97 letters and the "?" checked against images of the copper {open}
     - **F12.2** K4's statistics by segment and width against shuffles {open}
@@ -88,6 +103,10 @@ Update the leaf when an experiment works on it.
     - **F3.1** Combiners other than addition {open}
     - **F3.2** Number keys from the Morse and the plate layout {open}
     - **F3.3** Direction words as numbers: the bearing 67.5, compass points 6 of 32 and 3 of 16 {open}
+    - **F3.4** Three or more stacked tables (Scheidt's patent, "triple matrixes") {open}
+    - **F3.5** The misspelt letters' positions as indices, and their orientation {open}
+    - **F3.6** The Weltzeituhr's rotating ring as an offset over 26 letters {open}
+    - **F3.7** "Point" as a decimal point, a place or a punctuation mark {open}
   - F2 Masked plaintext, then a keyed stage
     - Masks that move or pad letters: reversal, nulls, doublets as nulls {closed · exact · 0023, 0057, 0075}
     - Masks that change letters: affine, Atbash {closed · exact · 0074}
@@ -96,10 +115,14 @@ Update the leaf when an experiment works on it.
     - **F2.2** Nulls placed by a rule {open}
     - A code layer, phonetic spelling, another language: these change the known letters or need a codebook {blocked}
   - F4 Sanborn's visual systems
-    - Trifid, any cube {closed · exact · 0040}
+    - Trifid, any cube, periods 2-15 {closed · exact · 0040}
     - The plates as a key by position, straight or folded {closed · exact · 0089}
     - K4 read from behind the screen {closed · exact · 0108}
     - **F4.1** A route that follows the plates' physical layout {open}
+    - **F4.2** Free trifid cubes at periods above 15 {open}
+    - **F4.3** The physical anomalies' positions as a key {open}
+    - **F4.4** The extra L and HILL as a marker matching YAR {open}
+    - **F4.5** Antipodes' plate order and spelling differences {open}
   - F10 Alphabets that change after every letter
     - **F10.1** Chaocipher: two wheels permuted after every letter (1918, disclosed 2010) {open}
     - **F10.2** Wheatstone cryptograph or Alberti disk advanced by the plaintext {open}
@@ -107,12 +130,16 @@ Update the leaf when an experiment works on it.
   - F11 Agency hand systems, now public
     - **F11.1** Strip ciphers and cylinders with published alphabets (M-94, Jefferson wheel, M-138-A) {open}
     - **F11.2** Poem code: double transposition keyed by words from a memorized text, then the table {open}
+    - **F11.3** The CIA's Polish key box: a key text transposed in a box, then the table {open}
+    - **F11.4** Friedman's keyed alphabet box as the key stream {open}
   - F8 Hill ciphers
-    - Hill 2-5, plain and affine, any numbering, chained, with a repeating key {closed · exact · 0015, 0036, 0044, 0055, 0105, 0116}
+    - Hill 2-5, plain and affine, 330 numberings, chained, with a repeating key {closed · exact · 0015, 0036, 0044, 0055, 0105, 0116}
+    - **F8.1** Hill with an unknown letter numbering: count the equations first {open}
     - Settings with too few equations to decide (5x5 affine; long keys with 4x4) {blocked · exact · 0105, 0116}
   - F5 Gromark and number feedback
-    - Two- and three-term rules, any alphabet, bases 2-26 {closed · exact · 0013, 0028, 0046, 0054, 0069, 0076, 0107}
+    - Two- and three-term rules, bases 2-26 (three-term free alphabet in base 10 only) {closed · exact · 0013, 0028, 0046, 0054, 0069, 0076, 0107}
     - **F5.1** Multiplicative feedback; the raised YAR as primer {open}
+    - **F5.2** Three-term Gromark on a free alphabet in other bases {open}
   - F9 Substitution, then a move
     - One-to-one substitution, then any of the 1.86M built routes {closed · exact · 0019, 0106}
     - Routes outside every built set: unbounded without a list of hand methods {blocked}

@@ -73,3 +73,7 @@ wrapping, punctuation and every place the change appears. If the browser extensi
 available, render the page with headless Chrome
 (`"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --window-size=1440,1400 --screenshot=out.png <url>`)
 and look at the screenshot. Checking the HTML alone does not count.
+
+### Page names
+
+The eyebrow, the first label on a page, is the page's name exactly as the navigation spells it.

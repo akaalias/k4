@@ -1949,7 +1949,7 @@ def lineage_page():
         facts += f' The most built-on is <a href="/exp/{esc(top[0])}">{int(top[0][:4])}</a>, with {top[1]} children.'
     blob = json.dumps(data).replace("</", "<\\/")
     body = f"""<style>{LIN_CSS}</style><div class="lin">
-{page_head("Research lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.")}
+{page_head("Lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.")}
 {sec(1, "Every experiment by family")}<div style="max-width:980px;margin:0 auto"><p class="facts" style="font-size:14.5px;color:var(--muted);margin:4px 0 12px;max-width:820px">{facts}</p>{LIN_LEGEND}</div>
 <div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
 {page_foot('Each family and its hypotheses are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/priorities">Priorities</a>.')}
@@ -2262,7 +2262,7 @@ def families_page():
                  f"{c.get('blocked', 0)} blocked, {c.get('noted', 0)} noted."
                  + (" Next: " + re.sub(r"[*][*](.+?)[*][*]", lambda m_: "<b>" + m_.group(1) + "</b>", esc(nx["label"])) + "." if nx else ""))
         key = TREE_KEY
-    head = page_head("Hypothesis families", "Where we believe the method is",
+    head = page_head("Families", "Where we believe the method is",
                      "Every hypothesis the search holds, from one root through the families to the single tests. Each leaf is open, closed, "
                      "blocked or noted, with the strength of the test and the experiments behind it. Families appear in the order they are "
                      "worked; click a branch to fold it, a number to open the experiment.", facts, key)
@@ -2379,7 +2379,7 @@ def route(path):
     if path == "/notebook":
         nb = (ROOT / "NOTEBOOK.md").read_text()
         days = len(re.findall(r"^## ", nb, re.M))
-        return md_page("lab notebook", "NOTEBOOK.md", "/notebook", eyebrow="Lab notebook", h1="What was decided, run, found and left open",
+        return md_page("lab notebook", "NOTEBOOK.md", "/notebook", eyebrow="Notebook", h1="What was decided, run, found and left open",
                        facts=f"{days} working days so far, newest first.", take_intro=True,
                        foot='The bounds each experiment set are on the <a href="/families">families</a> page and in the <a href="/clues">clue register</a>.')
     if path == "/order":
@@ -2404,7 +2404,7 @@ def route(path):
     if path == "/clues":
         cr = (ROOT / "knowledge/11-clue-register.md").read_text()
         nclues = len(set(re.findall(r"^\*\*(C\d+[a-z]?)\.", cr, re.M)))
-        return md_page("clue register", "knowledge/11-clue-register.md", "/clues", eyebrow="Clue register", h1="Every hint and its readings",
+        return md_page("clue register", "knowledge/11-clue-register.md", "/clues", eyebrow="Clues", h1="Every hint and its readings",
                        facts=f"{nclues} clues.", take_intro=True,
                        foot='Experiments cite clues by number in their expert hypothesis; the <a href="/families">families</a> page shows what each family has covered.')
     if path == "/program":

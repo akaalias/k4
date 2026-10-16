@@ -1,0 +1,15 @@
+part 1, sculpture's table (KRYPTOS alphabets), Vigenere: key value forced at each place of EASTNORTHEAST
+
+place 22: E under F -> key  1, slot at length 5: 0
+place 23: A under L -> key 10, slot at length 5: 1
+place 24: S under R -> key 21, slot at length 5: 2
+place 25: T under V -> key 18, slot at length 5: 3
+place 26: N under Q -> key  1, slot at length 5: 4
+place 27: O under Q -> key 15, slot at length 5: 0
+place 28: R under P -> key  2, slot at length 5: 1
+place 29: T under R -> key 23, slot at length 5: 2
+place 30: H under N -> key  5, slot at length 5: 3
+place 31: E under G -> key  2, slot at length 5: 4
+place 32: A under K -> key 19, slot at length 5: 0
+place 33: S under S -> key  0, slot at length 5: 1
+place 34: T under S -> key  2, slot at length 5: 2

@@ -1,0 +1,74 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "two parts with separate repeating keys (split between the runs), standard/KRYPTOS tables, lengths up to the run length - 1",
+  "summary": {
+   "part 1 (EASTNORTHEAST, 22-34)": {
+    "k4_live_lengths": [],
+    "k4_live_cells": 0,
+    "coppers_live_cells": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "checks_by_length": {
+     "1": 12,
+     "2": 11,
+     "3": 10,
+     "4": 9,
+     "5": 8,
+     "6": 7,
+     "7": 6,
+     "8": 5,
+     "9": 4,
+     "10": 3,
+     "11": 2,
+     "12": 1
+    }
+   },
+   "part 2 (BERLINCLOCK, 64-74)": {
+    "k4_live_lengths": [],
+    "k4_live_cells": 0,
+    "coppers_live_cells": [
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "checks_by_length": {
+     "1": 10,
+     "2": 9,
+     "3": 8,
+     "4": 7,
+     "5": 6,
+     "6": 5,
+     "7": 4,
+     "8": 3,
+     "9": 2,
+     "10": 1
+    }
+   }
+  },
+  "k4_live": [],
+  "controls": "10 shuffled coppers (seed 1615)",
+  "exhaustive": true
+ },
+ "notes": "part 1 (EASTNORTHEAST, 22-34): K4 live lengths [] (0 cells), coppers 0-1; part 2 (BERLINCLOCK, 64-74): K4 live lengths [] (0 cells), coppers 0-1",
+ "controls": [],
+ "error": null,
+ "worked_example": "part 1, sculpture's table (KRYPTOS alphabets), Vigenere: key value forced at each place of EASTNORTHEAST\n\nplace 22: E under F -> key  1, slot at length 5: 0\nplace 23: A under L -> key 10, slot at length 5: 1\nplace 24: S under R -> key 21, slot at length 5: 2\nplace 25: T under V -> key 18, slot at length 5: 3\nplace 26: N under Q -> key  1, slot at length 5: 4\nplace 27: O under Q -> key 15, slot at length 5: 0\nplace 28: R under P -> key  2, slot at length 5: 1\nplace 29: T under R -> key 23, slot at length 5: 2\nplace 30: H under N -> key  5, slot at length 5: 3\nplace 31: E under G -> key  2, slot at length 5: 4\nplace 32: A under K -> key 19, slot at length 5: 0\nplace 33: S under S -> key  0, slot at length 5: 1\nplace 34: T under S -> key  2, slot at length 5: 2",
+ "seconds": 0.004289150238037109
+}

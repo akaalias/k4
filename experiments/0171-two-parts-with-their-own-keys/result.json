@@ -1,0 +1,93 @@
+{
+ "id": 171,
+ "tag": "0171-two-parts-with-their-own-keys",
+ "started": "2026-10-16T23:04:58+00:00",
+ "seconds": 0.1,
+ "status": "ran",
+ "phases": {
+  "unattributed": 39.1,
+  "run": 0.1,
+  "record": 0.0
+ },
+ "ended_epoch": 1792191898.534785,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "two parts with separate repeating keys (split between the runs), standard/KRYPTOS tables, lengths up to the run length - 1",
+  "summary": {
+   "part 1 (EASTNORTHEAST, 22-34)": {
+    "k4_live_lengths": [],
+    "k4_live_cells": 0,
+    "coppers_live_cells": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "checks_by_length": {
+     "1": 12,
+     "2": 11,
+     "3": 10,
+     "4": 9,
+     "5": 8,
+     "6": 7,
+     "7": 6,
+     "8": 5,
+     "9": 4,
+     "10": 3,
+     "11": 2,
+     "12": 1
+    }
+   },
+   "part 2 (BERLINCLOCK, 64-74)": {
+    "k4_live_lengths": [],
+    "k4_live_cells": 0,
+    "coppers_live_cells": [
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "checks_by_length": {
+     "1": 10,
+     "2": 9,
+     "3": 8,
+     "4": 7,
+     "5": 6,
+     "6": 5,
+     "7": 4,
+     "8": 3,
+     "9": 2,
+     "10": 1
+    }
+   }
+  },
+  "k4_live": [],
+  "controls": "10 shuffled coppers (seed 1615)",
+  "exhaustive": true
+ },
+ "notes": "part 1 (EASTNORTHEAST, 22-34): K4 live lengths [] (0 cells), coppers 0-1; part 2 (BERLINCLOCK, 64-74): K4 live lengths [] (0 cells), coppers 0-1",
+ "error": null,
+ "candidates": []
+}

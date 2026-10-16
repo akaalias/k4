@@ -169,3 +169,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0168	0168-k4-statistics-against-a-thousand-shuffles	12-steins-way	0056-look-elsewhere-for-the-two-fingerprints	reverted	0	0	0			2	unattributed=222 run=2 record=0
 0169	0169-steins-peak-at-thirteen	12-steins-way	0168-k4-statistics-against-a-thousand-shuffles	reverted	0	0	0			9	unattributed=59 run=9 record=0
 0170	0170-pencil-session-observations	12-steins-way	0168-k4-statistics-against-a-thousand-shuffles	reverted	0	0	0			0	unattributed=152 run=0 record=0
+0171	0171-two-parts-with-their-own-keys	12-steins-way	0005-quagmire-period-sweep-forced-keys	reverted	0	0	0			0	unattributed=39 run=0 record=0

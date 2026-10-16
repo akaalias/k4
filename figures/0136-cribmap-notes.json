@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A cell the known letters cannot decide can still be decided by English, but only if its secret is small enough: English carries a fixed amount of information per letter, and a key with more open bits than that has false versions that read as well as the true one."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each cell's key counted in bits (a free alphabet 88.4, less the relabellings that change nothing; 4.70 per key letter), less the 113 bits the 24 known letters fix, against 73 letters times the bits per letter the quadgram scorer extracts (1.78, measured here) or Shannon allows (up to 3.97)."
+ },
+ {
+  "anchor": "the bound",
+  "text": "One free alphabet, every key length; two free alphabets to length 16 (14 with a move); Hill with any key to 26: decidable by quadgrams in principle. Two alphabets from 19 (15 with a move) and autokey lags 53-84 need a better model; lags 85-96 no English test can decide."
+ }
+]

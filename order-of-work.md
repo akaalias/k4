@@ -55,7 +55,7 @@ information (K5's text, a codebook) stay blocked.
 | Progressive key | closed | exact | 0011, 0042 | - |
 | Ciphertext autokey, any lag, any alphabet tried | closed | exact | 0002, 0025, 0064, 0118 | - |
 | Plaintext autokey, lags 1-52 | closed | exact | 0003, 0012 | - |
-| Plaintext autokey, lags 53-96 | blocked | - | 0012 | too few checks: the known letters force too little. Reopens if F1.5 reaches power |
+| Plaintext autokey, lags 53-96 | blocked | exact bound (0136) | 0012, 0136 | lags 85-96 blocked for good: the primer's open bits exceed what 73 letters of English can carry even at Shannon's lowest entropy (0136); lags 53-84 exceed the quadgram scorer's 130 bits, so only a better English model than the harness has could decide them |
 | Running key from K1-K3, the sculpture's texts, Carter, Sanborn's letters | closed | exact | 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117 | - |
 | Running key from an unknown English text, standard, KRYPTOS or puzzle-word alphabets | closed as far as testable | sampled; best forced stretch equals the coppers | 0009, 0010 | - |
 | **F1.1** Free alphabet, the same on both sides (Quagmire III with unknown order), periods 3-26 | **blocked** (closed exact where testable) | exact for the added form at 1-26 and the Beaufort form at 1-22, 24, 25 (0119); Beaufort 23 sampled at low power (plants above every copper 3 of 6, none recovered; K4 inside the coppers, below 10 of 12, 0120); Beaufort 26 one check | 0097, 0100, 0102, 0119, 0120 | Beaufort 23 (7 checks) and 26 (1 check) fit on K4 as on most coppers; only an English climb could go further, and 0120 showed no climb at this size recovers a planted text, so any test would be weak. Blocked 2026-10-16 (issue #14) |

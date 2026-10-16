@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "0136 showed one scrambled alphabet with a 23- or 26-letter key is decidable by English in principle. 0120's climb failed because one swap broke the known letters; this one only moves between alphabets that keep them, and runs 150 times faster."
+ },
+ {
+  "anchor": "the check",
+  "text": "12 planted English texts and 12 scrambled coppers per length, same climb and effort. K4 scores -5.05 at 23 (coppers -5.13 to -4.94) and -4.95 at 26 (-5.14 to -4.71)."
+ },
+ {
+  "anchor": "the bound",
+  "text": "At 23 the planted texts beat every copper 10 times in 12, passing the bar of 9; at 26 only 5. No planted text was recovered. K4 is inside its coppers at both lengths."
+ }
+]

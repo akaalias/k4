@@ -103,3 +103,7 @@ uses a word a stranger would not know.
 **the Berlin clocks** (also: the set-theory clock, the Mengenlehreuhr, the World Clock, the Weltzeituhr): Two famous Berlin timepieces. The set-theory clock shows the time with rows of lamps counting fives and ones of hours and minutes; the World Clock at Alexanderplatz shows the hour in 24 time zones and was where crowds gathered when the Wall fell. Sanborn has pointed at both.
 
 **a number base** (also: base 10, base 16, base 26, other number systems): How many different digits a counting system uses before it carries: ten for ordinary numbers, sixteen for hexadecimal, twenty for the Maya. A running-number key like Gromark's can be built in any base.
+
+**bits** (also: a bit, open bits, how big a secret is, the size of a secret): A way of counting how many possibilities a secret has: each bit doubles the count. A letter chosen freely is about 4.7 bits (26 choices); a scrambled alphabet is about 88 bits. A test can only single out the true secret if the evidence it reads, also counted in bits, is larger than the secret still left open.
+
+**a planted message** (also: planted text, hidden English, plants): A real English passage, with the 24 known letters written in at their places, enciphered by the method under test with a random key. Running a search on planted messages measures whether the search could find a true answer of that kind at all, before its verdict on the carved text is trusted.

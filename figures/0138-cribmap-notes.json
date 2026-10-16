@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "0137's planted texts beat scrambled copies of K4. But a planted ciphertext and K4 also differ in their letters; the fair comparison is a planted text against shuffles of its own letters."
+ },
+ {
+  "anchor": "the check",
+  "text": "12 new planted texts at length 23, each with 6 shuffles of itself that still fit the known letters; 0137's climb at full effort on all 84."
+ },
+ {
+  "anchor": "the bound",
+  "text": "6 of 12 beat all their own copies (luck gives 1.7; bar 9), against 11 of 12 versus K4's copies. Design 1 fails; 0137's verdict on K4 is weak."
+ }
+]

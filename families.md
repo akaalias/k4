@@ -31,7 +31,9 @@ Update the leaf when an experiment works on it.
     - A self-feeding key (autokey)
       - Ciphertext autokey, any lag, every alphabet tried {closed · exact · 0002, 0025, 0064, 0118}
       - Plaintext autokey, lags 1-52 {closed · exact · 0003, 0012}
-      - Plaintext autokey, lags 53-96: the known letters force too little {blocked}
+      - Plaintext autokey, lags 53-96: the known letters force too little {blocked · exact · 0012, 0136}
+        - Lags 85-96: open bits above what 73 letters of English carry at Shannon's lowest entropy; no English test can decide {blocked · exact · 0136}
+        - Lags 53-84: above the quadgram scorer's 130 bits; only a better English model could decide {blocked · exact · 0136}
       - Autokey plus a repeating key {closed · exact · 0066, 0067, 0073}
     - A running key from a text
       - K1-K3, the sculpture's texts, Carter, Sanborn's letters {closed · exact · 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117}
@@ -44,7 +46,8 @@ Update the leaf when an experiment works on it.
         - A key word stepped by skip, stutter, back and forth, triangle or square numbers, or restarted at each carved line, on standard or KRYPTOS tables: no setting fits {closed · exact · 0127, 0128}
         - The same rules on free alphabets: consistent at the coppers' rate, no climb can decide {blocked · exact · 0127, 0128}
         - K5 as the key (C20(e)): no text {blocked}
-    - **F1.5** A decider for cells the known letters cannot decide (the shared blocker of F1.1, F1.2, F1.4's free alphabets, autokey lags 53-96, F6.1, F6.2, F8): bound each cell by key bits against English redundancy, then a climb that passes 0120's power bar on planted texts (P6) {open}
+    - **F1.5** A decider for cells the known letters cannot decide (the shared blocker of F1.1, F1.2, F1.4's free alphabets, autokey lags 53-96, F6.1, F6.2, F8): bound each cell by key bits against English redundancy, then a climb that passes 0120's power bar on planted texts (P6) {open · exact · 0136}
+      - Step 1, the bound: the quadgram scorer extracts 1.78 bits per letter (130 bits in 73 letters); one free alphabet at every length, two to 16 (14 with a move), Hill with any key decidable in principle; two alphabets from 19 (15 with a move) and autokey 53-84 only with a better model; autokey 85-96 by none {closed · exact · 0136}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}

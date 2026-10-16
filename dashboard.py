@@ -1655,6 +1655,7 @@ LIN_CSS = """
 #lin .lrow{stroke:var(--rule-soft);stroke-width:1;shape-rendering:crispEdges}
 #lin .lpivot{stroke:var(--accent);stroke-width:1.4;stroke-dasharray:0.5 4;stroke-linecap:round}
 #lin .lpivot-lab{font:600 10.5px var(--serif);fill:var(--accent);letter-spacing:.02em}
+#lin .lpivot-row{fill:var(--paper)}
 #lin .lrow.ten{stroke:var(--rule);stroke-opacity:.6}
 #lin .lrow.lit-direct{stroke:var(--muted);stroke-opacity:.45}
 #lin .rhit{fill:var(--ink);fill-opacity:0;transition:fill-opacity .12s}
@@ -1708,10 +1709,13 @@ LIN_JS = r"""
   function layout(){
     var n=nodes.length,nf=fams.length,padY=16,sp=16,MINCOL=112,NUMW=30;
     var avail=host.clientWidth||1000;
-    var colW=Math.max(MINCOL,avail/nf),W=Math.floor(colW*nf),y={},cols=[];
-    nodes.forEach(function(nd,i){y[nd.key]=padY+i*sp;});
+    var colW=Math.max(MINCOL,avail/nf),W=Math.floor(colW*nf),y={},cols=[],py={},slot=0;
+    var pAfter={};pivots.forEach(function(pv){pAfter[pv.after]=pv;});
+    // a pivot takes a row of its own, right after the experiment it followed
+    nodes.forEach(function(nd){y[nd.key]=padY+slot*sp;slot++;if(pAfter[nd.key]){py[pAfter[nd.key].id]=padY+slot*sp;slot++;}});
+    var n=slot;
     fams.forEach(function(f,i){var left=i*colW;cols.push({left:left,x:left+NUMW});});
-    return {sp:sp,W:W,H:Math.ceil(2*padY+(n-1)*sp),y:y,cols:cols,colW:colW,CAP:colW-NUMW-12,padY:padY};
+    return {sp:sp,W:W,H:Math.ceil(2*padY+(n-1)*sp),y:y,py:py,cols:cols,colW:colW,CAP:colW-NUMW-12,padY:padY};
   }
 
   function render(){
@@ -1752,9 +1756,10 @@ LIN_JS = r"""
         +'<text class="nlab" x="'+(parseFloat(cx)-10)+'" y="'+(cy+3.3)+'" text-anchor="end">'+nd.n+'</text></a>';
     });
     // pivots: a dashed line between the experiment a pivot followed and the next one, labelled at the right
-    pivots.forEach(function(pv){if(!(pv.after in y))return;var py=y[pv.after]+geo.sp/2;
-      g+='<a href="/pivot/'+encodeURIComponent(pv.id)+'"><line class="lpivot" x1="0" x2="'+W+'" y1="'+py+'" y2="'+py+'"/>'
-        +'<text class="lpivot-lab" x="'+(W-6)+'" y="'+(py-3)+'" text-anchor="end">'+esc(pv.label)+'</text></a>';});
+    pivots.forEach(function(pv){if(!(pv.id in geo.py))return;var cy=geo.py[pv.id],h=geo.sp;
+      g+='<a href="/pivot/'+encodeURIComponent(pv.id)+'"><rect class="lpivot-row" x="0" y="'+(cy-h/2)+'" width="'+W+'" height="'+h+'"/>'
+        +'<line class="lpivot" x1="0" x2="'+W+'" y1="'+(cy-h/2)+'" y2="'+(cy-h/2)+'"/><line class="lpivot" x1="0" x2="'+W+'" y1="'+(cy+h/2)+'" y2="'+(cy+h/2)+'"/>'
+        +'<text class="lpivot-lab" x="10" y="'+(cy+3.6)+'">'+esc(pv.label)+'</text></a>';});
     host.innerHTML='<svg id="lin" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>';
     svg=document.getElementById('lin');
     lanesEl.style.width=W+'px';lanesEl.style.height='';
@@ -1818,8 +1823,9 @@ LIN_JS = r"""
     if(b)b.classList.add('on');if(l)l.classList.add('row-on');if(n)n.classList.add('row-on');
   }
   function rowAt(e){
-    var r=svg.getBoundingClientRect(),yy=e.clientY-r.top,i=Math.round((yy-geo.padY)/geo.sp);
-    return i>=0&&i<nodes.length&&Math.abs(yy-geo.y[nodes[i].key])<=geo.sp/2?nodes[i].key:null;
+    var r=svg.getBoundingClientRect(),yy=e.clientY-r.top,best=null,bd=geo.sp/2+0.01;
+    nodes.forEach(function(nd){var d=Math.abs(yy-geo.y[nd.key]);if(d<bd){bd=d;best=nd.key;}});
+    return best;
   }
   function wire(){
     rowOn=null;

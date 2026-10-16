@@ -5,6 +5,25 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-16
+
+Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.
+
+| # | Item | One line |
+|---|---|---|
+| 119 | F1.1 | **One free alphabet on both sides, exact.** Every key length 1-26, any of 26! orders, decided exactly by algebra mod 13 and mod 2 with an exhaustive search of the mod-13 solutions: in the added form (Quagmire III proper, and variant Beaufort) no alphabet fits at any length; in the Beaufort form only 23 and 26 fit (7 and 1 checks left). Coppers fit at 0-15 and 1-11 lengths; K4 is at the low end of their range, not outside it. **Prediction failed:** it expected most lengths from 8 up to fit. |
+
+Paragraph on 0119. The added form dies for a reason one can check by hand: S sits under S at 33 and K under K at
+74, and with one alphabet on both sides and the key added, a letter that encrypts to itself needs key 0 in its slot.
+At every key length from 1 to 26 another known letter shares the slot of 33 or 74 and is not its own carved letter,
+so that slot would need key 0 and a non-zero key at once. This is new for free alphabets (0097 tested only lengths 3,
+7 and 21, by a relaxation that can refute but not confirm). The first exact solver, a plain search with propagation,
+blew up on the dead lengths (product of independent choices); it was replaced before the run by linear algebra mod
+13 and mod 2 with an exhaustive search of the mod-13 solutions, and cross-checked on 40 coppers against the plain
+search (no fit it found was called dead). The prediction, written before the solver existed, guessed "fewer checks
+than free places, so most lengths fit"; it ignored that a one-to-one alphabet packs about 20 letters into 13 residue
+classes mod 13, which the known letters make tight.
+
 ## 2026-10-15
 
 Plan for the day: run to experiment 50. Priorities, in order: explain the three statistics

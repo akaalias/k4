@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "K1 and K2 used one scrambled alphabet on both sides of the table. Sanborn said his table was slightly different, so here the alphabet may be any of the 26! orders, and every key length 1-26 is decided exactly by algebra, not by guessing alphabets."
+ },
+ {
+  "anchor": "the check",
+  "text": "S encrypts to S and K to K. With the key added, that forces a zero key in their slots, and at every length 1-26 another known letter shares one of those slots without encrypting to itself: dead at every length."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Added form: no alphabet fits at any length 1-26. Beaufort form: only 23 and 26 fit, where 7 and 1 checks are left. Scrambled coppers fit at 0-15 and 1-11 lengths: K4 is inside their range. Lengths 23 and 26 go to the English test."
+ }
+]

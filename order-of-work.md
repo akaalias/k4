@@ -53,7 +53,7 @@ for low-value residues.
 | Plaintext autokey, lags 53-96 | blocked | - | 0012 | too few checks: the known letters force too little |
 | Running key from K1-K3, the sculpture's texts, Carter, Sanborn's letters | closed | exact | 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117 | - |
 | Running key from an unknown English text, standard, KRYPTOS or puzzle-word alphabets | closed as far as testable | sampled; best forced stretch equals the coppers | 0009, 0010 | - |
-| **F1.1** Free alphabet, the same on both sides (Quagmire III with unknown order), periods 3-26 | **open** | weak (0097: 3, 7, 21 only, check-set counts) | 0097, 0100, 0102 | exact consistency at every period, then an English climb over the alphabet with the known letters fixed, against coppers at equal effort |
+| **F1.1** Free alphabet, the same on both sides (Quagmire III with unknown order), periods 3-26 | **open** | exact for the added form: no alphabet fits at any length 1-26 (0119); Beaufort form exact-dead at 1-22, 24, 25, alive at 23 and 26 | 0097, 0100, 0102, 0119 | English climb over the alphabet at Beaufort lengths 23 and 26, against coppers that fit at the same length, at equal effort |
 | **F1.2** Two free alphabets (Quagmire IV), periods 3-26 | **open** | weak | 0097 | the same; fewer checks, so state the power before running |
 | **F1.3** Forced key stretches read as running English on the 208,062 dictionary alphabets | **open** | not run | 0010 did the puzzle words only | score both stretches under every alphabet and class; compare the best with coppers |
 | **F1.4** Hand key schedules other than the Berlin clock and Carter dates | **open** | - | 0079, 0038 | write the list of schedules first (C20(c)-(e)); test each exactly |

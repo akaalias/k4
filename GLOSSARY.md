@@ -56,6 +56,8 @@ uses a word a stranger would not know.
 
 **a way of using the table** (also: a convention, the 24 ways): Whether the message is looked up on the sculpture's alphabet or the plain one, whether the carved letters are, whether the secret word is, and whether letters are added or subtracted. Two choices for each of three alphabets and three rules of arithmetic make 24 ways; most experiments try all of them.
 
+**a free alphabet** (also: an unknown alphabet, an alphabet in an unknown order, Quagmire): A table whose rows are one scrambled alphabet that we do not know, any of the 26 x 25 x ... x 1 possible orders. K1 and K2 used such a table with a known order (it starts KRYPTOS); a free alphabet lets the order be anything, and the known letters decide whether any order can work.
+
 **Vigenere** (also: adding, Beaufort, subtracting): The three rules of arithmetic a table can use: add the key letter to the message letter, subtract the message letter from the key letter, or subtract the key letter from the message letter. Vigenere is the first; the Beauforts are the other two.
 
 **a shuffled control** (also: shuffled K4, random letters, the control, a scrambled version of the carved text): The same experiment run on the carved letters shuffled into a random order. Whatever the experiment finds on the shuffle is what luck alone can produce, so a result on the real text counts only if it beats the shuffles.

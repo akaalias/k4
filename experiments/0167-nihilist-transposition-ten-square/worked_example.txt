@@ -1,0 +1,9 @@
+10 x 10 square, last three cells empty; rows and columns reordered 3 7 0 9 1 5 2 8 4 6; read by rows
+
+place  letter  square cell  new cell  lands at  carved
+   22       E        (2,1)     (6,4)        62       F
+   23       A        (2,2)     (6,6)        64       N
+   24       S        (2,3)     (6,0)        58       A
+   64       B        (6,3)     (9,0)        88       U
+   65       E        (6,4)     (9,8)        96       A
+   74       K        (7,3)     (1,0)        11       U

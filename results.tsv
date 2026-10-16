@@ -165,3 +165,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0164	0164-disrupted-triangle-interrupted-trapezoid	6-transposition-then-tableau	0110-true-keyword-columnar-from-the-dictionary	reverted	0	0	0			38	unattributed=188 run=38 record=0
 0165	0165-keyed-blanks-row-reshuffles-french-diagonal	6-transposition-then-tableau	0135-hand-padding-at-every-grid-stage	reverted	0	0	0			48	unattributed=38 run=48 record=0
 0166	0166-eva-chiffre-xiii-yar	6-transposition-then-tableau	0164-disrupted-triangle-interrupted-trapezoid	reverted	0	0	0			36	unattributed=57 run=36 record=0
+0167	0167-nihilist-transposition-ten-square	6-transposition-then-tableau	0135-hand-padding-at-every-grid-stage	reverted	0	0	0			226	unattributed=75 run=226 record=0

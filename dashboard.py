@@ -55,6 +55,8 @@ h1.home{font:italic 400 40px/1.15 var(--serif);text-align:center;margin:72px 0 1
 #sculpture .sc-credit:hover{color:var(--accent)}
 .learn-hero h1.home{white-space:normal!important;width:auto!important;position:static!important;left:auto!important;transform:none!important;max-width:980px;margin:96px auto 18px;font-size:40px;line-height:1.25}
 .learn-hero p.psub{max-width:900px}
+.learn-arrow{text-align:center;margin:34px 0 18px}
+.hf-method.learn-soon{width:min(560px,100%);margin:0 auto 60px}
 p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}p.psub.answer{font-size:32px;line-height:1.3;color:var(--ink);margin:44px auto 34px;max-width:none}@media(max-width:760px){p.psub.answer{font-size:22px;margin-top:28px}}
 .hero-flow{width:96vw;position:relative;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:12px;margin:22px 0 26px}
 .hero-flow .lp-col{zoom:.74}
@@ -116,6 +118,7 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .ph-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin:6px 0 14px}.ph-legend>span{display:inline-flex;align-items:center;gap:7px}
 .pf{max-width:980px;margin:34px auto 0;padding-top:10px;border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted)}
 @media(max-width:640px){.ph h1{font-size:26px}}
+.meta-time{line-height:0;margin:2px 0 22px}.meta-time svg{width:100%;height:8px}.meta-time .faint{display:block;line-height:1.4;margin-top:6px}
 .meta-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0 24px;padding:14px 0 12px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule-soft)}.meta-row>div{display:flex;flex-direction:column}.meta-bar{margin-top:7px}.meta-bar svg rect{cursor:help}.meta-bar .faint{display:block;margin-top:3px}.meta-row b{font-weight:600;font-size:14.5px;line-height:1.3}.meta-row span{font:600 10px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
 .plain p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:640px}
 .gl{border-bottom:1px dotted var(--accent);cursor:help;transition:background .15s}.gl.on,.gl:hover{background:var(--hl)}.gl-entry{border-left:2px solid transparent;padding-left:6px;margin-left:-8px;transition:background .15s}.gl-entry.on,.gl-entry:hover{background:var(--hl);border-left-color:var(--accent)}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
@@ -1274,7 +1277,11 @@ def learnings_page():
     hero = ('<h1 class="home">&ldquo;Results! Why, man, I have gotten a lot of results!<br>I know several thousand things that won&rsquo;t work.&rdquo;</h1>'
             '<p class="psub">Thomas Edison, as recalled by his associate Walter S. Mallory, in Dyer and Martin, '
             '<a href="https://quoteinvestigator.com/2012/07/31/edison-lot-results/" target="_blank" rel="noopener"><i>Edison: His Life and Inventions</i> (1910)</a></p>')
-    return page("learnings", '<div class="learn-hero">' + hero + "</div>", "/learnings", False)
+    arrow = ('<div class="learn-arrow"><svg width="14" height="90" viewBox="0 0 14 90">'
+             '<path d="M7,0 L7,78" stroke="var(--muted)" stroke-width="1.4"/><path d="M1,76 L7,89 L13,76 z" fill="var(--muted)"/></svg></div>')
+    soon = ('<div class="hf-method learn-soon"><b>Our learnings, coming soon</b>'
+            '<span>What the experiments have taught us about K4, one finding at a time.</span></div>')
+    return page("learnings", '<div class="learn-hero">' + hero + arrow + soon + "</div>", "/learnings", False)
 
 
 def pivot_page(pid):
@@ -1556,13 +1563,15 @@ def experiment_page(tag):
         loss_note = f"; its lowest candidate scored {pct(r['best_loss'])} ({r['best_loss']:.1f}), but the rule then in force, highest fitness, kept this one"
     dec_html = f'<span class="{esc(decision)}">{esc(decision)}</span>'
     facts = f"Family {esc(fam_num)}, {esc(fam_label)}. Decision: {dec_html}." + (f" Run {esc(started)}." if started else "")
-    meta = f"""<div class="meta-row">
-<div><b>{parent_html}</b><span>builds on</span></div>
-<div><b>{fmt_dur(total)}</b><span>time, all phases</span><div class="meta-bar">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=190, height=8)}</div></div>
+    meta = f"""<div class="meta-row" style="grid-template-columns:repeat(6,1fr);border-bottom:none">
+<div><b class="{esc(decision)}">{esc(decision)}</b><span>status</span></div>
+<div><b>{parent_html}</b><span>parents</span></div>
+<div><b>{fmt_dur(total)}</b><span>time, all phases</span></div>
 <div><b>{r['n_candidates']}</b><span>candidates</span></div>
-<div><b>{r['best_crib_hits']}/24</b><span>known letters right</span></div>
+<div><b>{r['best_crib_hits']}/24</b><span>known letters</span></div>
 <div><b>{pct(shown_loss) or '&ndash;'}</b><span>loss</span></div>
-</div>"""
+</div>
+<div class="meta-time">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=980, height=8).replace('<svg width="980" height="8"', '<svg viewBox="0 0 980 8" preserveAspectRatio="none"', 1)}</div>"""
     note = meta + (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: '
                    f'{esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else "")
     head = page_head(f"Experiment {num}", esc(r["title"]), esc(changed), "", note)

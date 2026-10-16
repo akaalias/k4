@@ -657,7 +657,7 @@ def page(title, body, active="", refresh=True):
     # place on the page survive quiet periods
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     nav = "".join(f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>' for h, t in
-                  (("/", "Overview"), ("/lineage", "Lineage"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
+                  (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
@@ -920,18 +920,6 @@ def overview():
         for r in reversed(rows)
     )
     table = f"""<table><thead><tr><th class="num">id</th><th>title</th><th>family</th><th>decision</th><th class="num" title="the best candidate's loss as a share of the worst possible, 240">loss</th><th class="num" title="known letters the best candidate got right, out of 24">crib letters</th><th class="num" title="full 97-letter decryptions the experiment handed to the gates">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
-    by_parent = {}
-    for r in rows:
-        by_parent.setdefault(r["parent"], []).append(r)
-
-    def tree(parent):
-        kids = by_parent.get(parent, [])
-        if not kids:
-            return ""
-        return "<ul class='lineage'>" + "".join(
-            f"<li><a href='/exp/{esc(k['tag'])}'>{esc(k['tag'])}</a> <span class='{esc(k['decision'])}'>{esc(k['decision'])}</span> "
-            f"<span class='muted'>{esc(k['family'])}, loss {pct(row_loss(k))}</span>{tree(k['tag'])}</li>" for k in kids) + "</ul>"
-
     body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
             + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
@@ -940,11 +928,18 @@ def overview():
             + sec(2, "What each experiment found", "Each dot is one experiment, placed by what it found against scrambled copies of the carved text. The loss chart that stood here made fitted readings look like partial hits; it was replaced on 2026-10-16 (issue #29).")
             + findings_chart(rows)
             + sec(3, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
-            + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
-            + sec(4, "Lineage", "What each experiment inherits from.")
-            + '<p class="hero-sub" style="text-align:left;max-width:none;margin:0 0 6px"><a href="/lineage">See the lineage drawn as a family tree</a>, one column per family, every experiment in the order it ran.</p>'
-            + (tree(None) or "<p class='muted'>empty</p>"))
+            + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>')
     return page("Kryptos K4 autoresearch", body, "/")
+
+
+def live_page():
+    """The run as it goes: every experiment's best loss, newest on the right. Reloads when a new
+    experiment lands."""
+    rows = load_results()
+    body = ('<h1 class="home">Live dashboard</h1>'
+            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; a hollow dot means the search ruled everything out before producing one. The axis breaks at the line so the band where a solution would appear has room.")
+            + loss_chart(rows))
+    return page("live dashboard", body, "/live")
 
 
 def all_candidates(r):
@@ -1140,7 +1135,7 @@ def experiment_page(tag):
     loss_note = ""
     if kl is not None and r.get("best_loss") is not None and r["best_loss"] < kl - 1e-9:
         loss_note = f"; its lowest candidate scored {pct(r['best_loss'])} ({r['best_loss']:.1f}), but the rule then in force, highest fitness, kept this one"
-    head = f"""<p class="crumb"><a href="/">Overview</a> / experiment {num}</p>
+    head = f"""<p class="crumb"><a href="/">Project Overview</a> / experiment {num}</p>
 <div class="rec-head">
 <p class="eyebrow">Experiment {num} &middot; family {esc(fam_num)}, {esc(fam_label)} &middot; <span class="{esc(decision)}">{esc(decision)}</span></p>
 <h1 class="rec-title">{esc(r['title'])}</h1>
@@ -1502,7 +1497,7 @@ def lineage_page():
 <span class="k"><span class="lx"></span>built on a parent in another family</span>
 </div></div>
 <div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
-<p class="lin-foot">Families are described on the <a href="/families">families</a> page. The same tree as an indented list is at the foot of the <a href="/">overview</a>.</p>
+<p class="lin-foot">Families are described on the <a href="/families">families</a> page.</p>
 <div id="lin-tip" role="tooltip"></div>
 <script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}"""
     return page("research lineage", body, "/lineage")
@@ -1531,6 +1526,8 @@ def route(path):
             return ("model/gltf-binary", f.read_bytes())
     if path == "/lineage":
         return lineage_page()
+    if path == "/live":
+        return live_page()
     if path == "/glossary":
         return md_page("glossary", "GLOSSARY.md", "/glossary", refresh=False)
     if path == "/notebook":
@@ -1567,6 +1564,7 @@ def build():
     STATIC.mkdir(exist_ok=True)
     (STATIC / "index.html").write_text(overview())
     (STATIC / "lineage.html").write_text(lineage_page())
+    (STATIC / "live.html").write_text(live_page())
     for r in load_results():
         (STATIC / f"{r['tag']}.html").write_text(experiment_page(r["tag"]))
     print(f"wrote {STATIC}")

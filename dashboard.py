@@ -1068,7 +1068,7 @@ def experiments_table(rows):
         for r in reversed(rows)
     )
     table = f"""<table><thead><tr><th class="num">id</th><th>title</th><th>family</th><th>decision</th><th class="num" title="the best candidate's loss as a share of the worst possible, 240">loss</th><th class="num" title="known letters the best candidate got right, out of 24">crib letters</th><th class="num" title="full 97-letter decryptions the experiment handed to the gates">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
-    return (sec(2, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
+    return (sec(1, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>')
 
 
@@ -1080,7 +1080,6 @@ def live_page():
     facts = (f'{len(rows)} experiments. Latest: <a href="/exp/{esc(latest["tag"])}">{int(latest["tag"][:4])}</a>, {esc(latest["title"])}.' if latest else "")
     body = (page_head("Live dashboard", "The run, experiment by experiment",
                       "Every experiment's best candidate and the table of all of them, newest first. The page reloads when a new experiment lands.", facts)
-            + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; a hollow dot means the search ruled everything out before producing one. The axis breaks at the line so the band where a solution would appear has room.")
             + loss_chart(rows)
             + experiments_table(rows)
             + page_foot('How the experiments built on each other is on the <a href="/lineage">lineage</a> page; what is still open is on the <a href="/families">families</a> page.'))

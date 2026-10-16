@@ -4,7 +4,7 @@
 #   tools/run_loop.sh                       interactive: you see it work and approve its commands
 #   tools/run_loop.sh --unattended          headless, no permission prompts; progress on screen, full log in logs/
 #   uv run python tools/loop_watch.py --follow logs/loop-...log   watch a running loop from another shell
-#   tools/run_loop.sh --stop-after F6       stop once this family is closed or blocked (default: F6)
+#   tools/run_loop.sh --stop-after F6       stop once this family is closed or blocked (default: F9, the last in the ranking)
 #
 # The prompt is tools/loop_prompt.md; edit it to change what the loop does. Its transcript is synced into
 # transcripts/ by the hooks in .claude/settings.json like any other session.
@@ -12,7 +12,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 mode=interactive
-stop_after=F6
+stop_after=F9
 while [ $# -gt 0 ]; do
   case "$1" in
     --unattended) mode=unattended; shift ;;

@@ -44,6 +44,7 @@ Update the leaf when an experiment works on it.
         - A key word stepped by skip, stutter, back and forth, triangle or square numbers, or restarted at each carved line, on standard or KRYPTOS tables: no setting fits {closed · exact · 0127, 0128}
         - The same rules on free alphabets: consistent at the coppers' rate, no climb can decide {blocked · exact · 0127, 0128}
         - K5 as the key (C20(e)): no text {blocked}
+    - **F1.5** A decider for cells the known letters cannot decide (the shared blocker of F1.1, F1.2, F1.4's free alphabets, autokey lags 53-96, F6.1, F6.2, F8): bound each cell by key bits against English redundancy, then a climb that passes 0120's power bar on planted texts (P6) {open}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}
@@ -56,6 +57,7 @@ Update the leaf when an experiment works on it.
       - Three clockwise quarter turns, every width {closed · exact · 0083}
       - **F6.3** Mixed three-stage routes {closed · exact · 0037, 0134}
         - Four column readings (turn either way, rows-then-columns-down, its reverse), every pair at widths 2-96 and every triple at 2-24: nothing live below key length 20 {closed · exact · 0134}
+        - **F6.3b** Mixed triples at widths 25-96: sampled only (200,000 triples, chance) {open · sampled · 0037}
     - Alphabets in unknown orders after or before a move
       - **F6.1** One unknown alphabet (Quagmire III) {blocked · exact · 0097, 0129, 0130}
         - Every type-1 move, either order, added or Beaufort form, key lengths 1-5: no alphabet fits {closed · exact · 0129, 0130}
@@ -94,6 +96,7 @@ Update the leaf when an experiment works on it.
   - F9 Substitution, then a move
     - One-to-one substitution, then any of the 1.86M built routes {closed · exact · 0019, 0106}
     - Routes outside every built set: unbounded without a list of hand methods {blocked}
+    - **F9.1** A bounded list of hand transpositions outside the built sets, then one-to-one substitution {open}
   - F7 Construction simulation (a check on the others, not a cipher)
     - K4's two patterns, doublets lining up in sevens and repeats 21 apart, are real {noted · sampled · 0056}
     - No construction tried makes both patterns {closed · sampled · 0018, 0027, 0062, 0065, 0096}
@@ -224,7 +227,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P5 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P6 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -233,3 +236,4 @@ Each pivot has a details page in `pivots/` (P1-P5 so far), rendered on the Pivot
 | 2026-10-15 | 6 transposition then tableau (0080-0086, seven reverts) | 3 two-component key (0087-0088) | directions.md fixes the order of types (1, then 2), which overrode the five-revert rule for family 6; type 2's last items are two-component keys. |
 | 2026-10-16 | sweep across the types of directions.md (0089-0118) | F1 first, then the ranked order in order-of-work.md | No result had beaten chance, so there was nothing to follow; the user found the switching unsystematic. Families are now worked in a fixed rank order and left only when every item is closed or blocked (issue #29). |
 | 2026-10-16 | F1 one keyed stage (0119-0128) | F6 a move, then the table | Every F1 item closed or blocked; F1.1's last cells (Beaufort 23, 26) can only be tested by an English climb with no power (0120), so blocked. Ranking unchanged (P5). |
+| 2026-10-16 | F6 a move, then the table (0129-0135) | F1 again, reopened, then every family through F9 | Every F6 item closed or blocked. Alexis asked to start over at F1 and unblock what is blocked. Most blocked cells share one blocker, no decider where the known letters give too few checks: F1.5 works on it. F6.3b and F9.1 were blocked only for want of a list. Ranking unchanged (P6, issue #50). |

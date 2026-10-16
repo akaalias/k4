@@ -881,6 +881,112 @@ def crib_cells(html_text):
     return html_text
 
 
+# The history under the sculpture model on the overview: (date, era, kind, title, text, source).
+# kind: place, making, dedication, solved, clue, endgame, us. Sources: knowledge/08-timeline.md unless noted.
+HISTORY = [
+    ("November 3, 1959", "The building", "place", "A cornerstone at Langley",
+     "President Eisenhower lays the cornerstone of the CIA's headquarters in Langley, Virginia.", "cia.gov, About the OHB Cornerstone"),
+    ("1961", "The building", "place", "The Original Headquarters Building opens",
+     "Construction finishes in 1961; the CIA gives March, other accounts late 1961. Kryptos will stand in the courtyard between this building and the next.", "cia.gov, Original Headquarters Building"),
+    ("1988", "The commission", "making", "Art for the new building",
+     "Part of the New Headquarters Building's budget is set aside for art under the GSA's Art-in-Architecture programme. A panel reviews 700 slides from 275 artists.", "08-timeline"),
+    ("November 1988", "The commission", "making", "Jim Sanborn is chosen",
+     "A combined NEA and CIA panel picks the Washington sculptor for a $250,000 commission. He spends the next months reading everything he can find on the agency.", "08-timeline; cia.gov, About the Kryptos Sculpture"),
+    ("1989", "The making", "making", "Lessons from Ed Scheidt",
+     "The CIA pairs Sanborn with Ed Scheidt, a field-communications officer about to retire. Over four months, by voice and at secret locations, Scheidt teaches him “matrix codes”; Sanborn later says he changed what he was taught.", "08-timeline; 03-scheidt-said"),
+    ("November 9, 1989", "The making", "making", "The Berlin Wall falls",
+     "Sanborn is mid-construction and says he was “influenced by all that going on simultaneously.” BERLIN and CLOCK will turn out to be in K4.", "08-timeline"),
+    ("1989–90", "The making", "making", "K4 is enciphered on the road",
+     "Sanborn writes and enciphers K4 on the drive back from Arizona with the petrified tree, then spends two and a half years cutting the copper.", "08-timeline"),
+    ("November 3, 1990", "The dedication", "dedication", "Kryptos is dedicated",
+     "Director William Webster receives the solution in a sealed envelope. “We like to be tested.”", "08-timeline (sources give November 1, 3 or 5)"),
+    ("1991", "The dedication", "place", "The New Headquarters Building is finished",
+     "The building behind the sculpture is completed.", "cia.gov, About the Kryptos Sculpture"),
+    ("November 1992", "The first solutions", "solved", "The NSA solves K1, K2 and K3, quietly",
+     "A task force breaks the first three messages in days, spends one day on K4 and stops. The result stays inside the agency until 2000.", "08-timeline"),
+    ("February 1998", "The first solutions", "solved", "David Stein solves them by hand",
+     "A CIA analyst works out K1 to K3 with pencil and paper and briefs the agency.", "08-timeline"),
+    ("June 1999", "The first solutions", "solved", "Jim Gillogly solves them by computer, and the solutions go public",
+     "Gillogly announces his solution; Stein's is published days later. The three messages, as carved and as read:", "08-timeline"),
+    ("1999", "The first solutions", "place", "The compound becomes the George Bush Center for Intelligence",
+     "Named for George H. W. Bush, director of the CIA in 1976–77.", "Wikipedia, George Bush Center for Intelligence"),
+    ("January 2005", "Clues from the creators", "clue", "Matrix codes, masking, instructions in the earlier text",
+     "In interviews Sanborn speaks of “matrix codes” and “instructions in the earlier text”; Scheidt says he “masked the English language.”", "08-timeline; 02-sanborn-said; 03-scheidt-said"),
+    ("April 2006", "Clues from the creators", "clue", "A letter left out of K2",
+     "Sanborn says the end of K2 is wrong: one letter was dropped, and it reads LAYER TWO.", "08-timeline"),
+    ("November 2010", "Clues from the creators", "clue", "BERLIN",
+     "Letters 64–69 of K4 read BERLIN.", "08-timeline"),
+    ("November 2014", "Clues from the creators", "clue", "CLOCK",
+     "Letters 70–74 read CLOCK: “delve into that particular clock.”", "08-timeline"),
+    ("January 2020", "Clues from the creators", "clue", "NORTHEAST",
+     "Letters 26–34 read NORTHEAST; the message is “in itself a riddle.”", "08-timeline"),
+    ("August 2020", "Clues from the creators", "clue", "EAST",
+     "Letters 22–25 read EAST, completing EASTNORTHEAST.", "08-timeline"),
+    ("August 2025", "Endgame", "endgame", "The solution goes to auction",
+     "For his 80th birthday Sanborn announces he will sell the archive, solution included.", "08-timeline"),
+    ("September 2025", "Endgame", "endgame", "The plaintext is found in an archive",
+     "Two writers find K4's plaintext among Sanborn's papers at the Smithsonian and tell him; they do not publish it. The method is still unknown.", "08-timeline"),
+    ("November 2025", "Endgame", "clue", "The World Clock, Egypt and the Wall",
+     "At the Spy Museum Sanborn names the Weltzeituhr, his 1986 Egypt trip and the Wall as part of K4. The archive sells for $962,500.", "08-timeline"),
+    ("October 2026", "Endgame", "us", "This loop starts",
+     "An autoresearch loop sets out to find the method from the record alone.", "this project"),
+]
+
+TL_CSS = """<style>
+.tl{width:min(1200px,94vw);position:relative;left:50%;transform:translateX(-50%);margin:10px 0 28px}
+.tl-ev{display:grid;grid-template-columns:150px 28px minmax(0,1fr);align-items:start}
+.tl-date{font:600 12.5px/1.3 var(--serif);color:var(--muted);text-align:right;padding:3px 0 0}
+.tl-rail{position:relative;align-self:stretch}
+.tl-rail:before{content:'';position:absolute;left:13px;top:0;bottom:0;border-left:1px solid var(--rule)}
+.tl-ev:first-of-type .tl-rail:before{top:9px}.tl-ev.last .tl-rail:before{bottom:auto;height:9px}
+.tl-dot{position:absolute;left:8px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:2px solid var(--muted);box-sizing:border-box}
+.tl-ev.k-solved .tl-dot{background:var(--accent);border-color:var(--accent)}
+.tl-ev.k-clue .tl-dot{border-color:var(--ochre);background:var(--ochre)}
+.tl-ev.k-dedication .tl-dot{background:var(--ink);border-color:var(--ink);width:13px;height:13px;left:7px;top:4px}
+.tl-ev.k-endgame .tl-dot{border-color:var(--ink)}
+.tl-ev.k-us .tl-dot{border:2px dashed var(--accent)}
+.tl-body{padding:0 0 18px 6px;min-width:0}
+.tl-body h4{font:400 18px/1.3 var(--serif);margin:0 0 3px}
+.tl-body p{margin:0;font-size:15px;color:var(--muted);max-width:640px}
+.tl-body p.tl-src{font-size:12px;color:var(--faint);margin-top:3px}
+.tl-era{display:grid;grid-template-columns:150px 28px minmax(0,1fr)}
+.tl-era span{grid-column:3;font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--accent);padding:10px 0 8px 6px}
+.tl-era .tl-rail{grid-column:2;grid-row:1}
+.tl-insert{margin:12px 0 4px}
+.tl-insert h5{font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:14px 0 2px}
+.tl .panel-wrap.wide,.tl .how{width:auto;left:0;transform:none;max-width:none}
+.tl .kpane{zoom:.8}
+.tl-key{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;color:var(--muted);margin:0 0 14px 184px}
+.tl-key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;box-sizing:border-box}
+@media(max-width:760px){.tl-ev,.tl-era{grid-template-columns:0 22px minmax(0,1fr)}.tl-date{display:none}.tl-body .tl-d{display:block}.tl-key{margin-left:0}.tl .kpane{zoom:.55}.tl-rail:before{left:10px}.tl-dot{left:5px}}
+.tl-d{display:none;font:600 12px var(--serif);color:var(--muted);margin-bottom:2px}
+</style>"""
+
+
+def history_timeline():
+    """Kryptos from the cornerstone to today, vertically; the K1-K3 solution panels hang off the
+    1999 entry, where the solutions went public."""
+    solved = dict(solved_messages_block())
+    out, era = [], None
+    for i, (date, e, kind, title, text, src) in enumerate(HISTORY):
+        if e != era:
+            out.append(f'<div class="tl-era"><div class="tl-rail"></div><span>{esc(e)}</span></div>')
+            era = e
+        insert = ""
+        if date == "June 1999":
+            insert = '<div class="tl-insert">' + "".join(f"<h5>{k} solved</h5>{solved[k]}" for k in ("K1", "K2", "K3")) + "</div>"
+        last = " last" if i == len(HISTORY) - 1 else ""
+        out.append(f'<div class="tl-ev k-{kind}{last}"><div class="tl-date">{esc(date)}</div><div class="tl-rail"><i class="tl-dot"></i></div>'
+                   f'<div class="tl-body"><span class="tl-d">{esc(date)}</span><h4>{esc(title)}</h4><p>{crib_cells(esc(text))}</p>'
+                   f'<p class="tl-src">{esc(src)}</p>{insert}</div></div>')
+    key = ('<div class="tl-key"><span><i style="border:2px solid var(--muted)"></i>place and making</span>'
+           '<span><i style="background:var(--ink)"></i>the dedication</span>'
+           '<span><i style="background:var(--accent)"></i>a message solved</span>'
+           '<span><i style="background:var(--ochre)"></i>a clue from the creators</span>'
+           '<span><i style="border:2px dashed var(--accent)"></i>this loop</span></div>')
+    return TL_CSS + '<div class="tl">' + key + "".join(out) + "</div>"
+
+
 def what_we_look_for():
     from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
     panel = panel_block(_K4, None, _KNOWN)
@@ -892,11 +998,9 @@ def what_we_look_for():
     html = "".join(f'<div class="explain-col"><h4>{esc(h)}</h4><p>{crib_cells(esc(t))}</p></div>' for h, t in cols)
     sub = lambda n, t, d: f'<div class="subsec"><b>1.{n}</b><h3>{t}</h3></div><p class="subsec-sub">{d}</p>'
     return (sub(1, "The sculpture", "Bret L Bowen's model of Kryptos. Hover a key below it, or a plate, to see which message it carries.") + sculpture_block()
-            + "".join(sub(i + 2, f"{name} solved", d) + html for i, ((name, html), d) in enumerate(zip(solved_messages_block(), (
-                "The first message, solved in the 1990s. Carved letters in, readable English out: this is what solved looks like.",
-                "The second message, solved the same way with a different key word.",
-                "The third message, solved by moving letters rather than changing them."))))
-            + sub(5, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel
+            + sub(2, "From a cornerstone to an unsolved message", "The history of Kryptos, from the CIA's headquarters to today. The first three messages hang off 1999, when their solutions went public: carved letters in, readable English out, which is what solved looks like.")
+            + history_timeline()
+            + sub(3, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel
             + f'<div class="explain-row">{html}</div>')
 
 

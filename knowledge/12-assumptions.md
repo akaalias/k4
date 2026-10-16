@@ -10,11 +10,23 @@ Firmness: `firm` (the record never contradicts it), `contested` (the record cont
 itself), `ours` (a working choice with no creator source).
 
 Order of work, decided by Alexis 2026-10-16: nothing here becomes loop work until the current
-queue in `order-of-work.md` is exhausted. Then A1 first (tolerance for slips and missed known
-letters), together with a tolerant English judge (an LLM scoring blind against the scrambled
-coppers' candidates, power measured on planted damaged English; built in the harness, issue
-#11), because relaxed tests produce more noisy candidates and need a judge that can sort them.
-A13 and A6 follow with the same judge.
+queue in `order-of-work.md` is exhausted. Then, in this order:
+
+1. A3 first: a positive control for every closed item (plant a message under the item's own
+   method and key, run its own search, require it to be found). It says how far the closed
+   results can be trusted before anything else is built on them. (Proposed by Claude; Alexis
+   delegated the decision, 2026-10-16.)
+2. A1: tolerance for slips and missed known letters, together with a tolerant English judge, an
+   LLM scoring blind against the scrambled coppers' candidates, with power measured on planted
+   damaged English and built in the harness (issue 11). Relaxed tests produce more noisy
+   candidates and need a judge that can sort them.
+3. A13 and A6, with the same judge.
+
+Not scheduled, recorded so they are not lost: A5, A8, A11 and A12 have no check yet (A11 is
+partly answered by F12, Stein's way, which lets observations propose items); three options from
+the same discussion stay open: F7's fingerprints as the search itself rather than a check, new
+creator material (issue 9: Scheidt's patents, declassified field-cipher manuals), and publishing
+the bounded negative result if the sweep ends without a lead.
 
 ## The three that carry the most weight
 

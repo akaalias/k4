@@ -733,7 +733,7 @@ def page(title, body, active="", refresh=True):
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
     nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/experiments", "Experiments"), ("/lineage", "Lineage"), ("/learnings", "Learnings")))
            + '<span class="spacer"></span><span class="sec">'
-           + "".join(link(h, t) for h, t in (("/families", "Families"), ("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
+           + "".join(link(h, t) for h, t in (("/families", "Families"), ("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/assumptions", "Assumptions"), ("/glossary", "Glossary"), ("/program", "Program")))
            + "</span>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
@@ -2099,6 +2099,12 @@ def parse_tree(text):
     return root, cut
 
 
+def own_open(n):
+    """An item that carries its own open status and has sub-items (F1.5 with 0136's bound under it):
+    it is still open work, whatever its sub-items say."""
+    return bool(n["kids"]) and n["status"] == "open" and n["label"].startswith("**F")
+
+
 def tree_html(root, text):
     tags = {r["tag"][:4]: r["tag"] for r in load_results()}
     order = (ROOT / "order-of-work.md").read_text() if (ROOT / "order-of-work.md").exists() else text
@@ -2112,6 +2118,8 @@ def tree_html(root, text):
         for k in n["kids"]:
             for s_, v in roll(k).items():
                 c[s_] = c.get(s_, 0) + v
+        if own_open(n) and not c.get("open"):
+            c["open"] = 1
         return c
 
     def inline(label):
@@ -2139,13 +2147,16 @@ def tree_html(root, text):
         if fm:
             cls += f" fc-{fm.group(1)[1:]}"
         is_open = depth <= 1 or c.get("open")
+        own_nx = ""
+        if own_open(n) and not next_done[0]:
+            own_nx = '<span class="next">next</span>'; next_done[0] = True
         inner = "".join(node(k, depth + 1) for k in kids)
         lab = inline(n["label"])
         if fm:
             # spelled out on this page: "Family 6: A move, then the table", not "F6 A move..."
             lab = f'<span class="sw"></span>{inline(re.sub(r"^F(\d+)\s+", r"Family \1: ", n["label"]))}'
         return (f'<li class="{cls}"><details{" open" if is_open else ""}><summary><span class="row"><span class="tw">&#9656;</span>{rank}'
-                f'<span class="lab">{lab}</span><span class="roll">{words}</span><span class="bar">{bar}</span></span></summary>'
+                f'<span class="lab">{lab}</span>{own_nx}<span class="roll">{words}</span><span class="bar">{bar}</span></span></summary>'
                 f'<ul>{inner}</ul></details></li>')
 
     return TREE_CSS + f'<div class="ht-wrap"><ul class="ht">{node(root, 0)}</ul></div>'
@@ -2164,12 +2175,16 @@ def tree_counts(n):
     for k in n["kids"]:
         for s_, v in tree_counts(k).items():
             c[s_] = c.get(s_, 0) + v
+    if own_open(n) and not c.get("open"):
+        c["open"] = 1
     return c
 
 
 def first_open(n):
     if not n["kids"]:
         return n if (n["status"] or "open") == "open" and n["label"].startswith("**F") else None
+    if own_open(n):
+        return n
     for k in n["kids"]:
         f = first_open(k)
         if f:
@@ -2354,7 +2369,7 @@ PROG_CSS = """<style>
 </style>"""
 
 FILE_PAGES = {"order-of-work.md": "/priorities", "families.md": "/families", "11-clue-register.md": "/clues",
-              "knowledge/11-clue-register.md": "/clues", "NOTEBOOK.md": "/notebook", "GLOSSARY.md": "/glossary",
+              "knowledge/11-clue-register.md": "/clues", "12-assumptions.md": "/assumptions", "knowledge/12-assumptions.md": "/assumptions", "NOTEBOOK.md": "/notebook", "GLOSSARY.md": "/glossary",
               "results.tsv": "/experiments", "grades.tsv": "/experiments", "program.md": "/program"}
 
 
@@ -2477,6 +2492,12 @@ def route(path):
         return md_page("clue register", "knowledge/11-clue-register.md", "/clues", eyebrow="Clues", h1="Every hint and its readings",
                        facts=f"{nclues} clues.", take_intro=True,
                        foot='Experiments cite clues by number in their expert hypothesis; the <a href="/families">families</a> page shows what each family has covered.')
+    if path == "/assumptions":
+        ar = (ROOT / "knowledge/12-assumptions.md").read_text()
+        nass = len(set(re.findall(r"^\*\*(A\d+)\.", ar, re.M)))
+        return md_page("assumptions", "knowledge/12-assumptions.md", "/assumptions", eyebrow="Assumptions", h1="What the project takes for granted",
+                       facts=f"{nass} assumptions.", take_intro=True,
+                       foot='The hints these rest on are in the <a href="/clues">clue register</a>; the order of work is on the <a href="/priorities">priorities</a> page.')
     if path == "/program":
         return program_page()
     return None

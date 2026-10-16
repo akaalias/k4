@@ -5,7 +5,9 @@ and in this order:
 
 1. this file;
 2. `README.md`;
-3. every numbered file in `knowledge/` (`01-facts.md` through `11-clue-register.md`);
+3. every numbered file in `knowledge/` (`01-facts.md` through `12-assumptions.md`). The
+   assumptions register is context: its entries become loop work only when `order-of-work.md`
+   lists them;
 4. `order-of-work.md` (the Priorities page);
 5. `families.md`;
 6. `results.tsv` and the `experiments/*/experiment.md` records, newest first.

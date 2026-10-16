@@ -1,0 +1,14 @@
+ciphertext autokey, lag 8, added form, one unknown alphabet: one equation per known place past the primer
+
+place 22: place(F) = place(E) + place(S)   (key: carved letter at 14)
+place 23: place(L) = place(A) + place(O)   (key: carved letter at 15)
+place 24: place(R) = place(S) + place(L)   (key: carved letter at 16)
+place 25: place(V) = place(T) + place(I)   (key: carved letter at 17)
+place 26: place(Q) = place(N) + place(F)   (key: carved letter at 18)
+place 27: place(Q) = place(O) + place(B)   (key: carved letter at 19)
+place 28: place(P) = place(R) + place(B)   (key: carved letter at 20)
+place 29: place(R) = place(T) + place(W)   (key: carved letter at 21)
+place 30: place(N) = place(H) + place(F)   (key: carved letter at 22)
+place 31: place(G) = place(E) + place(L)   (key: carved letter at 23)
+...
+24 equations in the unknown places; solved exactly

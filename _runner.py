@@ -29,11 +29,13 @@ def main(attack_path, out_path, budget_s):
         deadline=t0 + budget_s,
         time_left=lambda: (t0 + budget_s) - time.time(),
     )
-    out = {"candidates": [], "bounds": {}, "notes": "", "error": None, "worked_example": ""}
+    out = {"candidates": [], "bounds": {}, "notes": "", "controls": [], "error": None, "worked_example": ""}
     try:
         res = attack.run(ctx) or {}
         out["bounds"] = res.get("bounds", {})
         out["notes"] = res.get("notes", "")
+        # gate 4 (issue #23) reads these; dropping them made the shuffled-copper gate unpassable (issue #45)
+        out["controls"] = [float(x) for x in res.get("controls", []) if isinstance(x, (int, float))]
         for c in res.get("candidates", [])[:50]:
             pt = c["plaintext"]
             try:

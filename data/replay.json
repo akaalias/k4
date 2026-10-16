@@ -1,5 +1,5 @@
 {
- "date": "2026-10-15",
+ "date": "2026-10-16",
  "rules": "original gates; English above every shuffled-copper control the experiment ran (10 or more); key charged by the length of its description; lowest loss wins",
  "champion": null,
  "experiments": {
@@ -22,6 +22,13 @@
    "verdict_now": "reverted",
    "reason": "3 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 3,
+   "kept_now": 0
+  },
+  "0120-one-free-alphabet-english-climb-at-23-and-26": {
+   "decision_recorded": "reverted",
+   "verdict_now": "reverted",
+   "reason": "2 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
+   "baseline": 2,
    "kept_now": 0
   }
  }

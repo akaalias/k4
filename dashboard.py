@@ -689,9 +689,9 @@ def page(title, body, active="", refresh=True):
     # place on the page survive quiet periods
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
-    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage"), ("/families", "Families")))
+    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/families", "Families"), ("/lineage", "Lineage")))
            + '<span class="spacer"></span><span class="sec">'
-           + "".join(link(h, t) for h, t in (("/order", "Order of Work"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
+           + "".join(link(h, t) for h, t in (("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
            + "</span>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
@@ -1086,7 +1086,7 @@ def overview():
         champ = f"""<div class="callout wide"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}; loss {ch.get('loss', 0):.2f}, {pct(ch.get('loss'))} of the worst possible. A champion is the lowest-loss candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.{' Experiments 0001-0049 were kept by a different number, fitness, which is why a reverted experiment can sit below the champion in the chart; from 0050 the harness keeps by loss.' if ch['experiment'][:4] <= '0049' else ''}</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
-    body = ('<h1 class="home">Can a research loop find the method behind K4?</h1>'
+    body = ('<h1 class="home">Can an autonomous research loop find the method behind K4?</h1>'
             '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
             + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
             + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
@@ -1796,14 +1796,14 @@ def lineage_page():
     body = f"""<style>{LIN_CSS}</style><div class="lin">
 {page_head("Research lineage", "The family tree of the search", "Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.", facts, extra=LIN_LEGEND)}
 <div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
-{page_foot('Each family and its hypotheses are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/order">Order of work</a>.')}
+{page_foot('Each family and its hypotheses are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/priorities">Priorities</a>.')}
 <div id="lin-tip" role="tooltip"></div>
 <script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}"""
     return page("research lineage", body, "/lineage")
 
 
 TREE_CSS = """<style>
-.ht-wrap{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin:4px 0 28px}
+.ht-wrap{width:calc(50% + 50vw - 32px);margin:4px 0 28px}
 .ht li,.ht p{max-width:none}
 .ht-eyebrow{font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 4px;padding-top:10px;border-top:1px solid var(--rule)}
 .ht-key{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;color:var(--muted);margin:4px 0 14px}
@@ -2063,7 +2063,7 @@ def families_section_page(path):
     nrows = len([ln for ln in body.splitlines() if ln.startswith("| ") and not ln.startswith("| Approach") and not ln.startswith("| Date")])
     facts = {"/dead-ends": f"{nrows} dead ends.", "/pivots": f"{nrows} pivots so far."}.get(path, "")
     head = page_head(eyebrow, title, standfirst, facts)
-    foot = page_foot('The families themselves are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/order">Order of work</a>.')
+    foot = page_foot('The families themselves are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/priorities">Priorities</a>.')
     return page(eyebrow.lower(), head + "<article>" + link_exps_html(md(body)) + "</article>" + foot, path, True)
 
 
@@ -2078,7 +2078,7 @@ def record_page():
                      "under the same search.",
                      f"{len(rows)} experiments, {n_find} findings.")
     foot = page_foot('The same families as a tree of open and closed hypotheses are on the <a href="/families">families</a> page; '
-                     'the order they are worked in is on <a href="/order">Order of work</a>.')
+                     'the order they are worked in is on <a href="/priorities">Priorities</a>.')
     _, rec_body, _ = families_section(text, "Full record by family")
     note = re.search(r"^Parameter applied.*?(?=\n\n|\Z)", rec_body, re.S | re.M)
     note_html = f'<article><p class="muted">{link_exps_html(md_inline(note.group(0).replace(chr(10), " ")))}</p></article>' if note else ""
@@ -2110,7 +2110,7 @@ def families_page():
                      "Every hypothesis the search holds, from one root through the families to the single tests. Each leaf is open, closed, "
                      "blocked or noted, with the strength of the test and the experiments behind it. Families appear in the order they are "
                      "worked; click a branch to fold it, a number to open the experiment.", facts, key)
-    foot = page_foot('The ranking and each family\'s open items as tables are on <a href="/order">Order of work</a>; what each family has covered, finding by finding, is in the <a href="/record">full record</a>; key sources, dead ends and pivots each have their own page; '
+    foot = page_foot('The ranking and each family\'s open items as tables are on <a href="/priorities">Priorities</a>; what each family has covered, finding by finding, is in the <a href="/record">full record</a>; key sources, dead ends and pivots each have their own page; '
                      'how the experiments built on each other is on the <a href="/lineage">lineage</a> page.')
     return page("families", head + "<article>" + body + "</article>" + foot, "/families", True)
 
@@ -2160,7 +2160,9 @@ def route(path):
                        facts=f"{days} working days so far, newest first.", take_intro=True,
                        foot='The bounds each experiment set are on the <a href="/families">families</a> page and in the <a href="/clues">clue register</a>.')
     if path == "/order":
-        return md_page("order of work", "order-of-work.md", "/order", eyebrow="Order of work", h1="How the search proceeds from here",
+        path = "/priorities"
+    if path == "/priorities":
+        return md_page("priorities", "order-of-work.md", "/priorities", eyebrow="Priorities", h1="How the search proceeds from here",
                        standfirst="The rules for working through the families, the order they are ranked in and why, and each family's open items as a table.",
                        facts='Decided 2026-10-16 (issue #29). The same items are drawn as a tree on the <a href="/families">families</a> page.',
                        foot='The same items as a tree are on the <a href="/families">families</a> page; the rules the loop follows are in the <a href="/program">program</a>.')
@@ -2179,7 +2181,7 @@ def route(path):
     if path == "/program":
         return md_page("program", "program.md", "/program", refresh=False, eyebrow="Program", h1="Instructions for the loop agent",
                        standfirst="The rules the agent follows on every experiment: what success means, the gates a reading must pass, what it may touch, and the loop itself.",
-                       foot='The order the families are worked in is on <a href="/order">Order of work</a>.')
+                       foot='The order the families are worked in is on <a href="/priorities">Priorities</a>.')
     return None
 
 

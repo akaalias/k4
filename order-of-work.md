@@ -1,4 +1,4 @@
-# Order of work
+# Priorities
 
 After 118 experiments none has beaten the scrambled coppers. Following up on a result needs a
 result that beats chance, and there has been none, so the work is a sweep. From here on the

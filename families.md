@@ -119,7 +119,7 @@ Update the leaf when an experiment works on it.
     - A column word plus a row key {closed · exact · 0087, 0088}
     - **F3.1** Combiners other than addition {closed · exact · 0173, 0174}
     - **F3.2** Number keys from the Morse and the plate layout {closed · exact · 0175}
-    - **F3.3** Direction words as numbers: the bearing 67.5, compass points 6 of 32 and 3 of 16 {open}
+    - **F3.3** Direction words as numbers: the bearing 67.5, compass points 6 of 32 and 3 of 16 {closed · exact · 0176}
     - **F3.4** Three or more stacked tables (Scheidt's patent, "triple matrixes") {open}
     - **F3.5** The misspelt letters' positions as indices, and their orientation {open}
     - **F3.6** The Weltzeituhr's rotating ring as an offset over 26 letters {open}

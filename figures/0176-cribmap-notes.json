@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The known words are directions, and a direction is also a number: east-northeast is 67.5 degrees, or the 6th of 32 compass points. Such a number could be half of the key, a secret word the other half."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every way of writing the directions as numbers, repeated from every start, added or subtracted, with a secret word of 1 to 24 letters on each of 12 table rules; the 24 known letters must agree on the word."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Nothing fits K4 or any of 20 scrambled copies; a planted text is found. F3.3 closed."
+ }
+]

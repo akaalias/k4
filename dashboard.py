@@ -1183,16 +1183,6 @@ def outcome_chart(rows):
             g.append(f'<rect x="{L + 1}" y="{y0 + 4}" width="{W - L - R - 2}" height="{band - 8}" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="7 5"/>')
         elif j % 2 == 0:
             g.append(f'<rect x="{L}" y="{y0}" width="{W - L - R}" height="{band}" fill="var(--wash)"/>')
-    # day separators along the top, from the run stamps
-    prev = None
-    for i, r in enumerate(rows):
-        d = (r.get("started") or "")[:10]
-        if d != prev:
-            x = L + i * step
-            if prev is not None:
-                g.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{T - 6}" y2="{H - 34}" stroke="var(--rule)" stroke-width="1"/>')
-            g.append(f'<text x="{x + 4:.1f}" y="{T - 10}" font-size="12.5" fill="var(--muted)">{esc(d)}</text>')
-            prev = d
     counts = {k: 0 for k, _ in shown}
     for i, r in enumerate(rows):
         k = kinds[r["tag"]]

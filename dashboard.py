@@ -1670,7 +1670,8 @@ def lineage_page():
 
 
 TREE_CSS = """<style>
-.ht-wrap{max-width:980px;margin:4px 0 28px}
+.ht-wrap{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin:4px 0 28px}
+.ht li,.ht p{max-width:none}
 .ht-eyebrow{font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 4px;padding-top:10px;border-top:1px solid var(--rule)}
 .ht-key{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;color:var(--muted);margin:4px 0 14px}
 .ht,.ht ul{list-style:none;margin:0;padding:0}
@@ -1689,7 +1690,7 @@ TREE_CSS = """<style>
 .ht .fam>details>summary .sw{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--fc);margin:0 8px 0 0;vertical-align:1px}
 .ht .fam>details>ul{border-left-color:color-mix(in srgb,var(--fc,var(--rule)) 45%,transparent)}
 .ht .root>details>summary .lab{font-size:18px;font-style:italic;font-weight:400}
-.ht-wrap .st{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 7px 0 1px;vertical-align:0}
+.ht-wrap .st,.ht-key2 .st{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 7px 0 1px;vertical-align:0}
 .st-open{background:var(--accent)}
 .st-closed{background:var(--disc)}
 .st-blocked{background:transparent;border:1.5px dashed var(--faint);width:7px!important;height:7px!important}
@@ -1791,7 +1792,7 @@ def tree_html(root, text):
     return TREE_CSS + f'<div class="ht-wrap"><ul class="ht">{node(root, 0)}</ul></div>'
 
 
-TREE_KEY = ('<div class="ph-legend ht-wrap" style="margin:6px 0 14px"><span><i class="st st-open"></i>open: still to test</span>'
+TREE_KEY = ('<div class="ph-legend ht-key2" style="margin:6px 0 14px"><span><i class="st st-open"></i>open: still to test</span>'
             '<span><i class="st st-closed"></i>closed: ruled out by an exact test, or a sampled one against scrambled copies</span>'
             '<span><i class="st st-blocked"></i>blocked: cannot be tested with the known letters alone</span>'
             '<span><i class="st st-noted"></i>noted: a finding, not a hypothesis to close</span></div>')

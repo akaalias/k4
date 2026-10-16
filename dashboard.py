@@ -691,7 +691,7 @@ def page(title, body, active="", refresh=True):
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
     nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage"), ("/families", "Families")))
            + '<span class="spacer"></span><span class="sec">'
-           + "".join(link(h, t) for h, t in (("/order", "Order of Work"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
+           + "".join(link(h, t) for h, t in (("/order", "Order of Work"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
            + "</span>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
@@ -1925,6 +1925,45 @@ FR_CSS = """<style>
 </style>"""
 
 
+FAM_SECTIONS = {
+    "/keys": ("Key sources", "Keys", "Where the secret words should come from",
+              "The order in which every family draws its key material: the creators' remarks say the first three messages hold "
+              "clues to the fourth, so their words come first, generic word lists last."),
+    "/dead-ends": ("Dead ends", "Dead ends", "Approaches ruled out, and why",
+                   "Every approach the known letters or an experiment has ruled out, with the reason and the source. Re-entering "
+                   "one needs a stated reason."),
+    "/pivots": ("Pivot log", "Pivots", "When the search changed family, and why",
+                "Each time the work moved from one family to another, with the experiments that led to it and the reason."),
+}
+
+
+def families_section(text, prefix):
+    """The '## <prefix>...' section of families.md: (heading line, body)."""
+    m = re.search(rf"^## ({re.escape(prefix)}[^\n]*)\n(.*?)(?=^## |\Z)", text, re.S | re.M)
+    return (m.group(1), m.group(2), m) if m else (None, "", None)
+
+
+def link_exps_html(h):
+    """Experiment numbers (0001-0999) in rendered text become links; tags and attributes are left alone."""
+    tags = {r["tag"][:4]: r["tag"] for r in load_results()}
+    parts = re.split(r"(<[^>]+>)", h)
+    for i, part in enumerate(parts):
+        if not part.startswith("<"):
+            parts[i] = re.sub(r"\b(0\d{3})\b", lambda mm: f'<a href="/exp/{esc(tags[mm.group(1)])}">{mm.group(1)}</a>' if mm.group(1) in tags else mm.group(1), part)
+    return "".join(parts)
+
+
+def families_section_page(path):
+    prefix, eyebrow, title, standfirst = FAM_SECTIONS[path]
+    text = (ROOT / "families.md").read_text()
+    heading, body, _ = families_section(text, prefix)
+    nrows = len([ln for ln in body.splitlines() if ln.startswith("| ") and not ln.startswith("| Approach") and not ln.startswith("| Date")])
+    facts = {"/dead-ends": f"{nrows} dead ends.", "/pivots": f"{nrows} pivots so far."}.get(path, "")
+    head = page_head(eyebrow, title, standfirst, facts)
+    foot = page_foot('The families themselves are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/order">Order of work</a>.')
+    return page(eyebrow.lower(), head + "<article>" + link_exps_html(md(body)) + "</article>" + foot, path, True)
+
+
 def record_page():
     text = (ROOT / "families.md").read_text()
     rec, _ = family_record_html(text)
@@ -1937,13 +1976,20 @@ def record_page():
                      f"{len(rows)} experiments, {n_find} findings.")
     foot = page_foot('The same families as a tree of open and closed hypotheses are on the <a href="/families">families</a> page; '
                      'the order they are worked in is on <a href="/order">Order of work</a>.')
-    return page("full record", head + (rec or "") + foot, "/record", True)
+    _, rec_body, _ = families_section(text, "Full record by family")
+    note = re.search(r"^Parameter applied.*?(?=\n\n|\Z)", rec_body, re.S | re.M)
+    note_html = f'<article><p class="muted">{link_exps_html(md_inline(note.group(0).replace(chr(10), " ")))}</p></article>' if note else ""
+    return page("full record", head + (rec or "") + note_html + foot, "/record", True)
 
 
 def families_page():
     text = (ROOT / "families.md").read_text()
     root, cut = parse_tree(text)
     _, cut = family_record_html(cut)
+    for pre, *_ in FAM_SECTIONS.values():
+        _, _, mm = families_section(cut, pre)
+        if mm:
+            cut = cut[:mm.start()] + cut[mm.end():]
     cut = cut.replace("## Full record by family\n\n<div class=\"fr-slot\"></div>\n\n", "")
     cut = re.sub(r"^# .*\n", "", cut, count=1, flags=re.M)
     body = md(cut)
@@ -1961,7 +2007,7 @@ def families_page():
                      "Every hypothesis the search holds, from one root through the families to the single tests. Each leaf is open, closed, "
                      "blocked or noted, with the strength of the test and the experiments behind it. Families appear in the order they are "
                      "worked; click a branch to fold it, a number to open the experiment.", facts, key)
-    foot = page_foot('The ranking and each family\'s open items as tables are on <a href="/order">Order of work</a>; what each family has covered, finding by finding, is in the <a href="/record">full record</a>; '
+    foot = page_foot('The ranking and each family\'s open items as tables are on <a href="/order">Order of work</a>; what each family has covered, finding by finding, is in the <a href="/record">full record</a>; key sources, dead ends and pivots each have their own page; '
                      'how the experiments built on each other is on the <a href="/lineage">lineage</a> page.')
     return page("families", head + "<article>" + body + "</article>" + foot, "/families", True)
 
@@ -2015,6 +2061,8 @@ def route(path):
                        standfirst="The rules for working through the families, the order they are ranked in and why, and each family's open items as a table.",
                        facts='Decided 2026-10-16 (issue #29). The same items are drawn as a tree on the <a href="/families">families</a> page.',
                        foot='The same items as a tree are on the <a href="/families">families</a> page; the rules the loop follows are in the <a href="/program">program</a>.')
+    if path in FAM_SECTIONS:
+        return families_section_page(path)
     if path == "/record":
         return record_page()
     if path == "/families":

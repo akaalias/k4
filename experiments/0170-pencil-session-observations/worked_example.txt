@@ -1,0 +1,18 @@
+K4 in rows of 7 (K in capitals, everything else lower case):
+
+  o b K r u o x
+  o g h u l b s
+  o l i f b b w
+  f l r v q q p
+  r n g K s s o
+  t w t q s j q
+  s s e K z z w
+  a t j K l u d
+  i a w i n f b
+  n y p v t t m
+  z f p K w g d
+  K z x t j c d
+  i g K u h u a
+  u e K c a r
+
+K at places 3, 32, 46, 53, 74, 78, 87, 94

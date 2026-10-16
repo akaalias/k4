@@ -1,0 +1,29 @@
+move: turn cw 7 (write the message in rows of 7, read the columns bottom to top); then the table, key length 9
+
+place  known  lands at  carved  slot (landing place mod 9)
+   22      E        11       U     1
+   23      A        25       V     6
+   24      S        39       Q     2
+   25      T        53       K     7
+   26      N        67       V     3
+   27      O        81       T     8
+   28      R        94       K     3
+   29      T        10       H     0
+   30      H        24       R     5
+   31      E        38       T     1
+   32      A        52       J     6
+   33      S        66       P     2
+   34      T        80       X     7
+   64      B         5       U     4
+   65      E        19       B     0
+   66      R        33       S     5
+   67      L        47       Z     1
+   68      I        61       N     6
+   69      N        75       W     2
+   70      C        88       U     6
+   71      L         4       R     3
+   72      O        18       F     8
+   73      C        32       K     4
+   74      K        46       K     0
+form V: a slot sends one known letter to two carved letters (or two to one): dead
+form B: a slot sends one known letter to two carved letters (or two to one): dead

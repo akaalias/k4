@@ -127,3 +127,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0126	0126-hand-key-schedules-listed-and-tested	1-keyed-periodic	0101-interrupted-key	reverted	0	0	0			1816	design=0 implement=10 test=1 run=1816 record=0
 0127	0127-skip-schedule-two-alphabets-replication	1-keyed-periodic	0126-hand-key-schedules-listed-and-tested	reverted	0	0	0			537	design=0 test=1 run=537 record=0
 0128	0128-hand-key-schedules-completed	1-keyed-periodic	0127-skip-schedule-two-alphabets-replication	reverted	0	0	0			153	design=0 test=1 run=154 record=0
+0129	0129-one-free-alphabet-after-every-move-exact	6-transposition-then-tableau	0097-free-mixed-alphabets-after-a-move	reverted	0	0	0			637	design=816 implement=95 test=312 run=637 record=0

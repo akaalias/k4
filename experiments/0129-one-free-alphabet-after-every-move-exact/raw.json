@@ -1,0 +1,792 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "one unknown alphabet on both sides (Quagmire III / Beaufort with a free order), periodic key 1-26, after a type-1 move (order A)",
+  "moves": 27852,
+  "k4_moves_done": 27852,
+  "cells": "order A (move, then table) x 2 forms x key lengths 1-26",
+  "exhaustive": "exact decision per setting (0119's decider; undecided counted where the node limit was hit)",
+  "summary": {
+   "AV": {
+    "k4_fits_full_library_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     48,
+     191,
+     444,
+     641,
+     1068,
+     1837,
+     2714,
+     3061,
+     3161,
+     3998,
+     4183,
+     5617,
+     5743,
+     6111,
+     6281,
+     7978,
+     9079,
+     9471,
+     8166,
+     11411
+    ],
+    "k4_per_slot_survivors_by_L": [
+     0,
+     0,
+     44,
+     116,
+     270,
+     1207,
+     1758,
+     3012,
+     3688,
+     3549,
+     4920,
+     7365,
+     9328,
+     9545,
+     8727,
+     10185,
+     9909,
+     12871,
+     12262,
+     12569,
+     12820,
+     14916,
+     16705,
+     16593,
+     13463,
+     18680
+    ],
+    "k4_undecided_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     1,
+     2,
+     2,
+     0,
+     20,
+     1,
+     4,
+     1,
+     0,
+     1,
+     2,
+     2,
+     0,
+     0,
+     2,
+     0
+    ],
+    "k4_fits_sample_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     7,
+     14,
+     24,
+     24,
+     59,
+     79,
+     85,
+     94,
+     114,
+     121,
+     162,
+     151,
+     189,
+     188,
+     205,
+     275,
+     290,
+     244,
+     326
+    ],
+    "coppers_fits_sample_min_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     2,
+     8,
+     12,
+     22,
+     16,
+     43,
+     69,
+     68,
+     93,
+     105,
+     108,
+     143,
+     137,
+     130,
+     157,
+     219,
+     181,
+     237,
+     239
+    ],
+    "coppers_fits_sample_max_by_L": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     3,
+     8,
+     17,
+     23,
+     52,
+     55,
+     73,
+     107,
+     122,
+     150,
+     165,
+     147,
+     183,
+     235,
+     223,
+     263,
+     301,
+     273,
+     322,
+     341
+    ],
+    "smallest_L_with_k4_fit": 6
+   },
+   "AB": {
+    "k4_fits_full_library_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     16,
+     54,
+     174,
+     301,
+     646,
+     1271,
+     2186,
+     2516,
+     2534,
+     3341,
+     3508,
+     4810,
+     5092,
+     5641,
+     5933,
+     7310,
+     8486,
+     9293,
+     7786,
+     11251
+    ],
+    "k4_per_slot_survivors_by_L": [
+     0,
+     0,
+     44,
+     116,
+     270,
+     1207,
+     1758,
+     3012,
+     3688,
+     3549,
+     4920,
+     7365,
+     9328,
+     9545,
+     8727,
+     10185,
+     9909,
+     12871,
+     12262,
+     12569,
+     12820,
+     14916,
+     16705,
+     16593,
+     13463,
+     18680
+    ],
+    "k4_undecided_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1,
+     3,
+     3,
+     0,
+     0,
+     2,
+     2,
+     1,
+     3,
+     1,
+     2
+    ],
+    "k4_fits_sample_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     4,
+     5,
+     16,
+     34,
+     67,
+     77,
+     67,
+     89,
+     108,
+     138,
+     130,
+     159,
+     175,
+     192,
+     254,
+     278,
+     235,
+     327
+    ],
+    "coppers_fits_sample_min_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     4,
+     11,
+     11,
+     33,
+     49,
+     54,
+     73,
+     87,
+     99,
+     112,
+     117,
+     130,
+     147,
+     200,
+     161,
+     222,
+     229
+    ],
+    "coppers_fits_sample_max_by_L": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     5,
+     9,
+     10,
+     40,
+     40,
+     70,
+     82,
+     98,
+     126,
+     150,
+     149,
+     163,
+     204,
+     187,
+     246,
+     275,
+     269,
+     333,
+     314
+    ],
+    "smallest_L_with_k4_fit": 6
+   }
+  },
+  "k4_fits_at_L_le_8": [
+   {
+    "route": "K3 rule a=37 b=1",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=40 b=1 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=46 b=1 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=47 b=1 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=47 b=1 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=4 b=2 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=8 b=2 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=16 b=2 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=17 b=2 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=19 b=2 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=83 b=2 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=85 b=2 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=87 b=2 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=87 b=2 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=18 b=3",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=68 b=3",
+    "order": "A",
+    "form": "B",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=25 b=5 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=37 b=5 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=55 b=5",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=56 b=5",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=82 b=7 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=87 b=7",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=59 b=8",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=66 b=9",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=75 b=9",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=82 b=9",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=7 b=13 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=13 b=13 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=53 b=13",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=80 b=13 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=87 b=13 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=90 b=13 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=67 b=16 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=43 b=20",
+    "order": "A",
+    "form": "B",
+    "L": 6
+   },
+   {
+    "route": "K3 rule a=83 b=21",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=37 b=22",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=81 b=22 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=14 b=23",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=17 b=23 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=19 b=23 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=30 b=23 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=33 b=23 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=51 b=23 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=57 b=23 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=58 b=23 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=9 b=24",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=13 b=25 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=16 b=25 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=65 b=25",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=89 b=25 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=2 b=26 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=5 b=26 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=8 b=26 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=47 b=26 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=48 b=26 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=51 b=26 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=55 b=26 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 8
+   },
+   {
+    "route": "K3 rule a=62 b=26",
+    "order": "A",
+    "form": "B",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=62 b=26 inverse",
+    "order": "A",
+    "form": "V",
+    "L": 7
+   },
+   {
+    "route": "K3 rule a=84 b=26 inverse",
+    "order": "A",
+    "form": "B",
+    "L": 8
+   }
+  ],
+  "n_k4_fits_at_L_le_8": 312,
+  "controls": "12 shuffled coppers (seed 129) on 800 sampled moves; K4 on the same sample",
+  "cells_k4_above_every_copper": [
+   [
+    "A",
+    "V",
+    10
+   ],
+   [
+    "A",
+    "V",
+    12
+   ],
+   [
+    "A",
+    "V",
+    13
+   ],
+   [
+    "A",
+    "V",
+    18
+   ],
+   [
+    "A",
+    "V",
+    24
+   ],
+   [
+    "A",
+    "B",
+    24
+   ],
+   [
+    "A",
+    "B",
+    26
+   ]
+  ],
+  "null_cells_above_rest_per_copper": [
+   1,
+   0,
+   8,
+   0,
+   1,
+   8,
+   0,
+   3,
+   2,
+   1,
+   4,
+   3
+  ],
+  "cells_k4_fits_no_copper_does": [],
+  "undecided_sample_k4_and_coppers": [
+   0,
+   2,
+   3,
+   0,
+   1,
+   0,
+   0,
+   4,
+   0,
+   2,
+   2,
+   0,
+   1
+  ],
+  "stop_queue": false,
+  "plants": "6 planted texts (random move, order A, form, length 3-21) all decided 'fit'"
+ },
+ "notes": "K4 on 27,852 of 27,852 moves; smallest key length with a fit {'AV': 6, 'AB': 6}; fits at L<=8: 312. Sample of 800 moves: K4 above every copper in 7 of 52 cells, coppers against the rest 0-8; cells where only K4 fits: []. Stop queue: False.",
+ "controls": [],
+ "error": null,
+ "worked_example": "move: turn cw 7 (write the message in rows of 7, read the columns bottom to top); then the table, key length 9\n\nplace  known  lands at  carved  slot (landing place mod 9)\n   22      E        11       U     1\n   23      A        25       V     6\n   24      S        39       Q     2\n   25      T        53       K     7\n   26      N        67       V     3\n   27      O        81       T     8\n   28      R        94       K     3\n   29      T        10       H     0\n   30      H        24       R     5\n   31      E        38       T     1\n   32      A        52       J     6\n   33      S        66       P     2\n   34      T        80       X     7\n   64      B         5       U     4\n   65      E        19       B     0\n   66      R        33       S     5\n   67      L        47       Z     1\n   68      I        61       N     6\n   69      N        75       W     2\n   70      C        88       U     6\n   71      L         4       R     3\n   72      O        18       F     8\n   73      C        32       K     4\n   74      K        46       K     0\nform V: a slot sends one known letter to two carved letters (or two to one): dead\nform B: a slot sends one known letter to two carved letters (or two to one): dead",
+ "seconds": 637.1698939800262
+}

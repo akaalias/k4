@@ -2142,7 +2142,8 @@ def tree_html(root, text):
         inner = "".join(node(k, depth + 1) for k in kids)
         lab = inline(n["label"])
         if fm:
-            lab = f'<span class="sw"></span>{lab}'
+            # spelled out on this page: "Family 6: A move, then the table", not "F6 A move..."
+            lab = f'<span class="sw"></span>{inline(re.sub(r"^F(\d+)\s+", r"Family \1: ", n["label"]))}'
         return (f'<li class="{cls}"><details{" open" if is_open else ""}><summary><span class="row"><span class="tw">&#9656;</span>{rank}'
                 f'<span class="lab">{lab}</span><span class="roll">{words}</span><span class="bar">{bar}</span></span></summary>'
                 f'<ul>{inner}</ul></details></li>')

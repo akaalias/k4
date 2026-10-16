@@ -1146,9 +1146,11 @@ def experiments_table(rows):
 
 
 OUTCOME_ROWS = [
-    ("beat-chance", "beat the scrambled copies"),
+    ("solved", "solved: passes every gate"),
+    ("beat-chance", "a lead: beat the scrambled copies"),
     ("chance", "at chance"),
     ("ruled-out", "ruled out"),
+    ("diagnostic", "not a decryption test"),
     ("other", "no comparison run"),
     ("ungraded", "not graded yet"),
 ]
@@ -1160,21 +1162,26 @@ def outcome_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     grades = load_grades()
-    W, L, R, T, band = 1400, 20, 230, 34, 46
+    W, L, R, T, band = 1400, 20, 270, 34, 46
     n = len(rows)
     step = (W - L - R) / n
     tw = max(1.0, min(4.0, step * 0.55))
     kinds = {}
     for r in rows:
         oc = grades.get(r["tag"][:4], {}).get("outcome")
-        kinds[r["tag"]] = oc if oc in ("beat-chance", "chance", "ruled-out") else ("ungraded" if not oc else "other")
+        if r.get("decision") == "kept":
+            kinds[r["tag"]] = "solved"
+        else:
+            kinds[r["tag"]] = oc if oc in ("beat-chance", "chance", "ruled-out", "diagnostic") else ("ungraded" if not oc else "other")
     shown = [(k, lab) for k, lab in OUTCOME_ROWS if k != "ungraded" or "ungraded" in kinds.values()]
     yrow = {k: T + j * band for j, (k, _) in enumerate(shown)}
     H = T + band * len(shown) + 34
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="What each experiment found against the scrambled copies, in run order">']
     for j, (k, _) in enumerate(shown):
         y0 = yrow[k]
-        if j % 2 == 0:
+        if k == "solved":
+            g.append(f'<rect x="{L + 1}" y="{y0 + 4}" width="{W - L - R - 2}" height="{band - 8}" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="7 5"/>')
+        elif j % 2 == 0:
             g.append(f'<rect x="{L}" y="{y0}" width="{W - L - R}" height="{band}" fill="var(--wash)"/>')
     # day separators along the top, from the run stamps
     prev = None
@@ -1193,14 +1200,14 @@ def outcome_chart(rows):
         gr = grades.get(r["tag"][:4], {})
         x = L + (i + 0.5) * step
         y0 = yrow[k] + 9
-        col = "var(--accent)" if k == "beat-chance" else ("var(--faint)" if k == "ungraded" else "var(--muted)")
+        col = "var(--accent)" if k in ("solved", "beat-chance") else ("var(--faint)" if k == "ungraded" else "var(--muted)")
         tip = (f"{esc(r['tag'])}<br>{esc(r['title'])}<br><b>{esc(gr.get('outcome') or 'not graded yet')}</b>"
                f"{', ' + esc(gr['strength']) + ' test' if gr.get('strength') else ''}<br>{esc(gr.get('note', ''))}")
         g.append(f'<a href="/exp/{esc(r["tag"])}"><g data-tip="{tip}"><rect x="{x - tw / 2:.2f}" y="{y0}" width="{tw:.2f}" height="{band - 18}" fill="{col}"/>'
                  f'<rect x="{x - max(step, 4) / 2:.2f}" y="{yrow[k]}" width="{max(step, 4):.2f}" height="{band}" fill="transparent"/></g></a>')
     for k, lab in shown:
         cy = yrow[k] + band / 2
-        col = "var(--accent)" if k == "beat-chance" else "var(--ink)"
+        col = "var(--accent)" if k in ("solved", "beat-chance") else "var(--ink)"
         g.append(f'<text x="{W - R + 14}" y="{cy - 3:.1f}" font-size="15" fill="{col}">{lab}</text>')
         g.append(f'<text x="{W - R + 14}" y="{cy + 15:.1f}" font-size="13" fill="var(--muted)">{counts[k]}</text>')
     tick_every = next(t for t in (10, 20, 50, 100, 200, 500, 1000) if n / t <= 14)
@@ -1236,10 +1243,10 @@ def live_page():
         k, _, rest = r["family"].partition("-")
         names.setdefault(k, rest.replace("-", " "))
     key = ('<div class="explain-row cols-4">'
-           '<div class="explain-col"><h4>Beat the scrambled copies</h4><p>K4 did better than every scrambled copy under the same search.</p></div>'
+           '<div class="explain-col"><h4>Solved</h4><p>A reading that passes every gate, including beating every scrambled copy. A winning experiment lands in the dashed band.</p></div>'
+           '<div class="explain-col"><h4>A lead</h4><p>K4 did better than every scrambled copy under the same search, but the reading fails another gate.</p></div>'
            '<div class="explain-col"><h4>At chance</h4><p>Settings or readings exist, but scrambled copies produce them just as well.</p></div>'
-           '<div class="explain-col"><h4>Ruled out</h4><p>Nothing in the searched space fits the 24 known letters.</p></div>'
-           '<div class="explain-col"><h4>No comparison run</h4><p>Early experiments that ran no scrambled copies.</p></div></div>')
+           '<div class="explain-col"><h4>Ruled out</h4><p>Nothing in the searched space fits the 24 known letters.</p></div></div>')
     body = (page_head("Experiments", "The run, experiment by experiment",
                       "Every experiment, in the order it ran, placed by what it found against scrambled copies of the carved text: the "
                       "same search on the same letters in a random order. A result counts only if K4 does better than all of them. Then the "

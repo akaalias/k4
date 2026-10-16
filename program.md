@@ -2,7 +2,7 @@
 
 You are running an autoresearch loop against Kryptos K4. Before your first edit, read
 in full and in this order: this file; `README.md`; every numbered file in `knowledge/`
-(`01-facts.md` through `11-clue-register.md`); `families.md`; `results.tsv` and the
+(`01-facts.md` through `11-clue-register.md`); `order-of-work.md`; `families.md`; `results.tsv` and the
 `experiments/*/experiment.md` records newest first. This is not optional and it is not
 skimmable. The record contains throwaway remarks from the artist and the cryptographer
 that no search strategy will rediscover; the clue that breaks K4 is as likely to be one of
@@ -98,13 +98,13 @@ are never edited, and the dashboard shows each experiment's current verdict.
 
 ## Patience and pivots
 
-- Work the families in the rank order in `families.md` ("Order of work", decided
+- Work the families in the rank order in `order-of-work.md` (decided
   2026-10-16, issue #29). Within a family, take its open items from the top. Leave a
   family only when every item is `closed` (exact, or sampled against scrambled coppers
   at stated power) or `blocked` (a written reason it cannot be tested with the known
   letters). Reverts do not force a pivot; a revert that closes an item is progress.
 - Every experiment names the item it works on (for example "F1.1") in `changed` and
-  the strength it reached. After the run, update the item's row and its leaf in the
+  the strength it reached. After the run, update the item's row in `order-of-work.md`, its leaf in the
   hypothesis tree (families.md; add sub-hypotheses there when an item splits), and add the
   experiment's line to `grades.tsv`. A weak test leaves the item open.
 - A result outside the scrambled-copper range stops the queue: replicate it against

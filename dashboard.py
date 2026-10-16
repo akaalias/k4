@@ -658,7 +658,7 @@ def page(title, body, active="", refresh=True):
     # place on the page survive quiet periods
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     nav = "".join(f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>' for h, t in
-                  (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/clues", "Clues"), ("/program", "Program")))
+                  (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/order", "Order of work"), ("/clues", "Clues"), ("/program", "Program")))
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
@@ -1548,11 +1548,11 @@ TREE_CSS = """<style>
 
 def parse_tree(text):
     """The nested list under '### Hypothesis tree' in families.md, as {label, status, strength, exps, kids}."""
-    m = re.search(r"^### Hypothesis tree\n(.*?)(?=^### |\Z)", text, re.S | re.M)
+    m = re.search(r"^(#{2,3}) Hypothesis tree\n(.*?)(?=^#{2,3} |\Z)", text, re.S | re.M)
     if not m:
         return None, text
     root, stack = None, []
-    for ln in m.group(1).splitlines():
+    for ln in m.group(2).splitlines():
         mm = re.match(r"^( *)- (.*)$", ln)
         if not mm:
             continue
@@ -1573,13 +1573,14 @@ def parse_tree(text):
         else:
             root = node
         stack.append((depth, node))
-    cut = text[:m.start()] + "### Hypothesis tree\n\n<div class=\"ht-slot\"></div>\n\n" + text[m.end():]
+    cut = text[:m.start()] + m.group(1) + " Hypothesis tree\n\n<div class=\"ht-slot\"></div>\n\n" + text[m.end():]
     return root, cut
 
 
 def tree_html(root, text):
     tags = {r["tag"][:4]: r["tag"] for r in load_results()}
-    ranks = {m.group(2): m.group(1) for m in re.finditer(r"^\| (\d+(?:st|nd|rd|th)) \| (F\d)", text, re.M)}
+    order = (ROOT / "order-of-work.md").read_text() if (ROOT / "order-of-work.md").exists() else text
+    ranks = {m.group(2): m.group(1) for m in re.finditer(r"^\| (\d+(?:st|nd|rd|th)) \| (F\d)", order, re.M)}
     next_done = [False]
 
     def roll(n):
@@ -1665,6 +1666,8 @@ def route(path):
         return md_page("glossary", "GLOSSARY.md", "/glossary", refresh=False)
     if path == "/notebook":
         return md_page("lab notebook", "NOTEBOOK.md", "/notebook")
+    if path == "/order":
+        return md_page("order of work", "order-of-work.md", "/order")
     if path == "/families":
         return families_page()
     if path == "/clues":

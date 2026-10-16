@@ -1,0 +1,16 @@
+cell: one unknown alphabet on both sides, Beaufort form, repeating key of 23 letters (F1.1)
+
+  alphabet          log2 26!            =   88.4 bits
+  same decryption   x -> m x + t, 312   = -  8.3
+  key               23 x 4.70           =  108.1
+  total                                 =  188.2
+  24 known letters  24 x 4.70           = -112.8
+  still open                            =   75.4 bits
+
+  quadgram scorer: cross-entropy 2.92 bits/letter on Carter, so 4.70 - 2.92 = 1.78 bits of evidence per letter
+  73 unknown letters x 1.78           =  130.3 bits
+
+  75.4 < 130.3: decidable in principle by the quadgram test (margin 54.9 bits)
+
+  plaintext autokey at lag 86 on a fixed table: 86 x 4.70 + 3 = 407.2 bits, open 294.4,
+  more than 73 letters carry even at Shannon's lowest entropy (290 bits): no English test can decide it

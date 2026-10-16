@@ -1,0 +1,119 @@
+{
+ "id": 144,
+ "tag": "0144-k4-two-free-alphabets-at-13-and-16",
+ "started": "2026-10-16T19:45:23+00:00",
+ "seconds": 765.4,
+ "status": "ran",
+ "phases": {
+  "unattributed": 61.3,
+  "run": 765.4,
+  "record": 0.1
+ },
+ "ended_epoch": 1792180688.9017322,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -5.102,
+  -5.3031,
+  -5.127,
+  -5.042,
+  -5.2726,
+  -5.2005,
+  -5.3196,
+  -5.3316,
+  -5.2518,
+  -5.2209,
+  -5.3436,
+  -5.277,
+  -4.8169,
+  -4.8807,
+  -4.8837,
+  -4.8872,
+  -4.7776,
+  -4.8934,
+  -4.9481,
+  -4.8672,
+  -4.7598,
+  -4.7423,
+  -4.9946,
+  -4.7856
+ ],
+ "champion_before": null,
+ "bounds": {
+  "family": "two free alphabets (Quagmire IV), key length 13 and 16, no move: K4 against 12 kept-place copies of itself (design 2)",
+  "search": "parallel tempering, 10 runs x 16 replicas x 625 rounds x 1000 moves per text; start from K4's exact witness (0123) randomised by 400 check-keeping swaps",
+  "not_exhaustive": true,
+  "runs_done": {
+   "min": 10,
+   "max": 10
+  },
+  "texts_with_no_finished_run": 0,
+  "c_decryption_checked": true,
+  "by_length": {
+   "13": {
+    "k4": {
+     "score": -5.116,
+     "plaintext": "DBUGHHPROLEITEDREOFVIEASTNORTHEASTLYOWNENWASINENOHWCITAFFMYSBURBERLINCLOCKOBAYGUIORYFAKELYUSFUMWO",
+     "english_free": -5.4156,
+     "runs": 10
+    },
+    "copies": [
+     -5.0336,
+     -5.0059,
+     -4.9846,
+     -4.9762,
+     -4.9579,
+     -4.957,
+     -4.9351,
+     -4.9216,
+     -4.9167,
+     -4.852,
+     -4.8433,
+     -4.8039
+    ],
+    "k4_rank_of_13": 13,
+    "k4_above_all_copies": false
+   },
+   "16": {
+    "k4": {
+     "score": -4.6694,
+     "plaintext": "KDOWBOOFGOLPREATINCEREASTNORTHEASTYIRTIDONTTOSTENEETSBEIPHYAVAMBERLINCLOCKYWASTILINGLDPREVELOSINP",
+     "english_free": -4.8738,
+     "runs": 10
+    },
+    "copies": [
+     -4.7664,
+     -4.7276,
+     -4.711,
+     -4.7105,
+     -4.7047,
+     -4.6997,
+     -4.6504,
+     -4.6451,
+     -4.6342,
+     -4.6308,
+     -4.6252,
+     -4.6016
+    ],
+    "k4_rank_of_13": 7,
+    "k4_above_all_copies": false
+   }
+  },
+  "stop_queue": false,
+  "power_measured_0143": {
+   "13": "5 of 5 against 5 kept-place copies",
+   "16": "4 of 5"
+  },
+  "controls": "12 kept-place copies of K4 per length (seed 144)"
+ },
+ "notes": "L13: K4 -5.116 rank 13 of 13; L16: K4 -4.669 rank 7 of 13; stop False",
+ "error": null,
+ "candidates": []
+}

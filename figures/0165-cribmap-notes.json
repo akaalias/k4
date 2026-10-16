@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Leave the grid's empty squares under chosen keyword letters; shuffle the letters inside each row by the keyword; copy out a few diagonals before the columns. Each needs only a keyword."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every rule for 181,308 keywords (and K1-K3 passages as keys for rows wider than 24), both directions, with a repeating key of 1-26 on the sculpture's tables after or before."
+ },
+ {
+  "anchor": "the bound",
+  "text": "The shortest key that fits K4 is as long as on the copies in all three, and K4 leads the copies in at most two cells. Closed."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "US Army manuals and agent ciphers describe keyword grids with odd shapes: triangular holes filled last, triangles growing two letters a row, rows cut short by the keyword's numbers, trapezoids. Each needs only a keyword."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every shape for each of 163,720 keywords (one per numbering), both directions, with a repeating key of 1-26 on the sculpture's tables after or before, against the 24 known letters and ten scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "In every shape the shortest key that fits K4 is as long as on the copies, and K4 leads the copies in at most one cell. Closed."
+ }
+]

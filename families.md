@@ -78,7 +78,7 @@ Update the leaf when an experiment works on it.
       - Three clockwise quarter turns, every width {closed · exact · 0083}
       - **F6.3** Mixed three-stage routes {closed · exact · 0037, 0134}
         - Four column readings (turn either way, rows-then-columns-down, its reverse), every pair at widths 2-96 and every triple at 2-24: nothing live below key length 20 {closed · exact · 0134}
-        - **F6.3b** Mixed triples at widths 25-96: sampled only (200,000 triples, chance) {open · sampled · 0037}
+        - **F6.3b** Mixed triples at widths 25-96: 105.5 million routes, nothing live below 18, at the coppers' rate {closed · exact · 0037, 0158}
     - Alphabets in unknown orders after or before a move
       - **F6.1** One unknown alphabet (Quagmire III) {blocked · exact · 0097, 0129, 0130}
         - Every type-1 move, either order, added or Beaufort form, key lengths 1-5: no alphabet fits {closed · exact · 0129, 0130}
@@ -89,21 +89,21 @@ Update the leaf when an experiment works on it.
         - Move first, key length 3: K4 at the top of its coppers in 0097, 0100, 0133; p 0.04-0.10 (0102) {noted · exact · 0100, 0102, 0133}
     - **F6.4** Padding at each grid stage; nulls dropped between grids {closed · exact · 0082, 0135}
       - Blanks in any of eight places per grid, dropped or kept as dummies, one stage (widths 2-96) or two (2-48), periodic key 1-26 on standard/KRYPTOS tables: nothing live below 21 {closed · exact · 0135}
-    - **F6.5** Direction words as routes through the grid ("east, then northeast"), then the table {open}
-    - **F6.6** Move, change, move again {open}
-    - **F6.7** Change, move, change on two different tables {open}
-    - **F6.8** Three-stage routes with a keyword columnar stage {open}
-    - **F6.9** Both autokeys with 0084's width-7 double columnar routes {open}
-    - **F6.10** Blank cells chosen by a key, then the table {open}
-    - **F6.11** Keyword-disrupted and triangle columnar transpositions, then the table {open}
-    - **F6.12** EVA's double triangle transposition, then the table {open}
-    - **F6.13** Chiffre XIII's keyword-shaped five-row mask, then its period-5 table {open}
-    - **F6.14** Nihilist transposition on a 10 x 10 square with three blanks {open}
-    - **F6.15** YAR's "1-2-3" spacing as an ordering, then the table {open}
-    - **F6.16** Interrupted-key columnar transposition, then the table {open}
-    - **F6.17** Trapezoid transposition, then the table {open}
-    - **F6.18** Letters reshuffled inside each row at widths other than 7, then the table {open}
-    - **F6.19** The French diagonal method, then the table {open}
+    - **F6.5** Direction words as routes through the grid ("east, then northeast"), then the table {closed · exact · 0159}
+    - **F6.6** Move, change, move again (844-move library, all pairs) {closed · exact · 0160}
+    - **F6.7** Change, move, change on two different tables {closed · exact · 0161}
+    - **F6.8** Three-stage routes with a keyword columnar stage {closed · exact · 0162}
+    - **F6.9** Both autokeys with 0084's width-7 double columnar routes {closed · exact · 0163}
+    - **F6.10** Blank cells chosen by a key, then the table {closed · exact · 0165}
+    - **F6.11** Keyword-disrupted and triangle columnar transpositions, then the table {closed · exact · 0164}
+    - **F6.12** EVA's double triangle transposition, then the table {closed · exact · 0166}
+    - **F6.13** Chiffre XIII's keyword-shaped five-row mask, then its period-5 table (parametric masks; the documented rule not in hand) {closed · exact · 0166}
+    - **F6.14** Nihilist transposition on a 10 x 10 square with three blanks {closed · exact · 0167}
+    - **F6.15** YAR's "1-2-3" spacing as an ordering, then the table {closed · exact · 0166}
+    - **F6.16** Interrupted-key columnar transposition, then the table {closed · exact · 0164}
+    - **F6.17** Trapezoid transposition, then the table {closed · exact · 0164}
+    - **F6.18** Letters reshuffled inside each row at widths other than 7, then the table {closed · exact · 0165}
+    - **F6.19** The French diagonal method, then the table (key-named diagonals) {closed · exact · 0165}
   - F12 Stein's way: look, quantify, then crib
     - **F12.1** The 97 letters and the "?" checked against images of the copper {open}
     - **F12.2** K4's statistics by segment and width against shuffles {open}
@@ -292,7 +292,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P7 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P8 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -303,3 +303,4 @@ Each pivot has a details page in `pivots/` (P1-P7 so far), rendered on the Pivot
 | 2026-10-16 | F1 one keyed stage (0119-0128) | F6 a move, then the table | Every F1 item closed or blocked; F1.1's last cells (Beaufort 23, 26) can only be tested by an English climb with no power (0120), so blocked. Ranking unchanged (P5). |
 | 2026-10-16 | F6 a move, then the table (0129-0135) | F1 again, reopened, then every family through F9 | Every F6 item closed or blocked. Alexis asked to start over at F1 and unblock what is blocked. Most blocked cells share one blocker, no decider where the known letters give too few checks: F1.5 works on it. F6.3b and F9.1 were blocked only for want of a list. Ranking unchanged (P6, issue #50). |
 | 2026-10-17 | F1 one keyed stage, reopened (0136-0157) | F6 a move, then the table | Every F1 item closed or blocked: F1.5 built a decider with measured power (design 2) and decided F1.1 and F1.2's cells; F1.6-F1.11 closed exactly; the residues are blocked by the English bound (0136) or by cost. Ranking unchanged (F1, F6, F12, F3, F2, F4, F10, F11, F8, F5, F9) (P7). |
+| 2026-10-17 | F6 a move, then the table (0158-0167) | F12 Stein's way | Every F6 item closed or blocked: F6.3b and F6.5-F6.19 closed exactly (route libraries up to 116 million, compiled), all at the scrambled-copies' rate; F6.1 and F6.2 blocked by cost. Ranking unchanged (P8). |

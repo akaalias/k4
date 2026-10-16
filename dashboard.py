@@ -2118,15 +2118,9 @@ def families_page():
 
 
 PROG_CSS = """<style>
-.prog p{max-width:760px}
-.prog ol{padding-left:24px;margin:10px 0 16px}.prog ol>li{margin:0 0 9px;max-width:760px;padding-left:4px}
-.prog li>ul{list-style:none;padding-left:0;margin:6px 0 6px}.prog li>ul>li{margin:0 0 3px}
-.prog ul.cards{list-style:none;padding:0;margin:14px 0 20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;max-width:none}
-.prog ul.cards>li{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:13px 16px 12px;margin:0;max-width:none;font-size:15px;line-height:1.55}
-.prog ul.cards>li>strong:first-child{display:block;font:600 11px/1.3 var(--serif);text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:6px}
-.prog ul.cards>li>strong:first-child code{font:inherit;color:inherit}
-.prog a.fchip{text-decoration:none;border-bottom:1px dotted var(--accent)}.prog a.fchip code{color:var(--accent)}
-@media(max-width:760px){.prog ul.cards{grid-template-columns:1fr}}
+.prog ol,.prog ul{padding-left:24px;margin:10px 0 16px}.prog li{margin:0 0 8px}
+.prog li>ul{margin:6px 0 4px}.prog li p{margin:0 0 6px}
+.prog a.fchip{text-decoration:none}.prog a.fchip code{color:var(--accent)}
 </style>"""
 
 FILE_PAGES = {"order-of-work.md": "/priorities", "families.md": "/families", "11-clue-register.md": "/clues",
@@ -2167,7 +2161,6 @@ def program_page():
         res.append(h[i:])
         return "".join(res)
 
-    h = tag_lists(h)
     h = re.sub(r"<code>([^<]+)</code>", lambda m: (f'<a class="fchip" href="{FILE_PAGES[m.group(1)]}"><code>{m.group(1)}</code></a>'
                                                    if m.group(1) in FILE_PAGES else m.group(0)), h)
     h = crib_cells(h)

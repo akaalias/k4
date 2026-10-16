@@ -1,0 +1,392 @@
+{
+ "id": 140,
+ "tag": "0140-k4-against-its-own-copies-with-the-tempering-climb",
+ "started": "2026-10-16T18:25:55+00:00",
+ "seconds": 760.5,
+ "status": "ran",
+ "phases": {
+  "unattributed": 179.0,
+  "run": 760.5,
+  "record": 40.0
+ },
+ "ended_epoch": 1792175956.208798,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 1,
+ "n_passed": 0,
+ "best_crib_hits": 24,
+ "best_crib_words": {
+  "EAST": [
+   4,
+   4
+  ],
+  "NORTHEAST": [
+   9,
+   9
+  ],
+  "BERLIN": [
+   6,
+   6
+  ],
+  "CLOCK": [
+   5,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 3.983798779321207,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -5.3467,
+  -5.1618,
+  -5.1527,
+  -5.4444,
+  -5.186,
+  -5.25,
+  -5.2752,
+  -5.3886,
+  -5.4749,
+  -5.2015,
+  -4.9595,
+  -5.1919
+ ],
+ "champion_before": null,
+ "bounds": {
+  "family": "one unknown alphabet on both sides, Beaufort form, no move: K4 at key length 23 against its own copies; design 2's power at 26",
+  "search": "parallel tempering (0139), 10 runs x 16 replicas x 625 rounds x 1000 moves per text, T 0.1->0.002",
+  "not_exhaustive": true,
+  "runs_done": {
+   "min": 10,
+   "max": 10
+  },
+  "c_decryption_checked": true,
+  "L23": {
+   "k4": {
+    "score": -4.9891,
+    "plaintext": "BOARIMELRBCEHINVEHWATEASTNORTHEASTHATEGNANHIFPLLBADIRODMOROSORYBERLINCLOCKDAVARRUNDISHEDSAVEANLAP",
+    "alphabet": "RTKDPNVSXJQMUAZGOBILEYCHWF",
+    "key": [
+     7,
+     7,
+     15,
+     0,
+     4,
+     1,
+     2,
+     9,
+     15,
+     14,
+     8,
+     13,
+     14,
+     25,
+     21,
+     25,
+     12,
+     22,
+     15,
+     4,
+     25,
+     19,
+     6
+    ],
+    "english_free": -5.2755,
+    "runs": 10
+   },
+   "coppers": [
+    -5.1369,
+    -5.1088,
+    -5.066,
+    -5.0613,
+    -4.9486,
+    -4.9439,
+    -4.9273,
+    -4.924,
+    -4.9086,
+    -4.895,
+    -4.8572,
+    -4.8326
+   ],
+   "k4_rank_of_13": 9,
+   "k4_above_all_copies": false,
+   "power_measured_0139": "6 of 8 planted texts beat all 6 own copies",
+   "false_alarm_rate": 0.077
+  },
+  "L26_power": {
+   "plants": 6,
+   "own_coppers_per_plant": 6,
+   "found": 5,
+   "bar": ">= 5 of 6",
+   "passes_bar": true,
+   "null_expected": 0.86,
+   "rows": [
+    {
+     "score": -4.782,
+     "letters_right": 34,
+     "true_score": -4.2931,
+     "runs": 10,
+     "own_coppers": [
+      -5.0523,
+      -5.0204,
+      -4.9084,
+      -4.8891,
+      -4.8738,
+      -4.8376
+     ],
+     "rank_among_own": 1,
+     "found_own": true,
+     "recovered": false
+    },
+    {
+     "score": -4.7582,
+     "letters_right": 35,
+     "true_score": -4.3151,
+     "runs": 10,
+     "own_coppers": [
+      -4.9262,
+      -4.9212,
+      -4.8524,
+      -4.8503,
+      -4.7999,
+      -4.7665
+     ],
+     "rank_among_own": 1,
+     "found_own": true,
+     "recovered": false
+    },
+    {
+     "score": -4.6909,
+     "letters_right": 39,
+     "true_score": -4.4263,
+     "runs": 10,
+     "own_coppers": [
+      -4.9664,
+      -4.9582,
+      -4.9268,
+      -4.8455,
+      -4.8218,
+      -4.8061
+     ],
+     "rank_among_own": 1,
+     "found_own": true,
+     "recovered": false
+    },
+    {
+     "score": -4.7186,
+     "letters_right": 36,
+     "true_score": -4.2785,
+     "runs": 10,
+     "own_coppers": [
+      -4.9963,
+      -4.962,
+      -4.9576,
+      -4.9328,
+      -4.9216,
+      -4.7998
+     ],
+     "rank_among_own": 1,
+     "found_own": true,
+     "recovered": false
+    },
+    {
+     "score": -4.9001,
+     "letters_right": 33,
+     "true_score": -4.3764,
+     "runs": 10,
+     "own_coppers": [
+      -4.9369,
+      -4.9135,
+      -4.8763,
+      -4.867,
+      -4.7901,
+      -4.7788
+     ],
+     "rank_among_own": 5,
+     "found_own": false,
+     "recovered": false
+    },
+    {
+     "score": -4.702,
+     "letters_right": 44,
+     "true_score": -4.2656,
+     "runs": 10,
+     "own_coppers": [
+      -4.9561,
+      -4.9274,
+      -4.8231,
+      -4.8187,
+      -4.766,
+      -4.7232
+     ],
+     "rank_among_own": 1,
+     "found_own": true,
+     "recovered": false
+    }
+   ]
+  },
+  "stop_queue": false,
+  "controls": "12 shuffles of K4 that fit length 23 exactly (0119's decider, seed 140); at 26 each plant's own fitting shuffles (seed 1400)"
+ },
+ "notes": "L23: K4 -4.989, rank 9 of 13 among its own copies (-5.137 to -4.833); stop queue False. L26 power: 5/6 plants beat all 6 own copies (null 0.86, bar 5).",
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "BOARIMELRBCEHINVEHWATEASTNORTHEASTHATEGNANHIFPLLBADIRODMOROSORYBERLINCLOCKDAVARRUNDISHEDSAVEANLAP",
+   "key": {
+    "alphabet": "RTKDPNVSXJQMUAZGOBILEYCHWF",
+    "shifts": [
+     7,
+     7,
+     15,
+     0,
+     4,
+     1,
+     2,
+     9,
+     15,
+     14,
+     8,
+     13,
+     14,
+     25,
+     21,
+     25,
+     12,
+     22,
+     15,
+     4,
+     25,
+     19,
+     6
+    ],
+    "form": "beaufort"
+   },
+   "key_bits": 198.5,
+   "key_description": "Beaufort form, one alphabet RTKDPNVSXJQMUAZGOBILEYCHWF on both sides, key length 23",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "best of design 2 on K4",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -5.275,
+    "controls": 12,
+    "best_control": -4.96
+   },
+   "english_free": -5.275465445987874,
+   "fitness": -7.321857198565193,
+   "loss": 3.983798779321207,
+   "readable_words": [
+    [
+     0,
+     4,
+     "BOAR"
+    ],
+    [
+     5,
+     7,
+     "ME"
+    ],
+    [
+     13,
+     15,
+     "IN"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     34,
+     38,
+     "HATE"
+    ],
+    [
+     40,
+     42,
+     "AN"
+    ],
+    [
+     43,
+     45,
+     "IF"
+    ],
+    [
+     48,
+     51,
+     "BAD"
+    ],
+    [
+     56,
+     58,
+     "OR"
+    ],
+    [
+     59,
+     61,
+     "SO"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     79,
+     82,
+     "RUN"
+    ],
+    [
+     82,
+     88,
+     "DISHED"
+    ],
+    [
+     88,
+     92,
+     "SAVE"
+    ],
+    [
+     92,
+     94,
+     "AN"
+    ],
+    [
+     94,
+     97,
+     "LAP"
+    ]
+   ]
+  }
+ ]
+}

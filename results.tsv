@@ -138,3 +138,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0137	0137-free-alphabet-climb-that-keeps-the-known-letters	1-keyed-periodic	0120-one-free-alphabet-english-climb-at-23-and-26	reverted	2	0	24	4.122		726	test=20 run=726 record=41
 0138	0138-climb-power-against-each-plants-own-copies	1-keyed-periodic	0137-free-alphabet-climb-that-keeps-the-known-letters	reverted	0	0	0			1609	unattributed=238 run=1609 record=0
 0139	0139-parallel-tempering-climb-against-own-copies	1-keyed-periodic	0138-climb-power-against-each-plants-own-copies	reverted	0	0	0			1087	unattributed=453 run=1087 record=0
+0140	0140-k4-against-its-own-copies-with-the-tempering-climb	1-keyed-periodic	0139-parallel-tempering-climb-against-own-copies	reverted	1	0	24	3.984		761	unattributed=179 run=760 record=40

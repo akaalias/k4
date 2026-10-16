@@ -141,3 +141,5 @@ id	outcome	strength	cribs_forced	space	note
 0140	chance	sampled	no	F1.1 Beaufort L23: K4 vs 12 own fitting shuffles with design 2 (PT); L26 power 6 plants x 6 own	K4 rank 9/13: closed sampled at power ~0.75; L26 power 5/6 passes (prediction failed)
 0141	error	weak	no	K4 at L26 + two-alphabet power (fully shuffled fitting copies)	control generation (exact two-alphabet decider) exceeded the budget; empty search crashed the summary; no result
 0142	chance	sampled	no	F1.1 Beaufort L26: K4 vs 12 own fitting shuffles, design 2	K4 rank 12/13: closed sampled at power 5/6 (0140)
+0143	diagnostic	sampled	no	F1.2 design 2 on two free alphabets (Quagmire IV): power at L8/13/16, 5 plants x 5 kept-place copies	L13 5/5, L16 4/5 pass (bar 4, null 0.83); L8 incomplete (27 texts no run)
+0144	chance	sampled	no	F1.2 Quagmire IV L13, L16: K4 vs 12 kept-place copies, design 2	K4 rank 13/13 (L13), 7/13 (L16): closed sampled at power 5/5, 4/5 (0143)

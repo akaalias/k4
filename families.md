@@ -105,13 +105,13 @@ Update the leaf when an experiment works on it.
     - **F6.18** Letters reshuffled inside each row at widths other than 7, then the table {closed · exact · 0165}
     - **F6.19** The French diagonal method, then the table (key-named diagonals) {closed · exact · 0165}
   - F12 Stein's way: look, quantify, then crib
-    - **F12.1** The 97 letters and the "?" checked against images of the copper {open}
-    - **F12.2** K4's statistics by segment and width against shuffles {open}
-    - **F12.3** Stein's I.C. peak at 13 in K1 and K2: real or chance {open}
-    - **F12.4** A pencil session: every pattern noted before any code {open}
-    - **F12.5** Parts with their own keys, split where the statistics break {open}
-    - **F12.6** Probable words through the cells the known letters cannot decide {open}
-    - **F12.7** Stein's K1-K3 method as such: column shifts scored by log frequencies, then a crib {open}
+    - **F12.1** The 97 letters and the "?" checked against images of the copper {blocked}
+    - **F12.2** K4's statistics by segment and width against shuffles {closed · sampled · 0168}
+    - **F12.3** Stein's I.C. peak at 13 in K1 and K2: real or chance {closed · sampled · 0169}
+    - **F12.4** A pencil session: every pattern noted before any code {closed · sampled · 0170}
+    - **F12.5** Parts with their own keys, split where the statistics break {closed · exact · 0171}
+    - **F12.6** Probable words through the cells the known letters cannot decide {closed · exact · 0172}
+    - **F12.7** Stein's K1-K3 method as such: column shifts scored by log frequencies, then a crib {closed · by subsumption · 0005}
   - F3 A two-part key with a combiner
     - Two words added: both from the puzzle, or one from the dictionary {closed · exact · 0014, 0043, 0059, 0115}
     - A word plus digits from the story {closed · exact · 0024, 0038}
@@ -292,7 +292,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P8 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P9 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -304,3 +304,4 @@ Each pivot has a details page in `pivots/` (P1-P8 so far), rendered on the Pivot
 | 2026-10-16 | F6 a move, then the table (0129-0135) | F1 again, reopened, then every family through F9 | Every F6 item closed or blocked. Alexis asked to start over at F1 and unblock what is blocked. Most blocked cells share one blocker, no decider where the known letters give too few checks: F1.5 works on it. F6.3b and F9.1 were blocked only for want of a list. Ranking unchanged (P6, issue #50). |
 | 2026-10-17 | F1 one keyed stage, reopened (0136-0157) | F6 a move, then the table | Every F1 item closed or blocked: F1.5 built a decider with measured power (design 2) and decided F1.1 and F1.2's cells; F1.6-F1.11 closed exactly; the residues are blocked by the English bound (0136) or by cost. Ranking unchanged (F1, F6, F12, F3, F2, F4, F10, F11, F8, F5, F9) (P7). |
 | 2026-10-17 | F6 a move, then the table (0158-0167) | F12 Stein's way | Every F6 item closed or blocked: F6.3b and F6.5-F6.19 closed exactly (route libraries up to 116 million, compiled), all at the scrambled-copies' rate; F6.1 and F6.2 blocked by cost. Ranking unchanged (P8). |
+| 2026-10-17 | F12 Stein's way (0168-0172) | F3 a two-part key with a combiner | Every F12 item closed or blocked: K4's statistics, Stein's peak at 13, a pencil session, two parts with own keys and probable words in the undecided cells all at the shuffles' or copies' rate; F12.1 blocked for want of photographs. Ranking unchanged (P9). |

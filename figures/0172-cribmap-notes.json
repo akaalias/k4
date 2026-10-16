@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Where the 24 known letters leave an unknown alphabet undecided, a likely word placed somewhere else adds more letters to check. If K4 is such a code, the right words should fit it more often than they fit scrambled copies."
+ },
+ {
+  "anchor": "the check",
+  "text": "Sixty words at every place they can go, each placement decided exactly, in the ten settings still open: one alphabet at key lengths 23 and 26, two alphabets at eight lengths."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 fits no more often than its copies: above all ten in one setting, as the copies themselves manage 0 to 3 times. F12.6 closed."
+ }
+]

@@ -168,3 +168,6 @@ id	outcome	strength	cribs_forced	space	note
 0167	chance	exact	no	F6.14 Nihilist transposition 10x10, 3 blanks at 8 places, all 10! keys, rows/cols read, fwd/inv (116M routes), periodic key A/B, 10 coppers	shortest live A20 B24 (coppers 18, 17); K4 above all coppers 0/52
 0168	diagnostic	sampled	no	F12.2: 71 statistics of K4 (segments, I.C. 1-48, repeats at widths 7/21/31) vs 1,000 shuffles	nothing outside every shuffle (0.14 expected); smallest p w7 doublet column 0.002, w21 vertical bigrams 0.004
 0169	diagnostic	sampled	no	F12.3: Stein I.C. peak at m=13 in K1, K2 parts vs 10,000 key-column shuffles	K1 p 0.0075 (look-elsewhere ~0.019 post hoc), Part II 0.24, K4 0.21: chance
+0170	diagnostic	sampled	no	F12.4 pencil session: six by-eye patterns (K mod 7, S cluster, repeated bigrams, Kasiski 4, U run) vs 1,000 shuffles	none outside every shuffle; K adjacency and S cluster p 0.004 (post hoc)
+0171	ruled-out	exact	no	F12.5 two parts with own periodic keys (split between the runs), lengths up to 12/10, 8 std/KRY classes, 10 coppers	no length live on K4 in either part (coppers 0-1)
+0172	chance	exact	no	F12.6 probable words: 60 words x 3,634 placements in the 10 undecided free-alphabet cells, exact, 10 kept-place copies per cell	K4 above every copy in 1/10 cells (copies 0-3): chance

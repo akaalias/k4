@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "K1 and K2 used different secret words. If K4's half with EAST NORTHEAST and its half with BERLIN CLOCK had their own words, each known word checks only its own half's word."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every word length a known run can check (up to 12 and up to 10), on the eight ways of using the sculpture's tables, on K4 and ten scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No length fits either half of K4; copies manage 0-1 cells. Longer words leave no checks at all, so this is all the known letters can say."
+ }
+]

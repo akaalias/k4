@@ -1179,7 +1179,7 @@ def outcome_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     grades = load_grades()
-    W, L, R, T, band = 1400, 64, 220, 26, 46
+    W, L, R, T, band = 1400, 64, 220, 36, 46
     n = len(rows)
     step = (W - L - R) / n
     dot_r = max(1.2, min(3.6, step * 0.42))     # the lineage page's dot, shrinking only when experiments crowd
@@ -1235,8 +1235,9 @@ def outcome_chart(rows):
         if pv.get("after") in pos:
             px = L + (pos[pv["after"]] + 1) * step
             g.append(f'<a href="/pivot/{esc(pv["id"])}"><g data-tip="Pivot {esc(pv["id"])}, {esc(pv["date"])}<br>{esc(pv["from"])} &rarr; {esc(pv["to"])}">'
-                     f'<line x1="{px:.1f}" x2="{px:.1f}" y1="{T - 4}" y2="{T + band * len(shown)}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3"/>'
-                     f'<text x="{px:.1f}" y="{T - 8:.1f}" font-size="12" fill="var(--accent)" text-anchor="middle">{esc(pv["id"])}</text>'
+                     f'<line x1="{px:.1f}" x2="{px:.1f}" y1="{T}" y2="{T + band * len(shown)}" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="0.5 4" stroke-linecap="round"/>'
+                     f'<path d="M{px - 5:.1f},{T - 8:.1f} L{px + 5:.1f},{T - 8:.1f} L{px:.1f},{T:.1f} z" fill="var(--accent)"/>'
+                     f'<text x="{px:.1f}" y="{T - 13:.1f}" font-size="12" fill="var(--accent)" text-anchor="middle">{esc(pv["id"])}</text>'
                      f'<rect x="{px - 6:.1f}" y="{T}" width="12" height="{band * len(shown)}" fill="transparent"/></g></a>')
     tick_every = next(t for t in (10, 20, 50, 100, 200, 500, 1000) if n / t <= 14)
     for i, r in enumerate(rows):
@@ -1309,7 +1310,8 @@ DECISION_LEGEND = ('<div class="lin-legend">'
                    '<span class="k"><span class="ldot lkept"></span>kept</span>'
                    '<span class="k"><span class="ldot" style="color:var(--disc)"></span>reverted</span>'
                    '<span class="k"><span class="lerr">&times;</span>error or timeout</span>'
-                   '<span class="k"><span class="lwas"></span>kept when it ran, reverted under today&rsquo;s rules</span></div>')
+                   '<span class="k"><span class="lwas"></span>reverted under today&rsquo;s rules</span>'
+                   '<span class="k"><svg width="12" height="10" viewBox="0 0 12 10"><path d="M1,1 L11,1 L6,9 z" fill="var(--accent)"/></svg>pivot</span></div>')
 
 
 def live_page():
@@ -1651,7 +1653,7 @@ LIN_CSS = """
 #lin .lbound{stroke:var(--rule-soft);stroke-width:1}
 #lin .lbase{stroke:var(--rule-soft);stroke-width:1}
 #lin .lrow{stroke:var(--rule-soft);stroke-width:1;shape-rendering:crispEdges}
-#lin .lpivot{stroke:var(--accent);stroke-width:1;stroke-dasharray:3 3}
+#lin .lpivot{stroke:var(--accent);stroke-width:1.4;stroke-dasharray:0.5 4;stroke-linecap:round}
 #lin .lpivot-lab{font:600 10.5px var(--serif);fill:var(--accent);letter-spacing:.02em}
 #lin .lrow.ten{stroke:var(--rule);stroke-opacity:.6}
 #lin .lrow.lit-direct{stroke:var(--muted);stroke-opacity:.45}
@@ -1901,9 +1903,10 @@ LIN_LEGEND = """<div class="lin-legend">
 <span class="k"><span class="ldot lkept"></span>kept</span>
 <span class="k"><span class="ldot" style="color:var(--disc)"></span>reverted, in its family's colour</span>
 <span class="k"><span class="lerr">&times;</span>error or timeout</span>
-<span class="k"><span class="lwas"></span>kept when it ran, reverted under today's rules</span>
+<span class="k"><span class="lwas"></span>reverted under today's rules</span>
 <span class="k"><span class="larc"></span>built on a parent in the same family</span>
 <span class="k"><span class="lx"></span>built on a parent in another family</span>
+<span class="k"><svg width="18" height="6" viewBox="0 0 18 6"><line x1="1" x2="17" y1="3" y2="3" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="0.5 4" stroke-linecap="round"/></svg>pivot</span>
 </div>"""
 
 

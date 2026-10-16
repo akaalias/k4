@@ -1,8 +1,5 @@
 # Hypothesis families (living document)
 
-Status values: `untouched`, `active`, `exhausted-bounded` (with the bound), `parked` (with reason).
-The order of work, with the ranking and each family's open-items table, is on its own page, [Order of work](/order) (`order-of-work.md`). The tree below shows every hypothesis and its status; the long table after it is the full record of what each family covered.
-
 ## Hypothesis tree
 
 One line per hypothesis. A leaf carries `{status · strength · experiments}`; a branch's status is
@@ -84,6 +81,8 @@ Update the leaf when an experiment works on it.
     - No construction tried makes both patterns {closed · sampled · 0018, 0027, 0062, 0065, 0096}
 
 ## Full record by family
+
+Status values: `untouched`, `active`, `exhausted-bounded` (with the bound), `parked` (with reason).
 
 | # | Family | Status | Experiments | Bounds exhausted so far | Notes |
 |---|---|---|---|---|---|

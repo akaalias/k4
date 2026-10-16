@@ -39,7 +39,11 @@ body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--seri
 a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a:hover{border-bottom-color:var(--accent)}
 .smcp{font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em}
 .num{font-variant-numeric:lining-nums tabular-nums}
-.topnav{display:flex;gap:28px;justify-content:center;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding:18px 0 12px;margin:0}
+.topnav{display:flex;gap:26px;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding:18px 28px 12px;margin:0}
+.topnav .spacer{flex:1 1 24px}
+.topnav .sec{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.topnav .sec a{font-size:10.5px;letter-spacing:.08em;color:var(--faint)}
+@media(max-width:640px){.topnav{gap:14px 18px;padding:14px 16px 10px}.topnav .spacer{flex-basis:100%;height:0}.topnav .sec{gap:14px}}
 .topnav .brand{font:italic 14px var(--serif);color:var(--faint)}
 .topnav a{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);border-bottom:2px solid transparent;padding-bottom:3px}
 .topnav a.on,.topnav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
@@ -76,6 +80,11 @@ article p,article li{max-width:720px}article table{table-layout:fixed;width:100%
 .rec-head{max-width:980px;margin:18px auto 0}.eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}.eyebrow .kept{color:var(--accent)}
 h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.005em;max-width:900px}
 .standfirst{font:italic 16.5px/1.6 var(--serif);color:var(--muted);margin:0 0 18px;max-width:820px}
+.ph{max-width:980px;margin:0 auto 8px}.ph h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}.ph .standfirst{max-width:760px}
+.ph .facts{font-size:14.5px;color:var(--muted);margin:0 0 12px;max-width:820px}
+.ph-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin:6px 0 14px}.ph-legend>span{display:inline-flex;align-items:center;gap:7px}
+.pf{max-width:980px;margin:34px auto 0;padding-top:10px;border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted)}
+@media(max-width:640px){.ph h1{font-size:26px}}
 .meta-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0 24px;padding:14px 0 12px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule-soft)}.meta-row>div{display:flex;flex-direction:column}.meta-bar{margin-top:7px}.meta-bar svg rect{cursor:help}.meta-bar .faint{display:block;margin-top:3px}.meta-row b{font-weight:600;font-size:14.5px;line-height:1.3}.meta-row span{font:600 10px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
 .plain p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:640px}
 .gl{border-bottom:1px dotted var(--accent);cursor:help;transition:background .15s}.gl.on,.gl:hover{background:var(--hl)}.gl-entry{border-left:2px solid transparent;padding-left:6px;margin-left:-8px;transition:background .15s}.gl-entry.on,.gl-entry:hover{background:var(--hl);border-left-color:var(--accent)}.aside p{margin:0 0 9px;font-size:13px;line-height:1.5}.aside p b{color:var(--ink);font-weight:600}.aside h4{margin-bottom:8px}.aside .faint{font-size:12px}
@@ -653,12 +662,26 @@ GL_JS = """<script>
 </script>"""
 
 
+def page_head(eyebrow, title, standfirst, facts="", extra=""):
+    """The header every page but the overview shares, after the lineage page: eyebrow, title,
+    italic standfirst, a line of facts from the record, and an optional key."""
+    return (f'<header class="ph"><p class="eyebrow">{eyebrow}</p><h1>{title}</h1>'
+            f'<p class="standfirst">{standfirst}</p>' + (f'<p class="facts">{facts}</p>' if facts else "") + extra + "</header>")
+
+
+def page_foot(html_text):
+    return f'<p class="pf">{html_text}</p>'
+
+
 def page(title, body, active="", refresh=True):
     # reload only when the record changes: poll a version stamp so the 3D model and a reader's
     # place on the page survive quiet periods
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
-    nav = "".join(f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>' for h, t in
-                  (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage"), ("/notebook", "Notebook"), ("/glossary", "Glossary"), ("/families", "Families"), ("/order", "Order of work"), ("/clues", "Clues"), ("/program", "Program")))
+    link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
+    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage"), ("/families", "Families")))
+           + '<span class="spacer"></span><span class="sec">'
+           + "".join(link(h, t) for h, t in (("/order", "Order of Work"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
+           + "</span>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
@@ -940,10 +963,14 @@ def live_page():
     """The run as it goes: every experiment's best loss, newest on the right, then the table of
     experiments. Reloads when a new experiment lands."""
     rows = load_results()
-    body = ('<h1 class="home">Live dashboard</h1>'
+    latest = rows[-1] if rows else None
+    facts = (f'{len(rows)} experiments. Latest: <a href="/exp/{esc(latest["tag"])}">{int(latest["tag"][:4])}</a>, {esc(latest["title"])}.' if latest else "")
+    body = (page_head("Live dashboard", "The run, experiment by experiment",
+                      "Every experiment's best candidate and the table of all of them, newest first. The page reloads when a new experiment lands.", facts)
             + sec(1, "Loss over the run", "Each dot is one experiment's best candidate; a hollow dot means the search ruled everything out before producing one. The axis breaks at the line so the band where a solution would appear has room.")
             + loss_chart(rows)
-            + experiments_table(rows))
+            + experiments_table(rows)
+            + page_foot('How the experiments built on each other is on the <a href="/lineage">lineage</a> page; what is still open is on the <a href="/families">families</a> page.'))
     return page("live dashboard", body, "/live")
 
 
@@ -1222,6 +1249,7 @@ def experiment_page(tag):
         extra = worksheet_figure(tag) if key == "Walkthrough, by hand" else ""
         body.append(sec(n, title, sub) + f'<article class="rec-body">{html_c}</article>' + extra)
         n += 1
+    body.append(page_foot('How this experiment sits among the others is on the <a href="/lineage">lineage</a> page; its family\'s open hypotheses are on the <a href="/families">families</a> page.'))
     return page(f"experiment {num}", "".join(body))
 
 
@@ -1494,6 +1522,16 @@ def lineage_data(rows):
     return {"nodes": nodes, "families": fams}
 
 
+LIN_LEGEND = """<div class="lin-legend">
+<span class="k"><span class="ldot lkept"></span>kept</span>
+<span class="k"><span class="ldot" style="color:var(--disc)"></span>reverted, in its family's colour</span>
+<span class="k"><span class="lerr">&times;</span>error or timeout</span>
+<span class="k"><span class="lwas"></span>kept when it ran, reverted under today's rules</span>
+<span class="k"><span class="larc"></span>built on a parent in the same family</span>
+<span class="k"><span class="lx"></span>built on a parent in another family</span>
+</div>"""
+
+
 def lineage_page():
     rows = load_results()
     data = lineage_data(rows)
@@ -1512,27 +1550,16 @@ def lineage_page():
         facts += f' The most built-on is <a href="/exp/{esc(top[0])}">{int(top[0][:4])}</a>, with {top[1]} children.'
     blob = json.dumps(data).replace("</", "<\\/")
     body = f"""<style>{LIN_CSS}</style><div class="lin">
-<div class="lin-head"><p class="eyebrow">Research lineage</p>
-<h1>The family tree of the search</h1>
-<p class="standfirst">Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.</p>
-<p class="muted" style="font-size:14.5px;margin:0 0 12px">{facts}</p>
-<div class="lin-legend">
-<span class="k"><span class="ldot lkept"></span>kept</span>
-<span class="k"><span class="ldot" style="color:var(--disc)"></span>reverted, in its family's colour</span>
-<span class="k"><span class="lerr">&times;</span>error or timeout</span>
-<span class="k"><span class="lwas"></span>kept when it ran, reverted under today's rules</span>
-<span class="k"><span class="larc"></span>built on a parent in the same family</span>
-<span class="k"><span class="lx"></span>built on a parent in another family</span>
-</div></div>
+{page_head("Research lineage", "The family tree of the search", "Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.", facts, extra=LIN_LEGEND)}
 <div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
-<p class="lin-foot">Families are described on the <a href="/families">families</a> page.</p>
+{page_foot('Each family and its hypotheses are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/order">Order of work</a>.')}
 <div id="lin-tip" role="tooltip"></div>
 <script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}"""
     return page("research lineage", body, "/lineage")
 
 
 TREE_CSS = """<style>
-.ht-wrap{max-width:1080px;width:calc(100vw - 32px);position:relative;left:50%;transform:translateX(-50%);margin:18px 0 28px}
+.ht-wrap{max-width:980px;margin:4px 0 28px}
 .ht-eyebrow{font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 4px;padding-top:10px;border-top:1px solid var(--rule)}
 .ht-key{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;color:var(--muted);margin:4px 0 14px}
 .ht,.ht ul{list-style:none;margin:0;padding:0}
@@ -1596,7 +1623,7 @@ def parse_tree(text):
         else:
             root = node
         stack.append((depth, node))
-    cut = text[:m.start()] + m.group(1) + " Hypothesis tree\n\n<div class=\"ht-slot\"></div>\n\n" + text[m.end():]
+    cut = text[:m.start()] + "<div class=\"ht-slot\"></div>\n\n" + text[m.end():]
     return root, cut
 
 
@@ -1643,28 +1670,72 @@ def tree_html(root, text):
                 f'<span class="lab">{inline(n["label"])}</span><span class="roll">{words}</span><span class="bar">{bar}</span></span></summary>'
                 f'<ul>{inner}</ul></details></li>')
 
-    key = ('<div class="ht-key"><span><i class="st st-open"></i>open: still to test</span>'
-           '<span><i class="st st-closed"></i>closed: ruled out by an exact test, or a sampled one against scrambled copies</span>'
-           '<span><i class="st st-blocked"></i>blocked: cannot be tested with the known letters alone</span>'
-           '<span><i class="st st-noted"></i>noted: a finding, not a hypothesis to close</span></div>')
-    return (TREE_CSS + '<div class="ht-wrap"><p class="ht-eyebrow">Families in rank order &middot; '
-            'click a branch to fold it; the numbers open the experiment</p>' + key + f'<ul class="ht">{node(root, 0)}</ul></div>')
+    return TREE_CSS + f'<div class="ht-wrap"><ul class="ht">{node(root, 0)}</ul></div>'
+
+
+TREE_KEY = ('<div class="ph-legend ht-wrap" style="margin:6px 0 14px"><span><i class="st st-open"></i>open: still to test</span>'
+            '<span><i class="st st-closed"></i>closed: ruled out by an exact test, or a sampled one against scrambled copies</span>'
+            '<span><i class="st st-blocked"></i>blocked: cannot be tested with the known letters alone</span>'
+            '<span><i class="st st-noted"></i>noted: a finding, not a hypothesis to close</span></div>')
+
+
+def tree_counts(n):
+    if not n["kids"]:
+        return {n["status"] or "open": 1}
+    c = {}
+    for k in n["kids"]:
+        for s_, v in tree_counts(k).items():
+            c[s_] = c.get(s_, 0) + v
+    return c
+
+
+def first_open(n):
+    if not n["kids"]:
+        return n if (n["status"] or "open") == "open" and n["label"].startswith("**F") else None
+    for k in n["kids"]:
+        f = first_open(k)
+        if f:
+            return f
+    return None
 
 
 def families_page():
     text = (ROOT / "families.md").read_text()
     root, cut = parse_tree(text)
+    cut = re.sub(r"^# .*\n", "", cut, count=1, flags=re.M)
     body = md(cut)
+    facts, key = "", ""
     if root:
         body = body.replace('<div class="ht-slot"></div>', tree_html(root, text))
-    return page("families", "<article>" + body + "</article>", "/families", True)
+        c = tree_counts(root)
+        fams = sum(1 for k in root["kids"] if re.match(r"F\d", k["label"]))
+        nx = first_open(root)
+        facts = (f"{fams} families, {sum(c.values())} hypotheses at the leaves: <b>{c.get('open', 0)} open</b>, {c.get('closed', 0)} closed, "
+                 f"{c.get('blocked', 0)} blocked, {c.get('noted', 0)} noted."
+                 + (" Next: " + re.sub(r"[*][*](.+?)[*][*]", lambda m_: "<b>" + m_.group(1) + "</b>", esc(nx["label"])) + "." if nx else ""))
+        key = TREE_KEY
+    head = page_head("Hypothesis families", "Where we believe the method is",
+                     "Every hypothesis the search holds, from one root through the families to the single tests. Each leaf is open, closed, "
+                     "blocked or noted, with the strength of the test and the experiments behind it. Families appear in the order they are "
+                     "worked; click a branch to fold it, a number to open the experiment.", facts, key)
+    foot = page_foot('The ranking and each family\'s open items as tables are on <a href="/order">Order of work</a>; '
+                     'how the experiments built on each other is on the <a href="/lineage">lineage</a> page.')
+    return page("families", head + "<article>" + body + "</article>" + foot, "/families", True)
 
 
-def md_page(title, path, active, refresh=True):
-    import re as _re
+def md_page(title, path, active, refresh=True, eyebrow="", h1="", standfirst="", facts="", foot="", take_intro=False):
+    """A markdown file under the shared header. The file's own title is dropped; with take_intro its
+    first paragraph becomes the standfirst."""
     text = (ROOT / path).read_text()
-    text = _re.sub(r"^# \d+\.\s+", "# ", text, count=1, flags=_re.M)   # knowledge files carry a study number in their title
-    return page(title, "<article>" + md(text) + "</article>", active, refresh)
+    text = re.sub(r"^# .*\n", "", text, count=1, flags=re.M)
+    if take_intro:
+        body = text.lstrip("\n")
+        para, _, rest = body.partition("\n\n")
+        if not para.startswith(("#", "|", "-", "1.")):
+            standfirst = re.sub(r"^<p>|</p>$", "", md(para.replace("\n", " ")).strip())
+            text = rest
+    head = page_head(eyebrow or esc(title), h1 or esc(title), standfirst, facts)
+    return page(title, head + "<article>" + md(text) + "</article>" + (page_foot(foot) if foot else ""), active, refresh)
 
 
 def route(path):
@@ -1686,17 +1757,33 @@ def route(path):
     if path == "/live":
         return live_page()
     if path == "/glossary":
-        return md_page("glossary", "GLOSSARY.md", "/glossary", refresh=False)
+        g = load_glossary()
+        return md_page("glossary", "GLOSSARY.md", "/glossary", refresh=False, eyebrow="Glossary", h1="The words the pages use",
+                       facts=f"{len(g)} entries.", take_intro=True,
+                       foot='Each experiment page shows, under its plain-words text, the entries its text uses.')
     if path == "/notebook":
-        return md_page("lab notebook", "NOTEBOOK.md", "/notebook")
+        nb = (ROOT / "NOTEBOOK.md").read_text()
+        days = len(re.findall(r"^## ", nb, re.M))
+        return md_page("lab notebook", "NOTEBOOK.md", "/notebook", eyebrow="Lab notebook", h1="What was decided, run, found and left open",
+                       facts=f"{days} working days so far, newest first.", take_intro=True,
+                       foot='The bounds each experiment set are on the <a href="/families">families</a> page and in the <a href="/clues">clue register</a>.')
     if path == "/order":
-        return md_page("order of work", "order-of-work.md", "/order")
+        return md_page("order of work", "order-of-work.md", "/order", eyebrow="Order of work", h1="How the search proceeds from here",
+                       standfirst="The rules for working through the families, the order they are ranked in and why, and each family's open items as a table.",
+                       facts='Decided 2026-10-16 (issue #29). The same items are drawn as a tree on the <a href="/families">families</a> page.',
+                       foot='The same items as a tree are on the <a href="/families">families</a> page; the rules the loop follows are in the <a href="/program">program</a>.')
     if path == "/families":
         return families_page()
     if path == "/clues":
-        return md_page("clue register", "knowledge/11-clue-register.md", "/clues")
+        cr = (ROOT / "knowledge/11-clue-register.md").read_text()
+        nclues = len(set(re.findall(r"^\*\*(C\d+[a-z]?)\.", cr, re.M)))
+        return md_page("clue register", "knowledge/11-clue-register.md", "/clues", eyebrow="Clue register", h1="Every hint and its readings",
+                       facts=f"{nclues} clues.", take_intro=True,
+                       foot='Experiments cite clues by number in their expert hypothesis; the <a href="/families">families</a> page shows what each family has covered.')
     if path == "/program":
-        return md_page("program", "program.md", "/program", refresh=False)
+        return md_page("program", "program.md", "/program", refresh=False, eyebrow="Program", h1="Instructions for the loop agent",
+                       standfirst="The rules the agent follows on every experiment: what success means, the gates a reading must pass, what it may touch, and the loop itself.",
+                       foot='The order the families are worked in is on <a href="/order">Order of work</a>.')
     return None
 
 

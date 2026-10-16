@@ -1,7 +1,5 @@
 # Order of work
 
-Decided 2026-10-16 (issue #29). The hypothesis tree on the [families page](/families) (`families.md`) shows the same items as a tree.
-
 After 118 experiments none has beaten the scrambled coppers. Following up on a result needs a
 result that beats chance, and there has been none, so the work is a sweep. From here on the
 sweep follows a fixed order, set before any further run:

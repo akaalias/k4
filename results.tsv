@@ -171,3 +171,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0170	0170-pencil-session-observations	12-steins-way	0168-k4-statistics-against-a-thousand-shuffles	reverted	0	0	0			0	unattributed=152 run=0 record=0
 0171	0171-two-parts-with-their-own-keys	12-steins-way	0005-quagmire-period-sweep-forced-keys	reverted	0	0	0			0	unattributed=39 run=0 record=0
 0172	0172-probable-words-in-the-undecided-cells	12-steins-way	0123-two-free-alphabets-exact-at-every-key-length	reverted	0	0	0			1737	unattributed=58 run=1737 record=0
+0173	0173-scheidt-patent-sandwich	3-two-component-key	0115-two-key-words-added	reverted	0	0	0			11	design=96 implement=0 test=0 run=11 record=0

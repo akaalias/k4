@@ -1,0 +1,17 @@
+table KRYPTOS between the two keys, letters numbered on the standard order, first key length 5, second 7
+
+place 22: message E, copper F: links slot 1 of the first key to slot 0 of the second
+place 23: message A, copper L: links slot 2 of the first key to slot 1 of the second
+place 24: message S, copper R: links slot 3 of the first key to slot 2 of the second
+place 25: message T, copper V: links slot 4 of the first key to slot 3 of the second
+place 26: message N, copper Q: links slot 0 of the first key to slot 4 of the second
+place 27: message O, copper Q: links slot 1 of the first key to slot 5 of the second
+place 28: message R, copper P: links slot 2 of the first key to slot 6 of the second
+place 29: message T, copper R: links slot 3 of the first key to slot 0 of the second
+place 30: message H, copper N: links slot 4 of the first key to slot 1 of the second
+place 31: message E, copper G: links slot 0 of the first key to slot 2 of the second
+place 32: message A, copper K: links slot 1 of the first key to slot 3 of the second
+place 33: message S, copper S: links slot 2 of the first key to slot 4 of the second
+place 34: message T, copper S: links slot 3 of the first key to slot 5 of the second
+
+1 connected group(s) of slots, 13 checks from all 24 known letters

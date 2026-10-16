@@ -167,3 +167,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0166	0166-eva-chiffre-xiii-yar	6-transposition-then-tableau	0164-disrupted-triangle-interrupted-trapezoid	reverted	0	0	0			36	unattributed=57 run=36 record=0
 0167	0167-nihilist-transposition-ten-square	6-transposition-then-tableau	0135-hand-padding-at-every-grid-stage	reverted	0	0	0			226	unattributed=75 run=226 record=0
 0168	0168-k4-statistics-against-a-thousand-shuffles	12-steins-way	0056-look-elsewhere-for-the-two-fingerprints	reverted	0	0	0			2	unattributed=222 run=2 record=0
+0169	0169-steins-peak-at-thirteen	12-steins-way	0168-k4-statistics-against-a-thousand-shuffles	reverted	0	0	0			9	unattributed=59 run=9 record=0

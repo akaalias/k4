@@ -1,0 +1,74 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "observation: the I.C. at 13 alphabets in K1 and K2 against key-period-preserving shuffles",
+  "shuffles": 10000,
+  "rows": [
+   {
+    "text": "K1 ciphertext (Stein's Part I, key 10)",
+    "letters": 63,
+    "ic13": 0.07436,
+    "peak13": 0.04817,
+    "p_ic13 (within key columns)": 0.0075,
+    "p_peak13 (within key columns)": 0.0046,
+    "p_ic13 (plain shuffles)": 0.0359,
+    "p_peak13 (plain shuffles)": 0.0102
+   },
+   {
+    "text": "K2 Part II (Stein's 125 letters, key 8)",
+    "letters": 125,
+    "ic13": 0.04231,
+    "peak13": 0.0083,
+    "p_ic13 (within key columns)": 0.2435,
+    "p_peak13 (within key columns)": 0.0478,
+    "p_ic13 (plain shuffles)": 0.331,
+    "p_peak13 (plain shuffles)": 0.1256
+   },
+   {
+    "text": "K2 Part III (key 8)",
+    "letters": 61,
+    "ic13": 0.04103,
+    "peak13": -0.0062,
+    "p_ic13 (within key columns)": 0.4051,
+    "p_peak13 (within key columns)": 0.531,
+    "p_ic13 (plain shuffles)": 0.4586,
+    "p_peak13 (plain shuffles)": 0.4235
+   },
+   {
+    "text": "K2 ciphertext without '?' (key 8)",
+    "letters": 369,
+    "ic13": 0.04837,
+    "peak13": -0.00635,
+    "p_ic13 (within key columns)": 0.0894,
+    "p_peak13 (within key columns)": 0.1197,
+    "p_ic13 (plain shuffles)": 0.1486,
+    "p_peak13 (plain shuffles)": 0.8993
+   },
+   {
+    "text": "K1 plaintext",
+    "letters": 63,
+    "ic13": 0.04359,
+    "peak13": -0.0453,
+    "p_ic13 (plain shuffles)": 0.8613,
+    "p_peak13 (plain shuffles)": 0.8601
+   },
+   {
+    "text": "K2 plaintext",
+    "letters": 369,
+    "ic13": 0.06619,
+    "peak13": -0.00239,
+    "p_ic13 (plain shuffles)": 0.3845,
+    "p_peak13 (plain shuffles)": 0.5514
+   }
+  ],
+  "stein_texts_below_p_0_01": [
+   "K1 ciphertext (Stein's Part I, key 10)"
+  ],
+  "controls": "10000 within-key-column shuffles and 10000 plain shuffles per text (seed 1613)"
+ },
+ "notes": "K1 ciphertext (Stein's Part I, key 10): I.C.13 0.07436, p within-columns 0.0075, plain 0.0359; K2 Part II (Stein's 125 letters, key 8): I.C.13 0.04231, p within-columns 0.2435, plain 0.331; K2 Part III (key 8): I.C.13 0.04103, p within-columns 0.4051, plain 0.4586; K2 ciphertext without '?' (key 8): I.C.13 0.04837, p within-columns 0.0894, plain 0.1486; K1 plaintext: I.C.13 0.04359, p within-columns -, plain 0.8613; K2 plaintext: I.C.13 0.06619, p within-columns -, plain 0.3845",
+ "controls": [],
+ "error": null,
+ "worked_example": "K1's 63 letters in 13 strands (letter i goes to strand i mod 13):\n\n  strand  1: EUGBY\n  strand  2: MSNQQ\n  strand  3: UDFVT\n  strand  4: FJIYM\n  strand  5: PKVUK\n  strand  6: HZJVY\n  strand  7: ZLYLR\n  strand  8: LDQLD\n  strand  9: RKTTM\n  strand 10: FRQRF\n  strand 11: ANUED\n  strand 12: XSXV\n  strand 13: YHQJ\n\naverage index of coincidence over the 13 strands: 0.0744; over 10 strands (the key length): 0.0914",
+ "seconds": 8.828907012939453
+}

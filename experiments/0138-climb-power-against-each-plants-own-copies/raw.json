@@ -1,0 +1,246 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "power check of 0137's climb: one unknown alphabet, Beaufort form, key length 23; each plant against shuffles of itself",
+  "search": "0137's compiled climb, 1000 restarts x 100,000 moves per text, T 0.05->0.002",
+  "plants": 12,
+  "own_coppers_per_plant": 6,
+  "shuffles_tried": 188,
+  "restarts_done": {
+   "min": 1000,
+   "max": 1000
+  },
+  "c_decryption_checked": true,
+  "null_rate_found": 0.1429,
+  "null_expected_found": 1.71,
+  "bar": "design 1's power at 23 stands if >= 9 of 12 plants beat all 6 of their own coppers",
+  "plants_found_against_own": 6,
+  "passes_bar": false,
+  "plants_recovered": 0,
+  "plants_found_against_0137_k4_coppers": 11,
+  "rows": [
+   {
+    "score": -4.8215,
+    "letters_right": 39,
+    "true_score": -4.3953,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.1534,
+     -5.1466,
+     -5.0132,
+     -5.0052,
+     -4.9561,
+     -4.9055
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -5.021,
+    "letters_right": 35,
+    "true_score": -4.3849,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.1372,
+     -5.0936,
+     -5.0744,
+     -5.0346,
+     -4.8821,
+     -4.8211
+    ],
+    "rank_among_own": 3,
+    "found_own": false,
+    "rank_among_k4_coppers_0137": 6,
+    "recovered": false
+   },
+   {
+    "score": -4.8108,
+    "letters_right": 41,
+    "true_score": -4.4056,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.2181,
+     -5.1731,
+     -5.12,
+     -5.0836,
+     -4.9633,
+     -4.9299
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.9223,
+    "letters_right": 43,
+    "true_score": -4.1695,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.1343,
+     -5.0895,
+     -5.068,
+     -5.0266,
+     -4.9526,
+     -4.9296
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.9002,
+    "letters_right": 40,
+    "true_score": -4.1409,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.0643,
+     -5.0501,
+     -5.0164,
+     -4.9404,
+     -4.9325,
+     -4.7881
+    ],
+    "rank_among_own": 2,
+    "found_own": false,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.9083,
+    "letters_right": 34,
+    "true_score": -4.2494,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.0425,
+     -4.9897,
+     -4.9408,
+     -4.9345,
+     -4.8796,
+     -4.8204
+    ],
+    "rank_among_own": 3,
+    "found_own": false,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.8185,
+    "letters_right": 36,
+    "true_score": -4.1588,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.096,
+     -5.0747,
+     -5.0706,
+     -5.0667,
+     -4.9824,
+     -4.9609
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.8063,
+    "letters_right": 39,
+    "true_score": -4.6656,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.1167,
+     -5.0662,
+     -5.0246,
+     -5.0197,
+     -4.9595,
+     -4.9586
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.8133,
+    "letters_right": 37,
+    "true_score": -4.2112,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.1559,
+     -5.0646,
+     -4.8776,
+     -4.8729,
+     -4.8342,
+     -4.8068
+    ],
+    "rank_among_own": 2,
+    "found_own": false,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.8553,
+    "letters_right": 31,
+    "true_score": -4.4412,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.1413,
+     -5.1146,
+     -5.0514,
+     -5.0433,
+     -5.0031,
+     -4.9463
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.8563,
+    "letters_right": 38,
+    "true_score": -4.4377,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.2767,
+     -5.2265,
+     -5.2024,
+     -5.1083,
+     -4.9783,
+     -4.7417
+    ],
+    "rank_among_own": 2,
+    "found_own": false,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.9177,
+    "letters_right": 33,
+    "true_score": -4.3421,
+    "restarts": 1000,
+    "own_coppers": [
+     -5.1421,
+     -5.1346,
+     -5.1198,
+     -4.9972,
+     -4.9948,
+     -4.8835
+    ],
+    "rank_among_own": 2,
+    "found_own": false,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   }
+  ],
+  "controls": "per plant, 6 shuffles of its own ciphertext that fit length 23 exactly (0119's decider, seed 138)"
+ },
+ "notes": "plants beating all 6 own coppers: 6/12 (null 1.7); beating all 0137 K4 coppers: 11/12; recovered 0; bar failed",
+ "controls": [],
+ "error": null,
+ "worked_example": "key length 23, Beaufort form: K4 in rows of 23; each column is one key slot\n\n  O B K R U O X O G H U L B S O L I F B B W F L\n  R V Q Q P R N G K S S O T W T Q S J Q S S E K\n  Z Z W A T J K L U D I A W I N F B N Y P V T T\n  M Z F P K W G D K Z X T J C D I G K U H U A U\n  E K C A R\n\nthe seven checks every move keeps (place(carved) + place(known) equal within a column):\n  column 0: R+S (24) = M+C (70)\n  column 1: V+T (25) = Z+L (71)\n  column 2: Q+N (26) = F+O (72)\n  column 3: Q+O (27) = P+C (73)\n  column 4: P+R (28) = K+K (74)\n  column 21: F+E (22) = T+I (68)\n  column 22: L+A (23) = T+N (69)",
+ "seconds": 1608.9119679927826
+}

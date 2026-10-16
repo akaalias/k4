@@ -143,3 +143,7 @@ id	outcome	strength	cribs_forced	space	note
 0142	chance	sampled	no	F1.1 Beaufort L26: K4 vs 12 own fitting shuffles, design 2	K4 rank 12/13: closed sampled at power 5/6 (0140)
 0143	diagnostic	sampled	no	F1.2 design 2 on two free alphabets (Quagmire IV): power at L8/13/16, 5 plants x 5 kept-place copies	L13 5/5, L16 4/5 pass (bar 4, null 0.83); L8 incomplete (27 texts no run)
 0144	chance	sampled	no	F1.2 Quagmire IV L13, L16: K4 vs 12 kept-place copies, design 2	K4 rank 13/13 (L13), 7/13 (L16): closed sampled at power 5/5, 4/5 (0143)
+0145	diagnostic	sampled	no	F1.2 design 2 on two free alphabets: power at L8, 4 plants x 4 kept-place copies	4/4 beat all own copies (bar 3, null 0.8): passes
+0146	chance	sampled	no	F1.2 Quagmire IV L8: K4 vs 12 kept-place copies, design 2	K4 rank 2/13: closed sampled at power 4/4 (0145)
+0147	chance	exact	no	F1.6: 604 one-letter-error variants per text through exact one/two free alphabet periodic tests, L1-26, 10 coppers	K4 above all coppers 2/78 cells (1V:19, 2:19), null 0-11; added form revived at 19 by any S->x at 33, carried to 0148
+0148	chance	weak	no	F1.6 revived cell: added form, free alphabet, L19, carved 33 a slip; design 2 power 5 plants x 4 kept copies; K4 vs 12 copies	power 3/5 (bar 4) fails; K4 rank 7/13; cell stays blocked (weak); one plant recovered 97/97

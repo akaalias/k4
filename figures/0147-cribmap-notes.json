@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "K2 lost a letter; K1-K3 carry slips. If one carved letter of K4 is wrong, an exact test may have ruled a cipher out unfairly; K1 and K2's own system with a scrambled alphabet dies only on S under S at 33 and K under K at 74."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each carved letter at the 24 known places changed to each other letter, and one letter added or dropped between the known words: 604 variants, each decided exactly for one and two scrambled alphabets, key lengths 1-26, on K4 and 10 scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Fits at the copies' rate. One cell stands out by meaning: with the S at 33 changed to any other letter, K1 and K2's system fits at key length 19; 0148 judges it by English."
+ }
+]

@@ -104,7 +104,8 @@ are never edited, and the dashboard shows each experiment's current verdict.
   at stated power) or `blocked` (a written reason it cannot be tested with the known
   letters). Reverts do not force a pivot; a revert that closes an item is progress.
 - Every experiment names the item it works on (for example "F1.1") in `changed` and
-  the strength it reached. After the run, update the item's row and add the
+  the strength it reached. After the run, update the item's row and its leaf in the
+  hypothesis tree (families.md; add sub-hypotheses there when an item splits), and add the
   experiment's line to `grades.tsv`. A weak test leaves the item open.
 - A result outside the scrambled-copper range stops the queue: replicate it against
   fresh controls before anything else.

@@ -1508,6 +1508,134 @@ def lineage_page():
     return page("research lineage", body, "/lineage")
 
 
+TREE_CSS = """<style>
+.ht-wrap{max-width:1080px;width:calc(100vw - 32px);position:relative;left:50%;transform:translateX(-50%);margin:18px 0 28px}
+.ht-eyebrow{font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 4px;padding-top:10px;border-top:1px solid var(--rule)}
+.ht-key{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;color:var(--muted);margin:4px 0 14px}
+.ht,.ht ul{list-style:none;margin:0;padding:0}
+.ht ul{margin-left:11px;padding-left:20px;border-left:1px solid var(--rule)}
+.ht li{position:relative;margin:0;padding:3px 0}
+.ht ul>li:before{content:'';position:absolute;left:-20px;top:15px;width:16px;border-top:1px solid var(--rule)}
+.ht ul>li:last-child:after{content:'';position:absolute;left:-21px;top:16px;bottom:0;border-left:3px solid var(--paper)}
+.ht details>summary{list-style:none;cursor:pointer}
+.ht details>summary::-webkit-details-marker{display:none}
+.ht summary .tw{display:inline-block;width:12px;color:var(--faint);font-size:11px;transition:transform .15s}
+.ht details[open]>summary .tw{transform:rotate(90deg)}
+.ht .row{display:inline;line-height:1.45}
+.ht .lab{font-size:15px}
+.ht .br>.row .lab{font-weight:600}
+.ht .fam>details>summary .lab{font-size:16px;font-weight:600}
+.ht .root>details>summary .lab{font-size:18px;font-style:italic;font-weight:400}
+.ht-wrap .st{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 7px 0 1px;vertical-align:0}
+.st-open{background:var(--accent)}
+.st-closed{background:var(--disc)}
+.st-blocked{background:transparent;border:1.5px dashed var(--faint);width:7px!important;height:7px!important}
+.st-noted{background:transparent;border:2px solid var(--ochre);width:6px!important;height:6px!important}
+.ht .meta{font-size:12.5px;color:var(--faint);margin-left:8px;white-space:nowrap}
+.ht .meta a{color:var(--faint);text-decoration:none;border-bottom:1px dotted var(--faint)}
+.ht .meta a:hover{color:var(--accent)}
+.ht .roll{font-size:12.5px;color:var(--muted);margin-left:10px;white-space:nowrap}
+.ht .roll b{font-weight:600;color:var(--accent)}
+.ht .bar{display:inline-flex;width:70px;height:6px;margin-left:8px;vertical-align:1px;border-radius:3px;overflow:hidden;background:var(--rule-soft)}
+.ht .bar i{display:block;height:100%}
+.ht .rank{font:600 11px var(--serif);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+.ht .next{font:600 10.5px var(--serif);letter-spacing:.08em;text-transform:uppercase;color:var(--paper);background:var(--accent);padding:1px 6px;border-radius:3px;margin-left:8px}
+.ht li.is-open>.row .lab{color:var(--ink)}
+.ht li.is-closed>.row .lab,.ht li.is-blocked>.row .lab{color:var(--muted)}
+@media(max-width:640px){.ht ul{padding-left:12px;margin-left:6px}.ht ul>li:before{left:-12px;width:9px}.ht ul>li:last-child:after{left:-13px}.ht .meta,.ht .roll{white-space:normal;display:block;margin-left:22px}}
+</style>"""
+
+
+def parse_tree(text):
+    """The nested list under '### Hypothesis tree' in families.md, as {label, status, strength, exps, kids}."""
+    m = re.search(r"^### Hypothesis tree\n(.*?)(?=^### |\Z)", text, re.S | re.M)
+    if not m:
+        return None, text
+    root, stack = None, []
+    for ln in m.group(1).splitlines():
+        mm = re.match(r"^( *)- (.*)$", ln)
+        if not mm:
+            continue
+        depth = len(mm.group(1)) // 2
+        body = mm.group(2).strip()
+        node = {"label": body, "status": None, "strength": "", "exps": [], "kids": []}
+        b = re.search(r"\{([^}]*)\}\s*$", body)
+        if b:
+            node["label"] = body[:b.start()].strip()
+            parts = [x.strip() for x in b.group(1).split("·")]
+            node["status"] = parts[0] if parts else None
+            node["strength"] = parts[1] if len(parts) > 1 else ""
+            node["exps"] = [e.strip() for e in parts[2].split(",")] if len(parts) > 2 else []
+        while stack and stack[-1][0] >= depth:
+            stack.pop()
+        if stack:
+            stack[-1][1]["kids"].append(node)
+        else:
+            root = node
+        stack.append((depth, node))
+    cut = text[:m.start()] + "### Hypothesis tree\n\n<div class=\"ht-slot\"></div>\n\n" + text[m.end():]
+    return root, cut
+
+
+def tree_html(root, text):
+    tags = {r["tag"][:4]: r["tag"] for r in load_results()}
+    ranks = {m.group(2): m.group(1) for m in re.finditer(r"^\| (\d+(?:st|nd|rd|th)) \| (F\d)", text, re.M)}
+    next_done = [False]
+
+    def roll(n):
+        if not n["kids"]:
+            return {n["status"] or "open": 1}
+        c = {}
+        for k in n["kids"]:
+            for s_, v in roll(k).items():
+                c[s_] = c.get(s_, 0) + v
+        return c
+
+    def inline(label):
+        return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc(label))
+
+    def node(n, depth):
+        kids = n["kids"]
+        if not kids:
+            st = n["status"] or "open"
+            nx = ""
+            if st == "open" and not next_done[0] and n["label"].startswith("**F"):
+                nx = '<span class="next">next</span>'; next_done[0] = True
+            exps = " ".join(f'<a href="/exp/{esc(tags[e])}">{int(e)}</a>' if e in tags else esc(e) for e in n["exps"])
+            meta = " &middot; ".join(x for x in [esc(st), esc(n["strength"]), exps] if x)
+            return (f'<li class="lf is-{esc(st)}"><span class="row"><i class="st st-{esc(st)}"></i>'
+                    f'<span class="lab">{inline(n["label"])}</span>{nx}<span class="meta">{meta}</span></span></li>')
+        c = roll(n)
+        tot = sum(c.values())
+        order = [("closed", "var(--disc)"), ("noted", "var(--ochre)"), ("blocked", "var(--faint)"), ("open", "var(--accent)")]
+        bar = "".join(f'<i style="width:{100 * c.get(k, 0) / tot:.1f}%;background:{col}"></i>' for k, col in order if c.get(k))
+        words = ", ".join(f"<b>{c[k]} {k}</b>" if k == "open" else f"{c[k]} {k}" for k, _ in reversed(order) if c.get(k))
+        cls = "root" if depth == 0 else ("fam" if depth == 1 else "br")
+        fm = re.match(r"(F\d)\s", n["label"])
+        rank = f'<span class="rank">{ranks[fm.group(1)]}</span>' if fm and fm.group(1) in ranks else ""
+        is_open = depth <= 1 or c.get("open")
+        inner = "".join(node(k, depth + 1) for k in kids)
+        return (f'<li class="{cls}"><details{" open" if is_open else ""}><summary><span class="row"><span class="tw">&#9656;</span>{rank}'
+                f'<span class="lab">{inline(n["label"])}</span><span class="roll">{words}</span><span class="bar">{bar}</span></span></summary>'
+                f'<ul>{inner}</ul></details></li>')
+
+    key = ('<div class="ht-key"><span><i class="st st-open"></i>open: still to test</span>'
+           '<span><i class="st st-closed"></i>closed: ruled out by an exact test, or a sampled one against scrambled copies</span>'
+           '<span><i class="st st-blocked"></i>blocked: cannot be tested with the known letters alone</span>'
+           '<span><i class="st st-noted"></i>noted: a finding, not a hypothesis to close</span></div>')
+    return (TREE_CSS + '<div class="ht-wrap"><p class="ht-eyebrow">Families in rank order &middot; '
+            'click a branch to fold it; the numbers open the experiment</p>' + key + f'<ul class="ht">{node(root, 0)}</ul></div>')
+
+
+def families_page():
+    text = (ROOT / "families.md").read_text()
+    root, cut = parse_tree(text)
+    body = md(cut)
+    if root:
+        body = body.replace('<div class="ht-slot"></div>', tree_html(root, text))
+    return page("families", "<article>" + body + "</article>", "/families", True)
+
+
 def md_page(title, path, active, refresh=True):
     import re as _re
     text = (ROOT / path).read_text()
@@ -1538,7 +1666,7 @@ def route(path):
     if path == "/notebook":
         return md_page("lab notebook", "NOTEBOOK.md", "/notebook")
     if path == "/families":
-        return md_page("families", "families.md", "/families")
+        return families_page()
     if path == "/clues":
         return md_page("clue register", "knowledge/11-clue-register.md", "/clues")
     if path == "/program":

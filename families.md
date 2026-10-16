@@ -45,6 +45,86 @@ largest axis not yet covered, and it costs less with no move (F1) than after one
 F2 come next because their remaining items are cheap. The rest are closed or blocked except
 for low-value residues.
 
+### Hypothesis tree
+
+One line per hypothesis. A leaf carries `{status · strength · experiments}`; a branch's status is
+rolled up from its leaves on the dashboard. Status: `open`, `closed`, `blocked`, `noted`.
+Update the leaf when an experiment works on it.
+
+- We believe the solution is present within these families
+  - Excluded by the known letters alone, before any search
+    - Pure transposition: the known letters need three Es, the copper has two {closed · exact · 0051}
+    - One substitution alphabet: the same carved letter stands for different known letters {closed · exact}
+    - Rotor machines: K encrypts to K, S to S {closed · exact}
+    - Systems with 25 or fewer symbols (Playfair, bifid, ADFGVX): K4 uses all 26 letters {closed · exact · 0052}
+  - F1 One keyed stage, no move
+    - A repeating key on the table
+      - Standard or KRYPTOS alphabets, key lengths 1-26 and 30-52 {closed · exact · 0005}
+      - Key lengths 27-29 and 53+ on alphabets from the puzzle's words; the completed key reads as noise {closed · exact · 0034, 0035, 0048, 0053}
+      - Alphabets from any dictionary word, key lengths 1-26 {closed · exact · 0109}
+      - Alphabets one swap or move from KRYPTOS {closed · exact · 0071}
+      - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {open · weak · 0097, 0100, 0102}
+      - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26 {open · weak · 0097}
+    - A progressive key {closed · exact · 0011, 0042}
+    - A self-feeding key (autokey)
+      - Ciphertext autokey, any lag, every alphabet tried {closed · exact · 0002, 0025, 0064, 0118}
+      - Plaintext autokey, lags 1-52 {closed · exact · 0003, 0012}
+      - Plaintext autokey, lags 53-96: the known letters force too little {blocked}
+      - Autokey plus a repeating key {closed · exact · 0066, 0067, 0073}
+    - A running key from a text
+      - K1-K3, the sculpture's texts, Carter, Sanborn's letters {closed · exact · 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117}
+      - An unknown English text, on standard, KRYPTOS or puzzle-word alphabets {closed · sampled · 0009, 0010}
+      - **F1.3** An unknown English text, on any dictionary-word alphabet {open}
+    - A key schedule worked by hand
+      - The Berlin clock, the Carter dates {closed · exact · 0079, 0038}
+      - **F1.4** Other hand schedules (C20(c)-(e)) {open}
+  - F6 A move, then the table
+    - One move, then a repeating key on standard, KRYPTOS or word alphabets
+      - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}
+      - K3's rule, quarter turns, grid paths, the ? as a 98th symbol {closed · exact · 0008, 0041, 0082, 0083, 0086, 0099}
+      - Key on both sides of the move {closed · exact · 0080}
+      - AMSCO at key length 23: above the coppers, within the number expected by chance {noted · exact · 0114}
+    - One move with an autokey, running key or clock schedule {closed · exact · 0063, 0081, 0090, 0091}
+    - One carved letter wrong, missing or extra, through every move {closed · exact · 0093, 0094}
+    - Three stages
+      - Three clockwise quarter turns, every width {closed · exact · 0083}
+      - **F6.3** Mixed three-stage routes {open · sampled · 0037}
+    - Alphabets in unknown orders after or before a move
+      - **F6.1** One unknown alphabet (Quagmire III) {open · weak · 0097}
+      - **F6.2** Two unknown alphabets (Quagmire IV) {open · weak · 0097}
+    - **F6.4** Padding at each grid stage; nulls dropped between grids {open · sampled · 0082}
+  - F3 A two-part key with a combiner
+    - Two words added: both from the puzzle, or one from the dictionary {closed · exact · 0014, 0043, 0059, 0115}
+    - A word plus digits from the story {closed · exact · 0024, 0038}
+    - A word plus the misspelt or raised letters {closed · exact · 0061}
+    - A column word plus a row key {closed · exact · 0087, 0088}
+    - **F3.1** Combiners other than addition {open}
+    - **F3.2** Number keys from the Morse and the plate layout {open}
+  - F2 Masked plaintext, then a keyed stage
+    - Masks that move or pad letters: reversal, nulls, doublets as nulls {closed · exact · 0023, 0057, 0075}
+    - Masks that change letters: affine, Atbash {closed · exact · 0074}
+    - The message written along a grid path {closed · exact · 0092}
+    - **F2.1** Fragments from 0057's letter strike-outs at key lengths 24-25 not yet matched against words {open}
+    - **F2.2** Nulls placed by a rule {open}
+    - A code layer, phonetic spelling, another language: these change the known letters or need a codebook {blocked}
+  - F4 Sanborn's visual systems
+    - Trifid, any cube {closed · exact · 0040}
+    - The plates as a key by position, straight or folded {closed · exact · 0089}
+    - K4 read from behind the screen {closed · exact · 0108}
+    - **F4.1** A route that follows the plates' physical layout {open}
+  - F8 Hill ciphers
+    - Hill 2-5, plain and affine, any numbering, chained, with a repeating key {closed · exact · 0015, 0036, 0044, 0055, 0105, 0116}
+    - Settings with too few equations to decide (5x5 affine; long keys with 4x4) {blocked · exact · 0105, 0116}
+  - F5 Gromark and number feedback
+    - Two- and three-term rules, any alphabet, bases 2-26 {closed · exact · 0013, 0028, 0046, 0054, 0069, 0076, 0107}
+    - **F5.1** Multiplicative feedback; the raised YAR as primer {open}
+  - F9 Substitution, then a move
+    - One-to-one substitution, then any of the 1.86M built routes {closed · exact · 0019, 0106}
+    - Routes outside every built set: unbounded without a list of hand methods {blocked}
+  - F7 Construction simulation (a check on the others, not a cipher)
+    - K4's two patterns, doublets lining up in sevens and repeats 21 apart, are real {noted · sampled · 0056}
+    - No construction tried makes both patterns {closed · sampled · 0018, 0027, 0062, 0065, 0096}
+
 ### F1. One keyed stage, no move
 
 | Item | Status | Strength | Experiments | Next test or reason |

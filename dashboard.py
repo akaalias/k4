@@ -2118,25 +2118,15 @@ def families_page():
 
 
 PROG_CSS = """<style>
-.prog .rsec{margin-top:46px}
 .prog p{max-width:760px}
-.prog ol.steps{list-style:none;counter-reset:st;padding:0;margin:16px 0 20px;max-width:none}
-.prog ol.steps>li{counter-increment:st;position:relative;padding:3px 0 16px 50px;max-width:800px;margin:0}
-.prog ol.steps>li:before{content:counter(st);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);background:var(--paper);font:600 14px/27px var(--serif);text-align:center;box-sizing:border-box;z-index:1}
-.prog ol.steps>li:after{content:'';position:absolute;left:14.5px;top:30px;bottom:0;border-left:1px solid var(--rule)}
-.prog ol.steps>li:last-child:after{display:none}
-.prog ol.steps>li>strong:first-child{font-weight:600;color:var(--ink)}
-.prog ul.cards{list-style:none;padding:0;margin:16px 0 22px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;max-width:none}
+.prog ol{padding-left:24px;margin:10px 0 16px}.prog ol>li{margin:0 0 9px;max-width:760px;padding-left:4px}
+.prog li>ul{list-style:none;padding-left:0;margin:6px 0 6px}.prog li>ul>li{margin:0 0 3px}
+.prog ul.cards{list-style:none;padding:0;margin:14px 0 20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;max-width:none}
 .prog ul.cards>li{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:13px 16px 12px;margin:0;max-width:none;font-size:15px;line-height:1.55}
-.prog ul.cards>li>strong:first-child{display:block;font:600 11px/1.3 var(--serif);text-transform:uppercase;letter-spacing:.09em;color:var(--accent);margin-bottom:6px}
-.prog ul.cards>li>strong:first-child code{font-size:11px;background:none;border:none;padding:0;color:var(--accent)}
-.prog li ul{margin:8px 0 4px;padding-left:18px}.prog li ul li{margin:0 0 4px;max-width:none}
-.prog ul:not(.cards){padding-left:20px}
-.prog code{font-size:12.5px;background:var(--wash);border:1px solid var(--rule-soft);border-radius:3px;padding:0 4px;white-space:nowrap}
-.prog a.fchip code{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
-.prog a.fchip{text-decoration:none}
-.prog blockquote{margin:6px 0 18px}
-@media(max-width:760px){.prog ul.cards{grid-template-columns:1fr}.prog code{white-space:normal}}
+.prog ul.cards>li>strong:first-child{display:block;font:600 11px/1.3 var(--serif);text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:6px}
+.prog ul.cards>li>strong:first-child code{font:inherit;color:inherit}
+.prog a.fchip{text-decoration:none;border-bottom:1px dotted var(--accent)}.prog a.fchip code{color:var(--accent)}
+@media(max-width:760px){.prog ul.cards{grid-template-columns:1fr}}
 </style>"""
 
 FILE_PAGES = {"order-of-work.md": "/priorities", "families.md": "/families", "11-clue-register.md": "/clues",
@@ -2150,11 +2140,13 @@ def program_page():
     text = (ROOT / "program.md").read_text()
     text = re.sub(r"^# .*\n", "", text, count=1, flags=re.M)
     intro, *secs = re.split(r"^## ", text, flags=re.M)
-    out = [md(intro)]
+    out = ['<article class="prog">' + md(intro) + "</article>"]
     for k, sec_text in enumerate(secs, 1):
         title, _, body = sec_text.partition("\n")
+        decided = re.search(r"\((decided[^)]*)\)", title)
         title = re.sub(r"\s*\(decided[^)]*\)", "", title).strip()
-        out.append(sec(k, title) + md(body))
+        out.append(sec(k, title, decided.group(1)[0].upper() + decided.group(1)[1:] + "." if decided else "")
+                   + '<article class="prog">' + md(body) + "</article>")
     h = "".join(out)
 
     def tag_lists(h):
@@ -2167,7 +2159,7 @@ def program_page():
                 depth -= 1; res.append(m.group(0)); continue
             if depth == 0:
                 nxt = h[m.end():m.end() + 40].lstrip()
-                cls = "steps" if kind == "ol" else ("cards" if nxt.startswith("<li><strong>") else "")
+                cls = "cards" if kind == "ul" and nxt.startswith("<li><strong>") else ""
                 res.append(f'<{kind} class="{cls}">' if cls else m.group(0))
             else:
                 res.append(m.group(0))
@@ -2184,7 +2176,7 @@ def program_page():
                      "pass, what it may touch, the loop itself, and how it decides what to try next.",
                      'The source is <code>program.md</code>; the agent reads it before every session.')
     foot = page_foot('The order the families are worked in is on <a href="/priorities">Priorities</a>; what has been tried is in the <a href="/record">full record</a>.')
-    return page("program", head + PROG_CSS + '<article class="prog">' + h + "</article>" + foot, "/program", False)
+    return page("program", head + PROG_CSS + h + foot, "/program", False)
 
 
 def md_page(title, path, active, refresh=True, eyebrow="", h1="", standfirst="", facts="", foot="", take_intro=False):

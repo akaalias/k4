@@ -81,6 +81,7 @@ edited, and the dashboard shows each experiment's current verdict.
 
     The harness records run and record itself. Time per phase is part of every experiment's
     record and of the dashboard.
+
 2. **Read the record.** Decide the next experiment: one focused change, with a parent (the
    champion, or the experiment you are extending) or a new root when changing family.
 3. **Pre-register.** Fill `EXPERIMENT` in `attack.py` before writing any search code: slug,
@@ -111,6 +112,7 @@ edited, and the dashboard shows each experiment's current verdict.
     - real letters and numbers from the record.
 
     Render each figure and look at it before committing. Every experiment has illustrations.
+
 11. **Readable words** run by themselves: after every run the harness asks a language model
     to mark the English words in the readings that passed every gate and the five closest,
     checks each against the dictionary, and stores them in the record (`readable_words`). The
@@ -132,6 +134,7 @@ edited, and the dashboard shows each experiment's current verdict.
     - the experiment's line in `grades.tsv`.
 
     A weak test leaves the item open.
+
 - **A result outside the scrambled-copper range stops the queue:** replicate it against fresh
   controls before anything else.
 - **Change the ranking only at a family boundary,** with the reason in the pivot log.
@@ -187,5 +190,6 @@ over experiments that sweep a textbook cipher family. Both are needed:
       correct key word/s".
     - Sanborn: "matrix codes Ed gave me" plus his own "visual systems"; earlier text holds
       "instructions" for later text; K4 "will come back to the first part".
+
 - **Earlier keys:** the K1-K3 keys were PALIMPSEST, ABSCISSA and (by one reading) KRYPTOS;
   `data/vocabulary.txt` lists key candidates from inside the puzzle.

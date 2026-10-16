@@ -31,6 +31,15 @@ F1 continued (ticket #14), after the run that started on 2026-10-16 (0136-0153 a
 | 166 | F6.12, F6.13, F6.15 | **EVA, Chiffre XIII, YAR, exact.** EVA's double triangle under one 19-letter numbering (1,920 keys): no key up to 26 fits after the move, 25 before, as on copies. Chiffre XIII as a parametric family (the source does not give rows 2 and 4's rule, so every split and shift; 2.25 million masks from 24-31-letter K1-K3 windows and puzzle phrases), then its published period-5 substitution on an unknown mixed alphabet, decided exactly: no mask consistent with 3+ checks on K4 or any copy. YAR's "1-2-3" as counting-off orders (1-2-3 and 4-5-7, every order): nothing below 26. All closed. Prediction held. |
 | 167 | F6.14 | **Nihilist transposition, exact.** 10 x 10 square, three blanks at each of eight places, one key of every order (10!) for rows and columns, read by rows or columns, both directions: 116 million routes in 226 s (compiled; builder checked against Python). Shortest consistent key 20 after, 24 before (copies 18, 17); K4 above every copper in 0 of 52 cells. Closed. Prediction held. **Every F6 item is now closed or blocked.** |
 
+### F12, Stein's way (after pivot P8, ticket #53)
+
+F12.1 blocked without a run: no image of the copper's K4 section at letter resolution is in the repository (Panel4Grid is a blurred video frame of a worksheet; the Blender model needs Blender); the NYT 2010 typeset clue agrees with the transcription at all 97 places.
+
+| # | Item | One line |
+|---|---|---|
+| 168 | F12.2 | **K4 measured, 71 statistics against 1,000 shuffles.** Letter counts across 8 segmentations, I.C. at 1-48 alphabets, repeats at widths 7, 21, 31: nothing outside every shuffle (0.14 expected by chance). Smallest p: the width-7 doublet column 0.002, the width-21 repeated vertical bigrams 0.004 (0056's fingerprints), width-7 same-letter vertical repeats 0.008 (the NSA's "interval 7"). No segment break, no I.C. peak. Closed, no new item. Prediction held. |
+| 169 | F12.3 | **Stein's peak at 13 alphabets.** Against 10,000 shuffles within each part's key columns: K1 p 0.0075 (local peak 0.0046), Part II p 0.24 (0.048), all of K2 0.09, K1 plaintext 0.86, K4 0.21 (0168). After the run, a look-elsewhere check over Stein's 12 non-key alphabet counts gives K1 p about 0.019. A marginal coincidence in K1 that does not replicate where he saw it again; closed as chance. **Prediction failed for K1** (expected above 0.05). |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Stein saw the letters match more often when K1 and part of K2 were cut into 13 strands, and wondered whether a second, 13-letter code lay underneath."
+ },
+ {
+  "anchor": "the check",
+  "text": "Shuffle each text only among the places that share a key letter, which keeps everything the known keys explain, 10,000 times, and see how often the bump at 13 is reached."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K1's bump is unusual (p 0.0075, about 0.02 allowing for the strand counts scanned); Part II's is not (0.24), nor K4's (0.21). A coincidence, closed."
+ }
+]

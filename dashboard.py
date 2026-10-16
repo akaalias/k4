@@ -1239,8 +1239,8 @@ LIN_CSS = """
 .lin-legend .lkept{width:11px;height:11px;background:var(--ink)}
 .lin-legend .lwas{width:13px;height:13px;border-radius:50%;border:1.3px dashed var(--ink);display:inline-block}
 .lin-legend .lerr{color:var(--accent);font:700 14px/1 var(--serif)}
-.lin-legend .larc{width:0;height:16px;border-left:1.5px solid var(--muted);display:inline-block;margin:0 4px}
-.lin-legend .lx{width:0;height:16px;border-left:1.5px dotted var(--muted);display:inline-block;margin:0 4px}
+.lin-legend .larc{width:9px;height:16px;border-right:1.2px solid var(--muted);border-radius:0 9px 9px 0;display:inline-block}
+.lin-legend .lx{width:0;height:16px;border-left:1.2px dashed var(--muted);display:inline-block;margin:0 4px}
 .lin-box{position:relative;width:min(1600px,94vw);margin:16px 0 0 calc(50% - min(800px,47vw));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 #lin-heads{position:sticky;top:0;z-index:5;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--rule)}
 #lin-lanes{position:relative;will-change:transform}
@@ -1255,9 +1255,11 @@ LIN_CSS = """
 #lin .lband{fill:currentColor;fill-opacity:.05}
 #lin .lbound{stroke:var(--rule-soft);stroke-width:1}
 #lin .lbase{stroke:var(--rule-soft);stroke-width:1}
-#lin .ltick{stroke:var(--rule-soft);stroke-width:1;stroke-dasharray:1 3}
-#lin .edge{fill:none;stroke:var(--muted);stroke-opacity:.55;stroke-width:1.5}
-#lin .edge.x{stroke-width:1.4;stroke-dasharray:.1 3.4;stroke-linecap:round}
+#lin .lrow{stroke:var(--rule-soft);stroke-width:1;shape-rendering:crispEdges}
+#lin .lrow.ten{stroke:var(--rule);stroke-opacity:.6}
+#lin .lrow.lit-direct{stroke:var(--muted);stroke-opacity:.45}
+#lin .edge{fill:none;stroke:var(--disc);stroke-width:1}
+#lin .edge.x{stroke-dasharray:3 3}
 #lin .ng{cursor:pointer;outline:none}
 #lin .nr{fill:currentColor}
 #lin .nk{fill:var(--ink)}
@@ -1265,13 +1267,12 @@ LIN_CSS = """
 #lin .ne{stroke:var(--accent);stroke-width:1.8;stroke-linecap:round}
 #lin .nlab{fill:var(--faint);font:9.5px/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
 #lin .ng:focus-visible .hit{stroke:var(--accent);stroke-width:1.5}
-#lin.dim .ng{opacity:.1}
-#lin.dim .edge{opacity:.12}
+#lin.dim .ng,#lin.dim .edge{opacity:.1}
 #lin.dim .ng.lit{opacity:.6}
 #lin.dim .ng.lit-direct{opacity:1}
 #lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
-#lin.dim .edge.lit{opacity:1;stroke:var(--ink);stroke-opacity:.7}
-#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-opacity:1;stroke-width:2}
+#lin.dim .edge.lit{opacity:.5;stroke:var(--muted)}
+#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
 #lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
 #lin-tip .pop-title{font-weight:700;font-size:14.5px;line-height:1.25;margin-bottom:3px}
 #lin-tip .pop-meta{color:var(--muted);font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
@@ -1299,7 +1300,8 @@ LIN_JS = r"""
   var svg=null,geo=null,shownKey=null,lastPointer='mouse';
 
   // Geometry: y is run order, one column per family. Each column has a gutter for the
-  // experiment numbers, then the line of dots, then room for the bowed edges.
+  // experiment numbers, then the line of dots; same-family arcs bulge right into the rest
+  // of the column, never wider than the column allows.
   function layout(){
     var n=nodes.length,nf=fams.length,padY=16,sp=16,MINCOL=112,NUMW=30;
     var avail=host.clientWidth||1000;
@@ -1317,25 +1319,23 @@ LIN_JS = r"""
       g+='<rect class="lband f'+fams[i].c+'" x="'+C.left.toFixed(1)+'" y="0" width="'+geo.colW.toFixed(1)+'" height="'+H+'"/>';
       if(i)g+='<line class="lbound" x1="'+C.left.toFixed(1)+'" x2="'+C.left.toFixed(1)+'" y1="0" y2="'+H+'"/>';
     });
-    // a faint rule every tenth experiment, so a row can be read across the columns
-    nodes.forEach(function(nd){if(typeof nd.n==='number'&&nd.n%10===0){var ty=y[nd.key];
-      g+='<line class="ltick" x1="0" x2="'+W+'" y1="'+ty+'" y2="'+ty+'"/>';}});
-    // Edges leave the parent straight down and enter the child from above: a cubic whose
-    // control points sit below the parent and above the child. Between columns that makes an
-    // S; inside a column it is a straight drop, bowed a few pixels to the right only when it
-    // would otherwise run through the dots in between (longer drops bow a little further).
-    var famYs=fams.map(function(){return [];});
-    nodes.forEach(function(nd){famYs[nd.fam].push(y[nd.key]);});
+    // one faint rule per experiment across every column, so the sequence can be followed
+    // from one family to the next; every tenth is a little stronger
+    nodes.forEach(function(nd){var ty=y[nd.key],ten=typeof nd.n==='number'&&nd.n%10===0;
+      g+='<line class="lrow'+(ten?' ten':'')+'" data-key="'+esc(nd.key)+'" x1="0" x2="'+W+'" y1="'+ty+'" y2="'+ty+'"/>';});
+    cols.forEach(function(C){g+='<line class="lbase" x1="'+C.x.toFixed(1)+'" x2="'+C.x.toFixed(1)+'" y1="'+geo.padY+'" y2="'+(H-geo.padY)+'"/>';});
     nodes.forEach(function(nd){
       var p=parentOf(nd.key);if(!p)return;
-      var a=y[p],b=y[nd.key],d,cls='edge';
-      if(byKey[p].fam===nd.fam){var x0=xOf(nd.key),between=famYs[nd.fam].some(function(v){return v>a&&v<b;});
-        if(!between)d='M'+x0.toFixed(1)+','+a+' L'+x0.toFixed(1)+','+b;
-        else{var bw=Math.min(geo.CAP,3+1.6*Math.log2(1+(b-a)/geo.sp)),dy=Math.min(.45*(b-a),40),xb=(x0+bw).toFixed(1);
-          d='M'+x0.toFixed(1)+','+a+' C'+xb+','+(a+dy).toFixed(1)+' '+xb+','+(b-dy).toFixed(1)+' '+x0.toFixed(1)+','+b;}}
-      else{var xa=xOf(p).toFixed(1),xc=xOf(nd.key).toFixed(1),dy2=Math.min(140,Math.max(.45*(b-a),Math.min(.8*(b-a),24)));cls+=' x';
-        d='M'+xa+','+a+' C'+xa+','+(a+dy2).toFixed(1)+' '+xc+','+(b-dy2).toFixed(1)+' '+xc+','+b;}
-      g+='<path class="'+cls+'" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';
+      var a=y[p],b=y[nd.key],d;
+      // the bulge grows with the log of the span, so long arcs fan out across the column
+      // instead of all piling up at its right edge
+      if(byKey[p].fam===nd.fam){var xb=xOf(nd.key).toFixed(1),ry=(b-a)/2,
+        r=Math.min(ry+4,geo.CAP*Math.min(1,Math.log(1+(b-a)/geo.sp)/Math.log(1+H/geo.sp)));
+        d='M'+xb+','+a+' A'+r.toFixed(1)+','+ry.toFixed(1)+' 0 0 1 '+xb+','+b;
+        g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
+      else{var xa=xOf(p),xc=xOf(nd.key),h=(xc-xa)/2;
+        d='M'+xa.toFixed(1)+','+a+' C'+(xa+h).toFixed(1)+','+a+' '+(xc-h).toFixed(1)+','+b+' '+xc.toFixed(1)+','+b;
+        g+='<path class="edge x" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
     });
     nodes.forEach(function(nd){
       var cx=xOf(nd.key).toFixed(1),cy=y[nd.key],k=esc(nd.key),m='';
@@ -1368,6 +1368,7 @@ LIN_JS = r"""
     clearLit();svg.classList.add('dim');
     var chain=[key],cur=key;while((cur=parentOf(cur))&&chain.indexOf(cur)<0)chain.push(cur);
     chain.forEach(function(k,i){mark(k,i<2?'lit-direct':'lit');});
+    var row=svg.querySelector('.lrow[data-key="'+CSS.escape(key)+'"]');if(row)row.classList.add('lit-direct');
     svg.querySelectorAll('.edge').forEach(function(e){var c=e.getAttribute('data-c'),i=chain.indexOf(c);
       if(i>=0&&e.getAttribute('data-p')===chain[i+1])e.classList.add(i===0?'lit-direct':'lit');});
   }
@@ -1490,7 +1491,7 @@ def lineage_page():
     body = f"""<style>{LIN_CSS}</style><div class="lin">
 <div class="lin-head"><p class="eyebrow">Research lineage</p>
 <h1>The family tree of the search</h1>
-<p class="standfirst">Every experiment, top to bottom in the order it ran, in the column of its family. A line runs down from each experiment to the ones built on it: solid inside a family, dotted when the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.</p>
+<p class="standfirst">Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.</p>
 <p class="muted" style="font-size:14.5px;margin:0 0 12px">{facts}</p>
 <div class="lin-legend">
 <span class="k"><span class="ldot lkept"></span>kept</span>

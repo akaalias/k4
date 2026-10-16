@@ -50,7 +50,9 @@ a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a
 .wrap{max-width:980px;margin:0 auto;padding:14px 28px 40px}
 h1.home{font:italic 400 40px/1.15 var(--serif);text-align:center;margin:72px 0 10px;letter-spacing:-.01em}
 @media(min-width:761px){h1.home{white-space:nowrap;font-size:clamp(26px,3.9vw,40px);width:96vw;position:relative;left:50%;transform:translateX(-50%)}}
-.sec-lead{max-width:760px;font-size:17px;line-height:1.65;margin:4px 0 8px}
+.sec-lead{max-width:760px;font-size:17px;line-height:1.65;margin:4px 0 12px}
+#sculpture .sc-credit{position:absolute;right:12px;bottom:10px;z-index:2;font:italic 12.5px var(--serif);color:var(--muted);background:color-mix(in srgb,var(--paper) 78%,transparent);padding:3px 8px;border-radius:3px;text-decoration:none}
+#sculpture .sc-credit:hover{color:var(--accent)}
 p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}p.psub.answer{font-size:32px;line-height:1.3;color:var(--ink);margin:44px auto 34px;max-width:none}@media(max-width:760px){p.psub.answer{font-size:22px;margin-top:28px}}
 .hero-flow{width:96vw;position:relative;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:12px;margin:22px 0 26px}
 .hero-flow .lp-col{zoom:.74}
@@ -780,7 +782,7 @@ def sculpture_panels():
 def sculpture_block():
     data = json.dumps(sculpture_panels())
     keys = "".join(f'<span data-region="{esc(n)}">{esc(n)}</span>' for n in ("K1", "K2", "K3", "K4", "the table"))
-    return (f'<div class="sculpture-wrap"><div id="sculpture"></div>'
+    return (f'<div class="sculpture-wrap"><div id="sculpture"><a class="sc-credit" href="https://www.youtube.com/@K4HasGotMe" target="_blank" rel="noopener">Model: Bret L Bowen (K4HasGotMe on YouTube)</a></div>'
             f'<div class="sculpture-foot"><div class="sculpture-key">{keys}</div><p id="sculpture-label" class="muted">Hover a plate to see which part of the puzzle it carries. Drag to turn.</p></div></div>'
             f'<script>window.KRYPTOS_PANELS = {data};</script>'
             '<script type="importmap">{"imports": {"three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>'
@@ -1070,7 +1072,7 @@ def what_we_look_for():
     ]
     html = "".join(f'<div class="explain-col"><h4>{esc(h)}</h4><p>{crib_cells(esc(t))}</p></div>' for h, t in cols)
     sub = lambda n, t, d: f'<div class="subsec"><b>1.{n}</b><h3>{t}</h3></div><p class="subsec-sub">{d}</p>'
-    return (sub(1, "The sculpture", "Bret L Bowen's model of Kryptos. Hover a key below it, or a plate, to see which message it carries.") + sculpture_block()
+    return (sub(1, "The sculpture", "Hover a key below the model, or a plate, to see which message it carries.") + sculpture_block()
             + sub(2, "From a cornerstone to an unsolved message", "The history of Kryptos, from the CIA's headquarters to today. The first three messages hang off 1999, when their solutions went public: carved letters in, readable English out, which is what solved looks like.")
             + history_timeline()
             + sub(3, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel
@@ -1112,8 +1114,8 @@ def overview():
             + sec(1, "What is Kryptos K4?", "A sculpture in the courtyard of the CIA, its history since 1959, and the fourth of its four messages, the one nobody has read.")
             + ('<p class="sec-lead">Kryptos is a sculpture by the artist Jim Sanborn, dedicated in 1990 in the courtyard of the '
                'CIA\'s headquarters in Langley, Virginia. Its centrepiece is a curved copper screen cut through with about 1,730 '
-               'letters: four encrypted messages, K1 to K4, and the table of alphabets used to encrypt the first two. K1, K2 and '
-               'K3 were solved in the 1990s. K4, the last 97 letters, has never been publicly solved. Sanborn has confirmed '
+               'letters: four encrypted messages, K1 to K4, and the table of alphabets used to encrypt the first two.</p>'
+               '<p class="sec-lead">K1, K2 and K3 were solved in the 1990s. K4, the last 97 letters, has never been publicly solved. Sanborn has confirmed '
                'only two stretches of its plaintext, EASTNORTHEAST and BERLINCLOCK. In 2025 the full plaintext turned up '
                'among his papers at the Smithsonian, but it has not been published, and the method that turns the 97 '
                'carved letters into that message is still unknown. That method is what this loop is looking for.</p>')

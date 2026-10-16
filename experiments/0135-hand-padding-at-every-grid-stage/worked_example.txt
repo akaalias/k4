@@ -1,0 +1,10 @@
+rows of 8, blanks down the last column from the bottom, read down the columns left first, blanks kept as dummies;
+then rows of 9, blanks at the start of the first row, read up the columns left first; dummies struck out
+
+place  letter  after grid 1  after grid 2  copper there
+   22       E            68            90             U
+   23       A            81            34             S
+   24       S            94            76             G
+   64       B            22            84             D
+   65       E            35            29             R
+   74       K            62            26             Q

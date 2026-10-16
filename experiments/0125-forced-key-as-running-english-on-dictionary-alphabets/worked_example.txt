@@ -1,0 +1,27 @@
+alphabet from WINTER: WINTERABCDFGHJKLMOPQSUVXYZ; Vigenere, WINTER on both sides, key letters on the standard alphabet
+
+place  known  carved  key value  key letter
+   22      E       F          6           G
+   23      A       L          9           J
+   24      S       R         11           L
+   25      T       V         19           T
+   26      N       Q         17           R
+   27      O       Q          2           C
+   28      R       P         13           N
+   29      T       R          2           C
+   30      H       N         16           Q
+   31      E       G          7           H
+   32      A       K          8           I
+   33      S       S          0           A
+   34      T       S         17           R
+   64      B       N         21           V
+   65      E       Y         20           U
+   66      R       P         13           N
+   67      L       V          7           H
+   68      I       T          2           C
+   69      N       T          1           B
+   70      C       M          8           I
+   71      L       Z         10           K
+   72      O       F         19           T
+   73      C       P         10           K
+   74      K       K          0           A

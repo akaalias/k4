@@ -114,6 +114,7 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .lin-legend .lx{width:0;height:16px;border-left:1.2px dashed var(--muted);display:inline-block;margin:0 4px}
 .ph{max-width:980px;margin:0 auto 40px}.ph h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}.ph .standfirst{max-width:760px}
 .ph .standfirst{margin-bottom:0}.ph-meta{margin-top:56px}
+.ph h1 .exp-q{font-style:italic}
 .ph .facts{font-size:14.5px;color:var(--muted);margin:0 0 12px;max-width:820px}
 .ph-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin:6px 0 14px}.ph-legend>span{display:inline-flex;align-items:center;gap:7px}
 .pf{max-width:980px;margin:34px auto 0;padding-top:10px;border-top:1px solid var(--rule-soft);font-size:13.5px;color:var(--muted)}
@@ -1109,8 +1110,8 @@ def overview():
     for r in rows:
         for k, v in (r.get("phases") or {"run": r["seconds"]}).items():
             by_phase[k] = by_phase.get(k, 0.0) + v
-    answer = (f'We believe so, and we have a champion: <a href="/exp/{esc(ch["experiment"])}">{esc(ch["experiment"])}</a>.' if ch
-              else "We believe so, but we have not yet found our champion.")
+    answer = (f'&ldquo;We believe so, and we have a champion: <a href="/exp/{esc(ch["experiment"])}">{esc(ch["experiment"])}</a>.&rdquo;' if ch
+              else "&ldquo;We believe so, but we have not yet found our champion.&rdquo;")
     hero = f"""<p class="psub answer">{answer}</p>
 <div class="stats">
 <div class="stat"><b class="num">{n}</b><span>experiments</span></div>
@@ -1122,7 +1123,7 @@ def overview():
         champ = f"""<div class="callout wide"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}; loss {ch.get('loss', 0):.2f}, {pct(ch.get('loss'))} of the worst possible. A champion is the lowest-loss candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.{' Experiments 0001-0049 were kept by a different number, fitness, which is why a reverted experiment can sit below the champion in the chart; from 0050 the harness keeps by loss.' if ch['experiment'][:4] <= '0049' else ''}</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
-    body = ('<h1 class="home">Can an autonomous research loop find the secret of Kryptos K4?</h1>' + hero_flow()
+    body = ('<h1 class="home">&ldquo;Can an autonomous research loop find the secret of Kryptos K4?&rdquo;</h1>' + hero_flow()
             + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
             + sec(1, "What is Kryptos K4?", "A sculpture in the courtyard of the CIA, its history since 1959, and the fourth of its four messages, the one nobody has read.")
             + ('<p class="sec-lead">Kryptos is a sculpture by the artist Jim Sanborn, dedicated in 1990 in the courtyard of the '
@@ -1576,7 +1577,7 @@ def experiment_page(tag):
 <div class="meta-time">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=980, height=8).replace('<svg width="980" height="8"', '<svg viewBox="0 0 980 8" preserveAspectRatio="none"', 1)}</div>"""
     note = meta + (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: '
                    f'{esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else "")
-    head = page_head(f"Experiment {num}", esc(r["title"]), esc(changed), "", note)
+    head = page_head(f"Experiment {num}", f'<span class="exp-q">&ldquo;{esc(r["title"])}&rdquo;</span>', esc(changed), "", note)
     # section 1: plain words with the glossary rail
     eli5 = r.get("eli5") or ""
     low = eli5.lower()

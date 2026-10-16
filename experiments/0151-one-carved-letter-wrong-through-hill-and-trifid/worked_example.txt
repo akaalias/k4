@@ -1,0 +1,7 @@
+the errors tried, for every place of the copper:
+
+  wrong:   place 21 W -> each of the other 25 letters
+  missing: place 21 deleted, the rest moves left, a filler at the end
+  extra:   each letter inserted before place 21, the last letter pushed out
+
+each variant through Hill 2x2-5x5 (plain, affine, every alignment, four numberings) and trifid (periods 2-15, every offset)

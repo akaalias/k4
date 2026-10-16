@@ -19,6 +19,8 @@ tools/run_loop.sh --unattended       # runs on its own with no permission prompt
 tools/run_loop.sh --stop-after F8    # stop once that family is closed or blocked (default F6)
 ```
 
+With `--unattended` the terminal shows one line per step: the phase, the experiment being written, each finished experiment with its decision, and the elapsed time; the full stream goes to `logs/`. To watch a running loop from another shell: `uv run python tools/loop_watch.py --follow logs/loop-<time>.log`.
+
 It follows `program.md` and works the open items in `order-of-work.md` (the Priorities page) from the top.
 What it is told to do is in `tools/loop_prompt.md`; edit that file to change it. `--unattended` switches off
 every permission check, so only use it when you are happy for it to run commands without asking.

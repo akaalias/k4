@@ -2,7 +2,8 @@
 # Start the autoresearch loop as its own Claude Code session, in this repository.
 #
 #   tools/run_loop.sh                       interactive: you see it work and approve its commands
-#   tools/run_loop.sh --unattended          headless, no permission prompts, log in logs/
+#   tools/run_loop.sh --unattended          headless, no permission prompts; progress on screen, full log in logs/
+#   uv run python tools/loop_watch.py --follow logs/loop-...log   watch a running loop from another shell
 #   tools/run_loop.sh --stop-after F6       stop once this family is closed or blocked (default: F6)
 #
 # The prompt is tools/loop_prompt.md; edit it to change what the loop does. Its transcript is synced into
@@ -31,8 +32,9 @@ if [ "$mode" = unattended ]; then
   mkdir -p logs
   log="logs/loop-$(date +%Y%m%d-%H%M%S).log"
   echo "Loop running headless until $stop_after; log: $log"
-  claude -p "$prompt" --dangerously-skip-permissions --output-format stream-json --verbose > "$log" 2>&1
-  echo "Loop finished; log: $log"
+  claude -p "$prompt" --dangerously-skip-permissions --output-format stream-json --verbose 2>&1 \
+    | tee "$log" | uv run python -u tools/loop_watch.py
+  echo "Loop finished; full log: $log"
 else
   exec claude "$prompt"
 fi

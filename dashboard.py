@@ -1118,7 +1118,8 @@ def overview():
                '<p class="sec-lead">K1, K2 and K3 were solved in the 1990s. K4, the last 97 letters, has never been publicly solved. Sanborn has confirmed '
                'only two stretches of its plaintext, EASTNORTHEAST and BERLINCLOCK. In 2025 the full plaintext turned up '
                'among his papers at the Smithsonian, but it has not been published, and the method that turns the 97 '
-               'carved letters into that message is still unknown. That method is what this loop is looking for.</p>')
+               'carved letters into that message is still unknown.</p>'
+               '<p class="sec-lead">That method is what this loop is looking for.</p>')
             + what_we_look_for()
             + f'''<a class="cta" href="/live"><span class="cta-k">Follow the run</span><span class="cta-h">Open the live dashboard &rarr;</span><span class="cta-s">Every experiment so far, {n} of them, with its result and time, updated as each new one lands.</span></a>''')
     return page("Kryptos K4 autoresearch", body, "/")

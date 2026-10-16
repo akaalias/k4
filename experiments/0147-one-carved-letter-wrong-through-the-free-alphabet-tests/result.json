@@ -1,0 +1,836 @@
+{
+ "id": 147,
+ "tag": "0147-one-carved-letter-wrong-through-the-free-alphabet-tests",
+ "started": "2026-10-16T20:19:48+00:00",
+ "seconds": 695.3,
+ "status": "ran",
+ "phases": {
+  "unattributed": 148.4,
+  "run": 695.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1792182683.4904141,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "one carved letter wrong at a known place (600) or one letter missing/extra between the runs (4: two readings each), through the exact one- and two-free-alphabet periodic tests",
+  "models": {
+   "1V": "one alphabet, added form (Quagmire III, K1/K2's system)",
+   "1B": "one alphabet, Beaufort form",
+   "2": "two alphabets (Quagmire IV)"
+  },
+  "variants_per_text": 604,
+  "key_lengths": [
+   1,
+   26
+  ],
+  "k4_fitting_variants_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    25,
+    1,
+    2,
+    1,
+    26,
+    27,
+    2,
+    28
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    27,
+    0,
+    91,
+    25,
+    24,
+    0,
+    0,
+    573,
+    27,
+    52,
+    601
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    534,
+    0,
+    52,
+    94,
+    100,
+    573,
+    3,
+    1,
+    586,
+    1,
+    100,
+    536,
+    578,
+    3,
+    97,
+    588,
+    594,
+    54,
+    602
+   ]
+  },
+  "controls_min_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    26,
+    28
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    27,
+    27,
+    27
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    2,
+    51,
+    2,
+    51,
+    2,
+    2,
+    1,
+    2,
+    51,
+    1,
+    53,
+    54,
+    598,
+    602
+   ]
+  },
+  "controls_max_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    36,
+    295,
+    23,
+    0,
+    505,
+    534,
+    542,
+    552,
+    553,
+    26,
+    571,
+    3,
+    577,
+    23,
+    551,
+    553,
+    565,
+    577,
+    584,
+    593,
+    601
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    17,
+    1,
+    0,
+    62,
+    45,
+    538,
+    552,
+    548,
+    26,
+    573,
+    4,
+    576,
+    510,
+    550,
+    548,
+    565,
+    577,
+    586,
+    593,
+    601
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    496,
+    526,
+    540,
+    0,
+    562,
+    572,
+    572,
+    579,
+    577,
+    52,
+    588,
+    4,
+    590,
+    534,
+    580,
+    577,
+    584,
+    589,
+    594,
+    598,
+    602
+   ]
+  },
+  "undecided": {
+   "k4": {
+    "1V": 0,
+    "1B": 0,
+    "2": 8
+   },
+   "controls": [
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 2
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 6
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 0
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 1
+    },
+    {
+     "1V": 0,
+     "1B": 11,
+     "2": 0
+    },
+    {
+     "1V": 1,
+     "1B": 0,
+     "2": 1
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 1
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 1
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 8
+    },
+    {
+     "1V": 0,
+     "1B": 2,
+     "2": 2
+    }
+   ]
+  },
+  "k4_added_form_fits": [
+   {
+    "variant": "sub 22 F->E",
+    "length": 26
+   },
+   {
+    "variant": "sub 26 Q->N",
+    "length": 24
+   },
+   {
+    "variant": "sub 28 P->R",
+    "length": 23
+   },
+   {
+    "variant": "sub 33 S->A",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->B",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->C",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->D",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->E",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->F",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->G",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->H",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->I",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->J",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->K",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->L",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->M",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->N",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->O",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->P",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->Q",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->R",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->T",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->U",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->V",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->W",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->X",
+    "length": 19
+   },
+   {
+    "variant": "sub 33 S->Y",
+    "length": 19
+   },
+   {
+    "variant": "sub 71 Z->L",
+    "length": 19
+   },
+   {
+    "variant": "sub 74 K->A",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->A",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->A",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->B",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->B",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->B",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->C",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->C",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->C",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->D",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->D",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->D",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->E",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->E",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->E",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->F",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->F",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->G",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->G",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->G",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->H",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->H",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->H",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->I",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->I",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->I",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->J",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->J",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->J",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->L",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->L",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->L",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->M",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->M",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->M",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->N",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->N",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->N",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->O",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->O",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->O",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->P",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->P",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->Q",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->Q",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->R",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->R",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->R",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->S",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->S",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->S",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->T",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->T",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->T",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->U",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->U",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->U",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->V",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->V",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->V",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->W",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->W",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->W",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->X",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->X",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->X",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->Y",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->Y",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->Y",
+    "length": 26
+   },
+   {
+    "variant": "sub 74 K->Z",
+    "length": 23
+   },
+   {
+    "variant": "sub 74 K->Z",
+    "length": 24
+   },
+   {
+    "variant": "sub 74 K->Z",
+    "length": 26
+   },
+   {
+    "variant": "one letter extra between the runs (places as typed, carved letters moved)",
+    "length": 22
+   },
+   {
+    "variant": "one letter extra between the runs (places as typed, carved letters moved)",
+    "length": 24
+   },
+   {
+    "variant": "one letter extra between the runs (places as typed, carved letters moved)",
+    "length": 25
+   },
+   {
+    "variant": "one letter extra between the runs (places as typed, carved letters moved)",
+    "length": 26
+   },
+   {
+    "variant": "one letter extra between the runs (carved letters fixed, places moved)",
+    "length": 14
+   },
+   {
+    "variant": "one letter extra between the runs (carved letters fixed, places moved)",
+    "length": 21
+   },
+   {
+    "variant": "one letter missing between the runs (places as typed, carved letters moved)",
+    "length": 14
+   },
+   {
+    "variant": "one letter missing between the runs (places as typed, carved letters moved)",
+    "length": 21
+   },
+   {
+    "variant": "one letter missing between the runs (places as typed, carved letters moved)",
+    "length": 23
+   },
+   {
+    "variant": "one letter missing between the runs (places as typed, carved letters moved)",
+    "length": 24
+   },
+   {
+    "variant": "one letter missing between the runs (places as typed, carved letters moved)",
+    "length": 25
+   },
+   {
+    "variant": "one letter missing between the runs (places as typed, carved letters moved)",
+    "length": 26
+   },
+   {
+    "variant": "one letter missing between the runs (carved letters fixed, places moved)",
+    "length": 20
+   },
+   {
+    "variant": "one letter missing between the runs (carved letters fixed, places moved)",
+    "length": 26
+   }
+  ],
+  "k4_added_form_fit_count": 114,
+  "cells_k4_above_every_copper": [
+   "1V:19",
+   "2:19"
+  ],
+  "null_cells_above_rest_per_copper": [
+   0,
+   9,
+   3,
+   2,
+   4,
+   11,
+   6,
+   0,
+   6,
+   3
+  ],
+  "stop_queue": false,
+  "indel_note": "an error before place 22 or after 74 shifts every known place together and changes no periodic check",
+  "controls": "10 shuffled coppers (seed 146), the same 604 variants each",
+  "exhaustive": "exact per (variant, model, length); undecided counted"
+ },
+ "notes": "K4 fitting (variant, length) pairs: {'1V': 114, '1B': 1421, '2': 5097}; added form revived on K4 in 114 pairs; K4 above every copper in 2 of 78 cells, null 0-11; stop False; undecided K4 {'1V': 0, '1B': 0, '2': 8}",
+ "error": null,
+ "candidates": []
+}

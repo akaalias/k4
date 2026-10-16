@@ -1,0 +1,8 @@
+one alphabet on both sides, added form (K1 and K2's method): place(carved) = place(known) + key value of the slot
+
+as carved: place 33 is S under S and place 74 is K under K, so their slots need key value 0;
+at every key length 1-26 another known letter shares one of those slots and is not its own carved letter: dead.
+
+variant: the carved S at 33 replaced by R (one slip of the chisel)
+  place 33 no longer forces 0; the slot of 74 still does (K under K)
+  the 24 equations are decided again at every key length, and the same for every other letter at every known place

@@ -16,6 +16,15 @@ F1 continued (ticket #14), after the run that started on 2026-10-16 (0136-0153 a
 | 156 | F1.10 | **Friedman's key-advance schedules, exact, with copies.** Run length by letter value (A=1, A=0), CHRISTMAS expansion, EXTINGUISHER windows 2-5, each with every dictionary word on 12 tables x 2 numberings: no word fits K4 or any copy. Ciphertext interruptor and fraction digits (key letters free): no consistent setting on K4 (copies 0-14). Plaintext interruptor inside the known runs: K4 160, copies 120-7,165. Closed. Prediction held. |
 | 157 | F1.11 | **Split key phrase (EMC par. 59d).** 29,880 phrases (pairs of puzzle words; runs of 2-4 K1-K3 words split at each boundary): part one mixes the plain alphabet, part two the cipher alphabet, the whole phrase the key; 3 numberings x 3 rules. Best 7 of 24 on K4, copies 7-8; no full hit anywhere. Closed. Prediction held. **Every F1 item is now closed or blocked.** |
 
+### F6 again (after pivot P7, ticket #13)
+
+| # | Item | One line |
+|---|---|---|
+| 158 | F6.3b | **Mixed triples at wide widths, exact.** Every triple of the four column readings with a width of 25-96 (63 reading triples), forward and inverse: 105.5 million distinct routes in 209 s (compiled counter, checked against Python). Shortest consistent key on K4 18 after the move (copies 19), 24 before (copies 17); K4 above every copper in 3 of 52 cells, null 0-3: chance. One setting at 18 (rows of 93 read down, then rows of 65 and 84 turned) on the KRYPTOS table, Beaufort form: noted. Prediction held. |
+| 159 | F6.5 | **Compass directions as reading routes, exact.** Rows of every width read along each of the 16 compass points (lines either order) and E/ENE/NE in two stages: 110,820 distinct routes, then or before a periodic key. Shortest consistent key 21 after, 25 before, as on the copies; K4 above every copper in 1 of 52 cells, null 0-1. Closed. Prediction held. |
+| 160 | F6.6 | **Move, change, move, exact.** 844 distinct moves (column readings at every width, K3's rule at every multiplier, both directions), every ordered pair (712,336), a repeating key 1-26 on the sculpture's tables between them, compiled (11 s). Shortest consistent key 20 on K4 (copies 18); K4 above every copper in 1 of 26 cells, null 0-2. Closed for this library; the full type-1 library squared (776 million pairs) not run. Prediction held. |
+| 161 | F6.7 | **Two keyed stages on different tables round a move, exact.** Standard then KRYPTOS or the reverse, keys 2-14 each, 844 moves; each known letter ties a slot of one key to a slot of the other one to one, so propagation decides it. Consistent with 5+ checks: K4 388, copies 300-504; every check level inside. Closed. The two stages' signs make no difference (a free key absorbs them): counts are four-fold. The best K4 setting has 9 checks (inverted two-row turn at width 84, both keys 13); the record kept copies only to 8 checks, so not measured: noted. Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

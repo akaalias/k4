@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A first key on the plain alphabet's table, a grid move, a second key on the KRYPTOS table (or the reverse): the two halves of the sculpture's alphabets used in turn. 0080 tried both keys on one table."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known letter ties one letter of the first key to one of the second, one to one; following the ties decides every setting exactly: 844 moves, key lengths 2-14 each, on K4 and ten scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "At every level of checks K4 sits inside the copies' range (5 or more: 388 against 300-504). Closed."
+ }
+]

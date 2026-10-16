@@ -1106,9 +1106,9 @@ def overview():
         champ = f"""<div class="callout wide"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}; loss {ch.get('loss', 0):.2f}, {pct(ch.get('loss'))} of the worst possible. A champion is the lowest-loss candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.{' Experiments 0001-0049 were kept by a different number, fitness, which is why a reverted experiment can sit below the champion in the chart; from 0050 the harness keeps by loss.' if ch['experiment'][:4] <= '0049' else ''}</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
-    body = ('<h1 class="home">Can an autonomous research loop find the secret of K4?</h1>' + hero_flow()
+    body = ('<h1 class="home">Can an autonomous research loop find the secret of Kryptos K4?</h1>' + hero_flow()
             + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
-            + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
+            + sec(1, "What is Kryptos K4?", "A sculpture in the courtyard of the CIA, its history since 1959, and the fourth of its four messages, the one nobody has read.")
             + what_we_look_for()
             + f'''<a class="cta" href="/live"><span class="cta-k">Follow the run</span><span class="cta-h">Open the live dashboard &rarr;</span><span class="cta-s">Every experiment so far, {n} of them, with its result and time, updated as each new one lands.</span></a>''')
     return page("Kryptos K4 autoresearch", body, "/")

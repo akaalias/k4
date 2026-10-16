@@ -1154,14 +1154,14 @@ def experiments_table(rows):
 
 
 OUTCOME_ROWS = [
-    ("solved", "solved: the success definition met"),
-    ("champion", "champion: passes every gate"),
-    ("beat-chance", "a lead: beat the scrambled copies"),
+    ("solved", "solved"),
+    ("champion", "champion"),
+    ("beat-chance", "a lead"),
     ("chance", "at chance"),
     ("ruled-out", "ruled out"),
     ("diagnostic", "not a decryption test"),
-    ("other", "no comparison run"),
-    ("error", "errored: the run crashed"),
+    ("other", "no comparison"),
+    ("error", "errored"),
     ("ungraded", "not graded yet"),
 ]
 
@@ -1172,7 +1172,7 @@ def outcome_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     grades = load_grades()
-    W, L, R, T, band = 1400, 64, 330, 6, 46
+    W, L, R, T, band = 1400, 64, 220, 6, 46
     n = len(rows)
     step = (W - L - R) / n
     dot_r = max(1.2, min(3.6, step * 0.42))     # the lineage page's dot, shrinking only when experiments crowd
@@ -1222,8 +1222,7 @@ def outcome_chart(rows):
     for k, lab in shown:
         cy = yrow[k] + band / 2
         col = "var(--accent)" if k in ("solved", "champion", "beat-chance") else "var(--ink)"
-        g.append(f'<text x="{W - R + 14}" y="{cy - 3:.1f}" font-size="15" fill="{col}">{lab}</text>')
-        g.append(f'<text x="{W - R + 14}" y="{cy + 15:.1f}" font-size="13" fill="var(--muted)">{counts[k]}</text>')
+        g.append(f'<text x="{W - R + 14}" y="{cy + 5:.1f}" font-size="15" fill="{col}">{lab}<tspan dx="9" font-size="13.5" fill="var(--muted)">{counts[k]}</tspan></text>')
     tick_every = next(t for t in (10, 20, 50, 100, 200, 500, 1000) if n / t <= 14)
     for i, r in enumerate(rows):
         num = int(r["tag"][:4]) if r["tag"][:4].isdigit() else i + 1

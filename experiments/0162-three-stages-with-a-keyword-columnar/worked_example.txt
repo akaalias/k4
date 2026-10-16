@@ -1,0 +1,9 @@
+KRYPTOS-keyed columnar (columns K O P R S T Y), then rows of 11 read down, then rows of 9 turned
+
+place  letter  after 1  after 2  after 3  carved
+   22       E        4       28        8       O
+   23       A       46       14       54       L
+   24       S       87       89       78       K
+   64       B       10       82        2       B
+   65       E       52       68       48       Z
+   74       K       39       49       39       Q

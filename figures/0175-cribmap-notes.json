@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The Morse at the entrance is padded with groups of single dots (E), and the copper's lines are of slightly different lengths. Either set of numbers could be the number half of a key whose other half is a secret word."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every reading of the numbers, as values one per letter, repeated from every starting point, added or subtracted, with a secret word of 1 to 24 letters on each of 12 table rules; the 24 known letters must agree on the word."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Not one setting fits K4 or any of 20 scrambled copies; a text planted this way is found. F3.2 closed."
+ }
+]

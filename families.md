@@ -118,7 +118,7 @@ Update the leaf when an experiment works on it.
     - A word plus the misspelt or raised letters {closed · exact · 0061}
     - A column word plus a row key {closed · exact · 0087, 0088}
     - **F3.1** Combiners other than addition {closed · exact · 0173, 0174}
-    - **F3.2** Number keys from the Morse and the plate layout {open}
+    - **F3.2** Number keys from the Morse and the plate layout {closed · exact · 0175}
     - **F3.3** Direction words as numbers: the bearing 67.5, compass points 6 of 32 and 3 of 16 {open}
     - **F3.4** Three or more stacked tables (Scheidt's patent, "triple matrixes") {open}
     - **F3.5** The misspelt letters' positions as indices, and their orientation {open}

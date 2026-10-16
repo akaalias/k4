@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Scheidt's 1998 patent enciphers a letter by shifting it, looking it up in a mixed alphabet, shifting it again and looking it up again. Two short secret words would give the two shifts."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known letter ties one letter of the first word to one of the second through the table. Trying the 26 letters for one and following every tie decides each choice exactly: 108 ways to pick the tables, word lengths 1 to 13 each."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Wherever the known letters give 4 or more checks (161 of 169 length pairs), nothing fits K4, and scrambled copies fit at most 2 settings in 1,000. The 8 pairs of long words leave 1 or 2 checks and cannot decide anything."
+ }
+]

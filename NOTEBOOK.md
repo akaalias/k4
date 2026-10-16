@@ -45,6 +45,12 @@ F12.1 blocked without a run: no image of the copper's K4 section at letter resol
 
 F12.7 closed by subsumption without a run: Stein's column method (every shift of each column, scored by letter frequencies, then a crib) finds periodic keys on a known table; the exact sweeps of 0005 test every such key on the standard and KRYPTOS tables against the 24 letters, and the lengths they leave live (27-29, 53 up) were shown to fit coppers equally (0034). F12 is finished: F12.1 blocked, F12.2-F12.7 closed. Pivot P9 to F3.
 
+### F3 two-part key with a combiner (after pivot P9, ticket #16)
+
+| # | Item | One line |
+|---|---|---|
+| 173 | F3.1 | **Scheidt's patent sandwich, exact.** c = T2[s2 T1[s1 T0[p] + a] + b], each table standard, KRYPTOS or its inverse, signs both ways (108 classes), keys a and b of length 1-13 each. Each known place ties a slot of a to a slot of b one-to-one; 26 trials decide each group of slots. 161 of 169 length pairs give 4 or more checks: nothing fits K4 there (copies fit at most 2 settings in 1,000, from those pairs' 72 new classes x 20 copies). The 8 pairs with both keys 10-13 long leave 1-2 checks; K4 fits as often as copies there (1+ checks: K4 182, copies 186-213). Three planted texts fit their own cell and decrypt in full. (The per-pair copper rate was measured after the run, with the same code.) Closed; long pairs blocked (too few checks). Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

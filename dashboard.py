@@ -88,7 +88,7 @@ article h2{font:400 22px/1.25 var(--serif);margin:34px 0 6px;padding-top:12px;bo
 article h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}
 article blockquote{margin:14px 0 16px;padding:2px 0 2px 18px;border-left:3px solid var(--accent);max-width:700px}article blockquote p{font:italic 17px/1.55 var(--serif);color:var(--ink);margin:0}
 article ol li strong,article ul li strong{font-weight:600}article li>ul,article li>ol{margin:6px 0 4px}
-article p,article li{max-width:720px}article table{table-layout:fixed;width:100%}article td{vertical-align:top;overflow-wrap:anywhere}article td code{white-space:normal;word-break:break-all;letter-spacing:.04em}article ol{padding-left:26px}article ol li{margin:0 0 8px}
+article p,article li{max-width:720px}article table{width:100%}article td{vertical-align:top;overflow-wrap:anywhere}article td code{white-space:normal;word-break:break-all;letter-spacing:.04em}article ol{padding-left:26px}article ol li{margin:0 0 8px}
 .crumb{max-width:980px;margin:10px auto 0;color:var(--muted);font-size:14px}
 .rec-head{max-width:980px;margin:18px auto 0}.eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}.eyebrow .kept{color:var(--accent)}
 h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.005em;max-width:900px}
@@ -124,7 +124,7 @@ dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 1
 table.score{width:100%;max-width:760px;margin:10px 0 6px;border-collapse:collapse}table.score td,table.score th{padding:7px 10px;border-bottom:1px solid var(--rule-soft);font-size:15px}table.score td:first-child{font-weight:600}table.score tr.total td{border-top:1.5px solid var(--ink);border-bottom:none;font-weight:700}table.score .pct{color:var(--accent);margin-left:8px}table.score.ranks td:first-child{font-weight:400}table.score.ranks tr.kept td{font-weight:700;color:var(--accent)}table.score.ranks tr.gap td{color:var(--faint);border-bottom:none}.score-sub{font-size:14px;color:var(--muted);margin:16px 0 4px;max-width:760px}
 .panel-wrap{display:flex;gap:18px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;margin:16px 0 8px}.panel-wrap.wide{width:min(1360px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}.callout.wide{width:min(1400px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%);box-sizing:border-box}.callout .panel-wrap.wide{width:auto;left:0;transform:none}#sculpture-label{min-height:3.2em}.subsec{display:flex;align-items:baseline;gap:12px;margin:34px 0 10px;padding-top:12px;border-top:1px solid var(--rule-soft)}.subsec b{font:400 15px var(--serif);color:var(--faint)}.subsec h3{font:400 21px var(--serif);margin:0}.subsec-sub{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 6px}.lp-col{display:flex;flex-direction:column}.lp-eyebrow{font:600 11px/1.2 var(--serif)!important;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.lp-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:10px 14px 12px;width:573px;box-sizing:border-box}.lp.mini .lp-box{width:auto}.lp-title{font:600 13px var(--serif);color:var(--muted);text-align:center;margin:0 0 8px}.lrow{display:flex;gap:1.5px;margin:0 0 2.5px;justify-content:flex-start}.lc{display:inline-flex;align-items:center;justify-content:center;width:15px;height:19px;border-radius:2.5px;background:#ebe7d8;color:var(--muted);font:normal 11.5px/1 var(--mono)}.lc.tail{background:#f1eee3;color:#cfcab8}.lc.known{background:var(--accent);color:var(--paper);font-weight:700}.lc.miss{background:var(--paper);color:var(--accent);box-shadow:inset 0 0 0 1.3px var(--accent);font-weight:700}.lc.ink{color:var(--ink)}.lc.dot:after{content:"";width:2px;height:2px;border-radius:50%;background:var(--faint,#9b998c)}.lp-cap{font:italic 13px/1.4 var(--serif);color:var(--muted);text-align:center;margin:6px 0 0}.lp-cap.acc{color:var(--accent);margin-top:2px}.lp-arrow{color:var(--muted);padding-top:72px}.lp.mini .lp-box{padding:5px 6px;border-radius:4px;background:transparent;border-color:var(--rule-soft)}.lp.mini .lp-title{display:none}.lp.mini .lc{width:6.5px;height:9px;font-size:6px;border-radius:1px}.lp.mini .lrow{gap:1px;margin-bottom:1px}
 .gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
-.cta{display:block;max-width:640px;margin:34px auto 10px;padding:18px 22px;border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--wash);text-decoration:none;color:var(--ink)}.cta:hover{background:var(--hl)}.cta-k{display:block;font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.cta-h{display:block;font-size:22px;margin:4px 0 4px;color:var(--accent)}.cta-s{display:block;font-size:15px;color:var(--muted)}
+.cta{display:block;max-width:640px;margin:34px auto 10px;padding:18px 22px;border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--wash);text-decoration:none;color:var(--ink)}.cta:hover{background:var(--hl)}.xtable{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin-top:22px}.xtable td.num,.xtable td:nth-child(3){white-space:nowrap}@media(max-width:760px){.xtable{width:calc(100vw - 32px);overflow-x:auto}}.cta-k{display:block;font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.cta-h{display:block;font-size:22px;margin:4px 0 4px;color:var(--accent)}.cta-s{display:block;font-size:15px;color:var(--muted)}
 .chart-wide{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin:10px 0 6px}.chart-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px;padding-top:10px;border-top:1px solid var(--rule)}.chart-legend{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13px;color:var(--muted);margin:6px 0 0}.chart-legend span{white-space:nowrap}.mk{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:6px}.mk-kept{background:var(--ink)}.mk-disc{background:var(--disc)}.mk-none{background:var(--paper);border:2px solid var(--disc);width:8px;height:8px}.mk-err{background:none;border-radius:0;position:relative;width:11px;height:11px}.mk-err:before,.mk-err:after{content:'';position:absolute;left:5px;top:-1px;width:2px;height:13px;background:var(--accent)}.mk-err:before{transform:rotate(45deg)}.mk-err:after{transform:rotate(-45deg)}.mk-line{border-radius:0;height:2px;width:18px;background:var(--ink);vertical-align:3px}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
 .chart-row{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:28px;align-items:start;margin-top:8px}
@@ -1133,7 +1133,7 @@ def experiments_table(rows):
     """Every experiment, newest first, with its loss, crib letters, candidates and time by phase."""
     scale_max = max((sum((r.get("phases") or {"run": r["seconds"]}).values()) for r in rows), default=0)
     trs = "".join(
-        f"""<tr><td class="num">{int(r['tag'][:4])}</td><td><a href="/exp/{esc(r['tag'])}">{esc(r['title'])}</a></td><td class="muted">{esc(r['family'])}</td>
+        f"""<tr><td class="num">{int(r['tag'][:4])}</td><td><a href="/exp/{esc(r['tag'])}">{esc(r['title'])}</a></td><td class="muted">{esc(r['family'].split('-', 1)[0] + ' ' + r['family'].split('-', 1)[-1].replace('-', ' '))}</td>
 <td class="{esc(r['decision'])}">{esc(r['decision'])}</td>
 <td class="num" title="{'' if row_loss(r) is None else f"{row_loss(r):.2f} of {WORST:.0f}"}">{pct(row_loss(r))}</td>
 <td class="num" title="{esc(words_str(r))}">{r['best_crib_hits']}/24</td>
@@ -1141,8 +1141,8 @@ def experiments_table(rows):
         for r in reversed(rows)
     )
     table = f"""<table><thead><tr><th class="num">id</th><th>title</th><th>family</th><th>decision</th><th class="num" title="the best candidate's loss as a share of the worst possible, 240">loss</th><th class="num" title="known letters the best candidate got right, out of 24">crib letters</th><th class="num" title="full 97-letter decryptions the experiment handed to the gates">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
-    return (sec(1, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
-            + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>')
+    return (sec(1, "All experiments in sequence")
+            + '<div class="xtable">' + table + "</div>")
 
 
 OUTCOME_ROWS = [
@@ -1166,7 +1166,7 @@ def outcome_chart(rows):
     W, L, R, T, band = 1400, 64, 270, 20, 46
     n = len(rows)
     step = (W - L - R) / n
-    tw = max(1.0, min(4.0, step * 0.55))
+    dot_r = max(1.2, min(3.6, step * 0.42))     # the lineage page's dot, shrinking only when experiments crowd
     kinds = {}
     for r in rows:
         oc = grades.get(r["tag"][:4], {}).get("outcome")
@@ -1182,10 +1182,7 @@ def outcome_chart(rows):
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="What each experiment found against the scrambled copies, in run order">']
     for j, (k, _) in enumerate(shown):
         y0 = yrow[k]
-        if k == "solved":
-            g.append(f'<rect x="{L + 1}" y="{y0 + 4}" width="{W - L - R - 2}" height="{band - 8}" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="7 5"/>')
-        elif j % 2 == 0:
-            g.append(f'<rect x="{L}" y="{y0}" width="{W - L - R}" height="{band}" fill="var(--wash)"/>')
+        g.append(f'<line x1="{L}" x2="{W - R}" y1="{y0 + band / 2:.1f}" y2="{y0 + band / 2:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
     counts = {k: 0 for k, _ in shown}
     for i, r in enumerate(rows):
         k = kinds[r["tag"]]
@@ -1193,10 +1190,10 @@ def outcome_chart(rows):
         gr = grades.get(r["tag"][:4], {})
         x = L + (i + 0.5) * step
         y0 = yrow[k] + 9
-        col = "var(--accent)" if k in ("solved", "champion", "beat-chance") else ("var(--faint)" if k == "ungraded" else "var(--muted)")
+        col = "var(--accent)" if k in ("solved", "champion", "beat-chance") else ("var(--faint)" if k == "ungraded" else "var(--disc)")
         tip = (f"{esc(r['tag'])}<br>{esc(r['title'])}<br><b>{esc(gr.get('outcome') or 'not graded yet')}</b>"
                f"{', ' + esc(gr['strength']) + ' test' if gr.get('strength') else ''}<br>{esc(gr.get('note', ''))}")
-        g.append(f'<a href="/exp/{esc(r["tag"])}"><g data-tip="{tip}"><rect x="{x - tw / 2:.2f}" y="{y0}" width="{tw:.2f}" height="{band - 18}" fill="{col}"/>'
+        g.append(f'<a href="/exp/{esc(r["tag"])}"><g data-tip="{tip}"><circle cx="{x:.2f}" cy="{yrow[k] + band / 2:.1f}" r="{dot_r:.1f}" fill="{col}"/>'
                  f'<rect x="{x - max(step, 4) / 2:.2f}" y="{yrow[k]}" width="{max(step, 4):.2f}" height="{band}" fill="transparent"/></g></a>')
     for k, lab in shown:
         cy = yrow[k] + band / 2
@@ -1239,7 +1236,7 @@ def live_page():
         k, _, rest = r["family"].partition("-")
         names.setdefault(k, rest.replace("-", " "))
     key = ('<div class="explain-row" style="row-gap:26px;margin-top:40px">'
-           '<div class="explain-col"><h4>Solved</h4><p>Meets the success definition: the known letters in place, readable English, and a procedure a person could do by hand with a short key. A winning experiment lands in the dashed band.</p></div>'
+           '<div class="explain-col"><h4>Solved</h4><p>Meets the success definition: the known letters in place, readable English, and a procedure a person could do by hand with a short key. A winning experiment lands in the top row.</p></div>'
            '<div class="explain-col"><h4>Champion</h4><p>Passes every gate: all 24 known letters, re-encrypts to the copper, beats every scrambled copy. Not yet shown to read as English from a memorable method.</p></div>'
            '<div class="explain-col"><h4>A lead</h4><p>K4 did better than every scrambled copy under the same search, but the reading fails another gate.</p></div>'
            '<div class="explain-col"><h4>At chance</h4><p>Settings or readings exist, but scrambled copies produce them just as well.</p></div>'

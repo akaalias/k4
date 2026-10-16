@@ -17,6 +17,24 @@ Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.
 | 123 | F1.2 | **Two free alphabets, exact.** Any pair of orders (plain and cipher), key lengths 1-26, decided exactly (0119's method, two independent alphabets; the Beaufort form is the same family): K4 fits only at 8, 13, 16, 19, 20, 23, 24, 26. Power stated before the run as the share of 100 coppers rejected per length: 1.0 at 1-5 and 9, 0.6-0.9 at 6-8 and 10, 0.25-0.5 at most lengths 11-24, 0.01 at 26. K4's 8 fitting lengths sit inside the coppers' 5-16. **One cell outside the range:** length 19, where 3 of 100 coppers fit; the queue stopped for 0124. |
 | 124 | F1.2 | **Replication of length 19.** 26 of 1,000 fresh coppers fit at 19 (p 0.026); the look-elsewhere p, by the statistic set before the run, is also 0.026, above the 0.01 set to stop; lengths 15 and 17 are as rare (0.028). The mechanism is the known letters: at 19 the known places pair 38 apart and 28 and 66 are both R under P, a check that holds for free; copies keeping the 24 known places' carved letters give K4's verdict every time (200 of 200). Not a signal; queue resumed. **Prediction failed in degree** (expected corrected p above 0.2). |
 | 125 | F1.3 | **Forced key as running English, every dictionary table.** The 13 + 11 key letters forced at the known places, under 208,062 keyword alphabets x 3 sides x 3 rules x 2 key alphabets (3.7 million readings per text): K4's best -4.94 ranks 18 of 51 among 50 coppers (-5.28 to -4.30). Twenty planted running keys from Carter score their true windows, -3.82 to -4.78, all above K4; 11 of 20 beat every copper (one copper at -4.30 sets the bar). Closed, sampled at stated power. **Prediction failed on power** (expected fewer than half; noise peaked lower than guessed). |
+| 126 | F1.4 | **Hand key schedules, listed then tested; run cut short.** List (below) written first. The run hit its 30-minute budget inside the skip rule: B was tested in part (coverage not recorded) and C-F not at all, though the record shows zeros for them; the tableau rows as keys (A) reproduce 6 of 24 known letters, against 6, 6, 5 on three coppers. In the part done, skip with two free alphabets gave K4 461 consistent settings against 305-449 on ten coppers: replicated in 0127. |
+| 127 | F1.4 | **Skip rule replicated, complete.** All 3,729 groupings, 30 fresh coppers: two free alphabets K4 1,135 against 681-1,300 (rank 6 of 31); one free alphabet 373 (B) and 120 (V), inside; standard/KRYPTOS tables 0. The only count K4 leads is settings that put 28 and 66 (R under P) in one slot, by construction. Prediction held. |
+| 128 | F1.4 | **The rest of the list.** Stutter, back and forth, triangle and square steps, restart at each carved line (1,325 groupings) on K4 and 30 coppers: no setting fits K4 on the standard or KRYPTOS tables; on free alphabets every cell inside the coppers' range except back-and-forth in the added form, where K4 is low (1 against 2-161, the self-encryption effect of 0119); tableau rows as keys 6 of 24 against 5-8. Prediction held. |
+
+Paragraph on 0126-0128 (F1.4). The list of hand key schedules, written before the tests. From C20 'layer two':
+(c) the second plate as a running key, already done with the sculpture's texts (0017, 0090, 0117); (d) the tableau's
+row two, taken as every carved tableau row used as a repeating key (A); (e) K5 as key, blocked (no text). Hand rules
+for a key word W of unknown letters: (B) skip one letter of W every m letters; (C) use each letter r times; (D) W
+forward then backward; (E) step through W by triangle or square numbers; (F) restart W at each carved line of the
+plate. Already covered: the Berlin clock (0079), Carter dates (0038), progressive per repeat (0011, 0042), restart at
+each word (0101), autokeys, a shift per carved line plus a word (0088). Every rule on the list is dead on the standard
+and KRYPTOS tables. On free alphabets the rules leave consistent settings at the coppers' rate, which by 0120 no climb
+can tell apart, so that residue is blocked like F1.2's.
+
+Mistakes in 0126: I estimated the run from K4 alone, where the decider takes about 1 ms. On a few copper groupings
+it ran to its million-node limit, the clock check broke out of each rule's loop, and the record shows zeros for four
+rules it never tested, without recording coverage. 0127 and 0128 lowered the node limit, counted undecided cases,
+recorded coverage and ran texts in parallel. Lesson: record coverage in the bounds whenever a loop can stop on the clock.
 
 Paragraph on 0123-0124 (F1.2). Two free alphabets are closed exactly at 18 of the 26 lengths. At the eight that
 stay consistent (8, 13, 16, 19, 20, 23, 24, 26) nothing cheaper than an English climb remains, and 0120 showed a climb

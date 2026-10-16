@@ -135,7 +135,7 @@ Constraint on the scorer: tolerate X and Q. Status: constraint.
 
 **C20. "Layer two."** (K2, confirmed 2006). Readings: (a) a second layer of encryption
 on K4; (b) fold the halves; (c) the second plate; (d) the tableau row two; (e) K5.
-Status: (a) as a second stage: types 1 and 2 of directions.md, 0080-0099 and 0110-0116 (moves with periodic, autokey, running and clock keys; Hill with a periodic key), all dead or at chance; as two key words added, dead (0115). (b) the screen folded: dead as a positional key (0089). (c)-(e) untested.
+Status: (a) as a second stage: types 1 and 2 of directions.md, 0080-0099 and 0110-0116 (moves with periodic, autokey, running and clock keys; Hill with a periodic key), all dead or at chance; as two key words added, dead (0115). (b) the screen folded: dead as a positional key (0089). (c) the second plate as a running key: dead with the sculpture's texts (0017, 0090, 0117). (d) the tableau rows, row two among them, as repeating keys from every start on standard or KRYPTOS tables: at most 6 of 24 known letters, coppers 5-8 (0126, 0128). (e) K5 as key: blocked, no text. Hand schedules of a key word (skip, stutter, back and forth, triangle, square, restart per carved line): dead on standard and KRYPTOS tables (0127, 0128).
 
 **C21. The extra L and HILL.** Readings: (a) Hill cipher (2x2 and 3x3 exhausted under
 the alignments tested; affine, chaining, 4x4, shifting numberings, paired 2x2 open); (b)

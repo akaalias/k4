@@ -687,7 +687,7 @@ def page(title, body, active="", refresh=True):
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
     nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/live", "Live Dashboard"), ("/lineage", "Lineage"), ("/families", "Families")))
            + '<span class="spacer"></span><span class="sec">'
-           + "".join(link(h, t) for h, t in (("/order", "Order of Work"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
+           + "".join(link(h, t) for h, t in (("/order", "Order of Work"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
            + "</span>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
@@ -1894,14 +1894,28 @@ FR_CSS = """<style>
 </style>"""
 
 
+def record_page():
+    text = (ROOT / "families.md").read_text()
+    rec, _ = family_record_html(text)
+    rows = load_results()
+    n_find = rec.count('<li><span class="fr-refs">') if rec else 0
+    head = page_head("Full record", "What each family has covered",
+                     "Every bound the search has set, family by family: the family's status, then each finding with the experiments "
+                     "behind it, newest first. A finding says what was searched and what the scrambled copies of the carved text did "
+                     "under the same search.",
+                     f"{len(rows)} experiments, {n_find} findings.")
+    foot = page_foot('The same families as a tree of open and closed hypotheses are on the <a href="/families">families</a> page; '
+                     'the order they are worked in is on <a href="/order">Order of work</a>.')
+    return page("full record", head + (rec or "") + foot, "/record", True)
+
+
 def families_page():
     text = (ROOT / "families.md").read_text()
     root, cut = parse_tree(text)
-    rec, cut = family_record_html(cut)
+    _, cut = family_record_html(cut)
+    cut = cut.replace("## Full record by family\n\n<div class=\"fr-slot\"></div>\n\n", "")
     cut = re.sub(r"^# .*\n", "", cut, count=1, flags=re.M)
     body = md(cut)
-    if rec:
-        body = body.replace('<div class="fr-slot"></div>', rec)
     facts, key = "", ""
     if root:
         body = body.replace('<div class="ht-slot"></div>', tree_html(root, text))
@@ -1916,7 +1930,7 @@ def families_page():
                      "Every hypothesis the search holds, from one root through the families to the single tests. Each leaf is open, closed, "
                      "blocked or noted, with the strength of the test and the experiments behind it. Families appear in the order they are "
                      "worked; click a branch to fold it, a number to open the experiment.", facts, key)
-    foot = page_foot('The ranking and each family\'s open items as tables are on <a href="/order">Order of work</a>; '
+    foot = page_foot('The ranking and each family\'s open items as tables are on <a href="/order">Order of work</a>; what each family has covered, finding by finding, is in the <a href="/record">full record</a>; '
                      'how the experiments built on each other is on the <a href="/lineage">lineage</a> page.')
     return page("families", head + "<article>" + body + "</article>" + foot, "/families", True)
 
@@ -1970,6 +1984,8 @@ def route(path):
                        standfirst="The rules for working through the families, the order they are ranked in and why, and each family's open items as a table.",
                        facts='Decided 2026-10-16 (issue #29). The same items are drawn as a tree on the <a href="/families">families</a> page.',
                        foot='The same items as a tree are on the <a href="/families">families</a> page; the rules the loop follows are in the <a href="/program">program</a>.')
+    if path == "/record":
+        return record_page()
     if path == "/families":
         return families_page()
     if path == "/clues":

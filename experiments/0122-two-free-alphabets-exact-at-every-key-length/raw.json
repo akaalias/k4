@@ -1,0 +1,8 @@
+{
+ "candidates": [],
+ "bounds": {},
+ "notes": "",
+ "error": "Traceback (most recent call last):\n  File \"/Users/alexisrondeau/Workshop/cryptos/_runner.py\", line 34, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 379, in run\n    pl = {f: \"\".join(a[1] for a, v in sorted(w[0].items(), key=lambda kv: kv[1]) if a[0] == f) for f in (\"P\", \"C\")}\n             ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: sequence item 0: expected str instance, int found\n",
+ "worked_example": "",
+ "seconds": 1.608051061630249
+}

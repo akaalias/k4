@@ -1,0 +1,20 @@
+key length 23, Beaufort form: K4 in rows of 23; each column is one key slot
+
+  O B K R U O X O G H U L B S O L I F B B W F L
+  R V Q Q P R N G K S S O T W T Q S J Q S S E K
+  Z Z W A T J K L U D I A W I N F B N Y P V T T
+  M Z F P K W G D K Z X T J C D I G K U H U A U
+  E K C A R
+
+columns holding two known letters (each gives one check: place(c1)+place(p1) = place(c2)+place(p2)):
+  column 0: S under R (24), C under M (70)
+  column 1: T under V (25), L under Z (71)
+  column 2: N under Q (26), O under F (72)
+  column 3: O under Q (27), C under P (73)
+  column 4: R under P (28), K under K (74)
+  column 21: E under F (22), I under T (68)
+  column 22: A under L (23), N under T (69)
+
+best climbed alphabet: JCRBOQYZPXVWHSMGAUKNFTIELD
+key values: [15, 5, 24, 9, 10, 23, 5, 12, 8, 0, 8, 6, 24, 17, 18, 21, 0, 22, 3, 10, 8, 17, 14]
+place 22: carved F at 20, key 17: 17 - 20 = 23 -> E

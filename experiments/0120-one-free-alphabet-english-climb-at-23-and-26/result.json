@@ -1,0 +1,498 @@
+{
+ "id": 120,
+ "tag": "0120-one-free-alphabet-english-climb-at-23-and-26",
+ "started": "2026-10-16T08:09:36+00:00",
+ "seconds": 968.2,
+ "status": "ran",
+ "phases": {
+  "design": 44.6,
+  "implement": 409.9,
+  "test": 229.0,
+  "run": 968.2,
+  "record": 35.5
+ },
+ "ended_epoch": 1792139180.4446871,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 2,
+ "n_passed": 0,
+ "best_crib_hits": 24,
+ "best_crib_words": {
+  "EAST": [
+   4,
+   4
+  ],
+  "NORTHEAST": [
+   9,
+   9
+  ],
+  "BERLIN": [
+   6,
+   6
+  ],
+  "CLOCK": [
+   5,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 4.232233564811935,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "one unknown alphabet on both sides, Beaufort form, periodic key 23 or 26, no move (the only pairs 0119 left)",
+  "search": "simulated annealing, 20 restarts x 200,000 moves per text, penalty 1.0 per known-letter violation, T 0.05->0.002",
+  "not_exhaustive": true,
+  "coppers_per_length": 12,
+  "plants_per_length": 6,
+  "summary": {
+   "23": {
+    "k4": -5.810638731843756,
+    "coppers_min": -5.89937258245918,
+    "coppers_max": -5.4458110913041535,
+    "k4_above_all_coppers": false,
+    "plants_found": 3,
+    "plants_letters_right": [
+     37,
+     41,
+     34,
+     34,
+     32,
+     36
+    ],
+    "plants_scores": [
+     -5.5,
+     -5.503,
+     -5.455,
+     -5.383,
+     -5.364,
+     -5.295
+    ],
+    "plants_true_scores": [
+     -4.351,
+     -4.067,
+     -4.379,
+     -4.165,
+     -4.053,
+     -4.013
+    ]
+   },
+   "26": {
+    "k4": -5.288900231478601,
+    "coppers_min": -5.326072645614461,
+    "coppers_max": -5.008216737672375,
+    "k4_above_all_coppers": false,
+    "plants_found": 1,
+    "plants_letters_right": [
+     29,
+     37,
+     38,
+     38,
+     43,
+     36
+    ],
+    "plants_scores": [
+     -5.052,
+     -5.096,
+     -5.075,
+     -5.227,
+     -4.794,
+     -5.092
+    ],
+    "plants_true_scores": [
+     -4.271,
+     -4.325,
+     -4.075,
+     -4.12,
+     -4.089,
+     -4.351
+    ]
+   }
+  },
+  "coppers_scores": {
+   "23": [
+    -5.729,
+    -5.815,
+    -5.729,
+    -5.713,
+    -5.446,
+    -5.611,
+    -5.54,
+    -5.702,
+    -5.899,
+    -5.812,
+    -5.671,
+    -5.757
+   ],
+   "26": [
+    -5.118,
+    -5.008,
+    -5.326,
+    -5.264,
+    -5.218,
+    -5.029,
+    -5.104,
+    -5.065,
+    -5.108,
+    -5.161,
+    -5.228,
+    -5.211
+   ]
+  },
+  "k4_best": {
+   "23": {
+    "score": -5.810638731843756,
+    "plaintext": "WRYZNNIPNMUPTOMEORJZEEASTNORTHEASTRBYEASILETFIPLSNGESMUCHASTDCEBERLINCLOCKHASANDWLANDWOHLUCEKSENP",
+    "alphabet": "JCRBOQYZPXVWHSMGAUKNFTIELD",
+    "key": [
+     15,
+     5,
+     24,
+     9,
+     10,
+     23,
+     5,
+     12,
+     8,
+     0,
+     8,
+     6,
+     24,
+     17,
+     18,
+     21,
+     0,
+     22,
+     3,
+     10,
+     8,
+     17,
+     14
+    ]
+   },
+   "26": {
+    "score": -5.288900231478601,
+    "plaintext": "QBHEFEULCLATLYEPHUVALEASTNORTHEASTPOILTYNESTUCOOTEVELHOURKMRTISBERLINCLOCKTBYINAROMTHEENEIGNORGHF",
+    "alphabet": "NDPEAFCIXWRMUHGYZKOBTJVSQL",
+    "key": [
+     16,
+     12,
+     4,
+     13,
+     17,
+     21,
+     20,
+     17,
+     20,
+     12,
+     16,
+     19,
+     18,
+     12,
+     21,
+     1,
+     20,
+     17,
+     15,
+     23,
+     8,
+     8,
+     3,
+     7,
+     16,
+     24
+    ]
+   }
+  },
+  "controls": "12 shuffled coppers per length that fit exactly at that length and form (seed 120), identical climb"
+ },
+ "notes": "L23: K4 -5.811, coppers -5.899 to -5.446, plants found 3/6 (letters right [37, 41, 34, 34, 32, 36]); L26: K4 -5.289, coppers -5.326 to -5.008, plants found 1/6 (letters right [29, 37, 38, 38, 43, 36])",
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "WRYZNNIPNMUPTOMEORJZEEASTNORTHEASTRBYEASILETFIPLSNGESMUCHASTDCEBERLINCLOCKHASANDWLANDWOHLUCEKSENP",
+   "key": {
+    "alphabet": "JCRBOQYZPXVWHSMGAUKNFTIELD",
+    "shifts": [
+     15,
+     5,
+     24,
+     9,
+     10,
+     23,
+     5,
+     12,
+     8,
+     0,
+     8,
+     6,
+     24,
+     17,
+     18,
+     21,
+     0,
+     22,
+     3,
+     10,
+     8,
+     17,
+     14
+    ],
+    "form": "beaufort"
+   },
+   "key_bits": 198.5,
+   "key_description": "Beaufort form, one alphabet JCRBOQYZPXVWHSMGAUKNFTIELD on both sides, key length 23",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "length 23, climbed",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -5.811,
+    "controls": 0,
+    "best_control": null
+   },
+   "english_free": -5.810638731843756,
+   "fitness": -7.857030484421076,
+   "loss": 4.518972065177089,
+   "readable_words": [
+    [
+     0,
+     3,
+     "WRY"
+    ],
+    [
+     5,
+     8,
+     "NIP"
+    ],
+    [
+     10,
+     12,
+     "UP"
+    ],
+    [
+     12,
+     16,
+     "TOME"
+    ],
+    [
+     16,
+     18,
+     "OR"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     35,
+     38,
+     "BYE"
+    ],
+    [
+     41,
+     44,
+     "LET"
+    ],
+    [
+     53,
+     57,
+     "MUCH"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     77,
+     80,
+     "AND"
+    ],
+    [
+     81,
+     85,
+     "LAND"
+    ]
+   ]
+  },
+  {
+   "plaintext": "QBHEFEULCLATLYEPHUVALEASTNORTHEASTPOILTYNESTUCOOTEVELHOURKMRTISBERLINCLOCKTBYINAROMTHEENEIGNORGHF",
+   "key": {
+    "alphabet": "NDPEAFCIXWRMUHGYZKOBTJVSQL",
+    "shifts": [
+     16,
+     12,
+     4,
+     13,
+     17,
+     21,
+     20,
+     17,
+     20,
+     12,
+     16,
+     19,
+     18,
+     12,
+     21,
+     1,
+     20,
+     17,
+     15,
+     23,
+     8,
+     8,
+     3,
+     7,
+     16,
+     24
+    ],
+    "form": "beaufort"
+   },
+   "key_bits": 212.60000000000002,
+   "key_description": "Beaufort form, one alphabet NDPEAFCIXWRMUHGYZKOBTJVSQL on both sides, key length 26",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "length 26, climbed",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -5.289,
+    "controls": 0,
+    "best_control": null
+   },
+   "english_free": -5.288900231478601,
+   "fitness": -7.4806528087981885,
+   "loss": 4.232233564811935,
+   "readable_words": [
+    [
+     12,
+     15,
+     "LYE"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     35,
+     38,
+     "OIL"
+    ],
+    [
+     40,
+     44,
+     "NEST"
+    ],
+    [
+     45,
+     49,
+     "COOT"
+    ],
+    [
+     49,
+     52,
+     "EVE"
+    ],
+    [
+     53,
+     57,
+     "HOUR"
+    ],
+    [
+     61,
+     63,
+     "IS"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     75,
+     77,
+     "BY"
+    ],
+    [
+     77,
+     79,
+     "IN"
+    ],
+    [
+     83,
+     86,
+     "THE"
+    ],
+    [
+     91,
+     94,
+     "NOR"
+    ]
+   ]
+  }
+ ]
+}

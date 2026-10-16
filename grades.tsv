@@ -147,3 +147,7 @@ id	outcome	strength	cribs_forced	space	note
 0146	chance	sampled	no	F1.2 Quagmire IV L8: K4 vs 12 kept-place copies, design 2	K4 rank 2/13: closed sampled at power 4/4 (0145)
 0147	chance	exact	no	F1.6: 604 one-letter-error variants per text through exact one/two free alphabet periodic tests, L1-26, 10 coppers	K4 above all coppers 2/78 cells (1V:19, 2:19), null 0-11; added form revived at 19 by any S->x at 33, carried to 0148
 0148	chance	weak	no	F1.6 revived cell: added form, free alphabet, L19, carved 33 a slip; design 2 power 5 plants x 4 kept copies; K4 vs 12 copies	power 3/5 (bar 4) fails; K4 rank 7/13; cell stays blocked (weak); one plant recovered 97/97
+0149	chance	exact	no	F1.7 autokey (ct, pt) on one unknown alphabet, 3 forms, every lag, no move, 10 coppers	K4 fit lags inside coppers per kind/form; rare fits 4 vs null 0-27; fitting lags blocked by cost
+0150	ruled-out	exact	no	F1.6 Gromark part: 605 one-letter variants x 0069/0076/0107 deciders (181 settings x 4 forms)	no variant fits any setting; exact (no controls needed)
+0151	diagnostic	exact	no	F1.6 Hill/trifid part: 5,044 one-letter variants of K4 (sub, del, ins anywhere) through 0105 Hill and 0040 trifid deciders	trifid: no cube under any variant; Hill: 257 alive-with-check pairs (mostly 5x5 plain, 1 check), controls in 0152
+0152	chance	exact	no	F1.6 Hill controls: 5,044 one-letter variants of 10 coppers through 0105	coppers 30-6,384 alive-with-check (5x5 plain); K4 257 rank 4/11: chance

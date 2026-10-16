@@ -534,9 +534,9 @@ def loss_chart(rows, bare=False):
             cx, cy = xs[i], y(ymax)
             g.append(f'<a href="{href}"><path d="M{cx-4:.1f},{cy-4:.1f} L{cx+4:.1f},{cy+4:.1f} M{cx-4:.1f},{cy+4:.1f} L{cx+4:.1f},{cy-4:.1f}" stroke="var(--accent)" stroke-width="2" fill="none" data-tip="{tip}"/></a>')
         elif v is None:
-            g.append(f'<a href="{href}" class="fc-{esc(fam_num(r))}"><circle cx="{xs[i]:.1f}" cy="{y(ymax):.1f}" r="5" fill="var(--paper)" stroke="{"var(--fc)" if bare else "var(--disc)"}" stroke-width="2" data-tip="{tip}"/></a>')
+            g.append(f'<a href="{href}" class="fc-{esc(fam_num(r))}"><circle cx="{xs[i]:.1f}" cy="{y(ymax):.1f}" r="5" fill="var(--paper)" stroke="var(--disc)" stroke-width="2" data-tip="{tip}"/></a>')
         else:
-            fill = "var(--ink)" if dec == "kept" else ("var(--fc)" if bare else "var(--disc)")
+            fill = "var(--ink)" if dec == "kept" else "var(--disc)"
             g.append(f'<a href="{href}" class="fc-{esc(fam_num(r))}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5.5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
     if best is not None:
         g.append(f'<text x="{xs[-1]+16:.1f}" y="{y(best)+5:.1f}" font-size="14" fill="var(--ink)">{100.0 * best / ymax:.1f}% the champion</text>')
@@ -1100,11 +1100,10 @@ def live_page():
     mk = lambda inner: f'<svg width="14" height="14" viewBox="0 0 14 14" style="flex:none">{inner}</svg>'
     key = ('<div class="ph-legend">'
            f'<span>{mk("<circle cx=7 cy=7 r=5 fill=var(--ink)></circle>")}kept</span>'
-           f'<span>{mk("<circle cx=7 cy=7 r=5 fill=var(--muted)></circle>")}a reading, in its family&rsquo;s colour, at its loss</span>'
+           f'<span>{mk("<circle cx=7 cy=7 r=5 fill=var(--disc)></circle>")}a reading, at its loss</span>'
            f'<span>{mk("<circle cx=7 cy=7 r=4 fill=var(--paper) stroke=var(--muted) stroke-width=2></circle>")}no reading: the search ruled everything out</span>'
            f'<span>{mk("<path d=\'M3,3 L11,11 M3,11 L11,3\' stroke=\'var(--accent)\' stroke-width=\'2\'></path>")}error or timeout</span>'
-           f'<span>{mk("<line x1=\'0\' x2=\'14\' y1=\'7\' y2=\'7\' stroke=\'var(--accent)\' stroke-width=\'1.5\'></line>")}below the line all 24 known letters are right; the three dots there got them because their keys were fitted to them</span></div>'
-           '<div class="ph-legend">' + "".join(f'<span class="famhead fc-{esc(k)}"><span class="sw"></span>{esc(k)} {esc(names[k])}</span>' for k in fams) + "</div>")
+           f'<span>{mk("<line x1=\'0\' x2=\'14\' y1=\'7\' y2=\'7\' stroke=\'var(--accent)\' stroke-width=\'1.5\'></line>")}below the line all 24 known letters are right; the three dots there got them because their keys were fitted to them</span></div>')
     body = (page_head("Live dashboard", "The run, experiment by experiment",
                       "Every experiment's best reading, placed by its loss: ten points for each of the 24 known letters it misses, plus how far "
                       "the rest is from English and how long its key is. Then the table of all of them, newest first. The page reloads when a "

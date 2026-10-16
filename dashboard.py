@@ -50,7 +50,7 @@ a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a
 .wrap{max-width:980px;margin:0 auto;padding:14px 28px 40px}
 h1.home{font:italic 400 40px/1.15 var(--serif);text-align:center;margin:28px 0 10px;letter-spacing:-.01em}
 @media(min-width:761px){h1.home{white-space:nowrap;font-size:clamp(26px,3.9vw,40px);width:96vw;position:relative;left:50%;transform:translateX(-50%)}}
-p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}.psub.answer{font-size:24px;line-height:1.4;color:var(--ink);margin:6px auto 28px}
+p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}p.psub.answer{font-size:32px;line-height:1.3;color:var(--ink);margin:44px auto 34px;max-width:none}@media(max-width:760px){p.psub.answer{font-size:22px;margin-top:28px}}
 .hero-flow{width:96vw;position:relative;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:12px;margin:22px 0 26px}
 .hero-flow .lp-col{zoom:.74}
 .hf-arrow{color:var(--muted);flex:none;padding-top:22px}

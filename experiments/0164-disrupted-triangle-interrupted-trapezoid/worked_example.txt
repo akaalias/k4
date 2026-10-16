@@ -1,0 +1,11 @@
+triangle: ten rows of 1, 3, ..., 19 cells, centred; key KRYPTOS repeated to 19 letters and numbered; columns read in that order
+
+first 20 message places read: 82 5 11 19 29 41 55 71 89 36 48 62 78 96 17 27 39 53 69 87
+
+place  letter  lands at  carved
+   22       E        35       O
+   23       A        77       D
+   24       S        22       F
+   64       B        96       A
+   65       E        42       Q
+   74       K        39       Q

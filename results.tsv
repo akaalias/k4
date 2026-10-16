@@ -162,3 +162,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0161	0161-two-tables-round-a-move	6-transposition-then-tableau	0080-key-on-both-sides-of-the-move	reverted	0	0	0			102	unattributed=101 run=102 record=0
 0162	0162-three-stages-with-a-keyword-columnar	6-transposition-then-tableau	0134-mixed-matrix-readings-two-and-three-stages	reverted	0	0	0			40	unattributed=132 run=40 record=0
 0163	0163-autokeys-with-width-7-double-columnar	6-transposition-then-tableau	0084-width-7-double-columnar	reverted	0	0	0			257	unattributed=85 run=257 record=0
+0164	0164-disrupted-triangle-interrupted-trapezoid	6-transposition-then-tableau	0110-true-keyword-columnar-from-the-dictionary	reverted	0	0	0			38	unattributed=188 run=38 record=0

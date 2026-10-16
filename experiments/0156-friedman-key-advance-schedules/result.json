@@ -1,0 +1,195 @@
+{
+ "id": 156,
+ "tag": "0156-friedman-key-advance-schedules",
+ "started": "2026-10-16T22:23:57+00:00",
+ "seconds": 38.7,
+ "status": "ran",
+ "phases": {
+  "unattributed": 27.3,
+  "run": 38.7,
+  "record": 0.1
+ },
+ "ended_epoch": 1792189475.9457338,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "Friedman key-advance schedules (MC III, TM 32-220) on the 12 standard/KRYPTOS tables x 2 key numberings",
+  "words": 234143,
+  "word_lengths": [
+   3,
+   20
+  ],
+  "summary": {
+   "christmas": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "extinguisher 2": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "extinguisher 3": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "extinguisher 4": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "extinguisher 5": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "runlen A=0": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "runlen A=1": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "ct interruptor": {
+    "k4_consistent_with_check": 0,
+    "coppers": [
+     2,
+     0,
+     2,
+     10,
+     4,
+     2,
+     0,
+     9,
+     14,
+     3
+    ]
+   },
+   "fraction digits": {
+    "k4_consistent_with_check": 0,
+    "coppers": [
+     0,
+     0,
+     0,
+     8,
+     8,
+     0,
+     0,
+     4,
+     8,
+     4
+    ]
+   },
+   "pt interruptor": {
+    "k4_consistent_with_check": 160,
+    "coppers": [
+     220,
+     130,
+     1762,
+     3074,
+     2854,
+     120,
+     2994,
+     7165,
+     2999,
+     1632
+    ]
+   }
+  },
+  "k4_word_hits": {},
+  "free_settings": {
+   "ct interruptor": "26 letters x key lengths 1-26",
+   "fraction digits": "denominators 3-99 x key lengths 1-26, zeros dropped",
+   "pt interruptor": "26 letters x key lengths 1-26 x start place of each known run"
+  },
+  "controls": "10 shuffled coppers (seed 1510), identical test",
+  "exhaustive": true
+ },
+ "notes": "christmas: K4 0 (coppers 0-0); extinguisher 2: K4 0 (coppers 0-0); extinguisher 3: K4 0 (coppers 0-0); extinguisher 4: K4 0 (coppers 0-0); extinguisher 5: K4 0 (coppers 0-0); runlen A=0: K4 0 (coppers 0-0); runlen A=1: K4 0 (coppers 0-0); ct interruptor: K4 0 (coppers 0-14); fraction digits: K4 0 (coppers 0-8); pt interruptor: K4 160 (coppers 120-7165)",
+ "error": null,
+ "candidates": []
+}

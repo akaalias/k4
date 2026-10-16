@@ -154,3 +154,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0153	0153-carter-running-key-on-an-unknown-alphabet	1-keyed-periodic	0098-sculpture-running-keys-on-an-unknown-alphabet	error	0	0	0			1860	unattributed=11 run=1860 record=0
 0154	0154-carter-running-key-on-an-unknown-alphabet-rerun	1-keyed-periodic	0098-sculpture-running-keys-on-an-unknown-alphabet	reverted	0	0	0			1427	unattributed=34 run=1427 record=0
 0155	0155-progressive-keys-on-dictionary-tables	1-keyed-periodic	0042-progressive-key-on-vocabulary-alphabets	reverted	0	0	0			386	unattributed=24 run=386 record=0
+0156	0156-friedman-key-advance-schedules	1-keyed-periodic	0126-hand-key-schedules-listed-and-tested	reverted	0	0	0			39	unattributed=27 run=39 record=0

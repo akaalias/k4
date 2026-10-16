@@ -1,0 +1,14 @@
+word KRYPTOS: the key letter in use at each known place, by schedule
+
+  runlen A=1       places 22-34: RRRRRRRRYYYYY   64-74: PPPPPPPTTTT
+  runlen A=0       places 22-34: RRRRRRYYYYYYY   64-74: PPPTTTTTTTT
+  christmas        places 22-34: RYPTKRYKKRYPT   64-74: KRYPKRKRYPT
+  extinguisher 2   places 22-34: OSKRKRKRYPYPP   64-74: TOTOTOSOKRK
+  extinguisher 3   places 22-34: KRRYPRYYPTOPT   64-74: PRYPRYPTPTO
+  extinguisher 4   places 22-34: RYYPTOYPKRYPR   64-74: YPKRYRYPYPT
+  extinguisher 5   places 22-34: YPKRYPTRYPTOK   64-74: PTORYYPTKRY
+
+sculpture's table (KRYPTOS alphabets, Vigenere): the key letters the known letters force
+  places 22-34: RDUMRIYWOYNKY   64-74: ELYOIECBAQK
+
+CHRISTMAS expands to CHRISTMACCHCHRICHRISTMCHRCHRISCHRISTMASCHRIST (45 letters, as MC III §35c)

@@ -54,7 +54,8 @@ Update the leaf when an experiment works on it.
     - One carved letter wrong, missing or extra, through every move {closed · exact · 0093, 0094}
     - Three stages
       - Three clockwise quarter turns, every width {closed · exact · 0083}
-      - **F6.3** Mixed three-stage routes {open · sampled · 0037}
+      - **F6.3** Mixed three-stage routes {closed · exact · 0037, 0134}
+        - Four column readings (turn either way, rows-then-columns-down, its reverse), every pair at widths 2-96 and every triple at 2-24: nothing live below key length 20 {closed · exact · 0134}
     - Alphabets in unknown orders after or before a move
       - **F6.1** One unknown alphabet (Quagmire III) {blocked · exact · 0097, 0129, 0130}
         - Every type-1 move, either order, added or Beaufort form, key lengths 1-5: no alphabet fits {closed · exact · 0129, 0130}

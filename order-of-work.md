@@ -64,7 +64,7 @@ for low-value residues.
 |---|---|---|---|---|
 | Columnar (plain, keyed, double), K3's rule, quarter turns, grid paths, rail fence, AMSCO, Myszkowski, then a periodic key on standard, KRYPTOS or word alphabets | closed | exact | 0006-0008, 0026, 0058, 0080-0086, 0099, 0110-0114 | - |
 | The same moves with autokey, running key or clock schedules | closed | exact | 0063, 0081, 0090, 0091 | - |
-| Three stages | partly closed | exact for clockwise triples (0083); sampled for mixed stages (0037) | 0037, 0083 | **F6.3** mixed-direction triples, exhaustive at small widths |
+| Three stages | closed | exact for clockwise triples at 2-96 (0083) and every mix of four column readings, triples at widths 2-24 and pairs at 2-96 (0134) | 0037, 0083, 0134 | **F6.3** done: nothing live below 20, at the coppers' rate; mixed triples at widths 25-96 not enumerated (0037 sampled them) |
 | One carved letter wrong, missing or extra, through the move library | closed | exact | 0093, 0094 | - |
 | AMSCO at period 23 after the move: 15 distinct check sets against 1-9 on the coppers | noted, not chased | exact | 0114 | within the 4.7 of 52 cells expected outside the range by chance; replicate only if F6 reaches AMSCO again |
 | **F6.1** Free alphabet (Quagmire III) after or before each move, periods 3-26 | **blocked** (closed exact where testable) | exact: every type-1 move, both orders, both forms, lengths 1-26; no fit below 6; fitting cells at the coppers' rate (0129: 7 of 52 cells above every copper, null 0-8; 0130: 0, null 0-10) | 0097, 0129, 0130 | the fitting settings leave only an English climb, which has no power here (0120); blocked like F1.1 |

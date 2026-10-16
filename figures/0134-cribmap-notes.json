@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Sanborn's matrix code: write the message in rows, copy it out down the columns, sometimes twice or three times, then use the table. Four ways to copy out the columns, every pair at widths 2-96 and every triple at widths 2-24."
+ },
+ {
+  "anchor": "the check",
+  "text": "For each of 1,762,597 routes and 8 ways of using the sculpture's tables, a key length is dead if two known letters sharing a key letter need different ones."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No route allows a key shorter than 20 on K4; the coppers manage the same. K4 is above every copper in 2 of 52 cells, a copper 0-2 against the rest."
+ }
+]

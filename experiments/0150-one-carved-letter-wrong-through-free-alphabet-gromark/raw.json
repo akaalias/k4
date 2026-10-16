@@ -1,0 +1,31 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "free-alphabet Gromark (0069, 0076, 0107) on 604 one-letter variants of K4",
+  "variants": 605,
+  "settings": {
+   "0069": {
+    "settings": 15,
+    "settings_with_a_fit": 0
+   },
+   "0076": {
+    "settings": 146,
+    "settings_with_a_fit": 0
+   },
+   "0107": {
+    "settings": 20,
+    "settings_with_a_fit": 0
+   }
+  },
+  "fits": [],
+  "n_settings_with_fit": 0,
+  "seconds": 1359,
+  "exhaustive": true,
+  "controls": "none needed if nothing fits (exact); any fit is compared with the same variants of 10 scrambled copies in a follow-up"
+ },
+ "notes": "605 variants x 181 rule/base settings: settings with any fitting variant 0",
+ "controls": [],
+ "error": null,
+ "worked_example": "the carved letters at the known places and the changes tried:\n\nplace 22: carved F under known E; tried the other 25 letters\nplace 26: carved Q under known N; tried the other 25 letters\nplace 27: carved Q under known O; tried the other 25 letters\nplace 33: carved S under known S; tried the other 25 letters\nplace 74: carved K under known K; tried the other 25 letters\n\nplus every known place's carved letter moved one place left or right (a letter extra or missing before EAST),\nand BERLINCLOCK's alone moved (a letter extra or missing between the two known words)",
+ "seconds": 1359.01691198349
+}

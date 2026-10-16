@@ -1,0 +1,10 @@
+the carved letters at the known places and the changes tried:
+
+place 22: carved F under known E; tried the other 25 letters
+place 26: carved Q under known N; tried the other 25 letters
+place 27: carved Q under known O; tried the other 25 letters
+place 33: carved S under known S; tried the other 25 letters
+place 74: carved K under known K; tried the other 25 letters
+
+plus every known place's carved letter moved one place left or right (a letter extra or missing before EAST),
+and BERLINCLOCK's alone moved (a letter extra or missing between the two known words)

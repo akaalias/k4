@@ -1,0 +1,50 @@
+{
+ "id": 150,
+ "tag": "0150-one-carved-letter-wrong-through-free-alphabet-gromark",
+ "started": "2026-10-16T20:52:37+00:00",
+ "seconds": 1359.1,
+ "status": "ran",
+ "phases": {
+  "unattributed": 86.0,
+  "run": 1359.1,
+  "record": 0.1
+ },
+ "ended_epoch": 1792185316.29656,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "free-alphabet Gromark (0069, 0076, 0107) on 604 one-letter variants of K4",
+  "variants": 605,
+  "settings": {
+   "0069": {
+    "settings": 15,
+    "settings_with_a_fit": 0
+   },
+   "0076": {
+    "settings": 146,
+    "settings_with_a_fit": 0
+   },
+   "0107": {
+    "settings": 20,
+    "settings_with_a_fit": 0
+   }
+  },
+  "fits": [],
+  "n_settings_with_fit": 0,
+  "seconds": 1359,
+  "exhaustive": true,
+  "controls": "none needed if nothing fits (exact); any fit is compared with the same variants of 10 scrambled copies in a follow-up"
+ },
+ "notes": "605 variants x 181 rule/base settings: settings with any fitting variant 0",
+ "error": null,
+ "candidates": []
+}

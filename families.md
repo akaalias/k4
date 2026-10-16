@@ -18,10 +18,10 @@ Update the leaf when an experiment works on it.
       - Key lengths 27-29 and 53+ on alphabets from the puzzle's words; the completed key reads as noise {closed · exact · 0034, 0035, 0048, 0053}
       - Alphabets from any dictionary word, key lengths 1-26 {closed · exact · 0109}
       - Alphabets one swap or move from KRYPTOS {closed · exact · 0071}
-      - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {open · exact · 0097, 0100, 0102, 0119, 0120}
+      - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {blocked · exact · 0097, 0100, 0102, 0119, 0120}
         - Added form (Quagmire III proper, and variant Beaufort), lengths 1-26: S under S and K under K force key 0 in slots another known letter shares {closed · exact · 0119}
         - Beaufort form, lengths 1-22, 24, 25: no alphabet fits {closed · exact · 0119}
-        - Beaufort form, length 23 (7 checks): English climb against coppers, K4 inside their range; weak, plants found 3 of 6 and never recovered {open · sampled · 0119, 0120}
+        - Beaufort form, length 23 (7 checks): English climb against coppers, K4 inside their range; weak, plants found 3 of 6 and never recovered; no climber at this size has power, so blocked (2026-10-16) {blocked · sampled · 0119, 0120}
         - Beaufort form, length 26 (1 check): no climb can decide; plants found 1 of 6 {blocked · sampled · 0119, 0120}
       - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26 {blocked · exact · 0097, 0123, 0124}
         - Lengths 1-7, 9-12, 14, 15, 17, 18, 21, 22, 25: no pair of alphabets fits {closed · exact · 0123}
@@ -217,7 +217,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P4 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P5 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -225,3 +225,4 @@ Each pivot has a details page in `pivots/` (P1-P4 so far), rendered on the Pivot
 | 2026-10-14 | 1 keyed periodic | 6 transposition then tableau | Five consecutive reverts in family 1 (0001-0005); program rule. Family 1 keeps its open bounds: plaintext autokey lags 12-29 and 53-96, progressive key. |
 | 2026-10-15 | 6 transposition then tableau (0080-0086, seven reverts) | 3 two-component key (0087-0088) | directions.md fixes the order of types (1, then 2), which overrode the five-revert rule for family 6; type 2's last items are two-component keys. |
 | 2026-10-16 | sweep across the types of directions.md (0089-0118) | F1 first, then the ranked order in order-of-work.md | No result had beaten chance, so there was nothing to follow; the user found the switching unsystematic. Families are now worked in a fixed rank order and left only when every item is closed or blocked (issue #29). |
+| 2026-10-16 | F1 one keyed stage (0119-0128) | F6 a move, then the table | Every F1 item closed or blocked; F1.1's last cells (Beaufort 23, 26) can only be tested by an English climb with no power (0120), so blocked. Ranking unchanged (P5). |

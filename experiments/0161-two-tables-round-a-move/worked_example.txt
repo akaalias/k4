@@ -1,0 +1,5 @@
+first word on the plain-alphabet table, a grid move, second word on the KRYPTOS table
+
+at a known place: guess the first-word letter v; the known letter plus v (plain alphabet) is the middle letter;
+the carved letter minus the middle letter (KRYPTOS alphabet) is the second-word letter: one second letter per guess.
+every known letter ties a first-word slot to a second-word slot this way; a contradiction for all 26 guesses rules the setting out.

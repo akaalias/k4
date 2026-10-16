@@ -1,0 +1,226 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "change (table A), move, change (table B != A): two repeating keys of lengths 2-14 on different tables round one of 844 moves",
+  "moves": 844,
+  "key_lengths": [
+   2,
+   14
+  ],
+  "table_orders": [
+   "std then kry",
+   "kry then std"
+  ],
+  "signs": 4,
+  "consistent_by_checks": {
+   "0": {
+    "k4": 11816,
+    "coppers_min": 11816,
+    "coppers_max": 11816
+   },
+   "1": {
+    "k4": 15084,
+    "coppers_min": 14812,
+    "coppers_max": 15448
+   },
+   "2": {
+    "k4": 3772,
+    "coppers_min": 3684,
+    "coppers_max": 4052
+   },
+   "3": {
+    "k4": 1220,
+    "coppers_min": 1088,
+    "coppers_max": 1332
+   },
+   "4": {
+    "k4": 524,
+    "coppers_min": 468,
+    "coppers_max": 552
+   },
+   "5": {
+    "k4": 348,
+    "coppers_min": 276,
+    "coppers_max": 460
+   },
+   "6": {
+    "k4": 16,
+    "coppers_min": 4,
+    "coppers_max": 32
+   },
+   "7": {
+    "k4": 16,
+    "coppers_min": 0,
+    "coppers_max": 20
+   },
+   "8": {
+    "k4": 4,
+    "coppers_min": 0,
+    "coppers_max": 4
+   }
+  },
+  "k4_consistent_with_5_or_more_checks": 388,
+  "coppers_with_5_or_more": [
+   444,
+   300,
+   432,
+   344,
+   372,
+   388,
+   432,
+   468,
+   504,
+   360
+  ],
+  "k4_top": [
+   {
+    "move": "ccw84inv",
+    "tables": "std then kry, signs +1+1",
+    "m": 13,
+    "n": 13,
+    "checks": 9
+   },
+   {
+    "move": "ccw84inv",
+    "tables": "std then kry, signs +1-1",
+    "m": 13,
+    "n": 13,
+    "checks": 9
+   },
+   {
+    "move": "ccw84inv",
+    "tables": "std then kry, signs -1+1",
+    "m": 13,
+    "n": 13,
+    "checks": 9
+   },
+   {
+    "move": "ccw84inv",
+    "tables": "std then kry, signs -1-1",
+    "m": 13,
+    "n": 13,
+    "checks": 9
+   },
+   {
+    "move": "colr84inv",
+    "tables": "std then kry, signs +1+1",
+    "m": 13,
+    "n": 13,
+    "checks": 8
+   },
+   {
+    "move": "colr84inv",
+    "tables": "std then kry, signs +1-1",
+    "m": 13,
+    "n": 13,
+    "checks": 8
+   },
+   {
+    "move": "colr84inv",
+    "tables": "std then kry, signs -1+1",
+    "m": 13,
+    "n": 13,
+    "checks": 8
+   },
+   {
+    "move": "colr84inv",
+    "tables": "std then kry, signs -1-1",
+    "m": 13,
+    "n": 13,
+    "checks": 8
+   },
+   {
+    "move": "k3x23",
+    "tables": "std then kry, signs +1+1",
+    "m": 13,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "k3x23",
+    "tables": "std then kry, signs +1-1",
+    "m": 13,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "k3x23",
+    "tables": "std then kry, signs -1+1",
+    "m": 13,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "k3x23",
+    "tables": "std then kry, signs -1-1",
+    "m": 13,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "colr34inv",
+    "tables": "std then kry, signs +1+1",
+    "m": 12,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "colr34inv",
+    "tables": "std then kry, signs +1-1",
+    "m": 12,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "colr34inv",
+    "tables": "std then kry, signs -1+1",
+    "m": 12,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "colr34inv",
+    "tables": "std then kry, signs -1-1",
+    "m": 12,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "colr7",
+    "tables": "std then kry, signs +1+1",
+    "m": 13,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "colr7",
+    "tables": "std then kry, signs +1-1",
+    "m": 13,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "colr7",
+    "tables": "std then kry, signs -1+1",
+    "m": 13,
+    "n": 12,
+    "checks": 7
+   },
+   {
+    "move": "colr7",
+    "tables": "std then kry, signs -1-1",
+    "m": 13,
+    "n": 12,
+    "checks": 7
+   }
+  ],
+  "seconds": 102,
+  "controls": "10 shuffled coppers (seed 1607)",
+  "exhaustive": true
+ },
+ "notes": "844 moves x 169 key-length pairs x 8 table/sign settings: consistent with >= 5 checks K4 388 (coppers 300-504); by checks 1-4 K4 [15084, 3772, 1220, 524]",
+ "controls": [],
+ "error": null,
+ "worked_example": "first word on the plain-alphabet table, a grid move, second word on the KRYPTOS table\n\nat a known place: guess the first-word letter v; the known letter plus v (plain alphabet) is the middle letter;\nthe carved letter minus the middle letter (KRYPTOS alphabet) is the second-word letter: one second letter per guess.\nevery known letter ties a first-word slot to a second-word slot this way; a contradiction for all 26 guesses rules the setting out.",
+ "seconds": 102.03469181060791
+}

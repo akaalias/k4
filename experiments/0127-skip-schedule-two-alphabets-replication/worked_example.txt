@@ -1,0 +1,29 @@
+skip schedule: key word of 7 letters, one key letter skipped every 5 letters; KRYPTOS on both sides, Vigenere
+
+place  known  carved  key letter no.  key value
+   22      E       F               4          1
+   23      A       L               5         10
+   24      S       R               6         21
+   25      T       V               0         18
+   26      N       Q               2          1
+   27      O       Q               3         15
+   28      R       P               4          2
+   29      T       R               5         23
+   30      H       N               6          5
+   31      E       G               1          2
+   32      A       K               2         19
+   33      S       S               3          0
+   34      T       S               4          2
+   64      B       N               5         11
+   65      E       Y               6         17
+   66      R       P               1          2
+   67      L       V               2          5
+   68      I       T               3         15
+   69      N       T               4         11
+   70      C       M               5          9
+   71      L       Z               0          8
+   72      O       F               1          7
+   73      C       P               2         20
+   74      K       K               3          0
+
+key letter numbers with clashing values: [0, 1, 2, 3, 4, 5, 6]: dead

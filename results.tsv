@@ -125,3 +125,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0124	0124-two-free-alphabets-length-19-replication	1-keyed-periodic	0123-two-free-alphabets-exact-at-every-key-length	reverted	0	0	0			553	design=0 test=7 run=553 record=0
 0125	0125-forced-key-as-running-english-on-dictionary-alphabets	1-keyed-periodic	0010-mixed-alphabets-forced-key-english	reverted	0	0	0			305	design=0 implement=13 test=6 run=305 record=0
 0126	0126-hand-key-schedules-listed-and-tested	1-keyed-periodic	0101-interrupted-key	reverted	0	0	0			1816	design=0 implement=10 test=1 run=1816 record=0
+0127	0127-skip-schedule-two-alphabets-replication	1-keyed-periodic	0126-hand-key-schedules-listed-and-tested	reverted	0	0	0			537	design=0 test=1 run=537 record=0

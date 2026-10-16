@@ -1,0 +1,29 @@
+{
+ "id": 121,
+ "tag": "0121-two-free-alphabets-exact-at-every-key-length",
+ "started": "2026-10-16T08:28:56+00:00",
+ "seconds": 0.9,
+ "status": "error",
+ "phases": {
+  "design": 6.7,
+  "test": 1.4,
+  "run": 0.9,
+  "record": 0.1
+ },
+ "ended_epoch": 1792139337.74978,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "error": "Traceback (most recent call last):\n  File \"/Users/alexisrondeau/Workshop/cryptos/_runner.py\", line 34, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 379, in run\n    pl = {f: \"\".join(a[1] for a, v in sorted(w[0].items(), key=lambda kv: kv[1]) if a[0] == f) for f in (\"P\", \"C\")}\n             ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: sequence item 0: expected str instance, int found\n",
+ "candidates": []
+}

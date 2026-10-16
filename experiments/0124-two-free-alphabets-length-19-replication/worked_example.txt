@@ -1,0 +1,24 @@
+key length 8: known letters by slot (place mod 8)
+  slot 0: T->V (25), S->S (33), E->Y (65), C->P (73)
+  slot 1: N->Q (26), T->S (34), R->P (66), K->K (74)
+  slot 2: O->Q (27), L->V (67)
+  slot 3: R->P (28), I->T (68)
+  slot 4: T->R (29), N->T (69)
+  slot 5: E->F (22), H->N (30), C->M (70)
+  slot 6: A->L (23), E->G (31), L->Z (71)
+  slot 7: S->R (24), A->K (32), B->N (64), O->F (72)
+  plain alphabet places: T=0 R=1 I=3 E=7 L=8 O=9 S=10 C=11 N=17 H=21 A=22 B=23 K=24
+  cipher alphabet places: L=0 T=1 F=9 R=10 G=11 Z=12 M=13 V=14 Q=15 Y=21 K=22 N=23 S=24 P=25
+  key: [14, 24, 6, 24, 10, 2, 4, 0]
+
+key length 9: known letters by slot (place mod 9)
+  slot 0: R->P (28), B->N (64), C->P (73)
+  slot 1: T->R (29), E->Y (65), K->K (74)
+  slot 2: H->N (30), R->P (66)
+  slot 3: E->F (22), E->G (31), L->V (67)
+  slot 4: A->L (23), A->K (32), I->T (68)
+  slot 5: S->R (24), S->S (33), N->T (69)
+  slot 6: T->V (25), T->S (34), C->M (70)
+  slot 7: N->Q (26), L->Z (71)
+  slot 8: O->Q (27), O->F (72)
+  dead: no pair of alphabets fits

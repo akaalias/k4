@@ -122,3 +122,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0121	0121-two-free-alphabets-exact-at-every-key-length	1-keyed-periodic	0119-one-free-alphabet-exact-at-every-key-length	error	0	0	0			1	design=7 test=1 run=1 record=0
 0122	0122-two-free-alphabets-exact-at-every-key-length	1-keyed-periodic	0119-one-free-alphabet-exact-at-every-key-length	error	0	0	0			2	unattributed=4 run=2 record=0
 0123	0123-two-free-alphabets-exact-at-every-key-length	1-keyed-periodic	0119-one-free-alphabet-exact-at-every-key-length	reverted	0	0	0			10	unattributed=21 run=10 record=0
+0124	0124-two-free-alphabets-length-19-replication	1-keyed-periodic	0123-two-free-alphabets-exact-at-every-key-length	reverted	0	0	0			553	design=0 test=7 run=553 record=0

@@ -439,7 +439,7 @@ def k4_marked(pt, known):
     return f'<span class="ct">{"".join(out)}</span>'
 
 
-def loss_chart(rows):
+def loss_chart(rows, bare=False):
     """Loss per experiment, 0 at the bottom. The axis breaks at 10, the crib gate: the band
     0-10 gets 40% of the height, 10-240 the rest. Kept: ink dot, champion line in accent.
     Reverted: recessive grey dot. No valid candidate: hollow dot at the top."""
@@ -534,10 +534,10 @@ def loss_chart(rows):
             cx, cy = xs[i], y(ymax)
             g.append(f'<a href="{href}"><path d="M{cx-4:.1f},{cy-4:.1f} L{cx+4:.1f},{cy+4:.1f} M{cx-4:.1f},{cy+4:.1f} L{cx+4:.1f},{cy-4:.1f}" stroke="var(--accent)" stroke-width="2" fill="none" data-tip="{tip}"/></a>')
         elif v is None:
-            g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(ymax):.1f}" r="5" fill="var(--paper)" stroke="var(--disc)" stroke-width="2" data-tip="{tip}"/></a>')
+            g.append(f'<a href="{href}" class="fc-{esc(fam_num(r))}"><circle cx="{xs[i]:.1f}" cy="{y(ymax):.1f}" r="5" fill="var(--paper)" stroke="{"var(--fc)" if bare else "var(--disc)"}" stroke-width="2" data-tip="{tip}"/></a>')
         else:
-            fill = "var(--ink)" if dec == "kept" else "var(--disc)"
-            g.append(f'<a href="{href}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5.5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
+            fill = "var(--ink)" if dec == "kept" else ("var(--fc)" if bare else "var(--disc)")
+            g.append(f'<a href="{href}" class="fc-{esc(fam_num(r))}"><circle cx="{xs[i]:.1f}" cy="{y(v):.1f}" r="5.5" fill="{fill}" stroke="var(--paper)" stroke-width="2" data-tip="{tip}"/></a>')
     if best is not None:
         g.append(f'<text x="{xs[-1]+16:.1f}" y="{y(best)+5:.1f}" font-size="14" fill="var(--ink)">{100.0 * best / ymax:.1f}% the champion</text>')
     g.append(f'<text transform="translate(18,{T + plot_h/2:.1f}) rotate(-90)" text-anchor="middle" font-size="14" fill="var(--muted)">loss, as % of the worst possible</text>')
@@ -553,6 +553,8 @@ def loss_chart(rows):
               '<span><i class="mk mk-err"></i>errored</span>'
               '<span><i class="mk mk-line"></i>the champion\'s loss; it moves only when an experiment is kept</span></div>')
     eyebrow = f'<p class="chart-eyebrow">Loss per experiment, all {n} of them &middot; share of the worst possible, 24 known letters wrong &middot; lower is better</p>'
+    if bare:
+        return "<div class='chart-wide' style='border-top:1px solid var(--rule);padding-top:14px'><figure class='chart'>" + "".join(g) + "</figure></div>"
     return "<div class='chart-wide'>" + eyebrow + "<figure class='chart'>" + "".join(g) + "</figure>" + legend + "</div>"
 
 
@@ -1072,15 +1074,42 @@ def experiments_table(rows):
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>')
 
 
+def fam_num(r):
+    return r["family"].split("-", 1)[0]
+
+
 def live_page():
     """The run as it goes: every experiment's best loss, newest on the right, then the table of
     experiments. Reloads when a new experiment lands."""
     rows = load_results()
     latest = rows[-1] if rows else None
-    facts = (f'{len(rows)} experiments. Latest: <a href="/exp/{esc(latest["tag"])}">{int(latest["tag"][:4])}</a>, {esc(latest["title"])}.' if latest else "")
+    n = len(rows)
+    fams = sorted({fam_num(r) for r in rows}, key=lambda k: (not k.isdigit(), int(k) if k.isdigit() else 0))
+    days = len({(r.get("started") or "")[:10] for r in rows})
+    hours = sum(sum((r.get("phases") or {}).values()) or r["seconds"] for r in rows) / 3600
+    errs = sum(1 for r in rows if r.get("decision") in ("error", "timeout"))
+    cand = sum(1 for r in rows if (r.get("n_candidates") or 0) > 0)
+    none = n - cand - errs
+    facts = (f"{n} experiments in {len(fams)} families over {days} days, {hours:.1f} hours of work. {none} ruled everything out before building a reading; "
+             f"{cand} produced readings, and none of them beat the same search on scrambled copies of the carved text. {errs} errored."
+             + (f' Latest: <a href="/exp/{esc(latest["tag"])}">{int(latest["tag"][:4])}</a>, {esc(latest["title"])}.' if latest else ""))
+    names = {}
+    for r in rows:
+        k, _, rest = r["family"].partition("-")
+        names.setdefault(k, rest.replace("-", " "))
+    mk = lambda inner: f'<svg width="14" height="14" viewBox="0 0 14 14" style="flex:none">{inner}</svg>'
+    key = ('<div class="ph-legend">'
+           f'<span>{mk("<circle cx=7 cy=7 r=5 fill=var(--ink)></circle>")}kept</span>'
+           f'<span>{mk("<circle cx=7 cy=7 r=5 fill=var(--muted)></circle>")}a reading, in its family&rsquo;s colour, at its loss</span>'
+           f'<span>{mk("<circle cx=7 cy=7 r=4 fill=var(--paper) stroke=var(--muted) stroke-width=2></circle>")}no reading: the search ruled everything out</span>'
+           f'<span>{mk("<path d=\'M3,3 L11,11 M3,11 L11,3\' stroke=\'var(--accent)\' stroke-width=\'2\'></path>")}error or timeout</span>'
+           f'<span>{mk("<line x1=\'0\' x2=\'14\' y1=\'7\' y2=\'7\' stroke=\'var(--accent)\' stroke-width=\'1.5\'></line>")}below the line all 24 known letters are right; the three dots there got them because their keys were fitted to them</span></div>'
+           '<div class="ph-legend">' + "".join(f'<span class="famhead fc-{esc(k)}"><span class="sw"></span>{esc(k)} {esc(names[k])}</span>' for k in fams) + "</div>")
     body = (page_head("Live dashboard", "The run, experiment by experiment",
-                      "Every experiment's best candidate and the table of all of them, newest first. The page reloads when a new experiment lands.", facts)
-            + loss_chart(rows)
+                      "Every experiment's best reading, placed by its loss: ten points for each of the 24 known letters it misses, plus how far "
+                      "the rest is from English and how long its key is. Then the table of all of them, newest first. The page reloads when a "
+                      "new experiment lands.", facts, key)
+            + loss_chart(rows, bare=True)
             + experiments_table(rows)
             + page_foot('How the experiments built on each other is on the <a href="/lineage">lineage</a> page; what is still open is on the <a href="/families">families</a> page.'))
     return page("live dashboard", body, "/live")

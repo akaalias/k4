@@ -1,0 +1,51 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "split key phrase (EMC par. 59d): part 1 mixes the plain alphabet, part 2 the cipher alphabet, the whole phrase the key",
+  "phrases": 29880,
+  "numberings": [
+   "cipher alphabet",
+   "plain alphabet",
+   "standard"
+  ],
+  "rules": [
+   "vig",
+   "beau",
+   "var"
+  ],
+  "k4_best_hits": 7,
+  "controls_best_hits": [
+   7,
+   8,
+   8,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7
+  ],
+  "k4_full_hits": 0,
+  "controls_full_hits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "k4_top": [],
+  "controls": "10 shuffled coppers (seed 1411)",
+  "exhaustive": true
+ },
+ "notes": "29,880 phrases x 3 numberings x 3 rules: K4 best 7/24 (coppers 7-8); full hits K4 0, coppers [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+ "controls": [],
+ "error": null,
+ "worked_example": "phrase LAYER TWO: plain alphabet LAYERBCDFGHIJKMNOPQSTUVWXZ, cipher alphabet TWOABCDEFGHIJKLMNPQRSUVXYZ, key LAYERTWO\n\nplace  carved  key  cipher place  key value  plain place  letter  known\n   22       F    T             8          0            8       F      E\n   23       L    W            14          1           13       K      A\n   24       R    O            19          2           17       P      S\n   64       N    O            16          2           14       M      B\n   65       Y    L            24         14           10       H      E",
+ "seconds": 24.211453914642334
+}

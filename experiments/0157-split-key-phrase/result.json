@@ -1,0 +1,70 @@
+{
+ "id": 157,
+ "tag": "0157-split-key-phrase",
+ "started": "2026-10-16T22:24:47+00:00",
+ "seconds": 24.3,
+ "status": "ran",
+ "phases": {
+  "unattributed": 11.8,
+  "run": 24.3,
+  "record": 0.0
+ },
+ "ended_epoch": 1792189512.030796,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "split key phrase (EMC par. 59d): part 1 mixes the plain alphabet, part 2 the cipher alphabet, the whole phrase the key",
+  "phrases": 29880,
+  "numberings": [
+   "cipher alphabet",
+   "plain alphabet",
+   "standard"
+  ],
+  "rules": [
+   "vig",
+   "beau",
+   "var"
+  ],
+  "k4_best_hits": 7,
+  "controls_best_hits": [
+   7,
+   8,
+   8,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7
+  ],
+  "k4_full_hits": 0,
+  "controls_full_hits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "k4_top": [],
+  "controls": "10 shuffled coppers (seed 1411)",
+  "exhaustive": true
+ },
+ "notes": "29,880 phrases x 3 numberings x 3 rules: K4 best 7/24 (coppers 7-8); full hits K4 0, coppers [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+ "error": null,
+ "candidates": []
+}

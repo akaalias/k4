@@ -1,0 +1,8 @@
+phrase LAYER TWO: plain alphabet LAYERBCDFGHIJKMNOPQSTUVWXZ, cipher alphabet TWOABCDEFGHIJKLMNPQRSUVXYZ, key LAYERTWO
+
+place  carved  key  cipher place  key value  plain place  letter  known
+   22       F    T             8          0            8       F      E
+   23       L    W            14          1           13       K      A
+   24       R    O            19          2           17       P      S
+   64       N    O            16          2           14       M      B
+   65       Y    L            24         14           10       H      E

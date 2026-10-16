@@ -64,7 +64,8 @@ Update the leaf when an experiment works on it.
         - Every type-1 move, either order, key lengths 1-2 (and 3 with the table first): no pair fits {closed · exact · 0133}
         - The rest: fits at the scrambled-copper rate (exact to 10, per-slot above); only an English climb could judge {blocked · exact · 0133}
         - Move first, key length 3: K4 at the top of its coppers in 0097, 0100, 0133; p 0.04-0.10 (0102) {noted · exact · 0100, 0102, 0133}
-    - **F6.4** Padding at each grid stage; nulls dropped between grids {open · sampled · 0082}
+    - **F6.4** Padding at each grid stage; nulls dropped between grids {closed · exact · 0082, 0135}
+      - Blanks in any of eight places per grid, dropped or kept as dummies, one stage (widths 2-96) or two (2-48), periodic key 1-26 on standard/KRYPTOS tables: nothing live below 21 {closed · exact · 0135}
   - F3 A two-part key with a combiner
     - Two words added: both from the puzzle, or one from the dictionary {closed · exact · 0014, 0043, 0059, 0115}
     - A word plus digits from the story {closed · exact · 0024, 0038}

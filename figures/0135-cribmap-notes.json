@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "97 letters never fill a grid, so a hand worker leaves empty squares: at the end or start of a row, or down a side column. With two grids, the first grid's empty squares can vanish or travel on as dummy letters, struck out at the end."
+ },
+ {
+  "anchor": "the check",
+  "text": "Eight places for the empty squares in each grid, drop or keep, one grid (4 readings, widths 2-96) or two (clockwise turn or Sanborn's matrix, widths 2-48): 874,572 distinct routes, each with a repeating key on the sculpture's tables."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No key shorter than 21 fits K4 after any route; the coppers reach 20. K4 is above every copper in 0 of 52 cells, a copper 0-2 against the rest."
+ }
+]

@@ -25,8 +25,8 @@ construction) are in `grades.tsv`.
 | Rank | Family | Clue support | What is left | Cost of what is left | Status |
 |---|---|---|---|---|---|
 | 1st | F1 one keyed stage, no move | strong: K1 and K2 are Quagmire III on KRYPTOS; Sanborn's "slightly different" tableau (C27c) | nothing testable: every item closed or blocked (P5) | - | done |
-| 2nd | F6 a move, then the table | strong: Sanborn's "matrix codes... then went back to this table" (C1) | the same free-alphabet items after each move in the type-1 library; mixed triple turns | medium to high | **next** (P5) |
-| 3rd | F3 two-part key with a combiner | medium: Scheidt's "key word/s" (C5), his CKM habit | combiners other than addition; numeric second parts not yet tried | low | queued |
+| 2nd | F6 a move, then the table | strong: Sanborn's "matrix codes... then went back to this table" (C1) | nothing testable: every item closed or blocked (0129-0135) | - | done |
+| 3rd | F3 two-part key with a combiner | medium: Scheidt's "key word/s" (C5), his CKM habit | combiners other than addition; numeric second parts not yet tried | low | **next** |
 | 4th | F2 masked plaintext | medium: Scheidt "masked the English language" | loose ends from 0057; nulls placed by a rule | low | queued; mostly blocked |
 | 5th | F4 Sanborn's visual systems | medium, vague | routes through the plates as a path, not as a key | medium | queued |
 | 6th | F8 Hill | weak: the HILL column only (C21) | 5x5 affine has no checks | none testable | blocked |
@@ -69,7 +69,7 @@ for low-value residues.
 | AMSCO at period 23 after the move: 15 distinct check sets against 1-9 on the coppers | noted, not chased | exact | 0114 | within the 4.7 of 52 cells expected outside the range by chance; replicate only if F6 reaches AMSCO again |
 | **F6.1** Free alphabet (Quagmire III) after or before each move, periods 3-26 | **blocked** (closed exact where testable) | exact: every type-1 move, both orders, both forms, lengths 1-26; no fit below 6; fitting cells at the coppers' rate (0129: 7 of 52 cells above every copper, null 0-8; 0130: 0, null 0-10) | 0097, 0129, 0130 | the fitting settings leave only an English climb, which has no power here (0120); blocked like F1.1 |
 | **F6.2** Two free alphabets after or before each move | **blocked** (closed exact where testable) | exact at 1-10 for every move, both orders, with undecided counted; per-slot refutation at 11-26 (0133); 97-99% of per-slot survivors fit at 11-26 (0131, 0132); K4 above every copper in 5 of 52 cells, null 2-7 | 0097, 0131, 0132, 0133 | fitting settings leave only an English climb (0120); order A length 3 (16 against 1-12) is 0102's marginal cell, inside chance by the fixed rule |
-| **F6.4** Padding applied separately at each grid stage; nulls dropped between griddings | **open** | partly (0082) | 0082 | list the hand padding rules, test each with a periodic key |
+| **F6.4** Padding applied separately at each grid stage; nulls dropped between griddings | closed | exact: the hand padding rules listed in NOTEBOOK 2026-10-16 (blanks in 8 places per grid, dropped or kept as dummies), one stage at widths 2-96, two at 2-48, periodic key 1-26 either side, 874,572 routes; nothing live below 21, at the coppers' rate (0135) | 0082, 0135 | - |
 
 ## F3. Two-part key with a combiner
 

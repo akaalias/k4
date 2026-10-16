@@ -1,0 +1,193 @@
+{
+ "id": 139,
+ "tag": "0139-parallel-tempering-climb-against-own-copies",
+ "started": "2026-10-16T18:04:49+00:00",
+ "seconds": 1087.3,
+ "status": "ran",
+ "phases": {
+  "unattributed": 453.4,
+  "run": 1087.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1792174976.709051,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "power check of 0137's climb: one unknown alphabet, Beaufort form, key length 23; each plant against shuffles of itself",
+  "search": "parallel tempering, 10 runs x 16 replicas x 625 rounds x 1000 moves per text, T 0.1->0.002",
+  "plants": 8,
+  "own_coppers_per_plant": 6,
+  "shuffles_tried": 110,
+  "restarts_done": {
+   "min": 10,
+   "max": 10
+  },
+  "c_decryption_checked": true,
+  "null_rate_found": 0.1429,
+  "null_expected_found": 1.14,
+  "bar": "design 1's power at 23 stands if >= 6 of 8 plants beat all 6 of their own coppers",
+  "plants_found_against_own": 6,
+  "passes_bar": true,
+  "plants_recovered": 0,
+  "plants_found_against_0137_k4_coppers": 8,
+  "rows": [
+   {
+    "score": -4.764,
+    "letters_right": 36,
+    "true_score": -4.2609,
+    "restarts": 10,
+    "own_coppers": [
+     -5.1035,
+     -5.0232,
+     -5.0203,
+     -5.0013,
+     -4.9526,
+     -4.9313
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.8504,
+    "letters_right": 39,
+    "true_score": -4.3786,
+    "restarts": 10,
+    "own_coppers": [
+     -5.145,
+     -5.0631,
+     -5.046,
+     -4.9888,
+     -4.9639,
+     -4.9401
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.7096,
+    "letters_right": 36,
+    "true_score": -4.3703,
+    "restarts": 10,
+    "own_coppers": [
+     -5.0463,
+     -5.0373,
+     -4.996,
+     -4.9244,
+     -4.871,
+     -4.8517
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.9344,
+    "letters_right": 38,
+    "true_score": -4.554,
+    "restarts": 10,
+    "own_coppers": [
+     -4.9851,
+     -4.9755,
+     -4.9335,
+     -4.9292,
+     -4.8888,
+     -4.8845
+    ],
+    "rank_among_own": 5,
+    "found_own": false,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.6937,
+    "letters_right": 41,
+    "true_score": -4.2441,
+    "restarts": 10,
+    "own_coppers": [
+     -5.1078,
+     -5.0393,
+     -5.0338,
+     -5.0198,
+     -4.9425,
+     -4.8926
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.8052,
+    "letters_right": 37,
+    "true_score": -4.5324,
+    "restarts": 10,
+    "own_coppers": [
+     -5.2018,
+     -5.1629,
+     -5.0567,
+     -5.052,
+     -5.0338,
+     -4.9497
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.7305,
+    "letters_right": 42,
+    "true_score": -4.1924,
+    "restarts": 10,
+    "own_coppers": [
+     -5.1441,
+     -5.0191,
+     -5.0034,
+     -4.9353,
+     -4.9318,
+     -4.8795
+    ],
+    "rank_among_own": 1,
+    "found_own": true,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   },
+   {
+    "score": -4.7954,
+    "letters_right": 34,
+    "true_score": -4.1519,
+    "restarts": 10,
+    "own_coppers": [
+     -5.0707,
+     -5.042,
+     -5.0247,
+     -4.8955,
+     -4.8608,
+     -4.7722
+    ],
+    "rank_among_own": 2,
+    "found_own": false,
+    "rank_among_k4_coppers_0137": 1,
+    "recovered": false
+   }
+  ],
+  "controls": "per plant, 6 shuffles of its own ciphertext that fit length 23 exactly (0119's decider, seed 139)"
+ },
+ "notes": "plants beating all 6 own coppers: 6/8 (null 1.1); beating all 0137 K4 coppers: 8/8; recovered 0; bar passed",
+ "error": null,
+ "candidates": []
+}

@@ -49,6 +49,7 @@ a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a
 .topnav a.on,.topnav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .wrap{max-width:980px;margin:0 auto;padding:14px 28px 40px}
 h1.home{font:italic 400 40px/1.15 var(--serif);text-align:center;margin:28px 0 10px;letter-spacing:-.01em}
+@media(min-width:761px){h1.home{white-space:nowrap;font-size:clamp(26px,3.9vw,40px);width:96vw;position:relative;left:50%;transform:translateX(-50%)}}
 p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}
 .stat-hero{max-width:560px;margin:30px auto 4px;text-align:center}
 .stat-hero>b{display:block;font-size:56px;line-height:1.05;font-weight:600;color:var(--ink)}

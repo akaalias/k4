@@ -50,6 +50,7 @@ F12.7 closed by subsumption without a run: Stein's column method (every shift of
 | # | Item | One line |
 |---|---|---|
 | 173 | F3.1 | **Scheidt's patent sandwich, exact.** c = T2[s2 T1[s1 T0[p] + a] + b], each table standard, KRYPTOS or its inverse, signs both ways (108 classes), keys a and b of length 1-13 each. Each known place ties a slot of a to a slot of b one-to-one; 26 trials decide each group of slots. 161 of 169 length pairs give 4 or more checks: nothing fits K4 there (copies fit at most 2 settings in 1,000, from those pairs' 72 new classes x 20 copies). The 8 pairs with both keys 10-13 long leave 1-2 checks; K4 fits as often as copies there (1+ checks: K4 182, copies 186-213). Three planted texts fit their own cell and decrypt in full. (The per-pair copper rate was measured after the run, with the same code.) Closed; long pairs blocked (too few checks). Prediction held. |
+| 174 | F3.1 | **Two key words joined by other combiners, exact.** A puzzle word (171, every start) and a dictionary word (3-24 letters, every rotation): added on an alphabet mixed from a puzzle word (61 new numberings; std and KRYPTOS were 0115), or multiplied mod 26 on any of 63 numberings; 12 table rules; 17.5M and 18.0M cases per text, compiled. Consistent cases: K4 0 and 0, copies 0 everywhere; two planted texts found word for word. Closed, and with 0173 F3.1 is closed (the sandwich's 8 long length pairs blocked, too few checks). Prediction held. |
 
 ## 2026-10-16
 

@@ -172,3 +172,4 @@ id	outcome	strength	cribs_forced	space	note
 0171	ruled-out	exact	no	F12.5 two parts with own periodic keys (split between the runs), lengths up to 12/10, 8 std/KRY classes, 10 coppers	no length live on K4 in either part (coppers 0-1)
 0172	chance	exact	no	F12.6 probable words: 60 words x 3,634 placements in the 10 undecided free-alphabet cells, exact, 10 kept-place copies per cell	K4 above every copy in 1/10 cells (copies 0-3): chance
 0173	ruled-out	exact	no	F3.1 Scheidt patent sandwich c=T2[T1[T0 p + a] + b], 108 table classes, key lengths 1-13 each, 20 coppers	nothing fits K4 at the 161 length pairs with >=4 checks; 8 long pairs with 1-2 checks undecidable
+0174	ruled-out	exact	no	F3.1 two key words (puzzle word x dictionary word) joined by addition on 61 mixed numberings or multiplication mod 26, 12 table rules, 10 coppers	no consistent case on K4 or any copper; 2 plants found

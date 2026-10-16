@@ -135,3 +135,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0134	0134-mixed-matrix-readings-two-and-three-stages	6-transposition-then-tableau	0083-every-triple-grid-turn	reverted	0	0	0			275	design=0 test=1 run=275 record=0
 0135	0135-hand-padding-at-every-grid-stage	6-transposition-then-tableau	0082-where-the-blanks-go-in-the-grid	reverted	0	0	0			138	design=0 test=1 run=138 record=0
 0136	0136-key-bits-against-english-redundancy	1-keyed-periodic	0120-one-free-alphabet-english-climb-at-23-and-26	reverted	0	0	0			1	design=304 implement=319 test=8 run=1 record=0
+0137	0137-free-alphabet-climb-that-keeps-the-known-letters	1-keyed-periodic	0120-one-free-alphabet-english-climb-at-23-and-26	reverted	2	0	24	4.122		726	test=20 run=726 record=41

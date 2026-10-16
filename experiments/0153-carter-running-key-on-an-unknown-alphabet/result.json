@@ -1,0 +1,28 @@
+{
+ "id": 153,
+ "tag": "0153-carter-running-key-on-an-unknown-alphabet",
+ "started": "2026-10-16T21:21:20+00:00",
+ "seconds": 1860.1,
+ "status": "error",
+ "phases": {
+  "unattributed": 11.1,
+  "run": 1860.1,
+  "record": 0.1
+ },
+ "ended_epoch": 1792187540.62206,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "error": "no output",
+ "candidates": []
+}

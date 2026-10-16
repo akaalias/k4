@@ -151,3 +151,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0150	0150-one-carved-letter-wrong-through-free-alphabet-gromark	1-keyed-periodic	0147-one-carved-letter-wrong-through-the-free-alphabet-tests	reverted	0	0	0			1359	unattributed=86 run=1359 record=0
 0151	0151-one-carved-letter-wrong-through-hill-and-trifid	1-keyed-periodic	0147-one-carved-letter-wrong-through-the-free-alphabet-tests	reverted	0	0	0			50	unattributed=14 run=50 record=0
 0152	0152-hill-slip-variants-on-scrambled-copies	1-keyed-periodic	0151-one-carved-letter-wrong-through-hill-and-trifid	reverted	0	0	0			260	unattributed=29 run=260 record=0
+0153	0153-carter-running-key-on-an-unknown-alphabet	1-keyed-periodic	0098-sculpture-running-keys-on-an-unknown-alphabet	error	0	0	0			1860	unattributed=11 run=1860 record=0

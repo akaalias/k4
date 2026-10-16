@@ -50,7 +50,7 @@ a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a
 .wrap{max-width:980px;margin:0 auto;padding:14px 28px 40px}
 h1.home{font:italic 400 40px/1.15 var(--serif);text-align:center;margin:28px 0 10px;letter-spacing:-.01em}
 @media(min-width:761px){h1.home{white-space:nowrap;font-size:clamp(26px,3.9vw,40px);width:96vw;position:relative;left:50%;transform:translateX(-50%)}}
-p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}
+p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}.psub.answer{font-size:21px;color:var(--ink);margin:4px auto 26px}
 .stat-hero{max-width:560px;margin:30px auto 4px;text-align:center}
 .stat-hero>b{display:block;font-size:56px;line-height:1.05;font-weight:600;color:var(--ink)}
 .stat-hero>span{display:block;font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:6px}
@@ -1072,15 +1072,12 @@ def overview():
     for r in rows:
         for k, v in (r.get("phases") or {"run": r["seconds"]}).items():
             by_phase[k] = by_phase.get(k, 0.0) + v
-    hero = (f"""<div class="stat-hero"><b class="num">{pct(best_loss)}</b><span>the champion's loss, as a share of the worst possible ({best_loss:.1f} of {WORST:.0f}). zero is solved</span></div>""" if best_loss is not None else
-            """<div class="stat-hero"><b class="num">none</b><span>no champion: no reading has passed every gate, including beating the same method on shuffled coppers</span></div>""")
-    hero += f"""
-<p class="hero-sub">Ten per missed known letter (24 cribs: EASTNORTHEAST, BERLINCLOCK), plus how far the other 73 letters are from English, plus the cost of a key too long to remember; 240 is every known letter wrong. Below ten, or 4.2%, means every known letter is in place. To be kept a reading must also score better English than the same method on ten shuffled coppers.</p>
+    answer = (f'We believe so, and we have a champion: <a href="/exp/{esc(ch["experiment"])}">{esc(ch["experiment"])}</a>.' if ch
+              else "We believe so, but we have not yet found our champion.")
+    hero = f"""<p class="psub answer">{answer}</p>
 <div class="stats">
 <div class="stat"><b class="num">{n}</b><span>experiments</span></div>
 <div class="stat"><b class="num">{kept}</b><span>kept</span></div>
-<div class="stat"><b class="num">{best_hits}<span style="font-size:14px;font-weight:400;display:inline">/24</span></b><span>best crib hits</span></div>
-<div class="stat"><b class="num">{fams}</b><span>families touched</span></div>
 <div class="stat"><b class="num">{secs/3600:.1f}</b><span>hours, all phases</span></div>
 </div>
 <p class="hero-sub">Time by phase across the run: {', '.join(f"{k} {fmt_dur(v)}" for k, v in sorted(by_phase.items(), key=lambda kv: PHASE_ORDER.index(kv[0]) if kv[0] in PHASE_ORDER else 9) if v >= 1) or 'none yet'}.</p>"""
@@ -1090,7 +1087,6 @@ def overview():
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
     body = ('<h1 class="home">Can an autonomous research loop find the method behind K4?</h1>'
-            '<p class="psub">Ninety-seven letters on a copper screen at Langley, four clue words, and a definition of done that demands the method, not just the words.</p>'
             + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
             + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
             + what_we_look_for()

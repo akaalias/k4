@@ -213,6 +213,8 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
+Each pivot has a details page in `pivots/` (P1-P4 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+
 | Date | From | To | Reason |
 |---|---|---|---|
 | 2026-10-14 | 1 keyed periodic (0009-0012) | 5 Gromark | Family 1 bounded for periodic, progressive and autokey keys under every alphabet the vocabulary can build. |

@@ -137,7 +137,10 @@ edited, and the dashboard shows each experiment's current verdict.
 
 - **A result outside the scrambled-copper range stops the queue:** replicate it against fresh
   controls before anything else.
-- **Change the ranking only at a family boundary,** with the reason in the pivot log.
+- **Change the ranking only at a family boundary,** with the reason in the pivot log. Every pivot also gets a
+  page, `pivots/PN.md`: frontmatter `id`, `date`, `after` (the experiment it follows), `from`, `to`, then why it
+  happened then, what came before, and the change we believe is needed. The dashboard marks it on the charts
+  and the experiments table.
 - **Dead ends** listed in `README.md` need a stated reason in `hypothesis_expert` before re-entry.
 
 ## Writing the record

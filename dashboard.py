@@ -132,7 +132,7 @@ dl.bd{display:grid;grid-template-columns:minmax(150px,max-content) 1fr;gap:6px 1
 table.score{width:100%;max-width:760px;margin:10px 0 6px;border-collapse:collapse}table.score td,table.score th{padding:7px 10px;border-bottom:1px solid var(--rule-soft);font-size:15px}table.score td:first-child{font-weight:600}table.score tr.total td{border-top:1.5px solid var(--ink);border-bottom:none;font-weight:700}table.score .pct{color:var(--accent);margin-left:8px}table.score.ranks td:first-child{font-weight:400}table.score.ranks tr.kept td{font-weight:700;color:var(--accent)}table.score.ranks tr.gap td{color:var(--faint);border-bottom:none}.score-sub{font-size:14px;color:var(--muted);margin:16px 0 4px;max-width:760px}
 .panel-wrap{display:flex;gap:18px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;margin:16px 0 8px}.panel-wrap.wide{width:min(1360px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}.callout.wide{width:min(1400px,96vw);max-width:none;position:relative;left:50%;transform:translateX(-50%);box-sizing:border-box}.callout .panel-wrap.wide{width:auto;left:0;transform:none}#sculpture-label{min-height:3.2em}.subsec{display:flex;align-items:baseline;gap:12px;margin:34px 0 10px;padding-top:12px;border-top:1px solid var(--rule-soft)}.subsec b{font:400 15px var(--serif);color:var(--faint)}.subsec h3{font:400 21px var(--serif);margin:0}.subsec-sub{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 6px}.lp-col{display:flex;flex-direction:column}.lp-eyebrow{font:600 11px/1.2 var(--serif)!important;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}.lp-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:10px 14px 12px;width:573px;box-sizing:border-box}.lp.mini .lp-box{width:auto}.lp-title{font:600 13px var(--serif);color:var(--muted);text-align:center;margin:0 0 8px}.lrow{display:flex;gap:1.5px;margin:0 0 2.5px;justify-content:flex-start}.lc{display:inline-flex;align-items:center;justify-content:center;width:15px;height:19px;border-radius:2.5px;background:#ebe7d8;color:var(--muted);font:normal 11.5px/1 var(--mono)}.lc.tail{background:#f1eee3;color:#cfcab8}.lc.known{background:var(--accent);color:var(--paper);font-weight:700}.lc.miss{background:var(--paper);color:var(--accent);box-shadow:inset 0 0 0 1.3px var(--accent);font-weight:700}.lc.ink{color:var(--ink)}.lc.dot:after{content:"";width:2px;height:2px;border-radius:50%;background:var(--faint,#9b998c)}.lp-cap{font:italic 13px/1.4 var(--serif);color:var(--muted);text-align:center;margin:6px 0 0}.lp-cap.acc{color:var(--accent);margin-top:2px}.lp-arrow{color:var(--muted);padding-top:72px}.lp.mini .lp-box{padding:5px 6px;border-radius:4px;background:transparent;border-color:var(--rule-soft)}.lp.mini .lp-title{display:none}.lp.mini .lc{width:6.5px;height:9px;font-size:6px;border-radius:1px}.lp.mini .lrow{gap:1px;margin-bottom:1px}
 .gloss{margin:6px 0 28px;padding:10px 0 0;border-top:1px solid var(--rule-soft)}.gloss .callout-h{color:var(--muted)}.gloss dl{margin:0;columns:2;column-gap:32px}.gloss .entry{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 8px}.gloss dt{font-weight:600;font-size:13.5px}.gloss dd{margin:1px 0 0 0;color:var(--muted);font-size:13px;line-height:1.5}.gloss p{margin:8px 0 0}
-.cta{display:block;max-width:640px;margin:34px auto 10px;padding:18px 22px;border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--wash);text-decoration:none;color:var(--ink)}.cta:hover{background:var(--hl)}.xtable{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin-top:22px}.xtable td.num,.xtable td:nth-child(3){white-space:nowrap}@media(max-width:760px){.xtable{width:calc(100vw - 32px);overflow-x:auto}}.cta-k{display:block;font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.cta-h{display:block;font-size:22px;margin:4px 0 4px;color:var(--accent)}.cta-s{display:block;font-size:15px;color:var(--muted)}
+.cta{display:block;max-width:640px;margin:34px auto 10px;padding:18px 22px;border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--wash);text-decoration:none;color:var(--ink)}.cta:hover{background:var(--hl)}.xtable{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin-top:22px}.xtable td.num,.xtable td:nth-child(3){white-space:nowrap}.xtable tr.pivot-row td{border-top:1px dashed var(--accent);border-bottom:1px dashed var(--accent);color:var(--accent);font-size:13.5px;padding:6px 9px}.xtable tr.pivot-row a{color:var(--accent);font-weight:600}@media(max-width:760px){.xtable{width:calc(100vw - 32px);overflow-x:auto}}.cta-k{display:block;font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.cta-h{display:block;font-size:22px;margin:4px 0 4px;color:var(--accent)}.cta-s{display:block;font-size:15px;color:var(--muted)}
 .chart-wide{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin:10px 0 6px}.chart-eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px;padding-top:10px;border-top:1px solid var(--rule)}.chart-legend{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13px;color:var(--muted);margin:6px 0 0}.chart-legend span{white-space:nowrap}.mk{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:6px}.mk-kept{background:var(--ink)}.mk-disc{background:var(--disc)}.mk-none{background:var(--paper);border:2px solid var(--disc);width:8px;height:8px}.mk-err{background:none;border-radius:0;position:relative;width:11px;height:11px}.mk-err:before,.mk-err:after{content:'';position:absolute;left:5px;top:-1px;width:2px;height:13px;background:var(--accent)}.mk-err:before{transform:rotate(45deg)}.mk-err:after{transform:rotate(-45deg)}.mk-line{border-radius:0;height:2px;width:18px;background:var(--ink);vertical-align:3px}
 figure.chart{margin:16px 0 0}figure.chart svg{width:100%;height:auto;display:block}
 .chart-row{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:28px;align-items:start;margin-top:8px}
@@ -1140,7 +1140,14 @@ def overview():
 def experiments_table(rows):
     """Every experiment, newest first, with its loss, crib letters, candidates and time by phase."""
     scale_max = max((sum((r.get("phases") or {"run": r["seconds"]}).values()) for r in rows), default=0)
+    pv_after = {p["after"]: p for p in load_pivots()}
+    ncols = 9
+
+    def pivot_row(p):
+        return (f'<tr class="pivot-row"><td colspan="{ncols}"><a href="/pivot/{esc(p["id"])}">Pivot {esc(p["id"])}</a> '
+                f'&middot; {esc(p["date"])} &middot; {esc(p["from"])} &rarr; {esc(p["to"])}</td></tr>')
     trs = "".join(
+        (pivot_row(pv_after[r["tag"][:4]]) if r["tag"][:4] in pv_after else "") +
         f"""<tr><td class="num">{int(r['tag'][:4])}</td><td><a href="/exp/{esc(r['tag'])}">{esc(r['title'])}</a></td><td class="muted">{esc(r['family'].split('-', 1)[0] + ' ' + r['family'].split('-', 1)[-1].replace('-', ' '))}</td>
 <td class="{esc(r['decision'])}">{esc(r['decision'])}</td>
 <td class="num" title="{'' if row_loss(r) is None else f"{row_loss(r):.2f} of {WORST:.0f}"}">{pct(row_loss(r))}</td>
@@ -1149,7 +1156,7 @@ def experiments_table(rows):
         for r in reversed(rows)
     )
     table = f"""<table><thead><tr><th class="num">id</th><th>title</th><th>family</th><th>decision</th><th class="num" title="the best candidate's loss as a share of the worst possible, 240">loss</th><th class="num" title="known letters the best candidate got right, out of 24">crib letters</th><th class="num" title="full 97-letter decryptions the experiment handed to the gates">candidates</th><th class="num">time</th><th>by phase, scaled to the longest</th></tr></thead><tbody>{trs}</tbody></table>"""
-    return (sec(1, "All experiments in sequence")
+    return (sec(2, "All experiments in sequence")
             + '<div class="xtable">' + table + "</div>")
 
 
@@ -1172,7 +1179,7 @@ def outcome_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     grades = load_grades()
-    W, L, R, T, band = 1400, 64, 220, 6, 46
+    W, L, R, T, band = 1400, 64, 220, 26, 46
     n = len(rows)
     step = (W - L - R) / n
     dot_r = max(1.2, min(3.6, step * 0.42))     # the lineage page's dot, shrinking only when experiments crowd
@@ -1223,6 +1230,14 @@ def outcome_chart(rows):
         cy = yrow[k] + band / 2
         col = "var(--accent)" if k in ("solved", "champion", "beat-chance") else "var(--ink)"
         g.append(f'<text x="{W - R + 14}" y="{cy + 5:.1f}" font-size="15" fill="{col}">{lab}<tspan dx="9" font-size="13.5" fill="var(--muted)">{counts[k]}</tspan></text>')
+    pos = {r["tag"][:4]: i for i, r in enumerate(rows)}
+    for pv in load_pivots():
+        if pv.get("after") in pos:
+            px = L + (pos[pv["after"]] + 1) * step
+            g.append(f'<a href="/pivot/{esc(pv["id"])}"><g data-tip="Pivot {esc(pv["id"])}, {esc(pv["date"])}<br>{esc(pv["from"])} &rarr; {esc(pv["to"])}">'
+                     f'<line x1="{px:.1f}" x2="{px:.1f}" y1="{T - 4}" y2="{T + band * len(shown)}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3"/>'
+                     f'<text x="{px:.1f}" y="{T - 8:.1f}" font-size="12" fill="var(--accent)" text-anchor="middle">{esc(pv["id"])}</text>'
+                     f'<rect x="{px - 6:.1f}" y="{T}" width="12" height="{band * len(shown)}" fill="transparent"/></g></a>')
     tick_every = next(t for t in (10, 20, 50, 100, 200, 500, 1000) if n / t <= 14)
     for i, r in enumerate(rows):
         num = int(r["tag"][:4]) if r["tag"][:4].isdigit() else i + 1
@@ -1231,7 +1246,59 @@ def outcome_chart(rows):
     g.append(f'<text x="{L + (W - L - R) / 2:.1f}" y="{H - 8}" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">experiment number, in the order it ran</text>')
     g.append(f'<text transform="translate({L - 24},{T + band * len(shown) / 2:.1f}) rotate(-90)" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">outcome against the scrambled copies</text>')
     g.append("</svg>")
-    return "<div class='chart-wide' style='margin-top:-14px'><figure class='chart' style='margin:0'>" + "".join(g) + "</figure></div>"
+    return "<div class='chart-wide' style='margin-top:14px'><figure class='chart' style='margin:0'>" + "".join(g) + "</figure></div>"
+
+
+def load_pivots():
+    """pivots/P*.md: frontmatter (id, date, after, from, to) and a markdown body, in run order."""
+    out = []
+    for f in sorted((ROOT / "pivots").glob("P*.md"), key=lambda f: int(f.stem[1:]) if f.stem[1:].isdigit() else 0):
+        text = f.read_text()
+        m = re.match(r"^---\n(.*?)\n---\n(.*)$", text, re.S)
+        if not m:
+            continue
+        meta = dict(ln.split(": ", 1) for ln in m.group(1).splitlines() if ": " in ln)
+        body = m.group(2)
+        t = re.match(r"^# (.*)\n", body)
+        meta["title"] = t.group(1).strip() if t else meta.get("id", f.stem)
+        meta["body"] = body[t.end():] if t else body
+        out.append(meta)
+    return sorted(out, key=lambda p: p.get("after", ""))
+
+
+def pivot_page(pid):
+    pv = {p["id"]: p for p in load_pivots()}.get(pid)
+    if not pv:
+        return page("not found", f"<p>No pivot {esc(pid)}</p>")
+    tags = {r["tag"][:4]: r["tag"] for r in load_results()}
+    after = pv["after"]
+    nxt = f"{int(after) + 1:04d}"
+    facts = (f'{esc(pv["date"])}. After experiment <a href="/exp/{esc(tags.get(after, after))}">{int(after)}</a>'
+             + (f', before <a href="/exp/{esc(tags[nxt])}">{int(nxt)}</a>' if nxt in tags else "")
+             + f'. From {esc(pv["from"])} to {esc(pv["to"])}.')
+    head = page_head(f'Pivot {esc(pv["id"])}', esc(pv["title"]),
+                     "Why the search changed course at this point, what had happened before, and the change we believed was needed.", facts)
+    foot = page_foot('All pivots are on the <a href="/pivots">pivots</a> page; the pivots are also marked on the '
+                     '<a href="/experiments">experiments</a> chart and the <a href="/lineage">lineage</a>.')
+    return page(f'pivot {pv["id"]}', head + "<article>" + link_exps_html(md(pv["body"])) + "</article>" + foot, "/pivots", False)
+
+
+def pivots_page():
+    pvs = load_pivots()
+    tags = {r["tag"][:4]: r["tag"] for r in load_results()}
+    rows = "".join(
+        f'<tr><td><a href="/pivot/{esc(p["id"])}">{esc(p["id"])}</a></td><td>{esc(p["date"])}</td>'
+        f'<td><a href="/exp/{esc(tags.get(p["after"], p["after"]))}">{int(p["after"])}</a></td>'
+        f'<td>{esc(p["from"])}</td><td>{esc(p["to"])}</td><td><a href="/pivot/{esc(p["id"])}">{esc(p["title"])}</a></td></tr>'
+        for p in pvs)
+    table = ('<table><thead><tr><th>pivot</th><th>date</th><th>after</th><th>from</th><th>to</th><th>details</th></tr></thead>'
+             f"<tbody>{rows}</tbody></table>")
+    head = page_head("Pivots", "When the search changed family, and why",
+                     "Each time the work moved from one family to another, with the experiment it followed. Each pivot has a page "
+                     "that says why it happened then, what came before, and the change we believed was needed.",
+                     f"{len(pvs)} pivots so far.")
+    foot = page_foot('The families themselves are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/priorities">Priorities</a>.')
+    return page("pivots", head + "<article>" + table + "</article>" + foot, "/pivots", True)
 
 
 def fam_num(r):
@@ -1273,7 +1340,9 @@ def live_page():
     body = (page_head("Experiments", "The autonomous research loop, experiment by experiment",
                       "Every experiment, in the order it ran, placed by what it found against scrambled copies of the carved text: the "
                       "same search on the same letters in a random order. A result counts only if K4 does better than all of them. Then the "
-                      "table of all experiments, newest first. The page reloads when a new experiment lands.", facts, DECISION_LEGEND)
+                      "table of all experiments, newest first. The page reloads when a new experiment lands.")
+            + sec(1, "Every experiment by outcome")
+            + f'<div style="max-width:980px;margin:0 auto"><p class="facts" style="font-size:14.5px;color:var(--muted);margin:4px 0 12px;max-width:820px">{facts}</p>' + DECISION_LEGEND + "</div>"
             + outcome_chart(rows) + key
             + experiments_table(rows)
             + page_foot('How the experiments built on each other is on the <a href="/lineage">lineage</a> page; what is still open is on the <a href="/families">families</a> page.'))
@@ -1582,6 +1651,8 @@ LIN_CSS = """
 #lin .lbound{stroke:var(--rule-soft);stroke-width:1}
 #lin .lbase{stroke:var(--rule-soft);stroke-width:1}
 #lin .lrow{stroke:var(--rule-soft);stroke-width:1;shape-rendering:crispEdges}
+#lin .lpivot{stroke:var(--accent);stroke-width:1;stroke-dasharray:3 3}
+#lin .lpivot-lab{font:600 10.5px var(--serif);fill:var(--accent);letter-spacing:.02em}
 #lin .lrow.ten{stroke:var(--rule);stroke-opacity:.6}
 #lin .lrow.lit-direct{stroke:var(--muted);stroke-opacity:.45}
 #lin .rhit{fill:var(--ink);fill-opacity:0;transition:fill-opacity .12s}
@@ -1618,7 +1689,7 @@ LIN_JS = r"""
 <script>
 (function(){
   var data={};try{data=JSON.parse(document.getElementById('lin-data').textContent||'{}');}catch(e){}
-  var nodes=data.nodes||[],fams=data.families||[];
+  var nodes=data.nodes||[],fams=data.families||[],pivots=data.pivots||[];
   var host=document.getElementById('lin-diagram'),lanesEl=document.getElementById('lin-lanes'),tip=document.getElementById('lin-tip');
   if(!host)return;
   if(!nodes.length){host.innerHTML='<p class="muted">No experiments yet.</p>';return;}
@@ -1678,6 +1749,10 @@ LIN_JS = r"""
         +'<circle class="hit" cx="'+cx+'" cy="'+cy+'" r="10" fill="transparent"/>'
         +'<text class="nlab" x="'+(parseFloat(cx)-10)+'" y="'+(cy+3.3)+'" text-anchor="end">'+nd.n+'</text></a>';
     });
+    // pivots: a dashed line between the experiment a pivot followed and the next one, labelled at the right
+    pivots.forEach(function(pv){if(!(pv.after in y))return;var py=y[pv.after]+geo.sp/2;
+      g+='<a href="/pivot/'+encodeURIComponent(pv.id)+'"><line class="lpivot" x1="0" x2="'+W+'" y1="'+py+'" y2="'+py+'"/>'
+        +'<text class="lpivot-lab" x="'+(W-6)+'" y="'+(py-3)+'" text-anchor="end">'+esc(pv.label)+'</text></a>';});
     host.innerHTML='<svg id="lin" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>';
     svg=document.getElementById('lin');
     lanesEl.style.width=W+'px';lanesEl.style.height='';
@@ -1817,7 +1892,9 @@ def lineage_data(rows):
               "decision": r.get("decision"), "recorded": r.get("decision_recorded"),
               "loss": pct(row_loss(r)), "cribs": r.get("best_crib_hits", 0),
               "summary": plain(r.get("eli5", "")), "note": r.get("verdict_note", "")} for r in rows]
-    return {"nodes": nodes, "families": fams}
+    pivots = [{"id": p["id"], "after": next((r["tag"] for r in rows if r["tag"][:4] == p["after"]), None),
+               "label": f'Pivot {p["id"]}: {p["from"]} \u2192 {p["to"]}'} for p in load_pivots()]
+    return {"nodes": nodes, "families": fams, "pivots": [p for p in pivots if p["after"]]}
 
 
 LIN_LEGEND = """<div class="lin-legend">
@@ -2287,6 +2364,10 @@ def route(path):
                        standfirst="The rules for working through the families, the order they are ranked in and why, and each family's open items as a table.",
                        facts='Decided 2026-10-16 (issue #29). The same items are drawn as a tree on the <a href="/families">families</a> page.',
                        foot='The same items as a tree are on the <a href="/families">families</a> page; the rules the loop follows are in the <a href="/program">program</a>.')
+    if path == "/pivots":
+        return pivots_page()
+    if path.startswith("/pivot/"):
+        return pivot_page(path[len("/pivot/"):].strip("/"))
     if path in FAM_SECTIONS:
         return families_section_page(path)
     if path == "/record":

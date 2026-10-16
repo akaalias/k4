@@ -110,7 +110,7 @@ h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.00
 .lin-legend .lkept{width:11px;height:11px;background:var(--ink)}
 .lin-legend .lwas{width:13px;height:13px;border-radius:50%;border:1.3px dashed var(--ink);display:inline-block}
 .lin-legend .lerr{color:var(--accent);font:700 14px/1 var(--serif)}
-.lin-legend .larc{width:9px;height:16px;border-right:1.2px solid var(--muted);border-radius:0 9px 9px 0;display:inline-block}
+.lin-legend .larc{width:8px;height:16px;border-right:1.2px solid var(--muted);border-radius:0 9px 9px 0;display:inline-block}
 .lin-legend .lx{width:0;height:16px;border-left:1.2px dashed var(--muted);display:inline-block;margin:0 4px}
 .ph{max-width:980px;margin:0 auto 40px}.ph h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}.ph .standfirst{max-width:760px}
 .ph .standfirst{margin-bottom:0}.ph-meta{margin-top:56px}
@@ -1816,17 +1816,34 @@ LIN_JS = r"""
         +'<line class="lpivot" x1="0" x2="'+W+'" y1="'+(cy-h/2)+'" y2="'+(cy-h/2)+'"/><line class="lpivot" x1="0" x2="'+W+'" y1="'+(cy+h/2)+'" y2="'+(cy+h/2)+'"/>'
         +'</a>';});
     cols.forEach(function(C){g+='<line class="lbase" x1="'+C.x.toFixed(1)+'" x2="'+C.x.toFixed(1)+'" y1="'+geo.padY+'" y2="'+(H-geo.padY)+'"/>';});
+    // edges for a vertical timeline, after airloom's lineage: every edge leaves the bottom centre
+    // of the parent and arrives at the top centre of the child, vertical at both ends. Within a
+    // family each edge gets its own lane beside the column, packed by span (shortest innermost),
+    // so one-row hops stay small S-bumps and long ones run further out without piling up.
+    var R=4,LANE=5,GAP=geo.sp*0.4,maxLanes=Math.max(1,Math.floor((geo.CAP-8)/LANE)),busy={},laneOf={};
+    // a parent directly above its child, with no experiment of the family between them, gets a
+    // straight edge and no lane
+    var direct=function(nd,p){var a=y[p],b=y[nd.key];return !nodes.some(function(o){return o.fam===nd.fam&&y[o.key]>a&&y[o.key]<b;});};
+    nodes.filter(function(nd){var p=parentOf(nd.key);return p&&byKey[p].fam===nd.fam&&!direct(nd,p);})
+      .map(function(nd){return {k:nd.key,f:nd.fam,a:y[parentOf(nd.key)],b:y[nd.key]};})
+      .sort(function(u,v){return (u.b-u.a)-(v.b-v.a)||u.a-v.a;})
+      .forEach(function(r){var iv=busy[r.f]||(busy[r.f]=[]),l=0;
+        for(;l<maxLanes;l++){if(!iv.some(function(q){return q.l===l&&q.a<r.b+GAP&&r.a<q.b+GAP;}))break;}
+        if(l>=maxLanes)l=maxLanes-1;iv.push({l:l,a:r.a,b:r.b});laneOf[r.k]=l;});
     nodes.forEach(function(nd){
       var p=parentOf(nd.key);if(!p)return;
-      var a=y[p],b=y[nd.key],d;
-      // the bulge grows with the log of the span, so long arcs fan out across the column
-      // instead of all piling up at its right edge
-      if(byKey[p].fam===nd.fam){var xb=xOf(nd.key).toFixed(1),ry=(b-a)/2,
-        r=Math.min(ry+4,geo.CAP*Math.min(1,Math.log(1+(b-a)/geo.sp)/Math.log(1+H/geo.sp)));
-        d='M'+xb+','+a+' A'+r.toFixed(1)+','+ry.toFixed(1)+' 0 0 1 '+xb+','+b;
+      var a=y[p],b=y[nd.key],a0=a+R,b0=b-R,d;
+      if(byKey[p].fam===nd.fam&&direct(nd,p)){var xs=xOf(nd.key).toFixed(1);
+        g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="M'+xs+','+a0+' L'+xs+','+b0+'"/>';}
+      else if(byKey[p].fam===nd.fam){var x=xOf(nd.key),lx=x+6+LANE*laneOf[nd.key],sw=Math.min((b0-a0)/2,6+0.9*(lx-x));
+        // airloom's vertical S-curve (vertical at both ends, handles at the midpoint) out to this
+        // edge's lane, down beside the column, and a mirrored S back into the top of the child
+        d='M'+x.toFixed(1)+','+a0+' C'+x.toFixed(1)+','+(a0+sw/2).toFixed(1)+' '+lx.toFixed(1)+','+(a0+sw/2).toFixed(1)+' '+lx.toFixed(1)+','+(a0+sw).toFixed(1)
+          +' L'+lx.toFixed(1)+','+(b0-sw).toFixed(1)
+          +' C'+lx.toFixed(1)+','+(b0-sw/2).toFixed(1)+' '+x.toFixed(1)+','+(b0-sw/2).toFixed(1)+' '+x.toFixed(1)+','+b0;
         g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
-      else{var xa=xOf(p),xc=xOf(nd.key),h=(xc-xa)/2;
-        d='M'+xa.toFixed(1)+','+a+' C'+(xa+h).toFixed(1)+','+a+' '+(xc-h).toFixed(1)+','+b+' '+xc.toFixed(1)+','+b;
+      else{var xa=xOf(p),xc=xOf(nd.key),m=(a0+b0)/2;
+        d='M'+xa.toFixed(1)+','+a0+' C'+xa.toFixed(1)+','+m.toFixed(1)+' '+xc.toFixed(1)+','+m.toFixed(1)+' '+xc.toFixed(1)+','+b0;
         g+='<path class="edge x" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
     });
     nodes.forEach(function(nd){
@@ -2018,7 +2035,7 @@ def lineage_page():
         facts += f' The most built-on is <a href="/exp/{esc(top[0])}">{int(top[0][:4])}</a>, with {top[1]} children.'
     blob = json.dumps(data).replace("</", "<\\/")
     body = f"""<style>{LIN_CSS}</style><div class="lin">
-{page_head("Lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. An arc on the right of a column joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.")}
+{page_head("Lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. A curve beside a column joins an experiment to the one it built on, from the bottom of the parent to the top of the child. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.")}
 {sec(1, "Every experiment by family")}<div style="max-width:980px;margin:0 auto"><p class="facts" style="font-size:14.5px;color:var(--muted);margin:4px 0 12px;max-width:820px">{facts}</p>{LIN_LEGEND}</div>
 <div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
 {page_foot('Each family and its hypotheses are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/priorities">Priorities</a>.')}

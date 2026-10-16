@@ -1146,7 +1146,8 @@ def experiments_table(rows):
 
 
 OUTCOME_ROWS = [
-    ("solved", "solved: passes every gate"),
+    ("solved", "solved: the success definition met"),
+    ("champion", "champion: passes every gate"),
     ("beat-chance", "a lead: beat the scrambled copies"),
     ("chance", "at chance"),
     ("ruled-out", "ruled out"),
@@ -1169,8 +1170,10 @@ def outcome_chart(rows):
     kinds = {}
     for r in rows:
         oc = grades.get(r["tag"][:4], {}).get("outcome")
-        if r.get("decision") == "kept":
+        if oc == "solved":
             kinds[r["tag"]] = "solved"
+        elif r.get("decision") == "kept":
+            kinds[r["tag"]] = "champion"
         else:
             kinds[r["tag"]] = oc if oc in ("beat-chance", "chance", "ruled-out", "diagnostic") else ("ungraded" if not oc else "other")
     shown = [(k, lab) for k, lab in OUTCOME_ROWS if k != "ungraded" or "ungraded" in kinds.values()]
@@ -1190,14 +1193,14 @@ def outcome_chart(rows):
         gr = grades.get(r["tag"][:4], {})
         x = L + (i + 0.5) * step
         y0 = yrow[k] + 9
-        col = "var(--accent)" if k in ("solved", "beat-chance") else ("var(--faint)" if k == "ungraded" else "var(--muted)")
+        col = "var(--accent)" if k in ("solved", "champion", "beat-chance") else ("var(--faint)" if k == "ungraded" else "var(--muted)")
         tip = (f"{esc(r['tag'])}<br>{esc(r['title'])}<br><b>{esc(gr.get('outcome') or 'not graded yet')}</b>"
                f"{', ' + esc(gr['strength']) + ' test' if gr.get('strength') else ''}<br>{esc(gr.get('note', ''))}")
         g.append(f'<a href="/exp/{esc(r["tag"])}"><g data-tip="{tip}"><rect x="{x - tw / 2:.2f}" y="{y0}" width="{tw:.2f}" height="{band - 18}" fill="{col}"/>'
                  f'<rect x="{x - max(step, 4) / 2:.2f}" y="{yrow[k]}" width="{max(step, 4):.2f}" height="{band}" fill="transparent"/></g></a>')
     for k, lab in shown:
         cy = yrow[k] + band / 2
-        col = "var(--accent)" if k in ("solved", "beat-chance") else "var(--ink)"
+        col = "var(--accent)" if k in ("solved", "champion", "beat-chance") else "var(--ink)"
         g.append(f'<text x="{W - R + 14}" y="{cy - 3:.1f}" font-size="15" fill="{col}">{lab}</text>')
         g.append(f'<text x="{W - R + 14}" y="{cy + 15:.1f}" font-size="13" fill="var(--muted)">{counts[k]}</text>')
     tick_every = next(t for t in (10, 20, 50, 100, 200, 500, 1000) if n / t <= 14)
@@ -1235,11 +1238,13 @@ def live_page():
     for r in rows:
         k, _, rest = r["family"].partition("-")
         names.setdefault(k, rest.replace("-", " "))
-    key = ('<div class="explain-row cols-4">'
-           '<div class="explain-col"><h4>Solved</h4><p>A reading that passes every gate, including beating every scrambled copy. A winning experiment lands in the dashed band.</p></div>'
+    key = ('<div class="explain-row" style="row-gap:26px;margin-top:40px">'
+           '<div class="explain-col"><h4>Solved</h4><p>Meets the success definition: the known letters in place, readable English, and a procedure a person could do by hand with a short key. A winning experiment lands in the dashed band.</p></div>'
+           '<div class="explain-col"><h4>Champion</h4><p>Passes every gate: all 24 known letters, re-encrypts to the copper, beats every scrambled copy. Not yet shown to read as English from a memorable method.</p></div>'
            '<div class="explain-col"><h4>A lead</h4><p>K4 did better than every scrambled copy under the same search, but the reading fails another gate.</p></div>'
            '<div class="explain-col"><h4>At chance</h4><p>Settings or readings exist, but scrambled copies produce them just as well.</p></div>'
-           '<div class="explain-col"><h4>Ruled out</h4><p>Nothing in the searched space fits the 24 known letters.</p></div></div>')
+           '<div class="explain-col"><h4>Ruled out</h4><p>Nothing in the searched space fits the 24 known letters.</p></div>'
+           '<div class="explain-col"><h4>Not a decryption test</h4><p>Statistics and simulations about the carved text, not attempts to read it.</p></div></div>')
     body = (page_head("Experiments", "The run, experiment by experiment",
                       "Every experiment, in the order it ran, placed by what it found against scrambled copies of the carved text: the "
                       "same search on the same letters in a random order. A result counts only if K4 does better than all of them. Then the "

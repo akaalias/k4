@@ -1,0 +1,62 @@
+{
+ "id": 152,
+ "tag": "0152-hill-slip-variants-on-scrambled-copies",
+ "started": "2026-10-16T21:16:49+00:00",
+ "seconds": 259.8,
+ "status": "ran",
+ "phases": {
+  "unattributed": 29.2,
+  "run": 259.8,
+  "record": 0.1
+ },
+ "ended_epoch": 1792185669.357548,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "Hill 2-5 on every single-letter error of ten scrambled copies (0151's test)",
+  "copies_done": 10,
+  "controls_total_alive_with_checks": [
+   269,
+   123,
+   243,
+   30,
+   225,
+   366,
+   87,
+   6384,
+   208,
+   82
+  ],
+  "k4_total_0151": 257,
+  "controls_by_size": {
+   "5x5 plain": [
+    269,
+    123,
+    243,
+    30,
+    225,
+    366,
+    87,
+    6384,
+    208,
+    82
+   ]
+  },
+  "k4_above_every_copper": false,
+  "k4_rank": 4,
+  "seconds": 260,
+  "controls": "10 shuffled coppers (seed 152), the 5,044 variants of each"
+ },
+ "notes": "copies alive-with-checks totals [269, 123, 243, 30, 225, 366, 87, 6384, 208, 82]; K4 (0151) 257, rank 4 of 11",
+ "error": null,
+ "candidates": []
+}

@@ -1,0 +1,43 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Hill 2-5 on every single-letter error of ten scrambled copies (0151's test)",
+  "copies_done": 10,
+  "controls_total_alive_with_checks": [
+   269,
+   123,
+   243,
+   30,
+   225,
+   366,
+   87,
+   6384,
+   208,
+   82
+  ],
+  "k4_total_0151": 257,
+  "controls_by_size": {
+   "5x5 plain": [
+    269,
+    123,
+    243,
+    30,
+    225,
+    366,
+    87,
+    6384,
+    208,
+    82
+   ]
+  },
+  "k4_above_every_copper": false,
+  "k4_rank": 4,
+  "seconds": 260,
+  "controls": "10 shuffled coppers (seed 152), the 5,044 variants of each"
+ },
+ "notes": "copies alive-with-checks totals [269, 123, 243, 30, 225, 366, 87, 6384, 208, 82]; K4 (0151) 257, rank 4 of 11",
+ "controls": [],
+ "error": null,
+ "worked_example": "the errors tried, for every place of the copper:\n\n  wrong:   place 21 W -> each of the other 25 letters\n  missing: place 21 deleted, the rest moves left, a filler at the end\n  extra:   each letter inserted before place 21, the last letter pushed out\n\neach variant through Hill 2x2-5x5 (plain, affine, every alignment, four numberings) and trifid (periods 2-15, every offset)",
+ "seconds": 259.64974188804626
+}

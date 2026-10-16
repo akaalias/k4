@@ -54,3 +54,13 @@ Numbered sections with a light numeral and a one-line italic summary. One hero f
 per page. Hairline rules, no boxes around marks, no shadows. The champion line is ink,
 reverted experiments are the recessive grey, the accent marks what matters now. Dark mode
 is designed, not flipped.
+
+### Charts
+
+- Every chart labels both axes: what the horizontal axis counts and what the vertical axis
+  measures or sorts by, in plain words, set in the muted serif beside the axis. A chart without
+  axis labels does not ship.
+- Reuse the house components (the overview's numbered sections, the lineage page's header,
+  legend and family heads, the small-caps explain columns, plain lists). Do not invent new
+  visual devices such as cards, step rings or chips; propose a new element before building it.
+- No explanatory side-notes under charts or keys; the chart, its axes and its key carry the meaning.

@@ -1162,7 +1162,7 @@ def outcome_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     grades = load_grades()
-    W, L, R, T, band = 1400, 20, 270, 34, 46
+    W, L, R, T, band = 1400, 64, 270, 20, 46
     n = len(rows)
     step = (W - L - R) / n
     tw = max(1.0, min(4.0, step * 0.55))
@@ -1175,7 +1175,7 @@ def outcome_chart(rows):
             kinds[r["tag"]] = oc if oc in ("beat-chance", "chance", "ruled-out", "diagnostic") else ("ungraded" if not oc else "other")
     shown = [(k, lab) for k, lab in OUTCOME_ROWS if k != "ungraded" or "ungraded" in kinds.values()]
     yrow = {k: T + j * band for j, (k, _) in enumerate(shown)}
-    H = T + band * len(shown) + 34
+    H = T + band * len(shown) + 58
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="What each experiment found against the scrambled copies, in run order">']
     for j, (k, _) in enumerate(shown):
         y0 = yrow[k]
@@ -1204,7 +1204,9 @@ def outcome_chart(rows):
     for i, r in enumerate(rows):
         num = int(r["tag"][:4]) if r["tag"][:4].isdigit() else i + 1
         if num == 1 or num % tick_every == 0:
-            g.append(f'<text x="{L + (i + 0.5) * step:.1f}" y="{H - 12}" font-size="12.5" fill="var(--faint)" text-anchor="middle">{num}</text>')
+            g.append(f'<text x="{L + (i + 0.5) * step:.1f}" y="{H - 34}" font-size="12.5" fill="var(--faint)" text-anchor="middle">{num}</text>')
+    g.append(f'<text x="{L + (W - L - R) / 2:.1f}" y="{H - 8}" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">experiment number, in the order it ran</text>')
+    g.append(f'<text transform="translate({L - 24},{T + band * len(shown) / 2:.1f}) rotate(-90)" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">outcome against the scrambled copies</text>')
     g.append("</svg>")
     return "<div class='chart-wide' style='border-top:1px solid var(--rule);padding-top:14px'><figure class='chart'>" + "".join(g) + "</figure></div>"
 

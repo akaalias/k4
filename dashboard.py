@@ -1554,18 +1554,15 @@ def experiment_page(tag):
     loss_note = ""
     if kl is not None and r.get("best_loss") is not None and r["best_loss"] < kl - 1e-9:
         loss_note = f"; its lowest candidate scored {pct(r['best_loss'])} ({r['best_loss']:.1f}), but the rule then in force, highest fitness, kept this one"
-    head = f"""<p class="crumb"><a href="/">Project Overview</a> / experiment {num}</p>
-<div class="rec-head">
-<p class="eyebrow">Experiment {num} &middot; family {esc(fam_num)}, {esc(fam_label)} &middot; <span class="{esc(decision)}">{esc(decision)}</span></p>
-<h1 class="rec-title">{esc(r['title'])}</h1>
-<p class="standfirst">{esc(changed)}</p>{f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: {esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else ""}
-<div class="meta-row">
-<div><b>{parent_html}</b><span>builds on</span></div>
-<div><b>{fmt_dur(total)}</b><span>time, all phases</span><div class="meta-bar">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=190, height=8)}</div></div>
-<div><b>{r['n_candidates']}</b><span>candidates</span></div>
-<div><b>{r['best_crib_hits']}/24</b><span>known letters right</span></div>
-<div><b>{pct(shown_loss) or '&ndash;'}</b><span>loss</span></div>
-</div></div>"""
+    phase_txt = ", ".join(f"{k} {fmt_dur(v)}" for k, v in ph.items() if v >= 1)
+    dec_html = f'<span class="{esc(decision)}">{esc(decision)}</span>'
+    facts = (f"Family {esc(fam_num)}, {esc(fam_label)}. Decision: {dec_html}. "
+             f"Builds on {parent_html}. {r['n_candidates']} candidates, {r['best_crib_hits']} of 24 known letters right"
+             + (f", loss {pct(shown_loss)}" if shown_loss is not None else "") + ". "
+             f"{fmt_dur(total)} of work" + (f" ({phase_txt})" if phase_txt else "") + (f", run {esc(started)}" if started else "") + ".")
+    note = (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: '
+            f'{esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else "")
+    head = page_head(f"Experiment {num}", esc(r["title"]), esc(changed), facts, note)
     # section 1: plain words with the glossary rail
     eli5 = r.get("eli5") or ""
     low = eli5.lower()

@@ -1,0 +1,13 @@
+numbering by the alphabet mixed from BERLIN: BERLINACDFGHJKMOPQSTUVWXYZ
+sculpture's table (KRYPTOS alphabet, Vigenere); first word PALIMPSEST from its P at place 1; second word of length 8
+
+place  known  carved  key value  first letter (number)  second word's number  slot (mod 8)
+   22      E       F          1                  A (6)                    21             5
+   23      A       L         10                  L (3)                     7             6
+   24      S       R         21                  I (4)                    17             7
+   25      T       V         18                 M (14)                     4             0
+   30      H       N          5                 T (19)                    12             5
+   31      E       G          2                 P (16)                    12             6
+   64      B       N         11                  I (4)                     7             7
+
+slots asked for two different numbers: [0, 1, 2, 3, 4, 5, 6, 7]: this pair is dead

@@ -1,0 +1,195 @@
+{
+ "id": 174,
+ "tag": "0174-two-key-words-joined-by-other-combiners",
+ "started": "2026-10-16T23:45:53+00:00",
+ "seconds": 4.6,
+ "status": "ran",
+ "phases": {
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 4.6,
+  "record": 0.0
+ },
+ "ended_epoch": 1792194357.808825,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "two key words joined by a combiner other than addition on the std/KRYPTOS numbering",
+  "combiners": {
+   "add": "a + b on a keyword-mixed numbering of a vocabulary word (new numberings; std/KRY were 0115)",
+   "mul": "a x b mod 26 on std, KRYPTOS or any vocabulary numbering"
+  },
+  "numberings": 63,
+  "puzzle_words": 171,
+  "table_rules": 12,
+  "second_word_lengths": [
+   3,
+   24
+  ],
+  "cases_per_text": {
+   "add": 17472840,
+   "mul": 18045720
+  },
+  "consistent_k4": {
+   "add": 0,
+   "mul": 0
+  },
+  "consistent_controls": {
+   "add": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "mul": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fully_forced_k4": {
+   "add": 0,
+   "mul": 0
+  },
+  "fully_forced_controls": {
+   "add": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "mul": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "too_open_k4": {
+   "add": 0,
+   "mul": 0
+  },
+  "too_open_controls": {
+   "add": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "mul": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "hits_k4": {
+   "add": 0,
+   "mul": 0
+  },
+  "hits_controls": {
+   "add": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "mul": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "plants": [
+   {
+    "key": {
+     "combiner": "mul/vig/kry/kry/mix:BERLIN",
+     "word1": "PALIMPSEST",
+     "start1": 3,
+     "word2": "GARDEN",
+     "rotation2": 0
+    },
+    "found": true
+   },
+   {
+    "key": {
+     "combiner": "add/beau/std/kry/mix:BERLIN",
+     "word1": "PALIMPSEST",
+     "start1": 3,
+     "word2": "SHADOW",
+     "rotation2": 2
+    },
+    "found": true
+   }
+  ],
+  "k4_hits": {
+   "add": [],
+   "mul": []
+  },
+  "seconds": 4,
+  "controls": "10 shuffled coppers (seed 1740), identical search",
+  "exhaustive": true
+ },
+ "notes": "add: consistent K4 0 (coppers 0-0), dictionary hits K4 0 (coppers 0-0); mul: consistent K4 0 (coppers 0-0), dictionary hits K4 0 (coppers 0-0); plants found 2/2",
+ "error": null,
+ "candidates": []
+}

@@ -1666,7 +1666,9 @@ def experiment_page(tag):
     cm = cribmap_figure(tag)
     off = 0
     plain = (sec(1, "The experiment method", "What the method does with the 24 known letters.")
-             + f'<div class="plain tufte">{eli5_html}{more}</div>' + cm)
+             + f'<div class="plain tufte">{eli5_html}{more}</div>'
+             + ('<div class="subsec"><b>1.1</b><h3>The method at work</h3></div>'
+                '<p class="subsec-sub">The carved letters go in at the top; the reading comes out at the bottom.</p>' + cm if cm else ""))
     # section 2: best candidate
     cand = ""
     if best:

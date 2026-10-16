@@ -1500,7 +1500,7 @@ def cribmap_figure(tag):
     notes_p = ROOT / "figures" / f"{num}-cribmap-notes.json"
     notes = json.loads(notes_p.read_text()) if notes_p.exists() else []
     below = "".join(f'<div class="fig-note"><b>{esc(n.get("anchor", ""))}</b><p>{crib_cells(esc(n.get("text", "")))}</p></div>' for n in notes)
-    return (f'<div class="fig-row"><figure class="fig-main"><figcaption class="fig-eyebrow">the crib map: what the method does with the 24 known letters</figcaption><div class="fig-scroll">{svg}</div></figure>'
+    return (f'<div class="fig-row"><figure class="fig-main"><div class="fig-scroll">{svg}</div></figure>'
             f'<div class="fig-notes">{below}</div></div>')
 
 
@@ -1554,14 +1554,17 @@ def experiment_page(tag):
     loss_note = ""
     if kl is not None and r.get("best_loss") is not None and r["best_loss"] < kl - 1e-9:
         loss_note = f"; its lowest candidate scored {pct(r['best_loss'])} ({r['best_loss']:.1f}), but the rule then in force, highest fitness, kept this one"
-    phase_txt = ", ".join(f"{k} {fmt_dur(v)}" for k, v in ph.items() if v >= 1)
     dec_html = f'<span class="{esc(decision)}">{esc(decision)}</span>'
-    facts = (f"Family {esc(fam_num)}, {esc(fam_label)}. Decision: {dec_html}. "
-             f"Builds on {parent_html}. {r['n_candidates']} candidates, {r['best_crib_hits']} of 24 known letters right"
-             + (f", loss {pct(shown_loss)}" if shown_loss is not None else "") + ". "
-             f"{fmt_dur(total)} of work" + (f" ({phase_txt})" if phase_txt else "") + (f", run {esc(started)}" if started else "") + ".")
-    note = (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: '
-            f'{esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else "")
+    facts = f"Family {esc(fam_num)}, {esc(fam_label)}. Decision: {dec_html}." + (f" Run {esc(started)}." if started else "")
+    meta = f"""<div class="meta-row">
+<div><b>{parent_html}</b><span>builds on</span></div>
+<div><b>{fmt_dur(total)}</b><span>time, all phases</span><div class="meta-bar">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=190, height=8)}</div></div>
+<div><b>{r['n_candidates']}</b><span>candidates</span></div>
+<div><b>{r['best_crib_hits']}/24</b><span>known letters right</span></div>
+<div><b>{pct(shown_loss) or '&ndash;'}</b><span>loss</span></div>
+</div>"""
+    note = meta + (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: '
+                   f'{esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else "")
     head = page_head(f"Experiment {num}", esc(r["title"]), esc(changed), facts, note)
     # section 1: plain words with the glossary rail
     eli5 = r.get("eli5") or ""
@@ -1596,14 +1599,17 @@ def experiment_page(tag):
     eli5_html = "<p>" + "".join(out).replace("\n\n", "</p><p>") + "</p>"
     # Tufte sidenotes: each word's definition sits in the margin beside the line where it appears
     more = '<p class="sidenote-more">Words in the margin are defined on the <a href="/glossary">glossary</a> page.</p>' if kept else ""
-    plain = cribmap_figure(tag) + sec(1, "In plain words", "") + f'<div class="plain tufte">{eli5_html}{more}</div>'
+    cm = cribmap_figure(tag)
+    off = 1 if cm else 0
+    plain = ((sec(1, "The experiment method", "What the method does with the 24 known letters.") + cm) if cm else "") \
+        + sec(1 + off, "In plain words", "") + f'<div class="plain tufte">{eli5_html}{more}</div>'
     # section 2: best candidate
     cand = ""
     if best:
         how = "the lowest-loss reading that passed the original gates" if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
-        cand = sec(2, "Best candidate against the known letters", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, the 24 known places in accent. Right, the candidate: a known place it gets right is an accent cell, one it misses is outlined. This is {how}.") + panel_block(K4, best["plaintext"], KNOWN).replace('class="panel-wrap"', 'class="panel-wrap wide"', 1)
+        cand = sec(2 + off, "Best candidate against the known letters", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, the 24 known places in accent. Right, the candidate: a known place it gets right is an accent cell, one it misses is outlined. This is {how}.") + panel_block(K4, best["plaintext"], KNOWN).replace('class="panel-wrap"', 'class="panel-wrap wide"', 1)
     else:
-        cand = sec(2, "Best candidate against the known letters", "This experiment produced no candidate: the search ruled everything out before a full text was built. Its product is the bounded negative in section 7.")
+        cand = sec(2 + off, "Best candidate against the known letters", "This experiment produced no candidate: the search ruled everything out before a full text was built. Its product is the bounded negative in section 7.")
     # remaining sections from the record, numbered
     order = [("Walkthrough, by hand", "Walkthrough, by hand", "Redo the method on a few letters with pencil and paper."),
              ("Worked example (generated)", "Worked example, generated", "The same steps run by the code on the real letters."),
@@ -1612,7 +1618,7 @@ def experiment_page(tag):
              ("Method", "Method", ""),
              ("Result", "Result and bounds", "The harness's record: candidates, gates, loss, and the negative result this experiment leaves behind.")]
     body = [head, plain, cand]
-    n = 3
+    n = 3 + off
     sc = score_section(n, r, best)
     if sc:
         body.append(sc); n += 1

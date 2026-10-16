@@ -1618,13 +1618,12 @@ def experiment_page(tag):
         loss_note = f"; its lowest candidate scored {pct(r['best_loss'])} ({r['best_loss']:.1f}), but the rule then in force, highest fitness, kept this one"
     dec_html = f'<span class="{esc(decision)}">{esc(decision)}</span>'
     facts = f"Family {esc(fam_num)}, {esc(fam_label)}. Decision: {dec_html}." + (f" Run {esc(started)}." if started else "")
-    meta = f"""<div class="meta-row" style="grid-template-columns:repeat(6,1fr);border-bottom:none">
+    meta = f"""<div class="meta-row" style="grid-template-columns:repeat(5,1fr);border-bottom:none">
 <div><b class="{esc(decision)}">{esc(decision)}</b><span>status</span></div>
 <div><b>{parent_html}</b><span>parents</span></div>
 <div><b>{fmt_dur(total)}</b><span>time, all phases</span></div>
 <div><b>{r['n_candidates']}</b><span>candidates</span></div>
 <div><b>{r['best_crib_hits']}/24</b><span>known letters</span></div>
-<div><b>{pct(shown_loss) or '&ndash;'}</b><span>loss</span></div>
 </div>
 <div class="meta-time">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=980, height=8).replace('<svg width="980" height="8"', '<svg viewBox="0 0 980 8" preserveAspectRatio="none"', 1)}</div>"""
     note = meta + (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: '

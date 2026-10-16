@@ -1,0 +1,289 @@
+{
+ "id": 143,
+ "tag": "0143-two-free-alphabets-climb-power",
+ "started": "2026-10-16T19:15:34+00:00",
+ "seconds": 1727.6,
+ "status": "ran",
+ "phases": {
+  "unattributed": 19.2,
+  "run": 1727.6,
+  "record": 0.1
+ },
+ "ended_epoch": 1792179862.063923,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "two free alphabets (Quagmire IV), periodic key 8, 13, 16, no move: power of design 2 on planted English",
+  "search": "parallel tempering, 10 runs x 16 replicas x 625 rounds x 1000 moves per text, T 0.1->0.002; start from the plant's exact witness (0123) randomised by 400 check-keeping swaps",
+  "not_exhaustive": true,
+  "runs_done": {
+   "min": 0,
+   "max": 10
+  },
+  "texts_with_no_finished_run": 27,
+  "c_decryption_checked": true,
+  "copies": "keep the carved letters at the 24 known places, shuffle the other 73 (fit by construction)",
+  "bar": ">= 4 of 5 plants beat all 5 own copies (null 0.83)",
+  "by_length": {
+   "8": {
+    "checks": 16,
+    "found": 1,
+    "passes_bar": false,
+    "rows": [
+     {
+      "score": -5.239,
+      "letters_right": 39,
+      "runs": 4,
+      "own_copies": [
+       -99.0,
+       -99.0,
+       -99.0,
+       -5.8206,
+       -5.5762
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -99.0,
+      "letters_right": null,
+      "runs": 0,
+      "own_copies": [
+       -99.0,
+       -99.0,
+       -99.0,
+       -99.0,
+       -99.0
+      ],
+      "rank_among_own": 1,
+      "found_own": false,
+      "recovered": false
+     },
+     {
+      "score": -99.0,
+      "letters_right": null,
+      "runs": 0,
+      "own_copies": [
+       -99.0,
+       -99.0,
+       -99.0,
+       -99.0,
+       -99.0
+      ],
+      "rank_among_own": 1,
+      "found_own": false,
+      "recovered": false
+     },
+     {
+      "score": -99.0,
+      "letters_right": null,
+      "runs": 0,
+      "own_copies": [
+       -99.0,
+       -99.0,
+       -99.0,
+       -99.0,
+       -99.0
+      ],
+      "rank_among_own": 1,
+      "found_own": false,
+      "recovered": false
+     },
+     {
+      "score": -99.0,
+      "letters_right": null,
+      "runs": 0,
+      "own_copies": [
+       -99.0,
+       -99.0,
+       -99.0,
+       -99.0,
+       -99.0
+      ],
+      "rank_among_own": 1,
+      "found_own": false,
+      "recovered": false
+     }
+    ]
+   },
+   "13": {
+    "checks": 11,
+    "found": 5,
+    "passes_bar": true,
+    "rows": [
+     {
+      "score": -4.675,
+      "letters_right": 41,
+      "runs": 10,
+      "own_copies": [
+       -4.9297,
+       -4.8314,
+       -4.8109,
+       -4.7382,
+       -4.6822
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -4.7332,
+      "letters_right": 45,
+      "runs": 10,
+      "own_copies": [
+       -4.9928,
+       -4.989,
+       -4.9874,
+       -4.9283,
+       -4.8092
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -4.719,
+      "letters_right": 35,
+      "runs": 10,
+      "own_copies": [
+       -4.9267,
+       -4.9209,
+       -4.8982,
+       -4.8543,
+       -4.7561
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -4.5159,
+      "letters_right": 39,
+      "runs": 10,
+      "own_copies": [
+       -4.8307,
+       -4.8269,
+       -4.8222,
+       -4.71,
+       -4.7069
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -4.5796,
+      "letters_right": 47,
+      "runs": 10,
+      "own_copies": [
+       -5.0164,
+       -4.9968,
+       -4.9784,
+       -4.8322,
+       -4.7878
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     }
+    ]
+   },
+   "16": {
+    "checks": 8,
+    "found": 4,
+    "passes_bar": true,
+    "rows": [
+     {
+      "score": -4.5624,
+      "letters_right": 39,
+      "runs": 10,
+      "own_copies": [
+       -4.6937,
+       -4.6768,
+       -4.6354,
+       -4.616,
+       -4.6153
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -4.5407,
+      "letters_right": 35,
+      "runs": 10,
+      "own_copies": [
+       -4.7296,
+       -4.7002,
+       -4.6591,
+       -4.6291,
+       -4.5307
+      ],
+      "rank_among_own": 2,
+      "found_own": false,
+      "recovered": false
+     },
+     {
+      "score": -4.553,
+      "letters_right": 32,
+      "runs": 10,
+      "own_copies": [
+       -4.7538,
+       -4.6894,
+       -4.6559,
+       -4.6366,
+       -4.5878
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -4.5669,
+      "letters_right": 42,
+      "runs": 10,
+      "own_copies": [
+       -4.6822,
+       -4.6267,
+       -4.6188,
+       -4.6187,
+       -4.6155
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -4.3647,
+      "letters_right": 52,
+      "runs": 10,
+      "own_copies": [
+       -4.645,
+       -4.6047,
+       -4.5702,
+       -4.5613,
+       -4.4653
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     }
+    ]
+   }
+  },
+  "controls": "per plant, 5 kept-place copies (seed 1431)"
+ },
+ "notes": "Quagmire IV power: L8 1/5 (16 checks), L13 5/5 (11 checks), L16 4/5 (8 checks); runs per text 0-10",
+ "error": null,
+ "candidates": []
+}

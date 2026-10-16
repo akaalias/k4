@@ -9,6 +9,13 @@ discussed with Alexis one at a time before any becomes loop work.
 Firmness: `firm` (the record never contradicts it), `contested` (the record contradicts
 itself), `ours` (a working choice with no creator source).
 
+Order of work, decided by Alexis 2026-10-16: nothing here becomes loop work until the current
+queue in `order-of-work.md` is exhausted. Then A1 first (tolerance for slips and missed known
+letters), together with a tolerant English judge (an LLM scoring blind against the scrambled
+coppers' candidates, power measured on planted damaged English; built in the harness, issue
+#11), because relaxed tests produce more noisy candidates and need a judge that can sort them.
+A13 and A6 follow with the same judge.
+
 ## The three that carry the most weight
 
 **A1. The encipherment was carried out without a mistake.**

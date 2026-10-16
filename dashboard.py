@@ -1172,7 +1172,7 @@ def outcome_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     grades = load_grades()
-    W, L, R, T, band = 1400, 64, 270, 20, 46
+    W, L, R, T, band = 1400, 64, 330, 6, 46
     n = len(rows)
     step = (W - L - R) / n
     dot_r = max(1.2, min(3.6, step * 0.42))     # the lineage page's dot, shrinking only when experiments crowd
@@ -1192,7 +1192,10 @@ def outcome_chart(rows):
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="What each experiment found against the scrambled copies, in run order">']
     for j, (k, _) in enumerate(shown):
         y0 = yrow[k]
-        g.append(f'<line x1="{L}" x2="{W - R}" y1="{y0 + band / 2:.1f}" y2="{y0 + band / 2:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
+        if k == "solved":
+            g.append(f'<rect x="{L + 1}" y="{y0 + 6}" width="{W - L - R - 2}" height="{band - 12}" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="7 5"/>')
+        else:
+            g.append(f'<line x1="{L}" x2="{W - R}" y1="{y0 + band / 2:.1f}" y2="{y0 + band / 2:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
     counts = {k: 0 for k, _ in shown}
     for i, r in enumerate(rows):
         k = kinds[r["tag"]]
@@ -1229,7 +1232,7 @@ def outcome_chart(rows):
     g.append(f'<text x="{L + (W - L - R) / 2:.1f}" y="{H - 8}" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">experiment number, in the order it ran</text>')
     g.append(f'<text transform="translate({L - 24},{T + band * len(shown) / 2:.1f}) rotate(-90)" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">outcome against the scrambled copies</text>')
     g.append("</svg>")
-    return "<div class='chart-wide' style='padding-top:14px'><figure class='chart'>" + "".join(g) + "</figure></div>"
+    return "<div class='chart-wide' style='margin-top:-14px'><figure class='chart' style='margin:0'>" + "".join(g) + "</figure></div>"
 
 
 def fam_num(r):
@@ -1262,7 +1265,7 @@ def live_page():
         k, _, rest = r["family"].partition("-")
         names.setdefault(k, rest.replace("-", " "))
     key = ('<div class="explain-row" style="row-gap:26px;margin-top:40px">'
-           '<div class="explain-col"><h4>Solved</h4><p>Meets the success definition: the known letters in place, readable English, and a procedure a person could do by hand with a short key. A winning experiment lands in the top row.</p></div>'
+           '<div class="explain-col"><h4>Solved</h4><p>Meets the success definition: the known letters in place, readable English, and a procedure a person could do by hand with a short key. A winning experiment lands in the dashed band.</p></div>'
            '<div class="explain-col"><h4>Champion</h4><p>Passes every gate: all 24 known letters, re-encrypts to the copper, beats every scrambled copy. Not yet shown to read as English from a memorable method.</p></div>'
            '<div class="explain-col"><h4>A lead</h4><p>K4 did better than every scrambled copy under the same search, but the reading fails another gate.</p></div>'
            '<div class="explain-col"><h4>At chance</h4><p>Settings or readings exist, but scrambled copies produce them just as well.</p></div>'

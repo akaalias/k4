@@ -1239,9 +1239,7 @@ def live_page():
            '<div class="explain-col"><h4>Beat the scrambled copies</h4><p>K4 did better than every scrambled copy under the same search.</p></div>'
            '<div class="explain-col"><h4>At chance</h4><p>Settings or readings exist, but scrambled copies produce them just as well.</p></div>'
            '<div class="explain-col"><h4>Ruled out</h4><p>Nothing in the searched space fits the 24 known letters.</p></div>'
-           '<div class="explain-col"><h4>No comparison run</h4><p>Early experiments that ran no scrambled copies.</p></div></div>'
-           '<p class="muted" style="max-width:980px;margin:18px auto 0;font-size:14.5px">The one tick in the top row, 0056, is a pattern in '
-           'the carved text itself, doubled letters lining up in columns of seven, not a reading of it. Hover a tick for the finding; click it to open the experiment.</p>')
+           '<div class="explain-col"><h4>No comparison run</h4><p>Early experiments that ran no scrambled copies.</p></div></div>')
     body = (page_head("Experiments", "The run, experiment by experiment",
                       "Every experiment, in the order it ran, placed by what it found against scrambled copies of the carved text: the "
                       "same search on the same letters in a random order. A result counts only if K4 does better than all of them. Then the "

@@ -5,6 +5,14 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-17
+
+F1 continued (ticket #14), after the run that started on 2026-10-16 (0136-0153 are recorded there).
+
+| # | Item | One line |
+|---|---|---|
+| 154 | F1.8 | **Carter as a running key on one unknown alphabet, exact (rerun of 0153).** Every offset of Carter's book, both directions, three forms, compiled solver (checked against Python on 300 offsets and a planted text): no offset fits K4 or any of 10 copies; 953 of about 1.7 million undecided on K4 (copies 99-20,675). Two unknown alphabets leave 0.1 checks on average (at most 4) for every running-key source sampled: blocked by structure. Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.
@@ -134,6 +142,7 @@ copper against the rest (so a copper's luck sets the bar, not a guessed threshol
 | 150 | F1.6 | **One-letter errors through free-alphabet Gromark, exact.** 605 variants (600 substitutions at the known places, known places shifted by one, all or BERLINCLOCK alone: a Gromark key depends on absolute position) through 0069, 0076 and 0107 unchanged, 181 rule/base settings x 4 forms: no fit. Prediction held. |
 | 151 | F1.6 | **One-letter errors anywhere through Hill and trifid, exact.** 5,044 variants of K4 (every place changed, deleted, or with each letter inserted): no trifid cube under any; Hill alive with a check in 257 (variant, setting) pairs, nearly all 5x5 plain with one check; 70,218 settings open (5x5 affine). Coppers in 0152. |
 | 152 | F1.6 | **Hill controls.** The same 5,044 variants of 10 scrambled copies: alive-with-check totals 30-6,384, all 5x5 plain; K4's 257 ranks 4 of 11. Chance. F1.6 complete. Prediction held. |
+| 153 | F1.8 | **Error (timeout).** Carter as a running key on one unknown alphabet: the compiled first pass finished, but the second pass on undecided offsets (node limit 400,000) had no clock check and two workers ran past the budget; the harness killed the run at 1,860 s. Mistake, the third of its kind (0025, 0126): every loop that can run long must check the clock. Rerun as 0154. |
 
 Paragraph on 0137-0138. 0137 looked like the first decider with power: ten planted texts in twelve climbed above every scrambled copy of K4. Reading the result, I saw the comparison was unfair. A planted ciphertext differs from K4 in its letters, not only their order (index of coincidence 0.039 against K4's 0.036; shuffles of a plant fit length 23 43% of the time, shuffles of K4 rarely), and the climb rewards those letters. 0138 compared each plant only with shuffles of itself: 6 of 12, against 11 of 12 for the same plants versus K4's copies. The climb does read some English order (6 against the 1.7 luck gives), but at even odds, and never gets a planted text back. Mistake: 0120's bar, which 0137 kept, compares plants with the target's copies; power must be measured against each plant's own copies. 0120's 3 of 6 has the same flaw. Lesson: a power test compares like with like, changing only the property the decider is meant to read.
 

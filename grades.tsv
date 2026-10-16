@@ -151,3 +151,5 @@ id	outcome	strength	cribs_forced	space	note
 0150	ruled-out	exact	no	F1.6 Gromark part: 605 one-letter variants x 0069/0076/0107 deciders (181 settings x 4 forms)	no variant fits any setting; exact (no controls needed)
 0151	diagnostic	exact	no	F1.6 Hill/trifid part: 5,044 one-letter variants of K4 (sub, del, ins anywhere) through 0105 Hill and 0040 trifid deciders	trifid: no cube under any variant; Hill: 257 alive-with-check pairs (mostly 5x5 plain, 1 check), controls in 0152
 0152	chance	exact	no	F1.6 Hill controls: 5,044 one-letter variants of 10 coppers through 0105	coppers 30-6,384 alive-with-check (5x5 plain); K4 257 rank 4/11: chance
+0153	error	weak	no	F1.8 Carter running key on one unknown alphabet (first attempt)	second pass without a clock check ran past the budget; killed; no result
+0154	ruled-out	exact	no	F1.8 Carter running key (both directions, every offset) on one unknown alphabet, 3 forms, 10 coppers; two-alphabet check counts per source	K4 0 fits (coppers 0); 953 undecided; two alphabets leave ~0 checks: blocked by structure

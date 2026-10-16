@@ -12,6 +12,17 @@ Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.
 | # | Item | One line |
 |---|---|---|
 | 119 | F1.1 | **One free alphabet on both sides, exact.** Every key length 1-26, any of 26! orders, decided exactly by algebra mod 13 and mod 2 with an exhaustive search of the mod-13 solutions: in the added form (Quagmire III proper, and variant Beaufort) no alphabet fits at any length; in the Beaufort form only 23 and 26 fit (7 and 1 checks left). Coppers fit at 0-15 and 1-11 lengths; K4 is at the low end of their range, not outside it. **Prediction failed:** it expected most lengths from 8 up to fit. |
+| 120 | F1.1 | **The two surviving lengths, climbed.** One free alphabet, Beaufort form, key lengths 23 and 26: the alphabet and free key values annealed toward English with the 24 known letters held, 20 restarts x 200,000 moves per text. K4 -5.81 at 23 (12 coppers -5.90 to -5.45, K4 below 10 of them) and -5.29 at 26 (-5.33 to -5.01): inside the range. Power: hidden English beat every copper in 3 of 6 trials at 23 and 1 of 6 at 26, and was never recovered (true scores -4.0 to -4.4; the climb got 32-43 letters right, 24 of them given). **Prediction failed on power** (expected 4 and 3 of 6). |
+
+Paragraph on 0120. The climb cannot find a planted answer at these lengths. In dry runs before the run (recorded in
+the record's hypothesis) it could not even return to the true alphabet from two swaps away: one swap moves letters in
+every slot and changes the forced key values with them, so the landscape is close to random. The pre-registered
+"found" criterion (a plant's climbed score above every copper) measures detection, not recovery, and at 23 it was met
+3 times in 6 only because English under the cipher climbs a little better than shuffled letters, not because the text
+came back. So length 23 is a weak test, about even odds of noticing a true Beaufort-23 message, with K4 near the bottom
+of its coppers; length 26 (one check) cannot be decided by any climb this size. Also found while preparing the run:
+the harness drops the attack's `controls` list (`_runner.py` never copies it), so the shuffled-copper gate reports
+"controls 0" for every candidate; filed as #45, not worked around.
 
 Paragraph on 0119. The added form dies for a reason one can check by hand: S sits under S at 33 and K under K at
 74, and with one alphabet on both sides and the key added, a letter that encrypts to itself needs key 0 in its slot.

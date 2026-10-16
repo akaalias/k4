@@ -92,6 +92,13 @@ Update the leaf when an experiment works on it.
     - The plates as a key by position, straight or folded {closed · exact · 0089}
     - K4 read from behind the screen {closed · exact · 0108}
     - **F4.1** A route that follows the plates' physical layout {open}
+  - F10 Alphabets that change after every letter
+    - **F10.1** Chaocipher: two wheels permuted after every letter (1918, disclosed 2010) {open}
+    - **F10.2** Wheatstone cryptograph or Alberti disk advanced by the plaintext {open}
+    - **F10.3** A key stream from a deck of cards (Solitaire, Mirdek) {open}
+  - F11 Agency hand systems, now public
+    - **F11.1** Strip ciphers and cylinders with published alphabets (M-94, Jefferson wheel, M-138-A) {open}
+    - **F11.2** Poem code: double transposition keyed by words from a memorized text, then the table {open}
   - F8 Hill ciphers
     - Hill 2-5, plain and affine, any numbering, chained, with a repeating key {closed · exact · 0015, 0036, 0044, 0055, 0105, 0116}
     - Settings with too few equations to decide (5x5 affine; long keys with 4x4) {blocked · exact · 0105, 0116}

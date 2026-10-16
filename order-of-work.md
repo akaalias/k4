@@ -29,9 +29,11 @@ construction) are in `grades.tsv`.
 | 3rd | F3 two-part key with a combiner | medium: Scheidt's "key word/s" (C5), his CKM habit | combiners other than addition; numeric second parts not yet tried | low | queued |
 | 4th | F2 masked plaintext | medium: Scheidt "masked the English language" | loose ends from 0057; nulls placed by a rule | low | queued; mostly blocked |
 | 5th | F4 Sanborn's visual systems | medium, vague | routes through the plates as a path, not as a key | medium | queued |
-| 6th | F8 Hill | weak: the HILL column only (C21) | 5x5 affine has no checks | none testable | blocked |
-| 7th | F5 Gromark | weak: no creator remark | multiplicative feedback, the raised YAR as primer | low | nearly closed |
-| 8th | F9 substitution, then a move | against it: Sanborn's NYPVTT to BERLIN mapping | F9.1: a bounded list of hand transpositions outside the 1.86M built routes | medium | queued (reopened, P6) |
+| 6th | F10 alphabets that change after every letter | weak to medium: no creator remark; Chaocipher (1918) was offered to US agencies and kept secret until 2010; A9, A10 | F10.1 Chaocipher, F10.2 Wheatstone cryptograph, F10.3 deck-of-cards key stream | low to medium | queued (added 2026-10-16, issue #51) |
+| 7th | F11 agency hand systems, now public | weak to medium: Scheidt's CIA cryptographic background; Scheidt's "key word/s" (C5) for the poem code; A9 | F11.1 strip ciphers and cylinders with published alphabets, F11.2 poem code | low to medium | queued (added 2026-10-16, issue #51) |
+| 8th | F8 Hill | weak: the HILL column only (C21) | 5x5 affine has no checks | none testable | blocked |
+| 9th | F5 Gromark | weak: no creator remark | multiplicative feedback, the raised YAR as primer | low | nearly closed |
+| 10th | F9 substitution, then a move | against it: Sanborn's NYPVTT to BERLIN mapping | F9.1: a bounded list of hand transpositions outside the 1.86M built routes | medium | queued (reopened, P6) |
 | - | F7 construction simulation | a tool, not a cipher | run before each family's first open item: does its construction make both fingerprints? | low | standing step |
 
 Why this order: F1 and F6 rest on the two most direct creator statements. Both were tested
@@ -109,6 +111,30 @@ information (K5's text, a codebook) stay blocked.
 | The plates as a key by position, straight or folded | closed | exact | 0089 | - |
 | Read from behind the screen | closed | exact | 0108 | - |
 | **F4.1** A route that follows the plates' physical layout (the S-curve, the 31-letter lines as a grid with K3's last line) | **open** | - | - | build the route set from the Blender model, then test as F6 |
+
+## F10. Alphabets that change after every letter
+
+Added 2026-10-16 (issue #51). Every family above uses a fixed alphabet with a changing key
+(assumption A10, `knowledge/12-assumptions.md`). These keep the letter-for-letter link the
+known letters need, and can be worked by hand.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **F10.1** Chaocipher: two alphabet wheels permuted after every letter (Byrne, 1918; method disclosed 2010) | **open** | - | - | count first how many checks the 24 known letters give: the wheels' state depends on every earlier letter, so the known stretches may constrain only through the unknown letters before them; if they leave too few checks, this needs the F1.5 decider and is blocked like F1.1 |
+| **F10.2** Wheatstone cryptograph or Alberti disk advanced by the plaintext: a 26-letter ring against a 27-place ring, the pointer moved by the distance between plaintext letters (Wheatstone, 1867) | **open** | - | - | exact: inside each known stretch consecutive known letters constrain the mixed ring directly; enumerate or propagate, then compare with coppers |
+| **F10.3** A key stream from a deck of cards (Solitaire 1999, Mirdek 2000) | **open** | - | - | the deck order is far larger than 24 known letters can pin down; state the bound and mark blocked unless a published known-plaintext attack applies |
+
+## F11. Agency hand systems, now public
+
+Added 2026-10-16 (issue #51). The method had only to be known to its creators in 1990
+(assumption A9); Scheidt chaired the CIA's Cryptographic Center until 1989. Systems that turn
+letters into digits or Morse (VIC, straddling checkerboards, fractionated Morse, Nihilist) are
+left out while the letter-for-letter reading of the known letters holds (A2).
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **F11.1** Strip ciphers and cylinders with published alphabets: M-94's 25 discs, the Jefferson wheel, M-138-A strips where published | **open** | - | - | exact: disc or strip order and row offset; the community tried M-94 only with hill climbs (`knowledge/05-attacks.md`), so no bounded result exists |
+| **F11.2** Poem code: a double transposition keyed by words from a memorized text (SOE), then the table | **open** | - | - | build long keys from consecutive and chosen words of the sculpture's texts and K1-K3; extend F6's double columnar test to them, exact |
 
 ## F8 Hill, F5 Gromark, F9 substitution then a move
 

@@ -97,8 +97,8 @@ article p,article li{max-width:720px}article table{width:100%}article td{vertica
 .rec-head{max-width:980px;margin:18px auto 0}.eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}.eyebrow .kept{color:var(--accent)}
 h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.005em;max-width:900px}
 .standfirst{font:italic 16.5px/1.6 var(--serif);color:var(--muted);margin:0 0 18px;max-width:820px}
-.fc-1{--fc:#3d6b8c}.fc-2{--fc:#8a6a1e}.fc-3{--fc:#5b7f4a}.fc-4{--fc:#7a4f86}.fc-5{--fc:#b0603a}.fc-6{--fc:#2f7f7a}.fc-7{--fc:#9a5470}.fc-8{--fc:#5c5a8f}.fc-9{--fc:#7d7a3a}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .fc-1{--fc:#7fa8c9}:root:not([data-theme=light]) .fc-2{--fc:#c9a227}:root:not([data-theme=light]) .fc-3{--fc:#8fb87a}:root:not([data-theme=light]) .fc-4{--fc:#b48cc0}:root:not([data-theme=light]) .fc-5{--fc:#e0936b}:root:not([data-theme=light]) .fc-6{--fc:#6cbfb8}:root:not([data-theme=light]) .fc-7{--fc:#d08aa6}:root:not([data-theme=light]) .fc-8{--fc:#9a98d0}:root:not([data-theme=light]) .fc-9{--fc:#bdb86a}}
+.fc-1{--fc:#3d6b8c}.fc-2{--fc:#8a6a1e}.fc-3{--fc:#5b7f4a}.fc-4{--fc:#7a4f86}.fc-5{--fc:#b0603a}.fc-6{--fc:#2f7f7a}.fc-7{--fc:#9a5470}.fc-8{--fc:#5c5a8f}.fc-9{--fc:#7d7a3a}.fc-10{--fc:#6b6a60}.fc-11{--fc:#6b6a60}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .fc-1{--fc:#7fa8c9}:root:not([data-theme=light]) .fc-2{--fc:#c9a227}:root:not([data-theme=light]) .fc-3{--fc:#8fb87a}:root:not([data-theme=light]) .fc-4{--fc:#b48cc0}:root:not([data-theme=light]) .fc-5{--fc:#e0936b}:root:not([data-theme=light]) .fc-6{--fc:#6cbfb8}:root:not([data-theme=light]) .fc-7{--fc:#d08aa6}:root:not([data-theme=light]) .fc-8{--fc:#9a98d0}:root:not([data-theme=light]) .fc-9{--fc:#bdb86a}:root:not([data-theme=light]) .fc-10{--fc:#a39f90}:root:not([data-theme=light]) .fc-11{--fc:#a39f90}}
 .famhead{font:600 11px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--fc)}
 .famhead .sw{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--fc);margin-right:6px;vertical-align:0}
 .famhead .cnt{display:block;color:var(--faint);font-weight:400;margin-top:2px}
@@ -636,7 +636,8 @@ def findings_chart(rows):
     xs = [L + (i + 0.5) * (W - L - R) / n for i in range(n)]
     row_of = {k: j for j, (k, _) in enumerate(FINDING_ROWS)}
     keys = sorted({r["family"].split("-", 1)[0] for r in rows}, key=lambda k: (not k.isdigit(), int(k) if k.isdigit() else 0, k))
-    fam_ix = {k: i for i, k in enumerate(keys)}
+    # a family's colour follows its number, as .fc-N does; families past the ninth share the neutral last slot
+    fam_ix = {k: min(int(k) - 1, len(FAMILY_PALETTE) - 1) if k.isdigit() else len(FAMILY_PALETTE) - 1 for k in keys}
     short = {}
     for r in rows:
         num, _, rest = r["family"].partition("-")
@@ -2101,7 +2102,7 @@ def parse_tree(text):
 def tree_html(root, text):
     tags = {r["tag"][:4]: r["tag"] for r in load_results()}
     order = (ROOT / "order-of-work.md").read_text() if (ROOT / "order-of-work.md").exists() else text
-    ranks = {m.group(2): m.group(1) for m in re.finditer(r"^\| (\d+(?:st|nd|rd|th)) \| (F\d)", order, re.M)}
+    ranks = {m.group(2): m.group(1) for m in re.finditer(r"^\| (\d+(?:st|nd|rd|th)) \| (F\d+)", order, re.M)}
     next_done = [False]
 
     def roll(n):
@@ -2133,7 +2134,7 @@ def tree_html(root, text):
         bar = "".join(f'<i style="width:{100 * c.get(k, 0) / tot:.1f}%;background:{col}"></i>' for k, col in order if c.get(k))
         words = ", ".join(f"<b>{c[k]} {k}</b>" if k == "open" else f"{c[k]} {k}" for k, _ in reversed(order) if c.get(k))
         cls = "root" if depth == 0 else ("fam" if depth == 1 else "br")
-        fm = re.match(r"(F\d)\s", n["label"])
+        fm = re.match(r"(F\d+)\s", n["label"])
         rank = f'<span class="rank">{ranks[fm.group(1)]}</span>' if fm and fm.group(1) in ranks else ""
         if fm:
             cls += f" fc-{fm.group(1)[1:]}"

@@ -11,3 +11,6 @@ Kryptos Blender Model/
 
 # transcript sync stamp (tools/sync_transcripts.py)
 .transcripts_sync
+
+# headless loop logs (tools/run_loop.sh); the transcripts are synced separately
+logs/

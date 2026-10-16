@@ -80,6 +80,13 @@ article p,article li{max-width:720px}article table{table-layout:fixed;width:100%
 .rec-head{max-width:980px;margin:18px auto 0}.eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}.eyebrow .kept{color:var(--accent)}
 h1.rec-title{font:400 34px/1.18 var(--serif);margin:0 0 10px;letter-spacing:-.005em;max-width:900px}
 .standfirst{font:italic 16.5px/1.6 var(--serif);color:var(--muted);margin:0 0 18px;max-width:820px}
+.fc-1{--fc:#3d6b8c}.fc-2{--fc:#8a6a1e}.fc-3{--fc:#5b7f4a}.fc-4{--fc:#7a4f86}.fc-5{--fc:#b0603a}.fc-6{--fc:#2f7f7a}.fc-7{--fc:#9a5470}.fc-8{--fc:#5c5a8f}.fc-9{--fc:#7d7a3a}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .fc-1{--fc:#7fa8c9}:root:not([data-theme=light]) .fc-2{--fc:#c9a227}:root:not([data-theme=light]) .fc-3{--fc:#8fb87a}:root:not([data-theme=light]) .fc-4{--fc:#b48cc0}:root:not([data-theme=light]) .fc-5{--fc:#e0936b}:root:not([data-theme=light]) .fc-6{--fc:#6cbfb8}:root:not([data-theme=light]) .fc-7{--fc:#d08aa6}:root:not([data-theme=light]) .fc-8{--fc:#9a98d0}:root:not([data-theme=light]) .fc-9{--fc:#bdb86a}}
+.famhead{font:600 11px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--fc)}
+.famhead .sw{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--fc);margin-right:6px;vertical-align:0}
+.famhead .cnt{display:block;color:var(--faint);font-weight:400;margin-top:2px}
+.xchip{display:inline-block;font:12px/1.2 var(--serif);font-variant-numeric:lining-nums tabular-nums;color:var(--fc,var(--muted));border:1px solid color-mix(in srgb,var(--fc,var(--muted)) 40%,transparent);border-radius:3px;padding:1px 4px;margin:0 3px 3px 0;text-decoration:none}
+.xchip:hover{background:var(--fc,var(--muted));color:var(--paper)}
 .ph{max-width:980px;margin:0 auto 8px}.ph h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}.ph .standfirst{max-width:760px}
 .ph .facts{font-size:14.5px;color:var(--muted);margin:0 0 12px;max-width:820px}
 .ph-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted);margin:6px 0 14px}.ph-legend>span{display:inline-flex;align-items:center;gap:7px}
@@ -1678,7 +1685,9 @@ TREE_CSS = """<style>
 .ht .row{display:inline;line-height:1.45}
 .ht .lab{font-size:15px}
 .ht .br>.row .lab{font-weight:600}
-.ht .fam>details>summary .lab{font-size:16px;font-weight:600}
+.ht .fam>details>summary .lab{font-size:16px;font-weight:600;color:var(--fc,var(--ink))}
+.ht .fam>details>summary .sw{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--fc);margin:0 8px 0 0;vertical-align:1px}
+.ht .fam>details>ul{border-left-color:color-mix(in srgb,var(--fc,var(--rule)) 45%,transparent)}
 .ht .root>details>summary .lab{font-size:18px;font-style:italic;font-weight:400}
 .ht-wrap .st{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 7px 0 1px;vertical-align:0}
 .st-open{background:var(--accent)}
@@ -1768,10 +1777,15 @@ def tree_html(root, text):
         cls = "root" if depth == 0 else ("fam" if depth == 1 else "br")
         fm = re.match(r"(F\d)\s", n["label"])
         rank = f'<span class="rank">{ranks[fm.group(1)]}</span>' if fm and fm.group(1) in ranks else ""
+        if fm:
+            cls += f" fc-{fm.group(1)[1:]}"
         is_open = depth <= 1 or c.get("open")
         inner = "".join(node(k, depth + 1) for k in kids)
+        lab = inline(n["label"])
+        if fm:
+            lab = f'<span class="sw"></span>{lab}'
         return (f'<li class="{cls}"><details{" open" if is_open else ""}><summary><span class="row"><span class="tw">&#9656;</span>{rank}'
-                f'<span class="lab">{inline(n["label"])}</span><span class="roll">{words}</span><span class="bar">{bar}</span></span></summary>'
+                f'<span class="lab">{lab}</span><span class="roll">{words}</span><span class="bar">{bar}</span></span></summary>'
                 f'<ul>{inner}</ul></details></li>')
 
     return TREE_CSS + f'<div class="ht-wrap"><ul class="ht">{node(root, 0)}</ul></div>'
@@ -1803,11 +1817,93 @@ def first_open(n):
     return None
 
 
+def family_record_html(text):
+    """The 'Full record by family' table, redrawn: one row per family with the lineage page's head,
+    its status, every experiment linked, and the bounds split into findings, newest first."""
+    m = re.search(r"^## Full record by family\n(.*?)(?=^## )", text, re.S | re.M)
+    if not m:
+        return None, text
+    rows = load_results()
+    tags = {r["tag"][:4]: r["tag"] for r in rows}
+    by_fam = {}
+    for r in rows:
+        by_fam.setdefault(r["family"].split("-", 1)[0], []).append(r)
+    short = {}
+    for r in rows:
+        num, _, rest = r["family"].partition("-")
+        short.setdefault(num, rest.replace("-", " "))
+
+    def chip(num4):
+        return f'<a class="xchip" href="/exp/{esc(tags[num4])}">{int(num4)}</a>' if num4 in tags else esc(num4)
+
+    def linkify(t):
+        return re.sub(r"\b(0\d{3})\b", lambda mm: f'<a href="/exp/{esc(tags[mm.group(1)])}">{mm.group(1)}</a>' if mm.group(1) in tags else mm.group(1), t)
+
+    fams = []
+    for ln in m.group(1).splitlines():
+        cells = [c.strip() for c in ln.strip().strip("|").split(" | ")]
+        if len(cells) >= 5 and cells[0].isdigit():
+            fams.append(cells)
+    fams.sort(key=lambda c: int(c[0]))
+    out = []
+    for num, name, status, _exps, bounds, *_ in fams:
+        parts = [x.strip() for x in re.split(r"(?<=\))\.\s+(?=[A-Z])", bounds) if x.strip()]
+        items = []
+        for ptxt in parts:
+            refs = sorted(set(re.findall(r"\b(0\d{3})\b", ptxt)))
+            items.append((max(refs) if refs else "0000", refs, ptxt.rstrip(".") + "."))
+        items.sort(key=lambda it: it[0], reverse=True)
+        lis = "".join(f'<li><span class="fr-refs">{"".join(chip(x) for x in refs)}</span><span class="fr-t">{linkify(md_inline(t))}</span></li>'
+                      for _, refs, t in items)
+        first, rest = lis.split("</li>", 4)[:4], None
+        li_list = re.findall(r"<li>.*?</li>", lis, re.S)
+        shown, more = li_list[:4], li_list[4:]
+        body = f'<ul class="fr-list">{"".join(shown)}</ul>'
+        if more:
+            body += f'<details class="fr-more"><summary>{len(more)} more findings</summary><ul class="fr-list">{"".join(more)}</ul></details>'
+        exps = by_fam.get(num, [])
+        st_word, _, st_rest = status.partition(" ")
+        out.append(f'<div class="fr-row fc-{esc(num)}"><div class="fr-head">'
+                   f'<div class="famhead"><span class="sw"></span>{esc(num)} {esc(short.get(num, ""))}<span class="cnt">{len(exps)} experiments</span></div>'
+                   f'<p class="fr-name">{md_inline(name)}</p>'
+                   f'<p class="fr-status"><b>{esc(st_word)}</b> {md_inline(st_rest)}</p>'
+                   f'<div class="fr-exps">{"".join(chip(r["tag"][:4]) for r in exps)}</div></div>'
+                   f'<div class="fr-body">{body}</div></div>')
+    html_ = FR_CSS + '<div class="fr">' + "".join(out) + "</div>"
+    cut = text[:m.start()] + "## Full record by family\n\n<div class=\"fr-slot\"></div>\n\n" + text[m.end():]
+    return html_, cut
+
+
+def md_inline(t):
+    """A table cell's markdown (code, bold, links) as inline HTML."""
+    return re.sub(r"^<p>|</p>$", "", md(t).strip())
+
+
+FR_CSS = """<style>
+.fr{width:90vw;position:relative;left:50%;transform:translateX(-50%);margin:8px 0 10px;border-top:1px solid var(--rule)}
+.fr-row{display:grid;grid-template-columns:260px minmax(0,1fr);gap:0 34px;padding:16px 0 14px;border-bottom:1px solid var(--rule-soft)}
+.fr-head .famhead{font-size:12px}
+.fr-name{font-size:14px;line-height:1.45;margin:8px 0 6px;max-width:none}
+.fr-status{font-size:13px;color:var(--muted);margin:0 0 8px;max-width:none}.fr-status b{color:var(--fc);font-weight:600}
+.fr-exps{line-height:1.5}
+.fr-list{list-style:none;margin:0;padding:0}
+.fr-list li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:0 12px;padding:5px 0;border-bottom:1px dotted var(--rule-soft);font-size:14.5px;line-height:1.5;max-width:none}
+.fr-list li:last-child{border-bottom:none}
+.fr-refs{text-align:right}
+.fr-t{color:var(--ink)}.fr-t a{color:inherit;border-bottom:1px dotted var(--faint);text-decoration:none}
+.fr-more summary{cursor:pointer;font:600 11px var(--serif);text-transform:uppercase;letter-spacing:.08em;color:var(--fc);margin:6px 0 2px 108px}
+@media(max-width:760px){.fr{width:calc(100vw - 32px)}.fr-row{grid-template-columns:1fr}.fr-list li{grid-template-columns:1fr}.fr-refs{text-align:left}.fr-more summary{margin-left:0}}
+</style>"""
+
+
 def families_page():
     text = (ROOT / "families.md").read_text()
     root, cut = parse_tree(text)
+    rec, cut = family_record_html(cut)
     cut = re.sub(r"^# .*\n", "", cut, count=1, flags=re.M)
     body = md(cut)
+    if rec:
+        body = body.replace('<div class="fr-slot"></div>', rec)
     facts, key = "", ""
     if root:
         body = body.replace('<div class="ht-slot"></div>', tree_html(root, text))

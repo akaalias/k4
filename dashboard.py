@@ -1072,7 +1072,7 @@ def what_we_look_for():
     ]
     html = "".join(f'<div class="explain-col"><h4>{esc(h)}</h4><p>{crib_cells(esc(t))}</p></div>' for h, t in cols)
     sub = lambda n, t, d: f'<div class="subsec"><b>1.{n}</b><h3>{t}</h3></div><p class="subsec-sub">{d}</p>'
-    return (sub(1, "The Kryptos sculpture", "Hover a key below the model, or a plate, to see which message it carries.") + sculpture_block()
+    return (sub(1, "The Kryptos sculpture by Jim Sanborn", "Hover a key below the model, or a plate, to see which message it carries.") + sculpture_block()
             + sub(2, "From a cornerstone to an unsolved message", "The history of Kryptos, from the CIA's headquarters to today. The first three messages hang off 1999, when their solutions went public: carved letters in, readable English out, which is what solved looks like.")
             + history_timeline()
             + sub(3, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel

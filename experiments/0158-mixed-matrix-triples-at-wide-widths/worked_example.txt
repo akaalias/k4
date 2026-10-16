@@ -1,0 +1,11 @@
+three matrix stages: rows of 30 read down the columns, left first; rows of 9 read up, right first; rows of 41 read up, left first
+
+place  letter  after 1  after 2  after 3  copper there
+   22       E       71       13       39             Q
+   23       A       74       78       88             U
+   24       S       77       45       11             U
+   64       B       15       41       97             R
+   65       E       19       95       37             W
+   74       K       49       59       50             A
+
+with a key of length p on the table, known letters whose final places differ by a multiple of p share a key letter

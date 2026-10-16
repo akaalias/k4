@@ -156,3 +156,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0155	0155-progressive-keys-on-dictionary-tables	1-keyed-periodic	0042-progressive-key-on-vocabulary-alphabets	reverted	0	0	0			386	unattributed=24 run=386 record=0
 0156	0156-friedman-key-advance-schedules	1-keyed-periodic	0126-hand-key-schedules-listed-and-tested	reverted	0	0	0			39	unattributed=27 run=39 record=0
 0157	0157-split-key-phrase	1-keyed-periodic	0123-two-free-alphabets-exact-at-every-key-length	reverted	0	0	0			24	unattributed=12 run=24 record=0
+0158	0158-mixed-matrix-triples-at-wide-widths	6-transposition-then-tableau	0134-mixed-matrix-readings-two-and-three-stages	reverted	0	0	0			209	unattributed=141 run=209 record=0

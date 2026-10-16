@@ -1,0 +1,361 @@
+{
+ "id": 158,
+ "tag": "0158-mixed-matrix-triples-at-wide-widths",
+ "started": "2026-10-16T22:27:33+00:00",
+ "seconds": 209.1,
+ "status": "ran",
+ "phases": {
+  "unattributed": 141.3,
+  "run": 209.1,
+  "record": 0.1
+ },
+ "ended_epoch": 1792189862.4507148,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "three matrix stages (rows of w, columns read in one of four ways), at least one width 25-96, then or before a periodic tableau key",
+  "readings": {
+   "cw": "left column first, bottom up",
+   "ccw": "right first, top down",
+   "col": "left first, top down",
+   "colr": "right first, bottom up"
+  },
+  "triples": "63 reading triples (all-cw skipped, 0083) x width triples in 2-96 with max >= 25 (all <= 24 was 0134), forward and inverse",
+  "first_stages_done": 380,
+  "first_stages_total": 380,
+  "distinct_routes": 105548253,
+  "duplicates_skipped_within_first_stage": 947955,
+  "periods": [
+   1,
+   26
+  ],
+  "classes": 8,
+  "c_counter_checked_against_python": "25 random routes x 2 orders x 11 texts, all equal",
+  "k4_live_by_period": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    4,
+    6,
+    271,
+    18849,
+    79056,
+    668223,
+    1648543,
+    10713606
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    57,
+    49207,
+    32652378
+   ]
+  },
+  "controls_live_by_period_min": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6,
+    154,
+    7076,
+    66983,
+    526528,
+    1642918,
+    10647843
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    44,
+    45550,
+    32345993
+   ]
+  },
+  "controls_live_by_period_max": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6,
+    112,
+    767,
+    57730,
+    87199,
+    701115,
+    1662253,
+    10709335
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    93,
+    49068,
+    32661842
+   ]
+  },
+  "k4_shortest_live": {
+   "A": 18,
+   "B": 24
+  },
+  "coppers_shortest_live": {
+   "A": 19,
+   "B": 17
+  },
+  "k4_settings_live_below_20": {
+   "A": 5,
+   "B": 0
+  },
+  "controls_settings_live_below_20": {
+   "A": [
+    0,
+    0,
+    2,
+    6,
+    0,
+    1,
+    0,
+    2,
+    3,
+    0
+   ],
+   "B": [
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_live_below_20": [
+   {
+    "route": [
+     "col",
+     93,
+     "cw",
+     65,
+     "cw",
+     84
+    ],
+    "dir": "fwd",
+    "order": "A",
+    "class": "kry/kry/beau",
+    "period": 18
+   },
+   {
+    "route": [
+     "ccw",
+     38,
+     "cw",
+     93,
+     "col",
+     31
+    ],
+    "dir": "fwd",
+    "order": "A",
+    "class": "std/std/beau",
+    "period": 19
+   },
+   {
+    "route": [
+     "ccw",
+     38,
+     "col",
+     93,
+     "col",
+     31
+    ],
+    "dir": "fwd",
+    "order": "A",
+    "class": "std/std/beau",
+    "period": 19
+   },
+   {
+    "route": [
+     "colr",
+     39,
+     "cw",
+     96,
+     "col",
+     31
+    ],
+    "dir": "fwd",
+    "order": "A",
+    "class": "std/std/beau",
+    "period": 19
+   },
+   {
+    "route": [
+     "colr",
+     39,
+     "col",
+     96,
+     "col",
+     31
+    ],
+    "dir": "fwd",
+    "order": "A",
+    "class": "std/std/beau",
+    "period": 19
+   }
+  ],
+  "cells_k4_above_every_copper": [
+   [
+    "A",
+    18
+   ],
+   [
+    "A",
+    26
+   ],
+   [
+    "B",
+    25
+   ]
+  ],
+  "null_cells_above_rest_per_copper": [
+   0,
+   2,
+   2,
+   3,
+   1,
+   0,
+   1,
+   0,
+   0,
+   2
+  ],
+  "stop_queue": false,
+  "controls": "10 shuffled coppers (seed 133, as 0134), identical search",
+  "order_A": "stages, then key (slot = landing place mod p)",
+  "order_B": "key, then stages (slot = message place mod p)"
+ },
+ "notes": "105,548,253 distinct routes (380 of 380 first stages) x 8 classes x 2 orders, periods 1-26. Shortest live key on K4: A 18, B 24; coppers A 19, B 17. K4 settings live below 20: A 5, B 0. K4 above every copper in 3 of 52 cells; null 0-3. Stop queue: False.",
+ "error": null,
+ "candidates": []
+}

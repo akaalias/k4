@@ -1,0 +1,8 @@
+rows of 7 read in column order 3 1 6 0 4 2 5, then rows of 12 read down; ciphertext autokey at lag 8 after the move
+
+place  letter  lands at  carved  carved 8 before
+   22       E        69       T                N
+   23       A        43       S                O
+   24       S         7       X                -
+   64       B        22       F                S
+   65       E        91       A                C

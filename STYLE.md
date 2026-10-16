@@ -64,3 +64,12 @@ is designed, not flipped.
   legend and family heads, the small-caps explain columns, plain lists). Do not invent new
   visual devices such as cards, step rings or chips; propose a new element before building it.
 - No explanatory side-notes under charts or keys; the chart, its axes and its key carry the meaning.
+
+### Before handing back a page change
+
+Look at the actual change in a browser and polish it until you can say: "I've looked at it, I've
+fixed anything that was off. Now it's time to send it back to Alexis." Check spacing, alignment,
+wrapping, punctuation and every place the change appears. If the browser extension is not
+available, render the page with headless Chrome
+(`"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --window-size=1440,1400 --screenshot=out.png <url>`)
+and look at the screenshot. Checking the HTML alone does not count.

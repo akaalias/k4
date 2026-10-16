@@ -1,0 +1,106 @@
+{
+ "id": 145,
+ "tag": "0145-two-free-alphabets-climb-power-at-8",
+ "started": "2026-10-16T19:58:28+00:00",
+ "seconds": 698.2,
+ "status": "ran",
+ "phases": {
+  "unattributed": 19.5,
+  "run": 698.2,
+  "record": 0.1
+ },
+ "ended_epoch": 1792181406.578965,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "two free alphabets (Quagmire IV), periodic key 8, 13, 16, no move: power of design 2 on planted English",
+  "search": "parallel tempering, 10 runs x 16 replicas x 625 rounds x 1000 moves per text, T 0.1->0.002; start from the plant's exact witness (0123) randomised by 400 check-keeping swaps",
+  "not_exhaustive": true,
+  "runs_done": {
+   "min": 10,
+   "max": 10
+  },
+  "texts_with_no_finished_run": 0,
+  "c_decryption_checked": true,
+  "copies": "keep the carved letters at the 24 known places, shuffle the other 73 (fit by construction)",
+  "bar": ">= 3 of 4 plants beat all 4 own copies (null 0.80)",
+  "by_length": {
+   "8": {
+    "checks": 16,
+    "found": 4,
+    "passes_bar": true,
+    "rows": [
+     {
+      "score": -5.2996,
+      "letters_right": 41,
+      "runs": 10,
+      "own_copies": [
+       -5.8523,
+       -5.7844,
+       -5.6114,
+       -5.5397
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -5.3115,
+      "letters_right": 39,
+      "runs": 10,
+      "own_copies": [
+       -5.9513,
+       -5.9304,
+       -5.7284,
+       -5.4626
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -5.2386,
+      "letters_right": 47,
+      "runs": 10,
+      "own_copies": [
+       -5.6438,
+       -5.5749,
+       -5.4806,
+       -5.2716
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     },
+     {
+      "score": -5.251,
+      "letters_right": 43,
+      "runs": 10,
+      "own_copies": [
+       -5.7065,
+       -5.5038,
+       -5.489,
+       -5.3695
+      ],
+      "rank_among_own": 1,
+      "found_own": true,
+      "recovered": false
+     }
+    ]
+   }
+  },
+  "controls": "per plant, 4 kept-place copies (seed 1451)"
+ },
+ "notes": "Quagmire IV power: L8 4/4 (16 checks); runs per text 10-10",
+ "error": null,
+ "candidates": []
+}

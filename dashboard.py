@@ -2121,6 +2121,12 @@ PROG_CSS = """<style>
 .prog ol,.prog ul{padding-left:24px;margin:10px 0 16px}.prog li{margin:0 0 8px}
 .prog li>ul{margin:6px 0 4px}.prog li p{margin:0 0 6px}
 .prog a.fchip{text-decoration:none}.prog a.fchip code{color:var(--accent)}
+.prompt{margin:8px 0 0}.prompt .ktabs{margin:8px 0 10px}
+.prompt-box{background:var(--wash);border:1px solid var(--rule);border-radius:7px;padding:8px 34px 30px}
+.prompt-box .rsec{margin-top:40px}
+.prompt-raw{display:none}.prompt.raw .prompt-raw{display:block}.prompt.raw .prompt-rendered{display:none}
+.prompt-raw pre{background:none;border:none;padding:18px 0 0;margin:0;white-space:pre-wrap;font-size:13px;line-height:1.6;color:var(--ink)}
+@media(max-width:640px){.prompt-box{padding:6px 16px 22px}}
 </style>"""
 
 FILE_PAGES = {"order-of-work.md": "/priorities", "families.md": "/families", "11-clue-register.md": "/clues",
@@ -2167,9 +2173,15 @@ def program_page():
     head = page_head("Program", "Instructions for the loop agent",
                      "The rules the agent follows on every experiment: what it reads first, what success means, the gates a reading must "
                      "pass, what it may touch, the loop itself, and how it decides what to try next.",
-                     'The source is <code>program.md</code>; the agent reads it before every session.')
+                     'Below is the prompt itself, as the agent gets it; switch to the raw view to see the exact text.')
     foot = page_foot('The order the families are worked in is on <a href="/priorities">Priorities</a>; what has been tried is in the <a href="/record">full record</a>.')
-    return page("program", head + PROG_CSS + h + foot, "/program", False)
+    raw = (ROOT / "program.md").read_text()
+    box = ('<div class="prompt" id="prompt"><p class="lp-eyebrow">Prompt &middot; program.md, read by the agent at the start of every session</p>'
+           '<div class="ktabs"><button class="ktab on" data-v="rendered">rendered</button><button class="ktab" data-v="raw">as the agent reads it</button></div>'
+           f'<div class="prompt-box"><div class="prompt-rendered">{h}</div><div class="prompt-raw"><pre>{esc(raw)}</pre></div></div></div>'
+           "<script>(function(){var p=document.getElementById('prompt');p.querySelectorAll('.ktab').forEach(function(b){b.addEventListener('click',function(){"
+           "p.querySelectorAll('.ktab').forEach(function(x){x.classList.toggle('on',x===b);});p.classList.toggle('raw',b.dataset.v==='raw');});});})();</script>")
+    return page("program", head + PROG_CSS + box + foot, "/program", False)
 
 
 def md_page(title, path, active, refresh=True, eyebrow="", h1="", standfirst="", facts="", foot="", take_intro=False):

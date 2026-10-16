@@ -146,3 +146,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0145	0145-two-free-alphabets-climb-power-at-8	1-keyed-periodic	0143-two-free-alphabets-climb-power	reverted	0	0	0			698	unattributed=20 run=698 record=0
 0146	0146-k4-two-free-alphabets-at-8	1-keyed-periodic	0145-two-free-alphabets-climb-power-at-8	reverted	0	0	0			406	unattributed=27 run=406 record=0
 0147	0147-one-carved-letter-wrong-through-the-free-alphabet-tests	1-keyed-periodic	0123-two-free-alphabets-exact-at-every-key-length	reverted	0	0	0			695	unattributed=148 run=695 record=0
+0148	0148-k1-k2-system-with-a-slip-at-33	1-keyed-periodic	0147-one-carved-letter-wrong-through-the-free-alphabet-tests	reverted	1	0	24	3.932		915	unattributed=120 run=915 record=44

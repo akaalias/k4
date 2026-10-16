@@ -1,0 +1,184 @@
+{
+ "candidates": [
+  {
+   "plaintext": "YADKARZAMESURECOINGOREASTNORTHEASTETENAITEPETJFBGLIONOUCHERYTHIBERLINCLOCKEELHURMOFTSSAYMCHTELZEP",
+   "key": {
+    "alphabet": "OVLIGSMJAZBFDXNCYPQRTWUHEK",
+    "shifts": [
+     10,
+     2,
+     13,
+     20,
+     14,
+     7,
+     4,
+     18,
+     24,
+     25,
+     17,
+     6,
+     17,
+     7,
+     11,
+     2,
+     0,
+     23,
+     6
+    ],
+    "form": "added",
+    "slip": 33
+   },
+   "key_bits": 0.0,
+   "key_description": "added form, one alphabet OVLIGSMJAZBFDXNCYPQRTWUHEK, key length 19, carved letter at 33 read as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "best of design 2 on K4"
+  }
+ ],
+ "bounds": {
+  "family": "one free alphabet, added form (K1/K2's system), key length 19, carved letter at place 33 taken as a slip (equation dropped, S kept)",
+  "search": "parallel tempering (0139) in the added form, 10 runs x 16 replicas x 625 rounds x 1000 moves per text",
+  "not_exhaustive": true,
+  "runs_done": {
+   "min": 10,
+   "max": 10
+  },
+  "c_decryption_checked": true,
+  "power": {
+   "plants": 5,
+   "copies_each": 4,
+   "found": 3,
+   "bar": ">= 4 of 5",
+   "passes_bar": false,
+   "null_expected": 1.0,
+   "rows": [
+    {
+     "score": -4.2033,
+     "letters_right": 97,
+     "own_copies": [
+      -5.2063,
+      -5.145,
+      -5.1365,
+      -5.0593
+     ],
+     "rank_among_own": 1,
+     "found_own": true,
+     "recovered": true
+    },
+    {
+     "score": -4.897,
+     "letters_right": 38,
+     "own_copies": [
+      -5.1354,
+      -5.0264,
+      -5.0128,
+      -4.9684
+     ],
+     "rank_among_own": 1,
+     "found_own": true,
+     "recovered": false
+    },
+    {
+     "score": -4.8079,
+     "letters_right": 35,
+     "own_copies": [
+      -5.0626,
+      -5.022,
+      -4.9493,
+      -4.8041
+     ],
+     "rank_among_own": 2,
+     "found_own": false,
+     "recovered": false
+    },
+    {
+     "score": -5.1223,
+     "letters_right": 32,
+     "own_copies": [
+      -5.1363,
+      -5.0745,
+      -5.0601,
+      -4.9811
+     ],
+     "rank_among_own": 4,
+     "found_own": false,
+     "recovered": false
+    },
+    {
+     "score": -4.7782,
+     "letters_right": 38,
+     "own_copies": [
+      -5.1225,
+      -5.1091,
+      -5.1074,
+      -5.0659
+     ],
+     "rank_among_own": 1,
+     "found_own": true,
+     "recovered": false
+    }
+   ]
+  },
+  "k4": {
+   "score": -5.1105,
+   "plaintext": "YADKARZAMESURECOINGOREASTNORTHEASTETENAITEPETJFBGLIONOUCHERYTHIBERLINCLOCKEELHURMOFTSSAYMCHTELZEP",
+   "alphabet": "OVLIGSMJAZBFDXNCYPQRTWUHEK",
+   "key": [
+    10,
+    2,
+    13,
+    20,
+    14,
+    7,
+    4,
+    18,
+    24,
+    25,
+    17,
+    6,
+    17,
+    7,
+    11,
+    2,
+    0,
+    23,
+    6
+   ],
+   "english_free": -5.427
+  },
+  "k4_copies": [
+   -5.3087,
+   -5.2374,
+   -5.2213,
+   -5.2112,
+   -5.194,
+   -5.1289,
+   -5.0963,
+   -5.0659,
+   -5.0529,
+   -5.0514,
+   -5.0114,
+   -5.0091
+  ],
+  "k4_rank_of_13": 7,
+  "stop_queue": false,
+  "controls": "kept-place copies (carved letters kept at the 24 known places, other 73 shuffled): 4 per plant (seed 1481), 12 for K4 (seed 1482)"
+ },
+ "notes": "power 3/5 (bar 4, null 1.00); K4 -5.111 rank 7 of 13 (-5.309 to -5.009); stop False",
+ "controls": [
+  -5.5598,
+  -5.3804,
+  -5.401,
+  -5.4157,
+  -5.6265,
+  -5.3234,
+  -5.3356,
+  -5.5553,
+  -5.3314,
+  -5.6186,
+  -5.6019,
+  -5.4156
+ ],
+ "error": null,
+ "worked_example": "key length 23, Beaufort form: K4 in rows of 23; each column is one key slot\n\n  O B K R U O X O G H U L B S O L I F B B W F L\n  R V Q Q P R N G K S S O T W T Q S J Q S S E K\n  Z Z W A T J K L U D I A W I N F B N Y P V T T\n  M Z F P K W G D K Z X T J C D I G K U H U A U\n  E K C A R\n\nthe seven checks every move keeps (place(carved) + place(known) equal within a column):\n  column 0: R+S (24) = M+C (70)\n  column 1: V+T (25) = Z+L (71)\n  column 2: Q+N (26) = F+O (72)\n  column 3: Q+O (27) = P+C (73)\n  column 4: P+R (28) = K+K (74)\n  column 21: F+E (22) = T+I (68)\n  column 22: L+A (23) = T+N (69)\n\nbest alphabet on K4: OVLIGSMJAZBFDXNCYPQRTWUHEK\nkey values: [10, 2, 13, 20, 14, 7, 4, 18, 24, 25, 17, 6, 17, 7, 11, 2, 0, 23, 6]\nplace 22: carved F at 11, key 13: 13 - 11 = 2 -> L\nplace 64: carved N at 14, key 4: 4 - 14 = 16 -> Y",
+ "seconds": 914.4957101345062
+}

@@ -127,3 +127,5 @@ id	outcome	strength	cribs_forced	space	note
 0126	chance	weak	no	Hand key schedules A-F, unknown keyword, 8 tables + free one/two alphabets, 10 coppers (run cut short)	Time budget hit inside B (coverage unrecorded); C-F untested (zeros); A 6/24; B two-free 461 vs 305-449, replicated in 0127
 0127	chance	exact	no	Skip schedule, all 3,729 partitions, 4 exact tests, 30 fresh coppers	Two free alphabets K4 1135 vs 681-1300 (rank 6/31); tables 0; replication of 0126 fails
 0128	ruled-out	exact	no	Hand schedules C-F (stutter, back-forth, triangle, square, line restart), 1,325 partitions; tableau rows as keys; 30 coppers	No setting fits on std/KRYPTOS tables; free alphabets inside coppers (one cell low); tableau rows 6/24 vs 5-8
+0129	chance	exact	no	One free alphabet (Quagmire III / Beaufort, any order) after each of 27,852 type-1 moves, key 1-26, exact; 12 coppers x 800 moves	No fit below 6; K4 above all coppers in 7/52 cells vs null 0-8; 38 undecided of ~390k
+0130	chance	exact	no	The same with the table before the move (order B)	No fit below 6; L 9 dead for all moves; K4 above all coppers in 0/52 cells vs null 0-10; 78 undecided

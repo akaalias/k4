@@ -56,7 +56,9 @@ Update the leaf when an experiment works on it.
       - Three clockwise quarter turns, every width {closed · exact · 0083}
       - **F6.3** Mixed three-stage routes {open · sampled · 0037}
     - Alphabets in unknown orders after or before a move
-      - **F6.1** One unknown alphabet (Quagmire III) {open · weak · 0097}
+      - **F6.1** One unknown alphabet (Quagmire III) {blocked · exact · 0097, 0129, 0130}
+        - Every type-1 move, either order, added or Beaufort form, key lengths 1-5: no alphabet fits {closed · exact · 0129, 0130}
+        - Lengths 6-26: settings fit at the scrambled-copper rate; only an English climb could judge them (0120) {blocked · exact · 0129, 0130}
       - **F6.2** Two unknown alphabets (Quagmire IV) {open · weak · 0097}
     - **F6.4** Padding at each grid stage; nulls dropped between grids {open · sampled · 0082}
   - F3 A two-part key with a combiner

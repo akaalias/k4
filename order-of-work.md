@@ -67,7 +67,7 @@ for low-value residues.
 | Three stages | partly closed | exact for clockwise triples (0083); sampled for mixed stages (0037) | 0037, 0083 | **F6.3** mixed-direction triples, exhaustive at small widths |
 | One carved letter wrong, missing or extra, through the move library | closed | exact | 0093, 0094 | - |
 | AMSCO at period 23 after the move: 15 distinct check sets against 1-9 on the coppers | noted, not chased | exact | 0114 | within the 4.7 of 52 cells expected outside the range by chance; replicate only if F6 reaches AMSCO again |
-| **F6.1** Free alphabet (Quagmire III) after or before each move, periods 3-26 | **open** | weak | 0097 | F1.1's method on each move; begins only after F1.1 |
+| **F6.1** Free alphabet (Quagmire III) after or before each move, periods 3-26 | **blocked** (closed exact where testable) | exact: every type-1 move, both orders, both forms, lengths 1-26; no fit below 6; fitting cells at the coppers' rate (0129: 7 of 52 cells above every copper, null 0-8; 0130: 0, null 0-10) | 0097, 0129, 0130 | the fitting settings leave only an English climb, which has no power here (0120); blocked like F1.1 |
 | **F6.2** Two free alphabets after or before each move | **open** | weak | 0097 | after F1.2 |
 | **F6.4** Padding applied separately at each grid stage; nulls dropped between griddings | **open** | partly (0082) | 0082 | list the hand padding rules, test each with a periodic key |
 

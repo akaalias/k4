@@ -66,6 +66,24 @@ search (no fit it found was called dead). The prediction, written before the sol
 than free places, so most lengths fit"; it ignored that a one-to-one alphabet packs about 20 letters into 13 residue
 classes mod 13, which the known letters make tight.
 
+### F6: a move, then the table (after pivot P5, ticket #13)
+
+F1.1 blocked first: its last cells (Beaufort 23 and 26) can only be judged by an English climb, which 0120 showed
+recovers no planted text at that size, so the item was marked blocked rather than tested weakly. Every F1 item is
+closed or blocked; pivot P5 to F6, ranking unchanged.
+
+| # | Item | One line |
+|---|---|---|
+| 129 | F6.1 | **One free alphabet after every move, exact (order A).** 27,852 type-1 moves x key lengths 1-26 x added and Beaufort forms, 0119's decider (38 undecided of about 390,000 settings): no fit below length 6, 3 settings at 6, 64 at 7. On 800 sampled moves K4 is above all 12 coppers in 7 of 52 cells; each copper against the rest 0-8. Chance. Prediction held (it said 1-5 dead; the first fits came at 6). |
+| 130 | F6.1 | **The same, order B (table, then move).** 78 undecided of about 500,000. No fit below 6; length 9 dead for every move and 15, 17, 19 nearly so, because with the table first the slots are the message places. K4 above every copper in 0 of 52 cells, null 0-10. Chance. Prediction held. F6.1 closed where dead, blocked where it fits at the coppers' rate. |
+
+Paragraph on 0129-0130. 0129 and 0130 are one test split in two, because both orders did not fit one 30-minute
+budget: the exact decider costs about 7 ms per fitting setting and most settings from length 10 up fit. A random
+witness hunt before the search, meant to speed up fits, made them slower (300 failed tries cost more than the search
+saved); numpy is not in the environment, so it was dropped rather than vectorised. The comparison with coppers uses a
+statistic fixed before the run: the number of cells where K4 is above every copper, against the same count for each
+copper against the rest (so a copper's luck sets the bar, not a guessed threshold).
+
 ## 2026-10-15
 
 Plan for the day: run to experiment 50. Priorities, in order: explain the three statistics

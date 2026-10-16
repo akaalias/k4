@@ -50,6 +50,7 @@ a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a
 .wrap{max-width:980px;margin:0 auto;padding:14px 28px 40px}
 h1.home{font:italic 400 40px/1.15 var(--serif);text-align:center;margin:72px 0 10px;letter-spacing:-.01em}
 @media(min-width:761px){h1.home{white-space:nowrap;font-size:clamp(26px,3.9vw,40px);width:96vw;position:relative;left:50%;transform:translateX(-50%)}}
+.sec-lead{max-width:760px;font-size:17px;line-height:1.65;margin:4px 0 8px}
 p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}p.psub.answer{font-size:32px;line-height:1.3;color:var(--ink);margin:44px auto 34px;max-width:none}@media(max-width:760px){p.psub.answer{font-size:22px;margin-top:28px}}
 .hero-flow{width:96vw;position:relative;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:12px;margin:22px 0 26px}
 .hero-flow .lp-col{zoom:.74}
@@ -1109,6 +1110,13 @@ def overview():
     body = ('<h1 class="home">Can an autonomous research loop find the secret of Kryptos K4?</h1>' + hero_flow()
             + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
             + sec(1, "What is Kryptos K4?", "A sculpture in the courtyard of the CIA, its history since 1959, and the fourth of its four messages, the one nobody has read.")
+            + ('<p class="sec-lead">Kryptos is a sculpture by the artist Jim Sanborn, dedicated in 1990 in the courtyard of the '
+               'CIA\'s headquarters in Langley, Virginia. Its centrepiece is a curved copper screen cut through with about 1,730 '
+               'letters: four encrypted messages, K1 to K4, and the table of alphabets used to encrypt the first two. K1, K2 and '
+               'K3 were solved in the 1990s. K4, the last 97 letters, has never been publicly solved. Sanborn has confirmed '
+               'only two stretches of its plaintext, EASTNORTHEAST and BERLINCLOCK. In 2025 the full plaintext turned up '
+               'among his papers at the Smithsonian, but it has not been published, and the method that turns the 97 '
+               'carved letters into that message is still unknown. That method is what this loop is looking for.</p>')
             + what_we_look_for()
             + f'''<a class="cta" href="/live"><span class="cta-k">Follow the run</span><span class="cta-h">Open the live dashboard &rarr;</span><span class="cta-s">Every experiment so far, {n} of them, with its result and time, updated as each new one lands.</span></a>''')
     return page("Kryptos K4 autoresearch", body, "/")

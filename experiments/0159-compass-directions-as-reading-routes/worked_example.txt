@@ -1,0 +1,11 @@
+rows of 10, read east-northeast (one row up, two columns right), lines from the top-left corner
+
+first 20 message places read: 1 2 11 3 12 4 21 13 5 22 14 6 31 23 15 7 32 24 16 8
+
+place  letter  lands at  copper there
+   22       E        10             H
+   23       A        14             S
+   24       S        18             F
+   64       B        57             I
+   65       E        63             B
+   74       K        67             V

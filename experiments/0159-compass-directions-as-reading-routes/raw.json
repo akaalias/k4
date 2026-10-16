@@ -1,0 +1,317 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "compass-direction reading routes (16 points, either line order, widths 2-96; E/ENE/NE pairs at widths 2-48), then or before a periodic tableau key",
+  "directions": {
+   "N": [
+    -1,
+    0
+   ],
+   "NNE": [
+    -2,
+    1
+   ],
+   "NE": [
+    -1,
+    1
+   ],
+   "ENE": [
+    -1,
+    2
+   ],
+   "E": [
+    0,
+    1
+   ],
+   "ESE": [
+    1,
+    2
+   ],
+   "SE": [
+    1,
+    1
+   ],
+   "SSE": [
+    2,
+    1
+   ],
+   "S": [
+    1,
+    0
+   ],
+   "SSW": [
+    2,
+    -1
+   ],
+   "SW": [
+    1,
+    -1
+   ],
+   "WSW": [
+    1,
+    -2
+   ],
+   "W": [
+    0,
+    -1
+   ],
+   "WNW": [
+    -1,
+    -2
+   ],
+   "NW": [
+    -1,
+    -1
+   ],
+   "NNW": [
+    -2,
+    -1
+   ]
+  },
+  "distinct_routes": 110820,
+  "periods": [
+   1,
+   26
+  ],
+  "classes": 8,
+  "k4_live_by_period": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    13,
+    200,
+    1215,
+    4549,
+    12668
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    44,
+    34169
+   ]
+  },
+  "controls_live_by_period_min": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    10,
+    186,
+    760,
+    4531,
+    12534
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    38,
+    33556
+   ]
+  },
+  "controls_live_by_period_max": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    40,
+    227,
+    1523,
+    4585,
+    12729
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    59,
+    34913
+   ]
+  },
+  "k4_shortest_live": {
+   "A": 21,
+   "B": 25
+  },
+  "coppers_shortest_live": {
+   "A": 21,
+   "B": 25
+  },
+  "k4_settings_live_below_20": {
+   "A": 0,
+   "B": 0
+  },
+  "controls_settings_live_below_20": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_live_below_20": [],
+  "cells_k4_above_every_copper": [
+   [
+    "A",
+    21
+   ]
+  ],
+  "null_cells_above_rest_per_copper": [
+   1,
+   1,
+   0,
+   1,
+   0,
+   1,
+   0,
+   1,
+   1,
+   0
+  ],
+  "stop_queue": false,
+  "controls": "10 shuffled coppers (seed 1365), identical search",
+  "exhaustive": true
+ },
+ "notes": "110,820 distinct routes x 8 classes x 2 orders, periods 1-26. Shortest live on K4: A 21, B 25; coppers A 21, B 25. K4 settings live below 20: A 0, B 0. K4 above every copper in 1 of 52 cells; null 0-1. Stop queue: False.",
+ "controls": [],
+ "error": null,
+ "worked_example": "rows of 10, read east-northeast (one row up, two columns right), lines from the top-left corner\n\nfirst 20 message places read: 1 2 11 3 12 4 21 13 5 22 14 6 31 23 15 7 32 24 16 8\n\nplace  letter  lands at  copper there\n   22       E        10             H\n   23       A        14             S\n   24       S        18             F\n   64       B        57             I\n   65       E        63             B\n   74       K        67             V",
+ "seconds": 14.65386700630188
+}

@@ -77,6 +77,7 @@ information (K5's text, a codebook) stay blocked.
 | **F6.1** Free alphabet (Quagmire III) after or before each move, periods 3-26 | **blocked** (closed exact where testable) | exact: every type-1 move, both orders, both forms, lengths 1-26; no fit below 6; fitting cells at the coppers' rate (0129: 7 of 52 cells above every copper, null 0-8; 0130: 0, null 0-10) | 0097, 0129, 0130 | the fitting settings leave only an English climb, which has no power here (0120); blocked like F1.1. Reopens if F1.5 reaches power |
 | **F6.2** Two free alphabets after or before each move | **blocked** (closed exact where testable) | exact at 1-10 for every move, both orders, with undecided counted; per-slot refutation at 11-26 (0133); 97-99% of per-slot survivors fit at 11-26 (0131, 0132); K4 above every copper in 5 of 52 cells, null 2-7 | 0097, 0131, 0132, 0133 | fitting settings leave only an English climb (0120); order A length 3 (16 against 1-12) is 0102's marginal cell, inside chance by the fixed rule. Reopens if F1.5 reaches power |
 | **F6.4** Padding applied separately at each grid stage; nulls dropped between griddings | closed | exact: the hand padding rules listed in NOTEBOOK 2026-10-16 (blanks in 8 places per grid, dropped or kept as dummies), one stage at widths 2-96, two at 2-48, periodic key 1-26 either side, 874,572 routes; nothing live below 21, at the coppers' rate (0135) | 0082, 0135 | - |
+| **F6.5** Direction words as routes through the grid (A14(a), C16(c): "directions" as instructions): "east, then northeast" and the other compass readings as reading paths (along rows, then up the diagonals; and each of the 16 points as a direction of travel), at every width, then a periodic key on the standard or KRYPTOS tables | **open** | - | - | add the routes to the move library and test as F6's first row, exact; cheap |
 
 ## F3. Two-part key with a combiner
 
@@ -88,6 +89,7 @@ information (K5's text, a codebook) stay blocked.
 | Column word plus row key | closed | exact | 0087, 0088 | - |
 | **F3.1** Combiners other than addition (subtraction both ways is done; table lookup through a second alphabet, multiplication mod 26) | **open** | - | - | exact, cheap |
 | **F3.2** Numeric second parts from the Morse (E counts) and the plate layout (line lengths) | **open** | - | 0038 did 17 readings | list the readings, test each exactly |
+| **F3.3** Direction words as numbers (A14(b)): east-northeast as a bearing (67.5 degrees: 6, 7, 5 or 67, 5), as compass point 6 of 32 or 3 of 16, and the same for EAST and NORTHEAST, as a numeric second part beside a word | **open** | - | 0072 tried direction words as keyword alphabets only | list the readings, test each exactly as F3.2 |
 
 ## F2. Masked plaintext
 

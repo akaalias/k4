@@ -1271,7 +1271,7 @@ def load_pivots():
 
 def learnings_page():
     """What the search has taught us so far. For now only the hero; the content is to be agreed first."""
-    hero = ('<h1 class="home">&ldquo;Results! Why, man, I have gotten a lot of results! I know several thousand things that won&rsquo;t work.&rdquo;</h1>'
+    hero = ('<h1 class="home">&ldquo;Results! Why, man, I have gotten a lot of results!<br>I know several thousand things that won&rsquo;t work.&rdquo;</h1>'
             '<p class="psub">Thomas Edison, as recalled by his associate Walter S. Mallory, in Dyer and Martin, '
             '<a href="https://quoteinvestigator.com/2012/07/31/edison-lot-results/" target="_blank" rel="noopener"><i>Edison: His Life and Inventions</i> (1910)</a></p>')
     return page("learnings", '<div class="learn-hero">' + hero + "</div>", "/learnings", False)

@@ -1258,6 +1258,10 @@ LIN_CSS = """
 #lin .lrow{stroke:var(--rule-soft);stroke-width:1;shape-rendering:crispEdges}
 #lin .lrow.ten{stroke:var(--rule);stroke-opacity:.6}
 #lin .lrow.lit-direct{stroke:var(--muted);stroke-opacity:.45}
+#lin .rhit{fill:var(--ink);fill-opacity:0;transition:fill-opacity .12s}
+#lin .rhit.on{fill-opacity:.05}
+#lin .lrow.row-on{stroke:var(--muted);stroke-opacity:.5}
+#lin .ng.row-on .nlab{fill:var(--ink);font-weight:600}
 #lin .edge{fill:none;stroke:var(--disc);stroke-width:1}
 #lin .edge.x{stroke-dasharray:3 3}
 #lin .ng{cursor:pointer;outline:none}
@@ -1322,7 +1326,8 @@ LIN_JS = r"""
     // one faint rule per experiment across every column, so the sequence can be followed
     // from one family to the next; every tenth is a little stronger
     nodes.forEach(function(nd){var ty=y[nd.key],ten=typeof nd.n==='number'&&nd.n%10===0;
-      g+='<line class="lrow'+(ten?' ten':'')+'" data-key="'+esc(nd.key)+'" x1="0" x2="'+W+'" y1="'+ty+'" y2="'+ty+'"/>';});
+      g+='<rect class="rhit" data-key="'+esc(nd.key)+'" x="0" y="'+(ty-geo.sp/2)+'" width="'+W+'" height="'+geo.sp+'"/>'
+        +'<line class="lrow'+(ten?' ten':'')+'" data-key="'+esc(nd.key)+'" x1="0" x2="'+W+'" y1="'+ty+'" y2="'+ty+'"/>';});
     cols.forEach(function(C){g+='<line class="lbase" x1="'+C.x.toFixed(1)+'" x2="'+C.x.toFixed(1)+'" y1="'+geo.padY+'" y2="'+(H-geo.padY)+'"/>';});
     nodes.forEach(function(nd){
       var p=parentOf(nd.key);if(!p)return;
@@ -1398,7 +1403,25 @@ LIN_JS = r"""
   }
   function hideTip(){tip.style.opacity='0';shownKey=null;}
 
+  // A light band across every column marks the row under the pointer, so the sequence can
+  // be read across families; it never dims the rest.
+  var rowOn=null;
+  function rowHi(key){
+    if(rowOn===key)return;
+    if(rowOn)svg.querySelectorAll('.row-on,.rhit.on').forEach(function(el){el.classList.remove('row-on','on');});
+    rowOn=key;if(!key)return;
+    var q='[data-key="'+CSS.escape(key)+'"]';
+    var b=svg.querySelector('.rhit'+q),l=svg.querySelector('.lrow'+q),n=svg.querySelector('.ng'+q);
+    if(b)b.classList.add('on');if(l)l.classList.add('row-on');if(n)n.classList.add('row-on');
+  }
+  function rowAt(e){
+    var r=svg.getBoundingClientRect(),yy=e.clientY-r.top,i=Math.round((yy-geo.padY)/geo.sp);
+    return i>=0&&i<nodes.length&&Math.abs(yy-geo.y[nodes[i].key])<=geo.sp/2?nodes[i].key:null;
+  }
   function wire(){
+    rowOn=null;
+    svg.addEventListener('mousemove',function(e){rowHi(rowAt(e));});
+    svg.addEventListener('mouseleave',function(){rowHi(null);});
     svg.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse';});
     svg.addEventListener('mouseover',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');lit(k);showTip(k,a);});
     svg.addEventListener('mouseout',function(e){var a=e.target.closest('.ng');if(!a||a.contains(e.relatedTarget))return;clearLit();hideTip();});

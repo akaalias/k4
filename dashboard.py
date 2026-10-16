@@ -1819,7 +1819,7 @@ def first_open(n):
 
 def family_record_html(text):
     """The 'Full record by family' table, redrawn: one row per family with the lineage page's head,
-    its status, every experiment linked, and the bounds split into findings, newest first."""
+    its status, every experiment linked, and the bounds split into findings, newest first, all shown."""
     m = re.search(r"^## Full record by family\n(.*?)(?=^## )", text, re.S | re.M)
     if not m:
         return None, text
@@ -1847,7 +1847,8 @@ def family_record_html(text):
     fams.sort(key=lambda c: int(c[0]))
     out = []
     for num, name, status, _exps, bounds, *_ in fams:
-        parts = [x.strip() for x in re.split(r"(?<=\))\.\s+(?=[A-Z])", bounds) if x.strip()]
+        # a finding ends with its experiment in brackets, "(0005)."; some start with it instead, "Both fingerprints (0077): ..."
+        parts = [x.strip() for x in re.split(r"(?<=\))\.\s+(?=[A-Z])|\.\s+(?=[A-Z][^.]{0,90}\(0\d{3}\):)", bounds) if x and x.strip()]
         items = []
         for ptxt in parts:
             refs = sorted(set(re.findall(r"\b(0\d{3})\b", ptxt)))
@@ -1857,17 +1858,14 @@ def family_record_html(text):
                       for _, refs, t in items)
         first, rest = lis.split("</li>", 4)[:4], None
         li_list = re.findall(r"<li>.*?</li>", lis, re.S)
-        shown, more = li_list[:4], li_list[4:]
-        body = f'<ul class="fr-list">{"".join(shown)}</ul>'
-        if more:
-            body += f'<details class="fr-more"><summary>{len(more)} more findings</summary><ul class="fr-list">{"".join(more)}</ul></details>'
+        body = f'<ul class="fr-list">{"".join(li_list)}</ul>'
         exps = by_fam.get(num, [])
         st_word, _, st_rest = status.partition(" ")
         out.append(f'<div class="fr-row fc-{esc(num)}"><div class="fr-head">'
                    f'<div class="famhead"><span class="sw"></span>{esc(num)} {esc(short.get(num, ""))}<span class="cnt">{len(exps)} experiments</span></div>'
                    f'<p class="fr-name">{md_inline(name)}</p>'
                    f'<p class="fr-status"><b>{esc(st_word)}</b> {md_inline(st_rest)}</p>'
-                   f'<div class="fr-exps">{"".join(chip(r["tag"][:4]) for r in exps)}</div></div>'
+                   '</div>'
                    f'<div class="fr-body">{body}</div></div>')
     html_ = FR_CSS + '<div class="fr">' + "".join(out) + "</div>"
     cut = text[:m.start()] + "## Full record by family\n\n<div class=\"fr-slot\"></div>\n\n" + text[m.end():]

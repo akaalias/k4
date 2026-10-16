@@ -1504,6 +1504,8 @@ def cribmap_figure(tag):
         svg = svg.replace(m.group(0), f'viewBox="{vx} 0 {vw} {m.group(2)}"', 1)
         w_, h_ = vw * FIG_SCALE, float(m.group(2)) * FIG_SCALE
         svg = re.sub(r'(<svg[^>]*?)\swidth="[^"]*"\s+height="[^"]*"', rf'\1 width="{w_:.0f}" height="{h_:.0f}"', svg, count=1)
+    # the "IN: THE COPPER" heading is drawn at the left edge; centre it on the drawing (x 26-970)
+    svg = re.sub(r'<text x="40"( y="22"[^>]*)>(IN: )', r'<text x="498" text-anchor="middle"\1>\2', svg, count=1)
     notes_p = ROOT / "figures" / f"{num}-cribmap-notes.json"
     notes = json.loads(notes_p.read_text()) if notes_p.exists() else []
     below = "".join(f'<div class="fig-note"><b>{esc(n.get("anchor", ""))}</b><p>{crib_cells(esc(n.get("text", "")))}</p></div>' for n in notes)

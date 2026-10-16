@@ -50,7 +50,14 @@ a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a
 .wrap{max-width:980px;margin:0 auto;padding:14px 28px 40px}
 h1.home{font:italic 400 40px/1.15 var(--serif);text-align:center;margin:28px 0 10px;letter-spacing:-.01em}
 @media(min-width:761px){h1.home{white-space:nowrap;font-size:clamp(26px,3.9vw,40px);width:96vw;position:relative;left:50%;transform:translateX(-50%)}}
-p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}.psub.answer{font-size:21px;color:var(--ink);margin:4px auto 26px}
+p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}.psub.answer{font-size:24px;line-height:1.4;color:var(--ink);margin:6px auto 28px}
+.hero-flow{width:96vw;position:relative;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:12px;margin:22px 0 26px}
+.hero-flow .lp-col{zoom:.74}
+.hf-arrow{color:var(--muted);flex:none;padding-top:22px}
+.hf-method{flex:none;width:250px;box-sizing:border-box;margin-top:22px;padding:30px 20px;border:2px dashed var(--accent);border-radius:8px;text-align:center}
+.hf-method b{display:block;font:700 18px/1.3 var(--serif);color:var(--ink)}
+.hf-method span{display:block;margin-top:8px;font:italic 14px/1.45 var(--serif);color:var(--muted)}
+@media(max-width:1180px){.hero-flow{flex-direction:column;gap:6px}.hf-arrow{transform:rotate(90deg);padding:0}.hf-method{margin-top:0}.hero-flow .lp-col{zoom:.62}}
 .stat-hero{max-width:560px;margin:30px auto 4px;text-align:center}
 .stat-hero>b{display:block;font-size:56px;line-height:1.05;font-weight:600;color:var(--ink)}
 .stat-hero>span{display:block;font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:6px}
@@ -352,6 +359,20 @@ def panel_block(ct, pt, known, in_caption=True):
                                 ("checked: the known letters in place, and the reading turns back into the copper", "scored: the loss, zero is solved")) + '</div>')
     arrow = '<div class="lp-arrow"><svg width="34" height="14" viewBox="0 0 34 14"><path d="M1,7 L28,7" stroke="currentColor" stroke-width="1.4"/><path d="M26,2 L33,7 L26,12 z" fill="currentColor"/></svg></div>'
     return f'<div class="panel-wrap wide">{left}{arrow}{right}</div>'
+
+
+def hero_flow():
+    """Above the overview's question: the carved K4, the method still to be found, the cleartext
+    it must give. The panels are panel_block's; the placeholder is the illustrations' dashed box."""
+    from kryptos.facts import KNOWN as _KNOWN, K4 as _K4
+    left = ('<div class="lp-col"><p class="lp-eyebrow">The Kryptos K4 ciphertext message</p>'
+            + letter_panel(_K4, _KNOWN, "carved", "as carved, 97 letters; the 24 known places in accent") + "</div>")
+    right = ('<div class="lp-col"><p class="lp-eyebrow">The fully decrypted cleartext message</p>'
+             + letter_panel(None, _KNOWN, "reading", "the 24 known letters must land here; the rest is read") + "</div>")
+    arrow = '<div class="hf-arrow"><svg width="34" height="14" viewBox="0 0 34 14"><path d="M1,7 L28,7" stroke="currentColor" stroke-width="1.4"/><path d="M26,2 L33,7 L26,12 z" fill="currentColor"/></svg></div>'
+    method = ('<div class="hf-method"><b>the method goes here</b>'
+              '<span>one experiment, one way of turning the left into the right</span></div>')
+    return f'<div class="hero-flow">{left}{arrow}{method}{arrow}{right}</div>'
 
 
 def mini_panel(pt, known):
@@ -1086,7 +1107,7 @@ def overview():
         champ = f"""<div class="callout wide"><div class="callout-h">Champion: <a href="/exp/{esc(ch['experiment'])}">{esc(ch['experiment'])}</a></div>{panel_block(_K4, ch['plaintext'], _KNOWN)}<p class="muted" style="font-size:13px">{esc(ch['key_description'])}; loss {ch.get('loss', 0):.2f}, {pct(ch.get('loss'))} of the worst possible. A champion is the lowest-loss candidate that passed every gate; it is not a solution until its text reads as English and its key is memorable.{' Experiments 0001-0049 were kept by a different number, fitness, which is why a reverted experiment can sit below the champion in the chart; from 0050 the harness keeps by loss.' if ch['experiment'][:4] <= '0049' else ''}</p></div>"""
     else:
         champ = '<div class="callout"><div class="callout-h">Champion</div><p>None yet. No candidate has passed all four gates.</p></div>'
-    body = ('<h1 class="home">Can an autonomous research loop find the method behind K4?</h1>'
+    body = (hero_flow() + '<h1 class="home">Can an autonomous research loop find the method behind K4?</h1>'
             + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
             + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
             + what_we_look_for()

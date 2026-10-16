@@ -123,3 +123,4 @@ id	outcome	strength	cribs_forced	space	note
 0122	error	exact	-	Quagmire IV exact, lengths 1-26 (second attempt, unchanged)	same crash, re-run without reading the traceback; kept as error
 0123	chance	exact	no	Two free alphabets (Quagmire IV), periodic key 1-26, no move, 100 coppers	K4 fits 8 lengths (8,13,16,19,20,23,24,26) vs coppers 5-16; 18 lengths dead; length 19 3/100 coppers, replicated in 0124
 0124	chance	exact	no	Quagmire IV at length 19 vs 1,000 fresh coppers, look-elsewhere over 26 lengths, known-letter null	26/1000 fit at 19 (p 0.026), look-elsewhere p 0.026 (>0.01 stop); due to R/P at 28 and 66; not a signal
+0125	chance	sampled	no	Forced key windows (13+11) as running English, 208,062 dictionary alphabets x 18 readings, 50 coppers, 20 plants	K4 -4.94 rank 18/51 (coppers -5.28..-4.30); below all 20 planted running keys (-3.82..-4.78); plants beat all coppers 11/20

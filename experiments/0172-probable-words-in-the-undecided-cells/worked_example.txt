@@ -1,0 +1,6 @@
+one scrambled alphabet, Beaufort form, key length 23: THE guessed at places 1-3
+
+place 1: carved O, guessed T, slot 0: place(O) + place(T) = key value of slot 0
+place 2: carved B, guessed H, slot 1: place(B) + place(H) = key value of slot 1
+place 3: carved K, guessed E, slot 2: place(K) + place(E) = key value of slot 2
+with the 24 known letters, 27 equations: decided exactly; repeated for every word and place

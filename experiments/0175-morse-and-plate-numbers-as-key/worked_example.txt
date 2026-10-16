@@ -1,0 +1,27 @@
+Morse E runs from the first run, Vigenere on the KRYPTOS table, word length 7
+
+place  known  carved  key  run  word value  slot
+   22      E       F    1    1           0     0
+   23      A       L   10    6           4     1
+   24      S       R   21    3          18     2
+   25      T       V   18    2          16     3
+   26      N       Q    1    2          25     4
+   27      O       Q   15    5          10     5
+   28      R       P    2    3          25     6
+   29      T       R   23    1          22     0
+   30      H       N    5    1           4     1
+   31      E       G    2    2           0     2
+   32      A       K   19    1          18     3
+   33      S       S    0    6          20     4
+   34      T       S    2    3          25     5
+   64      B       N   11    3           8     0
+   65      E       Y   17    2          15     1
+   66      R       P    2    2           0     2
+   67      L       V    5    5           0     3
+   68      I       T   15    3          12     4
+   69      N       T   11    1          10     5
+   70      C       M    9    1           8     6
+   71      L       Z    8    2           6     0
+   72      O       F    7    1           6     1
+   73      C       P   20    6          14     2
+   74      K       K    0    3          23     3

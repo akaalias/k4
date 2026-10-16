@@ -538,6 +538,109 @@ def loss_chart(rows):
     return "<div class='chart-wide'>" + eyebrow + "<figure class='chart'>" + "".join(g) + "</figure>" + legend + "</div>"
 
 
+def load_grades():
+    """{id: grade row} from grades.tsv: outcome, strength, cribs_forced, space, note (issue #29)."""
+    p = ROOT / "grades.tsv"
+    out = {}
+    if p.exists():
+        lines = p.read_text().splitlines()
+        head = lines[0].split("\t")
+        for ln in lines[1:]:
+            f = ln.split("\t")
+            if len(f) == len(head):
+                out[f[0]] = dict(zip(head, f))
+    return out
+
+
+FINDING_ROWS = [
+    ("beat-chance", "beat the scrambled copies"),
+    ("chance", "at chance"),
+    ("ruled-out", "ruled out"),
+    ("other", "no comparison run"),
+]
+FAMILY_PALETTE = ["#3d6b8c", "#8a6a1e", "#5b7f4a", "#7a4f86", "#b0603a", "#2f7f7a", "#9a5470", "#5c5a8f", "#7d7a3a", "#6b6a60"]
+FAMILY_PALETTE_DARK = ["#7fa8c9", "#c9a227", "#8fb87a", "#b48cc0", "#e0936b", "#6cbfb8", "#d08aa6", "#9a98d0", "#bdb86a", "#a39f90"]
+
+
+def findings_chart(rows):
+    """What each experiment found, against chance: one dot per experiment in run order, in the row
+    of its outcome (grades.tsv). Colour is the family, shape the strength of the test, a ring marks
+    readings whose known letters were fitted by the method itself."""
+    if not rows:
+        return "<p class='muted'>No experiments yet.</p>"
+    grades = load_grades()
+    W, L, R, T, B, band = 1400, 40, 250, 26, 40, 62
+    H = T + band * len(FINDING_ROWS) + B
+    n = len(rows)
+    xs = [L + (i + 0.5) * (W - L - R) / n for i in range(n)]
+    row_of = {k: j for j, (k, _) in enumerate(FINDING_ROWS)}
+    keys = sorted({r["family"].split("-", 1)[0] for r in rows}, key=lambda k: (not k.isdigit(), int(k) if k.isdigit() else 0, k))
+    fam_ix = {k: i for i, k in enumerate(keys)}
+    short = {}
+    for r in rows:
+        num, _, rest = r["family"].partition("-")
+        short.setdefault(num, f"{num} {rest.replace('-', ' ')}" if rest else num)
+    style = "<style>.fc{" + ";".join(f"--fc{i}:{c}" for i, c in enumerate(FAMILY_PALETTE)) + "}" \
+            "@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .fc{" + ";".join(f"--fc{i}:{c}" for i, c in enumerate(FAMILY_PALETTE_DARK)) + "}}" \
+            ":root[data-theme=dark] .fc{" + ";".join(f"--fc{i}:{c}" for i, c in enumerate(FAMILY_PALETTE_DARK)) + "}" \
+            ".fc .chart-legend span{white-space:normal}.fc .mk-fam{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}</style>"
+    g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="What each experiment found, against scrambled copies of K4">']
+    counts = {k: 0 for k, _ in FINDING_ROWS}
+    for j, (k, label) in enumerate(FINDING_ROWS):
+        y0 = T + j * band
+        if j % 2 == 0:
+            g.append(f'<rect x="{L}" y="{y0}" width="{W - L - R}" height="{band}" fill="var(--wash)"/>')
+        g.append(f'<line x1="{L}" x2="{W - R}" y1="{y0 + band / 2:.1f}" y2="{y0 + band / 2:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
+    placed = []
+    for i, r in enumerate(rows):
+        gr = grades.get(r["tag"][:4], {})
+        oc = gr.get("outcome", "")
+        k = oc if oc in row_of else "other"
+        counts[k] += 1
+        cy = T + row_of[k] * band + band / 2
+        c = f"var(--fc{fam_ix[r['family'].split('-', 1)[0]] % 10})"
+        st = gr.get("strength", "")
+        tip = (f"{esc(r['tag'])}<br>{esc(r['title'])}<br><b>{esc(oc or 'not graded')}</b>, {esc(st or '-')} test"
+               f"{'; known letters fitted by the method' if gr.get('cribs_forced') == 'yes' else ''}<br>{esc(gr.get('note', ''))}")
+        href = f"/exp/{esc(r['tag'])}"
+        if st == "exact":
+            shape = f'<circle cx="{xs[i]:.1f}" cy="{cy:.1f}" r="5" fill="{c}" stroke="var(--paper)" stroke-width="1.5"/>'
+        elif st == "sampled":
+            shape = f'<circle cx="{xs[i]:.1f}" cy="{cy:.1f}" r="4.2" fill="var(--paper)" stroke="{c}" stroke-width="2.2"/>'
+        else:
+            shape = f'<circle cx="{xs[i]:.1f}" cy="{cy:.1f}" r="4.2" fill="var(--paper)" stroke="{c}" stroke-width="1.4" stroke-dasharray="2 2"/>'
+        ring = (f'<circle cx="{xs[i]:.1f}" cy="{cy:.1f}" r="8.5" fill="none" stroke="var(--ink)" stroke-width="1"/>'
+                if gr.get("cribs_forced") == "yes" else "")
+        placed.append(f'<a href="{href}"><g data-tip="{tip}">{ring}{shape}<rect x="{xs[i] - 6:.1f}" y="{cy - 10:.1f}" width="12" height="20" fill="transparent"/></g></a>')
+    g += placed
+    for j, (k, label) in enumerate(FINDING_ROWS):
+        cy = T + j * band + band / 2
+        col = "var(--accent)" if k == "beat-chance" else "var(--ink)"
+        g.append(f'<text x="{W - R + 14}" y="{cy - 2:.1f}" font-size="15" fill="{col}">{label}</text>')
+        g.append(f'<text x="{W - R + 14}" y="{cy + 16:.1f}" font-size="13" fill="var(--muted)">{counts[k]} experiment{"" if counts[k] == 1 else "s"}</text>')
+    for i in range(n):
+        if i == 0 or (i + 1) % 5 == 0 or i == n - 1:
+            g.append(f'<text x="{xs[i]:.1f}" y="{H - 14}" font-size="13" fill="var(--faint)" text-anchor="middle">{i + 1}</text>')
+    g.append("</svg>")
+    fam_legend = "".join(
+        f'<span><i class="mk-fam" style="background:var(--fc{i % 10})"></i>{esc(short[k])}</span>'
+        for k, i in fam_ix.items())
+    legend = ('<div class="chart-legend">'
+              '<span><svg width="14" height="14" style="vertical-align:-2px;margin-right:6px"><circle cx="7" cy="7" r="5" fill="var(--muted)"/></svg>exact: the whole space was enumerated or solved</span>'
+              '<span><svg width="14" height="14" style="vertical-align:-2px;margin-right:6px"><circle cx="7" cy="7" r="4.2" fill="var(--paper)" stroke="var(--muted)" stroke-width="2.2"/></svg>sampled: a sample or a heuristic search</span>'
+              '<span><svg width="14" height="14" style="vertical-align:-2px;margin-right:6px"><circle cx="7" cy="7" r="4.2" fill="var(--paper)" stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="2 2"/></svg>weak: too little power to decide</span>'
+              '<span><svg width="20" height="20" style="vertical-align:-5px;margin-right:6px"><circle cx="10" cy="10" r="8.5" fill="none" stroke="var(--ink)"/><circle cx="10" cy="10" r="4" fill="var(--muted)"/></svg>ring: the method fitted its key to the known letters, so hitting them proves nothing</span>'
+              '</div><div class="chart-legend">' + fam_legend + '</div>')
+    eyebrow = (f'<p class="chart-eyebrow">What each of the {n} experiments found, judged against scrambled copies of K4 &middot; '
+               'in run order &middot; graded in grades.tsv</p>')
+    expl = ('<p class="hero-sub">Every experiment runs the same search on scrambled copies of the carved text. A result counts only if K4 '
+            'does better than all of them. <b>Ruled out</b>: no setting in the searched space fits the 24 known letters. '
+            '<b>At chance</b>: settings or readings exist, but scrambled copies produce them just as well. '
+            '<b>Beat the scrambled copies</b>: the one entry, 0056, is a property of the carved text (doubled letters lining up in '
+            'columns of 7, repeats 21 apart), not a reading of it. No decryption has beaten chance.</p>')
+    return style + "<div class='chart-wide fc'>" + eyebrow + "<figure class='chart'>" + "".join(g) + "</figure>" + legend + expl + "</div>"
+
+
 GL_JS = """<script>
 (function(){
   var all=document.querySelectorAll('[data-gl]');
@@ -834,12 +937,12 @@ def overview():
             + hero   # champion callout hidden for now (Alexis, 2026-10-15: too noisy); `champ` is still built
             + sec(1, "What the loop is looking for", "The fourth message as the copper carries it, and the three things every experiment is measured against.")
             + what_we_look_for()
-            + sec(2, "Loss over the run", "Each dot is one experiment's best candidate; a hollow dot means the search ruled everything out before producing one. The axis breaks at the line so the band where a solution would appear has room.")
-            + loss_chart(rows)
+            + sec(2, "What each experiment found", "Each dot is one experiment, placed by what it found against scrambled copies of the carved text. The loss chart that stood here made fitted readings look like partial hits; it was replaced on 2026-10-16 (issue #29).")
+            + findings_chart(rows)
             + sec(3, "Experiments", "Newest first. Crib letters: how many of the 24 known letters the best candidate got right. Candidates: full 97-letter decryptions the experiment handed to the gates; zero means the search ruled everything out before producing one. A bar marked unclocked shows run time only; its design and coding phases were not timed.")
             + table + f'<p class="hero-sub" style="text-align:left;max-width:none">Phase bar: {phase_legend()}</p>' 
             + sec(4, "Lineage", "What each experiment inherits from.")
-            + '<p class="hero-sub" style="text-align:left;max-width:none;margin:0 0 6px"><a href="/lineage">See the lineage drawn as a family tree</a>, one lane per family, every experiment in the order it ran.</p>'
+            + '<p class="hero-sub" style="text-align:left;max-width:none;margin:0 0 6px"><a href="/lineage">See the lineage drawn as a family tree</a>, one column per family, every experiment in the order it ran.</p>'
             + (tree(None) or "<p class='muted'>empty</p>"))
     return page("Kryptos K4 autoresearch", body, "/")
 
@@ -1136,22 +1239,25 @@ LIN_CSS = """
 .lin-legend .lkept{width:11px;height:11px;background:var(--ink)}
 .lin-legend .lwas{width:13px;height:13px;border-radius:50%;border:1.3px dashed var(--ink);display:inline-block}
 .lin-legend .lerr{color:var(--accent);font:700 14px/1 var(--serif)}
-.lin-legend .larc{width:18px;height:9px;border-top:1.2px solid var(--muted);border-radius:9px 9px 0 0;display:inline-block}
-.lin-legend .lx{width:18px;height:0;border-top:1.2px dashed var(--muted);display:inline-block}
+.lin-legend .larc{width:0;height:16px;border-left:1.5px solid var(--muted);display:inline-block;margin:0 4px}
+.lin-legend .lx{width:0;height:16px;border-left:1.5px dotted var(--muted);display:inline-block;margin:0 4px}
 .lin-box{position:relative;width:min(1600px,94vw);margin:16px 0 0 calc(50% - min(800px,47vw));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+#lin-heads{position:sticky;top:0;z-index:5;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--rule)}
+#lin-lanes{position:relative;will-change:transform}
 #lin-diagram{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}
 #lin-diagram::-webkit-scrollbar{height:6px}#lin-diagram::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}
-#lin-lanes{position:absolute;left:0;top:0;width:0;pointer-events:none}
-.lane-lab{position:absolute;left:0;white-space:nowrap;pointer-events:auto;cursor:default;padding:2px 10px 2px 6px;background:linear-gradient(90deg,var(--paper) 80%,transparent);font:600 10.5px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.lane-lab{position:absolute;top:0;bottom:0;padding:9px 8px 8px 10px;cursor:default;font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-left:1px solid var(--rule-soft);overflow-wrap:break-word;hyphens:auto}
+.lane-lab:first-child{border-left:0}
 .lane-lab .sw{display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:0}
-.lane-lab .cnt{color:var(--faint);font-weight:400;margin-left:5px}
-.lane-lab.on{text-decoration:underline;text-underline-offset:3px}
+.lane-lab .cnt{display:block;color:var(--faint);font-weight:400;margin-top:2px;font-variant-numeric:lining-nums tabular-nums}
+.lane-lab.on .nm{text-decoration:underline;text-underline-offset:3px}
 #lin{display:block}
 #lin .lband{fill:currentColor;fill-opacity:.05}
 #lin .lbound{stroke:var(--rule-soft);stroke-width:1}
 #lin .lbase{stroke:var(--rule-soft);stroke-width:1}
-#lin .edge{fill:none;stroke:var(--disc);stroke-width:1}
-#lin .edge.x{stroke-dasharray:3 3}
+#lin .ltick{stroke:var(--rule-soft);stroke-width:1;stroke-dasharray:1 3}
+#lin .edge{fill:none;stroke:var(--muted);stroke-opacity:.55;stroke-width:1.5}
+#lin .edge.x{stroke-width:1.4;stroke-dasharray:.1 3.4;stroke-linecap:round}
 #lin .ng{cursor:pointer;outline:none}
 #lin .nr{fill:currentColor}
 #lin .nk{fill:var(--ink)}
@@ -1159,12 +1265,13 @@ LIN_CSS = """
 #lin .ne{stroke:var(--accent);stroke-width:1.8;stroke-linecap:round}
 #lin .nlab{fill:var(--faint);font:9.5px/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
 #lin .ng:focus-visible .hit{stroke:var(--accent);stroke-width:1.5}
-#lin.dim .ng,#lin.dim .edge{opacity:.1}
+#lin.dim .ng{opacity:.1}
+#lin.dim .edge{opacity:.12}
 #lin.dim .ng.lit{opacity:.6}
 #lin.dim .ng.lit-direct{opacity:1}
 #lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
-#lin.dim .edge.lit{opacity:.5;stroke:var(--muted)}
-#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
+#lin.dim .edge.lit{opacity:1;stroke:var(--ink);stroke-opacity:.7}
+#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-opacity:1;stroke-width:2}
 #lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
 #lin-tip .pop-title{font-weight:700;font-size:14.5px;line-height:1.25;margin-bottom:3px}
 #lin-tip .pop-meta{color:var(--muted);font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
@@ -1173,7 +1280,7 @@ LIN_CSS = """
 #lin-tip .pop-sec+.pop-sec{margin-top:10px}
 #lin-tip .pop-parent{font:600 11px/1.35 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
 .lin-foot{max-width:980px;margin:12px auto 0;font-size:13.5px;color:var(--muted)}
-@media(max-width:640px){.lin-head h1{font-size:26px}.lin-box{width:calc(100vw - 28px);margin-left:0}}
+@media(max-width:640px){.lin-head h1{font-size:26px}.lin-box{width:calc(100vw - 32px);margin-left:2px}.lane-lab{padding:8px 5px 7px 7px;font-size:9.5px;letter-spacing:.03em}.lane-lab .sw{width:7px;height:7px;margin-right:4px}.lane-lab .cw{display:none}}
 """
 
 LIN_JS = r"""
@@ -1191,55 +1298,67 @@ LIN_JS = r"""
   var kids={};nodes.forEach(function(n){var p=parentOf(n.key);if(p)(kids[p]=kids[p]||[]).push(n.key);});
   var svg=null,geo=null,shownKey=null,lastPointer='mouse';
 
-  // Geometry: x is run order, one lane per family. An arc's height is half its span, capped,
-  // so every lane is only as tall as its longest arc needs.
+  // Geometry: y is run order, one column per family. Each column has a gutter for the
+  // experiment numbers, then the line of dots, then room for the bowed edges.
   function layout(){
-    var n=nodes.length,padX=22,minSp=24,CAP=78,LABEL_H=24,NUM_H=22;
-    var avail=Math.max(300,(host.clientWidth||1000)-2*padX);
-    var sp=n>1?Math.max(minSp,avail/(n-1)):0;
-    var W=Math.round(2*padX+(n-1)*sp),x={};
-    nodes.forEach(function(nd,i){x[nd.key]=padX+i*sp;});
-    var ry=fams.map(function(){return 10;});
-    nodes.forEach(function(nd){var p=parentOf(nd.key);if(p&&byKey[p].fam===nd.fam)ry[nd.fam]=Math.max(ry[nd.fam],Math.min(CAP,(x[nd.key]-x[p])/2));});
-    var lanes=[],y=0;
-    fams.forEach(function(f,i){var top=y,base=top+LABEL_H+ry[i]+4,bot=base+NUM_H;lanes.push({top:top,base:base,bot:bot});y=bot;});
-    return {sp:sp,W:W,H:Math.ceil(y),x:x,lanes:lanes,CAP:CAP,padX:padX};
+    var n=nodes.length,nf=fams.length,padY=16,sp=16,MINCOL=112,NUMW=30;
+    var avail=host.clientWidth||1000;
+    var colW=Math.max(MINCOL,avail/nf),W=Math.floor(colW*nf),y={},cols=[];
+    nodes.forEach(function(nd,i){y[nd.key]=padY+i*sp;});
+    fams.forEach(function(f,i){var left=i*colW;cols.push({left:left,x:left+NUMW});});
+    return {sp:sp,W:W,H:Math.ceil(2*padY+(n-1)*sp),y:y,cols:cols,colW:colW,CAP:colW-NUMW-12,padY:padY};
   }
 
   function render(){
     geo=layout();
-    var x=geo.x,lanes=geo.lanes,W=geo.W,H=geo.H,g='';
-    var yOf=function(k){return lanes[byKey[k].fam].base;};
-    lanes.forEach(function(L,i){
-      g+='<rect class="lband f'+fams[i].c+'" x="0" y="'+L.top+'" width="'+W+'" height="'+(L.bot-L.top)+'"/>';
-      if(i)g+='<line class="lbound" x1="0" x2="'+W+'" y1="'+L.top+'" y2="'+L.top+'"/>';
-      g+='<line class="lbase" x1="'+geo.padX+'" x2="'+(W-geo.padX)+'" y1="'+L.base+'" y2="'+L.base+'"/>';
+    var y=geo.y,cols=geo.cols,W=geo.W,H=geo.H,g='';
+    var xOf=function(k){return cols[byKey[k].fam].x;};
+    cols.forEach(function(C,i){
+      g+='<rect class="lband f'+fams[i].c+'" x="'+C.left.toFixed(1)+'" y="0" width="'+geo.colW.toFixed(1)+'" height="'+H+'"/>';
+      if(i)g+='<line class="lbound" x1="'+C.left.toFixed(1)+'" x2="'+C.left.toFixed(1)+'" y1="0" y2="'+H+'"/>';
     });
+    // a faint rule every tenth experiment, so a row can be read across the columns
+    nodes.forEach(function(nd){if(typeof nd.n==='number'&&nd.n%10===0){var ty=y[nd.key];
+      g+='<line class="ltick" x1="0" x2="'+W+'" y1="'+ty+'" y2="'+ty+'"/>';}});
+    // Edges leave the parent straight down and enter the child from above: a cubic whose
+    // control points sit below the parent and above the child. Between columns that makes an
+    // S; inside a column it is a straight drop, bowed a few pixels to the right only when it
+    // would otherwise run through the dots in between (longer drops bow a little further).
+    var famYs=fams.map(function(){return [];});
+    nodes.forEach(function(nd){famYs[nd.fam].push(y[nd.key]);});
     nodes.forEach(function(nd){
       var p=parentOf(nd.key);if(!p)return;
-      var a=x[p],b=x[nd.key],d;
-      if(byKey[p].fam===nd.fam){var yb=yOf(nd.key),rx=(b-a)/2,r=Math.min(geo.CAP,rx);
-        d='M'+a.toFixed(1)+','+yb+' A'+rx.toFixed(1)+','+r.toFixed(1)+' 0 0 1 '+b.toFixed(1)+','+yb;
-        g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
-      else{var ya=yOf(p),yc=yOf(nd.key),h=(b-a)/2;
-        d='M'+a.toFixed(1)+','+ya+' C'+(a+h).toFixed(1)+','+ya+' '+(b-h).toFixed(1)+','+yc+' '+b.toFixed(1)+','+yc;
-        g+='<path class="edge x" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
+      var a=y[p],b=y[nd.key],d,cls='edge';
+      if(byKey[p].fam===nd.fam){var x0=xOf(nd.key),between=famYs[nd.fam].some(function(v){return v>a&&v<b;});
+        if(!between)d='M'+x0.toFixed(1)+','+a+' L'+x0.toFixed(1)+','+b;
+        else{var bw=Math.min(geo.CAP,3+1.6*Math.log2(1+(b-a)/geo.sp)),dy=Math.min(.45*(b-a),40),xb=(x0+bw).toFixed(1);
+          d='M'+x0.toFixed(1)+','+a+' C'+xb+','+(a+dy).toFixed(1)+' '+xb+','+(b-dy).toFixed(1)+' '+x0.toFixed(1)+','+b;}}
+      else{var xa=xOf(p).toFixed(1),xc=xOf(nd.key).toFixed(1),dy2=Math.min(140,Math.max(.45*(b-a),Math.min(.8*(b-a),24)));cls+=' x';
+        d='M'+xa+','+a+' C'+xa+','+(a+dy2).toFixed(1)+' '+xc+','+(b-dy2).toFixed(1)+' '+xc+','+b;}
+      g+='<path class="'+cls+'" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';
     });
     nodes.forEach(function(nd){
-      var cx=x[nd.key].toFixed(1),cy=yOf(nd.key),k=esc(nd.key),m='';
+      var cx=xOf(nd.key).toFixed(1),cy=y[nd.key],k=esc(nd.key),m='';
       if(nd.decision==='kept')m='<circle class="nk" cx="'+cx+'" cy="'+cy+'" r="5"/>';
       else if(nd.decision==='reverted')m='<circle class="nr" cx="'+cx+'" cy="'+cy+'" r="3.6"/>';
       else{var c=parseFloat(cx),s=3.6;m='<path class="ne" d="M'+(c-s)+','+(cy-s)+' L'+(c+s)+','+(cy+s)+' M'+(c+s)+','+(cy-s)+' L'+(c-s)+','+(cy+s)+'"/>';}
       if(nd.recorded==='kept'&&nd.decision!=='kept')m+='<circle class="nwas" cx="'+cx+'" cy="'+cy+'" r="7.5"/>';
       g+='<a class="ng f'+fams[nd.fam].c+'" data-key="'+k+'" href="/exp/'+encodeURIComponent(nd.key)+'" aria-label="'+esc(nd.n+': '+nd.title)+'">'+m
         +'<circle class="hit" cx="'+cx+'" cy="'+cy+'" r="10" fill="transparent"/>'
-        +'<text class="nlab" x="'+cx+'" y="'+(cy+16)+'" text-anchor="middle">'+nd.n+'</text></a>';
+        +'<text class="nlab" x="'+(parseFloat(cx)-10)+'" y="'+(cy+3.3)+'" text-anchor="end">'+nd.n+'</text></a>';
     });
     host.innerHTML='<svg id="lin" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>';
     svg=document.getElementById('lin');
-    lanesEl.innerHTML=lanes.map(function(L,i){var f=fams[i];
-      return '<div class="lane-lab f'+f.c+'" data-fam="'+i+'" title="'+esc(f.name)+'" style="top:'+(L.top+4)+'px"><span class="sw"></span>'+esc(f.label)+'<span class="cnt">'+f.count+'</span></div>';}).join('');
+    lanesEl.style.width=W+'px';lanesEl.style.height='';
+    lanesEl.innerHTML=cols.map(function(C,i){var f=fams[i];
+      return '<div class="lane-lab f'+f.c+'" data-fam="'+i+'" title="'+esc(f.name)+'" style="left:'+C.left.toFixed(1)+'px;width:'+geo.colW.toFixed(1)+'px"><span class="sw"></span><span class="nm">'+esc(f.label)+'</span>'
+        +'<span class="cnt">'+f.count+'<span class="cw">'+(f.count===1?' experiment':' experiments')+'</span></span></div>';}).join('');
+    // the heads are absolutely placed, so the strip takes the height of the tallest one
+    var hh=0;lanesEl.querySelectorAll('.lane-lab').forEach(function(el){el.style.bottom='auto';hh=Math.max(hh,el.offsetHeight);el.style.bottom='';});
+    lanesEl.style.height=hh+'px';syncHeads();
   }
+  // On a narrow screen the figure scrolls sideways; the sticky heads follow it.
+  function syncHeads(){lanesEl.style.transform='translateX('+(-host.scrollLeft)+'px)';}
 
   function clearLit(){svg.classList.remove('dim');svg.querySelectorAll('.lit,.lit-direct').forEach(function(el){el.classList.remove('lit','lit-direct');});
     lanesEl.querySelectorAll('.on').forEach(function(el){el.classList.remove('on');});}
@@ -1291,20 +1410,12 @@ LIN_JS = r"""
       el.addEventListener('mouseenter',function(){litFam(+el.getAttribute('data-fam'));});
       el.addEventListener('mouseleave',clearLit);});
   }
-  var endScroll=function(){return Math.max(0,host.scrollWidth-host.clientWidth);};
   render();wire();
-  host.addEventListener('scroll',function(){if(shownKey)hideTip();},{passive:true});
+  host.addEventListener('scroll',function(){syncHeads();if(shownKey)hideTip();},{passive:true});
   window.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
-  // Open on the newest experiments, as the ballpark page does: a short eased scroll to the right end.
-  var introRan=false;
-  function intro(){if(introRan)return;introRan=true;var start=host.scrollLeft,dist=endScroll()-start,dur=1100;if(Math.abs(dist)<1)return;
-    var ease=function(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;},t0=performance.now();
-    var step=function(now){var p=Math.min(1,(now-t0)/dur);host.scrollLeft=start+dist*ease(p);if(p<1)requestAnimationFrame(step);};
-    requestAnimationFrame(step);}
-  if(document.readyState==='complete')setTimeout(intro,300);else window.addEventListener('load',function(){setTimeout(intro,300);});
   var rw=null,lastW=host.clientWidth;
   window.addEventListener('resize',function(){clearTimeout(rw);rw=setTimeout(function(){if(host.clientWidth===lastW)return;lastW=host.clientWidth;
-    var atEnd=host.scrollLeft>=endScroll()-4;render();wire();if(atEnd)host.scrollLeft=endScroll();},150);});
+    render();wire();},150);});
 })();
 </script>"""
 
@@ -1331,7 +1442,7 @@ def plain(text, limit=340):
 
 
 def lineage_data(rows):
-    """Nodes and family lanes for the lineage page, built from the records on every request."""
+    """Nodes and family columns for the lineage page, built from the records on every request."""
     names = family_names()
 
     # a family is its number in families.md; slugs spelt two ways in the records share one lane
@@ -1379,7 +1490,7 @@ def lineage_page():
     body = f"""<style>{LIN_CSS}</style><div class="lin">
 <div class="lin-head"><p class="eyebrow">Research lineage</p>
 <h1>The family tree of the search</h1>
-<p class="standfirst">Every experiment, left to right in the order it ran, in the lane of its family. An arc joins an experiment to the one it built on. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its lane. Click a dot to open its record.</p>
+<p class="standfirst">Every experiment, top to bottom in the order it ran, in the column of its family. A line runs down from each experiment to the ones built on it: solid inside a family, dotted when the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.</p>
 <p class="muted" style="font-size:14.5px;margin:0 0 12px">{facts}</p>
 <div class="lin-legend">
 <span class="k"><span class="ldot lkept"></span>kept</span>
@@ -1389,7 +1500,7 @@ def lineage_page():
 <span class="k"><span class="larc"></span>built on a parent in the same family</span>
 <span class="k"><span class="lx"></span>built on a parent in another family</span>
 </div></div>
-<div class="lin-box"><div id="lin-diagram"></div><div id="lin-lanes"></div></div>
+<div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
 <p class="lin-foot">Families are described on the <a href="/families">families</a> page. The same tree as an indented list is at the foot of the <a href="/">overview</a>.</p>
 <div id="lin-tip" role="tooltip"></div>
 <script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}"""

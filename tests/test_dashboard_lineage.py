@@ -1,5 +1,5 @@
 """The lineage page is built from the records: one node per experiment, edges from `parent`,
-one lane per family number, linked from the nav and the overview."""
+one column per family number, linked from the nav and the overview."""
 import json
 import re
 
@@ -22,7 +22,7 @@ def test_lineage_has_every_experiment_and_parent():
         assert by_key[r["tag"]]["decision"] == r["decision"]
 
 
-def test_one_lane_per_family_number():
+def test_one_column_per_family_number():
     data = dashboard.lineage_data(dashboard.load_results())
     labels = [f["label"].split(" ", 1)[0] for f in data["families"]]
     assert len(labels) == len(set(labels))

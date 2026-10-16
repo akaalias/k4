@@ -1,0 +1,366 @@
+{
+ "id": 176,
+ "tag": "0176-direction-words-as-numbers",
+ "started": "2026-10-16T23:50:45+00:00",
+ "seconds": 1.7,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 1.7,
+  "record": 0.0
+ },
+ "ended_epoch": 1792194646.876757,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "word plus the direction words read as numbers, k = w[i mod a] + s d, 12 table rules, exact",
+  "readings": {
+   "ENE 67.5 degrees: 6 7 5": [
+    6,
+    7,
+    5
+   ],
+   "ENE 67.5 degrees: 6 7 5, reversed": [
+    5,
+    7,
+    6
+   ],
+   "ENE 067.5: 0 6 7 5": [
+    0,
+    6,
+    7,
+    5
+   ],
+   "ENE 067.5: 0 6 7 5, reversed": [
+    5,
+    7,
+    6,
+    0
+   ],
+   "ENE 67 5": [
+    67,
+    5
+   ],
+   "ENE 67 5, reversed": [
+    5,
+    67
+   ],
+   "ENE 675": [
+    675
+   ],
+   "ENE 67 degrees 30 minutes": [
+    67,
+    30
+   ],
+   "ENE 67 degrees 30 minutes, reversed": [
+    30,
+    67
+   ],
+   "ENE 6 7 3 0": [
+    6,
+    7,
+    3,
+    0
+   ],
+   "ENE 6 7 3 0, reversed": [
+    0,
+    3,
+    7,
+    6
+   ],
+   "ENE 1200 mils: 1 2 0 0": [
+    1,
+    2,
+    0,
+    0
+   ],
+   "ENE 1200 mils: 1 2 0 0, reversed": [
+    0,
+    0,
+    2,
+    1
+   ],
+   "ENE 12 0 0": [
+    12,
+    0,
+    0
+   ],
+   "ENE 12 0 0, reversed": [
+    0,
+    0,
+    12
+   ],
+   "ENE point 6 of 32": [
+    6
+   ],
+   "ENE point 7 of 32 (from 1)": [
+    7
+   ],
+   "ENE point 3 of 16": [
+    3
+   ],
+   "ENE point 4 of 16 (from 1)": [
+    4
+   ],
+   "E 90 degrees: 9 0": [
+    9,
+    0
+   ],
+   "E 90 degrees: 9 0, reversed": [
+    0,
+    9
+   ],
+   "E 90": [
+    90
+   ],
+   "NE 45 degrees: 4 5": [
+    4,
+    5
+   ],
+   "NE 45 degrees: 4 5, reversed": [
+    5,
+    4
+   ],
+   "NE 45": [
+    45
+   ],
+   "E, NE degrees: 90 45": [
+    90,
+    45
+   ],
+   "E, NE degrees: 90 45, reversed": [
+    45,
+    90
+   ],
+   "E, NE digits: 9 0 4 5": [
+    9,
+    0,
+    4,
+    5
+   ],
+   "E, NE digits: 9 0 4 5, reversed": [
+    5,
+    4,
+    0,
+    9
+   ],
+   "E, NE of 32: 8 4": [
+    8,
+    4
+   ],
+   "E, NE of 32: 8 4, reversed": [
+    4,
+    8
+   ],
+   "E, NE of 32 from 1: 9 5": [
+    9,
+    5
+   ],
+   "E, NE of 32 from 1: 9 5, reversed": [
+    5,
+    9
+   ],
+   "E, NE of 16: 4 2": [
+    4,
+    2
+   ],
+   "E, NE of 16: 4 2, reversed": [
+    2,
+    4
+   ],
+   "E, NE of 16 from 1: 5 3": [
+    5,
+    3
+   ],
+   "E, NE of 16 from 1: 5 3, reversed": [
+    3,
+    5
+   ],
+   "ENE, E, NE of 32: 6 8 4": [
+    6,
+    8,
+    4
+   ],
+   "ENE, E, NE of 32: 6 8 4, reversed": [
+    4,
+    8,
+    6
+   ],
+   "ENE, E, NE of 16: 3 4 2": [
+    3,
+    4,
+    2
+   ],
+   "ENE, E, NE of 16: 3 4 2, reversed": [
+    2,
+    4,
+    3
+   ],
+   "ENE, E, NE degrees: 67.5 90 45 as 6 7 5 9 0 4 5": [
+    6,
+    7,
+    5,
+    9,
+    0,
+    4,
+    5
+   ],
+   "ENE, E, NE degrees: 67.5 90 45 as 6 7 5 9 0 4 5, reversed": [
+    5,
+    4,
+    0,
+    9,
+    5,
+    7,
+    6
+   ]
+  },
+  "n_readings": 43,
+  "word_lengths": [
+   1,
+   24
+  ],
+  "checks_by_word_length": {
+   "1": 23,
+   "2": 22,
+   "3": 21,
+   "4": 20,
+   "5": 19,
+   "6": 18,
+   "7": 17,
+   "8": 16,
+   "9": 15,
+   "10": 14,
+   "11": 13,
+   "12": 12,
+   "13": 11,
+   "14": 11,
+   "15": 9,
+   "16": 8,
+   "17": 7,
+   "18": 7,
+   "19": 9,
+   "20": 11,
+   "21": 11,
+   "22": 9,
+   "23": 7,
+   "24": 5
+  },
+  "live_at_least_checks": {
+   "1": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "2": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "4": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "6": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "8": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "11": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "14": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   }
+  },
+  "dictionary_hits": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "dictionary_hits_6_plus": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_hits": [],
+  "plant": {
+   "text": "6 7 5 from the second digit, + SHADOW, Vigenere on the KRYPTOS table",
+   "found": true
+  },
+  "copies": "20 shuffled coppers (seed 1760)",
+  "seconds": 2,
+  "exhaustive": true
+ },
+ "notes": "live settings with >=4 checks: K4 0 (coppers 0-0); dictionary words 4+: K4 0 (coppers 0-0); plant found True",
+ "error": null,
+ "candidates": []
+}

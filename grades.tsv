@@ -119,3 +119,7 @@ id	outcome	strength	cribs_forced	space	note
 0118	ruled-out	exact	-	CT autokey from the carved stream, lags 1-200, 12 rules, 2 streams; letter above on plate	No full fit; best 5/24 by lag (coppers 5-6), 3/24 by plate (coppers 2-5)
 0119	ruled-out	exact	no	One free alphabet both sides (Quagmire III, 26! orders), periodic key 1-26, no move, added and Beaufort forms	Added form dead at every length (S/S at 33, K/K at 74 force key 0); Beaufort alive only at 23, 26; coppers 0-15 / 1-11 lengths
 0120	chance	sampled	yes	One free alphabet both sides, Beaufort form, key 23 and 26: annealed alphabet + free key toward English, 12 coppers/length	K4 -5.81 (23; coppers -5.90..-5.45) and -5.29 (26; -5.33..-5.01); power weak: plants above coppers 3/6 and 1/6, none recovered
+0121	error	exact	-	Quagmire IV exact, lengths 1-26 (first attempt)	crashed formatting the witness alphabets; record kept as error; rerun as 0123
+0122	error	exact	-	Quagmire IV exact, lengths 1-26 (second attempt, unchanged)	same crash, re-run without reading the traceback; kept as error
+0123	chance	exact	no	Two free alphabets (Quagmire IV), periodic key 1-26, no move, 100 coppers	K4 fits 8 lengths (8,13,16,19,20,23,24,26) vs coppers 5-16; 18 lengths dead; length 19 3/100 coppers, replicated in 0124
+0124	chance	exact	no	Quagmire IV at length 19 vs 1,000 fresh coppers, look-elsewhere over 26 lengths, known-letter null	26/1000 fit at 19 (p 0.026), look-elsewhere p 0.026 (>0.01 stop); due to R/P at 28 and 66; not a signal

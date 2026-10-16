@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "0123 found two unknown alphabets fitting K4 at key length 19, which only 3 of 100 scrambled coppers did. Rule 5 of the order of work: replicate against fresh controls before anything else."
+ },
+ {
+  "anchor": "the check",
+  "text": "At length 19 the known places pair 38 apart; the R at 28 and the R at 66 both sit under P, a check that holds for free. 1,000 fresh scrambles show how often that kind of luck happens."
+ },
+ {
+  "anchor": "the bound",
+  "text": "26 of 1,000 fit at 19 (p 0.026); lengths 15 and 17 are as rare, so a copper lands on such a length often enough. Not a signal; F1.2 goes on."
+ }
+]

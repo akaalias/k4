@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A variant of K1 and K2's table uses two scrambled alphabets, one to look up the message letter and one to write the carved letter. Both may be any order; the known letters decide exactly which key lengths any pair can fit."
+ },
+ {
+  "anchor": "the check",
+  "text": "Per length, the 24 equations are solved modulo 13 and 2 and searched for two one-to-one alphabets. The share of scrambled coppers that fail is the test's power at that length."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 fits at 8, 13, 16, 19, 20, 23, 24 and 26 and nowhere else. Every length but 19 is inside the coppers' range; 19 (3 of 100) was replicated in 0124."
+ }
+]

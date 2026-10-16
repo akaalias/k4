@@ -16,7 +16,7 @@ id	outcome	strength	cribs_forced	space	note
 0015	ruled-out	exact	yes	Hill 2x2-4x4, plain and affine, 4 numberings, solved from crib blocks	2x2/3x3 inconsistent; 12 4x4 fits lack redundancy; best 16/24 cribs, English -7.86. 0044 confirms dead
 0016	chance	weak	-	23,930 routes (0006, 0008) then tableau; forced key at periods 2-40 scored as English	Best -3.547 tops both shuffles (-3.808, -4.025); only 2 controls, too noisy (notebook); called noise; #26
 0017	ruled-out	exact	-	Running key from tableau, Morse, K1-K4 ciphertexts, both ways, all offsets	162,912 trials, none within 3 mismatches. Record's 869-letter panel is really 865 (notebook)
-0018	chance	sampled	-	Simulator: 13 ranked generators x 5,000 samples, 10 statistics vs K4	No family singled out (best Hill 2x2 6.02 vs random 6.62); w7/w21 marks p~0.002 for all; real per 0056
+0018	diagnostic	sampled	-	Simulator: 13 ranked generators x 5,000 samples, 10 statistics vs K4	No family singled out (best Hill 2x2 6.02 vs random 6.62); w7/w21 marks p~0.002 for all; real per 0056
 0019	ruled-out	exact	-	Mono or homophonic substitution then any of 23,931 routes	0 routes pass either condition; 5 shuffled K4s also 0; route set carries #26 keyed-columnar caveat
 0020	chance	exact	-	Periodic tableau, periods 1-52, 248 vocabulary-mixed alphabets (184,512 pairs x modes)	Periods 1-23 and 21/42 dead; survivors at 24 (1) and 26 (7,454) vs shuffled 25 (19), 26 (7,204); no word
 0021	ruled-out	exact	-	Carter 1923 vol. 1 as running key, both ways, every offset, 24 conventions	13.7 million trials: none within two mismatches
@@ -25,7 +25,7 @@ id	outcome	strength	cribs_forced	space	note
 0024	chance	exact	-	Word (length 2-30) plus K2 coordinate digits, 7 readings, std/KRYPTOS	Shortest consistent word 26; best forced word -5.584 vs 10 shuffles -6.039 to -5.393; no match
 0025	chance	exact	-	Both autokeys, 63 vocabulary alphabets x 3 key alphabets x 3 modes, lags 1-96	Ct autokey 0 survivors; pt lags 1-24, 33-49 dead; best closure -6.469 vs 10 shuffles -6.608 to -6.157
 0026	chance	exact	-	Double keyed columnar from vocabulary word pairs (15,376 routes) then tableau	Min live period 23; best key -3.797 vs 10 shuffles -4.315 to -3.579; keyed columnar read inverse (#26)
-0027	chance	sampled	-	Simulator round two: 16 period-7/21/42, Gromark, autokey generators x 5,000	Gromark base 2 makes w21 repeats (p 0.34) but not w7 column (p 0.0); w7 p<=0.005 under all; 0056: real
+0027	diagnostic	sampled	-	Simulator round two: 16 period-7/21/42, Gromark, autokey generators x 5,000	Gromark base 2 makes w21 repeats (p 0.34) but not w7 column (p 0.0); w7 p<=0.005 under all; 0056: real
 0028	ruled-out	exact	-	Gromark bases 2-9, 66 lag rules, 184,512 vocabulary alphabet triples x 3 modes	Smallest largest forced shift is 15, so no triple reaches the recurrence test in any base 2-9
 0029	chance	exact	-	Bean's closeness: largest crib shift under 184,512 vocabulary alphabet pairs x modes	Smallest largest shift 8, same as 10 shuffled K4s (7-9)
 0030	ruled-out	exact	-	Key = ciphertext at a i + b (223,488 rules) or plaintext mirrored, 24 conventions	Ct self-key best 6 mismatches, 0 survivors; mirror: 0 consistent centres of 97
@@ -54,16 +54,16 @@ id	outcome	strength	cribs_forced	space	note
 0053	chance	exact	-	periodic tableau periods 1-52, 102 alphabets from K1-K3 and 2025 letter words, 3 modes	at chance vs 10 shuffles; 26/52 high (2,139 vs max 1,554) from one equation; p32 6 vs max 3 not discussed; 0 words
 0054	chance	exact	-	Gromark digit keys on 10,404 pairs of K1-K3-word alphabets, smallest base	smallest base 17 on K4 vs 17-19 on ten shuffles; no pair admits base <=15, so no rule tested
 0055	ruled-out	exact	yes	Hill 2x2-4x4 plain/affine, 200 numberings from K1-K3 words, all alignments	557 settings consistent on whole blocks, all 4x4 with no checks; best 21/24, all fail partial-block cribs
-0056	beat-chance	sampled	-	look-elsewhere test of width-7 doublet column and width-21 repeats, widths 2-48	corrected p 0.005 (0.018 among six-doublet shuffles) and 0.010; prediction failed; fingerprints real, unexplained
+0056	diagnostic	sampled	-	look-elsewhere test of width-7 doublet column and width-21 repeats, widths 2-48	corrected p 0.005 (0.018 among six-doublet shuffles) and 0.010; prediction failed; fingerprints real, unexplained
 0057	chance	exact	-	one or two letters struck everywhere outside the cribs (351 masks), tableau 1-52	periods 24/25/26: 18/117/168 masks vs 17.1/104.6/174.3 per ten random strike-outs; no word check
 0058	no-control	exact	-	tableau then keyed columnar (single/double) from K1-K3 words, 14,792 routes	16 pairs live at period 25 (predicted none), no control for their rate; no word; issue #26 inverse reading
 0059	no-control	exact	-	two periodic keys through two tableau passes, a+b up to 24, 102 alphabets from K1-K3 words	2,042 consistent, smallest a+b 21 (2 cases); no control run, "chance rates" asserted; 0 word matches
 0060	chance	exact	no	Hill 2x2/3x3 key matrices filled from K2 coordinates (72), 4 numberings, both directions	best 4/24 known letters vs random invertible matrices best 7 (mean 2.7 and 3.1)
 0061	ruled-out	exact	no	word plus short key from misspelt or raised letters, 451,440 settings	No setting fits all 24; best 8/24 vs ten scrambled coppers 7-11 (no better than controls).
-0062	chance	sampled	-	14 generators with a 7 or 21, 4,000 Carter-English samples each	No generator makes both marks (0/4000); ctak lag 21 makes repeats 5.4% vs 0.2%, but K4 fit not tested; conservative.
+0062	diagnostic	sampled	-	14 generators with a 7 or 21, 4,000 Carter-English samples each	No generator makes both marks (0/4000); ctak lag 21 makes repeats 5.4% vs 0.2%, but K4 fit not tested; conservative.
 0063	ruled-out	exact	no	3,107 column routes x ctak lags 1-95 x 24 conventions x 2 orders (14.2M checks)	0 full matches; best 8/24 (order A) and 9/24 (order B); no control run.
 0064	ruled-out	exact	no	ciphertext autokey on 102 K1-K3/C13/C14 word alphabets, lags 1-95, 3 modes	0 full matches; fewest mismatches 3 vs scrambled coppers 2-3.
-0065	chance	sampled	-	10 recipes meant to line doublets up in sevens, 4,000 samples each	Ctak lag1+P7 key gives doublet column 1.47% vs calibration 0.10-0.27% (pred. 5%); recipe dead under cribs (0066).
+0065	diagnostic	sampled	-	10 recipes meant to line doublets up in sevens, 4,000 samples each	Ctak lag1+P7 key gives doublet column 1.47% vs calibration 0.10-0.27% (pred. 5%); recipe dead under cribs (0066).
 0066	chance	exact	yes	ciphertext autokey lag 1-96 plus periodic key 1-96, 32 classes (221,184 cases tested)	Survivors only at 1-2 checks, inside controls (e.g. P<=26 2 checks 5 vs 0-6); none at 3+; lag1/P7 and lag 21 dead.
 0067	chance	exact	yes	two-lag ciphertext feedback, lags 1<=a<b<=74, 4 signs, periods 1-30 (1.93M cases)	3 checks 15 vs 3-12, 4 checks 1 vs 0-2: scattered, no pattern; notebook calls it chance (prediction said none).
 0068	chance	exact	yes	ctak lags 1-96 on copper with one letter wrong, missing or extra (602,112 cases)	Nothing at 3+ checks; counts inside controls (subst. 2 checks 6 vs 2-14); lag 21 no survivor. Tally overstates checks.
@@ -94,7 +94,7 @@ id	outcome	strength	cribs_forced	space	note
 0093	chance	exact	yes	Type-1 library x periodic key 1-26, one known letter allowed wrong	Min one-miss period 20 after (coppers 19-21), 24 before (24-25); 3 cells just outside; 0100: p22 one-miss p 0.10
 0094	chance	exact	yes	One letter dropped/added (149 variants) x single moves on 96/98, periodic key 1-26	648,709 settings; nothing below period 20; every period inside the scrambled-copper range
 0095	chance	weak	no	93 riddle words dragged under the 376 crib-consistent periodic keys (periods 27-96)	Best 2 checks vs random decoys 4; notebook says the test has little power at the live lengths
-0096	chance	sampled	-	31 two-stage recipes from 0080-0088, 20,000 English samples each, both width fingerprints	No recipe makes both marks over 2/20,000, same as period-7 calibration (0.0001); unsure: simulation, not crib test
+0096	diagnostic	sampled	-	31 two-stage recipes from 0080-0088, 20,000 English samples each, both width fingerprints	No recipe makes both marks over 2/20,000, same as period-7 calibration (0.0001); unsure: simulation, not crib test
 0097	chance	weak	yes	Quagmire III/IV free alphabets x type-1 moves, before/after, linear test at periods 3/7/21	In copper range except IV period 3 after move (16 vs 1-12); dissolved by 0100/0102; weak at 7/21 per record
 0098	ruled-out	exact	-	Sculpture running keys (80,676 text/offset/rule settings) on any unknown mixed alphabet	K4 0 consistent settings; scrambled coppers 0-57
 0099	chance	exact	yes	Two mixed-sense quarter turns, widths 2-96, 53,743 routes, periodic key 1-26 before/after	Nothing below period 20; every period in copper range by settings and by distinct check sets

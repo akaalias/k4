@@ -1,0 +1,28 @@
+{
+ "id": 141,
+ "tag": "0141-k4-at-26-and-two-alphabet-power",
+ "started": "2026-10-16T18:40:34+00:00",
+ "seconds": 1703.2,
+ "status": "error",
+ "phases": {
+  "unattributed": 78.6,
+  "run": 1703.2,
+  "record": 0.1
+ },
+ "ended_epoch": 1792177738.024974,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "error": "multiprocessing.pool.RemoteTraceback: \n\"\"\"\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/pool.py\", line 125, in worker\n    result = (True, func(*args, **kwds))\n                    ~~~~^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/pool.py\", line 48, in mapstar\n    return list(map(*args))\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 673, in _any\n    return _job4(args) if len(args) == 8 else _job(args)\n           ~~~~~^^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 667, in _job4\n    sc, pt, done, ok = climb4(text, KNOWN, L, seed, y0, deadline)\n                       ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 658, in climb4\n    sc, pt, (y, k) = best\n            ^^^^^^\nTypeError: cannot unpack non-iterable NoneType object\n\"\"\"\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/Users/alexisrondeau/Workshop/cryptos/_runner.py\", line 34, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 730, in run\n    res = pool.map(_any, jobs, chunksize=1)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/pool.py\", line 367, in map\n    return self._map_async(func, iterable, mapstar, chunksize).get()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/pool.py\", line 774, in get\n    raise self._value\nTypeError: cannot unpack non-iterable NoneType object\n",
+ "candidates": []
+}

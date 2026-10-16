@@ -1565,7 +1565,7 @@ def experiment_page(tag):
 </div>"""
     note = meta + (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: '
                    f'{esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else "")
-    head = page_head(f"Experiment {num}", esc(r["title"]), esc(changed), facts, note)
+    head = page_head(f"Experiment {num}", esc(r["title"]), esc(changed), "", note)
     # section 1: plain words with the glossary rail
     eli5 = r.get("eli5") or ""
     low = eli5.lower()
@@ -1600,9 +1600,9 @@ def experiment_page(tag):
     # Tufte sidenotes: each word's definition sits in the margin beside the line where it appears
     more = '<p class="sidenote-more">Words in the margin are defined on the <a href="/glossary">glossary</a> page.</p>' if kept else ""
     cm = cribmap_figure(tag)
-    off = 1 if cm else 0
-    plain = ((sec(1, "The experiment method", "What the method does with the 24 known letters.") + cm) if cm else "") \
-        + sec(1 + off, "In plain words", "") + f'<div class="plain tufte">{eli5_html}{more}</div>'
+    off = 0
+    plain = (sec(1, "The experiment method", "What the method does with the 24 known letters.")
+             + f'<div class="plain tufte">{eli5_html}{more}</div>' + cm)
     # section 2: best candidate
     cand = ""
     if best:

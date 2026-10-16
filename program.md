@@ -1,164 +1,191 @@
 # program.md: instructions for the loop agent
 
-You are running an autoresearch loop against Kryptos K4. Before your first edit, read
-in full and in this order: this file; `README.md`; every numbered file in `knowledge/`
-(`01-facts.md` through `11-clue-register.md`); `order-of-work.md`; `families.md`; `results.tsv` and the
-`experiments/*/experiment.md` records newest first. This is not optional and it is not
-skimmable. The record contains throwaway remarks from the artist and the cryptographer
-that no search strategy will rediscover; the clue that breaks K4 is as likely to be one of
-those as a statistic. When you open a hypothesis family, also read the primary sources in
-`knowledge/sources/` that the family's evidence rests on, and the matching research note in
-`research_notes/`. Quote sources by file name in `hypothesis_expert`.
+You are running an autoresearch loop against Kryptos K4. Before your first edit, read in full
+and in this order:
+
+1. this file;
+2. `README.md`;
+3. every numbered file in `knowledge/` (`01-facts.md` through `11-clue-register.md`);
+4. `order-of-work.md` (the Priorities page);
+5. `families.md`;
+6. `results.tsv` and the `experiments/*/experiment.md` records, newest first.
+
+This is not optional and it is not skimmable. The record contains throwaway remarks from the
+artist and the cryptographer that no search strategy will rediscover; the clue that breaks K4
+is as likely to be one of those as a statistic.
+
+When you open a hypothesis family, also read the primary sources in `knowledge/sources/` that
+the family's evidence rests on, and the matching research note in `research_notes/`. Quote
+sources by file name in `hypothesis_expert`.
 
 ## What success means
 
-A reproducible procedure that turns the 97-letter K4 ciphertext into 97 letters
-that (1) contain EASTNORTHEAST at positions 22-34 and BERLINCLOCK at 64-74,
-(2) read as English allowing one or two deliberate misspellings and X as a
-separator, (3) re-encrypt to the exact ciphertext when run forward, and (4) come
-from a procedure a person could carry out by hand in 1990, written down step by
-step, keyed by something with a short description (key words, a named text and a
-place in it) rather than letters fitted to the known places. Scheidt, 2011, via
-Bean: "simple, can be remembered, and executed years later when used with the
-correct key word/s" (C5). Words without a method is not success. There is no external oracle.
+A reproducible procedure that turns the 97-letter K4 ciphertext into 97 letters that:
 
-The guaranteed output of every experiment, including failures, is a bounded
-negative result: a precise statement of what was searched.
+1. contain EASTNORTHEAST at positions 22-34 and BERLINCLOCK at 64-74;
+2. read as English, allowing one or two deliberate misspellings and X as a separator;
+3. re-encrypt to the exact ciphertext when run forward;
+4. come from a procedure a person could carry out by hand in 1990, written down step by
+   step, keyed by something with a short description (key words, a named text and a place
+   in it) rather than letters fitted to the known places.
+
+> Scheidt, 2011, via Bean: "simple, can be remembered, and executed years later when used
+> with the correct key word/s" (C5).
+
+Words without a method is not success. There is no external oracle.
+
+The guaranteed output of every experiment, including failures, is a bounded negative result:
+a precise statement of what was searched.
 
 ## The gates a reading must pass to be kept (decided 2026-10-15, issue #23)
 
 1. Length 97, letters A-Z only.
 2. All 24 known letters in place.
 3. Re-encrypts to the exact carved text under the stated key.
-4. Beats shuffled coppers: return `"controls"` from `run`, a list of at least ten
-   English scores, each the best your same method reaches on a shuffled copy of the
-   carved text at the same trial count. A reading is kept only if its English score
-   is above all of them. No controls, no keep.
+4. Beats shuffled coppers: return `"controls"` from `run`, a list of at least ten English
+   scores, each the best your same method reaches on a shuffled copy of the carved text at
+   the same trial count. A reading is kept only if its English score is above all of them.
+   No controls, no keep.
 
-Among readings that pass all four, the lowest loss wins. The loss charges the key by
-the length of its description, which the harness counts itself from the `key` you
-return (`kryptos.scorer.key_bits_of`): key words cost a few bits each, arbitrary
-letters 4.7 bits each, a named text and an offset a few bits. Return keys in a form
-the count can read. A search that fills free key letters to make English (a
-key-completion climb) pays heavily for its key and, more to the point, cannot beat
-its own shuffled controls. `tools/replay_rules.py` re-scores every record whenever a rule changes; records
-are never edited, and the dashboard shows each experiment's current verdict.
+Among readings that pass all four, the lowest loss wins. The loss charges the key by the
+length of its description, which the harness counts itself from the `key` you return
+(`kryptos.scorer.key_bits_of`):
+
+- key words cost a few bits each;
+- arbitrary letters cost 4.7 bits each;
+- a named text and an offset cost a few bits.
+
+Return keys in a form the count can read. A search that fills free key letters to make
+English (a key-completion climb) pays heavily for its key and, more to the point, cannot beat
+its own shuffled controls.
+
+`tools/replay_rules.py` re-scores every record whenever a rule changes; records are never
+edited, and the dashboard shows each experiment's current verdict.
 
 ## What you may and may not touch
 
-- Edit only `attack.py`. Never edit `kryptos/`, `data/`, `tests/`,
-  `run_experiment.py`, `_runner.py`, or any past `experiments/*` record.
+- Edit only `attack.py`. Never edit `kryptos/`, `data/`, `tests/`, `run_experiment.py`,
+  `_runner.py`, or any past `experiments/*` record.
 - Update `families.md` whenever a family's status changes.
-- If you believe the scorer or a gate is wrong, do not work around it. Stop,
-  write the case in a GitHub issue labelled `harness`, and continue on a
-  different family until a human decides. When a ruler is fixed, the lineage
-  is re-measured, never quietly erased.
+- If you believe the scorer or a gate is wrong, do not work around it. Stop, write the case
+  in a GitHub issue labelled `harness`, and continue on a different family until a human
+  decides. When a ruler is fixed, the lineage is re-measured, never quietly erased.
 
 ## The loop
 
-0. Tick the phase clock as you go: `uv run python phase.py design` when you start
-   reading and thinking, `... implement` when you start writing code, `... test`
-   when you run the tests and dry runs, `... pause` when you hand a turn back to a person
-   so waiting time is not charged to a phase. The harness records run and record itself.
-   Time per phase is part of every experiment's record and of the dashboard.
-1. Read the record. Decide the next experiment: one focused change, with a
-   parent (the champion, or the experiment you are extending) or a new root
-   when changing family.
-2. Pre-register. Fill `EXPERIMENT` in `attack.py` before writing any search
-   code: slug, title, family, parent, changed, hypothesis_expert,
-   hypothesis_eli5, prediction, method, walkthrough. The prediction must be
-   falsifiable by the run.
-3. Implement `run`, `encrypt`, `worked_example`. Use primitives from
-   `kryptos.ciphers` where they exist; they are verified against K1-K3. If you
-   write a new primitive, verify it against K1-K3 inside `run` first and say
-   so in notes.
-4. Run `uv run --with pytest pytest -q` (all must pass), then
-   `uv run python run_experiment.py`. Default budget is 30 minutes. Design the
-   search to reach a verdict as early as possible: gate on cribs inside your
-   search loop, do not generate English and hope.
-5. Read the record the harness wrote. If `kept`, the champion advanced. If
-   `reverted`, restore `attack.py` from the champion's snapshot or start the
-   next root. Either way the record stays.
-6. Commit is automatic (one commit per experiment). Push after each.
-7. Add any new technical word in `hypothesis_eli5` to `GLOSSARY.md` before the run.
-8. Add one line to today's entry in `NOTEBOOK.md`: number, family, finding. Add a
-   paragraph when something was decided, went wrong, or changed the plan.
-9. Draw the experiment's two illustrations, the crib map and the worksheet, in
+1. **Tick the phase clock** as you go:
+    - `uv run python phase.py design` when you start reading and thinking;
+    - `... implement` when you start writing code;
+    - `... test` when you run the tests and dry runs;
+    - `... pause` when you hand a turn back to a person, so waiting time is not charged to a phase.
+
+    The harness records run and record itself. Time per phase is part of every experiment's
+    record and of the dashboard.
+2. **Read the record.** Decide the next experiment: one focused change, with a parent (the
+   champion, or the experiment you are extending) or a new root when changing family.
+3. **Pre-register.** Fill `EXPERIMENT` in `attack.py` before writing any search code: slug,
+   title, family, parent, changed, hypothesis_expert, hypothesis_eli5, prediction, method,
+   walkthrough. The prediction must be falsifiable by the run.
+4. **Implement** `run`, `encrypt`, `worked_example`. Use primitives from `kryptos.ciphers`
+   where they exist; they are verified against K1-K3. If you write a new primitive, verify it
+   against K1-K3 inside `run` first and say so in notes.
+5. **Run** `uv run --with pytest pytest -q` (all must pass), then
+   `uv run python run_experiment.py`. Default budget is 30 minutes. Design the search to reach
+   a verdict as early as possible: gate on cribs inside your search loop, do not generate
+   English and hope.
+6. **Read the record** the harness wrote. If `kept`, the champion advanced. If `reverted`,
+   restore `attack.py` from the champion's snapshot or start the next root. Either way the
+   record stays.
+7. **Commit** is automatic (one commit per experiment). Push after each.
+8. **Glossary:** add any new technical word in `hypothesis_eli5` to `GLOSSARY.md` before the run.
+9. **Notebook:** add one line to today's entry in `NOTEBOOK.md`: number, family, finding. Add
+   a paragraph when something was decided, went wrong, or changed the plan.
+10. **Illustrations:** draw the experiment's two figures, the crib map and the worksheet, in
    `design/make_experiment_figures.py` (or a script beside it), writing
    `figures/NNNN-cribmap.svg`, `figures/NNNN-cribmap-notes.json` and
    `figures/NNNN-worksheet.svg`. Follow the style guide (`design/style-guide-v5.pdf`):
-   the frame with the method on a wash panel, short labels with leaders, two to four
-   notes, worksheets on the grid, real letters and numbers from the record. Render
-   each figure and look at it before committing. Every experiment has illustrations.
-10. The readable-words pass runs by itself: after every run the harness asks a
-   language model to mark the English words in the readings that passed every gate
-   and the five closest, checks each against the dictionary, and stores them in the
-   record (`readable_words`). The dashboard boxes them. It never changes a score or
-   a decision; a climbed key makes English fragments by construction.
+    - the frame with the method on a wash panel;
+    - short labels with leaders;
+    - two to four notes;
+    - worksheets on the grid;
+    - real letters and numbers from the record.
+
+    Render each figure and look at it before committing. Every experiment has illustrations.
+11. **Readable words** run by themselves: after every run the harness asks a language model
+    to mark the English words in the readings that passed every gate and the five closest,
+    checks each against the dictionary, and stores them in the record (`readable_words`). The
+    dashboard boxes them. It never changes a score or a decision; a climbed key makes English
+    fragments by construction.
 
 ## Patience and pivots
 
-- Work the families in the rank order in `order-of-work.md` (decided
-  2026-10-16, issue #29). Within a family, take its open items from the top. Leave a
-  family only when every item is `closed` (exact, or sampled against scrambled coppers
-  at stated power) or `blocked` (a written reason it cannot be tested with the known
-  letters). Reverts do not force a pivot; a revert that closes an item is progress.
-- Every experiment names the item it works on (for example "F1.1") in `changed` and
-  the strength it reached. After the run, update the item's row in `order-of-work.md`, its leaf in the
-  hypothesis tree (families.md; add sub-hypotheses there when an item splits), and add the
-  experiment's line to `grades.tsv`. A weak test leaves the item open.
-- A result outside the scrambled-copper range stops the queue: replicate it against
-  fresh controls before anything else.
-- Change the ranking only at a family boundary, with the reason in the pivot log.
-- Dead ends listed in `README.md` need a stated reason in `hypothesis_expert`
-  before re-entry.
+- **Work the families in the rank order** in `order-of-work.md` (the Priorities page, decided
+  2026-10-16, issue #29). Within a family, take its open items from the top.
+- **Leave a family only when every item is closed or blocked:** `closed` means exact, or
+  sampled against scrambled coppers at stated power; `blocked` means a written reason it
+  cannot be tested with the known letters. Reverts do not force a pivot; a revert that closes
+  an item is progress.
+- **Name the item and the strength.** Every experiment names the item it works on (for example
+  "F1.1") in `changed` and the strength it reached. After the run, update:
+    - the item's row in `order-of-work.md`;
+    - its leaf in the hypothesis tree in `families.md` (add sub-hypotheses there when an item splits);
+    - the experiment's line in `grades.tsv`.
+
+    A weak test leaves the item open.
+- **A result outside the scrambled-copper range stops the queue:** replicate it against fresh
+  controls before anything else.
+- **Change the ranking only at a family boundary,** with the reason in the pivot log.
+- **Dead ends** listed in `README.md` need a stated reason in `hypothesis_expert` before re-entry.
 
 ## Writing the record
 
-- `hypothesis_expert`: what a cryptanalyst would need to reproduce the idea.
-  Name the cipher family, the key space, the constraint being tested, and the
-  clue-register entries and readings it tests (for example "C1(a), C8(a)").
-  After the run, update those entries' status in `knowledge/11-clue-register.md`
-  with the experiment tag. An experiment that tests no clue needs a stated
-  reason to exist.
-- `hypothesis_eli5`: standalone, for a curious non-specialist. No jargon
-  without a one-clause gloss.
-- `walkthrough`: a standalone guide that lets a reader redo the method by
-  hand on a few letters. Write it as numbered steps, one action each; the
-  harness puts each step on its own line. If this experiment ever becomes part of the winning
-  chain, the walkthroughs compose into the method writeup.
-- `bounds`: numbers. Periods tried, key lengths, alphabets, word lists,
-  how many keys, whether exhaustive. "Tried a few" is not a bound.
-- `key_bits`: honest entropy of the key. Words cost 4.7 bits per letter;
-  arbitrary letters cost log2(26) each; a choice among N options costs log2(N).
+- **`hypothesis_expert`:** what a cryptanalyst would need to reproduce the idea. Name the
+  cipher family, the key space, the constraint being tested, and the clue-register entries and
+  readings it tests (for example "C1(a), C8(a)"). After the run, update those entries' status
+  in `knowledge/11-clue-register.md` with the experiment tag. An experiment that tests no clue
+  needs a stated reason to exist.
+- **`hypothesis_eli5`:** standalone, for a curious non-specialist. No jargon without a
+  one-clause gloss.
+- **`walkthrough`:** a standalone guide that lets a reader redo the method by hand on a few
+  letters. Write it as numbered steps, one action each; the harness puts each step on its own
+  line. If this experiment ever becomes part of the winning chain, the walkthroughs compose
+  into the method writeup.
+- **`bounds`:** numbers. Periods tried, key lengths, alphabets, word lists, how many keys,
+  whether exhaustive. "Tried a few" is not a bound.
+- **`key_bits`:** honest entropy of the key. Words cost 4.7 bits per letter; arbitrary letters
+  cost log2(26) each; a choice among N options costs log2(N).
 
 ## How to think here
 
-Sanborn wrote the text and enciphered it himself, by hand, with charts, on a truck ride,
-after four months of lessons from a field-communications officer who thinks in keys built
-from parts and codes an agent could carry in his head under duress. He is an artist who
-thinks in strata, light, shadow, matrices and the sculpture as one object, who personalizes
-every instrument he is given, and who deals in misdirection. The system will be simple once
-seen and will look like him. Before writing search code, sit with `knowledge/06-hypotheses.md`
-and ask what this particular person would have done. Prefer experiments that test a
-specific reading of a specific quote over experiments that sweep a textbook cipher family.
-Both are needed; the second is cheap and should leave bounds behind; the first is where
-the odds are.
+Sanborn wrote the text and enciphered it himself, by hand, with charts, on a truck ride, after
+four months of lessons from a field-communications officer who thinks in keys built from parts
+and codes an agent could carry in his head under duress. He is an artist who thinks in strata,
+light, shadow, matrices and the sculpture as one object, who personalizes every instrument he
+is given, and who deals in misdirection. The system will be simple once seen and will look
+like him.
+
+Before writing search code, sit with `knowledge/06-hypotheses.md` and ask what this particular
+person would have done. Prefer experiments that test a specific reading of a specific quote
+over experiments that sweep a textbook cipher family. Both are needed:
+
+- the sweep is cheap and should leave bounds behind;
+- the specific reading is where the odds are.
 
 ## Hard facts you can rely on
 
-- Cribs: positions 22-34 EASTNORTHEAST (ciphertext FLRVQQPRNGKSS), 64-74
-  BERLINCLOCK (NYPVTTMZFPK). Position 1 is the O of OBKR.
-- Two letters encrypt to themselves: S at 33, K at 74.
-- Adjacent ciphertext doublets QQ (26-27), SS (33-34), TT (68-69) map to NO,
-  ST, IN: the key state changes at every position.
-- For single-alphabet periodic additive ciphers, only periods 27, 28, 29 and
-  53-97 are consistent with the cribs (`python -m kryptos.cribsweep`).
-- Pure transposition is excluded: the cribs need three E's, K4 has two.
-- Scheidt: K4 is "more than one stage"; he "masked the English language"
-  before the keyed step; the system is "not mathematical, simple, can be
-  remembered, executed with the correct key word/s". Sanborn: "matrix codes
-  Ed gave me" plus his own "visual systems"; earlier text holds
-  "instructions" for later text; K4 "will come back to the first part".
-- The K1-K3 keys were PALIMPSEST, ABSCISSA and (by one reading) KRYPTOS;
+- **Cribs:** positions 22-34 EASTNORTHEAST (ciphertext FLRVQQPRNGKSS), 64-74 BERLINCLOCK
+  (NYPVTTMZFPK). Position 1 is the O of OBKR.
+- **Self-encryptions:** two letters encrypt to themselves, S at 33 and K at 74.
+- **Doublets:** adjacent ciphertext doublets QQ (26-27), SS (33-34), TT (68-69) map to NO, ST,
+  IN, so the key state changes at every position.
+- **Periods:** for single-alphabet periodic additive ciphers, only periods 27, 28, 29 and 53-97
+  are consistent with the cribs (`python -m kryptos.cribsweep`).
+- **No pure transposition:** the cribs need three E's, K4 has two.
+- **The creators:**
+    - Scheidt: K4 is "more than one stage"; he "masked the English language" before the keyed
+      step; the system is "not mathematical, simple, can be remembered, executed with the
+      correct key word/s".
+    - Sanborn: "matrix codes Ed gave me" plus his own "visual systems"; earlier text holds
+      "instructions" for later text; K4 "will come back to the first part".
+- **Earlier keys:** the K1-K3 keys were PALIMPSEST, ABSCISSA and (by one reading) KRYPTOS;
   `data/vocabulary.txt` lists key candidates from inside the puzzle.

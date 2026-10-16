@@ -75,6 +75,8 @@ code,pre{font:12.5px/1.5 var(--mono)}pre{background:var(--wash);border:1px solid
 article{max-width:980px}article h1{font:400 30px/1.2 var(--serif);margin:10px 0 6px}
 article h2{font:400 22px/1.25 var(--serif);margin:34px 0 6px;padding-top:12px;border-top:1px solid var(--rule)}
 article h3{font:600 12px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 6px}
+article blockquote{margin:14px 0 16px;padding:2px 0 2px 18px;border-left:3px solid var(--accent);max-width:700px}article blockquote p{font:italic 17px/1.55 var(--serif);color:var(--ink);margin:0}
+article ol li strong,article ul li strong{font-weight:600}article li>ul,article li>ol{margin:6px 0 4px}
 article p,article li{max-width:720px}article table{table-layout:fixed;width:100%}article td{vertical-align:top;overflow-wrap:anywhere}article td code{white-space:normal;word-break:break-all;letter-spacing:.04em}article ol{padding-left:26px}article ol li{margin:0 0 8px}
 .crumb{max-width:980px;margin:10px auto 0;color:var(--muted);font-size:14px}
 .rec-head{max-width:980px;margin:18px auto 0}.eyebrow{font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}.eyebrow .kept{color:var(--accent)}

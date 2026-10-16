@@ -26,14 +26,15 @@ construction) are in `grades.tsv`.
 |---|---|---|---|---|---|
 | 1st | F1 one keyed stage, no move | strong: K1 and K2 are Quagmire III on KRYPTOS; Sanborn's "slightly different" tableau (C27c) | F1.5: a decider for the cells the known letters cannot decide; if it reaches power, F1.1, F1.2 and the other cells it covers reopen (P6) | medium | **next** (reopened, P6) |
 | 2nd | F6 a move, then the table | strong: Sanborn's "matrix codes... then went back to this table" (C1) | F6.3b: mixed triples at widths 25-96, only sampled so far; F6.1, F6.2 if F1.5 reaches power | low to medium | reopened (P6) |
-| 3rd | F3 two-part key with a combiner | medium: Scheidt's "key word/s" (C5), his CKM habit | combiners other than addition; numeric second parts not yet tried | low | queued |
-| 4th | F2 masked plaintext | medium: Scheidt "masked the English language" | loose ends from 0057; nulls placed by a rule | low | queued; mostly blocked |
-| 5th | F4 Sanborn's visual systems | medium, vague | routes through the plates as a path, not as a key | medium | queued |
-| 6th | F10 alphabets that change after every letter | weak to medium: no creator remark; Chaocipher (1918) was offered to US agencies and kept secret until 2010; A9, A10 | F10.1 Chaocipher, F10.2 Wheatstone cryptograph, F10.3 deck-of-cards key stream | low to medium | queued (added 2026-10-16, issue #51) |
-| 7th | F11 agency hand systems, now public | weak to medium: Scheidt's CIA cryptographic background; Scheidt's "key word/s" (C5) for the poem code; A9 | F11.1 strip ciphers and cylinders with published alphabets, F11.2 poem code | low to medium | queued (added 2026-10-16, issue #51) |
-| 8th | F8 Hill | weak: the HILL column only (C21) | 5x5 affine has no checks | none testable | blocked |
-| 9th | F5 Gromark | weak: no creator remark | multiplicative feedback, the raised YAR as primer | low | nearly closed |
-| 10th | F9 substitution, then a move | against it: Sanborn's NYPVTT to BERLIN mapping | F9.1: a bounded list of hand transpositions outside the 1.86M built routes | medium | queued (reopened, P6) |
+| 3rd | F12 Stein's way: look, quantify, then crib | strong precedent: the only hand solution of K1-K3 (Stein, 1998, 400 hours, pencil; Studies in Intelligence 1999); Stein on K4: "interesting patterns in here as well" | F12.1-F12.7: check the letters on the copper, K4's statistics against shuffles, his m = 13 anomaly, a pencil session, parts with their own keys, probable words | low | queued (added 2026-10-16, issue #53) |
+| 4th | F3 two-part key with a combiner | medium: Scheidt's "key word/s" (C5), his CKM habit | combiners other than addition; numeric second parts not yet tried | low | queued |
+| 5th | F2 masked plaintext | medium: Scheidt "masked the English language" | loose ends from 0057; nulls placed by a rule | low | queued; mostly blocked |
+| 6th | F4 Sanborn's visual systems | medium, vague | routes through the plates as a path, not as a key | medium | queued |
+| 7th | F10 alphabets that change after every letter | weak to medium: no creator remark; Chaocipher (1918) was offered to US agencies and kept secret until 2010; A9, A10 | F10.1 Chaocipher, F10.2 Wheatstone cryptograph, F10.3 deck-of-cards key stream | low to medium | queued (added 2026-10-16, issue #51) |
+| 8th | F11 agency hand systems, now public | weak to medium: Scheidt's CIA cryptographic background; Scheidt's "key word/s" (C5) for the poem code; A9 | F11.1 strip ciphers and cylinders with published alphabets, F11.2 poem code | low to medium | queued (added 2026-10-16, issue #51) |
+| 9th | F8 Hill | weak: the HILL column only (C21) | 5x5 affine has no checks | none testable | blocked |
+| 10th | F5 Gromark | weak: no creator remark | multiplicative feedback, the raised YAR as primer | low | nearly closed |
+| 11th | F9 substitution, then a move | against it: Sanborn's NYPVTT to BERLIN mapping | F9.1: a bounded list of hand transpositions outside the 1.86M built routes | medium | queued (reopened, P6) |
 | - | F7 construction simulation | a tool, not a cipher | run before each family's first open item: does its construction make both fingerprints? | low | standing step |
 
 Why this order: F1 and F6 rest on the two most direct creator statements. Both were tested
@@ -80,6 +81,27 @@ information (K5's text, a codebook) stay blocked.
 | **F6.2** Two free alphabets after or before each move | **blocked** (closed exact where testable) | exact at 1-10 for every move, both orders, with undecided counted; per-slot refutation at 11-26 (0133); 97-99% of per-slot survivors fit at 11-26 (0131, 0132); K4 above every copper in 5 of 52 cells, null 2-7 | 0097, 0131, 0132, 0133 | fitting settings leave only an English climb (0120); order A length 3 (16 against 1-12) is 0102's marginal cell, inside chance by the fixed rule. Reopens if F1.5 reaches power |
 | **F6.4** Padding applied separately at each grid stage; nulls dropped between griddings | closed | exact: the hand padding rules listed in NOTEBOOK 2026-10-16 (blanks in 8 places per grid, dropped or kept as dummies), one stage at widths 2-96, two at 2-48, periodic key 1-26 either side, 874,572 routes; nothing live below 21, at the coppers' rate (0135) | 0082, 0135 | - |
 | **F6.5** Direction words as routes through the grid (A14(a), C16(c): "directions" as instructions): "east, then northeast" and the other compass readings as reading paths (along rows, then up the diagonals; and each of the 16 points as a direction of travel), at every width, then a periodic key on the standard or KRYPTOS tables | **open** | - | - | add the routes to the move library and test as F6's first row, exact; cheap |
+
+## F12. Stein's way: look, quantify, then crib
+
+Added 2026-10-16 (issue #53). Not a cipher type but a way of working: what David Stein, who
+solved K1-K3 by hand in 1998, would do with a few free weeks and today's record. Source:
+`knowledge/sources/stein-1999-cracking-the-courtyard-crypto.txt`. He looked before he attacked
+("I seemed to see different patterns throughout, but I wanted to quantify these impressions"),
+split the text where its statistics changed, read the plaintext for hints about the method, and
+when the statistics ran out, guessed probable words. Items F12.2 and F12.4 produce
+observations, not verdicts: each observation that stands outside the shuffles becomes a new item,
+in this family or the one it points to.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **F12.1** The 97 letters and the "?" checked against images of the copper (he walked out to feel UNDERGRUUND) | **open** | - | - | compare the transcription letter by letter with `research_notes/sanborn_charts/Panel4Grid.jpg`, the Blender model and any photographs in `knowledge/sources`; list every letter that is doubtful; if the images are too coarse, say so and mark blocked until Alexis supplies better ones (A4, A1) |
+| **F12.2** Quantify the impressions: K4's statistics by segment and by width (letter counts per segment, I.C. against period 1-48 as in his Figure 26, positional patterns at widths 7, 21, 31), each against 1,000 shuffles | **open** | - | 0056 measured two of the patterns | report only what falls outside the shuffles, with the multiple-comparison count stated; a break inside K4 goes to F12.5 |
+| **F12.3** His I.C. peak at m = 13 in both K1 and K2 (C28): real or chance | **open** | - | 0005, 0011 tested period 13 on K4 only | compare K1's and K2's I.C. at 13 against shuffles of each that keep their keyword period; if real, state what overlaid structure it implies and test K4 for it |
+| **F12.4** A pencil session: K4 written out at the widths that matter, the known letters marked, every pattern noted before any search code ("the process of discovery is often intuitive as well as analytic") | **open** | - | - | write the observations up as a figure page; each goes to F12.2's shuffle test; each survivor becomes an item |
+| **F12.5** Parts with their own keys (A7): K4 split where F12.2 or F12.4 finds a break, or at the known stretches, each part with its own periodic key on the standard or KRYPTOS tables | **open** | - | - | exact; fewer checks per part, so state the checks each split leaves |
+| **F12.6** Probable words, his breakthrough (THE, then KNOW): common English words and the words of K1-K3's plaintexts placed at every position in the cells the 24 known letters cannot decide (F1.1 Beaufort 23 and 26, F1.2's consistent lengths, F6.1, F6.2) | **open** | - | 0095 dragged riddle words at the live periods only | each placement adds checks, so a cell can become decidable without an English model; count consistent placements on K4 against coppers, exact |
+| **F12.7** His K1-K3 method as such: every shift of each column written out, columns scored by summed log letter frequencies, then a crib | **open** | - | - | for periodic keys on the standard and KRYPTOS tables the exact sweeps (0005) already cover it; confirm and close by subsumption with that reason |
 
 ## F3. Two-part key with a combiner
 

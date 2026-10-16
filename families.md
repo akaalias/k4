@@ -72,6 +72,14 @@ Update the leaf when an experiment works on it.
     - **F6.4** Padding at each grid stage; nulls dropped between grids {closed · exact · 0082, 0135}
       - Blanks in any of eight places per grid, dropped or kept as dummies, one stage (widths 2-96) or two (2-48), periodic key 1-26 on standard/KRYPTOS tables: nothing live below 21 {closed · exact · 0135}
     - **F6.5** Direction words as routes through the grid ("east, then northeast"), then the table {open}
+  - F12 Stein's way: look, quantify, then crib
+    - **F12.1** The 97 letters and the "?" checked against images of the copper {open}
+    - **F12.2** K4's statistics by segment and width against shuffles {open}
+    - **F12.3** Stein's I.C. peak at 13 in K1 and K2: real or chance {open}
+    - **F12.4** A pencil session: every pattern noted before any code {open}
+    - **F12.5** Parts with their own keys, split where the statistics break {open}
+    - **F12.6** Probable words through the cells the known letters cannot decide {open}
+    - **F12.7** Stein's K1-K3 method as such: column shifts scored by log frequencies, then a crib {open}
   - F3 A two-part key with a combiner
     - Two words added: both from the puzzle, or one from the dictionary {closed · exact · 0014, 0043, 0059, 0115}
     - A word plus digits from the story {closed · exact · 0024, 0038}

@@ -1245,7 +1245,7 @@ def live_page():
            '<div class="explain-col"><h4>At chance</h4><p>Settings or readings exist, but scrambled copies produce them just as well.</p></div>'
            '<div class="explain-col"><h4>Ruled out</h4><p>Nothing in the searched space fits the 24 known letters.</p></div>'
            '<div class="explain-col"><h4>Not a decryption test</h4><p>Statistics and simulations about the carved text, not attempts to read it.</p></div></div>')
-    body = (page_head("Experiments", "The run, experiment by experiment",
+    body = (page_head("Experiments", "The autonomous research loop, experiment by experiment",
                       "Every experiment, in the order it ran, placed by what it found against scrambled copies of the carved text: the "
                       "same search on the same letters in a random order. A result counts only if K4 does better than all of them. Then the "
                       "table of all experiments, newest first. The page reloads when a new experiment lands.", facts)

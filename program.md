@@ -110,6 +110,9 @@ edited, and the dashboard shows each experiment's current verdict.
     - two to four notes;
     - worksheets on the grid;
     - real letters and numbers from the record.
+    - in the crib map's OUT row, fill a known place in accent only if the reading produced that letter;
+      outline it otherwise, so a method that found nothing never looks as if it did (issue #49);
+    - the IN and OUT labels sit on their arrows, centred (the dashboard also places them when it serves the figure).
 
     Render each figure and look at it before committing. Every experiment has illustrations.
 

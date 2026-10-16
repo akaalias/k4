@@ -1489,6 +1489,40 @@ def score_section(n, r, best):
 FIG_SCALE = 1.48   # 7.5-unit letters become 11 px, the panels' 11.5 px; the figure is about 1,400 px wide
 
 
+def cribmap_out_row(svg, hits):
+    """Issue #49: in the OUT row, a known place is filled in accent only if the experiment's best reading
+    produced that letter; otherwise it is outlined (the target, not an achievement). Also moves the OUT
+    label from under the row to the top of the output arrow, centred."""
+    lab = re.search(r'<text x="40" y="([\d.]+)"([^>]*)>(OUT:[^<]*)</text>', svg)
+    if not lab:
+        return svg
+    ly = float(lab.group(1))
+    ys = sorted({float(y) for y in re.findall(r'<rect x="[\d.]+" y="([\d.]+)" width="8.2" height="12"', svg) if float(y) < ly})
+    if not ys:
+        return svg
+    row_y = ys[-1]
+    if hits is not None:
+        def cell(m):
+            x = float(m.group(1)); pos = int(round((x - 40) / 9.5)) + 1
+            if pos in hits:
+                return m.group(0)
+            rect = m.group(0).replace('fill="#8c2f1f"', 'fill="#fffff8" stroke="#8c2f1f" stroke-width="1.1"', 1)
+            return re.sub(r'(<text[^>]*?)fill="#fffff8"', r'\1fill="#8c2f1f"', rect, count=1)
+        ystr = f"{row_y:g}"
+        svg = re.sub(rf'<rect x="([\d.]+)" y="{re.escape(ystr)}" width="8.2" height="12"[^>]*fill="#8c2f1f"[^>]*/>(<text[^>]*>[A-Z]</text>)?', cell, svg)
+    # the label: off the bottom, onto the top of the last arrow above the row (found again: the cells changed length)
+    lab = re.search(r'<text x="40" y="([\d.]+)"([^>]*)>(OUT:[^<]*)</text>', svg)
+    arrows = list(re.finditer(r'<path d="M([\d.]+),([\d.]+) L\1,([\d.]+)" stroke="#6b6a60"[^>]*/>', svg))
+    arrows = [a for a in arrows if float(a.group(3)) <= row_y]
+    svg = svg[:lab.start()] + svg[lab.end():]
+    if arrows:
+        a = arrows[-1]; x, y0, y1 = float(a.group(1)), float(a.group(2)), float(a.group(3))
+        moved = (f'<text x="{x:g}" y="{y0 + 8:g}" text-anchor="middle" paint-order="stroke" stroke="#fffff8" stroke-width="5" stroke-linejoin="round"{lab.group(2)}>{lab.group(3)}</text>'
+                 + a.group(0).replace(f'M{a.group(1)},{a.group(2)}', f'M{a.group(1)},{y0 + 16:g}', 1))
+        svg = svg[:a.start()] + moved + svg[a.end():]
+    return svg
+
+
 def cribmap_figure(tag):
     """The experiment's crib map, if one has been drawn (figures/NNNN-cribmap.svg), wide, with its
     notes in short blocks underneath."""
@@ -1505,8 +1539,26 @@ def cribmap_figure(tag):
         svg = svg.replace(m.group(0), f'viewBox="{vx} 0 {vw} {m.group(2)}"', 1)
         w_, h_ = vw * FIG_SCALE, float(m.group(2)) * FIG_SCALE
         svg = re.sub(r'(<svg[^>]*?)\swidth="[^"]*"\s+height="[^"]*"', rf'\1 width="{w_:.0f}" height="{h_:.0f}"', svg, count=1)
-    # the "IN: THE COPPER" heading is drawn at the left edge; centre it on the drawing (x 26-970)
-    svg = re.sub(r'<text x="40"( y="22"[^>]*)>(IN: )', r'<text x="498" text-anchor="middle"\1>\2', svg, count=1)
+    # which known places the best reading actually produced (issue #49)
+    r = {x["tag"]: x for x in load_results()}.get(tag)
+    hits = None
+    if r is not None and r.get("best_crib_hits", 0) < 24:
+        from kryptos.facts import KNOWN as _K
+        b = best_candidate(r)
+        pt = (b or {}).get("plaintext") or ""
+        hits = {q for q, ch in _K.items() if len(pt) >= q and pt[q - 1] == ch}
+    svg = cribmap_out_row(svg, hits)
+    # the "IN:" heading sits above the copper row at the left edge; put it on the input arrow, centred,
+    # the same way the OUT label sits on the output arrow
+    inl = re.search(r'<text x="40" y="22"([^>]*)>(IN:[^<]*)</text>', svg)
+    if inl:
+        svg = svg[:inl.start()] + svg[inl.end():]
+        a = next(iter(re.finditer(r'<path d="M([\d.]+),([\d.]+) L\1,([\d.]+)" stroke="#6b6a60"[^>]*/>', svg)), None)
+        if a:
+            x, y0 = float(a.group(1)), float(a.group(2))
+            moved = (f'<text x="{x:g}" y="{y0 + 8:g}" text-anchor="middle" paint-order="stroke" stroke="#fffff8" stroke-width="5" stroke-linejoin="round"{inl.group(1)}>{inl.group(2)}</text>'
+                     + a.group(0).replace(f'M{a.group(1)},{a.group(2)}', f'M{a.group(1)},{y0 + 16:g}', 1))
+            svg = svg[:a.start()] + moved + svg[a.end():]
     notes_p = ROOT / "figures" / f"{num}-cribmap-notes.json"
     notes = json.loads(notes_p.read_text()) if notes_p.exists() else []
     below = "".join(f'<div class="fig-note"><b>{esc(n.get("anchor", ""))}</b><p>{crib_cells(esc(n.get("text", "")))}</p></div>' for n in notes)

@@ -1,0 +1,119 @@
+id	outcome	strength	cribs_forced	space	note
+0001	no-control	exact	no	Keyed Vigenere, KRYPTOS alphabet, key KRYPTOS: one decryption	Pipeline baseline: 2/24 cribs, loss 224.7; no control
+0002	ruled-out	exact	-	Ciphertext autokey, lags 1-96, 24 conventions (2,304 pairs)	0 survivors; exact at every crib past the lag
+0003	ruled-out	exact	-	Plaintext autokey, lags 1-96, 24 conventions, checked where cribs pair up	Lags 1-11, 30-52 dead; 13-29, 53-96 undecided (no checks); lag 12 left in 1 convention (killed by 0012)
+0004	ruled-out	exact	-	Running key from K1-K3 pt/ct, 18 sources both ways, all offsets, 24 conventions	165,216 trials, 0 survivors; best alignment 16 mismatches of 24
+0005	ruled-out	exact	-	Periodic tableau (Quagmire I-IV, std/KRYPTOS), periods 1-97, 24 conventions	Periods 1-26, 30-52 dead; 1,152 long-period survivors force no vocabulary or K1-K3 word
+0006	ruled-out	exact	-	2,905 columnar routes (plain, keyed, double) then periodic tableau	No live period below 23; 0 word matches. Keyed columnar read inverse (#26); bounds re-held by 0085
+0007	ruled-out	weak	-	Periodic tableau then the same 2,905 columnar routes	Min live period 26-27 everywhere, 0 word matches; notebook calls this order a weak test; #26 caveat (0085)
+0008	ruled-out	exact	-	K3 rule (a + b i mod 97) all a, b both ways + double rotations, then tableau	21,025 routes: no live period below 22; 0 vocabulary matches
+0009	chance	exact	-	Forced 13/11-letter key stretches, 24 conventions, copper as carved +/- one letter	Best stretch -5.80 (exact copper -6.15), z 2.3 vs random over 9,408 stretches; English -4.25: noise
+0010	chance	exact	-	Forced key stretches under 63x63 vocabulary alphabets x 248 key alphabets x 3 modes	Best -3.813 vs shuffled-K4 best -3.801 (3 controls; notebook: too few); beat predicted -4.3 but equals null
+0011	ruled-out	exact	-	Progressive key, periods 1-97, steps 0-25, two forms, 24 conventions	Periods 1-25 and 31-51 dead at every step; survivors at 26-30 force no word
+0012	chance	exact	-	Plaintext autokey chained from cribs, lags 1-96, 24 conventions	Lags 1-25, 30-52 dead; no full text; best forced runs -4.095 = shuffled controls (10, -4.06 to -4.095)
+0013	ruled-out	exact	-	Gromark-style k[i]=k[i-a]+k[i-b], lags to 12, bases 10/26, 248 vocab alphabets	0 survivors with 6+ checks; no base-10 triple has all shifts as digits; settings under 6 checks not judged
+0014	ruled-out	exact	-	Two periodic keys in two passes, lengths 2-30, std/KRYPTOS alphabets	Nothing below total length 25; 3,498 of 4,896 longer cases consistent, none yields a vocabulary word
+0015	ruled-out	exact	yes	Hill 2x2-4x4, plain and affine, 4 numberings, solved from crib blocks	2x2/3x3 inconsistent; 12 4x4 fits lack redundancy; best 16/24 cribs, English -7.86. 0044 confirms dead
+0016	chance	weak	-	23,930 routes (0006, 0008) then tableau; forced key at periods 2-40 scored as English	Best -3.547 tops both shuffles (-3.808, -4.025); only 2 controls, too noisy (notebook); called noise; #26
+0017	ruled-out	exact	-	Running key from tableau, Morse, K1-K4 ciphertexts, both ways, all offsets	162,912 trials, none within 3 mismatches. Record's 869-letter panel is really 865 (notebook)
+0018	chance	sampled	-	Simulator: 13 ranked generators x 5,000 samples, 10 statistics vs K4	No family singled out (best Hill 2x2 6.02 vs random 6.62); w7/w21 marks p~0.002 for all; real per 0056
+0019	ruled-out	exact	-	Mono or homophonic substitution then any of 23,931 routes	0 routes pass either condition; 5 shuffled K4s also 0; route set carries #26 keyed-columnar caveat
+0020	chance	exact	-	Periodic tableau, periods 1-52, 248 vocabulary-mixed alphabets (184,512 pairs x modes)	Periods 1-23 and 21/42 dead; survivors at 24 (1) and 26 (7,454) vs shuffled 25 (19), 26 (7,204); no word
+0021	ruled-out	exact	-	Carter 1923 vol. 1 as running key, both ways, every offset, 24 conventions	13.7 million trials: none within two mismatches
+0022	ruled-out	exact	-	Porta over standard, KRYPTOS and 248 vocabulary alphabet orders	No order passes the halves test (best 7 crib positions on the wrong half); no period sweep needed
+0023	chance	exact	-	648 masks (reversal, regular and prefix nulls) then tableau, 24 conventions	Smallest live period 26; best fragment -5.378 vs 10 shuffles -5.534 to -4.888; no word
+0024	chance	exact	-	Word (length 2-30) plus K2 coordinate digits, 7 readings, std/KRYPTOS	Shortest consistent word 26; best forced word -5.584 vs 10 shuffles -6.039 to -5.393; no match
+0025	chance	exact	-	Both autokeys, 63 vocabulary alphabets x 3 key alphabets x 3 modes, lags 1-96	Ct autokey 0 survivors; pt lags 1-24, 33-49 dead; best closure -6.469 vs 10 shuffles -6.608 to -6.157
+0026	chance	exact	-	Double keyed columnar from vocabulary word pairs (15,376 routes) then tableau	Min live period 23; best key -3.797 vs 10 shuffles -4.315 to -3.579; keyed columnar read inverse (#26)
+0027	chance	sampled	-	Simulator round two: 16 period-7/21/42, Gromark, autokey generators x 5,000	Gromark base 2 makes w21 repeats (p 0.34) but not w7 column (p 0.0); w7 p<=0.005 under all; 0056: real
+0028	ruled-out	exact	-	Gromark bases 2-9, 66 lag rules, 184,512 vocabulary alphabet triples x 3 modes	Smallest largest forced shift is 15, so no triple reaches the recurrence test in any base 2-9
+0029	chance	exact	-	Bean's closeness: largest crib shift under 184,512 vocabulary alphabet pairs x modes	Smallest largest shift 8, same as 10 shuffled K4s (7-9)
+0030	ruled-out	exact	-	Key = ciphertext at a i + b (223,488 rules) or plaintext mirrored, 24 conventions	Ct self-key best 6 mismatches, 0 survivors; mirror: 0 consistent centres of 97
+0031	ruled-out	exact	-	copper +/- one letter (196 variants) x chained autokey lags 1-25 x two words a+b<=20	0 variants with a consistent autokey lag, 0 consistent two-word cases; notebook says 195 variants, record 196
+0032	ruled-out	exact	-	grid with one key letter per row, widths 2-48, key lengths 1-48, 63 alphabets, 3 modes	559,629 cases; no width survives the within-row agreement test
+0033	chance	weak	-	trifid cube: 498 keyword cubes periods 2-20, plus annealed free cubes periods 2-15	keyword cubes best 7/24; annealing 17/24 vs 2 shuffles 14,11 but plateaus at 17 on a planted cube; 0040: no cube
+0034	chance	sampled	yes	periodic tableau, 24 conventions, periods 27-29 and 53-95, free slots by English climb	best -3.277 (p95) vs shuffled best -3.234; overfitting; later fails the new control rule on own numbers
+0035	chance	sampled	yes	periodic tableau periods 27-29, std/KRYPTOS vs vocab-mixed alphabet, English climb	best -6.614 vs one shuffle (22-alphabet subset) best -6.616; equal to shuffled K4
+0036	ruled-out	exact	-	Bauer Hill variants (chained, feedback, summed, paired), sizes 2-4, 4 numberings	144 settings; 2 consistent on whole crib blocks (no redundancy), best 16/24, both break partial-block cribs
+0037	chance	sampled	-	three transposition stages, 200,000 sampled triples, then periodic tableau	-3.61 beat undersized controls (max -4.48); 13 full-size shuffles top at -3.63, so chance; issue #26
+0038	chance	exact	-	word key plus 17 digit readings from dates/counts, word lengths 2-30	shortest surviving word 26; best forced word -5.86 vs ten shuffled controls best -5.24; 0 word matches
+0039	error	exact	-	trifid free cube, periods 2-15, all alignments, constraint propagation	run found no cube but crashed writing its summary; record empty, kept as error; rerun as 0040
+0040	ruled-out	exact	-	trifid free 27-symbol cube, periods 2-15, every alignment, constraint propagation	119 settings, 0 admit a cube, none capped; also none on 2 shuffled K4; trifid dead
+0041	chance	exact	-	spiral/snake/diagonal routes w 2-48 (1,128) before tableau or after a substitution	before: best -4.937 inside 10 shuffles (-5.31 to -4.47), smallest period 23; after: 0 routes pass, as 0 on shuffles
+0042	no-control	exact	-	progressive key periods 1-30, steps 1-25, vocab keyword-mixed alphabet pairs, 3 modes	periods 1-24 dead everywhere; survivors at 25-30 (44 at 25) with no shuffled control; 0 word matches
+0043	no-control	exact	-	two periodic keys through two tableau passes, a+b up to 24, vocab keyword-mixed alphabets	770 consistent, smallest a+b 22 (2 cases); no control run, "chance above" asserted; 0 word matches
+0044	ruled-out	exact	yes	Hill 2x2-4x4 plain/affine, 126 vocab keyword numberings, all alignments, both ways	369 settings consistent on whole crib blocks (all 4x4, no redundancy); best 21/24, all break partial-block cribs
+0045	ruled-out	exact	-	K1-K3 plain/cipher texts as running keys, every offset both ways, keyword-mixed alphabets	146.9 million trials; none within two mismatches
+0046	ruled-out	exact	-	Gromark 2- and 3-term rules lags to 13, bases 16-26, 184,512 alphabet triples	0 rules with >=6 checks survive under any triple and base
+0047	ruled-out	exact	-	Carter, tableau, Morse, right panel as running keys, one keyword-mixed alphabet	855.6 million trials; none within two mismatches
+0048	chance	sampled	yes	periodic tableau 27-29, both alphabets mixed (all 3,721 pairs), English climb	best -6.139 vs one small shuffle -6.36 to -6.88; beats undersized control only; record/notebook: noise
+0049	ruled-out	exact	-	272 shaped keys length 27-29 from vocab words, 63x63 alphabets, 3 modes	9.7 million trials; none within three mismatches; record overestimated key count about a hundredfold
+0050	chance	exact	yes	copper off by one letter (48 crib tuples) x two words a+b<=22 x vocab alphabets	914 consistent (smallest sum 21) vs 878 on shuffled copper (smallest 20); 2 word matches were 96-letter, fail gate
+0051	ruled-out	exact	-	pure transposition of the 97 (or 98) carved letters, plus one-letter deletions	cribs need three Es, copper has two; no deletion fits; only a carved letter misread for E would rescue it
+0052	ruled-out	exact	-	Playfair, two/four-square, bifid 5x5, ADFGX/ADFGVX, Polybius, 24-letter ring (structural)	K4 uses all 26 letters and has odd length 97; all excluded; record misplaces I at 16 (should be 17)
+0053	chance	exact	-	periodic tableau periods 1-52, 102 alphabets from K1-K3 and 2025 letter words, 3 modes	at chance vs 10 shuffles; 26/52 high (2,139 vs max 1,554) from one equation; p32 6 vs max 3 not discussed; 0 words
+0054	chance	exact	-	Gromark digit keys on 10,404 pairs of K1-K3-word alphabets, smallest base	smallest base 17 on K4 vs 17-19 on ten shuffles; no pair admits base <=15, so no rule tested
+0055	ruled-out	exact	yes	Hill 2x2-4x4 plain/affine, 200 numberings from K1-K3 words, all alignments	557 settings consistent on whole blocks, all 4x4 with no checks; best 21/24, all fail partial-block cribs
+0056	beat-chance	sampled	-	look-elsewhere test of width-7 doublet column and width-21 repeats, widths 2-48	corrected p 0.005 (0.018 among six-doublet shuffles) and 0.010; prediction failed; fingerprints real, unexplained
+0057	chance	exact	-	one or two letters struck everywhere outside the cribs (351 masks), tableau 1-52	periods 24/25/26: 18/117/168 masks vs 17.1/104.6/174.3 per ten random strike-outs; no word check
+0058	no-control	exact	-	tableau then keyed columnar (single/double) from K1-K3 words, 14,792 routes	16 pairs live at period 25 (predicted none), no control for their rate; no word; issue #26 inverse reading
+0059	no-control	exact	-	two periodic keys through two tableau passes, a+b up to 24, 102 alphabets from K1-K3 words	2,042 consistent, smallest a+b 21 (2 cases); no control run, "chance rates" asserted; 0 word matches
+0060	chance	exact	no	Hill 2x2/3x3 key matrices filled from K2 coordinates (72), 4 numberings, both directions	best 4/24 known letters vs random invertible matrices best 7 (mean 2.7 and 3.1)
+0061	ruled-out	exact	no	word plus short key from misspelt or raised letters, 451,440 settings	No setting fits all 24; best 8/24 vs ten scrambled coppers 7-11 (no better than controls).
+0062	chance	sampled	-	14 generators with a 7 or 21, 4,000 Carter-English samples each	No generator makes both marks (0/4000); ctak lag 21 makes repeats 5.4% vs 0.2%, but K4 fit not tested; conservative.
+0063	ruled-out	exact	no	3,107 column routes x ctak lags 1-95 x 24 conventions x 2 orders (14.2M checks)	0 full matches; best 8/24 (order A) and 9/24 (order B); no control run.
+0064	ruled-out	exact	no	ciphertext autokey on 102 K1-K3/C13/C14 word alphabets, lags 1-95, 3 modes	0 full matches; fewest mismatches 3 vs scrambled coppers 2-3.
+0065	chance	sampled	-	10 recipes meant to line doublets up in sevens, 4,000 samples each	Ctak lag1+P7 key gives doublet column 1.47% vs calibration 0.10-0.27% (pred. 5%); recipe dead under cribs (0066).
+0066	chance	exact	yes	ciphertext autokey lag 1-96 plus periodic key 1-96, 32 classes (221,184 cases tested)	Survivors only at 1-2 checks, inside controls (e.g. P<=26 2 checks 5 vs 0-6); none at 3+; lag1/P7 and lag 21 dead.
+0067	chance	exact	yes	two-lag ciphertext feedback, lags 1<=a<b<=74, 4 signs, periods 1-30 (1.93M cases)	3 checks 15 vs 3-12, 4 checks 1 vs 0-2: scattered, no pattern; notebook calls it chance (prediction said none).
+0068	chance	exact	yes	ctak lags 1-96 on copper with one letter wrong, missing or extra (602,112 cases)	Nothing at 3+ checks; counts inside controls (subst. 2 checks 6 vs 2-14); lag 21 no survivor. Tally overstates checks.
+0069	ruled-out	exact	-	base-10 Gromark, free alphabet, 15 two-term rules lags<=6, 5,432,100 primers x 4 forms	0 consistent primers on K4 and on ten scrambled coppers; planted Gromark found uniquely.
+0070	chance	exact	yes	all 5,040 block-of-7 reshuffles before/after periodic key, periods 1-52, 8 classes	Periods <=24 dead; P<=26 counts A 1800, B 214 inside controls (1206-2172, 128-278); no word in fragments.
+0071	chance	exact	yes	925 alphabets one swap/move from KRYPTOS, periodic key or ciphertext autokey	P26 21 vs 0-548; autokey 2 checks 1 vs 0-292, 3+ none; no word in 16,671 fragments.
+0072	chance	exact	yes	42 compass-point/C15 word alphabets (1,764 pairs), periodic, ctak, or both	All at scrambled-copper rate (P26 87 vs 17-393; ak+per 3 checks 0 vs 0-5); no word in 10,671 fragments.
+0073	chance	exact	yes	plaintext autokey plus periodic key on 161 word alphabets (4,055,040 cases)	3 checks 12 vs 0-6, but four coincidences repeated at nested periods; none at 4 (0-1); notebook: chance.
+0074	chance	exact	yes	22 decimated/Atbash alphabets (110 pairings) before periodic key, ctak, or both	Nothing at 3 checks, P<=25 dead; autokey 1 check 79 vs 33-56 is a counting artefact per notebook; no word.
+0075	chance	exact	yes	doublets as nulls: 7 strike-out combos of BB/SS/ZZ, periodic key, ctak, both	QQ/SS/TT carry two known letters, so real letters; strike-outs change nothing (P<=26 8 vs 8-8).
+0076	ruled-out	exact	-	free-alphabet Gromark, bases 2-9, 11-16, 26, two-term rules lags<=5 (15.1M primers)	0 consistent primers in any base, on K4 and on all ten scrambled coppers.
+0077	chance	exact	yes	5,040 block-of-7 reshuffles x ctak lags 1-96, 32 classes, both orders (31M cases)	3 checks A 6 (0-24), B 12 (0-36); nothing at 4; lag 21 never at 3+.
+0078	ruled-out	exact	no	running keys from Sanborn's 1989, 1991 and 2025 texts, every offset, both ways	No fit; fewest mismatches 15 (9/24) vs scrambled coppers 15-16; 0 within 3 on K4 and controls.
+0079	ruled-out	exact	no	Berlin clock key schedules, 6 readings x 7 steps x 1,440 starts (725,760 trials)	0 survivors; best 8/24 agree (16 mismatches) vs scrambled coppers 16-17.
+0080	chance	exact	yes	two repeating keys (2-14) around 26,158 routes, solved exactly (4.4M structures)	Nothing at 5+; >=3 checks 34 vs 37-51 (below range, prediction miss); >=4 4 vs 0-6.
+0081	chance	exact	yes	27,752 routes x plaintext/ciphertext autokey, all lags, 6 conventions, both orders	Nothing at 5; 4 settings at 4 checks (ptak A 1 vs <=4, ptak B 3 vs <=2), scattered; notebook: chance.
+0082	chance	exact	yes	120,871 hand-padded grid/columnar routes x repeating key 1-26, both orders	No period <22 live; P23 299 vs 229-283, P24 2,166 vs 1,289-2,160, spread evenly as on controls: chance.
+0083	chance	exact	yes	1,714,024 triple quarter-turn routes widths 2-96 x repeating key 1-26, both orders	One P18 setting (controls none <21) decrypts to noise, ~0.1 expected at 6 checks; else at control rate.
+0084	chance	exact	yes	double columnar, one stage width 7 all 5,040 orders, other 253 seqs (2.55M routes)	Nothing live <21; P21 and P24 live 3 each vs 0-2; found issue #26 (keyed columnar read inverted in 0006-0081).
+0085	chance	exact	yes	true keyword columnar, 201 sequences single/double (40,771 routes), periodic and autokeys	Nothing live <22, nothing at 5; 3 ptak settings at 4 checks (controls up to 12); restores 0006-0081 bounds.
+0086	chance	exact	yes	? as 98th cell: 300,651 98-cell routes with repeating key; 14,946 with autokeys	Nothing <21, none at 4; ptak 3 checks 72 vs <=37 is 34 distinct check sets repeated by look-alike routes.
+0087	chance	exact	yes	column word plus row key, widths 2-48, alone and around 27,754 routes	No width on copper; with moves at control rate, none at 5; 0096 later showed premise wrong (row key cancels).
+0088	chance	exact	yes	column word plus shift every m letters (m 2-50, any offset, words 2-31), 31,994 structures	One combo at a single check vs 0-230 on controls, none at two; carved-line case (m=31) dies at every width.
+0089	ruled-out	exact	no	K4's 4 lines over every 4 lines of tableau or cipher plates, 10,800 overlays	No overlay fits; best 5/24 vs scrambled coppers 5-7.
+0090	ruled-out	exact	no	sculpture running keys (22 texts) x 27,852 type-1 routes x 12 conventions, both orders	No full match; no whole crib stretch; deepest partial 7 vs controls 6-7. Worked example crashed, result intact.
+0091	ruled-out	exact	-	Berlin clock schedules (60,480) x type-1 moves (27,852) x 12 conventions, both orders	No full match or whole crib stretch on K4 or 10 coppers; deepest partial 7 checks on K4 and all coppers
+0092	chance	exact	yes	Message along 30 grid paths, widths 2-96, 43,579 routes, periodic key 1-26 before/after	Nothing below p21; p22/23 above coppers by settings (47, 405) but distinct sets in range; 0100 p 0.24/0.48
+0093	chance	exact	yes	Type-1 library x periodic key 1-26, one known letter allowed wrong	Min one-miss period 20 after (coppers 19-21), 24 before (24-25); 3 cells just outside; 0100: p22 one-miss p 0.10
+0094	chance	exact	yes	One letter dropped/added (149 variants) x single moves on 96/98, periodic key 1-26	648,709 settings; nothing below period 20; every period inside the scrambled-copper range
+0095	chance	weak	no	93 riddle words dragged under the 376 crib-consistent periodic keys (periods 27-96)	Best 2 checks vs random decoys 4; notebook says the test has little power at the live lengths
+0096	chance	sampled	-	31 two-stage recipes from 0080-0088, 20,000 English samples each, both width fingerprints	No recipe makes both marks over 2/20,000, same as period-7 calibration (0.0001); unsure: simulation, not crib test
+0097	chance	weak	yes	Quagmire III/IV free alphabets x type-1 moves, before/after, linear test at periods 3/7/21	In copper range except IV period 3 after move (16 vs 1-12); dissolved by 0100/0102; weak at 7/21 per record
+0098	ruled-out	exact	-	Sculpture running keys (80,676 text/offset/rule settings) on any unknown mixed alphabet	K4 0 consistent settings; scrambled coppers 0-57
+0099	chance	exact	yes	Two mixed-sense quarter turns, widths 2-96, 53,743 routes, periodic key 1-26 before/after	Nothing below period 20; every period in copper range by settings and by distinct check sets
+0100	chance	exact	yes	Recount of 4 marginal cells (0092, 0093, 0097) as distinct sets vs 50 fresh coppers	p 0.24, 0.48, 0.10 luck; QIV p3 12 vs 0-11 (p<0.02, ~0.24 corrected), dissolved by 0102 (p 0.043/0.10)
+0101	ruled-out	exact	-	Key restarted at each word, 5 crib word splits, key lengths 1-26, 8 classes	No length fits on K4 or any scrambled copper
+0102	chance	exact	yes	Quagmire IV/III period 3 cells vs 400 shuffles and 400 width-21 column permutations	IV after move: 12 sets, p 0.043 (0.048 corrected) vs shuffles, p 0.10 vs column perms; not a signal
+0103	chance	exact	yes	Copper as own key via a+bi mod 97 (7,031 maps x 16 rules), alone or plus periodic key 1-26	Alone best 7/24 (blind) vs coppers 7-9; with key nothing below p20, p25 K4 2 vs 3-13 (below range)
+0104	ruled-out	exact	-	Message as own key via a+bi mod 97, 7,031 maps x 12 rules	No setting survives on K4 or any copper
+0105	ruled-out	exact	-	Plain and affine Hill 2-5, every alignment, 4 numberings, solved mod 2 and 13	All of 2-4 and 5x5 plain dead on K4 and coppers; 5x5 affine 14/20 open (underdetermined), rest dead
+0106	ruled-out	exact	-	One-to-one substitution with 1.84M routes (type-1, grid paths, mixed/triple turns)	No route fits on K4 or any scrambled copper
+0107	ruled-out	exact	-	Three-term Gromark, 20 rules c<=6, 10,631,000 primers, 4 forms, free alphabet	No consistent primer on K4 or 10 coppers; planted text found
+0108	chance	exact	yes	K4 lines right-to-left, line order reversed, both; periodic keys 1-26 and autokey lags	Periodic dead below 26 (K4 1 at p26, coppers 0-1); no autokey lag with 3+ checks, as on coppers
+0109	chance	exact	yes	208,062 dictionary keyword alphabets (plain/cipher/both), periodic key 1-26, no move	K4 smallest live period 26, coppers 25-26; K4 if anything less consistent than chance
+0110	chance	exact	yes	True keyword columnar, every dictionary word, 459,268 routes, periodic key before/after	Nothing below p21; p23 after move K4 below range (228 vs 231-296)
+0111	chance	exact	yes	Myszkowski keyed by dictionary words with repeats, 343,964 routes, periodic key 1-26	Nothing below p21; p25 after move K4 below range (1,499 vs 1,540-1,650)
+0112	chance	exact	yes	Double columnar with same dictionary word twice, 459,267 routes, periodic key 1-26	Nothing below period 21; every period inside the coppers' range
+0113	chance	exact	yes	Rail fence 2-48 rails all phases, redefence up to 6 rails, 12,784 routes, periodic key	Nothing below period 21; every period inside the coppers' range
+0114	chance	exact	yes	AMSCO under dictionary words of 3-15 columns, 891,360 routes, periodic key 1-26	p23 after move 21 vs 1-15 (15 vs 1-9 sets); ~4.7 of 52 cells expected out by chance; not followed, kept chance
+0115	ruled-out	exact	-	Puzzle word (171) plus any dictionary word 3-24 letters, every start, 24 table rules	No forced second word on K4 or any copper; dictionary hits K4 0, coppers 0
+0116	ruled-out	exact	-	Hill 2-4 plus periodic key 1-26 on the table, either order, alignments, 4 numberings	None alive on K4 or coppers; 536 dead, 400 open (too few equations) on K4; planted text recovered
+0117	ruled-out	exact	-	Sculpture texts as running key plus constant shift, both numberings, no move or type-1	No full match or whole crib stretch; deepest partial 8 checks on K4 vs 7-9 on coppers
+0118	ruled-out	exact	-	CT autokey from the carved stream, lags 1-200, 12 rules, 2 streams; letter above on plate	No full fit; best 5/24 by lag (coppers 5-6), 3/24 by plate (coppers 2-5)

@@ -98,12 +98,19 @@ are never edited, and the dashboard shows each experiment's current verdict.
 
 ## Patience and pivots
 
-- Five consecutive reverts within one family force the next experiment to
-  change family. Record the pivot and the bounds exhausted in `families.md`.
+- Work the families in the rank order in `families.md` ("Order of work", decided
+  2026-10-16, issue #29). Within a family, take its open items from the top. Leave a
+  family only when every item is `closed` (exact, or sampled against scrambled coppers
+  at stated power) or `blocked` (a written reason it cannot be tested with the known
+  letters). Reverts do not force a pivot; a revert that closes an item is progress.
+- Every experiment names the item it works on (for example "F1.1") in `changed` and
+  the strength it reached. After the run, update the item's row and add the
+  experiment's line to `grades.tsv`. A weak test leaves the item open.
+- A result outside the scrambled-copper range stops the queue: replicate it against
+  fresh controls before anything else.
+- Change the ranking only at a family boundary, with the reason in the pivot log.
 - Dead ends listed in `README.md` need a stated reason in `hypothesis_expert`
   before re-entry.
-- Every few pivots, re-read `families.md` top to bottom with fresh eyes and
-  pick the family with the least coverage, not the most familiar one.
 
 ## Writing the record
 

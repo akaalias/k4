@@ -1,0 +1,6548 @@
+REF ID ; A 
+
+
+
+DISPOSITION FORM 
+
+
+
+
+c Wiic Cryptologic Glossary 
+
+
+
+to oners. Offices and 
+Staff Divisions „ 
+
+
+
+FROM I0G 
+
+
+
+OftTEg^ COMMEI 
+
+J. E. Carroll, 60317, as 
+
+
+
+COMMENT NO. t 
+
+
+
+1. The attached glossary in draft fora is submitted for your consideration 
+and comment. it is requested that the glossary he given the widest practicable 
+distribution, and that all interested parties be urged to oaks cceanents and sug- 
+gestions as to possible revisions, additions and deletions* It will be appre- 
+ciated if military members of BSA will study the glossary from the point of view 
+of their particular Services, and make whatever suggestions they may deem appro- 
+priate. All such comments and suggestions will aid greatly in the preparation of 
+a definitive edition which will be considered as prescriptive, and which should 
+thus contribute toward the eventual standardization of cryptologic terminology 
+within the Agency and the Services* 
+
+3. In coder that the glossary may go to press as soon as possible, it is 
+requested tint the drafts with comments be returned to the Training Division by 
+10 October 195*. 
+
+
+
+UK COlonel, U8AF 
+Chief, Training Division 
+
+
+
+! I 
+
+
+
+1 ? •« * 
+
+
+
+eclassitied and approved for release bv NbA on 01 -03- Jill 4 pursuant to E.O. 1 35z! 
+
+
+
+DD I FEB* o96 REPLACES NME FORM 96. 1 OCT 48, WHICH MAY BE USED. 
+
+
+
+GOVERNMENT PCIMtlMS 
+
+
+
+
+
+
+
+nm'ioML security agehcy 
+
+Washington 25, D- C. 
+
+
+
+
+Training Division 
+T July 195^ 
+
+
+
+CONFIDENTIAL 
+
+
+
+
+
+
+Explanatory Notea 
+
+
+
+
+1. This glossary is the first of a series of USA prescriptive 
+cryptologic glossaries . In its preparation, an effort has been made 
+to bring together, for ready referen£^ the terms most frequently 
+encountered In current cryptolog i^grature . Many of these terms, 
+although frequently encountered, 
+specialized, very limited, or 
+the process of compilation, 
+obsolete or obsolescent te: 
+tions which seemed obscure or 
+a choice among various 
+etc. Besides the limit 
+common cryptologic terms } 
+desire to keep the securif 
+to permit the wide 
+
+
+
+increase its use 
+abridged gloss 
+and in which l ess 
+be Included 
+
+
+
+
+pd defined only in various 
+glossaries and manuals. In 
+effort has been made to eliminate 
+drify or to complete those defini- 
+ete, and in certain cases, to make 
+erred to the same object, method, 
+d by the selection of only the most 
+£r limitation has been imposed by the 
+gasification as low as possible in order 
+isseminatlon of the glossary, and thus 
+
+
+
+
+has begun on the preparation of an un- 
+the present glossary is to serve as a nucleus, 
+erma and terms of higher classification are to 
+
+
+
+2. The fbrad ih the present glossary are arranged In strictly al- 
+phabetical orders disregarding word spaces and hyphens. Single words 
+and certain hyph^ated words are followed directly by an abbreviation of 
+the part of speech. Run-on entries, indicating a part of speech different 
+from that of the main entry are shown simply by means of a series of 
+dashes followed by the abbreviation of the part of speech, and the appro- 
+priate definition. Underlining of terms in the text of the definitions in 
+a few cases Indicates emphasis), but in most cases indicates that the term 
+Is defined elsewhere in the glossary. Abbreviations, used for ports of 
+speech, as well as those used to indicate examples, cross-references, etc., 
+are those listed in Webster’s New International Dictionary, Second Edition. 
+
+
+
+
+CONFIDENTIAL 
+
+
+
+
+
+
+BASIC CRYPTOLOGIC GIOSSARY 
+
+
+
+
+A. Used as a symbol In various classification and evaluation systems, as 
+follows: 1. In traffic analysis, to describe the validity of an 
+
+identification or location as " confirmed” or "certain." 2. In inter- 
+cept operations as a suffix to a frequency to denote "average" . 3 • In 
+D/F bearing observation classification, to indicate that all bearings 
+are within an arc of 4 degrees . 4 , In D/F fix evaluation, to indi- 
+
+cate a 90 # probability that the tr\^ position of a given transmitter 
+is within 25 miles of the fix. 
+
+accidental repetition . A re pet pro duh^^f ortultous ly , and not by the 
+
+encipherment of identical pih^nts^t letters by Identical keying ele- 
+ments. Cf. causal re] 
+acknowledgment , n. A separate Hfe^age from the addressee Informing the 
+originator that^fi^m ^saa^ ^as been received and Is understood. 
+action addressee . Thaac4^v or individual to whom a message Is directed 
+by the ori^ipatorVoSmc t ion (in contrast to information addressee ) . 
+additive , n. flssihgje Aigit, a numerical, group, or a series of digits which, 
+for the purposed) f encipherment, is added to a numerical cipher, code 
+group, or plain text. 
+
+additive book . A book comprising a group of additive tables. 
+additive position . The location within a long key of a particular additive 
+(e.g., the page and line and column on that page where a specific 
+additive appears ) . 
+
+/ 
+
+additive system . A cryptosystem ip which encipherment is accomplished through 
+the application of additives, 
+additive table. A tabular arrangement of additives. 
+
+
+
+CONFIDENTIAL 
+
+
+
+address , n. External or Internal. Indication of message destination. 
+addressee , n. The office,, headquarters, activity, or individual to vhom a 
+message is directed hy the originator. 
+
+address group . A group of letters or numbers or both, assigned to represent 
+one or more commands, authorities, activities, or units. 
+
+ADFGVX system . A German high-command cipher system used in World War I. 
+Essentially, a billteral substitution system employing a 6 x 6 square, 
+to which a columnar transposition was subsequently applied. 
+agency of signal communication . The organizatioriCteams > and personnel ' 
+necessary to perform operational dutledSpertHplhg to signal communi- 
+cations . x 
+
+
+
+allocation , n. The assignment or dl^rdhsittofesgf call signs, frequencies, 
+code names, etc., (e.g., the call signs to radio stations 
+
+
+
+laaMt) /q)-? 
+
+. alternate group . See variants ^ / 
+
+alternate vertical routQ/^rjinflbos^tjon . Columnar transposition In which the 
+
+
+
+route followed is' 
+
+
+
+down and up, or up and down. 
+
+
+
+anagram , n. Plain languageN^constructed from a transposition cipher by 
+restoring the letters of the cipher text to their original order.— 
+v.t. To cryptanalyze a transposition cipher in whole or in part by com- 
+bining one series of characters with another series from the same mes- 
+sage to produce plain text, plalncode, or intermediate cipher text. 
+analogue , n. A machine which produces the same cryptography as another machine 
+although the two machines may vary. 
+
+aperiodic system . A cryptographic system in which the method of keying resuit, 
+in the suppression of patent cyclical phenomena in the cryptographic 
+text . 
+
+
+
+2 
+
+
+
+/ / 
+
+
+
+11/U1 1 A A. 
+
+
+
+rent pel 
+
+
+
+. . The period usually ascertained first as a result of the 
+
+
+
+study of the intervals between repetitions . This may be a secondary 
+period, and may or may not be broken down into component primary 
+periods. Cf. basic period. 
+
+
+
+rent sc 
+
+
+
+;. In a cipher machine, the alignment of the rotors as rep- 
+
+
+
+resented by the particular letter on each which is aligned with the 
+
+
+
+bench mark. 
+
+
+
+aue' uni 
+
+
+
+Leprinter . A special cipher attachment used in connection 
+
+
+
+with a teleprinter to provide 
+
+
+
+messages 
+
+
+
+
+
+
+pgraphic treatment for teleprinter 
+
+
+
+arbitrary group. A group arbitrarOT.jr derived, as the decipherment of an 
+
+
+
+enciphered-code groujy 
+artificial word 1 . A group i 
+the systematic afFfitoge 
+
+
+
+3/*H^elatS^rcode group. 
+
+having no real meaning, constructed by 
+jemetot/of vowels and consonants so as to give the 
+
+
+
+appearance arm phroouncaAbility of a bona fide word. 
+
+
+
+authentication^" a . 
+
+
+
+reply, % 2 s^tanec 
+
+
+
+parity measure, usually involving a challenge and 
+protect a communication system against fraudulent 
+
+
+
+transmisB iohq^j/ 
+
+authentication element . A group of letters or numbers selected from a pre- 
+arranged table serving as a test element in authentication procedure. 
+
+authenticator , n. A symbol or group of symbols selected In a prearranged 
+manner and usually inserted at a predetermined point within a trans- 
+mission for the purpose of attesting to the authenticity of the message 
+or transmission. 
+
+autoenc ipherment , n. Encipherment by means of an autokey system, q.v. 
+
+
+
+3 
+
+
+
+
+autokey system . An aperiodic substitution system in which the key, follow- 
+ing the application of a previously arranged initial key, is generated 
+from elements of the plain or cipher text of the message. 
+auxiliary code . See supplementary code . 
+
+auxiliary table . In certain code books which have two meanings assigned to 
+one group, that portion of the code which includes the second, or sub- 
+sidiary, meaning only, the employment of which is normally indicated by 
+a switch group. Cf. main table . 
+
+average frequency . The particular frequency dfrjfred by averaging several 
+
+measured frequencies which are approx J«plonii^^^pne basic frequency on 
+which a target is observed vorking with an "A" suffixed to 
+
+the frequency.) 
+
+axis of signal communications . The \ i 5 ^jp^?ute on which lie the starting 
+position and probable fu tyTSS^o c a\.op of the command post of a unit 
+during a troop movement^ a mainr route along which messages are relayed 
+or sent to and froij/EbmB&t ThaiJb in the field. 
+
+B. Used as a symbol /class if ication and evaluation systems, as 
+
+follows: 1 . In traf^^mnalyB is , to describe the validity of an identi- 
+
+fication or location as "highly probable" . 2 . In D/F bearing observa- 
+tion classification, to indicate that all bearings are within an arc of 
+10 degrees . 3 • In D/F fix evaluation, to Indicate a $Of> probability 
+
+that the true position of a given transmitter is within 50 miles of the 
+fix . 
+
+Baconian cipher . A cipher system invented by Sir Francis Bacon (1561-1626). 
+
+It is basically a monoalphabet ic substitution system in which single 
+plaintext letters are represented by five-letter cipher equivalents 
+formed by permutations of two letters taken five at a time . 
+
+
+
+h 
+
+
+
+’base , n. 1. A true code group or other substituted group or unit after 
+the true key has been removed. 2. A value arbitrarily assigned to 
+code groups when the true digits are not yet determined, such that the 
+assigned value differs from the true by an amount which is constant for 
+each group. 
+
+base letter . The character of the plain component against which the key 
+element of the cipher component is Juxtaposed. 
+base number . (Met.) A number, usually consisting of three digits, identlfyiiHl 
+a meteorological observation cenra^and almost always transmitted as 
+the first element in a meteoro^S^ibeiSeport • Also called station indi- 
+cator or IMS number. 
+
+N 
+
+red code system. 
+
+
+
+basic book . The code book o, 
+basic call sign . A consta 
+station and used 
+that station, 
+basic code. 
+
+
+
+
+
+
+Lch is assigned to a particular radio 
+>se of deriving the secret call sign of 
+
+
+
+>re encipherment, or resulting from the reduction 
+groups to a common base by the removal of key. 
+
+, hidden or latent, which constitutes a basic element 
+
+
+
+of enci; 
+basic period 
+
+of a cryptographic system and which may act or be acted upon to produce 
+a much longer external or apparent period. Cf. apparent period . 
+basket , n. A removable component of a cipher machine, made up of separators 
+and endplates, in which rotors revolve. 
+baud, n. A mark or space impulse in the international (Baudot) teleprinter 
+code. 
+
+Baudot alphabet. The 32-element alphabet employed in the Baudot code. 
+
+
+
+
+CQNEIIMl^4FML 
+
+
+
+Baudot code . A five unit code applied to teleprinter systems by Jean 
+
+Maurice Emile Baudot (1845-1903). It employs a 32 -element alphabet 
+
+i 
+
+composed of permutations of two elements taken five at a time. Also 
+called the International teleprinter code . 
+
+BC . Broadcast , q.v. 
+
+bearing . In direction finding, the angle in degrees (reading clockwise) 
+between true north and the line from the observer to the target. 
+Beaufort system . A polyalphabetic substitution system employing a key word 
+in connection with a Vigenere square, but^Ltffering from the normal 
+Vigenere method in its rules for appl^amots^f^dhe key. 
+begin spell . The plain equivalent of a ^odla^nbup indicating that the 
+groups following represent eleraaniiBtaKh^Jftpom the syllabary. 
+
+Berne list . A listing of permanent* ? signs allocated to member 
+
+nations and published by tfee^Jntevm&lonal Telecommunications Union 
+(formerly In Berne, Switzerland) . 
+
+Berne -type call . A e permanent call sign in the correct 
+nationality allod^tfcs^bjo^k, but one not listed in the Berne publi- 
+cations . 
+
+
+
+biliteral, adj . Of of pertaining only to cryptosystems, cipher alphabets', 
+and frequency distributions which involve cipher units of two letters 
+or characters. See the more inclusive term dl graphic ; see also blllteral 
+frequency distribution . 
+
+blllteral alphabet . A cipher alphabet involving a cipher component composed 
+of two -character units. 
+
+blllteral frequency distribution . A frequency distribution of pairs formed 
+by combining successive letters or characters. Thus, a blllteral distri- 
+bution of ABCDEF would list the following pairs: AB, BC, CD, DE, EP. Cf. 
+digraphic frequency distribution. 
+
+VoiNFlftENTIAL 
+
+
+
+
+binary addition . Addition according to the modulus two. 
+binary counter. A device which counts to the base two. 
+
+
+
+binary net . A net consisting o£ two stations communicating with each other 
+on the same frequency. 
+
+bipartite alphabet . A biliteral alphabet in which the cipher units may be 
+divided into two separate parts whose functions are clearly defined, 
+viz., row indicators and column indicators of a matrix. 
+bipartite system . A substitution system involving the use of a bipartite 
+alphabet . 
+
+
+
+bisection, n. A process used in p: 
+
+
+
+
+consists of dividing the 
+portions usually of unequal 
+the actual beginning^rrt^^p 
+eating the true beginn: 
+
+Mans, a. l * A W 
+
+
+
+Ltextwa 
+
+
+
+
+lain text for encryption. It 
+
+
+
+
+a message into two segments or 
+, transposing the segments so that 
+of the message are buried, and in indi- 
+nd ending in a distinctive manner, 
+cipher symbol to which no plain meaning haB as 
+T Any symbol that does not appear in the cipher 
+es not appear in a frequency distribution. 3. A 
+in a matrix. 
+
+
+
+blank expectation test . See lambda test . 
+
+blind , adj . As applied to transmission, carried on without expectation of 
+a reply. — -adv. blindly 
+
+blind sending . Transmission to a station without the knowledge that the 
+transmission in being received by the station addressed. 
+block , n. 1. A matrix; a square, rectangle, or other geometrical design 
+
+containing letters, figures, or other symbols. 2. A series of code groups 
+and their plaintext values grouped according to alphabetical or numerical 
+order to form a section of a blocked code . 
+
+
+
+blocked code . A form of modified one-part code in which the code groups 
+and their corresponding plaintext values are arranged in alphabetical 
+or numerical order within blocks . It differs from a normal one -part 
+code in that the blocks are not in alphabetical or numerical order with 
+relation to one another. 
+
+
+
+Boehme equipment . 1. Transmitting: Used for sending International Morse 
+Code characters by passing Wheatstone tape through a keying head. 
+
+2. Receiving: Used for recording International Morse Code characters 
+by ink syphon equipment on a moving papej^^pe . 
+
+
+
+book-breaker , n. A cryptanalyst who spec^^KelN^riN^ie recovery of plain- 
+text values in code books . / V/ 
+
+book-breakers* index . A type of IBMw<Qde ltoiteyin which the code group is 
+replaced by its plaintext valuW Jsj&n, whether the code group is 
+in control position or oflPwat position, 
+book-breaking, n. C odebooky'ebgnai fCHI ion . The cryptanalytic recovery of 
+
+
+
+book-breaking , n . Codebool 
+the plaintext valued 
+
+
+
+ratfUjaion. The cryptanalytic recovery of 
+ld<ybook. 
+
+
+
+book cipher. A c iphets yrteni, litilizing any agreed upon book, in which the 
+
+
+
+cipher identifies a 
+
+
+
+element present in the book. 
+
+
+
+book message . A message destined for two or more addressees, the content 
+of which requires no coordination among addressees . Each addressee 
+must be indicated as action or information. 
+
+
+
+break , n. 1. A pause between the heading and body of a message, between 
+the body and signature, or elsewhere in the message. 2. An interrup- 
+tion in the transmission of a message by electrical means. 3» In solu- 
+tion, the initial entry into a system or element thereof. 
+
+
+
+8 
+
+
+
+
+
+
+brevity code . A code which has as its sole purpose the shortening of mes- 
+sages rather than the concealment of content. Also called condensation 
+code . 
+
+broadcast , n. A transmission intended for general reception rather than 
+directed to a particular addressee. 
+
+broadcast method . The method of transmitting a message by which the stations 
+called do not answer the call, and do not receipt for the message or 
+otherwise transmit in connection with its reception. The prosign "F" 
+in the preamble or final instruj^i^s identifies a message sent by this 
+method. Also known as "F 
+
+
+
+
+brute force method . An analytlsalvfa^hine method of comparing encrypted mes- 
+sages with each other discovery of coincidences which may 
+
+< 
+
+aid in the proper alii messages for overlapping. The re- 
+sultant listing )a brute force run. 
+
+brute force run. 
+
+
+
+
+of the data obtained by the brute force method . 
+Sr . A prosigny^e5N§S^^la8t element of the heading and the first element 
+of the m^sroge ^nfing to separate the text from the other parts of the 
+message 
+
+bury , v.t. To place elements of a message, (e.g., call signs, addresses, sig- 
+natures, etc.), in other than their usual place. To hide or conceal in 
+the text of a message. 
+
+bust message . A message containing an error in encipherment which Jeopardizes 
+the cryptographic security of the message, and thus is potentially 
+valuable to the cryptanalyst. 
+
+
+
+9 
+
+
+
+
+
+C. Used as a symbol in various classification and evaluation systems, as 
+
+follows: 1. In traffic analysis, to describe the validity of an identi- 
+
+fication or location as "probable." 2 . In Intercept operations as a 
+suffix to a frequency to denote "confirmed." 3 • In D/F bearing observa- 
+tion classification, to indicate that all bearings are within an arc 
+of 20 degrees . 4 . In D/F fix evaluation, to indicate a 90$ probability 
+
+that the true position of a given transmitter 1 b within 100 miles of 
+
+
+
+the r 3 x . 
+
+Cryptanalysis , q.v 
+Caesar’s cipher . An ancient form of simpl 
+plaintext letter was replaced by t^e 
+of it in the normal alphabet; aiiribui 
+call sign . A group of letters or 
+
+
+
+
+;i?^ion cipher in which each 
+sr three places to the right 
+Julius Caesar, 
+a combination of both, used as 
+
+
+
+
+[.cation station (or stations), when 
+
+
+
+with each other. 
+t> a call sign or call signs; as callsign 
+
+
+
+the identification for a. 
+stations are establisl^n^yc 
+callsign , add • Of or ^ 
+generation. 
+
+call-up . A set of signals^u^d ^y a ra&lo station to establish contact 'with 
+another and to prepare for the transmission of traffic; also the part of 
+a transmission containing such signals. 
+call word . (Radiotelephony.) A bona fide word used in place of a call sign. 
+caption code . A code in which the phrases are listed under separate headings 
+based upon the principal word or idea in the entire phrase, 
+case number. An arbitrary notation assigned by a communication intelligence 
+
+
+
+
+agency to designate a target, link, group, net, etc., as identified by 
+that agency. 
+
+
+
+causal repetition > A Repetition produced by the encipherment of identical 
+
+plaintext letters “by identical keying elements. Cf. accidental repetition, . 
+cell , n. An individual small square on cross-section paper, grilles, etc. 
+chadded tape . Perforated teleprinter tape; also known as "fully-chadded tape." 
+Of. chadless tape . 
+
+chadless tape. Partially-perforated teleprinter tape, overprinted, of. 
+
+
+
+chain , n. In its cryptologic application, a series, usually cyclic, of letters 
+OR Other textual symbols followlfig^me another according to some rule or 
+law. — v.t. TO form into Chadjhf/ S v 
+
+
+
+chain of command . That part oi 
+
+
+
+fr/xf Battle indicating the organizational 
+
+
+
+structure , usually reflected ftLtae structure of administrative radio 
+
+
+
+nets . 
+
+
+
+and ret 
+
+
+
+for the exchange of authentication between 
+
+
+
+two tranomitt^rQ^^hl' challenge being a transmission of test elements 
+
+
+
+selected 
+
+
+
+panged table; the reply, an appropriate response 
+
+
+
+determiMd\aCcOT , dl.ng to the prearranged system* establishes the authen- 
+ticity of the apMWering station. 
+
+change-hour indicator . An enciphered indicator in a collective weather 
+
+broadcast to show that the reported observations which follow were made 
+at a different hour from those preceding it. 
+change -type indicator . An enciphered indicator inserted in a collective 
+weather broadcast to make clear that the reported observations which 
+follow are not of the same type as those which preceded it. 
+changing call sign . An assigned call sign which is changed periodically accord- 
+ing to a prearranged system. 
+
+
+
+
+
+
+channel, 1, A hand of frequencies. 2. A unit or subdivision of § link; . 
+
+3. One Qf the grooves on a strip -hoard into which alphabet §t£lP§ SI'S 
+inserted . 
+
+channel hoard , A base mad© of metal, paper, plastie, op aimllgp material 
+containing a series of channels into which alphabet strip igay he igs 
+serted and slid, 
+
+characteristic. , n. 1, Any distinguishing feature, 2, A property of §, tex tual 
+group, expressed numerically and resulting from one of Bevgral psaihle 
+
+
+
+arithmetical processes applied to digits yCf^he group, 
+
+
+
+racteristic frequency. See normal fre 
+
+
+
+
+chat . See chatter . 
+
+chatter . Any transmission between coimnuniqatign link qtfeer 
+
+than an actual message * \ ^ 
+
+check decryption , 1. The pyeenss o\ Asuring by leqryption , prigr t@ 
+
+transmission of an enc^pfh / jfef s^g , that proper qryptgai|g have hegp 
+employed, and that *Tie” pf a message was properly aggpiaplished. 
+check group . A transil^rSd gloJp which, by giving the indicator or other 
+information in a seeobdirorm, serves a? a check. 
+check symbol , A single character acting as a check, gf. cheek grpuB « 
+chlastic , adj, In general, arranged or shaped in the form of the Greek letter 
+chi (^ ) . In its cryptologic application, pertaining to any frunsppgitipn 
+system involving an interchange pf elements according tQ an Xr shaped 
+
+
+
+square 
+
+
+
+table . A mathematical table listing tfe§ pr§baMli1ji§§ ®f 
+
+
+
+occurrence by chance of a chi-square value higher than thOf>e ob§ery§d ig 
+a given case; an adjunct to thg chj-*Bquare test. 
+
+
+
+C O tSBF^BEWTf Afc 
+
+
+
+phi -square fc^*) test . A mathematical means for determining the relative 
+likelihood that two distributions derive from the same source. For 
+example, the test can be used to aid in the determination of whether 
+a distribution is more likely to be random or not; in this usage, the 
+observed distribution is compared with a theoretical distribution 
+representing that which is expected for random. The end result of 
+the test is a value representing the discrepancy between the two distri- 
+butions which have been compared^ This value, called a "chi-square 
+value" may be interpreted as or it may be interpreted through 
+
+the use of a chi-square taj 
+chi (X) test . A test applie 
+cipher texts either 
+suit of encipherment 
+whether the unpferiy^ng 
+cross -produc 
+
+
+
+
+
+
+
+distributions of the elements of two 
+'whether the distributions are the re- 
+cal cipher alphabets, or to determine 
+er alphabets are related. Also called the 
+
+
+
+imile. The process of converting a plane image 
+gible image or series of electrical impulses and of 
+or them into intelligibility through the use of a key. 
+
+— adj. Using or pertaining to cifax. 
+
+Cl message . Any message giving cryptologic instruction or information. 
+cipher, n* 1. A cipher system. 2. A cryptogram produced by means of a cipher 
+system. — ad j . Pertaining to that which enciphers or is enciphered. See 
+also ciphertext . 
+
+cipher alphabet . An ordered arrangement of the letters (or other conven- 
+tional signs, or both) of a written language and of the characters which 
+
+r 
+
+replace them in a cryptographic process of substitution. 
+
+
+
+13 
+
+
+
+CONFIDENTIA L 
+
+
+
+cipher clerk . A clerk who enciphers and deciphers messages. 
+cipher component . The sequence of a cipher alphabet containing the symbols 
+vhich replace the plain symbols in the process of substitution. 
+cipher device . A nonmechanical and nonelectrical apparatus used for en- 
+ciphering and deciphering. 
+
+cipher disk . A cipher device consisting of two or more concentric disks, 
+each bearing on its periphery one component of a cipher alphabet. 
+cipher machine . A mechanical or electrical apparatus for enciphering and 
+deciphering. A 
+
+
+
+cipher square. An orderly arrangement or 
+
+
+
+
+n>f sequences set forth 
+
+
+
+in a rectangular form, commonly a ^juareXe.g;, a Vigenere square). 
+
+
+
+?r system. Any cryptosystem i 
+
+
+
+to textual units of regular len$rt 
+
+
+
+Cf. code system. 
+
+
+
+cipher text. The text of a 
+
+
+
+
+graphic treatment is applied 
+lly monographic or dlgraphlC 
+
+
+
+
+
+a cipher system, 
+ciphertext , adj. Of < 
+
+
+
+vhich has been produced by means of 
+
+
+
+Lng to the encrypted text produced by a cipher 
+
+
+
+system or to the elemehjra which comprise such text; as the ciphertext 
+distribution. Often shortened to cipher . 
+ciphony , n. Enciphered telephony. The process of converting vocal communi- 
+cations into unintelligibility and of reconverting them into intelligi- 
+bility through cryptographic treatment. — adj . Using or pertaining 
+to ciphony. 
+
+circuit , n. Generally speaking, a communications path between two or more 
+points. Cf. channel, link, lane . 
+
+
+
+circular message. See book message, 
+
+
+
+
+XXX JLJ.L 1 X X. 
+
+
+
+eitrol, n. The process of converting control and telemetering signals, such 
+
+as those used in missile guidance, into unintelligibility and reconverting 
+them into intelligibility through cryptographic treatment. — adj . Using 
+or pertaining to citrol. 
+
+clvision , n. Enciphered television. A system of converting television signals 
+into unintelligible signals and vice versa, in accordance with certain 
+predetermined procedures. — ad j . Using or pertaining to civision. 
+clandestine traffic . 1. Traffic transmitted without the authority of the 
+
+government of the country in vhidCVhe transmitter Is located. 2. Unauth- 
+
+
+
+orized traffic transmitted by 
+
+
+
+mitted In violation of th 
+
+
+
+utnhrized transmitter. 3* Traffic trans- 
+tional Telecommunications Convention 
+
+
+
+and Regulations . 
+
+classification , n. The s^ui^te^r^&ing of a given message or other material, 
+classification group. ^A groVp, Vindicating the security classification of a 
+
+
+
+message , 
+
+
+
+Lassify, v.t. 
+
+
+
+jsfto a security classification. 2. In the early stages 
+
+
+
+of c od^3 <^u tihn A before code groups are identified as to specific 
+meaning, rh^^wegate the code groups appearing in traffic into classes 
+or sets of groups, based upon their distinctive behavior in the messages j 
+for example. Into those groups representing numbers, spelling groups, 
+punctuation, nulls , or indicators . 
+clear . See plain . 
+dlear text . Plain text , q.v. 
+
+code , n. 1. A code system. 2. A code book. — adj . Pertaining to that which 
+encodes or is encoded. 
+
+
+
+15 
+
+
+
+code book. A book or document used in a code system, arranged in syste 
+
+
+
+matic form, containing units of plain text of varying length ( letters > 
+syllables, words, phrases, or sentences) each accompanied by one or 
+more arbitrary groups of symbols used as equivalents in messages* 
+eodebook reconstruction . Book-breaking , q;v. 
+codebook recovery . See book -breaking . 
+
+code chart . A chart in the form of a matrix containing letters, syllables, 
+numbers, words, and occasionally, phrases. The matrix has row and 
+column coordinates for the purpose of dMrenating the plaintext ele- 
+ments within. 
+
+code clerk . A clerk who encodes and d^ou^sxbessages . 
+
+coded speech . The output of any wh^h>hanges in a nonsecret manner 
+
+a signal derived from plain Another kind of signal preparatory 
+
+to its encipherment in o*phony\ \ 
+
+code group . A group of dPTHWiibers , or a combination of both, assigned 
+
+(in a code eyatem^^o'N^pb^aJht a plaintext element. 
+code index . A numej^csS^rJaiphabetical listing of placode groups with pre- 
+ceding and succeedihcjgroups , compiled from a number of messages . ' 
+code message. A cryptogram produced by encodement. 
+
+code system . A cryptosystem in which arbitrary groups of symbols represent 
+. plaintext units of Irregular length, usually syllables, whole words, 
+phrases and sentences. 
+code table . A short code in tabular form. 
+
+code text . The text of a cryptogram which has been produced by means of a 
+code system. 
+
+
+
+16 
+
+
+
+C ONFIDENTIAL 
+
+
+
+r t ONP^ : iWM 6 i g i 2 7i^ 
+
+\jUIU JLJL7JUIX V JL JLX'JLXJ 
+
+/• 
+
+code word . 1. A word vhich conveys an agreed upon meaning rather than 
+its conventional meaning. 2. A cover name. 
+codress , n. A type of message in which the entire address is contained 
+only in the encrypted text. 
+
+codress procedure . A procedure in which the full address (including the 
+originator, the action addressee, and information addressee, if pre- 
+sent) is buried and encrypted within the text. 
+coincidence test . The kappa test. A statistical test applied to two 
+
+ciphertext messages to determine j^tther they both involve encipher- 
+ment by the same sequence of c^j)*s£ aS^phabets . 
+collateral information. In com^^jpy.on Intelligence usage, information 
+other than that derived f romN^ sS^dy of intercepted communications . 
+collective . (Met.) A geri^ra^^rSftA^ast to all meteorological centers in 
+
+a large area, («•£•, Evntop^, of all the synoptic weather, observations 
+made in that la par ticular (synoptic) hour, 
+
+collective call s iscnSw A’VlfiSle call sign used for calling two or more 
+station^^J^u^V-ri^ous ly . 
+
+co-locate , v ,t>yT&^fcertain by analytic or other means that two trans- 
+mitters, stations, or units are at the same place. 
+column , n. A vertical sequence of letters or numbers or groups thereof. 
+
+t 
+
+columnar transposition . A method of transposition in which the ciphertext 
+equivalent of a message is obtained by transcribing the columns of a 
+matrix into which the message was inscribed earlier according to some 
+scheme other than this vertical one. 
+column coordinate . A symbol normally at the top of a matrix or crypto- 
+graphic table, identifying a specific column of cells, used in con- 
+junction with a row coordinate to specify an individual cell in the 
+matrix or table. Also called column indicator. 
+
+
+
+CQNFIDENTIA fr 
+
+
+
+column designator. See column coordinate. 
+
+
+
+column indicator. See column coordinate. 
+
+
+
+comb , n. A matrix with an irregular marginal blank pattern caused by 
+variations in the length of the rows . 
+combined , ad<J . Between two or more forces or agencies of two or more 
+
+Allies. (When all allies or Services are not involved, the partici- 
+pating nations and Services shall be identified: e.g., Combined MATO 
+
+Havies .) 
+
+COMIMT . Communication intelligence , q.v. / ^ 
+
+communication- center . A communication agafly cnhs^geV with the responsi- 
+
+
+
+bility for receipt, transmission, a< 
+
+
+
+Fery of messages. It 
+
+
+
+normally includes a distributioBT^Qter/N^^essage center, a crypto- 
+center, and transmitting and reoerwsr^acilities . Abbreviated as 
+
+
+
+comm. cen. Also known as. 
+
+
+
+il \nper . 
+
+
+
+communication concealment 
+
+
+
+. wiQ 
+
+
+
+tnodjpof hiding from the enemy the fact 
+
+
+
+or method of cod 
+
+
+
+communication Intel lirfanc? 
+
+
+
+Luated and interpreted information derived 
+
+
+
+from the study of intefc^^ted communications , 
+communication intelligence analysis ♦ Methods of deriving information from 
+the communications of others . This term includes the interception of 
+messages, location of transmitters, the solution of codes and ciphers. 
+
+
+
+communication security . The protection resulting from all measures designed 
+to deny to unauthorized persons information of value which might be 
+derived from communications . Cryptosecurity, transmission security, 
+
+
+
+and physical security are the components of communication security. 
+Abbreviated as COMSEC. 
+
+
+
+
+'commutative , adj . As applied to cipher matrices, so constructed as to 
+permit coordinates to be read in either row -column or column-row 
+order without cryptographic ambiguity. 
+complement , n. The difference between any integer and 10. 
+
+j 
+
+■complex receiving . The system of radio frequency usage wherein two or more 
+stations are assigned receiving frequencies j thus, a station when send- 
+ing to another station will use the frequency assigned to the receiving 
+
+
+
+station . 
+
+
+
+; . The System of radish** quency usage wherein two or more 
+
+
+
+stations are assigned transi 
+Uses its assigned frequenq^ 
+
+
+
+S^r^^encies, and each transmitter 
+itact the other stations. 
+
+
+
+Lex -star . The system c^^radioS^e^iency usage wherein the net control 
+station transmits on to its outstations, the outstatlons 
+transmitting to t&a^conVo A station on other frequencies. 
+
+
+
+component , n. One< 
+a cipher alphe 
+
+
+
+sequences (plain and cipher) which compose 
+
+
+
+U8t ° f the “ 8t °°“ Dn 6048 ^ 16 a11 avallable 
+codes In a B^vejr language, arranged in decoding order and including 
+plaintext values and frequencies where known. Its principal function 
+is to serve as an aid in code identification. 
+composite difference book . A numerical listing of the minor differences 
+between the most frequent code groups in all known codes in a given 
+language. It is used to determine whether the plain code underlying 
+an additive system is a known code. 
+
+compromise , n. The loss of security of a classified document,, information, 
+or material, which results from an unauthorized person or persons having 
+knowledge thereof . 
+
+
+
+COMSEC . Communication security, q.v 
+
+
+
+concealment system . A method of secret communication so designed as to 
+
+convey a secret message without its presence being suppected by others 
+than the addressee. In its most usual form, the plaintext elements 
+are concealed by combining them with extraneous plaintext elements in 
+such a way that the end result is an intelligible and apparently 
+innocent message. Cf. open code . 
+
+condensation code, A code which has as its sole purpose the shortening 
+
+
+
+of messages rather than the concealment 
+
+
+
+condenser , n. A means of condensing code /itoups aomgpsed of digits into 
+smaller groups composed of letters / 
+
+
+
+ntent. See brevity code. 
+
+
+
+CQHFIDEMTIAL ♦ A security classifies^* 
+or material, the unauthorized mist 
+
+
+
+:>ert*^j£Lng to defense information 
+
+
+
+of which could he prejudicial 
+
+
+
+to the defense interests 
+confirmed frequency. The five 
+
+
+
+Confirmation is obtsine 
+
+
+
+le n\t5jbn. 
+
+
+
+Q 1 — 
+
+quMcv or 
+
+
+
+'Which a target is known to operate. 
+
+
+
+continuity, n . Ident* 
+
+
+
+Q 
+
+
+
+wS^ftpromise or by continued intercept, 
+r/spect to a Beries of changes. In crypt- 
+
+
+
+analytic procedure, trauma lnte nance of continuity involves keeping . 
+current a systematic record of changes In such variable elements as 
+indicators, keys, conversion squares, discriminants, etc., on a given 
+cryptochannel. In traffic analysis, the maintenance of continuity 
+involves the tracing of changes in call signs, frequencies, schedules, 
+or other variable elements assigned to a given radio station, link 
+or net . 
+
+
+
+ZQ 
+
+
+
+
+li7Ui 111 
+
+
+
+control , n. 1. A combination of letters or digits which determines the 
+source of the keys by which the discriminant, indicator, address, or 
+signature groups have been enciphered; because it depends upon some 
+element of the message text, the control varies from message to 
+message. 2. net control station , q.v. 
+control station . See net control station . 
+
+control traffic . Dummy traffic transmitted for the purpose of misleading 
+enemy traffic analysts. Control traffic can be employed merely to 
+hide an operation through maintaaq/ng a volume level on all nets, or 
+it can be used deliberately fc^yfe^Hi^Oay creating high volumes at 
+points of slight military tecfanby. 
+
+conversion square . A c iph^s^squar^^s^d in certain numerical cryptosystems 
+to provide arbitrary equivalents for the various key-plain 
+
+combinations. nonmaXLy a 10x10 Vigenfere, non-Vigenere, or Latin 
+
+square, in wh^Hv^cpp iu» contains all of the ten digits arranged in 
+
+
+
+a mixed se* 
+
+
+
+contains all of the ten digits arranged in 
+
+
+
+there is never a repeated digit within a single 
+
+
+
+converted code . 
+
+
+
+edition of a code prepared by applying some form of 
+
+
+
+encipherment to each of the individual code groups of the original 
+codebook . 
+
+coordinate , n. See row coordinate and column coordinate. 
+
+
+
+copy , n. A written record of an intercepted radio transmission. Cf . re - 
+cording and transcription (2). — v.t. To prepare a written record 
+of a radio transmission. 
+
+correction factor . The constant relation between a group of code or of key 
+in relative form and a code or key in its original or primary form. 
+
+
+
+21 
+
+
+
+
+cover , n. 1. The provision for intercepting radio signals, especially 
+those of a particular link, group, etc. 2. The concealment of un- 
+desirable traffic patterns, characteristics, address combinations, 
+etc . , as a communication security measure . 
+coverage , n. The degree to vhich intercept cover is applied or achieved. 
+coverage study . A study of the extent and nature of communications inter- 
+cepted in order to ensure adequate interception. 
+cover call olgn . A group used in place of an originator or addressee 
+
+designation in a message heading for dec^b^>n purposes, the actual 
+
+
+
+originator or addressee identlficatic 
+text . S. 
+
+crest , n. In its cryptologic application 
+queney in a frequency distribuMo\r . 
+
+
+
+in the encrypted 
+
+
+
+of high relative fre- 
+
+
+
+crib, n. 1. Plain text as si 
+
+
+
+2, Keys known or as si 
+
+
+
+To fit assumed or 
+
+
+
+in an encrypted mes 
+
+
+
+Known i 
+
+bW) 
+
+
+
+H* knd^njfco be present in a cryptogram. 
+^have^ een used in a cryptogram. — v.t . 
+La'fccAext or keys into the proper position 
+
+
+
+crib dragging . A method dS^nryptanalytlc attack in which a crib is assumed 
+successively in every position throughout the text of a message. 
+cross cribbing . A process by which plain text from a message encrypted 
+in one system is assumed to be present in a message encrypted in 
+another system. 
+
+cross-product text. See chi test. 
+
+
+
+' s 
+
+crown , n. In transposition solution, that part of a hat diagram containing 
+textual units not definitely located as to column. 
+
+
+
+22 
+
+
+
+
+crypt-, crypto- . In general, a combining form meaning "hidden", covered", 
+or "secret". Used as a prefix in compound words, crypt -, crypto -. 
+
+
+
+pertains to ci 
+
+
+
+bographic , or cryptanalytic , depending 
+
+
+
+upon the use of the particular word as defined. 
+cryptanalysis , n. The steps and operations performed in applying the prin- 
+ciples of cryptanalytics . 
+
+cryptanalyst , n. A person versed in the art of cryptanalysis. 
+cryptanalytic , adj. Of, pertaining to, or used in cryptanalytics. 
+cryptanalytics , n. That branch of cn^p-^logy which deals with the principles. 
+
+
+
+methods , and means employed 
+
+
+
+le^holu'fcLon or analysis of cryptosystems . 
+
+
+
+s, v.t. To solve bjforyptsfcalysis . 
+
+
+
+bo -aid , n. Any table, jin* 
+or decryption of a mesVag 
+
+
+
+device employed in the encryption 
+
+
+
+toboard, n. In TL<ffTSJIavy\nsage , personnel assigned to encrypting and 
+
+
+
+decrypting me^a^l. 
+
+
+
+
+s^qb/ishment maintained for the encrypting and de- 
+
+
+
+crypt 
+
+
+
+more holders . 
+
+
+
+oraplete system of crypto-communication between two or 
+
+
+
+crypto-communication . Any communication that has been encrypted. 
+cryptodate , n. The date which determines the specific key to be employed . 
+cryptodevice , n. Any device employed in the encryption or decryption of a 
+message . 
+
+cryptogram , n. A communication in visible writing which conveys no intel- 
+ligible meaning in any known language, or which conveys some meaning 
+other than the real meaning. 
+
+
+
+- CONFIDENTIA L 
+
+
+
+cryptographer , n. One who encrypts or decrypts messages or has a part 
+in making a cryptographic system. 
+
+cryptographic , adj . Of, pertaining to, or concerned with cryptography. 
+cryptographic ambiguity . Uncertainty as to the method of decryption or as 
+to the meaning intended after decryption; created by a fault in the 
+structure of a cryptosystem. 
+
+cryptographic arithmetic . The method of modular arithmetic used in crypto- 
+graphic procedures which involves no carrying in addition and no 
+borrowing in subtraction. / / 
+
+cryptographic section. The component of y^Bpmmu^ca*U.on center whose 
+
+
+
+function is to encrypt outgoing cl&^sl 
+incoming classified messages 
+cryptographic security. See crypto 
+
+
+
+cryptographic system. See cr 
+
+
+
+messages and decrypt 
+
+
+
+bography, n. That 
+
+
+
+
+; . Encr 
+
+
+
+e text of a cryptogram, 
+tology which treats of the means, methods, 
+and apparatus f<££sqve*tfng or transforming plaintext messages into 
+cryptograms, and fo^g^onverting the cryptograms into their original 
+plaintext form by a simple reversal of the steps used in their trans- 
+formation . 
+
+cryptolinguistics , n. The study of those characteristics of languages 
+
+which have some particular application in cryptology, (e.g.; frequency 
+data, word patterns, unusual or impossible letter combinations, etc.). 
+
+
+
+cryptologic , adj. Of, pertaining to, or concerned with cryptology. 
+
+
+
+
+
+cryptology , n. That branch of knowledge which treats of hidden, disguised, 
+or encrypted communications . It embraces all the means and methods 
+°f producing communication intelligence and maintaining communication 
+security; for example, cryptology includes cryptography, cryptanalytics 
+traffic analysis, intercept, specialized linguistic processing, secret 
+inks , etc . 
+
+cryptomannerism , n. A habit of a message writer or cryptographer which re- 
+1 suits in a stereotype. 
+
+cryptomaterial , n. All documents, and machines employed in encrypt- 
+
+ing and decrypting messages , 
+
+cryptomathemat ic ian , n . One i/ cryptomathematics . 
+
+cryptomathematics , n. Tho^s^jjortidup >f mathematics and those mathematical 
+methods which have crl /applications . 
+
+cryptonet , n. A gro^pnsQ staflgns using the same cryptosystems for inter- 
+
+comraunicationC O 
+
+erypto-operat3j^*T!ia^^t^bns . In cryptography, instructions describing the 
+method^tcf^je ^njjLoyed in the operation of a general cryptographic 
+system. TKi^Acludes a description of the general cryptographic 
+system as well as the method of application of specific keys •, 
+cryptoperiod , n. The specific length of time throughout which there is no 
+change in cryptographic procedure (keys, codes, etc.), 
+cryptosecurity , n. That component of communication security which results 
+from the provision of technically sound cryptographic systems and from 
+their proper use . 
+
+
+
+25 
+
+CONFIDENTIAL , 
+
+
+
+C ONFTr?S l^x 7 IAt7 
+
+
+
+cryptosystem , n. The associated items of cryptomaterial and the methods 
+and rules hy vhich these items are used as a unit to provide a single 
+means of encryption and decryption. A cryptosystem embraces the 
+general cryptosystem and the specific keys essential to the employ- 
+ment of the general cryptosystem. 
+cryptotext , n. See encrypted text . 
+
+C/S. Call sign . 
+
+CT . Control station . See net control station . 
+
+custodian , n. The individual designated hy p^rfr authority to he respon- 
+sible for the custody, handling and spregiuts^i^ of registered matter 
+or other classified matter which i t to special handling and 
+
+accounting procedures . 
+cut . 1. The position of a point o 
+
+the text of an encrypted ywraeage 
+2 . The point of inters^^^i W"'U»o D/F hearings . 
+cut-in . A message, the^ITBtsjras^ybf which was not intercepted, 
+cut numbers . 1 . WumhCr^>trarpiT|Ltted in Morse according to a scheme of 
+
+
+
+
+
+elative to the beginning of 
+e on the cut and off the cut. 
+
+
+
+abbreviation in whiclKp-lf dashes except one are omitted. Thus the 
+numbers 1 to 0 are represented by A, U, V, 4 , 5, 6, B, D, N, and T, 
+respectively. 2. Any system of abbreviated Morse numbers, as letter - 
+f or -number subs t i tut ion . 
+
+cycle , n. Any series which recurs or is expected to recur in the same order. 
+See period . 
+
+cycle interrupter . An element within the message which signifies the 
+
+point at which, and also possibly the extent to which, cycle inter- 
+ruption occurs . 
+
+
+
+2 6 
+
+
+
+CONFIDENTIAL 
+
+
+
+cycle interruption . A cryptographic procedure applied in the operation of 
+some cipher systems whereby the normal cyclic progression is modified. 
+cyclic , adj. Periodic; continuing or repeating so that the first term of a 
+
+series follows the last; characterized by a ring or closed-chain formation. 
+cyclic permutation . Any rearrangement of a sequence of elements which 
+
+rearrangement merely involves shifting all the elements a common distance 
+to the right or left (5f their initial positions in the sequence, the 
+relative order remaining undisturbed; such a rearrangement requires that 
+one consider the basic sequence a/Selng circular in nature so that, for 
+example, shifting that element N^Jiftchsccupies the left-most position in 
+
+
+
+the sequence one place to 
+
+
+
+most position. 
+cyclic phenomena , Periodi^ 
+a repeating key. 
+
+
+
+
+
+
+pieces this element in the right- 
+
+
+
+fe!»es of repetitions in a system which uses 
+
+
+
+cyclometric, adj . ng ^n o any motion which is of a meter-like character . . 
+
+
+
+D. Used as a si 
+
+
+
+various classification and evaluation systems as 
+
+
+
+follows r ^ Irk traffic analysis, to describe the validity of an identi- 
+fication oKdocation as "tentative". 2. In D/F bearing observation 
+classification, to indicate that one or more bearings are outside an 
+arc of 20 degrees. 3* In D/F fix evaluation, to indicate a 90# proba- 
+bility that the true position of a given transmitter is within 200 miles 
+of the fix. 
+
+dah, n. A dash in Morse code. 
+
+daily keying element. That part, of the specific key that changes at pre- 
+
+
+
+determined intervals, usually daily. 
+
+
+
+27 
+
+
+
+1X7U1 1 
+
+date break . The date on which a change in cryptographic procedure, keys, 
+code, etc. takes place. 
+
+date period . The inclusive dates during which a certain cryptosystem or 
+procedure is in effect. 
+
+date rota . A system in which a limited number of elements, such as call 
+signs or frequencies, is repeated in a regular pattern, as on certain 
+dates of each month. 
+
+date -time group . A transmitted group of a message giving the day of the 
+month and the time, usually according twenty- four -horn* clock. 
+
+In U.S. practice a group usually comM^ro otLsW digits , the. first 
+pair representing the day of the m&itn/tfte second pair the hour of 
+
+
+
+the day, and the final pair thaws^nutee 
+
+
+
+»r the hour. A letter or 
+
+
+
+letters may be added to indicsS^e^^^^e zone. 
+
+
+
+deception, n. Any practice carried o\wYthiu a communications system for 
+
+
+
+the purpose of confusj 
+
+
+
+decimated alphabet . An. 
+
+
+
+Hiding the enemy. 
+
+)duced by decimation, q.v. 
+
+
+
+decimation , n. The p^o<Hss df selecting members of a series by counting 
+
+off at a chosen inteSja]^ the original series being treated as cyclic; 
+or the result of the foregoing process . 
+decimation-mixed sequence . A mixed sequence produced by decimation , q.v. 
+decipher , v.t. To convert sn enciphered message into its equivalent plain 
+
+text by a reversal of the cryptographic process used in the encipherment. 
+(This does not incldde solution by cryptanalysis.) 
+deciphering alphabet . A cipher alphabet in which the sequence of symbols 
+in the cipher component is arranged in normal order for convenience 
+
+
+
+in decipherment. 
+
+
+
+28 
+
+
+
+decipherm ent , n. 1. The process of deciphering. 2. The plain text of a 
+
+deciphered cryptogram. 3* In an enciphered code system, the code text 
+resulting from the removal of the encipherment. 
+decod e , n. 1. That section of a code hook in which the code groups are in 
+alphabetical, numerical, or other systematic order. 2. The decoded, 
+hut not translated, version of a code message. — v.t. To convert an 
+encoded message into its plain text by means of a. code hook. (This 
+does not include solution by cryptanalysis.) 
+decoded index. A type of code index i^Ohich the plaintext value (when 
+
+
+
+known) of the code group in c 
+
+
+
+control block. 
+
+
+
+tion is Inserted before the 
+
+
+
+decode ra ent, n. 1. The procegs^foa^o^ng . 2. The decoded, but not trans- 
+
+lated, version of a crto^wamyP 
+
+decrypt , n. A decrypted- bulVid\ translated, message, —v.t. To transform 
+an unintellig ic communication into an intelligible one by 
+
+a reversal o#-*3^e^ryNtographic process used in encryptment . (This 
+does notrimlud^ solution by cryptanalysis.) 
+
+
+
+decryption , n. TN^e^et of decrypting. 
+
+decryptment , n. 1. The act of decrypting. 2. The text produced by decryption. 
+deferred message . A message bearing the precedence prosign M, q.v. 
+degarb le , v.t. To make emendations in a garbled text. 
+depth , n. 1. The condition which results when two or more sequences of 
+encrypted text have been correctly superimposed with reference to the 
+keying thereof. Sequences so superimposed are said to be in depth. 
+
+2. The number of such superimposed sequences, as a depth of three. 
+
+
+
+derived cipher alphabet. An alphabet produced by the interaction of two 
+
+
+
+primary components; a secondary alphabet. 
+
+
+
+derived numerical key . A key produced by n»i signing numerical values to a 
+selected literal key. 
+
+p/F . Plrection finding , q.v., or direction finder. 
+
+DFS . Double frequency-shift , q.v. 
+
+diagnosis , n. In cryptanalysis, a systematic examination of cryptograms 
+
+with a view to discovering the general system Underlying these crypto- 
+grams . 
+
+difference , n. The result of subtracting one element (a group, a letter, 
+
+etc.) from another using a given modulus -v.t. To obtain a difference . 
+
+
+
+To obtain every possible difference of 4 
+
+
+
+ips, of cipher groups. 
+
+
+
+of key, of cipher texts, of each laK«y<rom nlre next, etc. 
+difference book . A numerical listing of xte minor differences between 
+frequent code groups. ( 
+
+digraph , n. A pair of letters. \ / 
+
+digraphic , adj . Of or pertaflj^g |to ap v combination of two characters . 
+digraphic frequency dlstr^utbonTyA rreauencv distribution of suecessi> 
+
+
+
+pairs of letter^ 
+would list the pa: 
+
+
+
+iwS/- 
+
+
+
+frequency distribution of successive 
+alters . A digraphic distribution of ABCDEF 
+CD, EF. Cf. billteral frequency dlstribu- 
+
+
+
+tion. 
+
+
+
+digraphic idlomorph . A plaintext or cipher sequence which contains or 
+
+shows a pattern in its construction as regards the number and position 
+
+
+
+of repeated digraphs . 
+
+digraphlc substitution . Encipherment by substitution methods In which the 
+plaintext units are pairs of characters and their cipher equivalents 
+usually consist of two characters, 
+dlnome , n. A pair of digits. 
+
+
+
+■ ■■ ■ iAIj 
+
+directed net . A net In which no station except the net control station 
+
+can communicate with any other station, except for the transmission of 
+urgent messages, without first obtaining the permission of the net 
+control station. / 
+
+direction finding . Radiogoniometry . The process of locating a radio trans- 
+mitter by employing special receiving equipment including directional 
+antennas which can determine the direction from which a signal emanates • 
+Abbreviated "D/F 
+
+direct standard cipher alphabet . Avc&her alphabet in which both the plain 
+and cipher components are tJje^?^toa5Ssequence, the two components 
+being Juxtaposed in any %Jy^Voncraahing placements . 
+direct symmetry . A properjyof ascibher square in which the sequence of 
+characters in the rdps^ th^columns is the same throughout and is 
+visibly identi^pj^wit^t^t of one of the primary components (i.e., 
+
+ed to the latent symmetry of a cipher square 
+ccvymmetry) . 
+
+(roup of symbols indicating the specific cryptosystem 
+used in 3 Ting a given message. Also called system indicator . 
+distribution , n. See frequency distribution . 
+
+dlt , n. 1. A dot in the Morse code. 2, A mark, usually a period or comma, 
+used to denote a missing symbol. — v .t . To denote missing symbols 
+with dits . 
+
+double -channel operation . Simultaneous transmission of different traffic on 
+two frequencies by a single station. Cf . dual operation. 
+
+
+
+
+
+
+
+
+double frequency-shift . A system of transmission whereby two different 
+signals are combined into a single transmission signal by employing 
+four frequencies one kilocycle (or less) apart. Abbreviated HFS. 
+double hit . The occurrence in two different messages of the same pair 
+
+of cipher letters or groups , the intervals separating the members of 
+each pair being identical. 
+
+double position . Two terminals mounted together and manned by one operator* 
+
+i 
+
+double station call. A call-up wherein both the sending station's call 
+
+
+
+sign and the receiving station's call s 
+
+
+
+station . 
+
+
+
+doublet * n. A digraph or dinome in wh 
+(e.g., LL, EE, 22, 66, etc.). 
+
+
+
+e used by the calling 
+
+
+
+ter or a digit is repeated 
+
+
+
+double transposition . A cryptosya^nJ^j whptti the characters of a first or 
+primary transposition ai^spbjeoifce<\ to a second transposition. 
+downgrade , v.t. To reduce XhQe Wtty classification of a classified docu- 
+
+
+
+ment or an item of. 
+
+
+
+it ter or material. 
+
+
+
+drafter, n. A perse 
+
+
+
+acfcullly composes the message for release by the 
+
+
+
+originator or the rh^^Ang officer. 
+
+drum , n. 1. In a Hagelin machine, a cage of bars each of whieh carries a 
+lug or lugs . 2 . An electrical commutator or switching device . 
+
+DTP . Date -time group , q.v. 
+
+dual operation . Simultaneous transmission of identical traffic on two fre- 
+quencies by a 8 ingle station. Cf. double-channel operation . 
+
+dud , n . A cryptogram which cannot be decrypted promptly because of a faulty 
+indicator or discriminant. 
+
+
+
+dummy group . . A group of nulls , 
+dummy letter. A null, q.v. 
+
+
+
+.32 
+
+
+
+
+
+
+dummy message . A message sent for some purpose other than Its content. 
+dummy traffic . A series of dummy messages. 
+
+duplex , adj . Applied to a link on vhich simultaneous transmission of two 
+messages in opposite directions is possible. 
+duplex operation . Simultaneous transmitting and receiving of messages in 
+both directions between two stations . Each station uses two operators , 
+one transmitter, and one receiver., (Two different frequencies must be 
+employed . ) 
+
+E. A symbol used in intercept operj S^s a suffix to a frequency to 
+denote "estimated'' . 
+
+
+
+effective setting . In a cipher 
+which at a given mom? 
+element of key. 
+
+EHF . Extreme ly-hig]; fcencyy^q.v, 
+
+
+
+electrical intercep 
+cations 
+emergency mes 
+
+
+
+
+
+e, the particular position on each rotor 
+
+> 
+
+y contributing to the production of an 
+
+
+
+ning possession by electrical means of comrauni- 
+others . 
+
+ssage bearing the precedence proslgn Y, q.v. 
+
+
+
+emission analysis ~ The processes employed in radiofingerprinting. 
+enclcode , n. A portmanteau word for enciphered code . . 
+
+encipher , v.t. To convert a plaintext message into unintelligible language by 
+means of a cipher system. 
+
+enciphered code . A cryptographic system in which a cipher system is applied 
+to encoded text . 
+
+enciphered-code message . A cryptogram produced by enciphering encoded text. 
+enciphered facsimile . See cifax . 
+enciphered speech . See ciphony . 
+
+enciphering alphabet . A cipher alphabet in which the sequence of letters in the 
+
+rder for convenience in encipherment, 
+
+
+
+
+plain compo 
+
+
+
+
+
+
+
+
+
+enciphering table . A table so constructed as to facilitate encipherment. 
+encipherment , n. 1. The process of enciphering. 2. Text which has been 
+enciphered. 
+
+encipher sequence . A sequence of numbers giving the order of the plain 
+text letters as they occur in a transposition cryptogram. Noted as 
+"P -*■ C sequence" , which is read as "P to C sequence" . 
+encode , n. That section of a code book in which the plaintext equivalents 
+of the code groups are in alphabetical, numerical, or other systematic 
+order. — v.t. To convert a plaintext mesafeafe into unintelligible 
+language by means of a code book. 
+
+encoded cipher . The final text producq^ b^£Spiphering the plain text 
+and then encoding the enciphered tex^^^V 
+encodement , n. 1. The act or pr oc^s Tn^yp t ing plain text with a code 
+
+system. 2. The text prodjiged b\ eroding plain text. 
+encrypt , v.t. To convert a^I^^tiyt Message into unintelligible language 
+by means of a crypt » ey tj ba^^\ 
+encrypted message , ^c^ptoferlm. 
+
+encrypted text . The texWpi%Kluced by the application of a cryptosystem 'to 
+a plaintext message. 
+
+encryption , n. 1. The act of encrypting. 2. Encrypted text. 
+encryptment , n. 1. Encryption , q.v. 2. An encrypted communication. 
+endplate , n. In a cipher machine, the stationary set of contacts at the 
+beginning or end, or both, of the maze. Also called a stator . 
+end spell . The plain equivalent of a code group indicating that a spelling 
+has been completed and that the groups following represent words and 
+phrases . 
+
+
+
+3U 
+
+
+
+
+CONFIDENTIAL 
+
+
+
+the same two 1< 
+estimated frequ< 
+operati 
+
+executive method 
+
+
+
+
+
+equate columns . To adjust one column of an overlap to another by the appli- 
+cation of an arbitrary key so that those enciphered code groups occur- 
+ring in both columns, which are assumed to represent identical plain 
+text, are made identical, and thus may be treated as placode groups. 
+equation , n. As used in traffic analysis, the process by which two frequencies > 
+two routings, etc., or any combination of two such elements, are demon- 
+strated to be equivalent; also, the condition resulting from this process. 
+Equations may be continuities in which the elements are used successively, 
+or they may involve elements us edr simultaneously. 
+equivalent primary component . A sequ^dK^wnSch has been or can be developed 
+from the original sequence primary component, by applying a 
+
+decimation process to t^^atteS^y 
+
+equivalent sequence . An a3phe^^Ri£^^quence in which the interval between 
+any two letters a ODnstant relationship to the interval between 
+
+Other sequence. See decimated alphabet , 
+proximate frequency on which a target is observed 
+ing with an "E" prefixed to the frequency.) 
+method by which the transmitting station directs the 
+addressees of a message to execute (take action on) its purport at a 
+given moment . 
+
+executive signal . The transmission which indicates the' instant at which 
+action is to be taken on a given message . 
+exempted addressee . An addressee included in the collective address desig- 
+nation of a message but for whom the message is not intended for either 
+
+
+
+action or information. 
+
+
+
+
+exploitable system . A system whose basic elements have been solved, but 
+which cannot be read without the solution of specific controls for 
+individual messages or groups of messages. 
+exploitation , n. The production of information from messages which are 
+
+encrypted in systems whose basic elements have been solved. Exploita- 
+tion includes decryption, translation, and the solution of specific 
+controls such as indicators, specific keys, etc. 
+external repetitions . Patent repetitions in encrypted text. 
+external text . In concealment systems, the aa^Qhently innocent enveloping 
+text within which a secret message 
+
+extremely-high frequency . The range o^re^^Vrequencies from 30,000 to 
+300,000 megacycles . Abbreviatedas EiSi^\ 
+facsimile , n. A system of telecon^urS^yt-joy^ for the transmission of fixed 
+plane images with a vieiOb^^he^r reception in a permanent form.* 
+factoring , n. An arlthmetjfeadf^r fl aa a* of determining the period of a 
+
+polyalphabet ic cipJ^w-^T'tj^Ser iodic type by a study of the Intervals 
+between repetit^rordC j 1 
+FDT. File -date/time , 
+
+field code . Primarily, a tactical code containing a limited vocabulary * 
+for low-echelon ground use. 
+
+file date/time . The date and time at which a message was filed in the 
+communication center serving the originator. Abbreviated as FDT. 
+final period . In a periodic cipher system, the period determined by the 
+cryptanalyst to be the true period. 
+
+fist , n. The characteristic swing of the dots and dashes of hand-sent 
+Morse as sent by a given radio operator. 
+
+
+
+36 
+
+
+
+C0PffT™E??TiAl7 
+
+
+
+fix , n. In D/F, an area indicated as the location of a transmitter "by the 
+intersections of three or more bearings. Cf. cut . 
+fixed additive . An additive sequence which is repeated to make up the 
+entire additive key. 
+
+fixed call . An assigned call sign which remains constant for an extended 
+period of time. 
+
+flag , n. A graphic representation (triangular or square) of all comparisons 
+
+possible among a set of elements. v.t. To make a flag. 
+
+flash message . A message beax*ing th^ recedence prosign Z, q.v. 
+
+
+
+
+
+s when two or more encryoted 
+
+> 
+
+r imposed, all starting at the same 
+f such superimposed sequences, as a 
+
+
+
+flush depth . 1. The condition whi< 
+messages have been correnj 
+point in the key. 2. The 
+flush depth of three\ ^ 
+
+"F" (FOX) method . S ee broa\gaa^ method . 
+
+four-level dinome I A t TlIlteral substitution cipher system employing 
+
+four c inhe r -se aSe^^^"~comno6ed of two-digit numbers, by means of which 
+all or ^e^ly>al\ of the plaintext letters are provided with four two- 
+digit varW^e^uivalents . 
+
+four-square matrix system . A partially digraphic substitution system employ- 
+ing a matrix which usually consists of four 5x5 squares in which the 
+letters of 25 -element alphabets (usually combining I and j) are inserted 
+according to any prearranged order. 
+
+fractionating system. A cipher system in which plaintext units are repre- 
+sented by two or more cipher symbols which in turn are dissociated and 
+subjected to further encipherment by substitution or transposition or . 
+both. 
+
+
+
+37 
+
+
+
+CONFIDENTIA L 
+
+
+
+COIN 
+
+fractionation , n. A cryptographic process wherein the cipher symbols, 
+which combined represent a plaintext unit, are dissociated and sub- 
+jected to further encipherment . 
+
+free net . A radio net in which any station can communicate with any other 
+station in the same net without first obtaining the permission of the 
+
+I 
+
+net control station. 
+
+
+
+free routing . The type of routing wherein the destination of a message 
+is designated by the originator but routes which the message will 
+follow are left to the discretion of thif Delaying station. 
+free star . The system of radio f re quenc ywp^g^Hjheite in one frequency is 
+assigned to an entire net, and an^Qsrbrc^sn in the net may contact any 
+other on that frequency. 
+
+frequency , n. 1. In its cryptolo^ig ^^£^4<XtIon, the number of actual 
+occurrences of a textua>^Nenen-\wSbhin a given text. Cf. relative 
+
+
+
+
+
+
+frequency . 2. In ltsS^les ferlca yappllcatlon, the number of complete 
+cycles per secon^f5roSxlt^,edS^p^an alternating current system. 
+frequency band . The^^gs^^F frequencies between two definite limits. 
+frequency, count . A frequb^v distribution. 
+frequency distribution . A tabulation of the frequency of occurrence of 
+
+plaintext or ciphertext units in a message or a group of messages. A 
+frequency count. 
+
+frequency table . A frequency distribution in tabular form, with frequencies 
+indicated by numbers . 
+
+frequential matrix . A type of cipher matrix providing variants. A matrix 
+
+
+
+In which the number of different cipher values available to represent 
+any given plaintext letter closely approximates its relative plaintext 
+frequency. 
+
+
+
+
+
+
+full-time coverage . The assignment of the intercept operators necessary 
+to intercept all transmissions on a given frequency or associated 
+group of frequencies . 
+
+gapped ,, adj . As applied to a sequence, having gaps, selective, not complete. 
+garble , n. An error in transmission, reception, encryption, or decryption 
+which renders incorrect or undecryptable a message or transmission or 
+
+a portion thereof. v.t. To make an error in transmission, reception, 
+
+encryption, or decryption of a message. 
+
+
+
+garble table . Any table, chart, or Qfrhq? aid which may be used to correct 
+garbles (e.g., a permutation 
+GCT. Greenwich Civil Time , q.\ 
+
+general call sign . A call s^Ba^epr^g^ing all stations, units, commands, 
+etc., in an area, in or in any combination thereof. 
+
+general cryptosystem ^/TBie ba\jc ^ j nvariable method of encryption included 
+in a cryptosyd^j^^e£STupft.ng the specific keys essential to its 
+employment 
+
+general messageX ^A^y^e of message having a wide standard distribution, 
+
+originated oVl^e navy Dept., or by a fleet commander. A general message 
+is assigned an identifying title and usually a serial number. (e.g., 
+
+
+
+ALNAV 5 .) 
+
+
+
+general solution . A solution dependent on exploiting the inherent weaknesses 
+of the cryptographic system arising from its own mechanics, without 
+the presence of any specialized circumstances, 
+general system. See general cryptosystem. 
+
+
+
+39 
+
+CONFIDENTIAL 
+
+
+
+generation . The production, either systematic or random, of call signs, . 
+keys, code groups, etc. In the case of call signs, generation is 
+distinguished from allocation , which is the assignment of call signs 
+or blocks of call signs to stations after generation. (Cf . allocation t ) ' 
+generatrix , n. 1. One decipherment (or encipherment) out of a set of 
+decipherments (or encipherments) of the same text, the set being 
+exhaustive on a given hypothesis or given cryptographic principle. 
+
+The elements of a generatrix are at a constant alphabetic (normal 
+
+
+
+or cipher) interval from those of anothe: 
+
+
+
+(e.g., as in a strip system). 2. In panne cb^onVith the method of 
+
+
+
+completing the plain component sequenc 
+
+
+
+ratrix of the set, 
+
+
+
+one of the rows, each 
+
+
+
+of which represents a trial " de*4s^rraeHfc''ybf the original crypto- 
+
+
+
+gram. \vw 
+
+generatrix Interval . The inte^TK. bel^eda a plaintext generatrix and a 
+cipher generatrix. / 
+
+GMT , Greenwich Mean Tlm< 7' qX 
+
+goniometer , n. An el^tr^ay divice used in direction finding to determine 
+the azimuth of arrivau^ff signals picked up by a direction-finder 
+antenna . 
+
+good difference . In enciphered code solution, a possible difference or one 
+likely to occur which Is equal to, or may be, the difference between 
+two high frequency groups . 
+
+good group . 1 . A code group which occurs with a relatively high frequency! 
+
+i 
+
+a common group. 2. A code group which has the proper limitation and 
+thus is known to be not garbled. 
+
+
+
+CONFIDENTIA L- 
+
+
+
+
+grammatical group . A code group Indicating which of the alternative 
+grammatical inflections assigned to a particular code group is to 
+he taken. 
+
+grammatically identified group . A code group in process of identification 
+which has been established as being a particular part of speech, (e.g 
+noun, verb, adjective); but not more precisely determined. 
+grammatical table . A section in a code book containing grammatical groups 
+Orandpre* cipher. A type of substitution system providing variants. This 
+
+
+
+system employs a cipher square ijrwl^ch are inscribed ten. 10- letter 
+words containing all the lettpfa of 'bH^e^Lphabet in their approximate 
+plaintext frequencies. These' WrMrords are further linked together 
+by a 10-letter word wh^rt***«j^earhsjJ§ftically in the first column as a 
+mnemonic feature for th\ ^S^ri^ion of the words in the rows. 
+Greenwich Civil Time. /PShnerlX ihe mean solar time at the meridian of 
+
+
+
+Greenwich . Ab" 
+Time , q.v. 
+Greenwich Mea 
+
+
+
+
+,ted asr GCT . Now superseded by Greenwich Mean 
+
+
+
+le mean solar time at the meridian of Greenwich. 
+
+. Also known as universal time and Z (Zebra) time. 
+
+
+
+Abbreviated, ai 
+
+grid , n. In a transposition system, a form or matrix over which a grille 
+is placed for the purpose of enciphering or deciphering. 
+grille , n. 1. A sheet of paper, cardboard, thin metal, plastic, or like 
+material in which perforations have been made for the uncovering of 
+spaces in which textual units may be written or read on the grid. 
+
+2. A matrix in which certain squares ore blocked out or otherwise 
+marked so as not to be used. Also called a stencil. 
+
+
+
+4l 
+
+CONFIDENTIAL 
+
+
+
+GronafelA system . A polyalphabetic substitution system employing the first 
+10 alphabets of a direct standard Vigenere table in conjunction with a 
+numerical key. The cipher equivalent of a given plaintext letter is 
+found by counting down the normal sequence the number of positions 
+indicated by the numerical key; thus Ap with key of U 1 b 
+ground wave . The portion of a transmitted radio wave which travels along 
+the surface of the earth. Cf . sky wave . 
+group , n. 1. A number of digits, letters or characters forming a unit for 
+transmission or for cryptographic treatram^ 2. In radio, two or more 
+links whose stations work together ay^^MSjjinb^ation entity under a 
+common operating control. 
+
+
+
+group count . A number, usually pre 
+the number of groups or words 
+usually the text. 
+half-tone , adj . In facs 
+hard copy . A copy of 
+tape, as oppose 
+harmonic, n. A multiple 
+
+
+
+
+in bi^fcireamble , which indicates 
+nated portion of a message, 
+
+
+
+of a large number of shades of gray, 
+the conventional form on a page or printed 
+^graphic recording, perforated tape, etc. 
+"fundamental frequency. 
+hat , n. The upper part of a hat diagram; a crown. 
+
+hat diagram . A figure formed by writing the text of a cryptogram enciphered 
+by columnar transposition so that each column contains the textual units 
+which, for an assumed matrix width, must have occurred in a single 
+column of the original matrix, as well as others which may have occurred 
+in that column. 
+
+
+
+heading , n. In communication intelligence usage, the information on an inter- 
+cepted message preceding the message text; this information is in two 
+parts, the intercept data (supplied by the intercept operator) and the 
+preamble (transmitted by the target station) . 
+
+
+
+
+Hellschreiber, n. A system of automatic telegraphy which is uniquely 
+
+
+
+characterized by reception-printing on a paper tape in a facsimile- 
+
+like manner, in that the printing is accomplished through the use of 
+
+a helix and stylus rather than through the use of conventional type 
+
+bars; thus, each printed character is made up of several closely 
+
+spaced horizontal lines, as shown below: 
+
+apt C 
+
+A G «_ e_ 
+
+HF . High frequency , q.v. 
+
+high -echelon , adj. Pertaining to organizational units at the army divisional 
+level or higher, or their equivalents^ / 
+high frequency . The range of radio fra^u^nc^s *rom 3 to 30 megacycles. 
+high-grade , adj . Pertaining to a ci^m^wtem which offers a maximum of 
+
+resistance to cryptanalys iiy«*£or : (l) complex cipher machines, 
+
+(2) one-time systems, (3) de s enciphered with an additive 
+
+book. Cf. low-grade wads jiedfbaXsrade . 
+
+high-level cryptochannelC Ofchannel composed of high commands, employ- 
+
+ing a cryptosys^eir'^i^LMS limited distribution and relatively perma- 
+nent physicaJ^^^^^rAographic security. 
+
+Hill*s algebraic encipfrerplent . A true polygraphic system for the encipher- 
+ment of polygraphs of any order, involving algebraic treatment by means 
+of coefficients for the transformation of a plaintext polygraph into 
+its ciphertext polygraphic equivalent, and vice versa. Invented by 
+Professor Lester S. Hill of Hunter College. 
+hit , n. A coincidence of textual elements (single letters, digraphs, trigraphs, 
+etc . ) occurring between messages . 
+
+
+
+
+holder , n. A command or activity authorized to draw and hold publications 
+according to established distribution lists . In cryptologic appli- 
+cation, an authorized possessor of cryptographic materials. 
+holocryptlc , adj . Incapable of being deciphered without a key. For 
+example, a one-time system might be termed holoeryptic. 
+horizontal two-square matrix system. A digraphic substitution system employ- 
+
+
+
+ing a matrix which normally consists of two 5*5 squares placed side 
+by side. 
+
+hypothetical code . Code obtained by deciphering selected groups from en- 
+ciphered code messages by trial keys a^Oried to have been used. 
+
+
+
+hypothetical key. Key obtained by as si 
+
+
+
+p^eco&e groups to underlie selected 
+
+
+
+cipher groups . 
+
+IBM. International Business Mach^n&g, q. 
+
+
+
+IBM method. A form of statistics 
+
+
+
+
+
+
+employing International Business 
+
+
+
+Machines , q.v. 
+
+IBM run. A listing whict 
+
+
+
+Use of IBM sortii 
+
+
+
+
+
+
+Hit of (l) arranging data, through the 
+
+
+
+jsyhnd associated equipment, into a particular 
+
+
+
+order and forncfcaaeaae Jbf study, and (2) subsequently printing these 
+
+
+
+data by means of 
+
+
+
+abulating equipment. 
+
+
+
+ICR. International commercial radiotelegraphy. 
+
+
+
+identification ,, n. 1. In cryptanalysis, determination of the plaintext 
+
+value of a cipher element or code group. 2. In traffic analysis, deter- 
+mination of the specific unit, aircraft, ship, or Order of Battle in- 
+volved in a given instance, but not its location. 
+
+Identification Friend or Foe . Radar recognition and identification. A 
+
+system using radar transmissions to which equipment carried by friendly 
+forces automatically responds, for example, by emitting pulses, thereby 
+
+
+
+distinguishing themselves from enemy forces. Abbreviated as IFF. 
+
+
+
+1 JL X M-J M-JJL 1 JL 
+
+
+
+Identifier , n. A Voice Intercept operator who identifies the language and 
+subject matter of voice transmissions. 
+
+Identify , v.t. 1. In cryptanalysis, to determine the plaintext value of a 
+cipher element or code group, 2. In traffic analysis, to determine the 
+specific unit, aircraft, ship, or Order of Battle involved in a given 
+instance, but not its location. 
+
+Idlomorph -, n. A plaintext or cipher sequence which contains or shows a 
+pattern in its construction as regards the number and positions of 
+repeated letters . 
+
+idiomorphic , ad j . Exhibiting the phe nomat^o^of idiomorphism . 
+
+
+
+idlomorphism, n. In a plain-text or 
+
+
+
+ice, the phenomenon of 
+
+
+
+showing a pattern as regards 
+IFF . Identification Friend or 
+
+
+
+h* and positions of repeated letters. 
+
+
+
+IM3 number. International MeteVrc 
+
+
+
+Code number. See base number. 
+
+
+
+"I" (Item) method . See i^t9»cept\neyhod . 
+
+immediate message . A m^ssbje oeaj^jpg the precedence prosign 0, q.v. 
+
+
+
+index, n. An ordendd lTbtil 
+
+
+
+such data as cipher or code groups, traffic, 
+
+
+
+etc. — v.tS^t^jM'epale such an ?bn&ex. 
+
+index letter . That of a component of a cipher alphabet against which 
+
+the key letter in the other component is juxtaposed. 
+
+Index of coincidence . The ratio of the observed number of coincidences in 
+a given cryptogram to the number of coincidences expected in « sample 
+of random text- of the same size as the cryptogram. 
+
+
+
+Indicative , n. (Met.) A three -figure number indicating the meteorological 
+station concerned, and forming the first three figures of a synoptic 
+report . 
+
+indicative information . In connection with IBM listings, that data which 
+serves to identify a given control group or a given line of textual 
+material; indicative information usually appears at the left of any 
+given line on a listing and includes such data as worksheet number, 
+date, lane, etc. 
+
+indicator, n. In cryptography, an element inserted within the text or heading 
+of a message which serves as a guide -t^th^qelection or derivation and 
+application of the correct system atldXey foSjftie prompt decryption of 
+
+
+
+the message i See also the more prek^seSterms discriminant and message 
+
+indicator . € ^**^**^ 2 * 
+
+
+
+Indicator group . A group forming tne whole or part of an indicator, 
+indicator pattern. The meandfngfu\ ora^ of elements of an indicator. 
+
+
+
+indicator system. 1. .The tobal 
+
+
+
+graphic data by ml 
+system used to eni 
+
+
+
+:aiCr>qiMLn< 
+Sr-ypSAi/ i; 
+
+
+
+^conventions agreed upon to convey crypto- 
+fcators within a cryptographic system. 2. A 
+
+
+
+indicator. 
+
+
+
+indirect symmetry . A property of a cipher square in which a pair of rows or 
+pair of columns may be united to give a decimation of one of the primary 
+components; i.e., latent symmetry as opposed to the patent symmetry of a 
+cipher square exhibiting direct symmetry. 
+information addressee . The activity or Individual to whom a message is 
+directed by the originator for information only. 
+
+Initial key . The key used In starting an encipherment; especially, the short 
+key used to begin an autokey encipherment. Also called preliminary key or 
+priming key. 
+
+
+
+
+
+
+C0NF1 fiffiNTfAL 
+
+Inked tape . Paper tape on which code signals (usually dots and dashes) 
+
+are recorded in the form of visible ink patterns . Also known as inked 
+recording tape and undulator tape . 
+
+Inscription , n. In a transposition system, the process of writing a message 
+into a matrix. 
+
+integer , n. A whole number. 
+
+Integrated diagram . A composite traffic analysis diagram of a given net, 
+showing significant facts established about the net or network from 
+various separate daily diagrams anyother sources over a period of time . 
+intercept , n. A copy of a message interception. - — v.t. To 
+
+engage in interception. 7 
+
+intercept control . The assl^neniNqfN^sslons to Intercept stations, and the 
+furnishing' of such statite% wit* technical data to aid them in carrying 
+
+V/- 
+
+out these miss long 
+intercept data. T 
+
+
+
+appearing ai 
+general 
+
+
+
+
+;ra supplied by the intercept operator and 
+part of the message heading. Intercept data 
+
+
+
+| frequency, call signs, signal strength, signal reada- 
+bility, iht^c^HT date/time, intercept station number, and case number. 
+According to some intercept formats now in use, some intercept data, 
+such as time when transmission of message was completed and intercept 
+operator's initials may be found just below the message. 
+
+Intercept date/time . The actual date and time a message or chatter is heard 
+by an intercept operator. Usually recorded in Greenwich ("Z") time. 
+
+
+
+47 
+
+
+
+CONFIDENTIAL 
+
+
+
+V iUjLL<ii j. .. ; 
+
+interception , ». Site* process of gaining possession of communications intended 
+
+for others without obtaining the consent of the addressees end without 
+
+preventing or ordinarily delaying the transmission of the communications 
+
+to those addressees. 
+
+intercept method . The method of transmitting by pr e arrangement a message from 
+one station to another so that other stations for which it is intended 
+may receive it without giving a receipt. The' station called is responsible 
+for the correct reception of the message at that station. Also called 
+
+
+
+"I” (Item) method . 
+
+Intercept position . The necessary equipmen 
+cept one radio signal, (l) manned 
+
+
+
+ilities required to lnter- 
+
+
+
+tlon - The necessary 
+
+
+
+personnel and equipment to intercept madio signal, 2k hours per day 
+if necessary. ( 2 ) installed lnfer^pfr'yai&iCion - An intercept position 
+in either an operational or a swuidW^ state. (3) double position - Two 
+receiving terminals morn feetha r, manned by one operator, used for 
+
+intercepting the signalsS^d^?trtm ends of , a radio link. 
+
+-■%* l * ' 
+
+
+
+intercept station. An, 
+
+
+
+purposes . 
+
+
+
+53 
+
+
+
+aMon which collects communications for COMINT 
+
+
+
+interference, n. The impairment of receptibh by atmospherics , unwanted signals 
+
+■ V > ' 
+
+(not known to be deliberate) or the effects- of electrical apparatus or 
+machinery. ’ 
+
+intermediate cipher text . Text in cryptographic form which has undergone part 
+but not all of the deciphering or enciphering process . 
+
+Internal indicator. A message indicator, q.v. 
+
+
+
+Internal repetitions . Repetitions occurring within the same message. 
+
+
+
+
+
+
+internal text . In concealment systems, the secret text which is enveloped 
+by open or apparently innocent text. 
+
+International Business Machines. Machinery using punched cards which are 
+
+
+
+electrically read for accounting and statistical purposes. 
+international call sign . A call sign assigned in accordance with the pro- 
+visions of the International Telecommunications Union to identify a 
+radio station, and appearing in up to date lists published by the I.T.U* 
+The first letter or first two letters of the call sign indicate the 
+nationality of the station. / 
+
+international Morse code . A wid^WusecNno&p in which letters and numbers 
+are represented by specif groupings of dots, dashes, or combinations 
+
+
+
+of both. The internal 
+
+
+
+:ode is used especially in radio 
+
+
+
+telegraphy. 
+
+
+
+International Servlet 
+
+
+
+International Tele? 
+
+
+
+
+
+
+8e, \ey service code . 
+
+icat^n Union. A civil International organization 
+
+
+
+establisheatopro^ddg standardized communication procedures and 
+
+
+
+practic? 
+
+
+
+ig frequency allocation and radio regulations on a 
+
+
+
+world -wide bh^s. Abbreviated as ITU. 
+international teleprinter code . See Baudot code . 
+
+
+
+interpreter , n. A listener who translates (or summarizes) foreign language 
+voice transmissions directly from actual transmission, 
+interrelated cipher alphabets. Cipher alphabets most commonly produced by 
+
+
+
+the interaction of two primary components which, when juxtaposed at 
+various points of coincidence, can be made to yield secondary alphabets, 
+interrupted key cipher. An aperiodic polyalphabetic cipher of which the key 
+
+
+
+may be broken off and resumed at any point by prearrangement . 
+
+
+
+49 
+
+
+
+
+
+CONFI 
+
+
+
+identical patterns as regards repetitions . 
+
+^ :ion of electrical signals difficult 
+
+
+
+invisible writing . Writing not visible to the naked eye. The characters 
+composing such writing may be microscopic or inscribed with invisible 
+ink . 
+
+isolog , n. A cryptogram of which the plain text is identical with that of 
+another message encrypted in another system, key, c6de, etc. 
+
+Isologous , add . Pertaining to or having the nature of an isolog . 
+
+isomorph , n. A sequence exhibiting isomorphism. 
+
+Isomorphism, n. The term applied to the phenomena arising whenever two or 
+more sequences although differentXnAomposition nevertheless possess 
+
+dam , v.t. To make the satisfacto» A 
+
+or impossible by transmuting interaering signals. 
+
+damming , v.t. The de liberate of reception of electrical signals by 
+transmission of iabe*ferinc aLgnals . 
+
+Jargon code . A code^u^k^ wimfide words, instead of the arbitrary groups 
+of symbols uettHTftj^hqsMiated with code systems . 
+
+Jefferson cipher 5yA ra>]Falphabetic substitution system invented by Thomas 
+Jefferson ancNtoid^pendently at a later date by the French cryptographer 
+Bazerles. It provided for encipherment by means of a manually operated 
+device involving a number of revolvable disks, each bearing a mixed 
+alphabet on its periphery. 
+
+Joint , adj. Between, two or more Services of the same hatlon. (When all 
+
+Services are not involved the participating Services shall he identified, 
+e ,g . , Joint Army-Navy) . 
+
+Joint communication . Common use of communication facilities by two or more - 
+^Services of the same nation. 
+
+
+
+51 
+
+
+
+CONFIDENTIAL 
+
+
+
+plain constant. A constant wincCc^nce tests to denote 
+
+
+
+the probability of coincidence of a given textual element or unit in 
+plain text. It is the sum of the squares of the probabilities of occur- 
+rence of the different textual elements or units as they are employed 
+in writing the text; for example,, in English telegraphic plain texb, 
+the monographic and digraphic plain constants are .0667 and .0069 
+respectively. 
+
+pa random constant . A constant employed in coincidence tests to denote 
+the probability of coincidence of a given ybextual element in random 
+text. It is merely the reciprocal of t£(^\$ob^l number of characters 
+used in writing. the text. If a 26-J^^q^alphq#et were employed, for 
+instance, the constant denoting the ^gbfc^lity of coincidence of various 
+textual elements would be der^red^arrsaJJLOws : 
+
+a. single letters l/36 =^0385 
+
+b. digraphs .00lk8 
+
+c. trigraphs _ Nyl «* .000057 
+tejpa test . See coinaMstflSfeytetet . 
+kc, kcs . kilocycle, kr^cybce/. 
+
+key , n. 1. In cryptography, a symbol or sequence of symbols applied to 
+
+successive textual elements of a message to accomplish their encryption 
+or decryption. 2. A specific key . 
+
+key book . A book containing key text, or plain text forming specific keys. 
+keyed columner transposition . A transposition system in which the columns 
+of a matrix are taken off in the order determined by the specific key, 
+which is often a derived numerical key. 
+key generator . A device for producing a key sequence. 
+
+
+
+52 
+
+
+
+CONFIDENTIAL 
+
+
+
+IjUllf I jLrUrfil i ±/ilj 
+
+key group . A group of key symbols. 
+
+key- In , v.t. To recover key by means of a crib. 
+
+key Index . An ordered listing of keys showing preceding and following keys 
+with proper designations of source. 
+
+key letter . A letter of key; especially in polyalphabetic ciphers, the 
+
+letter determining which of the available cipher alphabets is used to 
+encipher a particular letter. 
+
+key list . In cryptography, the publication containing the keys for a parti- 
+cular cryptosystem. // 
+
+key phrase . An arbitrarily selecj^^hs^^^rom which a key is derived. 
+
+efl^5bstrucsi( 
+
+
+
+;ion of a key. 
+
+
+
+.ved. 
+
+
+
+rd used as a key per se , or from which 
+
+
+
+key recovery . The cryptanalytj 
+key text . Text from which akey 
+key word . An arbitrarily \^ej 
+
+a key is derive^*-*. \ \ 
+keyword , ad J . Of to a key word or key words; as keyword recovery. 
+
+keyword mixed a^ghahg^ Ay alphabet constructed by writing the prearranged 
+key wor^^^te^ mrase, (repeated letters, if present, usually being 
+omitted afrjar tjreir first occurrence) and then completing the sequence 
+from the unused letters of the alphabet in their normal sequence. 
+kick , n. A movement of controlled but usually variable amount imparted to a 
+rotating element of a cipher machine either regularly or cyclically. 
+kilocycle . One thousand cycles per second. 
+
+
+
+53 
+
+
+
+LTLiil J. 1 
+
+lambda (A) test . A test for monoalphabeticity in a message, based on a 
+comparison of the observed number of blanks in its frequency distri- 
+bution with the theoretically expected number of blanks both in (a) 
+a normal plaintext message of equal length and (b) a random assortment 
+of an equal number of letters . Also called the blank-expectation teat . 
+lane , n. A path, electrical, physical, or both, in one direction connecting 
+two correspondents regardless of the route involved. 
+language specialist . One who has developed a specialized competence in one 
+or more aspects of a foreign language. /y 
+latent repetition. A plaintext repetition nouwC^JaarSrt in cipher text but 
+
+
+
+susceptible of being made patent as 
+latent symmetry.. See indirect symmetry. 
+
+
+
+
+areqt in cipher text but 
+of analysis . 
+
+
+
+lateral communication . 1. C ommun ic n outstations of a group or 
+
+
+
+net. 2. LeSs frequently. 
+
+
+
+micatfen between adjacent units along a 
+
+
+
+front, or between units Loa » echelon of command. 
+
+
+
+Latin square . A cipher sow 
+symbol . f ^ 
+
+lexical, adj. Of, pertain^ 
+
+
+
+J!ksjra%ch no row nor column contains a repeated 
+
+
+
+>, or connected with words. In its cryptologic 
+
+
+
+sense, the word is used to characterize those cryptographic methods ' 
+(chiefly codes) which deal with plaintext elements comprising complete 
+words , phrases and sentences . 
+
+
+
+LF . Low frequency , q.v. 
+
+limitation , n. A restriction imposed upon a system or on some part of a 
+system, such that certain elements or characters either do not ocCur 
+at all, or occur only under certain conditions, (e.g., a 5-figure code 
+using only groups beginning with the digits 0-5; a 5-figure code using 
+only groups whose digits sum to an even number.) 
+
+
+
+line . See row . 
+
+
+
+
+linguist , n. One who has expert knowledge of a foreign language. 
+
+Unit , n. Any single direct system of telecommunication between two points 
+using one communication means. Cf. circuit. 
+link call . A common call sign used by two stations for intercommunications. 
+listener , n. A language specialist who deals with a foreign language in its 
+spoken form. 
+
+listing , n. A tabulation of data (e.g., the printed result from a deck of 
+IBM cards.). Also called a run . 
+literal key . A key composed of a sequenca/or letters. 
+
+literal system . Any cryptosystem de s ia^arqr cfcQf -1 ine literal communication 
+in which the plaintext and ciplrerl^fl^ymbols produced or accepted are 
+the normal alphabetical ch^^cters\ndSthe digits . 
+local stereotype . A stereotypeVrtSSji i^^haracteristic of a particular 
+originator . 
+
+log , n. 1. An orderly frf observed events. 2. In intercept operations, 
+
+a record kept Tyr'Sn^qpfc^-E^r of everything heard on a circuit. — v.t , 
+
+To keep a 1c 
+
+logarithmic weights . NJuqprical weights assigned to units of plain text, which 
+weights are actually logarithms of the probabilities of the plaintext 
+units, and which are used to evaluate the results of certain cryptanalytic 
+operations . 
+
+log reader . A person engaged in reading the logs of intercept operators for 
+communication intelligence purposes . 
+
+long title . The full descriptive name assigned to a document or device by the 
+preparing agency. 
+
+
+
+CONFIDENTIAL 
+
+
+
+■ IJLf Ui 1 
+
+
+
+loran , n. A long range radionavigation position fixing system using the 
+time difference Of reception of pulse type transmissions from two or 
+
+f 
+
+more fixed stations'. j 
+
+low -echelon , ad j . Pertaining to organizational units below the level of : 
+the army division or its equivalent. 
+
+low frequency . The range of radio frequencies from 30 to 300 kilocycles. 
+Abbreviated LF . 
+
+
+
+low-grade , adj . Pertaining to a cryptosystem which offers only slight 
+
+
+
+resistance to cryptanal 
+single transposition, ( 
+grade and high-grade . 
+
+
+
+low-level cryptochannel ♦ A cr 
+
+
+
+echelons, employing a c 
+physical security, and— 
+
+
+
+M. 1. United States 
+mitted as 
+
+
+
+
+Playfair ciphers, (2) 
+codes. Cf. medium- 
+
+
+
+f commands in low 
+
+
+
+de distribution, fair 
+security. 
+
+
+
+jMjfgeedence prosign for DEFERRED. Usually trans- 
+^iccuracy. Assigned to messages whose delivery 
+
+
+
+to the addressed 
+
+
+
+lot required until the beginning of the office 
+
+
+
+hours following x!*e day on which filed . 2 . Used in intercept operations 
+
+as a suffix to a frequency to denote "measured" . 
+
+machine cipher . A cipher system in which the enciphering and deciphering 
+are performed by a machine; or a message produced by such a system. 
+
+I 
+
+main table . In certain- code books which have two meanings assigned to one 
+group, that portion of the code which includes the first, or principal 
+meaning only., Cf. auxiliary table . 
+
+major difference. The larger of the two differences obtained when two 
+
+
+
+code or cipher groups are subtracted each from the other by modular 
+
+
+
+arithmetic . 
+
+
+
+
+1 M.' JLMJF MUi 1 J. JLA 
+
+major group . That one of two code or cipher groups which gives the minor 
+difference when the other group is subtracted from it. 
+
+marking impulse . One of the two types of impulses used in teleprinter trans- 
+mission; normally, that impulse during which current flows through the 
+teleprinter receiving magnet. The other type of impulse is the spacing 
+impulse, q.v. 
+
+master card . An IBM card which contains data common to a particular series 
+of cards . 
+
+master decode . The principal and authoritative decoding section of a code 
+book, maintained during its reconstruction . The master decode contains 
+all possible code groups in the understudy, and all partial or 
+
+complete identifications with l^eim^y^jropriate validity indicators . 
+
+matrix , n. A geometric form or y^S*igrn?\l^ transposition systems, the figure 
+or diagram in which the var^ou^sjjbe^ of the transposition are effected; 
+in substitution systejrtffTNfche Wfflre or diagram containing the sequence 
+
+
+
+matrix -recons true tiqifaiaS 
+
+
+
+C-* P sequent V* 
+matrix may be dedfc 
+
+
+
+transposition solution, a diagram of the 
+h the size and shape of the original transposition 
+
+
+
+maze , n. The more or less intricate network of paths along which an electrical 
+current may flow in a cipher machine; specifically, the unit of a cipher 
+machine which intervenes between the input or generating impulse leading 
+into the apparatus and the output or resulting impulse . 
+me, me 8 . megacycle, megacycles. 
+
+
+
+IrlflWlf 
+
+
+
+
+
+
+message externals . Those components of a transmitted message which are 
+
+not encrypted as a part of the message text. Specifically, the entire 
+preamble, the indicators and discriminants, and the postamble if present. 
+message format . The agreed upon arrangement of the various parts of a message. 
+message indicator . That part of the specific key which changes with every 
+message . 
+
+message keying element . See message Indicator . 
+
+message placement . The determination of the correct relative position of 
+key and message . 
+
+message print . An IBM machine reproduction^ q/ messages to facilitate solution. 
+These message prints may vary in f^or orS^i'ttie type of data included, 
+depending upon the nature of thsQjreel^in involved. 
+message serial number . A refereneeu^gmbeH^^a^signed by the originator to each 
+out-going message to facili) jilng, handling, and filing. 
+
+meteorological message . A ^message \ im ng data about atmospheric conditions; 
+
+usually in synoptic 4Q. I-/ 
+
+MF . Medium frequency f^'q'T^yS. 
+
+minor difference . sMe^smaLlir of the two differences obtained when two code 
+or cipher groups aj^e>Bubtracted each from the other by mod-10 arithmetic. 
+minor group . That one of two code or cipher groups which, when subtracted 
+from the other group, produces the minor difference. 
+minuend , n. The key used in the Mnuend method , q.v. 
+minuend method . A method of enciphering code in which the placode text 
+
+is subtracted from the key. In the process of decipherment, the enciphered 
+code text is subtracted from the key. 
+
+mission, radio Intercept . A definite task, duty, or assignment given to an 
+intercept activity or unit . Cf. target . 
+
+
+
+COWFIDEWTIAfc 
+
+
+
+
+
+
+mixed cipher alphabet . A cipher alphabet in which the sequence of letters 
+
+or characters in- one or both of the components is not the normal sequence , 
+
+mixed-length system. A cryptosystem in which the units of cipher text or 
+
+_ _ _ - . , «> 
+
+code text are of irregular or nonconstant length, as for example, a 
+monome-dinome system, or a code system employing both 4-letter and 5- 
+letter groups- . 
+
+mixed-unit , ad j . Applied to codes having groups of different length, (e.g., 
+some 4-character and some 5 -character groups. 
+mnemonic key . A key so constructed as easily remembered. 
+
+MNR . Message center number , q.v. 
+
+MOA . Morse operator analysis, q.vS 
+
+model encode. As used in codebook reconstruction, the encoding section of a 
+
+
+
+previous code 1 book in th^ s^ae* language and of approximately the same 
+
+
+
+type and size as the code 
+guide in the sele 
+solution. - \ V~ 
+
+
+
+
+study. Its function is to serve as a 
+tat ion of the vocabulary to be used in 
+
+
+
+modular , ad j . Pertaining po a modulus, q.v. 
+
+modulo , adv. W ith reppe to a modulus , q.v. (Abbreviated as mod ; e.g. 
+mod-10, mod -26, etc.) 
+
+modulus , n. Scale or basis of arithmetic; the number n is called the modulus 
+when all numbers which differ from each other by n or a multiple of n 
+are considered: equivalent. 
+
+monitor , v.t. To intercept and copy one's own or friendly radio and wire 
+
+1 
+
+transmissions; for the purpose of detecting and correcting violations of 
+regulations . 
+
+
+
+60 
+
+
+
+CONFIDENTIAL 
+
+
+
+monitoring position . The necessary equipment and facilities required to 
+monitor one radio or wire signal. 
+
+monoalphabet ic ity , n. A characteristic of encrypted text which indicates 
+that it has been produced by methods Involving a single cipher alpha- 
+bet or single code book, unenciphered. It is normally disclosed by 
+frequency distributions which display "roughness'', or pronounced 
+variation in relative frequencies . 
+
+monoalphabetic substitution . A type of substitution employing a single 
+
+cipher alphabet by means of which each cipher equivalent, composed of 
+one or more elements, invariably repre&^Jfrs one particular plaintext unit, 
+
+
+
+wherever it occurs throughout any gf^ij^S^jeSeage . 
+
+
+
+monographic , adj . Of or pertaining to | 
+monographic substitution . Enc iphermenv 1 
+
+
+
+nita^iompris ing single characters. 
+
+
+
+institution methods in which the 
+
+
+
+plaintext units are s ingle and their cipher equivalents 
+
+usually consist of single chatacCars . 
+monoliteral system. A j6^tJbiaa p system in which the elements of the 
+
+
+
+cipher componentaces 
+monome, n. A sin^tfre^ig^k. 
+
+
+
+igia characters . 
+
+
+
+monome -dinome systemTS ^jBybstitution system in which certain plaintext 
+
+elements have single-digit cipher equivalents, while others are repre- 
+sented by pairs of digits . 
+
+Morse codes . Various communication, codes, of special and limited usage, in 
+which letters and numbers are represented by specific groupings of dots, 
+dashes, or- combinations of both. 
+
+Morse operator analysis . Any system of cataloguing and identifying the manual 
+keying characteristics of a Morse operator. Abbreviated as MOA. 
+
+
+
+6l 
+
+
+
+C O N^l x x A L 
+
+
+
+multi literal , adj. Of or pertaining only to cryptosystems, cipher alphabets* * 
+and frequency distributions vhich Involve cipher units of two or more 
+letters or characters. See the more inclusive term polygraphic . 
+multillteral cipher alphabet . A cipher alphabet in which one plaintext lettei* 
+
+t 
+
+is represented by cipher unitB of two or more elements . 
+multiliteral system . A substitution system involving one or more multillteral 
+cipher alphabets. /' 
+
+multiple -address message . A message transmitted to two or more addressees 
+each of whom is informed of all the addressees . Each addressee must be 
+indicated as Action or Informat ionv/s^X. 
+multiple -alphabet system. A type ° V qdhp^tutbdn in which successive 
+
+lengthy portions of a message a'r^sgabh monoalphabetically enciphered by 
+a different alphabet; mon^ah^^betiy encipherment by sections. 
+multiple anagramming . A processVf fenagramming simultaneously several transit 
+position messages isame^ iength that have been enciphered with the ' 
+
+same key. _ \ . \^ J 
+
+multiple call , j^qrfl^cliracted to two or more stations, in which the indi- 
+vidual call si&raVi^he stations called are used (in contrast to col- 
+lective call) . 
+
+multiple key . A key whose value has not been uniquely determined. 
+multiplex , adj . Pertaining to a communication^ system permitting the 
+simultaneous use of a number of channels on a single link. 
+multiplex link . A link between one transmitter and one receiver whose 
+
+characteristics are such as to permit simultaneous use of a number of 
+channels with separate transmissions on each channel. 
+
+ECS. A net control station, q.v. 
+
+
+
+62 
+
+
+
+CONFIDENTIA L; 
+
+
+
+A 1 JL A 
+
+
+
+
+
+
+near depth . Depth which, hut for some minor inconsistencies in the progression 
+or identity of keying elements, would be true depth. 
+net , n. A group or a number of groups of stations and links assembled on the 
+basis of common operating characteristics, presumably undefc the admini- 
+strative direction of an immediate common superior headquarters station. 
+net authentication . Identification used on a communication net to establish 
+the authenticity of the several stations. 
+net call sign . A collective call sign used to contact all stations in a net 
+on the same frequency. 
+
+net control station. The station designato^^o direct transmission activities . 
+
+
+
+and enforce discipline within a net^^It\usu^.ly serves the senior unit 
+
+
+
+of the net. Abbreviated as NCS< 
+
+
+
+station 
+
+
+
+bVknown as "control” or "control 
+
+
+
+network , n. The total apparent of a military unit, military 
+
+service of a national J^i^pr afchap organization, including all subordi- 
+
+
+
+nate or related nel 
+
+
+
+noriborrowlng subtracl 
+
+
+
+
+
+
+Direction to the modulus ten; i.e., the tens 
+
+
+
+digits are di^eferdell .1 
+
+noncarrying arithmetic^ . A/lthroetlc to the modulus ten; i.e., the tens 
+digits sure disregarded. 
+
+noncarrying sum . A sum produced in cryptographic (mod 10) arithmetic . 
+
+noncommutat ive , adj . As applied to bipartite matrices , so constructed that 
+row and column coordinates must be read in a certain prescribed order, 
+for example, in a row-column order. 
+
+none r ashing , adj . A term used to describe that feature of the structure of 
+certain cryptosystems which does not permit a plaintext unit to be self- 
+enciphered. 
+
+
+
+nonliteral system . Any cryptosystem designed for the transmission of data 
+in which the symbols or signals produced or accepted are other than 
+the normal alphabetical characters and the digits (e.g. teleprinter, 
+IFF, ciphony, cifax, civision, etc.). 
+
+non-Morse , ad,) . Pertaining to methods of transmission using symbols other 
+than those of the Morse code, (e.g., those of the Baudot alphabet). 
+nonperforated grille . A matrix with numbered cells over which a transparent 
+paper is placed to obtain a transposition square, 
+nonregistered publication. A publicatior^fcieh bears no register number and 
+
+
+
+for which routine accounting is nd 
+nonrepeating key . A key sequence 
+
+
+
+pes pdt repeat within a given message. 
+
+
+
+nonsecret code. A code which has forsltss^sole purpose the abbreviation, not 
+
+/\y 
+
+the concealment, of mess^e^^nchtfcarefore may be of any construction 
+
+
+
+preferred by the issuing ua^t / A brevity code. 
+
+
+
+>f the actual text of the message; as for 
+
+
+
+groups 
+
+
+
+
+haracteristic incorporated in certain codes in 
+are constructed in such a maimer that the transpo- 
+sition of any two letters will not produce another .bona fide code group - 
+in that code . 
+
+normal alphabet . The conventional sequence of letters which form the ele- 
+ments of written language and are used to represent approximately the 
+sounds of the spoken language . The direct standard alphabet beginning 
+with "A" and ending with . 
+
+normal frequency . The standard frequency of a plaintext unit or letter 
+
+relative to other such units or letters, as disclosed by the statistical 
+study of a large volume of text. 
+
+
+
+m 1 1> n 
+
+
+
+
+
+
+
+
+JL ' Xl^JLJl 1 JL J.J. 
+
+
+
+normal sequence . The normal alphabetical sequence of those letters which 
+are used in the written text of any particular language, or any cyclic 
+permutation thereof. 
+
+normal unlllteral frequency distribution . A distribution showing the 
+
+standard relative frequency of single plaintext symbols as disclosed 
+by statistical study of a large volume of text. 
+
+MR . Station serial number , q.v. 
+
+null , n. In cryptography, a symbol or unit of encrypted text having no 
+plaintext significance . 
+
+numerical key . A key composed of a sequonc^of numbers . 
+
+numeric ally-keyed columnar transpositi o n , /transposition system in which 
+the columns of a matrix are teseiS/fr in the order determined by a 
+numerical key. 
+
+numerical table. In a code booli ^of code groups representing numbers, 
+
+dates , and amounts . \ y 
+
+0. United States Milit^^^exTSM^ce prosign for IMMEDIATE* Usually trans- 
+mitted as "00" accuracy. Assigned to important tactical 
+
+
+
+messages pertoft^ng nirectly to the operations In progress and, when 
+necessary, thoseSjje^ages concerning the immediate movement of ships, 
+aircraft, or ground forces. 
+
+O/B . The order of battle , q.v. 
+
+office of record . The agency charged with maintaining the ultimate accounting 
+records for registered documents. 
+
+off-line operation . A method of operation in which the processes of encryption 
+and transmission and/or reception and decryption are performed in separate 
+steps, rather than automatically and simultaneously. 
+
+
+
+Offset, ad j . Applied to messages in depth or repetitions in these, 
+
+
+
+■beginning or occurring at different points of the key. 
+offset duplicate . A pair of messages in depth having identical or nearly 
+identical plain text except that the plain text of one is displaced 
+along the keying cycle in relation to the other. 
+off the cut . As applied to the division of cipher text into polygraphs, 
+beginning elsewhere then with the initial character of a bona fide 
+polygraph . 
+
+one -deep reading . The keying-in of assumjnSk^placode of a single message. 
+one -part code . A code in. which the plsdo^teist elements are arranged in 
+
+
+
+
+
+an*efl by their code groups also 
+order. 
+
+a one-time system, so designed as 
+page of key aB soon as it has been 
+
+
+
+alphabetical or numerical ord^ 
+arranged In alphabetical, or m 
+one-time pad . A form of key 
+to permit the destruction 
+used. 
+
+one-time system . A cryp hqs^TB^tfflf in which the key, normally of a random 
+nature, is ufred''5l8d 
+on-line operation /S^B^t/od of operation in which the processes of, 
+
+encryption and transmission and/or reception and decryption are per- ... 
+formed automatically and simultaneously. 
+on the cut . As applied to the division of text into polygraphs, beginning 
+with the first textual character. 
+
+open code . A cryptosystem in which units of plain text are used as the 
+
+code equivalents for letters, numbers, words, phrases or sentences. The 
+code equivalents themselves, usually words or phrases, can be combined 
+to form the intelligible text of apparently innocent messages. Cf. 
+concealment system. 
+
+
+
+CONFIDENTIA L 
+
+
+
+Xiyui 1 X X 
+
+
+
+• operating signal . In joint and combined usage, a trigraph beginning with 
+"Q" (in international usage, "Q" and "Z") used to facilitate the 
+handling of traffic, to direct net operation, or to convey certain 
+originator’s instructions in a message. Operating signals are also 
+used by aircraft to convey certain operational information such as 
+movements, reports during flighty and meteorological advice. 
+optimum traffic frequency . The most effective frequency at a specified time 
+for ionospheric propagation of radio Waves between two specified points 
+(commonly taken as 85# of the monthly median value of maximum usable 
+frequency for the specified time an^pa^h) . 
+
+
+
+order of battle . Information concern^nCTthe a^^ls of a nation’s military 
+services; (e.g., the units composing ^hem, their disposition and 
+
+
+
+strength, personalities, e*7^ 
+originator, n. The individual 
+
+
+
+fer or hiB officially designated 
+
+
+
+representative) by wJ<6seN|uthd^n;y a message is sent. 
+
+outs tat ion , n. Any staftorrmJigr^han the control station on a link, group, 
+
+overlap, n . 1 . • nt of two or more encrypted texts by the Bame 
+
+or portions of tn^^ame key. 2. A worksheet containing cryptographic 
+text so written that the elements enciphered in the same key will fall 
+in the same column. 3 - In the Hagelin machine, the condition arising 
+when there are two effective lugs on the same bar. — v.t. To super- 
+impose enciphered texts . 
+
+P. United States Military precedence prosign for PRIORITY. Usually trans- 
+mitted as "FP” to ensure accuracy. Assigned to important matter which 
+requires prompt delivery to the addressee. It is the highest precedence 
+designation which may be assigned to nonoperational messages of an admini- 
+strative natiffler\»TTi¥-»-i a 
+
+
+
+C ONFI D EN TI A L 
+
+
+
+padding , n. Extraneous text added to a message for the purpose of concealing 
+its length and beginning or ending or both. 
+page copy. A copy of a message received by teleprinter on a page. 
+page symbol . 1. That part of the indicator in an enciphered code system, 
+indicating page in key book . 2 . That part of a code group indicating 
+the page on which the plain equivalent is to be found. 
+pagination, n. 1. The act or process of assigning identifying Bymbols to 
+the pages of a code book or a key book. 2. The sequence of Bymbols 
+identifying the pages of a code book >5S key book. 
+
+visual communications between 
+
+
+
+panel code . A prearranged code design 
+
+
+
+meahs 
+
+
+
+part of the 
+partlaliy-polygra; 
+
+
+
+
+of specially colored or 
+
+
+
+al. 
+
+
+
+y of a message without changing its 
+
+
+
+ground units and friendly airc^ 
+shaped strips of cloth or other 
+paraphrase , v.t. To change the^ 
+meaning . 
+
+partially periodic repej^-fflfri J A ^ petition in the cipher text caused by two 
+Identical secti ons o^VplhiiT text being enciphered by a repetition of 
+
+
+
+m. Any polygraphic substitution system in which 
+
+
+
+the encipherment of certain members of the polygraphs shows group;rela- 
+tionships; small matrix systems, such as the four-square, two-square and 
+Playfair systems involve such group relationships and are considered to 
+be partially-digraphic systems. 
+
+partition , n. Resolution of an integer into a set of integers (e.g., repre- 
+sentation of the integer 6 as 1 and 5, 2 and 4, 3 and 3) • 
+part message . A message divided into two or more parts, eachcf which is sent 
+as a separate transmission. 
+
+
+
+68 
+
+
+
+CONFIDENTIAL 
+
+
+
+
+tent rex 
+
+
+
+A repetition which is externally visible in the original 
+
+
+
+cryptographic text. 
+
+
+
+aatent s? 
+
+
+
+bry. See 
+
+
+
+pattern . See idiomorph . 
+pentagraph , n. A set of five letters. 
+pentanome , n. A set of five digits . 
+
+period , n. The number of elements (letters of a cryptogram, consecutive steps 
+of a wheel, etc.) that must occur before cyclic properties become manifest; 
+periodic , adj . Characterized by cyclic usage, as of key in a periodic Bystem , q.v. 
+
+
+
+periodicity, n. In its cryptologic appliCi 
+
+
+
+ting cyclic phenomena. > 
+
+periodic substitution . Periodic poljreilf 
+
+
+
+ic^tiAn, tt 
+
+
+
+the quality or state of exhibi- 
+
+
+
+Itic substitution. A method of 
+
+
+
+encipherment involving the 
+
+< 
+
+called repeating key method 
+periodic system. A ByBtem 
+
+
+
+Lie usw a plurality of alphabets . Also 
+
+
+
+graphic treatment 
+sultB in the prods 
+
+
+
+licn^t^e enciphering process involves a crypto- 
+■repetitive in character and which usually re- 
+
+
+
+srmutation table, 
+
+
+
+lBtiqiNqfTfcyclic phenomena in the cryptographic text, 
+babas designed for the systematic construction of code 
+
+
+
+groups . It may akqe^Be used to correct garbles in groups of code text . 
+srsonality file . A file containing the histories of all personalities appearing 
+in intercepted communications, together with the circumstances in which 
+they were mentioned. 
+
+
+
+CONFIDENTIA L 
+
+
+
+phase , n. 1. A period or interval. 2. The relationship between two sequences 
+(of text, of key, or of text and key), each having its own cycle. Such 
+sequences are in phase with each other whenever the starting points and 
+the successive elements of the periods coincide, and out of phase when- 
+ever the elements of the period do not. When a message is affected by 
+two periods, e.g., code -group length and a transposition key length or 
+additive key length, those portions of it written on the cycle of the 
+
+
+
+product of the two periods are said to be in phase. 
+
+
+
+best . A test applied to a frequreofey distribution to determine its 
+
+
+
+monoalphabeticity. See also ka 
+
+
+
+nstant and kappa random constant 
+
+
+
+That component/bf^fiamnication security which results 
+
+
+
+from all physical measure^necessH^J^o safeguard classified communica- 
+tion equipment and mater r^L^wn^^bess thereto by unauthorized persons 
+pibal , n. A weather repm-t, baapW oV pilot-balloon observations of upper 
+winds . (From "pi^ sfO” iU&Jnoon.") 
+
+
+
+pilot letter . A leij^a^jffHgir^s usually followed by a certain letter; the 
+
+
+
+first of t 
+
+
+
+placode , n. A port 
+
+
+
+
+f an invariable digraph. 
+
+word used to designate plain or unenciphered code. 
+
+
+
+plain, adj . Of or pertaining to that which is unencrypted . See also plaintext 
+plain code . Unenc-iphered code. 
+
+plain component. That sequence of a cipher alphabet which comprises the 
+
+% 
+
+sequence of plaintext symbols. 
+
+
+
+plain component equivalents . In connection with the method of completing the 
+
+
+
+plain component sequence, the plaintext equivalents for cipher units 
+derived from an arbitrary juxtaposition of the components of a cipher 
+alphabet . 
+
+
+
+C 0NPS5?ET^¥AL 
+
+
+
+plaindress , n. A type of message in which the complete address is contained 
+in the heading. Cf. codress . 
+plain language . Plain text , q.v. 
+
+plain text. 1. Text or language which conveys an intelligible meaning 
+
+in the language in which it is written, with no hidden meaning. 2. The 
+intelligible text underlying a cryptogram. 
+plaintext , adj . Of or pertaining to that which conveys an intelligible meaning 
+in the language in which it is written with no hidden meaning; as the 
+plaintext equivalents. Often shortened to plain . 
+
+Playfair system. A type of digraphic substij^^on using a single matrix 
+normally of 25 cells . 
+
+Poisson table . Table of the Poisson d 
+table containing probability 
+tions expected to obtain in s' 
+to determine whether or j*e<t the 
+
+
+
+
+
+
+ion. A type of mathematical 
+de to the phenomena of repet i- 
+andom text; used in cryptanalysis 
+tit ions observed in a given sample 
+repetitions or accidental (random) 
+
+
+
+of cryptographic tex 
+repetitions . 
+
+polyalphabetic substfltif^Lon ) |fc. type of substitution in which the successive 
+plaintext elements’^ ^message, usually single letters, are enciphered 
+by a succession of different alphabets which may be used more than once 
+and which are used in a predetermined order. 
+
+polygraphic , adj. Of, pertaining to, or connected with any groupings comprising 
+two or more letters or characters . 
+
+polygraphic substitution . Encipherment by substitution methods in which the 
+plaintext units are regular length groupings of more than one element. - 
+
+
+
+71 
+
+
+
+CONFIDENTIAL 
+
+
+
+1JL/U1 1 M. 
+
+
+
+partite alphabet . A multiliteral alphabet in vhich each letter of plain 
+text is represented by a cipher unit of two or more characters whose 
+
+
+
+functions are clearly defined. See 
+
+
+
+alphabet, tripartite alpha- 
+
+
+
+bet . 
+
+Porta system . A forerunner of the Vigenere syfetem of polyalphabetic substi- 
+tution, this system employs 13 alphabets formed by sliding the second 
+half of the normal alphabet against the first half. Each alphabet may 
+be identified by either of two key letters. 
+position assignment . That number of intercept targets or monitor targets which 
+can be adequately covered by one ^o^r^onSjanned 24 hours a day. 
+postamble, n. The Information tranemwy^e? Immediately following the actual 
+
+
+
+text of a message. Date, up cotot> and cryptographic indicators are 
+
+
+
+frequently transmitted in\fch^^o^^ible . 
+>st-card grille. See reo*«ngule« grille. 
+
+
+
+practice traffic . Trainm 
+
+
+
+cations personr 
+
+
+
+trafftts sent for the purpose of drilling communi- 
+idling traffic; distinguished from control or 
+
+
+
+dummy traffic, >n waidh there is intended deceit . 
+
+
+
+preamble , n. The ini 
+
+
+
+tion transmitted just before the text of a message. 
+
+
+
+The preamble generally includes the station serial number, the group 
+count, the file date/time, precedence indicator, and address. Cf . heading . 
+prearranged message code . A code adapted to the use of organizations which 
+require special or technical vocabulary and composed almost exclusively 
+of groups representing complete or nearly complete messages. 
+precedence designation . A designation assigned, usually by the originator, to 
+each outgoing message, indicating its degree of urgency; thus, precedence 
+designations indicate the order in which messages are to be handled. 
+
+
+
+TfkJl 
+
+
+
+bTTKMTM 
+
+
+
+preliminary check coverage . The assignment of Intercept operators to cover 
+all transmissions on a link, group, or net for a prearranged length of 
+time for the purpose of compiling information as to the stations’ opera- 
+tion, echelon, relative importance, and other data concerning the cir- 
+
+
+
+cuit. 
+
+
+
+r . See initial key. 
+
+
+
+primary frequency. A frequency assigned for normal use on a particular 
+
+
+
+circuit. 
+
+
+
+primary period . See basic period . 
+
+primary sequence . The basic sequence fiym^iich other sequences may be 
+
+derived or which may be slid aga^^t basic sequence to produce 
+
+secondary alphabets . V/ 
+
+priming key . See Initial key . 
+
+priority message . A message bs&r^fc precedence prosign P, q.v. 
+
+
+
+rivate code. A code conph«ctes\f<y the exclusive use in correspondence 
+
+
+
+of a group of ind^ri 
+
+
+
+company. 
+
+
+
+Drobable word . Pis 
+
+
+
+rtT\sMtaed or known to be present in a cryptogram. 
+
+
+
+A crib. ( V J 1 
+
+probable -word methoa Syjgire method of solution involving the trial of plain 
+text assumed to be present in a cryptogram. 
+procedure analysis . That component of transmission security which determines 
+trends in security and procedure violations, maintains a continual check 
+on such occurrences, and initiates remedial and corrective measures when’ 
+
+
+
+and where necessary. 
+
+procedure message. A short, plaindress message used to expedite the handling 
+
+
+
+of traffic 
+
+
+
+procedure sign > Prosign. An abbreviated code signal used to convey the 
+most frequently used orders, instructions, requests, and information 
+related to communications. Procedure signa are supplemented by opera- 
+ting signals . 
+
+procedure word , A word or phrase limited to radiotelephone procedure and 
+used in lieu of a prosign. 
+
+proforma message . A message in standardized form, designed to convey intel- 
+ligence by conventions of arrangement and abbreviation. 
+progressive alphabet system . A periodic i^yalphabetic substitution system 
+in which the successively used c ijl^walfc'shabets are produced by succes- 
+sively sliding a pair of sequyfc^ytorougK all possible Juxtapositions . 
+prosign , n. Procedure sign , q.v. 
+proword , n. See procedure 
+
+pseudo-code system. A cipher system which produces a cryptogram whose groups 
+
+
+
+resemble those proceed 
+aseudo -polygraphic systeihv 7 
+
+
+
+a code system. 
+
+7 
+
+jlygraphic substitution system in which at least 
+
+
+
+one of the Let 
+
+
+
+publication correc 
+
+
+
+;*£r!?VLi 
+
+
+
+each polygraph is enciphered monoalphabetically. 
+Joint or intra-service amendment which is issued 
+
+
+
+as a message, letter or memorandum, to meet operational requirements. 
+
+publication status . Past, present or future state of effectiveness of a 
+publication. 
+
+pyrotechnics code . A prearranged code in which meanings are assigned to the 
+various colors and arrangements of pyrotechnics . 
+
+Q. A symbol used in D/F bearing observation classification to indicate, 
+"insufficient time for accurate measurement or classification" . 
+
+Q code. A code made up of Q signals adopted by the International Telecommuni- 
+cations Conference at Cairo, 193? • 
+
+
+
+rt u 
+
+
+
+Q signal . See operating signal . 
+
+qulnquelltcral alphabet . A cipher alphabet in which each plaintext letter 
+is represented by a 5-character equivalent. 
+
+R. United States Military precedence prosign for ROUTINE. Usually trans- 
+mitted as "RR" to ensure accuracy. Assigned to messages which must be 
+delivered to the addressee without delay, but are not of sufficient 
+importance to justify a higher precedence. 
+
+radar , n. Radio equipment for the determination of a target’s direction and 
+range. Derived from the phrase, "radio detecting and ranging". 
+
+radar deception . The radiation or reradi^reioc of radar emissions in a manner 
+intended to deceive the enemy. /S \ y 
+
+radio countermeasures . All measuresS^e^Ao reduce the military effectiveness 
+of enemy equipment employinC^htS'^ff efe^Kl by electromagnetic radiations. 
+Radio countermeasures (RCM^^^^H^de jamming, RCM deception, ROM search 
+or reconnaissance, o^th^colAeo^ion, analysis, and evaluation of informa- 
+tion pertinent to erai nation of the resulting RCM intelli- 
+
+radlo deception .' TS^tedllajcion or reradiation of radio waves in a manner 
+intended to deceivb^he enemy. 
+
+radio discipline . Enforcement of the rules and regulations for the use of 
+radio . 
+
+radio fingerprinting . The process of identifying a radio station by a study 
+of the characteristics of the emissions of its transmitter. Abbreviated 
+
+
+
+radiogonlometry . See direction finding. 
+
+radioprinter . A radio teleprinter. See teleprinter . Abbreviated R/p. 
+
+
+
+c O 
+
+
+
+radio procedure . Standardized methods of transmission, used "by radio operators 
+to save time and prevent confusion. By ensuring uniformity; radio pro- 
+cedure increases security. 
+
+radio silence . The shut-down of radio transmission within a command as 
+ordered by the commander. 
+
+radio spectrum . The entire range of radio frequencies. 
+
+radio station . One, or a number of co -located transmitters and receivers 
+
+operating in any number of radio links, but serving the same organization. 
+radiotelegraphy , n. Transmission of telegr^>hic signals by radio. Abbreviated W/T. 
+radiotelephony, n. Transmission of vc^cs^Hgn^s by radio. Abbreviated R/T. 
+
+
+
+radiotelephony , n. Transmission of vd 
+rail-fence transposition . A transp/si^ 
+is written alternately in two lira 
+
+
+
+system in which the plain text ■. 
+toe above the. other and the cipher 
+
+
+
+text is taken off as the the resulting diagram. 
+
+
+
+RAM . Rapid analytical macfrijvery,\q Si . 
+
+
+
+random , adj. 1. In mai^eri^Ldt j - p ertaining to unsystematic or chance variations 
+
+
+
+from an expected 
+
+
+
+[\jTSIn cryptanalysis, pertaining to any situation 
+
+
+
+in which a s^-1%stida3l analysis will show variations from a calculated 
+expected norm i?H^sy!nguishable from those due to chance, provided that 
+this analysis is not correlated with the cryptographic system involved .- 
+Thus, in a search for characteristics of the cryptographic system statistical ^ 
+analyses are made, and those which show variations not likely to have been 
+produced by chance may suggest the nature of some element of the system. 
+
+The statistical analysis to be successful must be designed to provide 
+for the possibility that variations not likely to be those produced by 
+chance will appear and thus, by inference, must be correlated with the 
+cryptography. The norm is calculated on the assumption that chance 
+variation is present, and it is Ttaom this standard that variations are 
+measured. -r rmT a t 
+
+
+
+randomize , v.t. 1. To give random characteristics to; to allow or cause events 
+to occur or to appear according to no order other than that determined 
+by chance or accident; to select elements of a population at random. 2. 
+Loosely, to re-arrange so as to exhibit no evident law of formation. 
+randomized code . A two-part code , q.v. 
+
+random text . Text which appears to have been produced by chance or accident, 
+having no discernible patterns or limitations . 
+rapid analytical machinery . Any high-speed cryptanalytic machinery, usually 
+electronic or photoelectric in nature. Abbreviated RAM. 
+
+
+
+raw traffic . Intercepted traffic showing 
+communication intelligence purposes^ 
+
+
+
+fvidence of processing for 
+idSorting by clear address ele- 
+
+
+
+ments, elimination of unwanted and the inclusion of a case 
+
+number and/or an arbitrary tfcgff lc nes»nator . 
+
+ROM . Radio countermeasures , q.\ 
+
+
+
+RCM deception . The radiat^ps^or rl^s^iation of electromagnetic waves in a 
+manner intended to ^e ew enemy. (This does not include friendly 
+
+traffic manipula^+oisoKro^nunication security.) 
+
+RCM intelligence . ^A^. intelligence derived from the study of radio counter- 
+measures . / 
+
+RCM reconnaissance . See RCM search . 
+
+RCM search . The search for enemy-generated radio waves to determine existence, 
+source, and pertinent characteristics. 
+
+read , v.t. 1. To decrypt, especially as the result of successful cryptanalytic 
+investigation. — v.i. To yield intelligible plain text when decrypted. 
+
+readability , n. 1. Capability of being understood, as, the readability of 
+
+radio signals. 2. The extent to which cipher or code messages of a parti- 
+cular system can be read. 
+
+
+
+readable , adj . Pertaining to those code and cipher systems in which sufficient 
+plaintext values or keys have been recovered to permit the reading of 
+messages encrypted in these systems . 
+
+readable system . A system whose basic elements and specific controls have 
+
+been solved to the extent that messages can be read without further crypt- 
+analysis. Cf. exploitable system. 
+
+readdress , v.t. To direct a message to addressees not included in the original 
+address without rewriting or re -enciphering the message. 
+reader , n. A language specialist who deal^Vith a foreign language in its 
+written form . 
+
+receipt , n. A communication sent b^^jW^Mce^fiig station indicating that a 
+message or other transmission heuS^Deeo satisfactorily received. 
+receipt method . The method of^r^^mfew^on in which the transmitting station 
+requires a receipt for eachNof ^ts transmissions . Also known as "R" 
+(Roger) method. 
+
+reciprocal , n. 1. A n e le h^nt^vnrch bears a reciprocal relation to another 
+
+element. 2 .^^/''q^Staent of unity divided by any quantity. — ad,) . Inter- 
+changeable as u^praifi-cipher relationships; (e.g., in a reciprocal 
+alphabet, if Ap » B c , then Bp must equal Aq) . 
+reciprocal cipher alphabet . A cipher alphabet in which either of the two 
+sequences may Berve as plain or cipher since the equivalents exhibit 
+reciprocity. 
+
+{ 
+
+reciprocity , n. As used in cryptology, interchangeability of plain-cipher 
+relationships (e.g., Ap = B c and Bp * Aj). 
+recognition signal. See authenticator . 
+
+
+
+
+reconstruction matrix . A skeleton matrix employed In the solution of crypto- 
+systems Involving a substitution matrix. It aids in the correct relative 
+placement of plaintext or ciphertext values as recovered, and thus 
+often affords clues as to the internal arrangement of the original matrix. 
+recording , n. A representation of an intercepted radio transmission by any 
+means other than a -written record, (e.g., magnetic, inked, or punched 
+tapes; disks, wire, etc.). 
+
+recover , v.t. To solve; to reconstruct (e.g. cryptographic data or plain text), 
+recovery, n. 1. The process of making encrypted text intelligible through 
+
+
+
+cryptanalysis. 2. Any cryptographic ydal^L or plain text obtained through 
+cryptanalysis . 
+
+rectangular grille . A grille differi^g'^ft’oft the ordinary grille in that the 
+apertures are greater in wWrtfe^lmiiS^Jleight, and thus permit the 
+
+
+
+inscription of several letb 
+
+
+
+
+
+
+ord in the space disclosed on the 
+
+
+
+grid by each perforatifJJr^cf ttte grille . The grille itself admits of but 
+two positions with ^^^vers^ side up and two with its reverse side up. 
+Also called poshes 
+
+Reduction square . v^V Si^r^x Employed in cryptanalysis to reduce cipher elements 
+to a more usable IHuTX without altering their interrelationships, (e.g., 
+to deduce a multiliteral cipher to uniliteral terms). 
+reflector , if £ 1. An element of a cipher machine, usually with a single set 
+
+of contacts wired together in pairs, each of which establishes a reciprocal 
+circuit through the maze. 2. Specifically, in- a wired rotor machine of 
+the Enigma 4y|ie ; that particular irbtor which bears on one side the usual 
+2 6 contact points and bears on the othetf Bide 13 wires which connect these 
+2 6 points into 13 sets of two points each; thereby effecting a reciprocal 
+circuit. Sometimes called a reversing wheel. 
+
+
+
+
+regional call sign . A collective call sign used to contact a number of specific 
+
+stations in a net or group, usually within a particular geographic area. 
+
+> 
+
+registered document. See registered matter . 
+
+
+
+registered matter . Any classified matter registered usually by number and 
+periodically accounted for. 
+
+register number . A number assigned to registered matter for accounting purposes. 
+relate columns . See , equate columns . 
+
+related alphabets . Any of the several secondary cipher alphabets which are 
+
+
+
+produced by sliding any given pair of. 
+
+
+
+components against each 
+
+
+
+other . 
+
+
+
+relative , adj . Pertaining to code wroy 
+provisional encipherment has beerr 
+
+
+
+Indicators, etc. from which a : , 
+ted; reduced to provisional, not 
+
+
+
+time, figures or letters . 
+
+relative code . Code text from whsch^n encipherment has been removed in 
+
+relative terms, to plain-code text, so that the groups 
+
+differ from the asiaja-tv oNLglnal plain code by an interval constant for 
+
+
+
+every group 
+
+
+
+
+
+
+difference between two relative code groups is the 
+
+
+
+same as that bet^ei^cheir plain-code equivalents . 
+
+relative frequency . In its cryptologic application,, the ratio of the actual 
+occurrences of a textual element to the number of possible occurrences 
+within a given text. 
+
+relay message . A message which reaches its destination by passing through 
+one or more intermediate stations . 
+
+releasing officer . A properly designated individual who may authorize the 
+sending of a message for and in the name of the originator. 
+
+
+
+
+
+
+repaginate , v.t. To supply a new sequence of page symbols for a code book 
+or key book. 
+
+repaginated code . A code in which the pages of the code book have been 
+assigned a new sequence of identifying symbols. 
+repagination , n. The assignment of a new Bet of symbols identifying the 
+pages of a code book, or key book, 
+repeating -key method. See periodic substitution. 
+
+
+
+repetetive encipherment . A type of encipherment in which the primary cipher 
+text of a cryptogram is subjected to further encipherment with either 
+the same or a different system. Doublelfrransposition is a frequently- 
+encountered example of repetitive emM^heratot . 
+rephase, v.t. To put back in phase. . 
+
+
+
+resultant period . See apparent period . 
+
+
+
+reversed standard cipher alphabet • c ippar alphabet in which both the 
+
+plain and cipher components Ae Che normal sequence, the cipher component 
+
+
+
+being reversed in ■ £ram the plain component. 
+
+
+
+reversibility, n. The 
+
+
+
+text digraph 
+
+
+
+
+
+
+^ct^istic of the relationship between a plain- 
+pher digraph equivalent which permits the ele- 
+
+
+
+ments of each toN^j^versed (e.g., ABp = CD c and BAp s DCc). 
+
+revision , n. A complete publication, superseding all copies of the publi- 
+cation revised. 
+
+revolving grille . A type of grille in which the apertures are so distributed 
+that when the grille is turned successively through four angles of 90 
+degrees and set in position on the grid, all the cells on the grid are 
+disclosed only once. Also called rotating grille . 
+
+RFP. radio fingerprinting, q.v. 
+
+
+
+"R” (Roger) method. See receipt method. 
+
+
+
+CONFIDENTIA L 
+
+
+
+
+room circuit . A circuit which has no connection with outside stations 
+and which is used for encipherment and decipherment in off-line 
+operation . 
+
+rota , n. A table of call signs, frequencies, or other communication items 
+used in cyclic order. 
+
+rotating grille . See revolving grille . 
+
+rotation , n. The method of changing call signs or frequencies within a 
+given initial allocation. 
+
+rotor , n. A disk which is designed to r ot thin a cipher machine and 
+
+
+
+which controls the action of some meN^j^p component or produces 
+
+a variation in some textual or ke^nk^rement , 
+rotor alignment . . The setting of rpfe«j^vj^kraference to a bench mark. 
+rotor order . Order in which the uwfc^?h^^able rotors of a cipher machine 
+are arranged on a parttoettar &a\ during a specified period, 
+rotor setting. A letter 5fe»fcero^the rim of a rotor serving to indicate 
+
+
+
+its position at cc 
+roughness , n. That %h£ 
+
+
+
+enciphering, 
+
+otarnstic of. a frequency distribution where there 
+
+
+
+is displayed in theN^^ribution a pronounced variation in relative 
+frequencies of the elements considered. Cf . smoothness . 
+route transposition . A method of transposition in which the ciphertext 
+
+equivalent of a message is obtained by transcribing, according to any 
+prearranged route, the cells of a matrix into which the message was 
+inscribed earlier according to some other prearranged route. 
+routine message . A message bearing the precedence prosign R, q.v. 
+routing , n. The process of determining and prescribing the path or method to 
+be used in forwarding messages . 
+
+
+
+1 IJL/U1 111 
+
+
+
+routing designator . A symbol or group of symbols appearing in a message 
+preamble, serving as a guide to radio stations in routing the message 
+to the final recipient. 
+
+row , n. As applied to a matrix, a horizontal sequence of letters or 
+numbers or groups thereof. 
+
+row break . In enciphered code solution, the determination of the beginning 
+and end of the rows constituting an additive page. 
+row coordinate . A symbol normally at the side of a matrix, or cryptographic 
+table, identifying a specific row of cells, used in conjunction with a 
+column coordinate to specify an indi^mal cell in the matrix or table* 
+Also called row indicator . 
+row designator . See row coordinate ^ Vy 
+row indicator . See row coordinate^ 
+
+R/p . Radioprinter, q.v. 
+
+R/T . Radiotelephony , q.vy“N. \ N 
+run , n. See listing . *" 7 
+
+
+
+running key* In po] 
+
+
+
+abe^iy ciphers , a non-periodic key arbitrarily 
+
+
+
+prepared or,\brSined farom a book or any continuous text. 
+
+
+
+running -key system. 
+
+
+
+Dstitution system employing a running key, q.v. 
+
+
+
+S. Strength (of radio signals). See signal strength * 
+
+sampling coverage . The assignment of intercept operators to take periodic 
+samples of transmissions on a certain frequency. 
+scanner , n. A reader who examines foreign language texts to assess their 
+intelligence content. 
+
+schedule , n. A time during which a link, group, or net is known to work. 
+
+
+
+83 
+
+
+
+CONFiMMWr 
+
+
+
+scramble , v.t. 1. In telephony, to make telephony unintelligible to casual 
+Interception. 2. In cryptography, to mix in random or other fashion. 
+
+search, v.t. To sample transmissions on various frequency bands in an 
+
+effort to find stations or other communications activities which are 
+not already under regular coverage assignment. 
+
+search coverage . The assignment of intercept operators to listen continually 
+on a given band of frequencies in order to discover new target frequencies 
+in use. 
+
+secondary alphabet . An enciphering or deafptffering alphabet resulting from 
+the juxtaposition of two primary at least one of which is 
+
+mixed. A secondary alphabet, f erent in appearance from the 
+
+primary alphabet, is cryptojjj^phicefSiyy quivalent to the primary alpha- 
+bet. \ 
+
+Ov 
+
+secondary frequency . A fr^w^ncy \ssVgned for use on a particular radio 
+circuit when primal^ becomes unusable for any reason. 
+
+SECRET . A security cSserew^xSSafcSon pertaining to defense information or 
+
+material, theAu^tharjJzed disclosure of which could result in serious 
+damage to the narStfn. 
+
+secret ink . Any of several chemicals used for writing or printing which 
+have the property of being initially invisible to the naked eye or 
+of becoming so after a short time . Also called invisible ink or 
+sympathetic ink. 
+
+secret language . Text which conveys no intelligible meaning in any language 
+or which conveys an intelligible meaning that is not the real, hidden 
+meaning » 
+
+
+
+84 
+
+CONFIDENTIAL 
+
+
+
+
+secret writing . 1. Visible writing in secret language. 2. Invisible 
+
+writing . 
+
+sectional , adj . Pertaining to a code so constructed that a particular 
+
+class of code groups represents a particular class of plaintext units; 
+
+(e .g . , all code groups beginning with a given symbol represent numbers, 
+spelling groups, etc.). 
+
+self-evident code . A code whose meanings are self-evident owing to a 
+visible connection between code groups and their meanings, (e.g., 
+
+ADV means advance, ADR means address, etc.). 
+separator , n. 1. A word separator , q.v,^/ A stationary element between 
+moving rotors in a wired-rotor ci^p^er which comprises a ring 
+
+of contacts on which the contad&s'Vf^he rotors impinge . 
+
+sequence , n. An ordered arrang^niej^of ’’Hj^ols (letters, digits, etc.) 
+
+* 
+
+having continuity. SpecifHteeJ^5y«4#e members of a component of a cipher 
+alphabet in order; tl^-b^ibol^^i a row, column, or diagonal of a 
+cipher square in ofo£ 
+
+
+
+serial number . 1 . 
+
+
+
+for the p 
+
+
+
+
+
+tters or key figures In order, 
+gned to a document by the originating office 
+ting the cppies prepared and of controlling 
+their distributiNi.. Xlt is not to be used for accounting purposes and 
+therefore is not to be confused with a register number. Often called 
+a "copy number". 2. The number of a message in a series, 
+seriation, n. A process of inscribing plain or cipher elements in two rows 
+
+
+
+and subjecting the vertical pairs to further cryptographic treatment. 
+service message . A message between communications personnel pertaining to 
+any phase of traffic handling, communication facilities or circuit 
+conditions . 
+
+
+
+CONFIDENTIA L 
+
+
+
+C O NF f iM^ T fA L 
+
+
+
+setting , n. The arrangement . and alignment the Variable elements of a 
+cryptographic device or machine at any moment daring its operation. 
+
+set-up , n. Arrangement or character of those parts of a cipher machine, 
+
+(e.g., wheel patterns, wiring systems) which normally remain unaltered 
+for comparatively long periods of time or for the encipherment of large 
+numbers of messages. 
+
+SHF , Super-high frequency , q .v , 
+
+shift , n. 1. Difference in position of text jn messages, offset as regards 
+
+the key. 2 . Slide. 3- In the operot^Nn of a teleprinter, the mechanical 
+action which takes place when the moved from the letters to 
+
+the figures position, or vice 'Aw*/*) 
+
+shoran , n. An abbreviated name for range radio navigation system. 
+
+It is a precision posit io^ f^^ng*T5ystem using a pulse transmitter 
+and receiver and two toanspdjtde^ beacons at fixed point b . 
+short title . A short, ^a^i flying uombina bion of letters and/or numbers 
+assigned to a d oc\irae fr»t o^dovlce for purposes of brevity and/or 
+security. / /"N A 
+
+signage, n. As use^Sdu^a^ptoiiiathematics , a measure of the standard 
+deviation from normal, expressed in terms of sigma (<^). 
+
+signal center . See communication center . 
+
+signal communication . The means of conveying information of any kind 
+
+from one person or place to another except by direct unassisted conver- 
+sation or correspondence. 
+
+signal Intelligence . A term formerly applied to communication Intelligence , 
+with which it is synonymous . 
+
+Signal Intelligence Service . Formerly, an organization of the Army Signal 
+Corps which was charged with the functions now performed by the 
+
+
+
+Array Security Agency. 
+
+CONFIIMENTIAfc r 
+
+
+
+signal operation instructions . A series of -orders Issued periodically 
+for technical control and coordination of the signal communication 
+activities of a command. The SOI include related subjects such as 
+instructions for the use of codes, ciphers, and authentication systems; 
+and an Index of the special signal communication instructions issued 
+by an organization in the field. Abbreviated SOI. 
+signal security . Communication security , q.v. 
+
+signal strength . The relative audibility of a station’s transmission, 
+expressed on a numerical scale fron^^st to greatest audibility. 
+
+
+
+s ignlf leant , adj . 1 . Having meaning 
+
+
+
+Mir^icance. 2. Exhibiting some 
+
+
+
+feature or limitation which c/xit 
+
+
+
+jasorrably be attributed to chance 
+
+
+
+sign off. A signal denoting the ter 
+
+
+
+simple substitution. Monoalpka' 
+
+
+
+
+
+
+
+jn of a transmission. 
+
+
+
+literal substitution. 
+
+
+
+simple transposition. S ee , s ingle 
+
+
+
+simplex circuit. See^M^es-Iiak. 
+
+
+
+simplex Unit. A r* 
+
+
+
+Ita constituted that communication between the 
+
+
+
+two stations cs possible in only one direction at a time. Within this 
+
+
+
+definition, tnS^e^re at least two distinct uses of the phrase: (l) 
+
+To describe that system of frequency allocation, on a link of any 
+transmission type, in which only one frequency is assigned for communi- 
+cation in either direction; and (2) to describe a link using single- 
+channel teleprinter equipment. 
+
+simplex operation. A type of operation used on a simplex link, q.v. 
+
+
+
+single position . A receiving terminal manned by one operator. 
+single -station call . A station call-up wherein one call only (either the 
+sending station's call or the receiving station’s call) is used by 
+
+
+
+the calling station. 
+
+
+
+single transposition ., A transposition in which only one inscription and 
+one transcription are effected. 
+
+S .I»T. Special identification technique s , q.v. 
+sked . Schedule , q.v. 
+
+skip zone . The space or region within the range of transmission wherein 
+radio signals from a transmitter are not received. It lies between 
+the farthest point reached hy the ground wave and the nearest point 
+at which sky waves come hack to earth. Also known as dead space. 
+sky wave . The portion of a transmitted radio wave which is radiated outward 
+into space. Cf. ground wav e. 
+
+slid depth . The condition arising when roelSM^^s>re enciphered with the 
+same key hut offset with regard +£> ^ydSkey. 
+slide , n. 1. In the Hagelin machi^, the*sjeS>tive displacement between 
+the alphabet wheel and the . 2. The interval between 
+
+two different juxtapositions oXtxe same cipher and plain components. 
+
+
+
+v.t. To match on e/xSinii-tL* 
+
+
+
+text or a distribution against another 
+
+
+
+sequence of tex-^^ir-ss^s^^.iution . 
+
+slide code . A codeXrl%eh Varied from time to time by sliding the code 
+groups against thfSnL^i equivalents . 
+slide run . An IBM listing of the results of sliding one text against 
+another . 
+
+sliding , n. The process of testing possible placements of cipher on key 
+by deciphering at all possible juxtapositions. 
+sliding components . Components which are slid against one another In the 
+process of enciphering or deciphering. 
+
+
+
+Tniil 
+
+
+
+11 u 
+
+
+
+
+
+
+sliding strip . A strip of cardboard or similar material which bears a 
+sequence and which can be slid against other such strips to various 
+juxtapositions . 
+
+smoothness , n. That characteristic of a frequency distribution where there 
+is displayed in the distribution no pronounced variation in relative 
+frequencies of the elements considered. Cf. roughness . 
+
+SOI. Signal operation instructions, q.v. 
+
+
+
+solution , n. In its cryptanalytic application, the process or result of 
+solving a cryptogram or crypto sysdremN^v cryptanalysis . 
+solve , v.t. To cryptanalyze . To furfc&the text of encrypted communi- 
+
+cations by cryptanalytic proc^sseq^ or to recover by analysis the keys 
+and the principles of th^T^acgl^dn-on. 
+
+SOP . Standing operating procc 
+
+spacing impulse. One tv<Xtjpes of impulses used in teleprinter 
+
+
+
+transmission; nor^aixv ^ ty c impulse during which no current flows 
+through the j^ e^p r^ct^e/receiving magnet . The other type of impulse 
+
+
+
+is the marP 
+
+
+
+LmwuJJse . 
+
+
+
+special check coverag e The complete cover of a case number for a limited 
+period of time. 
+
+special identification techniques . A collective term including Morse operator 
+analysis, radio fingerprinting, and direction finding. Abbreviated 
+
+S.I.T. 
+
+special purpose system . Specific cryptographic aids intended only for 
+
+certain types of messages. They include General and Auxiliary Signal 
+Books and Signal Vocabulary, Authenticator Systems, Aircraft Codes, . 
+Fighter Director Vocabulary, etc . 
+
+
+
+fig 
+
+
+
+spelling group 
+
+
+
+
+
+
+
+C AL 
+
+
+
+starting point . A point in a key where enciphering or deciphering begins . 
+star with lateral . The system of radio frequency usage wherein a number 
+of stations operate on the same frequency with some degree of lateral 
+communication. Cf. star . 
+
+station authentication . A security measure designed to establish the 
+authenticity of a transmitting or receiving station. 
+station indicator . See base number . 
+
+station serial number . A message reference number assigned by the trans- 
+mitting operator to each message transmitted in direct communication 
+to another station. Abbreviated NR. /> 
+
+
+
+stator , n. An endplate , q.v. 
+stencil , n. See grille . 
+
+stereotype , n. A word, number, plw^ge, E&^r eolation, etc., which as a 
+result of language habits, ■‘W>^ robability of occurrence. 
+
+
+
+especially at the begii 
+
+
+
+stereotyped messages . Retat 
+
+
+
+or^n^Lng of a message. 
+iiLTVftted messages which are recognizable as 
+
+
+
+such because of 
+
+
+
+itiwe^fcharacteristics of the underlying plain 
+
+
+
+strip , n. Sliding stripy g^v. — v.t. To remove key, especially from 
+enciphered code. 
+
+strip-cipher device . A cipher device employing sliding alphabet strips. 
+stripper, n. One who recovers keys. 
+substitution alphabet . See cipher alphabet . 
+
+substitution cipher . 1. A cipher system in which the elements of the plain 
+text are replaced by other elements . 2 . A cryptogram produced by 
+
+enciphering a plaintext message with a substitution system. 
+
+
+
+
+gotfeifitittlon system . A' system in which the elements of the plain or code 
+t’ext are replaced by other elements . 
+subtractive method. See minuend method. 
+
+
+
+subtractor , n. A number or series of numbers from which numerical code, 
+cipher, or plain text is subtracted in the process of encipherment. 
+suffix call sign . 1. A call sign normally associated with a unit move, 
+in which the advanced headquarters is identified by the normal call 
+for the unit (e.g., XYZ) with a suffix "1" (e.g., XYZl) . Since the 
+physical separation of the two part^Vif the unit is temporary, no 
+
+
+
+separate call sign allocation ie 
+
+
+
+made in such cases. 2. 
+
+
+
+Berne -type calls in which vs 
+
+
+
+rfixes to a given letter call. . , 
+
+
+
+sign designate different transmitters at a single location. 
+
+
+
+sum check. 1. That digit of\a 
+
+
+
+
+group which by design represents 
+
+
+
+the units digit of the su\ o\ the other digits in the group. 2. To 
+
+
+
+exhibit the pro 
+sum-checking digit 
+
+
+
+
+check. 
+
+
+
+g sheeted digit (normally the final digit) in a 
+
+
+
+g?teuj which is the noncarrying stun of the other digits 
+
+
+
+code or c 
+
+
+
+in the group 
+
+summing group . A code or cipher group in which the stun of the digits is 
+a preselected constant. 
+
+summing -trinome system . A substitution system in which each plaintext 
+letter is assigned a unique numerical value of 0 to 27. This value 
+is then expressed as a trinome, the digits of which sum to the desig- 
+nated value of the letter. 
+
+supercession date. The date on which cryptographic procedures, keys. 
+
+
+
+codes, etc., are changed. 
+
+
+
+93 
+
+
+
+
+
+
+super encipher , v.t. To subject a cipher text to a further process of encipher- 
+ment. 
+
+superenc ipherment , n. A form of superencryption in which the final step 
+involves encipherment, —v.t. Superenc ipher . 
+superencrypt , v.t. To subject an encrypted text to a further process of 
+encryption. 
+
+superencryption , n. A further encryption of the text of a cryptogram for 
+increased security. Enciphered code is a frequently encountered 
+example of superencryption. - — v.t. Superencrypt . 
+super-high frequency . The range of radio fr^^acies from 3000 to 30000 
+megacycles. Abbreviated SHF. 
+
+superimpose , v.t. To write cryptographic ^e^ft so Uifet elements enciphered 
+by the same keying elements will faii. iisthe same column. 
+super lmpos it ion , n. See overlap 
+
+supplement , n. A separate publication /^related to a basic publication, and 
+prepared for nurnosea^^^r jmlga tlng additional information or 
+summaries, and ma v inc lude extracts from the basic publication. 
+supplementary code . \sed in conjunction with another code, containing 
+
+second, or subsioS^^j Mfeanings, Or special categories of meanings 
+(e.g., geographical terms) the use of which is normally indicated by 
+a special code group. Also called auxiliary code . 
+switch group . A group used within a message to indicate that the following 
+textual elements are encrypted with a different key or code book. 
+syllabary , n. In a code book, a list of individual letters, combinations 
+of letters, or syllables, accompanied by their equivalent code groups, 
+usually provided for spelling out words or proper names not present 
+in the vocabulary of a code; a spelling table. 
+
+
+
+CONFIDENTIAL 
+
+
+
+
+syllabary square , A cipher matrix containing individual letters, digits, 
+syllables, frequent digraphs, trigraphs, etc., which are encrypted by 
+the row and column coordinates of the matrix. 
+syllabic , adj. Of, pertaining to, or denoting syllables. 
+symbolic form . The conventions of arrangement used by international agree- 
+ment for transmitting weather Information in order to conserve time 
+and expense. 
+
+sympathetic ink . See invisible ink . 
+
+synoptic , n. (Met.) A proforma mes^^ giving complete meteorological 
+data obtained from a single ob^f^atibo at a single station. 
+synoptic hour . (Met.) A fixed whicn meteorological observations 
+are made at all meteora^ogicaS^^fcions in a particular area (e.g. 
+
+Europe) . \ 
+
+synoptic period . (Me^«l ThX interval between one synoptic hour and the 
+
+ciphered code system, a probable .or possible 
+p^p triced by enciphering a known good group with an 
+iy group with a view to locating other messages en- 
+ciphered with this key group. 
+system, n. See cryptosystem . 
+
+systematically-mixed cipher alphabet . A cipher alphabet in which the component 
+that is mixed has been disarranged by systematic procedure. Cf. random - 
+mixed cipher alphabet . 
+system indicator . See discriminant .. 
+
+T/A. Traffic analysis , q.v. 
+
+tactical call sign . A call sign which represents and identifies a tactical 
+command or communications facility. 
+
+
+
+
+CONFIDENTIA L 
+
+
+
+
+
+tail, vJL. Of two messages, to exhibit tailing. 
+
+
+
+tailing , n. The practice of beginning the encipherment of one message 
+
+with the element of key immediately following the element of key used 
+to encipher the last textual group of the preceding message. 
+tandem , adj . Pertaining to a kind of cipher -machine operation in which the 
+plain text is enciphered and the resultant cipher text simultaneously 
+deciphered on another machine as a check on the encipherment. 
+tandem operation . In cryptography, electrically or mechanically coupling 
+two cipher machines to produce automatic Jtefipherment simultaneous 
+with encipherment. 
+
+tape copy . A copy of a message recelve^^fqpe Luted or punched, or 
+both. 
+
+
+
+
+coming message recorded on 
+bhed on IBM cards therefrom. 
+
+, area, station, group of stations 
+are directed. Cf. mission. 
+
+
+
+tape -to -card process . A process 
+
+perforated tape is automaticall; 
+target . Radio intercept 
+
+etc., toward which inter " 
+
+task . An assignment jp© ^^^t^rcept operator to cover the transmission of 
+a link, group, or 
+
+TPS . Time division scrambling , q.v. 
+
+telecommunications . Any transmission, emission, or reception of signs, 
+signals, writing, images and sounds or intelligence of any nature 
+by wire, radio, visual, or other electromagnetic system. 
+telecon . A teleconference , q.v. 
+
+teleconference , n. A conference between persons remote from one another 
+but linked by a telecommunications system. Abbreviated as telecon. 
+
+
+
+96 
+
+
+
+CONFIDENTIAL 
+
+
+
+telemetering ) n. Automatic electrical communication, intended to indicate 
+or record a measurable, variable quantity at a distance. 
+teleprinter , n. An electrically-operated instrument resembling a typewriter, 
+used for the transmission and reception-printing of messages by 
+electrical means. Also called teletypewriter . 
+teletypewriter , n. A teleprinter, q.v. 
+
+
+
+teletypewriter exchange service. Commercial service permitting teleprinter 
+
+
+
+communication on the same basis as telephone service, operating through 
+central switchboards, to stations within the same city or in other 
+cities . This service is limited to jdu/bcribers as is telephone 
+service. Abbreviated as TWX. 
+
+terminal , n. Equipment required ana reproduce in usable form 
+
+one radio signal.- \ 
+
+test element . One of the char^cl^^ message from which the authenticator 
+is derived. . \ \ 
+
+tetragraph , n. A set ^ <^^rli«i*ers . 
+tetranome , n. A digits . 
+
+
+
+text , n. The pa^fc a'Ve&sage containing the basic information which the 
+originator desifces ho be communicated. 
+text key . Key used to encipher the text of a message. 
+
+textual element . An individual letter, a unit of encryption, or a complete 
+word from the actual text of a message. 
+tfc . Traffic , q.v. 
+
+
+
+55 : 
+
+
+
+CONFIDENT! A tr 
+
+
+
+
+thripple , v.t. In meteorological ciphers, to substitute tvo three-figure 
+groups for a five -figure group so that the sum (nnncarrying) of the 
+third figure of the first group and the first figure of the second 
+group is the middle figure of the original five-figure group, the other 
+four figures being unaltered. 
+
+t~t™* division scrambling. Transposition achieved by delaying elements of 
+intelligence by varying amounts in accordance with a key. The term 
+is normally applied to ciphony and cifax systems. 
+time of intercept . The time efc which a message was received by an intercept 
+operator. Abbreviated as TOI. 
+time of origin . The time at which a mi= 
+
+TOO. 
+
+time "zone. One of the 2k longitudinal 
+each 15 degrees wide, havii^ 
+
+
+
+
+eS/asSor iginated . Abbreviated as 
+
+
+
+i^Lons of the earth’s surface, 
+d time differing by one hour 
+
+
+
+from the standard ad j^.njng divisions . 
+
+TOI . Time of Intercept 
+TOO . Time -of -origin. 
+
+TOP SECRET. A sec^riNy clarification pertaining to information or material, 
+the defense aspecN^o^ which is paramount, and the unauthorized disclosure 
+of which could result in exceptionally grave damage to the nation, 
+traffic, n. All transmitted communications. Abbreviated as tfc. 
+traffic analysis . That branch of cryptology which, through a study of 
+signal transmissions by all means short of cryptanalysis of message 
+texts, assembles information concerning communication networks. 
+
+
+
+98 
+
+
+
+CONFIDENTIAL 
+
+
+
+JL JL M-J JLJi. 1 Jl JL 
+
+traffic -flow analysis . A statistical appraisal of the variations in the 
+
+nature, volume, and direction of traffic from which certain inferences 
+as to the causes thereof may he drawn. 
+
+traffic Intercept . A copy of a communication obtained through interception. 
+
+trail , v.i. To exhibit trailing. 
+
+trailer card . An IBM card used as a supplementary card when the desired 
+information requires more than eighty columns . 
+
+trailing , n. The practice of beginning the encipherment of one message with 
+an element of key at a comparatively short Interval after the element 
+of key used to encipher the iMrwirtm group of the preceding message. 
+Cf . tailing . S 
+
+
+
+transcriber , n. A listenej^fljg^convs^^ foreign language voice transmissions 
+into the written form\rf i?eign language. 
+
+transcription, n. l.JEesa tretos%osition system, the process of removing 
+
+the text from ^ grid by a method or route different from that 
+
+
+
+used in the 
+
+
+
+►grid by a method or route different from that 
+
+
+
+ti>i. 2. A written copy of a previously recorded 
+
+
+
+radio tmnaqissaoij; also the process of preparing such copy from tapes 
+or records 
+
+translator , n. A reader who translates written materials from a foreign 
+language into English. 
+
+transmission security . That component of communication security which results 
+from all measures designed to protect transmissions from interception 
+and traffic analysis. 
+
+transmitter call . The call sign of the radio station actually transmitting 
+a message by radio. 
+
+
+
+CONFIDENTIAL 
+
+
+
+are represented by 
+
+
+
+tripartite alphabet 
+
+
+
+
+1 M. M. j 
+
+true -periodic repetition . A repetition in the cipher, text arising from 
+a repetition of the keying cycle itself and caused hy two identical 
+sections of plain text being enciphered hy the same sequences of key. 
+
+true polygraphic system . Any polygraphic substitution system in which the 
+individual elements of the polygraphs display no evidence of mpno- 
+alphabeticity, nor evidence of relationships vithin any group of 
+.polygraphs; that is, in a true polygraphic system, changing one 
+letter in any plaintext polygraph affects the equivalent ciphertext 
+polygraph in its entirety. Cf . partlally-polygraphic system and 
+pseudo-polygraphic system . 
+
+TT . Teletypewriter. See teleprinter . * - ^ 
+
+tuning message . A message sent normal!^ control station, usually 
+
+immediately after a change of y^eque nh^Npr the purpose of ensuring 
+that all out stations in the gi jRrrectly tuned in to the new 
+
+frequency. 
+
+/ I > 
+
+sristic incorporated in certain codes 
+pm one another by a minimum of two 
+Lty or the positions occupied. When the 
+characteristic is called a two-letter 
+
+
+
+
+two -e lement different i al . 
+
+
+
+in which the grou; 
+elements, eithi 
+elements are lette: 
+
+
+
+
+
+differential ; when the elements are digits, it is called a two-digit 
+differential . 
+
+two-figure differential . A two-element differential in which the elements 
+are digits . 
+
+two-letter differential. A two-element differential in which the elements 
+
+
+
+are letters . 
+
+
+
+102 
+
+
+
+CONFIDENTIA L 
+
+
+
+two -port code . A randomized code, consisting of an encoding section in 
+which the plain-text groups are arranged in an alphabetical or other 
+significant order accompanied "by their code groups arranged in a non- 
+alphabetical or random order; and a decoding section, in which the code 
+groups are arranged in alphabetical or numerical order and are 
+accompanied by their meanings as given in the encoding section. 
+two-square matrix system . A digraphic substitution system which normally 
+employs a matrix consisting of two 5*5 squares arranged either 
+horizontally or vertically. /v 
+
+TWX . Teletypewriter exchange servlc/ .y^^vv 
+
+U. A symbol used in D/F fix evaljjfaiiaoin to > 'W<uicate the fix is outside the 
+limit of accuracy of a "D" fjS^ >*ee D. 
+
+UHF . Ultra-high frequency , (q 
+
+ultra-high frequency. The ratae At radio frequencies from 300 to 3000 
+
+
+
+megacycles . Abl 
+
+
+
+
+
+
+undulator tape . InkecraapC'Tf .v . 
+
+
+
+uniliteral 
+
+
+
+, adi/yOT>.. 
+requenSaf otb 
+
+
+
+and frequef? 
+
+
+
+oa pertaining only to cryptosystems, cipher alphabets 
+bributions which involve cipher units of single letters 
+
+
+
+or characters. See the more inclusive term monographic ; see also 
+uniliteral frequency distribution. 
+
+
+
+unlliteral frequency distribution. A simple tabulation showing the fre- 
+
+
+
+quency of individual characters of a text. 
+uni literal (simple) substitution . A cryptographic process in which the Indi- 
+vidual letters of a message text are replaced by the single-letter 
+cipher equivalents . 
+
+universal stereotype . A stereotype commonly vised by many originators. Cf. 
+local stereotype. 
+
+
+
+
+having no relationship to one another in any way 
+
+
+
+validity grading . Any method of indicating in a brief manner the degree 
+of reliability of information derived from or used in various COMIHT 
+activities . 
+
+variable spacing . During encryption on cipher machines, the random use. 
+between words of two or more of the following throughout the message: 
+(a) no space; (b) normal space; (c) more than one space. 
+variant , n. 1. One of two or more cipher or code symbols which have the 
+dame plain equivalent; also called var igmt^ralue . 2. One of several 
+
+plaintext meanings which may be reprj^f ntecSbyS single code group. 
+
+
+
+variant call signs. Two or more call 
+
+
+
+'wK ich may be used interchangeably 
+
+
+
+to identify a particular radic 
+
+
+
+;ion>v^ so known as alternate calls. 
+
+
+
+variant system. A substitution sysXec 
+
+
+
+n.ch some or all plaintext letters 
+
+
+
+may be represented by my^^bhan cipher equivalent . 
+variant value . See variant / 
+
+vertical digraph . A pa^oFS tefctepb written one over the other. 
+vertical two-square iferite system . A digraphic substitution system employing 
+a matrix which norma^^ionsists of two 5x5 squares arranged vertically. 
+very high frequency / "The range ~of radio frequencies from 30 to 300 megacycles. 
+Abbreviated VIE? . 
+
+very low frequency . The range of radio frequencies below 30 kilocycles. 
+Abbreviated VLB! . 
+
+
+
+VHF. Very high frequency, q.v. 
+
+
+
+
+,4 
+
+
+
+CONFf ^ ENY^L 
+
+Vlgen^re square . The cipher square commonly attributed in cryptographic 
+literature to the French cryptographer Vigenere, having the normal 
+sequence at the top (or bottom) and at the left (or right), with 
+cyclic permutations of the normal sequence' forming the successive 
+rows (or columns) within the square. 
+visible writing . Writing in which the characters are inscribed with 
+
+ordinary writing materials and can bo seen with the naked eye. Cf » 
+invisible writing . 
+
+visual analysis . A procedure involving inspection of superimposed punched 
+IBM cards. 
+
+VIF . Very low frequency , q.v. 
+voice call Sign . A word or conibinat 
+to identify a radio statio 
+voice translator . A listener wl 
+
+Hi 
+
+
+
+voice transmissions 
+war Indicative . (Met.) 
+
+to conceal the. 
+watch . The usual 1 
+trick . 
+
+
+
+
+
+
+rds used in voice transmission 
+
+
+
+,tes recorded foreign language 
+
+
+
+ituted for a base number during war time 
+the base number, 
+which an operator is on duty. Also known as 
+
+
+
+wave propagation . The radiation, as from an antenna, of radio frequency 
+energy into space. 
+
+weather code . A code used for the transmission of weather data. 
+weather collective . A general broadcast to all meteorological centers in a 
+large area of all the synoptic weather observations made in 'that area 
+at a particular (synoptic) hdpr. 
+
+
+
+105 
+
+
+
+
+
+tNrevolution of the larger, the 
+
+oluh^flffi plus one twenty-sixth. 
+
+lgnals (dots and dashes) are 
+► 
+
+at Ions; vised for automatic trans- 
+
+
+
+veather synoptic . A proforma message giving complete meteorological data 
+obtained from a single observation at a single station. 
+
+Wheatstone cipher device . A cipher device consisting essentially of two 
+
+rings mounted concentrically in a single plane, the outer (and larger) 
+ring being the plain component of the device and comprising 27 equi- 
+- sized divisions, the inner (and smaller) ring being the cipher component, 
+comprising 2 6 smaller divisions. The device incorporates two. hands 
+(similar to those on a clock) pivoted at the center of the device— 
+the larger hand serving the outer ringyand the smaller hand the inner— 
+so geared together that for each co| 
+smaller turns through one comply 
+Wheatstone tape . Paper tape on whicn 1 
+recorded in the form of twc-u^ 
+mission of Morse code. \ V 
+wheel , n. Rotor , q.v. /q ) V 
+
+window , n . 1 . Apertu re in Sg gEtSle through which one or more letters can 
+
+be written or/a(ffN2\ An aperture in the cover of a cipher machine 
+through which ohe'chr ar series of letters or numbers on the peripheries 
+of the rotors of a cipher machine can be read, serving as a reference 
+point for setting the rotors. 
+
+word pattern . The characteristic arrangement of repeated letters in a word 
+which tends to make it readily identifiable when enciphered mono- 
+alphabet ically . 
+
+word separator . A unit of one or more characters employed in certain crypto- 
+systems to indicate the space between words . It may be enciphered or 
+unenciphered. Also called a word spacer. 
+
+
+
+106 
+
+
+
+CONFIDENTIA L 
+
+
+
+
+
+
+*■ 
+
+
+
+vord transposition . A cryptosystem in which whole words are transposed 
+according to a certain prearranged route or pattern. 
+writer , n. The person who actually prepares and signs the message blank. 
+
+The writer may be the originator or his offically designated repre- 
+sentative . 
+
+W/T . Wireless telegraphy} radiotelegraphy , q.v. 
+
+X test . See chi teBt . 
+
+Y. United States Military precedence prosign for EMERGENCY. Usually trans- 
+
+mitted as "YY" to ensure accuracy. Asadgaed to messages amplifying 
+reports of initial enemy contact an^yrorS^sh^es required in situations 
+of emergency which affect the ctu| [/implementation of a tactical 
+action. 
+
+Z. 1. United States Military pre’ 
+
+mitted as "ZZ" to enstqje-accuri 
+initial enemy contai 
+2. Used as a s 
+zeroize, v.t. To r 
+
+
+
+
+
+
+bsign for FLASH. Usually trans- 
+Assigned to messages reporting 
+1 emergency operational combat traffic, 
+e time group to indicate Z time , q.v. 
+ographic elements of a cipher machine to a 
+
+N/y 
+
+fixed original pos 
+
+zoning , n. In enciphered code systems, the practice of limiting commands 
+to the use of certain specified blocks df pages in an additive book. 
+
+Z time . The time according to the 24-hour clock within the time zone 
+
+centered on the zero meridian of longitude. Formerly referred to as 
+GOT (Greenwich Civil Time) and now known as GMT (Greenwich Mean Time.) 
+
+
+
+107 
+
+
+
+CONFIDENTIAt r 
+
+
+

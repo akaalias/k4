@@ -1,0 +1,418 @@
+DOCID: ,3565448
+
+                                                                   SECRET
+
+
+
+
+                    German Agent Systems of
+                         World War II
+                            BY FRANK W. LEWIS
+
+                                     Btt:ret
+     INTRODUCTION
+
+        One of the more intriguing stories of U.S. cryptanalytic success
+     during World War II concerns itself with the German cloak-and-
+     dagger boys in South America. Leafing through the pages of news-
+     weeklies of the period, one would hardly suppose that credit for
+     rounding up the several gangs of conspirators belonged to other than
+     the usual under-cover law enforcement groups; and although the
+     story as told was highly exciting, only by knowledge of the behind-
+     the-scenes activity of our own cryptanalytic group can one ap-
+     preciate the true picture.
+        Since few records are available from which to draw examples (or
+     corroborate details) this present account represents the personalized
+     understanding of the author as to what happened, as it happened,
+     within the purview of the Signal Intelligence Section of the Office of
+     the Chief Signal Officer (one of the phases the Army portion of the
+     Agency's predecessors went through).
+        A certain amount of charity should be shown toward the author
+     if he seems particularly vague in matters of geography or calendar
+     events-the story is basically true, even though examples are illus-
+     trative rather than actual.
+        Long before Pearl Harbor, German agents were active in Spain
+     and South America, carrying on their traditional role in the very
+     thinly veiled disguise of commercial representatives. In particular,
+     a respectable commercial aura was given to their communications,
+     with banking addresses being used on supposedly straightforward en-
+     coded, but presumably business-type, financial messages. An ad-
+     dress such as SUDAMERIAT WEDEKIND appeared innocent enough but
+     actually covered arrangements for contact, pick-up points, and
+     general activities of a network of German agents. Since we were
+     forturutte enough to break their systems and (because of our 24-hour
+     watch) were reading messages before the recipient had even picked
+     up his copy, the round-up of the entire gang was due in an appreciable
+     measure to our cryptanalytic effort.
+
+                                       1                           S!:CREI
+
+                                    A.pproved for Release b'y' r'~S.A. on
+                                    16-05-2009, FOi.A. Case# 52224
+                                    A.ooeal #33 70
+DOCID·           3565448
+  SRREl                  GERMAN AGENT SYSTEMS                                                                         F. W. LEWIS                        SEER ET
+
+    Three crypWgraphic systems come to mind (which have "suCce&B                          time after transmission, to solve the roeeeeges, and to get word of
+  story" overtones) that bear setting down on paper, since a crypt-                       iinportant actions to the proper law enforcement authorities before the
+  analytic moral can perhaps be drawn from an account of our trials--.                    agent for whom the message was int.ended could pick up his copy.
+  and errors.                       . ·                                                      The system, which started in September 1941, invo1ved the use
+     We will briefly discuss the breaking of a grille transpoeition; a                    of a 13 x 19 grille; with 125 active positions (including 15 nulls).
+  Kryha enciphennent (of both plain language and code); and a dic-                        Traffic was sent in blocks of 50 5-letter groups (except for the first
+  tionary code, with one or two mildly embarassing gaffes recounted to                    block, which contained an indicator, to make the total 51 groups).
+  illustrate the rocky road of the cryptanalyst in his pursuit of plain                   The indicator (using a 1--0, A-J substitution) showed the page from
+  text. (By tempering success stories with confessions of lees-than-                      which a transposition key was obtained, and in which of the 8 possible
+  brilliant excurtrions, perhaps one can get away with what otherwise                     positions the grille was to be used, designating the corners A-D on
+  would appear chest-thumping!) It should alao be understood that                         one face and E-H on the other. Thus, an indicator group of AGIMF
+  the original analysis of moet of the agent systems was very compe-                      showed page 179 as the key source, with the last letter, F, designating
+  tently performed by agencies other than our own; the dictionary code                    that comer of the grille as the upper left setting. The transposed
+  and Kryha happen to be two example& wherein we independently                            cipher version was effected by copying the letters down the column
+  played a critical role.                                                                 designated No.1, up column 2, down 3, up 4, etc.
+     Lest the rooder react with a "so what's the Big Deal?" to this
+  pronouncement of succesa on what might now be.considered relatively
+  insecure system.a, the stage should be aet according to the times of
+  this period piece. Of the 40 or 50 "agency personnel," only a handful
+  were available for the entire German problem-diplomatic, military
+  and agent. (The stories of GEC, the double additive system, and
+  GEE, the one-time-pad system have already been recounted in
+  the Journal.) Very little machine help (in the form of relatively
+  primitive IBM equipment) could be expected, and neither the 1evel
+  of sophistication. of cryptographic techniques nor the accumulated
+  skill of wartime effort on increasingly complex problems had reached
+  maturity. In those days, we learned by doing, with no body of
+  accumulated knowledge to fall back on.
+
+  GRILLE TRANSPOsmoN                                                                                                                          (b) ( l)
+   Some hesitancy is felt in giving any detailed account of the Berlin-
+ Rio grille transposition with which the· SIS section was moet familiar.
+ The reason is that the Coast Guard Unit (with which we maintained
+ excellent liaison) did the origirial solution of this, along with scores of
+ similar traneposition and transposition/substitution systems, end the
+ technical aspects are very well covered in. the document "History of
+ Coast Guard Unit No. 387, 1940-1945."
+   Our role was one of operational eolution of current messeges.
+ Since we had a couple of people on the "graveyard shift", we were in
+ the position of being able to have copy relayed to 118 within a short
+
+
+                                                                               (b) ( 1)
+                                                                               (b) (3)-50 USC 403
+  &&€AET                             2                                                                                        3.
+                                                                               (b) (3)-18 USC 798
+                                                                               (b) (3)-P.L. 86-36
+                                       .lb) (1)
+                                       ( b) ( 3 ) - 5 0 L SC 4 0 3
+DOCID:   3565448                       ( b )\( 3 ) - 1 8 L SC 7 9 8
+             lil!>HMAN AGENT SYSTEMS                                                              F. W. LEWIS                       S!Clt!'F
+                                       Cb ) (3) - P • L • 8 6- 3 6
+ ...-~~~~~~~~~~~~~~~~~~~~~~--~--.......                              ~~~~~~~~~~~~~~~~~~~~~~~~~~---.
+
+
+
+
+                                                  I
+                                                       .r
+                                                       '~    ·....
+
+
+
+
+                                                                      USAGE Olf THE KRYHA CIPHER MACHINE
+
+                                                                         I had considered including a much-abbreviated story of the prin-
+                                                                      ciples and solution of the Kryha (particularly as it applies to German
+                                                                      agent usage). However, the absence of a generally usable treatise
+                                                                      on this machine prompted my good friend Lambros D. Callimahos
+                                                                      to suggest an altemative--exteneive cribbing from a rather long and
+                                                                      complete treatment writt:en by me 20 years ago. ('This is in keeping
+                                                                      with advice from my mentor, Dr. Kullback, who feels the reprinting in
+                                                                      its entirety of such technical reports as that covering GEE provides
+                                                      'I'             an interesting and informative means of tying together the old and
+                                                                      the new approaches. In reading such articles as appeared in the
+                                                                      Journal of July 1959 on the KEYWORD system, more recent arrivals
+                                                                      on the cryptanalytic scene may be stimulated by the vicarious exper-
+                                                                      ience of such "You Are 'There" reporting.) 'Therefore, no further
+                                                                      apology may be necessary to those who may recognize the following
+                                                                      portion as a 1942 report.
+                                                                         Usage by the German agents involved two models of the Kryha.
+                                                                      The earlier model had as the basic mechanism a selector wheel with
+                                                                      17 fixed gear-teeth to control the stops. The later model permitted
+                                                                      a variable number of stops by means of the adjustment of any or all
+                                                                      of 52 screws which acted as stop controls. As it is more practical to
+                                                                      describe the old Kryha in terms of the new model than it would be to
+
+                     4                                                                                  5                           SECREI
+DOCID·           3565448                                                          USC 403
+                                                                                                                  F. W. LEWIS
+  !!C~!T                 GERMAN AGENT SYSTEMS                                     USC .798
+                                                                             )-P.L.    86-36
+  explain the new machine on the basis of the old, this paper will.deal
+  with the later, improved model first.
+
+  DescriptWn
+
+     The new type Kryha may be visualized as a machine so devised as
+  to convert a plaintext message into a very long polyalphabet by
+  (viewed in tenns of a Vigenere square) selecting one of the 26 possible
+  positions of the cipher component to encipher the first plaint.ext
+  letter, selecting an entirely different poeition for the second, etc.
+     A revolving disc (on which the cipher component is placed) slides
+  against a stationary plain component, the selection of alphabet being
+  controlled by a geared wheel with 52 possible stopping points. The
+  distance between eucoeeeive stopping points is not neceesarily the
+  same, some intervals having three gear teeth, some four, and some
+  five.
+                                                                                                    NEW TYPE "KRYHA" CIPHER MACHINE
+     A further variable in regard to the shift of alphabets from letter
+  to letter can be created by using only certain stope of the 52 possible.             A - Plain-te>:t Component             D - Selector Wheel
+  This is done by raising or lowering any combination of the 52 screws                 B - Cipher-tert Component             E - Stopa
+  which act as stop controls, causing the machine to stop at each point                C - Hand Lever which diaengagee F     F - Select.or Arm which engages the
+  where a screw is turned in, and to pll.88 over those screws set Bush·                                                             stops
+  with the surface of the wheel. Strictly speaking, the complete cycle
+                                                                                                                       Fil- 1 . .
+  of the polyalphabet thus formed may be considered as being composed
+  of 26 eubcycles, each eubcycle comprising a complete revolution ·of                  first plaint.ext letter is now located on the .plain component, ~d
+  the selector wheel. At the conclusion of each revolution (or sub-                   ·written down in terms of the cipher equivalent. The co~trollmg
+  cycle), the cipher component will have moved exactly three letters to                lever is then depressed, moving the ciphertext wheel to its new
+  the left, which phenomenon forms the basis of recovery of the cipher
+                                                                                       position ready for enciphering the iiecond plaintext letter.
+  component and will be explained in detail in further on.
+     The complete cycle is dependent on the number of stope employed,
+  being the product of the number of stops selected and 26 (the number
+  of alphabets poeeible at each stop). The cycle must, therefore,
+  neceesarily fall between 26 (when only one screw is depressed) and
+  1352 (when all 52 openings are used).
+     The following diagram will illustrate the general action of the
+  various controlling mechanisms, and the terminology used thereon
+  will be adhered to as much as possible in this paper.
+     The actual mechanics of the enciphering are fairly simple. Those
+  screws (E) which have been selected to control the stopping points
+  are turned down, and the plain and cipher components (A and B)
+  set up. (The individual letters are on metal tabs which can be
+  interchanged at will on the components.) The lever (C) is depressed
+   until the arm (F) engages the predetermined opening to be used as
+   the starting point, and the inner (ciphertext) wheel revolved by hand
+   to set it at the predetermined setting (X, = X, for example). The
+
+                                     6
+DOCID:      3565448
+                                                                 F . W. LEWIS
+. !l!OU~f     GERMAN AGENT l:IYS'TEMS
+
+
+
+
+                       8                ( b ) (1)     I                9
+                                        (bl (3) - so ujc 4 03
+                                        (b) ( 3)- 1 8 USC 798
+                                        (b) ( 3)- P.L. 86 - 36
+DOCID: 3565448
+          GERMAN A<:ENT SYSTEMS                        F. W. LEWIS
+
+
+
+
+                 IO               (b) ( 1)                 11
+                                  (b) (3)-50  SC 403
+                                  (b) (3)-18 USC 798
+                                  (b) (3)-P.L. 86-36
+DOCID: 3565448
+           GERMAN AGENT SYSTEMS                         F. W. LEWIS
+
+
+
+
+                                             uJ
+                                  .··
+
+
+
+  SEERET          12               (b) ( 1)
+                                                            13        "!ECREI
+                                   (b) (3)-50     403
+                                   (b) (3)-18 UoC 798
+                                   (b) (3)-P.L. 86-36
+DOCID:       3565448
+   5EERl!T       GERMAN AGENT SYSTEMS               I          F. W. LEWIS   SECRET
+
+
+
+
+                                        (b) ( 1)
+                                        (b) (3)-50 USC 403
+   iiERET               14                                         15
+                                        (b) (3)-18 USC 798
+                                        (b) (3)-P.L-:" 86-36
+DOCID: 3565448
+           GERMAN AGENT SYSTEMS                         F. W. LEWIS   SECREI
+
+
+
+
+                 16                                         17
+                                  (b) ( 1)
+                                  (b) (3)-50 u c 403
+                                  (b) (3)-18 USC 798
+                                  (b) (3)-P".L. 86-36
+DOCID: 3565448
+           Ut;HMAN AGENT SYSTEMS
+
+
+
+
+                 18                (b)   ( 1)             19   SEERET
+                                   (b)   (3)-5  USC 403
+                                   (b)   (3)-18 USC 798
+                                   (b)   (3)-P.L. 86-36
+DOCID: 3565448
+           GERMAN AGENT SYSTEMS                        F. W. LEWIS
+
+
+
+
+  see1m·         20
+                                  (b) ( 1)  j              21
+                                  (b) (3)-50 USC 403
+                                  (b) (3)-18 USC 798
+                                  (b) (3)-P.L. 86-36
+DOCID: 3565448
+          GERMAN AGENT SYS'l'EMS                        F. W. LEWIS
+
+
+
+
+                 22
+                                   .· .
+                                   (b) (1)
+                                             J              23
+                                   (b) (3)-50  SC 403
+                                   (b) (3)-18 USC 798
+                                   (b) (3)-P.L. 86-36
+DOCID:        3565448
+   5EEltE'F       GERMAN AGENT SYSTEMS                          F. W. LEWIS   !l!~ltl!T
+
+
+
+
+                         24              (b)
+                                         (b)
+                                               (1)j
+                                               (3)-   USC 403
+                                                                    25        SEERH
+
+                                         (b)   (3)-18 USC 798
+                                         (b)   (3)-P.L. 86-36
+DOCID: 3565448
+   SEerm·   GERMAN AGENT SYSTEMS
+
+
+
+
+                                   (b) ( 1)             27
+                                   (b) (3)-50 USC 403
+                                   (b) (3)-18 USC 798
+                                   (b) (3)-P.L. 86-36
+DOCID:     3565448
+
+  SECRET         GERMAN AGENT SYSTEMS
+
+
+
+
+                                         (b) ( 1 )
+                                          (b) (3) - 50 USC 4 03
+                                        • (b) (3) - 18 USC 7 98
+                                          (b) (3) -P.L. 86 - 36
+
+
+
+
+                        28
+DOCID:   3565448
+
+
+
+
+                   (b) ( 1)
+                   (b) (3)-50 USC 403
+                   (b) (3)-18 USC 798
+                   (b) (3)-P.L.   86-36
+DOCID:   3565448
+            GERMAN AGENT SYSTEMS                           F. W . LEWIS
+
+
+
+
+                   30                                            31
+
+
+                                   (b) ( 1)
+                                   (b) (3) - 50 USC 403
+                                   (b) (3) -1 8 USC 798
+                                   (b) (3) -P.L. 86 - 36
+DOCID:       3565448
+                                                            F. W. LEWIS
+  S!CRl!:T      GERMAN AGENT SYSTEMS
+
+
+
+
+                                                                33
+                        32
+                                       (b) ( 1)
+                                       (b) (3)-50 USC 403
+                                       (b) (3)-18 USC 798
+                                       (b) (3)-P.L. 86-36
+DOCID:      3565448
+ SEER ET      GERMAN AGENT SYSTEMS                                                         F. W. LEWIS
+
+                                                              OICJ'IONAR Y C.ODR
+
+                                                                The third type of agent system under present discussion involved
+                                                              the use of a Gennan-8panish dictionary as a code book, designating
+                                                              the page and the ordered position on the page, for each word, with
+                                                              enciphennent of the resu\tant digits to a final literal cipher. This pre-
+                                                              sents no formidable problem, given a reasonable amount of traffic, but
+                                                              the early diagnosis, preliminary code reconstruction, and eventual
+                                                              acquisition of the actual dictionary being used, all contribute to a
+                                                              somewhat Black-Chamber-like story.
+
+
+
+
+ !iEERE'F            34              (b) ( 1)                                                     35
+                                     (b) (3) - 50 us 4 03
+                                     (b) (3) -1 8 iJ sc 798
+                                     (b) (3) -P.L.   86-36
+DOCID: 3565448
+          GERMAN AGENT SYSTEMS                              F . W . LEWIS
+
+
+
+
+                                 .·
+                 .}0
+                                                                 37
+                                                        I
+                           (b) ( 1)
+                           (b) (3) - 50 USC 403
+                           (b) (3) - 18 USC 798
+                           (b) (3) - P .L .   86 - 36
+DOCID:       3565448
+  SElkfi        G ERMAN AGENT SYSTEMS
+
+
+
+
+                              .·
+
+                             (b) (1)
+                             (b) (3)-5 0 USC 403
+                             (b) (3)- 18 USC 79 8
+                             (b) (3)-P .L. 86- 36
+
+
+
+
+  SE EA ET              38
+

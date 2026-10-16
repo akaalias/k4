@@ -39,9 +39,9 @@ body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--seri
 a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a:hover{border-bottom-color:var(--accent)}
 .smcp{font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em}
 .num{font-variant-numeric:lining-nums tabular-nums}
-.topnav{display:flex;gap:26px;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding:18px 28px 12px;margin:0}
+.topnav{display:flex;gap:22px;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding:18px 28px 12px;margin:0}
 .topnav .spacer{flex:1 1 24px}
-.topnav .sec{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.topnav .sec{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
 .topnav .sec a{font-size:10.5px;letter-spacing:.08em;color:var(--faint)}
 @media(max-width:640px){.topnav{gap:14px 18px;padding:14px 16px 10px}.topnav .spacer{flex-basis:100%;height:0}.topnav .sec{gap:14px}}
 .topnav .brand{font:italic 14px var(--serif);color:var(--faint)}
@@ -53,6 +53,8 @@ h1.home{font:italic 400 40px/1.15 var(--serif);text-align:center;margin:72px 0 1
 .sec-lead{max-width:760px;font-size:17px;line-height:1.65;margin:4px 0 12px}
 #sculpture .sc-credit{position:absolute;right:12px;bottom:10px;z-index:2;font:italic 12.5px var(--serif);color:var(--muted);background:color-mix(in srgb,var(--paper) 78%,transparent);padding:3px 8px;border-radius:3px;text-decoration:none}
 #sculpture .sc-credit:hover{color:var(--accent)}
+.learn-hero h1.home{white-space:normal!important;width:auto!important;position:static!important;left:auto!important;transform:none!important;max-width:980px;margin:96px auto 18px;font-size:40px;line-height:1.25}
+.learn-hero p.psub{max-width:900px}
 p.psub{text-align:center;font-style:italic;color:var(--muted);font-size:15.5px;line-height:1.7;margin:0 auto 8px;max-width:760px}p.psub.answer{font-size:32px;line-height:1.3;color:var(--ink);margin:44px auto 34px;max-width:none}@media(max-width:760px){p.psub.answer{font-size:22px;margin-top:28px}}
 .hero-flow{width:96vw;position:relative;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:12px;margin:22px 0 26px}
 .hero-flow .lp-col{zoom:.74}
@@ -724,7 +726,7 @@ def page(title, body, active="", refresh=True):
     # place on the page survive quiet periods
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
-    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/experiments", "Experiments"), ("/lineage", "Lineage")))
+    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/experiments", "Experiments"), ("/lineage", "Lineage"), ("/learnings", "Learnings")))
            + '<span class="spacer"></span><span class="sec">'
            + "".join(link(h, t) for h, t in (("/families", "Families"), ("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/glossary", "Glossary"), ("/program", "Program")))
            + "</span>")
@@ -1265,6 +1267,14 @@ def load_pivots():
         meta["body"] = body[t.end():] if t else body
         out.append(meta)
     return sorted(out, key=lambda p: p.get("after", ""))
+
+
+def learnings_page():
+    """What the search has taught us so far. For now only the hero; the content is to be agreed first."""
+    hero = ('<h1 class="home">&ldquo;Results! Why, man, I have gotten a lot of results! I know several thousand things that won&rsquo;t work.&rdquo;</h1>'
+            '<p class="psub">Thomas Edison, as recalled by his associate Walter S. Mallory, in Dyer and Martin, '
+            '<a href="https://quoteinvestigator.com/2012/07/31/edison-lot-results/" target="_blank" rel="noopener"><i>Edison: His Life and Inventions</i> (1910)</a></p>')
+    return page("learnings", '<div class="learn-hero">' + hero + "</div>", "/learnings", False)
 
 
 def pivot_page(pid):
@@ -2379,6 +2389,8 @@ def route(path):
                        standfirst="The rules for working through the families, the order they are ranked in and why, and each family's open items as a table.",
                        facts='Decided 2026-10-16 (issue #29). The same items are drawn as a tree on the <a href="/families">families</a> page.',
                        foot='The same items as a tree are on the <a href="/families">families</a> page; the rules the loop follows are in the <a href="/program">program</a>.')
+    if path == "/learnings":
+        return learnings_page()
     if path == "/pivots":
         return pivots_page()
     if path.startswith("/pivot/"):

@@ -65,6 +65,7 @@ F3 is finished: F3.1-F3.7 closed (0173-0180), with two weak residues blocked: th
 | # | Item | One line |
 |---|---|---|
 | 181 | F2.1 | **What 0057's long keys force, read for words, exact.** Every copy of one or two letters struck (351 masks), then a repeating key of 24 or 25 on 12 table rules: 1,620 fitting settings on K4 (copies 1,020-1,620). The places the key fixes, away from the known words, searched for dictionary words of 6-15 letters: K4 none in any setting; copies 0-32 settings, longest 6-7. Copies keep the 24 known places so each mask strikes as many letters. Closed. Prediction held. |
+| 182 | F2.2 | **Nulls by any rule, through the gap, exact.** For a repeating or progressive key only the number of nulls between the known runs matters (nulls outside them shift both runs or neither): d = 0-29, key lengths 1-26, steps 0-25, 12 table rules. K4 above every copy at no gap; live cells with at least one check over all gaps: K4 96, 20 copies 96-226 (zero-check cells, live on every text, were in the run's own count, 3,840 on K4; split out after the run with the same code). Named rules: one null after each known word d = 1, after every carved X d = 0 (no X between the runs), doubled letters d = 2. Closed. Prediction held. |
 
 ## 2026-10-16
 

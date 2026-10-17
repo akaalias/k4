@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Fillers placed by a rule (one after every X, one after each known word) would shift the known words. To a repeating or stepping key only the distance between the known letters matters, so every rule comes down to how many fillers fall between EASTNORTHEAST and BERLINCLOCK."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every count of 0 to 29 fillers, every key length 1-26, a repeating key or one that steps by a constant, on 12 table rules; K4 and 20 scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "At no count does K4 fit more settings than the copies; overall it fits the fewest. F2.2 closed for keys of this kind."
+ }
+]

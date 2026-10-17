@@ -70,6 +70,12 @@ F3 is finished: F3.1-F3.7 closed (0173-0180), with two weak residues blocked: th
 
 F2 is finished: F2.1-F2.3 closed (0181-0183); a code layer, phonetic spelling or another language stay blocked (they change the known letters or need a codebook). Pivot P11 to F4.
 
+### F4 Sanborn's visual systems (after pivot P11, ticket #21)
+
+| # | Item | One line |
+|---|---|---|
+| 184 | F4.1 | **Paths over the copper's own layout, exact.** K4's four lines (OBKR at columns 28-31 after K3's tail and the ?, then three lines of 31), the lower plate's 14 ragged lines and the left side's 28: rows, columns, diagonals both ways and spirals from every corner, straight or back and forth, K4's cells in the order visited: 73 distinct routes, each and its inverse, then or before a periodic key 1-26 (F6's compiled tester). Shortest live K4 23/26, copies 22/26; K4 above every copy in 0 of 52 cells (copies 0-1). The S-curve bends the plates, not the letter order. Closed. Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

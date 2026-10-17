@@ -157,7 +157,7 @@ in this family or the one it points to.
 | Trifid, any cube, periods 2-15 | closed | exact | 0040 | periods above 15 are F4.2 |
 | The plates as a key by position, straight or folded | closed | exact | 0089 | - |
 | Read from behind the screen | closed | exact | 0108 | - |
-| **F4.1** A route that follows the plates' physical layout (the S-curve, the 31-letter lines as a grid with K3's last line) | **open** | - | - | build the route set from the Blender model, then test as F6 |
+| **F4.1** A route that follows the plates' physical layout (the S-curve, the 31-letter lines as a grid with K3's last line) | closed | exact (0184): rows, columns, diagonals and spirals from every corner over K4's four lines as carved (starting after K3 and the ?), the lower plate and the whole left side, 73 routes and inverses, then or before a periodic key 1-26: shortest live 23/26 as copies 22/26, 0 of 52 cells above copies; the Blender model not needed (the transcript gives the layout) | 0184 (before: 0092) | - |
 | **F4.2** Free trifid cubes at periods above 15 | **open** | - | 0040 (2-15), 0033 (keyword cubes to 20) | constraint propagation as 0040; cheap (pivot audit 2026-10-16 (issue #55), D10) |
 | **F4.3** The positions of the sculpture's physical anomalies as a key (C3(c)) | **open** | - | - | list the anomalies and their positions from `01-facts.md` and the model; test as positional keys (from the clue register) |
 | **F4.4** The extra L and the HILL row as a marker matching YAR on the lower-left plate (C21(b)) | **open** | - | - | state what the marker would select (a row, a start, a key letter); test each exactly (from the clue register) |

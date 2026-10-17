@@ -136,7 +136,7 @@ Update the leaf when an experiment works on it.
     - Trifid, any cube, periods 2-15 {closed · exact · 0040}
     - The plates as a key by position, straight or folded {closed · exact · 0089}
     - K4 read from behind the screen {closed · exact · 0108}
-    - **F4.1** A route that follows the plates' physical layout {open}
+    - **F4.1** A route that follows the plates' physical layout {closed · exact · 0184}
     - **F4.2** Free trifid cubes at periods above 15 {open}
     - **F4.3** The physical anomalies' positions as a key {open}
     - **F4.4** The extra L and HILL as a marker matching YAR {open}

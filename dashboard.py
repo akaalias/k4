@@ -1945,8 +1945,10 @@ LIN_JS = r"""
     var r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight,cx=r.left+r.width/2;
     var left=Math.max(8,Math.min(cx-w/2,window.innerWidth-w-8)),top=r.bottom+6;
     if(top+h>window.innerHeight-8)top=Math.max(8,r.top-h-6);
-    // a pinned popover stays on screen when its dot scrolls away
-    if(pinned)top=Math.max(8,Math.min(top,window.innerHeight-h-8));
+    // a pinned popover sits in the top-right corner of the grid, under the family names, so it
+    // never covers the line being followed
+    if(pinned){var hb=document.getElementById('lin-heads').getBoundingClientRect(),bx=host.getBoundingClientRect();
+      top=Math.max(8,hb.bottom+8);left=Math.max(8,bx.right-w-8);}
     tip.style.left=left+'px';tip.style.top=top+'px';
   }
   function showTip(key,el){
@@ -2040,6 +2042,23 @@ def plain(text, limit=340):
     return t[:cut + 1] if cut > limit // 3 else t[:limit].rsplit(" ", 1)[0] + "..."
 
 
+def parent_tags(rows):
+    """{tag: its parent's tag} for the experiments that name a parent in the record. Some records
+    name the parent by a slug the parent's own tag no longer carries (0001-crib-consistent-periods);
+    those are matched by the experiment number, so the line does not break there."""
+    tags = {r["tag"] for r in rows}
+    by_num = {r["tag"][:4]: r["tag"] for r in rows if r["tag"][:4].isdigit()}
+    out = {}
+    for r in rows:
+        p = r.get("parent")
+        if not p:
+            continue
+        t = p if p in tags else by_num.get(p[:4]) if p[:4].isdigit() else None
+        if t and t != r["tag"]:
+            out[r["tag"]] = t
+    return out
+
+
 def lineage_data(rows):
     """Nodes and family columns for the lineage page, built from the records on every request."""
     names = family_names()
@@ -2061,8 +2080,9 @@ def lineage_data(rows):
         fams.append({"slug": slug, "label": label, "name": names.get(num, label), "c": i % 10,
                      "count": len(groups[k])})
     idx = {s: keys.index(lane_of(s)) for s in {r["family"] for r in rows}}
+    par = parent_tags(rows)
     nodes = [{"key": r["tag"], "n": int(r["tag"][:4]) if r["tag"][:4].isdigit() else r["tag"],
-              "title": r["title"], "fam": idx[r["family"]], "parent": r["parent"],
+              "title": r["title"], "fam": idx[r["family"]], "parent": par.get(r["tag"]),
               "decision": r.get("decision"), "recorded": r.get("decision_recorded"),
               "loss": pct(row_loss(r)), "cribs": r.get("best_crib_hits", 0),
               "summary": plain(r.get("eli5", "")), "note": r.get("verdict_note", "")} for r in rows]
@@ -2085,13 +2105,13 @@ LIN_LEGEND = """<div class="lin-legend">
 def lineage_page():
     rows = load_results()
     data = lineage_data(rows)
-    tags = {r["tag"] for r in rows}
-    fam_of = {r["tag"]: r["family"] for r in rows}
-    built = [r for r in rows if r["parent"] in tags]
-    cross = sum(1 for r in built if fam_of[r["parent"]] != r["family"])
+    par = parent_tags(rows)
+    built = [r for r in rows if r["tag"] in par]
+    col = {nd["key"]: nd["fam"] for nd in data["nodes"]}     # a family spelt two ways is one column
+    cross = sum(1 for r in built if col[par[r["tag"]]] != col[r["tag"]])
     kids = {}
     for r in built:
-        kids[r["parent"]] = kids.get(r["parent"], 0) + 1
+        kids[par[r["tag"]]] = kids.get(par[r["tag"]], 0) + 1
     top = max(kids.items(), key=lambda kv: (kv[1], kv[0]), default=None)
     n, nf, roots = len(rows), len(data["families"]), len(rows) - len(built)
     facts = (f"{n} experiments in {nf} families. {len(built)} built on an earlier one and {roots} started a line of their own. "

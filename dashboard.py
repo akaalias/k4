@@ -1717,7 +1717,7 @@ LIN_CSS = """
 .lin-head{max-width:980px;margin:0 auto}
 .lin-head h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}
 .lin-head .standfirst{max-width:760px}
-.lin-box{position:relative;width:min(1600px,94vw);margin:16px 0 0 calc(50% - min(800px,47vw));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.lin-box{position:relative;width:calc(100vw - 32px);margin:16px 0 0 calc(50% - 50vw + 16px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 #lin-heads{position:sticky;top:0;z-index:5;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--rule)}
 #lin-lanes{position:relative;will-change:transform}
 #lin-diagram{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}

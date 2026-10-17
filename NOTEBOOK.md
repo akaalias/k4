@@ -124,6 +124,14 @@ F8 is finished: F8.1 closed for 2x2 (0194), blocked for 3x3 (too few equations);
 
 F5 is finished: F5.1 and F5.2 closed (0195, 0196); base 26 with lag 6 and longer two-term lags blocked by cost. Pivot P16 to F9.
 
+### F9 substitution, then a move (after pivot P16, ticket #18)
+
+F9.1's list, the hand moves built since 0106 with their sizes: compass readings and pairs 110,820 (0159); keyword-disrupted 327,440, triangle 654,876, interrupted 332,817, trapezoid 89,708 (0164); keyed blanks 1,450,196, row reshuffles 361,698, French diagonal 2,264,476 (0165); EVA 3,840, Chiffre XIII's mask 4,497,024, YAR 24 (0166); the copper's layout 73 (0184); poem-code double columnars 6,118 (0190); mixed matrix triples about 105.5 million (0158); keyword triples 20.4 million (0162); Nihilist squares 116 million (0167). Counts include inverses. None of these is among 0106's 1.86 million.
+
+| # | Item | One line |
+|---|---|---|
+| 197 | F9.1 | **One code alphabet, then each newer move, exact.** 0106's one-to-one test (equal known letters on equal carved letters) on the builders reused from 0159, 0164, 0165, 0166, 0184 and 0190: 10.1 million routes with inverses, compiled, 8 processes. Survivors: K4 0, ten copies 0; a plant found. Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

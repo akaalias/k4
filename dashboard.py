@@ -1860,12 +1860,13 @@ LIN_JS = r"""
       if(same(nd,p)&&direct(nd,p,yy)){var xs=f1(xOf(nd.key));
         g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="M'+xs+','+a0+' L'+xs+','+b0+'"/>';}
       else if(same(nd,p)){var x=xOf(nd.key),o=6+LANE*laneOf[nd.key],lx=x+o,xh=x+0.35*o,
-          h=Math.max(4,Math.min((b0-a0)/2,o/Math.tan(t)));
-        // out of the port in a straight line at its angle, bending into the lane; the arrival is
-        // the same curve reflected
-        d='M'+f1(x)+','+a0+' C'+f1(xh)+','+f1(a0+0.35*h)+' '+f1(lx)+','+f1(a0+0.55*h)+' '+f1(lx)+','+f1(a0+h)
+          q=o/Math.tan(t),h=Math.max(4,Math.min((b0-a0)/2,1.8*q+4)),k1=Math.min(0.45,0.45*h/Math.max(q,1e-6));
+        // out of the port at its angle, easing into the lane over a drop longer than the reach,
+        // so the bend is spread along the curve rather than a knee; the arrival is its reflection
+        xh=x+k1*o;
+        d='M'+f1(x)+','+a0+' C'+f1(xh)+','+f1(a0+k1*q)+' '+f1(lx)+','+f1(a0+0.4*h)+' '+f1(lx)+','+f1(a0+h)
           +' L'+f1(lx)+','+f1(b0-h)
-          +' C'+f1(lx)+','+f1(b0-0.55*h)+' '+f1(xh)+','+f1(b0-0.35*h)+' '+f1(x)+','+b0;
+          +' C'+f1(lx)+','+f1(b0-0.4*h)+' '+f1(xh)+','+f1(b0-k1*q)+' '+f1(x)+','+b0;
         g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
       else{var xa=xOf(p),xc=xOf(nd.key),dx=xc-xa,k=Math.min(2.5*H0,(b0-a0)/3);
         // to another family: out of its port at the port's angle, then nearly straight, so a long

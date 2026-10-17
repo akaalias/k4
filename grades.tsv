@@ -175,3 +175,4 @@ id	outcome	strength	cribs_forced	space	note
 0174	ruled-out	exact	no	F3.1 two key words (puzzle word x dictionary word) joined by addition on 61 mixed numberings or multiplication mod 26, 12 table rules, 10 coppers	no consistent case on K4 or any copper; 2 plants found
 0175	ruled-out	exact	no	F3.2 Morse E counts and plate line lengths (26 readings) plus an unknown word of 1-24, 12 table rules, 20 coppers	no setting fits K4 or any copper; plant found
 0176	ruled-out	exact	no	F3.3 direction words as numbers (43 readings: 67.5 degrees, compass points, mils) plus an unknown word of 1-24, 12 table rules, 20 coppers	no setting fits K4 or any copper; plant found
+0177	ruled-out	exact	no	F3.4 patent N=2 (two keyed tables, three repeating keys 1-10), 144 classes, 5 coppers	nothing fits K4 at >=4 checks (780 length triples); fewer checks at the coppers' rate

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Scheidt's patent can stack its step: shift, mixed alphabet, shift, mixed alphabet, shift. Three short secret words would give the three shifts; Sanborn spoke of 'triple matrixes'."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known letter ties one letter of each word; any two decide the third. A compiled search with that rule decides every choice of the two mixed alphabets and every length triple up to 10 exactly."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Where the known letters give 4 or more checks, nothing fits K4 or a scrambled copy. With fewer checks K4 fits as often as the copies. F3.4 closed; the few-check cells are too weak to decide."
+ }
+]

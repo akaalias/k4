@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Wheatstone's cryptograph looks like a clock: move the long hand forward to each plain letter and read the letter under the short hand on a mixed inner ring. The hands drift, so repeated letters come out differently."
+ },
+ {
+  "anchor": "the check",
+  "text": "Inside each known word the hand's steps are known, so the known letters say where each carved letter sits on the inner ring, up to one turn per word. A ring in any order, or mixed from any dictionary word; K4 and twenty scrambled copies."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Nothing fits, not even a ring in any order: in every set-up some carved letter would have to stand at two places of the inner ring, or two letters at one. F10.2 closed."
+ }
+]

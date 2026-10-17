@@ -143,8 +143,8 @@ Update the leaf when an experiment works on it.
     - **F4.5** Antipodes' plate order and spelling differences {blocked}
   - F10 Alphabets that change after every letter
     - **F10.1** Chaocipher: two wheels permuted after every letter (1918, disclosed 2010) {closed · exact · 0187}
-    - **F10.2** Wheatstone cryptograph or Alberti disk advanced by the plaintext {open}
-    - **F10.3** A key stream from a deck of cards (Solitaire, Mirdek) {open}
+    - **F10.2** Wheatstone cryptograph or Alberti disk advanced by the plaintext {closed · exact · 0188}
+    - **F10.3** A key stream from a deck of cards (Solitaire, Mirdek) {blocked}
   - F11 Agency hand systems, now public
     - **F11.1** Strip ciphers and cylinders with published alphabets (M-94, Jefferson wheel, M-138-A) {open}
     - **F11.2** Poem code: double transposition keyed by words from a memorized text, then the table {open}
@@ -292,7 +292,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P12 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P13 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -308,3 +308,4 @@ Each pivot has a details page in `pivots/` (P1-P12 so far), rendered on the Pivo
 | 2026-10-17 | F3 a two-part key with a combiner (0173-0180) | F2 masked plaintext | Every F3 item closed: Scheidt's patent sandwich and its two-table stack decided exactly, other combiners, and the Morse, plate, direction, misspelling, World Clock and 'point' numbers as the number half of a key: nothing fits K4 or its scrambled copies; only few-check cells stay undecided. Ranking unchanged (P10). |
 | 2026-10-17 | F2 masked plaintext (0181-0183) | F4 Sanborn's visual systems | Every F2 item closed: what 0057's long keys force holds no words, any null rule acts through the gap between the known words and no gap helps, and a repeated-letter phrase strip fits only where nothing is checked. Ranking unchanged (P11). |
 | 2026-10-17 | F4 Sanborn's visual systems (0184-0186) | F10 alphabets that change after every letter | F4.1-F4.4 closed: paths over the copper's own layout, free trifid cubes at every period, the anomalies' places as numbers, the extra L as a marker (by subsumption); F4.5 blocked for want of Antipodes' layout. Ranking unchanged (P12). |
+| 2026-10-17 | F10 alphabets that change after every letter (0187-0188) | F11 agency hand systems | F10.1 and F10.2 closed exactly: Chaocipher with any word-mixed cipher wheel and Wheatstone's cryptograph with any inner ring do not fit K4; Chaocipher's free wheel blocked by cost, deck ciphers by date and bound. Ranking unchanged (P13). |

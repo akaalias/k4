@@ -89,6 +89,11 @@ F4 is finished: F4.1-F4.4 closed (0184-0186, F4.4 by subsumption), F4.5 closed f
 | # | Item | One line |
 |---|---|---|
 | 187 | F10.1 | **Chaocipher, word-mixed cipher wheel, exact, compiled.** Checks counted first: both wheels turn by the carved letter's place on the left wheel, so the left wheel's start fixes every move from the carved text, and each known letter pins one place of the right wheel's start (11 equalities plus distinctness). Implementation reproduces Byrne's test vector. 208,651 keyword-mixed alphabets (dictionary and vocabulary) at 26 rotations, 5.4M left wheels: consistent on K4 0, ten copies 0; three plants consistent at all 26 rotations of their wheel (with the right wheel free, turning both wheels together changes nothing, so rotations are equivalent). Closed for word-mixed wheels; a free left wheel (26!, about 88 bits) blocked by cost. Prediction held. |
+| 188 | F10.2 | **Wheatstone's cryptograph, exact.** 27-place outer ring (standard or KRYPTOS order, blank first or last), 26-letter inner ring, hands forward or backward (8 variants); continuous plaintext. Inside each run the hand's steps are known, so the inner places are known up to one offset per run. Inner ring free: no (variant, offset) fits K4 or 20 copies (standard ring, hands forward: the carved QQ at 26-27 falls on two neighbouring inner places; the other variants fail on other pairs); inner ring mixed from any of 208,651 word alphabets: none. Two plants found. Closed. Prediction held (stronger than predicted: even the free ring dies). |
+
+F10.3 blocked without a run: deck-of-cards key streams (Solitaire 1999, Mirdek 2000) postdate the sculpture (1990), against A9 (the method had to be known to its creators in 1990); and a free deck (54!, about 237 bits) far exceeds what 24 known key values (about 113 bits) and the English bound (130 bits) can pin down; no published known-plaintext attack recovers a deck from 24 outputs.
+
+F10 is finished: F10.1 and F10.2 closed (0187, 0188), F10.1's free left wheel and F10.3 blocked. Pivot P13 to F11.
 
 ## 2026-10-16
 

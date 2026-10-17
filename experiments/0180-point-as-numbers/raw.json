@@ -1,0 +1,293 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "word plus 'point' readings (decimal point, ? and X stops) as numbers, k = w[i mod a] + s d, 12 table rules, exact",
+  "readings": {
+   "six point five: 6 5": [
+    6,
+    5
+   ],
+   "six point five: 6 5, reversed": [
+    5,
+    6
+   ],
+   "six point five: 65": [
+    65
+   ],
+   "six point five with the point as 0: 6 0 5": [
+    6,
+    0,
+    5
+   ],
+   "six point five with the point as 0: 6 0 5, reversed": [
+    5,
+    0,
+    6
+   ],
+   "K2 coordinates as numbers with the point: 38 57 6 5 77 8 44": [
+    38,
+    57,
+    6,
+    5,
+    77,
+    8,
+    44
+   ],
+   "K2 coordinates as numbers with the point: 38 57 6 5 77 8 44, reversed": [
+    44,
+    8,
+    77,
+    5,
+    6,
+    57,
+    38
+   ],
+   "K2 coordinates, seconds as 65: 38 57 65 77 8 44": [
+    38,
+    57,
+    65,
+    77,
+    8,
+    44
+   ],
+   "K2 coordinates, seconds as 65: 38 57 65 77 8 44, reversed": [
+    44,
+    8,
+    77,
+    65,
+    57,
+    38
+   ],
+   "K2 coordinates, seconds as 6.5 rounded up: 38 57 7 77 8 44": [
+    38,
+    57,
+    7,
+    77,
+    8,
+    44
+   ],
+   "K2 coordinates, seconds as 6.5 rounded up: 38 57 7 77 8 44, reversed": [
+    44,
+    8,
+    77,
+    7,
+    57,
+    38
+   ],
+   "the four ? on the copper, places in the 869": [
+    101,
+    227,
+    289,
+    772
+   ],
+   "the four ? on the copper, places in the 869, reversed": [
+    772,
+    289,
+    227,
+    101
+   ],
+   "the four ?, lines 4 8 10 25": [
+    4,
+    8,
+    10,
+    25
+   ],
+   "the four ?, lines 4 8 10 25, reversed": [
+    25,
+    10,
+    8,
+    4
+   ],
+   "the four ?, places in their lines 7 9 8 27": [
+    7,
+    9,
+    8,
+    27
+   ],
+   "the four ?, places in their lines 7 9 8 27, reversed": [
+    27,
+    8,
+    9,
+    7
+   ],
+   "the ? in K2's plaintext, letters before each": [
+    37,
+    162,
+    223
+   ],
+   "the ? in K2's plaintext, letters before each, reversed": [
+    223,
+    162,
+    37
+   ],
+   "gaps between the ? in K2's plaintext": [
+    125,
+    61
+   ],
+   "gaps between the ? in K2's plaintext, reversed": [
+    61,
+    125
+   ],
+   "the X stops in K2's plaintext: 68 138 199 251": [
+    68,
+    138,
+    199,
+    251
+   ],
+   "the X stops in K2's plaintext: 68 138 199 251, reversed": [
+    251,
+    199,
+    138,
+    68
+   ],
+   "gaps between the X stops: 70 61 52": [
+    70,
+    61,
+    52
+   ],
+   "gaps between the X stops: 70 61 52, reversed": [
+    52,
+    61,
+    70
+   ]
+  },
+  "n_readings": 25,
+  "word_lengths": [
+   1,
+   24
+  ],
+  "checks_by_word_length": {
+   "1": 23,
+   "2": 22,
+   "3": 21,
+   "4": 20,
+   "5": 19,
+   "6": 18,
+   "7": 17,
+   "8": 16,
+   "9": 15,
+   "10": 14,
+   "11": 13,
+   "12": 12,
+   "13": 11,
+   "14": 11,
+   "15": 9,
+   "16": 8,
+   "17": 7,
+   "18": 7,
+   "19": 9,
+   "20": 11,
+   "21": 11,
+   "22": 9,
+   "23": 7,
+   "24": 5
+  },
+  "live_at_least_checks": {
+   "1": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "2": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "4": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "6": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "8": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "11": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "14": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   }
+  },
+  "dictionary_hits": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "dictionary_hits_6_plus": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_hits": [],
+  "plant": {
+   "text": "the four ? places from the second, + SHADOW, Vigenere on the KRYPTOS table",
+   "found": true
+  },
+  "copies": "20 shuffled coppers (seed 1800)",
+  "seconds": 1,
+  "exhaustive": true
+ },
+ "notes": "live settings with >=4 checks: K4 0 (coppers 0-0); dictionary words 4+: K4 0 (coppers 0-0); plant found True",
+ "controls": [],
+ "error": null,
+ "worked_example": "6 5 (six point five) from the first number, Vigenere on the KRYPTOS table, word length 7\n\nplace  known  carved  key  num  word value  slot\n   22      E       F    1    5          22     0\n   23      A       L   10    6           4     1\n   24      S       R   21    5          16     2\n   25      T       V   18    6          12     3\n   26      N       Q    1    5          22     4\n   27      O       Q   15    6           9     5\n   28      R       P    2    5          23     6\n   29      T       R   23    6          17     0\n   30      H       N    5    5           0     1\n   31      E       G    2    6          22     2\n   32      A       K   19    5          14     3\n   33      S       S    0    6          20     4\n   34      T       S    2    5          23     5\n   64      B       N   11    5           6     0\n   65      E       Y   17    6          11     1\n   66      R       P    2    5          23     2\n   67      L       V    5    6          25     3\n   68      I       T   15    5          10     4\n   69      N       T   11    6           5     5\n   70      C       M    9    5           4     6\n   71      L       Z    8    6           2     0\n   72      O       F    7    5           2     1\n   73      C       P   20    6          14     2\n   74      K       K    0    5          21     3",
+ "seconds": 1.5196459293365479
+}

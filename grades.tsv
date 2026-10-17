@@ -194,3 +194,4 @@ id	outcome	strength	cribs_forced	space	note
 0193	error	exact	no	F8.1 Hill 2x2 with a free numbering: first launch killed with its shell, relaunch stopped on a pickling error	rerun as 0194
 0194	ruled-out	exact	no	F8.1 Hill 2x2, any one-to-one numbering, every invertible matrix, both alignments, 5 copies, 3 plants	no matrix fits K4 or any copy; plants fit only their own matrix
 0195	ruled-out	exact	no	F5.2 Gromark on a free alphabet: three-term bases 2-16/26, two-term longer lags, 1.55 billion primers, 10 copies	no setting fits K4 or any copy; plants found
+0196	ruled-out	exact	no	F5.1 Gromark with multiplicative feedback, bases 2-16 (lags to 6) and 26 (to 5), free alphabet, 299M primers, 10 copies	no setting fits K4 or any copy; plants found

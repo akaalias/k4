@@ -120,6 +120,9 @@ F8 is finished: F8.1 closed for 2x2 (0194), blocked for 3x3 (too few equations);
 | # | Item | One line |
 |---|---|---|
 | 195 | F5.2 | **Gromark on a free alphabet in other bases, exact, compiled.** Three-term rules (lags to 6) in bases 2-9 and 11-16, base 26 to lag 5; two-term rules with lags 7-8 in base 10 and 6 in bases 2-9, 11-16; four forms; 373 rule jobs, 1.55 billion primers, 4 processes. Consistent: K4 0, ten copies 0; both plants found. Base 26 three-term with lag 6 (3.1 billion primers) and other bases beyond lag 6 blocked by cost. Closed. Prediction held. |
+| 196 | F5.1 | **Gromark with multiplicative feedback, exact, compiled.** d[i] = d[i-a] d[i-b] mod B, lags to 6 in bases 2-16, to 5 in base 26, four forms, free alphabet; 235 rule jobs, 299M primers. Consistent: K4 0, ten copies 0; plants found (one at 32 primers: product streams collapse). YAR as a primer is one of the primers every sweep enumerates (0076, 0195): closed by subsumption. The attack file's first line says 0197; the run took 0196. Closed. Prediction held. |
+
+F5 is finished: F5.1 and F5.2 closed (0195, 0196); base 26 with lag 6 and longer two-term lags blocked by cost. Pivot P16 to F9.
 
 ## 2026-10-16
 

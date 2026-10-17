@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Every Gromark rule tried so far adds earlier digits. Multiplying them is the other simple rule, and the raised YAR has been read as starting digits."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every pair of earlier positions up to six back, every base from 2 to 16 and 26, every starting run, four ways of applying the digit, any mixed alphabet."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Nothing fits K4 or a scrambled copy; planted texts are found. F5.1 closed."
+ }
+]

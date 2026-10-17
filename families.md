@@ -156,7 +156,7 @@ Update the leaf when an experiment works on it.
     - Settings with too few equations to decide (5x5 affine; long keys with 4x4) {blocked · exact · 0105, 0116}
   - F5 Gromark and number feedback
     - Two- and three-term rules, bases 2-26 (three-term free alphabet in base 10 only) {closed · exact · 0013, 0028, 0046, 0054, 0069, 0076, 0107}
-    - **F5.1** Multiplicative feedback; the raised YAR as primer {open}
+    - **F5.1** Multiplicative feedback; the raised YAR as primer {closed · exact · 0196}
     - **F5.2** Three-term Gromark on a free alphabet in other bases {closed · exact · 0195}
   - F9 Substitution, then a move
     - One-to-one substitution, then any of the 1.86M built routes {closed · exact · 0019, 0106}
@@ -292,7 +292,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P15 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P16 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -311,3 +311,4 @@ Each pivot has a details page in `pivots/` (P1-P15 so far), rendered on the Pivo
 | 2026-10-17 | F10 alphabets that change after every letter (0187-0188) | F11 agency hand systems | F10.1 and F10.2 closed exactly: Chaocipher with any word-mixed cipher wheel and Wheatstone's cryptograph with any inner ring do not fit K4; Chaocipher's free wheel blocked by cost, deck ciphers by date and bound. Ranking unchanged (P13). |
 | 2026-10-17 | F11 agency hand systems (0189-0192) | F8 Hill | F11.1-F11.4 closed exactly: the M-94 in any disc order, the poem code on the sculpture's text, the CIA's key box on K1-K3 and Carter, Friedman's alphabet box on every dictionary word; none fits K4 or its copies. Ranking unchanged (P14). |
 | 2026-10-17 | F8 Hill (0193-0194) | F5 Gromark | F8.1 closed for 2x2: no invertible matrix fits K4 under any numbering of the letters; 3x3 has too few equations (blocked). Ranking unchanged (P15). |
+| 2026-10-17 | F5 Gromark (0195-0196) | F9 substitution, then a move | F5.1 and F5.2 closed exactly: Gromark on a free alphabet in every base 2-16 and 26 with three-term, longer two-term and multiplicative rules; nothing fits K4. Ranking unchanged (P16). |

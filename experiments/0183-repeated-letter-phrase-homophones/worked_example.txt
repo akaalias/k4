@@ -1,0 +1,10 @@
+phrase strip NOWISTHETIMEFORALLGOODMENT (lacks C, K: such a phrase is dropped)
+
+place 22: E at strip places [7, 11, 23], carved F at 5: allowed keys [8, 20, 24]
+place 23: A at strip places [15], carved L at 11: allowed keys [22]
+place 24: S at strip places [4], carved R at 17: allowed keys [13]
+place 25: T at strip places [5, 8, 25], carved V at 21: allowed keys [13, 16, 22]
+place 26: N at strip places [0, 24], carved Q at 16: allowed keys [16, 18]
+place 27: O at strip places [1, 13, 19, 20], carved Q at 16: allowed keys [3, 15, 22, 23]
+place 28: R at strip places [14], carved P at 15: allowed keys [1]
+place 29: T at strip places [5, 8, 25], carved R at 17: allowed keys [9, 12, 18]

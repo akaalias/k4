@@ -1,0 +1,362 @@
+{
+ "id": 183,
+ "tag": "0183-repeated-letter-phrase-homophones",
+ "started": "2026-10-17T00:31:29+00:00",
+ "seconds": 4.1,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 4.1,
+  "record": 0.1
+ },
+ "ended_epoch": 1792197093.63232,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "repeated-letter phrase as plain strip (homophones keeping the length), cipher strip std/KRYPTOS, slide j+k or k-j, repeating key 1-26, exact; a derivation from EMC 45b, not a documented method",
+  "phrases": 1196,
+  "cells_per_text": 124384,
+  "live_cells": {
+   "k4": 617,
+   "copies": [
+    685,
+    693,
+    424,
+    734,
+    737,
+    516,
+    0,
+    501,
+    600,
+    386,
+    611,
+    703,
+    555,
+    548,
+    574,
+    638,
+    366,
+    616,
+    386,
+    574
+   ]
+  },
+  "per_length": {
+   "1": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 23
+   },
+   "2": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 22
+   },
+   "3": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 21
+   },
+   "4": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 20
+   },
+   "5": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 19
+   },
+   "6": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 18
+   },
+   "7": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 17
+   },
+   "8": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 16
+   },
+   "9": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 15
+   },
+   "10": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 14
+   },
+   "11": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 13
+   },
+   "12": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 12
+   },
+   "13": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 11
+   },
+   "14": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 11
+   },
+   "15": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 9
+   },
+   "16": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 8
+   },
+   "17": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 7
+   },
+   "18": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 7
+   },
+   "19": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 9
+   },
+   "20": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 11
+   },
+   "21": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 11
+   },
+   "22": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 9
+   },
+   "23": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 7
+   },
+   "24": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 1,
+    "checks": 5
+   },
+   "25": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 18,
+    "checks": 3
+   },
+   "26": {
+    "k4": 617,
+    "copies_min": 0,
+    "copies_max": 734,
+    "checks": 1
+   }
+  },
+  "lengths_k4_above_every_copy": [],
+  "k4_live_shortest": [
+   {
+    "phrase": "THEFLAMETOFLICKERBUTPRESEN",
+    "from": "k3 @248",
+    "strip": "kry",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "HEFLAMETOFLICKERBUTPRESENT",
+    "from": "k3 @249",
+    "strip": "kry",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ORTHEPUBLICATIONOFTHISBOOK",
+    "from": "Carter 1923 @1314",
+    "strip": "std",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "RTHEPUBLICATIONOFTHISBOOKW",
+    "from": "Carter 1923 @1315",
+    "strip": "std",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "INMETRESKETCHPLANOFTHETOMB",
+    "from": "Carter 1923 @3438",
+    "strip": "std",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "NIMPORTANTBECAUSEOFTHELACK",
+    "from": "Carter 1923 @3519",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "IMPORTANTBECAUSEOFTHELACKO",
+    "from": "Carter 1923 @3520",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ORTANTBECAUSEOFTHELACKOFLI",
+    "from": "Carter 1923 @3523",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "RTANTBECAUSEOFTHELACKOFLIT",
+    "from": "Carter 1923 @3524",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ANTBECAUSEOFTHELACKOFLITER",
+    "from": "Carter 1923 @3526",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "NTBECAUSEOFTHELACKOFLITERA",
+    "from": "Carter 1923 @3527",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "RESENTTHEACTUALTOMBOFTHEKI",
+    "from": "Carter 1923 @3661",
+    "strip": "std",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "TILITARIANOBJECTSSUCHAWALK",
+    "from": "Carter 1923 @8602",
+    "strip": "kry",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ILITARIANOBJECTSSUCHAWALKI",
+    "from": "Carter 1923 @8603",
+    "strip": "kry",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "LITARIANOBJECTSSUCHAWALKIN",
+    "from": "Carter 1923 @8604",
+    "strip": "kry",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   }
+  ],
+  "plant": {
+   "phrase": "THEFLAMETOFLICKERBUTPRESEN",
+   "length": 7,
+   "live": true
+  },
+  "copies": "20 shuffled copies (seed 1830)",
+  "exhaustive": true
+ },
+ "notes": "1196 phrases; live cells K4 617 (copies 0-737); lengths where K4 is above every copy: []; plant live True",
+ "error": null,
+ "candidates": []
+}

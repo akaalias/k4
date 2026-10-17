@@ -1755,7 +1755,7 @@ LIN_CSS = """
 #lin.dim .ng.lit{opacity:.6}
 #lin.dim .ng.lit-direct{opacity:1}
 #lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
-#lin.dim .edge.lit{opacity:.5;stroke:var(--muted)}
+#lin.dim .edge.lit{opacity:.85;stroke:var(--muted);stroke-width:1.5}
 #lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
 #lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
 #lin-tip .pop-title{font-weight:700;font-size:14.5px;line-height:1.25;margin-bottom:3px}

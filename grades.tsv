@@ -191,3 +191,5 @@ id	outcome	strength	cribs_forced	space	note
 0190	ruled-out	exact	no	F11.2 poem code: double columnar keyed by 1-6 consecutive words of K1-K3 and the Morse (3,063 keys), then/before periodic key 1-26, 15 copies	shortest live 24/25 vs copies 22/25; 0/52 cells above copies
 0191	ruled-out	exact	no	F11.3 CIA key box: K2, K3, K1-K3, Carter as key text by rows, read by columns (widths 2-50, 4 orders + keywords), 8 tables, every start, 10 copies	no fit on K4 or copies; best partial 9/24 as copies
 0192	ruled-out	exact	no	F11.4 Friedman's keyed alphabet box: 163,726 keyword column orders, alphabet x1-8 (std/KRY), every start, 8 tables, 10 copies	no fit on K4 or copies; plants found
+0193	error	exact	no	F8.1 Hill 2x2 with a free numbering: first launch killed with its shell, relaunch stopped on a pickling error	rerun as 0194
+0194	ruled-out	exact	no	F8.1 Hill 2x2, any one-to-one numbering, every invertible matrix, both alignments, 5 copies, 3 plants	no matrix fits K4 or any copy; plants fit only their own matrix

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The tableau's last column spells HILL, a cipher that mixes letters in pairs with a small matrix of numbers. It had been tried with the usual numberings of the letters; the numbering could itself be secret."
+ },
+ {
+  "anchor": "the check",
+  "text": "For every invertible 2 x 2 matrix and both ways of pairing the letters, a search for any one-to-one numbering of the alphabet that makes all 22 equations from the known pairs hold."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No matrix fits K4 or a scrambled copy under any numbering; planted texts are recovered exactly. F8.1 closed for 2 x 2; 3 x 3 has too few equations."
+ }
+]

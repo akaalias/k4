@@ -32,8 +32,8 @@ construction) are in `grades.tsv`.
 | 6th | F4 Sanborn's visual systems | medium, vague | nothing testable here: F4.5's shifted plate order needs Antipodes' layout | - | done (P12, 2026-10-17): F4.1-F4.4 closed, F4.5 blocked for the layout |
 | 7th | F10 alphabets that change after every letter | weak to medium: no creator remark; Chaocipher (1918) was offered to US agencies and kept secret until 2010; A9, A10 | nothing testable here: Chaocipher's free wheel by cost, decks by date and bound | - | done (P13, 2026-10-17): F10.1-F10.2 closed, F10.3 blocked |
 | 8th | F11 agency hand systems, now public | weak to medium: Scheidt's CIA cryptographic background; Scheidt's "key word/s" (C5) for the poem code; A9 | nothing testable here: Jefferson and M-138-A alphabets not to hand; free word picks and free tables too many | - | done (P14, 2026-10-17): F11.1-F11.4 closed |
-| 9th | F8 Hill | weak: the HILL column only (C21) | F8.1: count the equations for Hill with an unknown numbering; 5x5 affine has no checks | low | **next** (P14) |
-| 10th | F5 Gromark | weak: no creator remark | F5.1; F5.2: three-term Gromark on a free alphabet in other bases | low | nearly closed |
+| 9th | F8 Hill | weak: the HILL column only (C21) | nothing testable here: 3x3 with a free numbering has no checks; the older undecided settings have none either | - | done (P15, 2026-10-17): F8.1 closed for 2x2, blocked for 3x3 |
+| 10th | F5 Gromark | weak: no creator remark | F5.1; F5.2: three-term Gromark on a free alphabet in other bases | low | **next** (P15) |
 | 11th | F9 substitution, then a move | against it: Sanborn's NYPVTT to BERLIN mapping | F9.1: a bounded list of hand transpositions outside the 1.86M built routes | medium | queued (reopened, P6) |
 | - | F7 construction simulation | a tool, not a cipher | run before each family's first open item: does its construction make both fingerprints? | low | standing step |
 
@@ -194,7 +194,7 @@ left out while the letter-for-letter reading of the known letters holds (A2).
 | Item | Status | Strength | Experiments | Reason |
 |---|---|---|---|---|
 | Hill 2-5, plain and affine, 330 numberings (4 standard, 126 vocabulary, 200 K1-K3 words; an unknown numbering is F8.1), chained, with a periodic key | closed, except what had too few equations: 5x5 affine (14 of 20 settings undecided, 0105) and 400 of 936 Hill-plus-key settings, mostly 4x4 with long keys (0116) | exact where decided | 0015, 0036, 0044, 0055, 0105, 0116 | the undecided settings are blocked: no checks. Reopen if F1.5 reaches power and the bound in its step 1 allows |
-| **F8.1** Hill 2x2 and 3x3 with an unknown letter numbering (any of 26!) | **open** | - | 0015, 0044, 0055, 0105, 0116 | count equations against unknowns first; if too few, blocked with the number (pivot audit 2026-10-16 (issue #55), D9) |
+| **F8.1** Hill 2x2 and 3x3 with an unknown letter numbering (any of 26!) | closed (2x2); blocked (3x3) | exact (0194): 22 equations against 96-98 bits; every invertible 2x2 matrix, both alignments, any one-to-one numbering: none fits K4 or 5 copies, plants recovered; 3x3 is 21-32 bits short of a check | 0193 (error), 0194 | - |
 | Gromark, two- and three-term rules, bases 2-26 (three-term on a free alphabet in base 10 only; other bases are F5.2) | closed | exact | 0013, 0028, 0046, 0054, 0069, 0076, 0107 | - |
 | **F5.1** Multiplicative feedback; the raised YAR as primer | open, low value | - | - | no creator remark points here |
 | **F5.2** Three-term Gromark on a free alphabet in bases 2-9, 11-16 and 26; two-term free-alphabet rules beyond lag 6 (base 10) and 5 (other bases) | **open** | - | 0046, 0069, 0076, 0107 | exact; cheap (0107 ran in 50 s) (pivot audit 2026-10-16 (issue #55), D7) |

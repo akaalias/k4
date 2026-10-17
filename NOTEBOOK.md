@@ -106,6 +106,15 @@ F10 is finished: F10.1 and F10.2 closed (0187, 0188), F10.1's free left wheel an
 
 F11 is finished: F11.1-F11.4 closed (0189-0192), with the Jefferson wheel and M-138-A strips blocked (alphabets not to hand), free word picks for the poem code and free tables for the boxes not run. Pivot P14 to F8.
 
+### F8 Hill (after pivot P14, ticket #17)
+
+| # | Item | One line |
+|---|---|---|
+| 193 | F8.1 | **Error.** The first launch, run from a background shell with a 20-minute limit, was killed with it (each shuffled copy takes up to 4 minutes per alignment); the relaunch under nohup with a worker pool stopped at once on a pickling error (the pool's worker function, under the runner's module name). Rerun as 0194. |
+| 194 | F8.1 | **Hill 2x2 with a free letter numbering, exact, compiled.** Counted first: 11 digraphs inside the runs at either alignment, 22 equations (about 103 bits) against 79-81 bits of numbering and 17 of matrix. For each of the 157,248 invertible matrices and both alignments, a search with propagation for a one-to-one numbering: none on K4, none on 5 copies (copies take up to 4 minutes per alignment, so 5), nothing undecided (at most 40,301 nodes). Three plants each fit their own matrix and no other. 3x3: 21-32 bits short, blocked. Closed. Prediction held. |
+
+F8 is finished: F8.1 closed for 2x2 (0194), blocked for 3x3 (too few equations); the older undecided Hill settings stay blocked. Pivot P15 to F5.
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

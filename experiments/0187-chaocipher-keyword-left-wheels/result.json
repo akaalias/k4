@@ -1,0 +1,75 @@
+{
+ "id": 187,
+ "tag": "0187-chaocipher-keyword-left-wheels",
+ "started": "2026-10-17T00:41:25+00:00",
+ "seconds": 72.4,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 1.7,
+  "run": 72.4,
+  "record": 0.1
+ },
+ "ended_epoch": 1792197758.3907871,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "Chaocipher, left wheel from any keyword-mixed alphabet (dictionary + vocabulary) at any rotation, right wheel free, exact",
+  "test_vector_ok": true,
+  "alphabets": 208651,
+  "left_wheels": 5424926,
+  "consistent": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "plants": [
+    26,
+    26,
+    26
+   ]
+  },
+  "plants": [
+   {
+    "keyword": "SOCIOLOGIAN",
+    "rotation": 0
+   },
+   {
+    "keyword": "STRADIVARI",
+    "rotation": 10
+   },
+   {
+    "keyword": "TURBOEXCITER",
+    "rotation": 5
+   }
+  ],
+  "k4_hits": [],
+  "checks": "24 known letters, 13 different: 11 equalities on the right wheel's start, plus distinctness",
+  "free_left_wheel": "26! starts (about 88 bits) against about 51 bits of checks: not searchable; blocked",
+  "copies": "10 shuffled copies (seed 1870)",
+  "seconds": 72,
+  "exhaustive": true
+ },
+ "notes": "5,424,926 left wheels; consistent K4 0 (copies 0-0); plants [26, 26, 26]; Byrne's test vector reproduced",
+ "error": null,
+ "candidates": []
+}

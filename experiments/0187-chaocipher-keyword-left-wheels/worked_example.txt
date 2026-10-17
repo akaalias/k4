@@ -1,0 +1,26 @@
+left wheel starts as the BERLIN alphabet BERLINACDFGHJKMOPQSTUVWXYZ
+
+place 1: carved O at left-wheel place 15: the left wheel turns by 15, the right by 16
+place 2: carved B at left-wheel place 10: the left wheel turns by 10, the right by 11
+place 3: carved K at left-wheel place 14: the left wheel turns by 14, the right by 15
+place 4: carved R at left-wheel place 12: the left wheel turns by 12, the right by 13
+place 5: carved U at left-wheel place 19: the left wheel turns by 19, the right by 20
+place 6: carved O at left-wheel place 22: the left wheel turns by 22, the right by 23
+place 7: carved X at left-wheel place 5: the left wheel turns by 5, the right by 6
+place 8: carved O at left-wheel place 21: the left wheel turns by 21, the right by 22
+place 9: carved G at left-wheel place 20: the left wheel turns by 20, the right by 21
+place 10: carved H at left-wheel place 13: the left wheel turns by 13, the right by 14
+place 11: carved U at left-wheel place 20: the left wheel turns by 20, the right by 21
+place 12: carved L at left-wheel place 6: the left wheel turns by 6, the right by 7
+place 13: carved B at left-wheel place 23: the left wheel turns by 23, the right by 24
+place 14: carved S at left-wheel place 5: the left wheel turns by 5, the right by 6
+place 15: carved O at left-wheel place 16: the left wheel turns by 16, the right by 17
+place 16: carved L at left-wheel place 6: the left wheel turns by 6, the right by 7
+place 17: carved I at left-wheel place 14: the left wheel turns by 14, the right by 15
+place 18: carved F at left-wheel place 21: the left wheel turns by 21, the right by 22
+place 19: carved B at left-wheel place 14: the left wheel turns by 14, the right by 15
+place 20: carved B at left-wheel place 0: the left wheel turns by 0, the right by 1
+place 21: carved W at left-wheel place 5: the left wheel turns by 5, the right by 6
+place 22: carved F at left-wheel place 4: the left wheel turns by 4, the right by 5
+place 23: carved L at left-wheel place 2: the left wheel turns by 2, the right by 3
+place 24: carved R at left-wheel place 14: the left wheel turns by 14, the right by 15

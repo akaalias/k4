@@ -1,0 +1,54 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Chaocipher, left wheel from any keyword-mixed alphabet (dictionary + vocabulary) at any rotation, right wheel free, exact",
+  "test_vector_ok": true,
+  "alphabets": 208651,
+  "left_wheels": 5424926,
+  "consistent": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "plants": [
+    26,
+    26,
+    26
+   ]
+  },
+  "plants": [
+   {
+    "keyword": "SOCIOLOGIAN",
+    "rotation": 0
+   },
+   {
+    "keyword": "STRADIVARI",
+    "rotation": 10
+   },
+   {
+    "keyword": "TURBOEXCITER",
+    "rotation": 5
+   }
+  ],
+  "k4_hits": [],
+  "checks": "24 known letters, 13 different: 11 equalities on the right wheel's start, plus distinctness",
+  "free_left_wheel": "26! starts (about 88 bits) against about 51 bits of checks: not searchable; blocked",
+  "copies": "10 shuffled copies (seed 1870)",
+  "seconds": 72,
+  "exhaustive": true
+ },
+ "notes": "5,424,926 left wheels; consistent K4 0 (copies 0-0); plants [26, 26, 26]; Byrne's test vector reproduced",
+ "controls": [],
+ "error": null,
+ "worked_example": "left wheel starts as the BERLIN alphabet BERLINACDFGHJKMOPQSTUVWXYZ\n\nplace 1: carved O at left-wheel place 15: the left wheel turns by 15, the right by 16\nplace 2: carved B at left-wheel place 10: the left wheel turns by 10, the right by 11\nplace 3: carved K at left-wheel place 14: the left wheel turns by 14, the right by 15\nplace 4: carved R at left-wheel place 12: the left wheel turns by 12, the right by 13\nplace 5: carved U at left-wheel place 19: the left wheel turns by 19, the right by 20\nplace 6: carved O at left-wheel place 22: the left wheel turns by 22, the right by 23\nplace 7: carved X at left-wheel place 5: the left wheel turns by 5, the right by 6\nplace 8: carved O at left-wheel place 21: the left wheel turns by 21, the right by 22\nplace 9: carved G at left-wheel place 20: the left wheel turns by 20, the right by 21\nplace 10: carved H at left-wheel place 13: the left wheel turns by 13, the right by 14\nplace 11: carved U at left-wheel place 20: the left wheel turns by 20, the right by 21\nplace 12: carved L at left-wheel place 6: the left wheel turns by 6, the right by 7\nplace 13: carved B at left-wheel place 23: the left wheel turns by 23, the right by 24\nplace 14: carved S at left-wheel place 5: the left wheel turns by 5, the right by 6\nplace 15: carved O at left-wheel place 16: the left wheel turns by 16, the right by 17\nplace 16: carved L at left-wheel place 6: the left wheel turns by 6, the right by 7\nplace 17: carved I at left-wheel place 14: the left wheel turns by 14, the right by 15\nplace 18: carved F at left-wheel place 21: the left wheel turns by 21, the right by 22\nplace 19: carved B at left-wheel place 14: the left wheel turns by 14, the right by 15\nplace 20: carved B at left-wheel place 0: the left wheel turns by 0, the right by 1\nplace 21: carved W at left-wheel place 5: the left wheel turns by 5, the right by 6\nplace 22: carved F at left-wheel place 4: the left wheel turns by 4, the right by 5\nplace 23: carved L at left-wheel place 2: the left wheel turns by 2, the right by 3\nplace 24: carved R at left-wheel place 14: the left wheel turns by 14, the right by 15",
+ "seconds": 72.36585330963135
+}

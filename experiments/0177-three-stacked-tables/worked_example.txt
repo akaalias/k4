@@ -1,0 +1,28 @@
+key lengths 5, 6, 7: the three slots each known place ties together
+
+place 22: E -> F: first key slot 1, second 3, third 0
+place 23: A -> L: first key slot 2, second 4, third 1
+place 24: S -> R: first key slot 3, second 5, third 2
+place 25: T -> V: first key slot 4, second 0, third 3
+place 26: N -> Q: first key slot 0, second 1, third 4
+place 27: O -> Q: first key slot 1, second 2, third 5
+place 28: R -> P: first key slot 2, second 3, third 6
+place 29: T -> R: first key slot 3, second 4, third 0
+place 30: H -> N: first key slot 4, second 5, third 1
+place 31: E -> G: first key slot 0, second 0, third 2
+place 32: A -> K: first key slot 1, second 1, third 3
+place 33: S -> S: first key slot 2, second 2, third 4
+place 34: T -> S: first key slot 3, second 3, third 5
+place 64: B -> N: first key slot 3, second 3, third 0
+place 65: E -> Y: first key slot 4, second 4, third 1
+place 66: R -> P: first key slot 0, second 5, third 2
+place 67: L -> V: first key slot 1, second 0, third 3
+place 68: I -> T: first key slot 2, second 1, third 4
+place 69: N -> T: first key slot 3, second 2, third 5
+place 70: C -> M: first key slot 4, second 3, third 6
+place 71: L -> Z: first key slot 0, second 4, third 0
+place 72: O -> F: first key slot 1, second 5, third 1
+place 73: C -> P: first key slot 2, second 0, third 2
+place 74: K -> K: first key slot 3, second 1, third 3
+
+slots used: 18; checks: 6

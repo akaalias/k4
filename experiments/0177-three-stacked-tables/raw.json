@@ -1,0 +1,458 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "patent N = 2: v = d + P2[b + P1[u + a]], P1, P2 in {KRYPTOS, inverse}, u and v on std/KRYPTOS/inverse with signs (144 classes), key lengths 1-10 each, exact",
+  "classes": 144,
+  "length_triples": 916,
+  "cells_per_text": 131904,
+  "live_at_least_checks": {
+   "1": {
+    "k4": 124,
+    "coppers_min": 98,
+    "coppers_max": 130
+   },
+   "2": {
+    "k4": 3,
+    "coppers_min": 1,
+    "coppers_max": 7
+   },
+   "4": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0
+   },
+   "6": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0
+   },
+   "8": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0
+   },
+   "12": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0
+   }
+  },
+  "live_by_checks_k4": {
+   "1": 121,
+   "2": 3
+  },
+  "undecided": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "max_nodes": 990419,
+  "k4_live": [
+   {
+    "class": "kry/1/kry-inv/kry-inv/kry-inv/-1",
+    "lengths": [
+     9,
+     8,
+     5
+    ],
+    "checks": 2
+   },
+   {
+    "class": "kry/-1/kry-inv/kry/std/-1",
+    "lengths": [
+     8,
+     5,
+     9
+    ],
+    "checks": 2
+   },
+   {
+    "class": "kry-inv/-1/kry/kry/kry-inv/1",
+    "lengths": [
+     10,
+     3,
+     9
+    ],
+    "checks": 2
+   },
+   {
+    "class": "std/1/kry/kry/std/-1",
+    "lengths": [
+     4,
+     10,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry/kry/std/-1",
+    "lengths": [
+     10,
+     7,
+     6
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry/kry/kry/1",
+    "lengths": [
+     10,
+     4,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry/kry/kry-inv/1",
+    "lengths": [
+     4,
+     9,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry/kry-inv/std/1",
+    "lengths": [
+     4,
+     9,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry/kry-inv/kry/-1",
+    "lengths": [
+     10,
+     9,
+     4
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry/kry-inv/kry-inv/1",
+    "lengths": [
+     8,
+     9,
+     6
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry/std/-1",
+    "lengths": [
+     6,
+     10,
+     7
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry/kry/-1",
+    "lengths": [
+     10,
+     9,
+     4
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry/kry-inv/1",
+    "lengths": [
+     7,
+     6,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry/kry-inv/1",
+    "lengths": [
+     9,
+     10,
+     4
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry/kry-inv/-1",
+    "lengths": [
+     8,
+     9,
+     6
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry-inv/std/1",
+    "lengths": [
+     6,
+     9,
+     8
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry-inv/std/1",
+    "lengths": [
+     7,
+     6,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry-inv/kry/1",
+    "lengths": [
+     7,
+     7,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry-inv/kry/1",
+    "lengths": [
+     10,
+     6,
+     7
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry-inv/kry/-1",
+    "lengths": [
+     10,
+     6,
+     7
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry-inv/kry/-1",
+    "lengths": [
+     10,
+     7,
+     6
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry-inv/kry-inv/1",
+    "lengths": [
+     6,
+     7,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/1/kry-inv/kry-inv/kry-inv/-1",
+    "lengths": [
+     7,
+     9,
+     7
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry/kry-inv/kry-inv/1",
+    "lengths": [
+     4,
+     10,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry/std/1",
+    "lengths": [
+     6,
+     8,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry/std/1",
+    "lengths": [
+     9,
+     4,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry/std/-1",
+    "lengths": [
+     4,
+     9,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry/std/-1",
+    "lengths": [
+     9,
+     4,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry/kry-inv/-1",
+    "lengths": [
+     8,
+     7,
+     8
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry-inv/kry/1",
+    "lengths": [
+     7,
+     10,
+     6
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry-inv/kry/1",
+    "lengths": [
+     9,
+     8,
+     6
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry-inv/kry/1",
+    "lengths": [
+     10,
+     4,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry-inv/kry/-1",
+    "lengths": [
+     6,
+     8,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry-inv/kry/-1",
+    "lengths": [
+     7,
+     7,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "std/-1/kry-inv/kry-inv/kry-inv/1",
+    "lengths": [
+     6,
+     8,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "kry/1/kry/kry/std/1",
+    "lengths": [
+     6,
+     7,
+     10
+    ],
+    "checks": 1
+   },
+   {
+    "class": "kry/1/kry/kry/std/1",
+    "lengths": [
+     6,
+     8,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "kry/1/kry/kry/std/-1",
+    "lengths": [
+     6,
+     8,
+     9
+    ],
+    "checks": 1
+   },
+   {
+    "class": "kry/1/kry/kry/kry/1",
+    "lengths": [
+     7,
+     10,
+     6
+    ],
+    "checks": 1
+   },
+   {
+    "class": "kry/1/kry/kry/kry-inv/1",
+    "lengths": [
+     7,
+     10,
+     6
+    ],
+    "checks": 1
+   }
+  ],
+  "plants": [
+   {
+    "class": "std/-1/kry/kry/kry-inv/-1",
+    "lengths": [
+     4,
+     4,
+     5
+    ],
+    "checks": 11,
+    "status": 1
+   },
+   {
+    "class": "kry/1/kry/kry-inv/kry/-1",
+    "lengths": [
+     7,
+     5,
+     5
+    ],
+    "checks": 7,
+    "status": 1
+   },
+   {
+    "class": "kry-inv/1/kry-inv/kry/kry/-1",
+    "lengths": [
+     5,
+     8,
+     8
+    ],
+    "checks": 3,
+    "status": 1
+   }
+  ],
+  "copies": "5 of 20 shuffled coppers run (seed 1770)",
+  "seconds": 1772,
+  "exhaustive": true
+ },
+ "notes": "live cells with >=4 checks: K4 0 (coppers 0-0); >=1: K4 124 (coppers 98-130); undecided K4 0; plants live 3/3",
+ "controls": [],
+ "error": null,
+ "worked_example": "key lengths 5, 6, 7: the three slots each known place ties together\n\nplace 22: E -> F: first key slot 1, second 3, third 0\nplace 23: A -> L: first key slot 2, second 4, third 1\nplace 24: S -> R: first key slot 3, second 5, third 2\nplace 25: T -> V: first key slot 4, second 0, third 3\nplace 26: N -> Q: first key slot 0, second 1, third 4\nplace 27: O -> Q: first key slot 1, second 2, third 5\nplace 28: R -> P: first key slot 2, second 3, third 6\nplace 29: T -> R: first key slot 3, second 4, third 0\nplace 30: H -> N: first key slot 4, second 5, third 1\nplace 31: E -> G: first key slot 0, second 0, third 2\nplace 32: A -> K: first key slot 1, second 1, third 3\nplace 33: S -> S: first key slot 2, second 2, third 4\nplace 34: T -> S: first key slot 3, second 3, third 5\nplace 64: B -> N: first key slot 3, second 3, third 0\nplace 65: E -> Y: first key slot 4, second 4, third 1\nplace 66: R -> P: first key slot 0, second 5, third 2\nplace 67: L -> V: first key slot 1, second 0, third 3\nplace 68: I -> T: first key slot 2, second 1, third 4\nplace 69: N -> T: first key slot 3, second 2, third 5\nplace 70: C -> M: first key slot 4, second 3, third 6\nplace 71: L -> Z: first key slot 0, second 4, third 0\nplace 72: O -> F: first key slot 1, second 5, third 1\nplace 73: C -> P: first key slot 2, second 0, third 2\nplace 74: K -> K: first key slot 3, second 1, third 3\n\nslots used: 18; checks: 6",
+ "seconds": 1772.3590550422668
+}

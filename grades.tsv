@@ -179,3 +179,4 @@ id	outcome	strength	cribs_forced	space	note
 0178	ruled-out	exact	no	F3.5 misspelt letters' positions, shifts and Bauer coordinates (40 readings) plus an unknown word of 1-24, 12 table rules, 20 coppers	no setting fits K4 or any copper; plant found
 0179	ruled-out	exact	no	F3.6 Weltzeituhr 24-zone ring over 26 letters (56 readings) plus an unknown word of 1-24, 12 table rules, 20 coppers	no setting fits K4 or any copper; plant found
 0180	ruled-out	exact	no	F3.7 'point' as numbers: six point five, the four ?, K2's ? and X stops (25 readings) plus an unknown word of 1-24, 12 rules, 20 coppers	no setting fits K4 or any copper; plant found
+0181	ruled-out	exact	no	F2.1 letter nulls (351 masks) then periodic key 24-25: forced plaintext outside the runs searched for 6+ letter words, 10 kept-place copies	no word on K4 (copies 0-32 settings)

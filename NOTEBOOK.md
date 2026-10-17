@@ -62,6 +62,10 @@ F3 is finished: F3.1-F3.7 closed (0173-0180), with two weak residues blocked: th
 
 ### F2 masked plaintext (after pivot P10, ticket #20)
 
+| # | Item | One line |
+|---|---|---|
+| 181 | F2.1 | **What 0057's long keys force, read for words, exact.** Every copy of one or two letters struck (351 masks), then a repeating key of 24 or 25 on 12 table rules: 1,620 fitting settings on K4 (copies 1,020-1,620). The places the key fixes, away from the known words, searched for dictionary words of 6-15 letters: K4 none in any setting; copies 0-32 settings, longest 6-7. Copies keep the 24 known places so each mask strikes as many letters. Closed. Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

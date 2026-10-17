@@ -128,7 +128,7 @@ Update the leaf when an experiment works on it.
     - Masks that move or pad letters: reversal, nulls, doublets as nulls {closed · exact · 0023, 0057, 0075}
     - Masks that change letters: affine, Atbash {closed · exact · 0074}
     - The message written along a grid path {closed · exact · 0092}
-    - **F2.1** Fragments from 0057's letter strike-outs at key lengths 24-25 not yet matched against words {open}
+    - **F2.1** Fragments from 0057's letter strike-outs at key lengths 24-25 not yet matched against words {closed · exact · 0181}
     - **F2.2** Nulls placed by a rule {open}
     - **F2.3** A plain component with repeated letters: homophones that keep the length {open}
     - A code layer, phonetic spelling, another language: these change the known letters or need a codebook {blocked}

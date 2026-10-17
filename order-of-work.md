@@ -145,7 +145,7 @@ in this family or the one it points to.
 |---|---|---|---|---|
 | Reversal, regular nulls, prefix nulls, affine masks, doublets as nulls, nulls by letter | closed | exact | 0023, 0057, 0074, 0075 | - |
 | Message written along grid paths | closed | exact | 0092 | - |
-| **F2.1** Forced fragments at periods 24-25 after letter strike-outs not matched against words | **open** | gap in 0057 | 0057 | match them against the dictionary; cheap |
+| **F2.1** Forced fragments at periods 24-25 after letter strike-outs not matched against words | closed | exact (0181): the forced readings at key lengths 24-25 after every one- or two-letter strike-out hold no dictionary word of 6+ letters on K4; kept-place copies 0-32 settings | 0181 (before: 0057) | - |
 | **F2.2** Nulls placed by a rule (after every X, after each crib word) | **open** | - | - | exact, cheap |
 | **F2.3** A plain component written from a phrase with repeated letters, so a letter can be enciphered by any of its places: homophones that keep the length | **open** | - | - | the agent's derivation from EMC par. 45b, not a documented method: state it as such; test phrase components from the vocabulary, the known letters as set membership (addendum `research_notes/Scheidt patents and field ciphers/addendum_downloaded_manuals.md` (issue #9)) |
 | A code layer, phonetic spelling, another language | blocked | - | - | changes the letters at the known places or needs a codebook we lack |

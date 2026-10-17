@@ -1,0 +1,115 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Wheatstone cryptograph: 27-place outer ring (std/KRYPTOS, blank first/last), 26-letter inner ring free or word-mixed, hands forward/backward; continuous plaintext; exact",
+  "variants": 8,
+  "word_alphabets": 208651,
+  "free_ring_consistent_offsets": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mixed_ring_consistent": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_mixed_hits": [],
+  "distinct_inner_places_per_run": {
+   "std/first/fwd": {
+    "run1_places": 12,
+    "run2_places": 9
+   },
+   "std/first/bwd": {
+    "run1_places": 10,
+    "run2_places": 10
+   },
+   "std/last/fwd": {
+    "run1_places": 12,
+    "run2_places": 9
+   },
+   "std/last/bwd": {
+    "run1_places": 10,
+    "run2_places": 10
+   },
+   "kry/first/fwd": {
+    "run1_places": 10,
+    "run2_places": 11
+   },
+   "kry/first/bwd": {
+    "run1_places": 10,
+    "run2_places": 10
+   },
+   "kry/last/fwd": {
+    "run1_places": 10,
+    "run2_places": 11
+   },
+   "kry/last/bwd": {
+    "run1_places": 10,
+    "run2_places": 10
+   }
+  },
+  "plants": [
+   {
+    "variant": "std/first/bwd",
+    "inner": "CALXBDEFGHIJKMNOPQRSTUVWYZ",
+    "free_offsets": 1,
+    "mixed_found": true
+   },
+   {
+    "variant": "std/first/fwd",
+    "inner": "UNDERWFTABCGHIJKLMOPQSVXYZ",
+    "free_offsets": 1,
+    "mixed_found": true
+   }
+  ],
+  "copies": "20 shuffled copies (seed 1880)",
+  "seconds": 9,
+  "exhaustive": true
+ },
+ "notes": "free inner ring: consistent (variant, offset) K4 0 (copies 0-0) of 208; word-mixed inner ring: K4 0 (copies 0-0); plants [{'variant': 'std/first/bwd', 'inner': 'CALXBDEFGHIJKMNOPQRSTUVWYZ', 'free_offsets': 1, 'mixed_found': True}, {'variant': 'std/first/fwd', 'inner': 'UNDERWFTABCGHIJKLMOPQSVXYZ', 'free_offsets': 1, 'mixed_found': True}]",
+ "controls": [],
+ "error": null,
+ "worked_example": "outer ring _ABC...Z, hands forward: long-hand steps through EASTNORTHEAST and the inner place each lands on\n\nplace 22: E, total steps   0, inner place b +  0, carved F\nplace 23: A, total steps  23, inner place b + 23, carved L\nplace 24: S, total steps  41, inner place b + 15, carved R\nplace 25: T, total steps  42, inner place b + 16, carved V\nplace 26: N, total steps  63, inner place b + 11, carved Q\nplace 27: O, total steps  64, inner place b + 12, carved Q\nplace 28: R, total steps  67, inner place b + 15, carved P\nplace 29: T, total steps  69, inner place b + 17, carved R\nplace 30: H, total steps  84, inner place b +  6, carved N\nplace 31: E, total steps 108, inner place b +  4, carved G\nplace 32: A, total steps 131, inner place b +  1, carved K\nplace 33: S, total steps 149, inner place b + 19, carved S\nplace 34: T, total steps 150, inner place b + 20, carved S",
+ "seconds": 9.323617219924927
+}

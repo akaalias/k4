@@ -1,0 +1,15 @@
+outer ring _ABC...Z, hands forward: long-hand steps through EASTNORTHEAST and the inner place each lands on
+
+place 22: E, total steps   0, inner place b +  0, carved F
+place 23: A, total steps  23, inner place b + 23, carved L
+place 24: S, total steps  41, inner place b + 15, carved R
+place 25: T, total steps  42, inner place b + 16, carved V
+place 26: N, total steps  63, inner place b + 11, carved Q
+place 27: O, total steps  64, inner place b + 12, carved Q
+place 28: R, total steps  67, inner place b + 15, carved P
+place 29: T, total steps  69, inner place b + 17, carved R
+place 30: H, total steps  84, inner place b +  6, carved N
+place 31: E, total steps 108, inner place b +  4, carved G
+place 32: A, total steps 131, inner place b +  1, carved K
+place 33: S, total steps 149, inner place b + 19, carved S
+place 34: T, total steps 150, inner place b + 20, carved S

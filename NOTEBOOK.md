@@ -100,6 +100,7 @@ F10 is finished: F10.1 and F10.2 closed (0187, 0188), F10.1's free left wheel an
 | # | Item | One line |
 |---|---|---|
 | 189 | F11.1 | **The M-94 cylinder, any disc order, exact.** The 25 published disc alphabets (jproc.ca after George Mace; checked as permutations, A then the disc letter; B1 as the Cryptogram 1982 reprint). Groups of 25 from any alignment, any cipher row per group; per slot the discs allowed by its known letters, then distinct discs by bipartite matching. Consistent settings: K4 0, ten copies 0; two plants' true settings found (among 4 and 58). Closed for the M-94; Jefferson's own wheel and M-138-A strip sets blocked (alphabets not to hand). Prediction held. |
+| 190 | F11.2 | **The poem code on the sculpture's own text, exact.** Keys: every run of 1-6 consecutive words (5-40 letters) of K1, K2, K3 and the Morse, used for both columnar passes or split at a word boundary: 3,063 keys, 6,092 distinct moves with inverses, then or before a periodic key 1-26 (F6's compiled tester). Shortest live K4 24/25, copies 22/25; K4 above every copy in 0 of 52 cells (copies 0-1). Closed for consecutive words; an agent's free choice of five words is too many to list. Prediction held. |
 
 ## 2026-10-16
 

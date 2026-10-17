@@ -147,7 +147,7 @@ Update the leaf when an experiment works on it.
     - **F10.3** A key stream from a deck of cards (Solitaire, Mirdek) {blocked}
   - F11 Agency hand systems, now public
     - **F11.1** Strip ciphers and cylinders with published alphabets (M-94, Jefferson wheel, M-138-A) {closed · exact · 0189}
-    - **F11.2** Poem code: double transposition keyed by words from a memorized text, then the table {open}
+    - **F11.2** Poem code: double transposition keyed by words from a memorized text, then the table {closed · exact · 0190}
     - **F11.3** The CIA's Polish key box: a key text transposed in a box, then the table {open}
     - **F11.4** Friedman's keyed alphabet box as the key stream {open}
   - F8 Hill ciphers

@@ -1,0 +1,87 @@
+{
+ "id": 181,
+ "tag": "0181-struck-letter-fragments-against-words",
+ "started": "2026-10-17T00:27:14+00:00",
+ "seconds": 1.4,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 1.4,
+  "record": 0.0
+ },
+ "ended_epoch": 1792196835.878221,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "letter nulls (every copy of one or two letters outside the runs), then a periodic tableau at P 24, 25; forced plaintext outside the runs read for words",
+  "masks": 351,
+  "rules": 12,
+  "periods": [
+   24,
+   25
+  ],
+  "min_word": 6,
+  "fitting_settings": {
+   "k4": 1620,
+   "copies": [
+    1320,
+    1524,
+    1416,
+    1332,
+    1020,
+    1620,
+    1608,
+    1608,
+    1584,
+    1344
+   ]
+  },
+  "settings_with_a_word": {
+   "k4": 0,
+   "copies": [
+    0,
+    10,
+    0,
+    5,
+    0,
+    5,
+    0,
+    32,
+    12,
+    0
+   ]
+  },
+  "longest_word": {
+   "k4": 0,
+   "copies": [
+    0,
+    6,
+    0,
+    6,
+    0,
+    6,
+    0,
+    6,
+    7,
+    0
+   ]
+  },
+  "k4_examples": [],
+  "copies": "10 copies keeping the 24 known places, other 73 shuffled (seed 1810), same masks",
+  "exhaustive": true
+ },
+ "notes": "fitting settings K4 1620 (copies 1020-1620); with a 6+ letter word K4 0 (copies 0-32); longest K4 0 (copies 0-7)",
+ "error": null,
+ "candidates": []
+}

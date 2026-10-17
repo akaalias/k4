@@ -1,0 +1,66 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "letter nulls (every copy of one or two letters outside the runs), then a periodic tableau at P 24, 25; forced plaintext outside the runs read for words",
+  "masks": 351,
+  "rules": 12,
+  "periods": [
+   24,
+   25
+  ],
+  "min_word": 6,
+  "fitting_settings": {
+   "k4": 1620,
+   "copies": [
+    1320,
+    1524,
+    1416,
+    1332,
+    1020,
+    1620,
+    1608,
+    1608,
+    1584,
+    1344
+   ]
+  },
+  "settings_with_a_word": {
+   "k4": 0,
+   "copies": [
+    0,
+    10,
+    0,
+    5,
+    0,
+    5,
+    0,
+    32,
+    12,
+    0
+   ]
+  },
+  "longest_word": {
+   "k4": 0,
+   "copies": [
+    0,
+    6,
+    0,
+    6,
+    0,
+    6,
+    0,
+    6,
+    7,
+    0
+   ]
+  },
+  "k4_examples": [],
+  "copies": "10 copies keeping the 24 known places, other 73 shuffled (seed 1810), same masks",
+  "exhaustive": true
+ },
+ "notes": "fitting settings K4 1620 (copies 1020-1620); with a 6+ letter word K4 0 (copies 0-32); longest K4 0 (copies 0-7)",
+ "controls": [],
+ "error": null,
+ "worked_example": "Q at [26, 27, 39, 42]; struck outside the known runs: [39, 42]; BERLINCLOCK moves from 64-74 to 62-72",
+ "seconds": 1.325071096420288
+}

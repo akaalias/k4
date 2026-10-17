@@ -1,0 +1,1 @@
+Q at [26, 27, 39, 42]; struck outside the known runs: [39, 42]; BERLINCLOCK moves from 64-74 to 62-72

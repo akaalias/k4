@@ -33,7 +33,7 @@ each grid's family of shifts to K4 before and after tableau substitution. Status
 shadow... visual systems... individualistic."** (1999, 2005). Readings: (a) a route
 through the carved grid (31-wide lines, the four plates) rather than an abstract matrix;
 (b) the tableau read mirrored, as it reads from behind; (c) positions of the physical
-anomalies as the key. Experiments: family D. Status: (a) the carved lines laid over the tableau and cipher plates, straight or folded, as a positional key: dead (0089); grid paths (snake, spiral, diagonal) with periodic keys: dead below 21 (0092); hand padding of a 31-wide carved grid: 0082. (b) K4 read from behind, line by line, with periodic keys and autokeys: dead (0108). (c) untested.
+anomalies as the key. Experiments: family D. Status: (a) the carved lines laid over the tableau and cipher plates, straight or folded, as a positional key: dead (0089); grid paths (snake, spiral, diagonal) with periodic keys: dead below 21 (0092); hand padding of a 31-wide carved grid: 0082. (b) K4 read from behind, line by line, with periodic keys and autokeys: dead (0108). (c) untested. 2026-10-17: (c) the copper anomalies' places (the ?, K2's dropped S, YAR, the extra L, odd lines) as the number half of a key with an unknown word: dead (0186); paths over the copper's own layout with periodic keys: as copies (0184).
 
 **C4. "I masked the English language... the masking technique may not be known... you
 need to solve the technique first and then go for the puzzle... more than one stage."**
@@ -82,7 +82,7 @@ there... the positioning."** "They're important" (the misaligned YAR). (2003). R
 (a) the positions of Q in IQLUSION, U in UNDERGRUUND, A in DESPARATLY (and the missing E),
 and the raised YAR, read as indices into the tableau or the K4 text; (b) Bauer's error
 coordinates (25,2), (24,6), (11,15), (15,15) as a matrix; (c) "orientation" literally:
-the letters' direction, upside down (RQ reads YR). Status: (a) the misspelt letters QUA, the corrections LOE (with and without the dropped E) as a short second key added to any word: best 8 of 24 known letters, against 7-11 on shuffled coppers (0061); index readings untested.
+the letters' direction, upside down (RQ reads YR). Status: (a) the misspelt letters QUA, the corrections LOE (with and without the dropped E) as a short second key added to any word: best 8 of 24 known letters, against 7-11 on shuffled coppers (0061); index readings untested. 2026-10-17: (a) the misspelt letters' positions, shifts and Bauer's coordinates as numbers with an unknown word: dead (0178).
 
 **C11. "The other 91 characters and their proper order are yet to be determined."**
 (NYT 2010 wording). Reading: a reordering step exists. Supports C1(a). Status: noted.
@@ -95,7 +95,7 @@ and lags 1-96 (0002). Plaintext autokey excluded at lags 1-11 and 30-52, undecid
 (2025).** Readings: (a) the clock is plaintext content only; (b) the Weltzeituhr's
 structure (24 time zones on a rotating ring, a compass-rose mosaic on the ground) is a
 key: 24-letter alphabet, a rotating offset; (c) the 2014 steer was misdirection. Status:
-Mengenlehreuhr readings dead (key schedules from its lamp counts, hours, minutes and time digits at any start and step: best 8 of 24, as shuffled coppers, 0079; joined to any K3-style move before or after the table, no fit, 0091); a cipher on the Weltzeituhr's 24-letter ring is excluded because K4 uses all 26 letters (0052); other Weltzeituhr readings untested.
+Mengenlehreuhr readings dead (key schedules from its lamp counts, hours, minutes and time digits at any start and step: best 8 of 24, as shuffled coppers, 0079; joined to any K3-style move before or after the table, no fit, 0091); a cipher on the Weltzeituhr's 24-letter ring is excluded because K4 uses all 26 letters (0052); other Weltzeituhr readings untested. 2026-10-17: (b) the 24-zone ring laid over 26 letters as an offset with an unknown word: dead (0179).
 
 **C13. "Two events... my second trip to Egypt in late 1986, and the fall of the Berlin
 Wall."** (2025). Readings: (a) plaintext content: the words EGYPT, WALL, CAIRO, LUXOR,
@@ -112,7 +112,7 @@ NORTHEAST, or the key is a direction word; (b) "point" as the decimal point in K
 point five"; (c) "the point" as the place on the grounds: "find that place"; (d) "point"
 as a punctuation mark: the "?" or the X stop, Scheidt's "what's a period"; (e) POWER,
 SECRET, RESIDES, WITHOUT as keys; (f) the parenthetical marks only that the sentence is a
-clue to K5's theme. Status: (a) and (e) as keyword alphabets (the 32 compass points; POINT, POWER, RESIDES, WITHOUT, DIRECTIONS, BEARING) for a periodic key, ciphertext autokey or both: nothing beyond chance (0072); other readings untested.
+clue to K5's theme. Status: (a) and (e) as keyword alphabets (the 32 compass points; POINT, POWER, RESIDES, WITHOUT, DIRECTIONS, BEARING) for a periodic key, ciphertext autokey or both: nothing beyond chance (0072); other readings untested. 2026-10-17: (b) six point five and the coordinates with the point, (d) the four ? and K2's ? and X stops, as numbers with an unknown word: dead (0180); (c) the place on the grounds: blocked without a survey.
 
 **C16. "The final passage will lead in several directions. The word directions is, I use
 intentionally."** (2010). Readings: (a) the plaintext contains compass directions (EAST,
@@ -141,11 +141,11 @@ Status: (a) as a second stage: types 1 and 2 of directions.md, 0080-0099 and 011
 the alignments tested; affine, chaining, 4x4, shifting numberings, paired 2x2 open); (b)
 a marker at row N, the first line of the lower-right plate, matching YAR on the first line
 of the lower-left plate; (c) a production error (Sanborn omitted it from replicas; also
-missing on Antipodes). Status: (a) 2x2, 3x3 and 4x4 Hill, plain and affine, dead under four numberings, all alignments and both directions (0015), under 124 vocabulary keyword numberings (0044) and under 200 numberings from K1-K3 words and the 2025 letter's words (0055); paired 2x2, chained Hill and larger blocks open. (b) untested. A Hill matrix with a periodic tableau key in either order ('matrix codes', then the table): dead where decidable (0116).
+missing on Antipodes). Status: (a) 2x2, 3x3 and 4x4 Hill, plain and affine, dead under four numberings, all alignments and both directions (0015), under 124 vocabulary keyword numberings (0044) and under 200 numberings from K1-K3 words and the 2025 letter's words (0055); paired 2x2, chained Hill and larger blocks open. (b) untested. A Hill matrix with a periodic tableau key in either order ('matrix codes', then the table): dead where decidable (0116). 2026-10-17: (a) Hill 2x2 with any numbering of the letters: dead (0194); 3x3 has too few equations. (b) the extra L as a marker: closed by subsumption (0005, 0017, 0089).
 
 **C22. The raised YAR / DYAHR / "1-2-3".** Readings: (a) a Gromark primer; (b) HYDRA
 anagram, a keyword; (c) the column-extraction marker for K3 only (NSA's reading); (d)
-Sanborn's reported "1-2-3" spacing as an ordering. Status: (a) as a Gromark primer is bounded by 0013 for every two-term lag rule under vocabulary alphabets: no rule fits the known shifts, whatever the primer; with any mixed alphabet at all, base 10, every rule with lags up to 6 and every primer, nothing fits (0069). (b) untested. (d) '1-2-3' as counting-off orders (1-2-3 and YAR's places 4-5-7, every order) before or after a periodic key: nothing below 26 (0166).
+Sanborn's reported "1-2-3" spacing as an ordering. Status: (a) as a Gromark primer is bounded by 0013 for every two-term lag rule under vocabulary alphabets: no rule fits the known shifts, whatever the primer; with any mixed alphabet at all, base 10, every rule with lags up to 6 and every primer, nothing fits (0069). (b) untested. (d) '1-2-3' as counting-off orders (1-2-3 and YAR's places 4-5-7, every order) before or after a periodic key: nothing below 26 (0166). 2026-10-17: (a) YAR as a primer: every primer enumerated (0076, 0195, 0196), dead.
 
 **C23. The K2 coordinates, the USGS marker "no longer there," "an act I could have
 carried out," "buried out there somewhere."** Readings: (a) riddle layer, out of scope;
@@ -160,12 +160,12 @@ Status: untestable without a surveyed bearing; record as such.
 MEMORY, T IS YOUR POSITION, SOS, RQ, the E padding; INVISIBLE a palindrome; DIGETAL
 misspelled.** Readings: (a) keywords; (b) the E counts as numbers; (c) "digital
 interpretation" and "lucid memory" as instructions (binary; recall the key); (d) "RQ/YR"
-upside-down as the orientation clue. Status: the Morse plaintexts as a running key, carved or reversed order, are dead (0017); as keywords untested in bounded form.
+upside-down as the orientation clue. Status: the Morse plaintexts as a running key, carved or reversed order, are dead (0017); as keywords untested in bounded form. 2026-10-17: (b) the E counts as numbers (runs and totals, both transcriptions) with an unknown word: dead (0175).
 
 **C26. Antipodes differs from Kryptos only by the UUND/RTBJ spelling, the extra L, and
 "the order is shifted a little"; "it's possible that you could crack the whole thing
 from here, but it's also possible you couldn't."** Readings: (a) the extra L matters;
-(b) the plate order matters; (c) the differences are decoys. Status: untested.
+(b) the plate order matters; (c) the differences are decoys. Status: untested. 2026-10-17: (a) see C21(b); the RTBJ/ETBJ change as a key fragment closed by subsumption (0005, 0178); (b) the plate order blocked without Antipodes' layout.
 
 **C27. The 2010 worksheets: "there might be revelations in there... I gave more than just
 Berlin."** Readings: (a) the PALIMPCEST slip shows how he worked, one word at a time

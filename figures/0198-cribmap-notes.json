@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The same question as 0197, a fixed code alphabet first and a shuffle after, for the three largest families of shuffles, whose builders live inside compiled code."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each library's own builder, unchanged, with its per-route check replaced by the code-alphabet check: repeated known letters must land on one carved letter, different ones on different."
+ },
+ {
+  "anchor": "the bound",
+  "text": "None of 243 million routes passes on K4 or any copy. With 0106 and 0197, every move the project has built is closed for a code alphabet first. F9.1 closed."
+ }
+]

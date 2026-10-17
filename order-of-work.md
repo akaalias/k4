@@ -34,7 +34,7 @@ construction) are in `grades.tsv`.
 | 8th | F11 agency hand systems, now public | weak to medium: Scheidt's CIA cryptographic background; Scheidt's "key word/s" (C5) for the poem code; A9 | nothing testable here: Jefferson and M-138-A alphabets not to hand; free word picks and free tables too many | - | done (P14, 2026-10-17): F11.1-F11.4 closed |
 | 9th | F8 Hill | weak: the HILL column only (C21) | nothing testable here: 3x3 with a free numbering has no checks; the older undecided settings have none either | - | done (P15, 2026-10-17): F8.1 closed for 2x2, blocked for 3x3 |
 | 10th | F5 Gromark | weak: no creator remark | nothing testable here: base 26 with lag 6 and longer two-term lags blocked by cost | - | done (P16, 2026-10-17): F5.1 and F5.2 closed |
-| 11th | F9 substitution, then a move | against it: Sanborn's NYPVTT to BERLIN mapping | F9.1: a bounded list of hand transpositions outside the 1.86M built routes | medium | **next** (P16) |
+| 11th | F9 substitution, then a move | against it: Sanborn's NYPVTT to BERLIN mapping | nothing testable here: routes outside every built library are unbounded | - | done (2026-10-17): F9.1 closed; STOP_AFTER reached |
 | - | F7 construction simulation | a tool, not a cipher | run before each family's first open item: does its construction make both fingerprints? | low | standing step |
 
 Why this order: F1 and F6 rest on the two most direct creator statements. Both were tested
@@ -200,4 +200,4 @@ left out while the letter-for-letter reading of the known letters holds (A2).
 | **F5.2** Three-term Gromark on a free alphabet in bases 2-9, 11-16 and 26; two-term free-alphabet rules beyond lag 6 (base 10) and 5 (other bases) | closed | exact (0195): three-term in bases 2-9, 11-16 (lags to 6) and 26 (to 5); two-term base 10 lags 7-8, other bases lag 6; 1.55 billion primers, 4 forms, free alphabet: nothing fits K4 or 10 copies, plants found; base 26 lag 6 and longer two-term lags blocked by cost | 0195 | - |
 | One-to-one substitution, then any route in the built sets (1.86M) | closed | exact | 0019, 0106 | - |
 | Routes outside every built set | blocked | - | - | unbounded without a hand-method list; F9.1 writes that list |
-| **F9.1** Hand transpositions outside the built route sets | **open** | - | 0019, 0106 | write the list first, from the reference shelf (issue #9) and the methods a 1990 hand cipher could use, each with its sizes, as F1.4 and F6.4 did; drop what the 1.86M built routes already cover; then one-to-one substitution after each, exact, as 0106 |
+| **F9.1** Hand transpositions outside the built route sets | closed | exact (0197, 0198): the list of moves built since 0106 with sizes (about 254 million with inverses: 0159, 0164-0167, 0158, 0162, 0184, 0190), each after a one-to-one substitution: no route survives on K4 or 10 copies, plants found | 0197, 0198 (before: 0019, 0106) | - |

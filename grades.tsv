@@ -196,3 +196,4 @@ id	outcome	strength	cribs_forced	space	note
 0195	ruled-out	exact	no	F5.2 Gromark on a free alphabet: three-term bases 2-16/26, two-term longer lags, 1.55 billion primers, 10 copies	no setting fits K4 or any copy; plants found
 0196	ruled-out	exact	no	F5.1 Gromark with multiplicative feedback, bases 2-16 (lags to 6) and 26 (to 5), free alphabet, 299M primers, 10 copies	no setting fits K4 or any copy; plants found
 0197	ruled-out	exact	no	F9.1 one-to-one substitution then each move built since 0106 (0159, 0164-0166, 0184, 0190): 10.1M routes, 10 copies	no route survives on K4 or any copy; plant found
+0198	ruled-out	exact	no	F9.1 one-to-one substitution then 0158, 0162, 0167 libraries via their own builders (243.5M routes), 10 copies	no route survives on K4 or any copy

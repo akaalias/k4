@@ -131,6 +131,9 @@ F9.1's list, the hand moves built since 0106 with their sizes: compass readings 
 | # | Item | One line |
 |---|---|---|
 | 197 | F9.1 | **One code alphabet, then each newer move, exact.** 0106's one-to-one test (equal known letters on equal carved letters) on the builders reused from 0159, 0164, 0165, 0166, 0184 and 0190: 10.1 million routes with inverses, compiled, 8 processes. Survivors: K4 0, ten copies 0; a plant found. Prediction held. |
+| 198 | F9.1 | **One code alphabet, then the compiled libraries, exact.** 0158, 0162 and 0167 loaded with their own C builders, only the per-route test swapped for the one-to-one test (checked beforehand on a planted triple): mixed matrix triples 107.0 million (all widths, the all-narrow ones included), keyword triples 20.4 million, Nihilist squares 116.1 million; every job done in 38 s. Survivors: K4 0, copies 0 in each library. With 0106 and 0197, every move the project has built is closed for substitution first. F9.1 closed. Prediction held. |
+
+F9 is finished: F9.1 closed (0197, 0198); routes outside every built library stay unbounded. This is the last family before STOP_AFTER (F9).
 
 ## 2026-10-16
 

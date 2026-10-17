@@ -161,7 +161,7 @@ Update the leaf when an experiment works on it.
   - F9 Substitution, then a move
     - One-to-one substitution, then any of the 1.86M built routes {closed · exact · 0019, 0106}
     - Routes outside every built set: unbounded without a list of hand methods {blocked}
-    - **F9.1** A bounded list of hand transpositions outside the built sets, then one-to-one substitution {open}
+    - **F9.1** A bounded list of hand transpositions outside the built sets, then one-to-one substitution {closed · exact · 0197, 0198}
   - F7 Construction simulation (a check on the others, not a cipher)
     - K4's two patterns, doublets lining up in sevens and repeats 21 apart, are real {noted · sampled · 0056}
     - No construction tried makes both patterns {closed · sampled · 0018, 0027, 0062, 0065, 0096}

@@ -1,0 +1,27 @@
+24 zones over 26 letters (rounded) from zone 0, Vigenere on the KRYPTOS table, word length 7
+
+place  known  carved  key  num  word value  slot
+   22      E       F    1   23           4     0
+   23      A       L   10   24          12     1
+   24      S       R   21   25          22     2
+   25      T       V   18    0          18     3
+   26      N       Q    1    1           0     4
+   27      O       Q   15    2          13     5
+   28      R       P    2    3          25     6
+   29      T       R   23    4          19     0
+   30      H       N    5    5           0     1
+   31      E       G    2    6          22     2
+   32      A       K   19    8          11     3
+   33      S       S    0    9          17     4
+   34      T       S    2   10          18     5
+   64      B       N   11   16          21     0
+   65      E       Y   17   17           0     1
+   66      R       P    2   18          10     2
+   67      L       V    5   20          11     3
+   68      I       T   15   21          20     4
+   69      N       T   11   22          15     5
+   70      C       M    9   23          12     6
+   71      L       Z    8   24          10     0
+   72      O       F    7   25           8     1
+   73      C       P   20    0          20     2
+   74      K       K    0    1          25     3

@@ -1763,6 +1763,8 @@ LIN_CSS = """
 #lin-tip .pop-h{font:600 10px/1 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-bottom:4px}
 #lin-tip p{margin:0;font:italic 13px/1.5 var(--serif);color:var(--muted)}
 #lin-tip .pop-sec+.pop-sec{margin-top:10px}
+#lin-tip.pinned{pointer-events:auto}
+#lin-tip .pop-open a{font:600 11px/1.35 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
 #lin-tip .pop-parent{font:600 11px/1.35 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
 .lin-foot{max-width:980px;margin:12px auto 0;font-size:13.5px;color:var(--muted)}
 @media(max-width:640px){.lin-head h1{font-size:26px}.lin-box{width:calc(100vw - 32px);margin-left:2px}.lane-lab{padding:8px 5px 7px 7px;font-size:9.5px;letter-spacing:.03em}.lane-lab .sw{width:7px;height:7px;margin-right:4px}.lane-lab .cw{display:none}}
@@ -1781,7 +1783,7 @@ LIN_JS = r"""
   var short=function(t,n){if(t.length<=n)return t;var c=t.slice(0,n);return c.slice(0,c.lastIndexOf(' '))+'...';};
   var parentOf=function(k){var p=byKey[k]&&byKey[k].parent;return p&&byKey[p]?p:null;};
   var kids={};nodes.forEach(function(n){var p=parentOf(n.key);if(p)(kids[p]=kids[p]||[]).push(n.key);});
-  var svg=null,geo=null,shownKey=null,lastPointer='mouse';
+  var svg=null,geo=null,shownKey=null,pinned=null,lastPointer='mouse';
 
   // Geometry: y is run order, one column per family. Each column has a gutter for the
   // experiment numbers, then the line of dots; same-family arcs bulge right into the rest
@@ -1943,6 +1945,8 @@ LIN_JS = r"""
     var r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight,cx=r.left+r.width/2;
     var left=Math.max(8,Math.min(cx-w/2,window.innerWidth-w-8)),top=r.bottom+6;
     if(top+h>window.innerHeight-8)top=Math.max(8,r.top-h-6);
+    // a pinned popover stays on screen when its dot scrolls away
+    if(pinned)top=Math.max(8,Math.min(top,window.innerHeight-h-8));
     tip.style.left=left+'px';tip.style.top=top+'px';
   }
   function showTip(key,el){
@@ -1954,9 +1958,15 @@ LIN_JS = r"""
     if(nd.note)html+='<div class="pop-sec"><div class="pop-h">Kept when it ran, reverted under today\'s rules</div><p>'+esc(nd.note)+'</p></div>';
     html+='<div class="pop-sec"><div class="pop-h">Built on</div>'+(p?'<span class="pop-parent">#'+byKey[p].n+' '+esc(short(byKey[p].title,60))+'</span>':'<p>Nothing: it starts a line.</p>')+'</div>';
     if(ks.length)html+='<div class="pop-sec"><div class="pop-h">Built on by</div><p>'+ks.map(function(k){return '#'+byKey[k].n;}).join(', ')+'</p></div>';
+    if(pinned===key)html+='<div class="pop-sec pop-open"><a href="/exp/'+encodeURIComponent(key)+'">Open the record &rarr;</a></div>';
     tip.innerHTML=html;tip.style.opacity='1';shownKey=key;placeTip(el);
   }
   function hideTip(){tip.style.opacity='0';shownKey=null;}
+  // A click pins a dot: its line and its popover stay lit while the page scrolls, until the
+  // same dot, an empty spot or Escape lets go. Hovering does nothing else meanwhile.
+  function pin(k){pinned=k;tip.classList.add('pinned');var a=svg.querySelector('.ng[data-key="'+CSS.escape(k)+'"]');lit(k);showTip(k,a);}
+  function unpin(){pinned=null;tip.classList.remove('pinned');clearLit();hideTip();}
+  function pinnedEl(){return pinned&&svg.querySelector('.ng[data-key="'+CSS.escape(pinned)+'"]');}
 
   // A light band across every column marks the row under the pointer, so the sequence can
   // be read across families; it never dims the rest.
@@ -1982,22 +1992,26 @@ LIN_JS = r"""
     // a wider, invisible copy of each edge to hover; drawn under the dots, so a dot still wins
     svg.querySelectorAll('.edge').forEach(function(e){var h=document.createElementNS('http://www.w3.org/2000/svg','path');
       h.setAttribute('class','ehit');h.setAttribute('d',e.getAttribute('d'));h.setAttribute('data-c',e.getAttribute('data-c'));h.setAttribute('data-p',e.getAttribute('data-p'));e.after(h);});
-    svg.addEventListener('mouseover',function(e){var h=e.target.closest('.ehit');if(h)litEdge(h.getAttribute('data-c'),h.getAttribute('data-p'));});
-    svg.addEventListener('mouseout',function(e){if(e.target.closest('.ehit')&&!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('.ng')))clearLit();});
-    svg.addEventListener('mouseover',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');lit(k);showTip(k,a);});
-    svg.addEventListener('mouseout',function(e){var a=e.target.closest('.ng');if(!a||a.contains(e.relatedTarget))return;clearLit();hideTip();});
-    svg.addEventListener('focusin',function(e){var a=e.target.closest('.ng');if(a){var k=a.getAttribute('data-key');lit(k);showTip(k,a);}});
-    svg.addEventListener('focusout',function(){clearLit();hideTip();});
-    // On a touch screen the first tap shows the popover and the second opens the record.
-    svg.addEventListener('click',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');
-      if(lastPointer==='touch'&&shownKey!==k){e.preventDefault();lit(k);showTip(k,a);}});
+    svg.addEventListener('mouseover',function(e){var h=e.target.closest('.ehit');if(h&&!pinned)litEdge(h.getAttribute('data-c'),h.getAttribute('data-p'));});
+    svg.addEventListener('mouseout',function(e){if(!pinned&&e.target.closest('.ehit')&&!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('.ng')))clearLit();});
+    svg.addEventListener('mouseover',function(e){var a=e.target.closest('.ng');if(!a||pinned)return;var k=a.getAttribute('data-key');lit(k);showTip(k,a);});
+    svg.addEventListener('mouseout',function(e){var a=e.target.closest('.ng');if(!a||pinned||a.contains(e.relatedTarget))return;clearLit();hideTip();});
+    svg.addEventListener('focusin',function(e){var a=e.target.closest('.ng');if(a&&!pinned){var k=a.getAttribute('data-key');lit(k);showTip(k,a);}});
+    svg.addEventListener('focusout',function(){if(!pinned){clearLit();hideTip();}});
+    // A click pins or lets go; the record opens from the popover's link (or a cmd/ctrl-click).
+    svg.addEventListener('click',function(e){var a=e.target.closest('.ng');
+      if(!a){if(pinned)unpin();return;}
+      if(e.metaKey||e.ctrlKey||e.shiftKey)return;
+      e.preventDefault();var k=a.getAttribute('data-key');if(pinned===k)unpin();else pin(k);});
     lanesEl.querySelectorAll('.lane-lab').forEach(function(el){
-      el.addEventListener('mouseenter',function(){litFam(+el.getAttribute('data-fam'));});
-      el.addEventListener('mouseleave',clearLit);});
+      el.addEventListener('mouseenter',function(){if(!pinned)litFam(+el.getAttribute('data-fam'));});
+      el.addEventListener('mouseleave',function(){if(!pinned)clearLit();});});
+    if(pinned&&byKey[pinned])pin(pinned);
   }
   render();wire();
-  host.addEventListener('scroll',function(){syncHeads();if(shownKey)hideTip();},{passive:true});
-  window.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
+  host.addEventListener('scroll',function(){syncHeads();if(pinned)placeTip(pinnedEl());else if(shownKey)hideTip();},{passive:true});
+  window.addEventListener('scroll',function(){if(pinned)placeTip(pinnedEl());else if(shownKey){clearLit();hideTip();}},{passive:true});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&pinned)unpin();});
   var rw=null,lastW=host.clientWidth;
   window.addEventListener('resize',function(){clearTimeout(rw);rw=setTimeout(function(){if(host.clientWidth===lastW)return;lastW=host.clientWidth;
     render();wire();},150);});
@@ -2086,7 +2100,7 @@ def lineage_page():
         facts += f' The most built-on is <a href="/exp/{esc(top[0])}">{int(top[0][:4])}</a>, with {top[1]} children.'
     blob = json.dumps(data).replace("</", "<\\/")
     body = f"""<style>{LIN_CSS}</style><div class="lin">
-{page_head("Lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. A curve beside a column joins an experiment to the one it built on, from the bottom of the parent to the top of the child. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or a family's name to light its column. Click a dot to open its record.")}
+{page_head("Lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. A curve beside a column joins an experiment to the one it built on, from the bottom of the parent to the top of the child. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, an edge to light the two experiments it joins, or a family's name to light its column. Click a dot to keep its line and popover lit while you scroll; click it again, or press Escape, to let go. The popover links to the record.")}
 {sec(1, "Every experiment by family")}<div style="max-width:980px;margin:0 auto"><p class="facts" style="font-size:14.5px;color:var(--muted);margin:4px 0 12px;max-width:820px">{facts}</p>{LIN_LEGEND}</div>
 <div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
 {page_foot('Each family and its hypotheses are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/priorities">Priorities</a>.')}

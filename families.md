@@ -149,7 +149,7 @@ Update the leaf when an experiment works on it.
     - **F11.1** Strip ciphers and cylinders with published alphabets (M-94, Jefferson wheel, M-138-A) {closed · exact · 0189}
     - **F11.2** Poem code: double transposition keyed by words from a memorized text, then the table {closed · exact · 0190}
     - **F11.3** The CIA's Polish key box: a key text transposed in a box, then the table {closed · exact · 0191}
-    - **F11.4** Friedman's keyed alphabet box as the key stream {open}
+    - **F11.4** Friedman's keyed alphabet box as the key stream {closed · exact · 0192}
   - F8 Hill ciphers
     - Hill 2-5, plain and affine, 330 numberings, chained, with a repeating key {closed · exact · 0015, 0036, 0044, 0055, 0105, 0116}
     - **F8.1** Hill with an unknown letter numbering: count the equations first {open}
@@ -292,7 +292,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P13 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P14 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -309,3 +309,4 @@ Each pivot has a details page in `pivots/` (P1-P13 so far), rendered on the Pivo
 | 2026-10-17 | F2 masked plaintext (0181-0183) | F4 Sanborn's visual systems | Every F2 item closed: what 0057's long keys force holds no words, any null rule acts through the gap between the known words and no gap helps, and a repeated-letter phrase strip fits only where nothing is checked. Ranking unchanged (P11). |
 | 2026-10-17 | F4 Sanborn's visual systems (0184-0186) | F10 alphabets that change after every letter | F4.1-F4.4 closed: paths over the copper's own layout, free trifid cubes at every period, the anomalies' places as numbers, the extra L as a marker (by subsumption); F4.5 blocked for want of Antipodes' layout. Ranking unchanged (P12). |
 | 2026-10-17 | F10 alphabets that change after every letter (0187-0188) | F11 agency hand systems | F10.1 and F10.2 closed exactly: Chaocipher with any word-mixed cipher wheel and Wheatstone's cryptograph with any inner ring do not fit K4; Chaocipher's free wheel blocked by cost, deck ciphers by date and bound. Ranking unchanged (P13). |
+| 2026-10-17 | F11 agency hand systems (0189-0192) | F8 Hill | F11.1-F11.4 closed exactly: the M-94 in any disc order, the poem code on the sculpture's text, the CIA's key box on K1-K3 and Carter, Friedman's alphabet box on every dictionary word; none fits K4 or its copies. Ranking unchanged (P14). |

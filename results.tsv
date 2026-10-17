@@ -184,3 +184,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0183	0183-repeated-letter-phrase-homophones	2-masked-then-keyed	0057-letter-nulls-outside-the-cribs	reverted	0	0	0			4	design=0 implement=0 test=0 run=4 record=0
 0184	0184-routes-along-the-plate-layout	4-sanborn-visual	0092-grid-paths-then-tableau	reverted	0	0	0			1	design=0 implement=0 test=0 run=1 record=0
 0185	0185-trifid-free-cubes-above-period-15	4-sanborn-visual	0040-trifid-free-cubes-by-constraint-propagation-rerun	reverted	0	0	0			6	design=0 implement=0 test=0 run=6 record=0
+0186	0186-physical-anomalies-as-numbers	4-sanborn-visual	0175-morse-and-plate-numbers-as-key	reverted	0	0	0			2	design=0 implement=0 test=0 run=2 record=0

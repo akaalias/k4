@@ -1,0 +1,333 @@
+{
+ "id": 186,
+ "tag": "0186-physical-anomalies-as-numbers",
+ "started": "2026-10-17T00:37:43+00:00",
+ "seconds": 1.7,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 1.7,
+  "record": 0.0
+ },
+ "ended_epoch": 1792197465.5102122,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "word plus the places of the copper's physical anomalies as numbers, k = w[i mod a] + s d, 12 table rules, exact",
+  "readings": {
+   "anomaly places in carved order (?, ?, ?, missing S, Y, A, R, ?)": [
+    101,
+    227,
+    289,
+    428,
+    439,
+    440,
+    442,
+    772
+   ],
+   "anomaly places in carved order (?, ?, ?, missing S, Y, A, R, ?), reversed": [
+    772,
+    442,
+    440,
+    439,
+    428,
+    289,
+    227,
+    101
+   ],
+   "anomaly places with the long and short lines' starts": [
+    101,
+    227,
+    289,
+    428,
+    439,
+    440,
+    442,
+    684,
+    717,
+    772
+   ],
+   "anomaly places with the long and short lines' starts, reversed": [
+    772,
+    717,
+    684,
+    442,
+    440,
+    439,
+    428,
+    289,
+    227,
+    101
+   ],
+   "anomaly lines: 4 8 10 14 15 15 15 25": [
+    4,
+    8,
+    10,
+    14,
+    15,
+    15,
+    15,
+    25
+   ],
+   "anomaly lines: 4 8 10 14 15 15 15 25, reversed": [
+    25,
+    15,
+    15,
+    15,
+    14,
+    10,
+    8,
+    4
+   ],
+   "anomaly columns: 7 9 8 24 4 5 7 27": [
+    7,
+    9,
+    8,
+    24,
+    4,
+    5,
+    7,
+    27
+   ],
+   "anomaly columns: 7 9 8 24 4 5 7 27, reversed": [
+    27,
+    7,
+    5,
+    4,
+    24,
+    8,
+    9,
+    7
+   ],
+   "gaps between anomaly places": [
+    126,
+    62,
+    139,
+    11,
+    1,
+    2,
+    330
+   ],
+   "gaps between anomaly places, reversed": [
+    330,
+    2,
+    1,
+    11,
+    139,
+    62,
+    126
+   ],
+   "first-line markers: YAR columns and the extra L's column, 4 5 7 32": [
+    4,
+    5,
+    7,
+    32
+   ],
+   "first-line markers: YAR columns and the extra L's column, 4 5 7 32, reversed": [
+    32,
+    7,
+    5,
+    4
+   ],
+   "extra L: tableau line 15, column 32": [
+    15,
+    32
+   ],
+   "extra L: tableau line 15, column 32, reversed": [
+    32,
+    15
+   ],
+   "extra L as row N: 14 32": [
+    14,
+    32
+   ],
+   "extra L as row N: 14 32, reversed": [
+    32,
+    14
+   ],
+   "long and short lines: 23 24": [
+    23,
+    24
+   ],
+   "long and short lines: 23 24, reversed": [
+    24,
+    23
+   ],
+   "long and short line lengths: 33 29": [
+    33,
+    29
+   ],
+   "long and short line lengths: 33 29, reversed": [
+    29,
+    33
+   ],
+   "all anomaly lines with the long and short lines": [
+    4,
+    8,
+    10,
+    14,
+    15,
+    23,
+    24,
+    25
+   ],
+   "all anomaly lines with the long and short lines, reversed": [
+    25,
+    24,
+    23,
+    15,
+    14,
+    10,
+    8,
+    4
+   ]
+  },
+  "n_readings": 22,
+  "word_lengths": [
+   1,
+   24
+  ],
+  "checks_by_word_length": {
+   "1": 23,
+   "2": 22,
+   "3": 21,
+   "4": 20,
+   "5": 19,
+   "6": 18,
+   "7": 17,
+   "8": 16,
+   "9": 15,
+   "10": 14,
+   "11": 13,
+   "12": 12,
+   "13": 11,
+   "14": 11,
+   "15": 9,
+   "16": 8,
+   "17": 7,
+   "18": 7,
+   "19": 9,
+   "20": 11,
+   "21": 11,
+   "22": 9,
+   "23": 7,
+   "24": 5
+  },
+  "live_at_least_checks": {
+   "1": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "2": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "4": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "6": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "8": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "11": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "14": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   }
+  },
+  "dictionary_hits": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "dictionary_hits_6_plus": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_hits": [],
+  "plant": {
+   "text": "the anomaly places from the second, + SHADOW, Vigenere on the KRYPTOS table",
+   "found": true
+  },
+  "copies": "20 shuffled coppers (seed 1860)",
+  "seconds": 2,
+  "exhaustive": true
+ },
+ "notes": "live settings with >=4 checks: K4 0 (coppers 0-0); dictionary words 4+: K4 0 (coppers 0-0); plant found True",
+ "error": null,
+ "candidates": []
+}

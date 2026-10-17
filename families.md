@@ -157,7 +157,7 @@ Update the leaf when an experiment works on it.
   - F5 Gromark and number feedback
     - Two- and three-term rules, bases 2-26 (three-term free alphabet in base 10 only) {closed · exact · 0013, 0028, 0046, 0054, 0069, 0076, 0107}
     - **F5.1** Multiplicative feedback; the raised YAR as primer {open}
-    - **F5.2** Three-term Gromark on a free alphabet in other bases {open}
+    - **F5.2** Three-term Gromark on a free alphabet in other bases {closed · exact · 0195}
   - F9 Substitution, then a move
     - One-to-one substitution, then any of the 1.86M built routes {closed · exact · 0019, 0106}
     - Routes outside every built set: unbounded without a list of hand methods {blocked}

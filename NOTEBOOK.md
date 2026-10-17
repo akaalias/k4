@@ -115,6 +115,12 @@ F11 is finished: F11.1-F11.4 closed (0189-0192), with the Jefferson wheel and M-
 
 F8 is finished: F8.1 closed for 2x2 (0194), blocked for 3x3 (too few equations); the older undecided Hill settings stay blocked. Pivot P15 to F5.
 
+### F5 Gromark (after pivot P15, ticket #15)
+
+| # | Item | One line |
+|---|---|---|
+| 195 | F5.2 | **Gromark on a free alphabet in other bases, exact, compiled.** Three-term rules (lags to 6) in bases 2-9 and 11-16, base 26 to lag 5; two-term rules with lags 7-8 in base 10 and 6 in bases 2-9, 11-16; four forms; 373 rule jobs, 1.55 billion primers, 4 processes. Consistent: K4 0, ten copies 0; both plants found. Base 26 three-term with lag 6 (3.1 billion primers) and other bases beyond lag 6 blocked by cost. Closed. Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

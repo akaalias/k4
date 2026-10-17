@@ -1,0 +1,29 @@
+{
+ "id": 193,
+ "tag": "0193-hill-2x2-unknown-numbering",
+ "started": "2026-10-17T01:25:04+00:00",
+ "seconds": 0.2,
+ "status": "error",
+ "phases": {
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 0.2,
+  "record": 0.1
+ },
+ "ended_epoch": 1792200304.806637,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "error": "Traceback (most recent call last):\n  File \"/Users/alexisrondeau/Workshop/cryptos/_runner.py\", line 34, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 227, in run\n    out = pool.map(job, [(so, ti, t, a) for ti, t in enumerate(texts) for a in (0, 1)], chunksize=1)\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/pool.py\", line 367, in map\n    return self._map_async(func, iterable, mapstar, chunksize).get()\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/pool.py\", line 774, in get\n    raise self._value\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/pool.py\", line 540, in _handle_tasks\n    put(task)\n    ~~~^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/connection.py\", line 216, in send\n    self._send_bytes(_ForkingPickler.dumps(obj))\n                     ~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/reduction.py\", line 51, in dumps\n    cls(buf, protocol).dump(obj)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n_pickle.PicklingError: Can't pickle <function job at 0x1058b7690>: it's not the same object as attack.job\nwhen serializing tuple item 0\nwhen serializing tuple item 0\nwhen serializing tuple item 3\n",
+ "candidates": []
+}

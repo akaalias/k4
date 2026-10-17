@@ -1,0 +1,110 @@
+{
+ "id": 185,
+ "tag": "0185-trifid-free-cubes-above-period-15",
+ "started": "2026-10-17T00:35:05+00:00",
+ "seconds": 6.0,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 6.0,
+  "record": 0.0
+ },
+ "ended_epoch": 1792197311.685058,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "trifid, free 27-symbol cube, periods 16-97, every alignment, constraint propagation and backtracking",
+  "settings": 4633,
+  "settings_with_cubes": 0,
+  "settings_capped": 0,
+  "node_cap": 3000000,
+  "solution_cap": 5000,
+  "k4_settings_with_cubes": [],
+  "max_nodes": 364,
+  "best": [],
+  "plant": {
+   "period": 30,
+   "offset": 5,
+   "cubes": 288,
+   "true_cube_found": true
+  },
+  "controls": [
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   }
+  ],
+  "seconds": 6,
+  "exhaustive": true
+ },
+ "notes": "4633 settings; 0 admit a cube on K4; 0 capped; copies with cubes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+ "error": null,
+ "candidates": []
+}

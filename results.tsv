@@ -182,3 +182,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0181	0181-struck-letter-fragments-against-words	2-masked-then-keyed	0057-letter-nulls-outside-the-cribs	reverted	0	0	0			1	design=0 implement=0 test=0 run=1 record=0
 0182	0182-nulls-by-a-rule-as-a-gap	2-masked-then-keyed	0057-letter-nulls-outside-the-cribs	reverted	0	0	0			4	implement=0 test=0 run=4 record=0
 0183	0183-repeated-letter-phrase-homophones	2-masked-then-keyed	0057-letter-nulls-outside-the-cribs	reverted	0	0	0			4	design=0 implement=0 test=0 run=4 record=0
+0184	0184-routes-along-the-plate-layout	4-sanborn-visual	0092-grid-paths-then-tableau	reverted	0	0	0			1	design=0 implement=0 test=0 run=1 record=0

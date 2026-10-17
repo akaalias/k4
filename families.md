@@ -121,9 +121,9 @@ Update the leaf when an experiment works on it.
     - **F3.2** Number keys from the Morse and the plate layout {closed · exact · 0175}
     - **F3.3** Direction words as numbers: the bearing 67.5, compass points 6 of 32 and 3 of 16 {closed · exact · 0176}
     - **F3.4** Three or more stacked tables (Scheidt's patent, "triple matrixes") {closed · exact · 0177}
-    - **F3.5** The misspelt letters' positions as indices, and their orientation {open}
-    - **F3.6** The Weltzeituhr's rotating ring as an offset over 26 letters {open}
-    - **F3.7** "Point" as a decimal point, a place or a punctuation mark {open}
+    - **F3.5** The misspelt letters' positions as indices, and their orientation {closed · exact · 0178}
+    - **F3.6** The Weltzeituhr's rotating ring as an offset over 26 letters {closed · exact · 0179}
+    - **F3.7** "Point" as a decimal point, a place or a punctuation mark {closed · exact · 0180}
   - F2 Masked plaintext, then a keyed stage
     - Masks that move or pad letters: reversal, nulls, doublets as nulls {closed · exact · 0023, 0057, 0075}
     - Masks that change letters: affine, Atbash {closed · exact · 0074}
@@ -292,7 +292,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P9 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P10 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -305,3 +305,4 @@ Each pivot has a details page in `pivots/` (P1-P9 so far), rendered on the Pivot
 | 2026-10-17 | F1 one keyed stage, reopened (0136-0157) | F6 a move, then the table | Every F1 item closed or blocked: F1.5 built a decider with measured power (design 2) and decided F1.1 and F1.2's cells; F1.6-F1.11 closed exactly; the residues are blocked by the English bound (0136) or by cost. Ranking unchanged (F1, F6, F12, F3, F2, F4, F10, F11, F8, F5, F9) (P7). |
 | 2026-10-17 | F6 a move, then the table (0158-0167) | F12 Stein's way | Every F6 item closed or blocked: F6.3b and F6.5-F6.19 closed exactly (route libraries up to 116 million, compiled), all at the scrambled-copies' rate; F6.1 and F6.2 blocked by cost. Ranking unchanged (P8). |
 | 2026-10-17 | F12 Stein's way (0168-0172) | F3 a two-part key with a combiner | Every F12 item closed or blocked: K4's statistics, Stein's peak at 13, a pencil session, two parts with own keys and probable words in the undecided cells all at the shuffles' or copies' rate; F12.1 blocked for want of photographs. Ranking unchanged (P9). |
+| 2026-10-17 | F3 a two-part key with a combiner (0173-0180) | F2 masked plaintext | Every F3 item closed: Scheidt's patent sandwich and its two-table stack decided exactly, other combiners, and the Morse, plate, direction, misspelling, World Clock and 'point' numbers as the number half of a key: nothing fits K4 or its scrambled copies; only few-check cells stay undecided. Ranking unchanged (P10). |

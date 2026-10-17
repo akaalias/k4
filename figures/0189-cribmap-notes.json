@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The M-94, the US Army's cipher cylinder until 1942, is 25 discs with published mixed alphabets: set the message along one row, copy out another. Only the disc order and the row were secret."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each known letter allows only the discs that carry the carved letter the right number of places after it; the discs at different places must all be different. Every group start and every row choice, decided exactly; ten scrambled copies, two planted texts."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No disc order fits K4 or any copy under any setting; planted texts are found. F11.1 closed for the M-94."
+ }
+]

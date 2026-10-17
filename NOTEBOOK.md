@@ -95,6 +95,12 @@ F10.3 blocked without a run: deck-of-cards key streams (Solitaire 1999, Mirdek 2
 
 F10 is finished: F10.1 and F10.2 closed (0187, 0188), F10.1's free left wheel and F10.3 blocked. Pivot P13 to F11.
 
+### F11 agency hand systems (after pivot P13, ticket #58)
+
+| # | Item | One line |
+|---|---|---|
+| 189 | F11.1 | **The M-94 cylinder, any disc order, exact.** The 25 published disc alphabets (jproc.ca after George Mace; checked as permutations, A then the disc letter; B1 as the Cryptogram 1982 reprint). Groups of 25 from any alignment, any cipher row per group; per slot the discs allowed by its known letters, then distinct discs by bipartite matching. Consistent settings: K4 0, ten copies 0; two plants' true settings found (among 4 and 58). Closed for the M-94; Jefferson's own wheel and M-138-A strip sets blocked (alphabets not to hand). Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

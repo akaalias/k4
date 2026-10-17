@@ -75,6 +75,7 @@ F2 is finished: F2.1-F2.3 closed (0181-0183); a code layer, phonetic spelling or
 | # | Item | One line |
 |---|---|---|
 | 184 | F4.1 | **Paths over the copper's own layout, exact.** K4's four lines (OBKR at columns 28-31 after K3's tail and the ?, then three lines of 31), the lower plate's 14 ragged lines and the left side's 28: rows, columns, diagonals both ways and spirals from every corner, straight or back and forth, K4's cells in the order visited: 73 distinct routes, each and its inverse, then or before a periodic key 1-26 (F6's compiled tester). Shortest live K4 23/26, copies 22/26; K4 above every copy in 0 of 52 cells (copies 0-1). The S-curve bends the plates, not the letter order. Closed. Prediction held. |
+| 185 | F4.2 | **Trifid, free cube, periods 16-97, exact.** 0040's decider (72 coordinate ties, union-find, backtracking with the address and count rules) at every period 16-97 and alignment: 4,633 settings, at most 364 nodes, none capped. Settings with a cube: K4 0, ten shuffled copies 0 each; a text planted at period 30 has its cube found (among 288). With 0040, no trifid cube fits K4 at any period. Closed. Prediction held. |
 
 ## 2026-10-16
 

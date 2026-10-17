@@ -183,3 +183,4 @@ id	outcome	strength	cribs_forced	space	note
 0182	ruled-out	exact	no	F2.2 nulls by any rule as the gap d=0-29 between the runs, repeating/progressive keys 1-26, 12 rules, 20 copies	K4 above every copy at no gap; checked live cells K4 96 vs copies 96-226
 0183	ruled-out	exact	no	F2.3 repeated-letter phrase strip (homophones, length kept), 1,196 phrases, std/KRY strip, repeating key 1-26, 20 copies	no phrase fits K4 at 1-25; at 26 (1 check) K4 617 vs copies 0-734
 0184	ruled-out	exact	no	F4.1 routes over the copper's layout (K4 lines, lower plate, left side; rows, columns, diagonals, spirals), then/before periodic key 1-26, 15 copies	shortest live 23/26 vs copies 22/26; 0/52 cells above copies
+0185	ruled-out	exact	no	F4.2 trifid, free 27-symbol cube, periods 16-97, every alignment (4,633 settings), 10 copies	no cube fits K4 or any copy; plant found

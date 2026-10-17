@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A trifid code puts the 26 letters and ? in a 3 x 3 x 3 cube and mixes the three coordinates of neighbouring letters in groups: a sculptor's cipher. Groups of up to 15 letters were already ruled out (0040)."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every group length from 16 to the whole text, every starting place: each known letter ties its three coordinates to coordinates of carved letters; merging the ties and filling the cube so no two letters share a place decides each setting."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No cube fits K4, or any scrambled copy, at any setting; a planted text's cube is found. F4.2 closed."
+ }
+]

@@ -1,0 +1,6 @@
+message places of the known letters with d nulls between the runs
+
+d =  0: EASTNORTHEAST at 22-34, BERLINCLOCK at 64-74
+d =  1: EASTNORTHEAST at 22-34, BERLINCLOCK at 63-73
+d =  3: EASTNORTHEAST at 22-34, BERLINCLOCK at 61-71
+d = 10: EASTNORTHEAST at 22-34, BERLINCLOCK at 54-64

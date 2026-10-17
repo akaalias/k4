@@ -1,0 +1,170 @@
+{
+ "id": 196,
+ "tag": "0196-gromark-multiplicative-feedback",
+ "started": "2026-10-17T01:38:10+00:00",
+ "seconds": 56.3,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 56.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1792201146.545472,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "Gromark with multiplicative feedback d[i] = d[i-a] d[i-b] mod B, free mixed alphabet, bases 2-16 (lags to 6) and 26 (lags to 5), four forms, exact",
+  "rule_jobs": 235,
+  "primers": 299394061,
+  "per_base": {
+   "2": {
+    "rules": 15,
+    "primers": 516,
+    "k4": 0
+   },
+   "3": {
+    "rules": 15,
+    "primers": 4923,
+    "k4": 0
+   },
+   "4": {
+    "rules": 15,
+    "primers": 25488,
+    "k4": 0
+   },
+   "5": {
+    "rules": 15,
+    "primers": 92775,
+    "k4": 0
+   },
+   "6": {
+    "rules": 15,
+    "primers": 268740,
+    "k4": 0
+   },
+   "7": {
+    "rules": 15,
+    "primers": 663411,
+    "k4": 0
+   },
+   "8": {
+    "rules": 15,
+    "primers": 1455168,
+    "k4": 0
+   },
+   "9": {
+    "rules": 15,
+    "primers": 2914623,
+    "k4": 0
+   },
+   "10": {
+    "rules": 15,
+    "primers": 5432100,
+    "k4": 0
+   },
+   "11": {
+    "rules": 15,
+    "primers": 9548715,
+    "k4": 0
+   },
+   "12": {
+    "rules": 15,
+    "primers": 15991056,
+    "k4": 0
+   },
+   "13": {
+    "rules": 15,
+    "primers": 25709463,
+    "k4": 0
+   },
+   "14": {
+    "rules": 15,
+    "primers": 39919908,
+    "k4": 0
+   },
+   "15": {
+    "rules": 15,
+    "primers": 60149475,
+    "k4": 0
+   },
+   "16": {
+    "rules": 15,
+    "primers": 88285440,
+    "k4": 0
+   },
+   "26": {
+    "rules": 10,
+    "primers": 48932260,
+    "k4": 0
+   }
+  },
+  "consistent": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "plants": [
+    1,
+    32
+   ]
+  },
+  "plants": [
+   {
+    "base": 13,
+    "lags": [
+     1,
+     4
+    ],
+    "primer": [
+     1,
+     5,
+     2,
+     3
+    ]
+   },
+   {
+    "base": 26,
+    "lags": [
+     2,
+     5
+    ],
+    "primer": [
+     16,
+     18,
+     10,
+     20,
+     19
+    ]
+   }
+  ],
+  "k4_consistent": [],
+  "blocked": "base 26 with lag 6 (1.5 billion primers)",
+  "yar_primer": "subsumed: every primer enumerated in 0076 and 0195",
+  "copies": "10 shuffled copies (seed 1970)",
+  "seconds": 56,
+  "exhaustive": true
+ },
+ "notes": "299,394,061 primers x 4 forms; consistent K4 0 (copies 0-0); plants [1, 32]",
+ "error": null,
+ "candidates": []
+}

@@ -1,0 +1,2 @@
+base 10, each digit the product of the digits 2 and 5 places back, primer 3 7 9 1 4:
+3 7 9 1 4 3 8 7 8 8 4 4 8 2 4 8 6 4 2 6 6 6 4 2 4 2 4 8 8 2 6 8 8 4 6 4 8 2 2 2

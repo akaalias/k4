@@ -185,3 +185,4 @@ id	outcome	strength	cribs_forced	space	note
 0184	ruled-out	exact	no	F4.1 routes over the copper's layout (K4 lines, lower plate, left side; rows, columns, diagonals, spirals), then/before periodic key 1-26, 15 copies	shortest live 23/26 vs copies 22/26; 0/52 cells above copies
 0185	ruled-out	exact	no	F4.2 trifid, free 27-symbol cube, periods 16-97, every alignment (4,633 settings), 10 copies	no cube fits K4 or any copy; plant found
 0186	ruled-out	exact	no	F4.3 the copper's physical anomalies' places (?, omitted S, raised YAR, extra L, odd lines; 22 readings) plus an unknown word of 1-24, 12 rules, 20 copies	no setting fits K4 or any copper; plant found
+0187	ruled-out	exact	no	F10.1 Chaocipher, left wheel from 208,651 keyword-mixed alphabets (x26 rotations), right wheel free, 10 copies, 3 plants	no wheel fits K4 or any copy; plants found

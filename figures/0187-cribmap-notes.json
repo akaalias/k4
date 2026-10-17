@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Chaocipher (Byrne, 1918; kept secret until 2010) shuffles both alphabet wheels after every letter. How they move depends only on the code letters, all of which are on the copper."
+ },
+ {
+  "anchor": "the check",
+  "text": "Guess how the cipher wheel started; then every known letter says which letter stood where on the plain wheel at the start. Two Es must point to one place, two different letters to two places. Every wheel mixed from a dictionary word, on K4, ten scrambled copies and three planted texts."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No word-mixed starting wheel fits K4 or a copy; the planted texts' wheels are found. A wheel in any order at all is too many to try. F10.1 closed for word-mixed wheels, blocked otherwise."
+ }
+]

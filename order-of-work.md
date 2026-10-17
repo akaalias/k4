@@ -171,7 +171,7 @@ known letters need, and can be worked by hand.
 
 | Item | Status | Strength | Experiments | Next test or reason |
 |---|---|---|---|---|
-| **F10.1** Chaocipher: two alphabet wheels permuted after every letter (Byrne, 1918; method disclosed 2010) | **open** | - | - | count first how many checks the 24 known letters give: the wheels' state depends on every earlier letter, so the known stretches may constrain only through the unknown letters before them; if they leave too few checks, this needs the F1.5 decider and is blocked like F1.1 |
+| **F10.1** Chaocipher: two alphabet wheels permuted after every letter (Byrne, 1918; method disclosed 2010) | closed | exact (0187): the left wheel's start fixes every move from the carved text; each known letter pins the right wheel's start (11 checks); every keyword-mixed left wheel (208,651, rotations equivalent): none fits K4 or 10 copies, plants found; a free left wheel (about 88 bits) blocked by cost | 0187 | - |
 | **F10.2** Wheatstone cryptograph or Alberti disk advanced by the plaintext: a 26-letter ring against a 27-place ring, the pointer moved by the distance between plaintext letters (Wheatstone, 1867) | **open** | - | - | exact: inside each known stretch consecutive known letters constrain the mixed ring directly; enumerate or propagate, then compare with coppers |
 | **F10.3** A key stream from a deck of cards (Solitaire 1999, Mirdek 2000) | **open** | - | - | the deck order is far larger than 24 known letters can pin down; state the bound and mark blocked unless a published known-plaintext attack applies |
 

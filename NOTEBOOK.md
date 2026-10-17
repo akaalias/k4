@@ -84,6 +84,12 @@ F4.5: the spelling difference (Antipodes' UNDERGROUND makes K2's carved RTBJ int
 
 F4 is finished: F4.1-F4.4 closed (0184-0186, F4.4 by subsumption), F4.5 closed for the spelling and blocked for the layout. Pivot P12 to F10.
 
+### F10 alphabets that change after every letter (after pivot P12, ticket #57)
+
+| # | Item | One line |
+|---|---|---|
+| 187 | F10.1 | **Chaocipher, word-mixed cipher wheel, exact, compiled.** Checks counted first: both wheels turn by the carved letter's place on the left wheel, so the left wheel's start fixes every move from the carved text, and each known letter pins one place of the right wheel's start (11 equalities plus distinctness). Implementation reproduces Byrne's test vector. 208,651 keyword-mixed alphabets (dictionary and vocabulary) at 26 rotations, 5.4M left wheels: consistent on K4 0, ten copies 0; three plants consistent at all 26 rotations of their wheel (with the right wheel free, turning both wheels together changes nothing, so rotations are equivalent). Closed for word-mixed wheels; a free left wheel (26!, about 88 bits) blocked by cost. Prediction held. |
+
 ## 2026-10-16
 
 Family F1 under the fixed order of work (order-of-work.md, issue #29), items F1.1 to F1.4, ticket #14.

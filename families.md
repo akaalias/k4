@@ -142,7 +142,7 @@ Update the leaf when an experiment works on it.
     - **F4.4** The extra L and HILL as a marker matching YAR {closed · by subsumption · 0005, 0017, 0089}
     - **F4.5** Antipodes' plate order and spelling differences {blocked}
   - F10 Alphabets that change after every letter
-    - **F10.1** Chaocipher: two wheels permuted after every letter (1918, disclosed 2010) {open}
+    - **F10.1** Chaocipher: two wheels permuted after every letter (1918, disclosed 2010) {closed · exact · 0187}
     - **F10.2** Wheatstone cryptograph or Alberti disk advanced by the plaintext {open}
     - **F10.3** A key stream from a deck of cards (Solitaire, Mirdek) {open}
   - F11 Agency hand systems, now public

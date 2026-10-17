@@ -1,0 +1,3 @@
+groups of 25 from place 1; first group's cipher row 7 below the guide row: discs that can stand at place 22 (E over carved F)
+
+place 22: ['F5', 'O14', 'P15']

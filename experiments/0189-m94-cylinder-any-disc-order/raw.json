@@ -1,0 +1,44 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "M-94 cylinder, 25 published discs in any order, any cipher row per group of 25, any alignment, exact (bipartite matching)",
+  "discs_source": "jproc.ca/crypto/m94.html (George Mace); checked: permutations, A then the disc letter; B1 as the Cryptogram 1982 reprint",
+  "consistent_cells": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_cells": [],
+  "plants": [
+   {
+    "alignment": 2,
+    "cells": 4,
+    "true_cell_found": true
+   },
+   {
+    "alignment": 18,
+    "cells": 58,
+    "true_cell_found": true
+   }
+  ],
+  "not_tested": "Jefferson's own wheel (alphabets not recorded), M-138-A strip sets (not published): blocked",
+  "copies": "10 shuffled copies (seed 1890)",
+  "seconds": 0,
+  "exhaustive": true
+ },
+ "notes": "consistent (alignment, rows) cells: K4 0 (copies 0-0); plants [{'alignment': 2, 'cells': 4, 'true_cell_found': True}, {'alignment': 18, 'cells': 58, 'true_cell_found': True}]",
+ "controls": [],
+ "error": null,
+ "worked_example": "groups of 25 from place 1; first group's cipher row 7 below the guide row: discs that can stand at place 22 (E over carved F)\n\nplace 22: ['F5', 'O14', 'P15']",
+ "seconds": 0.11371707916259766
+}

@@ -1,0 +1,65 @@
+{
+ "id": 189,
+ "tag": "0189-m94-cylinder-any-disc-order",
+ "started": "2026-10-17T00:47:46+00:00",
+ "seconds": 0.2,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 0.2,
+  "record": 0.1
+ },
+ "ended_epoch": 1792198067.084896,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "M-94 cylinder, 25 published discs in any order, any cipher row per group of 25, any alignment, exact (bipartite matching)",
+  "discs_source": "jproc.ca/crypto/m94.html (George Mace); checked: permutations, A then the disc letter; B1 as the Cryptogram 1982 reprint",
+  "consistent_cells": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_cells": [],
+  "plants": [
+   {
+    "alignment": 2,
+    "cells": 4,
+    "true_cell_found": true
+   },
+   {
+    "alignment": 18,
+    "cells": 58,
+    "true_cell_found": true
+   }
+  ],
+  "not_tested": "Jefferson's own wheel (alphabets not recorded), M-138-A strip sets (not published): blocked",
+  "copies": "10 shuffled copies (seed 1890)",
+  "seconds": 0,
+  "exhaustive": true
+ },
+ "notes": "consistent (alignment, rows) cells: K4 0 (copies 0-0); plants [{'alignment': 2, 'cells': 4, 'true_cell_found': True}, {'alignment': 18, 'cells': 58, 'true_cell_found': True}]",
+ "error": null,
+ "candidates": []
+}

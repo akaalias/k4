@@ -1752,11 +1752,9 @@ LIN_CSS = """
 #lin .nlab{fill:var(--faint);font:9.5px/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
 #lin .ng:focus-visible .hit{stroke:var(--accent);stroke-width:1.5}
 #lin.dim .ng,#lin.dim .edge{opacity:.1}
-#lin.dim .ng.lit{opacity:.6}
-#lin.dim .ng.lit-direct{opacity:1}
-#lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
-#lin.dim .edge.lit{opacity:.85;stroke:var(--muted);stroke-width:1.5}
-#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
+#lin.dim .ng.lit,#lin.dim .ng.lit-direct{opacity:1}
+#lin.dim .ng.lit .nlab,#lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
+#lin.dim .edge.lit,#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
 #lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
 #lin-tip .pop-title{font-weight:700;font-size:14.5px;line-height:1.25;margin-bottom:3px}
 #lin-tip .pop-meta{color:var(--muted);font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
@@ -1920,7 +1918,7 @@ LIN_JS = r"""
   function clearLit(){svg.classList.remove('dim');svg.querySelectorAll('.lit,.lit-direct').forEach(function(el){el.classList.remove('lit','lit-direct');});
     lanesEl.querySelectorAll('.on').forEach(function(el){el.classList.remove('on');});}
   function mark(k,cls){var el=svg.querySelector('.ng[data-key="'+CSS.escape(k)+'"]');if(el)el.classList.add(cls);}
-  // Trace a node's line back to its root: the node and its parent in full, older ancestors half lit.
+  // Trace a node's line back to its root, every ancestor and edge in full.
   function lit(key){
     clearLit();svg.classList.add('dim');
     var chain=[key],cur=key;while((cur=parentOf(cur))&&chain.indexOf(cur)<0)chain.push(cur);

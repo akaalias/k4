@@ -1788,13 +1788,34 @@ LIN_JS = r"""
   function layout(){
     var n=nodes.length,nf=fams.length,padY=16,sp=16,MINCOL=112,NUMW=30;
     var avail=host.clientWidth||1000;
-    var colW=Math.max(MINCOL,avail/nf),W=Math.floor(colW*nf),y={},cols=[],py={},slot=0;
+    var y={},cols=[],py={},slot=0;
     var pAfter={};pivots.forEach(function(pv){pAfter[pv.after]=pv;});
     // a pivot takes a row of its own, right after the experiment it followed
     nodes.forEach(function(nd){y[nd.key]=padY+slot*sp;slot++;if(pAfter[nd.key]){py[pAfter[nd.key].id]=padY+slot*sp;slot++;}});
-    var n=slot;
-    fams.forEach(function(f,i){var left=i*colW;cols.push({left:left,x:left+NUMW});});
-    return {sp:sp,W:W,H:Math.ceil(2*padY+(n-1)*sp),y:y,py:py,cols:cols,colW:colW,CAP:colW-NUMW-12,padY:padY};
+    var n=slot,L=lanes(y,sp);
+    // a column is as wide as its lanes need, at least MINCOL; spare width is shared out evenly
+    var need=fams.map(function(f,i){return Math.max(MINCOL,NUMW+6+LANE*(L.nl[i]||0)+12);}),tot=need.reduce(function(s,v){return s+v;},0),
+        extra=Math.max(0,(avail-tot)/nf),left=0;
+    fams.forEach(function(f,i){var w=need[i]+extra;cols.push({left:left,x:left+NUMW,w:w});left+=w;});
+    return {sp:sp,W:Math.floor(left),H:Math.ceil(2*padY+(n-1)*sp),y:y,py:py,cols:cols,padY:padY,laneOf:L.laneOf};
+  }
+
+  // Lanes: a same-family edge that skips an experiment gets a lane of its own beside the column.
+  // Lanes are packed left-edge style (the channel router's rule), shortest span innermost, so
+  // nested edges never cross and no two edges ever share a lane where they overlap.
+  var LANE=5;
+  // a parent directly above its child, with no experiment of the family between them, gets a
+  // straight edge and no lane
+  function direct(nd,p,y){var a=y[p],b=y[nd.key];return !nodes.some(function(o){return o.fam===nd.fam&&y[o.key]>a&&y[o.key]<b;});}
+  function lanes(y,sp){
+    var GAP=sp*0.4,busy={},laneOf={},nl={};
+    nodes.filter(function(nd){var p=parentOf(nd.key);return p&&byKey[p].fam===nd.fam&&!direct(nd,p,y);})
+      .map(function(nd){return {k:nd.key,f:nd.fam,a:y[parentOf(nd.key)],b:y[nd.key]};})
+      .sort(function(u,v){return (u.b-u.a)-(v.b-v.a)||u.a-v.a;})
+      .forEach(function(r){var iv=busy[r.f]||(busy[r.f]=[]),l=0;
+        while(iv.some(function(q){return q.l===l&&q.a<r.b+GAP&&r.a<q.b+GAP;}))l++;
+        iv.push({l:l,a:r.a,b:r.b});laneOf[r.k]=l;nl[r.f]=Math.max(nl[r.f]||0,l+1);});
+    return {laneOf:laneOf,nl:nl};
   }
 
   function render(){
@@ -1802,7 +1823,7 @@ LIN_JS = r"""
     var y=geo.y,cols=geo.cols,W=geo.W,H=geo.H,g='';
     var xOf=function(k){return cols[byKey[k].fam].x;};
     cols.forEach(function(C,i){
-      g+='<rect class="lband f'+fams[i].c+'" x="'+C.left.toFixed(1)+'" y="0" width="'+geo.colW.toFixed(1)+'" height="'+H+'"/>';
+      g+='<rect class="lband f'+fams[i].c+'" x="'+C.left.toFixed(1)+'" y="0" width="'+C.w.toFixed(1)+'" height="'+H+'"/>';
       if(i)g+='<line class="lbound" x1="'+C.left.toFixed(1)+'" x2="'+C.left.toFixed(1)+'" y1="0" y2="'+H+'"/>';
     });
     // one faint rule per experiment across every column, so the sequence can be followed
@@ -1816,34 +1837,40 @@ LIN_JS = r"""
         +'<line class="lpivot" x1="0" x2="'+W+'" y1="'+(cy-h/2)+'" y2="'+(cy-h/2)+'"/><line class="lpivot" x1="0" x2="'+W+'" y1="'+(cy+h/2)+'" y2="'+(cy+h/2)+'"/>'
         +'</a>';});
     cols.forEach(function(C){g+='<line class="lbase" x1="'+C.x.toFixed(1)+'" x2="'+C.x.toFixed(1)+'" y1="'+geo.padY+'" y2="'+(H-geo.padY)+'"/>';});
-    // edges for a vertical timeline, after airloom's lineage: every edge leaves the bottom centre
-    // of the parent and arrives at the top centre of the child, vertical at both ends. Within a
-    // family each edge gets its own lane beside the column, packed by span (shortest innermost),
-    // so one-row hops stay small S-bumps and long ones run further out without piling up.
-    var R=4,LANE=5,GAP=geo.sp*0.4,maxLanes=Math.max(1,Math.floor((geo.CAP-8)/LANE)),busy={},laneOf={};
-    // a parent directly above its child, with no experiment of the family between them, gets a
-    // straight edge and no lane
-    var direct=function(nd,p){var a=y[p],b=y[nd.key];return !nodes.some(function(o){return o.fam===nd.fam&&y[o.key]>a&&y[o.key]<b;});};
-    nodes.filter(function(nd){var p=parentOf(nd.key);return p&&byKey[p].fam===nd.fam&&!direct(nd,p);})
-      .map(function(nd){return {k:nd.key,f:nd.fam,a:y[parentOf(nd.key)],b:y[nd.key]};})
-      .sort(function(u,v){return (u.b-u.a)-(v.b-v.a)||u.a-v.a;})
-      .forEach(function(r){var iv=busy[r.f]||(busy[r.f]=[]),l=0;
-        for(;l<maxLanes;l++){if(!iv.some(function(q){return q.l===l&&q.a<r.b+GAP&&r.a<q.b+GAP;}))break;}
-        if(l>=maxLanes)l=maxLanes-1;iv.push({l:l,a:r.a,b:r.b});laneOf[r.k]=l;});
+    // edges, routed like tracks in a channel (a circuit board, a metro map): crossings are
+    // allowed, overlaps are not. Each edge leaves the bottom centre of the parent and arrives at
+    // the top centre of the child; a same-family edge runs in its own lane (see lanes()). The
+    // edges leaving one dot are its ports: they fan out at evenly spread angles, inner lanes
+    // steepest, then the lanes further out, then edges to other families, so they part at once
+    // and never touch again. An arrival into a lane-routed child mirrors its departure.
+    var R=4,H0=geo.sp*0.4,laneOf=geo.laneOf,yy=y,ang={};
+    var f1=function(v){return v.toFixed(1);};
+    var same=function(nd,p){return byKey[p].fam===nd.fam;};
+    Object.keys(kids).forEach(function(p){
+      var out=kids[p].filter(function(c){return !(same(byKey[c],p)&&direct(byKey[c],p,yy));});
+      // sideways reach of each port: a lane's offset, or how far the other column lies
+      var reach=function(c){return same(byKey[c],p)?6+LANE*laneOf[c]:xOf(c)-xOf(p);};
+      [out.filter(function(c){return reach(c)>0;}),out.filter(function(c){return reach(c)<0;})].forEach(function(side){
+        side.sort(function(u,v){return Math.abs(reach(u))-Math.abs(reach(v));});
+        side.forEach(function(c,i){ang[c]=(side.length<2?40:25+45*i/(side.length-1))*Math.PI/180;});});
+    });
     nodes.forEach(function(nd){
       var p=parentOf(nd.key);if(!p)return;
-      var a=y[p],b=y[nd.key],a0=a+R,b0=b-R,d;
-      if(byKey[p].fam===nd.fam&&direct(nd,p)){var xs=xOf(nd.key).toFixed(1);
+      var a=y[p],b=y[nd.key],a0=a+R,b0=b-R,d,t=ang[nd.key];
+      if(same(nd,p)&&direct(nd,p,yy)){var xs=f1(xOf(nd.key));
         g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="M'+xs+','+a0+' L'+xs+','+b0+'"/>';}
-      else if(byKey[p].fam===nd.fam){var x=xOf(nd.key),lx=x+6+LANE*laneOf[nd.key],sw=Math.min((b0-a0)/2,6+0.9*(lx-x));
-        // airloom's vertical S-curve (vertical at both ends, handles at the midpoint) out to this
-        // edge's lane, down beside the column, and a mirrored S back into the top of the child
-        d='M'+x.toFixed(1)+','+a0+' C'+x.toFixed(1)+','+(a0+sw/2).toFixed(1)+' '+lx.toFixed(1)+','+(a0+sw/2).toFixed(1)+' '+lx.toFixed(1)+','+(a0+sw).toFixed(1)
-          +' L'+lx.toFixed(1)+','+(b0-sw).toFixed(1)
-          +' C'+lx.toFixed(1)+','+(b0-sw/2).toFixed(1)+' '+x.toFixed(1)+','+(b0-sw/2).toFixed(1)+' '+x.toFixed(1)+','+b0;
+      else if(same(nd,p)){var x=xOf(nd.key),o=6+LANE*laneOf[nd.key],lx=x+o,xh=x+0.35*o,
+          h=Math.max(4,Math.min((b0-a0)/2,o/Math.tan(t)));
+        // out of the port in a straight line at its angle, bending into the lane; the arrival is
+        // the same curve reflected
+        d='M'+f1(x)+','+a0+' C'+f1(xh)+','+f1(a0+0.35*h)+' '+f1(lx)+','+f1(a0+0.55*h)+' '+f1(lx)+','+f1(a0+h)
+          +' L'+f1(lx)+','+f1(b0-h)
+          +' C'+f1(lx)+','+f1(b0-0.55*h)+' '+f1(xh)+','+f1(b0-0.35*h)+' '+f1(x)+','+b0;
         g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
-      else{var xa=xOf(p),xc=xOf(nd.key),m=(a0+b0)/2;
-        d='M'+xa.toFixed(1)+','+a0+' C'+xa.toFixed(1)+','+m.toFixed(1)+' '+xc.toFixed(1)+','+m.toFixed(1)+' '+xc.toFixed(1)+','+b0;
+      else{var xa=xOf(p),xc=xOf(nd.key),dx=xc-xa,k=Math.min(2.5*H0,(b0-a0)/3);
+        // to another family: out of its port at the port's angle, then nearly straight, so a long
+        // one does not hug the column it leaves
+        d='M'+f1(xa)+','+a0+' C'+f1(xa+(dx<0?-1:1)*k*Math.sin(t))+','+f1(a0+k*Math.cos(t))+' '+f1(xc-0.2*dx)+','+f1(b0-H0)+' '+f1(xc)+','+b0;
         g+='<path class="edge x" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
     });
     nodes.forEach(function(nd){
@@ -1865,7 +1892,7 @@ LIN_JS = r"""
     svg=document.getElementById('lin');
     lanesEl.style.width=W+'px';lanesEl.style.height='';
     lanesEl.innerHTML=cols.map(function(C,i){var f=fams[i];
-      return '<div class="lane-lab f'+f.c+'" data-fam="'+i+'" title="'+esc(f.name)+'" style="left:'+C.left.toFixed(1)+'px;width:'+geo.colW.toFixed(1)+'px"><span class="sw"></span><span class="nm">'+esc(f.label)+'</span>'
+      return '<div class="lane-lab f'+f.c+'" data-fam="'+i+'" title="'+esc(f.name)+'" style="left:'+C.left.toFixed(1)+'px;width:'+C.w.toFixed(1)+'px"><span class="sw"></span><span class="nm">'+esc(f.label)+'</span>'
         +'<span class="cnt">'+f.count+'<span class="cw">'+(f.count===1?' experiment':' experiments')+'</span></span></div>';}).join('');
     // the heads are absolutely placed, so the strip takes the height of the tallest one
     var hh=0;lanesEl.querySelectorAll('.lane-lab').forEach(function(el){el.style.bottom='auto';hh=Math.max(hh,el.offsetHeight);el.style.bottom='';});

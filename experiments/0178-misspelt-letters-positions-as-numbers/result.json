@@ -1,0 +1,375 @@
+{
+ "id": 178,
+ "tag": "0178-misspelt-letters-positions-as-numbers",
+ "started": "2026-10-17T00:24:46+00:00",
+ "seconds": 1.7,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 1.7,
+  "record": 0.0
+ },
+ "ended_epoch": 1792196688.51986,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "word plus the misspelt letters' positions and shifts as numbers, k = w[i mod a] + s d, 12 table rules, exact",
+  "readings": {
+   "place in the word: Q, U, A": [
+    2,
+    8,
+    5
+   ],
+   "place in the word: Q, U, A, reversed": [
+    5,
+    8,
+    2
+   ],
+   "place in the word: Q, U, A, missing E": [
+    2,
+    8,
+    5,
+    9
+   ],
+   "place in the word: Q, U, A, missing E, reversed": [
+    9,
+    5,
+    8,
+    2
+   ],
+   "place in its plaintext: 57, 115, 11": [
+    57,
+    115,
+    11
+   ],
+   "place in its plaintext: 57, 115, 11, reversed": [
+    11,
+    115,
+    57
+   ],
+   "place in its plaintext with E: 57, 115, 11, 15": [
+    57,
+    115,
+    11,
+    15
+   ],
+   "place in its plaintext with E: 57, 115, 11, 15, reversed": [
+    15,
+    11,
+    115,
+    57
+   ],
+   "place through K1-K3: 57, 178, 443": [
+    57,
+    178,
+    443
+   ],
+   "place through K1-K3: 57, 178, 443, reversed": [
+    443,
+    178,
+    57
+   ],
+   "place through K1-K3 with E: 57, 178, 443, 447": [
+    57,
+    178,
+    443,
+    447
+   ],
+   "place through K1-K3 with E: 57, 178, 443, 447, reversed": [
+    447,
+    443,
+    178,
+    57
+   ],
+   "raised YAR, places in the line: 4 5 7": [
+    4,
+    5,
+    7
+   ],
+   "raised YAR, places in the line: 4 5 7, reversed": [
+    7,
+    5,
+    4
+   ],
+   "QUA as numbers, standard": [
+    16,
+    20,
+    0
+   ],
+   "QUA as numbers, standard, reversed": [
+    0,
+    20,
+    16
+   ],
+   "QUA as numbers, KRYPTOS": [
+    20,
+    21,
+    7
+   ],
+   "QUA as numbers, KRYPTOS, reversed": [
+    7,
+    21,
+    20
+   ],
+   "LOE as numbers, standard": [
+    11,
+    14,
+    4
+   ],
+   "LOE as numbers, standard, reversed": [
+    4,
+    14,
+    11
+   ],
+   "LOE as numbers, KRYPTOS": [
+    17,
+    5,
+    11
+   ],
+   "LOE as numbers, KRYPTOS, reversed": [
+    11,
+    5,
+    17
+   ],
+   "shifts L>Q, O>U, E>A, standard": [
+    5,
+    6,
+    22
+   ],
+   "shifts L>Q, O>U, E>A, standard, reversed": [
+    22,
+    6,
+    5
+   ],
+   "shifts L>Q, O>U, E>A, KRYPTOS": [
+    3,
+    16,
+    22
+   ],
+   "shifts L>Q, O>U, E>A, KRYPTOS, reversed": [
+    22,
+    16,
+    3
+   ],
+   "YAR as numbers, standard": [
+    24,
+    0,
+    17
+   ],
+   "YAR as numbers, standard, reversed": [
+    17,
+    0,
+    24
+   ],
+   "YAR as numbers, KRYPTOS": [
+    2,
+    7,
+    1
+   ],
+   "YAR as numbers, KRYPTOS, reversed": [
+    1,
+    7,
+    2
+   ],
+   "RQ, standard": [
+    17,
+    16
+   ],
+   "RQ, standard, reversed": [
+    16,
+    17
+   ],
+   "YR (RQ upside down), standard": [
+    24,
+    17
+   ],
+   "YR (RQ upside down), standard, reversed": [
+    17,
+    24
+   ],
+   "RQ, KRYPTOS": [
+    1,
+    20
+   ],
+   "RQ, KRYPTOS, reversed": [
+    20,
+    1
+   ],
+   "YR, KRYPTOS": [
+    2,
+    1
+   ],
+   "YR, KRYPTOS, reversed": [
+    1,
+    2
+   ],
+   "Bauer's error coordinates (25,2)(24,6)(11,15)(15,15)": [
+    25,
+    2,
+    24,
+    6,
+    11,
+    15,
+    15,
+    15
+   ],
+   "Bauer's error coordinates (25,2)(24,6)(11,15)(15,15), reversed": [
+    15,
+    15,
+    15,
+    11,
+    6,
+    24,
+    2,
+    25
+   ]
+  },
+  "n_readings": 40,
+  "word_lengths": [
+   1,
+   24
+  ],
+  "checks_by_word_length": {
+   "1": 23,
+   "2": 22,
+   "3": 21,
+   "4": 20,
+   "5": 19,
+   "6": 18,
+   "7": 17,
+   "8": 16,
+   "9": 15,
+   "10": 14,
+   "11": 13,
+   "12": 12,
+   "13": 11,
+   "14": 11,
+   "15": 9,
+   "16": 8,
+   "17": 7,
+   "18": 7,
+   "19": 9,
+   "20": 11,
+   "21": 11,
+   "22": 9,
+   "23": 7,
+   "24": 5
+  },
+  "live_at_least_checks": {
+   "1": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "2": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "4": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "6": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "8": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "11": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   },
+   "14": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "coppers_at_or_above_k4": 20
+   }
+  },
+  "dictionary_hits": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "dictionary_hits_6_plus": {
+   "k4": 0,
+   "coppers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_hits": [],
+  "plant": {
+   "text": "2 8 5 from the second number, + SHADOW, Vigenere on the KRYPTOS table",
+   "found": true
+  },
+  "copies": "20 shuffled coppers (seed 1780)",
+  "seconds": 2,
+  "exhaustive": true
+ },
+ "notes": "live settings with >=4 checks: K4 0 (coppers 0-0); dictionary words 4+: K4 0 (coppers 0-0); plant found True",
+ "error": null,
+ "candidates": []
+}

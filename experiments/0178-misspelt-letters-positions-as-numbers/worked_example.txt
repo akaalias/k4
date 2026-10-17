@@ -1,0 +1,27 @@
+2 8 5 (the misspelt letters' places in their words) from the first number, Vigenere on the KRYPTOS table, word length 7
+
+place  known  carved  key  num  word value  slot
+   22      E       F    1    2          25     0
+   23      A       L   10    8           2     1
+   24      S       R   21    5          16     2
+   25      T       V   18    2          16     3
+   26      N       Q    1    8          19     4
+   27      O       Q   15    5          10     5
+   28      R       P    2    2           0     6
+   29      T       R   23    8          15     0
+   30      H       N    5    5           0     1
+   31      E       G    2    2           0     2
+   32      A       K   19    8          11     3
+   33      S       S    0    5          21     4
+   34      T       S    2    2           0     5
+   64      B       N   11    2           9     0
+   65      E       Y   17    8           9     1
+   66      R       P    2    5          23     2
+   67      L       V    5    2           3     3
+   68      I       T   15    8           7     4
+   69      N       T   11    5           6     5
+   70      C       M    9    2           7     6
+   71      L       Z    8    8           0     0
+   72      O       F    7    5           2     1
+   73      C       P   20    2          18     2
+   74      K       K    0    8          18     3

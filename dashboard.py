@@ -1186,7 +1186,7 @@ def outcome_chart(rows):
     if not rows:
         return "<p class='muted'>No experiments yet.</p>"
     grades = load_grades()
-    W, L, R, T, band = 1400, 64, 220, 36, 46
+    W, L, R, T, band = 1480, 64, 220, 36, 46     # W at 95vw keeps the text the size it was at 1400 and 90vw
     n = len(rows)
     step = (W - L - R) / n
     dot_r = max(1.2, min(3.6, step * 0.42))     # the lineage page's dot, shrinking only when experiments crowd
@@ -1254,7 +1254,7 @@ def outcome_chart(rows):
     g.append(f'<text x="{L + (W - L - R) / 2:.1f}" y="{H - 8}" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">experiment number, in the order it ran</text>')
     g.append(f'<text transform="translate({L - 24},{T + band * len(shown) / 2:.1f}) rotate(-90)" font-size="13.5" font-style="italic" fill="var(--muted)" text-anchor="middle">outcome against the scrambled copies</text>')
     g.append("</svg>")
-    return "<div class='chart-wide' style='margin-top:14px'><figure class='chart' style='margin:0'>" + "".join(g) + "</figure></div>"
+    return "<div class='chart-wide' style='margin-top:14px;width:95vw'><figure class='chart' style='margin:0'>" + "".join(g) + "</figure></div>"
 
 
 def load_pivots():
@@ -1743,6 +1743,7 @@ LIN_CSS = """
 #lin .ng.row-on .nlab{fill:var(--ink);font-weight:600}
 #lin .edge{fill:none;stroke:var(--disc);stroke-width:1}
 #lin .edge.x{stroke-dasharray:3 3}
+#lin .ehit{fill:none;stroke:transparent;stroke-width:7;pointer-events:stroke}
 #lin .ng{cursor:pointer;outline:none}
 #lin .nr{fill:currentColor}
 #lin .nk{fill:var(--ink)}
@@ -1807,10 +1808,13 @@ LIN_JS = r"""
   // a parent directly above its child, with no experiment of the family between them, gets a
   // straight edge and no lane
   function direct(nd,p,y){var a=y[p],b=y[nd.key];return !nodes.some(function(o){return o.fam===nd.fam&&y[o.key]>a&&y[o.key]<b;});}
+  // An edge to another family that spans four rows or more also takes a lane, in its parent's
+  // column, and sweeps across to the child only at the end.
+  function crossLane(nd,p,y,sp){return byKey[p].fam!==nd.fam&&y[nd.key]-y[p]>=4*sp;}
   function lanes(y,sp){
     var GAP=sp*0.4,busy={},laneOf={},nl={};
-    nodes.filter(function(nd){var p=parentOf(nd.key);return p&&byKey[p].fam===nd.fam&&!direct(nd,p,y);})
-      .map(function(nd){return {k:nd.key,f:nd.fam,a:y[parentOf(nd.key)],b:y[nd.key]};})
+    nodes.filter(function(nd){var p=parentOf(nd.key);return p&&(byKey[p].fam===nd.fam?!direct(nd,p,y):crossLane(nd,p,y,sp));})
+      .map(function(nd){var p=parentOf(nd.key);return {k:nd.key,f:byKey[p].fam,a:y[p],b:y[nd.key]};})
       .sort(function(u,v){return (u.b-u.a)-(v.b-v.a)||u.a-v.a;})
       .forEach(function(r){var iv=busy[r.f]||(busy[r.f]=[]),l=0;
         while(iv.some(function(q){return q.l===l&&q.a<r.b+GAP&&r.a<q.b+GAP;}))l++;
@@ -1849,7 +1853,7 @@ LIN_JS = r"""
     Object.keys(kids).forEach(function(p){
       var out=kids[p].filter(function(c){return !(same(byKey[c],p)&&direct(byKey[c],p,yy));});
       // sideways reach of each port: a lane's offset, or how far the other column lies
-      var reach=function(c){return same(byKey[c],p)?6+LANE*laneOf[c]:xOf(c)-xOf(p);};
+      var reach=function(c){return c in laneOf?6+LANE*laneOf[c]:xOf(c)-xOf(p);};
       [out.filter(function(c){return reach(c)>0;}),out.filter(function(c){return reach(c)<0;})].forEach(function(side){
         side.sort(function(u,v){return Math.abs(reach(u))-Math.abs(reach(v));});
         side.forEach(function(c,i){ang[c]=(side.length<2?40:25+45*i/(side.length-1))*Math.PI/180;});});
@@ -1868,9 +1872,18 @@ LIN_JS = r"""
           +' L'+f1(lx)+','+f1(b0-h)
           +' C'+f1(lx)+','+f1(b0-0.4*h)+' '+f1(xh)+','+f1(b0-k1*q)+' '+f1(x)+','+b0;
         g+='<path class="edge" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
+      else if(nd.key in laneOf){var xa=xOf(p),xc=xOf(nd.key),o=6+LANE*laneOf[nd.key],lx=xa+o,
+          q=o/Math.tan(t),h=Math.max(4,Math.min((b0-a0)/3,1.8*q+4)),k1=Math.min(0.45,0.45*h/Math.max(q,1e-6)),
+          S=Math.min(b0-a0-h,Math.max(2*geo.sp,Math.min(10*geo.sp,0.3*Math.abs(xc-lx))));
+        // to another family, far down: out of its port into a lane beside the parent's column,
+        // as a same-family edge does, then an S across into the top of the child
+        d='M'+f1(xa)+','+a0+' C'+f1(xa+k1*o)+','+f1(a0+k1*q)+' '+f1(lx)+','+f1(a0+0.4*h)+' '+f1(lx)+','+f1(a0+h)
+          +' L'+f1(lx)+','+f1(b0-S)
+          +' C'+f1(lx)+','+f1(b0-S/2)+' '+f1(xc)+','+f1(b0-S/2)+' '+f1(xc)+','+b0;
+        g+='<path class="edge x" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
       else{var xa=xOf(p),xc=xOf(nd.key),dx=xc-xa,k=Math.min(2.5*H0,(b0-a0)/3);
-        // to another family: out of its port at the port's angle, then nearly straight, so a long
-        // one does not hug the column it leaves
+        // to another family, a row or two down: out of its port at the port's angle, then one
+        // curve into the top of the child
         d='M'+f1(xa)+','+a0+' C'+f1(xa+(dx<0?-1:1)*k*Math.sin(t))+','+f1(a0+k*Math.cos(t))+' '+f1(xc-0.2*dx)+','+f1(b0-H0)+' '+f1(xc)+','+b0;
         g+='<path class="edge x" data-c="'+esc(nd.key)+'" data-p="'+esc(p)+'" d="'+d+'"/>';}
     });
@@ -1913,6 +1926,11 @@ LIN_JS = r"""
     var row=svg.querySelector('.lrow[data-key="'+CSS.escape(key)+'"]');if(row)row.classList.add('lit-direct');
     svg.querySelectorAll('.edge').forEach(function(e){var c=e.getAttribute('data-c'),i=chain.indexOf(c);
       if(i>=0&&e.getAttribute('data-p')===chain[i+1])e.classList.add(i===0?'lit-direct':'lit');});
+  }
+  // An edge alone: the edge and the two experiments it joins.
+  function litEdge(c,p){
+    clearLit();svg.classList.add('dim');mark(c,'lit-direct');mark(p,'lit-direct');
+    svg.querySelectorAll('.edge[data-c="'+CSS.escape(c)+'"]').forEach(function(e){e.classList.add('lit-direct');});
   }
   function litFam(fi){
     clearLit();svg.classList.add('dim');
@@ -1961,6 +1979,11 @@ LIN_JS = r"""
     svg.addEventListener('mousemove',function(e){rowHi(rowAt(e));});
     svg.addEventListener('mouseleave',function(){rowHi(null);});
     svg.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse';});
+    // a wider, invisible copy of each edge to hover; drawn under the dots, so a dot still wins
+    svg.querySelectorAll('.edge').forEach(function(e){var h=document.createElementNS('http://www.w3.org/2000/svg','path');
+      h.setAttribute('class','ehit');h.setAttribute('d',e.getAttribute('d'));h.setAttribute('data-c',e.getAttribute('data-c'));h.setAttribute('data-p',e.getAttribute('data-p'));e.after(h);});
+    svg.addEventListener('mouseover',function(e){var h=e.target.closest('.ehit');if(h)litEdge(h.getAttribute('data-c'),h.getAttribute('data-p'));});
+    svg.addEventListener('mouseout',function(e){if(e.target.closest('.ehit')&&!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('.ng')))clearLit();});
     svg.addEventListener('mouseover',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');lit(k);showTip(k,a);});
     svg.addEventListener('mouseout',function(e){var a=e.target.closest('.ng');if(!a||a.contains(e.relatedTarget))return;clearLit();hideTip();});
     svg.addEventListener('focusin',function(e){var a=e.target.closest('.ng');if(a){var k=a.getAttribute('data-key');lit(k);showTip(k,a);}});

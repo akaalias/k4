@@ -148,7 +148,7 @@ Update the leaf when an experiment works on it.
   - F11 Agency hand systems, now public
     - **F11.1** Strip ciphers and cylinders with published alphabets (M-94, Jefferson wheel, M-138-A) {closed · exact · 0189}
     - **F11.2** Poem code: double transposition keyed by words from a memorized text, then the table {closed · exact · 0190}
-    - **F11.3** The CIA's Polish key box: a key text transposed in a box, then the table {open}
+    - **F11.3** The CIA's Polish key box: a key text transposed in a box, then the table {closed · exact · 0191}
     - **F11.4** Friedman's keyed alphabet box as the key stream {open}
   - F8 Hill ciphers
     - Hill 2-5, plain and affine, 330 numberings, chained, with a repeating key {closed · exact · 0015, 0036, 0044, 0055, 0105, 0116}

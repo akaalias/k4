@@ -1732,9 +1732,8 @@ LIN_CSS = """
 #lin .lbound{stroke:var(--rule-soft);stroke-width:1}
 #lin .lbase{stroke:var(--rule-soft);stroke-width:1}
 #lin .lrow{stroke:var(--rule-soft);stroke-width:1;shape-rendering:crispEdges}
-#lin .lpivot{stroke:var(--accent);stroke-opacity:.55;stroke-width:1.2;stroke-dasharray:0.5 4;stroke-linecap:round}
 #lin .lpivot-lab{font:italic 400 10.5px var(--serif);fill:var(--accent);letter-spacing:.01em;paint-order:stroke;stroke:var(--paper);stroke-width:4px;stroke-linejoin:round}
-#lin .lpivot-row{fill:transparent}
+#lin .lpivot-row{fill:var(--paper)}
 #lin .lrow.ten{stroke:var(--rule);stroke-opacity:.6}
 #lin .lrow.lit-direct{stroke:var(--muted);stroke-opacity:.45}
 #lin .rhit{fill:var(--ink);fill-opacity:0;transition:fill-opacity .12s}
@@ -1835,10 +1834,10 @@ LIN_JS = r"""
     nodes.forEach(function(nd){var ty=y[nd.key],ten=typeof nd.n==='number'&&nd.n%10===0;
       g+='<rect class="rhit" data-key="'+esc(nd.key)+'" x="0" y="'+(ty-geo.sp/2)+'" width="'+W+'" height="'+geo.sp+'"/>'
         +'<line class="lrow'+(ten?' ten':'')+'" data-key="'+esc(nd.key)+'" x1="0" x2="'+W+'" y1="'+ty+'" y2="'+ty+'"/>';});
-    // pivots: a row of their own, drawn under the edges and dots so the lineage stays visible across it
+    // pivots: a plain paper row of their own, drawn over the bands and rules but under the edges
+    // and dots, so the lineage stays visible across it
     pivots.forEach(function(pv){if(!(pv.id in geo.py))return;var cy=geo.py[pv.id],h=geo.sp;
       g+='<a href="/pivot/'+encodeURIComponent(pv.id)+'"><rect class="lpivot-row" x="0" y="'+(cy-h/2)+'" width="'+W+'" height="'+h+'"/>'
-        +'<line class="lpivot" x1="0" x2="'+W+'" y1="'+(cy-h/2)+'" y2="'+(cy-h/2)+'"/><line class="lpivot" x1="0" x2="'+W+'" y1="'+(cy+h/2)+'" y2="'+(cy+h/2)+'"/>'
         +'</a>';});
     cols.forEach(function(C){g+='<line class="lbase" x1="'+C.x.toFixed(1)+'" x2="'+C.x.toFixed(1)+'" y1="'+geo.padY+'" y2="'+(H-geo.padY)+'"/>';});
     // edges, routed like tracks in a channel (a circuit board, a metro map): crossings are

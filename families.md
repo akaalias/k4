@@ -138,9 +138,9 @@ Update the leaf when an experiment works on it.
     - K4 read from behind the screen {closed · exact · 0108}
     - **F4.1** A route that follows the plates' physical layout {closed · exact · 0184}
     - **F4.2** Free trifid cubes at periods above 15 {closed · exact · 0185}
-    - **F4.3** The physical anomalies' positions as a key {open}
-    - **F4.4** The extra L and HILL as a marker matching YAR {open}
-    - **F4.5** Antipodes' plate order and spelling differences {open}
+    - **F4.3** The physical anomalies' positions as a key {closed · exact · 0186}
+    - **F4.4** The extra L and HILL as a marker matching YAR {closed · by subsumption · 0005, 0017, 0089}
+    - **F4.5** Antipodes' plate order and spelling differences {blocked}
   - F10 Alphabets that change after every letter
     - **F10.1** Chaocipher: two wheels permuted after every letter (1918, disclosed 2010) {open}
     - **F10.2** Wheatstone cryptograph or Alberti disk advanced by the plaintext {open}
@@ -292,7 +292,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P11 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P12 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -307,3 +307,4 @@ Each pivot has a details page in `pivots/` (P1-P11 so far), rendered on the Pivo
 | 2026-10-17 | F12 Stein's way (0168-0172) | F3 a two-part key with a combiner | Every F12 item closed or blocked: K4's statistics, Stein's peak at 13, a pencil session, two parts with own keys and probable words in the undecided cells all at the shuffles' or copies' rate; F12.1 blocked for want of photographs. Ranking unchanged (P9). |
 | 2026-10-17 | F3 a two-part key with a combiner (0173-0180) | F2 masked plaintext | Every F3 item closed: Scheidt's patent sandwich and its two-table stack decided exactly, other combiners, and the Morse, plate, direction, misspelling, World Clock and 'point' numbers as the number half of a key: nothing fits K4 or its scrambled copies; only few-check cells stay undecided. Ranking unchanged (P10). |
 | 2026-10-17 | F2 masked plaintext (0181-0183) | F4 Sanborn's visual systems | Every F2 item closed: what 0057's long keys force holds no words, any null rule acts through the gap between the known words and no gap helps, and a repeated-letter phrase strip fits only where nothing is checked. Ranking unchanged (P11). |
+| 2026-10-17 | F4 Sanborn's visual systems (0184-0186) | F10 alphabets that change after every letter | F4.1-F4.4 closed: paths over the copper's own layout, free trifid cubes at every period, the anomalies' places as numbers, the extra L as a marker (by subsumption); F4.5 blocked for want of Antipodes' layout. Ranking unchanged (P12). |

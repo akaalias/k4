@@ -76,6 +76,13 @@ F2 is finished: F2.1-F2.3 closed (0181-0183); a code layer, phonetic spelling or
 |---|---|---|
 | 184 | F4.1 | **Paths over the copper's own layout, exact.** K4's four lines (OBKR at columns 28-31 after K3's tail and the ?, then three lines of 31), the lower plate's 14 ragged lines and the left side's 28: rows, columns, diagonals both ways and spirals from every corner, straight or back and forth, K4's cells in the order visited: 73 distinct routes, each and its inverse, then or before a periodic key 1-26 (F6's compiled tester). Shortest live K4 23/26, copies 22/26; K4 above every copy in 0 of 52 cells (copies 0-1). The S-curve bends the plates, not the letter order. Closed. Prediction held. |
 | 185 | F4.2 | **Trifid, free cube, periods 16-97, exact.** 0040's decider (72 coordinate ties, union-find, backtracking with the address and count rules) at every period 16-97 and alignment: 4,633 settings, at most 364 nodes, none capped. Settings with a cube: K4 0, ten shuffled copies 0 each; a text planted at period 30 has its cube found (among 288). With 0040, no trifid cube fits K4 at any period. Closed. Prediction held. |
+| 186 | F4.3 | **The copper's physical anomalies as numbers, exact.** Located from the transcript: ? at 101, 227, 289, 772; K2's omitted S after 427; raised Y, A, R at 439, 440, 442; the extra L at tableau line 15, column 32; lines 23 and 24 (33 and 29 letters). 22 readings (places, lines, columns, gaps, the first-line markers, each reversed) with an unknown word of 1-24 on 12 table rules (0175's decider): K4 0, 20 copies 0; plant found. Closed. Prediction held. |
+
+F4.4 closed by subsumption without a run: what the extra L, read with HILL as a marker matching YAR, could select is a row or key letter (a key of length 1-4 such as L, HILL, YARL on the KRYPTOS table: every periodic key to 26 is dead, 0005), a starting place in the tableau (running keys from the tableau rows at every start, forward and backward: 0017), or a plate to lay over K4 (0089); its place as a number is in 0186.
+
+F4.5: the spelling difference (Antipodes' UNDERGROUND makes K2's carved RTBJ into ETBJ, one carved letter, R to E, at place 178) as a key fragment is a one- or four-letter key (dead, 0005), and place 178 was a reading in 0178; closed by subsumption. "The order is shifted a little" as a reading order needs Antipodes' own line layout for the K4 section, which is not in the repository: blocked until a transcript or photographs of Antipodes are supplied.
+
+F4 is finished: F4.1-F4.4 closed (0184-0186, F4.4 by subsumption), F4.5 closed for the spelling and blocked for the layout. Pivot P12 to F10.
 
 ## 2026-10-16
 

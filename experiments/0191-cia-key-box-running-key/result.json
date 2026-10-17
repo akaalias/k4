@@ -1,0 +1,242 @@
+{
+ "id": 191,
+ "tag": "0191-cia-key-box-running-key",
+ "started": "2026-10-17T00:51:49+00:00",
+ "seconds": 10.7,
+ "status": "ran",
+ "phases": {
+  "design": 0.0,
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 10.7,
+  "record": 0.0
+ },
+ "ended_epoch": 1792198320.125839,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "key box: key text by rows, read by columns (widths 2-50, natural, reversed, bottom-up, vocabulary keyword orders), then Bury's reciprocal / Vigenere / Beaufort / variant on std or KRYPTOS numbering; every start; exact",
+  "readings": 320,
+  "rules": 8,
+  "settings_per_text": 732076800,
+  "per_source": {
+   "K1": {
+    "settings": 0,
+    "fits_k4": 0,
+    "fits_copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fits_plants": [
+     0,
+     0
+    ],
+    "best_hits_k4": 0,
+    "best_hits_copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "K2": {
+    "settings": 676160,
+    "fits_k4": 0,
+    "fits_copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fits_plants": [
+     1,
+     0
+    ],
+    "best_hits_k4": 8,
+    "best_hits_copies": [
+     7,
+     7,
+     8,
+     7,
+     8,
+     8,
+     7,
+     8,
+     8,
+     8
+    ]
+   },
+   "K3": {
+    "settings": 591680,
+    "fits_k4": 0,
+    "fits_copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fits_plants": [
+     0,
+     0
+    ],
+    "best_hits_k4": 9,
+    "best_hits_copies": [
+     7,
+     7,
+     8,
+     8,
+     7,
+     7,
+     7,
+     9,
+     8,
+     8
+    ]
+   },
+   "K1-K3": {
+    "settings": 1697600,
+    "fits_k4": 0,
+    "fits_copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fits_plants": [
+     1,
+     0
+    ],
+    "best_hits_k4": 9,
+    "best_hits_copies": [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     7,
+     9,
+     8,
+     9
+    ]
+   },
+   "Morse": {
+    "settings": 0,
+    "fits_k4": 0,
+    "fits_copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fits_plants": [
+     0,
+     0
+    ],
+    "best_hits_k4": 0,
+    "best_hits_copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "Carter 1923": {
+    "settings": 729111360,
+    "fits_k4": 0,
+    "fits_copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fits_plants": [
+     0,
+     1
+    ],
+    "best_hits_k4": null,
+    "best_hits_copies": null
+   }
+  },
+  "k4_fits": [],
+  "plants": [
+   {
+    "source": "K2",
+    "reading": "width 10, columns left to right",
+    "start": 255,
+    "rule": "std/recip25"
+   },
+   {
+    "source": "Carter 1923",
+    "reading": "width 17, columns right to left, bottom to top",
+    "start": 191483,
+    "rule": "kry/beau"
+   }
+  ],
+  "copies": "10 shuffled copies (seed 1910)",
+  "seconds": 11,
+  "exhaustive": true
+ },
+ "notes": "K1: fits K4 0 (copies 0-0, plants [0, 0]), best K4 0/24 (copies 0-0); K2: fits K4 0 (copies 0-0, plants [1, 0]), best K4 8/24 (copies 7-8); K3: fits K4 0 (copies 0-0, plants [0, 0]), best K4 9/24 (copies 7-9); K1-K3: fits K4 0 (copies 0-0, plants [1, 0]), best K4 9/24 (copies 7-9); Morse: fits K4 0 (copies 0-0, plants [0, 0]), best K4 0/24 (copies 0-0); Carter 1923: fits K4 0 (copies 0-0, plants [0, 1])",
+ "error": null,
+ "candidates": []
+}

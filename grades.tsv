@@ -181,3 +181,4 @@ id	outcome	strength	cribs_forced	space	note
 0180	ruled-out	exact	no	F3.7 'point' as numbers: six point five, the four ?, K2's ? and X stops (25 readings) plus an unknown word of 1-24, 12 rules, 20 coppers	no setting fits K4 or any copper; plant found
 0181	ruled-out	exact	no	F2.1 letter nulls (351 masks) then periodic key 24-25: forced plaintext outside the runs searched for 6+ letter words, 10 kept-place copies	no word on K4 (copies 0-32 settings)
 0182	ruled-out	exact	no	F2.2 nulls by any rule as the gap d=0-29 between the runs, repeating/progressive keys 1-26, 12 rules, 20 copies	K4 above every copy at no gap; checked live cells K4 96 vs copies 96-226
+0183	ruled-out	exact	no	F2.3 repeated-letter phrase strip (homophones, length kept), 1,196 phrases, std/KRY strip, repeating key 1-26, 20 copies	no phrase fits K4 at 1-25; at 26 (1 check) K4 617 vs copies 0-734

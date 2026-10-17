@@ -1,0 +1,26 @@
+the known letters and the carved letters they would have to match one to one, with no move at all:
+
+place 22: E -> F
+place 23: A -> L
+place 24: S -> R
+place 25: T -> V
+place 26: N -> Q
+place 27: O -> Q
+place 28: R -> P
+place 29: T -> R
+place 30: H -> N
+place 31: E -> G
+place 32: A -> K
+place 33: S -> S
+place 34: T -> S
+place 64: B -> N
+place 65: E -> Y
+place 66: R -> P
+place 67: L -> V
+place 68: I -> T
+place 69: N -> T
+place 70: C -> M
+place 71: L -> Z
+place 72: O -> F
+place 73: C -> P
+place 74: K -> K

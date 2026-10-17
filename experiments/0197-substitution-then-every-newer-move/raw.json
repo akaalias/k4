@@ -1,0 +1,271 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "one-to-one substitution, then each hand move built since 0106 (forward and inverse), exact",
+  "routes_by_source": {
+   "0159 compass": 110820,
+   "0184 layout": 73,
+   "0166 F6.15 YAR": 24,
+   "0166 F6.12 EVA": 3840,
+   "0166 F6.13 Chiffre XIII": 4497024,
+   "0164 F6.11 disrupted": 327440,
+   "0164 F6.11 triangle": 654876,
+   "0164 F6.16 interrupted": 332817,
+   "0164 F6.17 trapezoid": 89708,
+   "0165 F6.10 keyed blanks": 1450196,
+   "0165 F6.18 row reshuffle": 361698,
+   "0165 F6.19 French diagonal": 2264476,
+   "0190 poem code": 6118
+  },
+  "routes_total": 10099110,
+  "survivors": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "plant": 1
+  },
+  "per_source": {
+   "0159 compass": {
+    "routes": 110820,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0184 layout": {
+    "routes": 73,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0166 F6.15 YAR": {
+    "routes": 24,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0166 F6.12 EVA": {
+    "routes": 3840,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0166 F6.13 Chiffre XIII": {
+    "routes": 4497024,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0164 F6.11 disrupted": {
+    "routes": 327440,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0164 F6.11 triangle": {
+    "routes": 654876,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0164 F6.16 interrupted": {
+    "routes": 332817,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0164 F6.17 trapezoid": {
+    "routes": 89708,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0165 F6.10 keyed blanks": {
+    "routes": 1450196,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 1
+   },
+   "0165 F6.18 row reshuffle": {
+    "routes": 361698,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0165 F6.19 French diagonal": {
+    "routes": 2264476,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   },
+   "0190 poem code": {
+    "routes": 6118,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "plant": 0
+   }
+  },
+  "k4_survivors": [],
+  "not_run": "0158 mixed triples (105.5M), 0162 keyword triples (20.4M), 0167 Nihilist (116M): builders compiled into their testers",
+  "copies": "10 shuffled copies (seed 1960)",
+  "seconds": 70,
+  "exhaustive": true
+ },
+ "notes": "10,099,110 routes; survivors K4 0 (copies 0-0); plant 1",
+ "controls": [],
+ "error": null,
+ "worked_example": "the known letters and the carved letters they would have to match one to one, with no move at all:\n\nplace 22: E -> F\nplace 23: A -> L\nplace 24: S -> R\nplace 25: T -> V\nplace 26: N -> Q\nplace 27: O -> Q\nplace 28: R -> P\nplace 29: T -> R\nplace 30: H -> N\nplace 31: E -> G\nplace 32: A -> K\nplace 33: S -> S\nplace 34: T -> S\nplace 64: B -> N\nplace 65: E -> Y\nplace 66: R -> P\nplace 67: L -> V\nplace 68: I -> T\nplace 69: N -> T\nplace 70: C -> M\nplace 71: L -> Z\nplace 72: O -> F\nplace 73: C -> P\nplace 74: K -> K",
+ "seconds": 70.2194311618805
+}

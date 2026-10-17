@@ -195,3 +195,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0194	0194-hill-2x2-unknown-numbering	8-hill	0193-hill-2x2-unknown-numbering	reverted	0	0	0			496	implement=0 test=0 run=496 record=0
 0195	0195-gromark-free-alphabet-other-bases	5-gromark	0107-three-term-gromark-with-a-free-alphabet	reverted	0	0	0			162	design=0 implement=0 test=0 run=162 record=0
 0196	0196-gromark-multiplicative-feedback	5-gromark	0195-gromark-free-alphabet-other-bases	reverted	0	0	0			56	design=0 implement=0 test=0 run=56 record=0
+0197	0197-substitution-then-every-newer-move	9-substitution-then-transposition	0106-one-to-one-substitution-with-every-move-so-far	reverted	0	0	0			70	design=0 implement=0 test=0 run=70 record=0

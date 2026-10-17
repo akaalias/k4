@@ -1,0 +1,52 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Friedman's keyed alphabet box (MC III 35b): alphabet (std/KRYPTOS) x n (1-8) by rows, read by keyword column order, every dictionary keyword, every start, 8 tables, exact",
+  "column_orders": 163726,
+  "settings_per_text": 2451960576,
+  "fits": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "plants": [
+    62,
+    26
+   ]
+  },
+  "plants": [
+   {
+    "keyword": "MORPHOPLASM",
+    "alphabet": "kry",
+    "n": 4,
+    "start": 96,
+    "rule": "std/beau"
+   },
+   {
+    "keyword": "FORSAKENNESS",
+    "alphabet": "std",
+    "n": 6,
+    "start": 149,
+    "rule": "kry/recip25"
+   }
+  ],
+  "k4_hits": [],
+  "copies": "10 shuffled copies (seed 1920)",
+  "seconds": 25,
+  "exhaustive": true
+ },
+ "notes": "163,726 column orders; fits K4 0 (copies 0-0); plants [62, 26]",
+ "controls": [],
+ "error": null,
+ "worked_example": "BERLIN, the alphabet four times in rows of 6, columns read in BERLIN's order: AGMSYEKQWCIOUAGMSYBHNTZFLRXDJPVBHNTZEKQWCIOUAGMSYEKQWDJPVBHNTZFLRXDJPVFLRXDJPVBHNTZFLRXCIOUAGMSYEKQWCIOU",
+ "seconds": 25.373852968215942
+}

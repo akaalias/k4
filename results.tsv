@@ -190,3 +190,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0189	0189-m94-cylinder-any-disc-order	11-agency-hand-systems	0119-one-free-alphabet-exact	reverted	0	0	0			0	design=0 implement=0 test=0 run=0 record=0
 0190	0190-poem-code-double-transposition	11-agency-hand-systems	0184-routes-along-the-plate-layout	reverted	0	0	0			5	design=0 implement=0 test=0 run=5 record=0
 0191	0191-cia-key-box-running-key	11-agency-hand-systems	0190-poem-code-double-transposition	reverted	0	0	0			11	design=0 implement=0 test=0 run=11 record=0
+0192	0192-friedman-keyed-alphabet-box	11-agency-hand-systems	0191-cia-key-box-running-key	reverted	0	0	0			25	design=0 implement=0 test=0 run=26 record=0

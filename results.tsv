@@ -192,3 +192,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0191	0191-cia-key-box-running-key	11-agency-hand-systems	0190-poem-code-double-transposition	reverted	0	0	0			11	design=0 implement=0 test=0 run=11 record=0
 0192	0192-friedman-keyed-alphabet-box	11-agency-hand-systems	0191-cia-key-box-running-key	reverted	0	0	0			25	design=0 implement=0 test=0 run=26 record=0
 0193	0193-hill-2x2-unknown-numbering	8-hill	0116-hill-plus-periodic-key	error	0	0	0			0	implement=0 test=0 run=0 record=0
+0194	0194-hill-2x2-unknown-numbering	8-hill	0193-hill-2x2-unknown-numbering	reverted	0	0	0			496	implement=0 test=0 run=496 record=0

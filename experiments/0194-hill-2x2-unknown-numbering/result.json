@@ -1,0 +1,97 @@
+{
+ "id": 194,
+ "tag": "0194-hill-2x2-unknown-numbering",
+ "started": "2026-10-17T01:25:35+00:00",
+ "seconds": 496.3,
+ "status": "ran",
+ "phases": {
+  "implement": 0.0,
+  "test": 0.1,
+  "run": 496.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1792200831.59995,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "Hill 2x2, any invertible matrix, any one-to-one numbering, alignments 0 and 1, exact",
+  "matrices": 157248,
+  "blocks_per_alignment": {
+   "0": 11,
+   "1": 11
+  },
+  "fitting_matrices": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "undecided": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "max_nodes": 40301,
+  "k4_fits": [],
+  "plants": [
+   {
+    "matrix": [
+     9,
+     21,
+     18,
+     19
+    ],
+    "alignment": 0,
+    "true_matrix_fits": true,
+    "fitting_matrices": 1
+   },
+   {
+    "matrix": [
+     5,
+     20,
+     3,
+     15
+    ],
+    "alignment": 1,
+    "true_matrix_fits": true,
+    "fitting_matrices": 1
+   },
+   {
+    "matrix": [
+     17,
+     13,
+     5,
+     16
+    ],
+    "alignment": 0,
+    "true_matrix_fits": true,
+    "fitting_matrices": 1
+   }
+  ],
+  "count_3x3": "6-7 trigraphs, 18-21 equations (85-99 bits) against 76-81 bits of numbering and 41 of matrix: 21-32 bits short; blocked",
+  "copies": "5 shuffled copies (seed 1930)",
+  "seconds": 496,
+  "exhaustive": true
+ },
+ "notes": "matrices admitting a numbering: K4 0 (copies 0-0); undecided K4 0; plants: [(True, 1), (True, 1), (True, 1)]",
+ "error": null,
+ "candidates": []
+}

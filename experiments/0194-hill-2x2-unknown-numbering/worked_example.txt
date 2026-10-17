@@ -1,0 +1,13 @@
+digraphs wholly inside the known runs, pairing from place 1
+
+AS -> LR
+TN -> VQ
+OR -> QP
+TH -> RN
+EA -> GK
+ST -> SS
+ER -> YP
+LI -> VT
+NC -> TM
+LO -> ZF
+CK -> PK

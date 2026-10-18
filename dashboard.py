@@ -728,6 +728,33 @@ def page_foot(html_text):
     return f'<p class="pf">{html_text}</p>'
 
 
+SITE = "https://alexisrondeau.me/k4"
+REPO = "https://github.com/akaalias/k4"
+# the corner ribbon every autoresearch site at alexisrondeau.me carries, as airloom has it
+GH_RIBBON = ('<style>#gh-ribbon{position:fixed;right:-56px;bottom:36px;z-index:80;transform:rotate(-45deg);background:#111111;color:#fffff8;font:600 11px "Palatino","Palatino Linotype","Book Antiqua",Georgia,serif;font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.12em;white-space:nowrap;padding:7px 64px;text-decoration:none;border:none;outline:1px solid rgba(255,255,248,.4);outline-offset:-4px;box-shadow:0 1px 8px rgba(0,0,0,.3)}#gh-ribbon:hover{background:#8c2f1f;color:#fffff8}@media(max-width:600px){#gh-ribbon{right:-50px;bottom:24px;font-size:9px;letter-spacing:.09em;padding:5px 44px}}</style>'
+             f'<a id="gh-ribbon" href="{REPO}" target="_blank" rel="noopener">view on GitHub</a>')
+
+
+def ways_that_dont_work():
+    """Experiments graded ruled-out (no setting gives the known letters) or chance (no better than
+    the scrambled copies); tools/publish.py counts the same for the repository's description."""
+    return sum(1 for g in load_grades().values() if g.get("outcome") in ("ruled-out", "chance"))
+
+
+def social_tags():
+    """Open Graph and Twitter card tags for the public site, as the other autoresearch sites have them."""
+    title = "“Can an autonomous research loop find the secret of Kryptos K4?”"
+    desc = (f"Not solved yet, but {ways_that_dont_work()} ways that don't work, each on the record. An AI agent designs, "
+            "runs and records one cipher experiment at a time against Jim Sanborn's unsolved fourth message. Free software, GPLv3.")
+    img, alt = f"{SITE}/share.png", "The carved letters of Kryptos, K4's known places in red, under the question: can an autonomous research loop find the secret of Kryptos K4?"
+    t = lambda k, v, a="property": f'<meta {a}="{k}" content="{esc(v)}">'
+    return "".join([t("description", desc, "name"), t("og:type", "website"), t("og:site_name", "Kryptos K4 autoresearch"),
+                    t("og:title", title), t("og:description", desc), t("og:url", f"{SITE}/"), t("og:image", img),
+                    t("og:image:width", "1200"), t("og:image:height", "630"), t("og:image:alt", alt),
+                    t("twitter:card", "summary_large_image", "name"), t("twitter:title", title, "name"),
+                    t("twitter:description", desc, "name"), t("twitter:image", img, "name")])
+
+
 def page(title, body, active="", refresh=True):
     # reload only when the record changes: poll a version stamp so the 3D model and a reader's
     # place on the page survive quiet periods
@@ -738,10 +765,10 @@ def page(title, body, active="", refresh=True):
            + '<span class="spacer"></span><span class="sec">'
            + "".join(link(h, t) for h, t in (("/families", "Families"), ("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/assumptions", "Assumptions"), ("/glossary", "Glossary"), ("/program", "Program")))
            + "</span>")
-    return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
+    return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}{social_tags() if EXPORT else ""}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
-<div class="foot"><span class="dot"></span>{f"Rendered from the record on {EXPORT['date']}; updated after every experiment." if EXPORT else "Rendered from the record. Reloads when a new experiment lands."}</div>{JS}{GL_JS}</body></html>"""
+<div class="foot"><span class="dot"></span>{f"Rendered from the record on {EXPORT['date']}; updated after every experiment." if EXPORT else "Rendered from the record. Reloads when a new experiment lands."}</div>{JS}{GL_JS}{GH_RIBBON if EXPORT else ""}</body></html>"""
 
 
 def crib_strip():
@@ -2654,6 +2681,7 @@ def export(out, base=""):
     for a in (ROOT / "assets").iterdir():
         if a != MODEL and a.suffix == ".js":
             (out / "assets" / a.name).write_text(rebase(a.read_text()))
+    shutil.copy(ROOT / "assets" / "share.png", out / "share.png")     # tools/share_card.py
     (out / ".nojekyll").write_text("")
     print(f"wrote {len(paths)} pages to {out}")
 

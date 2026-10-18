@@ -131,6 +131,21 @@ edited, and the dashboard shows each experiment's current verdict.
     dashboard boxes them. It never changes a score or a decision; a climbed key makes English
     fragments by construction.
 
+## Positive controls (assumption A3, issue #73)
+
+A closed item is only as good as the search that closed it. Stage 2 checks each one: plant a message made with
+the item's own method and a key inside its space, run the closing experiment's saved `attack.py` unchanged on
+the planted ciphertext, and require the plant to be found.
+
+- Write `controls/<ID>/spec.py` (ITEM, EXPERIMENT, WHAT, `plant()`, `found(result, plant)`; see
+  `tools/positive_control.py` and the worked example `controls/C-F1.1`). `kryptos.plants.english_plant(seed)`
+  gives 97 letters of English with the known words in place.
+- Run `uv run python tools/positive_control.py controls/<ID>`. It writes `result.json` and a row in `controls.tsv`.
+- `found` must identify the plant the way the attack would have identified K4's answer. A pass that only
+  shows "something fits" where many settings fit on any text is not a pass: require the planted setting itself.
+- From now on every new experiment that closes an item carries its own positive control in the same run, or
+  the item stays open.
+
 ## Patience and pivots
 
 - **Work the families in the rank order** in `order-of-work.md` (the Priorities page, decided

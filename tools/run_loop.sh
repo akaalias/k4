@@ -4,7 +4,8 @@
 #   tools/run_loop.sh                       interactive: you see it work and approve its commands
 #   tools/run_loop.sh --unattended          headless, no permission prompts; progress on screen, full log in logs/
 #   uv run python tools/loop_watch.py --follow logs/loop-...log   watch a running loop from another shell
-#   tools/run_loop.sh --stop-after F6       stop once this family is closed or blocked (default: F9, the last in the ranking)
+#   tools/run_loop.sh --stop-after A3       stop once stage 2's control table has no open row (the default since 2026-10-18;
+#                                           a family name such as F6 stops once that family is closed or blocked)
 #
 # The prompt is tools/loop_prompt.md; edit it to change what the loop does. Its transcript is synced into
 # transcripts/ by the hooks in .claude/settings.json like any other session.
@@ -12,7 +13,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 mode=interactive
-stop_after=F9
+stop_after=A3
 while [ $# -gt 0 ]; do
   case "$1" in
     --unattended) mode=unattended; shift ;;
@@ -24,7 +25,7 @@ done
 
 prompt="$(cat tools/loop_prompt.md)
 
-STOP_AFTER: family $stop_after."
+STOP_AFTER: $stop_after."
 
 git pull -q --rebase --autostash || true
 

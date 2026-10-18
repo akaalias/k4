@@ -13,3 +13,11 @@ Comment on the family's GitHub issue after each experiment.
 
 When you stop, write a short report: each experiment (number, item, result against the scrambled copies,
 verdict), each item's new status, surprises, mistakes, and what is left.
+
+Stage 2 (from 2026-10-18, issues #52 and #73): every family in the ranking is closed or blocked. While the table
+"Stage 2, step 1" in order-of-work.md has open rows, work it instead of the families, top down, following the
+rules above the table and program.md's "Positive controls" section. A control is not an experiment: no
+run_experiment.py and no experiment number; it is a folder controls/<ID>/ with spec.py and result.json, a row in
+controls.tsv, and its row in the table. Commit controls in batches, one family at a time, and comment on issue #73
+after each family with the passes, any slices, and any failure. A FAILED control stops the queue: find why, fix,
+rerun, and report before going on. STOP_AFTER A3 means stop when no row is open.

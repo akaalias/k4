@@ -1,0 +1,2 @@
+id	item	experiment	passed	seconds	why	what	date
+C-F1.1	F1.1	0119	yes	8	added-form lengths that fit the planted text: [9, 13, 14, 15, 18, 21, 23, 24, 25, 26]	Quagmire III, added form, a random alphabet, key length 9 with random shifts, on English from Carter	2026-10-18

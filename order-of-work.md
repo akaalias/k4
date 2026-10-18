@@ -48,6 +48,117 @@ no test can judge a cell the known letters leave undecided. F1.5 works on that r
 more were blocked only because nobody had written their list (F6.3b, F9.1). Items blocked by missing
 information (K5's text, a codebook) stay blocked.
 
+## Stage 2, step 1: a positive control for every closed item (A3, issue #73)
+
+Started 2026-10-18 (issue #52's stage 2). A closed item means our search found nothing on K4; no
+search has been checked against a planted answer. Each control plants a message made with the item's
+own method and a key inside its space, reruns the closing experiment's saved `attack.py` unchanged on
+the planted ciphertext, and requires the plant to be found (`tools/positive_control.py`; specs in
+`controls/<ID>/spec.py`; results in `controls.tsv`). Worked example: `controls/C-F1.1`.
+
+Rules:
+
+1. Work the table top down, in family rank order.
+2. Pick the experiment that carries the item's verdict, usually the last exact one listed. Plant a key
+   strictly inside the space it searched, not at an edge case, and say which key in `WHAT`.
+3. `found` reads what the attack returns (`bounds` or candidates) and passes only if the plant is
+   identified as the attack would have identified K4's answer: its key length, setting or reading.
+4. Run the attack unchanged. If it cannot run within the budget, a control may cut the search to a
+   slice that contains the planted key, and must say so: such a pass is `passed, sliced`.
+5. A pass marks the row `passed` with the control's ID. A failure marks it `FAILED` and stops the
+   queue: find why, fix the method, rerun the control, then rerun the item on K4 as a new experiment.
+   The item is `reopened` until both are done.
+6. An item whose experiment has a planted text that already went through the same unchanged search
+   may cite it (`passed, own plant`, with the experiment number) instead of a new control.
+7. Items with several experiments need one control per distinct search the verdict rests on; add
+   rows `C-<item>b`, `C-<item>c` when that applies.
+
+| Control | Item | What it covers | Experiments | Status | Result |
+|---|---|---|---|---|---|
+| C-F1-1 | F1/1 | Periodic key, standard or KRYPTOS alphabets, periods 1-26 and 30-52 | 0005, crib sweep | open | - |
+| C-F1-2 | F1/2 | Periods 27-29 and 53+ on any alphabet pair the puzzle's words build | 0034, 0035, 0048, 0053 | open | - |
+| C-F1-3 | F1/3 | Periodic key on alphabets from any dictionary word | 0109 | open | - |
+| C-F1-4 | F1/4 | Progressive key | 0011, 0042, 0155 | open | - |
+| C-F1-5 | F1/5 | Ciphertext autokey, any lag, on 1,092 keyword tables (63 vocabulary, 102 K1-K3 words,... | 0002, 0025, 0064, 0118 | open | - |
+| C-F1-6 | F1/6 | Plaintext autokey, lags 1-52 | 0003, 0012 | open | - |
+| C-F1-8 | F1/8 | Running key from K1-K3, the sculpture's texts, Carter, Sanborn's letters (Carter on... | 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117 | open | - |
+| C-F1-9 | F1/9 | Running key from an unknown English text, standard, KRYPTOS or puzzle-word alphabets | 0009, 0010 | open | - |
+| C-F1.1 | F1.1 | Free alphabet, the same on both sides (Quagmire III with unknown order), periods 3-26: the exact search | 0119 | passed | 0119's search finds the planted length 9 (8 s) |
+| C-F1.1b | F1.1 | Beaufort lengths 23 and 26, decided by F1.5's design-2 decider (sampled) | 0139, 0140, 0142 | open | - |
+| C-F1.2 | F1.2 | Two free alphabets (Quagmire IV), periods 3-26 | 0097, 0121-0124, 0143-0146 | open | - |
+| C-F1.3 | F1.3 | Forced key stretches read as running English on the 208,062 dictionary alphabets | 0010, 0125 | open | - |
+| C-F1.5 | F1.5 | A decider for cells the known letters cannot decide | 0120, 0136-0146 | open | - |
+| C-F1.4 | F1.4 | Hand key schedules other than the Berlin clock and Carter dates | 0126, 0127, 0128 | open | - |
+| C-F1.6 | F1.6 | One carved letter wrong, missing or extra, run through the exact unknown-alphabet... | 0147, 0148, 0150, 0151, 0152 | open | - |
+| C-F1.7 | F1.7 | Autokey on one unknown alphabet | 0149 | open | - |
+| C-F1.8 | F1.8 | Carter's book as a running key on one unknown alphabet (both directions, every offset,... | 0153 (error), 0154 | open | - |
+| C-F1.9 | F1.9 | Progressive key, per-letter and per-repeat, on keyword-mixed and dictionary tables;... | 0155 | open | - |
+| C-F1.10 | F1.10 | Friedman's keyword-only key-advance schedules (run length by value, CHRISTMAS,... | 0156 | open | - |
+| C-F1.11 | F1.11 | A split key phrase (Elementary Military Cryptography par. 59d) | 0157 | open | - |
+| C-F6-1 | F6/1 | Columnar (plain, keyed, double), K3's rule, quarter turns, grid paths, rail fence,... | 0006-0008, 0026, 0058, 0080-0086, 0099, 0110-0114 | open | - |
+| C-F6-2 | F6/2 | The same moves with autokey, running key or clock schedules | 0063, 0081, 0090, 0091 | open | - |
+| C-F6-3 | F6/3 | Three stages | 0037, 0083, 0134 | open | - |
+| C-F6.3b | F6.3b | Mixed triples of the four column readings at widths 25-96 | 0037, 0158 | open | - |
+| C-F6-5 | F6/5 | One carved letter wrong, missing or extra, through the move library | 0093, 0094 | open | - |
+| C-F6.4 | F6.4 | Padding applied separately at each grid stage; nulls dropped between griddings | 0082, 0135 | open | - |
+| C-F6.5 | F6.5 | Direction words as routes through the grid | 0159 | open | - |
+| C-F6.6 | F6.6 | Move, change, move again | 0160 | open | - |
+| C-F6.7 | F6.7 | Change, move, change with the two keyed stages on different tables | 0161 | open | - |
+| C-F6.8 | F6.8 | Three-stage routes with a keyword columnar stage | 0037, 0083, 0134, 0162 | open | - |
+| C-F6.9 | F6.9 | Both autokeys with 0084's double columnar routes | 0084, 0085, 0163 | open | - |
+| C-F6.10 | F6.10 | Padded grids whose blank cells are chosen by a key | 0082, 0135, 0165 | open | - |
+| C-F6.11 | F6.11 | Keyword-disrupted and triangle columnar transpositions | 0164 | open | - |
+| C-F6.12 | F6.12 | EVA double triangle | 0166 | open | - |
+| C-F6.13 | F6.13 | Chiffre XIII's five-row mask, then its period-5 shifted mixed alphabet | 0166 | open | - |
+| C-F6.14 | F6.14 | Nihilist transposition on a 10 x 10 square with three blanks | 0167 | open | - |
+| C-F6.15 | F6.15 | Sanborn's "1-2-3" spacing of the raised YAR as an ordering | 0166 | open | - |
+| C-F6.16 | F6.16 | Interrupted-key columnar transposition | 0164 | open | - |
+| C-F6.17 | F6.17 | Trapezoid transposition | 0164 | open | - |
+| C-F6.18 | F6.18 | Letters reshuffled inside each row by a keyword at widths other than 7 | 0070, 0165 | open | - |
+| C-F6.19 | F6.19 | The French diagonal method | 0165 | open | - |
+| C-F12.2 | F12.2 | Quantify the impressions: K4's statistics by segment and by width (letter counts per... | 0168 (before: 0056 measured two of the patterns) | open | - |
+| C-F12.3 | F12.3 | His I.C. peak at m = 13 in both K1 and K2 (C28): real or chance | 0169 (before: 0005, 0011 tested period 13 on K4 only) | open | - |
+| C-F12.4 | F12.4 | A pencil session: K4 written out at the widths that matter, the known letters marked,... | 0170 | open | - |
+| C-F12.5 | F12.5 | Parts with their own keys (A7): K4 split where F12.2 or F12.4 finds a break, or at the... | 0171 | open | - |
+| C-F12.6 | F12.6 | Probable words, his breakthrough (THE, then KNOW): common English words and the words... | 0172 (before: 0095 dragged riddle words at the live periods only) | open | - |
+| C-F12.7 | F12.7 | His K1-K3 method as such: every shift of each column written out, columns scored by... | 0005, 0034 | open | - |
+| C-F3-1 | F3/1 | Two words added, both from the puzzle, or one from the dictionary | 0014, 0043, 0059, 0115 | open | - |
+| C-F3-2 | F3/2 | A word plus digits from the story (coordinates, dates, counts) | 0024, 0038 | open | - |
+| C-F3-3 | F3/3 | A word plus the misspelt or raised letters | 0061 | open | - |
+| C-F3-4 | F3/4 | Column word plus row key | 0087, 0088 | open | - |
+| C-F3.1 | F3.1 | Combiners other than addition (subtraction both ways is done; table lookup through a... | 0173, 0174 | open | - |
+| C-F3.2 | F3.2 | Numeric second parts from the Morse (E counts) and the plate layout (line lengths) | 0175 (before: 0038 did 17 digit readings) | open | - |
+| C-F3.3 | F3.3 | Direction words as numbers (A14(b)): east-northeast as a bearing (67.5 degrees: 6, 7, 5... | 0176 (before: 0072 used direction words as keyword alphabets) | open | - |
+| C-F3.4 | F3.4 | Three or more stacked tables (US 6,075,865 with N = 3; Sanborn's "triple matrixes") | 0177 (before: 0043, 0059 two passes) | open | - |
+| C-F3.5 | F3.5 | The misspelt letters' positions as indices (Q in IQLUSION, U in UNDERGRUUND, A in... | 0178 (before: 0061 used the letters) | open | - |
+| C-F3.6 | F3.6 | The Weltzeituhr's rotating ring as an offset over 26 letters (C12(b)): 24 zones, the... | 0179 (before: 0052) | open | - |
+| C-F3.7 | F3.7 | "Point" read as the decimal point in K2's "six point five", as the place on the... | 0180 (before: 0072) | open | - |
+| C-F2-1 | F2/1 | Reversal, regular nulls, prefix nulls, affine masks, doublets as nulls, nulls by letter | 0023, 0057, 0074, 0075 | open | - |
+| C-F2-2 | F2/2 | Message written along grid paths | 0092 | open | - |
+| C-F2.1 | F2.1 | Forced fragments at periods 24-25 after letter strike-outs not matched against words | 0181 (before: 0057) | open | - |
+| C-F2.2 | F2.2 | Nulls placed by a rule (after every X, after each crib word) | 0182 | open | - |
+| C-F2.3 | F2.3 | A plain component written from a phrase with repeated letters, so a letter can be... | 0183 | open | - |
+| C-F4-1 | F4/1 | Trifid, any cube, periods 2-15 | 0040 | open | - |
+| C-F4-2 | F4/2 | The plates as a key by position, straight or folded | 0089 | open | - |
+| C-F4-3 | F4/3 | Read from behind the screen | 0108 | open | - |
+| C-F4.1 | F4.1 | A route that follows the plates' physical layout (the S-curve, the 31-letter lines as a... | 0184 (before: 0092) | open | - |
+| C-F4.2 | F4.2 | Free trifid cubes at periods above 15 | 0185 (before: 0040 (2-15), 0033) | open | - |
+| C-F4.3 | F4.3 | The positions of the sculpture's physical anomalies as a key (C3(c)) | 0186 | open | - |
+| C-F4.4 | F4.4 | The extra L and the HILL row as a marker matching YAR on the lower-left plate (C21(b)) | 0005, 0017, 0089, 0186 | open | - |
+| C-F10.1 | F10.1 | Chaocipher: two alphabet wheels permuted after every letter (Byrne, 1918; method... | 0187 | open | - |
+| C-F10.2 | F10.2 | Wheatstone cryptograph or Alberti disk advanced by the plaintext: a 26-letter ring... | 0188 | open | - |
+| C-F11.1 | F11.1 | Strip ciphers and cylinders with published alphabets: M-94's 25 discs, the Jefferson... | 0189 | open | - |
+| C-F11.2 | F11.2 | Poem code: a double transposition keyed by words from a memorized text (SOE), then the... | 0190 | open | - |
+| C-F11.3 | F11.3 | The CIA's own 1970s Polish agent system (Bury, Cryptologia 2007): a key text written... | 0191 | open | - |
+| C-F11.4 | F11.4 | Friedman's keyed alphabet box (MC III 35b): the alphabet written n times in a... | 0192 | open | - |
+| C-F8-1 | F8/1 | Hill 2-5, plain and affine, 330 numberings (4 standard, 126 vocabulary, 200 K1-K3... | 0015, 0036, 0044, 0055, 0105, 0116 | open | - |
+| C-F8.1 | F8.1 | Hill 2x2 and 3x3 with an unknown letter numbering (any of 26!) | 0193 (error), 0194 | open | - |
+| C-F5-1 | F5/1 | Gromark, two- and three-term rules, bases 2-26 (three-term on a free alphabet in base... | 0013, 0028, 0046, 0054, 0069, 0076, 0107 | open | - |
+| C-F5.1 | F5.1 | Multiplicative feedback; the raised YAR as primer | 0196 | open | - |
+| C-F5.2 | F5.2 | Three-term Gromark on a free alphabet in bases 2-9, 11-16 and 26; two-term... | 0195 | open | - |
+| C-F9-1 | F9/1 | One-to-one substitution, then any route in the built sets (1.86M) | 0019, 0106 | open | - |
+| C-F9.1 | F9.1 | Hand transpositions outside the built route sets | 0197, 0198 (before: 0019, 0106) | open | - |
+
 ## F1. One keyed stage, no move
 
 | Item | Status | Strength | Experiments | Next test or reason |

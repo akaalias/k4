@@ -766,6 +766,7 @@ REFERENCE = {
     "/assumptions": ("Assumptions", "What the project takes for granted, and what each assumption rests on."),
     "/glossary": ("Glossary", "The words the pages use, each in one plain sentence."),
     "/program": ("Program", "The instructions the loop agent follows on every experiment."),
+    "/controls": ("Controls", "Each closed item rerun on a planted message: did its own search find the plant? Live as the loop runs."),
 }
 
 
@@ -773,6 +774,32 @@ def reference_page():
     cols = "".join(f'<div class="explain-col"><h4><a href="{h}">{esc(n)}</a></h4><p>{esc(d)}</p></div>' for h, (n, d) in REFERENCE.items())
     head = page_head("Reference", "The record behind the pages", "The full record, the notebook, the hints and assumptions the search starts from, the glossary and the loop's instructions.")
     return page("reference", head + f'<div class="explain-row" style="row-gap:34px;margin:28px 0 0">{cols}</div>', "/reference", False)
+
+
+def controls_page():
+    """Stage 2's positive controls (assumption A3, issue #73), straight from controls.tsv as each one lands."""
+    import csv
+    f = ROOT / "controls.tsv"
+    rows = list(csv.DictReader(f.open(), delimiter="\t")) if f.exists() else []
+    planned = len(re.findall(r"^\| C-", (ROOT / "order-of-work.md").read_text(), re.M))
+    tags = {r["tag"][:4]: r["tag"] for r in load_results()}
+    npass = sum(r["passed"] == "yes" for r in rows)
+    nfail = len(rows) - npass
+    trs = "".join(
+        f'<tr><td>{esc(r["id"])}</td><td>{esc(r["item"])}</td>'
+        f'<td class="num"><a href="/exp/{esc(tags.get(r["experiment"], r["experiment"]))}">{int(r["experiment"]) if r["experiment"].isdigit() else esc(r["experiment"])}</a></td>'
+        f'<td style="color:var({"--ink" if r["passed"] == "yes" else "--accent"});font-weight:600">{"passed" if r["passed"] == "yes" else "FAILED"}</td>'
+        f'<td class="num">{esc(r["seconds"])} s</td><td>{esc(r["what"])}</td><td class="muted">{esc(r["why"])}</td></tr>'
+        for r in rows)
+    head = page_head("Controls", "Does each search find a planted answer?",
+                     "A closed item rests on a search that found nothing on K4. Each control plants a message made with the item's own "
+                     "method and a key inside its space, reruns the closing experiment unchanged on it, and requires the plant to be found. "
+                     "A failure reopens the item.",
+                     f"{len(rows)} of {planned} controls run: {npass} passed, {nfail} failed. The page reloads as each one lands.")
+    table = ('<div class="xtable"><table><thead><tr><th>control</th><th>item</th><th class="num">experiment</th><th>result</th>'
+             f'<th class="num">time</th><th>what was planted</th><th>what the search returned</th></tr></thead><tbody>{trs}</tbody></table></div>')
+    foot = page_foot('The queue and its rules are on the <a href="/priorities">priorities</a> page; the reason for stage 2 is assumption A3 on the <a href="/assumptions">assumptions</a> page.')
+    return page("controls", head + table + foot, "/controls", True)
 
 
 def page(title, body, active="", refresh=True):
@@ -2597,7 +2624,7 @@ def route(path):
     if path.startswith("/exp/"):
         return experiment_page(path[5:].strip("/"))
     if path == "/version":
-        stamp = "|".join(str(int(p.stat().st_mtime)) for p in (ROOT / "results.tsv", ROOT / "champion.json", ROOT / "NOTEBOOK.md") if p.exists())
+        stamp = "|".join(str(int(p.stat().st_mtime)) for p in (ROOT / "results.tsv", ROOT / "champion.json", ROOT / "NOTEBOOK.md", ROOT / "controls.tsv") if p.exists())
         return ("text/plain", stamp)
     if path.startswith("/assets/"):
         f = ROOT / "assets" / path[len("/assets/"):]
@@ -2655,6 +2682,8 @@ def route(path):
         return program_page()
     if path == "/reference":
         return reference_page()
+    if path == "/controls":
+        return controls_page()
     return None
 
 
@@ -2685,7 +2714,7 @@ def export(out, base=""):
     EXPORT.update(base=base, date=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
     rows = load_results()
     paths = (["/", "/experiments", "/lineage", "/learnings", "/families", "/priorities", "/pivots", "/record",
-              "/notebook", "/clues", "/assumptions", "/glossary", "/program", "/reference"]
+              "/notebook", "/clues", "/assumptions", "/glossary", "/program", "/reference", "/controls"]
              + [p for p in FAM_SECTIONS if p != "/pivots"]
              + [f"/pivot/{p['id']}" for p in load_pivots()] + [f"/exp/{r['tag']}" for r in rows])
     rebase = lambda h: re.sub(r"""(["'])/(?=exp/|pivot/|assets/)""", lambda m: m.group(1) + base + "/",

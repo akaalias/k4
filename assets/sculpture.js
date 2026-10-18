@@ -33,9 +33,19 @@ host.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.target.set(0, 6, 0);
 controls.enableDamping = true;
-controls.minDistance = 10; controls.maxDistance = 80;
+controls.minDistance = 4; controls.maxDistance = 80;
 controls.maxPolarAngle = Math.PI * 0.49;
-controls.enablePan = false;
+// pan (right-drag, shift-drag or two fingers) moves the view across the screen, so the stones and the base can
+// be looked at closely; the point it turns around stays within the sculpture's footprint (issue #79)
+controls.enablePan = true;
+controls.screenSpacePanning = true;
+controls.panSpeed = 0.8;
+const PAN_MIN = new THREE.Vector3(-14, 0.5, -14), PAN_MAX = new THREE.Vector3(14, 14, 14);
+controls.addEventListener('change', () => {
+  const before = controls.target.clone();
+  controls.target.clamp(PAN_MIN, PAN_MAX);
+  camera.position.add(controls.target.clone().sub(before));
+});
 
 scene.add(new THREE.HemisphereLight(0xffffff, 0xd8d2c6, 1.05));
 const sun = new THREE.DirectionalLight(0xfff4e0, 1.6);
@@ -298,7 +308,7 @@ loader.load('/assets/kryptos.glb', (gltf) => {
 // ---- hover -----------------------------------------------------------------------------------
 let current = null, shownAt = 0;
 const label = document.getElementById('sculpture-label');
-const IDLE = 'Hover a plate to see which part of the puzzle it carries. Drag to walk around it; scroll to come closer.';
+const IDLE = 'Hover a plate to see which part of the puzzle it carries. Drag to walk around it; scroll to come closer; right-drag or shift-drag to move the view.';
 function setHighlight(name) {
   if (name === current) return;
   current = name;

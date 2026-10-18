@@ -876,7 +876,7 @@ def sculpture_block():
     data = json.dumps(sculpture_panels())
     keys = "".join(f'<span data-region="{esc(n)}">{esc(n)}</span>' for n in ("K1", "K2", "K3", "K4", "the table"))
     return (f'<div class="sculpture-wrap"><div id="sculpture"><a class="sc-credit" href="https://www.youtube.com/@K4HasGotMe" target="_blank" rel="noopener">Model: Bret L Bowen (K4HasGotMe on YouTube)</a></div>'
-            f'<div class="sculpture-foot"><div class="sculpture-key">{keys}</div><p id="sculpture-label" class="muted">Hover a plate to see which part of the puzzle it carries. Drag to turn.</p></div></div>'
+            f'<div class="sculpture-foot"><div class="sculpture-key">{keys}</div><p id="sculpture-label" class="muted">Hover a plate to see which part of the puzzle it carries. Drag to turn; right-drag or shift-drag to move the view.</p></div></div>'
             f'<script>window.KRYPTOS_PANELS = {data};</script>'
             '<script type="importmap">{"imports": {"three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>'
             '<script type="module" src="/assets/sculpture.js"></script>')

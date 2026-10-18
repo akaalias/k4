@@ -87,6 +87,6 @@ benevolent cryptographer" (2009). Both are on the record. Weigh accordingly.
 ## What the record never contradicts
 
 That K4 is 97 letters of English. That BERLINCLOCK is at 64-74 and EASTNORTHEAST at
-22-34. That Sanborn wrote the text and did the encryption himself. That Scheidt masked
+22-34. That Sanborn wrote the text. (That he did the encryption himself is Sanborn's account, contested only by Scheidt 2003, secondhand; taken as true, A15.) That Scheidt masked
 the English and never checked the result. That the sculpture's two alphabets, KRYPTOS and
 standard, matter. That a solution needs the method.

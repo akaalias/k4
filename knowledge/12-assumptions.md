@@ -166,3 +166,32 @@ letters (C12(b)); (d) a marker where one stage or part of the message ends (see 
 pointer outside the text, which is the riddle layer and out of scope unless it feeds the key.
 Stands on it: the key-source order and every family's key list. Cheapest check: (b) as
 numeric keys, exact and cheap like F3.2; (a) as routes added to the F6 move library.
+
+## The maker (added 2026-10-18, with Alexis)
+
+**A15. Sanborn alone enciphered K4, by hand, from charts; Scheidt taught him.** (decided by Alexis, 2026-10-18)
+Source: Sanborn, 2003 ("compartmentalized"; Scheidt taught, Sanborn encrypted, alone, on the drive back from
+Arizona, no one beta-tested it) and NPR 2010 ("for me they were encoding charts"); Scheidt 2015 ("since he's
+the one who had the chisel in his hands, there could be some changes"; he never checked the final K4).
+Firmness: firm on Sanborn's word; contested by one secondhand source, Scheidt 2003 via Dunin's road trip ("did
+the actual encryption and design"). Decision: taken as true for now. Weakened by: any primary source putting
+Scheidt's hand on the K4 encipherment. Stands on it: A1 (a lone amateur's slips are likely), A16, the
+"artist's change" reading of "I fucked with it". Cheapest check: none beyond the sources; revisit if new
+material (an interview, the auction lot's papers) says otherwise.
+
+**A16. The method is at most a few hand stages from the 1890-1945 systems Scheidt taught, with no arithmetic
+beyond counting.** (Alexis, 2026-10-18)
+Source: the creators. Scheidt: "not mathematical", "simple, can be remembered, and executed years later when
+used with the correct key word/s", "similar to what would be provided agents or pilots in case of capture"
+(2011), "solved in a straight-forward manner with pencil and paper" (2003). Sanborn: no cryptographic training
+before 1989; "zero mathematical ability"; systems that "didn't necessarily depend on mathematics" were "one of
+my prerequisites"; four months of lessons in 1989 on systems "going back to Caesar", of which he used
+"several". K1-K3, from the same lessons, are a keyed tableau with a keyword and a grid transposition, each
+fitting on a sheet of paper. Firmness: firm (creators, consistent across 1989-2015). Weakened by: Sanborn
+working from a chart Scheidt prepared that hides arithmetic in a lookup (the chart, not the man, would carry
+the complexity). Stands on it: the ranking (F8 Hill and F5 Gromark weak; F1, F6, F3 strong), criterion 4 of
+success. What it implies: K4's difficulty is more likely in the key (an unguessed word or phrase), in an
+artist's change to a standard system ("It is a solid system, and I fucked with it"), or in a slip (A1), than
+in the machinery. Cheapest check: a family of "a standard system plus one change an amateur with paper charts
+would make" (a shifted chart row, a reversed alphabet, a skipped letter, a key switched midway), each
+decidable by the 24 known letters.

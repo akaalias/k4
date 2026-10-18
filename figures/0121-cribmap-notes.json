@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Two alphabets in unknown orders, one for the message and one for the carved letters. At each key length 1-26, exact arithmetic on the 24 known letters decides whether any pair of orders fits, on K4 and 100 scrambled copies."
+ },
+ {
+  "anchor": "what happened",
+  "text": "The code failed after 0.9 seconds, while writing out the first pair of alphabets it found: a number stood where a letter was expected. No length was recorded."
+ },
+ {
+  "anchor": "the rerun",
+  "text": "0122 retried the same code a few seconds later and failed on the same line. 0123 fixed it and ran the test in full."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "The tableau's last column spells HILL. Here the numbering of the letters is a secret too: any order of the alphabet. For every invertible 2x2 matrix, the known pairs decide exactly whether a numbering exists, on K4 and 5 scrambled copies."
+ },
+ {
+  "anchor": "what happened",
+  "text": "The run stopped at once, in 0.2 seconds: the job could not be handed to the worker processes. Nothing was decided."
+ },
+ {
+  "anchor": "the rerun",
+  "text": "0194 is the same test with the job fixed."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A second try of 0121 a few seconds later: two alphabets in unknown orders, every key length 1-26, exact, on K4 and 100 scrambled copies."
+ },
+ {
+  "anchor": "what happened",
+  "text": "Nothing had changed in the code, so it failed on the same line as 0121, after 1.8 seconds. No length was recorded."
+ },
+ {
+  "anchor": "the rerun",
+  "text": "0123 fixed the line and ran the test in full."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Two jobs in one run: K4 at key length 26 against shuffles of itself, and the same search carried to two unknown alphabets, its power measured on planted English at lengths 8, 13 and 16."
+ },
+ {
+  "anchor": "what happened",
+  "text": "After 28 minutes the two-alphabet part ran out of time while drawing shuffles that fit. One text had no finished search, and that broke the summary, so no result was kept."
+ },
+ {
+  "anchor": "the rerun",
+  "text": "0142 ran the length-26 job alone. 0143 ran the two-alphabet power test."
+ }
+]

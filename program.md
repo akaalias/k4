@@ -116,7 +116,14 @@ edited, and the dashboard shows each experiment's current verdict.
       outline it otherwise, so a method that found nothing never looks as if it did (issue #49);
     - the IN and OUT labels sit on their arrows, centred (the dashboard also places them when it serves the figure).
 
+    - the method panel holds a drawing, not sentences: cells, dots on an axis, leaders, bars, built
+      from the existing pieces (`kind_cells`, `dotline`, `cell_at`, `flag`, `ledger`, `histogram`). A
+      caption line above each row is fine. The explanation goes in the notes (issue #68);
+    - a run that errored still gets a crib map: the planned sweep as soft "not run" cells and the
+      experiment that reran it (`design/make_figures_errored.py`, after 0039; issue #67).
+
     Render each figure and look at it before committing. Every experiment has illustrations.
+    `tests/test_figures.py` fails when a crib map is missing or its method panel is text only.
 
 11. **Readable words** run by themselves: after every run the harness asks a language model
     to mark the English words in the readings that passed every gate and the five closest,

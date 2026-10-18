@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "K3 quotes Carter's book on Tutankhamun's tomb. Laid under K4 from any starting letter, forwards or backwards, it could be the key, with the alphabet in any order. Each starting letter is decided exactly."
+ },
+ {
+  "anchor": "what happened",
+  "text": "After 31 minutes the run hit the harness's time limit. Its second pass, which retries the hard starting letters, had no clock check, so it printed nothing."
+ },
+ {
+  "anchor": "the rerun",
+  "text": "0154 is the same test, with the second pass stopping at the deadline and reporting what it left."
+ }
+]

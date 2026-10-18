@@ -1,14 +1,14 @@
-"""Draw the public site's social preview card, assets/share.png (1200 x 630), issue #69.
+"""Draw the public site's social preview card, assets/share.png (1200 x 630), issues #69 and #70.
 
-The carved text of the sculpture, K1 to K4 in order, as the site's letter cells, with K4 darker and
-its 24 known places in accent, under a paper band with the project's question. Rendered by headless
-Chrome so the house fonts (Palatino) are used. It carries no counts, so it does not go stale; the
-count of ways that don't work is in the page's description instead.
+The crib map of experiment 6, drawn wide: the 97 carved letters of K4 along the top with the 24
+known places in accent, the same 97 places along the bottom, and a curve carrying each known letter
+to where one route puts it (write the message in rows of 7, read down the columns). One of the ways
+that don't work. No title in the image: previews print the page's title under it. Rendered by
+headless Chrome so the house fonts are used.
 
     uv run python tools/share_card.py
 """
 
-import json
 import subprocess
 import sys
 import tempfile
@@ -20,42 +20,50 @@ from kryptos.facts import K4, KNOWN  # noqa: E402
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 OUT = ROOT / "assets" / "share.png"
-W, H, COLS, CW, CH, GAP = 1200, 630, 46, 23, 29, 3
+W, H = 1200, 630
+X0, STEP, CW, CH = 30, 11.75, 10.4, 16          # 97 cells across the card
+TOP, BOT = 100, 505                              # the copper row and the reading row
+ACC, MUTED, CELL, PAPER = "#8c2f1f", "#6b6a60", "#ebe7d8", "#fffff8"
 
 
-def cells():
-    k = [json.loads((ROOT / "data" / f"k{i}.json").read_text()) for i in (1, 2, 3)]
-    before = k[0]["ciphertext"] + k[1]["ciphertext_as_carved"] + k[2]["ciphertext"]
-    rows = -(-(len(before) + len(K4)) // COLS)
-    pad = rows * COLS - len(before) - len(K4)
-    out = ['<span class="c t"></span>'] * pad
-    out += [f'<span class="c">{ch}</span>' for ch in before]
-    out += [f'<span class="c k{" n" if i + 1 in KNOWN else ""}">{ch}</span>' for i, ch in enumerate(K4)]
-    return rows, "".join(out)
+def land(p):
+    """Place p (1-based) after writing 97 letters in rows of 7 and reading the columns down."""
+    r, c = divmod(p - 1, 7)
+    return c * 14 + r + 1
+
+
+def cell(i, y, ch, known):
+    x = X0 + (i - 1) * STEP
+    fill, ink, weight = (ACC, PAPER, 700) if known else (CELL, MUTED, 400)
+    out = f'<rect x="{x:.1f}" y="{y}" width="{CW}" height="{CH}" rx="1.5" fill="{fill}"/>'
+    if ch:
+        out += (f'<text x="{x + CW / 2:.1f}" y="{y + 11.6}" font-family="SF Mono, Menlo, monospace" font-size="9" '
+                f'font-weight="{weight}" fill="{ink}" text-anchor="middle">{ch}</text>')
+    else:
+        out += f'<circle cx="{x + CW / 2:.1f}" cy="{y + CH / 2}" r="1.1" fill="#b9b6a6"/>'
+    return out
+
+
+def svg():
+    landed = {land(p): ch for p, ch in KNOWN.items()}
+    g = [f'<rect x="14" y="{BOT - 120}" width="{W - 28}" height="{H - BOT + 106}" rx="10" fill="#f3efe2"/>']
+    for p in sorted(KNOWN):                                        # curves first, under the cells
+        x1, x2 = X0 + (p - 1) * STEP + CW / 2, X0 + (land(p) - 1) * STEP + CW / 2
+        y1, y2, m = TOP + CH, BOT, (TOP + CH + BOT) / 2
+        bold = p == 22
+        g.append(f'<path d="M{x1:.1f},{y1} C{x1:.1f},{m:.1f} {x2:.1f},{m:.1f} {x2:.1f},{y2}" fill="none" stroke="{ACC}" '
+                 f'stroke-width="{2.6 if bold else 1.3}" stroke-opacity="{1 if bold else .38}"/>')
+    g += [cell(i, TOP, KNOWN.get(i, K4[i - 1]), i in KNOWN) for i in range(1, 98)]
+    g += [cell(i, BOT, landed.get(i, ""), i in landed) for i in range(1, 98)]
+    g.append(f'<text x="{W / 2}" y="{H - 40}" font-family="Palatino, Palatino Linotype, Book Antiqua, Georgia, serif" '
+             f'font-size="22" font-style="italic" fill="{MUTED}" text-anchor="middle">Kryptos K4: the known letters, carried '
+             f'by one route that doesn\'t work &#183; alexisrondeau.me/k4</text>')
+    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">{"".join(g)}</svg>'
 
 
 def html():
-    rows, grid = cells()
-    gw, gh = COLS * (CW + GAP) - GAP, rows * (CH + GAP) - GAP
-    return f"""<!doctype html><html><head><meta charset="utf-8"><style>
-:root{{--paper:#fffff8;--ink:#111111;--muted:#6b6a60;--accent:#8c2f1f;
---serif:"Palatino","Palatino Linotype","Book Antiqua",Georgia,serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}}
-html,body{{margin:0;width:{W}px;height:{H}px;overflow:hidden;background:var(--paper)}}
-.g{{position:absolute;left:{(W - gw) // 2}px;top:{H - gh - 6}px;width:{gw}px;display:flex;flex-wrap:wrap;gap:{GAP}px}}
-.c{{width:{CW}px;height:{CH}px;border-radius:3px;background:#ebe7d8;color:#a9a594;font:15px/{CH}px var(--mono);text-align:center}}
-.c.t{{background:#f1eee3}}
-.c.k{{color:var(--ink);background:#e3decb}}
-.c.n{{background:var(--accent);color:var(--paper);font-weight:700}}
-.band{{position:absolute;left:0;right:0;top:178px;height:250px;background:var(--paper);border-top:2px solid var(--accent);
-border-bottom:2px solid var(--accent);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}}
-h1{{margin:0 40px;font:italic 400 47px/1.15 var(--serif);color:var(--ink)}}
-.s{{margin-top:16px;font:400 25px var(--serif);color:var(--muted)}}
-.a{{margin-top:8px;font:italic 400 25px var(--serif);color:var(--accent)}}
-</style></head><body><div class="g">{grid}</div><div class="band">
-<h1>&ldquo;Can an autonomous research loop<br>find the secret of Kryptos K4?&rdquo;</h1>
-<div class="s">an AI agent &middot; one cipher experiment at a time &middot; every result on the record</div>
-<div class="a">not solved yet &mdash; alexisrondeau.me/k4</div>
-</div></body></html>"""
+    return (f'<!doctype html><html><head><meta charset="utf-8"><style>html,body{{margin:0;width:{W}px;height:{H}px;'
+            f'overflow:hidden;background:{PAPER}}}svg{{display:block}}</style></head><body>{svg()}</body></html>')
 
 
 def main():

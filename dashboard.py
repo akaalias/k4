@@ -742,11 +742,11 @@ def ways_that_dont_work():
 
 
 def social_tags():
-    """Open Graph and Twitter card tags for the public site, as the other autoresearch sites have them."""
-    title = "“Can an autonomous research loop find the secret of Kryptos K4?”"
-    desc = (f"Not solved yet, but {ways_that_dont_work()} ways that don't work, each on the record. An AI agent designs, "
-            "runs and records one cipher experiment at a time against Jim Sanborn's unsolved fourth message. Free software, GPLv3.")
-    img, alt = f"{SITE}/share.png", "The carved letters of Kryptos, K4's known places in red, under the question: can an autonomous research loop find the secret of Kryptos K4?"
+    """Open Graph and Twitter card tags for the public site, as the other autoresearch sites have them; the
+    title stays under 60 characters and the description under 125, so previews do not cut them."""
+    title = "Can an AI research loop find the secret of Kryptos K4?"
+    desc = f"Not solved yet, but {ways_that_dont_work()} ways that don't work, each on the record: an AI agent's cipher experiments on K4."
+    img, alt = f"{SITE}/share.png", "K4's 97 carved letters, the 24 known places in red, each carried by a curve to where one ruled-out route puts it."
     t = lambda k, v, a="property": f'<meta {a}="{k}" content="{esc(v)}">'
     return "".join([t("description", desc, "name"), t("og:type", "website"), t("og:site_name", "Kryptos K4 autoresearch"),
                     t("og:title", title), t("og:description", desc), t("og:url", f"{SITE}/"), t("og:image", img),
@@ -1174,7 +1174,7 @@ def overview():
             + f'<div class="explain-col"><h4><a href="/experiments">The experiments &rarr;</a></h4><p>Every experiment so far, {n} of them, placed by what it found against scrambled copies of the carved text, updated as each new one lands.</p></div>'
             + '<div class="explain-col"><h4><a href="/lineage">The lineage &rarr;</a></h4><p>How each experiment built on an earlier one, family by family, in the order they ran.</p></div>'
             + '</div>')
-    return page("Kryptos K4 autoresearch", body, "/")
+    return page("Kryptos K4: can an AI research loop find its secret?", body, "/")
 
 
 def experiments_table(rows):

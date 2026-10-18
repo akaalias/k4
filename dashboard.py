@@ -758,6 +758,23 @@ def social_tags():
                     t("twitter:description", desc, "name"), t("twitter:image", img, "name")])
 
 
+# the reference pages behind the nav's one Reference link (issue #71): path, name, what it holds
+REFERENCE = {
+    "/record": ("Full record", "What each family has covered: every bound the search has set, with the experiments behind it."),
+    "/notebook": ("Notebook", "What was decided, run, found and left open, day by day, newest first."),
+    "/clues": ("Clues", "Every hint about K4 and its readings; experiments cite them by number."),
+    "/assumptions": ("Assumptions", "What the project takes for granted, and what each assumption rests on."),
+    "/glossary": ("Glossary", "The words the pages use, each in one plain sentence."),
+    "/program": ("Program", "The instructions the loop agent follows on every experiment."),
+}
+
+
+def reference_page():
+    cols = "".join(f'<div class="explain-col"><h4><a href="{h}">{esc(n)}</a></h4><p>{esc(d)}</p></div>' for h, (n, d) in REFERENCE.items())
+    head = page_head("Reference", "The record behind the pages", "The full record, the notebook, the hints and assumptions the search starts from, the glossary and the loop's instructions.")
+    return page("reference", head + f'<div class="explain-row" style="row-gap:34px;margin:28px 0 0">{cols}</div>', "/reference", False)
+
+
 def page(title, body, active="", refresh=True):
     # reload only when the record changes: poll a version stamp so the 3D model and a reader's
     # place on the page survive quiet periods
@@ -766,7 +783,8 @@ def page(title, body, active="", refresh=True):
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
     nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/experiments", "Experiments"), ("/lineage", "Lineage"), ("/learnings", "Learnings")))
            + '<span class="spacer"></span><span class="sec">'
-           + "".join(link(h, t) for h, t in (("/families", "Families"), ("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots"), ("/record", "Full Record"), ("/notebook", "Notebook"), ("/clues", "Clues"), ("/assumptions", "Assumptions"), ("/glossary", "Glossary"), ("/program", "Program")))
+           + "".join(link(h, t) for h, t in (("/families", "Families"), ("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots")))
+           + f'<a href="/reference" class="{"on" if active == "/reference" or active in REFERENCE else ""}">Reference</a>'
            + "</span>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}{social_tags() if EXPORT else ""}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
@@ -2635,6 +2653,8 @@ def route(path):
                        foot='The hints these rest on are in the <a href="/clues">clue register</a>; the order of work is on the <a href="/priorities">priorities</a> page.')
     if path == "/program":
         return program_page()
+    if path == "/reference":
+        return reference_page()
     return None
 
 
@@ -2665,7 +2685,7 @@ def export(out, base=""):
     EXPORT.update(base=base, date=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
     rows = load_results()
     paths = (["/", "/experiments", "/lineage", "/learnings", "/families", "/priorities", "/pivots", "/record",
-              "/notebook", "/clues", "/assumptions", "/glossary", "/program"]
+              "/notebook", "/clues", "/assumptions", "/glossary", "/program", "/reference"]
              + [p for p in FAM_SECTIONS if p != "/pivots"]
              + [f"/pivot/{p['id']}" for p in load_pivots()] + [f"/exp/{r['tag']}" for r in rows])
     rebase = lambda h: re.sub(r"""(["'])/(?=exp/|pivot/|assets/)""", lambda m: m.group(1) + base + "/",

@@ -1,0 +1,42 @@
+{
+ "error": null,
+ "plant": {
+  "plaintext": "LBEPACKEDANDGOTRIDOFAEASTNORTHEASTFINISHEDWITHITSIXCASESOFOBJECBERLINCLOCKMBAREALREADYONEXHIBITIO",
+  "key": "{'pa': 'CHAMBERDFGIJKLNOPQSTUVWXYZ', 'ca': 'KRYPTOSABCDEFGHIJLMNQUVWXZ', 'ka': 'CHAMBERDFGIJKLNOPQSTUVWXYZ', 'm': 'beau', 'lag': 20, 'primer': 'THEDOORWAYWASREMOVED'}",
+  "ciphertext": "SWKLGIQLUVBUCLFWOHJZJLDUJVYARQZMBQKFRLNXSSEDMQHCHAYPYZAJLOZNAGOPXEHJGYERXGZAECQFIPDHJAFWTRTVNZSMJ"
+ },
+ "passed": true,
+ "why": "fewest mismatches 0 at {'plain': 'CHAMBER/keyword', 'cipher': 'kry', 'key': 'plain', 'mode': 'beau', 'lag': 20, 'cribs_checked': 24}; full matches 1; copies [1, 3, 3, 1, 2, 2, 1, 3, 2, 3]",
+ "bounds": {
+  "family": "ciphertext autokey on K1-K3-word and C13/C14-word alphabets",
+  "alphabets": 102,
+  "key_alphabets": "standard, KRYPTOS, plain, cipher",
+  "modes": 3,
+  "lags": "1-95 (at least 6 cribs past the primer)",
+  "fewest_mismatches": 0,
+  "best_setting": {
+   "plain": "CHAMBER/keyword",
+   "cipher": "kry",
+   "key": "plain",
+   "mode": "beau",
+   "lag": 20,
+   "cribs_checked": 24
+  },
+  "full_matches": 1,
+  "control_fewest_mismatches": [
+   1,
+   3,
+   3,
+   1,
+   2,
+   2,
+   1,
+   3,
+   2,
+   3
+  ]
+ },
+ "notes": "Fewest mismatches over all settings: 0 (('CHAMBER/keyword', 'kry', 'plain', 'beau', 20, 24)); ten shuffled coppers: [1, 1, 1, 2, 2, 2, 3, 3, 3, 3]. Full matches: 1.",
+ "candidates": [],
+ "seconds": 465.7
+}

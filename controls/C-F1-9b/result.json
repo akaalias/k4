@@ -1,0 +1,269 @@
+{
+ "error": null,
+ "plant": {
+  "plaintext": "EFTFORINSTANCEWASANEVEASTNORTHEASTETYTHEWHOLECOUNTRYSIDEWASAGOGBERLINCLOCKENTABOUTTHETOMBALLSORTS",
+  "key": "{'pa': 'SHADOWBCEFGIJKLMNPQRTUVXYZ', 'ca': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ka': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'm': 'vig', 'key': 'HAMENSTUFFEDINASPACKINGTHEREWERESHIRTSANDANUMBEROFTHEKINGSUNDERGARMENTSWHEREASBELOWMOREORLESSORDE'}",
+  "ciphertext": "PJGNRLEKFZGTPVFUPCSSEVITBUVXQFZGSBQLRMBVIBRIUIIMEZMFEVLVLUUPNIBMIKAPDAGAORZUUUHIGIQNWLIDXNSGSSKXE"
+ },
+ "passed": true,
+ "why": "best overall NGTHEREWERESH -3.416; planted ['GARMENTSWHE', 'NGTHEREWERESH'] ranked 1 of the top 20 at -3.416; shuffled copies' best [-3.875, -3.841, -3.919]",
+ "bounds": {
+  "family": "periodic tableau, period 27+, alphabets mixed from vocabulary; forced key stretches scored as English",
+  "plain_cipher_alphabets": 63,
+  "key_alphabets": 248,
+  "modes": 3,
+  "stretches_scored": 5905872,
+  "calibration_from": "0009",
+  "best_overall": {
+   "score": -3.416,
+   "stretch": "NGTHEREWERESH",
+   "run": "22-34",
+   "plain": "SHADOW/keyword",
+   "cipher": "std",
+   "key": "std",
+   "mode": "vig",
+   "z_vs_random": 4.98,
+   "z_vs_english": 1.79
+  },
+  "top_twenty": [
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "run": "22-34",
+    "plain": "SHADOW/keyword",
+    "cipher": "std",
+    "key": "std",
+    "mode": "vig",
+    "z_vs_random": 4.98,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -3.918,
+    "stretch": "LSMEANDFORA",
+    "run": "64-74",
+    "plain": "DESPERATELY/keyword",
+    "cipher": "HILL/keyword",
+    "key": "SOUTH/alt_vertical",
+    "mode": "vig",
+    "z_vs_random": 4.05,
+    "z_vs_english": 0.64
+   },
+   {
+    "score": -4.019,
+    "stretch": "GONENERANDHEE",
+    "run": "22-34",
+    "plain": "ALEXANDERPLATZ/keyword",
+    "cipher": "NORTH/keyword",
+    "key": "ABSCISSAE/keyed_columnar",
+    "mode": "beau",
+    "z_vs_random": 4.36,
+    "z_vs_english": 0.5
+   },
+   {
+    "score": -4.072,
+    "stretch": "GARMENTSWHE",
+    "run": "64-74",
+    "plain": "SHADOW/keyword",
+    "cipher": "std",
+    "key": "std",
+    "mode": "vig",
+    "z_vs_random": 3.91,
+    "z_vs_english": 0.35
+   },
+   {
+    "score": -4.145,
+    "stretch": "ANKINGEDATM",
+    "run": "64-74",
+    "plain": "HOWARDCARTER/keyword",
+    "cipher": "WORLDCLOCK/keyword",
+    "key": "NORTH/keyed_columnar",
+    "mode": "vig",
+    "z_vs_random": 3.84,
+    "z_vs_english": 0.21
+   },
+   {
+    "score": -4.16,
+    "stretch": "RIONINTHRUN",
+    "run": "64-74",
+    "plain": "INVISIBLE/keyword",
+    "cipher": "WALL/keyword",
+    "key": "WONDERFUL/alt_vertical",
+    "mode": "beau",
+    "z_vs_random": 3.83,
+    "z_vs_english": 0.18
+   },
+   {
+    "score": -4.165,
+    "stretch": "VONSATEDHIS",
+    "run": "64-74",
+    "plain": "MESSAGE/keyword",
+    "cipher": "CARTER/keyword",
+    "key": "WEST/columnar",
+    "mode": "beau",
+    "z_vs_random": 3.82,
+    "z_vs_english": 0.17
+   },
+   {
+    "score": -4.207,
+    "stretch": "GDIGINETHEALG",
+    "run": "22-34",
+    "plain": "SHADOWFORCES/keyword",
+    "cipher": "DIGITAL/keyword",
+    "key": "SANBORN/keyed_columnar",
+    "mode": "varbeau",
+    "z_vs_random": 4.17,
+    "z_vs_english": 0.09
+   },
+   {
+    "score": -4.209,
+    "stretch": "IULDNOTHING",
+    "run": "64-74",
+    "plain": "LUCIDMEMORY/keyword",
+    "cipher": "TUTANKHAMUN/keyword",
+    "key": "TWO/columnar",
+    "mode": "vig",
+    "z_vs_random": 3.78,
+    "z_vs_english": 0.08
+   },
+   {
+    "score": -4.224,
+    "stretch": "PISHEIRMATE",
+    "run": "64-74",
+    "plain": "NORTHEAST/keyword",
+    "cipher": "std",
+    "key": "CLOCK/alt_vertical",
+    "mode": "varbeau",
+    "z_vs_random": 3.77,
+    "z_vs_english": 0.05
+   },
+   {
+    "score": -4.261,
+    "stretch": "BUCHELEANGE",
+    "run": "64-74",
+    "plain": "DESPARATLY/keyword",
+    "cipher": "kry",
+    "key": "NORTHEAST/columnar",
+    "mode": "beau",
+    "z_vs_random": 3.74,
+    "z_vs_english": -0.02
+   },
+   {
+    "score": -4.279,
+    "stretch": "ARMERAANDCR",
+    "run": "64-74",
+    "plain": "SOMEWHERE/keyword",
+    "cipher": "MAGNETIC/keyword",
+    "key": "DIGITAL/columnar",
+    "mode": "vig",
+    "z_vs_random": 3.72,
+    "z_vs_english": -0.05
+   },
+   {
+    "score": -4.281,
+    "stretch": "EVERLIGHEAS",
+    "run": "64-74",
+    "plain": "LOCATION/keyword",
+    "cipher": "MYSTERY/keyword",
+    "key": "SCHEIDT/keyed_columnar",
+    "mode": "beau",
+    "z_vs_random": 3.72,
+    "z_vs_english": -0.06
+   },
+   {
+    "score": -4.288,
+    "stretch": "HANDSONFILO",
+    "run": "64-74",
+    "plain": "MAGNETIC/keyword",
+    "cipher": "LOCATION/keyword",
+    "key": "POSITION/columnar",
+    "mode": "vig",
+    "z_vs_random": 3.71,
+    "z_vs_english": -0.07
+   },
+   {
+    "score": -4.294,
+    "stretch": "GERTONDISMI",
+    "run": "64-74",
+    "plain": "NORTH/keyword",
+    "cipher": "UNDERGROUND/keyword",
+    "key": "DESPERATELY/columnar",
+    "mode": "vig",
+    "z_vs_random": 3.7,
+    "z_vs_english": -0.08
+   },
+   {
+    "score": -4.298,
+    "stretch": "ASTRIGHESIU",
+    "run": "64-74",
+    "plain": "IQLUSION/keyword",
+    "cipher": "SOMEWHERE/keyword",
+    "key": "LAYER/columnar",
+    "mode": "varbeau",
+    "z_vs_random": 3.7,
+    "z_vs_english": -0.09
+   },
+   {
+    "score": -4.298,
+    "stretch": "SNBEASTHISA",
+    "run": "64-74",
+    "plain": "ALEXANDERPLATZ/keyword",
+    "cipher": "LANGLEY/keyword",
+    "key": "EGYPT/keyed_columnar",
+    "mode": "vig",
+    "z_vs_random": 3.7,
+    "z_vs_english": -0.09
+   },
+   {
+    "score": -4.305,
+    "stretch": "ERSAIDTRICR",
+    "run": "64-74",
+    "plain": "kry",
+    "cipher": "SCHEIDT/keyword",
+    "key": "MESSAGE/columnar",
+    "mode": "vig",
+    "z_vs_random": 3.69,
+    "z_vs_english": -0.1
+   },
+   {
+    "score": -4.308,
+    "stretch": "YINFORNTOPL",
+    "run": "64-74",
+    "plain": "WONDERFULTHINGS/keyword",
+    "cipher": "EAST/keyword",
+    "key": "BERLINWALL/columnar",
+    "mode": "beau",
+    "z_vs_random": 3.69,
+    "z_vs_english": -0.11
+   },
+   {
+    "score": -4.316,
+    "stretch": "EIGHISTERMZ",
+    "run": "64-74",
+    "plain": "LUCID/keyword",
+    "cipher": "TUTANKHAMEN/keyword",
+    "key": "LUCID/alt_vertical",
+    "mode": "beau",
+    "z_vs_random": 3.68,
+    "z_vs_english": -0.12
+   }
+  ],
+  "null_control_best": [
+   [
+    -3.875,
+    "ALTHATHINPA"
+   ],
+   [
+    -3.841,
+    "RYAREPORTHO"
+   ],
+   [
+    -3.919,
+    "EOFANTHELLR"
+   ]
+  ],
+  "null_control": "same search on three shuffles of the K4 letters; best score and stretch each"
+ },
+ "notes": "Diagnostic, no candidates. 5905872 stretches scored over 63^2 x 248 x 3 alphabet triples.",
+ "candidates": [],
+ "seconds": 158.2
+}

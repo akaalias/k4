@@ -1,0 +1,109 @@
+{
+ "error": null,
+ "plant": {
+  "plaintext": "ESSESREFERENCESTOITSREASTNORTHEASTESARENUMEROUSINCLASSICALAUTHOBERLINCLOCKNYOFTHEMWERESTILLACCESS",
+  "key": "{'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'vig', 'key': 'ABSCISSA', 'step': 3, 'form': 'per-repeat'}",
+  "ciphertext": "MHFQUALNUFQORQIHMPJUVWNNQDQNYPKWZXPRBNPFLISZCJREMCIBGTGBCQBZHISDJAUVSGUDLCKFUNEVVTAXQUJIPSTWOVXQW"
+ },
+ "passed": true,
+ "why": "candidates with the planted key, step and text: 1 of 1",
+ "bounds": {
+  "family": "progressive-key periodic tableau, separate alphabets",
+  "conventions": 24,
+  "periods": "1-97",
+  "steps": "0-25",
+  "forms": [
+   "per-repeat",
+   "per-letter"
+  ],
+  "combinations_checked": 121056,
+  "surviving_steps_by_period_up_to_30": {
+   "8": {
+    "per-repeat": 2,
+    "per-letter": 0
+   },
+   "16": {
+    "per-repeat": 2,
+    "per-letter": 4
+   },
+   "24": {
+    "per-repeat": 4,
+    "per-letter": 4
+   },
+   "26": {
+    "per-repeat": 10,
+    "per-letter": 26
+   },
+   "27": {
+    "per-repeat": 26,
+    "per-letter": 26
+   },
+   "28": {
+    "per-repeat": 26,
+    "per-letter": 26
+   },
+   "29": {
+    "per-repeat": 26,
+    "per-letter": 26
+   },
+   "30": {
+    "per-repeat": 10,
+    "per-letter": 20
+   }
+  },
+  "period_13_survivors": {},
+  "periods_with_no_survivor_any_step": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   25,
+   31,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   49,
+   50,
+   51
+  ],
+  "fragment_matches": 1,
+  "key_pool": "vocabulary words and K1-K3 windows of length P for P <= 30"
+ },
+ "notes": "121056 (form, period, step, convention) combinations; 1 fragment matches submitted.",
+ "candidates": [
+  {
+   "plaintext": "ESSESREFERENCESTOITSREASTNORTHEASTESARENUMEROUSINCLASSICALAUTHOBERLINCLOCKNYOFTHEMWERESTILLACCESS",
+   "key": "{'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'vig', 'key': 'ABSCISSA', 'step': 3, 'form': 'per-repeat'}",
+   "notes": null
+  }
+ ],
+ "seconds": 1.8
+}

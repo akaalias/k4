@@ -1,0 +1,76 @@
+{
+ "error": null,
+ "plant": {
+  "plaintext": "EINTHEWORLDANDYETNOTOEASTNORTHEASTOFHERCLEVERSYMPATHYWASALIFELOBERLINCLOCKCHESTERHISWHIMSICALWITA",
+  "key": "{'pa': 'SHADINGBCEFJKLMOPQRTUVWXYZ', 'ca': 'TREMBLINGACDFHJKOPQSUVWXYZ', 'm': 'vig', 'key': [3, 4, 18, 15, 0, 17, 0, 19, 11, 24]}",
+  "ciphertext": "FGXGRTWGMDIIXQYTSYTPQHUKSWKDBZFIQGKRREMIOHHYQPYNRTWLODEPEIKGFPNWAAHXOIOSTRGQASBNVLWKWQBNDEDILDBCE"
+ },
+ "passed": true,
+ "why": "candidates with the planted text: 1 of 1; period 10 key DESPARATLY on std; plain SHADING/keyword, cipher TREMBLING/keyword, vig",
+ "bounds": {
+  "family": "periodic tableau, alphabets keyword-mixed from K1-K3 words and C13/C14 words",
+  "alphabets": 102,
+  "pairs": 10404,
+  "modes": 3,
+  "periods": "1-52",
+  "controls": 10,
+  "consistent_by_period_k4": {
+   "10": 2,
+   "20": 2,
+   "25": 4,
+   "26": 1356,
+   "27": 31212,
+   "28": 31212,
+   "29": 31212,
+   "30": 2051,
+   "31": 5,
+   "32": 0,
+   "40": 2,
+   "50": 4,
+   "51": 14,
+   "52": 1356
+  },
+  "consistent_by_period_controls_mean": {
+   "10": 0.0,
+   "20": 0.0,
+   "25": 2.7,
+   "26": 800.5,
+   "27": 31212.0,
+   "28": 31212.0,
+   "29": 31212.0,
+   "30": 1487.7,
+   "31": 46.3,
+   "32": 1.1,
+   "40": 0.0,
+   "50": 2.7,
+   "51": 37.0,
+   "52": 800.5
+  },
+  "consistent_by_period_controls_max": {
+   "10": 0,
+   "20": 0,
+   "25": 11,
+   "26": 1301,
+   "27": 31212,
+   "28": 31212,
+   "29": 31212,
+   "30": 2202,
+   "31": 94,
+   "32": 10,
+   "40": 0,
+   "50": 11,
+   "51": 107,
+   "52": 1301
+  },
+  "word_matches": 1
+ },
+ "notes": "102 alphabets, 10404 pairs, 3 modes, periods 1-52. Consistent cases on K4 by period (shown where K4 or a control has any): 10: 2 (controls mean 0.0, max 0), 20: 2 (controls mean 0.0, max 0), 25: 4 (controls mean 2.7, max 11), 26: 1356 (controls mean 800.5, max 1301), 27: 31212 (controls mean 31212.0, max 31212), 28: 31212 (controls mean 31212.0, max 31212), 29: 31212 (controls mean 31212.0, max 31212), 30: 2051 (controls mean 1487.7, max 2202), 31: 5 (controls mean 46.3, max 94), 32: 0 (controls mean 1.1, max 10), 40: 2 (controls mean 0.0, max 0), 50: 4 (controls mean 2.7, max 11), 51: 14 (controls mean 37.0, max 107), 52: 1356 (controls mean 800.5, max 1301). Word matches: 1.",
+ "candidates": [
+  {
+   "plaintext": "EINTHEWORLDANDYETNOTOEASTNORTHEASTOFHERCLEVERSYMPATHYWASALIFELOBERLINCLOCKCHESTERHISWHIMSICALWITA",
+   "key": "{'pa': 'SHADINGBCEFJKLMOPQRTUVWXYZ', 'ca': 'TREMBLINGACDFHJKOPQSUVWXYZ', 'm': 'vig', 'key': [3, 4, 18, 15, 0, 17, 0, 19, 11, 24]}",
+   "notes": null
+  }
+ ],
+ "seconds": 89.0
+}

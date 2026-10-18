@@ -1,0 +1,77 @@
+{
+ "error": null,
+ "plant": {
+  "plaintext": "ESUMORBEINGPITCHEDINTEASTNORTHEASTSTENEDQUIETLYANDMOTIONEDTOTHEBERLINCLOCKRESSINGBAGTHEYOBEYEDALR",
+  "key": "{'source': 'K2 cipher bwd', 'offset': 77, 'pa': 'ORDINATEBCFGHJKLMPQSUVWXYZ', 'ca': 'MAGNETICBDFHJKLOPQRSUVWXYZ', 'ka': 'KRYPTOSABCDEFGHIJLMNQUVWXZ', 'm': 'vig'}",
+  "ciphertext": "TETVWKUCPTJKGTMXALKOZGXLMVDVYGQBOAJORHGTTYWAUAFTTJELEOVCWOHKGIQUKDLNPBMEWARSQNRMRZYIQYFRGLUSHIWTV"
+ },
+ "passed": true,
+ "why": "survivors 2; the planted text among them: True; stopped by clock: False",
+ "bounds": {
+  "family": "running key from K1-K3 plaintexts and ciphertexts, keyword-mixed alphabets",
+  "alphabets": 63,
+  "key_alphabets": [
+   "std",
+   "kry"
+  ],
+  "modes": 3,
+  "sources": {
+   "K1 plain fwd": 63,
+   "K1 plain bwd": 63,
+   "K2 plain fwd": 369,
+   "K2 plain bwd": 369,
+   "K3 plain fwd": 336,
+   "K3 plain bwd": 336,
+   "K1+K2+K3 plain fwd": 768,
+   "K1+K2+K3 plain bwd": 768,
+   "K1 cipher fwd": 63,
+   "K1 cipher bwd": 63,
+   "K2 cipher fwd": 369,
+   "K2 cipher bwd": 369,
+   "K3 cipher fwd": 336,
+   "K3 cipher bwd": 336,
+   "K1+K2+K3 cipher fwd": 768,
+   "K1+K2+K3 cipher bwd": 768,
+   "K2 plain corrected ending fwd": 13,
+   "K2 plain corrected ending bwd": 13
+  },
+  "trials": 146932380,
+  "stopped_by_clock": false,
+  "fewest_mismatches": 0,
+  "near_misses": [
+   {
+    "mismatches": 0,
+    "source": "K1+K2+K3 cipher bwd",
+    "plain": "ORDINATE/keyword",
+    "cipher": "MAGNETIC/keyword",
+    "key": "kry",
+    "mode": "vig",
+    "offset": 413
+   },
+   {
+    "mismatches": 0,
+    "source": "K2 cipher bwd",
+    "plain": "ORDINATE/keyword",
+    "cipher": "MAGNETIC/keyword",
+    "key": "kry",
+    "mode": "vig",
+    "offset": 77
+   }
+  ],
+  "survivors": 2
+ },
+ "notes": "146932380 trials; 2 survivors; 2 within two mismatches.",
+ "candidates": [
+  {
+   "plaintext": "ESUMORBEINGPITCHEDINTEASTNORTHEASTSTENEDQUIETLYANDMOTIONEDTOTHEBERLINCLOCKRESSINGBAGTHEYOBEYEDALR",
+   "key": "{'source': 'K2 cipher bwd', 'offset': 77, 'pa': 'ORDINATEBCFGHJKLMPQSUVWXYZ', 'ca': 'MAGNETICBDFHJKLOPQRSUVWXYZ', 'ka': 'KRYPTOSABCDEFGHIJLMNQUVWXZ', 'm': 'vig'}",
+   "notes": null
+  },
+  {
+   "plaintext": "ESUMORBEINGPITCHEDINTEASTNORTHEASTSTENEDQUIETLYANDMOTIONEDTOTHEBERLINCLOCKRESSINGBAGTHEYOBEYEDALR",
+   "key": "{'source': 'K1+K2+K3 cipher bwd', 'offset': 413, 'pa': 'ORDINATEBCFGHJKLMPQSUVWXYZ', 'ca': 'MAGNETICBDFHJKLOPQRSUVWXYZ', 'ka': 'KRYPTOSABCDEFGHIJLMNQUVWXZ', 'm': 'vig'}",
+   "notes": null
+  }
+ ],
+ "seconds": 127.0
+}

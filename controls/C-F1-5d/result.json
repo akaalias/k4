@@ -1,0 +1,123 @@
+{
+ "error": null,
+ "plant": {
+  "plaintext": "CPPWINTEDANDATTWOOCLOEASTNORTHEASTETOBEPRIVILEGEDTOWITNESSTHECEBERLINCLOCKAPPOINTMENTABOVETHETOMB",
+  "key": "('letters only', 40, 'vig', 'std', 'kry')",
+  "ciphertext": "OBKRVOSJUFXXHTTOXSPKLJEAEXYDDGDTVQBIXSMFVJUCACFQXOFQVWLCJXVAUMIBIIGMWIUMXTBTGQKZIYZVKCGBNCORKJOUL"
+ },
+ "passed": true,
+ "why": "full matches 1, the planted one among them: True; best 24/24, copies [7, 5, 5, 5, 5, 6, 5, 6, 5, 5]",
+ "bounds": {
+  "family": "ciphertext autokey continuing the carved stream from K3, and the letter above on the plate",
+  "streams": {
+   "with ?": 772,
+   "letters only": 768
+  },
+  "lags": [
+   1,
+   200
+  ],
+  "rules": 12,
+  "k4_best_lag_hits": 24,
+  "controls_best_lag_hits": [
+   7,
+   5,
+   5,
+   5,
+   5,
+   6,
+   5,
+   6,
+   5,
+   5
+  ],
+  "k4_best_geometric_hits": 3,
+  "controls_best_geometric_hits": [
+   2,
+   3,
+   5,
+   5,
+   3,
+   4,
+   3,
+   3,
+   5,
+   4
+  ],
+  "k4_full": [
+   [
+    "letters only",
+    40,
+    "vig",
+    "std",
+    "kry"
+   ]
+  ],
+  "k4_top": [
+   {
+    "stream": "letters only",
+    "lag": 40,
+    "rule": "vig/std/kry",
+    "hits": 24
+   },
+   {
+    "stream": "with ?",
+    "lag": 41,
+    "rule": "vig/std/kry",
+    "hits": 14
+   },
+   {
+    "stream": "with ?",
+    "lag": 40,
+    "rule": "vig/std/kry",
+    "hits": 13
+   },
+   {
+    "stream": "letters only",
+    "lag": 40,
+    "rule": "vig/std/std",
+    "hits": 8
+   },
+   {
+    "stream": "with ?",
+    "lag": 53,
+    "rule": "vig/kry/std",
+    "hits": 6
+   },
+   {
+    "stream": "with ?",
+    "lag": 58,
+    "rule": "beau/kry/kry",
+    "hits": 6
+   },
+   {
+    "stream": "letters only",
+    "lag": 50,
+    "rule": "beau/kry/std",
+    "hits": 6
+   },
+   {
+    "stream": "letters only",
+    "lag": 72,
+    "rule": "vig/kry/std",
+    "hits": 6
+   }
+  ],
+  "k4_geometric": {
+   "1 up, left, beau/kry/std": 3,
+   "1 up, right, beau/kry/std": 3,
+   "2 up, left, vig/std/std": 3,
+   "1 up, left, vig/kry/kry": 2,
+   "1 up, left, beau/kry/kry": 2,
+   "1 up, right, vig/kry/kry": 2,
+   "1 up, right, beau/kry/kry": 2,
+   "2 up, left, beau/kry/kry": 2,
+   "2 up, right, vig/std/std": 2,
+   "2 up, right, beau/kry/kry": 2
+  },
+  "controls": "10 shuffled coppers (K4 shuffled, earlier text fixed; seed 118), identical search"
+ },
+ "notes": "Lags 1-200 x 12 rules x 2 streams: K4 best 24/24, controls [7, 5, 5, 5, 5, 6, 5, 6, 5, 5]; full 1. Letter above on the plate: K4 best 3/24, controls [2, 3, 5, 5, 3, 4, 3, 3, 5, 4].",
+ "candidates": [],
+ "seconds": 1.7
+}

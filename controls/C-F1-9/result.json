@@ -1,0 +1,581 @@
+{
+ "error": null,
+ "plant": {
+  "plaintext": "TAINABOVETHEVALLEYOFTEASTNORTHEASTATELYARIVALPARTYOFDIGGERSARMEBERLINCLOCKANDMADETHEIRWAYTOTHESPO",
+  "key": "{'pa': 'std', 'ca': 'std', 'ka': 'std', 'm': 'vig', 'key': 'HAMENSTUFFEDINASPACKINGTHEREWERESHIRTSANDANUMBEROFTHEKINGSUNDERGARMENTSWHEREASBELOWMOREORLESSORDE'}",
+  "ciphertext": "AAURNTHPJYLHDNLDTYQPBRGLARFVPLVEKAIKXDYNUIIUXQEIHDHMHSOTKJMNUQVHEIXMAVDKJORRDEBHPHDQWIAOPESLZSJSS"
+ },
+ "passed": true,
+ "why": "best exact stretch NGTHEREWERESH (std/std/std/vig, z vs English 1.79); planted ['GARMENTSWHE', 'NGTHEREWERESH']",
+ "bounds": {
+  "family": "periodic tableau, separate alphabets, period 27+; forced key stretches scored as English",
+  "conventions": 24,
+  "copper_variants": 196,
+  "stretches_scored": 9408,
+  "calibration_mean_sd": {
+   "english_13": [
+    -4.251,
+    0.466
+   ],
+   "english_11": [
+    -4.252,
+    0.518
+   ],
+   "random_13": [
+    -8.292,
+    0.98
+   ],
+   "random_11": [
+    -8.295,
+    1.08
+   ]
+  },
+  "best_overall": {
+   "score": -3.342,
+   "stretch": "NGTHEREWERES",
+   "copper": "inserted before 34",
+   "convention": "std/std/std/vig",
+   "run": "22-34",
+   "z_vs_random": 5.05,
+   "z_vs_english": 1.95
+  },
+  "best_exact_copper": {
+   "score": -3.416,
+   "stretch": "NGTHEREWERESH",
+   "copper": "exact",
+   "convention": "std/std/std/vig",
+   "run": "22-34",
+   "z_vs_random": 4.97,
+   "z_vs_english": 1.79
+  },
+  "top_ten": [
+   {
+    "score": -3.342,
+    "stretch": "NGTHEREWERES",
+    "copper": "inserted before 34",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 5.05,
+    "z_vs_english": 1.95
+   },
+   {
+    "score": -3.387,
+    "stretch": "NGTHEREWERESP",
+    "copper": "deleted 34",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 5.0,
+    "z_vs_english": 1.85
+   },
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "inserted before 98",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "inserted before 97",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "inserted before 96",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "inserted before 95",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "inserted before 94",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "inserted before 93",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "inserted before 92",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "inserted before 91",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   }
+  ],
+  "exact_copper_all_24": [
+   {
+    "score": -3.416,
+    "stretch": "NGTHEREWERESH",
+    "copper": "exact",
+    "convention": "std/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": 4.97,
+    "z_vs_english": 1.79
+   },
+   {
+    "score": -4.072,
+    "stretch": "GARMENTSWHE",
+    "copper": "exact",
+    "convention": "std/std/std/vig",
+    "run": "64-74",
+    "z_vs_random": 3.91,
+    "z_vs_english": 0.35
+   },
+   {
+    "score": -6.079,
+    "stretch": "ZNASWAFFOKH",
+    "copper": "exact",
+    "convention": "kry/std/kry/vig",
+    "run": "64-74",
+    "z_vs_random": 2.05,
+    "z_vs_english": -3.53
+   },
+   {
+    "score": -6.185,
+    "stretch": "PPJOBTEUPSO",
+    "copper": "exact",
+    "convention": "kry/std/std/beau",
+    "run": "64-74",
+    "z_vs_random": 1.95,
+    "z_vs_english": -3.73
+   },
+   {
+    "score": -6.268,
+    "stretch": "FNJAOANWYALSA",
+    "copper": "exact",
+    "convention": "std/kry/std/beau",
+    "run": "22-34",
+    "z_vs_random": 2.06,
+    "z_vs_english": -4.33
+   },
+   {
+    "score": -6.299,
+    "stretch": "GAOHDONTVHF",
+    "copper": "exact",
+    "convention": "kry/kry/std/vig",
+    "run": "64-74",
+    "z_vs_random": 1.85,
+    "z_vs_english": -3.95
+   },
+   {
+    "score": -6.327,
+    "stretch": "UAJOWNHIETW",
+    "copper": "exact",
+    "convention": "std/std/std/varbeau",
+    "run": "64-74",
+    "z_vs_random": 1.82,
+    "z_vs_english": -4.01
+   },
+   {
+    "score": -6.403,
+    "stretch": "BHTUDTOOVAM",
+    "copper": "exact",
+    "convention": "kry/std/std/varbeau",
+    "run": "64-74",
+    "z_vs_random": 1.75,
+    "z_vs_english": -4.15
+   },
+   {
+    "score": -6.562,
+    "stretch": "GSNATLTVTLTMA",
+    "copper": "exact",
+    "convention": "std/std/kry/vig",
+    "run": "22-34",
+    "z_vs_random": 1.77,
+    "z_vs_english": -4.96
+   },
+   {
+    "score": -6.792,
+    "stretch": "VVJIAKOROZO",
+    "copper": "exact",
+    "convention": "kry/kry/kry/beau",
+    "run": "64-74",
+    "z_vs_random": 1.39,
+    "z_vs_english": -4.9
+   },
+   {
+    "score": -6.819,
+    "stretch": "VGDTETMISZECT",
+    "copper": "exact",
+    "convention": "std/std/std/beau",
+    "run": "22-34",
+    "z_vs_random": 1.5,
+    "z_vs_english": -5.51
+   },
+   {
+    "score": -6.998,
+    "stretch": "DQIWMNORWIVSW",
+    "copper": "exact",
+    "convention": "kry/kry/kry/varbeau",
+    "run": "22-34",
+    "z_vs_random": 1.32,
+    "z_vs_english": -5.89
+   },
+   {
+    "score": -7.057,
+    "stretch": "SKHAPHGNUAO",
+    "copper": "exact",
+    "convention": "kry/kry/kry/vig",
+    "run": "64-74",
+    "z_vs_random": 1.15,
+    "z_vs_english": -5.42
+   },
+   {
+    "score": -7.37,
+    "stretch": "IICHRNTQIMH",
+    "copper": "exact",
+    "convention": "kry/std/kry/beau",
+    "run": "64-74",
+    "z_vs_random": 0.86,
+    "z_vs_english": -6.02
+   },
+   {
+    "score": -7.609,
+    "stretch": "JSEPBAUZPETQP",
+    "copper": "exact",
+    "convention": "kry/kry/kry/vig",
+    "run": "22-34",
+    "z_vs_random": 0.7,
+    "z_vs_english": -7.2
+   },
+   {
+    "score": -7.638,
+    "stretch": "FQWEQLWAOAMSE",
+    "copper": "exact",
+    "convention": "kry/kry/kry/beau",
+    "run": "22-34",
+    "z_vs_random": 0.67,
+    "z_vs_english": -7.27
+   },
+   {
+    "score": -7.775,
+    "stretch": "XNZOOYFKKSLIO",
+    "copper": "exact",
+    "convention": "std/kry/std/vig",
+    "run": "22-34",
+    "z_vs_random": 0.53,
+    "z_vs_english": -7.56
+   },
+   {
+    "score": -7.998,
+    "stretch": "PPGJAUYVOSP",
+    "copper": "exact",
+    "convention": "std/kry/std/beau",
+    "run": "64-74",
+    "z_vs_random": 0.28,
+    "z_vs_english": -7.23
+   },
+   {
+    "score": -8.039,
+    "stretch": "NHYNKUUZMOV",
+    "copper": "exact",
+    "convention": "std/kry/std/vig",
+    "run": "64-74",
+    "z_vs_random": 0.24,
+    "z_vs_english": -7.31
+   },
+   {
+    "score": -8.103,
+    "stretch": "QKFNWFGAONU",
+    "copper": "exact",
+    "convention": "kry/kry/kry/varbeau",
+    "run": "64-74",
+    "z_vs_random": 0.18,
+    "z_vs_english": -7.43
+   },
+   {
+    "score": -8.114,
+    "stretch": "UBVECAGPDQDWE",
+    "copper": "exact",
+    "convention": "kry/std/std/varbeau",
+    "run": "22-34",
+    "z_vs_random": 0.18,
+    "z_vs_english": -8.29
+   },
+   {
+    "score": -8.165,
+    "stretch": "USPNTNFBMZTYN",
+    "copper": "exact",
+    "convention": "std/std/kry/beau",
+    "run": "22-34",
+    "z_vs_random": 0.13,
+    "z_vs_english": -8.4
+   },
+   {
+    "score": -8.191,
+    "stretch": "YGLTDDVNZSEJT",
+    "copper": "exact",
+    "convention": "kry/std/kry/beau",
+    "run": "22-34",
+    "z_vs_random": 0.1,
+    "z_vs_english": -8.45
+   },
+   {
+    "score": -8.223,
+    "stretch": "SKLFTGNMVAT",
+    "copper": "exact",
+    "convention": "std/std/kry/vig",
+    "run": "64-74",
+    "z_vs_random": 0.07,
+    "z_vs_english": -7.67
+   },
+   {
+    "score": -8.256,
+    "stretch": "NUHTWJWEWJWIT",
+    "copper": "exact",
+    "convention": "std/std/std/varbeau",
+    "run": "22-34",
+    "z_vs_random": 0.04,
+    "z_vs_english": -8.59
+   },
+   {
+    "score": -8.289,
+    "stretch": "NTCNQGGBOMF",
+    "copper": "exact",
+    "convention": "std/kry/std/varbeau",
+    "run": "64-74",
+    "z_vs_random": 0.01,
+    "z_vs_english": -7.8
+   },
+   {
+    "score": -8.324,
+    "stretch": "ZTHGXHMMFAO",
+    "copper": "exact",
+    "convention": "kry/std/std/vig",
+    "run": "64-74",
+    "z_vs_random": -0.03,
+    "z_vs_english": -7.86
+   },
+   {
+    "score": -8.325,
+    "stretch": "QKCHVGABTNV",
+    "copper": "exact",
+    "convention": "std/std/kry/varbeau",
+    "run": "64-74",
+    "z_vs_random": -0.03,
+    "z_vs_english": -7.86
+   },
+   {
+    "score": -8.327,
+    "stretch": "GNYGJSSRHFO",
+    "copper": "exact",
+    "convention": "std/kry/kry/varbeau",
+    "run": "64-74",
+    "z_vs_random": -0.03,
+    "z_vs_english": -7.87
+   },
+   {
+    "score": -8.348,
+    "stretch": "WGZHHXODDMEBH",
+    "copper": "exact",
+    "convention": "std/kry/kry/vig",
+    "run": "22-34",
+    "z_vs_random": -0.06,
+    "z_vs_english": -8.79
+   },
+   {
+    "score": -8.45,
+    "stretch": "QRUTYKSIPJPVT",
+    "copper": "exact",
+    "convention": "kry/std/kry/varbeau",
+    "run": "22-34",
+    "z_vs_random": -0.16,
+    "z_vs_english": -9.01
+   },
+   {
+    "score": -8.511,
+    "stretch": "PGRFFYUJJBIMF",
+    "copper": "exact",
+    "convention": "std/kry/kry/varbeau",
+    "run": "22-34",
+    "z_vs_random": -0.22,
+    "z_vs_english": -9.14
+   },
+   {
+    "score": -8.566,
+    "stretch": "IIZIUNXOYLY",
+    "copper": "exact",
+    "convention": "std/std/std/beau",
+    "run": "64-74",
+    "z_vs_random": -0.25,
+    "z_vs_english": -8.33
+   },
+   {
+    "score": -8.675,
+    "stretch": "QGLDIHVZDLEUD",
+    "copper": "exact",
+    "convention": "kry/kry/std/vig",
+    "run": "22-34",
+    "z_vs_random": -0.39,
+    "z_vs_english": -9.49
+   },
+   {
+    "score": -8.683,
+    "stretch": "WWQPHAFBFZF",
+    "copper": "exact",
+    "convention": "kry/kry/std/beau",
+    "run": "64-74",
+    "z_vs_random": -0.36,
+    "z_vs_english": -8.55
+   },
+   {
+    "score": -8.699,
+    "stretch": "DNBMMCVQQIPSM",
+    "copper": "exact",
+    "convention": "std/kry/std/varbeau",
+    "run": "22-34",
+    "z_vs_random": -0.42,
+    "z_vs_english": -9.54
+   },
+   {
+    "score": -8.705,
+    "stretch": "RANQPNHHUKF",
+    "copper": "exact",
+    "convention": "kry/std/kry/varbeau",
+    "run": "64-74",
+    "z_vs_random": -0.38,
+    "z_vs_english": -8.6
+   },
+   {
+    "score": -8.726,
+    "stretch": "UAMTXMNHFTV",
+    "copper": "exact",
+    "convention": "kry/kry/std/varbeau",
+    "run": "64-74",
+    "z_vs_random": -0.4,
+    "z_vs_english": -8.64
+   },
+   {
+    "score": -8.74,
+    "stretch": "GQANVCVTVCVBN",
+    "copper": "exact",
+    "convention": "std/std/kry/varbeau",
+    "run": "22-34",
+    "z_vs_random": -0.46,
+    "z_vs_english": -9.63
+   },
+   {
+    "score": -8.77,
+    "stretch": "MUXLURXHFHSGL",
+    "copper": "exact",
+    "convention": "kry/kry/std/beau",
+    "run": "22-34",
+    "z_vs_random": -0.49,
+    "z_vs_english": -9.69
+   },
+   {
+    "score": -9.127,
+    "stretch": "CNREKKWTZGLQE",
+    "copper": "exact",
+    "convention": "kry/std/std/beau",
+    "run": "22-34",
+    "z_vs_random": -0.85,
+    "z_vs_english": -10.46
+   },
+   {
+    "score": -9.168,
+    "stretch": "OGCKHKGVXKEMK",
+    "copper": "exact",
+    "convention": "std/kry/kry/beau",
+    "run": "22-34",
+    "z_vs_random": -0.89,
+    "z_vs_english": -10.55
+   },
+   {
+    "score": -9.181,
+    "stretch": "KUPXSTFBXPWGX",
+    "copper": "exact",
+    "convention": "kry/kry/std/varbeau",
+    "run": "22-34",
+    "z_vs_random": -0.91,
+    "z_vs_english": -10.58
+   },
+   {
+    "score": -9.296,
+    "stretch": "IISCKQXUHMI",
+    "copper": "exact",
+    "convention": "std/kry/kry/beau",
+    "run": "64-74",
+    "z_vs_random": -0.93,
+    "z_vs_english": -9.74
+   },
+   {
+    "score": -9.326,
+    "stretch": "GZFWYAULXKXEW",
+    "copper": "exact",
+    "convention": "kry/std/std/vig",
+    "run": "22-34",
+    "z_vs_random": -1.06,
+    "z_vs_english": -10.89
+   },
+   {
+    "score": -9.449,
+    "stretch": "SZOVXKQEWDWTV",
+    "copper": "exact",
+    "convention": "kry/std/kry/vig",
+    "run": "22-34",
+    "z_vs_random": -1.18,
+    "z_vs_english": -11.15
+   },
+   {
+    "score": -10.177,
+    "stretch": "BBZBQGWHXEX",
+    "copper": "exact",
+    "convention": "std/std/kry/beau",
+    "run": "64-74",
+    "z_vs_random": -1.74,
+    "z_vs_english": -11.44
+   },
+   {
+    "score": -10.298,
+    "stretch": "GAXGDQQZFHU",
+    "copper": "exact",
+    "convention": "std/kry/kry/vig",
+    "run": "64-74",
+    "z_vs_random": -1.85,
+    "z_vs_english": -11.67
+   }
+  ]
+ },
+ "notes": "Diagnostic: no full key is implied, so no candidates. The verdict is the gap between the best stretch and the English distribution.",
+ "candidates": [],
+ "seconds": 0.7
+}

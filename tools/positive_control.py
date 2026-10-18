@@ -10,6 +10,8 @@ Each control is a folder controls/<ID>/ with a spec.py the loop writes:
     EXPERIMENT = "0119"           # the experiment whose search closed it
     WHAT = "one sentence: the method and the planted key"
     BUDGET = 1800                 # seconds, optional (default 1800, the experiments' own budget)
+    PATCH = [(old, new)]          # optional: exact replacements in the snapshot, only for lines that pin K4 itself
+                                  # (an assert of K4's recorded result); recorded in result.json
 
     def plant():                  # -> {"plaintext": ..., "key": ...} and optionally "ciphertext"
         ...                       #    without "ciphertext", the attack's own encrypt(plaintext, key) makes it
@@ -36,7 +38,7 @@ import time
 import traceback
 from datetime import datetime, timezone
 from pathlib import Path
-from types import SimpleNamespace
+from types import ModuleType, SimpleNamespace
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -49,6 +51,26 @@ def load(path, name):
     mod = importlib.util.module_from_spec(spec)
     sys.modules[name] = mod
     spec.loader.exec_module(mod)
+    return mod
+
+
+def load_attack(path, patches=()):
+    """Load a saved attack.py as the harness ran it: from the repository root. Older snapshots find their
+    data files next to their own __file__ (data/, knowledge/sources/), so __file__ is set to ROOT/attack.py;
+    tracebacks still name the snapshot.
+
+    patches: the spec's optional PATCH, a list of (old, new) exact replacements in the snapshot's source. Only for
+    lines that pin K4 itself (an assert that K4 gives its recorded result), never the search; each must match
+    exactly once, and every patch is written into result.json."""
+    src = Path(path).read_text()
+    for old, new in patches:
+        if src.count(old) != 1:
+            raise ValueError(f"PATCH must match the snapshot exactly once, matched {src.count(old)} times: {old!r}")
+        src = src.replace(old, new)
+    mod = ModuleType("attack")
+    mod.__file__ = str(ROOT / "attack.py")
+    sys.modules["attack"] = mod
+    exec(compile(src, str(path), "exec"), mod.__dict__)
     return mod
 
 
@@ -67,7 +89,9 @@ def child(spec_dir, out_path, budget):
     out = {"error": None}
     try:
         spec = load(Path(spec_dir) / "spec.py", "control_spec")
-        attack = load(snapshot(spec.EXPERIMENT), "attack")
+        patches = list(getattr(spec, "PATCH", []))
+        out["patches"] = patches
+        attack = load_attack(snapshot(spec.EXPERIMENT), patches)
         p = spec.plant()
         if not plants.has_known(p["plaintext"]):
             raise ValueError("the planted plaintext does not carry the 24 known letters in place")

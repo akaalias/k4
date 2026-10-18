@@ -1,0 +1,27 @@
+{
+ "error": null,
+ "plant": {
+  "plaintext": "ESTINGPLACEONAHIGHERLEASTNORTHEASTHEENTRANCETOANOTHERABANDONEDTBERLINCLOCKONFOUNDATIONDEPOSITSOFH",
+  "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm': 'beau', 'lag': 5, 'primer': 'QUIET'}",
+  "ciphertext": "JPVPLDHEPISKXPBXQLZLGJLAXKYKHLVYBUDMXUYNMENXKTESDAWAIDSWQFVNNLNUIYSEBGLMCXZTGUTFRGYVXHDXADVYOIVLU"
+ },
+ "passed": true,
+ "why": "survivors 1; with the planted lag and text past the primer: 1",
+ "bounds": {
+  "family": "ciphertext autokey",
+  "conventions": 24,
+  "lags": "1-96",
+  "pairs_tested": 2304,
+  "survivors": 1,
+  "decidability": "exact at every crib position i > lag"
+ },
+ "notes": "A survivor must also reproduce the cribs inside the primer region, which the gate checks.",
+ "candidates": [
+  {
+   "plaintext": "AAAAAGPLACEONAHIGHERLEASTNORTHEASTHEENTRANCETOANOTHERABANDONEDTBERLINCLOCKONFOUNDATIONDEPOSITSOFH",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm': 'beau', 'lag': 5, 'primer': 'AAAAA'}",
+   "notes": "24 crib checks passed"
+  }
+ ],
+ "seconds": 0.0
+}

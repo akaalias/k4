@@ -1,78 +1,87 @@
-# Primary sources, full text
+# Primary sources
 
-Plain-text extractions of the documents the knowledge files cite. Names carry outlet, year and subject. Read the source before trusting a quote in the numbered files.
+The knowledge files cite these documents. Full plain-text copies are kept for reference in the private working copy. The public repository carries only the public-domain ones, and our own notes. Each entry says where to read the original. Read the source before trusting a quote in the numbered files.
 
-| File | Size |
-|---|---|
-| `abc-1991-world-news-tonight.txt` | 3 KB |
-| `abc-1998-stein-interview.txt` | 14 KB |
-| `aol_nov2025-2025.txt` | 7 KB |
-| `artnet_arch-2025.txt` | 11 KB |
-| `baltimore-sun-2000-nsa-solvers.txt` | 6 KB |
-| `bauer-2017-unsolved-chapter-notes.md` | 4 KB |
-| `bean-2018-kryptos-thoughts.txt` | 43 KB |
-| `bean-2021-cryptodiagnosis-of-k4.txt` | 47 KB |
-| `bean-2021-the-conversation.txt` | 8 KB |
-| `carter-1923-tomb-of-tutankhamen-vol1.txt` | 436 KB |
-| `cia-legacy-page.txt` | 10 KB |
-| `cnn-2005-sanborn-interview-transcript.txt` | 31 KB |
-| `cnn-2020-great-big-story.txt` | 33 KB |
-| `dunin-2005-radio-layertwo.txt` | 2 KB |
-| `dunin-faq.txt` | 24 KB |
-| `dunin-k3-pencil-and-paper.txt` | 7 KB |
-| `dunin-main-page.txt` | 26 KB |
-| `dunin-timeline.txt` | 13 KB |
-| `edtimes-2021.txt` | 11 KB |
-| `elonka_index-2025.txt` | 26 KB |
-| `ft-2025-roeder-jim-sanborns-secret.txt` | 49 KB |
-| `gillogly-1999-cypherpunks-post.txt` | 5 KB |
-| `ilpost-2025.txt` | 8 KB |
-| `kryptools-hints-compilation.txt` | 28 KB |
-| `kryptos-group-2006-corrected-k2.txt` | 10 KB |
-| `kryptos-workshop-2015-scheidt-transcript.txt` | 27 KB |
-| `kryptosproject-k0-morse.txt` | 6 KB |
-| `kryptosproject-k5.txt` | 4 KB |
-| `mentalfloss-2025.txt` | 10 KB |
-| `nightly-2025.txt` | 13 KB |
-| `npr-2005-scheidt-sanborn.txt` | 5 KB |
-| `npr2020-2025.txt` | 6 KB |
-| `nsa-2014-summary-of-previous-work.txt` | 45 KB |
-| `nsa-foia-1992-2014-blackvault-compilation.txt` | 163 KB |
-| `nyt-1999-markoff-gillogly.txt` | 8 KB |
-| `nyt-2010-berlin-clue.txt` | 8 KB |
-| `nyt-2020-northeast-clue.txt` | 9 KB |
-| `nyt_oct2025-2025.txt` | 12 KB |
-| `openletter-2025.txt` | 2 KB |
-| `paradigm-2025.txt` | 5 KB |
-| `paradigm_rules-2025.txt` | 4 KB |
-| `rr-2025.txt` | 15 KB |
-| `rr_discovered-2025.txt` | 8 KB |
-| `rr_press-2025.txt` | 5 KB |
-| `rr_search-2025.txt` | 2 KB |
-| `rumkin-k4.txt` | 4 KB |
-| `rumkin-k5-dinner-notes.txt` | 9 KB |
-| `rumkin_k5-2025.txt` | 9 KB |
-| `sanborn-1989-letter-and-webster-1990-cryptogram.txt` | 9 KB |
-| `schmeh-2019-cnn-documentary-making-of.txt` | 40 KB |
-| `schmeh-2020-aj-jacobs-interview-and-bean-comment.txt` | 17 KB |
-| `schneier-2025.txt` | 7 KB |
-| `schridde-2017-numberworld-part2.txt` | 22 KB |
-| `schridde-2020-numberworld-part4.txt` | 63 KB |
-| `sciam_clues-2025.txt` | 8 KB |
-| `sciam_oct2025-2025.txt` | 7 KB |
-| `scirealm-john-wilson-collected-hints.txt` | 102 KB |
-| `stein-1999-cracking-the-courtyard-crypto.txt` | 48 KB |
-| `wapo-1999-schwartz-cracking-the-code.txt` | 13 KB |
-| `wapo-2025-auction-announcement.txt` | 4 KB |
-| `wapo-2025.txt` | 4 KB |
-| `wikipedia-kryptos-wikitext-2026-10.txt` | 50 KB |
-| `wired-2005-alt-copy.txt` | 16 KB |
-| `wired-2005-zetter-questions-for-kryptos-creator.txt` | 17 KB |
-| `wired-2006-typo-confounds-kryptos-sleuths.txt` | 11 KB |
-| `wired-2009-levy-mission-impossible.txt` | 19 KB |
-| `wired-2010-berlin-clue.txt` | 11 KB |
-| `wired-2013-nsa-cracked-kryptos.txt` | 19 KB |
-| `wired-2013-stein-article-released.txt` | 9 KB |
-| `wired-2014-clock-clue.txt` | 16 KB |
-| `wired2005-2025.txt` | 16 KB |
-| `zona-2025.txt` | 9 KB |
+Dates are publication dates where the source gives one. Web pages without a date are marked undated. A dash in the Link column means no reliable link was found.
+
+| File | Source (author/outlet, title) | Date | Link | In public repo |
+|---|---|---|---|---|
+| `abc-1991-world-news-tonight.txt` | ABC World News Tonight, broadcast segment on Kryptos (Peter Jennings); transcript via Elonka Dunin's mirror | 1991-04-02 | [elonka.com](https://elonka.com/kryptos/mirrors/WNT.html) | no |
+| `abc-1998-stein-interview.txt` | ABCNEWS.com, "Interview with Man Who Partially Deciphered 'Kryptos' Code" (David Stein) | interview 1998-07-15 | [archive.org](http://web.archive.org/web/19990903230649/http://www.abcnews.go.com/onair/WorldNewsTonight/wnt990618_stein_intv.html) | no |
+| `aol_nov2025-2025.txt` | AOL, "The CIA Has Been Home to an Unsolved Puzzle for 35 Years. Its Creator Just Released the Final Clues." | 2025-11-19 | [aol.com](https://www.aol.com/lifestyle/cia-home-unsolved-puzzle-35-130000201.html) | no |
+| `army-1950-tm32-220-basic-cryptography.txt` | Department of the Army, TM 32-220, *Basic Cryptography* (NSA Friedman Documents release) | 1950-04-05 | [nsa.gov](https://www.nsa.gov/news-features/declassified-documents/friedman-documents/assets/files/publications/FOLDER_238/41748889078809.pdf); [archive.org](https://archive.org/details/41748889078809) | yes |
+| `artnet_arch-2025.txt` | Artnet News, "Secret Code to the CIA's Enigmatic 'Kryptos' Sculpture Sells for Nearly $1 Million at Auction" | 2025-11-24 (updated) | [artnet.com](https://news.artnet.com/art-world/cia-kryptos-sculpture-code-auction-2677451) | no |
+| `baltimore-sun-2000-nsa-solvers.txt` | Tom Bowman, Baltimore Sun, "Unlocking the secret of 'Kryptos'" | 2000-03-17 | [archive.org](https://web.archive.org/web/20140209165252/http://articles.baltimoresun.com/2000-03-17/news/0003180448_1_decipher-petrified-wood-cia-headquarters) | no |
+| `bauer-2017-unsolved-chapter-notes.md` | Our notes on Craig P. Bauer, *Unsolved!* (Princeton University Press), ch. 9, "The CIA's Cipher Mystery (1990)" | 2017 | [WorldCat](https://search.worldcat.org/oclc/963914459) | yes |
+| `bean-2018-kryptos-thoughts.txt` | Richard Bean, "Kryptos Thoughts" | 2018 | [richardbean.id.au](https://kryptos.richardbean.id.au/kryptos-2018.htm) | no |
+| `bean-2021-cryptodiagnosis-of-k4.txt` | Richard Bean, "Cryptodiagnosis of 'Kryptos K4'", HistoCrypt 2021 proceedings | 2021 | [ecp.ep.liu.se](https://ecp.ep.liu.se/index.php/histocrypt/article/view/153) | no |
+| `bean-2021-the-conversation.txt` | Richard Bean, The Conversation, "Declassified Cold War code-breaking manual has lessons for solving 'impossible' puzzles" | 2021-05-30 | [theconversation.com](https://theconversation.com/declassified-cold-war-code-breaking-manual-has-lessons-for-solving-impossible-puzzles-161595) | no |
+| `carter-1923-tomb-of-tutankhamen-vol1.txt` | Howard Carter and A. C. Mace, *The Tomb of Tut-ankh-Amen*, vol. 1 | 1923 | [archive.org](https://archive.org/details/tomboftutankhame00cart_1) | yes |
+| `cia-legacy-page.txt` | CIA, "'Kryptos' Sculpture" (legacy headquarters page) | undated | [cia.gov](https://www.cia.gov/legacy/headquarters/kryptos-sculpture/) | yes |
+| `cnn-2005-sanborn-interview-transcript.txt` | CNN, David Ensor's B-roll interviews with Jim Sanborn; transcript by Justine Redman and Elonka Dunin | 2005 (mid-year) | [elonka.com](https://elonka.com/x/2005CNN.html) | no |
+| `cnn-2020-great-big-story.txt` | Christine Champagne and Drew Beebe, CNN / Great Big Story, Kryptos video feature | 2020-07-25 | [cnn.com](https://www.cnn.com/2020/07/25/us/kryptos-secret-message-code-trnd/index.html) | no |
+| `dunin-2005-radio-layertwo.txt` | SarenaSix (Google Sites), "A Long Overdue Look At Kryptos": Elonka Dunin quotes from a BellCoreRadio interview on LAYERTWO | c. 2006 | [archive.org](https://web.archive.org/web/20151019073449/http://sites.google.com/site/sarenasix/home) | no |
+| `dunin-faq.txt` | Elonka Dunin, "Kryptos FAQ" | last modified 2020-07-13 | [elonka.com](https://elonka.com/kryptos/faq.html) | no |
+| `dunin-k3-pencil-and-paper.txt` | Elonka Dunin, "Elonka's Solution of Part 3 of Kryptos" | 2003-05 | [elonka.com](https://elonka.com/kryptos/part3.html) | no |
+| `dunin-main-page.txt` | Elonka Dunin, "Elonka's Kryptos Page" | undated | [elonka.com](https://elonka.com/kryptos/) | no |
+| `dunin-timeline.txt` | Elonka Dunin, "Cryptography Timeline - Kryptos, Antipodes, and the Cyrillic Projector" | undated | [elonka.com](https://elonka.com/kryptos/KryptosTimeline.html) | no |
+| `edtimes-2021.txt` | ED Times, "Kryptos – The Mystery That Not Even The Smartest People Have Been Able To Solve For 30 Years" | 2021-09-20 | [edtimes.in](https://edtimes.in/kryptos-the-mystery-that-not-even-the-smartest-people-have-been-able-to-solve-for-30-years/) | no |
+| `elonka_index-2025.txt` | Elonka Dunin, "Elonka's Kryptos Page" (later copy of the same page) | undated | [elonka.com](https://elonka.com/kryptos/) | no |
+| `friedman-1935-elementary-military-cryptography.txt` | Army Extension Courses, Special Text No. 165, *Elementary Military Cryptography*, 1935 edition (NSA Friedman Documents release) | 1935 | [archive.org](https://archive.org/details/41760369079950) | yes |
+| `friedman-1943-elementary-military-cryptography.txt` | Army Extension Courses, Special Text No. 165, *Elementary Military Cryptography*, 1943 edition (NSA Friedman Documents release) | 1943 | [archive.org](https://archive.org/details/41760629079976) | yes |
+| `ft-2025-roeder-jim-sanborns-secret.txt` | Oliver Roeder, FT Weekend Magazine, "Jim Sanborn's Secret" | 2025-08-16 | — | no |
+| `gillogly-1999-cypherpunks-post.txt` | Jim Gillogly, "Cypherpunk breaks CIA's crypto code in 1990 statue", fx-discuss list (forwarded by Corey Lindsly); Elonka Dunin's mirror | 1999-06-16 | [elonka.com](https://elonka.com/kryptos/mirrors/cypherpunks/1999/0930.html) | no |
+| `ilpost-2025.txt` | Il Post, "Ora è una società di criptovalute a custodire la soluzione a uno degli enigmi più famosi al mondo" | 2026-06-16 | [ilpost.it](https://www.ilpost.it/2026/06/16/kryptos-scultura-enigma-cia/) | no |
+| `kryptools-hints-compilation.txt` | Kryptools.com, "Kryptos Hints and Clues from Jim Sanborn and Ed Scheidt" | undated | [archive.org](http://web.archive.org/web/20250123072244/http://kryptools.com/hints.htm) | no |
+| `kryptos-group-2006-corrected-k2.txt` | The Kryptos Group, "Kryptos Part 2 Was Wrong" (press release) | 2006-04-19 | [elonka.com](https://elonka.com/kryptos/CorrectedK2Announcement.html) | no |
+| `kryptos-workshop-2015-scheidt-transcript.txt` | Klaus Schmeh, Cipherbrain, "Kryptos workshop transcript" (transcription by Richard Bean) | workshop 2015-10-24 | [scienceblogs.de](https://scienceblogs.de/klausis-krypto-kolumne/kryptos-workshop-transcript/) | no |
+| `kryptosproject-k0-morse.txt` | The Kryptos Project, "K0 Solution" | undated | [thekryptosproject.com](https://thekryptosproject.com/kryptos/k0-k5/k0.php) | no |
+| `kryptosproject-k5.txt` | The Kryptos Project, "K5 Solution" | undated | [thekryptosproject.com](https://thekryptosproject.com/kryptos/k0-k5/k5.php) | no |
+| `lewis-nsa-german-agent-systems-wwii.pdf` | Frank W. Lewis, "German Agent Systems of World War II", NSA Technical Journal (declassified) | undated | [nsa.gov](https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/tech-journals/german-agent-systems.pdf); [defense.gov](https://media.defense.gov/2021/Jul/02/2002755807/-1/-1/0/GERMAN-AGENT-SYSTEMS.PDF) | yes |
+| `lewis-nsa-german-agent-systems-wwii.txt` | Text extraction of the PDF above | undated | [nsa.gov](https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/tech-journals/german-agent-systems.pdf) | yes |
+| `mentalfloss-2025.txt` | Jake Rossen, Mental Floss, "The Artist Behind the CIA's Famous 'Kryptos' Puzzle Is Ready to Reveal the Solution—But There's a Catch" | 2025-08-21 | [mentalfloss.com](https://www.mentalfloss.com/art/cia-kryptos-puzzle-solution-for-sale) | no |
+| `nightly-2025.txt` | The Nightly, "The 'Kryptos' code at the CIA headquarters has gone unsolved for 35 years. Now it's up for sale" | 2025-08-15 | [thenightly.com.au](https://thenightly.com.au/culture/the-kryptos-code-at-the-cia-headquarters-has-gone-unsolved-for-35-years-now-its-up-for-sale-c-19690600) | no |
+| `npr-2005-scheidt-sanborn.txt` | NPR Morning Edition, "CIA Experts Still Spooked by Kryptos Puzzle" (transcript) | 2005-06-09 | [npr.org](https://www.npr.org/2005/06/09/4684720/cia-experts-still-spooked-by-kryptos-puzzle) | no |
+| `npr2020-2025.txt` | NPR, "A New (And Final) Clue To 'Kryptos,' A Long-Standing Puzzle" | 2020-01-29 | [npr.org](https://www.npr.org/2020/01/30/801323608/a-new-and-final-clue-to-kryptos-a-long-standing-puzzle) | no |
+| `nsa-1954-basic-cryptologic-glossary.txt` | NSA, *Basic Cryptologic Glossary* (Friedman Documents release) | 1954 | [nsa.gov](https://www.nsa.gov/news-features/declassified-documents/friedman-documents/assets/files/publications/FOLDER_234/41761109080025.pdf); [archive.org](https://archive.org/details/41761109080025) | yes |
+| `nsa-1955-basic-cryptologic-glossary-draft.txt` | NSA, *Basic Cryptologic Glossary*, draft (Friedman Documents release) | 1955 | [nsa.gov](https://www.nsa.gov/Portals/75/documents/news-features/declassified-documents/friedman-documents/publications/FOLDER_232/41760959080009.pdf); [archive.org](https://archive.org/details/41760959080009) | yes |
+| `nsa-2014-summary-of-previous-work.txt` | NSA, "The CIA Kryptos Sculpture: A summary of previous work and new revelations in working toward its complete solution" (declassified) | 2014 | [defense.gov](https://media.defense.gov/2021/Jul/12/2002760463/-1/-1/0/KRYPTOS_SUMMARY.PDF) | yes |
+| `nsa-foia-1992-2014-blackvault-compilation.txt` | NSA FOIA release on Kryptos (cases 66050A/B), documents 1992–2014, compiled by The Black Vault | 1992–2014 | [theblackvault.com](https://documents.theblackvault.com/documents/controversies/KRYPTOS-Statue-NSA.pdf) | yes |
+| `nyt_oct2025-2025.txt` | New York Times, "A C.I.A. Secret Kept for 35 Years Is Found in the Smithsonian's Vault" | 2025-10-16 | [nytimes.com](https://www.nytimes.com/2025/10/16/science/kryptos-cia-solution-sanborn-auction.html) | no |
+| `nyt-1999-markoff-gillogly.txt` | John Markoff, New York Times, "C.I.A.'s Artistic Enigma Yields All but Final Clue" | 1999-06-16 | [nytimes.com](https://archive.nytimes.com/www.nytimes.com/library/tech/99/06/biztech/articles/16code.html) | no |
+| `nyt-2010-berlin-clue.txt` | John Schwartz, New York Times, "A Crack in the Code Kryptos Is Keeping" | 2010-11-21 | [nytimes.com](https://www.nytimes.com/2010/11/21/us/21code.html) | no |
+| `nyt-2020-northeast-clue.txt` | John Schwartz and Jonathan Corum, New York Times, "This Sculpture Holds a Decades-Old C.I.A. Mystery. And Now, Another Clue." | 2020-01-29 | [nytimes.com](https://www.nytimes.com/interactive/2020/01/29/climate/kryptos-sculpture-final-clue.html) | no |
+| `openletter-2025.txt` | Jim Sanborn, open letter to Kryptos fans (on Elonka Dunin's site) | 2025-08 | [elonka.com](https://elonka.com/kryptos/OpenLetterAug2025.html) | no |
+| `paradigm_rules-2025.txt` | Paradigm, "Kryptos CTF Rules" | undated | [paradigm.xyz](https://paradigm.xyz/kryptos-ctf/rules) | no |
+| `paradigm-2025.txt` | Dan Robinson and Matt Huang, Paradigm, "Project Kryptos" | 2026-06-12 | [paradigm.xyz](https://www.paradigm.xyz/writing/kryptos) | no |
+| `rr_discovered-2025.txt` | RR Auction blog, "Kryptos K4: Discovered, Not Solved—Here's What Actually Happened" | 2025-10-23 | [rrauction.com](https://content.rrauction.com/kryptos-k4-discovered-not-solved-heres-what-actually-happened/) | no |
+| `rr_press-2025.txt` | RR Auction press release, "Jim Sanborn's Complete Kryptos Archive Sells for $962,500 at Auction" | 2025-11-21 | [rrauction.com](https://content.rrauction.com/jim-sanborns-complete-kryptos-archive-sells-for-962500-at-auction/) | no |
+| `rr_search-2025.txt` | RR Auction content site, search results for "kryptos" | undated | [rrauction.com](https://content.rrauction.com/?s=kryptos) | no |
+| `rr-2025.txt` | RR Auction, lot listing "The Complete Secrets of Kryptos: Jim Sanborn's Private Archive" | 2025 | [rrauction.com](https://www.rrauction.com/auctions/lot-detail/350761607302001-the-complete-secrets-of-kryptos-jim-sanborns-private-archive/) | no |
+| `rumkin_k5-2025.txt` | Rumkin.com, "K5 - An Additional Puzzle?" (Kryptos Tools and Notes) | undated | [rumkin.com](https://rumkin.com/reference/kryptos/k5/) | no |
+| `rumkin-k4.txt` | Rumkin.com, "K4 - Unsolved" (Kryptos Tools and Notes) | undated | [rumkin.com](https://rumkin.com/reference/kryptos/k4/) | no |
+| `rumkin-k5-dinner-notes.txt` | Rumkin.com, "K5 - An Additional Puzzle?" (same page as `rumkin_k5-2025.txt`) | undated | [rumkin.com](https://rumkin.com/reference/kryptos/k5/) | no |
+| `sanborn-1989-letter-and-webster-1990-cryptogram.txt` | *The Cryptogram* (American Cryptogram Association), vol. 57 no. 6: Kryptos dedication pages, with Sanborn's letter to Agency employees (1989-12-15) | 1991-11/12 | [thekryptosproject.com](https://www.thekryptosproject.com/kryptos/cia/thecryptogram/pdfs/Binder2.pdf) | no |
+| `schmeh-2019-cnn-documentary-making-of.txt` | Klaus Schmeh, Cipherbrain, "CNN documentary about Kryptos: A making-of report with many photographs" | 2019-03-15 | [scienceblogs.de](https://scienceblogs.de/klausis-krypto-kolumne/2019/03/15/cnn-documentary-about-kryptos-a-making-of-report-with-many-photographs/) | no |
+| `schmeh-2020-aj-jacobs-interview-and-bean-comment.txt` | Klaus Schmeh, Cipherbrain, "A.J. Jacobs' interview with Jim Sanborn" (with Richard Bean's comment) | 2020-10-03 | [scienceblogs.de](https://scienceblogs.de/klausis-krypto-kolumne/2020/10/03/a-j-jacobs-interview-with-jim-sanborn/) | no |
+| `schneier-2025.txt` | Bruce Schneier, Schneier on Security, "Jim Sanborn Is Auctioning Off the Solution to Part Four of the Kryptos Sculpture" | 2025-08-21 | [schneier.com](https://www.schneier.com/blog/archives/2025/08/jim-sanborn-is-auctioning-off-the-solution-to-part-four-of-the-kryptos-sculpture.html) | no |
+| `schridde-2017-numberworld-part2.txt` | NumberWorld blog (Schridde), "Kryptos - The Cipher (Part 2) - K4 abnormalities and solution attempts" | 2017-03 | [numberworld.blog](https://www.numberworld.blog/2017/03/kryptos-cipher-part-2.html) | no |
+| `schridde-2020-numberworld-part4.txt` | NumberWorld blog (Schridde), "Kryptos - The Cipher (Part 4) - Correctly positioned decryption of the word BERLIN" | 2020-07 | [numberworld.blog](https://www.numberworld.blog/2020/07/kryptos-cipher-part-4.html) | no |
+| `sciam_clues-2025.txt` | Dan Vergano, Scientific American, "CIA Kryptos Puzzle Creator Releases Final Clues" | 2025-11-12 | [scientificamerican.com](https://www.scientificamerican.com/article/cia-kryptos-puzzle-creator-releases-final-clues/) | no |
+| `sciam_oct2025-2025.txt` | Humberto Basilio, Scientific American, "A Solution to the CIA's Kryptos Code Is Found after 35 Years" | 2025-10-16 | [scientificamerican.com](https://www.scientificamerican.com/article/a-solution-to-the-cias-kryptos-code-is-found-after-35-years/) | no |
+| `scirealm-john-wilson-collected-hints.txt` | John Wilson, SciRealm, "John's Collected Kryptos Hints" | last modified 2019-01-15 | [scirealm.org](https://scirealm.org/KryptosHints.html) | no |
+| `stein-1999-cracking-the-courtyard-crypto.txt` | David Stein, "The Puzzle at CIA Headquarters: Cracking the Courtyard Crypto", *Studies in Intelligence* 43(1) (CIA release) | 1999 | [cia.gov](https://www.cia.gov/readingroom/document/06712772) | no |
+| `wapo-1999-schwartz-cracking-the-code.txt` | John Schwartz, Washington Post, "Cracking the Code of a CIA Sculpture" | 1999-07-19 | [washingtonpost.com](https://www.washingtonpost.com/wp-srv/national/daily/july99/kryptos19.htm) | no |
+| `wapo-2025-auction-announcement.txt` | Kelsey Ables, Washington Post, "The secret of CIA's 'Kryptos' sculpture, unsolved for 35 years, is up for sale" | 2025-08-14 | [washingtonpost.com](https://www.washingtonpost.com/entertainment/art/2025/08/14/kryptos-code-k4-solution-jim-sanborn-auction/) | no |
+| `wapo-2025.txt` | Kelsey Ables, Washington Post, same article as `wapo-2025-auction-announcement.txt` (second capture) | 2025-08-14 | [washingtonpost.com](https://www.washingtonpost.com/entertainment/art/2025/08/14/kryptos-code-k4-solution-jim-sanborn-auction/) | no |
+| `wikipedia-kryptos-wikitext-2026-10.txt` | Wikipedia, "Kryptos" (wikitext). Text licensed CC BY-SA 4.0, by Wikipedia contributors; authorship in the page history | captured 2026-10 | [wikipedia.org](https://en.wikipedia.org/wiki/Kryptos) | yes |
+| `wired-2005-alt-copy.txt` | Kim Zetter, Wired, "Questions for Kryptos' Creator" (second capture) | 2005-01-20 | [wired.com](https://www.wired.com/2005/01/questions-for-kryptos-creator/) | no |
+| `wired-2005-zetter-questions-for-kryptos-creator.txt` | Kim Zetter, Wired, "Questions for Kryptos' Creator" | 2005-01-20 | [wired.com](https://www.wired.com/2005/01/questions-for-kryptos-creator/) | no |
+| `wired-2006-typo-confounds-kryptos-sleuths.txt` | Kim Zetter, Wired, "Typo Confounds Kryptos Sleuths" | 2006-04-20 | [wired.com](https://www.wired.com/2006/04/typo-confounds-kryptos-sleuths/) | no |
+| `wired-2009-levy-mission-impossible.txt` | Steven Levy, Wired, "Mission Impossible: The Code Even the CIA Can't Crack" | 2009-04-20 | [wired.com](https://www.wired.com/2009/04/ff-kryptos/) | no |
+| `wired-2010-berlin-clue.txt` | Kim Zetter, Wired, "Kryptos Artist to Reveal Rare Clue to Baffling CIA Sculpture" | 2010-11-17 | [wired.com](https://www.wired.com/2010/11/kryptos-clue/) | no |
+| `wired-2013-nsa-cracked-kryptos.txt` | Kim Zetter, Wired, "Documents Reveal How the NSA Cracked the Kryptos Sculpture Years Before the CIA" | 2013-07-10 | [wired.com](https://www.wired.com/2013/07/nsa-cracked-kryptos-before-cia/) | no |
+| `wired-2013-stein-article-released.txt` | Kim Zetter, Wired, "CIA Releases Analyst's Fascinating Tale of Cracking the Kryptos Sculpture" | 2013-06-05 | [wired.com](https://www.wired.com/2013/06/analyst-who-cracked-kryptos/) | no |
+| `wired-2014-clock-clue.txt` | Kim Zetter, Wired, "Finally, a New Clue to Solve the CIA's Mysterious Kryptos Sculpture" | 2014-11-20 | [wired.com](https://www.wired.com/2014/11/second-kryptos-clue/) | no |
+| `wired2005-2025.txt` | Kim Zetter, Wired, "Questions for Kryptos' Creator" (third capture) | 2005-01-20 | [wired.com](https://www.wired.com/2005/01/questions-for-kryptos-creator/) | no |
+| `zona-2025.txt` | Zona Motel (Substack), "Kryptos K4 Uncovered": interview with Jarett Kobek and Richard Byrne | 2025-10-17 | [substack.com](https://zonamotel.substack.com/p/interview-kryptos-k4-uncovered-jarett) | no |

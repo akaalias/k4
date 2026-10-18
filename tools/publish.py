@@ -13,6 +13,9 @@ Left out of every commit:
   knowledge/sources/  the full texts, except the public-domain ones in SOURCES_PUBLIC and the
                       index, which says where to read every original
 
+After each push the repository's description is set to the current count of ways that do not work
+(experiments graded ruled-out or chance in grades.tsv).
+
 The author address becomes the GitHub noreply one. Filtering the same history the same way gives
 the same commits, so each publish fast-forwards k4; a change to the rules above changes every hash
 and needs --force once.
@@ -67,6 +70,15 @@ return filename
 """
 
 
+def description():
+    """'... found N ways that don't work': experiments whose outcome against the scrambled copies is
+    ruled-out (no setting gives the known letters) or chance (no better than the copies)."""
+    rows = [l.split("\t") for l in (ROOT / "grades.tsv").read_text().splitlines()]
+    col = rows[0].index("outcome")
+    n = sum(1 for r in rows[1:] if len(r) > col and r[col] in ("ruled-out", "chance"))
+    return f"Autonomous Research with AI: we haven't solved Kryptos K4 yet, but we've found {n} ways that don't work."
+
+
 def run(*cmd, cwd=None):
     subprocess.run(cmd, cwd=cwd, check=True)
 
@@ -85,6 +97,7 @@ def publish_once(dry_run, force):
             print(f"would publish {head[:7]}: {n} commits, .git {size}")
             return head
         run("git", "push", "-q", *(["--force"] if force else []), PUBLIC, "HEAD:main", cwd=work)
+        subprocess.run(["gh", "repo", "edit", "akaalias/k4", "--description", description()], check=False)
         print(f"published {head[:7]} to k4 ({n} commits)")
     return head
 

@@ -9,6 +9,7 @@ experiments/*/result.json, experiments/*/experiment.md, results.tsv,
 champion.json, families.md and the clue register. Style follows STYLE.md.
 """
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -746,7 +747,9 @@ def social_tags():
     title stays under 60 characters and the description under 125, so previews do not cut them."""
     title = "Can an AI research loop find the secret of Kryptos K4?"
     desc = f"Not solved yet, but {ways_that_dont_work()} ways that don't work, each on the record: an AI agent's cipher experiments on K4."
-    img, alt = f"{SITE}/share.png", "K4's 97 carved letters, the 24 known places in red, each carried by a curve to where one ruled-out route puts it."
+    # the version stamp changes with the card, so previews that cache by URL fetch a redrawn one
+    v = hashlib.md5((ROOT / "assets" / "share.png").read_bytes()).hexdigest()[:8]
+    img, alt = f"{SITE}/share.png?v={v}","K4's 97 carved letters, the 24 known places in red, each carried by a curve to where one ruled-out route puts it."
     t = lambda k, v, a="property": f'<meta {a}="{k}" content="{esc(v)}">'
     return "".join([t("description", desc, "name"), t("og:type", "website"), t("og:site_name", "Kryptos K4 autoresearch"),
                     t("og:title", title), t("og:description", desc), t("og:url", f"{SITE}/"), t("og:image", img),

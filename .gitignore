@@ -14,3 +14,7 @@ Kryptos Blender Model/
 
 # headless loop logs (tools/run_loop.sh); the transcripts are synced separately
 logs/
+
+# tools/publish.py
+.publish.lock
+.publish.again

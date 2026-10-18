@@ -16,7 +16,7 @@ you keep working on anything else:
 ```
 tools/run_loop.sh                    # interactive: you watch it work and approve its commands
 tools/run_loop.sh --unattended       # runs on its own with no permission prompts; log in logs/
-tools/run_loop.sh --stop-after F8    # stop once that family is closed or blocked (default F6)
+tools/run_loop.sh --stop-after F8    # stop once that family is closed or blocked (default F9, the last)
 ```
 
 With `--unattended` the terminal shows one line per step: the phase, the experiment being written, each finished experiment with its decision, and the elapsed time; the full stream goes to `logs/`. To watch a running loop from another shell: `uv run python tools/loop_watch.py --follow logs/loop-<time>.log`.
@@ -38,3 +38,18 @@ uv run python run_experiment.py     # runs attack.py once, writes the record, co
 ```
 uv run python tools/sync_transcripts.py --commit
 ```
+
+**Publishing.** This repository is private. The public one, [akaalias/k4](https://github.com/akaalias/k4), and its
+site, [alexisrondeau.me/k4](https://alexisrondeau.me/k4/), are regenerated from it by `tools/publish.py`: a fresh clone
+of main with the transcripts, research notes, design files, the 3D model and the copyrighted source texts removed from
+every commit, and the author address replaced by the GitHub noreply one. `run_experiment.py` starts it in the background
+after every experiment and `tools/run_loop.sh` once more when a run ends; its output goes to `logs/publish.log`. GitHub
+Actions in k4 then rebuilds the site (`dashboard.py --export`). To publish by hand, or to check first:
+
+```
+uv run python tools/publish.py --dry-run   # filter into a temporary folder and report, push nothing
+uv run python tools/publish.py
+```
+
+What is left out is listed at the top of `tools/publish.py`. Changing that list changes every public commit hash, so
+the next publish then needs `--force`.

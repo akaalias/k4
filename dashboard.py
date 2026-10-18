@@ -27,6 +27,8 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent
 EXPERIMENTS = ROOT / "experiments"
 STATIC = ROOT / "dashboard"
+MODEL = ROOT / "assets" / "kryptos.glb"     # Bret L Bowen's model; local only, see .gitignore
+EXPORT = {}                                  # set by export(): {"base": "/k4", "date": "..."} for the public site
 
 CSS = """
 :root{--paper:#fffff8;--ink:#111111;--muted:#6b6a60;--faint:#9b998c;--rule:#d9d5c3;--rule-soft:#ece9da;
@@ -729,6 +731,7 @@ def page_foot(html_text):
 def page(title, body, active="", refresh=True):
     # reload only when the record changes: poll a version stamp so the 3D model and a reader's
     # place on the page survive quiet periods
+    refresh = refresh and not EXPORT
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
     nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/experiments", "Experiments"), ("/lineage", "Lineage"), ("/learnings", "Learnings")))
@@ -738,7 +741,7 @@ def page(title, body, active="", refresh=True):
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
 <nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
-<div class="foot"><span class="dot"></span>Rendered from the record. Reloads when a new experiment lands.</div>{JS}{GL_JS}</body></html>"""
+<div class="foot"><span class="dot"></span>{f"Rendered from the record on {EXPORT['date']}; updated after every experiment." if EXPORT else "Rendered from the record. Reloads when a new experiment lands."}</div>{JS}{GL_JS}</body></html>"""
 
 
 def crib_strip():
@@ -1087,10 +1090,13 @@ def what_we_look_for():
     ]
     html = "".join(f'<div class="explain-col"><h4>{esc(h)}</h4><p>{crib_cells(esc(t))}</p></div>' for h, t in cols)
     sub = lambda n, t, d: f'<div class="subsec"><b>1.{n}</b><h3>{t}</h3></div><p class="subsec-sub">{d}</p>'
-    return (sub(1, "The Kryptos sculpture by Jim Sanborn", "Hover a key below the model, or a plate, to see which message it carries.") + sculpture_block()
-            + sub(2, "In context: The history of the sculpture", "The history of Kryptos, from the CIA's headquarters to today. The first three messages hang off 1999, when their solutions went public: carved letters in, readable English out, which is what solved looks like.")
+    # the 3D model may not be redistributed (only its author's zip may), so the public site has none
+    model = MODEL.exists() and not EXPORT
+    k = 1 if model else 0
+    return ((sub(1, "The Kryptos sculpture by Jim Sanborn", "Hover a key below the model, or a plate, to see which message it carries.") + sculpture_block() if model else "")
+            + sub(k + 1, "In context: The history of the sculpture", "The history of Kryptos, from the CIA's headquarters to today. The first three messages hang off 1999, when their solutions went public: carved letters in, readable English out, which is what solved looks like.")
             + history_timeline()
-            + sub(3, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel
+            + sub(k + 2, "The fourth message, as the loop sees it", "In: the 97 carved letters of K4, laid out as on the copper. Out: what every candidate must produce.") + panel
             + f'<div class="explain-row">{html}</div>')
 
 
@@ -2621,6 +2627,37 @@ class H(BaseHTTPRequestHandler):
         pass
 
 
+def export(out, base=""):
+    """Write every page as a static site under out/ (a page at /x becomes out/x/index.html), with
+    every root-relative link moved under base, for GitHub Pages at alexisrondeau.me/k4/."""
+    import shutil
+    from datetime import datetime, timezone
+    EXPORT.update(base=base, date=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
+    rows = load_results()
+    paths = (["/", "/experiments", "/lineage", "/learnings", "/families", "/priorities", "/pivots", "/record",
+              "/notebook", "/clues", "/assumptions", "/glossary", "/program"]
+             + [p for p in FAM_SECTIONS if p != "/pivots"]
+             + [f"/pivot/{p['id']}" for p in load_pivots()] + [f"/exp/{r['tag']}" for r in rows])
+    rebase = lambda h: re.sub(r"""(["'])/(?=exp/|pivot/|assets/)""", lambda m: m.group(1) + base + "/",
+                              re.sub(r'((?:href|src)=")/(?!/)', lambda m: m.group(1) + base + "/", h))
+    out = Path(out)
+    if out.exists():
+        shutil.rmtree(out)
+    for p in paths:
+        html = route(p)
+        if html is None:
+            raise SystemExit(f"no page at {p}")
+        f = out / p.strip("/") / "index.html"
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text(rebase(html))
+    (out / "assets").mkdir(exist_ok=True)
+    for a in (ROOT / "assets").iterdir():
+        if a != MODEL and a.suffix == ".js":
+            (out / "assets" / a.name).write_text(rebase(a.read_text()))
+    (out / ".nojekyll").write_text("")
+    print(f"wrote {len(paths)} pages to {out}")
+
+
 def build():
     STATIC.mkdir(exist_ok=True)
     (STATIC / "index.html").write_text(overview())
@@ -2634,9 +2671,13 @@ def build():
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--build", action="store_true")
+    ap.add_argument("--export", metavar="DIR", help="write the whole site as static pages to DIR")
+    ap.add_argument("--base", default="", help="with --export: the path the site is served under, e.g. /k4")
     ap.add_argument("--port", type=int, default=8765)
     a = ap.parse_args()
-    if a.build:
+    if a.export:
+        export(a.export, a.base.rstrip("/"))
+    elif a.build:
         build()
     else:
         print(f"dashboard at http://127.0.0.1:{a.port}")

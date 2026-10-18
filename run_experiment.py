@@ -178,6 +178,11 @@ def main():
     if not args.no_commit:
         subprocess.run(["git", "add", str(outdir), str(RESULTS), str(CHAMPION) if CHAMPION.exists() else str(RESULTS)], cwd=ROOT, check=False)
         subprocess.run(["git", "commit", "-q", "-m", f"exp {tag}: {decision} ({len(passed)}/{len(scored)} passed gates, best cribs {best_hits}/24)\n\n{meta['title']}\nFamily: {meta['family']}\nParent: {meta['parent'] or '-'}\nChanged: {meta['changed']}"], cwd=ROOT, check=False)
+        # refresh the public repository and site in the background (tools/publish.py, issue #66)
+        (ROOT / "logs").mkdir(exist_ok=True)
+        with open(ROOT / "logs" / "publish.log", "a") as log:
+            subprocess.Popen(["uv", "run", "python", str(ROOT / "tools" / "publish.py")], cwd=ROOT,
+                             stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
 
 
 def steps(text):

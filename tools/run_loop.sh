@@ -35,6 +35,8 @@ if [ "$mode" = unattended ]; then
   claude -p "$prompt" --dangerously-skip-permissions --output-format stream-json --verbose 2>&1 \
     | tee "$log" | uv run python -u tools/loop_watch.py
   echo "Loop finished; full log: $log"
+  # the record commits that followed the last experiment go public too (tools/publish.py)
+  uv run python tools/publish.py >> logs/publish.log 2>&1 || echo "publish failed; see logs/publish.log"
 else
   exec claude "$prompt"
 fi

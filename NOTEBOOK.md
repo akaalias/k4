@@ -5,6 +5,39 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-19
+
+Stage 2, step 1: a positive control for every closed item (A3, issue #73). The queue is empty: every row of the table
+is passed, cited to an own plant, not applicable, or failed for lack of power with the item blocked.
+
+| Family | Controls | Outcome |
+|---|---|---|
+| F1 | 16 run today, 4 own plants | all pass; F1/2 blocked above period 53 |
+| F6 | 36 | all pass |
+| F12 | 6 | F12.5 passes, F12.7 cited; F12.2, F12.4, F12.6 no power, blocked; F12.3 not applicable |
+| F3, F2, F4, F10, F11, F8, F5, F9 | 54 run, 14 own plants, F4.4 cited | all pass |
+
+**What changed.**
+- **F1/2 is blocked above period 53.** The failed row from 2026-10-18 (C-F1-2b) was the check, not the search. Judged the way 0034 judged K4, against its own shuffled copies, a planted text is told apart at 53 (margin 0.74 against at most 0.34 for an unplanted period). At 80 it is not (0.03 against 0.12). This is 0136's bound in practice.
+- **F12.2, F12.4 and F12.6 move from closed to blocked.** Their tests do not see planted structure of the kind they look for. A period-7 key gives p 0.004 and is not outside 1,000 shuffles; real probable-word placements leave a planted text below its copies. Their "nothing found" says little.
+- **New item F5.3,** found while writing C-F5-1d: 0054 tested Gromark growth rules only up to base 15 on its alphabets, so bases 16-25 there are untested.
+
+**Mistakes.**
+- **Concurrent runs.** The helpers I started to write specs ran short controls side by side, load average 89, while hour-long clock-bound climbs ran. Stopped; the climbs still finished.
+- **Three specs judged wrongly and were rerun:**
+  - C-F1.6: 0147 lists only 200 fits.
+  - C-F1.6c: its plant found no place for seed 7373.
+  - C-F6-2: wrong keys into 0081's counts. My first fix was also wrong: levels are ints inside the run and strings in JSON.
+- **Two checks were stricter than the attack's own verdict** and were matched to it, with the first judgement kept as result.failed-1.json: C-F1-2 (95/97 letters required) and C-F4-1 (the reading required where 0040 judges by cubes).
+- **The opposite case, one check looser than the evidence:** C-F1-2d first passed by a margin smaller than an unplanted period's. It was re-judged as no power, with result.passed-1.json kept.
+
+**Weaker identifications, recorded in the table.**
+- C-F6.9 and C-F6.9b by the top survivor's check count.
+- C-F6-5b by variant only.
+- C-F6.7: copies counted to 8 checks only.
+- C-F4-1: cubes found, reading not returned (5,000-cube cap).
+- Several own plants report counts, not the planted setting: 0187, 0191, 0192, C-F5-1d.
+
 ## 2026-10-17
 
 F1 continued (ticket #14), after the run that started on 2026-10-16 (0136-0153 are recorded there).

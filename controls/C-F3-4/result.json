@@ -1,0 +1,420 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "SLOWWORKPAINFULLYSLOWEASTNORTHEASTNGATTHATFORONEFELTALLTHETIMEABERLINCLOCKOFRESPONSIBILITYEVERYEX",
+  "key": "({'kind': 'k3rule', 'a': 10, 'b': 3}, 'order B', 8, 'kry', 1, [19, 3, 10, 18, 8, 10, 12, 14], [4, 24, 4, 10, 25, 15, 14, 8, 14, 17, 6, 16, 11])",
+  "ciphertext": "BTRAITOYMXPMSXIYNUTNIHCAGNLILARMNIQQVBSEWUFCKXMFTPCQRBHPTNZYYGVIOGDRVPCOIZCLWCSXGIAUVSEVZTIPCBVRP"
+ },
+ "passed": true,
+ "why": "cases with 5+ checks 2 (40 listed), copies at 5+ [0, 0, 0, 0, 0, 3, 0, 0, 0, 0]; the planted route/order/width: True; routes done 27754 of 27754",
+ "bounds": {
+  "family": "key = column letter of one key + row letter of another on a grid of width 2-48, no move or after/before 0080's moves",
+  "distinct_routes": 27754,
+  "routes_done": 27754,
+  "widths": [
+   2,
+   48
+  ],
+  "cases_per_structure": "alphabet std or KRYPTOS x sign +1/-1 = 4",
+  "no_move_by_width": {
+   "2": {
+    "checks": 10,
+    "consistent": []
+   },
+   "3": {
+    "checks": 13,
+    "consistent": []
+   },
+   "4": {
+    "checks": 13,
+    "consistent": []
+   },
+   "5": {
+    "checks": 14,
+    "consistent": []
+   },
+   "6": {
+    "checks": 13,
+    "consistent": []
+   },
+   "7": {
+    "checks": 14,
+    "consistent": []
+   },
+   "8": {
+    "checks": 11,
+    "consistent": []
+   },
+   "9": {
+    "checks": 12,
+    "consistent": []
+   },
+   "10": {
+    "checks": 11,
+    "consistent": []
+   },
+   "11": {
+    "checks": 9,
+    "consistent": []
+   },
+   "12": {
+    "checks": 9,
+    "consistent": []
+   },
+   "13": {
+    "checks": 8,
+    "consistent": []
+   },
+   "14": {
+    "checks": 9,
+    "consistent": []
+   },
+   "15": {
+    "checks": 7,
+    "consistent": []
+   },
+   "16": {
+    "checks": 5,
+    "consistent": []
+   },
+   "17": {
+    "checks": 5,
+    "consistent": []
+   },
+   "18": {
+    "checks": 6,
+    "consistent": []
+   },
+   "19": {
+    "checks": 8,
+    "consistent": []
+   },
+   "20": {
+    "checks": 10,
+    "consistent": []
+   },
+   "21": {
+    "checks": 10,
+    "consistent": []
+   },
+   "22": {
+    "checks": 7,
+    "consistent": []
+   },
+   "23": {
+    "checks": 5,
+    "consistent": []
+   },
+   "24": {
+    "checks": 3,
+    "consistent": []
+   },
+   "25": {
+    "checks": 2,
+    "consistent": []
+   },
+   "31": {
+    "checks": 1,
+    "consistent": []
+   },
+   "32": {
+    "checks": 1,
+    "consistent": []
+   },
+   "33": {
+    "checks": 2,
+    "consistent": []
+   },
+   "34": {
+    "checks": 4,
+    "consistent": []
+   },
+   "35": {
+    "checks": 5,
+    "consistent": []
+   },
+   "36": {
+    "checks": 6,
+    "consistent": []
+   },
+   "37": {
+    "checks": 7,
+    "consistent": []
+   },
+   "38": {
+    "checks": 8,
+    "consistent": []
+   },
+   "39": {
+    "checks": 9,
+    "consistent": []
+   },
+   "40": {
+    "checks": 10,
+    "consistent": []
+   },
+   "41": {
+    "checks": 10,
+    "consistent": []
+   },
+   "42": {
+    "checks": 10,
+    "consistent": []
+   },
+   "43": {
+    "checks": 9,
+    "consistent": []
+   },
+   "44": {
+    "checks": 8,
+    "consistent": []
+   },
+   "45": {
+    "checks": 7,
+    "consistent": []
+   },
+   "46": {
+    "checks": 6,
+    "consistent": []
+   },
+   "47": {
+    "checks": 5,
+    "consistent": []
+   },
+   "48": {
+    "checks": 4,
+    "consistent": []
+   }
+  },
+  "structures_with_checks": 2313108,
+  "structures_by_checks": {
+   "1": 162177,
+   "2": 184989,
+   "3": 163454,
+   "4": 207134,
+   "5": 302338,
+   "6": 209390,
+   "7": 207119,
+   "8": 184905,
+   "9": 196956,
+   "10": 210841,
+   "11": 86156,
+   "12": 45413,
+   "13": 93355,
+   "14": 58863,
+   "15": 18
+  },
+  "k4_at_least": {
+   "1": 26347,
+   "2": 1150,
+   "3": 42,
+   "4": 4,
+   "5": 2,
+   "6": 1,
+   "7": 1,
+   "8": 1
+  },
+  "controls_at_least": {
+   "1": [
+    25770,
+    26001,
+    26336,
+    26084,
+    26184,
+    25972,
+    25847,
+    26119,
+    25739,
+    26036
+   ],
+   "2": [
+    1088,
+    1087,
+    1188,
+    1141,
+    1268,
+    1144,
+    1163,
+    1069,
+    1104,
+    1154
+   ],
+   "3": [
+    47,
+    56,
+    35,
+    45,
+    37,
+    26,
+    27,
+    38,
+    40,
+    31
+   ],
+   "4": [
+    2,
+    1,
+    1,
+    1,
+    4,
+    5,
+    0,
+    2,
+    1,
+    2
+   ],
+   "5": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "6": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "7": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "8": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "check_levels_outside_control_range": [
+   1,
+   6,
+   7,
+   8
+  ],
+  "k4_cases_with_5_or_more_checks": [
+   {
+    "route": {
+     "kind": "k3rule",
+     "a": 10,
+     "b": 3
+    },
+    "order": "A",
+    "width": 37,
+    "alphabet": "kry",
+    "sign": 1,
+    "checks": 5,
+    "column_key": [
+     0,
+     null,
+     0,
+     2,
+     null,
+     2,
+     4,
+     null,
+     13,
+     24,
+     null,
+     23,
+     8,
+     null,
+     4,
+     null,
+     null,
+     12,
+     null,
+     null,
+     2,
+     null,
+     null,
+     4,
+     null,
+     null,
+     6,
+     null,
+     null,
+     8,
+     null,
+     null,
+     16,
+     null,
+     null,
+     0,
+     0
+    ],
+    "row_key": [
+     20,
+     14,
+     16
+    ]
+   },
+   {
+    "route": {
+     "kind": "k3rule",
+     "a": 10,
+     "b": 3
+    },
+    "order": "B",
+    "width": 8,
+    "alphabet": "kry",
+    "sign": 1,
+    "checks": 11,
+    "column_key": [
+     0,
+     10,
+     17,
+     25,
+     15,
+     17,
+     19,
+     21
+    ],
+    "row_key": [
+     null,
+     null,
+     23,
+     3,
+     18,
+     null,
+     null,
+     1,
+     7,
+     10
+    ]
+   }
+  ],
+  "n_k4_cases_5_plus": 2,
+  "controls": "10 shuffled coppers (seed 87), identical search"
+ },
+ "notes": "No move: widths consistent on K4: none (width 7 has 14 checks). With moves: 27,754 routes x widths 2-48 x 2 orders, 2,313,108 structures x 4 cases. K4 consistent with >= c checks, c = 1..8: [26347, 1150, 42, 4, 2, 1, 1, 1]; controls max [26336, 1268, 56, 5, 3, 0, 0, 0], min [25739, 1069, 26, 0, 0, 0, 0, 0]. Levels outside the control range: [1, 6, 7, 8]. K4 cases with 5+ checks: 2.",
+ "candidates": [],
+ "seconds": 87.2
+}

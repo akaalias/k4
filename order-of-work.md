@@ -125,17 +125,17 @@ Rules:
 | C-F12.5 | F12.5 | Parts with their own keys (A7): K4 split where F12.2 or F12.4 finds a break, or at the... | 0171 | passed | C-F12.5 |
 | C-F12.6 | F12.6 | Probable words, his breakthrough (THE, then KNOW): common English words and the words... | 0172 (before: 0095 dragged riddle words at the live periods only) | FAILED: no power; item blocked | C-F12.6: two free alphabets at 8, the plant's consistent placements 481 against copies 518-780: true placements do not raise the count in an undecided cell |
 | C-F12.7 | F12.7 | His K1-K3 method as such: every shift of each column written out, columns scored by... | 0005, 0034 | passed | cites C-F1-1 (0005's search, which the item rests on) |
-| C-F3-1 | F3/1 | Two words added, both from the puzzle, or one from the dictionary | 0014, 0043, 0059, 0115 | open | - |
-| C-F3-2 | F3/2 | A word plus digits from the story (coordinates, dates, counts) | 0024, 0038 | open | - |
-| C-F3-3 | F3/3 | A word plus the misspelt or raised letters | 0061 | open | - |
-| C-F3-4 | F3/4 | Column word plus row key | 0087, 0088 | open | - |
-| C-F3.1 | F3.1 | Combiners other than addition (subtraction both ways is done; table lookup through a... | 0173, 0174 | open | - |
-| C-F3.2 | F3.2 | Numeric second parts from the Morse (E counts) and the plate layout (line lengths) | 0175 (before: 0038 did 17 digit readings) | open | - |
-| C-F3.3 | F3.3 | Direction words as numbers (A14(b)): east-northeast as a bearing (67.5 degrees: 6, 7, 5... | 0176 (before: 0072 used direction words as keyword alphabets) | open | - |
-| C-F3.4 | F3.4 | Three or more stacked tables (US 6,075,865 with N = 3; Sanborn's "triple matrixes") | 0177 (before: 0043, 0059 two passes) | open | - |
-| C-F3.5 | F3.5 | The misspelt letters' positions as indices (Q in IQLUSION, U in UNDERGRUUND, A in... | 0178 (before: 0061 used the letters) | open | - |
-| C-F3.6 | F3.6 | The Weltzeituhr's rotating ring as an offset over 26 letters (C12(b)): 24 zones, the... | 0179 (before: 0052) | open | - |
-| C-F3.7 | F3.7 | "Point" read as the decimal point in K2's "six point five", as the place on the... | 0180 (before: 0072) | open | - |
+| C-F3-1 | F3/1 | Two words added, both from the puzzle, or one from the dictionary | 0014, 0043, 0059, 0115 | passed | C-F3-1 (0115), C-F3-1b (0014), C-F3-1c (0059; 0043 is the same code on other alphabets) |
+| C-F3-2 | F3/2 | A word plus digits from the story (coordinates, dates, counts) | 0024, 0038 | passed | C-F3-2 (0038; 0024 is the same code) |
+| C-F3-3 | F3/3 | A word plus the misspelt or raised letters | 0061 | passed | C-F3-3 |
+| C-F3-4 | F3/4 | Column word plus row key | 0087, 0088 | passed | C-F3-4 (0087, with K3's rule as the move), C-F3-4b (0088) |
+| C-F3.1 | F3.1 | Combiners other than addition (subtraction both ways is done; table lookup through a... | 0173, 0174 | passed, own plant | 0174: two plants through the full search, found 2/2; 0173: three plants decided in their own cell by the same decide(), live 3/3 (sliced to the cell) |
+| C-F3.2 | F3.2 | Numeric second parts from the Morse (E counts) and the plate layout (line lengths) | 0175 (before: 0038 did 17 digit readings) | passed | 0175's own plant (repeating readings) and C-F3.2b (the one-number-per-place branch) |
+| C-F3.3 | F3.3 | Direction words as numbers (A14(b)): east-northeast as a bearing (67.5 degrees: 6, 7, 5... | 0176 (before: 0072 used direction words as keyword alphabets) | passed, own plant | 0176: 6 7 5 plus SHADOW through the same scan, found |
+| C-F3.4 | F3.4 | Three or more stacked tables (US 6,075,865 with N = 3; Sanborn's "triple matrixes") | 0177 (before: 0043, 0059 two passes) | passed, own plant | 0177: three plants decided in their own cell by the same decide(), live 3/3 (sliced to the cell) |
+| C-F3.5 | F3.5 | The misspelt letters' positions as indices (Q in IQLUSION, U in UNDERGRUUND, A in... | 0178 (before: 0061 used the letters) | passed, own plant | 0178: 2 8 5 plus SHADOW, found |
+| C-F3.6 | F3.6 | The Weltzeituhr's rotating ring as an offset over 26 letters (C12(b)): 24 zones, the... | 0179 (before: 0052) | passed | 0179's own plant and C-F3.6b (the ring turning through the text, the other branch) |
+| C-F3.7 | F3.7 | "Point" read as the decimal point in K2's "six point five", as the place on the... | 0180 (before: 0072) | passed, own plant | 0180: the four ? plus SHADOW, found |
 | C-F2-1 | F2/1 | Reversal, regular nulls, prefix nulls, affine masks, doublets as nulls, nulls by letter | 0023, 0057, 0074, 0075 | open | - |
 | C-F2-2 | F2/2 | Message written along grid paths | 0092 | open | - |
 | C-F2.1 | F2.1 | Forced fragments at periods 24-25 after letter strike-outs not matched against words | 0181 (before: 0057) | open | - |

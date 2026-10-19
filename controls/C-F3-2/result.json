@@ -1,0 +1,251 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "RCONSISTINGOFFOURSEPAEASTNORTHEASTORSLETPROPERINLAIDWITHGOLDANDBERLINCLOCKTHBORDERBANDSANDBRACESO",
+  "key": "{'word': 'PALIMPSEST', 'digits': '9111989', 'o': 3, 's': -1, 'ka': 'kry', 'pa': 'kry', 'ca': 'std', 'm': 'beau'}",
+  "ciphertext": "BPENDNZGIDHTECMZXWMAVVBBFBAJBHKRCKMBRMMRZFLDZTIROWFPLRNOSXHLNNGGYUGNMULTAGFOXFWMJXIHYKSVETUFBYYOA"
+ },
+ "passed": true,
+ "why": "matches 1 (first 50 listed); shortest surviving word length 10; candidates with the planted word, digits, offset and sign: 1",
+ "bounds": {
+  "family": "word key plus known digit key (K2 coordinates), additive",
+  "digit_readings": {
+   "dedication 3 Nov 1990, dmy": "3111990",
+   "dedication, ymd": "19901103",
+   "dedication, dmy padded": "03111990",
+   "Wall fell 9 Nov 1989, dmy": "9111989",
+   "Wall, ymd": "19891109",
+   "Carter breach 26 Nov 1922, dmy": "26111922",
+   "Carter, ymd": "19221126",
+   "1990": "1990",
+   "1989": "1989",
+   "1986": "1986",
+   "1922": "1922",
+   "Morse E-padding counts 5 10 1 7 9": "510179",
+   "Morse counts reversed": "971015",
+   "letter counts 63 372 337 97": "6337233797",
+   "97": "97",
+   "98": "98",
+   "97 and 24 known": "9724"
+  },
+  "word_lengths": "2-30",
+  "alphabets": "plain and cipher in {std, kry}; word read in std or kry",
+  "cases": 46400,
+  "survivors_by_word_length": {
+   "10": 1,
+   "20": 1,
+   "25": 2,
+   "26": 99,
+   "27": 1600,
+   "28": 1600,
+   "29": 1600,
+   "30": 103
+  },
+  "shortest_surviving_word_length": 10,
+  "best_forced_words": [
+   {
+    "score": -4.786,
+    "length": 25,
+    "reading": "Wall fell 9 Nov 1989, dmy",
+    "offset": 3,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "PSESTPALI....IMPSESTPALIM"
+   },
+   {
+    "score": -4.826,
+    "length": 27,
+    "reading": "Wall fell 9 Nov 1989, dmy",
+    "offset": 3,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "ESTPALI..IMPSESTPALI.ALIMPS"
+   },
+   {
+    "score": -4.835,
+    "length": 20,
+    "reading": "Wall fell 9 Nov 1989, dmy",
+    "offset": 3,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": ".ALIMPSESTPALI......"
+   },
+   {
+    "score": -4.851,
+    "length": 30,
+    "reading": "Wall fell 9 Nov 1989, dmy",
+    "offset": 3,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "PALIMPSESTPALI.......ALIMPSEST"
+   },
+   {
+    "score": -4.873,
+    "length": 10,
+    "reading": "Wall fell 9 Nov 1989, dmy",
+    "offset": 3,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "PALIMPSEST"
+   },
+   {
+    "score": -4.895,
+    "length": 28,
+    "reading": "Wall fell 9 Nov 1989, dmy",
+    "offset": 3,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "STPALI.IMPSESTPALI...ALIMPSE"
+   },
+   {
+    "score": -5.187,
+    "length": 29,
+    "reading": "Wall fell 9 Nov 1989, dmy",
+    "offset": 3,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "TPALIIMPSESTPALI.....ALIMPSES"
+   },
+   {
+    "score": -5.893,
+    "length": 28,
+    "reading": "dedication, dmy padded",
+    "offset": 4,
+    "s": 1,
+    "plain": "kry",
+    "cipher": "kry",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "FZDAHU.QFGUBERABIT...THGIMPL"
+   },
+   {
+    "score": -5.894,
+    "length": 28,
+    "reading": "dedication 3 Nov 1990, dmy",
+    "offset": 4,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "HTURCI.WMUKPSTEACC...ILAFUSE"
+   },
+   {
+    "score": -5.924,
+    "length": 29,
+    "reading": "1990",
+    "offset": 2,
+    "s": -1,
+    "plain": "std",
+    "cipher": "std",
+    "mode": "vig",
+    "word_alphabet": "std",
+    "word": "AHATRODDWOISBOHW.....RCSVONBR"
+   },
+   {
+    "score": -5.933,
+    "length": 28,
+    "reading": "dedication, ymd",
+    "offset": 1,
+    "s": 1,
+    "plain": "kry",
+    "cipher": "kry",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "EYBASU.QTGTADTOBAT...AFGAMFJ"
+   },
+   {
+    "score": -5.958,
+    "length": 26,
+    "reading": "1986",
+    "offset": 3,
+    "s": -1,
+    "plain": "kry",
+    "cipher": "std",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "HMEVTSHI...VIVSDETESIALIIU"
+   },
+   {
+    "score": -5.993,
+    "length": 29,
+    "reading": "Morse E-padding counts 5 10 1 7 9",
+    "offset": 5,
+    "s": -1,
+    "plain": "std",
+    "cipher": "std",
+    "mode": "vig",
+    "word_alphabet": "kry",
+    "word": "AIVELOUDTDKMRFAR.....LYJUNGMC"
+   },
+   {
+    "score": -6.008,
+    "length": 27,
+    "reading": "dedication, ymd",
+    "offset": 1,
+    "s": 1,
+    "plain": "kry",
+    "cipher": "kry",
+    "mode": "beau",
+    "word_alphabet": "kry",
+    "word": "JEYBASU..QTGTADTOBAT.AFGAMF"
+   },
+   {
+    "score": -6.029,
+    "length": 27,
+    "reading": "Morse counts reversed",
+    "offset": 3,
+    "s": -1,
+    "plain": "std",
+    "cipher": "std",
+    "mode": "vig",
+    "word_alphabet": "kry",
+    "word": "RIRSMIK..HRTUSTRASXW.KBDFIL"
+   }
+  ],
+  "shuffled_control_best": [
+   -5.808,
+   -5.877,
+   -5.854,
+   -5.717,
+   -5.685,
+   -5.673,
+   -5.727,
+   -5.819,
+   -5.818,
+   -5.589
+  ],
+  "vocab_matches": 1
+ },
+ "notes": "46400 cases; shortest surviving word length 10; best forced word -4.786 vs shuffled best -5.589; 1 matches.",
+ "candidates": [
+  {
+   "plaintext": "RCONSISTINGOFFOURSEPAEASTNORTHEASTORSLETPROPERINLAIDWITHGOLDANDBERLINCLOCKTHBORDERBANDSANDBRACESO",
+   "key": "{'word': 'PALIMPSEST', 'digits': '9111989', 'o': 3, 's': -1, 'ka': 'kry', 'pa': 'kry', 'ca': 'std', 'm': 'beau'}",
+   "notes": null
+  }
+ ],
+ "seconds": 2.0
+}

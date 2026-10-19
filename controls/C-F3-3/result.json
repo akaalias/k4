@@ -1,0 +1,48 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "ILKWINEANDHONEYONTHETEASTNORTHEASTTUNATELYWEHADNEITHERWINENORHOBERLINCLOCKWEREUNABLETOCARRYOUTTHE",
+  "key": "{'pa': 'std', 'ca': 'kry', 'm': 'beau', 'k': [20, 25, 11, 8, 11, 21, 23, 10, 16, 21, 8, 15, 20, 12, 4, 1, 22, 17, 4, 12, 1, 21, 21, 8, 13, 23, 0, 8, 24, 2, 4, 25, 20, 14, 6, 4, 20, 25, 11, 8, 11, 21, 23, 10, 16, 21, 8, 15, 20, 12, 4, 1, 22, 17, 4, 12, 1, 21, 21, 8, 13, 23, 0, 8, 24, 2, 4, 25, 20, 14, 6, 4, 20, 25, 11, 8, 11, 21, 23, 10, 16, 21, 8, 15, 20, 12, 4, 1, 22, 17, 4, 12, 1, 21, 21, 8, 13]}",
+  "ciphertext": "FHRFPBNDPMRRABSGCXWBBLUJQDFLOUKZYUGDAZMTKWRSCUOYJTEQMKBTHLBQVJFAQENLAFUJMIITQLPWJQWERXYROKSXAYYRC"
+ },
+ "passed": true,
+ "why": "best 24/24 at {'word': 'INVISIBLE', 'short': 'UQEA', 'sign': -1, 'key_alphabet': 'kry', 'plain': 'std', 'cipher': 'kry', 'mode': 'beau'}; copies best [7, 8, 7, 8, 8, 8, 8, 8, 8, 7]; candidate reads the plant: True",
+ "bounds": {
+  "family": "two-component key: a word plus a short key from the misspelt or raised letters",
+  "long_words": 171,
+  "short_keys": 55,
+  "settings": 451440,
+  "best_hits": 24,
+  "best_setting": {
+   "word": "INVISIBLE",
+   "short": "UQEA",
+   "sign": -1,
+   "key_alphabet": "kry",
+   "plain": "std",
+   "cipher": "kry",
+   "mode": "beau"
+  },
+  "control_best_hits": [
+   7,
+   8,
+   7,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   7
+  ]
+ },
+ "notes": "451,440 settings; best 24/24 known letters; ten shuffled coppers best [7, 7, 7, 8, 8, 8, 8, 8, 8, 8].",
+ "candidates": [
+  {
+   "plaintext": "ILKWINEANDHONEYONTHETEASTNORTHEASTTUNATELYWEHADNEITHERWINENORHOBERLINCLOCKWEREUNABLETOCARRYOUTTHE",
+   "key": "{'pa': 'std', 'ca': 'kry', 'm': 'beau', 'k': [20, 25, 11, 8, 11, 21, 23, 10, 16, 21, 8, 15, 20, 12, 4, 1, 22, 17, 4, 12, 1, 21, 21, 8, 13, 23, 0, 8, 24, 2, 4, 25, 20, 14, 6, 4, 20, 25, 11, 8, 11, 21, 23, 10, 16, 21, 8, 15, 20, 12, 4, 1, 22, 17, 4, 12, 1, 21, 21, 8, 13, 23, 0, 8, 24, 2, 4, 25, 20, 14, 6, 4, 20, 25, 11, 8, 11, 21, 23, 10, 16, 21, 8, 15, 20, 12, 4, 1, 22, 17, 4, 12, 1, 21, 21, 8, 13]}",
+   "notes": null
+  }
+ ],
+ "seconds": 1.4
+}

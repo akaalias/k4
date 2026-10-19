@@ -1,0 +1,90 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "SHADOWFELLACROSSTHEBOEASTNORTHEASTERDIEDAFTERGIVINGBIRTHTOATHIRBERLINCLOCKESHADOWWASDESTINEDTOBEE",
+  "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm1': 'vig', 'm2': 'vig', 'X': 'EGYPT', 'Y': 'UNDERGROUND'}",
+  "ciphertext": "XGFLNQNECBUDFRATNDFKMRWHACYSWJDSTLRFREQBJGHLJDOBFTMNOGAGZKHXOVXZRFNPKLWHOMPVTWZYMDIVFDXOSDZRVTSQF"
+ },
+ "passed": true,
+ "why": "word matches 5 (first 50 listed); candidates with the planted pair and text: 1; consistent cases 3508",
+ "bounds": {
+  "family": "two periodic keys composed through two tableau passes",
+  "lengths": "2 <= a < b <= 30, lcm outside 1-26 and 30-52",
+  "pairs": 306,
+  "alphabets": "plain and cipher in {std, kry}; key words read in std or kry",
+  "cases": 4896,
+  "survivors": 3508,
+  "survivors_by_a_plus_b": {
+   "16": 2,
+   "21": 2,
+   "24": 2,
+   "25": 16,
+   "26": 16,
+   "27": 52,
+   "28": 34,
+   "29": 96,
+   "30": 82,
+   "31": 162,
+   "32": 146,
+   "33": 176,
+   "34": 194,
+   "35": 144,
+   "36": 144,
+   "37": 192,
+   "38": 176,
+   "39": 160,
+   "40": 128,
+   "41": 160,
+   "42": 144,
+   "43": 144,
+   "44": 128,
+   "45": 112,
+   "46": 112,
+   "47": 112,
+   "48": 96,
+   "49": 96,
+   "50": 80,
+   "51": 80,
+   "52": 64,
+   "53": 64,
+   "54": 48,
+   "55": 48,
+   "56": 32,
+   "57": 32,
+   "58": 16,
+   "59": 16
+  },
+  "smallest_surviving_pairs": [],
+  "vocab_or_k1k3_matches": 5
+ },
+ "notes": "4896 cases; 3508 consistent; 5 word matches submitted.",
+ "candidates": [
+  {
+   "plaintext": "SHADOWFELLACROSSTHEBOEASTNORTHEASTERDIEDAFTERGIVINGBIRTHTOATHIRBERLINCLOCKESHADOWWASDESTINEDTOBEE",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm1': 'vig', 'm2': 'vig', 'X': 'EGYPT', 'Y': 'UNDERGROUND'}",
+   "notes": null
+  },
+  {
+   "plaintext": "SHADOWFELLACROSSTHEBOEASTNORTHEASTERDIEDAFTERGIVINGBIRTHTOATHIRBERLINCLOCKESHADOWWASDESTINEDTOBEE",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm1': 'vig', 'm2': 'varbeau', 'X': 'EGYPT', 'Y': 'OAJIZGZUOAJ'}",
+   "notes": null
+  },
+  {
+   "plaintext": "SHADOWFELLACROSSTHEBOEASTNORTHEASTERDIEDAFTERGIVINGBIRTHTOATHIRBERLINCLOCKESHADOWWASDESTINEDTOBEE",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm1': 'vig', 'm2': 'vig', 'X': 'EGYPTEGYPT', 'Y': 'UNDERGROUND'}",
+   "notes": null
+  },
+  {
+   "plaintext": "SHADOWFELLACROSSTHEBOEASTNORTHEASTERDIEDAFTERGIVINGBIRTHTOATHIRBERLINCLOCKESHADOWWASDESTINEDTOBEE",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm1': 'vig', 'm2': 'vig', 'X': 'UNDERGROUND', 'Y': 'EGYPTEGYPTEGYPT'}",
+   "notes": null
+  },
+  {
+   "plaintext": "SHADOWFELLACROSSTHEBOEASTNORTHEASTERDIEDAFTERGIVINGBIRTHTOATHIRBERLINCLOCKESHADOWWASDESTINEDTOBEE",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm1': 'vig', 'm2': 'varbeau', 'X': 'UNDERGROUND', 'Y': 'IGXWVIGXWVIGXWV'}",
+   "notes": null
+  }
+ ],
+ "seconds": 35.2
+}

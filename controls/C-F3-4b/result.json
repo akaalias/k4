@@ -1,0 +1,596 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "SANDSOFBEADSWILLHAVEBEASTNORTHEASTEREINLIESTHETESTOFPATIENCEFORBERLINCLOCKRYANDRESTORATIONOFTHISB",
+  "key": "('w', 6, 'm', 12, 'o', 4, 'kry', -1, [25, 2, 13, 23, 25, 22], [14, 0, 18, 8, 22, 9, 14, 24, 19])",
+  "ciphertext": "ACBRAORBYJIJYGVSEIPLWTDBGRKHGKSGIRVPVUYHMNRSUBLAIQTAMELCEGZQVSUXWTLVBYVOTJKCSLPIKINIVNASMRMHYYPCD"
+ },
+ "passed": true,
+ "why": "survivors with 3+ checks 1450 (40 listed); the planted structure: [{'w': 6, 'm': 12, 'offset': 4, 'alphabet': 'kry', 'sign': -1, 'checks': 15}]",
+ "bounds": {
+  "family": "key = a[j mod w] + b[(j + o) div m], one alphabet, either sign, no move",
+  "w": [
+   2,
+   31
+  ],
+  "m": [
+   2,
+   50
+  ],
+  "offsets": "all 0..m-1",
+  "structures_with_checks": 31994,
+  "structures_by_checks": {
+   "1": 1434,
+   "2": 1295,
+   "3": 352,
+   "4": 1177,
+   "5": 1285,
+   "6": 3214,
+   "7": 2000,
+   "8": 2728,
+   "9": 1986,
+   "10": 3373,
+   "11": 1276,
+   "12": 1272,
+   "13": 1272,
+   "14": 1271,
+   "15": 1269,
+   "16": 1267,
+   "17": 1263,
+   "18": 1251,
+   "19": 1238,
+   "20": 1109,
+   "21": 662
+  },
+  "carved_lines_m31_o27": {
+   "2": {
+    "checks": 20,
+    "consistent": []
+   },
+   "3": {
+    "checks": 19,
+    "consistent": []
+   },
+   "4": {
+    "checks": 18,
+    "consistent": []
+   },
+   "5": {
+    "checks": 17,
+    "consistent": []
+   },
+   "6": {
+    "checks": 16,
+    "consistent": []
+   },
+   "7": {
+    "checks": 15,
+    "consistent": []
+   },
+   "8": {
+    "checks": 14,
+    "consistent": []
+   },
+   "9": {
+    "checks": 13,
+    "consistent": []
+   },
+   "10": {
+    "checks": 12,
+    "consistent": []
+   },
+   "11": {
+    "checks": 11,
+    "consistent": []
+   },
+   "12": {
+    "checks": 10,
+    "consistent": []
+   },
+   "13": {
+    "checks": 9,
+    "consistent": []
+   },
+   "14": {
+    "checks": 9,
+    "consistent": []
+   },
+   "15": {
+    "checks": 7,
+    "consistent": []
+   },
+   "16": {
+    "checks": 6,
+    "consistent": []
+   },
+   "17": {
+    "checks": 5,
+    "consistent": []
+   },
+   "18": {
+    "checks": 5,
+    "consistent": []
+   },
+   "19": {
+    "checks": 7,
+    "consistent": []
+   },
+   "20": {
+    "checks": 9,
+    "consistent": []
+   },
+   "21": {
+    "checks": 9,
+    "consistent": []
+   },
+   "22": {
+    "checks": 7,
+    "consistent": []
+   },
+   "23": {
+    "checks": 6,
+    "consistent": []
+   },
+   "24": {
+    "checks": 4,
+    "consistent": [
+     "kry s=-1"
+    ]
+   },
+   "25": {
+    "checks": 2,
+    "consistent": []
+   },
+   "31": {
+    "checks": 1,
+    "consistent": []
+   }
+  },
+  "k4_at_least": {
+   "1": 1468,
+   "2": 1468,
+   "3": 1450,
+   "4": 1154,
+   "5": 193,
+   "6": 144,
+   "7": 139,
+   "8": 134
+  },
+  "controls_at_least": {
+   "1": [
+    210,
+    0,
+    108,
+    89,
+    1007,
+    1271,
+    319,
+    108,
+    0,
+    89
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1093,
+    0,
+    0,
+    0,
+    0
+   ],
+   "3": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "4": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "5": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "6": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "7": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "8": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "check_levels_outside_control_range": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "k4_survivors_3_plus": [
+   {
+    "w": 6,
+    "m": 2,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 6,
+    "m": 3,
+    "offset": 1,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 11
+   },
+   {
+    "w": 6,
+    "m": 4,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 11
+   },
+   {
+    "w": 6,
+    "m": 6,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 14
+   },
+   {
+    "w": 6,
+    "m": 9,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 14
+   },
+   {
+    "w": 6,
+    "m": 12,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 15
+   },
+   {
+    "w": 6,
+    "m": 18,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 15
+   },
+   {
+    "w": 7,
+    "m": 2,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 5
+   },
+   {
+    "w": 9,
+    "m": 2,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 3
+   },
+   {
+    "w": 12,
+    "m": 2,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 5
+   },
+   {
+    "w": 12,
+    "m": 3,
+    "offset": 1,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 7
+   },
+   {
+    "w": 12,
+    "m": 4,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 7
+   },
+   {
+    "w": 12,
+    "m": 5,
+    "offset": 3,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 6
+   },
+   {
+    "w": 12,
+    "m": 6,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 12,
+    "m": 7,
+    "offset": 2,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 12,
+    "m": 8,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 7
+   },
+   {
+    "w": 12,
+    "m": 9,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 12,
+    "m": 12,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 12,
+    "m": 14,
+    "offset": 2,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 12,
+    "m": 18,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 12,
+    "m": 21,
+    "offset": 16,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 14,
+    "m": 2,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 5
+   },
+   {
+    "w": 14,
+    "m": 3,
+    "offset": 1,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 7
+   },
+   {
+    "w": 14,
+    "m": 4,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 5
+   },
+   {
+    "w": 14,
+    "m": 4,
+    "offset": 2,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 5
+   },
+   {
+    "w": 14,
+    "m": 5,
+    "offset": 2,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 6
+   },
+   {
+    "w": 14,
+    "m": 5,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 6
+   },
+   {
+    "w": 14,
+    "m": 6,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 14,
+    "m": 7,
+    "offset": 2,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 14,
+    "m": 8,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 14,
+    "m": 8,
+    "offset": 6,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 14,
+    "m": 9,
+    "offset": 1,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 14,
+    "m": 9,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 14,
+    "m": 10,
+    "offset": 2,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 14,
+    "m": 10,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 14,
+    "m": 11,
+    "offset": 7,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 14,
+    "m": 11,
+    "offset": 9,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   },
+   {
+    "w": 14,
+    "m": 12,
+    "offset": 4,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 14,
+    "m": 12,
+    "offset": 10,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 9
+   },
+   {
+    "w": 14,
+    "m": 13,
+    "offset": 0,
+    "alphabet": "kry",
+    "sign": -1,
+    "checks": 8
+   }
+  ],
+  "n_k4_3_plus": 1450,
+  "controls": "10 shuffled coppers (seed 88), identical search"
+ },
+ "notes": "31,994 (w, m, offset) structures x 4 cases. K4 consistent with >= c checks, c = 1..8: [1468, 1468, 1450, 1154, 193, 144, 139, 134]; controls max [1271, 1093, 0, 0, 0, 0, 0, 0], min [0, 0, 0, 0, 0, 0, 0, 0]. Outside: [1, 2, 3, 4, 5, 6, 7, 8]. Carved lines (m = 31, offset 27): widths alive [24]. K4 survivors with 3+ checks: 1450.",
+ "candidates": [],
+ "seconds": 1.4
+}

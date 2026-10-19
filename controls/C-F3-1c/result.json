@@ -1,0 +1,156 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "HREEOFTHEKINGSBOWSLXXEASTNORTHEASTFAPPLIEDNEEDLEWORKLXXIXEXAMPLBERLINCLOCKSGLOVESINTRODUCTIONINTR",
+  "key": "{'pa': 'SHADINGBCEFJKLMOPQRTUVWXYZ', 'ca': 'CANDLEBFGHIJKMOPQRSTUVWXYZ', 'm': 'vig', 'X': [4, 6, 24, 15, 19], 'Y': [20, 13, 3, 4, 17, 6, 17, 14, 20, 13, 3], 's': 1}",
+  "ciphertext": "ZJINZUQMSSJERSLIGPQIOSUNPMKWZGFVANQHCEGOADQAWUWJNOMBEZTNQIQKYMZQPZMPXEGAXPMXWFXEGAHZZMWVRZJZUZPJS"
+ },
+ "passed": true,
+ "why": "word matches 3 (first 50 listed); candidates with the planted pair and text: 1",
+ "bounds": {
+  "family": "two periodic keys composed through two tableau passes, alphabets from K1-K3 words and C13/C14 words",
+  "alphabets": 102,
+  "length_pairs": 42,
+  "cases": 1747872,
+  "survivors": 1900,
+  "survivors_by_a_plus_b": {
+   "16": 2,
+   "21": 2,
+   "22": 8,
+   "23": 292,
+   "24": 1596
+  },
+  "smallest_surviving_sum": 16,
+  "smallest_survivors": [
+   {
+    "a": 5,
+    "b": 11,
+    "plain": "SHADING/keyword",
+    "cipher": "CANDLE/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 11,
+    "plain": "SHADING/keyword",
+    "cipher": "CANDLE/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 10,
+    "b": 11,
+    "plain": "SHADING/keyword",
+    "cipher": "CANDLE/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 10,
+    "b": 11,
+    "plain": "SHADING/keyword",
+    "cipher": "CANDLE/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "DELIVERING/keyword",
+    "cipher": "ABOUT/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "DELIVERING/keyword",
+    "cipher": "ABOUT/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "PEERED/keyword",
+    "cipher": "DEBRIS/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "PEERED/keyword",
+    "cipher": "DEBRIS/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "SLOWLY/keyword",
+    "cipher": "EMERGED/keyword",
+    "mode": "beau",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "SLOWLY/keyword",
+    "cipher": "EMERGED/keyword",
+    "mode": "beau",
+    "s": 1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "std",
+    "cipher": "GATHERED/keyword",
+    "mode": "vig",
+    "s": -1,
+    "components": 1
+   },
+   {
+    "a": 5,
+    "b": 17,
+    "plain": "std",
+    "cipher": "GATHERED/keyword",
+    "mode": "vig",
+    "s": 1,
+    "components": 1
+   }
+  ],
+  "vocab_matches": 3
+ },
+ "notes": "1747872 cases; 1900 consistent; smallest surviving a + b 16; survivors by sum {16: 2, 21: 2, 22: 8, 23: 292, 24: 1596}; 3 word matches.",
+ "candidates": [
+  {
+   "plaintext": "HREEOFTHEKINGSBOWSLXXEASTNORTHEASTFAPPLIEDNEEDLEWORKLXXIXEXAMPLBERLINCLOCKSGLOVESINTRODUCTIONINTR",
+   "key": "{'pa': 'SHADINGBCEFJKLMOPQRTUVWXYZ', 'ca': 'CANDLEBFGHIJKMOPQRSTUVWXYZ', 'm': 'vig', 'X': [4, 6, 24, 15, 19], 'Y': [20, 13, 3, 4, 17, 6, 17, 14, 20, 13, 3], 's': 1}",
+   "notes": null
+  },
+  {
+   "plaintext": "HREEOFTHEKINGSBOWSLXXEASTNORTHEASTFAPPLIEDNEEDLEWORKLXXIXEXAMPLBERLINCLOCKSGLOVESINTRODUCTIONINTR",
+   "key": "{'pa': 'SHADINGBCEFJKLMOPQRTUVWXYZ', 'ca': 'CANDLEBFGHIJKMOPQRSTUVWXYZ', 'm': 'vig', 'X': [4, 6, 24, 15, 19], 'Y': [6, 13, 23, 22, 9, 20, 9, 12, 6, 13, 23], 's': -1}",
+   "notes": null
+  },
+  {
+   "plaintext": "HREEOFTHEKINGSBOWSLXXEASTNORTHEASTFAPPLIEDNEEDLEWORKLXXIXEXAMPLBERLINCLOCKSGLOVESINTRODUCTIONINTR",
+   "key": "{'pa': 'SHADINGBCEFJKLMOPQRTUVWXYZ', 'ca': 'CANDLEBFGHIJKMOPQRSTUVWXYZ', 'm': 'vig', 'X': [4, 6, 24, 15, 19, 4, 6, 24, 15, 19], 'Y': [20, 13, 3, 4, 17, 6, 17, 14, 20, 13, 3], 's': 1}",
+   "notes": null
+  }
+ ],
+ "seconds": 14.4
+}

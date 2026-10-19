@@ -127,22 +127,44 @@ function regionAt(localPoint) {
 }
 // Where OBKR starts on line 25: the line carries 31 letters, the last four are OBKR, so the
 // split sits 27/31 of the way across the text's measured extent on that line.
-function obkrArc(geo, edges) {
+function obkrArc(geo, edges, seam) {
   const pos = geo.attributes.position, arc = geo.attributes.arc;
   let a0 = Infinity, a1 = -Infinity;
   for (let i = 0; i < pos.count; i++) {
     const y = pos.getY(i), t = arc.getX(i);
-    if (t > 0.48 || y > edges[24] || y < edges[25]) continue;
+    if (t > seam || y > edges[24] || y < edges[25]) continue;
     if (t < a0) a0 = t; if (t > a1) a1 = t;
   }
   return a0 + (a1 - a0) * 27 / 31;
 }
-// The 28 lines of text, measured: the cut letters carry nearly all of the sheet's vertices, so a
-// histogram of vertex height over the cipher half peaks once per line. Returns 29 edges, top down.
-function lineEdges(geo, yMin, yMax) {
-  const pos = geo.attributes.position, arc = geo.attributes.arc, B = 600, hist = new Float64Array(B);
+// The 28 lines of text, measured: the cut letters carry nearly all of the sheet's vertices, and
+// each line's letters fill a band of heights with an empty gap above and below. Find the bands,
+// keep the 28 that are letter-high, and put each edge in the middle of the gap. Returns 29 edges,
+// top down. If the bands cannot be read, fall back to peaks of the height histogram.
+function lineEdges(geo, yMin, yMax, seam) {
+  const pos = geo.attributes.position, arc = geo.attributes.arc;
+  {
+    const B = 1200, w = (yMax - yMin) / B, h = new Float64Array(B);
+    for (let i = 0; i < pos.count; i++) if (arc.getX(i) < seam) h[Math.min(B - 1, Math.floor((pos.getY(i) - yMin) / w))]++;
+    const occ = Array.from(h, v => v > Math.max(...h) * 0.02), runs = [];
+    for (let b = 0; b < B;) { if (!occ[b]) { b++; continue; } const s0 = b; while (b < B && occ[b]) b++; runs.push([s0, b]); }
+    const merged = [];
+    for (const r of runs) { if (merged.length && (r[0] - merged[merged.length - 1][1]) * w < 0.0028 * (yMax - yMin)) merged[merged.length - 1][1] = r[1]; else merged.push([...r]); }
+    const tall = merged.map(([s0, e]) => [yMin + s0 * w, yMin + e * w]);
+    const med = tall.map(([p, q]) => q - p).sort((p, q) => p - q)[Math.floor(tall.length / 2)];
+    const bands = tall.filter(([p, q]) => q - p > 0.5 * med).reverse();   // top first
+    if (bands.length === 28) {
+      const edges = [], gap = (bands[0][0] - bands[1][1]);
+      edges.push(bands[0][1] + gap / 2);
+      for (let k = 1; k < 28; k++) edges.push((bands[k - 1][0] + bands[k][1]) / 2);
+      edges.push(bands[27][0] - gap / 2);
+      console.log('[sculpture] lines found 28 (bands)');
+      return edges;
+    }
+  }
+  const B = 600, hist = new Float64Array(B);
   for (let i = 0; i < pos.count; i++) {
-    if (arc.getX(i) > 0.48) continue;
+    if (arc.getX(i) > seam) continue;
     const b = Math.min(B - 1, Math.floor((pos.getY(i) - yMin) / (yMax - yMin) * B)); hist[b]++;
   }
   const sm = new Float64Array(B);
@@ -165,9 +187,12 @@ function lineEdges(geo, yMin, yMax) {
   edges.push(centres[27] - (centres[26] - centres[27]) / 2);
   return edges;
 }
-// The arc parameter: project the sheet's footprint onto its long axis (the principal direction
-// of its vertices seen from above), trace the centreline bin by bin, and measure arc length
-// along it. Returns {axis, arcOf(x, z)} and writes an 'arc' attribute on the geometry.
+// The arc parameter: the fraction of the way along the sheet's S-curve, seen from above. The ends
+// curl round nearly square to the long axis, so position along that axis is not position along
+// the sheet: fit a centreline that follows the curve (start from the axis, then repeatedly
+// project points onto it, re-average them in equal-length steps and smooth), and measure each
+// vertex by its nearest point on it. Returns {axis, arcOf(x, z), centreline, seam, halfThick}
+// and writes an 'arc' attribute on the geometry.
 function arcParameter(geo, treeCentre) {
   const pos = geo.attributes.position, n = pos.count;
   let mx = 0, mz = 0;
@@ -177,38 +202,60 @@ function arcParameter(geo, treeCentre) {
   for (let i = 0; i < n; i++) { const x = pos.getX(i) - mx, z = pos.getZ(i) - mz; sxx += x * x; sxz += x * z; szz += z * z; }
   const ang = 0.5 * Math.atan2(2 * sxz, sxx - szz);
   let ax = Math.cos(ang), az = Math.sin(ang);
-  if (treeCentre && (treeCentre.x - mx) * ax + (treeCentre.z - mz) * az > 0) { ax = -ax; az = -az; }   // the tree end is u = 0
-  const px = -az, pz = ax;
-  const u = new Float32Array(n), v = new Float32Array(n);
+  if (treeCentre && (treeCentre.x - mx) * ax + (treeCentre.z - mz) * az > 0) { ax = -ax; az = -az; }   // the tree end comes first
+  const X = new Float32Array(n), Z = new Float32Array(n);
+  for (let i = 0; i < n; i++) { X[i] = pos.getX(i); Z[i] = pos.getZ(i); }
+  // first guess: mean position in bins along the long axis
   let uMin = Infinity, uMax = -Infinity;
-  for (let i = 0; i < n; i++) {
-    const x = pos.getX(i) - mx, z = pos.getZ(i) - mz;
-    u[i] = x * ax + z * az; v[i] = x * px + z * pz;
-    if (u[i] < uMin) uMin = u[i]; if (u[i] > uMax) uMax = u[i];
-  }
-  const B = 200, sum = new Float64Array(B), cnt = new Float64Array(B);
-  for (let i = 0; i < n; i++) { const b = Math.min(B - 1, Math.floor((u[i] - uMin) / (uMax - uMin) * B)); sum[b] += v[i]; cnt[b]++; }
-  const cu = [], cv = [];
-  for (let b = 0; b < B; b++) if (cnt[b] > 0) { cu.push(uMin + (b + 0.5) * (uMax - uMin) / B); cv.push(sum[b] / cnt[b]); }
-  const S = [0];
-  for (let k = 1; k < cu.length; k++) S.push(S[k - 1] + Math.hypot(cu[k] - cu[k - 1], cv[k] - cv[k - 1]));
-  const total = S[S.length - 1];
-  const arcOfU = (uu) => {
-    if (uu <= cu[0]) return 0; if (uu >= cu[cu.length - 1]) return 1;
-    let k = 1; while (cu[k] < uu) k++;
-    const f = (uu - cu[k - 1]) / (cu[k] - cu[k - 1]);
-    return (S[k - 1] + f * (S[k] - S[k - 1])) / total;
+  const u = new Float32Array(n);
+  for (let i = 0; i < n; i++) { u[i] = (X[i] - mx) * ax + (Z[i] - mz) * az; if (u[i] < uMin) uMin = u[i]; if (u[i] > uMax) uMax = u[i]; }
+  const binMeans = (K, key, idx) => {
+    const sx = new Float64Array(K), sz = new Float64Array(K), c = new Float64Array(K), out = [];
+    for (const i of idx) { const b = Math.min(K - 1, Math.max(0, Math.floor(key(i) * K))); sx[b] += X[i]; sz[b] += Z[i]; c[b]++; }
+    for (let b = 0; b < K; b++) if (c[b]) out.push({ x: sx[b] / c[b], z: sz[b] / c[b] });
+    return out;
   };
-  const arc = new Float32Array(n);
-  for (let i = 0; i < n; i++) arc[i] = arcOfU(u[i]);
-  geo.setAttribute('arc', new THREE.BufferAttribute(arc, 1));
-  // the centreline, smoothed, back in local coordinates, with its arc fraction
-  const centreline = [];
-  for (let k = 0; k < cu.length; k++) {
-    let vv = 0, c = 0; for (let j = -2; j <= 2; j++) if (k + j >= 0 && k + j < cu.length) { vv += cv[k + j]; c++; } vv /= c;
-    centreline.push({ x: mx + cu[k] * ax + vv * px, z: mz + cu[k] * az + vv * pz, arc: S[k] / total });
+  const all = Array.from({ length: n }, (_, i) => i), sub = all.filter(i => i % 7 === 0);
+  let C = binMeans(200, i => (u[i] - uMin) / (uMax - uMin), sub);
+  // nearest point on the polyline C: arc length along it and distance from it
+  const project = (C, x, z) => {
+    let best = Infinity, s = 0, run = 0;
+    for (let k = 0; k < C.length - 1; k++) {
+      const dx = C[k + 1].x - C[k].x, dz = C[k + 1].z - C[k].z, L2 = dx * dx + dz * dz || 1e-9, L = Math.sqrt(L2);
+      const t = Math.min(1, Math.max(0, ((x - C[k].x) * dx + (z - C[k].z) * dz) / L2));
+      const ex = x - C[k].x - t * dx, ez = z - C[k].z - t * dz, d = ex * ex + ez * ez;
+      if (d < best) { best = d; s = run + t * L; }
+      run += L;
+    }
+    return { s, total: run, d: Math.sqrt(best) };
+  };
+  for (let it = 0; it < 6; it++) {
+    const f = new Float32Array(n);
+    for (const i of sub) { const p = project(C, X[i], Z[i]); f[i] = p.s / p.total; }
+    const M = binMeans(160, i => f[i], sub), W = 3;      // re-average in equal-length steps, smooth over 7
+    C = M.map((p, k) => {
+      if (k === 0 || k === M.length - 1) return p;
+      let x = 0, z = 0, c = 0;
+      for (let j = -W; j <= W; j++) { const q = M[Math.min(M.length - 1, Math.max(0, k + j))]; x += q.x; z += q.z; c++; }
+      return { x: x / c, z: z / c };
+    });
   }
-  return { axis: new THREE.Vector2(ax, az), arcOf: (x, z) => arcOfU((x - mx) * ax + (z - mz) * az), centreline };
+  const arc = new Float32Array(n), dist = new Float32Array(n);
+  for (let i = 0; i < n; i++) { const p = project(C, X[i], Z[i]); arc[i] = p.s / p.total; dist[i] = p.d; }
+  geo.setAttribute('arc', new THREE.BufferAttribute(arc, 1));
+  // the seam: the widest stretch with no vertices between 40% and 60% of the way along
+  const B = 2000, hist = new Uint32Array(B);
+  for (let i = 0; i < n; i++) hist[Math.min(B - 1, Math.floor(arc[i] * B))]++;
+  let seam = 0.5, bestRun = 0;
+  for (let b = Math.floor(0.4 * B), run = 0; b < 0.6 * B; b++) {
+    if (hist[b] === 0) { run++; if (run > bestRun) { bestRun = run; seam = (b - run / 2 + 1) / B; } } else run = 0;
+  }
+  const halfThick = Array.from(dist).sort((p, q) => p - q)[Math.floor(0.98 * n)];
+  const lens = [0];
+  for (let k = 1; k < C.length; k++) lens.push(lens[k - 1] + Math.hypot(C[k].x - C[k - 1].x, C[k].z - C[k - 1].z));
+  const total = lens[lens.length - 1];
+  const centreline = C.map((p, k) => ({ x: p.x, z: p.z, arc: lens[k] / total }));
+  return { axis: new THREE.Vector2(ax, az), arcOf: (x, z) => { const p = project(C, x, z); return p.s / p.total; }, centreline, seam, halfThick };
 }
 // A ribbon along the centreline from the sheet's bottom to its top, carrying the arc attribute.
 function lightRibbon(centreline, yMin, yMax) {
@@ -277,11 +324,10 @@ loader.load('/assets/kryptos.glb', (gltf) => {
     const b = sheet.geometry.boundingBox, h = b.max.y - b.min.y;
     let treeCentre = null;
     if (tree) { tree.geometry.computeBoundingBox(); treeCentre = tree.geometry.boundingBox.getCenter(new THREE.Vector3()); }
-    const { axis, arcOf, centreline } = arcParameter(sheet.geometry, treeCentre);
+    const { axis, arcOf, centreline, seam, halfThick } = arcParameter(sheet.geometry, treeCentre);
     // turn the whole model so the sheet's long axis runs left to right, tree on the left
     group.rotation.y = Math.atan2(axis.y, axis.x);
-    // the seam: the two halves meet at the middle of the arc
-    const edges = lineEdges(sheet.geometry, b.min.y, b.max.y);
+    const edges = lineEdges(sheet.geometry, b.min.y, b.max.y, seam);
     const centre = (a) => {
       const C = centreline; let k = 1; while (k < C.length - 1 && C[k].arc < a) k++;
       const p0 = C[k - 1], p1 = C[k], f = Math.min(1, Math.max(0, (a - p0.arc) / ((p1.arc - p0.arc) || 1)));
@@ -293,7 +339,8 @@ loader.load('/assets/kryptos.glb', (gltf) => {
     group.rotation.y = Math.atan2(axis.y, axis.x); group.updateMatrixWorld(true);
     { const p = centre(0.25); const cam = sheet.worldToLocal(camera.position.clone());
       if ((cam.x - p.x) * p.nx + (cam.z - p.z) * p.nz < 0) side = -1; }
-    layout = { seam: 0.5, edges, obkr: obkrArc(sheet.geometry, edges), arcOf, centre, offset: 0.025 * h, radius: 0.0032 * h };
+    // the outline floats just clear of the copper's front face, so it shifts little when seen at an angle
+    layout = { seam, edges, obkr: obkrArc(sheet.geometry, edges, seam), arcOf, centre, offset: halfThick + 0.004 * h, radius: 0.0032 * h };
     glow = new THREE.Group(); sheet.add(glow);
     frames = {};
     for (const n of ['K1', 'K2', 'K3', 'K4', 'the table']) { frames[n] = buildFrame(n); frames[n].visible = false; glow.add(frames[n]); }

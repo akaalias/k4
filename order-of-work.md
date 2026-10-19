@@ -156,9 +156,9 @@ Rules:
 | C-F11.4 | F11.4 | Friedman's keyed alphabet box (MC III 35b): the alphabet written n times in a... | 0192 | passed, own plant | 0192: plants fit 62 and 26 times, copies 0; counts only |
 | C-F8-1 | F8/1 | Hill 2-5, plain and affine, 330 numberings (4 standard, 126 vocabulary, 200 K1-K3... | 0015, 0036, 0044, 0055, 0105, 0116 | passed | C-F8-1 (0015), C-F8-1b (0036 chained), C-F8-1c (0044; 0055's run() is the same), C-F8-1d (0105), C-F8-1e (0116 Hill with a periodic key) |
 | C-F8.1 | F8.1 | Hill 2x2 and 3x3 with an unknown letter numbering (any of 26!) | 0193 (error), 0194 | passed, own plant | 0194: three plants through the same pool.map as K4, each the only fit |
-| C-F5-1 | F5/1 | Gromark, two- and three-term rules, bases 2-26 (three-term on a free alphabet in base... | 0013, 0028, 0046, 0054, 0069, 0076, 0107 | open | - |
-| C-F5.1 | F5.1 | Multiplicative feedback; the raised YAR as primer | 0196 | open | - |
-| C-F5.2 | F5.2 | Three-term Gromark on a free alphabet in bases 2-9, 11-16 and 26; two-term... | 0195 | open | - |
+| C-F5-1 | F5/1 | Gromark, two- and three-term rules, bases 2-26 (three-term on a free alphabet in base... | 0013, 0028, 0046, 0054, 0069, 0076, 0107 | passed | C-F5-1 (0013), C-F5-1b (0028), C-F5-1c (0046), C-F5-1d (0054, counts only), C-F5-1e (0069), C-F5-1f (0076), C-F5-1g (0107). Gap noted: 0054 tested rules only up to base 15 on its K1-K3-word alphabets; bases 16-26 there look untested |
+| C-F5.1 | F5.1 | Multiplicative feedback; the raised YAR as primer | 0196 | passed, own plant | 0196: plants [1, 32]; the 32 at base 26 are the planted primer and its +13 variants, identical at the known places |
+| C-F5.2 | F5.2 | Three-term Gromark on a free alphabet in bases 2-9, 11-16 and 26; two-term... | 0195 | passed, own plant | 0195: plants [1, 1], the planted primer each time |
 | C-F9-1 | F9/1 | One-to-one substitution, then any route in the built sets (1.86M) | 0019, 0106 | open | - |
 | C-F9.1 | F9.1 | Hand transpositions outside the built route sets | 0197, 0198 (before: 0019, 0106) | open | - |
 

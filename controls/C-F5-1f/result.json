@@ -1,0 +1,269 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "OCLEARAWAYTHETHREEFEEEASTNORTHEASTYBENEATHTHEMHARDLYHADIARRIVEDBERLINCLOCKXTMORNINGNOVEMBERTHTHAN",
+  "key": "('YPLIMQDCUAKBEXOTSRJGHFWVZN', 'base 12', 'rule (2, 5)', 'primer [7, 6, 5, 3, 0]', 'M[P-d]=c')",
+  "ciphertext": "CWDPYCHGRFEZHXDSHGPMNHWSTDEDTMGFUKVGZCPGUDOIMADJEFITIZIZRTDDEGJRIKBLIFDCRQRABQBKMAQIKGWAFVASWKPFM"
+ },
+ "passed": true,
+ "why": "base 12: consistent primers 2, copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+ "bounds": {
+  "family": "Gromark, free mixed alphabet, bases 2-9, 11-16 and 26",
+  "rules": "two-term, lags up to 5 (base 26: up to 4)",
+  "settings_done": 146,
+  "settings_planned": 146,
+  "primers": 15135782,
+  "forms": [
+   "M[P+d]=c",
+   "M[P-d]=c",
+   "M[C-d]=p",
+   "M[C+d]=p"
+  ],
+  "by_base": {
+   "2": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 196
+   },
+   "3": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 1278
+   },
+   "4": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 5008
+   },
+   "5": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 14650
+   },
+   "6": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 35460
+   },
+   "7": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 75166
+   },
+   "8": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 144448
+   },
+   "9": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 257418
+   },
+   "11": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 690910
+   },
+   "12": {
+    "k4": 2,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 1061136
+   },
+   "13": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 1575418
+   },
+   "14": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 2272228
+   },
+   "15": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 3196350
+   },
+   "16": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 4399360
+   },
+   "26": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "primers": 1406756
+   }
+  }
+ },
+ "notes": "146 of 146 base-rule settings, 15,135,782 primers x 4 forms. Consistent primers by base, K4 (controls): base 2: 0 (0-0); base 3: 0 (0-0); base 4: 0 (0-0); base 5: 0 (0-0); base 6: 0 (0-0); base 7: 0 (0-0); base 8: 0 (0-0); base 9: 0 (0-0); base 11: 0 (0-0); base 12: 2 (0-0); base 13: 0 (0-0); base 14: 0 (0-0); base 15: 0 (0-0); base 16: 0 (0-0); base 26: 0 (0-0).",
+ "candidates": [],
+ "seconds": 126.6
+}

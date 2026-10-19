@@ -1,0 +1,67 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "ILYOUHAVEREACHEDTHEACEASTNORTHEASTOUFINDOUTEXACTLYWHATHASBEENFOBERLINCLOCKELARGELYTOANEGYPTIANSLO",
+  "key": "{'numbering': 'std0', 'n': 2, 'offset': 1, 'variant': 'chain-c', 'M': [[24, 5], [17, 21]]}",
+  "ciphertext": "IUPOXAMELQUAKGFRNXIHYZOGRYMHYNTZHFAQDNWZDCOFTPJGRQDCSZULIDFIIQXIUDUANZSHMHGLLHKCXXYVCPVTDGHQNCOYB"
+ },
+ "passed": true,
+ "why": "full hits 1; planted chain-c 2x2 std0 offset 1 with the planted text: True",
+ "bounds": {
+  "family": "Hill variants: ciphertext feedback, plaintext feedback, summed input, paired matrices; sizes 2-4",
+  "numberings": [
+   "std0",
+   "std1",
+   "kry0",
+   "kry1"
+  ],
+  "settings": 144,
+  "settings_solved": 3,
+  "solved_settings": [
+   {
+    "numbering": "std0",
+    "n": 2,
+    "offset": 1,
+    "variant": "chain-c",
+    "crib_blocks": 11,
+    "solutions": {
+     "0": 1
+    },
+    "best_hits": 24
+   },
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 0,
+    "variant": "chain-c",
+    "crib_blocks": 4,
+    "solutions": {
+     "0": 1
+    },
+    "best_hits": 16
+   },
+   {
+    "numbering": "std1",
+    "n": 4,
+    "offset": 3,
+    "variant": "chain-c",
+    "crib_blocks": 4,
+    "solutions": {
+     "0": 1
+    },
+    "best_hits": 16
+   }
+  ],
+  "best_hits_over_solved": 24
+ },
+ "notes": "144 settings; 3 consistent on their whole crib blocks; best known-letter count among them 24 of 24; 1 full hits.",
+ "candidates": [
+  {
+   "plaintext": "ILYOUHAVEREACHEDTHEACEASTNORTHEASTOUFINDOUTEXACTLYWHATHASBEENFOBERLINCLOCKELARGELYTOANEGYPTIANSLO",
+   "key": "{'numbering': 'std0', 'n': 2, 'offset': 1, 'variant': 'chain-c', 'M': [[24, 5], [17, 21]]}",
+   "notes": null
+  }
+ ],
+ "seconds": 0.0
+}

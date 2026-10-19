@@ -1,0 +1,151 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "SENTISTHEMOSTTHATYOUCEASTNORTHEASTTHERTHEREWILLGENERALLYBEACERTBERLINCLOCKINFORMATIONTOBEGLEANEDM",
+  "key": "('JOANQVCXDUSIFPYGLEBKTWHMRZ', 'rule (2, 3, 5)', 'primer 69254', 'M[C+d]=p')",
+  "ciphertext": "EIBPHHMNLWTFMLSXMHZACICFMUZROPPXERMVLTUNLTRUHJQOJYLVAJQJSKAZNPMNNRICDFKSAOFWMSWSUNJUZNTPPKOMCURHT"
+ },
+ "passed": true,
+ "why": "consistent primers 1 (copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]); planted rule (2, 3, 5), primer 69254, M[C+d]=p listed: True",
+ "bounds": {
+  "family": "three-term Gromark, base 10, free mixed alphabet",
+  "rules": [
+   [
+    1,
+    2,
+    3
+   ],
+   [
+    1,
+    2,
+    4
+   ],
+   [
+    1,
+    3,
+    4
+   ],
+   [
+    2,
+    3,
+    4
+   ],
+   [
+    1,
+    2,
+    5
+   ],
+   [
+    1,
+    3,
+    5
+   ],
+   [
+    2,
+    3,
+    5
+   ],
+   [
+    1,
+    4,
+    5
+   ],
+   [
+    2,
+    4,
+    5
+   ],
+   [
+    3,
+    4,
+    5
+   ],
+   [
+    1,
+    2,
+    6
+   ],
+   [
+    1,
+    3,
+    6
+   ],
+   [
+    2,
+    3,
+    6
+   ],
+   [
+    1,
+    4,
+    6
+   ],
+   [
+    2,
+    4,
+    6
+   ],
+   [
+    3,
+    4,
+    6
+   ],
+   [
+    1,
+    5,
+    6
+   ],
+   [
+    2,
+    5,
+    6
+   ],
+   [
+    3,
+    5,
+    6
+   ],
+   [
+    4,
+    5,
+    6
+   ]
+  ],
+  "rules_planned": 20,
+  "primers": 10631000,
+  "forms": [
+   "M[P+d]=c",
+   "M[P-d]=c",
+   "M[C-d]=p",
+   "M[C+d]=p"
+  ],
+  "k4_consistent": [
+   {
+    "rule": [
+     2,
+     3,
+     5
+    ],
+    "primer": "69254",
+    "form": "M[C+d]=p"
+   }
+  ],
+  "k4_count": 1,
+  "control_counts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "notes": "20 of 20 rules, 10,631,000 primers x 4 forms: K4 consistent primers 1; ten shuffled coppers [0, 0, 0, 0, 0, 0, 0, 0, 0, 0].",
+ "candidates": [],
+ "seconds": 172.4
+}

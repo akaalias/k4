@@ -1,0 +1,146 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "BERTHATIFYOUGIVEMONEYEASTNORTHEASTRDINARYPROCEEDINGWILLBETOUNDOBERLINCLOCKISHEADSHAWLPUTTHECOINSI",
+  "key": "(('kry', 'last', 'bwd'), 'PYRAMIDBCEFGHJKLNOQSTUVWXZ', 341)",
+  "ciphertext": "HFTQENSEHVTIJHDOGXGSRTXZYJYIATWYRMBZUQMFFFHEDIDBAPDWIMIKHSSMDLTQNPGJFTJZVIOPSVPXRURJSBNBCZRMCZVEY"
+ },
+ "passed": true,
+ "why": "word-mixed rings consistent 6 (copies max 0); the planted PYRAMID ring at kry/last/bwd listed: True; free-ring offsets 2",
+ "bounds": {
+  "family": "Wheatstone cryptograph: 27-place outer ring (std/KRYPTOS, blank first/last), 26-letter inner ring free or word-mixed, hands forward/backward; continuous plaintext; exact",
+  "variants": 8,
+  "word_alphabets": 208651,
+  "free_ring_consistent_offsets": {
+   "k4": 2,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mixed_ring_consistent": {
+   "k4": 6,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_mixed_hits": [
+   {
+    "variant": "kry/first/bwd",
+    "inner": "PYRAMIDBCEFGHJKLNOQSTUVWXZ"
+   },
+   {
+    "variant": "kry/first/bwd",
+    "inner": "PYRAMIDCBEFGHJKLNOQSTUVWXZ"
+   },
+   {
+    "variant": "kry/first/bwd",
+    "inner": "PYRAMIDEBCFGHJKLNOQSTUVWXZ"
+   },
+   {
+    "variant": "kry/last/bwd",
+    "inner": "PYRAMIDBCEFGHJKLNOQSTUVWXZ"
+   },
+   {
+    "variant": "kry/last/bwd",
+    "inner": "PYRAMIDCBEFGHJKLNOQSTUVWXZ"
+   },
+   {
+    "variant": "kry/last/bwd",
+    "inner": "PYRAMIDEBCFGHJKLNOQSTUVWXZ"
+   }
+  ],
+  "distinct_inner_places_per_run": {
+   "std/first/fwd": {
+    "run1_places": 12,
+    "run2_places": 9
+   },
+   "std/first/bwd": {
+    "run1_places": 10,
+    "run2_places": 10
+   },
+   "std/last/fwd": {
+    "run1_places": 12,
+    "run2_places": 9
+   },
+   "std/last/bwd": {
+    "run1_places": 10,
+    "run2_places": 10
+   },
+   "kry/first/fwd": {
+    "run1_places": 10,
+    "run2_places": 11
+   },
+   "kry/first/bwd": {
+    "run1_places": 10,
+    "run2_places": 10
+   },
+   "kry/last/fwd": {
+    "run1_places": 10,
+    "run2_places": 11
+   },
+   "kry/last/bwd": {
+    "run1_places": 10,
+    "run2_places": 10
+   }
+  },
+  "plants": [
+   {
+    "variant": "std/first/bwd",
+    "inner": "CALXBDEFGHIJKMNOPQRSTUVWYZ",
+    "free_offsets": 1,
+    "mixed_found": true
+   },
+   {
+    "variant": "std/first/fwd",
+    "inner": "UNDERWFTABCGHIJKLMOPQSVXYZ",
+    "free_offsets": 1,
+    "mixed_found": true
+   }
+  ],
+  "copies": "20 shuffled copies (seed 1880)",
+  "seconds": 10,
+  "exhaustive": true
+ },
+ "notes": "free inner ring: consistent (variant, offset) K4 2 (copies 0-0) of 208; word-mixed inner ring: K4 6 (copies 0-0); plants [{'variant': 'std/first/bwd', 'inner': 'CALXBDEFGHIJKMNOPQRSTUVWYZ', 'free_offsets': 1, 'mixed_found': True}, {'variant': 'std/first/fwd', 'inner': 'UNDERWFTABCGHIJKLMOPQSVXYZ', 'free_offsets': 1, 'mixed_found': True}]",
+ "candidates": [],
+ "seconds": 9.7
+}

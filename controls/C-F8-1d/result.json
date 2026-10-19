@@ -1,0 +1,415 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "MUMMYTHEEARLYFUNERARYEASTNORTHEASTLWAYSINIMMEDIATEPROXIMITYTOTHBERLINCLOCKEOFBURIALATEMPLEINWHICH",
+  "key": "([[0, 6, 12, 25], [9, 8, 7, 11], [23, 25, 23, 0], [22, 11, 21, 11]], [6, 6, 4, 16], '4x4 affine, align 2, numbering 3')",
+  "ciphertext": "MUVMVFQHOVNTUERGAASBXGKZIARHCRZHNEHGTRTTGHZPUHXJQOHGVWJSNENPPVKADHNCOIMEKNRBLPZZUGYXVWTDPVHUVAICH"
+ },
+ "passed": true,
+ "why": "4x4 affine: {'alive': 2, 'dead': 14, 'open': 0}, copies alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; planted setting submitted with the planted text: True",
+ "bounds": {
+  "family": "affine and plain Hill, sizes 2-5, every alignment, four numberings, solved row by row from every known letter",
+  "by_size": {
+   "2x2 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2x2 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 8,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3x3 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 12,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 plain": {
+    "k4": {
+     "alive": 0,
+     "dead": 16,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4x4 affine": {
+    "k4": {
+     "alive": 2,
+     "dead": 14,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5x5 plain": {
+    "k4": {
+     "alive": 1,
+     "dead": 19,
+     "open": 0
+    },
+    "controls_alive": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5x5 affine": {
+    "k4": {
+     "alive": 0,
+     "dead": 4,
+     "open": 16
+    },
+    "controls_alive": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "controls_open": [
+     10,
+     14,
+     16,
+     10,
+     12,
+     12,
+     8,
+     14,
+     12,
+     16
+    ]
+   }
+  },
+  "k4_alive": [
+   {
+    "n": 4,
+    "affine": true,
+    "align": 2,
+    "numbering": 2,
+    "checks": 4,
+    "B": [
+     [
+      0,
+      6,
+      12,
+      25
+     ],
+     [
+      9,
+      8,
+      7,
+      11
+     ],
+     [
+      23,
+      25,
+      23,
+      0
+     ],
+     [
+      22,
+      11,
+      21,
+      11
+     ]
+    ],
+    "w": [
+     22,
+     14,
+     22,
+     2
+    ]
+   },
+   {
+    "n": 4,
+    "affine": true,
+    "align": 2,
+    "numbering": 3,
+    "checks": 4,
+    "B": [
+     [
+      0,
+      6,
+      12,
+      25
+     ],
+     [
+      9,
+      8,
+      7,
+      11
+     ],
+     [
+      23,
+      25,
+      23,
+      0
+     ],
+     [
+      22,
+      11,
+      21,
+      11
+     ]
+    ],
+    "w": [
+     6,
+     6,
+     4,
+     16
+    ]
+   },
+   {
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 2,
+    "checks": 1,
+    "B": [
+     [
+      2,
+      8,
+      21,
+      17,
+      23
+     ],
+     [
+      23,
+      2,
+      11,
+      24,
+      0
+     ],
+     [
+      5,
+      8,
+      16,
+      0,
+      0
+     ],
+     [
+      19,
+      9,
+      16,
+      3,
+      21
+     ],
+     [
+      2,
+      12,
+      18,
+      25,
+      10
+     ]
+    ],
+    "w": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "controls": "10 shuffled coppers (seed 105), identical test"
+ },
+ "notes": "2x2 plain: K4 {'alive': 0, 'dead': 8, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 2x2 affine: K4 {'alive': 0, 'dead': 8, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 3x3 plain: K4 {'alive': 0, 'dead': 12, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 3x3 affine: K4 {'alive': 0, 'dead': 12, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 4x4 plain: K4 {'alive': 0, 'dead': 16, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 4x4 affine: K4 {'alive': 2, 'dead': 14, 'open': 0}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 5x5 plain: K4 {'alive': 1, 'dead': 19, 'open': 0}, controls alive [0, 0, 1, 0, 0, 0, 1, 0, 0, 0]; 5x5 affine: K4 {'alive': 0, 'dead': 4, 'open': 16}, controls alive [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]. K4 alive with checks: 3.",
+ "candidates": [
+  {
+   "plaintext": "MUMMYTHEEARLYFUNERARYEASTNORTHEASTLWAYSINIMMEDIATEPROXIMITYTOTHBERLINCLOCKEOFBURIALATEMPLEINWHICH",
+   "key": "'Hill 4x4 affine align 2 numbering 2 B=[[0, 6, 12, 25], [9, 8, 7, 11], [23, 25, 23, 0], [22, 11, 21, 11]] w=[22, 14, 22, 2]'",
+   "notes": null
+  },
+  {
+   "plaintext": "MUMMYTHEEARLYFUNERARYEASTNORTHEASTLWAYSINIMMEDIATEPROXIMITYTOTHBERLINCLOCKEOFBURIALATEMPLEINWHICH",
+   "key": "'Hill 4x4 affine align 2 numbering 3 B=[[0, 6, 12, 25], [9, 8, 7, 11], [23, 25, 23, 0], [22, 11, 21, 11]] w=[6, 6, 4, 16]'",
+   "notes": null
+  },
+  {
+   "plaintext": "MUVBTJQFMVEDJEQEVNUYDEASTNORTHEASTKETHBAKPSVCLQVCKKSGMLRPUOJEBYBERLINCLOCKZWHZVXEZALCHVJGLZJNAICH",
+   "key": "'Hill 5x5 plain align 3 numbering 2 B=[[2, 8, 21, 17, 23], [23, 2, 11, 24, 0], [5, 8, 16, 0, 0], [19, 9, 16, 3, 21], [2, 12, 18, 25, 10]] w=[0, 0, 0, 0, 0]'",
+   "notes": null
+  }
+ ],
+ "seconds": 0.2
+}

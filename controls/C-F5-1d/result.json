@@ -1,0 +1,35 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "IONTHEREWEREANUMBEROFEASTNORTHEASTLTHINGSINTHECHAMBERBUTWEFOUNDBERLINCLOCKETHEMINATTHETIMESOINEVI",
+  "key": "{'pa': 'SHADINGBCEFJKLMOPQRTUVWXYZ', 'ca': 'KRYPTOSABCDEFGHIJLMNQUVWXZ', 'm': 'vig', 'key': [4, 4, 10, 5, 5, 9, 2, 9, 3, 2, 7, 6, 5, 11, 10, 8, 0, 5, 3, 7, 10, 1, 3, 0, 1, 8, 1, 1, 4, 8, 2, 9, 5, 9, 6, 5, 7, 6, 11, 2, 1, 11, 6, 8, 0, 1, 7, 7, 6, 9, 7, 8, 1, 4, 1, 5, 8, 0, 2, 9, 9, 5, 10, 9, 11, 2, 7, 2, 9, 11, 6, 4, 4, 1, 3, 3, 10, 5, 7, 4, 1, 8, 5, 9, 8, 0, 6, 5, 1, 9, 2, 5, 7, 2, 3, 2, 9]}",
+  "ciphertext": "BNIXSMQMZEZIAJTVAHUVQDOKQGJNWCEEOYNXBDJBRIERRDIBBWHLNEUXTCFXPDGJQQQSHNNNFGFVEHUBSDXYCCZCIMYQEAFWG"
+ },
+ "passed": true,
+ "why": "smallest admissible base 12 (copies [16, 17, 18, 18, 18, 18, 19, 19, 19, 20]); triples admissible at 15 or less 1; consistent rules 10",
+ "bounds": {
+  "family": "Gromark-type digit keys, k[i] = k[i-a] + k[i-b] mod B, on K1-K3-word and C13/C14-word alphabets",
+  "alphabets": 102,
+  "pairs": 10404,
+  "modes": 3,
+  "smallest_admissible_base_k4": 12,
+  "smallest_admissible_base_controls": [
+   20,
+   16,
+   18,
+   18,
+   17,
+   19,
+   19,
+   19,
+   18,
+   18
+  ],
+  "pairs_admissible_at_15_or_less": 1,
+  "rules_consistent": 10
+ },
+ "notes": "Smallest base any pair admits on K4: 12; on ten shuffles: [16, 17, 18, 18, 18, 18, 19, 19, 19, 20]. Pairs admissible at base 15 or less: 1; consistent rules among them: 10.",
+ "candidates": [],
+ "seconds": 3.7
+}

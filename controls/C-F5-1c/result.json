@@ -1,0 +1,47 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "ATEPROBLEMANDASISAIDBEASTNORTHEASTECASESINWHICHONLYEXPERIMENTCOBERLINCLOCKTHEPROPERTREATMENTWASTO",
+  "key": "{'pa': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ca': 'BERLINACDFGHJKMOPQSTUVWXYZ', 'm': 'varbeau', 'rule': [9, 5, 2], 'base': 20, 'primer': [19, 9, 8, 17, 14, 14, 4, 14, 1]}",
+  "ciphertext": "CGWYLBXXLNWUMJRAFDYHPRXGPNHPGSHZGATKKALPQGUSOXTARCNIVNTMOWQCLVJPTHXCRUCGJIFLOIDFYMLIMXPFRUBNITLFV"
+ },
+ "passed": true,
+ "why": "survivors 1, consistent with the second run 1; planted rule, base and alphabets decrypting to the plant: True",
+ "bounds": {
+  "family": "running numerical key, k[i] = k[i-a] + k[i-b] mod base",
+  "rules": "364 two- and three-term rules with lags up to 13",
+  "bases": "16-26 as each triple allows",
+  "alphabets": 248,
+  "alphabet_triples": 184512,
+  "modes": 3,
+  "triples_with_all_shifts_below_16": 2,
+  "min_checks": 6,
+  "survivors": [
+   {
+    "plain": "std",
+    "cipher": "BERLIN/keyword",
+    "mode": "varbeau",
+    "base": 20,
+    "rule": [
+     9,
+     5,
+     2
+    ],
+    "checks": 6,
+    "stream_matches_second_run": true
+   }
+  ],
+  "n_survivors": 1,
+  "n_survivors_consistent_with_second_run": 1
+ },
+ "notes": "184512 alphabet triples x 364 rules, bases 16-26. 1 survivors with >= 6 checks; 1 full-stream candidates submitted.",
+ "candidates": [
+  {
+   "plaintext": "ATEPROBLEMANDASISAIDBEASTNORTHEASTECASESINWHICHONLYEXPERIMENTCOBERLINCLOCKTHEPROPERTREATMENTWASTO",
+   "key": "{'pa': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ca': 'BERLINACDFGHJKMOPQSTUVWXYZ', 'm': 'varbeau', 'rule': [9, 5, 2], 'base': 20, 'primer': [19, 9, 8, 17, 14, 14, 4, 14, 1]}",
+   "notes": null
+  }
+ ],
+ "seconds": 133.8
+}

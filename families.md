@@ -108,11 +108,11 @@ Update the leaf when an experiment works on it.
     - **F6.19** The French diagonal method, then the table (key-named diagonals) {closed · exact · 0165}
   - F12 Stein's way: look, quantify, then crib
     - **F12.1** The 97 letters and the "?" checked against images of the copper {blocked}
-    - **F12.2** K4's statistics by segment and width against shuffles {closed · sampled · 0168}
+    - **F12.2** K4's statistics by segment and width against shuffles; a planted period-7 key is not seen (C-F12.2) {blocked · sampled · 0168}
     - **F12.3** Stein's I.C. peak at 13 in K1 and K2: real or chance {closed · sampled · 0169}
-    - **F12.4** A pencil session: every pattern noted before any code {closed · sampled · 0170}
+    - **F12.4** A pencil session: every pattern noted before any code; planted patterns not seen (C-F12.4) {blocked · sampled · 0170}
     - **F12.5** Parts with their own keys, split where the statistics break {closed · exact · 0171}
-    - **F12.6** Probable words through the cells the known letters cannot decide {closed · exact · 0172}
+    - **F12.6** Probable words through the cells the known letters cannot decide; a plant scores below its copies (C-F12.6) {blocked · exact · 0172}
     - **F12.7** Stein's K1-K3 method as such: column shifts scored by log frequencies, then a crib {closed · by subsumption · 0005}
   - F3 A two-part key with a combiner
     - Two words added: both from the puzzle, or one from the dictionary {closed · exact · 0014, 0043, 0059, 0115}

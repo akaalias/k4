@@ -150,10 +150,10 @@ Rules:
 | C-F4.4 | F4.4 | The extra L and the HILL row as a marker matching YAR on the lower-left plate (C21(b)) | 0005, 0017, 0089, 0186 | passed (cited) | by subsumption: C-F1-1 (0005), C-F1-8b (0017), C-F4-2 (0089), C-F4.3 (0186) |
 | C-F10.1 | F10.1 | Chaocipher: two alphabet wheels permuted after every letter (Byrne, 1918; method... | 0187 | passed, own plant | 0187: plants added to the texts and through the same scan_rot as K4: consistent 26, 26, 26 (the 26 rotations), K4 0, copies 0; counts only |
 | C-F10.2 | F10.2 | Wheatstone cryptograph or Alberti disk advanced by the plaintext: a 26-letter ring... | 0188 | passed | C-F10.2 (0188's plants were tested against 2,000 rings only, so a new control) |
-| C-F11.1 | F11.1 | Strip ciphers and cylinders with published alphabets: M-94's 25 discs, the Jefferson... | 0189 | open | - |
-| C-F11.2 | F11.2 | Poem code: a double transposition keyed by words from a memorized text (SOE), then the... | 0190 | open | - |
-| C-F11.3 | F11.3 | The CIA's own 1970s Polish agent system (Bury, Cryptologia 2007): a key text written... | 0191 | open | - |
-| C-F11.4 | F11.4 | Friedman's keyed alphabet box (MC III 35b): the alphabet written n times in a... | 0192 | open | - |
+| C-F11.1 | F11.1 | Strip ciphers and cylinders with published alphabets: M-94's 25 discs, the Jefferson... | 0189 | passed, own plant | 0189: the same consistent_cells() as K4; planted cell found at alignments 2 and 18 |
+| C-F11.2 | F11.2 | Poem code: a double transposition keyed by words from a memorized text (SOE), then the... | 0190 | passed | C-F11.2 |
+| C-F11.3 | F11.3 | The CIA's own 1970s Polish agent system (Bury, Cryptologia 2007): a key text written... | 0191 | passed, own plant | 0191: plants through the same search, fit once each (K2, K1-K3, Carter), copies 0; counts only |
+| C-F11.4 | F11.4 | Friedman's keyed alphabet box (MC III 35b): the alphabet written n times in a... | 0192 | passed, own plant | 0192: plants fit 62 and 26 times, copies 0; counts only |
 | C-F8-1 | F8/1 | Hill 2-5, plain and affine, 330 numberings (4 standard, 126 vocabulary, 200 K1-K3... | 0015, 0036, 0044, 0055, 0105, 0116 | open | - |
 | C-F8.1 | F8.1 | Hill 2x2 and 3x3 with an unknown letter numbering (any of 26!) | 0193 (error), 0194 | open | - |
 | C-F5-1 | F5/1 | Gromark, two- and three-term rules, bases 2-26 (three-term on a free alphabet in base... | 0013, 0028, 0046, 0054, 0069, 0076, 0107 | open | - |

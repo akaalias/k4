@@ -148,8 +148,8 @@ Rules:
 | C-F4.2 | F4.2 | Free trifid cubes at periods above 15 | 0185 (before: 0040 (2-15), 0033) | passed | C-F4.2 (0185's own plant went through solve_setting directly, not the sweep, so a new control) |
 | C-F4.3 | F4.3 | The positions of the sculpture's physical anomalies as a key (C3(c)) | 0186 | passed | C-F4.3 |
 | C-F4.4 | F4.4 | The extra L and the HILL row as a marker matching YAR on the lower-left plate (C21(b)) | 0005, 0017, 0089, 0186 | passed (cited) | by subsumption: C-F1-1 (0005), C-F1-8b (0017), C-F4-2 (0089), C-F4.3 (0186) |
-| C-F10.1 | F10.1 | Chaocipher: two alphabet wheels permuted after every letter (Byrne, 1918; method... | 0187 | open | - |
-| C-F10.2 | F10.2 | Wheatstone cryptograph or Alberti disk advanced by the plaintext: a 26-letter ring... | 0188 | open | - |
+| C-F10.1 | F10.1 | Chaocipher: two alphabet wheels permuted after every letter (Byrne, 1918; method... | 0187 | passed, own plant | 0187: plants added to the texts and through the same scan_rot as K4: consistent 26, 26, 26 (the 26 rotations), K4 0, copies 0; counts only |
+| C-F10.2 | F10.2 | Wheatstone cryptograph or Alberti disk advanced by the plaintext: a 26-letter ring... | 0188 | passed | C-F10.2 (0188's plants were tested against 2,000 rings only, so a new control) |
 | C-F11.1 | F11.1 | Strip ciphers and cylinders with published alphabets: M-94's 25 discs, the Jefferson... | 0189 | open | - |
 | C-F11.2 | F11.2 | Poem code: a double transposition keyed by words from a memorized text (SOE), then the... | 0190 | open | - |
 | C-F11.3 | F11.3 | The CIA's own 1970s Polish agent system (Bury, Cryptologia 2007): a key text written... | 0191 | open | - |

@@ -1,0 +1,191 @@
+{
+ "error": null,
+ "patches": [
+  [
+   "    assert \"\".join(LOWER_LEFT[10][27:]) + \"\".join(LOWER_LEFT[11:]) == ct\n",
+   ""
+  ]
+ ],
+ "plant": {
+  "plaintext": "CKOFTHEWORKANDITWASONEASTNORTHEASTNTIONTODETAILANDSTRICTADHERENBERLINCLOCKFINITEORDEROFPROCEDURET",
+  "key": "('cipher', 20, 'folded', 1, 'beau/kry/std')",
+  "ciphertext": "GUYKWXXXQKBLUPTOJENXURETCRRYTZDFUSYIAXZEXMXUHXQLCAFSNYQLELADYPXJHPETSPZOZAFYSZSBZUBLPAKWSDNKHQNFS"
+ },
+ "passed": true,
+ "why": "overlays with all 24: 1 (copies best [5, 5, 5, 6, 6, 6, 5, 6, 6, 6]); the planted overlay reading the message: True",
+ "bounds": {
+  "family": "running key read by position off the carved screen",
+  "sources": "tableau plates (header, 26 labelled rows, extra L in row N, footer) and cipher plates, 28 lines each",
+  "line_windows": 25,
+  "straight_or_folded": 2,
+  "column_shifts": [
+   -4,
+   4
+  ],
+  "conventions": 12,
+  "trials": 10800,
+  "k4_best_hits": 24,
+  "controls_best_hits": [
+   5,
+   5,
+   5,
+   6,
+   6,
+   6,
+   5,
+   6,
+   6,
+   6
+  ],
+  "k4_hit_histogram": {
+   "0": 4840,
+   "1": 3784,
+   "2": 1577,
+   "3": 463,
+   "4": 115,
+   "5": 18,
+   "6": 1,
+   "7": 1,
+   "24": 1
+  },
+  "natural_alignment_hits": {
+   "tableau straight": 2,
+   "tableau folded": 3,
+   "cipher straight": 3,
+   "cipher folded": 2
+  },
+  "k4_top": [
+   {
+    "source": "cipher",
+    "start_line": 20,
+    "folded": true,
+    "shift": 1,
+    "convention": "beau/kry/std",
+    "hits": 24
+   },
+   {
+    "source": "cipher",
+    "start_line": 20,
+    "folded": false,
+    "shift": -3,
+    "convention": "beau/kry/std",
+    "hits": 7
+   },
+   {
+    "source": "tableau",
+    "start_line": 23,
+    "folded": false,
+    "shift": 0,
+    "convention": "beau/kry/kry",
+    "hits": 6
+   },
+   {
+    "source": "tableau",
+    "start_line": 4,
+    "folded": true,
+    "shift": -1,
+    "convention": "beau/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 11,
+    "folded": true,
+    "shift": -1,
+    "convention": "beau/std/std",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 20,
+    "folded": true,
+    "shift": -3,
+    "convention": "beau/std/kry",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 22,
+    "folded": false,
+    "shift": 1,
+    "convention": "beau/kry/kry",
+    "hits": 5
+   },
+   {
+    "source": "tableau",
+    "start_line": 24,
+    "folded": false,
+    "shift": -1,
+    "convention": "beau/kry/kry",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 1,
+    "folded": false,
+    "shift": 0,
+    "convention": "varb/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 1,
+    "folded": false,
+    "shift": 0,
+    "convention": "varb/kry/kry",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 7,
+    "folded": false,
+    "shift": 1,
+    "convention": "vig/std/kry",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 8,
+    "folded": true,
+    "shift": -3,
+    "convention": "vig/std/kry",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 10,
+    "folded": true,
+    "shift": 0,
+    "convention": "beau/std/std",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 12,
+    "folded": true,
+    "shift": 1,
+    "convention": "varb/kry/std",
+    "hits": 5
+   },
+   {
+    "source": "cipher",
+    "start_line": 13,
+    "folded": true,
+    "shift": -1,
+    "convention": "beau/kry/kry",
+    "hits": 5
+   }
+  ],
+  "full_24": 1,
+  "controls": "10 shuffled coppers (seed 89), identical search"
+ },
+ "notes": "10,800 overlays. K4 best 24/24; controls best 5-6. Overlays hitting all 24: 1. Natural alignment (lower plates, no shift), best hits: {'tableau straight': 2, 'tableau folded': 3, 'cipher straight': 3, 'cipher folded': 2}.",
+ "candidates": [
+  {
+   "plaintext": "CKOFTHEWORKANDITWASONEASTNORTHEASTN?IONTODETAILANDSTRICTADHERENBERLINCLOCKFINITEORDEROFPROCEDURET",
+   "key": "'screen overlay cipher line 20 folded shift 1 beau/kry/std'",
+   "notes": null
+  }
+ ],
+ "seconds": 0.5
+}

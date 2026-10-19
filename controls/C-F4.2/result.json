@@ -1,0 +1,120 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "EDTHESCATTEREDBEADSFREASTNORTHEASTOUGHTBYTHEPLUNDERERSFROMTHECHBERLINCLOCKANDDROPPEDUPONTHETHRESH",
+  "key": "{'cube': 'AXORFI?TPEBJSVNHGLZDQUWKMCY', 'period': 23, 'offset': 9}",
+  "ciphertext": "HVZODQFABRGJEBRXJRAXSIBMRXEBAIDAEWIFIGRBDYPQWXFBDFUPTAXOFWBIJDCPQZGLTRORREYLHWAIZBBFSMIIQUHYRYEEA"
+ },
+ "passed": true,
+ "why": "settings with cubes 1 (copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]); at period 23 offset 9: 5000 cubes; candidate reading the planted message: True",
+ "bounds": {
+  "family": "trifid, free 27-symbol cube, periods 16-97, every alignment, constraint propagation and backtracking",
+  "settings": 4633,
+  "settings_with_cubes": 1,
+  "settings_capped": 1,
+  "node_cap": 3000000,
+  "solution_cap": 5000,
+  "k4_settings_with_cubes": [
+   {
+    "period": 23,
+    "offset": 9,
+    "classes": 26,
+    "nodes": 73028,
+    "cubes": 5000,
+    "capped": true,
+    "best_english": -3.998,
+    "best_hits": 24
+   }
+  ],
+  "max_nodes": 73028,
+  "best": [
+   {
+    "english": -3.998,
+    "period": 23,
+    "offset": 9,
+    "hits": 24,
+    "text": "EDTHESCATTEREDBEADSFREASTNORTHEASTOUGHTBYTHEPLUNDERERSFROMTHECHBERLINCLOCKANDDROPPEDUPONTHETHRESH"
+   }
+  ],
+  "plant": {
+   "period": 30,
+   "offset": 5,
+   "cubes": 288,
+   "true_cube_found": true
+  },
+  "controls": [
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   },
+   {
+    "settings": 4633,
+    "with_cubes": 0,
+    "capped": 0,
+    "best_english": null
+   }
+  ],
+  "seconds": 36,
+  "exhaustive": true
+ },
+ "notes": "4633 settings; 1 admit a cube on K4; 1 capped; copies with cubes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+ "candidates": [
+  {
+   "plaintext": "EDTHESCATTEREDBEADSFREASTNORTHEASTOUGHTBYTHEPLUNDERERSFROMTHECHBERLINCLOCKANDDROPPEDUPONTHETHRESH",
+   "key": "{'cube': 'AXORFI?TPEBJSVNHGLZDQUWKMCY', 'period': 23, 'offset': 9}",
+   "notes": null
+  }
+ ],
+ "seconds": 36.1
+}

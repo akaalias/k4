@@ -141,13 +141,13 @@ Rules:
 | C-F2.1 | F2.1 | Forced fragments at periods 24-25 after letter strike-outs not matched against words | 0181 (before: 0057) | passed | C-F2.1 (the forced reading pins the plant; 64 settings with a word against copies 0-3) |
 | C-F2.2 | F2.2 | Nulls placed by a rule (after every X, after each crib word) | 0182 | passed | C-F2.2 (gap 7 above every copy; gaps 15 and 23 also give length 8: a period-8 key cannot tell d from d+8) |
 | C-F2.3 | F2.3 | A plain component written from a phrase with repeated letters, so a letter can be... | 0183 | passed | C-F2.3 |
-| C-F4-1 | F4/1 | Trifid, any cube, periods 2-15 | 0040 | open | - |
-| C-F4-2 | F4/2 | The plates as a key by position, straight or folded | 0089 | open | - |
-| C-F4-3 | F4/3 | Read from behind the screen | 0108 | open | - |
-| C-F4.1 | F4.1 | A route that follows the plates' physical layout (the S-curve, the 31-letter lines as a... | 0184 (before: 0092) | open | - |
-| C-F4.2 | F4.2 | Free trifid cubes at periods above 15 | 0185 (before: 0040 (2-15), 0033) | open | - |
-| C-F4.3 | F4.3 | The positions of the sculpture's physical anomalies as a key (C3(c)) | 0186 | open | - |
-| C-F4.4 | F4.4 | The extra L and the HILL row as a marker matching YAR on the lower-left plate (C21(b)) | 0005, 0017, 0089, 0186 | open | - |
+| C-F4-1 | F4/1 | Trifid, any cube, periods 2-15 | 0040 | passed | C-F4-1 (0040: the planted period and offset admit cubes, the only setting that does; the 5,000-cube cap stops short of the true cube, so the reading is not returned; first run judged on the reading, FAILED, check matched to 0040's verdict) |
+| C-F4-2 | F4/2 | The plates as a key by position, straight or folded | 0089 | passed | C-F4-2 (0089; PATCH drops a K4 self-check) |
+| C-F4-3 | F4/3 | Read from behind the screen | 0108 | passed | C-F4-3 |
+| C-F4.1 | F4.1 | A route that follows the plates' physical layout (the S-curve, the 31-letter lines as a... | 0184 (before: 0092) | passed | C-F4.1 |
+| C-F4.2 | F4.2 | Free trifid cubes at periods above 15 | 0185 (before: 0040 (2-15), 0033) | passed | C-F4.2 (0185's own plant went through solve_setting directly, not the sweep, so a new control) |
+| C-F4.3 | F4.3 | The positions of the sculpture's physical anomalies as a key (C3(c)) | 0186 | passed | C-F4.3 |
+| C-F4.4 | F4.4 | The extra L and the HILL row as a marker matching YAR on the lower-left plate (C21(b)) | 0005, 0017, 0089, 0186 | passed (cited) | by subsumption: C-F1-1 (0005), C-F1-8b (0017), C-F4-2 (0089), C-F4.3 (0186) |
 | C-F10.1 | F10.1 | Chaocipher: two alphabet wheels permuted after every letter (Byrne, 1918; method... | 0187 | open | - |
 | C-F10.2 | F10.2 | Wheatstone cryptograph or Alberti disk advanced by the plaintext: a 26-letter ring... | 0188 | open | - |
 | C-F11.1 | F11.1 | Strip ciphers and cylinders with published alphabets: M-94's 25 discs, the Jefferson... | 0189 | open | - |

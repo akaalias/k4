@@ -136,11 +136,11 @@ Rules:
 | C-F3.5 | F3.5 | The misspelt letters' positions as indices (Q in IQLUSION, U in UNDERGRUUND, A in... | 0178 (before: 0061 used the letters) | passed, own plant | 0178: 2 8 5 plus SHADOW, found |
 | C-F3.6 | F3.6 | The Weltzeituhr's rotating ring as an offset over 26 letters (C12(b)): 24 zones, the... | 0179 (before: 0052) | passed | 0179's own plant and C-F3.6b (the ring turning through the text, the other branch) |
 | C-F3.7 | F3.7 | "Point" read as the decimal point in K2's "six point five", as the place on the... | 0180 (before: 0072) | passed, own plant | 0180: the four ? plus SHADOW, found |
-| C-F2-1 | F2/1 | Reversal, regular nulls, prefix nulls, affine masks, doublets as nulls, nulls by letter | 0023, 0057, 0074, 0075 | open | - |
-| C-F2-2 | F2/2 | Message written along grid paths | 0092 | open | - |
-| C-F2.1 | F2.1 | Forced fragments at periods 24-25 after letter strike-outs not matched against words | 0181 (before: 0057) | open | - |
-| C-F2.2 | F2.2 | Nulls placed by a rule (after every X, after each crib word) | 0182 | open | - |
-| C-F2.3 | F2.3 | A plain component written from a phrase with repeated letters, so a letter can be... | 0183 | open | - |
+| C-F2-1 | F2/1 | Reversal, regular nulls, prefix nulls, affine masks, doublets as nulls, nulls by letter | 0023, 0057, 0074, 0075 | passed | C-F2-1 (0023 regular nulls), C-F2-1b (0057 nulls by letter), C-F2-1c (0074 affine mask), C-F2-1d (0075 doublet null); periodic arms only, the autokey arms of 0074 and 0075 share the forced-key code |
+| C-F2-2 | F2/2 | Message written along grid paths | 0092 | passed | C-F2-2 (0092) |
+| C-F2.1 | F2.1 | Forced fragments at periods 24-25 after letter strike-outs not matched against words | 0181 (before: 0057) | passed | C-F2.1 (the forced reading pins the plant; 64 settings with a word against copies 0-3) |
+| C-F2.2 | F2.2 | Nulls placed by a rule (after every X, after each crib word) | 0182 | passed | C-F2.2 (gap 7 above every copy; gaps 15 and 23 also give length 8: a period-8 key cannot tell d from d+8) |
+| C-F2.3 | F2.3 | A plain component written from a phrase with repeated letters, so a letter can be... | 0183 | passed | C-F2.3 |
 | C-F4-1 | F4/1 | Trifid, any cube, periods 2-15 | 0040 | open | - |
 | C-F4-2 | F4/2 | The plates as a key by position, straight or folded | 0089 | open | - |
 | C-F4-3 | F4/3 | Read from behind the screen | 0108 | open | - |

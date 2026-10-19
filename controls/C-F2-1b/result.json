@@ -1,0 +1,146 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "EREABLETOSECURETHEEXAEASTNORTHEASTSTHISHASBEENALONGDIGRESSIONBUBERLINCLOCKSARYTOSHOWTHENATUREOFTH",
+  "key": "('nulls C at [37, 40, 46, 48, 57, 62]', 'vig/kry/std', [22, 4, 15, 3, 1, 15, 19, 4])",
+  "ciphertext": "HFAKJGEIBKAMWQEIKPABIAAKAXUEFDELCIVHCQVCAKEPACKCGIGOLRQOCHEYXCRMAESEMNNJYDHWUGAJVRGMXSHXWHWQEJIID"
+ },
+ "passed": true,
+ "why": "masks below 26: [{'letters': 'C', 'struck': 6, 'period': 8}, {'letters': 'BC', 'struck': 8, 'period': 8}, {'letters': 'CD', 'struck': 7, 'period': 8}, {'letters': 'CF', 'struck': 7, 'period': 8}, {'letters': 'CJ', 'struck': 9, 'period': 8}]; the null letter C at period 8: True",
+ "bounds": {
+  "family": "null letters (every copy of one or two letters outside the crib ranges), then periodic tableau",
+  "masks": 351,
+  "controls_per_mask": 10,
+  "periods": "1-52",
+  "alphabet_pairs": 4,
+  "modes": 3,
+  "smallest_period_histogram": {
+   "8": 12,
+   "15": 9,
+   "17": 36,
+   "18": 118,
+   "19": 66,
+   "23": 5,
+   "25": 45,
+   "26": 60
+  },
+  "control_histogram_per_10": {
+   "8": 7.3,
+   "15": 0.9,
+   "17": 38.0,
+   "18": 81.4,
+   "19": 54.8,
+   "23": 1.7,
+   "24": 19.4,
+   "25": 61.3,
+   "26": 86.1,
+   "29": 0.1
+  },
+  "masks_below_26": [
+   {
+    "letters": "C",
+    "struck": 6,
+    "period": 8
+   },
+   {
+    "letters": "BC",
+    "struck": 8,
+    "period": 8
+   },
+   {
+    "letters": "CD",
+    "struck": 7,
+    "period": 8
+   },
+   {
+    "letters": "CF",
+    "struck": 7,
+    "period": 8
+   },
+   {
+    "letters": "CJ",
+    "struck": 9,
+    "period": 8
+   },
+   {
+    "letters": "CM",
+    "struck": 8,
+    "period": 8
+   },
+   {
+    "letters": "CN",
+    "struck": 6,
+    "period": 8
+   },
+   {
+    "letters": "CS",
+    "struck": 7,
+    "period": 8
+   },
+   {
+    "letters": "CT",
+    "struck": 6,
+    "period": 8
+   },
+   {
+    "letters": "CU",
+    "struck": 7,
+    "period": 8
+   },
+   {
+    "letters": "CW",
+    "struck": 10,
+    "period": 8
+   },
+   {
+    "letters": "CZ",
+    "struck": 6,
+    "period": 8
+   },
+   {
+    "letters": "AC",
+    "struck": 12,
+    "period": 15
+   },
+   {
+    "letters": "CE",
+    "struck": 11,
+    "period": 15
+   },
+   {
+    "letters": "CG",
+    "struck": 11,
+    "period": 15
+   },
+   {
+    "letters": "CH",
+    "struck": 12,
+    "period": 15
+   },
+   {
+    "letters": "CK",
+    "struck": 11,
+    "period": 15
+   },
+   {
+    "letters": "CO",
+    "struck": 8,
+    "period": 15
+   },
+   {
+    "letters": "CQ",
+    "struck": 10,
+    "period": 15
+   },
+   {
+    "letters": "CR",
+    "struck": 9,
+    "period": 15
+   }
+  ]
+ },
+ "notes": "351 letter masks; smallest consistent period per mask: {8: 12, 15: 9, 17: 36, 18: 118, 19: 66, 23: 5, 25: 45, 26: 60}; random strike-outs of the same size (per 10): {8: 7.3, 15: 0.9, 17: 38.0, 18: 81.4, 19: 54.8, 23: 1.7, 24: 19.4, 25: 61.3, 26: 86.1, 29: 0.1}. Masks below 26: 291.",
+ "candidates": [],
+ "seconds": 6.4
+}

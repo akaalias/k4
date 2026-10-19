@@ -1,0 +1,449 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "BEENINBOXESWERELYINGOEASTNORTHEASTONTHECOUCHESONTHELIDOFONEOFTHBERLINCLOCKWASACOLLARINTACTBUTCRUM",
+  "key": "('stdx7/std', 'vig', 'LODESTONE')",
+  "ciphertext": "AWLRIGDPLTYVMNBXJUYAFMSDNAGGNEMSDNPRKPLIUHSOMVQQDTBXDXNLFRAVLMFAWYNIGSWGPIVECTSPNUOYUFSORDACCINHM"
+ },
+ "passed": true,
+ "why": "period 9: live 4, copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; LODESTONE read from stdx7/std at 9: True",
+ "bounds": {
+  "family": "affine (decimated-alphabet) masks before a periodic key, ciphertext autokey, or both",
+  "decimated_alphabets": 22,
+  "pairings": 110,
+  "periods": "1-52",
+  "periodic_consistent_by_period": {
+   "9": {
+    "k4": 4,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "18": {
+    "k4": 4,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "26": {
+    "k4": 8,
+    "controls": [
+     8,
+     8,
+     8,
+     0,
+     13,
+     8,
+     4,
+     4,
+     8,
+     6
+    ]
+   },
+   "27": {
+    "k4": 220,
+    "controls": [
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220
+    ]
+   },
+   "28": {
+    "k4": 220,
+    "controls": [
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220
+    ]
+   },
+   "29": {
+    "k4": 220,
+    "controls": [
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220,
+     220
+    ]
+   },
+   "30": {
+    "k4": 8,
+    "controls": [
+     8,
+     16,
+     0,
+     16,
+     0,
+     16,
+     0,
+     0,
+     8,
+     0
+    ]
+   },
+   "31": {
+    "k4": 0,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     13,
+     0,
+     0,
+     0
+    ]
+   },
+   "36": {
+    "k4": 4,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "45": {
+    "k4": 4,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "52": {
+    "k4": 8,
+    "controls": [
+     8,
+     8,
+     8,
+     0,
+     13,
+     8,
+     4,
+     4,
+     8,
+     6
+    ]
+   }
+  },
+  "autokey_constant_by_checks": {
+   "1": {
+    "k4": 40,
+    "controls": [
+     42,
+     44,
+     55,
+     55,
+     60,
+     38,
+     50,
+     48,
+     52,
+     34
+    ]
+   },
+   "2": {
+    "k4": 2,
+    "controls": [
+     9,
+     2,
+     4,
+     0,
+     4,
+     4,
+     0,
+     4,
+     2,
+     2
+    ]
+   }
+  },
+  "autokey_plus_periodic_by_checks": {
+   "1": {
+    "k4": 4012,
+    "controls": [
+     3785,
+     4250,
+     3777,
+     4402,
+     4087,
+     4108,
+     3907,
+     3713,
+     4005,
+     3997
+    ]
+   },
+   "2": {
+    "k4": 189,
+    "controls": [
+     75,
+     68,
+     124,
+     116,
+     127,
+     71,
+     120,
+     93,
+     88,
+     94
+    ]
+   },
+   "3": {
+    "k4": 10,
+    "controls": [
+     4,
+     0,
+     0,
+     4,
+     6,
+     2,
+     0,
+     2,
+     2,
+     6
+    ]
+   }
+  },
+  "fragments": 676,
+  "word_matches": [
+   {
+    "pairing": "stdx7/std",
+    "mode": "vig",
+    "period": 9,
+    "run": "LODESTONE"
+   },
+   {
+    "pairing": "stdx7/std",
+    "mode": "vig",
+    "period": 18,
+    "run": "ESTONELODESTONE"
+   },
+   {
+    "pairing": "stdx7/std",
+    "mode": "vig",
+    "period": 27,
+    "run": "LODESTO"
+   },
+   {
+    "pairing": "stdx7/std",
+    "mode": "vig",
+    "period": 27,
+    "run": "LODESTONELO"
+   },
+   {
+    "pairing": "stdx7/std",
+    "mode": "vig",
+    "period": 27,
+    "run": "ESTONE"
+   },
+   {
+    "pairing": "stdx7/std",
+    "mode": "vig",
+    "period": 28,
+    "run": "ODESTO"
+   },
+   {
+    "pairing": "stdx7/std",
+    "mode": "vig",
+    "period": 28,
+    "run": "LODESTONELO"
+   },
+   {
+    "pairing": "stdx7/std",
+    "mode": "vig",
+    "period": 29,
+    "run": "DESTOLODESTONELO"
+   },
+   {
+    "pairing": "std/stdx11",
+    "mode": "beau",
+    "period": 9,
+    "run": "LODESTONE"
+   },
+   {
+    "pairing": "std/stdx11",
+    "mode": "beau",
+    "period": 18,
+    "run": "ESTONELODESTONE"
+   },
+   {
+    "pairing": "std/stdx11",
+    "mode": "beau",
+    "period": 27,
+    "run": "LODESTO"
+   },
+   {
+    "pairing": "std/stdx11",
+    "mode": "beau",
+    "period": 27,
+    "run": "LODESTONELO"
+   },
+   {
+    "pairing": "std/stdx11",
+    "mode": "beau",
+    "period": 27,
+    "run": "ESTONE"
+   },
+   {
+    "pairing": "std/stdx11",
+    "mode": "beau",
+    "period": 28,
+    "run": "ODESTO"
+   },
+   {
+    "pairing": "std/stdx11",
+    "mode": "beau",
+    "period": 28,
+    "run": "LODESTONELO"
+   },
+   {
+    "pairing": "std/stdx11",
+    "mode": "beau",
+    "period": 29,
+    "run": "DESTOLODESTONELO"
+   },
+   {
+    "pairing": "std/stdx15",
+    "mode": "vig",
+    "period": 9,
+    "run": "LODESTONE"
+   },
+   {
+    "pairing": "std/stdx15",
+    "mode": "vig",
+    "period": 18,
+    "run": "ESTONELODESTONE"
+   },
+   {
+    "pairing": "std/stdx15",
+    "mode": "vig",
+    "period": 27,
+    "run": "LODESTO"
+   },
+   {
+    "pairing": "std/stdx15",
+    "mode": "vig",
+    "period": 27,
+    "run": "LODESTONELO"
+   },
+   {
+    "pairing": "std/stdx15",
+    "mode": "vig",
+    "period": 27,
+    "run": "ESTONE"
+   },
+   {
+    "pairing": "std/stdx15",
+    "mode": "vig",
+    "period": 28,
+    "run": "ODESTO"
+   },
+   {
+    "pairing": "std/stdx15",
+    "mode": "vig",
+    "period": 28,
+    "run": "LODESTONELO"
+   },
+   {
+    "pairing": "std/stdx15",
+    "mode": "vig",
+    "period": 29,
+    "run": "DESTOLODESTONELO"
+   },
+   {
+    "pairing": "stdx19/std",
+    "mode": "beau",
+    "period": 9,
+    "run": "LODESTONE"
+   },
+   {
+    "pairing": "stdx19/std",
+    "mode": "beau",
+    "period": 18,
+    "run": "ESTONELODESTONE"
+   },
+   {
+    "pairing": "stdx19/std",
+    "mode": "beau",
+    "period": 27,
+    "run": "LODESTO"
+   },
+   {
+    "pairing": "stdx19/std",
+    "mode": "beau",
+    "period": 27,
+    "run": "LODESTONELO"
+   },
+   {
+    "pairing": "stdx19/std",
+    "mode": "beau",
+    "period": 27,
+    "run": "ESTONE"
+   },
+   {
+    "pairing": "stdx19/std",
+    "mode": "beau",
+    "period": 28,
+    "run": "ODESTO"
+   }
+  ]
+ },
+ "notes": "22 decimated alphabets, 110 pairings. Periodic at P <= 26 (K4, control min, max): {'9': (4, 0, 0), '18': (4, 0, 0), '26': (8, 0, 13)}. Autokey: {'1': (40, 34, 60), '2': (2, 0, 9)}. Autokey plus periodic: {'1': (4012, 3713, 4402), '2': (189, 68, 127), '3': (10, 0, 6)}. Word matches in 676 fragments: 32.",
+ "candidates": [],
+ "seconds": 62.7
+}

@@ -1,0 +1,356 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "ANDLAPSEDAGAININTOUNCEASTNORTHEASTNTHISCONDITIONHEWASCARRIEDTOTBERLINCLOCKTHOUSEWHERELADYCARNARVO",
+  "key": "('null at 43', 'beau/std/kry', [4, 24, 8, 15, 25, 22, 13, 14, 5, 24, 12])",
+  "ciphertext": "TEOTZAUDYXSTJUAFPZQMVBTSIYEOQARXQEEIBLTEKMMJNVDUBUKGVPXUGJTFSBQGRARVESTEQPUXDMFQFBUOCPOUHYXLYZOMK"
+ },
+ "passed": true,
+ "why": "null at 43: smallest period 11, live P<=26 10, copies [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]",
+ "bounds": {
+  "family": "doublet letters as nulls",
+  "inside_crib_doublets": [],
+  "null_combinations": 7,
+  "periods": "1-52",
+  "results": [
+   {
+    "nulls": [
+     19
+    ],
+    "periodic_le26": 0,
+    "smallest_period": 27,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+     ],
+     "autokey_2plus": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     43
+    ],
+    "periodic_le26": 10,
+    "smallest_period": 11,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 1,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     47
+    ],
+    "periodic_le26": 10,
+    "smallest_period": 11,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 1,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     43
+    ],
+    "periodic_le26": 10,
+    "smallest_period": 11,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     47
+    ],
+    "periodic_le26": 10,
+    "smallest_period": 11,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+     ],
+     "autokey_2plus": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     43,
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      9,
+      8,
+      8,
+      8,
+      8,
+      9,
+      9,
+      8
+     ],
+     "autokey_2plus": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "nulls": [
+     19,
+     43,
+     47
+    ],
+    "periodic_le26": 8,
+    "smallest_period": 26,
+    "autokey_2plus_checks": 0,
+    "autokey_periodic_3plus": 0,
+    "controls": {
+     "periodic_le26": [
+      8,
+      8,
+      9,
+      8,
+      8,
+      8,
+      8,
+      9,
+      9,
+      8
+     ],
+     "autokey_2plus": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "autokey_periodic_3plus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ]
+ },
+ "notes": "Doublets inside the cribs carrying two different known letters: [], so not nulls. nulls [19]: periodic P<=26 0 (controls 0-1), autokey 2+ checks 0 (0-1), autokey+periodic 3+ 0 (0-1); nulls [43]: periodic P<=26 10 (controls 8-8), autokey 2+ checks 0 (0-1), autokey+periodic 3+ 1 (0-0); nulls [47]: periodic P<=26 10 (controls 8-8), autokey 2+ checks 0 (0-1), autokey+periodic 3+ 1 (0-0); nulls [19, 43]: periodic P<=26 10 (controls 8-8), autokey 2+ checks 0 (0-1), autokey+periodic 3+ 0 (0-0); nulls [19, 47]: periodic P<=26 10 (controls 8-8), autokey 2+ checks 0 (0-1), autokey+periodic 3+ 0 (0-0); nulls [43, 47]: periodic P<=26 8 (controls 8-9), autokey 2+ checks 0 (0-1), autokey+periodic 3+ 0 (0-0); nulls [19, 43, 47]: periodic P<=26 8 (controls 8-9), autokey 2+ checks 0 (0-1), autokey+periodic 3+ 0 (0-0).",
+ "candidates": [],
+ "seconds": 12.0
+}

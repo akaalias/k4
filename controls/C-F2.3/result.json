@@ -1,0 +1,352 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "BLTHOSEHENTHEUNSOUHTAEASTNORTHEASTDFORRAIDDECISIONANDROTACTIONBBERLINCLOCKEUNDERSTOODTHATTHEADVEN",
+  "key": "('LACKOFEVIDENCEBUTHISINTERV', 'Carter 1923 @107546', 'std', 'k-j', [9, 4, 22, 19, 20, 24, 24, 25, 1, 18, 16])",
+  "ciphertext": "VEGCQFLIEHASRHIBUJIFRGILAYQACIVRXTVRPWAXFSJGXWDLQDXOSUMTDUDCUDLNISJKLRUUMWODVAHYAYUUQLBPNOFNTPZCG"
+ },
+ "passed": true,
+ "why": "planted cell listed: True, lengths [11, 22]; length 11: live 2 (copies 0-0)",
+ "bounds": {
+  "family": "repeated-letter phrase as plain strip (homophones keeping the length), cipher strip std/KRYPTOS, slide j+k or k-j, repeating key 1-26, exact; a derivation from EMC 45b, not a documented method",
+  "phrases": 1196,
+  "cells_per_text": 124384,
+  "live_cells": {
+   "k4": 654,
+   "copies": [
+    671,
+    499,
+    723,
+    617,
+    404,
+    608,
+    237,
+    534,
+    625,
+    725,
+    689,
+    443,
+    697,
+    567,
+    667,
+    566,
+    236,
+    10,
+    494,
+    723
+   ]
+  },
+  "per_length": {
+   "1": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 23
+   },
+   "2": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 22
+   },
+   "3": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 21
+   },
+   "4": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 20
+   },
+   "5": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 19
+   },
+   "6": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 18
+   },
+   "7": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 17
+   },
+   "8": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 16
+   },
+   "9": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 15
+   },
+   "10": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 14
+   },
+   "11": {
+    "k4": 2,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 13
+   },
+   "12": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 12
+   },
+   "13": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 11
+   },
+   "14": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 11
+   },
+   "15": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 9
+   },
+   "16": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 8
+   },
+   "17": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 7
+   },
+   "18": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 7
+   },
+   "19": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 9
+   },
+   "20": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 11
+   },
+   "21": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 11
+   },
+   "22": {
+    "k4": 2,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 9
+   },
+   "23": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 0,
+    "checks": 7
+   },
+   "24": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 3,
+    "checks": 5
+   },
+   "25": {
+    "k4": 0,
+    "copies_min": 0,
+    "copies_max": 18,
+    "checks": 3
+   },
+   "26": {
+    "k4": 650,
+    "copies_min": 0,
+    "copies_max": 718,
+    "checks": 1
+   }
+  },
+  "lengths_k4_above_every_copy": [
+   11,
+   22
+  ],
+  "k4_live_shortest": [
+   {
+    "phrase": "RLACKOFEVIDENCEBUTHISINTER",
+    "from": "Carter 1923 @107545",
+    "strip": "std",
+    "form": "k-j",
+    "lengths": [
+     11,
+     22
+    ]
+   },
+   {
+    "phrase": "LACKOFEVIDENCEBUTHISINTERV",
+    "from": "Carter 1923 @107546",
+    "strip": "std",
+    "form": "k-j",
+    "lengths": [
+     11,
+     22
+    ]
+   },
+   {
+    "phrase": "THEFLAMETOFLICKERBUTPRESEN",
+    "from": "k3 @248",
+    "strip": "std",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "THEFLAMETOFLICKERBUTPRESEN",
+    "from": "k3 @248",
+    "strip": "kry",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "HEFLAMETOFLICKERBUTPRESENT",
+    "from": "k3 @249",
+    "strip": "std",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "HEFLAMETOFLICKERBUTPRESENT",
+    "from": "k3 @249",
+    "strip": "kry",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "UICKBROWNFOXJUMPSOVERTHELA",
+    "from": "famous 1 @4",
+    "strip": "std",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "UICKBROWNFOXJUMPSOVERTHELA",
+    "from": "famous 1 @4",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ICKBROWNFOXJUMPSOVERTHELAZ",
+    "from": "famous 1 @5",
+    "strip": "std",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ICKBROWNFOXJUMPSOVERTHELAZ",
+    "from": "famous 1 @5",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "RESENTTHEACTUALTOMBOFTHEKI",
+    "from": "Carter 1923 @3661",
+    "strip": "std",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "RESENTTHEACTUALTOMBOFTHEKI",
+    "from": "Carter 1923 @3661",
+    "strip": "kry",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ALLTHEOBJECTSAREINPERFECTK",
+    "from": "Carter 1923 @4306",
+    "strip": "std",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ALLTHEOBJECTSAREINPERFECTK",
+    "from": "Carter 1923 @4306",
+    "strip": "std",
+    "form": "k-j",
+    "lengths": [
+     26
+    ]
+   },
+   {
+    "phrase": "ALLTHEOBJECTSAREINPERFECTK",
+    "from": "Carter 1923 @4306",
+    "strip": "kry",
+    "form": "j+k",
+    "lengths": [
+     26
+    ]
+   }
+  ],
+  "plant": {
+   "phrase": "THEFLAMETOFLICKERBUTPRESEN",
+   "length": 7,
+   "live": true
+  },
+  "copies": "20 shuffled copies (seed 1830)",
+  "exhaustive": true
+ },
+ "notes": "1196 phrases; live cells K4 654 (copies 10-725); lengths where K4 is above every copy: [11, 22]; plant live True",
+ "candidates": [],
+ "seconds": 15.9
+}

@@ -1,0 +1,157 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "HETUITIONOFTHEFUTUREBEASTNORTHEASTDRCREIGHTONTOWHOSEMEMORYHEREMBERLINCLOCKTACHEDWORKWITHCRAMMERSI",
+  "key": "{'mask': {'rev': False, 'k': 7, 'phase': 3, 'prefix': 0}, 'pa': 'kry', 'ca': 'std', 'ka': 'kry', 'm': 'beau', 'key': 'LODESTONE'}",
+  "ciphertext": "DUGNLPBEGYAMZCQUHQNHPKVWUMFTBRGFARINKZGBFVEVACSWHBLHPGURFFVGNITMEIXITEITJUJNPPMKUMWMLCXWFAHHNGFEI"
+ },
+ "passed": true,
+ "why": "vocabulary matches 1; the planted mask, convention and LODESTONE reading the planted message: True (of 1 candidates listed)",
+ "bounds": {
+  "family": "masked plaintext (reversal, regular nulls, prefix nulls) then periodic tableau",
+  "masks": 648,
+  "conventions": 24,
+  "smallest_live_period_histogram": {
+   "9": 1,
+   "26": 19,
+   "27": 116,
+   "28": 287,
+   "29": 142,
+   "30": 35,
+   "31": 20,
+   "32": 7,
+   "33": 7
+  },
+  "masks_dropping_a_crib": 14,
+  "best_forced_fragments": [
+   {
+    "score": -4.019,
+    "mask": "null before every 7th letter, phase 3",
+    "convention": "kry/std/kry/beau",
+    "period": 27,
+    "fragment": "LODESTON.LOD......LOD.STONE"
+   },
+   {
+    "score": -4.056,
+    "mask": "null before every 7th letter, phase 3",
+    "convention": "kry/std/kry/beau",
+    "period": 9,
+    "fragment": "LODESTONE"
+   },
+   {
+    "score": -4.057,
+    "mask": "null before every 7th letter, phase 3",
+    "convention": "kry/std/kry/beau",
+    "period": 29,
+    "fragment": "DESTON.LOD....LOD.STONELONE.O"
+   },
+   {
+    "score": -4.275,
+    "mask": "null before every 7th letter, phase 3",
+    "convention": "kry/std/kry/beau",
+    "period": 18,
+    "fragment": "LOD.STONELODESTON."
+   },
+   {
+    "score": -4.554,
+    "mask": "null before every 7th letter, phase 4",
+    "convention": "kry/std/kry/beau",
+    "period": 30,
+    "fragment": "ESTONQ.OD...LODT.TONELOFONEW.D"
+   },
+   {
+    "score": -5.216,
+    "mask": "null before every 18th letter, phase 15",
+    "convention": "kry/std/std/varbeau",
+    "period": 29,
+    "fragment": "NIGHP.R.LDINHA.PISUL..QLMSOMA"
+   },
+   {
+    "score": -5.227,
+    "mask": "null before every 18th letter, phase 15",
+    "convention": "kry/std/std/varbeau",
+    "period": 30,
+    "fragment": "IGHP.RLDINHA.PISUL....QLMSOMAN"
+   },
+   {
+    "score": -5.372,
+    "mask": "null before every 20th letter, phase 10",
+    "convention": "kry/std/std/varbeau",
+    "period": 29,
+    "fragment": "NI.LQYR.LDINHAA.ISUL..QLMSOMA"
+   },
+   {
+    "score": -5.372,
+    "mask": "null before every 19th letter, phase 13",
+    "convention": "kry/std/std/varbeau",
+    "period": 29,
+    "fragment": "NIGH.YR.LDINHAA.ISUL..QLMSOMA"
+   },
+   {
+    "score": -5.393,
+    "mask": "null before every 18th letter, phase 16",
+    "convention": "kry/std/std/varbeau",
+    "period": 30,
+    "fragment": "IGHPW.LDINHAA.ISUL....QLMSOMAN"
+   },
+   {
+    "score": -5.403,
+    "mask": "null before every 18th letter, phase 16",
+    "convention": "kry/std/std/varbeau",
+    "period": 29,
+    "fragment": "NIGHPW..LDINHAA.ISUL..QLMSOMA"
+   },
+   {
+    "score": -5.407,
+    "mask": "null before every 19th letter, phase 12",
+    "convention": "kry/std/std/varbeau",
+    "period": 29,
+    "fragment": "NIG.QYR.LDINHA.PISUL..QLMSOMA"
+   },
+   {
+    "score": -5.429,
+    "mask": "null before every 19th letter, phase 14",
+    "convention": "kry/std/std/varbeau",
+    "period": 29,
+    "fragment": "NIGHP.R.LDINHAAX.SUL..QLMSOMA"
+   },
+   {
+    "score": -5.439,
+    "mask": "null before every 19th letter, phase 14",
+    "convention": "kry/std/std/varbeau",
+    "period": 30,
+    "fragment": "IGHP.RLDINHAAX.SUL....QLMSOMAN"
+   },
+   {
+    "score": -5.458,
+    "mask": "null before every 8th letter, phase 1",
+    "convention": "std/kry/kry/varbeau",
+    "period": 30,
+    "fragment": "ROFSIAM.S..WH.RMODDEND.MCBSI.F"
+   }
+  ],
+  "shuffled_control_best": [
+   -4.881,
+   -4.836,
+   -4.648,
+   -5.416,
+   -5.035,
+   -5.057,
+   -4.981,
+   -5.245,
+   -5.51,
+   -5.447
+  ],
+  "vocab_matches": 1
+ },
+ "notes": "648 masks x 24 conventions. Smallest live period over all masks: 9. Best fragment -4.019 vs shuffled best -4.648. 1 matches.",
+ "candidates": [
+  {
+   "plaintext": "HETUITIONOFTHEFUTUREBEASTNORTHEASTDRCREIGHTONTOWHOSEMEMORYHEREMBERLINCLOCKTACHEDWORKWXXXXXXXXXXXX",
+   "key": "{'mask': {'rev': False, 'k': 7, 'phase': 3, 'prefix': 0}, 'pa': 'kry', 'ca': 'std', 'ka': 'kry', 'm': 'beau', 'key': 'LODESTONE'}",
+   "notes": null
+  }
+ ],
+ "seconds": 46.8
+}

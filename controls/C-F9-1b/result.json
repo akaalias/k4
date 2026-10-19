@@ -1,0 +1,51 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "NOTBUDGEWEGOTTHEMAPAREASTNORTHEASTDWITHSCARCELYANYDAMAGEBUTITTOBERLINCLOCKANFIVEOFUSTODOITTWOSUPP",
+  "key": "('YXSQMJWRTAFGOHKZUDIPELNBCV', 'cw 23, 9, 31')",
+  "ciphertext": "MWKTYDCTCPNOPIYPYSPSPMMEMKWPPYKQOKMFKJHMEIDZHQGPRDYNYRXKTTIKQKNXIREYQSYHMSHDYGXPGPZKPIMPPTWJEHMLZ"
+ },
+ "passed": true,
+ "why": "triple turns consistent 1 vs copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; survivors 1; 'cw 23, 9, 31' listed: True; stopped None",
+ "bounds": {
+  "family": "one-to-one substitution (commutes with the move) with four route sets",
+  "routes_by_set": {
+   "type-1 library": 27852,
+   "grid paths": 42978,
+   "mixed double turns": 53214,
+   "triple clockwise turns": 1711697
+  },
+  "stopped": null,
+  "consistent_by_set": {
+   "triple clockwise turns": {
+    "k4": 1,
+    "controls": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "k4_survivors": [
+   {
+    "set": "triple clockwise turns",
+    "route": "cw 23, 9, 31",
+    "letters_fixed": 73,
+    "reading": "NOTB...E.E.OTTHE.A.AREASTNORTHEAST..ITHSCARCEL.AN..A.A.EB.TITTOBERLINCLOCKAN.I.EO..STO.OITT.OS..."
+   }
+  ],
+  "n_k4_survivors": 1,
+  "controls": "10 shuffled coppers (seed 106), identical test"
+ },
+ "notes": "Routes tested: {'type-1 library': 27852, 'grid paths': 42978, 'mixed double turns': 53214, 'triple clockwise turns': 1711697}. Consistent (K4 / controls): triple clockwise turns: 1 / [0, 0, 0, 0, 0, 0, 0, 0, 0, 0].",
+ "candidates": [],
+ "seconds": 53.8
+}

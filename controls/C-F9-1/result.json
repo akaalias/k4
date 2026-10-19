@@ -1,0 +1,54 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "FORETHEWARHADHARDENEDEASTNORTHEASTNCHESITISJUSTPOSSIBLETHATCARNBERLINCLOCKEDRESOURCEANDCALMNESSMI",
+  "key": "{'route': 'double columnar w=13 then w=8', 'substitution': {'A': 'X', 'B': 'L', 'C': 'D', 'D': 'R', 'E': 'Z', 'F': 'I', 'G': 'N', 'H': 'A', 'I': 'P', 'J': 'B', 'K': 'J', 'L': 'K', 'M': 'W', 'N': 'H', 'O': 'V', 'P': 'T', 'Q': 'U', 'R': 'Q', 'S': 'C', 'T': 'Y', 'U': 'S', 'V': 'E', 'W': 'G', 'X': 'O', 'Y': 'M', 'Z': 'F'}}",
+  "ciphertext": "IVQZYAZRHVHQWAXQRZHZYTQRKVQYAZXCYXZXRPYPCBSCDJDXHLKZYAXYDRAYCQKPHDKVHQCZPCVSQDZXXXACZHZCCWPGZDCLZ"
+ },
+ "passed": true,
+ "why": "monoalphabetic survivors 1 (shuffled [0, 0, 0, 0, 0]); planted route among them: True",
+ "bounds": {
+  "family": "substitution (mono or homophonic over 26 symbols) then transposition",
+  "routes": 23931,
+  "homophonic_survivors": 1,
+  "homophonic_survivor_routes": [
+   "double columnar w=13 then w=8"
+  ],
+  "monoalphabetic_survivors": 1,
+  "monoalphabetic_survivor_routes": [
+   "double columnar w=13 then w=8"
+  ],
+  "shuffled_k4_survivors": [
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   },
+   {
+    "homophonic": 0,
+    "monoalphabetic": 0
+   }
+  ]
+ },
+ "notes": "23931 routes: 1 pass the homophonic condition, 1 the monoalphabetic one; shuffled K4 gives [0, 0, 0, 0, 0] and [0, 0, 0, 0, 0].",
+ "candidates": [
+  {
+   "plaintext": "MORETHEWARHADHARDENEDEASTNORTHEASTNCHESITISJUSTPOSSIBLETHATCARNBERLINCLOCKEDRESOURCEANDCALYNESSYI",
+   "key": "{'route': 'double columnar w=13 then w=8', 'substitution': {'E': 'Z', 'A': 'X', 'S': 'C', 'T': 'Y', 'N': 'H', 'O': 'V', 'R': 'Q', 'H': 'A', 'B': 'L', 'L': 'K', 'I': 'P', 'C': 'D', 'K': 'J', 'J': 'B', 'X': 'E', 'F': 'F', 'W': 'G', 'M': 'I', 'V': 'M', 'G': 'N', 'Q': 'O', 'D': 'R', 'U': 'S', 'P': 'T', 'Z': 'U', 'Y': 'W'}}",
+   "notes": null
+  }
+ ],
+ "seconds": 4.5
+}

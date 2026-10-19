@@ -159,8 +159,8 @@ Rules:
 | C-F5-1 | F5/1 | Gromark, two- and three-term rules, bases 2-26 (three-term on a free alphabet in base... | 0013, 0028, 0046, 0054, 0069, 0076, 0107 | passed | C-F5-1 (0013), C-F5-1b (0028), C-F5-1c (0046), C-F5-1d (0054, counts only), C-F5-1e (0069), C-F5-1f (0076), C-F5-1g (0107). Gap noted: 0054 tested rules only up to base 15 on its K1-K3-word alphabets; bases 16-26 there look untested |
 | C-F5.1 | F5.1 | Multiplicative feedback; the raised YAR as primer | 0196 | passed, own plant | 0196: plants [1, 32]; the 32 at base 26 are the planted primer and its +13 variants, identical at the known places |
 | C-F5.2 | F5.2 | Three-term Gromark on a free alphabet in bases 2-9, 11-16 and 26; two-term... | 0195 | passed, own plant | 0195: plants [1, 1], the planted primer each time |
-| C-F9-1 | F9/1 | One-to-one substitution, then any route in the built sets (1.86M) | 0019, 0106 | open | - |
-| C-F9.1 | F9.1 | Hand transpositions outside the built route sets | 0197, 0198 (before: 0019, 0106) | open | - |
+| C-F9-1 | F9/1 | One-to-one substitution, then any route in the built sets (1.86M) | 0019, 0106 | passed | C-F9-1 (0019), C-F9-1b (0106) |
+| C-F9.1 | F9.1 | Hand transpositions outside the built route sets | 0197, 0198 (before: 0019, 0106) | passed | 0197's own plant (keyed blanks, one of six builders); 0198 had no plant (the table's 'plants found' was wrong): C-F9.1 (0158 library), C-F9.1b (0162), C-F9.1c (0167), counts only |
 
 ## F1. One keyed stage, no move
 

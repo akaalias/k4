@@ -1,0 +1,77 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "HEREASONSHALLOWGRAVESEASTNORTHEASTEMETERYFOREXAMPLETENWILLKEEPHBERLINCLOCKABLYBUSYTHENUMBEROFMENW",
+  "key": "('KEWDUYTGRQFNOJMLPBSVXIAHCZ', [7, 0, 8, 2, 1, 9, 4, 6, 5, 3], 'place 3', 'columns', 'forward')",
+  "ciphertext": "KUVAUUUAURGCKJOVNOBEJJTJHBROWBXUGUBUNGJUEISEUFLVNXMBAKNNUMKCUNMYLVKFMGSMOBEJVWSVKNYMGUSNUSSKBCUUU"
+ },
+ "passed": true,
+ "why": "0167 Nihilist: survivors planted 1, copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], jobs 80/80",
+ "bounds": {
+  "family": "one-to-one substitution, then the moves of 0158, 0162 and 0167 (their own builders), exact",
+  "per_library": {
+   "0158 mixed matrix triples": {
+    "routes": 107012733,
+    "first_stages_done": 380,
+    "first_stages_total": 380,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "0162 keyword triples": {
+    "routes": 20370476,
+    "first_stages_done": 223,
+    "first_stages_total": 223,
+    "k4": 0,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "0167 Nihilist": {
+    "routes": 116121600,
+    "jobs_done": 80,
+    "jobs_total": 80,
+    "k4": 1,
+    "copies": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "routes_total": 243504809,
+  "survivors_k4": 1,
+  "seconds": 88,
+  "exhaustive": "per library as reported (jobs done)"
+ },
+ "notes": "0158 mixed matrix triples: 107,012,733 routes, survivors K4 0 (copies 0-0); 0162 keyword triples: 20,370,476 routes, survivors K4 0 (copies 0-0); 0167 Nihilist: 116,121,600 routes, survivors K4 1 (copies 0-0)",
+ "candidates": [],
+ "seconds": 87.7
+}

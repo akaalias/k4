@@ -1,0 +1,497 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "BBINGSEEMSTOHAVESETINEASTNORTHEASTWHICHWEHAVEACTUALFIRSTHANDEVIBERLINCLOCKREHAVECOMEDOWNTOUSDATIN",
+  "key": "({'kind': 'turn2', 'w1': 8, 'w2': 11, 'dir': 'fwd'}, 'plaintext autokey after the move', 'kry vig', 12, 'BJKAMXKWPNES')",
+  "ciphertext": "GORMSPEIVRLGQJOLVCIRYFUEWSGDVMWHXZQGOJQMAQEOKYFJDUVIQQXVLHLMTLSFFMEDUKLVYVMMTHVYUFPQVRTEWUBDUINYL"
+ },
+ "passed": true,
+ "why": "K4 settings with 4+ checks 7; the planted route at lag 12 with 12 checks: True; plaintext autokey A at 6+ checks: plant 1, copies' max 0",
+ "bounds": {
+  "family": "route (K3 rule, quarter turns, columnar) joined to plaintext or ciphertext autokey, both orders, solved exactly",
+  "route_specs": 28246,
+  "distinct_routes": 27752,
+  "routes_done": 27752,
+  "lags": [
+   1,
+   96
+  ],
+  "conventions": "one alphabet throughout (standard or KRYPTOS) x Vigenere, Beaufort, variant = 6",
+  "planted_check": true,
+  "by_kind_and_order": {
+   "ptak order A": {
+    "k4_at_least_c": {
+     "1": 63880,
+     "2": 2287,
+     "3": 64,
+     "4": 2,
+     "5": 1,
+     "6": 1
+    },
+    "controls_at_least_c": {
+     "1": [
+      62772,
+      65680,
+      63500,
+      62926,
+      63453,
+      62751,
+      63285,
+      63199,
+      64107,
+      61743
+     ],
+     "2": [
+      2115,
+      2181,
+      2296,
+      2202,
+      2135,
+      2248,
+      2299,
+      2123,
+      2219,
+      2177
+     ],
+     "3": [
+      80,
+      83,
+      56,
+      74,
+      58,
+      75,
+      103,
+      56,
+      55,
+      58
+     ],
+     "4": [
+      3,
+      2,
+      0,
+      1,
+      4,
+      2,
+      0,
+      0,
+      0,
+      1
+     ],
+     "5": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "k4_exactly_c": {
+     "1": 61593,
+     "2": 2223,
+     "3": 62,
+     "4": 1,
+     "12": 1
+    },
+    "max_checks_seen": 12
+   },
+   "ptak order B": {
+    "k4_at_least_c": {
+     "1": 23070,
+     "2": 291,
+     "3": 26,
+     "4": 2,
+     "5": 0,
+     "6": 0
+    },
+    "controls_at_least_c": {
+     "1": [
+      23699,
+      23365,
+      23039,
+      23321,
+      23059,
+      23176,
+      22955,
+      23539,
+      22940,
+      22905
+     ],
+     "2": [
+      322,
+      306,
+      280,
+      240,
+      317,
+      320,
+      282,
+      319,
+      329,
+      246
+     ],
+     "3": [
+      25,
+      20,
+      29,
+      26,
+      30,
+      50,
+      25,
+      20,
+      26,
+      11
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      3,
+      2,
+      0
+     ],
+     "5": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "k4_exactly_c": {
+     "1": 22779,
+     "2": 265,
+     "3": 24,
+     "4": 2
+    },
+    "max_checks_seen": 4
+   },
+   "ctak order A": {
+    "k4_at_least_c": {
+     "1": 19596,
+     "2": 648,
+     "3": 40,
+     "4": 3,
+     "5": 0,
+     "6": 0
+    },
+    "controls_at_least_c": {
+     "1": [
+      20939,
+      22606,
+      20067,
+      21267,
+      21253,
+      21132,
+      21115,
+      18336,
+      21055,
+      19391
+     ],
+     "2": [
+      919,
+      949,
+      922,
+      1052,
+      898,
+      890,
+      908,
+      854,
+      893,
+      803
+     ],
+     "3": [
+      57,
+      43,
+      27,
+      19,
+      40,
+      26,
+      42,
+      38,
+      30,
+      55
+     ],
+     "4": [
+      0,
+      3,
+      2,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      5
+     ],
+     "5": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "k4_exactly_c": {
+     "1": 18948,
+     "2": 608,
+     "3": 37,
+     "4": 3
+    },
+    "max_checks_seen": 4
+   },
+   "ctak order B": {
+    "k4_at_least_c": {
+     "1": 6520,
+     "2": 271,
+     "3": 11,
+     "4": 0,
+     "5": 0,
+     "6": 0
+    },
+    "controls_at_least_c": {
+     "1": [
+      6733,
+      7338,
+      6451,
+      7048,
+      7233,
+      6665,
+      6642,
+      6805,
+      7263,
+      6598
+     ],
+     "2": [
+      213,
+      229,
+      275,
+      254,
+      322,
+      268,
+      314,
+      297,
+      277,
+      243
+     ],
+     "3": [
+      9,
+      14,
+      9,
+      7,
+      11,
+      7,
+      10,
+      6,
+      7,
+      12
+     ],
+     "4": [
+      0,
+      0,
+      2,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+     ],
+     "5": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "k4_exactly_c": {
+     "1": 6249,
+     "2": 260,
+     "3": 11
+    },
+    "max_checks_seen": 5
+   }
+  },
+  "levels_outside_control_range": [
+   "ptak A: [5, 6]",
+   "ctak A: [2]"
+  ],
+  "k4_settings_with_4_plus_checks": [
+   {
+    "kind": "ciphertext autokey",
+    "order": "A",
+    "route": {
+     "kind": "k3rule",
+     "a": 56,
+     "b": 14
+    },
+    "alphabet": "std",
+    "mode": "vig",
+    "lag": 84,
+    "checks": 4
+   },
+   {
+    "kind": "plaintext autokey",
+    "order": "B",
+    "route": {
+     "kind": "turn2",
+     "w1": 5,
+     "w2": 81,
+     "dir": "fwd"
+    },
+    "alphabet": "std",
+    "mode": "vig",
+    "lag": 33,
+    "checks": 4
+   },
+   {
+    "kind": "plaintext autokey",
+    "order": "A",
+    "route": {
+     "kind": "turn2",
+     "w1": 8,
+     "w2": 11,
+     "dir": "fwd"
+    },
+    "alphabet": "kry",
+    "mode": "vig",
+    "lag": 12,
+    "checks": 12
+   },
+   {
+    "kind": "plaintext autokey",
+    "order": "A",
+    "route": {
+     "kind": "turn2",
+     "w1": 13,
+     "w2": 63,
+     "dir": "inv"
+    },
+    "alphabet": "kry",
+    "mode": "vig",
+    "lag": 68,
+    "checks": 4
+   },
+   {
+    "kind": "ciphertext autokey",
+    "order": "A",
+    "route": {
+     "kind": "turn2",
+     "w1": 14,
+     "w2": 95,
+     "dir": "inv"
+    },
+    "alphabet": "std",
+    "mode": "vig",
+    "lag": 84,
+    "checks": 4
+   },
+   {
+    "kind": "ciphertext autokey",
+    "order": "A",
+    "route": {
+     "kind": "turn2",
+     "w1": 34,
+     "w2": 57,
+     "dir": "inv"
+    },
+    "alphabet": "kry",
+    "mode": "var",
+    "lag": 79,
+    "checks": 4
+   },
+   {
+    "kind": "plaintext autokey",
+    "order": "B",
+    "route": {
+     "kind": "turn2",
+     "w1": 49,
+     "w2": 39,
+     "dir": "inv"
+    },
+    "alphabet": "kry",
+    "mode": "var",
+    "lag": 33,
+    "checks": 4
+   }
+  ],
+  "n_k4_4_plus": 7,
+  "controls": "10 shuffled coppers (seed 81), identical search"
+ },
+ "notes": "27,752 distinct routes x 96 lags x 6 conventions x 2 kinds x 2 orders. ptak order A: K4 >=1..6 [63880, 2287, 64, 2, 1, 1], controls max [65680, 2299, 103, 4, 0, 0]; ptak order B: K4 >=1..6 [23070, 291, 26, 2, 0, 0], controls max [23699, 329, 50, 3, 0, 0]; ctak order A: K4 >=1..6 [19596, 648, 40, 3, 0, 0], controls max [22606, 1052, 57, 5, 0, 0]; ctak order B: K4 >=1..6 [6520, 271, 11, 0, 0, 0], controls max [7338, 322, 14, 2, 1, 0]. Outside the control range: ['ptak A: [5, 6]', 'ctak A: [2]']. K4 settings with 4+ checks: 7. Planted texts found: True.",
+ "candidates": [],
+ "seconds": 486.2
+}

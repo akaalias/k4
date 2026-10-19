@@ -1,0 +1,296 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "NCAPABLEOFGIVINGHALFHEASTNORTHEASTONTOANYBUSINESSORPURSUITULTIMBERLINCLOCKNINTERESTLAYINHISSTUDFA",
+  "key": "{'stages': [(40, 'colr'), (7, 'cw'), (31, 'ccw')], 'order': 'B', 'alphabet': 'KRY', 'key': [3, 10, 15, 14, 15, 16, 10, 7]}",
+  "ciphertext": "MEYQZKNGLKXEPNLCOVBLZPBTOHVSPUYADONUULSCQGRDOOYMMKPBCQNLIFHMTUVEADLFVDNQNHQLRRPHILQIBUNPHVJDZJBJQ"
+ },
+ "passed": true,
+ "why": "shortest live {'A': 20, 'B': 8}, copies {'A': 18, 'B': 24}; the planted triple at 8, order B: True; B8 above every copy: True; first stages done 380 of 380",
+ "bounds": {
+  "family": "three matrix stages (rows of w, columns read in one of four ways), at least one width 25-96, then or before a periodic tableau key",
+  "readings": {
+   "cw": "left column first, bottom up",
+   "ccw": "right first, top down",
+   "col": "left first, top down",
+   "colr": "right first, bottom up"
+  },
+  "triples": "63 reading triples (all-cw skipped, 0083) x width triples in 2-96 with max >= 25 (all <= 24 was 0134), forward and inverse",
+  "first_stages_done": 380,
+  "first_stages_total": 380,
+  "distinct_routes": 105548253,
+  "duplicates_skipped_within_first_stage": 947955,
+  "periods": [
+   1,
+   26
+  ],
+  "classes": 8,
+  "c_counter_checked_against_python": "25 random routes x 2 orders x 11 texts, all equal",
+  "k4_live_by_period": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    18,
+    275,
+    7144,
+    80310,
+    620392,
+    1653167,
+    10674319
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    63,
+    49022,
+    30769460
+   ]
+  },
+  "controls_live_by_period_min": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    162,
+    7758,
+    61576,
+    552566,
+    1639796,
+    10627007
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    49,
+    43563,
+    30614599
+   ]
+  },
+  "controls_live_by_period_max": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    8,
+    55,
+    729,
+    38457,
+    80708,
+    639208,
+    1664023,
+    10742792
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    118,
+    47312,
+    31156057
+   ]
+  },
+  "k4_shortest_live": {
+   "A": 20,
+   "B": 8
+  },
+  "coppers_shortest_live": {
+   "A": 18,
+   "B": 24
+  },
+  "k4_settings_live_below_20": {
+   "A": 0,
+   "B": 1
+  },
+  "controls_settings_live_below_20": {
+   "A": [
+    9,
+    2,
+    0,
+    4,
+    2,
+    1,
+    3,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_live_below_20": [
+   {
+    "route": [
+     "colr",
+     40,
+     "cw",
+     7,
+     "ccw",
+     31
+    ],
+    "dir": "fwd",
+    "order": "B",
+    "class": "kry/kry/vig-var",
+    "period": 8
+   }
+  ],
+  "cells_k4_above_every_copper": [
+   [
+    "B",
+    8
+   ],
+   [
+    "B",
+    16
+   ],
+   [
+    "B",
+    20
+   ],
+   [
+    "B",
+    25
+   ]
+  ],
+  "null_cells_above_rest_per_copper": [
+   2,
+   2,
+   2,
+   0,
+   1,
+   1,
+   2,
+   0,
+   0,
+   1
+  ],
+  "stop_queue": true,
+  "controls": "10 shuffled coppers (seed 133, as 0134), identical search",
+  "order_A": "stages, then key (slot = landing place mod p)",
+  "order_B": "key, then stages (slot = message place mod p)"
+ },
+ "notes": "105,548,253 distinct routes (380 of 380 first stages) x 8 classes x 2 orders, periods 1-26. Shortest live key on K4: A 20, B 8; coppers A 18, B 24. K4 settings live below 20: A 0, B 1. K4 above every copper in 4 of 52 cells; null 0-2. Stop queue: True.",
+ "candidates": [],
+ "seconds": 303.9
+}

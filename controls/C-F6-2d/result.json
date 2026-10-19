@@ -1,0 +1,230 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+  "key": "('keyword SHADOW', 'hour plus minute', 5, 437, 3, 'vig/kry/std', 'move then change')",
+  "ciphertext": "PREMAGMWIYDQFANXHMTWRSUKHJVBIGKRADJEXQWOJLWCSBQGNGUBDLUDMWHSHSVCHJDIYDHIWEVNKYOBZVJPOBHELCYSBJQKV"
+ },
+ "passed": true,
+ "why": "move then change: full matches 85, deepest 24, copies' deepest [7, 6, 7, 7, 7, 8, 7, 7, 7, 7]; the planted schedule as a candidate: True",
+ "bounds": {
+  "routes_distinct": 27852,
+  "conventions": 12,
+  "schedules": 60480,
+  "readings": [
+   "lit lamps",
+   "hour",
+   "minute",
+   "hour plus minute",
+   "five-minute row",
+   "time digits"
+  ],
+  "steps_minutes": [
+   1,
+   2,
+   3,
+   5,
+   10,
+   15,
+   30
+  ],
+  "start_minutes": 1440,
+  "change_then_move": {
+   "k4_full": 0,
+   "controls_full": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch13": 0,
+   "controls_stretch13": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch11": 0,
+   "controls_stretch11": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch_hits": []
+  },
+  "move_then_change": {
+   "clock_families": 36,
+   "time_digits_steps": [
+    1
+   ],
+   "k4_full": 85,
+   "k4_best_depth": 24,
+   "controls_best_depth": [
+    7,
+    6,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7
+   ],
+   "controls_completed": 10,
+   "k4_depth_histogram": {
+    "1": 10448039,
+    "2": 1420781,
+    "3": 141543,
+    "4": 20168,
+    "5": 1469,
+    "6": 58,
+    "7": 4,
+    "8": 1,
+    "24": 1
+   },
+   "k4_top": [
+    {
+     "route": "keyword SHADOW (repeats dropped)",
+     "conv": "vig/kry/std",
+     "reading": "hour plus minute",
+     "step": 5,
+     "depth": 24
+    },
+    {
+     "route": "keyword RIDDLE (full word)",
+     "conv": "vig/kry/std",
+     "reading": "hour plus minute",
+     "step": 5,
+     "depth": 8
+    }
+   ]
+  },
+  "carter_dates": "periodic keys of period at most 10: covered exactly by 0080 and 0083",
+  "controls": "10 shuffled coppers (seed 91), identical search"
+ },
+ "notes": "27,852 routes x 12 conventions x 60,480 clock schedules. Change then move: full K4 0, controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; EASTNORTHEAST stretch 0 (controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]); BERLINCLOCK stretch 0 (controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]). Move then change: full 85, deepest K4 24, controls [7, 6, 7, 7, 7, 8, 7, 7, 7, 7] (10 completed).",
+ "candidates": [
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 15 + 12, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 16 + 11, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 17 + 10, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 18 + 9, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 19 + 8, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 75 + 11, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 76 + 10, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 77 + 9, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 78 + 8, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 79 + 7, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 135 + 10, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 136 + 9, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 137 + 8, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 138 + 7, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 139 + 6, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 195 + 9, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 196 + 8, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 197 + 7, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 198 + 6, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  },
+  {
+   "plaintext": "ACHEBYTHEEVENINGOFNOVEASTNORTHEASTAIDBAREASUFFICIENTNUMBEROFTHEBERLINCLOCKPERIMENTALPURPOSESSOAFT",
+   "key": "'move then change: clock hour plus minute step 5 start index 199 + 5, keyword SHADOW (repeats dropped), vig/kry/std'",
+   "notes": null
+  }
+ ],
+ "seconds": 772.4
+}

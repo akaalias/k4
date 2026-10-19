@@ -98,27 +98,27 @@ Rules:
 | C-F1.9 | F1.9 | Progressive key, per-letter and per-repeat, on keyword-mixed and dictionary tables;... | 0155 | passed | C-F1.9 (per-repeat, Beaufort); C-F1-4c (per-letter) on the same search |
 | C-F1.10 | F1.10 | Friedman's keyword-only key-advance schedules (run length by value, CHRISTMAS,... | 0156 | passed | C-F1.10 |
 | C-F1.11 | F1.11 | A split key phrase (Elementary Military Cryptography par. 59d) | 0157 | passed | C-F1.11 |
-| C-F6-1 | F6/1 | Columnar (plain, keyed, double), K3's rule, quarter turns, grid paths, rail fence,... | 0006-0008, 0026, 0058, 0080-0086, 0099, 0110-0114 | open | - |
-| C-F6-2 | F6/2 | The same moves with autokey, running key or clock schedules | 0063, 0081, 0090, 0091 | open | - |
-| C-F6-3 | F6/3 | Three stages | 0037, 0083, 0134 | open | - |
-| C-F6.3b | F6.3b | Mixed triples of the four column readings at widths 25-96 | 0037, 0158 | open | - |
-| C-F6-5 | F6/5 | One carved letter wrong, missing or extra, through the move library | 0093, 0094 | open | - |
-| C-F6.4 | F6.4 | Padding applied separately at each grid stage; nulls dropped between griddings | 0082, 0135 | open | - |
-| C-F6.5 | F6.5 | Direction words as routes through the grid | 0159 | open | - |
-| C-F6.6 | F6.6 | Move, change, move again | 0160 | open | - |
-| C-F6.7 | F6.7 | Change, move, change with the two keyed stages on different tables | 0161 | open | - |
-| C-F6.8 | F6.8 | Three-stage routes with a keyword columnar stage | 0037, 0083, 0134, 0162 | open | - |
-| C-F6.9 | F6.9 | Both autokeys with 0084's double columnar routes | 0084, 0085, 0163 | open | - |
-| C-F6.10 | F6.10 | Padded grids whose blank cells are chosen by a key | 0082, 0135, 0165 | open | - |
-| C-F6.11 | F6.11 | Keyword-disrupted and triangle columnar transpositions | 0164 | open | - |
-| C-F6.12 | F6.12 | EVA double triangle | 0166 | open | - |
-| C-F6.13 | F6.13 | Chiffre XIII's five-row mask, then its period-5 shifted mixed alphabet | 0166 | open | - |
-| C-F6.14 | F6.14 | Nihilist transposition on a 10 x 10 square with three blanks | 0167 | open | - |
-| C-F6.15 | F6.15 | Sanborn's "1-2-3" spacing of the raised YAR as an ordering | 0166 | open | - |
-| C-F6.16 | F6.16 | Interrupted-key columnar transposition | 0164 | open | - |
-| C-F6.17 | F6.17 | Trapezoid transposition | 0164 | open | - |
-| C-F6.18 | F6.18 | Letters reshuffled inside each row by a keyword at widths other than 7 | 0070, 0165 | open | - |
-| C-F6.19 | F6.19 | The French diagonal method | 0165 | open | - |
+| C-F6-1 | F6/1 | Columnar (plain, keyed, double), K3's rule, quarter turns, grid paths, rail fence,... | 0006-0008, 0026, 0058, 0080-0086, 0099, 0110-0114 | passed | C-F6-1 (0110 keyword columnar), C-F6-1b (0008 K3 rule), C-F6-1c (0099 turns), C-F6-1d (0113 rail fence), C-F6-1e (0114 AMSCO), C-F6-1f (0111 Myszkowski), C-F6-1g (0112 double columnar); 0006/0007/0026/0058/0080/0082/0086 not controlled separately (same tester or covered by F6.4, F6.7) |
+| C-F6-2 | F6/2 | The same moves with autokey, running key or clock schedules | 0063, 0081, 0090, 0091 | passed | C-F6-2 (0081 plaintext autokey; rerun twice for the spec's keys into 0081's counts), C-F6-2b (0081 ciphertext autokey), C-F6-2c (0090 running key), C-F6-2d (0091 clock) |
+| C-F6-3 | F6/3 | Three stages | 0037, 0083, 0134 | passed | C-F6-3 (0083), C-F6-3b (0134); 0037 sampled, not controlled |
+| C-F6.3b | F6.3b | Mixed triples of the four column readings at widths 25-96 | 0037, 0158 | passed | C-F6.3b |
+| C-F6-5 | F6/5 | One carved letter wrong, missing or extra, through the move library | 0093, 0094 | passed | C-F6-5 (0093), C-F6-5b (0094: identified by variant, order and length; 0094 does not name the move) |
+| C-F6.4 | F6.4 | Padding applied separately at each grid stage; nulls dropped between griddings | 0082, 0135 | passed | C-F6.4 |
+| C-F6.5 | F6.5 | Direction words as routes through the grid | 0159 | passed | C-F6.5 |
+| C-F6.6 | F6.6 | Move, change, move again | 0160 | passed | C-F6.6 |
+| C-F6.7 | F6.7 | Change, move, change with the two keyed stages on different tables | 0161 | passed | C-F6.7 (14 checks; 0161 kept copies' counts only to 8 checks, where they reach 0-4) |
+| C-F6.8 | F6.8 | Three-stage routes with a keyword columnar stage | 0037, 0083, 0134, 0162 | passed | C-F6.8 |
+| C-F6.9 | F6.9 | Both autokeys with 0084's double columnar routes | 0084, 0085, 0163 | passed | C-F6.9, C-F6.9b (identified by the top survivor's check count, 22 and 14: 0163 does not name routes) |
+| C-F6.10 | F6.10 | Padded grids whose blank cells are chosen by a key | 0082, 0135, 0165 | passed | C-F6.10 |
+| C-F6.11 | F6.11 | Keyword-disrupted and triangle columnar transpositions | 0164 | passed | C-F6.11, C-F6.11b |
+| C-F6.12 | F6.12 | EVA double triangle | 0166 | passed | C-F6.12 |
+| C-F6.13 | F6.13 | Chiffre XIII's five-row mask, then its period-5 shifted mixed alphabet | 0166 | passed | C-F6.13 |
+| C-F6.14 | F6.14 | Nihilist transposition on a 10 x 10 square with three blanks | 0167 | passed | C-F6.14 |
+| C-F6.15 | F6.15 | Sanborn's "1-2-3" spacing of the raised YAR as an ordering | 0166 | passed | C-F6.15 |
+| C-F6.16 | F6.16 | Interrupted-key columnar transposition | 0164 | passed | C-F6.16, C-F6.16b |
+| C-F6.17 | F6.17 | Trapezoid transposition | 0164 | passed | C-F6.17 |
+| C-F6.18 | F6.18 | Letters reshuffled inside each row by a keyword at widths other than 7 | 0070, 0165 | passed | C-F6.18, C-F6.18b |
+| C-F6.19 | F6.19 | The French diagonal method | 0165 | passed | C-F6.19 |
 | C-F12.2 | F12.2 | Quantify the impressions: K4's statistics by segment and by width (letter counts per... | 0168 (before: 0056 measured two of the patterns) | open | - |
 | C-F12.3 | F12.3 | His I.C. peak at m = 13 in both K1 and K2 (C28): real or chance | 0169 (before: 0005, 0011 tested period 13 on K4 only) | open | - |
 | C-F12.4 | F12.4 | A pencil session: K4 written out at the widths that matter, the known letters marked,... | 0170 | open | - |

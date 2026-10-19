@@ -1,0 +1,359 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "TECERTAINTHATONCETHEIEASTNORTHEASTSPATCHHADBEENPUBLISHEDNOPOWERBERLINCLOCKDSHELTERUSFROMTHELIGHTO",
+  "key": "{'stages': [(11, 'ENE', False), (9, 'NE', True)], 'order': 'B', 'alphabet': 'KRY', 'key': [22, 14, 19, 4, 14, 20, 2, 7]}",
+  "ciphertext": "DZKHRAUFAIGAPEPIYNAYDOFEOUUPIQPHLAJATONDNIUHBNYVDMOAPEUVPXIZIKDNBUMCZCOELXJCGDMAKIIAZMMOVXYAUEGZK"
+ },
+ "passed": true,
+ "why": "shortest live {'A': 20, 'B': 8}, copies {'A': 20, 'B': 24}; the planted route at 8, order B: True; B8 above every copy: True",
+ "bounds": {
+  "family": "compass-direction reading routes (16 points, either line order, widths 2-96; E/ENE/NE pairs at widths 2-48), then or before a periodic tableau key",
+  "directions": {
+   "N": [
+    -1,
+    0
+   ],
+   "NNE": [
+    -2,
+    1
+   ],
+   "NE": [
+    -1,
+    1
+   ],
+   "ENE": [
+    -1,
+    2
+   ],
+   "E": [
+    0,
+    1
+   ],
+   "ESE": [
+    1,
+    2
+   ],
+   "SE": [
+    1,
+    1
+   ],
+   "SSE": [
+    2,
+    1
+   ],
+   "S": [
+    1,
+    0
+   ],
+   "SSW": [
+    2,
+    -1
+   ],
+   "SW": [
+    1,
+    -1
+   ],
+   "WSW": [
+    1,
+    -2
+   ],
+   "W": [
+    0,
+    -1
+   ],
+   "WNW": [
+    -1,
+    -2
+   ],
+   "NW": [
+    -1,
+    -1
+   ],
+   "NNW": [
+    -2,
+    -1
+   ]
+  },
+  "distinct_routes": 110820,
+  "periods": [
+   1,
+   26
+  ],
+  "classes": 8,
+  "k4_live_by_period": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    37,
+    237,
+    1056,
+    4562,
+    12608
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    62,
+    34577
+   ]
+  },
+  "controls_live_by_period_min": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6,
+    173,
+    939,
+    4518,
+    12532
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    35,
+    34432
+   ]
+  },
+  "controls_live_by_period_max": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    3,
+    39,
+    236,
+    1199,
+    4601,
+    12788
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    60,
+    34977
+   ]
+  },
+  "k4_shortest_live": {
+   "A": 20,
+   "B": 8
+  },
+  "coppers_shortest_live": {
+   "A": 20,
+   "B": 24
+  },
+  "k4_settings_live_below_20": {
+   "A": 0,
+   "B": 1
+  },
+  "controls_settings_live_below_20": {
+   "A": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_live_below_20": [
+   {
+    "route": [
+     "double",
+     "ENE",
+     "False",
+     "11",
+     "NE",
+     "True",
+     "9"
+    ],
+    "dir": "fwd",
+    "order": "B",
+    "class": "kry/kry/vig-var",
+    "period": 8
+   }
+  ],
+  "cells_k4_above_every_copper": [
+   [
+    "A",
+    20
+   ],
+   [
+    "A",
+    23
+   ],
+   [
+    "B",
+    8
+   ],
+   [
+    "B",
+    16
+   ],
+   [
+    "B",
+    20
+   ],
+   [
+    "B",
+    25
+   ]
+  ],
+  "null_cells_above_rest_per_copper": [
+   0,
+   0,
+   2,
+   0,
+   1,
+   0,
+   1,
+   0,
+   1,
+   1
+  ],
+  "stop_queue": true,
+  "controls": "10 shuffled coppers (seed 1365), identical search",
+  "exhaustive": true
+ },
+ "notes": "110,820 distinct routes x 8 classes x 2 orders, periods 1-26. Shortest live on K4: A 20, B 8; coppers A 20, B 24. K4 settings live below 20: A 0, B 1. K4 above every copper in 6 of 52 cells; null 0-2. Stop queue: True.",
+ "candidates": [],
+ "seconds": 50.9
+}

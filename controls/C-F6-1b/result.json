@@ -1,0 +1,188 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "OURTRECORDSASHAVINGBEEASTNORTHEASTNDINTHEFOLLOWINGDYNASTYALLATTBERLINCLOCKDINGTHETOMBSSEEMTOHAVEB",
+  "key": "{'route': {'kind': 'affine', 'a': 40, 'b': 23, 'dir': 'fwd'}, 'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'vig', 'key': 'LODESTONE'}",
+  "ciphertext": "WVLXLBVXJCCHIMMJDNDQZLQBDZUYNZFPFXRFVJUYEBXFIXXNZBVJFUSEIVLUCKMFNWXBKINMDCLQFWEQFKVILDOJWNXJZUYED"
+ },
+ "passed": true,
+ "why": "vocabulary matches 2; candidates 2; the planted rule and key: True",
+ "bounds": {
+  "family": "K3 affine rule with all shifts, or double rotation, then periodic tableau (separate alphabets)",
+  "routes": 21025,
+  "route_convention_pairs_checked": 504600,
+  "route_set": "plaintext[i] = inter[(a + b i) mod 97], a in 0..96, b in 1..96, fwd and inv; double rotation w1, w2 in 2..50",
+  "conventions": 24,
+  "periods": "1-97 by divisor rule",
+  "key_pool": "vocabulary words and K1-K3 windows of length P for live P <= 30",
+  "min_live_period_histogram": {
+   "9": 8,
+   "22": 28,
+   "23": 32,
+   "24": 464,
+   "25": 1296,
+   "26": 6388,
+   "27": 8842,
+   "28": 8424,
+   "29": 9860,
+   "30": 11250,
+   "31": 24488,
+   "32": 25614,
+   "33": 38678,
+   "34": 33862,
+   "35": 29138,
+   "36": 29894,
+   "37": 15726,
+   "38": 29380,
+   "39": 26970,
+   "40": 17798,
+   "41": 18136,
+   "42": 16488,
+   "43": 24376,
+   "44": 18524,
+   "45": 10628,
+   "46": 16544,
+   "47": 25158,
+   "48": 7962,
+   "49": 5292,
+   "50": 8408,
+   "51": 2868,
+   "52": 4468,
+   "53": 1156,
+   "54": 820,
+   "55": 1918,
+   "56": 1182,
+   "57": 892,
+   "58": 1110,
+   "59": 1270,
+   "60": 1222,
+   "61": 858,
+   "62": 1210,
+   "63": 972,
+   "64": 994,
+   "65": 950,
+   "66": 1110,
+   "67": 824,
+   "68": 952,
+   "69": 720,
+   "70": 648,
+   "71": 610,
+   "72": 602,
+   "73": 786,
+   "74": 462,
+   "75": 558,
+   "76": 562,
+   "77": 586,
+   "78": 734,
+   "79": 388,
+   "80": 516,
+   "81": 390,
+   "82": 480,
+   "83": 260,
+   "84": 164,
+   "85": 282,
+   "86": 212,
+   "87": 186,
+   "88": 144,
+   "89": 452,
+   "90": 52,
+   "91": 48,
+   "92": 16,
+   "93": 48,
+   "94": 262
+  },
+  "fifteen_shortest": [
+   {
+    "min_period": 9,
+    "route": "K3 rule a=40 b=23 fwd",
+    "convention": "kry/kry/std/vig"
+   },
+   {
+    "min_period": 9,
+    "route": "K3 rule a=40 b=23 fwd",
+    "convention": "kry/kry/std/varbeau"
+   },
+   {
+    "min_period": 9,
+    "route": "K3 rule a=40 b=23 fwd",
+    "convention": "kry/kry/kry/vig"
+   },
+   {
+    "min_period": 9,
+    "route": "K3 rule a=40 b=23 fwd",
+    "convention": "kry/kry/kry/varbeau"
+   },
+   {
+    "min_period": 9,
+    "route": "K3 rule a=32 b=38 inv",
+    "convention": "kry/kry/std/vig"
+   },
+   {
+    "min_period": 9,
+    "route": "K3 rule a=32 b=38 inv",
+    "convention": "kry/kry/std/varbeau"
+   },
+   {
+    "min_period": 9,
+    "route": "K3 rule a=32 b=38 inv",
+    "convention": "kry/kry/kry/vig"
+   },
+   {
+    "min_period": 9,
+    "route": "K3 rule a=32 b=38 inv",
+    "convention": "kry/kry/kry/varbeau"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=33 b=1 inv",
+    "convention": "kry/std/std/vig"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=33 b=1 inv",
+    "convention": "kry/std/std/varbeau"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=33 b=1 inv",
+    "convention": "kry/std/kry/vig"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=33 b=1 inv",
+    "convention": "kry/std/kry/varbeau"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=33 b=1 inv",
+    "convention": "kry/kry/std/vig"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=33 b=1 inv",
+    "convention": "kry/kry/std/varbeau"
+   },
+   {
+    "min_period": 22,
+    "route": "K3 rule a=33 b=1 inv",
+    "convention": "kry/kry/kry/vig"
+   }
+  ],
+  "vocab_matches": 2
+ },
+ "notes": "504600 route/convention pairs; 2 forced-fragment matches submitted. K3 rule verified against data/k3.json inside run.",
+ "candidates": [
+  {
+   "plaintext": "OURTRECORDSASHAVINGBEEASTNORTHEASTNDINTHEFOLLOWINGDYNASTYALLATTBERLINCLOCKDINGTHETOMBSSEEMTOHAVEB",
+   "key": "{'route': {'kind': 'affine', 'a': 40, 'b': 23, 'dir': 'fwd'}, 'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'vig', 'key': 'LODESTONE'}",
+   "notes": null
+  },
+  {
+   "plaintext": "OURTRECORDSASHAVINGBEEASTNORTHEASTNDINTHEFOLLOWINGDYNASTYALLATTBERLINCLOCKDINGTHETOMBSSEEMTOHAVEB",
+   "key": "{'route': {'kind': 'affine', 'a': 32, 'b': 38, 'dir': 'inv'}, 'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'vig', 'key': 'LODESTONE'}",
+   "notes": null
+  }
+ ],
+ "seconds": 59.4
+}

@@ -78,25 +78,26 @@ Rules:
 | Control | Item | What it covers | Experiments | Status | Result |
 |---|---|---|---|---|---|
 | C-F1-1 | F1/1 | Periodic key, standard or KRYPTOS alphabets, periods 1-26 and 30-52 | 0005, crib sweep | passed | C-F1-1 |
-| C-F1-2 | F1/2 | Periods 27-29 and 53+ on any alphabet pair the puzzle's words build | 0034, 0035, 0048, 0053 | FAILED | C-F1-2b: at period 53 the climb finds English better than the plant (52/97 letters), copies did not run; a rerun with a revised check is unfinished (#73) |
+| C-F1-2 | F1/2 | Periods 27-29 and 53+ on any alphabet pair the puzzle's words build | 0034, 0035, 0048, 0053 | passed; blocked above 53 | 27-29: C-F1-2 (0048, judged as 0048 judged K4; first judged on 95/97 recovery, 88 reached), C-F1-2c (0053); 53: C-F1-2b (plant 0.74 above its copies, an unplanted period at most 0.34); 80: C-F1-2d no power (0.03, an unplanted period 0.12), so 0034's climb cannot decide above 53 (0136's bound): blocked |
 | C-F1-3 | F1/3 | Periodic key on alphabets from any dictionary word | 0109 | passed | C-F1-3 |
-| C-F1-4 | F1/4 | Progressive key | 0011, 0042, 0155 | in progress | passed: C-F1-4, C-F1-4c; written, not yet run: C-F1-4b |
-| C-F1-5 | F1/5 | Ciphertext autokey, any lag, on 1,092 keyword tables (63 vocabulary, 102 K1-K3 words,... | 0002, 0025, 0064, 0118 | in progress | passed: C-F1-5, C-F1-5c, C-F1-5d; written, not yet run: C-F1-5b |
+| C-F1-4 | F1/4 | Progressive key | 0011, 0042, 0155 | passed | C-F1-4, C-F1-4b, C-F1-4c |
+| C-F1-5 | F1/5 | Ciphertext autokey, any lag, on 1,092 keyword tables (63 vocabulary, 102 K1-K3 words,... | 0002, 0025, 0064, 0118 | passed | C-F1-5, C-F1-5b, C-F1-5c, C-F1-5d |
 | C-F1-6 | F1/6 | Plaintext autokey, lags 1-52 | 0003, 0012 | passed | C-F1-6, C-F1-6b |
-| C-F1-8 | F1/8 | Running key from K1-K3, the sculpture's texts, Carter, Sanborn's letters (Carter on... | 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117 | in progress | passed: C-F1-8, C-F1-8b, C-F1-8c, C-F1-8d, C-F1-8f; written, not yet run: C-F1-8e, C-F1-8g, C-F1-8h |
+| C-F1-8 | F1/8 | Running key from K1-K3, the sculpture's texts, Carter, Sanborn's letters (Carter on... | 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117 | passed | C-F1-8, C-F1-8b, C-F1-8c, C-F1-8d, C-F1-8e, C-F1-8f, C-F1-8g, C-F1-8h |
 | C-F1-9 | F1/9 | Running key from an unknown English text, standard, KRYPTOS or puzzle-word alphabets | 0009, 0010 | passed | C-F1-9, C-F1-9b |
 | C-F1.1 | F1.1 | Free alphabet, the same on both sides (Quagmire III with unknown order), periods 3-26: the exact search | 0119 | passed | 0119's search finds the planted length 9 (8 s) |
-| C-F1.1b | F1.1 | Beaufort lengths 23 and 26, decided by F1.5's design-2 decider (sampled) | 0139, 0140, 0142 | open | - |
-| C-F1.2 | F1.2 | Two free alphabets (Quagmire IV), periods 3-26 | 0097, 0121-0124, 0143-0146 | in progress | passed: -; written, not yet run: C-F1.2 |
-| C-F1.3 | F1.3 | Forced key stretches read as running English on the 208,062 dictionary alphabets | 0010, 0125 | open | - |
-| C-F1.5 | F1.5 | A decider for cells the known letters cannot decide | 0120, 0136-0146 | open | - |
-| C-F1.4 | F1.4 | Hand key schedules other than the Berlin clock and Carter dates | 0126, 0127, 0128 | in progress | passed: -; written, not yet run: C-F1.4, C-F1.4b |
-| C-F1.6 | F1.6 | One carved letter wrong, missing or extra, run through the exact unknown-alphabet... | 0147, 0148, 0150, 0151, 0152 | in progress | passed: -; written, not yet run: C-F1.6, C-F1.6b, C-F1.6c, C-F1.6d |
-| C-F1.7 | F1.7 | Autokey on one unknown alphabet | 0149 | in progress | passed: -; written, not yet run: C-F1.7 |
-| C-F1.8 | F1.8 | Carter's book as a running key on one unknown alphabet (both directions, every offset,... | 0153 (error), 0154 | in progress | passed: -; written, not yet run: C-F1.8 |
-| C-F1.9 | F1.9 | Progressive key, per-letter and per-repeat, on keyword-mixed and dictionary tables;... | 0155 | open | - |
-| C-F1.10 | F1.10 | Friedman's keyword-only key-advance schedules (run length by value, CHRISTMAS,... | 0156 | in progress | passed: -; written, not yet run: C-F1.10 |
-| C-F1.11 | F1.11 | A split key phrase (Elementary Military Cryptography par. 59d) | 0157 | in progress | passed: -; written, not yet run: C-F1.11 |
+| C-F1.1b | F1.1 | Beaufort lengths 23 and 26, decided by F1.5's design-2 decider (sampled) | 0139, 0140, 0142 | passed, own plant | 0139 (6 of 8 plants above all own copies at 23) and 0140 (5 of 6 at 26), the decider that judged K4 in 0140 and 0142 |
+| C-F1.2 | F1.2 | Two free alphabets (Quagmire IV), periods 3-26 | 0097, 0121-0124, 0143-0146 | passed | C-F1.2 (0123 finds the planted length 10); sampled lengths: C-F1.2b |
+| C-F1.2b | F1.2 | Lengths 8, 13, 16 decided by design 2 on two free alphabets (sampled) | 0143-0146 | passed, own plant | 0145 (4 of 4 at 8), 0143 (5 of 5 at 13, 4 of 5 at 16) |
+| C-F1.3 | F1.3 | Forced key stretches read as running English on the 208,062 dictionary alphabets | 0010, 0125 | passed, own plant | 0125: 20 planted running keys through the same search, 11 beat every copy (the stated power) |
+| C-F1.5 | F1.5 | A decider for cells the known letters cannot decide | 0120, 0136-0146 | passed, own plant | 0139, 0140, 0143, 0145 (design 2's plants against their own copies); design 1 failed its own check (0138) and carries no verdict |
+| C-F1.4 | F1.4 | Hand key schedules other than the Berlin clock and Carter dates | 0126, 0127, 0128 | passed | C-F1.4 (0128, stutter), C-F1.4b (0127, skip) |
+| C-F1.6 | F1.6 | One carved letter wrong, missing or extra, run through the exact unknown-alphabet... | 0147, 0148, 0150, 0151, 0152 | passed | C-F1.6 (0147; rerun: the first plant's restoring variant fell past 0147's 200-entry list), C-F1.6b (0150), C-F1.6c (0151 Hill; rerun after the spec's plant errored), C-F1.6d (0151 trifid) |
+| C-F1.7 | F1.7 | Autokey on one unknown alphabet | 0149 | passed | C-F1.7 |
+| C-F1.8 | F1.8 | Carter's book as a running key on one unknown alphabet (both directions, every offset,... | 0153 (error), 0154 | passed | C-F1.8 |
+| C-F1.9 | F1.9 | Progressive key, per-letter and per-repeat, on keyword-mixed and dictionary tables;... | 0155 | passed | C-F1.9 (per-repeat, Beaufort); C-F1-4c (per-letter) on the same search |
+| C-F1.10 | F1.10 | Friedman's keyword-only key-advance schedules (run length by value, CHRISTMAS,... | 0156 | passed | C-F1.10 |
+| C-F1.11 | F1.11 | A split key phrase (Elementary Military Cryptography par. 59d) | 0157 | passed | C-F1.11 |
 | C-F6-1 | F6/1 | Columnar (plain, keyed, double), K3's rule, quarter turns, grid paths, rail fence,... | 0006-0008, 0026, 0058, 0080-0086, 0099, 0110-0114 | open | - |
 | C-F6-2 | F6/2 | The same moves with autokey, running key or clock schedules | 0063, 0081, 0090, 0091 | open | - |
 | C-F6-3 | F6/3 | Three stages | 0037, 0083, 0134 | open | - |
@@ -166,7 +167,7 @@ Rules:
 | Item | Status | Strength | Experiments | Next test or reason |
 |---|---|---|---|---|
 | Periodic key, standard or KRYPTOS alphabets, periods 1-26 and 30-52 | closed | exact | 0005, crib sweep | - |
-| Periods 27-29 and 53+ on any alphabet pair the puzzle's words build | closed | exact consistency; the key completion is noise against coppers | 0034, 0035, 0048, 0053 | - |
+| Periods 27-29 and 53+ on any alphabet pair the puzzle's words build | closed at 27-29 and 53; blocked above 53 | exact consistency; the key completion is noise against coppers. Positive controls (#73): a plant is told from its copies at 28 and 53, not at 80 (C-F1-2d) | 0034, 0035, 0048, 0053 | above 53 the climb overfits copies as well as English (0136's bound): only a better English model could decide |
 | Periodic key on alphabets from any dictionary word | closed | exact | 0109 | - |
 | Progressive key | closed | exact for the periodic step forms tried; per-letter form and periods 26-52 on every dictionary table in F1.9 (0155) | 0011, 0042, 0155 | - |
 | Ciphertext autokey, any lag, on 1,092 keyword tables (63 vocabulary, 102 K1-K3 words, 925 near-KRYPTOS, 42 compass words); a free alphabet is F1.7 | closed | exact | 0002, 0025, 0064, 0118 | - |

@@ -1,0 +1,1181 @@
+{
+ "error": null,
+ "patches": [
+  [
+   "    assert [L for L in range(1, 27) if m0120.decide(eqs_for(base_eq, L), \"V\", rng0)[0] == \"fit\"] == []\n",
+   ""
+  ],
+  [
+   "    assert [L for L in range(1, 27) if m0120.decide(eqs_for(base_eq, L), \"B\", rng0)[0] == \"fit\"] == [23, 26]\n",
+   ""
+  ]
+ ],
+ "plant": {
+  "plaintext": "ASURVEYOFTHEANTECHAMBEASTNORTHEASTDAGILTHEADRESTANDOTHERMISCELLBERLINCLOCKTSTHISWASTHEFIRSTBOXWEO",
+  "key": "('TAGFOMSPXBNEULCRQVJYZKHWID', [3, 8, 13, 16, 11, 14, 18, 4, 21], 'place 22 miscut A->H')",
+  "ciphertext": "OCDMGDEXIFOIVKCFJVOLHHUZJCDJXBAUZJFHMSTQPDYFNCCLVKLHOVCWJCVGFVXUYGFBISVDVFLHENQNJOCLUHVQYAFVVIXDH"
+ },
+ "passed": true,
+ "why": "added-form fits 5523; the restoring variant 'sub 22 H->A' at 9: True; cells above every copy ['1V:9', '1V:18', '1V:22', '1B:6', '1B:9', '1B:15', '2:9']",
+ "bounds": {
+  "family": "one carved letter wrong at a known place (600) or one letter missing/extra between the runs (4: two readings each), through the exact one- and two-free-alphabet periodic tests",
+  "models": {
+   "1V": "one alphabet, added form (Quagmire III, K1/K2's system)",
+   "1B": "one alphabet, Beaufort form",
+   "2": "two alphabets (Quagmire IV)"
+  },
+  "variants_per_text": 604,
+  "key_lengths": [
+   1,
+   26
+  ],
+  "k4_fitting_variants_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    48,
+    69,
+    47,
+    550,
+    105,
+    507,
+    49,
+    3,
+    574,
+    2,
+    547,
+    105,
+    565,
+    574,
+    584,
+    592,
+    600
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    14,
+    0,
+    0,
+    2,
+    43,
+    25,
+    45,
+    544,
+    539,
+    511,
+    47,
+    2,
+    571,
+    1,
+    541,
+    539,
+    26,
+    2,
+    583,
+    592,
+    600
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    21,
+    35,
+    0,
+    2,
+    61,
+    550,
+    49,
+    576,
+    567,
+    532,
+    51,
+    4,
+    590,
+    2,
+    575,
+    567,
+    582,
+    587,
+    594,
+    598,
+    602
+   ]
+  },
+  "controls_min_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    48,
+    0,
+    4,
+    0,
+    24,
+    0,
+    25,
+    49,
+    49,
+    51,
+    599
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    29
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    2,
+    0,
+    1,
+    50,
+    1,
+    4,
+    1,
+    52,
+    0,
+    50,
+    51,
+    52,
+    53,
+    601
+   ]
+  },
+  "controls_max_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    112,
+    26,
+    0,
+    530,
+    531,
+    501,
+    558,
+    548,
+    519,
+    569,
+    4,
+    572,
+    4,
+    552,
+    548,
+    562,
+    575,
+    585,
+    594,
+    601
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    14,
+    36,
+    0,
+    52,
+    530,
+    50,
+    553,
+    553,
+    48,
+    567,
+    4,
+    575,
+    3,
+    558,
+    553,
+    562,
+    575,
+    584,
+    592,
+    600
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    48,
+    527,
+    506,
+    0,
+    564,
+    571,
+    564,
+    581,
+    577,
+    534,
+    586,
+    4,
+    590,
+    4,
+    580,
+    577,
+    584,
+    589,
+    594,
+    598,
+    602
+   ]
+  },
+  "undecided": {
+   "k4": {
+    "1V": 0,
+    "1B": 1,
+    "2": 0
+   },
+   "controls": [
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 16
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 0
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 2
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 27
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 1
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 54
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 0
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 1
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 58
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 6
+    }
+   ]
+  },
+  "k4_added_form_fits": [
+   {
+    "variant": "sub 22 H->A",
+    "length": 9
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->A",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->B",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->B",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->B",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->B",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->B",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->B",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->B",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->B",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->C",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->D",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->D",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->D",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->D",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->D",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->D",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->D",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->D",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->E",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->E",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->F",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->F",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->F",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->F",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->F",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->F",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->G",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->G",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->G",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->G",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->G",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->G",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->G",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->G",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->I",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->J",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->K",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->L",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->M",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->N",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->O",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->P",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->Q",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->R",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->S",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->S",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->S",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->S",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->S",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->S",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->S",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->S",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->T",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->U",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->V",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->W",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 23
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 H->X",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 H->Y",
+    "length": 13
+   },
+   {
+    "variant": "sub 22 H->Y",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 H->Y",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 H->Y",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 H->Y",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 H->Y",
+    "length": 23
+   }
+  ],
+  "k4_added_form_fit_count": 5523,
+  "cells_k4_above_every_copper": [
+   "1V:9",
+   "1V:18",
+   "1V:22",
+   "1B:6",
+   "1B:9",
+   "1B:15",
+   "2:9"
+  ],
+  "null_cells_above_rest_per_copper": [
+   0,
+   1,
+   3,
+   0,
+   7,
+   4,
+   2,
+   11,
+   3,
+   6
+  ],
+  "stop_queue": false,
+  "indel_note": "an error before place 22 or after 74 shifts every known place together and changes no periodic check",
+  "controls": "10 shuffled coppers (seed 146), the same 604 variants each",
+  "exhaustive": "exact per (variant, model, length); undecided counted"
+ },
+ "notes": "K4 fitting (variant, length) pairs: {'1V': 5523, '1B': 5227, '2': 7145}; added form revived on K4 in 5523 pairs; K4 above every copper in 7 of 78 cells, null 0-11; stop False; undecided K4 {'1V': 0, '1B': 1, '2': 0}",
+ "candidates": [],
+ "seconds": 1211.7
+}

@@ -1,0 +1,59 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "SOMEFEETBYFEETANDWEHAEASTNORTHEASTYFORTHOUGHTHEOFFICIALSHADCLEABERLINCLOCKALLALLEYWAYINTHECENTREA",
+  "key": "{'source': 'carter vol1 fwd', 'offset': 54321, 'pa': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ca': 'LANGEYBCDFHIJKMOPQRSTUVWXZ', 'ka': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'm': 'beau'}",
+  "ciphertext": "UECLJHFPZOOVKYSTEDRSRLLLOXHPISKGFYNBJLKWJLWAIBXPVOIYVGWLEDCNRZMCFODZUIUEZPGLKLNRGHVYBREUXWNELKQFG"
+ },
+ "passed": true,
+ "why": "survivors 1; the planted text among them: True; stopped by clock: False",
+ "bounds": {
+  "family": "running key from Carter and the sculpture texts, one alphabet keyword-mixed",
+  "alphabet_pairs": 248,
+  "alphabets": 63,
+  "key_alphabets": [
+   "std",
+   "kry"
+  ],
+  "modes": 3,
+  "sources": {
+   "carter vol1 fwd": 284914,
+   "carter vol1 bwd": 284914,
+   "tableau rows fwd": 781,
+   "tableau rows bwd": 781,
+   "tableau columns fwd": 781,
+   "tableau columns bwd": 781,
+   "morse as carved fwd": 80,
+   "morse as carved bwd": 80,
+   "morse reversed order fwd": 80,
+   "morse reversed order bwd": 80,
+   "right panel K1-K4 fwd": 865,
+   "right panel K1-K4 bwd": 865
+  },
+  "trials": 855602976,
+  "stopped_by_clock": false,
+  "fewest_mismatches": 0,
+  "near_misses": [
+   {
+    "mismatches": 0,
+    "source": "carter vol1 fwd",
+    "plain": "std",
+    "cipher": "LANGLEY/keyword",
+    "key": "std",
+    "mode": "beau",
+    "offset": 54321
+   }
+  ],
+  "survivors": 1
+ },
+ "notes": "855602976 trials; 1 survivors; 1 within two mismatches.",
+ "candidates": [
+  {
+   "plaintext": "SOMEFEETBYFEETANDWEHAEASTNORTHEASTYFORTHOUGHTHEOFFICIALSHADCLEABERLINCLOCKALLALLEYWAYINTHECENTREA",
+   "key": "{'source': 'carter vol1 fwd', 'offset': 54321, 'pa': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ca': 'LANGEYBCDFHIJKMOPQRSTUVWXZ', 'ka': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'm': 'beau'}",
+   "notes": null
+  }
+ ],
+ "seconds": 376.2
+}

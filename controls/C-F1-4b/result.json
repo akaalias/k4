@@ -1,0 +1,62 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "EAREDITSEEMEDTOMAKETHEASTNORTHEASTNTTHANBEFOREWEUSEDTHISPROCESSBERLINCLOCKBEROFOTHEROBJECTSOFWOOD",
+  "key": "{'pa': 'LODESTNABCFGHIJKMPQRUVWXYZ', 'ca': 'CARTEBDFGHIJKLMNOPQSUVWXYZ', 'm': 'beau', 'key': [22, 4, 1, 18, 19, 4, 17], 'step': 5}",
+  "ciphertext": "SXGNPPKXDTFVFPBYELCHNGKKRRQLJKQBHSBOYMIKVLOFKSABAAIGWOCWSZMXEMAFUAJZPAUAOAHZWYXTOIEATEVXQFVGFQEBN"
+ },
+ "passed": true,
+ "why": "candidates with the planted text: 1 of 1; period 7 key WEBSTER step 5; plain LODESTONE/keyword, cipher CARTER/keyword, key alphabet std, beau",
+ "bounds": {
+  "family": "progressive key (per-repeat), keyword-mixed alphabets from the vocabulary",
+  "alphabets": 63,
+  "periods": "1-30",
+  "steps": "1-25",
+  "combinations_checked": 8930250,
+  "survivors_by_period": {
+   "7": 1,
+   "14": 1,
+   "21": 2,
+   "25": 28,
+   "26": 11342,
+   "27": 297675,
+   "28": 297675,
+   "29": 297675,
+   "30": 11562
+  },
+  "periods_dead_at_every_step_and_pair": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   22,
+   23,
+   24
+  ],
+  "vocab_matches": 1
+ },
+ "notes": "8930250 combinations. Periods dead under every pair and step: [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 22, 23, 24]. Survivors by period: {7: 1, 14: 1, 21: 2, 25: 28, 26: 11342, 27: 297675, 28: 297675, 29: 297675, 30: 11562}. 1 matches.",
+ "candidates": [
+  {
+   "plaintext": "EAREDITSEEMEDTOMAKETHEASTNORTHEASTNTTHANBEFOREWEUSEDTHISPROCESSBERLINCLOCKBEROFOTHEROBJECTSOFWOOD",
+   "key": "{'pa': 'LODESTNABCFGHIJKMPQRUVWXYZ', 'ca': 'CARTEBDFGHIJKLMNOPQSUVWXYZ', 'm': 'beau', 'key': [22, 4, 1, 18, 19, 4, 17], 'step': 5}",
+   "notes": null
+  }
+ ],
+ "seconds": 494.4
+}

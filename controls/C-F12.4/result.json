@@ -1,0 +1,70 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "BURYINGTHEBEAUTIFULOLEASTNORTHEASTDINGTHEBODYOFOURDEARBROTHERTOBERLINCLOCKSUREANDCERTAINHOPEHADSO",
+  "key": "('vig std', [6, 10, 5, 0])",
+  "ciphertext": "HEWYOXLTNOGEGEYILEQOROFSZXTRZRJAYDIITQYHKLTDEYKOABIEGBGRUDMEXDTBKBQITMQOIUXUXOFNJMJRZKNNNYUENKISU"
+ },
+ "passed": false,
+ "why": "(4) repeated-bigram spacings divisible by 4: plant 5, shuffles 0-9, p 0.052; outside every shuffle: []",
+ "bounds": {
+  "family": "observation: six by-eye patterns in K4 against 1,000 shuffles",
+  "observations": [
+   {
+    "observation": "(1) most of one letter in one width-7 column",
+    "k4": 4,
+    "shuffles_min": 2,
+    "shuffles_max": 6,
+    "p_one_sided": 0.278,
+    "outside_every_shuffle": false
+   },
+   {
+    "observation": "(2) commonest letter's share in two adjacent width-7 columns",
+    "k4": 0.5,
+    "shuffles_min": 0.375,
+    "shuffles_max": 0.875,
+    "p_one_sided": 0.78,
+    "outside_every_shuffle": false
+   },
+   {
+    "observation": "(3) repeated bigrams",
+    "k4": 10,
+    "shuffles_min": 1,
+    "shuffles_max": 16,
+    "p_one_sided": 0.21,
+    "outside_every_shuffle": false
+   },
+   {
+    "observation": "(4) repeated-bigram spacings divisible by 4",
+    "k4": 5,
+    "shuffles_min": 0,
+    "shuffles_max": 9,
+    "p_one_sided": 0.052,
+    "outside_every_shuffle": false
+   },
+   {
+    "observation": "(5) shortest window holding all but one copy of a 6-copy letter",
+    "k4": 14,
+    "shuffles_min": 7,
+    "shuffles_max": 60,
+    "p_one_sided": 0.017,
+    "outside_every_shuffle": false
+   },
+   {
+    "observation": "(6) most equal letters at a fixed step of 2 or 3",
+    "k4": 2,
+    "shuffles_min": 2,
+    "shuffles_max": 4,
+    "p_one_sided": 1.0,
+    "outside_every_shuffle": false
+   }
+  ],
+  "outside_every_shuffle": [],
+  "note": "selected by eye, so post hoc; only an observation outside every shuffle would become an item",
+  "controls": "1000 letter-preserving shuffles (seed 1614)"
+ },
+ "notes": "(1) most of one letter in one width-7 column: K4 4, p 0.278; (2) commonest letter's share in two adjacent width-7 columns: K4 0.5, p 0.78; (3) repeated bigrams: K4 10, p 0.21; (4) repeated-bigram spacings divisible by 4: K4 5, p 0.052; (5) shortest window holding all but one copy of a 6-copy letter: K4 14, p 0.017; (6) most equal letters at a fixed step of 2 or 3: K4 2, p 1.0",
+ "candidates": [],
+ "seconds": 0.9
+}

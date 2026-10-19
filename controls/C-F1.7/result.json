@@ -1,0 +1,242 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "THITHERHEPAUSEDINNEWYEASTNORTHEASTPROMISEDAFRIENDHEWOULDTRYTOOBBERLINCLOCKTIONRESPECTINGACERTAINC",
+  "key": "('TAGFOMSPXBNEULCRQVJYZKHWID', 9, 'ct', 'V', 'FXLQECJOK')",
+  "ciphertext": "FOEQPDPTSNMWHJIMNQKGQPYOMZZNGUJZNMABCPNIMBSOIUJZWAZFXNDVZUZZPUYXGBDJOKDWHWBWHCNNFFXWWZIUEVCWWIJXT"
+ },
+ "passed": true,
+ "why": "ciphertext autokey, added form: lags that fit the plant [68, 69, 70, 71, 72, 73, 9]",
+ "bounds": {
+  "family": "ciphertext and plaintext autokey on one unknown alphabet (both sides), no move, every lag 1-96, three forms",
+  "solver": "propagation depth-first over the 26 places, node limit 200,000; checked on 6 planted texts",
+  "summary": {
+   "ct/V": {
+    "lags_with_equations": 73,
+    "k4_fit_lags": [
+     68,
+     69,
+     70,
+     71,
+     72,
+     73,
+     9
+    ],
+    "coppers_fit_count": [
+     8,
+     24,
+     30,
+     32,
+     31,
+     26,
+     29,
+     30,
+     17,
+     30
+    ],
+    "k4_fit_count": 7
+   },
+   "ct/B": {
+    "lags_with_equations": 73,
+    "k4_fit_lags": [
+     68,
+     69,
+     71,
+     72,
+     73
+    ],
+    "coppers_fit_count": [
+     17,
+     26,
+     14,
+     19,
+     30,
+     24,
+     23,
+     26,
+     22,
+     26
+    ],
+    "k4_fit_count": 5
+   },
+   "ct/R": {
+    "lags_with_equations": 73,
+    "k4_fit_lags": [
+     68,
+     69,
+     71,
+     72,
+     73
+    ],
+    "coppers_fit_count": [
+     11,
+     20,
+     25,
+     29,
+     28,
+     29,
+     24,
+     26,
+     13,
+     27
+    ],
+    "k4_fit_count": 5
+   },
+   "pt/V": {
+    "lags_with_equations": 35,
+    "k4_fit_lags": [
+     10,
+     11,
+     12,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     46,
+     48,
+     49,
+     50,
+     51,
+     52,
+     6,
+     8,
+     9
+    ],
+    "coppers_fit_count": [
+     19,
+     23,
+     23,
+     25,
+     26,
+     25,
+     26,
+     25,
+     19,
+     22
+    ],
+    "k4_fit_count": 19
+   },
+   "pt/B": {
+    "lags_with_equations": 35,
+    "k4_fit_lags": [
+     10,
+     11,
+     12,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     42,
+     46,
+     47,
+     48,
+     49,
+     5,
+     50,
+     51,
+     52,
+     6,
+     7
+    ],
+    "coppers_fit_count": [
+     23,
+     21,
+     20,
+     19,
+     21,
+     21,
+     19,
+     22,
+     22,
+     20
+    ],
+    "k4_fit_count": 21
+   },
+   "pt/R": {
+    "lags_with_equations": 35,
+    "k4_fit_lags": [
+     10,
+     11,
+     12,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     46,
+     47,
+     48,
+     49,
+     5,
+     50,
+     51,
+     52,
+     6,
+     7,
+     8
+    ],
+    "coppers_fit_count": [
+     19,
+     23,
+     19,
+     22,
+     27,
+     22,
+     25,
+     24,
+     20,
+     23
+    ],
+    "k4_fit_count": 21
+   }
+  },
+  "undecided": {
+   "k4": 67,
+   "controls": [
+    5,
+    16,
+    20,
+    12,
+    15,
+    14,
+    17,
+    24,
+    13,
+    10
+   ]
+  },
+  "k4_rare_fits": [
+   "ct/V/9",
+   "pt/B/42",
+   "pt/B/5"
+  ],
+  "null_rare_fits_per_copper": [
+   1,
+   4,
+   1,
+   3,
+   6,
+   9,
+   3,
+   4,
+   3,
+   3
+  ],
+  "stop_queue": false,
+  "controls": "10 shuffled coppers (seed 147), identical search",
+  "exhaustive": "exact per cell; undecided counted",
+  "not_covered": "the move-first version (27,852 moves x 96 lags x 3 forms x 11 texts)"
+ },
+ "notes": "ct/V K4 7 fits (coppers 8-32), ct/B K4 5 fits (coppers 14-30), ct/R K4 5 fits (coppers 11-29), pt/V K4 19 fits (coppers 19-26), pt/B K4 21 fits (coppers 19-23), pt/R K4 21 fits (coppers 19-27); rare K4 fits 3 vs null 1-9; stop False; undecided K4 67",
+ "candidates": [],
+ "seconds": 318.9
+}

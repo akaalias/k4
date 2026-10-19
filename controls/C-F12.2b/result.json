@@ -1,0 +1,674 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "DETOTHELABORATORYATALEASTNORTHEASTQUESTIONOFVISITORSISAMATTEROFBERLINCLOCKYWEHAVEALREADYGOTINTOAG",
+  "key": "('shift 1-48', 23, 'shift 49-97', 12)",
+  "ciphertext": "ABQLQEBIXYLOXQLOVXQXIBXPQKLOQEBXPQNRBPQFLKLCSFPFFADEUEMYMFFQDARNQDXUZOXAOWKIQTMHQMXDQMPKSAFUZFAMS"
+ },
+ "passed": false,
+ "why": "segments: halves at 48/49: plant 38.51943, shuffles 10.27882-45.13637, p 0.01; outside every shuffle: []",
+ "bounds": {
+  "family": "observation, not a cipher: K4's statistics against 1,000 shuffles",
+  "statistics": 71,
+  "shuffles": 1000,
+  "expected_outliers_by_chance_at_p_0_002": 0.14,
+  "outside_every_shuffle": [],
+  "smallest_p": [
+   {
+    "statistic": "segments: halves at 48/49",
+    "k4": 38.51943,
+    "shuffles_min": 10.27882,
+    "shuffles_max": 45.13637,
+    "p_two_sided": 0.01,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: thirds",
+    "k4": 66.20973,
+    "shuffles_min": 27.60852,
+    "shuffles_max": 75.28941,
+    "p_two_sided": 0.022,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 46 alphabets",
+    "k4": 0.13768,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.17391,
+    "p_two_sided": 0.028,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 25 alphabets",
+    "k4": 0.02,
+    "shuffles_min": 0.00667,
+    "shuffles_max": 0.14667,
+    "p_two_sided": 0.07,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 19 alphabets",
+    "k4": 0.02807,
+    "shuffles_min": 0.01404,
+    "shuffles_max": 0.12632,
+    "p_two_sided": 0.084,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 12 alphabets",
+    "k4": 0.07374,
+    "shuffles_min": 0.02612,
+    "shuffles_max": 0.09689,
+    "p_two_sided": 0.088,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 24 alphabets",
+    "k4": 0.08333,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.12222,
+    "p_two_sided": 0.132,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 32 alphabets",
+    "k4": 0.02083,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.13021,
+    "p_two_sided": 0.186,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 2 alphabets",
+    "k4": 0.05781,
+    "shuffles_min": 0.04557,
+    "shuffles_max": 0.06782,
+    "p_two_sided": 0.194,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: quarters",
+    "k4": 81.04018,
+    "shuffles_min": 45.25085,
+    "shuffles_max": 102.40509,
+    "p_two_sided": 0.212,
+    "outside_every_shuffle": false
+   }
+  ],
+  "all": [
+   {
+    "statistic": "segments: carved lines (1-4, 5-35, 36-66, 67-97)",
+    "k4": 74.94032,
+    "shuffles_min": 42.10036,
+    "shuffles_max": 110.38965,
+    "p_two_sided": 0.574,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: halves at 48/49",
+    "k4": 38.51943,
+    "shuffles_min": 10.27882,
+    "shuffles_max": 45.13637,
+    "p_two_sided": 0.01,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: thirds",
+    "k4": 66.20973,
+    "shuffles_min": 27.60852,
+    "shuffles_max": 75.28941,
+    "p_two_sided": 0.022,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: before EAST, the runs and between, after CLOCK",
+    "k4": 102.9156,
+    "shuffles_min": 61.91574,
+    "shuffles_max": 135.76884,
+    "p_two_sided": 0.376,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: quarters",
+    "k4": 81.04018,
+    "shuffles_min": 45.25085,
+    "shuffles_max": 102.40509,
+    "p_two_sided": 0.212,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: before and after BERLINCLOCK's start",
+    "k4": 28.46381,
+    "shuffles_min": 10.57794,
+    "shuffles_max": 44.82445,
+    "p_two_sided": 0.338,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: first 21, rest",
+    "k4": 28.3694,
+    "shuffles_min": 9.52314,
+    "shuffles_max": 49.72372,
+    "p_two_sided": 0.348,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "segments: fifths",
+    "k4": 104.95554,
+    "shuffles_min": 62.21401,
+    "shuffles_max": 134.00978,
+    "p_two_sided": 0.236,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 1 alphabets",
+    "k4": 0.05326,
+    "shuffles_min": 0.05326,
+    "shuffles_max": 0.05326,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 2 alphabets",
+    "k4": 0.05781,
+    "shuffles_min": 0.04557,
+    "shuffles_max": 0.06782,
+    "p_two_sided": 0.194,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 3 alphabets",
+    "k4": 0.05759,
+    "shuffles_min": 0.04199,
+    "shuffles_max": 0.07403,
+    "p_two_sided": 0.278,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 4 alphabets",
+    "k4": 0.05699,
+    "shuffles_min": 0.03989,
+    "shuffles_max": 0.07746,
+    "p_two_sided": 0.458,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 5 alphabets",
+    "k4": 0.06,
+    "shuffles_min": 0.03719,
+    "shuffles_max": 0.07649,
+    "p_two_sided": 0.29,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 6 alphabets",
+    "k4": 0.05686,
+    "shuffles_min": 0.03619,
+    "shuffles_max": 0.08554,
+    "p_two_sided": 0.57,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 7 alphabets",
+    "k4": 0.05102,
+    "shuffles_min": 0.03323,
+    "shuffles_max": 0.09524,
+    "p_two_sided": 0.84,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 8 alphabets",
+    "k4": 0.05565,
+    "shuffles_min": 0.02753,
+    "shuffles_max": 0.08887,
+    "p_two_sided": 0.766,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 9 alphabets",
+    "k4": 0.05993,
+    "shuffles_min": 0.03008,
+    "shuffles_max": 0.09136,
+    "p_two_sided": 0.47,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 10 alphabets",
+    "k4": 0.05444,
+    "shuffles_min": 0.02278,
+    "shuffles_max": 0.08611,
+    "p_two_sided": 0.854,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 11 alphabets",
+    "k4": 0.04618,
+    "shuffles_min": 0.02273,
+    "shuffles_max": 0.09921,
+    "p_two_sided": 0.56,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 12 alphabets",
+    "k4": 0.07374,
+    "shuffles_min": 0.02612,
+    "shuffles_max": 0.09689,
+    "p_two_sided": 0.088,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 13 alphabets",
+    "k4": 0.04945,
+    "shuffles_min": 0.01648,
+    "shuffles_max": 0.10073,
+    "p_two_sided": 0.812,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 14 alphabets",
+    "k4": 0.05578,
+    "shuffles_min": 0.01701,
+    "shuffles_max": 0.10272,
+    "p_two_sided": 0.832,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 15 alphabets",
+    "k4": 0.05524,
+    "shuffles_min": 0.02159,
+    "shuffles_max": 0.09778,
+    "p_two_sided": 0.824,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 16 alphabets",
+    "k4": 0.05714,
+    "shuffles_min": 0.01548,
+    "shuffles_max": 0.10357,
+    "p_two_sided": 0.824,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 17 alphabets",
+    "k4": 0.04118,
+    "shuffles_min": 0.01176,
+    "shuffles_max": 0.10784,
+    "p_two_sided": 0.454,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 18 alphabets",
+    "k4": 0.05185,
+    "shuffles_min": 0.01667,
+    "shuffles_max": 0.1,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 19 alphabets",
+    "k4": 0.02807,
+    "shuffles_min": 0.01404,
+    "shuffles_max": 0.12632,
+    "p_two_sided": 0.084,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 20 alphabets",
+    "k4": 0.06333,
+    "shuffles_min": 0.015,
+    "shuffles_max": 0.11,
+    "p_two_sided": 0.512,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 21 alphabets",
+    "k4": 0.05397,
+    "shuffles_min": 0.00476,
+    "shuffles_max": 0.14603,
+    "p_two_sided": 0.962,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 22 alphabets",
+    "k4": 0.03788,
+    "shuffles_min": 0.00455,
+    "shuffles_max": 0.11364,
+    "p_two_sided": 0.41,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 23 alphabets",
+    "k4": 0.07536,
+    "shuffles_min": 0.00725,
+    "shuffles_max": 0.10435,
+    "p_two_sided": 0.236,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 24 alphabets",
+    "k4": 0.08333,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.12222,
+    "p_two_sided": 0.132,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 25 alphabets",
+    "k4": 0.02,
+    "shuffles_min": 0.00667,
+    "shuffles_max": 0.14667,
+    "p_two_sided": 0.07,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 26 alphabets",
+    "k4": 0.05769,
+    "shuffles_min": 0.00641,
+    "shuffles_max": 0.12821,
+    "p_two_sided": 0.89,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 27 alphabets",
+    "k4": 0.03704,
+    "shuffles_min": 0.00617,
+    "shuffles_max": 0.1358,
+    "p_two_sided": 0.572,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 28 alphabets",
+    "k4": 0.03571,
+    "shuffles_min": 0.00595,
+    "shuffles_max": 0.125,
+    "p_two_sided": 0.512,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 29 alphabets",
+    "k4": 0.06897,
+    "shuffles_min": 0.00575,
+    "shuffles_max": 0.14368,
+    "p_two_sided": 0.512,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 30 alphabets",
+    "k4": 0.04444,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.15,
+    "p_two_sided": 0.848,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 31 alphabets",
+    "k4": 0.06989,
+    "shuffles_min": 0.00538,
+    "shuffles_max": 0.13441,
+    "p_two_sided": 0.438,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 32 alphabets",
+    "k4": 0.02083,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.13021,
+    "p_two_sided": 0.186,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 33 alphabets",
+    "k4": 0.05051,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.13131,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 34 alphabets",
+    "k4": 0.01961,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.17647,
+    "p_two_sided": 0.238,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 35 alphabets",
+    "k4": 0.06667,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.1619,
+    "p_two_sided": 0.65,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 36 alphabets",
+    "k4": 0.05556,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.14815,
+    "p_two_sided": 0.97,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 37 alphabets",
+    "k4": 0.02703,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.16216,
+    "p_two_sided": 0.502,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 38 alphabets",
+    "k4": 0.01754,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.17544,
+    "p_two_sided": 0.238,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 39 alphabets",
+    "k4": 0.05983,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.15385,
+    "p_two_sided": 0.806,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 40 alphabets",
+    "k4": 0.05,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.15,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 41 alphabets",
+    "k4": 0.04065,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.17886,
+    "p_two_sided": 0.796,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 42 alphabets",
+    "k4": 0.05556,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.19048,
+    "p_two_sided": 0.926,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 43 alphabets",
+    "k4": 0.03101,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.17054,
+    "p_two_sided": 0.634,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 44 alphabets",
+    "k4": 0.0303,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.17424,
+    "p_two_sided": 0.634,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 45 alphabets",
+    "k4": 0.04444,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.18519,
+    "p_two_sided": 0.904,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 46 alphabets",
+    "k4": 0.13768,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.17391,
+    "p_two_sided": 0.028,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 47 alphabets",
+    "k4": 0.04965,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.17021,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "I.C. at 48 alphabets",
+    "k4": 0.08333,
+    "shuffles_min": 0.0,
+    "shuffles_max": 0.1875,
+    "p_two_sided": 0.446,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 7: repeated vertical bigrams (0056's statistic)",
+    "k4": 8,
+    "shuffles_min": 2,
+    "shuffles_max": 17,
+    "p_two_sided": 0.584,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 7: vertical repeats",
+    "k4": 3,
+    "shuffles_min": 0,
+    "shuffles_max": 11,
+    "p_two_sided": 0.536,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 7: diagonal repeats right",
+    "k4": 2,
+    "shuffles_min": 0,
+    "shuffles_max": 11,
+    "p_two_sided": 0.392,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 7: diagonal repeats left",
+    "k4": 3,
+    "shuffles_min": 0,
+    "shuffles_max": 11,
+    "p_two_sided": 0.816,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 7: most doublets in one column",
+    "k4": 1,
+    "shuffles_min": 0,
+    "shuffles_max": 6,
+    "p_two_sided": 0.53,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 21: repeated vertical bigrams (0056's statistic)",
+    "k4": 8,
+    "shuffles_min": 1,
+    "shuffles_max": 18,
+    "p_two_sided": 0.856,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 21: vertical repeats",
+    "k4": 2,
+    "shuffles_min": 0,
+    "shuffles_max": 11,
+    "p_two_sided": 0.484,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 21: diagonal repeats right",
+    "k4": 4,
+    "shuffles_min": 0,
+    "shuffles_max": 10,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 21: diagonal repeats left",
+    "k4": 5,
+    "shuffles_min": 0,
+    "shuffles_max": 12,
+    "p_two_sided": 0.692,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 21: most doublets in one column",
+    "k4": 1,
+    "shuffles_min": 0,
+    "shuffles_max": 4,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 31: repeated vertical bigrams (0056's statistic)",
+    "k4": 6,
+    "shuffles_min": 0,
+    "shuffles_max": 12,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 31: vertical repeats",
+    "k4": 4,
+    "shuffles_min": 0,
+    "shuffles_max": 10,
+    "p_two_sided": 0.904,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 31: diagonal repeats right",
+    "k4": 2,
+    "shuffles_min": 0,
+    "shuffles_max": 9,
+    "p_two_sided": 0.68,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 31: diagonal repeats left",
+    "k4": 2,
+    "shuffles_min": 0,
+    "shuffles_max": 9,
+    "p_two_sided": 0.704,
+    "outside_every_shuffle": false
+   },
+   {
+    "statistic": "width 31: most doublets in one column",
+    "k4": 1,
+    "shuffles_min": 0,
+    "shuffles_max": 3,
+    "p_two_sided": 1.0,
+    "outside_every_shuffle": false
+   }
+  ],
+  "controls": "1000 letter-preserving shuffles of K4 (seed 1612)"
+ },
+ "notes": "71 statistics x 1000 shuffles: outside every shuffle 0 ([]); smallest p segments: halves at 48/49 0.01, segments: thirds 0.022, I.C. at 46 alphabets 0.028, I.C. at 25 alphabets 0.07",
+ "candidates": [],
+ "seconds": 5.7
+}

@@ -4,7 +4,9 @@ First run (kept as result.failed-1.json): with recovery of the text required (90
 52/97: at 29 free slots (about 136 bits, past 0136's 130-bit bound) the climb finds English better than the
 truth (-3.92 against the plant's own -4.18); its shuffled copies did not run on the loaded machine.
 Rerun with the identification the attack can make there: the planted period scores above the run's own
-shuffled copies at that period. 53 is the low edge of 53+; C-F1-2d plants at 80."""
+shuffled copies at that period, by more than any
+unplanted period beats its copies in the same run (re-judged 2026-10-19: a margin smaller than an unplanted
+period's is overfitting, not identification). 53 is the low edge of 53+; C-F1-2d plants at 80."""
 import random
 
 from kryptos.facts import STANDARD_ALPHABET as STD
@@ -29,6 +31,10 @@ def found(result, plant):
     if not best:
         return False, "no climb at the planted period"
     same = sum(a == c for a, c in zip(best["text"], plant["plaintext"]))
-    top = b.get("shuffled_k4_best_by_period", {}).get(str(P))
-    ok = top is not None and best["english"] > top
-    return ok, f"best at {P}: {best['convention']}, English {best['english']} against shuffled copies' best {top} at {P}; {same}/97 letters of the plant (the reading is not recovered)"
+    ctl = b.get("shuffled_k4_best_by_period", {})
+    top = ctl.get(str(P))
+    margins = {q: b["best_by_period"][q]["english"] - v for q, v in ctl.items() if q in b.get("best_by_period", {})}
+    other = max((m for q, m in margins.items() if q != str(P)), default=None)
+    ok = top is not None and other is not None and margins[str(P)] > 0 and margins[str(P)] > other
+    return ok, (f"best at {P}: {best['convention']}, English {best['english']} against shuffled copies' best {top} (margin "
+                f"{margins.get(str(P), 0):.3f}); largest margin at an unplanted period {other:.3f}; {same}/97 letters of the plant")

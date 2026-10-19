@@ -1,0 +1,238 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "SOFRUBBINGITSEEMEDASTEASTNORTHEASTETREATMENTWASNECESSARYTHESURFBERLINCLOCKEMOVEDTHEDISCOLORATIONO",
+  "key": "{'pa': 'SHADOWBCEFGIJKLMNPQRTUVXYZ', 'ca': 'COMPASBDEFGHIJKLNQRTUVWXYZ', 'ka': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'm': 'varbeau', 'lag': 13, 'primer': 'LIGHTANDSHADE', 'kind': 'ciphertext'}",
+  "ciphertext": "LWPIMBTEYPHQWXICCQODNGJTAUDHRZRKXDMHCEEQEQQPVSXAOSAWGYPESBNPVSQBIJNWILJQRRNZPKZNYTXUVFNQLLFPDJHTG"
+ },
+ "passed": true,
+ "why": "ciphertext-autokey survivors 1; with the planted lag and text: 1",
+ "bounds": {
+  "family": "ciphertext and plaintext autokey with keyword-mixed alphabets",
+  "alphabets": 63,
+  "key_alphabet_choices": "standard, KRYPTOS, or the plain alphabet",
+  "modes": 3,
+  "lags": "1-96",
+  "trials": 3429216,
+  "ciphertext_autokey_best": {
+   "mismatches": 0,
+   "setting": [
+    "SHADOW/keyword",
+    "COMPASS/keyword",
+    "std",
+    "varbeau",
+    13,
+    24
+   ]
+  },
+  "ciphertext_autokey_survivors": 1,
+  "plaintext_autokey_lags_dead_under_every_triple": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49
+  ],
+  "plaintext_autokey_best_closures": [
+   {
+    "score": -6.167,
+    "plain": "CIA/keyword",
+    "cipher": "HILL/keyword",
+    "key": "CIA/keyword",
+    "mode": "vig",
+    "lag": 29,
+    "forced": 82,
+    "runs": [
+     "RMJENLDMEMAEROYO",
+     "IWTAVOAZARG",
+     "YUREATILEKTCX"
+    ]
+   },
+   {
+    "score": -6.326,
+    "plain": "CIA/keyword",
+    "cipher": "CIA/keyword",
+    "key": "CIA/keyword",
+    "mode": "vig",
+    "lag": 29,
+    "forced": 82,
+    "runs": [
+     "RMHELMMHBKAUSOYO",
+     "CWSAVOLYARG",
+     "XUPEARIKEKTCX"
+    ]
+   },
+   {
+    "score": -6.387,
+    "plain": "COMPASS/keyword",
+    "cipher": "SCHEIDT/keyword",
+    "key": "std",
+    "mode": "vig",
+    "lag": 29,
+    "forced": 82,
+    "runs": [
+     "OLISMOGIZPRNWAYM",
+     "CWTAKONWRTF",
+     "PWRSALFLEJVEZ"
+    ]
+   },
+   {
+    "score": -6.441,
+    "plain": "ORDINATE/keyword",
+    "cipher": "WILLIAMWEBSTER/keyword",
+    "key": "std",
+    "mode": "vig",
+    "lag": 27,
+    "forced": 86,
+    "runs": [
+     "NDNCLEF",
+     "MLFLIXOOCCC",
+     "YUOCXXTAUAV"
+    ]
+   },
+   {
+    "score": -6.458,
+    "plain": "SOMEWHERE/keyword",
+    "cipher": "LAYER/keyword",
+    "key": "kry",
+    "mode": "beau",
+    "lag": 27,
+    "forced": 86,
+    "runs": [
+     "JXTAQXR",
+     "MBONGJRIGOI",
+     "GHMODYCYNGN"
+    ]
+   },
+   {
+    "score": -6.472,
+    "plain": "EGYPT/keyword",
+    "cipher": "WONDERFULTHINGS/keyword",
+    "key": "kry",
+    "mode": "beau",
+    "lag": 27,
+    "forced": 86,
+    "runs": [
+     "PCCOWLA",
+     "ETFATHSEOVF",
+     "UEDJERIOFFM"
+    ]
+   },
+   {
+    "score": -6.488,
+    "plain": "MESSAGE/keyword",
+    "cipher": "LAYERTWO/keyword",
+    "key": "std",
+    "mode": "varbeau",
+    "lag": 28,
+    "forced": 84,
+    "runs": [
+     "PKXNEJ",
+     "KFESHAKECJP",
+     "XNDVEAGYVCI"
+    ]
+   },
+   {
+    "score": -6.517,
+    "plain": "std",
+    "cipher": "TUTANKHAMEN/keyword",
+    "key": "std",
+    "mode": "vig",
+    "lag": 27,
+    "forced": 86,
+    "runs": [
+     "OASPEFR",
+     "CYKATSFORDO",
+     "HJXSOANDERJ"
+    ]
+   },
+   {
+    "score": -6.517,
+    "plain": "std",
+    "cipher": "TUTANKHAMEN/keyword",
+    "key": "std",
+    "mode": "vig",
+    "lag": 27,
+    "forced": 86,
+    "runs": [
+     "OASPEFR",
+     "CYKATSFORDO",
+     "HJXSOANDERJ"
+    ]
+   },
+   {
+    "score": -6.53,
+    "plain": "WORLDCLOCK/keyword",
+    "cipher": "LAYERTWO/keyword",
+    "key": "kry",
+    "mode": "varbeau",
+    "lag": 27,
+    "forced": 86,
+    "runs": [
+     "IJGOLUD",
+     "WMBITTANDAK",
+     "KUGEAYOHARY"
+    ]
+   }
+  ],
+  "plaintext_autokey_fully_forced": 0,
+  "shuffled_control_best": [
+   -6.298,
+   -6.419,
+   -6.328,
+   -6.515,
+   -6.446,
+   -6.427,
+   -6.454,
+   -6.38,
+   -6.356,
+   -6.468
+  ]
+ },
+ "notes": "3429216 (triple, mode, lag) cases. Ciphertext autokey: best 0 mismatches, 1 survivors. Plaintext autokey: lags dead under every triple [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 33, 34, 35, 36, 37, 38]...; 0 fully forced; best closure -6.166844909244859 vs shuffled -6.298.",
+ "candidates": [
+  {
+   "plaintext": "XXXXXXXXXXXXXEEMEDASTEASTNORTHEASTETREATMENTWASNECESSARYTHESURFBERLINCLOCKEMOVEDTHEDISCOLORATIONO",
+   "key": "{'pa': 'SHADOWBCEFGIJKLMNPQRTUVXYZ', 'ca': 'COMPASBDEFGHIJKLNQRTUVWXYZ', 'ka': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'm': 'varbeau', 'lag': 13, 'primer': 'XXXXXXXXXXXXX', 'kind': 'ciphertext'}",
+   "notes": null
+  }
+ ],
+ "seconds": 372.0
+}

@@ -1,0 +1,81 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "ERESTINGANDVARIEDLISTEASTNORTHEASTCKETWRITTENINHIERATICONTHELIDBERLINCLOCKTEENOBJECTSOFLAPISLAZUL",
+  "key": "('BCGXAMEOHZRFTNJWQVUYILPDKS', 'rule (1,5)', 'primer 38576', 'M[P+d]=c', 'place 66 miscut')",
+  "ciphertext": "OSZSSVIHZUOPXYWMMQWPKFGCPLYKSQFGCKEFOLXURKBHUWWQFTPOSVZQPKFMJRRGEAUTUZNDMUKFRPLXUZEILQTTGIWPQOCXJ"
+ },
+ "passed": true,
+ "why": "settings with a fitting variant 2; rule (1,5) restored by 'sub 66 A->P': True",
+ "bounds": {
+  "family": "free-alphabet Gromark (0069, 0076, 0107) on 604 one-letter variants of K4",
+  "variants": 605,
+  "settings": {
+   "0069": {
+    "settings": 15,
+    "settings_with_a_fit": 1
+   },
+   "0076": {
+    "settings": 146,
+    "settings_with_a_fit": 0
+   },
+   "0107": {
+    "settings": 20,
+    "settings_with_a_fit": 1
+   }
+  },
+  "fits": [
+   {
+    "source": "0069",
+    "setting": [
+     1,
+     5
+    ],
+    "variants": [
+     [
+      "sub 25 P->A",
+      2
+     ],
+     [
+      "sub 31 F->E",
+      1
+     ],
+     [
+      "sub 66 A->P",
+      2
+     ]
+    ]
+   },
+   {
+    "source": "0107",
+    "setting": [
+     2,
+     5,
+     6
+    ],
+    "variants": [
+     [
+      "sub 25 P->A",
+      2
+     ],
+     [
+      "sub 31 F->E",
+      1
+     ],
+     [
+      "sub 66 A->P",
+      2
+     ]
+    ]
+   }
+  ],
+  "n_settings_with_fit": 2,
+  "seconds": 1798,
+  "exhaustive": true,
+  "controls": "none needed if nothing fits (exact); any fit is compared with the same variants of 10 scrambled copies in a follow-up"
+ },
+ "notes": "605 variants x 181 rule/base settings: settings with any fitting variant 2",
+ "candidates": [],
+ "seconds": 1797.9
+}

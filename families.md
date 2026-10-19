@@ -15,7 +15,9 @@ Update the leaf when an experiment works on it.
   - F1 One keyed stage, no move
     - A repeating key on the table
       - Standard or KRYPTOS alphabets, key lengths 1-26 and 30-52 {closed · exact · 0005}
-      - Key lengths 27-29 and 53+ on alphabets from the puzzle's words; the completed key reads as noise {closed · exact · 0034, 0035, 0048, 0053}
+      - Key lengths 27-29 and 53+ on alphabets from the puzzle's words; the completed key reads as noise
+        - Lengths 27-29 and 53: a planted text is told from its copies (C-F1-2, C-F1-2b) {closed · sampled · 0034, 0035, 0048, 0053}
+        - Lengths above 53: a planted text at 80 is not told from its copies (C-F1-2d); 0136's bound {blocked · sampled · 0034}
       - Alphabets from any dictionary word, key lengths 1-26 {closed · exact · 0109}
       - Alphabets one swap or move from KRYPTOS {closed · exact · 0071}
       - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {closed · sampled · 0097, 0100, 0102, 0119, 0120, 0139, 0140, 0142}

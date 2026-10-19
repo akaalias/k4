@@ -1,0 +1,70 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "NTICAMONEYHADNOVALUEFEASTNORTHEASTWONTTOSAYWITHSIRHENRYRAWLINSOBERLINCLOCKTOGETMONEYTHANANTICASOF",
+  "key": "('GDRKUCEOXQZNVBMSAHTIWPLJYF', 'K1-K3 plaintexts fwd', 200, 'vig')",
+  "ciphertext": "IIGNCZJLEWJMULMEEQNZHYOXOKYXAEJJIMPGKOCNHQUPGLQOZXIVGQVXZNRPHJDUBCOGCWMYNQGJCYMPVDYHFRJLVQVBJOXLI"
+ },
+ "passed": true,
+ "why": "consistent settings on the plant 1, copies [0, 26, 65, 3, 0, 10, 0, 76, 0, 2]; the planted one: True",
+ "bounds": {
+  "family": "running key from the sculpture's texts on an unknown mixed alphabet (Quagmire III)",
+  "sources": {
+   "tableau rows fwd": 781,
+   "tableau rows bwd": 781,
+   "tableau rows with index column fwd": 807,
+   "tableau rows with index column bwd": 807,
+   "tableau columns fwd": 781,
+   "tableau columns bwd": 781,
+   "morse as carved fwd": 80,
+   "morse as carved bwd": 80,
+   "morse reversed order fwd": 80,
+   "morse reversed order bwd": 80,
+   "panel ciphertexts K1-K4 fwd": 865,
+   "panel ciphertexts K1-K4 bwd": 865,
+   "K1-K3 plaintexts fwd": 768,
+   "K1-K3 plaintexts bwd": 768,
+   "Sanborn 1989 letter fwd": 2176,
+   "Sanborn 1989 letter bwd": 2176,
+   "1991 dedication texts fwd": 4880,
+   "1991 dedication texts bwd": 4880,
+   "2025 open letter fwd": 2228,
+   "2025 open letter bwd": 2228
+  },
+  "rules": [
+   "vigenere",
+   "variant",
+   "beaufort"
+  ],
+  "settings": 80676,
+  "k4_consistent": 1,
+  "controls_consistent": [
+   0,
+   26,
+   65,
+   3,
+   0,
+   10,
+   0,
+   76,
+   0,
+   2
+  ],
+  "k4_consistent_settings": [
+   {
+    "source": "K1-K3 plaintexts fwd",
+    "offset": 200,
+    "rule": "vig",
+    "free_dims_mod2_mod13": [
+     6,
+     6
+    ]
+   }
+  ],
+  "controls": "10 shuffled coppers (seed 98), identical search"
+ },
+ "notes": "80,676 (text, offset, rule) settings. Consistent with some alphabet: K4 1, controls [0, 26, 65, 3, 0, 10, 0, 76, 0, 2].",
+ "candidates": [],
+ "seconds": 479.2
+}

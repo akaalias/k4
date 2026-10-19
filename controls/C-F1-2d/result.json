@@ -1,0 +1,232 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "NDTHERETURNHOMEATDAWNEASTNORTHEASTYWECANIMAGINETHESETHINGSANDATBERLINCLOCKWECANREALISEHOWINEVITAB",
+  "key": "{'pa': 'std', 'ca': 'std', 'ka': 'kry', 'm': 'beau', 'key': 'IFZTFGTTCBGVZOMXMAXMWIWSKBMFNKANYAXCJTWJHGGHUNGDBEJWWQNZTZXMGSQLAAYUPLSMJBENHYVB'}",
+  "ciphertext": "CJGXIWALPRAPLTOYZEYWKLXOHVEVATDTKOANMCXDGBNINGJRBHYTENLMYHYFKGBQDQRNQPVEOYPPMCJRLMOWUJXQNAASEXZYR"
+ },
+ "passed": false,
+ "why": "best at 80: std/kry/std/beau, English -3.547 against shuffled copies' best -3.574 (margin 0.027); largest margin at an unplanted period 0.123; 28/97 letters of the plant [re-judged from the saved run]",
+ "bounds": {
+  "family": "periodic tableau at surviving periods, key completed by English climb",
+  "conventions": 24,
+  "periods": "27-29, then 53-95 every third",
+  "restarts": 20,
+  "best_by_period": {
+   "27": {
+    "english": -7.046,
+    "convention": "std/std/std/beau",
+    "free_slots": 3,
+    "text": "KKUKLGHAMAHSRCPTHOSMAEASTNORTHEASTLOFFKZPCEYFKZTOQIHEFBHCAVXXFABERLINCLOCKVALERRHAFENKFRYBRPDFWFA"
+   },
+   "28": {
+    "english": -6.982,
+    "convention": "std/kry/std/vig",
+    "free_slots": 4,
+    "text": "VTHUHLEYXYRSKDUFWTHAVEASTNORTHEASTEAMGIZGHISQVVEDBERQKUNORWISBFBERLINCLOCKIGNWSOWJISHTSQLVENFVJRU"
+   },
+   "29": {
+    "english": -7.103,
+    "convention": "std/std/kry/beau",
+    "free_slots": 5,
+    "text": "YYNFZVHWNEDCVZCKITUNDEASTNORTHEASTRUVAYALFFIVBOBIGRECNXGOMCCJWGBERLINCLOCKSIGHEYMUMMYDWKUTCPNKIEE"
+   },
+   "53": {
+    "english": -4.825,
+    "convention": "kry/std/kry/beau",
+    "free_slots": 29,
+    "text": "JUDISSESTEXZSIHEZBERHEASTNORTHEASTATICHESTINGTHEINTEDONTHATSAGRBERLINCLOCKAIBCOMEMNMSAULTRENDISTD"
+   },
+   "56": {
+    "english": -5.045,
+    "convention": "std/std/kry/beau",
+    "free_slots": 32,
+    "text": "DCHITONGSQCGSYSURERECEASTNORTHEASTORAINTHESTANDINANDERSTHEPAREMBERLINCLOCKALANOPPWEQZRKDPHOMINLYW"
+   },
+   "59": {
+    "english": -4.918,
+    "convention": "std/kry/kry/beau",
+    "free_slots": 35,
+    "text": "KOROGREVYGYEIDHESTHEMEASTNORTHEASTRSCHESTEDTHESANDERSONANDTHEREBERLINCLOCKDOMALLEGSKOJPGSHXMNAMSP"
+   },
+   "62": {
+    "english": -4.727,
+    "convention": "kry/kry/kry/vig",
+    "free_slots": 38,
+    "text": "FTHOONSWXUERIORTHEVESEASTNORTHEASTANDSINGINGTHEREQUESTANDTHESTEBERLINCLOCKRTHEORESELTLHLGFTJFRORR"
+   },
+   "65": {
+    "english": -4.636,
+    "convention": "std/kry/std/varbeau",
+    "free_slots": 41,
+    "text": "GACROMKOLDSCASEDANTTOEASTNORTHEASTREPOINTHEINTHERENTHERSECONTHEBERLINCLOCKFORSEASTHORELWGMYJGKCWX"
+   },
+   "68": {
+    "english": -4.107,
+    "convention": "std/kry/std/beau",
+    "free_slots": 44,
+    "text": "YPUBSPEACANYTHEMAREAMEASTNORTHEASTEINATTHEATTHERESECONSANDSTHATBERLINCLOCKIONSEATTEREMIDTORRWLALZ"
+   },
+   "71": {
+    "english": -3.933,
+    "convention": "kry/std/std/vig",
+    "free_slots": 47,
+    "text": "PTBETEONTINANDSATWAREEASTNORTHEASTPOINTOCONTHESTHATSTOREMENTHESBERLINCLOCKPERALSCOSTERSUSCONTALUI"
+   },
+   "74": {
+    "english": -3.74,
+    "convention": "std/std/kry/varbeau",
+    "free_slots": 50,
+    "text": "ANMONSINGONGHISCRECREEASTNORTHEASTATTHERALLYANDEREVERALLEDTHEREBERLINCLOCKNTSTONTOFTHATFRESSISTRU"
+   },
+   "77": {
+    "english": -3.533,
+    "convention": "std/kry/std/varbeau",
+    "free_slots": 53,
+    "text": "HETHATOORDANDEDITANDIEASTNORTHEASTNTHERENTERETHEREATEDINTHESTEDBERLINCLOCKWITHEHADBESEANDTHERSONH"
+   },
+   "80": {
+    "english": -3.547,
+    "convention": "std/kry/std/beau",
+    "free_slots": 56,
+    "text": "IVANTHELINEDONINGANDIEASTNORTHEASTNTHESTOREATIONATINTHEINTOTHESBERLINCLOCKANANDIATIONONISHEAUTONE"
+   },
+   "83": {
+    "english": -3.408,
+    "convention": "kry/kry/kry/beau",
+    "free_slots": 59,
+    "text": "ZSHAVESTHERETHEREANDIEASTNORTHEASTNGANDISTATEREDINTERTHERENTHERBERLINCLOCKEATIONSTHEREALISHERDINL"
+   },
+   "86": {
+    "english": -3.439,
+    "convention": "kry/std/kry/vig",
+    "free_slots": 62,
+    "text": "NTTINETORESINTHEINTHEEASTNORTHEASTREATTHERENTHESTHETHATEDTHECOMBERLINCLOCKMENTSANDINGTHEEMEABLEMW"
+   },
+   "89": {
+    "english": -3.38,
+    "convention": "kry/kry/kry/varbeau",
+    "free_slots": 65,
+    "text": "SHERSANOFTHESAREATIONEASTNORTHEASTTHEPRESTATEDTHEBUTIONTHERSIONBERLINCLOCKTHERENTERATIVESTOTHICHI"
+   },
+   "92": {
+    "english": -3.305,
+    "convention": "std/std/kry/vig",
+    "free_slots": 68,
+    "text": "CEANDITINTHESINTHEREIEASTNORTHEASTNTERSANDERESTANDINTHESTHERENTBERLINCLOCKHEREQUARENTOTHESTHESTOM"
+   },
+   "95": {
+    "english": -3.25,
+    "convention": "kry/std/std/vig",
+    "free_slots": 71,
+    "text": "NETHETHERENTINGTHESIDEASTNORTHEASTENTIONWITHERENTHEREDINGANDTHEBERLINCLOCKSTHERENTEREATTHETHANDIN"
+   }
+  },
+  "shuffled_k4_best_by_period": {
+   "27": -7.087,
+   "28": -6.807,
+   "29": -6.77,
+   "53": -4.948,
+   "60": -4.854,
+   "70": -4.015,
+   "80": -3.574,
+   "97": -3.273
+  },
+  "english_reference": -3.6
+ },
+ "notes": "Best English at 27-29: [-7.046, -6.982, -7.103]; shuffled K4 at 27-29: [-7.087, -6.807, -6.77]. Best overall -3.250 at period 95 vs shuffled best -3.2726562523222618.",
+ "candidates": [
+  {
+   "plaintext": "NETHETHERENTINGTHESIDEASTNORTHEASTENTIONWITHERENTHEREDINGANDTHEBERLINCLOCKSTHERENTEREATTHETHANDIN",
+   "key": "{'pa': 'kry', 'ca': 'std', 'ka': 'std', 'm': 'vig', 'key': 'JYCJXSMAOGHLWABULTSHAAQIDCZUWFSMEKPUINSKJMJUCFYYXTNSTDWTLAFVGSQISPAYXGEZFYJLYRIGSIDVJCTMZPWEXEP'}",
+   "notes": "English of the 73 free letters -3.250"
+  },
+  {
+   "plaintext": "CEANDITINTHESINTHEREIEASTNORTHEASTNTERSANDERESTANDINTHESTHERENTBERLINCLOCKHEREQUARENTOTHESTHESTOM",
+   "key": "{'pa': 'std', 'ca': 'std', 'ka': 'kry', 'm': 'vig', 'key': 'KOSDOHAPYXNENEROMKAMYAWVHBJTAFZNMUGQBEOPNXCLCHJLHTJSESAQOKQHSNBIZZSOPGDJFHBEUXNWEUDCRUTCCBAE'}",
+   "notes": "English of the 73 free letters -3.305"
+  },
+  {
+   "plaintext": "SHERSANOFTHESAREATIONEASTNORTHEASTTHEPRESTATEDTHEBUTIONTHERSIONBERLINCLOCKTHERENTERATIVESTOTHICHI",
+   "key": "{'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'varbeau', 'key': 'WXXPLDFHCPABIPVCBNGBNQCRJWQOWDRPSZWUNQPRNVHIMWHGPQNKTFYFFWZQIMEHRAJVZSUQTXRENMUMGNVDCZXLG'}",
+   "notes": "English of the 73 free letters -3.380"
+  },
+  {
+   "plaintext": "ZSHAVESTHERETHEREANDIEASTNORTHEASTNGANDISTATEREDINTERTHERENTHERBERLINCLOCKEATIONSTHEREALISHERDINL",
+   "key": "{'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'beau', 'key': 'BVROEBGULFBHUMJPDMUAIYOEMIJWEMUESCKSZYBZNFKNTHREWASIFWOPPZUJHXCYUUMBGFGJHYHDVXUQWVN'}",
+   "notes": "English of the 73 free letters -3.408"
+  },
+  {
+   "plaintext": "NTTINETORESINTHEINTHEEASTNORTHEASTREATTHERENTHESTHETHATEDTHECOMBERLINCLOCKMENTSANDINGTHEEMEABLEMW",
+   "key": "{'pa': 'kry', 'ca': 'std', 'ka': 'kry', 'm': 'vig', 'key': 'COYBIEVSHSQKMIKGDEQBZKJBPYZQVOMFTDZYOXNIUKYICMXEWNGIJSARHPDQRRCBMIKXWSTZOXWTNXPDMYZPAO'}",
+   "notes": "English of the 73 free letters -3.439"
+  },
+  {
+   "plaintext": "HETHATOORDANDEDITANDIEASTNORTHEASTNTHERENTERETHEREATEDINTHESTEDBERLINCLOCKWITHEHADBESEANDTHERSONH",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'std', 'm': 'varbeau', 'key': 'YOGJLWHXOCTKMAYGUPLGINCNFRDVMDUWSOGAPVTUALLCLGRDJQYPTKRVRTCGTRVHUXKPTZPDXITFB'}",
+   "notes": "English of the 73 free letters -3.533"
+  },
+  {
+   "plaintext": "IVANTHELINEDONINGANDIEASTNORTHEASTNTHESTOREATIONATINTHEINTOTHESBERLINCLOCKANANDIATIONONISHEAUTONE",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'std', 'm': 'beau', 'key': 'RLNLIELCLOLGFRNPFLPAIVYXHJZNALOESYUMZNQDBZXPMVEOIHKREAVAPHQFHRAVOLMBHFHZHMDQSWTJ'}",
+   "notes": "English of the 73 free letters -3.547"
+  },
+  {
+   "plaintext": "ANMONSINGONGHISCRECREEASTNORTHEASTATTHERALLYANDEREVERALLEDTHEREBERLINCLOCKNTSTONTOFTHATFRESSISTRU",
+   "key": "{'pa': 'std', 'ca': 'std', 'ka': 'kry', 'm': 'varbeau', 'key': 'XTSLOVBYLWGLVITTMKTUQNPTFMDVNHRABOKSAOAHQDXJGAQGJWWEGGKZSVUYQEPERRQUWGJDHF'}",
+   "notes": "English of the 73 free letters -3.740"
+  },
+  {
+   "plaintext": "PTBETEONTINANDSATWAREEASTNORTHEASTPOINTOCONTHESTHATSTOREMENTHESBERLINCLOCKPERALSCOSTERSUSCONTALUI",
+   "key": "{'pa': 'kry', 'ca': 'std', 'ka': 'std', 'm': 'vig', 'key': 'ZFYMELVSLCHISJIRVHRVZAQIDCZUWFSMEKXIXJTYXWUEZVDNNAUNAIKBGWFBWVVISPAYXGE'}",
+   "notes": "English of the 73 free letters -3.933"
+  },
+  {
+   "plaintext": "YPUBSPEACANYTHEMAREAMEASTNORTHEASTEINATTHEATTHERESECONSANDSTHATBERLINCLOCKIONSEATTEREMIDTORRWLALZ",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'std', 'm': 'beau', 'key': 'HFHZHMLRFBUBKLJOZCGXMVYXHJZNALOESYLBFJRDUMTIMUUSMGGGZGJSPRUFHNBVOLMB'}",
+   "notes": "English of the 73 free letters -4.107"
+  },
+  {
+   "plaintext": "GACROMKOLDSCASEDANTTOEASTNORTHEASTREPOINTHEINTHERENTHERSECONTHEBERLINCLOCKFORSEASTHORELWGMYJGKCWX",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'std', 'm': 'varbeau', 'key': 'XKPTZPDXICLZJOZBBCRWONCNFRDVMDUWSOKLXFKDGZLTUGRDJQLPWLAACOMBTUWHU'}",
+   "notes": "English of the 73 free letters -4.636"
+  },
+  {
+   "plaintext": "FTHOONSWXUERIORTHEVESEASTNORTHEASTANDSINGINGTHEREQUESTANDTHESTEBERLINCLOCKRTHEORESELTLHLGFTJFRORR",
+   "key": "{'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'vig', 'key': 'WFZNDTRQOSVYYZTXEKSFQSLZDPSUPJZWQRKKBPCLKNKYIZOKWQANOIDZMDHRQC'}",
+   "notes": "English of the 73 free letters -4.727"
+  },
+  {
+   "plaintext": "JUDISSESTEXZSIHEZBERHEASTNORTHEASTATICHESTINGTHEINTEDONTHATSAGRBERLINCLOCKAIBCOMEMNMSAULTRENDISTD",
+   "key": "{'pa': 'kry', 'ca': 'std', 'ka': 'kry', 'm': 'beau', 'key': 'MTJFHYELNYXHLBYCXFCWXVTQEHCVTAHKJMALREEHFOYRKDWYJKYTH'}",
+   "notes": "English of the 73 free letters -4.825"
+  },
+  {
+   "plaintext": "KOROGREVYGYEIDHESTHEMEASTNORTHEASTRSCHESTEDTHESANDERSONANDTHEREBERLINCLOCKDOMALLEGSKOJPGSHXMNAMSP",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm': 'beau', 'key': 'NTTFUHEFRAOAZAFSLTCRFUXWACZGKEHTMXXEQJYYSFVBKLBRULSUPATMILU'}",
+   "notes": "English of the 73 free letters -4.918"
+  },
+  {
+   "plaintext": "DCHITONGSQCGSYSURERECEASTNORTHEASTORAINTHESTANDINANDERSTHEPAREMBERLINCLOCKALANOPPWEQZRKDPHOMINLYW",
+   "key": "{'pa': 'std', 'ca': 'std', 'ka': 'kry', 'm': 'beau', 'key': 'OEGORDGLAAYUPLSMJBIKFIWSKBMFNKANYAHTFDDVGOORGNFZHAEVBTPO'}",
+   "notes": "English of the 73 free letters -5.045"
+  },
+  {
+   "plaintext": "VTHUHLEYXYRSKDUFWTHAVEASTNORTHEASTEAMGIZGHISQVVEDBERQKUNORWISBFBERLINCLOCKIGNWSOWJISHTSQLVENFVJRU",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'std', 'm': 'vig', 'key': 'OXGEIMDTGDQLHBLXDSVXFNYNVJXF'}",
+   "notes": "English of the 73 free letters -6.982"
+  },
+  {
+   "plaintext": "KKUKLGHAMAHSRCPTHOSMAEASTNORTHEASTLOFFKZPCEYFKZTOQIHEFBHCAVXXFABERLINCLOCKVALERRHAFENKFRYBRPDFWFA",
+   "key": "{'pa': 'std', 'ca': 'std', 'ka': 'std', 'm': 'beau', 'key': 'MTAHTCHLBRHHCVDRGSQIKPXGAIS'}",
+   "notes": "English of the 73 free letters -7.046"
+  },
+  {
+   "plaintext": "YYNFZVHWNEDCVZCKITUNDEASTNORTHEASTRUVAYALFFIVBOBIGRECNXGOMCCJWGBERLINCLOCKSIGHEYMUMMYDWKUTCPNKIEE",
+   "key": "{'pa': 'std', 'ca': 'std', 'ka': 'kry', 'm': 'beau', 'key': 'KANYALAAYUPLSMJBAWMCGIWSKBMFN'}",
+   "notes": "English of the 73 free letters -7.103"
+  }
+ ],
+ "seconds": 1851.3
+}

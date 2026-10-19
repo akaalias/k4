@@ -1,0 +1,1182 @@
+{
+ "error": null,
+ "patches": [
+  [
+   "    assert [L for L in range(1, 27) if m0120.decide(eqs_for(base_eq, L), \"V\", rng0)[0] == \"fit\"] == []\n",
+   ""
+  ],
+  [
+   "    assert [L for L in range(1, 27) if m0120.decide(eqs_for(base_eq, L), \"B\", rng0)[0] == \"fit\"] == [23, 26]\n",
+   ""
+  ]
+ ],
+ "plant": {
+  "plaintext": "ASURVEYOFTHEANTECHAMBEASTNORTHEASTDAGILTHEADRESTANDOTHERMISCELLBERLINCLOCKTSTHISWASTHEFIRSTBOXWEO",
+  "key": "('NWVJBODKYLQAZGICTFSEXPUMHR', [15, 19, 24, 22, 4, 5, 17, 20, 25], 'place 30 miscut U->B')",
+  "ciphertext": "NAXPDHRRTOFFKBPQLMNTVCCMKXBILBCCMKNQVKKZVHVNHYAIKBAUQMYSPQUXQJYEZMOSODJBBNIIXJOZNNAIXMUOEFOMJTOHU"
+ },
+ "passed": false,
+ "why": "added-form fits 4978; the restoring variant 'sub 30 B->U' at 9: False; cells above every copy ['1V:9', '1V:15', '1V:18', '1V:24', '1B:9', '1B:15', '2:9', '2:15']",
+ "bounds": {
+  "family": "one carved letter wrong at a known place (600) or one letter missing/extra between the runs (4: two readings each), through the exact one- and two-free-alphabet periodic tests",
+  "models": {
+   "1V": "one alphabet, added form (Quagmire III, K1/K2's system)",
+   "1B": "one alphabet, Beaufort form",
+   "2": "two alphabets (Quagmire IV)"
+  },
+  "variants_per_text": 604,
+  "key_lengths": [
+   1,
+   26
+  ],
+  "k4_fitting_variants_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    298,
+    0,
+    0,
+    43,
+    77,
+    1,
+    497,
+    559,
+    3,
+    575,
+    3,
+    542,
+    1,
+    555,
+    46,
+    586,
+    592,
+    600
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    23,
+    0,
+    0,
+    0,
+    0,
+    0,
+    511,
+    0,
+    0,
+    567,
+    0,
+    0,
+    0,
+    26,
+    45,
+    0,
+    25,
+    599
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    330,
+    0,
+    0,
+    48,
+    99,
+    2,
+    533,
+    580,
+    3,
+    590,
+    3,
+    573,
+    2,
+    581,
+    51,
+    594,
+    598,
+    602
+   ]
+  },
+  "controls_min_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    28,
+    598
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    0,
+    24,
+    0,
+    1,
+    27,
+    26
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    50,
+    3,
+    1,
+    4,
+    1,
+    52,
+    1,
+    50,
+    3,
+    575,
+    51,
+    4,
+    594,
+    600
+   ]
+  },
+  "controls_max_by_length": {
+   "1V": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    67,
+    0,
+    46,
+    518,
+    516,
+    526,
+    532,
+    3,
+    569,
+    3,
+    574,
+    3,
+    551,
+    532,
+    566,
+    575,
+    583,
+    592,
+    601
+   ],
+   "1B": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    34,
+    527,
+    515,
+    530,
+    545,
+    3,
+    568,
+    3,
+    575,
+    2,
+    547,
+    545,
+    566,
+    576,
+    585,
+    590,
+    600
+   ],
+   "2": [
+    0,
+    0,
+    0,
+    369,
+    0,
+    44,
+    506,
+    533,
+    0,
+    561,
+    572,
+    565,
+    581,
+    577,
+    4,
+    586,
+    4,
+    590,
+    4,
+    580,
+    577,
+    584,
+    589,
+    594,
+    598,
+    602
+   ]
+  },
+  "undecided": {
+   "k4": {
+    "1V": 0,
+    "1B": 0,
+    "2": 1
+   },
+   "controls": [
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 0
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 0
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 1
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 0
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 9
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 8
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 3
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 3
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 2
+    },
+    {
+     "1V": 0,
+     "1B": 0,
+     "2": 0
+    }
+   ]
+  },
+  "k4_added_form_fits": [
+   {
+    "variant": "sub 22 C->A",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->A",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->A",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->A",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->A",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->A",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->A",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->A",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->B",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->B",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->B",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->B",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->B",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->B",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->D",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->D",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->D",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->D",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->D",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->D",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->E",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->E",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->F",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->F",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->F",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->F",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->F",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->F",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->F",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->F",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->G",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->G",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->G",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->G",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->G",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->G",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->G",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->G",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->H",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->H",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->H",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->H",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->H",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->H",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->H",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->H",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->I",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->I",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->I",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->I",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->I",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->I",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->I",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->I",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->J",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->J",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->J",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->J",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->J",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->J",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->J",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->J",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->K",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->K",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->K",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->K",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->K",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->K",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->K",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->K",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->L",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->L",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->L",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->L",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->L",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->L",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->L",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->L",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->M",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->M",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->M",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->M",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->M",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->M",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->M",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->N",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->N",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->N",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->N",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->N",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->N",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->N",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->O",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->O",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->O",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->O",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->O",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->O",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->O",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->P",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->P",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->P",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->P",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->P",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->P",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->P",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->P",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->Q",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->Q",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->Q",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->Q",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->Q",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->Q",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->Q",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->Q",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->R",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->R",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->R",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->R",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->R",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->R",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->R",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->R",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->S",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->S",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->S",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->S",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->S",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->S",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->S",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->S",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->T",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->T",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->T",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->T",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->T",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->T",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->T",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->T",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->U",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->U",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->U",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->U",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->U",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->U",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->U",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->U",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->V",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->V",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->V",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->V",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->V",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->V",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->V",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->V",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->W",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->W",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->W",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->W",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->W",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->W",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->W",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->W",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->X",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->X",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->X",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->X",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->X",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->X",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->X",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->X",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->Y",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->Y",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->Y",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->Y",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->Y",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->Y",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->Y",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->Y",
+    "length": 26
+   },
+   {
+    "variant": "sub 22 C->Z",
+    "length": 15
+   },
+   {
+    "variant": "sub 22 C->Z",
+    "length": 16
+   },
+   {
+    "variant": "sub 22 C->Z",
+    "length": 18
+   },
+   {
+    "variant": "sub 22 C->Z",
+    "length": 20
+   },
+   {
+    "variant": "sub 22 C->Z",
+    "length": 22
+   },
+   {
+    "variant": "sub 22 C->Z",
+    "length": 24
+   },
+   {
+    "variant": "sub 22 C->Z",
+    "length": 25
+   },
+   {
+    "variant": "sub 22 C->Z",
+    "length": 26
+   },
+   {
+    "variant": "sub 23 C->A",
+    "length": 18
+   },
+   {
+    "variant": "sub 23 C->A",
+    "length": 20
+   },
+   {
+    "variant": "sub 23 C->A",
+    "length": 26
+   },
+   {
+    "variant": "sub 23 C->B",
+    "length": 15
+   },
+   {
+    "variant": "sub 23 C->B",
+    "length": 16
+   },
+   {
+    "variant": "sub 23 C->B",
+    "length": 18
+   },
+   {
+    "variant": "sub 23 C->B",
+    "length": 20
+   },
+   {
+    "variant": "sub 23 C->B",
+    "length": 24
+   },
+   {
+    "variant": "sub 23 C->B",
+    "length": 26
+   },
+   {
+    "variant": "sub 23 C->D",
+    "length": 15
+   },
+   {
+    "variant": "sub 23 C->D",
+    "length": 16
+   },
+   {
+    "variant": "sub 23 C->D",
+    "length": 18
+   },
+   {
+    "variant": "sub 23 C->D",
+    "length": 20
+   }
+  ],
+  "k4_added_form_fit_count": 4978,
+  "cells_k4_above_every_copper": [
+   "1V:9",
+   "1V:15",
+   "1V:18",
+   "1V:24",
+   "1B:9",
+   "1B:15",
+   "2:9",
+   "2:15"
+  ],
+  "null_cells_above_rest_per_copper": [
+   1,
+   0,
+   6,
+   4,
+   1,
+   9,
+   1,
+   0,
+   6,
+   5
+  ],
+  "stop_queue": false,
+  "indel_note": "an error before place 22 or after 74 shifts every known place together and changes no periodic check",
+  "controls": "10 shuffled coppers (seed 146), the same 604 variants each",
+  "exhaustive": "exact per (variant, model, length); undecided counted"
+ },
+ "notes": "K4 fitting (variant, length) pairs: {'1V': 4978, '1B': 1796, '2': 5189}; added form revived on K4 in 4978 pairs; K4 above every copper in 8 of 78 cells, null 0-9; stop False; undecided K4 {'1V': 0, '1B': 0, '2': 1}",
+ "candidates": [],
+ "seconds": 403.1
+}

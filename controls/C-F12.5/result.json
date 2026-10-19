@@ -1,0 +1,104 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "IVEPEOPLEBUTASTHESITUEASTNORTHEASTDITBECAMEVERYCLEARTHATUNLESSSBERLINCLOCKDONETODISCOURAGEITWESHO",
+  "key": "('split 48/49', 'kry/kry vig', [23, 25, 22, 10, 5], 'std/std beaufort', [18, 11, 8, 17, 1, 21, 19])",
+  "ciphertext": "FUAGJYYGUGMPPJCEDYZCMDPJCJTWHNBSYHIFPTUHTLASJXROIOLRYUVAYYXNJDBRHRGTIRHXGHYHGOSUOTDRERRRVRLZPEZUH"
+ },
+ "passed": true,
+ "why": "part 1 kry/kry/vig-var length 5 live: True (8 checks); part 2 std/std/beau length 7 live: True (4 checks); live lengths part 1 (EASTNORTHEAST, 22-34): [5, 10]; part 2 (BERLINCLOCK, 64-74): [7]",
+ "bounds": {
+  "family": "two parts with separate repeating keys (split between the runs), standard/KRYPTOS tables, lengths up to the run length - 1",
+  "summary": {
+   "part 1 (EASTNORTHEAST, 22-34)": {
+    "k4_live_lengths": [
+     5,
+     10
+    ],
+    "k4_live_cells": 2,
+    "coppers_live_cells": [
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     2
+    ],
+    "checks_by_length": {
+     "1": 12,
+     "2": 11,
+     "3": 10,
+     "4": 9,
+     "5": 8,
+     "6": 7,
+     "7": 6,
+     "8": 5,
+     "9": 4,
+     "10": 3,
+     "11": 2,
+     "12": 1
+    }
+   },
+   "part 2 (BERLINCLOCK, 64-74)": {
+    "k4_live_lengths": [
+     7
+    ],
+    "k4_live_cells": 1,
+    "coppers_live_cells": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0
+    ],
+    "checks_by_length": {
+     "1": 10,
+     "2": 9,
+     "3": 8,
+     "4": 7,
+     "5": 6,
+     "6": 5,
+     "7": 4,
+     "8": 3,
+     "9": 2,
+     "10": 1
+    }
+   }
+  },
+  "k4_live": [
+   {
+    "part": "part 1 (EASTNORTHEAST, 22-34)",
+    "class": "kry/kry/vig-var",
+    "length": 5,
+    "checks": 8
+   },
+   {
+    "part": "part 1 (EASTNORTHEAST, 22-34)",
+    "class": "kry/kry/vig-var",
+    "length": 10,
+    "checks": 3
+   },
+   {
+    "part": "part 2 (BERLINCLOCK, 64-74)",
+    "class": "std/std/beau",
+    "length": 7,
+    "checks": 4
+   }
+  ],
+  "controls": "10 shuffled coppers (seed 1615)",
+  "exhaustive": true
+ },
+ "notes": "part 1 (EASTNORTHEAST, 22-34): K4 live lengths [5, 10] (2 cells), coppers 0-2; part 2 (BERLINCLOCK, 64-74): K4 live lengths [7] (1 cells), coppers 0-1",
+ "candidates": [],
+ "seconds": 0.0
+}

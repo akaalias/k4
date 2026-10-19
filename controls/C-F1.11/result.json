@@ -1,0 +1,91 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "EMADEANADDITIONALPROTEASTNORTHEASTINSERTINGAMATTRESSONTHEINNERSBERLINCLOCKRBLOCKINGSUSPENDINGITFR",
+  "key": "{'plain': 'TREMBLING', 'cipher': 'HANDS', 'numbering': 'P', 'rule': 'beau'}",
+  "ciphertext": "YYTRNWZYXNDEBDTRXKDOCBZUGHVRHMHUJBHHOJFEBKRRZUSBBBOUTHJCYVVWNSLDCKSASGVJRMDAAQYYDHDHCFJAXUHHHEGVI"
+ },
+ "passed": true,
+ "why": "full hits 1 (copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]); the planted text among the candidates: True",
+ "bounds": {
+  "family": "split key phrase (EMC par. 59d): part 1 mixes the plain alphabet, part 2 the cipher alphabet, the whole phrase the key",
+  "phrases": 29880,
+  "numberings": [
+   "cipher alphabet",
+   "plain alphabet",
+   "standard"
+  ],
+  "rules": [
+   "vig",
+   "beau",
+   "var"
+  ],
+  "k4_best_hits": 24,
+  "controls_best_hits": [
+   7,
+   7,
+   9,
+   7,
+   7,
+   8,
+   8,
+   7,
+   7,
+   8
+  ],
+  "k4_full_hits": 1,
+  "controls_full_hits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "k4_top": [
+   {
+    "phrase": [
+     "TREMBLING",
+     "HANDS"
+    ],
+    "numbering": "P",
+    "rule": "beau",
+    "hits": 24
+   },
+   {
+    "phrase": [
+     "TREMBLING",
+     "CAIRO"
+    ],
+    "numbering": "P",
+    "rule": "beau",
+    "hits": 10
+   },
+   {
+    "phrase": [
+     "TREMBLING",
+     "THERE"
+    ],
+    "numbering": "P",
+    "rule": "beau",
+    "hits": 10
+   }
+  ],
+  "controls": "10 shuffled coppers (seed 1411)",
+  "exhaustive": true
+ },
+ "notes": "29,880 phrases x 3 numberings x 3 rules: K4 best 24/24 (coppers 7-9); full hits K4 1, coppers [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+ "candidates": [
+  {
+   "plaintext": "EMADEANADDITIONALPROTEASTNORTHEASTINSERTINGAMATTRESSONTHEINNERSBERLINCLOCKRBLOCKINGSUSPENDINGITFR",
+   "key": "{'plain': 'TREMBLING', 'cipher': 'HANDS', 'numbering': 'P', 'rule': 'beau'}",
+   "notes": null
+  }
+ ],
+ "seconds": 27.4
+}

@@ -4,7 +4,8 @@ single-letter variants of the copper and lists settings alive with spare equatio
 planted (numbering A=0, blocks from place 1) and one carved letter at a known place miscut; the restoring variant
 must be alive with checks. 0151 lists only its first 50 live settings, in its own chunk order, and K4 alone gives
 about 250 one-check survivors, so the miscut is placed where the restoring variant falls in chunk 0 (index
-divisible by 64); the search is unchanged. 0151's encrypt() is a stub, so the plant makes its own ciphertext."""
+divisible by 64); the search is unchanged. First run errored (seed 7373 has no qualifying place); the plant now
+takes the first seed from 7373 that has one. 0151's encrypt() is a stub, so the plant makes its own ciphertext."""
 import random
 
 from kryptos.facts import STANDARD_ALPHABET as STD, KNOWN
@@ -22,7 +23,16 @@ def inv2(B):
 
 
 def plant():
-    rng = random.Random(7373)
+    seed = 7373
+    while True:
+        p = _plant(seed)
+        if p:
+            return p
+        seed += 1
+
+
+def _plant(seed):
+    rng = random.Random(seed)
     while True:
         B = [[rng.randrange(26) for _ in range(2)] for _ in range(2)]
         det = (B[0][0] * B[1][1] - B[0][1] * B[1][0]) % 26
@@ -44,7 +54,7 @@ def plant():
             if ((q - 1) * 25 + rank) % 64 == 0:
                 ct[q - 1] = bad
                 return {"plaintext": pt, "key": (B, f"place {q} miscut {true}->{bad}"), "ciphertext": "".join(ct), "true": true, "place": q}
-    raise RuntimeError("no place found")
+    return None                        # no known place qualifies for this seed: the next seed is tried
 
 
 def found(result, plant):

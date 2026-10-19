@@ -1,12 +1,13 @@
 {
  "error": null,
+ "patches": [],
  "plant": {
   "plaintext": "LOVERITISALSOTRUETHATEASTNORTHEASTRSECRETLYTHEWORLDLOVESROMANCEBERLINCLOCKESSTHEPASSIONATEANDFARF",
   "key": "{'pa': 'std', 'ca': 'std', 'ka': 'kry', 'm': 'beau', 'key': 'AHFXEKVVHLSWOTNCDFCNDWUVFJEIJYFJJIUVEFSAXQVOEBXWBTLBD'}",
   "ciphertext": "WARUUSDOWRVFRLCPGTCTRTVETDXYXVIQYWEEHKPDFJYMEECJRTOXWMKUHXOWJMNFTOTLWIBVRATDETJHAQKUICCVDHMTETUFA"
  },
- "passed": false,
- "why": "best at 53: std/std/std/beau, 52/97 letters of the plant, English -3.923 against shuffled copies' best None",
+ "passed": true,
+ "why": "best at 53: std/std/std/beau, English -3.923 against shuffled copies' best -4.665 (margin 0.742); largest margin at an unplanted period 0.340; 52/97 letters of the plant [re-judged from the saved run]",
  "bounds": {
   "family": "periodic tableau at surviving periods, key completed by English climb",
   "conventions": 24,
@@ -96,13 +97,66 @@
     "convention": "std/kry/kry/beau",
     "free_slots": 59,
     "text": "RAIBERSALSANDSOFTHESTEASTNORTHEASTANDINGANDTHERSTANDTHESANDTHERBERLINCLOCKENTHEREASTSANDNONEISESC"
+   },
+   "86": {
+    "english": -3.464,
+    "convention": "std/kry/std/vig",
+    "free_slots": 62,
+    "text": "SOFTHENOFTHERECONSTEREASTNORTHEASTEDTOTHEARETHERATIONESSEVERTHEBERLINCLOCKSANDANDERANDEDOMECONDES"
+   },
+   "89": {
+    "english": -3.38,
+    "convention": "std/kry/kry/vig",
+    "free_slots": 65,
+    "text": "ATASERESTANDERSANDCONEASTNORTHEASTTINTHESTHANDTHEREMENTININTHERBERLINCLOCKATINGTHEREATTHEREDINGGU"
+   },
+   "92": {
+    "english": -3.283,
+    "convention": "std/std/kry/varbeau",
+    "free_slots": 68,
+    "text": "WHATINTHEANDTHESTHEREEASTNORTHEASTAREACTIONANDINTHERSEVEROFTHERBERLINCLOCKENTHEREATEDINTHETHEADEO"
+   },
+   "95": {
+    "english": -3.28,
+    "convention": "kry/kry/kry/varbeau",
+    "free_slots": 71,
+    "text": "FTHERESIDETHERSINCEINEASTNORTHEASTTERSTOTHERSTANDITINTHERETHEREBERLINCLOCKINTHEREATTHERENTHEREART"
    }
   },
-  "shuffled_k4_best_by_period": {},
+  "shuffled_k4_best_by_period": {
+   "27": -6.992,
+   "28": -6.963,
+   "29": -7.016,
+   "53": -4.665,
+   "60": -4.445,
+   "70": -4.008,
+   "80": -3.582,
+   "97": -3.295
+  },
   "english_reference": -3.6
  },
- "notes": "Best English at 27-29: [-7.276, -6.623, -6.956]; shuffled K4 at 27-29: []. Best overall -3.531 at period 83 vs shuffled best None.",
+ "notes": "Best English at 27-29: [-7.276, -6.623, -6.956]; shuffled K4 at 27-29: [-6.992, -6.963, -7.016]. Best overall -3.280 at period 95 vs shuffled best -3.294575181836897.",
  "candidates": [
+  {
+   "plaintext": "FTHERESIDETHERSINCEINEASTNORTHEASTTERSTOTHERSTANDITINTHERETHEREBERLINCLOCKINTHEREATTHERENTHEREART",
+   "key": "{'pa': 'kry', 'ca': 'kry', 'ka': 'kry', 'm': 'varbeau', 'key': 'IWGJSOVDGDBYDDWFSOYEMAEUKCAZSMVGTANKGSRUMXCCUNXPCEZLVFHJGGZLUCMVAVGXVQCCBNECNDUGTGTCZYMICJVAJAF'}",
+   "notes": "English of the 73 free letters -3.280"
+  },
+  {
+   "plaintext": "WHATINTHEANDTHESTHEREEASTNORTHEASTAREACTIONANDINTHERSEVEROFTHERBERLINCLOCKENTHEREATEDINTHETHEADEO",
+   "key": "{'pa': 'std', 'ca': 'std', 'ka': 'kry', 'm': 'varbeau', 'key': 'KACZHUJNBCMXYVYPGHYXGEOHKDLNVFVDQWVGWJGJPOIHCZSTYHJQVMEDDLLWXMTVEPMWLQDNEDEDIHUDTDCDUSEXTWAH'}",
+   "notes": "English of the 73 free letters -3.283"
+  },
+  {
+   "plaintext": "ATASERESTANDERSANDCONEASTNORTHEASTTINTHESTHANDTHEREMENTININTHERBERLINCLOCKATINGTHEREATTHEREDINGGU",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm': 'vig', 'key': 'WHRPLISGTRCCWKLPKRAJHKVNEWDEOIEQDTMPRAVSQWUMXBJCWGRFNOAGRJMTCHYEKHNCDGWBZWTLPLDUKJCLIJJIS'}",
+   "notes": "English of the 73 free letters -3.380"
+  },
+  {
+   "plaintext": "SOFTHENOFTHERECONSTEREASTNORTHEASTEDTOTHEARETHERATIONESSEVERTHEBERLINCLOCKSANDANDERANDEDOMECONDES",
+   "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'std', 'm': 'vig', 'key': 'FTWCOCXRSIPIKNHPAMQAKAWTLXKLFPLUKEHIVMKDIQLOSEFZBLXKKOIDKDBGXLPLAOTJKNXIZXMKYBQBEQJVCG'}",
+   "notes": "English of the 73 free letters -3.464"
+  },
   {
    "plaintext": "RAIBERSALSANDSOFTHESTEASTNORTHEASTANDINGANDTHERSTANDTHESANDTHERBERLINCLOCKENTHEREASTSANDNONEISESC",
    "key": "{'pa': 'std', 'ca': 'kry', 'ka': 'kry', 'm': 'beau', 'key': 'HACVZWYOBNVZTCWBSEGVQBVPWWFNLPNQQJEXLBJJFPOEMIKBQTMRJZTGHEBJWVDGBVIZDLNDPLBWTEQOEQM'}",
@@ -174,5 +228,5 @@
    "notes": "English of the 73 free letters -7.276"
   }
  ],
- "seconds": 1753.2
+ "seconds": 1852.1
 }

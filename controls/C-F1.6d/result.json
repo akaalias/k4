@@ -1,0 +1,437 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "RATIMEINCAIROPARTLYINEASTNORTHEASTGABLETOACHIEVESOMEMOREDIGGINGBERLINCLOCKUSEHEWASGENUINELYINTERE",
+  "key": "('ITKGDCXJRPSNU?BVWQFEYLOAMHZ', 7, 0, 'place 28 miscut')",
+  "ciphertext": "XRJKKLGNKSNNMLFMBGKLYHCTIWOFRLKGDBUAYOPBEBXABKKSDZMAJEGWITGUDIXVEGLCVRMDOSIQDHLMLSBSUQEINKNGYIXJW"
+ },
+ "passed": true,
+ "why": "trifid consistent 1; 'sub 28 F->A' at period 7: True",
+ "bounds": {
+  "family": "Hill 2-5 (plain, affine) and trifid (free cube) on every single-letter error of the copper",
+  "variants": 5044,
+  "variants_done": 5044,
+  "hill_settings_per_variant": "4 sizes x plain/affine x alignments x 4 numberings (112)",
+  "trifid_settings_per_variant": "periods 2-15 x every offset (119)",
+  "hill_alive_with_checks": [
+   {
+    "variant": "ins Q before 24",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins W before 73",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "sub 67 L->Q",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "sub 75 I->H",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins F before 22",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins B before 32",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "ins P before 61",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins X before 73",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "sub 21 Y->O",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "sub 31 K->V",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "sub 31 K->V",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins S before 24",
+    "n": 5,
+    "affine": false,
+    "align": 2,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 24 T->E",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "sub 24 T->E",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 34 B->L",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins E before 32",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins Q before 34",
+    "n": 5,
+    "affine": false,
+    "align": 2,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins Q before 66",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 24 T->G",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins H before 27",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins T before 61",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins D before 69",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins I before 27",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "ins I before 27",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins G before 32",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 24 T->I",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins J before 27",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "ins F before 69",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins K before 27",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins W before 29",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "ins I before 32",
+    "n": 5,
+    "affine": false,
+    "align": 2,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins G before 69",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 73 O->B",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins T before 71",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 62 I->X",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins N before 27",
+    "n": 5,
+    "affine": false,
+    "align": 2,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins N before 27",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins V before 71",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "ins V before 71",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 32 G->F",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "sub 60 U->J",
+    "n": 5,
+    "affine": false,
+    "align": 4,
+    "numbering": 2,
+    "checks": 1
+   },
+   {
+    "variant": "ins C before 25",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "ins Y before 66",
+    "n": 5,
+    "affine": false,
+    "align": 2,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins K before 69",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 63 X->A",
+    "n": 5,
+    "affine": false,
+    "align": 2,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "ins E before 25",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "ins O before 32",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "ins M before 69",
+    "n": 5,
+    "affine": false,
+    "align": 0,
+    "numbering": 0,
+    "checks": 1
+   },
+   {
+    "variant": "sub 73 O->H",
+    "n": 5,
+    "affine": false,
+    "align": 3,
+    "numbering": 1,
+    "checks": 1
+   },
+   {
+    "variant": "sub 27 O->H",
+    "n": 5,
+    "affine": false,
+    "align": 1,
+    "numbering": 1,
+    "checks": 1
+   }
+  ],
+  "n_hill_alive_with_checks": 205,
+  "hill_open_settings": 53466,
+  "trifid_consistent": [
+   {
+    "variant": "sub 28 F->A",
+    "period": 7,
+    "offset": 0,
+    "cubes": 5000
+   }
+  ],
+  "n_trifid_consistent": 1,
+  "seconds": 71,
+  "exhaustive": "exact where decided; Hill open settings counted",
+  "controls": "none needed if nothing fits (exact)"
+ },
+ "notes": "5044 variants: Hill alive with checks 205, Hill open settings 53466; trifid consistent 1",
+ "candidates": [],
+ "seconds": 71.1
+}

@@ -1,0 +1,230 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "ETHATMIGHTGOWRONGDANGEASTNORTHEASTNSTANCEWASANEVERPRESENTANXIETBERLINCLOCKUNTRYSIDEWASAGOGWITHEXC",
+  "key": "('stutter r=2 phi=0 n=6', [20, 3, 20, 15, 0, 17], 'kry/kry vig')",
+  "ciphertext": "OXLDXFTYHTTVLUBVATVBGEXWXGBTXBKVSTDWXRVFOLVUANYGOUSTOKKBTADICOAEOUSTNCBVPQXVXULUIDYHRKDJZAFTTHYIP"
+ },
+ "passed": true,
+ "why": "stutter partitions consistent on the tables: plant 4, copies 0-0",
+ "bounds": {
+  "family": "hand key schedules C-F (stutter, back and forth, triangle, square, restart per carved line), unknown keyword, 4 exact tests; tableau rows as fixed keys",
+  "coverage": {
+   "C stutter": {
+    "partitions": 207,
+    "k4_done": 207,
+    "coppers_min_done": 207
+   },
+   "E triangle": {
+    "partitions": 350,
+    "k4_done": 350,
+    "coppers_min_done": 350
+   },
+   "E square": {
+    "partitions": 229,
+    "k4_done": 229,
+    "coppers_min_done": 229
+   },
+   "F line restart": {
+    "partitions": 30,
+    "k4_done": 30,
+    "coppers_min_done": 30
+   },
+   "D back and forth": {
+    "partitions": 509,
+    "k4_done": 509,
+    "coppers_min_done": 509
+   }
+  },
+  "undecided": {
+   "C stutter": {
+    "k4": 0,
+    "coppers_total": 0
+   },
+   "E triangle": {
+    "k4": 2,
+    "coppers_total": 1
+   },
+   "E square": {
+    "k4": 0,
+    "coppers_total": 0
+   },
+   "F line restart": {
+    "k4": 0,
+    "coppers_total": 2
+   },
+   "D back and forth": {
+    "k4": 1,
+    "coppers_total": 13
+   }
+  },
+  "summary": {
+   "C stutter | tables": {
+    "k4": 4,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "k4_rank": 1
+   },
+   "C stutter | free V": {
+    "k4": 4,
+    "coppers_min": 0,
+    "coppers_max": 15,
+    "k4_rank": 7
+   },
+   "C stutter | free B": {
+    "k4": 4,
+    "coppers_min": 0,
+    "coppers_max": 11,
+    "k4_rank": 4
+   },
+   "C stutter | two free": {
+    "k4": 22,
+    "coppers_min": 0,
+    "coppers_max": 39,
+    "k4_rank": 8
+   },
+   "E triangle | tables": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "k4_rank": 1
+   },
+   "E triangle | free V": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 44,
+    "k4_rank": 24
+   },
+   "E triangle | free B": {
+    "k4": 14,
+    "coppers_min": 0,
+    "coppers_max": 14,
+    "k4_rank": 1
+   },
+   "E triangle | two free": {
+    "k4": 38,
+    "coppers_min": 6,
+    "coppers_max": 75,
+    "k4_rank": 15
+   },
+   "E square | tables": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "k4_rank": 1
+   },
+   "E square | free V": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 22,
+    "k4_rank": 21
+   },
+   "E square | free B": {
+    "k4": 9,
+    "coppers_min": 0,
+    "coppers_max": 10,
+    "k4_rank": 3
+   },
+   "E square | two free": {
+    "k4": 17,
+    "coppers_min": 4,
+    "coppers_max": 38,
+    "k4_rank": 23
+   },
+   "F line restart | tables": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 0,
+    "k4_rank": 1
+   },
+   "F line restart | free V": {
+    "k4": 0,
+    "coppers_min": 0,
+    "coppers_max": 15,
+    "k4_rank": 21
+   },
+   "F line restart | free B": {
+    "k4": 9,
+    "coppers_min": 0,
+    "coppers_max": 13,
+    "k4_rank": 2
+   },
+   "F line restart | two free": {
+    "k4": 11,
+    "coppers_min": 0,
+    "coppers_max": 18,
+    "k4_rank": 19
+   },
+   "D back and forth | tables": {
+    "k4": 4,
+    "coppers_min": 0,
+    "coppers_max": 2,
+    "k4_rank": 1
+   },
+   "D back and forth | free V": {
+    "k4": 12,
+    "coppers_min": 0,
+    "coppers_max": 169,
+    "k4_rank": 25
+   },
+   "D back and forth | free B": {
+    "k4": 88,
+    "coppers_min": 10,
+    "coppers_max": 85,
+    "k4_rank": 1
+   },
+   "D back and forth | two free": {
+    "k4": 131,
+    "coppers_min": 59,
+    "coppers_max": 202,
+    "k4_rank": 17
+   }
+  },
+  "outside_copper_range": [
+   "C stutter | tables",
+   "D back and forth | tables",
+   "D back and forth | free B"
+  ],
+  "tableau_rows_as_keys": {
+   "keys": 52,
+   "k4_best_hits": 5,
+   "coppers_best_hits": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    8,
+    8
+   ]
+  },
+  "controls": "30 shuffled coppers (seed 128), identical tests"
+ },
+ "notes": "Outside the copper range: ['C stutter | tables', 'D back and forth | tables', 'D back and forth | free B']. Tables consistent on K4: {'C stutter | tables': 4, 'E triangle | tables': 0, 'E square | tables': 0, 'F line restart | tables': 0, 'D back and forth | tables': 4}. Tableau rows: K4 5/24, coppers 5-8.",
+ "candidates": [],
+ "seconds": 123.1
+}

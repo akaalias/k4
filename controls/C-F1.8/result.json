@@ -1,0 +1,137 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "ATTHEFAMILYGATHERINGSEASTNORTHEASTGSTHEWEDDINGSWHEREHERPRESENCEBERLINCLOCKACKTOALLTHELOVELYMEMORI",
+  "key": "('ZETWLFIXMKJNUHPVGQAYDOCSRB', 'carter fwd', 200000, 'V')",
+  "ciphertext": "VLSJHWIIUEDMVWKBBMITBCSKBQSLBFRRDDCQDQXFWROFUYWXXTCXRQWKCHDUIRWDRGSXYOCYDEVYVHNJVRFPLBIKTTGWKKSLP"
+ },
+ "passed": true,
+ "why": "fits on the plant 1, copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; offset 200000 listed: True; list [[(200000, 'V')], []]",
+ "bounds": {
+  "family": "running key from Carter's book (both directions, every offset) on one unknown alphabet, three forms; two-alphabet check counts for every running-key source",
+  "carter_letters": 284914,
+  "offsets_per_direction": 284818,
+  "solver": "compiled propagation search, limit 20,000 then 100,000; agrees with a Python solver on 300 random offsets; a planted text fits",
+  "k4": {
+   "fwd": {
+    "V": {
+     "fit": 1,
+     "undecided_after_second_pass": 351
+    },
+    "B": {
+     "fit": 0,
+     "undecided_after_second_pass": 158
+    },
+    "R": {
+     "fit": 0,
+     "undecided_after_second_pass": 281
+    }
+   },
+   "rev": {
+    "V": {
+     "fit": 0,
+     "undecided_after_second_pass": 377
+    },
+    "B": {
+     "fit": 0,
+     "undecided_after_second_pass": 132
+    },
+    "R": {
+     "fit": 0,
+     "undecided_after_second_pass": 279
+    }
+   }
+  },
+  "k4_fits_total": 1,
+  "k4_fit_list": [
+   [
+    [
+     200000,
+     "V"
+    ]
+   ],
+   []
+  ],
+  "controls_fits_total": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "k4_undecided_left": 1578,
+  "controls_undecided_left": [
+   4810,
+   2734,
+   11290,
+   700,
+   607,
+   321,
+   13496,
+   459,
+   1026,
+   4189
+  ],
+  "two_alphabets_checks_by_source": {
+   "carter": {
+    "P": {
+     "min": 0,
+     "mean": 0.31,
+     "max": 3
+    },
+    "C": {
+     "min": 0,
+     "mean": 0.17,
+     "max": 2
+    }
+   },
+   "k2": {
+    "P": {
+     "min": 0,
+     "mean": 0.27,
+     "max": 2
+    },
+    "C": {
+     "min": 0,
+     "mean": 0.15,
+     "max": 1
+    }
+   },
+   "k3": {
+    "P": {
+     "min": 0,
+     "mean": 0.25,
+     "max": 2
+    },
+    "C": {
+     "min": 0,
+     "mean": 0.17,
+     "max": 2
+    }
+   },
+   "cipher_panel": {
+    "P": {
+     "min": 0,
+     "mean": 0.19,
+     "max": 2
+    },
+    "C": {
+     "min": 0,
+     "mean": 0.12,
+     "max": 1
+    }
+   }
+  },
+  "controls": "10 shuffled coppers (seed 148), identical scan",
+  "exhaustive": "exact per offset; undecided counted"
+ },
+ "notes": "K4 fitting offsets 1 (coppers 0-0), undecided left 1578; two alphabets, checks by source: carter 3/2 max, k2 2/1 max, k3 2/2 max, cipher_panel 2/1 max",
+ "candidates": [],
+ "seconds": 1556.4
+}

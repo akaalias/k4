@@ -1,0 +1,7 @@
+{
+ "error": "Traceback (most recent call last):\n  File \"/Users/alexisrondeau/Workshop/cryptos/tools/positive_control.py\", line 95, in child\n    p = spec.plant()\n  File \"/Users/alexisrondeau/Workshop/cryptos/controls/C-F1.6c/spec.py\", line 47, in plant\n    raise RuntimeError(\"no place found\")\nRuntimeError: no place found\n",
+ "patches": [],
+ "passed": false,
+ "why": "error: RuntimeError: no place found",
+ "seconds": 0.0
+}

@@ -1,0 +1,147 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "CASELEFTPERMANENTLYWIEASTNORTHEASTDNOTREUSEDFROMTIMETOTIMEWHENABERLINCLOCKUMBEROFSTRETCHERSHADBEE",
+  "key": "('K1-K3 plaintexts fwd [std]', 50, 'shift 7', 'vig/std/kry', 'no move')",
+  "ciphertext": "VCPZWNYEJPSAQYTJKDXLBEMDXYBNBSNBDTLBLMLMRMKXTJPQENFMTNQAWHVUIXAZTODRQIOZYZPXJICXCMAYNGHYYDZAIXUAE"
+ },
+ "passed": true,
+ "why": "full hits (change then move) 1, copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; the planted one with no move: True",
+ "bounds": {
+  "family": "running key from the sculpture's texts plus one constant tableau shift, with or without a type-1 move",
+  "routes_distinct": 27852,
+  "conventions": 12,
+  "key_texts_change_then_move": {
+   "tableau rows fwd [std]": 781,
+   "tableau rows fwd [kry]": 781,
+   "tableau rows bwd [std]": 781,
+   "tableau rows bwd [kry]": 781,
+   "tableau rows with index column fwd [std]": 807,
+   "tableau rows with index column fwd [kry]": 807,
+   "tableau rows with index column bwd [std]": 807,
+   "tableau rows with index column bwd [kry]": 807,
+   "tableau columns fwd [std]": 781,
+   "tableau columns fwd [kry]": 781,
+   "tableau columns bwd [std]": 781,
+   "tableau columns bwd [kry]": 781,
+   "morse as carved fwd [std]": 80,
+   "morse as carved fwd [kry]": 80,
+   "morse as carved bwd [std]": 80,
+   "morse as carved bwd [kry]": 80,
+   "morse reversed order fwd [std]": 80,
+   "morse reversed order fwd [kry]": 80,
+   "morse reversed order bwd [std]": 80,
+   "morse reversed order bwd [kry]": 80,
+   "panel ciphertexts K1-K4 fwd [std]": 865,
+   "panel ciphertexts K1-K4 fwd [kry]": 865,
+   "panel ciphertexts K1-K4 bwd [std]": 865,
+   "panel ciphertexts K1-K4 bwd [kry]": 865,
+   "K1-K3 plaintexts fwd [std]": 768,
+   "K1-K3 plaintexts fwd [kry]": 768,
+   "K1-K3 plaintexts bwd [std]": 768,
+   "K1-K3 plaintexts bwd [kry]": 768,
+   "Sanborn 1989 letter fwd [std]": 2176,
+   "Sanborn 1989 letter fwd [kry]": 2176,
+   "Sanborn 1989 letter bwd [std]": 2176,
+   "Sanborn 1989 letter bwd [kry]": 2176,
+   "1991 dedication texts fwd [std]": 4880,
+   "1991 dedication texts fwd [kry]": 4880,
+   "1991 dedication texts bwd [std]": 4880,
+   "1991 dedication texts bwd [kry]": 4880,
+   "2025 open letter fwd [std]": 2228,
+   "2025 open letter fwd [kry]": 2228,
+   "2025 open letter bwd [std]": 2228,
+   "2025 open letter bwd [kry]": 2228,
+   "Carter vol 1 fwd [std]": 284914,
+   "Carter vol 1 fwd [kry]": 284914,
+   "Carter vol 1 bwd [std]": 284914,
+   "Carter vol 1 bwd [kry]": 284914
+  },
+  "change_then_move": {
+   "k4_full": 1,
+   "controls_full": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch13": 1,
+   "controls_stretch13": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_stretch11": 1,
+   "controls_stretch11": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_full_hits": [
+    [
+     "K3 rule a=0 b=1",
+     "vig/std/kry",
+     7,
+     [
+      [
+       "K1-K3 plaintexts fwd [std]",
+       50
+      ]
+     ]
+    ]
+   ]
+  },
+  "move_then_change": {
+   "key_texts": 40,
+   "k4_full": 1,
+   "k4_best_depth": 24,
+   "controls_best_depth": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    7,
+    7,
+    8,
+    7,
+    8
+   ],
+   "controls_completed": 10,
+   "k4_full_hits": [
+    [
+     "K3 rule a=0 b=1",
+     "vig/std/kry",
+     "K1-K3 plaintexts fwd [std]",
+     50,
+     7
+    ]
+   ]
+  },
+  "controls": "10 shuffled coppers (seed 117), identical search"
+ },
+ "notes": "27,852 routes x 12 conventions. Change then move (44 numbered key texts incl. Carter): full K4 1, controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; EASTNORTHEAST stretch K4 1 (controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]); BERLINCLOCK stretch K4 1 (controls [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]). Move then change (40 key texts): full 1, deepest K4 24, controls [8, 8, 8, 8, 8, 7, 7, 8, 7, 8] (10 completed).",
+ "candidates": [],
+ "seconds": 906.6
+}

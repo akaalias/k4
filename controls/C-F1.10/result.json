@@ -1,0 +1,190 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "SCHEMELAYINTHEFACTTHAEASTNORTHEASTILARUNONTHESHOPSTHEPOTATOESREBERLINCLOCKFIELDTHECORNINTHERICKST",
+  "key": "('GARDENING', 'christmas', 'kry/std/vig', 'std')",
+  "ciphertext": "MJULJOXHTSXKULDKNRMBNRHXHXSJKOCKKRVRYEZGNGKOCMOLDXHULUIINKFCJFYQYHXPKMVSRGMGOVXKOCMJOBCZEFRBVJRJK"
+ },
+ "passed": true,
+ "why": "christmas-schedule word hits on the plant: [('GARDENING', 'kry/std/vig', 'std')]",
+ "bounds": {
+  "family": "Friedman key-advance schedules (MC III, TM 32-220) on the 12 standard/KRYPTOS tables x 2 key numberings",
+  "words": 234143,
+  "word_lengths": [
+   3,
+   20
+  ],
+  "summary": {
+   "christmas": {
+    "k4_word_hits": 1,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "extinguisher 2": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "extinguisher 3": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "extinguisher 4": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "extinguisher 5": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "runlen A=0": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "runlen A=1": {
+    "k4_word_hits": 0,
+    "coppers_word_hits": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "ct interruptor": {
+    "k4_consistent_with_check": 10,
+    "coppers": [
+     7,
+     0,
+     0,
+     0,
+     5,
+     0,
+     0,
+     14,
+     2,
+     0
+    ]
+   },
+   "fraction digits": {
+    "k4_consistent_with_check": 8,
+    "coppers": [
+     4,
+     0,
+     0,
+     0,
+     4,
+     0,
+     0,
+     8,
+     0,
+     0
+    ]
+   },
+   "pt interruptor": {
+    "k4_consistent_with_check": 12004,
+    "coppers": [
+     1522,
+     100,
+     170,
+     150,
+     1592,
+     410,
+     230,
+     3054,
+     387,
+     755
+    ]
+   }
+  },
+  "k4_word_hits": {
+   "christmas": [
+    {
+     "word": "GARDENING",
+     "table": "kry/std/vig",
+     "numbering": "std"
+    }
+   ]
+  },
+  "free_settings": {
+   "ct interruptor": "26 letters x key lengths 1-26",
+   "fraction digits": "denominators 3-99 x key lengths 1-26, zeros dropped",
+   "pt interruptor": "26 letters x key lengths 1-26 x start place of each known run"
+  },
+  "controls": "10 shuffled coppers (seed 1510), identical test",
+  "exhaustive": true
+ },
+ "notes": "christmas: K4 1 (coppers 0-0); extinguisher 2: K4 0 (coppers 0-0); extinguisher 3: K4 0 (coppers 0-0); extinguisher 4: K4 0 (coppers 0-0); extinguisher 5: K4 0 (coppers 0-0); runlen A=0: K4 0 (coppers 0-0); runlen A=1: K4 0 (coppers 0-0); ct interruptor: K4 10 (coppers 0-14); fraction digits: K4 8 (coppers 0-8); pt interruptor: K4 12004 (coppers 100-3054)",
+ "candidates": [],
+ "seconds": 41.1
+}

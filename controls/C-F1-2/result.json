@@ -1,0 +1,148 @@
+{
+ "error": null,
+ "patches": [],
+ "plant": {
+  "plaintext": "SSCHILDRENINWHOSELIVEEASTNORTHEASTEROWNLIFESHEWASTHENATURALINTEBERLINCLOCKVENGEANCETHREATENEDTOFO",
+  "key": "{'pa': 'SHADOWBCEFGIJKLMNPQRTUVXYZ', 'ca': 'LODESTNABCFGHIJKMPQRUVWXYZ', 'm': 'vig', 'key': [1, 0, 25, 3, 15, 0, 9, 11, 20, 12, 12, 8, 13, 12, 14, 8, 0, 11, 5, 22, 18, 11, 6, 16, 4, 25, 8, 25]}",
+  "ciphertext": "OLNSLJHSDDXYQIQBBZMQLRBMYKHQVOATKUPSYPDWYVWBORFYQTAYUODUUDIJTUPPDTLRERDHAYOSBVJQUNMRDRATCBZRXNMPP"
+ },
+ "passed": true,
+ "why": "best at 28: SHADOW/keyword/LODESTONE/keyword/vig, 88/97 letters of the plant, English -4.086 against shuffled copy best -6.523 [re-judged from the saved run]",
+ "bounds": {
+  "family": "periodic tableau at periods 27-29, one alphabet standard or KRYPTOS and the other keyword-mixed from the vocabulary, key completed by English climb",
+  "alphabets": 63,
+  "pairs_total": 3721,
+  "pairs_reached": 3721,
+  "coverage": 1.0,
+  "periods": [
+   27,
+   28,
+   29
+  ],
+  "restarts": 3,
+  "climbs": 33489,
+  "best_by_period": {
+   "27": {
+    "english": -6.3,
+    "plain": "WONDERFUL/keyword",
+    "cipher": "CARNARVON/keyword",
+    "mode": "beau",
+    "free_slots": 3,
+    "text": "PBJGITRCESIOREPUAHVVCEASTNORTHEASTHPDSPOPFMAUBRNITATTUKEXYMTVASBERLINCLOCKTHAFFYMSAKYOUVERNANSWQV"
+   },
+   "28": {
+    "english": -4.086,
+    "plain": "SHADOW/keyword",
+    "cipher": "LODESTONE/keyword",
+    "mode": "vig",
+    "free_slots": 4,
+    "text": "SSCHILDRENINWHOSELEEVEASTNORTHEASTEROWNLIFESHEALLTHENATURALINTEBERLINCLOCKRTOGEANCETHREATENEDTOFO"
+   },
+   "29": {
+    "english": -6.206,
+    "plain": "TUTANKHAMUN/keyword",
+    "cipher": "RIDDLE/keyword",
+    "mode": "beau",
+    "free_slots": 5,
+    "text": "HGBJPGASOFEETZWWEGISOEASTNORTHEASTBSJAFFEWKBIONASTHEIDIMORRKAGKBERLINCLOCKURSOCRJRFLYEOUCLBSTYZAX"
+   }
+  },
+  "top_ten": [
+   {
+    "english": -4.086,
+    "period": 28,
+    "plain": "SHADOW/keyword",
+    "cipher": "LODESTONE/keyword",
+    "mode": "vig"
+   },
+   {
+    "english": -4.086,
+    "period": 28,
+    "plain": "SHADOW/keyword",
+    "cipher": "LODESTONE/keyword",
+    "mode": "varbeau"
+   },
+   {
+    "english": -6.009,
+    "period": 28,
+    "plain": "BURIED/keyword",
+    "cipher": "POSITION/keyword",
+    "mode": "vig"
+   },
+   {
+    "english": -6.009,
+    "period": 28,
+    "plain": "BURIED/keyword",
+    "cipher": "POSITION/keyword",
+    "mode": "varbeau"
+   },
+   {
+    "english": -6.161,
+    "period": 28,
+    "plain": "SHADOW/keyword",
+    "cipher": "RIDDLE/keyword",
+    "mode": "vig"
+   },
+   {
+    "english": -6.161,
+    "period": 28,
+    "plain": "SHADOW/keyword",
+    "cipher": "RIDDLE/keyword",
+    "mode": "varbeau"
+   },
+   {
+    "english": -6.161,
+    "period": 28,
+    "plain": "TUTANKHAMEN/keyword",
+    "cipher": "LUCID/keyword",
+    "mode": "vig"
+   },
+   {
+    "english": -6.177,
+    "period": 28,
+    "plain": "TUTANKHAMEN/keyword",
+    "cipher": "LUCID/keyword",
+    "mode": "varbeau"
+   },
+   {
+    "english": -6.184,
+    "period": 28,
+    "plain": "SHADOW/keyword",
+    "cipher": "ORDINATE/keyword",
+    "mode": "varbeau"
+   },
+   {
+    "english": -6.202,
+    "period": 28,
+    "plain": "SHADOW/keyword",
+    "cipher": "ORDINATE/keyword",
+    "mode": "vig"
+   }
+  ],
+  "shuffled_k4_best_by_period": {
+   "27": -6.904,
+   "28": -6.663,
+   "29": -6.523
+  },
+  "english_reference": -3.6
+ },
+ "notes": "33489 climbs over 3721 of 3721 pairs. Best by period: [(27, -6.3), (28, -4.086), (29, -6.206)]; shuffled K4 (22-alphabet subset): [(27, -6.904), (28, -6.663), (29, -6.523)].",
+ "candidates": [
+  {
+   "plaintext": "PBJGITRCESIOREPUAHVVCEASTNORTHEASTHPDSPOPFMAUBRNITATTUKEXYMTVASBERLINCLOCKTHAFFYMSAKYOUVERNANSWQV",
+   "key": "{'pa': 'WONDERFULABCGHIJKMPQSTVXYZ', 'ca': 'CARNVOBDEFGHIJKLMPQSTUWXYZ', 'm': 'beau', 'key': [23, 25, 18, 5, 3, 8, 16, 4, 11, 1, 11, 25, 23, 16, 10, 13, 15, 12, 12, 14, 0, 6, 15, 10, 19, 16, 12]}",
+   "notes": "English of the 73 free letters -6.300"
+  },
+  {
+   "plaintext": "SSCHILDRENINWHOSELEEVEASTNORTHEASTEROWNLIFESHEALLTHENATURALINTEBERLINCLOCKRTOGEANCETHREATENEDTOFO",
+   "key": "{'pa': 'SHADOWBCEFGIJKLMNPQRTUVXYZ', 'ca': 'LODESTNABCFGHIJKMPQRUVWXYZ', 'm': 'vig', 'key': [1, 0, 25, 3, 15, 0, 9, 11, 20, 12, 12, 8, 13, 12, 14, 8, 0, 11, 8, 10, 4, 11, 6, 16, 4, 25, 8, 25]}",
+   "notes": "English of the 73 free letters -4.086"
+  },
+  {
+   "plaintext": "HGBJPGASOFEETZWWEGISOEASTNORTHEASTBSJAFFEWKBIONASTHEIDIMORRKAGKBERLINCLOCKURSOCRJRFLYEOUCLBSTYZAX",
+   "key": "{'pa': 'TUANKHMBCDEFGIJLOPQRSVWXYZ', 'ca': 'RIDLEABCFGHJKMNOPQSTUVWXYZ', 'm': 'beau', 'key': [20, 15, 21, 6, 20, 23, 12, 12, 18, 13, 7, 8, 17, 0, 13, 2, 16, 11, 0, 11, 19, 10, 8, 7, 24, 15, 0, 10, 21]}",
+   "notes": "English of the 73 free letters -6.206"
+  }
+ ],
+ "seconds": 1198.1
+}

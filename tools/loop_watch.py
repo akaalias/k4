@@ -113,7 +113,11 @@ def handle(ev):
     if et and state["start"] is None:
         state["start"] = et
     if t == "system" and ev.get("subtype") == "init":
-        say(f"{BOLD}loop started{RESET}  session {ev.get('session_id', '')[:8]}")
+        # the session wakes again on each background notification; only the first init is the start
+        first = not state.get("started")
+        state["started"] = True
+        say(f"{BOLD}loop started{RESET}  session {ev.get('session_id', '')[:8]}" if first
+            else f"{DIM}turn started (background work reported back){RESET}")
     elif t == "assistant":
         for c in ev.get("message", {}).get("content", []):
             if c.get("type") == "tool_use":
@@ -123,7 +127,8 @@ def handle(ev):
     elif t == "result":
         cost = ev.get("total_cost_usd")
         mins = (ev.get("duration_ms") or 0) / 60000
-        say(f"{BOLD}loop finished{RESET}  {mins:.0f} min" + (f", ${cost:.2f}" if cost else ""))
+        # a result ends one turn, not the loop: run_loop.sh prints "Loop finished" when the session exits
+        say(f"{BOLD}turn ended{RESET}  {mins:.0f} min" + (f", ${cost:.2f} so far" if cost else ""))
         if ev.get("result"):
             print("\n" + ev["result"], flush=True)
     check_files()

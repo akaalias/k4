@@ -154,8 +154,8 @@ Rules:
 | C-F11.2 | F11.2 | Poem code: a double transposition keyed by words from a memorized text (SOE), then the... | 0190 | passed | C-F11.2 |
 | C-F11.3 | F11.3 | The CIA's own 1970s Polish agent system (Bury, Cryptologia 2007): a key text written... | 0191 | passed, own plant | 0191: plants through the same search, fit once each (K2, K1-K3, Carter), copies 0; counts only |
 | C-F11.4 | F11.4 | Friedman's keyed alphabet box (MC III 35b): the alphabet written n times in a... | 0192 | passed, own plant | 0192: plants fit 62 and 26 times, copies 0; counts only |
-| C-F8-1 | F8/1 | Hill 2-5, plain and affine, 330 numberings (4 standard, 126 vocabulary, 200 K1-K3... | 0015, 0036, 0044, 0055, 0105, 0116 | open | - |
-| C-F8.1 | F8.1 | Hill 2x2 and 3x3 with an unknown letter numbering (any of 26!) | 0193 (error), 0194 | open | - |
+| C-F8-1 | F8/1 | Hill 2-5, plain and affine, 330 numberings (4 standard, 126 vocabulary, 200 K1-K3... | 0015, 0036, 0044, 0055, 0105, 0116 | passed | C-F8-1 (0015), C-F8-1b (0036 chained), C-F8-1c (0044; 0055's run() is the same), C-F8-1d (0105), C-F8-1e (0116 Hill with a periodic key) |
+| C-F8.1 | F8.1 | Hill 2x2 and 3x3 with an unknown letter numbering (any of 26!) | 0193 (error), 0194 | passed, own plant | 0194: three plants through the same pool.map as K4, each the only fit |
 | C-F5-1 | F5/1 | Gromark, two- and three-term rules, bases 2-26 (three-term on a free alphabet in base... | 0013, 0028, 0046, 0054, 0069, 0076, 0107 | open | - |
 | C-F5.1 | F5.1 | Multiplicative feedback; the raised YAR as primer | 0196 | open | - |
 | C-F5.2 | F5.2 | Three-term Gromark on a free alphabet in bases 2-9, 11-16 and 26; two-term... | 0195 | open | - |

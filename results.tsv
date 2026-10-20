@@ -203,3 +203,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0202	0202-a-slip-in-the-keyword-columnar	6-transposition-then-tableau	0110-keyword-columnar-from-the-whole-dictionary	reverted	0	0	0			1851	test=3 run=1851 record=0
 0203	0203-a-slip-in-the-keyword-columnar-part-2	6-transposition-then-tableau	0202-a-slip-in-the-keyword-columnar	reverted	0	0	0			611	unattributed=56 run=610 record=0
 0204	0204-row-reshuffle-slip-against-forty-fresh-copies	6-transposition-then-tableau	0203-a-slip-in-the-keyword-columnar-part-2	reverted	0	0	0			978	unattributed=88 run=978 record=0
+0205	0205-nulls-at-both-ends	2-masked-then-keyed	0023-masks-reversal-and-nulls-then-tableau	reverted	0	0	0			6	test=1 run=6 record=0

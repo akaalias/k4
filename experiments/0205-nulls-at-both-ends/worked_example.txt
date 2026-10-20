@@ -1,0 +1,9 @@
+start run of 8 nulls: the known words sit 8 places later on the copper; KRYPTOS table, added form
+
+place  known  carved place  carved  key value
+   22      E            30       N          8
+   23      A            31       G          6
+   24      S            32       K         20
+   25      T            33       S          2
+   26      N            34       S         13
+   27      O            35       O          0

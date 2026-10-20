@@ -1,0 +1,63 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Gromark growth rules (two- and three-term, lags to 13) in bases 16-26 on 0054's K1-K3-word and 2025-letter tables",
+  "alphabets": 102,
+  "pairs": 10404,
+  "forms": 3,
+  "rules": 364,
+  "bases": "max(16, largest forced + 1) to 26",
+  "min_checks": 6,
+  "k4": {
+   "survivors": 0,
+   "survivors_both_runs": 0,
+   "list": []
+  },
+  "copies_survivors": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "copies_survivors_both_runs": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "plant": {
+   "plain": "PART/keyword",
+   "cipher": "THIRTY/keyword",
+   "form": "vig",
+   "base": 20,
+   "rule": [
+    7,
+    3
+   ],
+   "found": true,
+   "survivors": 1,
+   "survivors_both_runs": 1
+  },
+  "spot_check": "8960 (table, base, rule) cases checked against Python",
+  "controls": "10 shuffled copies (seed 5300)",
+  "seconds": 3,
+  "exhaustive": "yes"
+ },
+ "notes": "Survivors with >= 6 checks: K4 0 (both runs 0), copies 0-0 (both runs 0-0). Plant found: True.",
+ "controls": [],
+ "error": null,
+ "worked_example": "standard plain alphabet, KRYPTOS cipher alphabet, Vigenere: the forced shifts over EASTNORTHEAST\n\nshifts: 8 17 9 3 7 6 12 8 12 9 0 14 13\nlargest 17: only bases 18-26 are possible\nrule (5, 2) in base 20: shift 6 should be shift 1 + shift 4 = 11; it is 6",
+ "seconds": 3.3970839977264404
+}

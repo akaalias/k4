@@ -1,0 +1,5 @@
+standard plain alphabet, KRYPTOS cipher alphabet, Vigenere: the forced shifts over EASTNORTHEAST
+
+shifts: 8 17 9 3 7 6 12 8 12 9 0 14 13
+largest 17: only bases 18-26 are possible
+rule (5, 2) in base 20: shift 6 should be shift 1 + shift 4 = 11; it is 6

@@ -1,0 +1,82 @@
+{
+ "id": 206,
+ "tag": "0206-gromark-high-bases-on-k1-k3-word-tables",
+ "started": "2026-10-20T11:12:37+00:00",
+ "seconds": 3.5,
+ "status": "ran",
+ "phases": {
+  "test": 0.9,
+  "run": 3.5,
+  "record": 0.0
+ },
+ "ended_epoch": 1792494760.703618,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "Gromark growth rules (two- and three-term, lags to 13) in bases 16-26 on 0054's K1-K3-word and 2025-letter tables",
+  "alphabets": 102,
+  "pairs": 10404,
+  "forms": 3,
+  "rules": 364,
+  "bases": "max(16, largest forced + 1) to 26",
+  "min_checks": 6,
+  "k4": {
+   "survivors": 0,
+   "survivors_both_runs": 0,
+   "list": []
+  },
+  "copies_survivors": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "copies_survivors_both_runs": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "plant": {
+   "plain": "PART/keyword",
+   "cipher": "THIRTY/keyword",
+   "form": "vig",
+   "base": 20,
+   "rule": [
+    7,
+    3
+   ],
+   "found": true,
+   "survivors": 1,
+   "survivors_both_runs": 1
+  },
+  "spot_check": "8960 (table, base, rule) cases checked against Python",
+  "controls": "10 shuffled copies (seed 5300)",
+  "seconds": 3,
+  "exhaustive": "yes"
+ },
+ "notes": "Survivors with >= 6 checks: K4 0 (both runs 0), copies 0-0 (both runs 0-0). Plant found: True.",
+ "error": null,
+ "candidates": []
+}

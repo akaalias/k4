@@ -21,6 +21,12 @@ Stage 2's control table had no open rows, so the loop went back to the family it
 | 203 | F6.21 | **Part 2.** Trapezoid and poem code at the copies' rate; **row reshuffle: K4 above every copy in 6 cells, no copy in more than 1.** Queue stopped; replicated in 0204. Plants 3 of 3. |
 | 204 | F6.21 | **Replication against 40 fresh copies.** The row-reshuffle family unchanged: K4 above every copy in 1 cell (A21), while 10 of the 40 copies lead the rest in 1 or 2; 0203's six cells at ranks 0-8 among the 40. Chance; F6.21 closed. A21 is carried by rows of 9 (67 of K4's 88 settings, copies' median 0): noted, not chased. Prediction held. **Every F6 item is closed or blocked again.** |
 
+### F2 (after pivot P17, ticket #20 reopened)
+
+| # | Item | One line |
+|---|---|---|
+| 205 | F2.4 | **Nulls at both ends, exact.** The end run moves nothing and the key's start is absorbed by the key word, so the test is the known words moved by a start run of 0-12 against periodic (0023's) and progressive keys, per letter and per repeat, steps 1-25, lengths 1-52, 8 table classes: nothing below 26 on K4 or any copy; K4 ahead of every copy in 0 cells. Two planted padded messages found at their own lengths. F2 closed again; pivot P18 to F11. Prediction held. |
+
 **How the grille search works.** A turning grille is not a sweep: 10^15 cards per procedure. The search walks the top half of
 the grid; each cell and its 180-degree partner share one prefix count, so both of their message places are known at once and
 about two thirds of the early cells land a known letter. With a key word every landing is a check and the tree stays tiny;

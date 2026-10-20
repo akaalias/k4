@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "SOE's Dutch section put eight random letters before and after every message. Padding at the start moves the known words along the copper; padding at the end moves nothing."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every start run 0-12, a repeating key or one that slides by any step after every letter or every pass, lengths 1-52, on the sculpture's tables, K4 against ten scrambled copies and two planted padded messages."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Nothing fits below length 26 on K4 or on any copy, whatever the start run; the planted messages are found at their own lengths. F2.4 closed."
+ }
+]

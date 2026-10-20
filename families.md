@@ -143,6 +143,7 @@ Update the leaf when an experiment works on it.
     - **F2.1** Fragments from 0057's letter strike-outs at key lengths 24-25 not yet matched against words {closed · exact · 0181}
     - **F2.2** Nulls placed by a rule {closed · exact · 0182}
     - **F2.3** A plain component with repeated letters: homophones that keep the length {closed · exact · 0183}
+    - **F2.4** Nulls at both ends of the message (SOE's Dutch section): periodic and progressive keys on the moved known words {closed · exact · 0023, 0205}
     - A code layer, phonetic spelling, another language: these change the known letters or need a codebook {blocked}
   - F4 Sanborn's visual systems
     - Trifid, any cube, periods 2-15 {closed · exact · 0040}
@@ -305,7 +306,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P17 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P18 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -326,3 +327,4 @@ Each pivot has a details page in `pivots/` (P1-P17 so far), rendered on the Pivo
 | 2026-10-17 | F8 Hill (0193-0194) | F5 Gromark | F8.1 closed for 2x2: no invertible matrix fits K4 under any numbering of the letters; 3x3 has too few equations (blocked). Ranking unchanged (P15). |
 | 2026-10-17 | F5 Gromark (0195-0196) | F9 substitution, then a move | F5.1 and F5.2 closed exactly: Gromark on a free alphabet in every base 2-16 and 26 with three-term, longer two-term and multiplicative rules; nothing fits K4. Ranking unchanged (P16). |
 | 2026-10-20 | F6 a move, then the table, reopened for #78 (0199-0204) | F2 masked plaintext (F2.4) | F6.20 closed for key words and short free keys (turning grille, every card, by rows and by columns); F6.21 closed (one slip around every keyword columnar; the row-reshuffle excess of 0203 dissolved against 40 fresh copies). Ranking unchanged; F12 and F3 have no open item, so F2 is next (P17). |
+| 2026-10-20 | F2 masked plaintext, reopened (0205) | F11 agency hand systems (F11.5) | F2.4 closed: nulls at both ends revive no periodic or progressive key below 26. F4 and F10 have no open item, so F11 is next. Ranking unchanged (P18). |

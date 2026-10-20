@@ -65,6 +65,26 @@ Counts are distinct landing maps: cards that differ only where unknown letters g
 - **Figures before the next run.** I started 0200 while 0199's crib map was still missing (one failing test).
 - **0202's six families did not fit in 30 minutes**; its time check skipped three, run as 0203.
 
+### Stage 2, step 2: slips at the known places (A1, ticket #76)
+
+| # | Item | One line |
+|---|---|---|
+| 207 | A1.2 | **A repeating key on the tables with 1-3 slips, exact, judged.** 8 table classes, lengths 1-26: nothing fits K4 below 25 (copies 24) even with three of the 24 known letters wrong; at 24-26 only 5, 3, 1 checks exist and settings fit everywhere. Every reading went to quadgrams and the blind judge with the 20 copies' (62 calls): K4 best 3, copies best 8. Plants with 2-3 slips found (judge 82-88, own copies at most 6). Prediction held. |
+| 208 | A1.2 | **One free alphabet with 0-3 slips, exact.** 0119's decider on all 2,325 drop sets per cell: K4 dead at 1-7 and 9; fits at 8 and 10-26 as the copies do. Plants at 7 found; plants at 12 fit with fewer slips than planted, as their copies do. Prediction partly failed (the length-12 plants). |
+| 209 | A1.2 | **Two free alphabets with 0-3 slips, exact.** 0123's decider: K4 dead at 1-3 and 9; copies fit from 4. Plants at 3 and 9 found, the pre-registered ones at 4, 5, 7 not. **A1.2 closed where decidable, blocked beyond the reach.** |
+
+**What a slip costs a free alphabet.** With the sculpture's tables a slip is expensive: below length 24 at least 7 checks
+remain and three slips cannot clear them. With a free alphabet the 24 equations already leave room, and two or three
+dropped equations are enough for an alphabet to fit almost any text from about length 10 (one alphabet) or 4 (two). The
+plants show it from the other side: a message planted with three slips at length 12 fits with none. So "nothing found"
+there says nothing; the cells are blocked, not closed. The judge cannot help, because a free alphabet that fits leaves
+most letters undetermined.
+
+**Mistakes.**
+- **Plants placed where they cannot be told apart.** 0209's pre-registered plants (4, 5, 7) sat where the copies already
+  fit; the dry run showed it, and plants at 3 and 9 were added before the real run, with the change written in `changed`.
+  The prediction stayed as registered and failed for the first three. 0208's length-12 plants failed the same way.
+
 ## 2026-10-19
 
 Stage 2, step 1: a positive control for every closed item (A3, issue #73). The queue is empty: every row of the table

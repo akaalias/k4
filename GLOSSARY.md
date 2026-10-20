@@ -109,3 +109,7 @@ uses a word a stranger would not know.
 **a planted message** (also: planted text, hidden English, plants): A real English passage, with the 24 known letters written in at their places, enciphered by the method under test with a random key. Running a search on planted messages measures whether the search could find a true answer of that kind at all, before its verdict on the carved text is trusted.
 
 **a turning grille** (also: Fleissner grille, a grille, a card with holes): A square card with holes cut so that, turned a quarter at a time through four positions, it uncovers every square of a grid exactly once. The message is written through the holes, the card turned, and so on; the filled grid is then copied out row by row, which scrambles the order of the letters.
+
+**a slip** (also: slips, an enciphering slip, a known letter carved wrong): A mistake made while enciphering by hand: a wrong row or column of the table at one letter, so the carved letter is not the one the method gives there. K2 has one (a dropped letter). A search that allows k slips lets k of the 24 known letters disagree with the method, and names where they are.
+
+**the judge** (also: the blind judge, a language model reads): A language model that scores how much of a reading is English, from 0 to 100, allowing misspellings and X between sentences. It sees one reading at a time, with the known words hidden, and never knows whether a reading came from the real carving or from a scrambled copy. A reading counts only if it scores above every scrambled copy's best.

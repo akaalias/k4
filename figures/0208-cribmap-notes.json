@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Experiment 119 found that almost no scrambled alphabet fits the 24 known letters with a repeating key. A hand slip at two or three of those places would have hidden the right one."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every choice of up to 3 slipped places (2,325 per cell), every key length 1-26, both table forms, decided exactly with 119's search, unchanged; K4 against 20 scrambled copies, four planted slipped messages."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No alphabet fits K4 at lengths 1-7 or 9 even with 3 slips; at 8 and from 10 up K4 fits as the copies do (K4 ahead of every copy in 3 of 52 cells, copies 0-4). Plants at length 7 are found; at 12 they fit without their slips, as their copies do: the reach ends near length 9."
+ }
+]

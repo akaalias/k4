@@ -2378,5 +2378,180 @@
     "SAY"
    ]
   ]
+ },
+ "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIMWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA": {
+  "model": "claude-haiku-5-5",
+  "words": [
+   [
+    3,
+    5,
+    "TO"
+   ],
+   [
+    6,
+    8,
+    "NO"
+   ],
+   [
+    13,
+    16,
+    "GUN"
+   ],
+   [
+    21,
+    25,
+    "EAST"
+   ],
+   [
+    25,
+    34,
+    "NORTHEAST"
+   ],
+   [
+    53,
+    55,
+    "NO"
+   ],
+   [
+    55,
+    57,
+    "BY"
+   ],
+   [
+    59,
+    61,
+    "IN"
+   ],
+   [
+    63,
+    69,
+    "BERLIN"
+   ],
+   [
+    69,
+    74,
+    "CLOCK"
+   ]
+  ]
+ },
+ "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIMXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA": {
+  "model": "claude-haiku-5-5",
+  "words": [
+   [
+    25,
+    34,
+    "NORTHEAST"
+   ],
+   [
+    63,
+    69,
+    "BERLIN"
+   ],
+   [
+    69,
+    74,
+    "CLOCK"
+   ]
+  ]
+ },
+ "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA": {
+  "model": "claude-haiku-5-5",
+  "words": [
+   [
+    13,
+    16,
+    "GUN"
+   ],
+   [
+    21,
+    25,
+    "EAST"
+   ],
+   [
+    25,
+    34,
+    "NORTHEAST"
+   ],
+   [
+    53,
+    56,
+    "NOB"
+   ],
+   [
+    59,
+    61,
+    "IN"
+   ],
+   [
+    63,
+    69,
+    "BERLIN"
+   ],
+   [
+    69,
+    74,
+    "CLOCK"
+   ]
+  ]
+ },
+ "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA": {
+  "model": "claude-haiku-5-5",
+  "words": [
+   [
+    13,
+    16,
+    "GUN"
+   ],
+   [
+    21,
+    25,
+    "EAST"
+   ],
+   [
+    25,
+    34,
+    "NORTHEAST"
+   ],
+   [
+    63,
+    69,
+    "BERLIN"
+   ],
+   [
+    69,
+    74,
+    "CLOCK"
+   ]
+  ]
+ },
+ "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ": {
+  "model": "claude-haiku-5-5",
+  "words": [
+   [
+    13,
+    16,
+    "GUN"
+   ],
+   [
+    21,
+    25,
+    "EAST"
+   ],
+   [
+    25,
+    34,
+    "NORTHEAST"
+   ],
+   [
+    63,
+    69,
+    "BERLIN"
+   ],
+   [
+    69,
+    74,
+    "CLOCK"
+   ]
+  ]
  }
 }

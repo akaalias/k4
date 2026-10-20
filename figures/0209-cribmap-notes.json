@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "With two scrambled alphabets, one to look up the message letter and one to write the carved letter, a hand slip at the known places is easier still to hide; the question is how far a search allowing slips can still tell anything."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every choice of up to 3 slipped places, every key length 1-26, decided exactly with 123's search, unchanged; K4 against 20 scrambled copies and six planted slipped messages."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No pair fits K4 at lengths 1-3 or 9 even with 3 slips; elsewhere K4 fits as the copies do (ahead of every copy in 2 of 26 lengths, copies 0-2). Plants at 3 and 9 are found, at 4, 5 and 7 they are not told from their copies: that is the reach."
+ }
+]

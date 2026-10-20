@@ -68,6 +68,11 @@ Update the leaf when an experiment works on it.
       - Period 34 (K4 40 and 20 consistent pairs against copy maxima 10 and 7), inside the fixed statistic {noted · exact · 0155}
     - **F1.10** Friedman's keyword-only key-advance schedules {closed · exact · 0156}
     - **F1.11** A split key phrase: one part mixes the plain alphabet, the other the cipher alphabet {closed · exact · 0157}
+    - **A1.2** One, two or three of the 24 known letters slipped (A1, Stage 2 step 2), periodic key {closed · exact · 0207, 0208, 0209}
+      - The sculpture's tables, lengths 1-26: nothing fits K4 below 25 even with 3 slips; 24-26 fit everywhere; the judge puts K4's best reading at 3 against the copies' 8 {closed · exact · 0207}
+      - One free alphabet: dead at 1-7 and 9 with up to 3 slips; plants at 7 found {closed · exact · 0208}
+      - Two free alphabets: dead at 1-3 and 9 with up to 3 slips; plants at 3 and 9 found {closed · exact · 0209}
+      - Free-alphabet lengths where K4 and the copies fit with 2-3 slips (one alphabet 8, 10-26; two 4-8, 10-26): too short to decide k slips, the reading undetermined {blocked · exact · 0208, 0209}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}

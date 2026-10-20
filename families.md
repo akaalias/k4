@@ -80,6 +80,9 @@ Update the leaf when an experiment works on it.
     - **A1.4** Autokeys and progressive keys with slips or one lost step {closed · exact · 0212, 0213}
       - Ciphertext autokey on 487,734 table setups, 2 slips or a lost step: nothing below lag 68; progressive key, 2 slips: nothing below period 25 {closed · exact · 0212}
       - Plaintext autokey, lags 1-52, 2 broken links or a lost step: nothing below lag 24; lags 26-29 read blind as copies {closed · exact · 0213}
+    - **A1.5** A move, then the table, with two slips {closed · exact · 0214}
+      - 0110-0114's routes and the type-1 library (1.85M landings), 8 tables, keys 1-26: shortest fit 18 after, 16 before, as copies; readings judged as copies' {closed · exact · 0214}
+      - A free alphabet after a move with slips (0129): fits at the copies' rate from length 6 without slips; too short to decide k slips {blocked}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}

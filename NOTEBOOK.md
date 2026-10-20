@@ -79,6 +79,8 @@ Counts are distinct landing maps: cards that differ only where unknown letters g
 | 212 | A1.4 | **Ciphertext autokey and progressive key with slips, exact, compiled.** 487,734 autokey table setups, every lag, 2 slips at known places or one lost step: nothing below lag 68 on K4 (copies 67-69); progressive key on the tables, 2 slips: nothing below 25. Judge: K4 4, copies 12. Five plants found (60-93). Prediction held. |
 | 213 | A1.4 | **Plaintext autokey with 2 broken links or one lost step, exact, compiled.** Lags 1-52 on 35,343 tables: nothing below 24 (copies 17-24); lags 26-29 read in bulk and judged: K4 4, copies 12. Three plants found, one whose slip runs on through its chain (85 against at most 18). **A1.4 closed.** Prediction held. |
 
+| 214 | A1.5 | **A move then the table, two slips, exact, compiled.** 1,847,590 distinct landings (0110-0114 and the type-1 library), both orders, 8 tables, keys 1-26: shortest fit 18 after the move, 16 before, as the copies (16-18, 16-17); K4 above every copy in 1 cell (copies 0-3); judge K4 6, copies 12; plants found (70-92). The free alphabet after a move (0129) blocked without a run. **Stage 2, step 2's table has no open row.** Prediction held. |
+
 **What a slip costs a free alphabet.** With the sculpture's tables a slip is expensive: below length 24 at least 7 checks
 remain and three slips cannot clear them. With a free alphabet the 24 equations already leave room, and two or three
 dropped equations are enough for an alphabet to fit almost any text from about length 10 (one alphabet) or 4 (two). The
@@ -100,6 +102,12 @@ most letters undetermined.
   the run. (In plaintext autokey the key is the message, so changing the carved letter afterwards is the right model.)
 - **ctypes and big arrays.** Building C arrays by unpacking millions of Python ints, and passing a Python int for a C
   `long` without argtypes, both crashed (segfault); arrays now come from `array.array` buffers with explicit argtypes.
+- **0214 killed before its record.** The judge stage stalled on slow API replies (one 30-minute gap) and the
+  background shell's 40-minute limit killed the harness after the attack had finished, before the record was written.
+  The partial folder (raw.json only, never committed) was moved aside and the run repeated unchanged with
+  `--budget 3600`; deterministic seeds and the judge cache gave the same readings and scores in 438 s, no new calls.
+- **`cp` is `cp -i` in this shell:** a background copy of the new attack.py silently declined to overwrite, and a dry
+  run tested the previous experiment's file. Use `command cp -f`.
 
 ## 2026-10-19
 

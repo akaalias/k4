@@ -1,0 +1,3312 @@
+{
+ "candidates": [
+  {
+   "plaintext": "IIDPVLMAAAAAAAAAAAAAAEASTNORTHEASTAFURGVTAAAAAAAAAAAAAECAITMOFDBERLINCLOCKAAAAAAAAAAAAAETAKTHIOXD",
+   "key": {
+    "pa": "WORLDCKABEFGHIJMNPQSTUVXYZ",
+    "ca": "UNDERGOABCFHIJKLMPQSTVWXYZ",
+    "ka": "WORLDCKABEFGHIJMNPQSTUVXYZ",
+    "m": "beau",
+    "lag": 33,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      29,
+      "R"
+     ],
+     [
+      30,
+      "N"
+     ],
+     [
+      31,
+      "G"
+     ],
+     [
+      32,
+      "K"
+     ],
+     [
+      33,
+      "S"
+     ],
+     [
+      42,
+      "Q"
+     ],
+     [
+      43,
+      "S"
+     ],
+     [
+      44,
+      "S"
+     ],
+     [
+      45,
+      "E"
+     ],
+     [
+      46,
+      "K"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      50,
+      "A"
+     ],
+     [
+      51,
+      "T"
+     ],
+     [
+      52,
+      "J"
+     ],
+     [
+      53,
+      "K"
+     ],
+     [
+      54,
+      "L"
+     ],
+     [
+      67,
+      "V"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      76,
+      "G"
+     ],
+     [
+      77,
+      "D"
+     ],
+     [
+      78,
+      "K"
+     ],
+     [
+      79,
+      "Z"
+     ],
+     [
+      80,
+      "X"
+     ],
+     [
+      81,
+      "T"
+     ],
+     [
+      82,
+      "J"
+     ],
+     [
+      83,
+      "C"
+     ],
+     [
+      84,
+      "D"
+     ],
+     [
+      85,
+      "I"
+     ],
+     [
+      86,
+      "G"
+     ],
+     [
+      87,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 703.8000000000001,
+   "key_description": "plaintext autokey lag 33, WORLDCLOCK/keyword|UNDERGROUND/keyword|plain|beau, chain, cuts [67], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 4, quadgram -6.504"
+  },
+  {
+   "plaintext": "BTUMOPAHOMRAVJABAIAAAEASTNORTHEASTANISHDHADEEXAAADFEGOGAVGWBGCABERLINCLOCKAAARCAMLOIYRJUSVAUIETHE",
+   "key": {
+    "pa": "WALBCDEFGHIJKMNOPQRSTUVXYZ",
+    "ca": "PALIMSETBCDFGHJKNOQRUVWXYZ",
+    "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "m": "varbeau",
+    "lag": 28,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      11,
+      "U"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      35,
+      "O"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      63,
+      "B"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      76,
+      "G"
+     ],
+     [
+      77,
+      "D"
+     ]
+    ]
+   },
+   "key_bits": 447.80000000000007,
+   "key_description": "plaintext autokey lag 28, WALL/keyword|PALIMPSEST/keyword|std|varbeau, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 4, quadgram -6.540"
+  },
+  {
+   "plaintext": "MWVTALAKJOVRJERINTAAAEASTNORTHEASTATFCKHUVHISAAAAAUEAOFWECTHLDABERLINCLOCKAAAKSIUZFINHAGUYAWHEOFA",
+   "key": {
+    "pa": "DIGETALBCFHJKMNOPQRSUVWXYZ",
+    "ca": "WALBCDEFGHIJKMNOPQRSTUVXYZ",
+    "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "m": "varbeau",
+    "lag": 28,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      35,
+      "O"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      63,
+      "B"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      76,
+      "G"
+     ],
+     [
+      91,
+      "A"
+     ]
+    ]
+   },
+   "key_bits": 457.1,
+   "key_description": "plaintext autokey lag 28, DIGETAL/keyword|WALL/keyword|std|varbeau, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 4, quadgram -6.570"
+  },
+  {
+   "plaintext": "STHASNALNGEJFADRAAAAAEASTNORTHEASTEJJABLYDSMRAAAAAFDFIROINMRGOVBERLINCLOCKAAAAAHGRTFEXWNVERZUVEMP",
+   "key": {
+    "pa": "CARNVOBDEFGHIJKLMPQSTUWXYZ",
+    "ca": "SOMEWHRABCDFGIJKLNPQTUVXYZ",
+    "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "m": "vig",
+    "lag": 29,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      11,
+      "U"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      29,
+      "R"
+     ],
+     [
+      46,
+      "K"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      50,
+      "A"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      76,
+      "G"
+     ],
+     [
+      77,
+      "D"
+     ],
+     [
+      78,
+      "K"
+     ],
+     [
+      79,
+      "Z"
+     ]
+    ]
+   },
+   "key_bits": 480.40000000000003,
+   "key_description": "plaintext autokey lag 29, CARNARVON/keyword|SOMEWHERE/keyword|kry|vig, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 3, quadgram -6.655"
+  },
+  {
+   "plaintext": "TAOSOMDDLOUFEILFAAAAAEASTNORTHEASTAQGGIROLCAXAAAAAPFLCADCOLOBENBERLINCLOCKAAAAASMVYONNACZSSAODFIR",
+   "key": {
+    "pa": "WONDERFULABCGHIJKMPQSTVXYZ",
+    "ca": "SOUTHABCDEFGIJKLMNPQRVWXYZ",
+    "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "m": "vig",
+    "lag": 29,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      11,
+      "U"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      29,
+      "R"
+     ],
+     [
+      46,
+      "K"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      50,
+      "A"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      76,
+      "G"
+     ],
+     [
+      77,
+      "D"
+     ],
+     [
+      78,
+      "K"
+     ],
+     [
+      79,
+      "Z"
+     ]
+    ]
+   },
+   "key_bits": 499.00000000000006,
+   "key_description": "plaintext autokey lag 29, WONDERFUL/keyword|SOUTH/keyword|kry|vig, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 3, quadgram -6.662"
+  },
+  {
+   "plaintext": "PNYPMCLAAIDGAKLANUMAAEASTNORTHEASTAAISPRACRATALAEZAHOAYPUAAWCAABERLINCLOCKAIJJJWIOFQMPSJAAUHIKORY",
+   "key": {
+    "pa": "VIRTUALYNSBECDFGHJKMOPQWXZ",
+    "ca": "WEBSTRACDFGHIJKLMNOPQUVXYZ",
+    "ka": "VIRTUALYNSBECDFGHJKMOPQWXZ",
+    "m": "beau",
+    "lag": 27,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      11,
+      "U"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      35,
+      "O"
+     ],
+     [
+      36,
+      "T"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      62,
+      "F"
+     ],
+     [
+      63,
+      "B"
+     ],
+     [
+      89,
+      "H"
+     ],
+     [
+      90,
+      "U"
+     ]
+    ]
+   },
+   "key_bits": 433.80000000000007,
+   "key_description": "plaintext autokey lag 27, VIRTUALLYINVISIBLE/keyword|WEBSTER/keyword|plain|beau, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.665"
+  },
+  {
+   "plaintext": "PSQLWELANGNIETSTAAAAAEASTNORTHEASTOFXINVXKIZRAAAAAAKRTUNMCSSGBZBERLINCLOCKAAAAADBLYGARMYTLEACPUKE",
+   "key": {
+    "pa": "HOWARDCTEBFGIJKLMNPQSUVXYZ",
+    "ca": "LAYERTWOBCDFGHIJKMNPQSUVXZ",
+    "ka": "HOWARDCTEBFGIJKLMNPQSUVXYZ",
+    "m": "beau",
+    "lag": 29,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      11,
+      "U"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      29,
+      "R"
+     ],
+     [
+      46,
+      "K"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      50,
+      "A"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      76,
+      "G"
+     ],
+     [
+      77,
+      "D"
+     ],
+     [
+      78,
+      "K"
+     ],
+     [
+      79,
+      "Z"
+     ]
+    ]
+   },
+   "key_bits": 480.40000000000003,
+   "key_description": "plaintext autokey lag 29, HOWARDCARTER/keyword|LAYERTWO/keyword|plain|beau, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.675"
+  },
+  {
+   "plaintext": "ROANOURMRJAOJOABAAAAAEASTNORTHEASTEAJAMNYMTNZAAAAAWDESQARTAMWCABERLINCLOCKAAAAATVJOFFIRIYBRIZHCFR",
+   "key": {
+    "pa": "BERLINCOKADFGHJMPQSTUVWXYZ",
+    "ca": "ALEXNDRPTZBCFGHIJKMOQSUVWY",
+    "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "m": "beau",
+    "lag": 29,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      11,
+      "U"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      29,
+      "R"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      50,
+      "A"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      76,
+      "G"
+     ],
+     [
+      77,
+      "D"
+     ],
+     [
+      79,
+      "Z"
+     ]
+    ]
+   },
+   "key_bits": 471.1,
+   "key_description": "plaintext autokey lag 29, BERLINCLOCK/keyword|ALEXANDERPLATZ/keyword|std|beau, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.680"
+  },
+  {
+   "plaintext": "TPCMYCIAKPKAWHEEAAAAAEASTNORTHEASTDHRUPWBYBEKAAAAAPBDYGASOFTEANBERLINCLOCKAAAAAVVOCZYBETUVLGRODPR",
+   "key": {
+    "pa": "IQLUSONABCDEFGHJKMPRTVWXYZ",
+    "ca": "WELTZIUHRABCDFGJKMNOPQSVXY",
+    "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "m": "vig",
+    "lag": 29,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      11,
+      "U"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      18,
+      "F"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      29,
+      "R"
+     ],
+     [
+      46,
+      "K"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      50,
+      "A"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      77,
+      "D"
+     ],
+     [
+      78,
+      "K"
+     ],
+     [
+      79,
+      "Z"
+     ]
+    ]
+   },
+   "key_bits": 480.40000000000003,
+   "key_description": "plaintext autokey lag 29, IQLUSION/keyword|WELTZEITUHR/keyword|kry|vig, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.710"
+  },
+  {
+   "plaintext": "MBSRFWAOWHNWIMIDERAAAEASTNORTHEASTAVIJWTYVALYAAAAOBCCLTGKBCWOGABERLINCLOCKAAASUNDLMLARPUNGABYACCV",
+   "key": {
+    "pa": "ILUSONABCDEFGHJKMPQRTVWXYZ",
+    "ca": "ABSCIDEFGHJKLMNOPQRTUVWXYZ",
+    "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "m": "beau",
+    "lag": 28,
+    "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "skip_at": null,
+    "skip_lag": null,
+    "slips": [
+     [
+      1,
+      "O"
+     ],
+     [
+      2,
+      "B"
+     ],
+     [
+      3,
+      "K"
+     ],
+     [
+      4,
+      "R"
+     ],
+     [
+      5,
+      "U"
+     ],
+     [
+      6,
+      "O"
+     ],
+     [
+      7,
+      "X"
+     ],
+     [
+      8,
+      "O"
+     ],
+     [
+      9,
+      "G"
+     ],
+     [
+      10,
+      "H"
+     ],
+     [
+      11,
+      "U"
+     ],
+     [
+      12,
+      "L"
+     ],
+     [
+      13,
+      "B"
+     ],
+     [
+      14,
+      "S"
+     ],
+     [
+      15,
+      "O"
+     ],
+     [
+      16,
+      "L"
+     ],
+     [
+      17,
+      "I"
+     ],
+     [
+      19,
+      "B"
+     ],
+     [
+      20,
+      "B"
+     ],
+     [
+      21,
+      "W"
+     ],
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      25,
+      "V"
+     ],
+     [
+      26,
+      "Q"
+     ],
+     [
+      27,
+      "Q"
+     ],
+     [
+      28,
+      "P"
+     ],
+     [
+      35,
+      "O"
+     ],
+     [
+      47,
+      "Z"
+     ],
+     [
+      48,
+      "Z"
+     ],
+     [
+      49,
+      "W"
+     ],
+     [
+      63,
+      "B"
+     ],
+     [
+      75,
+      "W"
+     ],
+     [
+      76,
+      "G"
+     ],
+     [
+      77,
+      "D"
+     ],
+     [
+      91,
+      "A"
+     ]
+    ]
+   },
+   "key_bits": 466.4,
+   "key_description": "plaintext autokey lag 28, ILLUSION/keyword|ABSCISSA/keyword|std|beau, bulk, cuts [], lost step None; unknown letters filled with A, every disagreeing carved letter named as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.716"
+  }
+ ],
+ "bounds": {
+  "family": "plaintext autokey on 0025's tables, lags 1-52, up to 2 chain breaks (slips) or one lost step (A1.4)",
+  "table_setups": 35343,
+  "lags": "1-52 (53-96 blocked by 0136's bound)",
+  "breaks": "0-2 anywhere in a chain between neighbouring known letters (known places included)",
+  "lost_step": "lag L before place j, L+1 or L-1 from j on, j = 2-74; known letters in one tree must agree",
+  "bulk": "lags 26-29 with no break: every table's reading scored by quadgrams; the top 20 and all at or above -5.0 per text to the judge",
+  "by_lag": {
+   "1": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "2": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "3": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "4": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "5": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "6": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "7": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "8": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "9": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "10": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "11": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "12": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "13": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "14": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "15": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "16": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "17": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     1
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "18": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     1
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "19": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "20": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "21": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "22": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "23": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "24": {
+    "k4": [
+     0,
+     0,
+     8
+    ],
+    "copies_max": [
+     0,
+     2,
+     27
+    ],
+    "copies_min": [
+     0,
+     0,
+     5
+    ],
+    "skip_k4": [
+     88,
+     1
+    ],
+    "skip_copies_max": [
+     121,
+     0
+    ]
+   },
+   "25": {
+    "k4": [
+     3,
+     120,
+     3732
+    ],
+    "copies_max": [
+     4,
+     215,
+     4330
+    ],
+    "copies_min": [
+     0,
+     101,
+     3201
+    ],
+    "skip_k4": [
+     45458,
+     7
+    ],
+    "skip_copies_max": [
+     52429,
+     33
+    ]
+   },
+   "26": {
+    "k4": [
+     1512,
+     33831,
+     0
+    ],
+    "copies_max": [
+     1734,
+     34306,
+     0
+    ],
+    "copies_min": [
+     1037,
+     33609,
+     0
+    ],
+    "skip_k4": [
+     35885,
+     1923
+    ],
+    "skip_copies_max": [
+     41822,
+     6413
+    ]
+   },
+   "27": {
+    "k4": [
+     35343,
+     0,
+     0
+    ],
+    "copies_max": [
+     35343,
+     0,
+     0
+    ],
+    "copies_min": [
+     35343,
+     0,
+     0
+    ],
+    "skip_k4": [
+     35113,
+     71064
+    ],
+    "skip_copies_max": [
+     39293,
+     81498
+    ]
+   },
+   "28": {
+    "k4": [
+     35343,
+     0,
+     0
+    ],
+    "copies_max": [
+     35343,
+     0,
+     0
+    ],
+    "copies_min": [
+     35343,
+     0,
+     0
+    ],
+    "skip_k4": [
+     33522,
+     0
+    ],
+    "skip_copies_max": [
+     39794,
+     0
+    ]
+   },
+   "29": {
+    "k4": [
+     35343,
+     0,
+     0
+    ],
+    "copies_max": [
+     35343,
+     0,
+     0
+    ],
+    "copies_min": [
+     35343,
+     0,
+     0
+    ],
+    "skip_k4": [
+     73128,
+     0
+    ],
+    "skip_copies_max": [
+     114130,
+     0
+    ]
+   },
+   "30": {
+    "k4": [
+     1234,
+     34109,
+     0
+    ],
+    "copies_max": [
+     1963,
+     34459,
+     0
+    ],
+    "copies_min": [
+     884,
+     33380,
+     0
+    ],
+    "skip_k4": [
+     2502,
+     12340
+    ],
+    "skip_copies_max": [
+     8400,
+     19630
+    ]
+   },
+   "31": {
+    "k4": [
+     40,
+     2601,
+     32702
+    ],
+    "copies_max": [
+     156,
+     3539,
+     33454
+    ],
+    "copies_min": [
+     13,
+     1862,
+     31718
+    ],
+    "skip_k4": [
+     65,
+     79533
+    ],
+    "skip_copies_max": [
+     675,
+     126601
+    ]
+   },
+   "32": {
+    "k4": [
+     1,
+     93,
+     3509
+    ],
+    "copies_max": [
+     12,
+     359,
+     5563
+    ],
+    "copies_min": [
+     0,
+     61,
+     2623
+    ],
+    "skip_k4": [
+     0,
+     2639
+    ],
+    "skip_copies_max": [
+     113,
+     9999
+    ]
+   },
+   "33": {
+    "k4": [
+     0,
+     4,
+     247
+    ],
+    "copies_max": [
+     2,
+     61,
+     804
+    ],
+    "copies_min": [
+     0,
+     1,
+     186
+    ],
+    "skip_k4": [
+     0,
+     67
+    ],
+    "skip_copies_max": [
+     3,
+     758
+    ]
+   },
+   "34": {
+    "k4": [
+     0,
+     0,
+     9
+    ],
+    "copies_max": [
+     0,
+     3,
+     74
+    ],
+    "copies_min": [
+     0,
+     0,
+     11
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     126
+    ]
+   },
+   "35": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     1,
+     4
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "36": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     2
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "37": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "38": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "39": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "40": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "41": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "42": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "43": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "44": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "45": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     1
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "46": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     1
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "47": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     4
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     0,
+     0
+    ]
+   },
+   "48": {
+    "k4": [
+     0,
+     0,
+     7
+    ],
+    "copies_max": [
+     0,
+     2,
+     65
+    ],
+    "copies_min": [
+     0,
+     0,
+     9
+    ],
+    "skip_k4": [
+     0,
+     0
+    ],
+    "skip_copies_max": [
+     189,
+     0
+    ]
+   },
+   "49": {
+    "k4": [
+     0,
+     2,
+     262
+    ],
+    "copies_max": [
+     3,
+     36,
+     392
+    ],
+    "copies_min": [
+     0,
+     0,
+     179
+    ],
+    "skip_k4": [
+     315,
+     0
+    ],
+    "skip_copies_max": [
+     635,
+     2
+    ]
+   },
+   "50": {
+    "k4": [
+     5,
+     115,
+     3436
+    ],
+    "copies_max": [
+     10,
+     260,
+     4649
+    ],
+    "copies_min": [
+     0,
+     41,
+     2678
+    ],
+    "skip_k4": [
+     2530,
+     2
+    ],
+    "skip_copies_max": [
+     6067,
+     229
+    ]
+   },
+   "51": {
+    "k4": [
+     40,
+     3166,
+     32137
+    ],
+    "copies_max": [
+     96,
+     3581,
+     33715
+    ],
+    "copies_min": [
+     5,
+     1623,
+     31686
+    ],
+    "skip_k4": [
+     91372,
+     430
+    ],
+    "skip_copies_max": [
+     112809,
+     877
+    ]
+   },
+   "52": {
+    "k4": [
+     1443,
+     33900,
+     0
+    ],
+    "copies_max": [
+     1780,
+     34316,
+     0
+    ],
+    "copies_min": [
+     1027,
+     33563,
+     0
+    ],
+    "skip_k4": [
+     12028,
+     5072
+    ],
+    "skip_copies_max": [
+     17591,
+     8591
+    ]
+   }
+  },
+  "k4_above_every_copy_lags": [],
+  "copies_above_rest": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   2,
+   0,
+   0,
+   5,
+   0,
+   1,
+   3,
+   1,
+   0,
+   2,
+   0,
+   1,
+   1,
+   0,
+   1
+  ],
+  "shortest_lag_with_breaks": {
+   "K4": 24,
+   "copy1": 24,
+   "copy2": 24,
+   "copy3": 17,
+   "copy4": 24,
+   "copy5": 24,
+   "copy6": 17,
+   "copy7": 18,
+   "copy8": 17,
+   "copy9": 24,
+   "copy10": 24,
+   "copy11": 18,
+   "copy12": 24,
+   "copy13": 18,
+   "copy14": 24,
+   "copy15": 24,
+   "copy16": 24,
+   "copy17": 17,
+   "copy18": 24,
+   "copy19": 24,
+   "copy20": 24
+  },
+  "shortest_lag_lost_step": {
+   "K4": 24,
+   "copy1": 24,
+   "copy2": 24,
+   "copy3": 24,
+   "copy4": 24,
+   "copy5": 24,
+   "copy6": 24,
+   "copy7": 24,
+   "copy8": 24,
+   "copy9": 24,
+   "copy10": 24,
+   "copy11": 25,
+   "copy12": 24,
+   "copy13": 25,
+   "copy14": 24,
+   "copy15": 24,
+   "copy16": 24,
+   "copy17": 24,
+   "copy18": 24,
+   "copy19": 24,
+   "copy20": 25
+  },
+  "readings": {
+   "k4": 1169,
+   "copies": [
+    686,
+    715,
+    370,
+    728,
+    1015,
+    316,
+    787,
+    960,
+    1300,
+    560,
+    1279,
+    590,
+    1821,
+    332,
+    1143,
+    1389,
+    2371,
+    574,
+    1013,
+    1111
+   ]
+  },
+  "capped": [],
+  "judge": {
+   "sent": 194,
+   "none": 0,
+   "cut": -5.0,
+   "rule": "each text's top 5 readings by quadgrams and every reading at or above -5.0; one call"
+  },
+  "k4_judge_best": 4,
+  "copies_judge_best": [
+   8,
+   4,
+   8,
+   3,
+   6,
+   6,
+   8,
+   4,
+   6,
+   5,
+   12,
+   10,
+   5,
+   12,
+   4,
+   4,
+   6,
+   5,
+   12,
+   12
+  ],
+  "k4_readings_above_every_copy": 0,
+  "k4_top": [
+   {
+    "reading": "IIDPVLMA?????????????EASTNORTHEASTAFURGVT?????????????ECAITMOFDBERLINCLOCK?????????????ETAKTHIOXD",
+    "judge": 4,
+    "quad": -6.504,
+    "kind": "chain",
+    "setup": "WORLDCLOCK/keyword|UNDERGROUND/keyword|plain|beau",
+    "L": 33
+   },
+   {
+    "reading": "BTUMOP?HOMRAVJABAI???EASTNORTHEAST?NISHDHADEEX???DFEGOGAVGWBGC?BERLINCLOCK???RCAMLOIYRJUSV?UIETHE",
+    "judge": 4,
+    "quad": -6.54,
+    "kind": "bulk",
+    "setup": "WALL/keyword|PALIMPSEST/keyword|std|varbeau",
+    "L": 28
+   },
+   {
+    "reading": "MWVTAL?KJOVRJERINT???EASTNORTHEAST?TFCKHUVHISA???AUEAOFWECTHLD?BERLINCLOCK???KSIUZFINHAGUY?WHEOFA",
+    "judge": 4,
+    "quad": -6.57,
+    "kind": "bulk",
+    "setup": "DIGETAL/keyword|WALL/keyword|std|varbeau",
+    "L": 28
+   },
+   {
+    "reading": "STHASNALNGEJFADR?????EASTNORTHEASTEJJABLYDSMR?????FDFIROINMRGOVBERLINCLOCK?????HGRTFEXWNVERZUVEMP",
+    "judge": 3,
+    "quad": -6.655,
+    "kind": "bulk",
+    "setup": "CARNARVON/keyword|SOMEWHERE/keyword|kry|vig",
+    "L": 29
+   },
+   {
+    "reading": "TAOSOMDDLOUFEILF?????EASTNORTHEASTAQGGIROLCAX?????PFLCADCOLOBENBERLINCLOCK?????SMVYONNACZSSAODFIR",
+    "judge": 3,
+    "quad": -6.662,
+    "kind": "bulk",
+    "setup": "WONDERFUL/keyword|SOUTH/keyword|kry|vig",
+    "L": 29
+   }
+  ],
+  "plants": [
+   {
+    "seed": 2131,
+    "L": 12,
+    "k": 2,
+    "skip": null,
+    "slips": [
+     53,
+     70
+    ],
+    "planted_setting_found": true,
+    "wrong_letters_in_reading": 0,
+    "quad": -3.96,
+    "judge": 96,
+    "own_copies_judge_best": [
+     7,
+     4,
+     8,
+     4,
+     18
+    ],
+    "found": true
+   },
+   {
+    "seed": 2132,
+    "L": 20,
+    "k": 0,
+    "skip": [
+     49,
+     21
+    ],
+    "slips": [],
+    "planted_setting_found": true,
+    "wrong_letters_in_reading": 0,
+    "quad": -4.488,
+    "judge": 88,
+    "own_copies_judge_best": [
+     5,
+     5,
+     12,
+     6,
+     4
+    ],
+    "found": true
+   },
+   {
+    "seed": 2133,
+    "L": 8,
+    "k": 1,
+    "skip": null,
+    "slips": [
+     77
+    ],
+    "planted_setting_found": true,
+    "wrong_letters_in_reading": 3,
+    "quad": -5.034,
+    "judge": 85,
+    "own_copies_judge_best": [
+     5,
+     4,
+     8,
+     12,
+     5
+    ],
+    "found": true
+   }
+  ],
+  "slip_cost_bits": {
+   "1": 9.3,
+   "2": 17.5,
+   "lost step": 7.2
+  },
+  "controls": "20 shuffled copies (seeds 2140-2159); each plant against 5 shuffles of its own ciphertext",
+  "exhaustive": "yes"
+ },
+ "notes": "35,343 tables x lags 1-52; K4 shortest lag with <= 2 breaks 24, lost step 24; copies [17, 17, 17, 17, 18, 18, 18, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24]; judge sent 194, K4 best 4, copies best 12; plants found [True, True, True]",
+ "controls": [
+  -6.2050744865237455,
+  -6.378572714287263,
+  -5.783592520508795,
+  -6.4678790006366835,
+  -6.415105541066665,
+  -6.443639677838322,
+  -6.440274184629285,
+  -6.157189975190121,
+  -6.52206546841874,
+  -6.414335916929739,
+  -6.295528051741234,
+  -6.320733651504068,
+  -6.264409599980863,
+  -6.416223330387927,
+  -6.571985910150991,
+  -6.309725526686033,
+  -6.236749292594522,
+  -6.411153156819072,
+  -5.797568378608516,
+  -5.770675716848988
+ ],
+ "error": null,
+ "worked_example": "plaintext autokey, lag 12, KRYPTOS table, Vigenere: chains of places 12 apart, walked from one known letter to the next\n\n  22 E -> 34: the chain gives U, known T   break needed\n  23 A -> 71: the chain gives P, known L   break needed\n  24 S -> 72: the chain gives X, known O   break needed\n  25 T -> 73: the chain gives H, known C   break needed\n  26 N -> 74: the chain gives D, known K   break needed\n  28 R -> 64: the chain gives B, known B\n  29 T -> 65: the chain gives H, known E   break needed\n  30 H -> 66: the chain gives M, known R   break needed\n\nbreaks needed at lag 12: 11 (2 allowed)",
+ "seconds": 218.95276379585266,
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 194,
+  "cached": 0,
+  "input_tokens": 113808,
+  "output_tokens": 85329,
+  "errors": 0
+ }
+}

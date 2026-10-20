@@ -1,0 +1,12 @@
+plaintext autokey, lag 12, KRYPTOS table, Vigenere: chains of places 12 apart, walked from one known letter to the next
+
+  22 E -> 34: the chain gives U, known T   break needed
+  23 A -> 71: the chain gives P, known L   break needed
+  24 S -> 72: the chain gives X, known O   break needed
+  25 T -> 73: the chain gives H, known C   break needed
+  26 N -> 74: the chain gives D, known K   break needed
+  28 R -> 64: the chain gives B, known B
+  29 T -> 65: the chain gives H, known E   break needed
+  30 H -> 66: the chain gives M, known R   break needed
+
+breaks needed at lag 12: 11 (2 allowed)

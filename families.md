@@ -106,6 +106,12 @@ Update the leaf when an experiment works on it.
     - **F6.17** Trapezoid transposition, then the table {closed · exact · 0164}
     - **F6.18** Letters reshuffled inside each row at widths other than 7, then the table {closed · exact · 0165}
     - **F6.19** The French diagonal method, then the table (key-named diagonals) {closed · exact · 0165}
+    - **F6.20** A 10x10 turning grille (Fleissner), then or before the table {closed · exact · 0199, 0201}
+      - Copied out by rows, every card, free keys 1-6 and 200,563 key words: no card fits {closed · exact · 0199}
+      - Copied out by columns, every card, free keys 1-4 and the key words: no card fits {closed · exact · 0200, 0201}
+      - Free keys of 7-26 letters (rows) and 5-26 (columns): 10^8-10^9 nodes per setting {blocked · exact · 0199, 0201}
+      - Fixed stencils (the Abwehr's 13x19 card): no rule for the holes {blocked}
+    - **F6.21** A deliberate slip in a keyword columnar (one column out of place, or two swapped), then the table {open}
   - F12 Stein's way: look, quantify, then crib
     - **F12.1** The 97 letters and the "?" checked against images of the copper {blocked}
     - **F12.2** K4's statistics by segment and width against shuffles; a planted period-7 key is not seen (C-F12.2) {blocked · sampled · 0168}

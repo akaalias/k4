@@ -107,3 +107,5 @@ uses a word a stranger would not know.
 **bits** (also: a bit, open bits, how big a secret is, the size of a secret): A way of counting how many possibilities a secret has: each bit doubles the count. A letter chosen freely is about 4.7 bits (26 choices); a scrambled alphabet is about 88 bits. A test can only single out the true secret if the evidence it reads, also counted in bits, is larger than the secret still left open.
 
 **a planted message** (also: planted text, hidden English, plants): A real English passage, with the 24 known letters written in at their places, enciphered by the method under test with a random key. Running a search on planted messages measures whether the search could find a true answer of that kind at all, before its verdict on the carved text is trusted.
+
+**a turning grille** (also: Fleissner grille, a grille, a card with holes): A square card with holes cut so that, turned a quarter at a time through four positions, it uncovers every square of a grid exactly once. The message is written through the holes, the card turned, and so on; the filled grid is then copied out row by row, which scrambles the order of the letters.

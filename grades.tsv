@@ -197,3 +197,4 @@ id	outcome	strength	cribs_forced	space	note
 0196	ruled-out	exact	no	F5.1 Gromark with multiplicative feedback, bases 2-16 (lags to 6) and 26 (to 5), free alphabet, 299M primers, 10 copies	no setting fits K4 or any copy; plants found
 0197	ruled-out	exact	no	F9.1 one-to-one substitution then each move built since 0106 (0159, 0164-0166, 0184, 0190): 10.1M routes, 10 copies	no route survives on K4 or any copy; plant found
 0198	ruled-out	exact	no	F9.1 one-to-one substitution then 0158, 0162, 0167 libraries via their own builders (243.5M routes), 10 copies	no route survives on K4 or any copy
+0199	ruled-out	exact	no	F6.20 turning grille 10x10 (4^25 cards), copied out by rows, cw/ccw, empty cells at end/start, then or before a periodic key: free keys 1-6 (8 classes) and 200,563 key words of 7-28 letters (24 conventions); 10 copies	no card fits K4 or any copy; 4 plants found on their own landing maps; free keys 7-26 blocked by cost

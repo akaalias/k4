@@ -5,6 +5,43 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-20
+
+Stage 2's control table had no open rows, so the loop went back to the family items reopened on 2026-10-19 and 2026-10-20
+(#78, #73): F6.20, F6.21, F2.4, F11.5, F5.3, in rank order.
+
+### F6 (ticket #13, reopened)
+
+| # | Item | One line |
+|---|---|---|
+| 199 | F6.20 | **Turning grille, copied out by rows, exact.** Every 10x10 card (4^25), turned cw or ccw, three empty squares at the end or start, then or before the table: free keys 1-6 and 200,563 key words of 7-28 letters on 24 conventions. No card fits K4 or any of 10 copies; 4 of 4 plants found on their own landing maps. Free keys of 7-26 blocked by cost (10^8-10^9 nodes per setting at 7). F7: grille plus key makes both fingerprints in 0 of 2,000. Prediction held. |
+| 200 | F6.20 | **Copied out by columns: error.** The key-word arm outran its 60 minutes; no record. |
+| 201 | F6.20 | **Copied out by columns, rerun, exact.** A faster search (guesses about the empty squares must nest), free keys 1-4, key words as 0199: nothing fits K4 or the copies; free-key plants found, the English key-word plants cut by the clock after every copy had finished (self-check 16 of 16 planted words). F6.20 closed for key words and short free keys. Prediction held. |
+| 202 | F6.21 | **A slip in the keyword columnar, part 1, exact.** One column read out of place or two swapped, around every dictionary keyword columnar (67.8M routes), the same word twice (135.5M) and the interrupted key (51.9M), then or before the table: at the copies' rate; plants found. The other three families skipped by the time check. Prediction held for the three run. |
+| 203 | F6.21 | **Part 2.** Trapezoid and poem code at the copies' rate; **row reshuffle: K4 above every copy in 6 cells, no copy in more than 1.** Queue stopped; replicated in 0204. Plants 3 of 3. |
+| 204 | F6.21 | **Replication against 40 fresh copies.** The row-reshuffle family unchanged: K4 above every copy in 1 cell (A21), while 10 of the 40 copies lead the rest in 1 or 2; 0203's six cells at ranks 0-8 among the 40. Chance; F6.21 closed. A21 is carried by rows of 9 (67 of K4's 88 settings, copies' median 0): noted, not chased. Prediction held. **Every F6 item is closed or blocked again.** |
+
+**How the grille search works.** A turning grille is not a sweep: 10^15 cards per procedure. The search walks the top half of
+the grid; each cell and its 180-degree partner share one prefix count, so both of their message places are known at once and
+about two thirds of the early cells land a known letter. With a key word every landing is a check and the tree stays tiny;
+with a free key a slot is only checked once it repeats, which is why free keys stop at 6 letters (rows) and 4 (columns).
+Counts are distinct landing maps: cards that differ only where unknown letters go are one reading of the known letters.
+
+**Mistakes.**
+- **Counting cards instead of landing maps.** The first design counted cards; a planted card then showed 1,000 fitting
+  "cards", all equivalent on the known letters. Fixed before 0199 ran.
+- **0200's budget.** I scaled one measured setting to the whole column-mode key-word arm, assumed full speed on 8 workers
+  (they ran at about 72%), and left the arm without a clock check: the run was killed at 3,660 s with no record, and its 8
+  pool workers kept running until I stopped them by hand.
+- **A check that lied.** The single-card check in the self-check capped its walk at 1,000 nodes, which column mode's guesses
+  exceed, so it reported false misfits. The self-check caught it, as designed. 0199 (rows) does no guessing and is unaffected.
+- **A dead end.** One walk per word over all 48 key-word settings at once (a bitmask) was slower, 13 s per setting against
+  5.8: with 48 settings alive, some setting survives nearly every landing, so the tree barely prunes.
+- **Plants queued last.** 0201's clock guard cut its English key-word plants because I queued them after the copies.
+  Queue plants first.
+- **Figures before the next run.** I started 0200 while 0199's crib map was still missing (one failing test).
+- **0202's six families did not fit in 30 minutes**; its time check skipped three, run as 0203.
+
 ## 2026-10-19
 
 Stage 2, step 1: a positive control for every closed item (A3, issue #73). The queue is empty: every row of the table

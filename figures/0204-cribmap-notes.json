@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "0203 found K4 ahead of all ten scrambled copies in six cells of one family, where no copy led in more than one: outside the copies' range, which stops the queue until it is replicated."
+ },
+ {
+  "anchor": "the check",
+  "text": "The same search, unchanged, against forty fresh scrambled copies, with K4's rank in every cell and the counts split by row width."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 leads every copy in one cell only (A21, carried by rows of 9), as ten of the forty copies do in one or two. Chance; F6.21 closed. The plant is found."
+ }
+]

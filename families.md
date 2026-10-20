@@ -111,7 +111,11 @@ Update the leaf when an experiment works on it.
       - Copied out by columns, every card, free keys 1-4 and the key words: no card fits {closed · exact · 0200, 0201}
       - Free keys of 7-26 letters (rows) and 5-26 (columns): 10^8-10^9 nodes per setting {blocked · exact · 0199, 0201}
       - Fixed stencils (the Abwehr's 13x19 card): no rule for the holes {blocked}
-    - **F6.21** A deliberate slip in a keyword columnar (one column out of place, or two swapped), then the table {open}
+    - **F6.21** A deliberate slip in a keyword columnar (one column out of place, or two swapped), then the table {closed · exact · 0202, 0203, 0204}
+      - Around the dictionary keyword columnar, the same word twice, the interrupted key: at the copies' rate {closed · exact · 0202}
+      - Around the trapezoid and the poem code: at the copies' rate {closed · exact · 0203}
+      - Around the row reshuffle: 6 cells above every copy (0203), 1 against 40 fresh copies (0204): chance {closed · exact · 0203, 0204}
+      - A21 of the row reshuffle, carried by rows of 9 {noted · exact · 0204}
   - F12 Stein's way: look, quantify, then crib
     - **F12.1** The 97 letters and the "?" checked against images of the copper {blocked}
     - **F12.2** K4's statistics by segment and width against shuffles; a planted period-7 key is not seen (C-F12.2) {blocked · sampled · 0168}
@@ -301,7 +305,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P16 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P17 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -321,3 +325,4 @@ Each pivot has a details page in `pivots/` (P1-P16 so far), rendered on the Pivo
 | 2026-10-17 | F11 agency hand systems (0189-0192) | F8 Hill | F11.1-F11.4 closed exactly: the M-94 in any disc order, the poem code on the sculpture's text, the CIA's key box on K1-K3 and Carter, Friedman's alphabet box on every dictionary word; none fits K4 or its copies. Ranking unchanged (P14). |
 | 2026-10-17 | F8 Hill (0193-0194) | F5 Gromark | F8.1 closed for 2x2: no invertible matrix fits K4 under any numbering of the letters; 3x3 has too few equations (blocked). Ranking unchanged (P15). |
 | 2026-10-17 | F5 Gromark (0195-0196) | F9 substitution, then a move | F5.1 and F5.2 closed exactly: Gromark on a free alphabet in every base 2-16 and 26 with three-term, longer two-term and multiplicative rules; nothing fits K4. Ranking unchanged (P16). |
+| 2026-10-20 | F6 a move, then the table, reopened for #78 (0199-0204) | F2 masked plaintext (F2.4) | F6.20 closed for key words and short free keys (turning grille, every card, by rows and by columns); F6.21 closed (one slip around every keyword columnar; the row-reshuffle excess of 0203 dissolved against 40 fresh copies). Ranking unchanged; F12 and F3 have no open item, so F2 is next (P17). |

@@ -1,0 +1,4107 @@
+{
+ "id": 207,
+ "tag": "0207-periodic-key-with-slips-at-known-places",
+ "started": "2026-10-20T12:14:27+00:00",
+ "seconds": 41.9,
+ "status": "ran",
+ "phases": {
+  "design": 260.6,
+  "implement": 83.2,
+  "test": 45.3,
+  "run": 41.9,
+  "record": 64.4
+ },
+ "ended_epoch": 1792498573.5146198,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 50,
+ "n_passed": 0,
+ "best_crib_hits": 24,
+ "best_crib_words": {
+  "EAST": [
+   4,
+   4
+  ],
+  "NORTHEAST": [
+   9,
+   9
+  ],
+  "BERLIN": [
+   6,
+   6
+  ],
+  "CLOCK": [
+   5,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 5.301631602761004,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -7.1293351132488105,
+  -7.57859996434921,
+  -7.335347374552417,
+  -7.936185529511743,
+  -7.4843128862838775,
+  -7.42118637402136,
+  -7.643195806376092,
+  -7.568175640251775,
+  -7.702194724497986,
+  -7.839364475477592,
+  -6.982100107367641,
+  -7.51108963045872,
+  -7.732325131026749,
+  -7.930897558792815,
+  -7.219197972677711,
+  -7.617524012171188,
+  -7.618864546591867,
+  -7.673935294625104,
+  -7.820545838695747,
+  -7.331853482865238
+ ],
+ "champion_before": null,
+ "bounds": {
+  "family": "periodic key on the sculpture's tables, k known letters slipped (A1.2 tables)",
+  "classes": 8,
+  "key_lengths": "1-26",
+  "slips": "0-3 at the 24 known places (exact enumeration)",
+  "not_rerun": "key lengths 27-29 and 53+: no check on these tables, so a slip cannot show (F1/2)",
+  "slip_cost_bits": {
+   "1": 9.3,
+   "2": 17.5,
+   "3": 25.1
+  },
+  "by_length": {
+   "1": {
+    "checks": 23,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2": {
+    "checks": 22,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3": {
+    "checks": 21,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4": {
+    "checks": 20,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5": {
+    "checks": 19,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "6": {
+    "checks": 18,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "7": {
+    "checks": 17,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "8": {
+    "checks": 16,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "9": {
+    "checks": 15,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "10": {
+    "checks": 14,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "11": {
+    "checks": 13,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "12": {
+    "checks": 12,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "13": {
+    "checks": 11,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "14": {
+    "checks": 11,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "15": {
+    "checks": 9,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "16": {
+    "checks": 8,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "17": {
+    "checks": 7,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "18": {
+    "checks": 7,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "19": {
+    "checks": 9,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "20": {
+    "checks": 11,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "21": {
+    "checks": 11,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "22": {
+    "checks": 9,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "23": {
+    "checks": 7,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "24": {
+    "checks": 5,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     16
+    ],
+    "k4_rank_by_total": 20
+   },
+   "25": {
+    "checks": 3,
+    "k4": [
+     0,
+     0,
+     0,
+     64
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     48
+    ],
+    "copies_max": [
+     0,
+     0,
+     8,
+     64
+    ],
+    "k4_rank_by_total": 6
+   },
+   "26": {
+    "checks": 1,
+    "k4": [
+     0,
+     16,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     12,
+     0,
+     0
+    ],
+    "copies_max": [
+     2,
+     16,
+     0,
+     0
+    ],
+    "k4_rank_by_total": 11
+   }
+  },
+  "shortest_length_by_slips": {
+   "K4": [
+    null,
+    26,
+    null,
+    25
+   ],
+   "copies": [
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     24
+    ],
+    [
+     26,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     24
+    ],
+    [
+     26,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     null,
+     24
+    ]
+   ]
+  },
+  "judge": {
+   "sent": 62,
+   "none": 0,
+   "cut": -5.0,
+   "rule": "each text's best reading by quadgrams plus every reading at or above the cut; one call"
+  },
+  "k4_settings": 80,
+  "k4_best_quad": -7.534,
+  "k4_judge_best": 3,
+  "copies_judge_best": [
+   8,
+   2,
+   3,
+   2,
+   3,
+   2,
+   2,
+   3,
+   3,
+   2,
+   4,
+   2,
+   3,
+   2,
+   6,
+   2,
+   3,
+   4,
+   1,
+   6
+  ],
+  "k4_readings_above_every_copy": 0,
+  "copies_best_quad": [
+   -7.177,
+   -7.629,
+   -7.141,
+   -7.874,
+   -7.342,
+   -7.507,
+   -7.566,
+   -7.331,
+   -7.75,
+   -7.814,
+   -7.12,
+   -7.582,
+   -7.603,
+   -7.517,
+   -7.433,
+   -7.476,
+   -7.524,
+   -7.428,
+   -7.565,
+   -7.181
+  ],
+  "plants": [
+   {
+    "name": "plant1",
+    "seed": 2071,
+    "key_length": 13,
+    "class": "kry/kry/vig",
+    "slips": [
+     71,
+     74
+    ],
+    "k": 2,
+    "settings_by_slips": {
+     "13": [
+      0,
+      0,
+      4,
+      0
+     ],
+     "25": [
+      0,
+      0,
+      4,
+      56
+     ],
+     "26": [
+      0,
+      16,
+      0,
+      0
+     ]
+    },
+    "own_copies_settings_at_length": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    "planted_setting_found": true,
+    "planted_slips_named": [
+     71,
+     74
+    ],
+    "planted_quad": -4.742,
+    "planted_judge": 88,
+    "planted_judge_reading": "NGS SCEPTRE OF GOLD AND LA ????????????? GLASS B TWO SISTRA OF WOOD GILT AND B ??????????? RONE AND FOOTSTOOL BENEATH",
+    "own_copies_judge_best": [
+     3,
+     2,
+     3,
+     3,
+     2,
+     3,
+     4,
+     3,
+     2,
+     2
+    ],
+    "found": true
+   },
+   {
+    "name": "plant2",
+    "seed": 2072,
+    "key_length": 20,
+    "class": "std/kry/beau",
+    "slips": [
+     28,
+     64,
+     70
+    ],
+    "k": 3,
+    "settings_by_slips": {
+     "20": [
+      0,
+      0,
+      0,
+      8
+     ],
+     "25": [
+      0,
+      0,
+      0,
+      64
+     ],
+     "26": [
+      0,
+      16,
+      0,
+      0
+     ]
+    },
+    "own_copies_settings_at_length": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    "planted_setting_found": true,
+    "planted_slips_named": [
+     28,
+     64,
+     70
+    ],
+    "planted_quad": -4.652,
+    "planted_judge": 85,
+    "planted_judge_reading": "?T OUT AGAIN AND T ??????? ############# ??????? BBLES WE MUST CO ??????? RS ########### ??????? CTUAL WORK IN TH ???",
+    "own_copies_judge_best": [
+     2,
+     2,
+     3,
+     3,
+     3,
+     3,
+     2,
+     3,
+     2,
+     2
+    ],
+    "found": true
+   },
+   {
+    "name": "plant3",
+    "seed": 2073,
+    "key_length": 25,
+    "class": "kry/std/vig",
+    "slips": [
+     22,
+     73,
+     74
+    ],
+    "k": 3,
+    "settings_by_slips": {
+     "25": [
+      0,
+      0,
+      4,
+      56
+     ],
+     "26": [
+      0,
+      16,
+      0,
+      0
+     ]
+    },
+    "own_copies_settings_at_length": [
+     [
+      0,
+      0,
+      4,
+      56
+     ],
+     [
+      0,
+      0,
+      4,
+      56
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      2,
+      4,
+      48
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      8,
+      48
+     ]
+    ],
+    "planted_setting_found": true,
+    "planted_slips_named": [
+     22,
+     73,
+     74
+    ],
+    "planted_quad": -4.023,
+    "planted_judge": 82,
+    "planted_judge_reading": "OULDERS AN? ? ? ? PERFORAT? ? ? ? ESE CORRESPONDING EXACT ? ? ? ? N THE SCALES ? ? ? ? ED THAT THE",
+    "own_copies_judge_best": [
+     5,
+     2,
+     3,
+     3,
+     3,
+     2,
+     2,
+     3,
+     6,
+     2
+    ],
+    "found": true
+   }
+  ],
+  "decidable": "the remaining checks (24 minus the slots the known letters touch, minus k) decide the key at lengths 1-23 (7-23 checks, 4-20 after 3 slips); at 24-26 only 5, 3, 1 checks exist, so 3 slips leave 2, 0, 0 and the readings alone decide",
+  "controls": "20 shuffled copies (seeds 2070-2089); each plant against 10 shuffles of its own ciphertext",
+  "exhaustive": "yes"
+ },
+ "notes": "K4 settings with <= 3 slips: 80 (shortest length by slips [None, 26, None, 25]); judge sent 62, K4 best 3, copies best 8; plants found [True, True, True]",
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 62,
+  "cached": 0,
+  "input_tokens": 36561,
+  "output_tokens": 27816,
+  "errors": 0
+ },
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKORLAC",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std vig, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.534; judge 3",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.345,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.344969293984981,
+   "fitness": -8.926409897351594,
+   "loss": 5.301631602761004,
+   "readable_words": [
+    [
+     13,
+     16,
+     "GUN"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     53,
+     56,
+     "NOB"
+    ],
+    [
+     59,
+     61,
+     "IN"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ]
+   ]
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIMWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKORNAC",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std vig, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.544; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.353,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.353152039636584,
+   "fitness": -8.934592643003196,
+   "loss": 5.3098143484126075,
+   "readable_words": [
+    [
+     3,
+     5,
+     "TO"
+    ],
+    [
+     6,
+     8,
+     "NO"
+    ],
+    [
+     13,
+     16,
+     "GUN"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     53,
+     55,
+     "NO"
+    ],
+    [
+     55,
+     57,
+     "BY"
+    ],
+    [
+     59,
+     61,
+     "IN"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ]
+   ]
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRSWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKQRTP",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, std/kry beau, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.585; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.68,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.680351719353939,
+   "fitness": -9.323175789837942,
+   "loss": 5.736250633303076
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKORLZC",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std vig, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.600; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.396,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.396026883523949,
+   "fitness": -8.97746748689056,
+   "loss": 5.352689192299972,
+   "readable_words": [
+    [
+     13,
+     16,
+     "GUN"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ]
+   ]
+  },
+  {
+   "plaintext": "PGWMZEEKSAQSHTDABYNRJEASTNORTHEASTHNVHPTOFMIVDNOMIYFZWATGWDQGORBERLINCLOCKMUFGHCSDAKVMDQAIGSKSYWC",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "LONZVDMOAAAFNOEEADIAGUELRX",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "key length 26, kry/std vig, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.601; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.692,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.691512728266699,
+   "fitness": -9.149802513344781,
+   "loss": 5.4490812141429315
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRSNIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKQRKP",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, std/kry beau, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.608; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.698,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.698397572130422,
+   "fitness": -9.341221642614425,
+   "loss": 5.754296486079559
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRGWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKQFTP",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, std/kry beau, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.647; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.728,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.72815315519662,
+   "fitness": -9.370977225680623,
+   "loss": 5.784052069145757
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIMXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKORNZC",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std vig, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.661; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.443,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.4430591131147565,
+   "fitness": -9.024499716481369,
+   "loss": 5.39972142189078,
+   "readable_words": [
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ]
+   ]
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKBSWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDZ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKARTP",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, std/kry beau, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.662; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.74,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.739994292993437,
+   "fitness": -9.38281836347744,
+   "loss": 5.795893206942575
+  },
+  {
+   "plaintext": "PGWMZEEKSAQSHTDABYNRJEASTNORTHEASTHNVHPTOFMIVDNIMIYFZWATGWDQGORBERLINCLOCKMUFGHCSDAKVMDQAIGSKSYWC",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "LONZVDMOAAAFNOEEADIAGKELRX",
+    "slips": [
+     [
+      22,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "key length 26, kry/std vig, slips at [22], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.663; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.743,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.742867672954995,
+   "fitness": -9.201157458033078,
+   "loss": 5.500436158831229
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRGNIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKQFKP",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, std/kry beau, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.666; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.743,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.742952605747515,
+   "fitness": -9.385776676231519,
+   "loss": 5.798851519696653
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKOBLAC",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std vig, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.688; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.464,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.463680243777149,
+   "fitness": -9.04512084714376,
+   "loss": 5.420342552553172,
+   "readable_words": [
+    [
+     13,
+     16,
+     "GUN"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ]
+   ]
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYOXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKOBLZC",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std vig, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.691; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.466,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.466459452324638,
+   "fitness": -9.04790005569125,
+   "loss": 5.423121761100661
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKBSNIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDZ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKARKP",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, std/kry beau, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.699; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.768,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.768496292044891,
+   "fitness": -9.411320362528894,
+   "loss": 5.824395205994028
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKBGWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDZ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKAFTP",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, std/kry beau, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.782; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.833,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.832750412314403,
+   "fitness": -9.475574482798406,
+   "loss": 5.88864932626354
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKBGNIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDZ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKAFKP",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, std/kry beau, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.791; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.84,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.8396717302231735,
+   "fitness": -9.482495800707177,
+   "loss": 5.895570644172311
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYMXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKOBNZC",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std vig, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.806; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.555,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.5552838736554655,
+   "fitness": -9.136724477022078,
+   "loss": 5.511946182431489
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYMWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKOBNAC",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std vig, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.831; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.574,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.574387333202872,
+   "fitness": -9.155827936569484,
+   "loss": 5.531049641978895
+  },
+  {
+   "plaintext": "JSPVNFXPGHUSLTKYTPKRPEASTNORTHEASTOTWNPTEOUWPNOZGFFIEIXOGHWGNFBBERLINCLOCKGMMZDVAEALIEKUHDJNSEXXN",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "PCXFCTACAAALRCFPLJIHUAKVSB",
+    "slips": [
+     [
+      22,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "key length 26, kry/kry vig, slips at [22], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.909; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.919,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.919327513788454,
+   "fitness": -9.377617298866536,
+   "loss": 5.676895999664686
+  },
+  {
+   "plaintext": "JSPVNFXPGHUSLTKYTPKRPEASTNORTHEASTOTWNPTEOUWPNOXGFFIEIXOGHWGNFBBERLINCLOCKGMMZDVAEALIEKUHDJNSEXXN",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "PCXFCTACAAALRCFPLJIHUBKVSB",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "key length 26, kry/kry vig, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.950; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.954,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.953582863071882,
+   "fitness": -9.411872648149965,
+   "loss": 5.711151348948115
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJMGPNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCJ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQRMAA",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry beau, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.959; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.782,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.782091878427683,
+   "fitness": -9.424915948911686,
+   "loss": 5.83799079237682
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJMGDNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCJ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQRMHA",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry beau, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.972; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.792,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.792056883098482,
+   "fitness": -9.434880953582486,
+   "loss": 5.84795579704762
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJMZDNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCJ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQRYHA",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry beau, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.985; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.803,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.802676728014545,
+   "fitness": -9.445500798498546,
+   "loss": 5.858575641963682
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJXGDNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCV",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQXMHA",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry beau, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.081; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.876,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.876250378371135,
+   "fitness": -9.519074448855138,
+   "loss": 5.932149292320272
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJXGPNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCV",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQXMAA",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry beau, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.090; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.883,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.883155232870869,
+   "fitness": -9.525979303354871,
+   "loss": 5.9390541468200055
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJMZPNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCJ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQRYAA",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry beau, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.098; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.889,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.889279156094415,
+   "fitness": -9.532103226578418,
+   "loss": 5.945178070043552
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJXZDNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCV",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQXYHA",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry beau, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.106; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.896,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.895967681824157,
+   "fitness": -9.53879175230816,
+   "loss": 5.951866595773295
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMMOWIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZQ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIHUAS",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry vig, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.108; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.732,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.732083693019153,
+   "fitness": -9.374907763503156,
+   "loss": 5.78798260696829
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMMIWIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZQ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIHKAS",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry vig, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.133; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.752,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.751579313576472,
+   "fitness": -9.394403384060475,
+   "loss": 5.807478227525609
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJXZPNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCV",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQXYAA",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry beau, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.155; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.934,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.933784776361587,
+   "fitness": -9.57660884684559,
+   "loss": 5.989683690310724
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMMOYIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZQ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIHUVS",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry vig, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.166; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.777,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.777223101898806,
+   "fitness": -9.420047172382809,
+   "loss": 5.833122015847943
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMMIYIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZQ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIHKVS",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry vig, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.193; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.798,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.798165759123735,
+   "fitness": -9.440989829607737,
+   "loss": 5.854064673072873
+  },
+  {
+   "plaintext": "DMUZWVAUNMFDYOCVCICSIEASTNORTHEASTVWDQMORSLOZAGRUMLRIDZQCTBKHOSBERLINCLOCKUGFHJWQKIQJMAFMZZZWMINJ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "IUUARAYZAAAUGUHMRUKAFQRTPH",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "key length 26, std/kry beau, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.208; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.174,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.174441729425686,
+   "fitness": -9.632731514503769,
+   "loss": 5.932010215301919
+  },
+  {
+   "plaintext": "DMUZWVAUNMFDYOCVCICSIEASTNORTHEASTVWDQMORSLOZAGLUMLRIDZQCTBKHOSBERLINCLOCKUGFHJWQKIQJMAFMZZZWMINJ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "IUUARAYZAAAUGUHMRUKAFKRTPH",
+    "slips": [
+     [
+      22,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "key length 26, std/kry beau, slips at [22], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.251; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.21,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.209703531352249,
+   "fitness": -9.667993316430332,
+   "loss": 5.967272017228482
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMXIWIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIBKAS",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry vig, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.259; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.849,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.848625699593052,
+   "fitness": -9.491449770077054,
+   "loss": 5.90452461354219
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMXOWIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIBUAS",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry vig, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.272; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.859,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.858752896770556,
+   "fitness": -9.50157696725456,
+   "loss": 5.914651810719693
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMXIYIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIBKVS",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry vig, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.305; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.884,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.8841299574797645,
+   "fitness": -9.526954027963768,
+   "loss": 5.940028871428902
+  },
+  {
+   "plaintext": "LJVTUNQYMAQERGRWTRRXHEASTNORTHEASTHNVNEOUFHMRYONECVXVXUBOHBBGORBERLINCLOCKOCMVFXXSJIBSDQYAFJKDZMW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "XLONZVDMOAAAAFNOEEADIUGLR",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/std vig, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.316; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.303,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.303449087818194,
+   "fitness": -9.946273158302198,
+   "loss": 6.359348001767332
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMXOYIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIBUVS",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/kry vig, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.379; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.942,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -7.9416819434969135,
+   "fitness": -9.584506013980917,
+   "loss": 5.997580857446051
+  },
+  {
+   "plaintext": "ZWSPMFKSNOVZKUUVYWUKWEASTNORTHEASTFEXMWUFYPQXCYRGYBJUFNYGHJCTMIBERLINCLOCKGEHTTMWEAKBAAVODJJAESRN",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "vig",
+    "key": "GMIMJAONAAASYMLWRQOYBIRJDH",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "key length 26, std/kry vig, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.397; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.228,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.227581347489762,
+   "fitness": -9.685871132567845,
+   "loss": 5.985149833365996
+  },
+  {
+   "plaintext": "QVOSPYHOGFODOXBYBIBCIEASTNORTHEASTUVPWNXWZLUOLGRRKVWZGDWCKIUAHMBERLINCLOCKRQJGKSRLIWWWKOFSSCYNHQI",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "ZEFHYHMKAAABNENTXBQRMAYHAN",
+    "slips": [
+     [
+      22,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "key length 26, kry/kry beau, slips at [22], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.397; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.283,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.282817027124475,
+   "fitness": -9.741106812202558,
+   "loss": 6.040385513000708
+  },
+  {
+   "plaintext": "LJVTUNQYMAQERGRWTRRXHEASTNORTHEASTHNVNEOUFHMRYOUFCVXVXUBOHBBGORBERLINCLOCKOCMVFXXSJIBSDQYAFJKDZMW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "XLONZVDMOAAAAFNOEEADIUEKR",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/std vig, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.409; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.375,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.374870178647255,
+   "fitness": -10.017694249131257,
+   "loss": 6.4307690925963925
+  },
+  {
+   "plaintext": "LJVTUNQYMAQERGRWTRRXHEASTNORTHEASTHNVNEOUFHMRYOUECVXVXUBOHBBGORBERLINCLOCKOCMVFXXSJIBSDQYAFJKDZMW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "XLONZVDMOAAAAFNOEEADIUELR",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/std vig, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.411; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.376,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.376442667899614,
+   "fitness": -10.019266738383617,
+   "loss": 6.4323415818487515
+  },
+  {
+   "plaintext": "LJVTUNQYMAQERGRWTRRXHEASTNORTHEASTHNVNEOUFHMRYONFCVXVXUBOHBBGORBERLINCLOCKOCMVFXXSJIBSDQYAFJKDZMW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "XLONZVDMOAAAAFNOEEADIUGKR",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 159.35393483694827,
+   "key_description": "key length 25, kry/std vig, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.419; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.383,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.382683476660896,
+   "fitness": -10.025507547144898,
+   "loss": 6.4385823906100335
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAUSNOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKC",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKTRJO",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std beau, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.437; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.545,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.544507628180654,
+   "fitness": -10.125948231547266,
+   "loss": 6.501169936956677
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAKSNOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKS",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKJRJO",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std beau, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.477; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.576,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.575658607012226,
+   "fitness": -10.157099210378838,
+   "loss": 6.532320915788249
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAUMNOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKC",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKTLJO",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std beau, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.485; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.581,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.581472210224025,
+   "fitness": -10.162912813590637,
+   "loss": 6.538134519000048
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAUSYOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKC",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKTRUO",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std beau, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.491; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.586,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.586234811358235,
+   "fitness": -10.167675414724847,
+   "loss": 6.542897120134258
+  },
+  {
+   "plaintext": "MDMLSEXPGHUZHUEACVNKJEASTNORTHEASTOTWHWUZFMIQTMYLBRGINWXGQWJNFBBERLINCLOCKLHBHXZVDATIHKUHIGWUZWQD",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "CYYGCKAZAAAMUYKLGKORNBLZCD",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 135.49991284218714,
+   "key_description": "key length 26, std/std vig, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.512; judge None",
+   "key_bits_declared": 131.48496250072117,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.234,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.234411570475595,
+   "fitness": -9.631317888436287,
+   "loss": 5.892743451178715
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAKSYOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKS",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKJRUO",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 153.39973852656138,
+   "key_description": "key length 25, std/std beau, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.514; judge None",
+   "key_bits_declared": 142.5829935746943,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -8.605,
+    "controls": 20,
+    "best_control": -6.982
+   },
+   "english_free": -8.604517447382111,
+   "fitness": -10.185958050748724,
+   "loss": 6.561179756158134
+  }
+ ]
+}

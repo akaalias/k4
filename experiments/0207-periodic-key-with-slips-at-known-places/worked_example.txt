@@ -1,0 +1,17 @@
+key length 13, KRYPTOS table on both sides, added form: key letter forced at each known place, by slot
+
+  slot  0: 27:O->Q key P, 66:R->P key C   slips needed 1
+  slot  1: 28:R->P key C, 67:L->V key F   slips needed 1
+  slot  2: 29:T->R key X, 68:I->T key P   slips needed 1
+  slot  3: 30:H->N key F, 69:N->T key L   slips needed 1
+  slot  4: 31:E->G key C, 70:C->M key J   slips needed 1
+  slot  5: 32:A->K key T, 71:L->Z key I   slips needed 1
+  slot  6: 33:S->S key A, 72:O->F key H   slips needed 1
+  slot  7: 34:T->S key C, 73:C->P key U   slips needed 1
+  slot  8: 22:E->F key B, 74:K->K key A   slips needed 1
+  slot  9: 23:A->L key K   slips needed 0
+  slot 10: 24:S->R key V   slips needed 0
+  slot 11: 25:T->V key S, 64:B->N key L   slips needed 1
+  slot 12: 26:N->Q key B, 65:E->Y key R   slips needed 1
+
+slips needed at length 13: 11 (more than 3: dead)

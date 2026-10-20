@@ -1,0 +1,2409 @@
+{
+ "candidates": [
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKORLAC",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std vig, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.534; judge 3"
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIMWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKORNAC",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std vig, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.544; judge None"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRSWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKQRTP",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/kry beau, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.585; judge None"
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKORLZC",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std vig, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.600; judge None"
+  },
+  {
+   "plaintext": "PGWMZEEKSAQSHTDABYNRJEASTNORTHEASTHNVHPTOFMIVDNOMIYFZWATGWDQGORBERLINCLOCKMUFGHCSDAKVMDQAIGSKSYWC",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "LONZVDMOAAAFNOEEADIAGUELRX",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, kry/std vig, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.601; judge None"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRSNIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKQRKP",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/kry beau, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.608; judge None"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRGWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKQFTP",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/kry beau, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.647; judge None"
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIMXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKORNZC",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std vig, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.661; judge None"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKBSWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDZ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKARTP",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/kry beau, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.662; judge None"
+  },
+  {
+   "plaintext": "PGWMZEEKSAQSHTDABYNRJEASTNORTHEASTHNVHPTOFMIVDNIMIYFZWATGWDQGORBERLINCLOCKMUFGHCSDAKVMDQAIGSKSYWC",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "LONZVDMOAAAFNOEEADIAGKELRX",
+    "slips": [
+     [
+      22,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, kry/std vig, slips at [22], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.663; judge None"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRGNIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKQFKP",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/kry beau, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.666; judge None"
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKOBLAC",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std vig, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.688; judge None"
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYOXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKOBLZC",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std vig, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.691; judge None"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKBSNIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDZ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKARKP",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/kry beau, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.699; judge None"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKBGWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDZ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKAFTP",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/kry beau, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.782; judge None"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKBGNIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDZ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "HIUUARAYZAAAAUGUHMRUKAFKP",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/kry beau, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.791; judge None"
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYMXYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKOBNZC",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std vig, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.806; judge None"
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWYMWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMQ",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "DCYYGCKAZAAAAMUYKLGKOBNAC",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std vig, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.831; judge None"
+  },
+  {
+   "plaintext": "JSPVNFXPGHUSLTKYTPKRPEASTNORTHEASTOTWNPTEOUWPNOZGFFIEIXOGHWGNFBBERLINCLOCKGMMZDVAEALIEKUHDJNSEXXN",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "PCXFCTACAAALRCFPLJIHUAKVSB",
+    "slips": [
+     [
+      22,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, kry/kry vig, slips at [22], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.909; judge None"
+  },
+  {
+   "plaintext": "JSPVNFXPGHUSLTKYTPKRPEASTNORTHEASTOTWNPTEOUWPNOXGFFIEIXOGHWGNFBBERLINCLOCKGMMZDVAEALIEKUHDJNSEXXN",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "PCXFCTACAAALRCFPLJIHUBKVSB",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, kry/kry vig, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.950; judge None"
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJMGPNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCJ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQRMAA",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry beau, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.959; judge None"
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJMGDNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCJ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQRMHA",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry beau, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.972; judge None"
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJMZDNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCJ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQRYHA",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry beau, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -7.985; judge None"
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJXGDNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCV",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQXMHA",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry beau, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.081; judge None"
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJXGPNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCV",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQXMAA",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry beau, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.090; judge None"
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJMZPNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCJ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQRYAA",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry beau, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.098; judge None"
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJXZDNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCV",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQXYHA",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry beau, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.106; judge None"
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMMOWIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZQ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIHUAS",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry vig, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.108; judge None"
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMMIWIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZQ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIHKAS",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry vig, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.133; judge None"
+  },
+  {
+   "plaintext": "BLTTFNCAWFOCMUBGXAINNEASTNORTHEASTUVPVAAHNGLJJXZPNCCTHFHMOGEAHMBERLINCLOCKPKITSCQLPKEGKOGMWMBWMCV",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "NZEFHYHMKAAAABNENTXBQXYAA",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry beau, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.155; judge None"
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMMOYIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZQ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIHUVS",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry vig, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.166; judge None"
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMMIYIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZQ",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIHKVS",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry vig, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.193; judge None"
+  },
+  {
+   "plaintext": "DMUZWVAUNMFDYOCVCICSIEASTNORTHEASTVWDQMORSLOZAGRUMLRIDZQCTBKHOSBERLINCLOCKUGFHJWQKIQJMAFMZZZWMINJ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "IUUARAYZAAAUGUHMRUKAFQRTPH",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, std/kry beau, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.208; judge None"
+  },
+  {
+   "plaintext": "DMUZWVAUNMFDYOCVCICSIEASTNORTHEASTVWDQMORSLOZAGLUMLRIDZQCTBKHOSBERLINCLOCKUGFHJWQKIQJMAFMZZZWMINJ",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "beau",
+    "key": "IUUARAYZAAAUGUHMRUKAFKRTPH",
+    "slips": [
+     [
+      22,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, std/kry beau, slips at [22], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.251; judge None"
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMXIWIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIBKAS",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry vig, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.259; judge None"
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMXOWIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIBUAS",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry vig, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.272; judge None"
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMXIYIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIBKVS",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry vig, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.305; judge None"
+  },
+  {
+   "plaintext": "LJVTUNQYMAQERGRWTRRXHEASTNORTHEASTHNVNEOUFHMRYONECVXVXUBOHBBGORBERLINCLOCKOCMVFXXSJIBSDQYAFJKDZMW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "XLONZVDMOAAAAFNOEEADIUGLR",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/std vig, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.316; judge None"
+  },
+  {
+   "plaintext": "TNXTJPOOEHULBUHIDWWZIEASTNORTHEASTOTWTCIHILUYMXOYIPRXQJBVAUINFBBERLINCLOCKOFUXYNYWCBIGKUPTOJVIKZK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "vig",
+    "key": "BPCXFCTACAAAALRCFPLJIBUVS",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/kry vig, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.379; judge None"
+  },
+  {
+   "plaintext": "ZWSPMFKSNOVZKUUVYWUKWEASTNORTHEASTFEXMWUFYPQXCYRGYBJUFNYGHJCTMIBERLINCLOCKGEHTTMWEAKBAAVODJJAESRN",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "m": "vig",
+    "key": "GMIMJAONAAASYMLWRQOYBIRJDH",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, std/kry vig, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.397; judge None"
+  },
+  {
+   "plaintext": "QVOSPYHOGFODOXBYBIBCIEASTNORTHEASTUVPWNXWZLUOLGRRKVWZGDWCKIUAHMBERLINCLOCKRQJGKSRLIWWWKOFSSCYNHQI",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "m": "beau",
+    "key": "ZEFHYHMKAAABNENTXBQRMAYHAN",
+    "slips": [
+     [
+      22,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, kry/kry beau, slips at [22], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.397; judge None"
+  },
+  {
+   "plaintext": "LJVTUNQYMAQERGRWTRRXHEASTNORTHEASTHNVNEOUFHMRYOUFCVXVXUBOHBBGORBERLINCLOCKOCMVFXXSJIBSDQYAFJKDZMW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "XLONZVDMOAAAAFNOEEADIUEKR",
+    "slips": [
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/std vig, slips at [24, 72, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.409; judge None"
+  },
+  {
+   "plaintext": "LJVTUNQYMAQERGRWTRRXHEASTNORTHEASTHNVNEOUFHMRYOUECVXVXUBOHBBGORBERLINCLOCKOCMVFXXSJIBSDQYAFJKDZMW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "XLONZVDMOAAAAFNOEEADIUELR",
+    "slips": [
+     [
+      72,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/std vig, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.411; judge None"
+  },
+  {
+   "plaintext": "LJVTUNQYMAQERGRWTRRXHEASTNORTHEASTHNVNEOUFHMRYONFCVXVXUBOHBBGORBERLINCLOCKOCMVFXXSJIBSDQYAFJKDZMW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "m": "vig",
+    "key": "XLONZVDMOAAAAFNOEEADIUGKR",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, kry/std vig, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.419; judge None"
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAUSNOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKC",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKTRJO",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std beau, slips at [22, 23, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.437; judge None"
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAKSNOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKS",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKJRJO",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      72,
+      "F"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std beau, slips at [23, 72, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.477; judge None"
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAUMNOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKC",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKTLJO",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      73,
+      "P"
+     ],
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std beau, slips at [22, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.485; judge None"
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAUSYOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKC",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKTRUO",
+    "slips": [
+     [
+      22,
+      "F"
+     ],
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std beau, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.491; judge None"
+  },
+  {
+   "plaintext": "MDMLSEXPGHUZHUEACVNKJEASTNORTHEASTOTWHWUZFMIQTMYLBRGINWXGQWJNFBBERLINCLOCKLHBHXZVDATIHKUHIGWUZWQD",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "vig",
+    "key": "CYYGCKAZAAAMUYKLGKORNBLZCD",
+    "slips": [
+     [
+      74,
+      "K"
+     ]
+    ]
+   },
+   "key_bits": 131.48496250072117,
+   "key_description": "key length 26, std/std vig, slips at [74], 3 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.512; judge None"
+  },
+  {
+   "plaintext": "PDWTAWNWFTGPZWOVYWFNOEASTNORTHEASTMHEHYKXQJOKAKSYOKVWZAHCKPSNVZBERLINCLOCKSXBWLXRBIISUQGHIGMXWMKS",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "m": "beau",
+    "key": "DEGKUKKKLAAAAOCGGBGOKJRUO",
+    "slips": [
+     [
+      23,
+      "L"
+     ],
+     [
+      24,
+      "R"
+     ],
+     [
+      72,
+      "F"
+     ]
+    ]
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "key length 25, std/std beau, slips at [23, 24, 72], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "quadgram -8.514; judge None"
+  }
+ ],
+ "bounds": {
+  "family": "periodic key on the sculpture's tables, k known letters slipped (A1.2 tables)",
+  "classes": 8,
+  "key_lengths": "1-26",
+  "slips": "0-3 at the 24 known places (exact enumeration)",
+  "not_rerun": "key lengths 27-29 and 53+: no check on these tables, so a slip cannot show (F1/2)",
+  "slip_cost_bits": {
+   "1": 9.3,
+   "2": 17.5,
+   "3": 25.1
+  },
+  "by_length": {
+   "1": {
+    "checks": 23,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "2": {
+    "checks": 22,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "3": {
+    "checks": 21,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "4": {
+    "checks": 20,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "5": {
+    "checks": 19,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "6": {
+    "checks": 18,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "7": {
+    "checks": 17,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "8": {
+    "checks": 16,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "9": {
+    "checks": 15,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "10": {
+    "checks": 14,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "11": {
+    "checks": 13,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "12": {
+    "checks": 12,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "13": {
+    "checks": 11,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "14": {
+    "checks": 11,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "15": {
+    "checks": 9,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "16": {
+    "checks": 8,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "17": {
+    "checks": 7,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "18": {
+    "checks": 7,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "19": {
+    "checks": 9,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "20": {
+    "checks": 11,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "21": {
+    "checks": 11,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "22": {
+    "checks": 9,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "23": {
+    "checks": 7,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "24": {
+    "checks": 5,
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     16
+    ],
+    "k4_rank_by_total": 20
+   },
+   "25": {
+    "checks": 3,
+    "k4": [
+     0,
+     0,
+     0,
+     64
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     48
+    ],
+    "copies_max": [
+     0,
+     0,
+     8,
+     64
+    ],
+    "k4_rank_by_total": 6
+   },
+   "26": {
+    "checks": 1,
+    "k4": [
+     0,
+     16,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     12,
+     0,
+     0
+    ],
+    "copies_max": [
+     2,
+     16,
+     0,
+     0
+    ],
+    "k4_rank_by_total": 11
+   }
+  },
+  "shortest_length_by_slips": {
+   "K4": [
+    null,
+    26,
+    null,
+    25
+   ],
+   "copies": [
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     24
+    ],
+    [
+     26,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     null,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     25,
+     24
+    ],
+    [
+     26,
+     26,
+     25,
+     25
+    ],
+    [
+     null,
+     26,
+     25,
+     25
+    ],
+    [
+     26,
+     26,
+     null,
+     24
+    ]
+   ]
+  },
+  "judge": {
+   "sent": 62,
+   "none": 0,
+   "cut": -5.0,
+   "rule": "each text's best reading by quadgrams plus every reading at or above the cut; one call"
+  },
+  "k4_settings": 80,
+  "k4_best_quad": -7.534,
+  "k4_judge_best": 3,
+  "copies_judge_best": [
+   8,
+   2,
+   3,
+   2,
+   3,
+   2,
+   2,
+   3,
+   3,
+   2,
+   4,
+   2,
+   3,
+   2,
+   6,
+   2,
+   3,
+   4,
+   1,
+   6
+  ],
+  "k4_readings_above_every_copy": 0,
+  "copies_best_quad": [
+   -7.177,
+   -7.629,
+   -7.141,
+   -7.874,
+   -7.342,
+   -7.507,
+   -7.566,
+   -7.331,
+   -7.75,
+   -7.814,
+   -7.12,
+   -7.582,
+   -7.603,
+   -7.517,
+   -7.433,
+   -7.476,
+   -7.524,
+   -7.428,
+   -7.565,
+   -7.181
+  ],
+  "plants": [
+   {
+    "name": "plant1",
+    "seed": 2071,
+    "key_length": 13,
+    "class": "kry/kry/vig",
+    "slips": [
+     71,
+     74
+    ],
+    "k": 2,
+    "settings_by_slips": {
+     "13": [
+      0,
+      0,
+      4,
+      0
+     ],
+     "25": [
+      0,
+      0,
+      4,
+      56
+     ],
+     "26": [
+      0,
+      16,
+      0,
+      0
+     ]
+    },
+    "own_copies_settings_at_length": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    "planted_setting_found": true,
+    "planted_slips_named": [
+     71,
+     74
+    ],
+    "planted_quad": -4.742,
+    "planted_judge": 88,
+    "planted_judge_reading": "NGS SCEPTRE OF GOLD AND LA ????????????? GLASS B TWO SISTRA OF WOOD GILT AND B ??????????? RONE AND FOOTSTOOL BENEATH",
+    "own_copies_judge_best": [
+     3,
+     2,
+     3,
+     3,
+     2,
+     3,
+     4,
+     3,
+     2,
+     2
+    ],
+    "found": true
+   },
+   {
+    "name": "plant2",
+    "seed": 2072,
+    "key_length": 20,
+    "class": "std/kry/beau",
+    "slips": [
+     28,
+     64,
+     70
+    ],
+    "k": 3,
+    "settings_by_slips": {
+     "20": [
+      0,
+      0,
+      0,
+      8
+     ],
+     "25": [
+      0,
+      0,
+      0,
+      64
+     ],
+     "26": [
+      0,
+      16,
+      0,
+      0
+     ]
+    },
+    "own_copies_settings_at_length": [
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0
+     ]
+    ],
+    "planted_setting_found": true,
+    "planted_slips_named": [
+     28,
+     64,
+     70
+    ],
+    "planted_quad": -4.652,
+    "planted_judge": 85,
+    "planted_judge_reading": "?T OUT AGAIN AND T ??????? ############# ??????? BBLES WE MUST CO ??????? RS ########### ??????? CTUAL WORK IN TH ???",
+    "own_copies_judge_best": [
+     2,
+     2,
+     3,
+     3,
+     3,
+     3,
+     2,
+     3,
+     2,
+     2
+    ],
+    "found": true
+   },
+   {
+    "name": "plant3",
+    "seed": 2073,
+    "key_length": 25,
+    "class": "kry/std/vig",
+    "slips": [
+     22,
+     73,
+     74
+    ],
+    "k": 3,
+    "settings_by_slips": {
+     "25": [
+      0,
+      0,
+      4,
+      56
+     ],
+     "26": [
+      0,
+      16,
+      0,
+      0
+     ]
+    },
+    "own_copies_settings_at_length": [
+     [
+      0,
+      0,
+      4,
+      56
+     ],
+     [
+      0,
+      0,
+      4,
+      56
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      2,
+      4,
+      48
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      0,
+      64
+     ],
+     [
+      0,
+      0,
+      8,
+      48
+     ]
+    ],
+    "planted_setting_found": true,
+    "planted_slips_named": [
+     22,
+     73,
+     74
+    ],
+    "planted_quad": -4.023,
+    "planted_judge": 82,
+    "planted_judge_reading": "OULDERS AN? ? ? ? PERFORAT? ? ? ? ESE CORRESPONDING EXACT ? ? ? ? N THE SCALES ? ? ? ? ED THAT THE",
+    "own_copies_judge_best": [
+     5,
+     2,
+     3,
+     3,
+     3,
+     2,
+     2,
+     3,
+     6,
+     2
+    ],
+    "found": true
+   }
+  ],
+  "decidable": "the remaining checks (24 minus the slots the known letters touch, minus k) decide the key at lengths 1-23 (7-23 checks, 4-20 after 3 slips); at 24-26 only 5, 3, 1 checks exist, so 3 slips leave 2, 0, 0 and the readings alone decide",
+  "controls": "20 shuffled copies (seeds 2070-2089); each plant against 10 shuffles of its own ciphertext",
+  "exhaustive": "yes"
+ },
+ "notes": "K4 settings with <= 3 slips: 80 (shortest length by slips [None, 26, None, 25]); judge sent 62, K4 best 3, copies best 8; plants found [True, True, True]",
+ "controls": [
+  -7.1293351132488105,
+  -7.57859996434921,
+  -7.335347374552417,
+  -7.936185529511743,
+  -7.4843128862838775,
+  -7.42118637402136,
+  -7.643195806376092,
+  -7.568175640251775,
+  -7.702194724497986,
+  -7.839364475477592,
+  -6.982100107367641,
+  -7.51108963045872,
+  -7.732325131026749,
+  -7.930897558792815,
+  -7.219197972677711,
+  -7.617524012171188,
+  -7.618864546591867,
+  -7.673935294625104,
+  -7.820545838695747,
+  -7.331853482865238
+ ],
+ "error": null,
+ "worked_example": "key length 13, KRYPTOS table on both sides, added form: key letter forced at each known place, by slot\n\n  slot  0: 27:O->Q key P, 66:R->P key C   slips needed 1\n  slot  1: 28:R->P key C, 67:L->V key F   slips needed 1\n  slot  2: 29:T->R key X, 68:I->T key P   slips needed 1\n  slot  3: 30:H->N key F, 69:N->T key L   slips needed 1\n  slot  4: 31:E->G key C, 70:C->M key J   slips needed 1\n  slot  5: 32:A->K key T, 71:L->Z key I   slips needed 1\n  slot  6: 33:S->S key A, 72:O->F key H   slips needed 1\n  slot  7: 34:T->S key C, 73:C->P key U   slips needed 1\n  slot  8: 22:E->F key B, 74:K->K key A   slips needed 1\n  slot  9: 23:A->L key K   slips needed 0\n  slot 10: 24:S->R key V   slips needed 0\n  slot 11: 25:T->V key S, 64:B->N key L   slips needed 1\n  slot 12: 26:N->Q key B, 65:E->Y key R   slips needed 1\n\nslips needed at length 13: 11 (more than 3: dead)",
+ "seconds": 41.65055799484253,
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 62,
+  "cached": 0,
+  "input_tokens": 36561,
+  "output_tokens": 27816,
+  "errors": 0
+ }
+}

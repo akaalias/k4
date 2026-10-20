@@ -1,0 +1,15 @@
+keyword columnar PYRAMID (move first), then the KRYPTOS table, key length 11: key letter forced at each known place
+
+  slot  0: 26N@45:S
+  slot  1: 33S@46:U  66R@79:Y  70C@24:S
+  slot  2: 73C@80:P
+  slot  3: 22E@59:M  25T@4:X  69N@37:E
+  slot  4: 29T@60:L  32A@5:O  65E@93:A
+  slot  5: 72O@94:V
+  slot  6: 24S@73:X  28R@18:L  68I@51:P
+  slot  7: 31E@74:P
+  slot  8: 27O@31:I
+  slot  9: 23A@87:T  34T@32:W  64B@65:U  67L@10:X
+  slot 10: 30H@88:H  71L@66:M  74K@11:V
+
+slips needed: 13 (2 allowed)

@@ -1,0 +1,2658 @@
+{
+ "candidates": [
+  {
+   "plaintext": "UDYWHEKOVYGWAKEKRAXHSEASTNORTHEASTEVHWOODNSOMAMALKEYKWHENPUXQKQBERLINCLOCKZOOZHTIKLPUBVIEQTUATMIQ",
+   "key": {
+    "where": [
+     45,
+     11,
+     75,
+     46,
+     15,
+     79,
+     44,
+     9,
+     73,
+     42,
+     8,
+     72,
+     29,
+     93,
+     59,
+     30,
+     94,
+     63,
+     28,
+     92,
+     57,
+     26,
+     90,
+     56,
+     53,
+     19,
+     83,
+     54,
+     23,
+     87,
+     52,
+     17,
+     81,
+     50,
+     16,
+     80,
+     61,
+     27,
+     91,
+     62,
+     31,
+     95,
+     60,
+     25,
+     89,
+     58,
+     24,
+     88,
+     37,
+     3,
+     67,
+     38,
+     7,
+     71,
+     36,
+     1,
+     65,
+     34,
+     0,
+     64,
+     13,
+     77,
+     43,
+     14,
+     78,
+     47,
+     12,
+     76,
+     41,
+     10,
+     74,
+     40,
+     21,
+     85,
+     51,
+     22,
+     86,
+     55,
+     20,
+     84,
+     49,
+     18,
+     82,
+     48,
+     5,
+     69,
+     35,
+     6,
+     70,
+     39,
+     4,
+     68,
+     33,
+     2,
+     66,
+     32,
+     96
+    ],
+    "cls": [
+     "kry",
+     "kry",
+     "beau"
+    ],
+    "order": 1,
+    "key": "VBPWFJLTWIAAAAANKAZZNEOV",
+    "slips": [
+     [
+      27,
+      "Q"
+     ],
+     [
+      86,
+      "G"
+     ]
+    ]
+   },
+   "key_bits": 151.4,
+   "key_description": "0112 double columnar: TOSHNAIL inverse, order B, key length 24, kry/kry/beau, slips [74, 22]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 6, quadgram -6.614"
+  },
+  {
+   "plaintext": "TXAWUAEZPUGAJTKPUUTREEASTNORTHEASTYIQAMIRSPZVBRFWITHSITSCDQKEZIBERLINCLOCKMWNSLOKIRHLYCOHALSHKENZ",
+   "key": {
+    "where": [
+     0,
+     86,
+     22,
+     1,
+     55,
+     23,
+     54,
+     56,
+     24,
+     2,
+     87,
+     57,
+     3,
+     88,
+     26,
+     4,
+     25,
+     27,
+     5,
+     89,
+     29,
+     28,
+     90,
+     30,
+     7,
+     91,
+     6,
+     8,
+     92,
+     31,
+     10,
+     9,
+     32,
+     11,
+     94,
+     33,
+     93,
+     95,
+     34,
+     12,
+     68,
+     96,
+     13,
+     69,
+     36,
+     14,
+     35,
+     37,
+     15,
+     70,
+     39,
+     38,
+     71,
+     40,
+     17,
+     72,
+     16,
+     18,
+     73,
+     41,
+     58,
+     19,
+     42,
+     59,
+     75,
+     43,
+     74,
+     76,
+     44,
+     60,
+     78,
+     77,
+     61,
+     79,
+     46,
+     62,
+     45,
+     47,
+     63,
+     80,
+     49,
+     48,
+     81,
+     50,
+     65,
+     82,
+     64,
+     66,
+     83,
+     51,
+     20,
+     67,
+     52,
+     21,
+     85,
+     53,
+     84
+    ],
+    "cls": [
+     "std",
+     "std",
+     "beau"
+    ],
+    "order": 1,
+    "key": "HHLXXRYHKEAAAAAJKJHLRPKY",
+    "slips": [
+     [
+      29,
+      "R"
+     ],
+     [
+      91,
+      "A"
+     ]
+    ]
+   },
+   "key_bits": 151.4,
+   "key_description": "0112 double columnar: AVICULTURE, order B, key length 24, std/std/beau, slips [22, 23]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 5, quadgram -6.755"
+  },
+  {
+   "plaintext": "HRGASSTPDNAEAEWADYMOVEASTNORTHEASTBRBDIUAREDHEBAZKGCARSIUTOHEDXBERLINCLOCKAFIFROVRXBPEHAVKSBLZDZR",
+   "key": {
+    "where": [
+     40,
+     25,
+     10,
+     91,
+     78,
+     54,
+     44,
+     29,
+     12,
+     93,
+     77,
+     67,
+     52,
+     37,
+     24,
+     0,
+     81,
+     71,
+     56,
+     39,
+     23,
+     13,
+     94,
+     79,
+     64,
+     51,
+     27,
+     17,
+     2,
+     83,
+     66,
+     50,
+     58,
+     43,
+     28,
+     15,
+     96,
+     72,
+     62,
+     47,
+     30,
+     14,
+     95,
+     4,
+     85,
+     70,
+     55,
+     42,
+     18,
+     8,
+     89,
+     74,
+     57,
+     41,
+     76,
+     61,
+     46,
+     33,
+     9,
+     90,
+     80,
+     65,
+     48,
+     32,
+     22,
+     7,
+     88,
+     73,
+     60,
+     36,
+     26,
+     11,
+     92,
+     75,
+     59,
+     31,
+     16,
+     1,
+     82,
+     69,
+     45,
+     35,
+     20,
+     3,
+     84,
+     68,
+     49,
+     34,
+     19,
+     6,
+     87,
+     63,
+     53,
+     38,
+     21,
+     5,
+     86
+    ],
+    "cls": [
+     "std",
+     "kry",
+     "vig"
+    ],
+    "order": 1,
+    "key": "JDPVHDSEFNAAAAAFNODSGVJG",
+    "slips": [
+     [
+      12,
+      "L"
+     ],
+     [
+      14,
+      "S"
+     ]
+    ]
+   },
+   "key_bits": 151.4,
+   "key_description": "0112 double columnar: IDIOPATHICAL inverse, order B, key length 24, std/kry/vig, slips [22, 72]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 4, quadgram -6.586"
+  },
+  {
+   "plaintext": "YUCZOFOTSFGWPJPERLCISEASTNORTHEASTIGATCREPUAEFQSVCSEAGKNUZLDYKOBERLINCLOCKKOFDIJRSFJSDSCQTXMHWNYA",
+   "key": {
+    "where": [
+     50,
+     89,
+     90,
+     7,
+     65,
+     66,
+     14,
+     35,
+     36,
+     21,
+     73,
+     74,
+     0,
+     81,
+     82,
+     28,
+     57,
+     58,
+     43,
+     51,
+     52,
+     91,
+     8,
+     9,
+     67,
+     15,
+     16,
+     37,
+     22,
+     23,
+     75,
+     1,
+     2,
+     83,
+     29,
+     30,
+     59,
+     44,
+     45,
+     53,
+     92,
+     93,
+     10,
+     68,
+     69,
+     17,
+     38,
+     39,
+     24,
+     76,
+     77,
+     3,
+     84,
+     85,
+     31,
+     60,
+     61,
+     46,
+     54,
+     55,
+     94,
+     11,
+     12,
+     70,
+     18,
+     19,
+     40,
+     25,
+     26,
+     78,
+     4,
+     5,
+     86,
+     32,
+     33,
+     62,
+     47,
+     48,
+     56,
+     95,
+     96,
+     13,
+     71,
+     72,
+     20,
+     41,
+     42,
+     27,
+     79,
+     80,
+     6,
+     87,
+     88,
+     34,
+     63,
+     64,
+     49
+    ],
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "order": 0,
+    "key": "CBUQEAAGGIARDAAYKAXHRANNA",
+    "slips": [
+     [
+      26,
+      "Q"
+     ],
+     [
+      41,
+      "J"
+     ]
+    ]
+   },
+   "key_bits": 156.1,
+   "key_description": "0114 AMSCO: OVERIMITATION first 1, order A, key length 25, kry/kry/vig, slips [68, 67]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 3, quadgram -6.705"
+  },
+  {
+   "plaintext": "DBQIPWPFOROCENOUTDSSSEASTNORTHEASTCXIESKAOPCHMYSKESPCCOEXYDYEOBBERLINCLOCKYDKFFVBSBUESABCYEHTWJDK",
+   "key": {
+    "where": [
+     51,
+     45,
+     39,
+     33,
+     27,
+     21,
+     15,
+     9,
+     3,
+     0,
+     4,
+     10,
+     16,
+     22,
+     28,
+     34,
+     40,
+     46,
+     52,
+     57,
+     62,
+     67,
+     72,
+     77,
+     82,
+     87,
+     91,
+     95,
+     92,
+     88,
+     83,
+     78,
+     73,
+     68,
+     63,
+     58,
+     53,
+     47,
+     41,
+     35,
+     29,
+     23,
+     17,
+     11,
+     5,
+     1,
+     6,
+     12,
+     18,
+     24,
+     30,
+     36,
+     42,
+     48,
+     54,
+     59,
+     64,
+     69,
+     74,
+     79,
+     84,
+     89,
+     93,
+     96,
+     94,
+     90,
+     85,
+     80,
+     75,
+     70,
+     65,
+     60,
+     55,
+     49,
+     43,
+     37,
+     31,
+     25,
+     19,
+     13,
+     7,
+     2,
+     8,
+     14,
+     20,
+     26,
+     32,
+     38,
+     44,
+     50,
+     56,
+     61,
+     66,
+     71,
+     76,
+     81,
+     86
+    ],
+    "cls": [
+     "kry",
+     "kry",
+     "beau"
+    ],
+    "order": 0,
+    "key": "GAGGATANVAEAOCAUAPIUIJKGH",
+    "slips": [
+     [
+      61,
+      "N"
+     ],
+     [
+      91,
+      "A"
+     ]
+    ]
+   },
+   "key_bits": 156.1,
+   "key_description": "0113 rail fence: 19 rails offset 9 order (18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0), order A, key length 25, kry/kry/beau, slips [72, 66]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge 3, quadgram -6.759"
+  },
+  {
+   "plaintext": "UVYWHEKOVYGWAKEKRAXHSEASTNORTHEASTEVHWOODNSOMAMALFEYKWHENPUXQKQBERLINCLOCKZOOZHTIKLPUBVIEQTUATMIQ",
+   "key": {
+    "where": [
+     45,
+     11,
+     75,
+     46,
+     15,
+     79,
+     44,
+     9,
+     73,
+     42,
+     8,
+     72,
+     29,
+     93,
+     59,
+     30,
+     94,
+     63,
+     28,
+     92,
+     57,
+     26,
+     90,
+     56,
+     53,
+     19,
+     83,
+     54,
+     23,
+     87,
+     52,
+     17,
+     81,
+     50,
+     16,
+     80,
+     61,
+     27,
+     91,
+     62,
+     31,
+     95,
+     60,
+     25,
+     89,
+     58,
+     24,
+     88,
+     37,
+     3,
+     67,
+     38,
+     7,
+     71,
+     36,
+     1,
+     65,
+     34,
+     0,
+     64,
+     13,
+     77,
+     43,
+     14,
+     78,
+     47,
+     12,
+     76,
+     41,
+     10,
+     74,
+     40,
+     21,
+     85,
+     51,
+     22,
+     86,
+     55,
+     20,
+     84,
+     49,
+     18,
+     82,
+     48,
+     5,
+     69,
+     35,
+     6,
+     70,
+     39,
+     4,
+     68,
+     33,
+     2,
+     66,
+     32,
+     96
+    ],
+    "cls": [
+     "kry",
+     "kry",
+     "beau"
+    ],
+    "order": 1,
+    "key": "VNPWFJLTWIAAAAANKAZZNEOV",
+    "slips": [
+     [
+      20,
+      "B"
+     ],
+     [
+      27,
+      "Q"
+     ]
+    ]
+   },
+   "key_bits": 151.4,
+   "key_description": "0112 double columnar: TOSHNAIL inverse, order B, key length 24, kry/kry/beau, slips [26, 22]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.761"
+  },
+  {
+   "plaintext": "MXHUCVUNYNFITQURESTSPEASTNORTHEASTIHMBWILNGVBJIRGGFDAUGEFUFMPIDBERLINCLOCKHOAPMALXCTWENXFBIVXZIIA",
+   "key": {
+    "where": [
+     78,
+     48,
+     49,
+     38,
+     9,
+     10,
+     68,
+     20,
+     21,
+     59,
+     0,
+     1,
+     29,
+     88,
+     89,
+     79,
+     80,
+     50,
+     39,
+     40,
+     11,
+     69,
+     70,
+     22,
+     60,
+     61,
+     2,
+     30,
+     31,
+     90,
+     81,
+     51,
+     52,
+     41,
+     12,
+     13,
+     71,
+     23,
+     24,
+     62,
+     3,
+     4,
+     32,
+     91,
+     92,
+     82,
+     83,
+     53,
+     42,
+     43,
+     14,
+     72,
+     73,
+     25,
+     63,
+     64,
+     5,
+     33,
+     34,
+     93,
+     84,
+     54,
+     55,
+     44,
+     15,
+     16,
+     74,
+     26,
+     27,
+     65,
+     6,
+     7,
+     35,
+     94,
+     95,
+     85,
+     86,
+     56,
+     45,
+     46,
+     17,
+     75,
+     76,
+     28,
+     66,
+     67,
+     8,
+     36,
+     37,
+     96,
+     87,
+     57,
+     58,
+     47,
+     18,
+     19,
+     77
+    ],
+    "cls": [
+     "std",
+     "kry",
+     "vig"
+    ],
+    "order": 0,
+    "key": "AAMQIANHAMACAZANYBAAKOZA",
+    "slips": [
+     [
+      8,
+      "O"
+     ],
+     [
+      31,
+      "G"
+     ]
+    ]
+   },
+   "key_bits": 151.4,
+   "key_description": "0114 AMSCO: UNMETHODIZED first 1, order A, key length 24, std/kry/vig, slips [28, 72]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.772"
+  },
+  {
+   "plaintext": "JGBAARMEWAUQKDNKKALLZEASTNORTHEASTZQBWOSCTGARSPDUOPTUASBMCVDOQSBERLINCLOCKPMOMUFGDZKGHWOPRPLBHAWS",
+   "key": {
+    "where": [
+     56,
+     0,
+     65,
+     81,
+     48,
+     1,
+     16,
+     24,
+     40,
+     25,
+     66,
+     89,
+     57,
+     2,
+     67,
+     82,
+     49,
+     3,
+     17,
+     26,
+     41,
+     27,
+     68,
+     90,
+     58,
+     4,
+     69,
+     83,
+     50,
+     5,
+     18,
+     28,
+     42,
+     29,
+     70,
+     91,
+     59,
+     6,
+     71,
+     84,
+     51,
+     7,
+     19,
+     30,
+     43,
+     31,
+     72,
+     92,
+     60,
+     8,
+     73,
+     85,
+     52,
+     9,
+     20,
+     32,
+     44,
+     33,
+     74,
+     93,
+     61,
+     10,
+     75,
+     86,
+     53,
+     11,
+     21,
+     34,
+     45,
+     35,
+     76,
+     94,
+     62,
+     12,
+     77,
+     87,
+     54,
+     13,
+     22,
+     36,
+     46,
+     37,
+     78,
+     95,
+     63,
+     14,
+     79,
+     88,
+     55,
+     15,
+     23,
+     38,
+     47,
+     39,
+     80,
+     96,
+     64
+    ],
+    "cls": [
+     "kry",
+     "std",
+     "vig"
+    ],
+    "order": 1,
+    "key": "SBHCPAQKMJAAAAACAKOZREMU",
+    "slips": [
+     [
+      36,
+      "T"
+     ],
+     [
+      95,
+      "C"
+     ]
+    ]
+   },
+   "key_bits": 151.4,
+   "key_description": "0111 Myszkowski: SATURABILITY, order B, key length 24, kry/std/vig, slips [70, 72]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.778"
+  },
+  {
+   "plaintext": "HQMJMUHERSSGUNKSVSZJXEASTNORTHEASTWPMIUDIOBVWQUXMLWEANDTJITYDYMBERLINCLOCKLRJUUWINPFAWHBEWFYNBMOH",
+   "key": {
+    "where": [
+     11,
+     1,
+     7,
+     3,
+     5,
+     9,
+     83,
+     95,
+     85,
+     91,
+     87,
+     89,
+     93,
+     13,
+     25,
+     15,
+     21,
+     17,
+     19,
+     23,
+     55,
+     67,
+     57,
+     63,
+     59,
+     61,
+     65,
+     27,
+     39,
+     29,
+     35,
+     31,
+     33,
+     37,
+     41,
+     53,
+     43,
+     49,
+     45,
+     47,
+     51,
+     69,
+     81,
+     71,
+     77,
+     73,
+     75,
+     79,
+     0,
+     12,
+     2,
+     8,
+     4,
+     6,
+     10,
+     84,
+     96,
+     86,
+     92,
+     88,
+     90,
+     94,
+     14,
+     26,
+     16,
+     22,
+     18,
+     20,
+     24,
+     56,
+     68,
+     58,
+     64,
+     60,
+     62,
+     66,
+     28,
+     40,
+     30,
+     36,
+     32,
+     34,
+     38,
+     42,
+     54,
+     44,
+     50,
+     46,
+     48,
+     52,
+     70,
+     82,
+     72,
+     78,
+     74,
+     76,
+     80
+    ],
+    "cls": [
+     "std",
+     "std",
+     "beau"
+    ],
+    "order": 0,
+    "key": "ARGAUAKAKBXSMFADMXEAEACAI",
+    "slips": [
+     [
+      19,
+      "B"
+     ],
+     [
+      40,
+      "S"
+     ]
+    ]
+   },
+   "key_bits": 156.1,
+   "key_description": "0112 double columnar: SELFHOOD, order A, key length 25, std/std/beau, slips [29, 67]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.780"
+  },
+  {
+   "plaintext": "ZUCZOFOTSFGWKJPERLCISEASTNORTHEASTIGATCREPUAEFQSVCSEAGKNUZLDYKOBERLINCLOCKKOFDIJRSFJSDSCQTXMHWNYA",
+   "key": {
+    "where": [
+     50,
+     89,
+     90,
+     7,
+     65,
+     66,
+     14,
+     35,
+     36,
+     21,
+     73,
+     74,
+     0,
+     81,
+     82,
+     28,
+     57,
+     58,
+     43,
+     51,
+     52,
+     91,
+     8,
+     9,
+     67,
+     15,
+     16,
+     37,
+     22,
+     23,
+     75,
+     1,
+     2,
+     83,
+     29,
+     30,
+     59,
+     44,
+     45,
+     53,
+     92,
+     93,
+     10,
+     68,
+     69,
+     17,
+     38,
+     39,
+     24,
+     76,
+     77,
+     3,
+     84,
+     85,
+     31,
+     60,
+     61,
+     46,
+     54,
+     55,
+     94,
+     11,
+     12,
+     70,
+     18,
+     19,
+     40,
+     25,
+     26,
+     78,
+     4,
+     5,
+     86,
+     32,
+     33,
+     62,
+     47,
+     48,
+     56,
+     95,
+     96,
+     13,
+     71,
+     72,
+     20,
+     41,
+     42,
+     27,
+     79,
+     80,
+     6,
+     87,
+     88,
+     34,
+     63,
+     64,
+     49
+    ],
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "order": 0,
+    "key": "FBUQEAAGGIARDAAYKAXHRANNA",
+    "slips": [
+     [
+      41,
+      "J"
+     ],
+     [
+      76,
+      "G"
+     ]
+    ]
+   },
+   "key_bits": 156.1,
+   "key_description": "0114 AMSCO: OVERIMITATION first 1, order A, key length 25, kry/kry/vig, slips [31, 67]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "judge None, quadgram -6.781"
+  }
+ ],
+ "bounds": {
+  "family": "a move then the table and the reverse, 0110-0114 and the type-1 library, periodic key 1-26 on 8 table classes, 0-2 known letters slipped (A1.5)",
+  "route_maps_by_family": {
+   "0110 keyword columnar": 459268,
+   "0112 double columnar": 459268,
+   "0111 Myszkowski": 343990,
+   "0113 rail fence": 25568,
+   "0114 AMSCO": 891360,
+   "type-1 library": 27852
+  },
+  "distinct_landings": 1847590,
+  "orders": "A move then table, B table then move",
+  "classes": 8,
+  "key_lengths": "1-26",
+  "slips": "0-2 at the known places",
+  "by_order_and_length": {
+   "A1": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A2": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A3": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A4": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A5": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A6": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A7": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A8": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A9": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A10": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A11": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A12": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A13": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A14": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A15": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "A16": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     1
+    ]
+   },
+   "A17": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     3
+    ]
+   },
+   "A18": {
+    "k4": [
+     0,
+     0,
+     17
+    ],
+    "copies_min": [
+     0,
+     0,
+     6
+    ],
+    "copies_max": [
+     0,
+     2,
+     26
+    ]
+   },
+   "A19": {
+    "k4": [
+     0,
+     1,
+     109
+    ],
+    "copies_min": [
+     0,
+     0,
+     108
+    ],
+    "copies_max": [
+     0,
+     6,
+     164
+    ]
+   },
+   "A20": {
+    "k4": [
+     0,
+     39,
+     1424
+    ],
+    "copies_min": [
+     0,
+     18,
+     1124
+    ],
+    "copies_max": [
+     2,
+     56,
+     1770
+    ]
+   },
+   "A21": {
+    "k4": [
+     2,
+     262,
+     6865
+    ],
+    "copies_min": [
+     0,
+     191,
+     6051
+    ],
+    "copies_max": [
+     8,
+     278,
+     6831
+    ]
+   },
+   "A22": {
+    "k4": [
+     41,
+     1595,
+     23973
+    ],
+    "copies_min": [
+     8,
+     1244,
+     23380
+    ],
+    "copies_max": [
+     53,
+     1624,
+     25417
+    ]
+   },
+   "A23": {
+    "k4": [
+     226,
+     7183,
+     56501
+    ],
+    "copies_min": [
+     160,
+     6767,
+     54885
+    ],
+    "copies_max": [
+     233,
+     7405,
+     57413
+    ]
+   },
+   "A24": {
+    "k4": [
+     3504,
+     36743,
+     124444
+    ],
+    "copies_min": [
+     3124,
+     36277,
+     121775
+    ],
+    "copies_max": [
+     3545,
+     37648,
+     124623
+    ]
+   },
+   "A25": {
+    "k4": [
+     3650,
+     31062,
+     134534
+    ],
+    "copies_min": [
+     3702,
+     30545,
+     131997
+    ],
+    "copies_max": [
+     3919,
+     31601,
+     135204
+    ]
+   },
+   "A26": {
+    "k4": [
+     12986,
+     59296,
+     202644
+    ],
+    "copies_min": [
+     12428,
+     58347,
+     200157
+    ],
+    "copies_max": [
+     13657,
+     60762,
+     205126
+    ]
+   },
+   "B1": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B2": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B3": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B4": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B5": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B6": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B7": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B8": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B9": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B10": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B11": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B12": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B13": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B14": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B15": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B16": {
+    "k4": [
+     0,
+     0,
+     1
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     1,
+     4
+    ]
+   },
+   "B17": {
+    "k4": [
+     0,
+     0,
+     24
+    ],
+    "copies_min": [
+     0,
+     0,
+     14
+    ],
+    "copies_max": [
+     0,
+     2,
+     46
+    ]
+   },
+   "B18": {
+    "k4": [
+     0,
+     1,
+     14
+    ],
+    "copies_min": [
+     0,
+     0,
+     10
+    ],
+    "copies_max": [
+     0,
+     2,
+     36
+    ]
+   },
+   "B19": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B20": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B21": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0
+    ]
+   },
+   "B22": {
+    "k4": [
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     2
+    ]
+   },
+   "B23": {
+    "k4": [
+     0,
+     0,
+     27
+    ],
+    "copies_min": [
+     0,
+     0,
+     11
+    ],
+    "copies_max": [
+     0,
+     2,
+     66
+    ]
+   },
+   "B24": {
+    "k4": [
+     0,
+     236,
+     7336
+    ],
+    "copies_min": [
+     0,
+     114,
+     6883
+    ],
+    "copies_max": [
+     4,
+     334,
+     9157
+    ]
+   },
+   "B25": {
+    "k4": [
+     795,
+     60178,
+     1584744
+    ],
+    "copies_min": [
+     633,
+     59019,
+     1506650
+    ],
+    "copies_max": [
+     1055,
+     67911,
+     1624606
+    ]
+   },
+   "B26": {
+    "k4": [
+     568249,
+     14212471,
+     0
+    ],
+    "copies_min": [
+     551040,
+     14185953,
+     0
+    ],
+    "copies_max": [
+     594767,
+     14229680,
+     0
+    ]
+   }
+  },
+  "k4_above_every_copy": [
+   "A21"
+  ],
+  "copies_above_rest": [
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   1,
+   1,
+   0,
+   1,
+   1,
+   1,
+   0,
+   3,
+   1,
+   1
+  ],
+  "shortest_length_by_slips": {
+   "K4": {
+    "A": [
+     21,
+     19,
+     18
+    ],
+    "B": [
+     25,
+     18,
+     16
+    ]
+   },
+   "copy1": {
+    "A": [
+     22,
+     20,
+     18
+    ],
+    "B": [
+     25,
+     24,
+     16
+    ]
+   },
+   "copy2": {
+    "A": [
+     20,
+     20,
+     17
+    ],
+    "B": [
+     24,
+     24,
+     16
+    ]
+   },
+   "copy3": {
+    "A": [
+     21,
+     19,
+     17
+    ],
+    "B": [
+     24,
+     17,
+     17
+    ]
+   },
+   "copy4": {
+    "A": [
+     20,
+     19,
+     18
+    ],
+    "B": [
+     24,
+     16,
+     16
+    ]
+   },
+   "copy5": {
+    "A": [
+     21,
+     18,
+     17
+    ],
+    "B": [
+     24,
+     24,
+     16
+    ]
+   },
+   "copy6": {
+    "A": [
+     21,
+     19,
+     16
+    ],
+    "B": [
+     25,
+     24,
+     16
+    ]
+   },
+   "copy7": {
+    "A": [
+     20,
+     18,
+     17
+    ],
+    "B": [
+     25,
+     24,
+     16
+    ]
+   },
+   "copy8": {
+    "A": [
+     20,
+     19,
+     17
+    ],
+    "B": [
+     24,
+     24,
+     16
+    ]
+   },
+   "copy9": {
+    "A": [
+     21,
+     19,
+     16
+    ],
+    "B": [
+     24,
+     24,
+     17
+    ]
+   },
+   "copy10": {
+    "A": [
+     21,
+     18,
+     18
+    ],
+    "B": [
+     24,
+     17,
+     16
+    ]
+   },
+   "copy11": {
+    "A": [
+     20,
+     19,
+     17
+    ],
+    "B": [
+     25,
+     24,
+     16
+    ]
+   },
+   "copy12": {
+    "A": [
+     21,
+     19,
+     16
+    ],
+    "B": [
+     25,
+     18,
+     16
+    ]
+   },
+   "copy13": {
+    "A": [
+     21,
+     19,
+     17
+    ],
+    "B": [
+     24,
+     18,
+     16
+    ]
+   },
+   "copy14": {
+    "A": [
+     20,
+     19,
+     17
+    ],
+    "B": [
+     24,
+     24,
+     17
+    ]
+   },
+   "copy15": {
+    "A": [
+     21,
+     18,
+     17
+    ],
+    "B": [
+     24,
+     24,
+     16
+    ]
+   },
+   "copy16": {
+    "A": [
+     21,
+     19,
+     18
+    ],
+    "B": [
+     24,
+     17,
+     17
+    ]
+   },
+   "copy17": {
+    "A": [
+     21,
+     19,
+     17
+    ],
+    "B": [
+     24,
+     23,
+     16
+    ]
+   },
+   "copy18": {
+    "A": [
+     21,
+     18,
+     17
+    ],
+    "B": [
+     24,
+     17,
+     16
+    ]
+   },
+   "copy19": {
+    "A": [
+     20,
+     19,
+     17
+    ],
+    "B": [
+     24,
+     17,
+     17
+    ]
+   },
+   "copy20": {
+    "A": [
+     22,
+     19,
+     18
+    ],
+    "B": [
+     25,
+     16,
+     16
+    ]
+   }
+  },
+  "readings": {
+   "k4": 53150,
+   "copies": [
+    53360,
+    52732,
+    54262,
+    53213,
+    58628,
+    52820,
+    54812,
+    55804,
+    54019,
+    53037,
+    56613,
+    53311,
+    52833,
+    56645,
+    53082,
+    58540,
+    55096,
+    60290,
+    51863,
+    53933
+   ]
+  },
+  "capped": [],
+  "judge": {
+   "sent": 195,
+   "none": 0,
+   "cut": -5.0,
+   "rule": "each text's top 5 readings by quadgrams and every reading at or above -5.0; one call"
+  },
+  "k4_judge_best": 6,
+  "copies_judge_best": [
+   4,
+   4,
+   12,
+   8,
+   5,
+   4,
+   6,
+   6,
+   8,
+   5,
+   12,
+   4,
+   8,
+   4,
+   8,
+   4,
+   4,
+   8,
+   4,
+   6
+  ],
+  "k4_readings_above_every_copy": 0,
+  "k4_top": [
+   {
+    "reading": "UDYWHEKOVY?????KRAXHSDASTNORTHEAST?????ODNSOMAMALKEYKWHENP?????BERLINCLOCHZOOZHTIK?????IEQTUATMIQ",
+    "judge": 6,
+    "quad": -6.614,
+    "route": "0112 double columnar: TOSHNAIL inverse",
+    "order": "B",
+    "L": 24,
+    "class": "kry/kry/beau"
+   },
+   {
+    "reading": "TXAWUAEZPU?????PUUTREYKSTNORTHEAST?????IRSPZVBRFWITHSITSCD?????BERLINCLOCKMWNSLOKI?????OHALSHKENZ",
+    "judge": 5,
+    "quad": -6.755,
+    "route": "0112 double columnar: AVICULTURE",
+    "order": "B",
+    "L": 24,
+    "class": "std/std/beau"
+   },
+   {
+    "reading": "HRGASSTPDN?????ADYMOVLASTNORTHEAST?????UAREDHEBAZKGCARSIUT?????BERLINCLLCKAFIFROVR?????AVKSBLZDZR",
+    "judge": 4,
+    "quad": -6.586,
+    "route": "0112 double columnar: IDIOPATHICAL inverse",
+    "order": "B",
+    "L": 24,
+    "class": "std/kry/vig"
+   },
+   {
+    "reading": "?B?IPWP?OR?CENO?TDSSSEASTNORTHEASTCXIESK?OP?H??SKES?CC???YD???BBEGLINCLECKYD?FFVBSB?E?ABCY??TW???",
+    "judge": 3,
+    "quad": -6.759,
+    "route": "0113 rail fence: 19 rails offset 9 order (18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)",
+    "order": "A",
+    "L": 25,
+    "class": "kry/kry/beau"
+   },
+   {
+    "reading": "Y?CZOF??S?G?P?PERLCISEASTNORTHEASTIGATCREP?AEF???CSEA???U?LDYKOBERMMNCLOCKKOFD?J???JSDSCQT?M?W???",
+    "judge": 3,
+    "quad": -6.705,
+    "route": "0114 AMSCO: OVERIMITATION first 1",
+    "order": "A",
+    "L": 25,
+    "class": "kry/kry/vig"
+   }
+  ],
+  "plants": [
+   {
+    "seed": 2141,
+    "route": "0110 keyword columnar: ODONTASPIDAE",
+    "L": 11,
+    "cls": "kry/kry/vig",
+    "order": "A",
+    "slips": [
+     23,
+     25
+    ],
+    "planted_setting_found": true,
+    "slips_named": [
+     25,
+     23
+    ],
+    "quad": -4.787,
+    "judge": 70,
+    "own_copies_judge_best": [
+     6,
+     4,
+     4,
+     6,
+     8
+    ],
+    "found": true
+   },
+   {
+    "seed": 2142,
+    "route": "0114 AMSCO: UNEXTINGUISHED first 2 inverse",
+    "L": 9,
+    "cls": "std/kry/beau",
+    "order": "B",
+    "slips": [
+     31,
+     64
+    ],
+    "planted_setting_found": true,
+    "slips_named": [
+     64,
+     31
+    ],
+    "quad": -4.206,
+    "judge": 90,
+    "own_copies_judge_best": [
+     4,
+     8,
+     6,
+     6,
+     6
+    ],
+    "found": true
+   },
+   {
+    "seed": 2143,
+    "route": "0113 rail fence: 31 rails offset 25 order (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30)",
+    "L": 13,
+    "cls": "kry/std/vig",
+    "order": "A",
+    "slips": [
+     33,
+     74
+    ],
+    "planted_setting_found": true,
+    "slips_named": [
+     74,
+     33
+    ],
+    "quad": -4.306,
+    "judge": 92,
+    "own_copies_judge_best": [
+     3,
+     6,
+     8,
+     4,
+     8
+    ],
+    "found": true
+   }
+  ],
+  "slip_cost_bits": {
+   "2": 17.5
+  },
+  "controls": "20 shuffled copies (seeds 2150-2169); each plant against 5 shuffles of its own ciphertext",
+  "exhaustive": "yes"
+ },
+ "notes": "1,847,590 distinct landings; K4 shortest length with <= 2 slips A 18, B 16; K4 above every copy in 1 cells (copies 0-3); judge sent 195, K4 best 6, copies best 12; plants found [True, True, True]",
+ "controls": [
+  -6.385882899259096,
+  -6.651641906872347,
+  -6.540979873704912,
+  -6.429632115644401,
+  -6.355958538280792,
+  -6.076040185870423,
+  -6.34206903039931,
+  -6.4288814349538175,
+  -6.613031419704652,
+  -6.482537994358393,
+  -6.496649976204084,
+  -6.400461409930114,
+  -6.446628864132753,
+  -6.52202350352003,
+  -6.535308511675051,
+  -6.600756379020927,
+  -6.5539654817637745,
+  -6.591490794782167,
+  -6.54925980897141,
+  -6.396384924070293
+ ],
+ "error": null,
+ "worked_example": "keyword columnar PYRAMID (move first), then the KRYPTOS table, key length 11: key letter forced at each known place\n\n  slot  0: 26N@45:S\n  slot  1: 33S@46:U  66R@79:Y  70C@24:S\n  slot  2: 73C@80:P\n  slot  3: 22E@59:M  25T@4:X  69N@37:E\n  slot  4: 29T@60:L  32A@5:O  65E@93:A\n  slot  5: 72O@94:V\n  slot  6: 24S@73:X  28R@18:L  68I@51:P\n  slot  7: 31E@74:P\n  slot  8: 27O@31:I\n  slot  9: 23A@87:T  34T@32:W  64B@65:U  67L@10:X\n  slot 10: 30H@88:H  71L@66:M  74K@11:V\n\nslips needed: 13 (2 allowed)",
+ "seconds": 435.9536700248718,
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 0,
+  "cached": 195,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "errors": 0
+ }
+}

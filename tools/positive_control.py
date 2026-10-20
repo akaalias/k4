@@ -106,6 +106,7 @@ def child(spec_dir, out_path, budget):
             KRYPTOS_ALPHABET=facts.KRYPTOS_ALPHABET, STANDARD_ALPHABET=facts.STANDARD_ALPHABET,
             vocabulary=facts.load_vocabulary(), ciphers=ciphers, english_score=scorer.english_score,
             deadline=t0 + budget, time_left=lambda: (t0 + budget) - time.time(),
+            judge=lambda texts: __import__("kryptos.judge", fromlist=["judge"]).judge(texts),
         )
         res = attack.run(ctx) or {}
         ok, why = spec.found(res, p)

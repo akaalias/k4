@@ -11,6 +11,12 @@ from types import SimpleNamespace
 from kryptos import facts, ciphers, scorer
 
 
+def _judge(texts):
+    """The blind English judge (kryptos.judge, issue #76), imported only when an attack calls it."""
+    from kryptos import judge
+    return judge.judge(texts)
+
+
 def main(attack_path, out_path, budget_s):
     t0 = time.time()
     spec = importlib.util.spec_from_file_location("attack", attack_path)
@@ -28,6 +34,7 @@ def main(attack_path, out_path, budget_s):
         english_score=scorer.english_score,
         deadline=t0 + budget_s,
         time_left=lambda: (t0 + budget_s) - time.time(),
+        judge=_judge,
     )
     out = {"candidates": [], "bounds": {}, "notes": "", "controls": [], "error": None, "worked_example": ""}
     try:
@@ -59,6 +66,9 @@ def main(attack_path, out_path, budget_s):
     except Exception:  # noqa: BLE001
         out["error"] = traceback.format_exc()
     out["seconds"] = time.time() - t0
+    if "kryptos.judge" in sys.modules:
+        j = sys.modules["kryptos.judge"]
+        out["judge"] = {"model": j.MODEL, "prompt": j.PROMPT_VERSION, **j.usage}
     json.dump(out, open(out_path, "w"), indent=1)
 
 

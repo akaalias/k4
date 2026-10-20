@@ -21,3 +21,10 @@ run_experiment.py and no experiment number; it is a folder controls/<ID>/ with s
 controls.tsv, and its row in the table. Commit controls in batches, one family at a time, and comment on issue #73
 after each family with the passes, any slices, and any failure. A FAILED control stops the queue: find why, fix,
 rerun, and report before going on. STOP_AFTER A3 means stop when no row is open.
+
+Stage 2, step 2 (from 2026-10-20, issue #76): step 1's table is done. While the table "Stage 2, step 2" in
+order-of-work.md has open rows, work it top down, following program.md's "Slip tolerance and the judge". These are
+experiments (run_experiment.py, numbered, with records and figures), each with its own planted slipped message in
+the same run. Use ctx.judge for readings, K4's and the copies' together; estimate the number of judge calls before
+the run and keep it under the cap. Comment on issue #76 after each experiment. STOP_AFTER A1 means stop when no row
+of that table is open.

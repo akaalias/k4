@@ -146,6 +146,45 @@ the planted ciphertext, and require the plant to be found.
 - From now on every new experiment that closes an item carries its own positive control in the same run, or
   the item stays open.
 
+## Slip tolerance and the judge (assumption A1, issue #76)
+
+Every exact verdict so far assumed Sanborn made no slip. Stage 2, step 2 reruns the strongest searches allowing
+for one. The table "Stage 2, step 2" in `order-of-work.md` lists the items; these rules apply to all of them.
+
+- **Where a slip lands decides how it is handled.**
+    - A slip at one of the 73 unknown places in a system where an error stays put (a wrong tableau row in a
+      periodic or running key) changes no consistency check, so it cannot change an exact verdict. It garbles one
+      letter of the reading, which the judge is built to read through. No rerun is needed for that case.
+    - A slip at one of the 24 known places: allow k of the 24 checks to fail (k = 1, 2, 3), count consistent
+      settings on K4 and on at least 10 scrambled copies at the same k, and judge the readings. Dropping k checks
+      costs about 4.7 bits each plus log2(C(24, k)) for not knowing which; say in `bounds` how much of the
+      key space the remaining checks can still decide.
+    - A slip that throws off everything after it (a skipped step in an autokey chain, a column read out of turn):
+      one per run, at every place, as its own setting. F6.21 (0202-0204) already covers slipped columns.
+- **A candidate with a slip passes the gates only if the slip is part of its key.** The plaintext carries the
+  known words correctly; the key names the slip (its place and the wrong letter, or the skipped step) and
+  `encrypt` applies it, so the re-encryption gives K4 exactly. The key's description then pays for the slip.
+- **The judge.** `ctx.judge(texts)` (`kryptos/judge.py`) scores readings 0-100 for how much reads as English,
+  allowing misspellings, X stops and spelled numbers. Pass '?' for letters the search could not determine.
+    - Always judge K4's candidates and the copies' candidates in the same call and compare them: a K4 reading
+      counts only if it scores above every copy's best. The judge masks the known places itself and sees one text
+      at a time, so it is blind to which is which.
+    - Call it from the main process, not from forked workers, and only on readings that survived the
+      consistency checks: each new text costs a call (cached afterwards). The cap is `JUDGE_MAX_CALLS` (3000 per
+      process); estimate your count in the design phase and say it in `bounds`.
+    - Filter with the quadgram scorer first (`ctx.english_score`), the same cut for K4's and the copies' readings,
+      and send the judge only what survives: against readings that look like random letters, quadgrams already
+      separate damaged English as well as the judge (bench), and they cost nothing. The judge earns its cost on
+      English-like junk and on readings that are only partly English.
+    - A verdict can come back `None` (the model refused or never gave a score). Count it as not found, for K4 and
+      copies alike, and report how many.
+    - It filters. It never certifies: the four success criteria and the gates still decide.
+    - Its measured power is in `reports/judge-bench.md`: use it to say what a 'nothing found' means.
+- **Every A1 run plants its own slipped message** (English from `kryptos.plants`, encrypted with the item's
+  method and k slips) and requires it to be found at the same tolerance, in the same run. The largest k at which
+  plants are found and K4's count can still differ from the copies' is the item's reach; beyond it the item is
+  `blocked: too short to decide k slips`, with the numbers.
+
 ## Patience and pivots
 
 - **Work the families in the rank order** in `order-of-work.md` (the Priorities page, decided

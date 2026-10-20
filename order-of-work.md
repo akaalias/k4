@@ -166,6 +166,23 @@ Rules:
 | C-F2.4 | F2.4 | Nulls at both ends, periodic and progressive keys | 0205 | passed, own plant | 0205: two padded messages (8 + 8 and 5 + 11 nulls, sliding keys of 9 and 11) found at their own lengths |
 | C-F5.3 | F5.3 | Gromark rules in bases 16-26 on 0054's tables | 0206 | passed, own plant | 0206: a planted base-20 text (rule 7-3) found, the only rule that fits it |
 
+## Stage 2, step 2: slip tolerance (A1, issue #76)
+
+Started 2026-10-20. Every exact verdict assumed Sanborn enciphered all 97 letters without a slip (A1,
+`knowledge/12-assumptions.md`); K1-K3 carry one enciphering slip (the letter dropped from K2) and three
+misspellings in about 770 letters. This step reruns the strongest closed searches allowing for slips, judged by
+the blind English judge (`kryptos/judge.py`, power in `reports/judge-bench.md`). Rules: program.md, "Slip
+tolerance and the judge". Work the table top down; the families' rank order still holds inside it.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **A1.0** One or more slips at the 73 unknown places, in systems where an error stays put (periodic, progressive and running keys; one or two free alphabets) | closed | by argument, no run: such a slip changes none of the 24 checks, so no exact verdict moves; it garbles one letter of the reading, which the judge reads through (bench: damaged classes) | - | - |
+| **A1.1** One slip at a known place (k = 1), free alphabets, Gromark, trifid, Hill, and the move library | closed (cited) | exact, already run as "one carved letter wrong" (F1.6: 0147-0152; move library: 0093, 0094); a carved letter wrong at a known place is one failed check | 0093, 0094, 0147-0152 | - |
+| **A1.2** Periodic key, k = 2 and 3 known letters wrong: the standard and KRYPTOS tables (8 table classes, as 0005), then one free alphabet (Quagmire III, as 0119) | open | - | 0005, 0119 | settings consistent with 24-k checks, every period 1-26 (and 27-29, 53 on the tables), K4 against 10+ copies at the same k; readings with every column determined go to the judge with the copies'; plants with k slips at known places in the same run. Quagmire IV (0123) only if the cost allows |
+| **A1.3** Running key from the named texts (K1-K3, the sculpture's texts, Carter, Sanborn's letters, as 0004-0117), k = 1, 2, 3 | open | - | 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117 | every offset whose key matches 24-k known letters on each table, K4 against copies; readings to the judge; F1.6 did not cover running keys |
+| **A1.4** Autokeys and progressive keys (F1/4-F1/6, as 0002, 0003, 0011, 0025, 0064, 0118), k = 1, 2; plaintext autokey with one slip that runs on through the chain | open | - | 0002, 0003, 0011, 0012, 0025, 0064, 0118 | for the running-on slip the reading is right only up to the slip: the judge's power on half-readable texts (bench class 'half') says how far this can be judged |
+| **A1.5** A move, then the table (F6/1's type-1 library, as 0110-0114, 0129), k = 2 known letters wrong | open | - | 0110-0114, 0129 | k = 1 is A1.1; slipped columns are F6.21 (closed). Estimate the cost first: dropping 2 of 24 checks multiplies the live settings |
+
 ## F1. One keyed stage, no move
 
 | Item | Status | Strength | Experiments | Next test or reason |

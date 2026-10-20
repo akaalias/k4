@@ -4,8 +4,9 @@
 #   tools/run_loop.sh                       interactive: you see it work and approve its commands
 #   tools/run_loop.sh --unattended          headless, no permission prompts; progress on screen, full log in logs/
 #   uv run python tools/loop_watch.py --follow logs/loop-...log   watch a running loop from another shell
-#   tools/run_loop.sh --stop-after A3       stop once stage 2's control table has no open row (the default since 2026-10-18;
-#                                           a family name such as F6 stops once that family is closed or blocked)
+#   tools/run_loop.sh --stop-after A1       stop once stage 2 step 2's slip table has no open row (the default since
+#                                           2026-10-20; A3 was the control table; a family name such as F6 stops once
+#                                           that family is closed or blocked)
 #
 # The prompt is tools/loop_prompt.md; edit it to change what the loop does. Its transcript is synced into
 # transcripts/ by the hooks in .claude/settings.json like any other session.
@@ -13,7 +14,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 mode=interactive
-stop_after=A3
+stop_after=A1
 while [ $# -gt 0 ]; do
   case "$1" in
     --unattended) mode=unattended; shift ;;

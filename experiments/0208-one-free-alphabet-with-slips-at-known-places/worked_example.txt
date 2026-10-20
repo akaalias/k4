@@ -1,0 +1,7 @@
+key length 7, form V: A(carved) = A(known) + k[slot]
+
+  slips at none: dead
+  slips at [66]: dead
+  slips at [66, 73]: dead
+
+(66 R and 73 C both sit under carved P in slot 2: no alphabet fits without a slip at one of them, and at length 7 none fits even with one.)

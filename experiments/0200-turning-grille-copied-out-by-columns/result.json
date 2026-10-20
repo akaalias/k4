@@ -1,0 +1,28 @@
+{
+ "id": 200,
+ "tag": "0200-turning-grille-copied-out-by-columns",
+ "started": "2026-10-20T07:55:41+00:00",
+ "seconds": 3660.3,
+ "status": "error",
+ "phases": {
+  "unattributed": 193.3,
+  "run": 3660.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1792486601.586189,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "error": "no output",
+ "candidates": []
+}

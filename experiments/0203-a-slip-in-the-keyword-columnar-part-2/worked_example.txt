@@ -1,0 +1,9 @@
+key word SHADOW: columns read in the order [3, 4, 2, 5, 1, 6]
+one slip, the third column read one step early: [3, 2, 4, 5, 1, 6]
+
+place  known  lands at  carved
+   22      E        36       T
+   26      N        21       W
+   34      T        38       T
+   64      B        43       S
+   74      K        29       R

@@ -199,3 +199,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0198	0198-substitution-then-the-compiled-libraries	9-substitution-then-transposition	0197-substitution-then-every-newer-move	reverted	0	0	0			38	design=0 implement=0 test=0 run=38 record=0
 0199	0199-turning-grille-with-the-table	6-transposition-then-tableau	0164-disrupted-triangle-interrupted-trapezoid	reverted	0	0	0			1227	design=438 implement=148468 test=1741 run=1227 record=0
 0200	0200-turning-grille-copied-out-by-columns	6-transposition-then-tableau	0199-turning-grille-with-the-table	error	0	0	0			3660	unattributed=193 run=3660 record=0
+0201	0201-turning-grille-copied-out-by-columns-rerun	6-transposition-then-tableau	0200-turning-grille-copied-out-by-columns	reverted	0	0	0			3464	unattributed=807 run=3464 record=0

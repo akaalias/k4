@@ -197,3 +197,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0196	0196-gromark-multiplicative-feedback	5-gromark	0195-gromark-free-alphabet-other-bases	reverted	0	0	0			56	design=0 implement=0 test=0 run=56 record=0
 0197	0197-substitution-then-every-newer-move	9-substitution-then-transposition	0106-one-to-one-substitution-with-every-move-so-far	reverted	0	0	0			70	design=0 implement=0 test=0 run=70 record=0
 0198	0198-substitution-then-the-compiled-libraries	9-substitution-then-transposition	0197-substitution-then-every-newer-move	reverted	0	0	0			38	design=0 implement=0 test=0 run=38 record=0
+0199	0199-turning-grille-with-the-table	6-transposition-then-tableau	0164-disrupted-triangle-interrupted-trapezoid	reverted	0	0	0			1227	design=438 implement=148468 test=1741 run=1227 record=0

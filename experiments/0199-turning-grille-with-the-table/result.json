@@ -1,0 +1,576 @@
+{
+ "id": 199,
+ "tag": "0199-turning-grille-with-the-table",
+ "started": "2026-10-20T07:32:00+00:00",
+ "seconds": 1227.0,
+ "status": "ran",
+ "phases": {
+  "design": 437.9,
+  "implement": 148468.0,
+  "test": 1741.0,
+  "run": 1227.0,
+  "record": 0.1
+ },
+ "ended_epoch": 1792482747.831532,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "10x10 turning grille (25 holes, three empty cells), then or before a repeating key on the standard/KRYPTOS tables; exact constraint search",
+  "cards_per_procedure": 1125899906842624,
+  "procedures": [
+   "cw, out by rows, empty cells at the end",
+   "cw, out by rows, empty cells at the start",
+   "ccw, out by rows, empty cells at the end",
+   "ccw, out by rows, empty cells at the start"
+  ],
+  "orders": {
+   "A": "grille, then key",
+   "B": "key, then grille"
+  },
+  "texts": "K4, 10 scrambled copies (seed 1620), 4 planted grilles",
+  "free_key": {
+   "lengths": "1-6",
+   "classes": [
+    "std/std/vig-var",
+    "std/std/beau",
+    "std/kry/vig-var",
+    "std/kry/beau",
+    "kry/std/vig-var",
+    "kry/std/beau",
+    "kry/kry/vig-var",
+    "kry/kry/beau"
+   ],
+   "per_procedure": {
+    "cw, out by rows, empty cells at the end": {
+     "A": {
+      "k4_placements_by_length": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "copies_placements_by_length_max": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "incomplete_lengths_any_text": [],
+      "k4_shortest_fit": null,
+      "copies_shortest_fit": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "k4_above_every_copy": [],
+      "copy_cells_above_rest": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "B": {
+      "k4_placements_by_length": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "copies_placements_by_length_max": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "incomplete_lengths_any_text": [],
+      "k4_shortest_fit": null,
+      "copies_shortest_fit": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "k4_above_every_copy": [],
+      "copy_cells_above_rest": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    "cw, out by rows, empty cells at the start": {
+     "A": {
+      "k4_placements_by_length": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "copies_placements_by_length_max": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "incomplete_lengths_any_text": [],
+      "k4_shortest_fit": null,
+      "copies_shortest_fit": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "k4_above_every_copy": [],
+      "copy_cells_above_rest": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "B": {
+      "k4_placements_by_length": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "copies_placements_by_length_max": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "incomplete_lengths_any_text": [],
+      "k4_shortest_fit": null,
+      "copies_shortest_fit": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "k4_above_every_copy": [],
+      "copy_cells_above_rest": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    "ccw, out by rows, empty cells at the end": {
+     "A": {
+      "k4_placements_by_length": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "copies_placements_by_length_max": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "incomplete_lengths_any_text": [],
+      "k4_shortest_fit": null,
+      "copies_shortest_fit": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "k4_above_every_copy": [],
+      "copy_cells_above_rest": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "B": {
+      "k4_placements_by_length": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "copies_placements_by_length_max": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "incomplete_lengths_any_text": [],
+      "k4_shortest_fit": null,
+      "copies_shortest_fit": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "k4_above_every_copy": [],
+      "copy_cells_above_rest": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    },
+    "ccw, out by rows, empty cells at the start": {
+     "A": {
+      "k4_placements_by_length": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "copies_placements_by_length_max": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "incomplete_lengths_any_text": [],
+      "k4_shortest_fit": null,
+      "copies_shortest_fit": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "k4_above_every_copy": [],
+      "copy_cells_above_rest": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "B": {
+      "k4_placements_by_length": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "copies_placements_by_length_max": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "incomplete_lengths_any_text": [],
+      "k4_shortest_fit": null,
+      "copies_shortest_fit": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "k4_above_every_copy": [],
+      "copy_cells_above_rest": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   },
+   "k4_fits": [],
+   "k4_cells_above_every_copy": 0,
+   "copy_cells_above_rest": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "search_nodes": 81815034340,
+   "seconds": 657,
+   "blocked": "lengths 7-26: one setting costs 0.9-7 x 10^8 nodes at length 7 and over 2 x 10^9 at 12 (measured on K4), about 10^5 settings: blocked by cost"
+  },
+  "key_words": {
+   "words": 200563,
+   "lengths": "7-28",
+   "conventions": [
+    "std/std/std/vig",
+    "std/std/std/beau",
+    "std/std/std/var",
+    "std/std/kry/vig",
+    "std/std/kry/beau",
+    "std/std/kry/var",
+    "std/kry/std/vig",
+    "std/kry/std/beau",
+    "std/kry/std/var",
+    "std/kry/kry/vig",
+    "std/kry/kry/beau",
+    "std/kry/kry/var",
+    "kry/std/std/vig",
+    "kry/std/std/beau",
+    "kry/std/std/var",
+    "kry/std/kry/vig",
+    "kry/std/kry/beau",
+    "kry/std/kry/var",
+    "kry/kry/std/vig",
+    "kry/kry/std/beau",
+    "kry/kry/std/var",
+    "kry/kry/kry/vig",
+    "kry/kry/kry/beau",
+    "kry/kry/kry/var"
+   ],
+   "source": "the vocabulary, puzzle phrases, kryptos/data/words.txt",
+   "settings_per_text": 38508096,
+   "k4_settings_with_a_card": 0,
+   "copies_settings_with_a_card": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "k4_hits": [],
+   "search_nodes": 34110186412,
+   "seconds": 559
+  },
+  "plants": [
+   {
+    "arm": "free key",
+    "procedure": "cw, out by rows, empty cells at the start",
+    "order": "A",
+    "class": "std/kry/beau",
+    "length": 5,
+    "placements_fitting_at_its_setting": 1,
+    "complete": true,
+    "planted_card_found": true,
+    "placements_at_shorter_lengths": 0
+   },
+   {
+    "arm": "free key",
+    "procedure": "ccw, out by rows, empty cells at the end",
+    "order": "B",
+    "class": "kry/std/beau",
+    "length": 6,
+    "placements_fitting_at_its_setting": 8,
+    "complete": true,
+    "planted_card_found": true,
+    "placements_at_shorter_lengths": 0
+   },
+   {
+    "arm": "key word",
+    "procedure": "ccw, out by rows, empty cells at the start",
+    "order": "B",
+    "convention": "kry/kry/std/beau",
+    "word": "UNGUIDABLY",
+    "words_fitting_at_its_setting": 1,
+    "planted_word_found": true,
+    "planted_card_found": true,
+    "settings_fitting_anywhere": 1
+   },
+   {
+    "arm": "key word",
+    "procedure": "cw, out by rows, empty cells at the end",
+    "order": "A",
+    "convention": "std/kry/std/var",
+    "word": "REMOTENESS",
+    "words_fitting_at_its_setting": 1,
+    "planted_word_found": true,
+    "planted_card_found": true,
+    "settings_fitting_anywhere": 1
+   }
+  ],
+  "stop_queue": false,
+  "self_check": {
+   "planted_cards_found_by_full_search": 16,
+   "planted_words_found_by_keyword_arm": 16,
+   "cards_compared": 25600,
+   "of_which_fit": 2625,
+   "note": "the compiled walk agrees with the literal Python builder (turn the card, fill holes by rows, copy out) on every card compared"
+  },
+  "fingerprints_F7": {
+   "grille, then a length-7 key": {
+    "column": 0.0025,
+    "repeats21": 0.0095,
+    "both": 0.0
+   },
+   "length-7 key, then the grille": {
+    "column": 0.0005,
+    "repeats21": 0.0065,
+    "both": 0.0
+   },
+   "grille, then a length-21 key": {
+    "column": 0.003,
+    "repeats21": 0.006,
+    "both": 0.0
+   },
+   "length-21 key, then the grille": {
+    "column": 0.0015,
+    "repeats21": 0.0035,
+    "both": 0.0
+   },
+   "calibration: random letters": {
+    "column": 0.003,
+    "repeats21": 0.002,
+    "both": 0.0
+   }
+  },
+  "not_tested": "free keys of 7-26 letters (cost); stencils with arbitrary holes (any permutation); the Abwehr's 13x19 card (no rule for its holes in the source)",
+  "seconds": 1227,
+  "exhaustive": "yes for both arms: every card, every procedure, both orders; free keys 1-6, key words 7 letters and up"
+ },
+ "notes": "Plants: free key cw, out by rows, empty cells at the start A: found True; free key ccw, out by rows, empty cells at the end B: found True; key word ccw, out by rows, empty cells at the start B: found True; key word cw, out by rows, empty cells at the end A: found True. Free keys 1-6: K4 fits 0 settings; K4 above every copy in 0 cells, copies 0-0. Key words (200,563): settings with a card K4 0, copies 0-0.",
+ "error": null,
+ "candidates": []
+}

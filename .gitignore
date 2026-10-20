@@ -18,3 +18,6 @@ logs/
 # tools/publish.py
 .publish.lock
 .publish.again
+
+# secrets (API key for the judge)
+.env

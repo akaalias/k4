@@ -73,6 +73,9 @@ Counts are distinct landing maps: cards that differ only where unknown letters g
 | 208 | A1.2 | **One free alphabet with 0-3 slips, exact.** 0119's decider on all 2,325 drop sets per cell: K4 dead at 1-7 and 9; fits at 8 and 10-26 as the copies do. Plants at 7 found; plants at 12 fit with fewer slips than planted, as their copies do. Prediction partly failed (the length-12 plants). |
 | 209 | A1.2 | **Two free alphabets with 0-3 slips, exact.** 0123's decider: K4 dead at 1-3 and 9; copies fit from 4. Plants at 3 and 9 found, the pre-registered ones at 4, 5, 7 not. **A1.2 closed where decidable, blocked beyond the reach.** |
 
+| 210 | A1.3 | **Running keys from the named texts with up to 7 slips, exact.** 0004/0017/0021/0045/0047/0078 in one pass (1.36 x 10^9 trials) through a pigeonhole index (7 slips leave one of 8 blocks of 3 known places whole): no setting on K4 or any of 20 copies; three planted slipped messages found, judged 90-96. Prediction held. |
+| 211 | A1.3 | **0117's shifts and moves with up to 3 slips, exact, compiled.** Both orders, 27,852 routes, 12 tables, 26 shifts: nothing on K4 or 10 copies; both plants found. 0098's free alphabet blocked without a run (one slip: copies fit 0.4-1.6% of 80,676 settings, reading undetermined). **A1.3 closed on fixed and keyword tables.** Prediction held. |
+
 **What a slip costs a free alphabet.** With the sculpture's tables a slip is expensive: below length 24 at least 7 checks
 remain and three slips cannot clear them. With a free alphabet the 24 equations already leave room, and two or three
 dropped equations are enough for an alphabet to fit almost any text from about length 10 (one alphabet) or 4 (two). The
@@ -84,6 +87,11 @@ most letters undetermined.
 - **Plants placed where they cannot be told apart.** 0209's pre-registered plants (4, 5, 7) sat where the copies already
   fit; the dry run showed it, and plants at 3 and 9 were added before the real run, with the change written in `changed`.
   The prediction stayed as registered and failed for the first three. 0208's length-12 plants failed the same way.
+- **Plant texts read back in the wrong order.** 0211's first dry run laid the plants out as [plant 1, plant 2, copies] and
+  read them as [plant 1, its copies, plant 2]: a plant "not found" and a copy "with a hit". Found in the dry run, before the record.
+- **Ran 0211 with a test failing.** 0210's crib map was not drawn yet and `tests/test_figures.py` failed; I chained the test
+  and the run with `;` instead of stopping. The cipher tests passed and the run is unaffected, but it is the same slip as
+  0200's (figures before the next run). Stop on any failing test.
 
 ## 2026-10-19
 

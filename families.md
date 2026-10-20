@@ -73,6 +73,10 @@ Update the leaf when an experiment works on it.
       - One free alphabet: dead at 1-7 and 9 with up to 3 slips; plants at 7 found {closed · exact · 0208}
       - Two free alphabets: dead at 1-3 and 9 with up to 3 slips; plants at 3 and 9 found {closed · exact · 0209}
       - Free-alphabet lengths where K4 and the copies fit with 2-3 slips (one alphabet 8, 10-26; two 4-8, 10-26): too short to decide k slips, the reading undetermined {blocked · exact · 0208, 0209}
+    - **A1.3** Running keys from the named texts with slips at the known places {closed · exact · 0210, 0211}
+      - K1-K3, the sculpture's texts, Carter, Sanborn's letters on standard, KRYPTOS and keyword tables, up to 7 slips: no setting on K4 or any copy {closed · exact · 0210}
+      - The sculpture's texts and Carter plus a constant shift, with or without every type-1 move, up to 3 slips: none {closed · exact · 0211}
+      - On a free alphabet (0098, 0154): one slip lets hundreds of settings fit on every copy, reading undetermined: too short to decide k slips {blocked}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}

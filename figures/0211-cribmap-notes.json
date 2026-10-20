@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Sanborn was surprised nobody had run the original matrix through all the possible shifts. Experiment 117 did, with the sculpture's texts as the key and every grid move, and found nothing with all 24 known letters; three slips would have hidden it."
+ },
+ {
+  "anchor": "the check",
+  "text": "The same search, both orders (move first or table first), every route, table, shift and offset, allowing 3 of the 24 known letters to disagree, found through a block or a pair of known places that must agree; K4, 10 copies, two planted messages."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No setting with 3 or fewer slips on K4 or any copy (chance about 10^-14); both planted messages found at their own route, table, text, offset and shift."
+ }
+]

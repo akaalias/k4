@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A running key takes the secret letters from a long text. Every text we could name was slid along the carving before, and none gave all 24 known letters; a few hand slips at those places would have hidden the right one."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every named text (K1-K3, the sculpture's texts, Carter's book, Sanborn's letters), every offset both ways, on standard, KRYPTOS and keyword tables, allowing up to 7 of the 24 known letters to disagree; K4, 20 scrambled copies, three planted messages with slips."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No setting with 7 or fewer slips on K4 or any copy (chance about 10^-10); the three plants are found at their own text and offset, judged 96, 90, 93."
+ }
+]

@@ -1,0 +1,12 @@
+key text: the four ciphertexts as one panel, offset 0; KRYPTOS table, Vigenere, no move
+
+place  known  carved  needed  offered  needed - offered
+   22      E       F       1        0                1
+   23      A       L      10        1                9
+   24      S       R      21       19                2
+   25      T       V      18        6               12
+   64      B       N      11       22               15
+   65      E       Y      17       12                5
+   74      K       K       0       23                3
+
+the most common value of the last column covers 2 of 24 places; a shift with 3 slips needs 21

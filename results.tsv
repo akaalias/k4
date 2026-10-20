@@ -209,3 +209,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0208	0208-one-free-alphabet-with-slips-at-known-places	1-keyed-periodic	0119-one-free-alphabet-exact-at-every-key-length	reverted	0	0	0			236	design=89 implement=15 test=254 run=236 record=0
 0209	0209-two-free-alphabets-with-slips-at-known-places	1-keyed-periodic	0123-two-free-alphabets-exact-at-every-key-length	reverted	0	0	0			102	implement=5 test=107 run=102 record=0
 0210	0210-running-keys-with-slips-at-known-places	1-keyed-periodic	0047-running-key-carter-and-sculpture-mixed-alphabets	reverted	0	0	0			144	test=182 run=144 record=0
+0211	0211-running-keys-through-the-shifts-and-moves-with-slips	1-keyed-periodic	0117-running-keys-through-all-the-shifts	reverted	0	0	0			276	implement=101 test=558 run=276 record=0

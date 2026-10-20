@@ -1,0 +1,244 @@
+{
+ "id": 211,
+ "tag": "0211-running-keys-through-the-shifts-and-moves-with-slips",
+ "started": "2026-10-20T12:59:06+00:00",
+ "seconds": 275.7,
+ "status": "ran",
+ "phases": {
+  "implement": 101.1,
+  "test": 557.9,
+  "run": 275.7,
+  "record": 0.1
+ },
+ "ended_epoch": 1792501421.9330719,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "0117's running keys plus a constant shift, with or without a type-1 move, either order, 0-3 known letters slipped (A1.3)",
+  "routes_distinct": 27852,
+  "conventions": 12,
+  "shifts": 26,
+  "key_texts": {
+   "change_then_move": 44,
+   "move_then_change": 40,
+   "letters_cm": 1193440,
+   "letters_mc": 53784
+  },
+  "trials": {
+   "change_then_move": 10370783554560,
+   "move_then_change": 467373494016
+  },
+  "chance_settings_with_3_or_fewer_slips": {
+   "change_then_move": "4.1e-14",
+   "move_then_change": "1.8e-15"
+  },
+  "method": "change then move: 4 blocks of 6 known places, key differences indexed; move then change: 4 disjoint pairs, per-gap difference index; compiled; every hit checked on all 24",
+  "k4_settings_by_order_and_slips": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "copies_settings_by_order_and_slips": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "copies_done": 10,
+  "k4_hits": [],
+  "plants": [
+   {
+    "seed": 2111,
+    "order": "change then move",
+    "route": "keyword KRYPTOS (repeats dropped)",
+    "keytext": "Carter vol 1 fwd [kry]",
+    "offset": 182002,
+    "shift": 15,
+    "conv": "vig/kry/kry",
+    "k": 3,
+    "slips": [
+     33,
+     65,
+     70
+    ],
+    "settings_by_order_and_slips": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "planted_found": true,
+    "planted_mismatches": 3,
+    "same_reading_routes": 1,
+    "own_copies_settings": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 2112,
+    "order": "move then change",
+    "route": "turn cw 9",
+    "keytext": "panel ciphertexts K1-K4 fwd [std]",
+    "offset": 96,
+    "shift": 15,
+    "conv": "beau/std/kry",
+    "k": 2,
+    "slips": [
+     30,
+     31
+    ],
+    "settings_by_order_and_slips": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "planted_found": true,
+    "planted_mismatches": 2,
+    "same_reading_routes": 1,
+    "own_copies_settings": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   }
+  ],
+  "slip_cost_bits": {
+   "1": 9.3,
+   "2": 17.5,
+   "3": 25.1
+  },
+  "controls": "10 shuffled copies (seeds 2120-2129); each plant against 5 shuffles of its own ciphertext",
+  "exhaustive": "yes"
+ },
+ "notes": "K4 settings with <= 3 slips (change-then-move 0-3, move-then-change 0-3): [0, 0, 0, 0, 0, 0, 0, 0]; copies [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; plants found [True, True]",
+ "judge": null,
+ "error": null,
+ "candidates": []
+}

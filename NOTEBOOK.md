@@ -36,6 +36,14 @@ constraint to propagate, and enumeration would take tens of thousands of years. 
 10^8 keys) would run in about an hour, but it is not the agents' method, so it was not run as a stand-in (the instruction:
 a weak test is marked blocked, not run). F11 closed again; pivot P19 to F5.
 
+### F5 (after pivot P19, ticket #15 reopened)
+
+| # | Item | One line |
+|---|---|---|
+| 206 | F5.3 | **Gromark in bases 16-26 on the solved messages' word tables, exact.** 0046's rule test (364 two- and three-term rules, lags to 13, six or more checks, then carried to the second run) on 0054's 10,404 table pairs, 3 forms, every base each pair allows: no rule fits K4 or any copy; the planted base-20 text is the only fit. Spot-checked against Python on 8,960 cases. The gap a positive control found is closed. Prediction held. |
+
+F9 has no open item: **every open item in order-of-work.md is now closed or blocked** (STOP_AFTER).
+
 **How the grille search works.** A turning grille is not a sweep: 10^15 cards per procedure. The search walks the top half of
 the grid; each cell and its 180-degree partner share one prefix count, so both of their message places are known at once and
 about two thirds of the early cells land a known letter. With a key word every landing is a check and the tree stays tiny;

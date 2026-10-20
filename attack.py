@@ -1,63 +1,64 @@
-"""Experiment 0211. See program.md for the contract."""
+"""Experiment 0213. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "running-keys-through-the-shifts-and-moves-with-slips",
-    "title": "A1.3, with moves: 0117's running keys from the sculpture's texts and Carter, plus any constant shift of the table, with or without every type-1 move, either order, allowing up to three of the 24 known letters to be slips, exact, against scrambled copies, with planted slipped messages",
+    "slug": "plaintext-autokey-with-slips-and-a-lost-step",
+    "title": "A1.4, part 2: plaintext autokey on the sculpture's and the vocabulary's tables, lags 1-52, with up to two carved slips breaking the chain, or one lost step that runs on through it; exact, the readings judged against scrambled copies, with planted slipped messages",
     "family": "1-keyed-periodic",
-    "parent": "0117-running-keys-through-all-the-shifts",
+    "parent": "0025-autokey-keyword-mixed-alphabets",
     "changed": (
-        "A1.3 (Stage 2, step 2, issue #76), the part 0210 left out: 0117 required all 24 known letters (change then move: "
-        "the 23 key differences matched by hash; move then change: a pair index filtered check by check, deepest 8 of 24). "
-        "Here both orders allow up to 3 failed checks: change then move by a pigeonhole index (4 blocks of 6 known places; "
-        "3 slips leave one block whole, whose 5 key differences are looked up), move then change by 4 disjoint pairs of "
-        "known places (3 slips leave one pair whole, looked up by its key difference at its gap). Both compiled; same "
-        "sources, numberings, 12 conventions and 0117's route library unchanged; K4 against 10 scrambled copies; two "
-        "planted messages (one per order) with 3 and 2 slips."
+        "A1.4 (Stage 2, step 2, issue #76), second part. 0003, 0012 and 0025 chained plaintext autokey from the known "
+        "letters with no slip: lags 1-25 and 30-52 dead, 26-29 noise by quadgrams. In plaintext autokey a wrong carved "
+        "letter does not change the message but breaks our derivation through it, so (a) every lag 1-52 is rerun allowing up "
+        "to 2 breaks (slips anywhere in the chain, the known places included); (b) one lost step (from some place on, the "
+        "key is the message letter L + 1 or L - 1 back), at every place, as its own setting: everything after it shifts; "
+        "(c) at lags 26-29, where the known letters give 0-1 checks, every table's reading is scored and the best go to the "
+        "blind judge, which reads past a slip that garbles the rest of a chain (bench class 'half'). 35,721 table setups "
+        "(0025's), compiled; K4 against 20 scrambled copies; three planted messages."
     ),
     "hypothesis_expert": (
-        "C2(b) (Sanborn 2003: 'surprised that no one had tried recovering the original matrix and running it through all "
-        "the possible shifts'), C6(a) (keys concealed at the sculpture), C1(a) (a matrix stage), with A1 "
-        "(knowledge/12-assumptions.md) and C27(a) (the PALIMPCEST slip). Model as 0117: c = E(p, y[o + i] + s) for a key text "
-        "y numbered on the standard or KRYPTOS alphabet, offset o, constant s 0-25, E one of 12 conventions (Vigenere, "
-        "Beaufort, variant; plain and cipher alphabets standard or KRYPTOS); with a type-1 move before the table (move then "
-        "change: key aligned to carved places) or after it (change then move: key aligned to message places); key texts "
-        "the carved tableau (rows, rows with index, columns), the Morse (carved, reversed order), the four ciphertexts, "
-        "K1-K3 plaintexts, Sanborn's 1989 letter, the 1991 dedication texts, the 2025 open letter, forward and backward, "
-        "every cyclic offset; Carter's book in the change-then-move order only (as 0117). A slip at known place q makes "
-        "its equation fail; settings with at most 3 failures are counted, K4 against each copy. Chance of any setting "
-        "with 3 or fewer slips on a text: about 10^-15 (change then move, 4 x 10^11 trials) and 10^-17 (move then change), "
-        "so the 24 checks decide at k <= 3."
+        "A1 (knowledge/12-assumptions.md); C11a (NSA 1992: 'plain-text auto-key (if a high-frequency letter is assigned "
+        "0)'; NSA 2007 tested it without cribs), C27(a), Sanborn 2005 'Saying I was sloppy'. Model: c_i = C[E(P(p_i), "
+        "K(p_{i-L}))] after a primer of L letters; P, C from 0025's 63 alphabets (standard, KRYPTOS, vocabulary keyword), "
+        "K standard, KRYPTOS or the plain alphabet; Vigenere, Beaufort, variant. Each equation links p_i and p_{i-L} by a "
+        "bijection, so the message splits into L chains; two known letters in one chain must agree through every carved "
+        "letter between them. A slip at place j cuts the chain at j: the least number of cuts is the number of disagreeing "
+        "neighbouring known pairs, at most 2 here (17.5 bits to name). A lost step at j: p_i keyed by p_{i-L-1} or "
+        "p_{i-L+1} from j on, which joins the chains differently (a forest; known letters in one tree must agree), j = "
+        "2-74, about 7 bits. Readings: every letter whose chain holds a known letter. Counted per lag, K4 against each copy; "
+        "readings keeping 3 or more checks, and at 26-29 the best by quadgrams of every text, go to the judge in one call."
     ),
     "hypothesis_eli5": (
-        "Experiment 117 took the sculpture's own texts as a long key, let the whole table slide by any of 26 places, and "
-        "tried it with and without the grid scrambles of experiments 80-83. Nothing gave the 24 known letters. Here the "
-        "same search allows Sanborn up to three slips at those 24 places, on the carving and on scrambled copies, with two "
-        "messages of our own hidden the same way, slips included, to check the search finds them."
+        "In a plaintext autokey the message is its own key: each letter is enciphered with the message letter L places "
+        "before it. The known words then let us work out letters further along the message, one step at a time, like a "
+        "chain. One wrongly carved letter breaks the chain there, and a hand slip that loses one step shifts everything "
+        "after it. Earlier experiments allowed neither. Here we allow two broken links, or one lost step anywhere, on the "
+        "carving and on scrambled copies, and a language model reads what comes out, blind to which is which."
     ),
     "prediction": (
-        "No setting with 3 or fewer slips on K4 or on any copy, in either order. Both planted messages are found at their "
-        "own route, convention, key text, offset and shift, with exactly their slips. Zero candidates on K4."
+        "No lag below 26 fits K4 with 2 breaks or one lost step where it keeps 3 or more checks beyond the copies' rate; "
+        "at 26-29 K4's best reading is judged inside the copies'. All three plants found. Zero candidates pass gate 4."
     ),
     "method": (
-        "1. Build 0117's key texts (both numberings) and route library. 2. Change then move: index every offset of every "
-        "key text by the 5 key differences inside each of 4 blocks of 6 known places; for each route, convention and text, "
-        "compute the key each known place needs and look up its block differences; check every offset found on all 24 "
-        "places with the shift its clean block gives. 3. Move then change: for 4 disjoint pairs of known places, the moved "
-        "places' gap and needed key difference are looked up in a per-gap index of each key text; check every offset found "
-        "on all 24. 4. Keep settings with at most 3 failures. 5. K4, 10 copies, two plants with 5 copies each."
+        "1. For each table setup, lag and text, walk every chain between neighbouring known letters and count the pairs "
+        "that disagree; keep up to 2. 2. For each lost step (lag L before place j, L + 1 or L - 1 from it), walk each known "
+        "letter to the root of its tree and require known letters sharing a root to agree. 3. At lags 26-29, derive every "
+        "reading and score it by quadgrams in the same compiled pass. 4. Readings to quadgrams; each text's 5 best and every "
+        "reading at or above -5.0 to the judge, all texts in one call. 5. Counts per lag, K4 against 20 copies; plants and "
+        "their own copies through the same search."
     ),
     "walkthrough": (
-        "1. Take the four ciphertexts as the key text, from some offset, and the KRYPTOS table with Vigenere. "
-        "2. At each known place, the key needed is the carved letter minus the known letter, and the key text offers its own letter. "
-        "3. With a constant shift, needed minus offered must come out the same at every known place. "
-        "4. Allow up to 3 places where it does not: those would be Sanborn's slips. "
-        "5. Slide the offset, and repeat for every text, rule, and every grid scramble before or after the table."
+        "1. Choose a lag, say 12, and a table. "
+        "2. Known place 22 (E) and place 34 (T) are 12 apart: the carved letter at 34 and E as its key must give T on the table. "
+        "3. Work along each chain of places 12 apart, from one known letter to the next, and mark the pairs that disagree. "
+        "4. Each disagreeing pair needs one carved slip somewhere between them; allow up to two. "
+        "5. For a lost step, from some place on use the letter 13 (or 11) back as the key instead, and require every pair to agree. "
+        "6. Read every letter a known letter reaches through its chain, and compare with scrambled copies."
     ),
 }
 
 import ctypes
-import json
-import math
+import importlib.util
+import itertools
 import multiprocessing as mp
 import os
 import random
@@ -65,258 +66,246 @@ import subprocess
 import sys
 import tempfile
 import types
+from array import array
 from pathlib import Path
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY, load_k1, load_k2, load_k3
-from kryptos.ciphers import tableau_rows, columnar_transposition_encrypt
-from kryptos.alphabets import numeric_order
+
+from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
 
 N = 97
-N_COPIES = 10
-N_PLANT_COPIES = 5
-KMAX = 3
 ROOT = Path(__file__).resolve().parent
-if not (ROOT / "knowledge").exists():
+if not (ROOT / "experiments").exists():
     ROOT = Path.cwd()
-AL = {"std": STD, "kry": KRY}
-IDX = {k: {c: i for i, c in enumerate(a)} for k, a in AL.items()}
-EXTRA = ["EGYPT", "CAIRO", "LUXOR", "WALL", "NOVEMBER", "MESSAGE", "DELIVER", "DELIVERING", "TRANSMIT"]
-MODE_N = {"vig": 0, "beau": 1, "varb": 2}
+KMAX = 2
+RMIN = 3
+CUT = -5.0
+TOPC = 20
+TOPJ = 5
+N_COPIES = 20
+N_PLANT_COPIES = 5
+MODES = ("vig", "beau", "varbeau")
+MODE_N = {"vig": 0, "beau": 1, "varbeau": 2}
+ENC = {"vig": lambda p, k: (p + k) % 26, "beau": lambda p, k: (k - p) % 26, "varbeau": lambda p, k: (p - k) % 26}
+DEC = {"vig": lambda c, k: (c - k) % 26, "beau": lambda c, k: (k - c) % 26, "varbeau": lambda c, k: (c + k) % 26}
+NEED = {"vig": lambda p, c: (c - p) % 26, "beau": lambda p, c: (c + p) % 26, "varbeau": lambda p, c: (p - c) % 26}
 
 
-def letters(s):
-    return "".join(c for c in s.upper() if "A" <= c <= "Z")
+def _load(prefix):
+    d = sorted((ROOT / "experiments").glob(prefix + "-*"))[0]
+    spec = importlib.util.spec_from_file_location(f"exp{prefix}", d / "attack.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
 
 
-def sources():
-    site = json.loads((ROOT / "data" / "site_texts.json").read_text())
-    rows = tableau_rows(carved=True)
-    src = {}
-    src["tableau rows"] = "".join(rows)
-    src["tableau rows with index column"] = "".join(STD[i] + r for i, r in enumerate(rows))
-    width = max(len(r) for r in rows)
-    src["tableau columns"] = "".join(r[c] for c in range(width) for r in rows if c < len(r))
-    morse = [letters(m) for m in site["morse"]]
-    src["morse as carved"] = "".join(morse)
-    src["morse reversed order"] = "".join(reversed(morse))
-    k1, k2, k3 = load_k1(), load_k2(), load_k3()
-    k4 = letters((ROOT / "data" / "k4.txt").read_text())
-    src["panel ciphertexts K1-K4"] = letters(k1["ciphertext"]) + letters(k2["ciphertext_as_carved"]) + letters(k3["ciphertext"]) + k4
-    src["K1-K3 plaintexts"] = letters(k1["plaintext"]) + letters(k2["plaintext_as_carved"]) + letters(k3["plaintext"])
-    t = (ROOT / "knowledge" / "sources" / "sanborn-1989-letter-and-webster-1990-cryptogram.txt").read_text(errors="ignore")
-    a = t.index("Dear Agency Employees"); b = t.index("Sincerely, Jim Sanborn") + len("Sincerely, Jim Sanborn")
-    c = t.index("Remarks by William H. Webster")
-    o = (ROOT / "knowledge" / "sources" / "openletter-2025.txt").read_text(errors="ignore")
-    oa = o.index("Dear Kryptos fans"); ob = o.index("Jim Sanborn", o.index("All the best")) + len("Jim Sanborn")
-    src["Sanborn 1989 letter"] = letters(t[a:b])
-    src["1991 dedication texts"] = letters(t[c:])
-    src["2025 open letter"] = letters(o[oa:ob])
-    out = {}
-    for name, s in src.items():
-        out[name + " fwd"] = s
-        out[name + " bwd"] = s[::-1]
-    carter = letters((ROOT / "knowledge" / "sources" / "carter-1923-tomb-of-tutankhamen-vol1.txt").read_text(errors="ignore"))
-    big = {"Carter vol 1 fwd": carter, "Carter vol 1 bwd": carter[::-1]}
-    return out, big
-
-
-def perm_of(fn):
-    idx = "".join(chr(0x100 + i) for i in range(N))
-    return [ord(ch) - 0x100 for ch in fn(idx)]
-
-
-def rot_cw(s, w):
-    rows = [s[i:i + w] for i in range(0, len(s), w)]
-    return "".join(r[c] for c in range(w) for r in reversed(rows) if c < len(r))
-
-
-def rot_ccw(s, w):
-    rows = [s[i:i + w] for i in range(0, len(s), w)]
-    return "".join(r[c] for c in reversed(range(w)) for r in rows if c < len(r))
-
-
-def keyword_sequence(word):
-    rank = numeric_order(word)
-    return sorted(range(len(rank)), key=lambda c: rank[c])
-
-
-def full_sequence(word):
-    w = [c for c in word.upper() if c.isalpha()]
-    return sorted(range(len(w)), key=lambda c: (w[c], c))
-
-
-def route_fns(vocab):
-    for b in range(1, N):
-        for a in range(N):
-            def f(s, a=a, b=b):
-                out = [""] * N
-                for i in range(N):
-                    out[(a + b * i) % N] = s[i]
-                return "".join(out)
-            yield f"K3 rule a={a} b={b}", f
-    for w in range(2, N):
-        yield f"turn cw {w}", (lambda s, w=w: rot_cw(s, w))
-        yield f"turn ccw {w}", (lambda s, w=w: rot_ccw(s, w))
-        yield f"columnar {w}", (lambda s, o=list(range(w)): columnar_transposition_encrypt(s, o))
-        yield f"columnar rtl {w}", (lambda s, o=list(range(w))[::-1]: columnar_transposition_encrypt(s, o))
-    for w1 in range(2, N):
-        for w2 in range(2, N):
-            yield f"two turns cw {w1},{w2}", (lambda s, a=w1, b=w2: rot_cw(rot_cw(s, a), b))
-    words = sorted({w for w in vocab if 2 <= len(w) <= 30} | set(EXTRA))
-    for word in words:
-        for how, seq in (("repeats dropped", keyword_sequence(word)), ("full word", full_sequence(word))):
-            if len(seq) >= 2:
-                yield f"keyword {word} ({how})", (lambda s, o=list(seq): columnar_transposition_encrypt(s, o))
-
-
-def route_library(vocab):
-    """Distinct 'where' maps (where[i] = place in the moved text of letter i), forward and inverse."""
-    seen, lib = set(), []
-    for name, f in route_fns(vocab):
-        sigma = perm_of(f)                    # moved[j] = orig[sigma[j]]
-        fwd = [0] * N
-        for j, i in enumerate(sigma):
-            fwd[i] = j
-        for tag, w in ((name, fwd), (name + " inverse", sigma)):
-            t = tuple(w)
-            if t not in seen:
-                seen.add(t); lib.append((tag, t))
-    return lib
-
-
-def enc(mode, p, k):
-    return {"vig": (p + k) % 26, "beau": (k - p) % 26, "varb": (p - k) % 26}[mode]
-
-
-def key_for(mode, p, c):
-    """k with enc(mode, p, k) = c."""
-    return {"vig": (c - p) % 26, "beau": (c + p) % 26, "varb": (p - c) % 26}[mode]
-
-
-def dec(mode, c, k):
-    return {"vig": (c - k) % 26, "beau": (k - c) % 26, "varb": (c + k) % 26}[mode]
-
-
-CONVS = [(m, pa, ca) for m in ("vig", "beau", "varb") for pa in ("std", "kry") for ca in ("std", "kry")]
+def table_setups(vocab):
+    """0025's: plain and cipher alphabet from the 63 (standard, KRYPTOS, vocabulary keyword), key standard, KRYPTOS or plain."""
+    pool = _load("0045").pool_of(vocab)
+    out, seen = [], set()
+    for pn, pa in pool.items():
+        for cn, ca in pool.items():
+            for kn, ka in (("std", STD), ("kry", KRY), ("plain", pa)):
+                for m in MODES:
+                    if (pa, ca, ka, m) not in seen:
+                        seen.add((pa, ca, ka, m)); out.append((f"{pn}|{cn}|{kn}|{m}", pa, ca, ka, m))
+    return out
 
 
 C_SRC = r"""
-#include <stdlib.h>
-#include <string.h>
 static int md(int x){ x%=26; return x<0?x+26:x; }
-static int keyfor(int m,int p,int c){ return m==0?md(c-p):(m==1?md(c+p):md(p-c)); }
-
-/* key texts: concatenated y (0-25), starts, lens. */
-static int NF; static const int *Y; static const long *ST; static const int *LN;
-void set_keys(int nf, const int *y, const long *st, const int *ln){ NF=nf; Y=y; ST=st; LN=ln; }
-
-/* change then move: index of (code, f, o) for the 4 blocks of 6 known places (positions kp, fixed). */
-static long *IX[4]; static long NIX; static int KP[24];
-static int cmp(const void*a,const void*b){ long x=*(const long*)a,y=*(const long*)b; return x<y?-1:x>y; }
-static long code_at(int f,long o,int b){ const int *y=Y+ST[f]; int L=LN[f]; long c=0; int y0=y[(o+KP[6*b])%L];
-  for(int j=1;j<6;j++){ c=c*26+md(y[(o+KP[6*b+j])%L]-y0);} return c; }
-void build_cm(int nfcm, const int *kp){ /* only the first nfcm key texts (all, incl. Carter) */
-  memcpy(KP,kp,24*sizeof(int)); NIX=0; for(int f=0;f<nfcm;f++) NIX+=LN[f];
-  for(int b=0;b<4;b++){ IX[b]=(long*)malloc(sizeof(long)*NIX); long n=0;
-    for(int f=0;f<nfcm;f++) for(long o=0;o<LN[f];o++){ long c=code_at(f,o,b); IX[b][n++]=(c<<26)|((long)f<<20)|o; }
-    qsort(IX[b],NIX,sizeof(long),cmp); } }
-
-/* move then change: per key text, per gap g in -96..96, offsets u sorted by d = y[u+g]-y[u]. */
-static int NFMC; static int **GI; static int **GS; /* GI[f*193+g+96] offsets, GS[...] 27 starts */
-void build_mc(int nfmc){ NFMC=nfmc; GI=(int**)malloc(sizeof(int*)*nfmc*193); GS=(int**)malloc(sizeof(int*)*nfmc*193);
-  for(int f=0;f<nfmc;f++){ const int *y=Y+ST[f]; int L=LN[f];
-    for(int g=-96;g<=96;g++){ int *cnt=(int*)calloc(27,sizeof(int)); int *off=(int*)malloc(sizeof(int)*L);
-      for(int u=0;u<L;u++){ int d=md(y[((u+g)%L+L)%L]-y[u]); cnt[d+1]++; }
-      for(int d=0;d<26;d++) cnt[d+1]+=cnt[d];
-      int *pos=(int*)malloc(sizeof(int)*27); memcpy(pos,cnt,27*sizeof(int));
-      for(int u=0;u<L;u++){ int d=md(y[((u+g)%L+L)%L]-y[u]); off[pos[d]++]=u; }
-      free(pos); GI[f*193+g+96]=off; GS[f*193+g+96]=cnt; } } }
-
-/* one text against every route and convention.
-   text[97]; known[24] letters; kpos[24] 0-based places; routes nr x 97 (where[i]);
-   conv 12 x (mode, pa idx table 26, ca idx table 26) as convm[12], pat[12*26], cat[12*26];
-   counts out[2*4]; hits out up to maxh x 8 (order, route, conv, f, o, s, mism, unused). */
-long run_text(const int *text,const int *known,const int *kpos,int nr,const int *routes,
-              const int *convm,const int *pat,const int *cat,int nfmc,
-              long *counts,int maxh,long *hits){
-  long nh=0; int T[24], kp[24];
-  for(int r=0;r<nr;r++){ const int *w=routes+97*r;
-    for(int c=0;c<12;c++){ int m=convm[c];
-      for(int e=0;e<24;e++) T[e]=keyfor(m,pat[c*26+known[e]],cat[c*26+text[w[kpos[e]]]]);
-      /* change then move: key at message places */
-      long seen_n=0;
-      for(int b=0;b<4;b++){ long code=0; for(int j=1;j<6;j++) code=code*26+md(T[6*b+j]-T[6*b]);
-        long lo=0,hi=NIX; long key=code<<26; while(lo<hi){ long mid=(lo+hi)/2; if(IX[b][mid]<key) lo=mid+1; else hi=mid; }
-        for(long i=lo;i<NIX && (IX[b][i]>>26)==code;i++){ int f=(IX[b][i]>>20)&63; long o=IX[b][i]&((1<<20)-1);
-          int dup=0; for(int b2=0;b2<b;b2++) if(code_at(f,o,b2)==({long cc=0; for(int j=1;j<6;j++) cc=cc*26+md(T[6*b2+j]-T[6*b2]); cc;})){dup=1;break;}
-          if(dup) continue;
-          const int *y=Y+ST[f]; int L=LN[f]; int s=md(T[6*b]-y[(o+KP[6*b])%L]); int mm=0;
-          for(int e=0;e<24 && mm<=3;e++) if(md(y[(o+KP[e])%L]+s)!=T[e]) mm++;
-          if(mm<=3){ counts[0*4+mm]++; if(nh<maxh){ long *h=hits+8*nh; h[0]=0;h[1]=r;h[2]=c;h[3]=f;h[4]=o;h[5]=s;h[6]=mm; nh++; } } } }
-      /* move then change: key at carved places */
-      for(int e=0;e<24;e++) kp[e]=w[kpos[e]];
-      for(int f=0;f<nfmc;f++){ const int *y=Y+ST[f]; int L=LN[f];
-        for(int pr=0;pr<4;pr++){ int e0=2*pr,e1=2*pr+1; int g=kp[e1]-kp[e0]; int d=md(T[e1]-T[e0]);
-          const int *off=GI[f*193+g+96]; const int *cs=GS[f*193+g+96];
-          for(int i=cs[d];i<cs[d+1];i++){ int u=off[i]; long o=((u-kp[e0])%L+L)%L; int s=md(T[e0]-y[u]);
-            int dup=0; for(int p2=0;p2<pr;p2++){ int a=2*p2,bb=2*p2+1;
-              if(md(y[(o+kp[bb])%L]-y[(o+kp[a])%L])==md(T[bb]-T[a])){dup=1;break;} }
-            if(dup) continue;
-            int mm=0; for(int e=0;e<24 && mm<=3;e++) if(md(y[(o+kp[e])%L]+s)!=T[e]) mm++;
-            if(mm<=3){ counts[1*4+mm]++; if(nh<maxh){ long *h=hits+8*nh; h[0]=1;h[1]=r;h[2]=c;h[3]=f;h[4]=o;h[5]=s;h[6]=mm; nh++; } } } } } } }
-  return nh; }
+static inline int fwd(int m,const int*pinv,const int*ci,const int*ki,int c,int x){ int k=ki[x],v=ci[c]; v= m==0?md(v-k):(m==1?md(k-v):md(v+k)); return pinv[v]; }
+static inline int bwd(int m,const int*pi,const int*ci,const int*kinv,int c,int p){ int v= m==0?md(ci[c]-pi[p]):(m==1?md(ci[c]+pi[p]):md(pi[p]-ci[c])); return kinv[v]; }
+static const float *QG; static float QFLOOR;
+void set_qg(const float*q,float fl){ QG=q; QFLOOR=fl; }
+static float quad(const int*r,const int*isknown){ int buf[97],n=0; for(int i=0;i<97;i++) if(!isknown[i] && r[i]>=0) buf[n++]=r[i];
+  if(n<4) return QFLOOR; double s=0; for(int i=0;i+3<n;i++) s+=QG[((buf[i]*26+buf[i+1])*26+buf[i+2])*26+buf[i+3]]; return (float)(s/(n-3)); }
+long run_pa(int ns,const int*PI,const int*CI,const int*KI,const int*PINV,const int*KINV,const int*M,
+            const int*text,const int*kq,const int*kl,const int*isknown,int rmin,float cut,
+            long*counts,long*skip,long maxh,int*hits,long*nb_out,long maxb,int*bulk){
+  long nh=0,nb=0; int root[98];
+  for(int s=0;s<ns;s++){
+    const int*pi=PI+26*s,*ci=CI+26*s,*ki=KI+26*s,*pinv=PINV+26*s,*kinv=KINV+26*s; int m=M[s];
+    for(int L=1;L<=52;L++){
+      int d=0,pairs=0;
+      for(int e=0;e<24 && d<=2;e++){ int a=kq[e]; int f2=-1; for(int f=e+1;f<24;f++) if((kq[f]-a)%L==0){ f2=f; break; }
+        if(f2<0) continue; pairs++; int b=kq[f2]; int x=kl[e]; for(int i=a+L;i<=b;i+=L) x=fwd(m,pinv,ci,ki,text[i-1],x);
+        if(x!=kl[f2]) d++; }
+      if(d<=2){ counts[L*3+d]++; if(pairs-d>=rmin && nh<maxh){ int*h=hits+5*nh; h[0]=s;h[1]=L;h[2]=d;h[3]=-1;h[4]=-1; nh++; } }
+      if(L>=26 && L<=29 && d==0){ int r[97]; for(int i=0;i<97;i++) r[i]=-1;
+        for(int e=0;e<24;e++) r[kq[e]-1]=kl[e];
+        for(int e=0;e<24;e++){ int q=kq[e]; int x=kl[e];
+          for(int i=q+L;i<=97;i+=L){ if(isknown[i-1]) break; x=fwd(m,pinv,ci,ki,text[i-1],x); r[i-1]=x; }
+          x=kl[e]; for(int i=q;i-L>=1;i-=L){ if(isknown[i-L-1]) break; x=bwd(m,pi,ci,kinv,text[i-1],x); r[i-L-1]=x; } }
+        float sc=quad(r,isknown);
+        if(nb<maxb){ int*b=bulk+3*nb; b[0]=s;b[1]=L;b[2]=(int)(sc*1000); nb++; } }
+      for(int di=0;di<2;di++){ int L2=di==0?L+1:L-1; if(L2<1) continue;
+        for(int j=2;j<=74;j++){
+          for(int i=0;i<98;i++) root[i]=-1;
+          int ok=1,checks=0;
+          for(int e=0;e<24 && ok;e++){ int i=kq[e]; int x=kl[e];
+            while(1){ int lg=i>=j?L2:L; int par=i-lg; if(par<1) break; x=bwd(m,pi,ci,kinv,text[i-1],x); i=par; }
+            if(root[i]<0){ root[i]=x; } else { checks++; if(root[i]!=x) ok=0; } }
+          if(ok && checks>0){ skip[L*2+di]++; if(checks>=rmin && nh<maxh){ int*h=hits+5*nh; h[0]=s;h[1]=L;h[2]=0;h[3]=di;h[4]=j; nh++; } } } } } }
+  *nb_out=nb; return nh; }
 """
-
 _LIB = None
-_STATE = {}
+_KEEP = []
 
 
 def lib():
     global _LIB
     if _LIB is None:
-        d = tempfile.mkdtemp(prefix="k4_rk_")
-        src, so = os.path.join(d, "rk.c"), os.path.join(d, "rk.so")
+        d = tempfile.mkdtemp(prefix="k4_pa_")
+        src, so = os.path.join(d, "pa.c"), os.path.join(d, "pa.so")
         Path(src).write_text(C_SRC)
         subprocess.run(["cc", "-O2", "-shared", "-fPIC", "-o", so, src], check=True, capture_output=True)
         _LIB = ctypes.CDLL(so)
-        _LIB.run_text.restype = ctypes.c_long
+        P, ci, cl = ctypes.POINTER, ctypes.c_int, ctypes.c_long
+        _LIB.run_pa.restype = cl
+        _LIB.run_pa.argtypes = [ci] + [P(ci)] * 10 + [ci, ctypes.c_float, P(cl), P(cl), cl, P(ci), P(cl), cl, P(ci)]
+        _LIB.set_qg.argtypes = [P(ctypes.c_float), ctypes.c_float]
     return _LIB
 
 
-def I(a):
-    return (ctypes.c_int * len(a))(*a)
+def I(a, typ="i", ct=ctypes.c_int):
+    buf = array(typ, a)
+    _KEEP.append(buf)
+    return (ct * len(buf)).from_buffer(buf)
 
 
-def setup_state(keytexts_cm, n_mc, lib_routes, known):
-    """keytexts_cm: list of (name, numbers); the first n_mc are the move-then-change texts (no Carter)."""
-    L = lib()
-    y = []; st = []; ln = []
-    for _, v in keytexts_cm:
-        st.append(len(y)); ln.append(len(v)); y.extend(v)
-    _STATE["y"] = I(y); _STATE["st"] = (ctypes.c_long * len(st))(*st); _STATE["ln"] = I(ln)
-    L.set_keys(len(ln), _STATE["y"], _STATE["st"], _STATE["ln"])
-    kpos = [q - 1 for q in sorted(known)]
-    _STATE["kpos"] = I(kpos)
-    L.build_cm(len(ln), _STATE["kpos"])
-    L.build_mc(n_mc)
-    routes = []
-    for _, w in lib_routes:
-        routes.extend(w)
-    _STATE["routes"] = I(routes); _STATE["nr"] = len(lib_routes); _STATE["nmc"] = n_mc
-    _STATE["known"] = I([ord(known[q]) - 65 for q in sorted(known)])
-    convm, pat, cat = [], [], []
-    for mode, pa, ca in CONVS:
-        convm.append(MODE_N[mode]); pat.extend(IDX[pa][c] for c in STD); cat.extend(IDX[ca][c] for c in STD)
-    _STATE["convm"], _STATE["pat"], _STATE["cat"] = I(convm), I(pat), I(cat)
+class PA:
+    def __init__(self, setups, known):
+        from kryptos.scorer import _table
+        logs, floor = _table()
+        q = [floor] * (26 ** 4)
+        for k, v in logs.items():
+            a, b, c, d = (ord(x) - 65 for x in k)
+            q[((a * 26 + b) * 26 + c) * 26 + d] = v
+        self.qg = I(q, "f", ctypes.c_float)
+        self.floor = floor
+        self.setups = setups
+        self.PI = I([pa.index(c) for _, pa, _, _, _ in setups for c in STD])
+        self.CI = I([ca.index(c) for _, _, ca, _, _ in setups for c in STD])
+        self.KI = I([ka.index(c) for _, _, _, ka, _ in setups for c in STD])
+        self.PINV = I([ord(pa[i]) - 65 for _, pa, _, _, _ in setups for i in range(26)])
+        self.KINV = I([ord(ka[i]) - 65 for _, _, _, ka, _ in setups for i in range(26)])
+        self.M = I([MODE_N[m] for *_, m in setups])
+        self.known = known
+        self.kq = sorted(known)
+        self.kqI = I(self.kq)
+        self.klI = I([ord(known[q]) - 65 for q in self.kq])
+        self.isk = I([1 if i + 1 in known else 0 for i in range(N)])
+
+    def run(self, text):
+        lib().set_qg(self.qg, self.floor)
+        cl = ctypes.c_long
+        counts = (cl * (53 * 3))(); skip = (cl * (53 * 2))()
+        maxh, maxb = 200000, 400000
+        hits = (ctypes.c_int * (5 * maxh))(); bulk = (ctypes.c_int * (3 * maxb))(); nb = cl(0)
+        nh = lib().run_pa(len(self.setups), self.PI, self.CI, self.KI, self.PINV, self.KINV, self.M, I([ord(c) - 65 for c in text]),
+                          self.kqI, self.klI, self.isk, RMIN, ctypes.c_float(CUT), counts, skip, maxh, hits, ctypes.byref(nb), maxb, bulk)
+        H = [tuple(hits[5 * i + j] for j in range(5)) for i in range(nh)]
+        B = [(bulk[3 * i], bulk[3 * i + 1], bulk[3 * i + 2] / 1000) for i in range(nb.value)]
+        return ({L: [counts[L * 3 + d] for d in range(3)] for L in range(1, 53)},
+                {L: [skip[L * 2], skip[L * 2 + 1]] for L in range(1, 53)}, H, B, nh >= maxh or nb.value >= maxb)
+
+    def fwd(self, s, c, x):
+        _, pa, ca, ka, m = self.setups[s]
+        return pa[DEC[m](ca.index(c), ka.index(x))]
+
+    def bwd(self, s, c, p):
+        _, pa, ca, ka, m = self.setups[s]
+        return ka[NEED[m](pa.index(p), ca.index(c))]
+
+    def reading_chain(self, text, s, L, cuts=()):
+        """Derive along each chain from its known letters; a cut at place j stops the walk through j."""
+        r = ["?"] * N
+        for q in self.kq:
+            r[q - 1] = self.known[q]
+        for q in self.kq:
+            x = self.known[q]
+            i = q + L
+            while i <= N and i not in self.known and i not in cuts:
+                x = self.fwd(s, text[i - 1], x); r[i - 1] = x; i += L
+            x = self.known[q]; i = q
+            while i - L >= 1 and (i - L) not in self.known and i not in cuts:
+                x = self.bwd(s, text[i - 1], x); r[i - L - 1] = x; i -= L
+        return "".join(r)
+
+    def reading_skip(self, text, s, L, L2, j):
+        """Lost step: lag L before place j, L2 from j on. Derive from every known letter over its tree."""
+        lag = lambda i: L2 if i >= j else L  # noqa: E731
+        children = {}
+        for i in range(1, N + 1):
+            p = i - lag(i)
+            if p >= 1:
+                children.setdefault(p, []).append(i)
+        r = {q: self.known[q] for q in self.kq}
+        stack = list(self.kq)
+        while stack:
+            i = stack.pop()
+            p = i - lag(i)
+            if p >= 1 and p not in r:
+                r[p] = self.bwd(s, text[i - 1], r[i]); stack.append(p)
+            for c in children.get(i, []):
+                if c not in r:
+                    r[c] = self.fwd(s, text[c - 1], r[i]); stack.append(c)
+        return "".join(r.get(i, "?") for i in range(1, N + 1))
 
 
-def one_text(text):
-    L = lib()
-    counts = (ctypes.c_long * 8)()
-    maxh = 200
-    hits = (ctypes.c_long * (8 * maxh))()
-    nh = L.run_text(I([ord(c) - 65 for c in text]), _STATE["known"], _STATE["kpos"], _STATE["nr"], _STATE["routes"],
-                    _STATE["convm"], _STATE["pat"], _STATE["cat"], _STATE["nmc"], counts, maxh, hits)
-    return list(counts), [tuple(hits[8 * i + j] for j in range(7)) for i in range(nh)]
+def pa_encrypt(pt, pa, ca, ka, m, L, primer, skip=None):
+    out = []
+    for i, p in enumerate(pt):
+        lg = skip[1] if skip and i >= skip[0] else L
+        k = primer[i] if i < lg else pt[i - lg]
+        out.append(ca[ENC[m](pa.index(p), ka.index(k))])
+    return "".join(out)
+
+
+def encrypt(plaintext, key):
+    sk = (key["skip_at"], key["skip_lag"]) if key.get("skip_at") is not None else None
+    out = list(pa_encrypt(plaintext, key["pa"], key["ca"], key["ka"], key["m"], key["lag"], key["primer"], sk))
+    for q, ch in key.get("slips", []):
+        out[q - 1] = ch
+    return "".join(out)
+
+
+_STATE = {}
+
+
+def one_text(t):
+    pa = _STATE["pa"]
+    cnt, skp, H, B, capped = pa.run(t)
+    recs = []
+    for h in H:
+        s, L, d, di, j = h
+        if di < 0:
+            if d == 0:
+                recs.append({"kind": "chain", "s": s, "L": L, "d": 0, "cuts": [], "reading": pa.reading_chain(t, s, L)})
+            else:
+                bad = []
+                for e, a in enumerate(pa.kq):
+                    b = next((q for q in pa.kq[e + 1:] if (q - a) % L == 0), None)
+                    if b is None:
+                        continue
+                    x = pa.known[a]
+                    for i in range(a + L, b + 1, L):
+                        x = pa.fwd(s, t[i - 1], x)
+                    if x != pa.known[b]:
+                        bad.append(list(range(a + L, b + 1, L)))
+                for cuts in itertools.product(*bad):
+                    recs.append({"kind": "chain", "s": s, "L": L, "d": d, "cuts": list(cuts), "reading": pa.reading_chain(t, s, L, set(cuts))})
+        else:
+            L2 = L + 1 if di == 0 else L - 1
+            recs.append({"kind": "skip", "s": s, "L": L, "L2": L2, "j": j, "reading": pa.reading_skip(t, s, L, L2, j)})
+    B.sort(key=lambda b: -b[2])
+    for s, L, sc in [b for b in B if b[2] >= CUT] + B[:TOPC]:
+        recs.append({"kind": "bulk", "s": s, "L": L, "d": 0, "cuts": [], "reading": pa.reading_chain(t, s, L), "bulk_quad": sc})
+    seen, uniq = set(), []
+    for r in recs:
+        k_ = (r["kind"], r["s"], r["L"], tuple(r.get("cuts", [])), r.get("j"), r.get("L2"))
+        if k_ not in seen:
+            seen.add(k_); uniq.append(r)
+    return {"counts": cnt, "skip": skp, "recs": uniq, "capped": capped, "bulk_n": len(B)}
 
 
 def shuffled(text, seed):
@@ -325,162 +314,159 @@ def shuffled(text, seed):
     return "".join(l_)
 
 
-def apply(order, text_letters, where, y, o, s, conv):
-    """Encrypt 97 plaintext letters: order 0 change then move, 1 move then change. Returns the carved text."""
-    mode, pa, ca = conv
-    P, C = IDX[pa], AL[ca]
-    L = len(y)
-    if order == 0:
-        ch = [C[enc(mode, P[p], (y[(o + i) % L] + s) % 26)] for i, p in enumerate(text_letters)]
-        out = [""] * N
-        for i in range(N):
-            out[where[i]] = ch[i]
-        return "".join(out)
-    moved = [""] * N
-    for i in range(N):
-        moved[where[i]] = text_letters[i]
-    return "".join(C[enc(mode, P[p], (y[(o + j) % L] + s) % 26)] for j, p in enumerate(moved))
-
-
-def encrypt(plaintext, key):
-    """key: order (0 change then move, 1 move then change), where (97 places), key text numbers y, offset, shift,
-    convention (mode, pa, ca), slips [[place, carved letter]]."""
-    out = list(apply(key["order"], plaintext, key["where"], key["y"], key["offset"], key["shift"], tuple(key["conv"])))
-    for q, ch in key.get("slips", []):
-        out[q - 1] = ch
-    return "".join(out)
-
-
-PLANTS = [  # (seed, order, route name prefix, key text, numbering, conv, slips)
-    (2111, 0, "keyword KRYPTOS (repeats dropped)", "Carter vol 1 fwd", "kry", ("vig", "kry", "kry"), 3),
-    (2112, 1, "turn cw 9", "panel ciphertexts K1-K4 fwd", "std", ("beau", "std", "kry"), 2),
-]
-
-
 def run(ctx):
+    from kryptos.plants import english_plant
     known = ctx.KNOWN
-    lib_routes = route_library(ctx.vocabulary)
-    srcs, big = sources()
-    mc_texts = [(f"{n} [{ka}]", [IDX[ka][c] for c in s]) for n, s in srcs.items() for ka in ("std", "kry")]
-    cm_extra = [(f"{n} [{ka}]", [IDX[ka][c] for c in s]) for n, s in big.items() for ka in ("std", "kry")]
-    keytexts = mc_texts + cm_extra
-    names = [n for n, _ in keytexts]
-    setup_state(keytexts, len(mc_texts), lib_routes, known)
-    route_idx = {name: i for i, (name, _) in enumerate(lib_routes)}
-    # plants
+    setups = table_setups(list(ctx.vocabulary))
+    pa = PA(setups, known)
+    sidx = {(a, b, c, d): i for i, (_, a, b, c, d) in enumerate(setups)}
+    kq = sorted(known)
     plants = []
-    for seed, order, rname, kt, ka, conv, k in PLANTS:
-        from kryptos.plants import english_plant
+    specs = [  # (seed, (pa, ca, ka, m), L, slips, lost step (place 0-based, new lag))
+        (2131, (STD, KRY, KRY, "vig"), 12, 2, None),
+        (2132, (KRY, KRY, KRY, "beau"), 20, 0, (49, 21)),
+        (2133, (KRY, STD, STD, "varbeau"), 8, 1, None),
+    ]
+    for seed, (a, b, c, m), L, k, skip in specs:
         rng = random.Random(seed)
         pt = english_plant(seed)
-        r = route_idx[rname]
-        f = names.index(f"{kt} [{ka}]")
-        y = keytexts[f][1]
-        o, s = rng.randrange(len(y)), rng.randrange(26)
-        ct = list(apply(order, pt, lib_routes[r][1], y, o, s, conv))
-        places = sorted(rng.sample(sorted(known), k))
-        where = lib_routes[r][1]
-        for q in places:  # the known letter at message place q is carved at where[q - 1] in either order
-            j = where[q - 1]
-            ct[j] = rng.choice([c for c in STD if c != ct[j]])
-        plants.append({"seed": seed, "order": order, "route": rname, "r": r, "keytext": f"{kt} [{ka}]", "f": f, "offset": o,
-                       "shift": s, "conv": "/".join(conv), "c": CONVS.index(conv), "k": k, "slips": places, "ct": "".join(ct), "pt": pt})
+        primer = "".join(rng.choice(STD) for _ in range(L + 2))
+        ct = list(pa_encrypt(pt, a, b, c, m, L, primer, skip))
+        inner = sorted({i for e, q in enumerate(kq) for q2 in kq[e + 1:] if (q2 - q) % L == 0 for i in range(q + L, q2 + 1, L)})
+        places = sorted(rng.sample(inner, k)) if k else []
+        if seed == 2133:  # one slip that runs on: past the last known letter of its chain (69 -> 77 -> 85 -> 93)
+            places = [77]
+        for q in places:
+            ct[q - 1] = rng.choice([x for x in STD if x != ct[q - 1]])
+        plants.append({"seed": seed, "setup": sidx[(a, b, c, m)], "L": L, "k": len(places), "skip": skip, "slips": places, "pt": pt, "ct": "".join(ct)})
     texts = []
-    for p in plants:  # each plant, then its own copies
-        texts += [p["ct"]] + [shuffled(p["ct"], p["seed"] * 100 + i) for i in range(N_PLANT_COPIES)]
-    n_pl = len(texts)
-    texts += [ctx.K4] + [shuffled(ctx.K4, 2120 + i) for i in range(N_COPIES)]
+    for j, p in enumerate(plants):
+        texts.append((f"plant{j + 1}", p["ct"]))
+        texts += [(f"plant{j + 1}-copy{i + 1}", shuffled(p["ct"], p["seed"] * 100 + i)) for i in range(N_PLANT_COPIES)]
+    texts.append(("K4", ctx.K4))
+    texts += [(f"copy{i + 1}", shuffled(ctx.K4, 2140 + i)) for i in range(N_COPIES)]
+    _STATE["pa"] = pa
     if getattr(sys.modules.get(__name__), "one_text", None) is not one_text:
         mod = types.ModuleType(__name__); mod.__dict__.update(globals()); sys.modules[__name__] = mod
-    out = [None] * len(texts)
+    res = {}
     with mp.get_context("fork").Pool(8) as pool:
-        it = pool.imap(one_text, texts)
-        for i in range(len(texts)):
-            out[i] = it.next()
-            if ctx.time_left() < 60:
+        it = pool.imap(one_text, [t for _, t in texts])
+        for name, _ in texts:
+            res[name] = it.next()
+            if ctx.time_left() < 300:
                 pool.terminate()
                 break
+
+    def quad(r):
+        return ctx.english_score("".join(c for i, c in enumerate(r, start=1) if i not in known and c != "?"))
+    to_judge = set()
+    for v in res.values():
+        for r in v["recs"]:
+            r["quad"] = quad(r["reading"])
+        top = sorted(v["recs"], key=lambda r: -r["quad"])[:TOPJ]
+        for r in top + [r for r in v["recs"] if r["quad"] >= CUT]:
+            to_judge.add(r["reading"])
+    order = sorted(to_judge)
+    verdicts = dict(zip(order, ctx.judge(order))) if order else {}
+    for v in res.values():
+        for r in v["recs"]:
+            if r["reading"] in verdicts:
+                r["judge"] = verdicts[r["reading"]]["score"]
+
+    def jbest(name):
+        sc = [r["judge"] for r in res[name]["recs"] if r.get("judge") is not None]
+        return max(sc) if sc else None
     plant_out = []
     for j, p in enumerate(plants):
-        res = out[j * (N_PLANT_COPIES + 1)]
-        own = [out[j * (N_PLANT_COPIES + 1) + 1 + i] for i in range(N_PLANT_COPIES)]
-        if res is None or any(x is None for x in own):
-            plant_out.append({"seed": p["seed"], "found": False, "note": "not run"}); continue
-        hit = [h for h in res[1] if h[0] == p["order"] and h[2] == p["c"] and h[3] == p["f"] and h[4] == p["offset"] and h[5] == p["shift"]]
-        hit_route = [h for h in hit if h[1] == p["r"]]
-        plant_out.append({"seed": p["seed"], "order": ["change then move", "move then change"][p["order"]], "route": p["route"],
-                          "keytext": p["keytext"], "offset": p["offset"], "shift": p["shift"], "conv": p["conv"], "k": p["k"],
-                          "slips": p["slips"], "settings_by_order_and_slips": res[0],
-                          "planted_found": bool(hit_route), "planted_mismatches": hit_route[0][6] if hit_route else None,
-                          "same_reading_routes": len(hit), "own_copies_settings": [sum(x[0]) for x in own],
-                          "found": bool(hit_route and hit_route[0][6] == p["k"] and all(sum(x[0]) == 0 for x in own))})
-    k4 = out[n_pl]
-    copies = [x for x in out[n_pl + 1:] if x is not None]
-    # readings of K4's settings (if any) to the judge
-    k4_hits = []
+        name = f"plant{j + 1}"
+        if name not in res:
+            plant_out.append({"seed": p["seed"], "found": False}); continue
+        if p["skip"]:
+            want = lambda r: r["kind"] == "skip" and r["s"] == p["setup"] and r["L"] == p["L"] and r["L2"] == p["skip"][1]  # noqa: E731
+        else:
+            want = lambda r: r["kind"] in ("chain", "bulk") and r["s"] == p["setup"] and r["L"] == p["L"]  # noqa: E731
+        wrong = lambda r: sum(1 for i, c in enumerate(r["reading"]) if c != "?" and (i + 1) not in known and c != p["pt"][i])  # noqa: E731
+        good = [r for r in res[name]["recs"] if want(r) and wrong(r) <= 3]
+        best = max(good, key=lambda r: (r.get("judge") or -1)) if good else None
+        own = [jbest(f"{name}-copy{i + 1}") for i in range(N_PLANT_COPIES)]
+        own_bar = max([x for x in own if x is not None], default=None)
+        hj = best.get("judge") if best else None
+        plant_out.append({"seed": p["seed"], "L": p["L"], "k": p["k"], "skip": p["skip"], "slips": p["slips"],
+                          "planted_setting_found": bool(good), "wrong_letters_in_reading": wrong(best) if best else None,
+                          "quad": round(best["quad"], 3) if best else None, "judge": hj, "own_copies_judge_best": own,
+                          "found": bool(best) and hj is not None and (own_bar is None or hj > own_bar)})
+    copies = [n for n, _ in texts if n.startswith("copy") and n in res]
+    k4 = res["K4"]
+    copies_j = [jbest(n) for n in copies]
+    bar = max([x for x in copies_j if x is not None], default=None)
+    by_lag = {}
+    for L in range(1, 53):
+        by_lag[str(L)] = {"k4": k4["counts"][L], "copies_max": [max(res[n]["counts"][L][d] for n in copies) for d in range(3)],
+                          "copies_min": [min(res[n]["counts"][L][d] for n in copies) for d in range(3)],
+                          "skip_k4": k4["skip"][L], "skip_copies_max": [max(res[n]["skip"][L][x] for n in copies) for x in range(2)]}
+    tot = lambda n, L: sum(res[n]["counts"][L]) + sum(res[n]["skip"][L])  # noqa: E731
+    above = [L for L in range(1, 53) if tot("K4", L) > max(tot(n, L) for n in copies)]
+    null = [sum(1 for L in range(1, 53) if tot(n, L) > max(tot(o, L) for o in ["K4"] + copies if o != n)) for n in copies]
+    shortest = {n: next((L for L in range(1, 53) if sum(res[n]["counts"][L])), None) for n in ["K4"] + copies}
+    shortest_skip = {n: next((L for L in range(1, 53) if sum(res[n]["skip"][L])), None) for n in ["K4"] + copies}
     cands = []
-    if k4 and k4[1]:
-        reads = []
-        for h in k4[1]:
-            order, r, c, f, o, s, mm = h
-            where = lib_routes[r][1]; y = keytexts[f][1]; mode, pa, ca = CONVS[c]
-            P, C = AL[pa], IDX[ca]
-            Lk = len(y)
-            if order == 0:
-                inv = [0] * N
-                for i in range(N):
-                    inv[where[i]] = i
-                pt = "".join(P[dec(mode, C[ctx.K4[where[i]]], (y[(o + i) % Lk] + s) % 26)] for i in range(N))
-            else:
-                moved = [P[dec(mode, C[ctx.K4[j]], (y[(o + j) % Lk] + s) % 26)] for j in range(N)]
-                pt = "".join(moved[where[i]] for i in range(N))
-            reads.append(pt)
-            k4_hits.append({"order": order, "route": lib_routes[r][0], "conv": "/".join(CONVS[c]), "keytext": names[f], "offset": o, "shift": s, "slips": mm, "reading": pt})
-        v = ctx.judge(sorted(set(reads)))
-        vd = dict(zip(sorted(set(reads)), v))
-        for kh in k4_hits:
-            kh["judge"] = vd[kh["reading"]]["score"]
-    tot_cm = sum(len(v) for _, v in keytexts)
-    tot_mc = sum(len(v) for _, v in mc_texts)
-    trials_cm = len(lib_routes) * len(CONVS) * 26 * tot_cm
-    trials_mc = len(lib_routes) * len(CONVS) * 26 * tot_mc
+    for r in sorted(k4["recs"], key=lambda r: (-(r.get("judge") or -1), -r["quad"]))[:10]:
+        _, a, b, c, m = setups[r["s"]]
+        L = r["L"]
+        pt = "".join(known.get(i + 1, ("A" if ch == "?" else ch)) for i, ch in enumerate(r["reading"]))
+        sk = (r["j"] - 1, r["L2"]) if r["kind"] == "skip" else None
+        key = {"pa": a, "ca": b, "ka": c, "m": m, "lag": L, "primer": "A" * (max(L, r.get("L2", 0)) + 1),
+               "skip_at": sk[0] if sk else None, "skip_lag": sk[1] if sk else None}
+        re_ = encrypt(pt, key)
+        key["slips"] = [[i + 1, ctx.K4[i]] for i in range(N) if re_[i] != ctx.K4[i]]
+        cands.append({"plaintext": pt, "key": key, "key_bits": 4.7 * L + 9.3 * len(key["slips"]),
+                      "key_description": f"plaintext autokey lag {L}, {setups[r['s']][0]}, {r['kind']}, cuts {r.get('cuts')}, lost step {sk}; unknown letters filled with A, every disagreeing carved letter named as a slip",
+                      "notes": f"judge {r.get('judge')}, quadgram {r['quad']:.3f}"})
     return {
         "candidates": cands,
+        "controls": [max([r["quad"] for r in res[n]["recs"]], default=-9.0) for n in copies],
         "bounds": {
-            "family": "0117's running keys plus a constant shift, with or without a type-1 move, either order, 0-3 known letters slipped (A1.3)",
-            "routes_distinct": len(lib_routes), "conventions": len(CONVS), "shifts": 26,
-            "key_texts": {"change_then_move": len(keytexts), "move_then_change": len(mc_texts), "letters_cm": tot_cm, "letters_mc": tot_mc},
-            "trials": {"change_then_move": trials_cm, "move_then_change": trials_mc},
-            "chance_settings_with_3_or_fewer_slips": {"change_then_move": f"{trials_cm / 26 * math.comb(24, 3) * 26 ** -20:.1e}",
-                                                       "move_then_change": f"{trials_mc / 26 * math.comb(24, 3) * 26 ** -20:.1e}"},
-            "method": "change then move: 4 blocks of 6 known places, key differences indexed; move then change: 4 disjoint pairs, per-gap difference index; compiled; every hit checked on all 24",
-            "k4_settings_by_order_and_slips": k4[0] if k4 else None,
-            "copies_settings_by_order_and_slips": [x[0] for x in copies], "copies_done": len(copies),
-            "k4_hits": k4_hits[:20],
+            "family": "plaintext autokey on 0025's tables, lags 1-52, up to 2 chain breaks (slips) or one lost step (A1.4)",
+            "table_setups": len(setups), "lags": "1-52 (53-96 blocked by 0136's bound)",
+            "breaks": "0-2 anywhere in a chain between neighbouring known letters (known places included)",
+            "lost_step": "lag L before place j, L+1 or L-1 from j on, j = 2-74; known letters in one tree must agree",
+            "bulk": f"lags 26-29 with no break: every table's reading scored by quadgrams; the top {TOPC} and all at or above {CUT} per text to the judge",
+            "by_lag": by_lag, "k4_above_every_copy_lags": above, "copies_above_rest": null,
+            "shortest_lag_with_breaks": shortest, "shortest_lag_lost_step": shortest_skip,
+            "readings": {"k4": len(k4["recs"]), "copies": [len(res[n]["recs"]) for n in copies]},
+            "capped": [n for n, v in res.items() if v["capped"]],
+            "judge": {"sent": len(order), "none": sum(1 for v in verdicts.values() if v["score"] is None), "cut": CUT,
+                      "rule": f"each text's top {TOPJ} readings by quadgrams and every reading at or above {CUT}; one call"},
+            "k4_judge_best": jbest("K4"), "copies_judge_best": copies_j,
+            "k4_readings_above_every_copy": sum(1 for r in k4["recs"] if r.get("judge") is not None and bar is not None and r["judge"] > bar),
+            "k4_top": [{"reading": r["reading"], "judge": r.get("judge"), "quad": round(r["quad"], 3), "kind": r["kind"], "setup": setups[r["s"]][0], "L": r["L"]}
+                       for r in sorted(k4["recs"], key=lambda r: -(r.get("judge") or -1))[:5]],
             "plants": plant_out,
-            "slip_cost_bits": {k: round(4.7 * k + math.log2(math.comb(24, k)), 1) for k in (1, 2, 3)},
-            "controls": f"{N_COPIES} shuffled copies (seeds 2120-2129); each plant against {N_PLANT_COPIES} shuffles of its own ciphertext",
+            "slip_cost_bits": {"1": 9.3, "2": 17.5, "lost step": 7.2},
+            "controls": f"{N_COPIES} shuffled copies (seeds 2140-2159); each plant against {N_PLANT_COPIES} shuffles of its own ciphertext",
             "exhaustive": "yes",
         },
-        "notes": (f"K4 settings with <= 3 slips (change-then-move 0-3, move-then-change 0-3): {k4[0] if k4 else None}; copies "
-                  f"{[sum(x[0]) for x in copies]}; plants found {[p['found'] for p in plant_out]}"),
+        "notes": (f"{len(setups):,} tables x lags 1-52; K4 shortest lag with <= 2 breaks {shortest['K4']}, lost step {shortest_skip['K4']}; "
+                  f"copies {sorted(v for k_, v in shortest.items() if k_ != 'K4' and v)}; judge sent {len(order)}, K4 best {jbest('K4')}, copies best {bar}; "
+                  f"plants found {[p['found'] for p in plant_out]}"),
     }
 
 
 def worked_example(ctx, key):
-    ct, known = ctx.K4, ctx.KNOWN
-    srcs, _ = sources()
-    s = srcs["panel ciphertexts K1-K4 fwd"]
-    Ix = IDX["kry"]
-    lines = ["key text: the four ciphertexts as one panel, offset 0; KRYPTOS table, Vigenere, no move", "",
-             "place  known  carved  needed  offered  needed - offered"]
-    diffs = []
-    for q in sorted(known):
-        need = (Ix[ct[q - 1]] - Ix[known[q]]) % 26
-        off = Ix[s[q - 1]]
-        diffs.append((need - off) % 26)
-        if q in (22, 23, 24, 25, 64, 65, 74):
-            lines.append(f"{q:>5}  {known[q]:>5}  {ct[q - 1]:>6}  {need:>6}  {off:>7}  {(need - off) % 26:>15}")
-    best = max(diffs.count(v) for v in set(diffs))
-    lines += ["", f"the most common value of the last column covers {best} of 24 places; a shift with 3 slips needs 21"]
+    known, ct = ctx.KNOWN, ctx.K4
+    L = 12
+    lines = [f"plaintext autokey, lag {L}, KRYPTOS table, Vigenere: chains of places {L} apart, walked from one known letter to the next", ""]
+    I_ = {c: i for i, c in enumerate(KRY)}
+    bad = 0
+    for e, a in enumerate(sorted(known)):
+        b = next((q for q in sorted(known)[e + 1:] if (q - a) % L == 0), None)
+        if b is None:
+            continue
+        x = known[a]
+        for i in range(a + L, b + 1, L):
+            x = KRY[(I_[ct[i - 1]] - I_[x]) % 26]
+        bad += x != known[b]
+        if len(lines) < 10:
+            lines.append(f"  {a} {known[a]} -> {b}: the chain gives {x}, known {known[b]}{'' if x == known[b] else '   break needed'}")
+    lines += ["", f"breaks needed at lag {L}: {bad} (2 allowed)"]
     return "\n".join(lines)

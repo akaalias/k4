@@ -76,6 +76,9 @@ Counts are distinct landing maps: cards that differ only where unknown letters g
 | 210 | A1.3 | **Running keys from the named texts with up to 7 slips, exact.** 0004/0017/0021/0045/0047/0078 in one pass (1.36 x 10^9 trials) through a pigeonhole index (7 slips leave one of 8 blocks of 3 known places whole): no setting on K4 or any of 20 copies; three planted slipped messages found, judged 90-96. Prediction held. |
 | 211 | A1.3 | **0117's shifts and moves with up to 3 slips, exact, compiled.** Both orders, 27,852 routes, 12 tables, 26 shifts: nothing on K4 or 10 copies; both plants found. 0098's free alphabet blocked without a run (one slip: copies fit 0.4-1.6% of 80,676 settings, reading undetermined). **A1.3 closed on fixed and keyword tables.** Prediction held. |
 
+| 212 | A1.4 | **Ciphertext autokey and progressive key with slips, exact, compiled.** 487,734 autokey table setups, every lag, 2 slips at known places or one lost step: nothing below lag 68 on K4 (copies 67-69); progressive key on the tables, 2 slips: nothing below 25. Judge: K4 4, copies 12. Five plants found (60-93). Prediction held. |
+| 213 | A1.4 | **Plaintext autokey with 2 broken links or one lost step, exact, compiled.** Lags 1-52 on 35,343 tables: nothing below 24 (copies 17-24); lags 26-29 read in bulk and judged: K4 4, copies 12. Three plants found, one whose slip runs on through its chain (85 against at most 18). **A1.4 closed.** Prediction held. |
+
 **What a slip costs a free alphabet.** With the sculpture's tables a slip is expensive: below length 24 at least 7 checks
 remain and three slips cannot clear them. With a free alphabet the 24 equations already leave room, and two or three
 dropped equations are enough for an alphabet to fit almost any text from about length 10 (one alphabet) or 4 (two). The
@@ -92,6 +95,11 @@ most letters undetermined.
 - **Ran 0211 with a test failing.** 0210's crib map was not drawn yet and `tests/test_figures.py` failed; I chained the test
   and the run with `;` instead of stopping. The cipher tests passed and the run is unaffected, but it is the same slip as
   0200's (figures before the next run). Stop on any failing test.
+- **Slips applied after enciphering.** 0212's first ciphertext-autokey plant changed carved letters after the whole text
+  was enciphered; by hand the next key letter is the letter he wrote, so the slip belongs inside the chain. Fixed before
+  the run. (In plaintext autokey the key is the message, so changing the carved letter afterwards is the right model.)
+- **ctypes and big arrays.** Building C arrays by unpacking millions of Python ints, and passing a Python int for a C
+  `long` without argtypes, both crashed (segfault); arrays now come from `array.array` buffers with explicit argtypes.
 
 ## 2026-10-19
 

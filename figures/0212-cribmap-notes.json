@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "An autokey grows its key from the text itself, so a hand slip is easy: a wrong letter, or losing one's place in the chain. Earlier tests threw away any setting that missed one known letter."
+ },
+ {
+  "anchor": "the check",
+  "text": "Ciphertext autokey on every table tried so far (487,734 setups), every lag, up to 2 slips or one lost step; the progressive key on the sculpture's tables with up to 2 slips; K4 against 20 scrambled copies, readings judged blind, five planted slipped messages."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Nothing fits K4 below lag 68 (copies 67-69), where 6 or fewer checks are left; the progressive key nowhere below period 25. K4's best reading scores 4, the copies' 12; all five plants are found."
+ }
+]

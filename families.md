@@ -77,6 +77,9 @@ Update the leaf when an experiment works on it.
       - K1-K3, the sculpture's texts, Carter, Sanborn's letters on standard, KRYPTOS and keyword tables, up to 7 slips: no setting on K4 or any copy {closed · exact · 0210}
       - The sculpture's texts and Carter plus a constant shift, with or without every type-1 move, up to 3 slips: none {closed · exact · 0211}
       - On a free alphabet (0098, 0154): one slip lets hundreds of settings fit on every copy, reading undetermined: too short to decide k slips {blocked}
+    - **A1.4** Autokeys and progressive keys with slips or one lost step {closed · exact · 0212, 0213}
+      - Ciphertext autokey on 487,734 table setups, 2 slips or a lost step: nothing below lag 68; progressive key, 2 slips: nothing below period 25 {closed · exact · 0212}
+      - Plaintext autokey, lags 1-52, 2 broken links or a lost step: nothing below lag 24; lags 26-29 read blind as copies {closed · exact · 0213}
   - F6 A move, then the table
     - One move, then a repeating key on standard, KRYPTOS or word alphabets
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}

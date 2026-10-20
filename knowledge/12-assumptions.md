@@ -21,6 +21,10 @@ queue in `order-of-work.md` is exhausted. Then, in this order:
    damaged English and built in the harness (issue 11). Relaxed tests produce more noisy
    candidates and need a judge that can sort them.
 3. A13 and A6, with the same judge.
+4. Last (Alexis, 2026-10-20): the cost-blocked items that day-long runs can reach, as long runs
+   allowed by exception, each with its total cost stated and a decider of measured power: F1.7's
+   fitting lags (about 100 h), F6.2's lengths 3-14, F5.2's base 26 lag 6 and longer two-term
+   lags. F1.4's residue and F6.1 stay blocked unless a cheaper decider (issue 77) changes their cost.
 
 Not scheduled, recorded so they are not lost: A5, A8, A11 and A12 have no check yet (A11 is
 partly answered by F12, Stein's way, which lets observations propose items); three options from

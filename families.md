@@ -163,6 +163,7 @@ Update the leaf when an experiment works on it.
     - **F11.2** Poem code: double transposition keyed by words from a memorized text, then the table {closed · exact · 0190}
     - **F11.3** The CIA's Polish key box: a key text transposed in a box, then the table {closed · exact · 0191}
     - **F11.4** Friedman's keyed alphabet box as the key stream {closed · exact · 0192}
+    - **F11.5** Poem code with five words picked anywhere in K1-K3, two passes, then the table: 8.1 x 10^17 key pairs, no constraint cuts it {blocked}
   - F8 Hill ciphers
     - Hill 2-5, plain and affine, 330 numberings, chained, with a repeating key {closed · exact · 0015, 0036, 0044, 0055, 0105, 0116}
     - **F8.1** Hill with an unknown letter numbering: count the equations first {closed · exact · 0194}
@@ -306,7 +307,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P18 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P19 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -328,3 +329,4 @@ Each pivot has a details page in `pivots/` (P1-P18 so far), rendered on the Pivo
 | 2026-10-17 | F5 Gromark (0195-0196) | F9 substitution, then a move | F5.1 and F5.2 closed exactly: Gromark on a free alphabet in every base 2-16 and 26 with three-term, longer two-term and multiplicative rules; nothing fits K4. Ranking unchanged (P16). |
 | 2026-10-20 | F6 a move, then the table, reopened for #78 (0199-0204) | F2 masked plaintext (F2.4) | F6.20 closed for key words and short free keys (turning grille, every card, by rows and by columns); F6.21 closed (one slip around every keyword columnar; the row-reshuffle excess of 0203 dissolved against 40 fresh copies). Ranking unchanged; F12 and F3 have no open item, so F2 is next (P17). |
 | 2026-10-20 | F2 masked plaintext, reopened (0205) | F11 agency hand systems (F11.5) | F2.4 closed: nulls at both ends revive no periodic or progressive key below 26. F4 and F10 have no open item, so F11 is next. Ranking unchanged (P18). |
+| 2026-10-20 | F11 agency hand systems, reopened (no run) | F5 Gromark (F5.3) | F11.5 blocked by cost: two five-word keys from K1-K3's 163 words are 8.1 x 10^17 pairs, and no known letter can be placed without both keys. F8 has no open item, so F5 is next. Ranking unchanged (P19). |

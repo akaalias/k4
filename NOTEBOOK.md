@@ -27,6 +27,15 @@ Stage 2's control table had no open rows, so the loop went back to the family it
 |---|---|---|
 | 205 | F2.4 | **Nulls at both ends, exact.** The end run moves nothing and the key's start is absorbed by the key word, so the test is the known words moved by a start run of 0-12 against periodic (0023's) and progressive keys, per letter and per repeat, steps 1-25, lengths 1-52, 8 table classes: nothing below 26 on K4 or any copy; K4 ahead of every copy in 0 cells. Two planted padded messages found at their own lengths. F2 closed again; pivot P18 to F11. Prediction held. |
 
+### F11 (after pivot P18, ticket #58)
+
+F11.5, the poem code as SOE agents used it, blocked by cost without a run. Two five-word picks from K1-K3's 163 words,
+one per pass, are 8.1 x 10^17 key pairs (59.5 bits). The 24 known letters could decide that only at short table keys (14 or
+more checks), and nothing narrows the search: a known letter's carved place depends on both whole keys, so there is no
+constraint to propagate, and enumeration would take tens of thousands of years. A single pass with one five-word key (9 x
+10^8 keys) would run in about an hour, but it is not the agents' method, so it was not run as a stand-in (the instruction:
+a weak test is marked blocked, not run). F11 closed again; pivot P19 to F5.
+
 **How the grille search works.** A turning grille is not a sweep: 10^15 cards per procedure. The search walks the top half of
 the grid; each cell and its 180-degree partner share one prefix count, so both of their message places are known at once and
 about two thirds of the early cells land a known letter. With a key word every landing is a check and the tree stays tiny;

@@ -1,0 +1,1589 @@
+{
+ "id": 209,
+ "tag": "0209-two-free-alphabets-with-slips-at-known-places",
+ "started": "2026-10-20T12:31:35+00:00",
+ "seconds": 101.7,
+ "status": "ran",
+ "phases": {
+  "implement": 5.1,
+  "test": 106.7,
+  "run": 101.7,
+  "record": 0.1
+ },
+ "ended_epoch": 1792499597.706676,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "family": "two unknown alphabets (Quagmire IV), periodic key 1-26, with 0-3 known letters slipped (A1.2)",
+  "key_lengths": [
+   1,
+   26
+  ],
+  "forms": {
+   "V": "C(c) = P(p) + k (Beaufort is the same family with P negated)"
+  },
+  "drop_sets": "every set of 0-3 of the 24 known places (2,325 per cell), supersets of a fitting set skipped; 0123's decide(two=True) unchanged",
+  "slip_cost_bits": {
+   "1": 9.3,
+   "2": 17.5,
+   "3": 25.1
+  },
+  "cells": {
+   "V1": {
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": []
+   },
+   "V2": {
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": []
+   },
+   "V3": {
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": []
+   },
+   "V4": {
+    "k4": [
+     0,
+     0,
+     0,
+     8
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     2,
+     8
+    ],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     4,
+     11
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      25,
+      28,
+      67
+     ],
+     [
+      25,
+      28,
+      71
+     ],
+     [
+      25,
+      66,
+      67
+     ],
+     [
+      25,
+      66,
+      71
+     ],
+     [
+      28,
+      29,
+      67
+     ],
+     [
+      28,
+      29,
+      71
+     ],
+     [
+      29,
+      66,
+      67
+     ],
+     [
+      29,
+      66,
+      71
+     ]
+    ]
+   },
+   "V5": {
+    "k4": [
+     0,
+     0,
+     0,
+     2
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     2,
+     8
+    ],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     1,
+     8
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      28,
+      29,
+      72
+     ],
+     [
+      29,
+      72,
+      73
+     ]
+    ]
+   },
+   "V6": {
+    "k4": [
+     0,
+     0,
+     0,
+     8
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     8,
+     10,
+     18
+    ],
+    "copies_fitting_at_k_or_less": [
+     2,
+     11,
+     16,
+     19
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      25,
+      28,
+      32
+     ],
+     [
+      25,
+      28,
+      74
+     ],
+     [
+      25,
+      32,
+      66
+     ],
+     [
+      25,
+      66,
+      74
+     ],
+     [
+      28,
+      32,
+      67
+     ],
+     [
+      28,
+      67,
+      74
+     ],
+     [
+      32,
+      66,
+      67
+     ],
+     [
+      66,
+      67,
+      74
+     ]
+    ]
+   },
+   "V7": {
+    "k4": [
+     0,
+     0,
+     0,
+     8
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     4,
+     12,
+     8
+    ],
+    "copies_fitting_at_k_or_less": [
+     3,
+     13,
+     18,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      25,
+      32,
+      66
+     ],
+     [
+      25,
+      32,
+      73
+     ],
+     [
+      25,
+      66,
+      74
+     ],
+     [
+      25,
+      73,
+      74
+     ],
+     [
+      32,
+      66,
+      67
+     ],
+     [
+      32,
+      67,
+      73
+     ],
+     [
+      66,
+      67,
+      74
+     ],
+     [
+      67,
+      73,
+      74
+     ]
+    ]
+   },
+   "V8": {
+    "k4": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     4,
+     8
+    ],
+    "copies_fitting_at_k_or_less": [
+     1,
+     13,
+     18,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     []
+    ]
+   },
+   "V9": {
+    "k4": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": []
+   },
+   "V10": {
+    "k4": [
+     0,
+     2,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     4,
+     4,
+     6
+    ],
+    "copies_fitting_at_k_or_less": [
+     3,
+     17,
+     19,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      22
+     ],
+     [
+      72
+     ]
+    ]
+   },
+   "V11": {
+    "k4": [
+     0,
+     4,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     4,
+     8
+    ],
+    "copies_fitting_at_k_or_less": [
+     13,
+     18,
+     19,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      22
+     ],
+     [
+      28
+     ],
+     [
+      66
+     ],
+     [
+      72
+     ]
+    ]
+   },
+   "V12": {
+    "k4": [
+     0,
+     4,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     4,
+     4,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     12,
+     19,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      28
+     ],
+     [
+      30
+     ],
+     [
+      64
+     ],
+     [
+      66
+     ]
+    ]
+   },
+   "V13": {
+    "k4": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     14,
+     20,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     []
+    ]
+   },
+   "V14": {
+    "k4": [
+     0,
+     0,
+     4,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     4,
+     4,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     13,
+     19,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      25,
+      32
+     ],
+     [
+      25,
+      74
+     ],
+     [
+      32,
+      67
+     ],
+     [
+      67,
+      74
+     ]
+    ]
+   },
+   "V15": {
+    "k4": [
+     0,
+     0,
+     4,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     0,
+     2,
+     4,
+     8
+    ],
+    "copies_fitting_at_k_or_less": [
+     0,
+     16,
+     19,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      27,
+      28
+     ],
+     [
+      27,
+      73
+     ],
+     [
+      28,
+      72
+     ],
+     [
+      72,
+      73
+     ]
+    ]
+   },
+   "V16": {
+    "k4": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     4,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     14,
+     19,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     []
+    ]
+   },
+   "V17": {
+    "k4": [
+     0,
+     0,
+     4,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     8,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     1,
+     15,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      30,
+      31
+     ],
+     [
+      30,
+      65
+     ],
+     [
+      31,
+      64
+     ],
+     [
+      64,
+      65
+     ]
+    ]
+   },
+   "V18": {
+    "k4": [
+     0,
+     4,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     18,
+     20,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      28
+     ],
+     [
+      30
+     ],
+     [
+      64
+     ],
+     [
+      66
+     ]
+    ]
+   },
+   "V19": {
+    "k4": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     4,
+     8
+    ],
+    "copies_fitting_at_k_or_less": [
+     1,
+     17,
+     19,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     []
+    ]
+   },
+   "V20": {
+    "k4": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     4,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     7,
+     19,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     []
+    ]
+   },
+   "V21": {
+    "k4": [
+     0,
+     0,
+     4,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     4,
+     4,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     13,
+     19,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      25,
+      32
+     ],
+     [
+      25,
+      74
+     ],
+     [
+      32,
+      67
+     ],
+     [
+      67,
+      74
+     ]
+    ]
+   },
+   "V22": {
+    "k4": [
+     0,
+     4,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     17,
+     20,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      22
+     ],
+     [
+      28
+     ],
+     [
+      66
+     ],
+     [
+      72
+     ]
+    ]
+   },
+   "V23": {
+    "k4": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     18,
+     20,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     []
+    ]
+   },
+   "V24": {
+    "k4": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     15,
+     20,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     []
+    ]
+   },
+   "V25": {
+    "k4": [
+     0,
+     2,
+     0,
+     0
+    ],
+    "copies_min": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     2,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     18,
+     20,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     [
+      22
+     ],
+     [
+      72
+     ]
+    ]
+   },
+   "V26": {
+    "k4": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_min": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_max": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "copies_fitting_at_k_or_less": [
+     20,
+     20,
+     20,
+     20
+    ],
+    "k4_undecided": 0,
+    "copies_undecided": 0,
+    "k4_sets": [
+     []
+    ]
+   }
+  },
+  "k4_above_every_copy": [
+   "V18",
+   "V22"
+  ],
+  "copies_above_the_rest_cells": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0,
+   2,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0
+  ],
+  "shortest_fitting_length": {
+   "k0": {
+    "K4": {
+     "V": 8
+    },
+    "copies": [
+     {
+      "V": 14
+     },
+     {
+      "V": 10
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 13
+     },
+     {
+      "V": 12
+     },
+     {
+      "V": 11
+     },
+     {
+      "V": 12
+     },
+     {
+      "V": 11
+     },
+     {
+      "V": 11
+     },
+     {
+      "V": 11
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 11
+     },
+     {
+      "V": 8
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 12
+     },
+     {
+      "V": 12
+     },
+     {
+      "V": 11
+     },
+     {
+      "V": 11
+     }
+    ]
+   },
+   "k1": {
+    "K4": {
+     "V": 8
+    },
+    "copies": [
+     {
+      "V": 7
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 8
+     },
+     {
+      "V": 10
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 8
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 6
+     }
+    ]
+   },
+   "k2": {
+    "K4": {
+     "V": 8
+    },
+    "copies": [
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 10
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 7
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 6
+     }
+    ]
+   },
+   "k3": {
+    "K4": {
+     "V": 4
+    },
+    "copies": [
+     {
+      "V": 6
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 5
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 5
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 5
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 6
+     },
+     {
+      "V": 4
+     },
+     {
+      "V": 6
+     }
+    ]
+   }
+  },
+  "plants": [
+   {
+    "seed": 2091,
+    "key_length": 4,
+    "form": "V",
+    "k": 2,
+    "slips": [
+     34,
+     72
+    ],
+    "alphabet": "KAXBWSMIQZFUYLDTCJHOENRVGP/ULCQWGIKASBZXRMYPJTFNDEHOV",
+    "minimal_fits_by_k": [
+     0,
+     1,
+     1,
+     4
+    ],
+    "planted_slips_fit": true,
+    "exact_planted_set_minimal": false,
+    "count_at_k": 2,
+    "own_copies_count_at_k": [
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     4,
+     0,
+     2
+    ],
+    "found": false
+   },
+   {
+    "seed": 2092,
+    "key_length": 5,
+    "form": "V",
+    "k": 3,
+    "slips": [
+     70,
+     71,
+     74
+    ],
+    "alphabet": "DNIGCFTHLBQSUVMOREJPWXAYKZ/GSUTOZDLIYEABWVCRJMFPNXKQH",
+    "minimal_fits_by_k": [
+     0,
+     2,
+     0,
+     0
+    ],
+    "planted_slips_fit": true,
+    "exact_planted_set_minimal": false,
+    "count_at_k": 2,
+    "own_copies_count_at_k": [
+     0,
+     0,
+     8,
+     0,
+     3,
+     8,
+     8,
+     16,
+     4,
+     8
+    ],
+    "found": false
+   },
+   {
+    "seed": 2093,
+    "key_length": 7,
+    "form": "V",
+    "k": 3,
+    "slips": [
+     66,
+     67,
+     71
+    ],
+    "alphabet": "WGOJVQSLNKRXTZAMBYEDUHIFCP/ZADHMLKPIWBRFOSEQXVTNUYGJC",
+    "minimal_fits_by_k": [
+     0,
+     0,
+     8,
+     0
+    ],
+    "planted_slips_fit": true,
+    "exact_planted_set_minimal": false,
+    "count_at_k": 8,
+    "own_copies_count_at_k": [
+     2,
+     8,
+     2,
+     1,
+     1,
+     4,
+     2,
+     4,
+     8,
+     1
+    ],
+    "found": false
+   },
+   {
+    "seed": 2094,
+    "key_length": 3,
+    "form": "V",
+    "k": 2,
+    "slips": [
+     29,
+     34
+    ],
+    "alphabet": "XZRMEVANBYFTWOGJHKUQSLDIPC/PCQGTNKFYRZEWABUVDLSXJHMOI",
+    "minimal_fits_by_k": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "planted_slips_fit": true,
+    "exact_planted_set_minimal": false,
+    "count_at_k": 1,
+    "own_copies_count_at_k": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 2095,
+    "key_length": 3,
+    "form": "V",
+    "k": 3,
+    "slips": [
+     22,
+     26,
+     69
+    ],
+    "alphabet": "CEAUDWVNYQRTFLHXKZBIJMGPOS/ITVAMLBHXQOUESGCPYNFRJKWDZ",
+    "minimal_fits_by_k": [
+     0,
+     2,
+     0,
+     0
+    ],
+    "planted_slips_fit": true,
+    "exact_planted_set_minimal": false,
+    "count_at_k": 2,
+    "own_copies_count_at_k": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 2096,
+    "key_length": 9,
+    "form": "V",
+    "k": 3,
+    "slips": [
+     66,
+     70,
+     73
+    ],
+    "alphabet": "ZGIYKNPECUAMJRHDQSFBXVTWOL/RHSCZPTGWOMIAQFEDUXLYNJVBK",
+    "minimal_fits_by_k": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "planted_slips_fit": true,
+    "exact_planted_set_minimal": false,
+    "count_at_k": 1,
+    "own_copies_count_at_k": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   }
+  ],
+  "judge": "not called: where two free alphabets fit, both are undetermined and so is the reading; F1.5's decider only below 0136's bound (length 19)",
+  "texts_done": "546 of 546 cells",
+  "controls": "20 shuffled copies (seeds 2100-2119); each plant against 10 shuffles of its own ciphertext",
+  "exhaustive": "yes (exact per drop set; undecided sets counted)"
+ },
+ "notes": "K4 above every copy in 2 cells ['V18', 'V22']; copies above the rest 0-2; plants found [False, False, False, True, True, True]",
+ "judge": null,
+ "error": null,
+ "candidates": []
+}

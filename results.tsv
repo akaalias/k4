@@ -207,3 +207,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0206	0206-gromark-high-bases-on-k1-k3-word-tables	5-gromark	0054-gromark-bases-k1-k3-word-alphabets	reverted	0	0	0			3	test=1 run=4 record=0
 0207	0207-periodic-key-with-slips-at-known-places	1-keyed-periodic	0005-quagmire-period-sweep-forced-keys	reverted	50	0	24	5.302		42	design=261 implement=83 test=45 run=42 record=64
 0208	0208-one-free-alphabet-with-slips-at-known-places	1-keyed-periodic	0119-one-free-alphabet-exact-at-every-key-length	reverted	0	0	0			236	design=89 implement=15 test=254 run=236 record=0
+0209	0209-two-free-alphabets-with-slips-at-known-places	1-keyed-periodic	0123-two-free-alphabets-exact-at-every-key-length	reverted	0	0	0			102	implement=5 test=107 run=102 record=0

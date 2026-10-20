@@ -1,0 +1,6 @@
+key length 4, two free alphabets: C(carved) = P(known) + k[slot]
+
+  slips at none: dead
+  slips at [66]: dead
+  slips at [66, 73]: dead
+  slips at [28, 66, 73]: dead

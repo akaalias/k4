@@ -93,3 +93,18 @@ other direction K4 sits last on plain English (eng_base and the affine maps, ran
 **A13.2 closed, sampled:** no structure test separates K4's no-climb readings at key lengths 26-29 from 20 plain
 shuffles' after correction for 14 tests; the one candidate did not replicate (p = 0.013 against 300 copies). Power
 against flat noise as in A13.1: every mask but a letter swap is seen in 20 of 20 plants by some test.
+
+## A13.3 The saved 24-of-24 readings against their own search on fresh copies
+
+**Pre-registered 2026-10-21, before pass 1 ran.** The 31 saved readings of 0034 (18, best per period), 0035 (3),
+0048 (3), 0120 (2), 0137 (2), 0140, 0142, 0148 (1 each). Copies are the same experiment's frozen `attack.py` run
+unchanged on fresh copies built as that experiment built them (`a13_check.py pass1-regen`, seed 1300): 10 plain
+shuffles each for 0034, 0035, 0048; 12 decider-passing shuffles each for 0120, 0137, 0140, 0142; 12 shuffles of
+the 73 unknown places for 0148. Per experiment and test the statistic is the best value over that text's readings.
+
+All 14 tests count, on 8 experiments: **112 cells**; a cell flags at p < 0.05 / 112 = 0.00045, which needs 2,242
+copies with none at or above K4. With 10-12 copies a cell where K4 is above every copy is a candidate only (chance
+expects about 112/12 = 9 of them). Each candidate is replicated on that test alone with the experiment's own search
+on fresh copies (seed 3113), **sequentially**: copies are drawn until one reaches K4's value, which already puts p at
+or above 2/2,243 = 0.0009 and ends the replication as not a flag; a flag needs all 2,242 copies below K4. Only a
+flag stops the queue.

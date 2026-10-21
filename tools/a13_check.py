@@ -5,6 +5,7 @@ all 24 known letters in place, and on the same method's readings of scrambled co
     uv run --with numpy python tools/a13_check.py pass2         # whole-setting readings, K4 and copies
     uv run --with numpy python tools/a13_check.py power         # the battery on planted masked English
     uv run --with numpy python tools/a13_check.py report        # tables for reports/a13-structure-check.md
+    uv run --with numpy python tools/a13_check.py replicate TEST N SEED   # a pass-2 candidate against N fresh copies
 
 Pass 1: the 31 saved candidates in experiments/*/raw.json with all 24 known letters. Their
 controls are the same experiment's search, imported from its frozen attack.py and run unchanged
@@ -229,6 +230,40 @@ def p2_text_job(args):
     return tag, {"n_readings": len(rd), "best": best, "by_period": by_period, "seconds": round(time.time() - t0, 1)}
 
 
+def p2_one_job(args):
+    """One test only, on one text: the best value over every fitting setting's reading."""
+    tag, text, test = args
+    from tools.a13_structure import N as _N, _sep_stats, carter_stats, codes
+    rd = p2_readings(text, p2_pool())
+    best = -math.inf
+    for s in rd:
+        if test in ("sep_words", "sep_regular"):
+            w, r = _sep_stats(codes(s), carter_stats()[1])
+            v = w if test == "sep_words" else r
+        else:
+            v = battery(s)[test]
+        best = max(best, v)
+    return tag, best
+
+
+def replicate(test, n, seed):
+    """A pass-2 candidate on one test against n fresh plain shuffles (seed given in the report)."""
+    rng = random.Random(seed)
+    texts = [("k4", K4, test)]
+    for i in range(n):
+        sh = list(K4); rng.shuffle(sh); texts.append((f"copy{i}", "".join(sh), test))
+    res = {}
+    with get_context("fork").Pool(8) as pool:
+        for tag, v in pool.imap_unordered(p2_one_job, texts):
+            res[tag] = v
+    k = res.pop("k4")
+    above = sum(1 for v in res.values() if v >= k)
+    out = {"test": test, "seed": seed, "copies": n, "k4": k, "copies_at_or_above": above,
+           "p": (above + 1) / (n + 1), "copies_max": max(res.values()), "values": res}
+    (OUT / f"replicate-{test}.json").write_text(json.dumps(out, indent=0, default=float))
+    print(f"{test}: K4 {k:.4f}, {above} of {n} copies at or above (p = {(above + 1) / (n + 1):.4f}), copies max {max(res.values()):.4f}")
+
+
 def pass2():
     OUT.mkdir(parents=True, exist_ok=True)
     rng = random.Random(1302)
@@ -404,5 +439,7 @@ if __name__ == "__main__":
         pass2()
     elif cmd == "power":
         power()
+    elif cmd == "replicate":
+        replicate(sys.argv[2], int(sys.argv[3]), int(sys.argv[4]))
     else:
         sys.exit(__doc__)

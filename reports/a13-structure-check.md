@@ -55,3 +55,41 @@ A cell flags at an empirical p below 0.05 / 14 = 0.0036. `pass2.json` has 20 cop
 cell where K4 is above every copy is a candidate only: it is replicated on that test alone against 300 fresh plain
 shuffles (seed 2113, p resolution 1/301 = 0.0033), the same pool and readings. Chance alone puts K4 above all 20
 copies in about 14/21 = 0.67 cells. Only a replicated flag stops the queue.
+
+**A fix before ranking.** `pass2.json` as written on 2026-10-18 was computed before the battery's guard against
+side-by-side separators (a run like QQQQQ is not spacing) was added; K4's sep_regular there was a perfect 0.000 from
+a QQQQQ run at 36-40 in one P29 reading. Pass 2 was rerun unchanged with the committed battery (same seed 1302,
+2 min 54 s on 8 cores); only that one value moved. The stale file is kept as `pass2-2026-10-18-stale.json`.
+
+Readings per text: K4 24,162; copies 23,814-24,281 (P26-29, standard, KRYPTOS and vocabulary alphabets, all
+ordered pairs, three modes).
+
+| test | K4 | copies min | copies max | K4 rank of 21 | K4's best setting |
+|---|---|---|---|---|---|
+| eng_base | -5.875 | -5.872 | -5.716 | 21 | P29 beau CLOCK / RIDDLE |
+| freq_sorted | -2.880 | -2.906 | -2.837 | 10 | P29 beau BERLINCLOCK / HOWARDCARTER |
+| ioc | 0.058 | 0.054 | 0.064 | 10 | P29 beau BERLINCLOCK / HOWARDCARTER |
+| sep_words | **0.920** | 0.525 | 0.896 | **1** | P28 vig VIRTUALLYINVISIBLE / SHADOWFORCES |
+| sep_regular | -0.106 | -0.192 | -0.051 | 8 | P27 vig EAST / MAGNETIC |
+| eng_reverse | -6.438 | -6.579 | -6.297 | 13 | P29 beau WONDERFUL / DESPERATELY |
+| eng_keep_nth | -4.630 | -4.863 | -4.322 | 12 | P27 beau MYSTERY / DESPARATLY |
+| eng_drop_nth | -5.433 | -5.533 | -5.273 | 14 | P29 vig LUCIDMEMORY / WONDERFUL |
+| eng_step | -5.712 | -5.982 | -5.615 | 3 | P29 vig PALIMPSEST / COMPASS |
+| eng_affine_std | -5.875 | -5.872 | -5.716 | 21 | (identity map) |
+| eng_affine_kry | -5.875 | -5.872 | -5.716 | 21 | (identity map) |
+| eng_columns | -5.736 | -5.917 | -5.559 | 8 | P29 vig BERLIN / CARTER |
+| repeats | 6 | 5 | 7 | 17 | P28 beau MESSAGE / SHADOWFORCES |
+| base_pairs | -0.842 | -0.842 | -0.816 | 21 | P28 vig ABSCISSAE / SECRET |
+
+K4 above every copy in 1 of 14 cells (chance expects 0.67). The candidate, sep_words, reads
+`VSFXUY.WXEAQXQETLB...EASTNORTHEAST.DKUTYIGYFTK...YBGPUQDNIATVS.BERLINCLOCK...MGZIRSDNBFCBX.FQXKSP`: five X's,
+two at the start and three at the end, splitting the text into pieces whose lengths happen to suit English word
+lengths. Nothing reads.
+
+**Replication** (`a13_check.py replicate sep_words 300 2113`, 75 s, `replicate-sep_words.json`): 3 of 300 fresh
+copies at or above K4 (copies' max 0.932), p = 4/301 = 0.013, above the corrected 0.0036. **Not a flag.** In the
+other direction K4 sits last on plain English (eng_base and the affine maps, rank 21 of 21) and on pair codes.
+
+**A13.2 closed, sampled:** no structure test separates K4's no-climb readings at key lengths 26-29 from 20 plain
+shuffles' after correction for 14 tests; the one candidate did not replicate (p = 0.013 against 300 copies). Power
+against flat noise as in A13.1: every mask but a letter swap is seen in 20 of 20 plants by some test.

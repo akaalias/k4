@@ -108,3 +108,23 @@ expects about 112/12 = 9 of them). Each candidate is replicated on that test alo
 on fresh copies (seed 3113), **sequentially**: copies are drawn until one reaches K4's value, which already puts p at
 or above 2/2,243 = 0.0009 and ends the replication as not a flag; a flag needs all 2,242 copies below K4. Only a
 flag stops the queue.
+
+## A13.4 Readings kept since 2026-10-18 (0199-0214)
+
+**Which experiments kept readings.** K4 24-of-24 readings were saved by 0207 (50), 0212 (10), 0213 (10) and 0214
+(10); none by 0199, 0201-0206, 0208-0211 (0200 errored with no record). In those, no setting fits K4 at all (0199,
+0201-0206, 0210, 0211) or one fits only with a free alphabet that leaves the reading undetermined (0208, 0209): there
+is no K4 reading to test. Noted, not rerun. No experiment saved its copies' readings, only their scores.
+
+**Regeneration** (`a13_check.py pass4`). Each frozen `attack.py` is imported, its search state rebuilt as its
+`run()` builds it, and its own per-text search (`search` in 0207, `one_text` in 0212-0214) called on K4 and on the
+same 20 seeded copies it used (seeds 2070, 2130, 2140, 2150 onward). Every reading it returns is kept, not only the
+saved top ones, with "?" read as unknown and the 24 known letters set in place as the candidates set them (a slipped
+known place otherwise reads the carved letter). Check: every saved K4 candidate of 0207, 0212 and 0213 is among the
+regenerated readings (50/50, 10/10, 10/10; 0214 checked after the run). Plants are not rerun.
+
+**Pre-registered 2026-10-21, before pass 4 ran.** All 14 tests on 4 experiments: **56 cells**; a cell flags at
+p < 0.05 / 56 = 0.00089, which needs 1,123 copies with none at or above K4. With 20 copies, K4 above every copy is a
+candidate (chance expects about 56/21 = 2.7); each is replicated on that test alone with the experiment's own search
+on fresh copies (its own `shuffled`, seeds 4113 onward), sequentially as in A13.3: it ends at the first copy at or
+above K4 (not a flag); a flag needs all 1,123 below.

@@ -3,6 +3,7 @@ all 24 known letters in place, and on the same method's readings of scrambled co
 
     uv run --with numpy python tools/a13_check.py pass1-regen   # copies' readings, own methods (about 1 h on 8 cores)
     uv run --with numpy python tools/a13_check.py pass2         # whole-setting readings, K4 and copies
+    uv run --with numpy python tools/a13_check.py pass4         # A13.4: 0207, 0212-0214, K4 and their copies
     uv run --with numpy python tools/a13_check.py power         # the battery on planted masked English
     uv run --with numpy python tools/a13_check.py report        # tables for reports/a13-structure-check.md
     uv run --with numpy python tools/a13_check.py replicate TEST N SEED   # a pass-2 candidate against N fresh copies
@@ -161,6 +162,96 @@ def pass1_regen():
             done[f"{e}/{idx}"] = {"rows": rows, "seconds": round(secs, 1)}
             path.write_text(json.dumps(done, indent=0))
             print(f"{e} copy {idx}: {len(rows)} readings, {secs:.0f} s", flush=True)
+
+
+# ---- pass 4 (A13.4): readings kept since 2026-10-18 --------------------------------------------
+# 0207, 0212, 0213 and 0214 saved K4's readings but only the copies' scores. Their frozen attack.py
+# is imported, its search state rebuilt the way its run() builds it, and its own per-text search
+# called on K4 and on the same seeded copies; every reading it returns ("?" for an undetermined
+# letter, read as "."), with the 24 known letters set as the candidates set them, goes through the
+# battery. Plants are not rerun.
+
+P4 = {"0207": 2070, "0212": 2130, "0213": 2140, "0214": 2150}  # first copy seed, as each run()
+P4_COPIES = 20
+
+
+def _p4_mod(e):
+    if e not in EXP:
+        EXP[e] = next((ROOT / "experiments").glob(f"{e}-*"))
+    return mod(e)
+
+
+def p4_setup(e):
+    from array import array
+    import ctypes
+    m = _p4_mod(e)
+    vocab = list(load_vocabulary())
+    if e == "0212":
+        m._STATE["ca"], m._STATE["known"] = m.CA(m.table_setups(vocab), KNOWN), KNOWN
+    elif e == "0213":
+        m._STATE["pa"] = m.PA(m.table_setups(vocab), KNOWN)
+    elif e == "0214":
+        kq = sorted(KNOWN)
+        routes, seen, lands = [], set(), array("i")
+        for fam, name, wh in m.route_maps(vocab):
+            land = tuple(wh[q - 1] for q in kq)
+            if land in seen:
+                continue
+            seen.add(land)
+            routes.append((fam, name, wh))
+            lands.extend(land)
+        m._KEEP.append(lands)
+        m._STATE["lands"] = (ctypes.c_int * len(lands)).from_buffer(lands)
+        m._STATE["routes"], m._STATE["known"] = routes, KNOWN
+    return m
+
+
+def p4_readings(e, text):
+    m = _p4_mod(e)
+    if e == "0207":
+        recs = m.search(text, KNOWN, english_score)[1]
+    else:
+        recs = m.one_text(text)["recs"]
+    out = set()
+    for r in recs:  # a slipped known place reads the carved letter; the candidate's plaintext carries the known word
+        x = list(r["reading"].replace("?", "."))
+        for q, a in KNOWN.items():
+            x[q - 1] = a
+        out.add("".join(x))
+    return sorted(out)
+
+
+def p4_texts(e):
+    m = _p4_mod(e)
+    return [("k4", K4)] + [(f"copy{i}", m.shuffled(K4, P4[e] + i)) for i in range(P4_COPIES)]
+
+
+def p4_job(args):
+    e, tag, text = args
+    t0 = time.time()
+    rd = p4_readings(e, text)
+    best = {t: (-math.inf, None) for t in TESTS}
+    for s in rd:
+        for t, v in battery(s).items():
+            if v > best[t][0]:
+                best[t] = (v, s)
+    return e, tag, {"n_readings": len(rd), "best": best, "seconds": round(time.time() - t0, 1)}
+
+
+def pass4():
+    path = OUT / "pass4.json"
+    done = json.loads(path.read_text()) if path.exists() else {}
+    for e in P4:
+        if e in done and len(done[e]) == P4_COPIES + 1:
+            continue
+        p4_setup(e)  # before the fork, so every worker inherits the state
+        jobs = [(e, tag, t) for tag, t in p4_texts(e)]
+        done[e] = {}
+        with get_context("fork").Pool(8) as pool:
+            for e_, tag, r in pool.imap_unordered(p4_job, jobs):
+                done[e][tag] = r
+                print(f"{e} {tag}: {r['n_readings']} readings, {r['seconds']} s", flush=True)
+        path.write_text(json.dumps(done, indent=0, default=float))
 
 
 # ---- pass 2: settings that fix the reading -----------------------------------------------------
@@ -439,6 +530,8 @@ if __name__ == "__main__":
         pass2()
     elif cmd == "power":
         power()
+    elif cmd == "pass4":
+        pass4()
     elif cmd == "replicate":
         replicate(sys.argv[2], int(sys.argv[3]), int(sys.argv[4]))
     else:

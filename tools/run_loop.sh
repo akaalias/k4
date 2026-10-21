@@ -4,9 +4,10 @@
 #   tools/run_loop.sh                       interactive: you see it work and approve its commands
 #   tools/run_loop.sh --unattended          headless, no permission prompts; progress on screen, full log in logs/
 #   uv run python tools/loop_watch.py --follow logs/loop-...log   watch a running loop from another shell
-#   tools/run_loop.sh --stop-after A1       stop once stage 2 step 2's slip table has no open row (the default since
-#                                           2026-10-20; A3 was the control table; a family name such as F6 stops once
-#                                           that family is closed or blocked)
+#   tools/run_loop.sh --stop-after A6       stop once stage 2 step 4's English-score table has no open row (the default
+#                                           since 2026-10-21; A13 stops after step 3, A1 after step 2, A3 after the
+#                                           control table; a family name such as F6 stops once that family is closed
+#                                           or blocked)
 #
 # The prompt is tools/loop_prompt.md; edit it to change what the loop does. Its transcript is synced into
 # transcripts/ by the hooks in .claude/settings.json like any other session.
@@ -14,12 +15,12 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 mode=interactive
-stop_after=A1
+stop_after=A6
 while [ $# -gt 0 ]; do
   case "$1" in
     --unattended) mode=unattended; shift ;;
     --stop-after) stop_after="$2"; shift 2 ;;
-    -h|--help) sed -n '2,9p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,10p' "$0"; exit 0 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
 done

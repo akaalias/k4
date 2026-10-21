@@ -183,6 +183,37 @@ tolerance and the judge". Work the table top down; the families' rank order stil
 | **A1.4** Autokeys and progressive keys (F1/4-F1/6, as 0002, 0003, 0011, 0025, 0064, 0118), k = 1, 2; plaintext autokey with one slip that runs on through the chain | closed | exact. 0212: ciphertext autokey on the union of 0025/0064/0071/0072's tables (487,734 setups), every lag, 2 slips at known places or one lost step: nothing below lag 68 on K4 (copies 67-69), where 6 or fewer checks remain; 0118's copper-primed autokey closed by its own best (5 of 24 matched, so no setting within 2); progressive key on the 8 table classes, 2 slips: nothing below period 25, as copies; K4 judge best 4, copies 12; 5 plants found (60-93). 0213: plaintext autokey on 0025's tables, lags 1-52, 2 chain breaks anywhere or one lost step: nothing below lag 24 (copies 17-24); lags 26-29 read in bulk; K4 judge best 4, copies 12; 3 plants found, one with a slip running on (85, own copies at most 18) | 0002, 0003, 0011, 0012, 0025, 0064, 0118, 0212, 0213 | lags with 2 or fewer checks left after the slips (ciphertext autokey 72-96) are decided by the readings alone; plaintext autokey 53-96 stays blocked by 0136's bound |
 | **A1.5** A move, then the table (F6/1's type-1 library, as 0110-0114, 0129), k = 2 known letters wrong | closed on the tables; free alphabet blocked | exact. 0214: every route of 0110-0114 (dictionary keyword columnar, Myszkowski, double columnar, rail fence, AMSCO) and the type-1 library, 1,847,590 distinct landings, both orders, 8 table classes, key lengths 1-26, up to 2 slips (cost estimated first: about 50 s per text, compiled): the shortest key that fits K4 drops to 18 after the move and 16 before it, as the copies (16-18, 16-17); K4 above every copy in 1 of 52 cells (copies 0-3); K4 judge best 6, copies 12; 3 plants found (70-92) | 0110-0114, 0129, 0214 | 0129's free alphabet after a move, not run: with no slip it already fits K4 at the copies' rate from length 6 (thousands of moves from 10), and 0208 showed one free alphabet absorbs 2 slips from about length 10 with no move at all; the reading stays undetermined, so `blocked: too short to decide k slips` |
 
+## Stage 2, step 3: structure other than English in the 24-of-24 readings (A13, issue #75)
+
+Started 2026-10-21 (decided by Alexis; issue #52's order: A3, then A1, then A13 and A6). Readings that put all 24
+known letters in place but score like noise were thrown away. If the message was masked before it was
+enciphered, the answer may be among them. The battery (`tools/a13_structure.py`, 14 tests) and the driver
+(`tools/a13_check.py`) were written on 2026-10-18 and stopped part way (2935dc0); outputs in
+`reports/a13-structure-data/`. Rules: program.md, "Masked English (A13) and the English score (A6)". Work the
+table top down.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **A13.1** The battery's power: which masks each of the 14 tests finds on planted masked English (20 plants per mask) | in progress | measured | - | `power.json` is written; check it is complete, then write the power table into the report. A mask no test finds at 15 of 20 plants is named as one this step cannot see |
+| **A13.2** Readings a setting fixes with no climb: repeating key on a fixed alphabet pair at key lengths 26-29, standard, KRYPTOS and vocabulary alphabets, three modes; K4 against 20 plain shuffles | in progress | sampled | - | `pass2.json` holds K4 and 20 copies; rank K4 per test under the step's rules. A flag goes to its replication before anything else |
+| **A13.3** The 31 saved 24-of-24 readings (8 experiments' `raw.json`) against the same experiment's frozen `attack.py` run unchanged on fresh copies (`a13_check.py pass1-regen`, about 1 h on 8 cores) | open | sampled | - | - |
+| **A13.4** Readings kept since 2026-10-18 (0199-0214, among them A1's slipped readings): every 24-of-24 reading saved, K4 and copies, through the battery | open | sampled | - | First list which of these experiments kept readings for K4 and for copies; those that kept neither are noted, not rerun |
+| **A13.5** Unmask and judge: for each test that flags in A13.2-A13.4, undo the mask it found (the reversal, the nth letters, the affine map, the columns) on K4's and the copies' readings alike and judge them blind together | open | sampled | - | Only if a test flags; otherwise closed with no run. Then write `reports/a13-structure-check.md` and update A13 in `knowledge/12-assumptions.md` |
+
+## Stage 2, step 4: does the plaintext score as English? (A6, issue #84)
+
+Started after step 3 (decided by Alexis 2026-10-21). Every sampled verdict compared K4's climbed reading with the
+copies' climbed readings by quadgram score. The judge bench (`reports/judge-bench.md`) shows the quadgram scorer
+finds 10% of clean English and none of the damaged classes against English-like junk, which is what a climb
+returns on a copy. These items check whether the sampled verdicts still stand. Rules: program.md, "Masked English
+(A13) and the English score (A6)". Work the table top down.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **A6.1** Rejudge the sampled verdicts: K4's and every copy's best readings from 0120, 0125, 0140, 0142, 0144, 0146 (then 0034, 0035, 0048, 0037), judged blind in one call per verdict; K4 counts only above every copy | open | sampled | - | Readings not saved are regenerated with the frozen `attack.py` and the same copies' seeds; say which. Estimate judge calls first |
+| **A6.2** The climbs' power on Sanborn-style plaintext: plant the judge bench's xstops, k123 and sub3 classes (not clean Carter) through F1.5's design 2 at one length per family (F1.1 L23, F1.2 L13), and through 0125's running-key search; judged by quadgram and by the judge | open | sampled | - | If power falls below the verdict's stated power, the item it closed goes back to `open` (or `blocked` by cost) with the numbers |
+| **A6.3** A13's masks through the decider: a plaintext masked by each mask A13.1 can see (reversal, X every kth, nth letters), enciphered and run through design 2 at F1.1 L23 | open | sampled | - | Says whether a masked answer would have been found at all. If not, the sampled closes are `closed for unmasked English` only |
+
 ## F1. One keyed stage, no move
 
 | Item | Status | Strength | Experiments | Next test or reason |

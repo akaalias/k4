@@ -185,6 +185,30 @@ for one. The table "Stage 2, step 2" in `order-of-work.md` lists the items; thes
   plants are found and K4's count can still differ from the copies' is the item's reach; beyond it the item is
   `blocked: too short to decide k slips`, with the numbers.
 
+## Masked English (A13) and the English score (A6)
+
+Stage 2, steps 3 and 4 (issues #75 and #84). The tables in `order-of-work.md` list the items; these rules apply to both.
+
+- **These are experiments** (run_experiment.py, numbered, with records and figures), except A13.1, which writes up
+  `power.json`, and A13.2, which ranks the readings already in `pass2.json`. Both still go in the report and the
+  table. Reuse `tools/a13_structure.py` and `tools/a13_check.py`; do not rewrite them.
+- **Many tests, one verdict.** The battery runs 14 tests, so K4 above every one of 20 copies on some test happens by
+  chance about two times in three. Before each run, write down which tests count and how many cells (test x
+  experiment) are looked at. A cell flags only at an empirical p below 0.05 divided by that number, which needs
+  enough copies to reach it (at 14 cells, at least 280). With fewer copies, a cell where K4 beats every copy is a
+  candidate, not a result: replicate it on that test alone against fresh copies, enough for the corrected p, before
+  anything else. Only a replicated flag stops the queue.
+- **Copies are made the way the readings were made:** the same search, from the frozen `attack.py`, on scrambled
+  copies built as the experiment built them (plain shuffles, or shuffles that pass the same decider). Never compare
+  K4's climbed readings with copies' unclimbed ones.
+- **The judge** follows the rules in "Slip tolerance and the judge": K4's and the copies' readings in one call, blind,
+  quadgram filter first with the same cut, estimate the calls before the run, `None` counts as not found.
+- **Every run that closes an item plants its own answer** (masked or Sanborn-style English through the item's own
+  method) and says whether it was found, in the same run.
+- **A verdict that changes is written back.** If A6.1-A6.3 weaken a sampled close, change that item's row in its family
+  table (`closed` to `open` or `blocked`, with the numbers), its row in `grades.tsv`, and A6 or A13 in
+  `knowledge/12-assumptions.md`. Reopened family items are not worked in this step; they wait for Alexis.
+
 ## Patience and pivots
 
 - **Work the families in the rank order** in `order-of-work.md` (the Priorities page, decided

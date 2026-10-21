@@ -20,7 +20,8 @@ queue in `order-of-work.md` is exhausted. Then, in this order:
    LLM scoring blind against the scrambled coppers' candidates, with power measured on planted
    damaged English and built in the harness (issue 11). Relaxed tests produce more noisy
    candidates and need a judge that can sort them.
-3. A13 and A6, with the same judge.
+3. A13 and A6, with the same judge. Queued 2026-10-21 (Alexis) as Stage 2, steps 3 and 4 in
+   `order-of-work.md` (issues 75 and 84).
 4. Last (Alexis, 2026-10-20): the cost-blocked items that day-long runs can reach, as long runs
    allowed by exception, each with its total cost stated and a decider of measured power: F1.7's
    fitting lags (about 100 h), F6.2's lengths 3-14, F5.2's base 26 lag 6 and longer two-term

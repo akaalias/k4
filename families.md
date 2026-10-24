@@ -195,6 +195,14 @@ Update the leaf when an experiment works on it.
   - F7 Construction simulation (a check on the others, not a cipher)
     - K4's two patterns, doublets lining up in sevens and repeats 21 apart, are real {noted · sampled · 0056}
     - No construction tried makes both patterns {closed · sampled · 0018, 0027, 0062, 0065, 0096}
+  - F13 Ciphertext only: the known words sealed until a reading wins (a way of working across families, issue #85)
+    - **F13.1** Which families 97 letters of English can decide with no known letter: key bits against the judge's reach {open}
+    - **F13.2** The cipher type named from the ciphertext's statistics, power measured first {open}
+    - **F13.3** A stronger English judge: bits per letter it extracts on planted texts {open}
+    - **F13.4** Ciphertext-only solves in the families F13.1 leaves decidable {open}
+    - **F13.5** Memorable keys from the named sources, scored by English alone {open}
+    - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
+    - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}
 
 ## Full record by family
 

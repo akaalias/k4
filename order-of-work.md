@@ -214,6 +214,26 @@ returns on a copy. These items check whether the sampled verdicts still stand. R
 | **A6.2** The climbs' power on Sanborn-style plaintext: plant the judge bench's xstops, k123 and sub3 classes (not clean Carter) through F1.5's design 2 at one length per family (F1.1 L23, F1.2 L13), and through 0125's running-key search; judged by quadgram and by the judge | open | sampled | - | If power falls below the verdict's stated power, the item it closed goes back to `open` (or `blocked` by cost) with the numbers |
 | **A6.3** A13's masks through the decider: a plaintext masked by each mask A13.1 can see (reversal, X every kth, nth letters), enciphered and run through design 2 at F1.1 L23 | open | sampled | - | Says whether a masked answer would have been found at all. If not, the sampled closes are `closed for unmasked English` only |
 
+## F13. Ciphertext only: the known words sealed (issue #85)
+
+Drafted 2026-10-24 at Alexis's question: what would we run if no plaintext were known? Queued after Stage 2,
+step 4 unless Alexis moves it. Every search so far prunes settings with the 24 known letters, which carry about
+113 bits (24 x log2 26). Without them a search has only English to go on: about 1.78 bits per letter with the
+quadgram scorer (0136), about 170 bits over 97 letters. Here the known letters are not read by the search at
+all. They stay as gate 2, checked by the harness only after a reading has beaten its copies, so a hit is a
+held-out confirmation and no key can be fitted to the known places. Rules: program.md, "Ciphertext only (F13)".
+Work the table top down: F13.1 decides how much of F13.4 exists.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **F13.1** Solvability map: for each family in `families.md`, the key space in bits, against what 97 letters of English decide (0136's 1.78 bits per letter now, Shannon's lowest entropy as the ceiling), with no known letter | open | exact (a count) | - | A desk count, no run: a table of family, key bits, decidable now, decidable with a better judge, never. Write it to `reports/` and cite it in each F13.4 row |
+| **F13.2** Cipher-type identification: thousands of 97-letter texts made by each family's own generator (F7's, `kryptos/plants.py`), measured by 0168's 71 statistics and A13's 14 tests; a classifier trained on them names the families K4 resembles | open | sampled | - | Power first: how often it names the right family on held-out plants at 97 letters. 0168 found K4 inside every shuffle on all 71 statistics, so the classifier may be blind; if power is near chance, close with that number |
+| **F13.3** A stronger English judge: quadgrams against longer n-grams, a word model and the blind judge, each measured as bits extracted per letter on planted texts the way 0136 measured quadgrams | open | measured | - | Each extra bit per letter moves families from "never" to "decidable" in F13.1. Reuse `reports/judge-bench.md`'s classes, Sanborn-style plaintext included |
+| **F13.4** Ciphertext-only solves: hill climbs scored by the F13.3 judge alone, in each family F13.1 marks decidable, K4 against scrambled copies climbed the same way | open | sampled | - | One row per family once F13.1 is written. Plants made without known words must be found at 0120's power bar before K4's result counts |
+| **F13.5** Memorable keys scored by English alone: the key-source order (K1-K3 words, the sculpture's text, the Morse, Carter, then a dictionary) through each method already built, no known-letter check | open | exact | - | Where the known letters are exact this is weaker than the checks already run; it matters only if they sit or read differently than assumed (masking, slips, offsets). Cheap; run as a hedge |
+| **F13.6** A13's battery on every reading F13.4 and F13.5 produce, not only those that put the 24 letters in place | open | sampled | - | Same multiple-test rule as A13 (program.md) |
+| **F13.7** The object: the carved letters checked against photographs, the ?, the line breaks, Antipodes' K4 against Kryptos' | blocked | - | - | Needs sharp photographs of the copper (#81) and Antipodes' layout (F4.5). One wrong carved letter breaks every other item |
+
 ## F1. One keyed stage, no move
 
 | Item | Status | Strength | Experiments | Next test or reason |

@@ -209,6 +209,19 @@ Stage 2, steps 3 and 4 (issues #75 and #84). The tables in `order-of-work.md` li
   table (`closed` to `open` or `blocked`, with the numbers), its row in `grades.tsv`, and A6 or A13 in
   `knowledge/12-assumptions.md`. Reopened family items are not worked in this step; they wait for Alexis.
 
+## Ciphertext only (F13)
+
+F13 in `order-of-work.md` (issue #85). The search works as if no plaintext were known.
+
+- **The search never reads the known letters.** An F13 `attack.py` does not import them from `kryptos.facts`,
+  `kryptos.cribsweep` or `kryptos.gates`, and does not prune, rank or seed by them. The harness still applies
+  gate 2 at keep time. That check is the held-out test.
+- **Order of judgment:** a reading must beat its copies on English alone first. Only then are the 24 letters
+  looked at. Report how many readings beat their copies and how many of those also put the 24 letters in place.
+- **Plants carry no known words** and are found without them, at the power the row states.
+- **Copies are climbed the same way as K4,** with the same judge and budget, as in A13 and A6.
+- **F13.1 comes first.** No F13.4 row runs until F13.1 has marked its family decidable.
+
 ## Patience and pivots
 
 - **Work the families in the rank order** in `order-of-work.md` (the Priorities page, decided

@@ -1,0 +1,2049 @@
+{
+ "candidates": [
+  {
+   "plaintext": "RPRESIDENTHESTHERESANEASTNORTHEASTDERSTHEPRESINTHEREARENTHERETHBERLINCLOCKERESIDEDINGTHETHEREARTI",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "kry",
+     "ka": "kry",
+     "m": "varbeau",
+     "key": "FALPWPOZKOFGDGYGYMDMJMCLWNQHMHLKFGXKQHZRHUEXABHQDWGHKKCPTKAYEAZBYHITCDFYZDATQMCOKGZPLSACOFWVNKB"
+    }
+   },
+   "key_bits": 446.5,
+   "key_description": "saved reading of 0034: period 95 key FALPWPOZKOFGDGYGYMDMJMCLWNQHMHLKFGXKQHZRHUEXABHQDWGHKKCPTKAYEAZBYHITCDFYZDATQMCOKGZPLSACOFWVNKB (71 free s",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0034's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "OFORESTINTEDINTHEARENEASTNORTHEASTTHESTHESTHERENTERSANDINGANDINBERLINCLOCKGSTANDTHERENTERSARETHAL",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "m": "vig",
+     "key": "KVUKDZQJQDDANGRPTOAWTRDUMRIYWOYNKYRJFXJMOHYMKZHSNVPDNXEUVQJVCWIELYOIECBAQKDASNSHKYXCTQVDGIKQ"
+    }
+   },
+   "key_bits": 432.40000000000003,
+   "key_description": "saved reading of 0034: period 92 key KVUKDZQJQDDANGRPTOAWTRDUMRIYWOYNKYRJFXJMOHYMKZHSNVPDNXEUVQJVCWIELYOIECBAQKDASNSHKYXCTQVDGIKQ (68 free slot",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0034's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "ISCOREATTHETHESTHEREAEASTNORTHEASTNDCONTHERESERINTHESTERANDERANBERLINCLOCKDRENTHEREARATERSTHEMARX",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "kry",
+     "ka": "std",
+     "m": "beau",
+     "key": "NACPMJYYGVZKPKXKWQZMXQRTPHIUUARAYZSHZSHZXYXKDEQHKALUSKZBPUATKMVUGUHMRUKAFKAEONSFIHNKGNTZF"
+    }
+   },
+   "key_bits": 418.3,
+   "key_description": "saved reading of 0034: period 89 key NACPMJYYGVZKPKXKWQZMXQRTPHIUUARAYZSHZSHZXYXKDEQHKALUSKZBPUATKMVUGUHMRUKAFKAEONSFIHNKGNTZF (65 free slots c",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0034's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "QGFMJOYSTOAEUHISNORDFEASTNORTHEASTSDKZSIZKIENYYISBUIIAWIVYLBOMOBERLINCLOCKFFEMXURMHAWYLVEERAJBUXH",
+   "key": {
+    "exp": "0035",
+    "key": {
+     "pa": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "ca": "HILABCDEFGJKMNOPQRSTUVWXYZ",
+     "m": "vig",
+     "key": [
+      24,
+      24,
+      6,
+      5,
+      11,
+      0,
+      25,
+      22,
+      16,
+      12,
+      20,
+      24,
+      10,
+      11,
+      6,
+      10,
+      14,
+      20,
+      13,
+      1,
+      17,
+      4,
+      2,
+      25,
+      2,
+      3,
+      2
+     ]
+    }
+   },
+   "key_bits": 126.9,
+   "key_description": "saved reading of 0035: period 27, plain std, cipher HILL/keyword, vig; 3 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0035's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "DWIVEFUEXNARRMGFNUECOEASTNORTHEASTMWSESLIBREUKSFOCUJPVHUNIJEFUNBERLINCLOCKCEDWJICYBUNUIPOBOZZHUQP",
+   "key": {
+    "exp": "0035",
+    "key": {
+     "pa": "WILAMEBSTRCDFGHJKNOPQUVXYZ",
+     "ca": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "beau",
+     "key": [
+      25,
+      1,
+      11,
+      13,
+      25,
+      0,
+      18,
+      19,
+      3,
+      24,
+      23,
+      20,
+      10,
+      22,
+      1,
+      23,
+      25,
+      0,
+      6,
+      11,
+      14,
+      10,
+      14,
+      24,
+      3,
+      7,
+      8,
+      24
+     ]
+    }
+   },
+   "key_bits": 131.6,
+   "key_description": "saved reading of 0035: period 28, plain WILLIAMWEBSTER/keyword, cipher std, beau; 4 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0035's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "FFATRYYSOWADXNDJBUTHEEASTNORTHEASTYFINMGHFNESEAVOLPGLEXNZIANXBIBERLINCLOCKRTRAAJSAKOWAAGGQIRORYUK",
+   "key": {
+    "exp": "0035",
+    "key": {
+     "pa": "LANGEYBCDFHIJKMOPQRSTUVWXZ",
+     "ca": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "beau",
+     "key": [
+      23,
+      10,
+      11,
+      11,
+      12,
+      19,
+      2,
+      7,
+      21,
+      4,
+      21,
+      19,
+      25,
+      20,
+      22,
+      23,
+      14,
+      0,
+      21,
+      11,
+      0,
+      9,
+      12,
+      10,
+      15,
+      18,
+      5,
+      7,
+      11
+     ]
+    }
+   },
+   "key_bits": 136.3,
+   "key_description": "saved reading of 0035: period 29, plain LANGLEY/keyword, cipher std, beau; 5 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0035's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "UYUGNUWILATPSJGPEOMIFEASTNORTHEASTIAORTOOPSUPOUGHBHISCEBKRIFCSOBERLINCLOCKFWRZEIMDEXZEMBERHTJRETQ",
+   "key": {
+    "exp": "0048",
+    "key": {
+     "pa": "WEBSTRACDFGHIJKLMNOPQUVXYZ",
+     "ca": "WORLDCKABEFGHIJMNPQSTUVXYZ",
+     "m": "beau",
+     "key": [
+      22,
+      6,
+      1,
+      12,
+      12,
+      22,
+      23,
+      13,
+      0,
+      18,
+      25,
+      22,
+      11,
+      6,
+      11,
+      22,
+      14,
+      2,
+      24,
+      20,
+      9,
+      11,
+      9,
+      5,
+      0,
+      9,
+      10
+     ]
+    }
+   },
+   "key_bits": 126.9,
+   "key_description": "saved reading of 0048: period 27, plain WEBSTER/keyword, cipher WORLDCLOCK/keyword, beau; 3 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0048's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "ADJBNPTHULKBRUNTDELITEASTNORTHEASTYWBCIGZFRYRKWATWCULYBOLARSASWBERLINCLOCKALSKHOOJUOLBJCEGOTKPAKO",
+   "key": {
+    "exp": "0048",
+    "key": {
+     "pa": "SHADOWBCEFGIJKLMNPQRTUVXYZ",
+     "ca": "LODESTNABCFGHIJKMPQRUVWXYZ",
+     "m": "varbeau",
+     "key": [
+      1,
+      21,
+      23,
+      13,
+      22,
+      16,
+      23,
+      0,
+      10,
+      2,
+      19,
+      6,
+      11,
+      17,
+      15,
+      20,
+      16,
+      24,
+      6,
+      3,
+      24,
+      24,
+      2,
+      7,
+      25,
+      24,
+      12,
+      2
+     ]
+    }
+   },
+   "key_bits": 131.6,
+   "key_description": "saved reading of 0048: period 28, plain SHADOW/keyword, cipher LODESTONE/keyword, varbeau; 4 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0048's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "JGAFEEFGHJCJOUSTOLITIEASTNORTHEASTEHHUAODBULYMENDTRYFFLAWPKASEDBERLINCLOCKITHNDPRGADTYGABNDEDOZMS",
+   "key": {
+    "exp": "0048",
+    "key": {
+     "pa": "LUCIDABEFGHJKMNOPQRSTVWXYZ",
+     "ca": "WONDERFULABCGHIJKMPQSTVXYZ",
+     "m": "beau",
+     "key": [
+      12,
+      19,
+      21,
+      13,
+      14,
+      8,
+      5,
+      10,
+      22,
+      24,
+      9,
+      19,
+      25,
+      21,
+      20,
+      2,
+      3,
+      6,
+      13,
+      4,
+      3,
+      13,
+      13,
+      24,
+      16,
+      7,
+      8,
+      10,
+      25
+     ]
+    }
+   },
+   "key_bits": 136.3,
+   "key_description": "saved reading of 0048: period 29, plain LUCID/keyword, cipher WONDERFUL/keyword, beau; 5 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0048's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "WRYZNNIPNMUPTOMEORJZEEASTNORTHEASTRBYEASILETFIPLSNGESMUCHASTDCEBERLINCLOCKHASANDWLANDWOHLUCEKSENP",
+   "key": {
+    "exp": "0120",
+    "key": {
+     "alphabet": "JCRBOQYZPXVWHSMGAUKNFTIELD",
+     "shifts": [
+      15,
+      5,
+      24,
+      9,
+      10,
+      23,
+      5,
+      12,
+      8,
+      0,
+      8,
+      6,
+      24,
+      17,
+      18,
+      21,
+      0,
+      22,
+      3,
+      10,
+      8,
+      17,
+      14
+     ],
+     "form": "beaufort"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0120: Beaufort form, one alphabet JCRBOQYZPXVWHSMGAUKNFTIELD on both sides, key length 23",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0120's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "QBHEFEULCLATLYEPHUVALEASTNORTHEASTPOILTYNESTUCOOTEVELHOURKMRTISBERLINCLOCKTBYINAROMTHEENEIGNORGHF",
+   "key": {
+    "exp": "0120",
+    "key": {
+     "alphabet": "NDPEAFCIXWRMUHGYZKOBTJVSQL",
+     "shifts": [
+      16,
+      12,
+      4,
+      13,
+      17,
+      21,
+      20,
+      17,
+      20,
+      12,
+      16,
+      19,
+      18,
+      12,
+      21,
+      1,
+      20,
+      17,
+      15,
+      23,
+      8,
+      8,
+      3,
+      7,
+      16,
+      24
+     ],
+     "form": "beaufort"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0120: Beaufort form, one alphabet NDPEAFCIXWRMUHGYZKOBTJVSQL on both sides, key length 26",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0120's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "DUBDUWORNYOCSPAREDTOPEASTNORTHEASTHEBUATIIAMFIVLIEFFENOWERLASSMBERLINCLOCKOFCANHIANGINTAWARYQSEEP",
+   "key": {
+    "exp": "0137",
+    "key": {
+     "alphabet": "UWOXMQNVLFISRKPAZTECJDGYBH",
+     "shifts": [
+      23,
+      24,
+      11,
+      7,
+      0,
+      3,
+      5,
+      14,
+      2,
+      22,
+      2,
+      1,
+      9,
+      25,
+      17,
+      20,
+      2,
+      4,
+      15,
+      0,
+      15,
+      1,
+      23
+     ],
+     "form": "beaufort"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0137: Beaufort form, one alphabet UWOXMQNVLFISRKPAZTECJDGYBH on both sides, key length 23",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0137's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "QEVEDENGETOPTOANHEANGEASTNORTHEASTCHERIONYMNSVAGIEVELMAFTKALLYSBERLINCLOCKINMCUARLOTBORGJANGEREDW",
+   "key": {
+    "exp": "0137",
+    "key": {
+     "alphabet": "AKDPGNBMLEVURJIXHQOFWCYSZT",
+     "shifts": [
+      9,
+      15,
+      11,
+      21,
+      13,
+      1,
+      20,
+      22,
+      13,
+      15,
+      3,
+      11,
+      5,
+      15,
+      18,
+      13,
+      4,
+      2,
+      6,
+      11,
+      24,
+      2,
+      8,
+      9,
+      9,
+      22
+     ],
+     "form": "beaufort"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0137: Beaufort form, one alphabet AKDPGNBMLEVURJIXHQOFWCYSZT on both sides, key length 26",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0137's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "BOARIMELRBCEHINVEHWATEASTNORTHEASTHATEGNANHIFPLLBADIRODMOROSORYBERLINCLOCKDAVARRUNDISHEDSAVEANLAP",
+   "key": {
+    "exp": "0140",
+    "key": {
+     "alphabet": "RTKDPNVSXJQMUAZGOBILEYCHWF",
+     "shifts": [
+      7,
+      7,
+      15,
+      0,
+      4,
+      1,
+      2,
+      9,
+      15,
+      14,
+      8,
+      13,
+      14,
+      25,
+      21,
+      25,
+      12,
+      22,
+      15,
+      4,
+      25,
+      19,
+      6
+     ],
+     "form": "beaufort"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0140: Beaufort form, one alphabet RTKDPNVSXJQMUAZGOBILEYCHWF on both sides, key length 23",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0140's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "QINARCEOUSEAZEYNONENGEASTNORTHEASTEDTUDECRSABSOSCIVEFUSSHKRLDRABERLINCLOCKCLARINRUNGONTAGTOLEMASC",
+   "key": {
+    "exp": "0142",
+    "key": {
+     "alphabet": "UTVXRSWEPNHFLZDAOQBJICKGYM",
+     "shifts": [
+      7,
+      12,
+      5,
+      19,
+      4,
+      11,
+      10,
+      6,
+      23,
+      15,
+      7,
+      1,
+      5,
+      12,
+      14,
+      21,
+      10,
+      20,
+      25,
+      1,
+      3,
+      18,
+      1,
+      9,
+      3,
+      0
+     ],
+     "form": "beaufort"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0142: Beaufort form, one alphabet UTVXRSWEPNHFLZDAOQBJICKGYM on both sides, key length 26",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0142's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "YADKARZAMESURECOINGOREASTNORTHEASTETENAITEPETJFBGLIONOUCHERYTHIBERLINCLOCKEELHURMOFTSSAYMCHTELZEP",
+   "key": {
+    "exp": "0148",
+    "key": {
+     "alphabet": "OVLIGSMJAZBFDXNCYPQRTWUHEK",
+     "shifts": [
+      10,
+      2,
+      13,
+      20,
+      14,
+      7,
+      4,
+      18,
+      24,
+      25,
+      17,
+      6,
+      17,
+      7,
+      11,
+      2,
+      0,
+      23,
+      6
+     ],
+     "form": "added",
+     "slip": 33
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0148: added form, one alphabet OVLIGSMJAZBFDXNCYPQRTWUHEK, key length 19, carved letter at 33 read as a slip",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3: 0148's saved 24-of-24 reading, through the battery"
+  }
+ ],
+ "bounds": {
+  "item": "A13.3",
+  "pre_registered": "2026-10-21, reports/a13-structure-check.md",
+  "tests": [
+   "eng_base",
+   "freq_sorted",
+   "ioc",
+   "sep_words",
+   "sep_regular",
+   "eng_reverse",
+   "eng_keep_nth",
+   "eng_drop_nth",
+   "eng_step",
+   "eng_affine_std",
+   "eng_affine_kry",
+   "eng_columns",
+   "repeats",
+   "base_pairs"
+  ],
+  "experiments": [
+   "0034",
+   "0035",
+   "0048",
+   "0120",
+   "0137",
+   "0140",
+   "0142",
+   "0148"
+  ],
+  "cells": 112,
+  "p_flag": 0.00044642857142857147,
+  "k4_readings": {
+   "0034": 18,
+   "0035": 3,
+   "0048": 3,
+   "0120": 2,
+   "0137": 2,
+   "0140": 1,
+   "0142": 1,
+   "0148": 1
+  },
+  "k4_reencrypt_ok": {
+   "0034": true,
+   "0035": true,
+   "0048": true,
+   "0120": true,
+   "0137": true,
+   "0140": true,
+   "0142": true,
+   "0148": true
+  },
+  "copies": {
+   "0034": 10,
+   "0035": 10,
+   "0048": 10,
+   "0120": 12,
+   "0137": 12,
+   "0140": 12,
+   "0142": 12,
+   "0148": 12
+  },
+  "copy_cpu_seconds_mean": {
+   "0034": 3789.3,
+   "0035": 141.9,
+   "0048": 1449.4,
+   "0120": 338.3,
+   "0137": 213.5,
+   "0140": 143.1,
+   "0142": 67.3,
+   "0148": 148.1
+  },
+  "copies_regenerated": "tools/a13_check.py pass1-regen, seed 1300: 22 jobs on 2026-10-21, the other 68 on 2026-10-24 before this run",
+  "jobs_missing_at_start": 0,
+  "cells_table": {
+   "0034/eng_base": {
+    "k4": -3.642290426988611,
+    "copies_min": -3.6046326748374944,
+    "copies_max": -3.5329024185250635,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0034/freq_sorted": {
+    "k4": -2.575368554012606,
+    "copies_min": -2.621632540922238,
+    "copies_max": -2.555635860418908,
+    "n": 10,
+    "rank": 2,
+    "candidate": false
+   },
+   "0034/ioc": {
+    "k4": 0.10631443298969072,
+    "copies_min": 0.0936426116838488,
+    "copies_max": 0.11404639175257732,
+    "n": 10,
+    "rank": 3,
+    "candidate": false
+   },
+   "0034/sep_words": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -2.051969008582769,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0034/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0034/eng_reverse": {
+    "k4": -5.4582804472186215,
+    "copies_min": -5.71720599576929,
+    "copies_max": -5.552742879798134,
+    "n": 10,
+    "rank": 1,
+    "candidate": true
+   },
+   "0034/eng_keep_nth": {
+    "k4": -4.751907523560674,
+    "copies_min": -5.181900310263038,
+    "copies_max": -4.875489415912129,
+    "n": 10,
+    "rank": 1,
+    "candidate": true
+   },
+   "0034/eng_drop_nth": {
+    "k4": -3.7071057487699983,
+    "copies_min": -3.6976052935926806,
+    "copies_max": -3.6131388750090556,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0034/eng_step": {
+    "k4": -5.196587592066844,
+    "copies_min": -5.29159231036549,
+    "copies_max": -5.011680129342879,
+    "n": 10,
+    "rank": 7,
+    "candidate": false
+   },
+   "0034/eng_affine_std": {
+    "k4": -3.6422904269886125,
+    "copies_min": -3.604632674837496,
+    "copies_max": -3.5329024185250644,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0034/eng_affine_kry": {
+    "k4": -3.6422904269886125,
+    "copies_min": -3.604632674837496,
+    "copies_max": -3.5329024185250644,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0034/eng_columns": {
+    "k4": -5.260393159199314,
+    "copies_min": -5.31129290466676,
+    "copies_max": -5.145974464551342,
+    "n": 10,
+    "rank": 6,
+    "candidate": false
+   },
+   "0034/repeats": {
+    "k4": 31.0,
+    "copies_min": 25.0,
+    "copies_max": 38.0,
+    "n": 10,
+    "rank": 5,
+    "candidate": false
+   },
+   "0034/base_pairs": {
+    "k4": -0.5833333333333334,
+    "copies_min": -0.625,
+    "copies_max": -0.5625,
+    "n": 10,
+    "rank": 6,
+    "candidate": false
+   },
+   "0035/eng_base": {
+    "k4": -6.096714692753467,
+    "copies_min": -6.084134767339252,
+    "copies_max": -5.668075960605389,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0035/freq_sorted": {
+    "k4": -3.12612761615087,
+    "copies_min": -3.059051675762564,
+    "copies_max": -2.927451153621812,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0035/ioc": {
+    "k4": 0.04488831615120275,
+    "copies_min": 0.04553264604810996,
+    "copies_max": 0.05605670103092784,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0035/sep_words": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0035/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0035/eng_reverse": {
+    "k4": -6.89510768979299,
+    "copies_min": -6.987466721589629,
+    "copies_max": -6.44013585787408,
+    "n": 10,
+    "rank": 9,
+    "candidate": false
+   },
+   "0035/eng_keep_nth": {
+    "k4": -6.043539183143253,
+    "copies_min": -6.269042420044986,
+    "copies_max": -5.275433642329155,
+    "n": 10,
+    "rank": 7,
+    "candidate": false
+   },
+   "0035/eng_drop_nth": {
+    "k4": -5.768787682263362,
+    "copies_min": -5.866000613616906,
+    "copies_max": -5.386926074211838,
+    "n": 10,
+    "rank": 5,
+    "candidate": false
+   },
+   "0035/eng_step": {
+    "k4": -6.490615509790811,
+    "copies_min": -6.58851485561862,
+    "copies_max": -6.139916621200839,
+    "n": 10,
+    "rank": 8,
+    "candidate": false
+   },
+   "0035/eng_affine_std": {
+    "k4": -6.096714692753467,
+    "copies_min": -6.084134767339252,
+    "copies_max": -5.668075960605389,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0035/eng_affine_kry": {
+    "k4": -6.096714692753467,
+    "copies_min": -6.084134767339252,
+    "copies_max": -5.668075960605389,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0035/eng_columns": {
+    "k4": -6.532556437072188,
+    "copies_min": -6.558516930058649,
+    "copies_max": -6.060268048994418,
+    "n": 10,
+    "rank": 10,
+    "candidate": false
+   },
+   "0035/repeats": {
+    "k4": 4.0,
+    "copies_min": 3.0,
+    "copies_max": 5.0,
+    "n": 10,
+    "rank": 6,
+    "candidate": false
+   },
+   "0035/base_pairs": {
+    "k4": -0.9166666666666666,
+    "copies_min": -0.9375,
+    "copies_max": -0.8541666666666666,
+    "n": 10,
+    "rank": 7,
+    "candidate": false
+   },
+   "0048/eng_base": {
+    "k4": -5.686172135893684,
+    "copies_min": -5.903913260124872,
+    "copies_max": -5.544667717272858,
+    "n": 10,
+    "rank": 5,
+    "candidate": false
+   },
+   "0048/freq_sorted": {
+    "k4": -2.9922051216651964,
+    "copies_min": -3.004280581659727,
+    "copies_max": -2.940153506477771,
+    "n": 10,
+    "rank": 10,
+    "candidate": false
+   },
+   "0048/ioc": {
+    "k4": 0.04725085910652921,
+    "copies_min": 0.048539518900343644,
+    "copies_max": 0.058848797250859106,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0048/sep_words": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0048/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0048/eng_reverse": {
+    "k4": -6.767279035354215,
+    "copies_min": -6.771054238071913,
+    "copies_max": -6.280503735100856,
+    "n": 10,
+    "rank": 10,
+    "candidate": false
+   },
+   "0048/eng_keep_nth": {
+    "k4": -6.078103379218427,
+    "copies_min": -6.225233784241704,
+    "copies_max": -5.460013558108831,
+    "n": 10,
+    "rank": 9,
+    "candidate": false
+   },
+   "0048/eng_drop_nth": {
+    "k4": -5.5840848204313716,
+    "copies_min": -5.571743685745264,
+    "copies_max": -5.294111630625189,
+    "n": 10,
+    "rank": 11,
+    "candidate": false
+   },
+   "0048/eng_step": {
+    "k4": -6.327964939457987,
+    "copies_min": -6.5201173955883265,
+    "copies_max": -6.0878850736965715,
+    "n": 10,
+    "rank": 9,
+    "candidate": false
+   },
+   "0048/eng_affine_std": {
+    "k4": -5.686172135893685,
+    "copies_min": -5.903913260124875,
+    "copies_max": -5.544667717272857,
+    "n": 10,
+    "rank": 5,
+    "candidate": false
+   },
+   "0048/eng_affine_kry": {
+    "k4": -5.686172135893685,
+    "copies_min": -5.903913260124875,
+    "copies_max": -5.544667717272857,
+    "n": 10,
+    "rank": 5,
+    "candidate": false
+   },
+   "0048/eng_columns": {
+    "k4": -6.356665943140553,
+    "copies_min": -6.534067907096268,
+    "copies_max": -6.101911491484472,
+    "n": 10,
+    "rank": 10,
+    "candidate": false
+   },
+   "0048/repeats": {
+    "k4": 4.0,
+    "copies_min": 2.0,
+    "copies_max": 5.0,
+    "n": 10,
+    "rank": 4,
+    "candidate": false
+   },
+   "0048/base_pairs": {
+    "k4": -0.8958333333333334,
+    "copies_min": -0.9375,
+    "copies_max": -0.8541666666666666,
+    "n": 10,
+    "rank": 8,
+    "candidate": false
+   },
+   "0120/eng_base": {
+    "k4": -5.063530921083712,
+    "copies_min": -5.186167966670841,
+    "copies_max": -4.8111462983033855,
+    "n": 12,
+    "rank": 9,
+    "candidate": false
+   },
+   "0120/freq_sorted": {
+    "k4": -2.8841335454670163,
+    "copies_min": -2.937878113382758,
+    "copies_max": -2.7601191880332574,
+    "n": 12,
+    "rank": 11,
+    "candidate": false
+   },
+   "0120/ioc": {
+    "k4": 0.05627147766323024,
+    "copies_min": 0.05369415807560137,
+    "copies_max": 0.06829896907216494,
+    "n": 12,
+    "rank": 11,
+    "candidate": false
+   },
+   "0120/sep_words": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0120/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0120/eng_reverse": {
+    "k4": -6.224044156149807,
+    "copies_min": -6.297542003499332,
+    "copies_max": -5.909286741073485,
+    "n": 12,
+    "rank": 10,
+    "candidate": false
+   },
+   "0120/eng_keep_nth": {
+    "k4": -5.697830018785895,
+    "copies_min": -6.050501596953651,
+    "copies_max": -5.26174903194554,
+    "n": 12,
+    "rank": 5,
+    "candidate": false
+   },
+   "0120/eng_drop_nth": {
+    "k4": -5.007079858726159,
+    "copies_min": -5.103989195076372,
+    "copies_max": -4.706534013158261,
+    "n": 12,
+    "rank": 12,
+    "candidate": false
+   },
+   "0120/eng_step": {
+    "k4": -6.008035443238698,
+    "copies_min": -5.969738418047347,
+    "copies_max": -5.496427260321056,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0120/eng_affine_std": {
+    "k4": -5.0635309210837125,
+    "copies_min": -5.186167966670841,
+    "copies_max": -4.8111462983033855,
+    "n": 12,
+    "rank": 9,
+    "candidate": false
+   },
+   "0120/eng_affine_kry": {
+    "k4": -5.0635309210837125,
+    "copies_min": -5.186167966670841,
+    "copies_max": -4.8111462983033855,
+    "n": 12,
+    "rank": 9,
+    "candidate": false
+   },
+   "0120/eng_columns": {
+    "k4": -5.982086521589703,
+    "copies_min": -6.055884107014221,
+    "copies_max": -5.638706319678302,
+    "n": 12,
+    "rank": 11,
+    "candidate": false
+   },
+   "0120/repeats": {
+    "k4": 7.0,
+    "copies_min": 3.0,
+    "copies_max": 7.0,
+    "n": 12,
+    "rank": 2,
+    "candidate": false
+   },
+   "0120/base_pairs": {
+    "k4": -0.9166666666666666,
+    "copies_min": -0.9166666666666666,
+    "copies_max": -0.8125,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0137/eng_base": {
+    "k4": -4.953803474091055,
+    "copies_min": -4.965532614832664,
+    "copies_max": -4.693463744379584,
+    "n": 12,
+    "rank": 12,
+    "candidate": false
+   },
+   "0137/freq_sorted": {
+    "k4": -2.9338861339038615,
+    "copies_min": -2.8968153952702376,
+    "copies_max": -2.7897300453644043,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0137/ioc": {
+    "k4": 0.05648625429553265,
+    "copies_min": 0.05584192439862543,
+    "copies_max": 0.06722508591065292,
+    "n": 12,
+    "rank": 12,
+    "candidate": false
+   },
+   "0137/sep_words": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0137/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0137/eng_reverse": {
+    "k4": -6.140388140765204,
+    "copies_min": -6.4037616171640845,
+    "copies_max": -5.527536230756367,
+    "n": 12,
+    "rank": 10,
+    "candidate": false
+   },
+   "0137/eng_keep_nth": {
+    "k4": -6.065479517549549,
+    "copies_min": -5.947745169832811,
+    "copies_max": -5.262752397158751,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0137/eng_drop_nth": {
+    "k4": -4.754837014137857,
+    "copies_min": -4.92783112043008,
+    "copies_max": -4.599437818086509,
+    "n": 12,
+    "rank": 6,
+    "candidate": false
+   },
+   "0137/eng_step": {
+    "k4": -5.878701584192223,
+    "copies_min": -6.0019273311366765,
+    "copies_max": -5.486764859344598,
+    "n": 12,
+    "rank": 10,
+    "candidate": false
+   },
+   "0137/eng_affine_std": {
+    "k4": -4.953803474091054,
+    "copies_min": -4.965532614832664,
+    "copies_max": -4.693463744379584,
+    "n": 12,
+    "rank": 12,
+    "candidate": false
+   },
+   "0137/eng_affine_kry": {
+    "k4": -4.953803474091054,
+    "copies_min": -4.965532614832664,
+    "copies_max": -4.693463744379584,
+    "n": 12,
+    "rank": 12,
+    "candidate": false
+   },
+   "0137/eng_columns": {
+    "k4": -5.989825508587057,
+    "copies_min": -5.941803008020516,
+    "copies_max": -5.699966067272687,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0137/repeats": {
+    "k4": 7.0,
+    "copies_min": 2.0,
+    "copies_max": 7.0,
+    "n": 12,
+    "rank": 3,
+    "candidate": false
+   },
+   "0137/base_pairs": {
+    "k4": -0.8958333333333334,
+    "copies_min": -0.8958333333333334,
+    "copies_max": -0.8125,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0140/eng_base": {
+    "k4": -4.989091638582698,
+    "copies_min": -5.084186735876598,
+    "copies_max": -4.880476311445674,
+    "n": 12,
+    "rank": 8,
+    "candidate": false
+   },
+   "0140/freq_sorted": {
+    "k4": -2.867758898863594,
+    "copies_min": -2.9546482602799347,
+    "copies_max": -2.765599373847152,
+    "n": 12,
+    "rank": 9,
+    "candidate": false
+   },
+   "0140/ioc": {
+    "k4": 0.05777491408934708,
+    "copies_min": 0.05219072164948454,
+    "copies_max": 0.070446735395189,
+    "n": 12,
+    "rank": 9,
+    "candidate": false
+   },
+   "0140/sep_words": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0140/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0140/eng_reverse": {
+    "k4": -6.000261074982041,
+    "copies_min": -6.335639891969496,
+    "copies_max": -5.919036530737811,
+    "n": 12,
+    "rank": 2,
+    "candidate": false
+   },
+   "0140/eng_keep_nth": {
+    "k4": -5.398356703923783,
+    "copies_min": -5.948643349667668,
+    "copies_max": -5.268311890732577,
+    "n": 12,
+    "rank": 3,
+    "candidate": false
+   },
+   "0140/eng_drop_nth": {
+    "k4": -4.92721044177315,
+    "copies_min": -5.07230599029337,
+    "copies_max": -4.781234693516137,
+    "n": 12,
+    "rank": 7,
+    "candidate": false
+   },
+   "0140/eng_step": {
+    "k4": -5.825225296853422,
+    "copies_min": -6.089267839690203,
+    "copies_max": -5.713690552204805,
+    "n": 12,
+    "rank": 4,
+    "candidate": false
+   },
+   "0140/eng_affine_std": {
+    "k4": -4.989091638582699,
+    "copies_min": -5.084186735876596,
+    "copies_max": -4.880476311445675,
+    "n": 12,
+    "rank": 8,
+    "candidate": false
+   },
+   "0140/eng_affine_kry": {
+    "k4": -4.989091638582699,
+    "copies_min": -5.084186735876596,
+    "copies_max": -4.880476311445675,
+    "n": 12,
+    "rank": 8,
+    "candidate": false
+   },
+   "0140/eng_columns": {
+    "k4": -6.022112999110879,
+    "copies_min": -6.05022266373015,
+    "copies_max": -5.76873415230933,
+    "n": 12,
+    "rank": 12,
+    "candidate": false
+   },
+   "0140/repeats": {
+    "k4": 3.0,
+    "copies_min": 2.0,
+    "copies_max": 7.0,
+    "n": 12,
+    "rank": 11,
+    "candidate": false
+   },
+   "0140/base_pairs": {
+    "k4": -0.875,
+    "copies_min": -0.9166666666666666,
+    "copies_max": -0.7708333333333334,
+    "n": 12,
+    "rank": 10,
+    "candidate": false
+   },
+   "0142/eng_base": {
+    "k4": -4.990328321801061,
+    "copies_min": -5.044662612703084,
+    "copies_max": -4.722151738926735,
+    "n": 12,
+    "rank": 11,
+    "candidate": false
+   },
+   "0142/freq_sorted": {
+    "k4": -2.842899890242736,
+    "copies_min": -2.9419520128650984,
+    "copies_max": -2.813188386501495,
+    "n": 12,
+    "rank": 6,
+    "candidate": false
+   },
+   "0142/ioc": {
+    "k4": 0.059922680412371136,
+    "copies_min": 0.05283505154639175,
+    "copies_max": 0.06464776632302406,
+    "n": 12,
+    "rank": 7,
+    "candidate": false
+   },
+   "0142/sep_words": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0142/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0142/eng_reverse": {
+    "k4": -6.0221200135253,
+    "copies_min": -6.481221973880998,
+    "copies_max": -5.801798672749979,
+    "n": 12,
+    "rank": 6,
+    "candidate": false
+   },
+   "0142/eng_keep_nth": {
+    "k4": -5.445755442012921,
+    "copies_min": -6.105518828983748,
+    "copies_max": -5.33965052347856,
+    "n": 12,
+    "rank": 2,
+    "candidate": false
+   },
+   "0142/eng_drop_nth": {
+    "k4": -4.931322620923448,
+    "copies_min": -5.024921879501305,
+    "copies_max": -4.665568272653109,
+    "n": 12,
+    "rank": 11,
+    "candidate": false
+   },
+   "0142/eng_step": {
+    "k4": -5.7603288956511545,
+    "copies_min": -6.171677782222352,
+    "copies_max": -5.566542821453248,
+    "n": 12,
+    "rank": 5,
+    "candidate": false
+   },
+   "0142/eng_affine_std": {
+    "k4": -4.990328321801061,
+    "copies_min": -5.044662612703086,
+    "copies_max": -4.722151738926734,
+    "n": 12,
+    "rank": 11,
+    "candidate": false
+   },
+   "0142/eng_affine_kry": {
+    "k4": -4.990328321801061,
+    "copies_min": -5.044662612703086,
+    "copies_max": -4.722151738926734,
+    "n": 12,
+    "rank": 11,
+    "candidate": false
+   },
+   "0142/eng_columns": {
+    "k4": -5.892204567897963,
+    "copies_min": -6.070994173205393,
+    "copies_max": -5.674002742643571,
+    "n": 12,
+    "rank": 7,
+    "candidate": false
+   },
+   "0142/repeats": {
+    "k4": 2.0,
+    "copies_min": 2.0,
+    "copies_max": 8.0,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0142/base_pairs": {
+    "k4": -0.9375,
+    "copies_min": -0.9375,
+    "copies_max": -0.7916666666666666,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0148/eng_base": {
+    "k4": -5.110545353384077,
+    "copies_min": -5.236338524802218,
+    "copies_max": -5.003094304351364,
+    "n": 12,
+    "rank": 6,
+    "candidate": false
+   },
+   "0148/freq_sorted": {
+    "k4": -2.9013552190055782,
+    "copies_min": -2.9470278737081244,
+    "copies_max": -2.7781880822410585,
+    "n": 12,
+    "rank": 7,
+    "candidate": false
+   },
+   "0148/ioc": {
+    "k4": 0.056915807560137456,
+    "copies_min": 0.05133161512027491,
+    "copies_max": 0.0661512027491409,
+    "n": 12,
+    "rank": 4,
+    "candidate": false
+   },
+   "0148/sep_words": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0148/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -Infinity,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0148/eng_reverse": {
+    "k4": -6.144412056843341,
+    "copies_min": -6.495829147558959,
+    "copies_max": -5.943649756596133,
+    "n": 12,
+    "rank": 4,
+    "candidate": false
+   },
+   "0148/eng_keep_nth": {
+    "k4": -6.099044253502546,
+    "copies_min": -6.267380223779869,
+    "copies_max": -5.098296138448454,
+    "n": 12,
+    "rank": 12,
+    "candidate": false
+   },
+   "0148/eng_drop_nth": {
+    "k4": -5.056731479681456,
+    "copies_min": -5.177384949065263,
+    "copies_max": -4.971277606079257,
+    "n": 12,
+    "rank": 7,
+    "candidate": false
+   },
+   "0148/eng_step": {
+    "k4": -5.759808537501923,
+    "copies_min": -6.165593134889681,
+    "copies_max": -5.55590105894448,
+    "n": 12,
+    "rank": 2,
+    "candidate": false
+   },
+   "0148/eng_affine_std": {
+    "k4": -5.11054535338408,
+    "copies_min": -5.2363385248022185,
+    "copies_max": -5.003094304351364,
+    "n": 12,
+    "rank": 6,
+    "candidate": false
+   },
+   "0148/eng_affine_kry": {
+    "k4": -5.11054535338408,
+    "copies_min": -5.2363385248022185,
+    "copies_max": -5.003094304351364,
+    "n": 12,
+    "rank": 6,
+    "candidate": false
+   },
+   "0148/eng_columns": {
+    "k4": -6.027449503142971,
+    "copies_min": -6.175756394445149,
+    "copies_max": -5.575464857838674,
+    "n": 12,
+    "rank": 7,
+    "candidate": false
+   },
+   "0148/repeats": {
+    "k4": 2.0,
+    "copies_min": 2.0,
+    "copies_max": 5.0,
+    "n": 12,
+    "rank": 13,
+    "candidate": false
+   },
+   "0148/base_pairs": {
+    "k4": -0.9166666666666666,
+    "copies_min": -0.9375,
+    "copies_max": -0.8541666666666666,
+    "n": 12,
+    "rank": 12,
+    "candidate": false
+   }
+  },
+  "candidates": [
+   "0034/eng_reverse",
+   "0034/eng_keep_nth"
+  ],
+  "candidates_expected_by_chance": 9.2,
+  "replication": {
+   "0034/eng_reverse": {
+    "k4": -5.4582804472186215,
+    "fresh_copies": 8,
+    "first_copy_at_or_above": null,
+    "fresh_max": -5.556524387129956,
+    "verdict": "unresolved",
+    "p_bound_if_unresolved": 0.1111111111111111
+   },
+   "0034/eng_keep_nth": {
+    "k4": -4.751907523560674,
+    "fresh_copies": 6,
+    "first_copy_at_or_above": 6,
+    "fresh_max": -4.735572098878378,
+    "verdict": "not a flag",
+    "p_bound_if_unresolved": null
+   }
+  },
+  "flags": [],
+  "unresolved": [
+   "0034/eng_reverse"
+  ],
+  "plants": [
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "none",
+    "i": 0,
+    "test": "eng_base",
+    "reading_value": -4.62966238678313,
+    "plaintext_value": -4.255679303868371,
+    "copies_max": -4.722151738926735,
+    "letters_right": 35,
+    "found": true,
+    "plaintext_would_be_found": true,
+    "reading": "CALEDIBETARTORCOADELEEASTNORTHEASTEALLYTADOHALGENEDABICIDEAWANTBERLINCLOCKIRILYSHOMISAGARLOISNOUN"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "none",
+    "i": 1,
+    "test": "eng_base",
+    "reading_value": -4.592331361427648,
+    "plaintext_value": -4.420235380511223,
+    "copies_max": -4.722151738926735,
+    "letters_right": 35,
+    "found": true,
+    "plaintext_would_be_found": true,
+    "reading": "FERNINTKNONVEWEDENTALEASTNORTHEASTALSESONATIONFIGUOUNDHESSENINDBERLINCLOCKUFIDMAGATERSHEREDJCHEWT"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "none",
+    "i": 2,
+    "test": "eng_base",
+    "reading_value": -4.760691747735969,
+    "plaintext_value": -4.238678626943255,
+    "copies_max": -4.722151738926735,
+    "letters_right": 34,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "LONOVORGISONDWILSAEETEASTNORTHEASTHARABALECHUCIDENMRBERPCONATOUBERLINCLOCKSSAARESTOWIEROUGHTSSHOO"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "reversal",
+    "i": 0,
+    "test": "eng_reverse",
+    "reading_value": -5.972011277701728,
+    "plaintext_value": -4.761928613244291,
+    "copies_max": -5.801798672749979,
+    "letters_right": 36,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "WLOCATANDJUNIONITWBENEASTNORTHEASTALREACELELETHISAINTDEADILIACIBERLINCLOCKEEASBARRESTONEBMOAIKLMA"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "reversal",
+    "i": 1,
+    "test": "eng_reverse",
+    "reading_value": -5.922751016754045,
+    "plaintext_value": -4.961532540926,
+    "copies_max": -5.801798672749979,
+    "letters_right": 40,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "LDSONSUSREPOSONLITETREASTNORTHEASTCOMTHANGECMONTOBORDSPRWEBSTEMBERLINCLOCKMAOWIADNEYSAENGSESENJON"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "reversal",
+    "i": 2,
+    "test": "eng_reverse",
+    "reading_value": -6.146353814027237,
+    "plaintext_value": -5.208049668953652,
+    "copies_max": -5.801798672749979,
+    "letters_right": 35,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "REECPLANDOOFOAROPSDONEASTNORTHEASTOIDCOTCHIEGOALISTEOMSTOTOFROMBERLINCLOCKSSEADWPUTHEADCIESSFOODD"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "X spaces",
+    "i": 0,
+    "test": "sep_words",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.3041520031580787,
+    "copies_max": -Infinity,
+    "letters_right": 31,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "PGHEXTLEHEASOANYHEGAMEASTNORTHEASTOFCOMECTADBELEPASASJUIRSCISHIBERLINCLOCKEDIASCHITAGUETTINDEDTCJ"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "X spaces",
+    "i": 1,
+    "test": "sep_words",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.34812495191765974,
+    "copies_max": -Infinity,
+    "letters_right": 31,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "WAKEFACHMANHIMILERLUREASTNORTHEASTHATTTOILBERSHOPOPEFAMEENVADVABERLINCLOCKEDFREMABHOWSUPASSEFUVEV"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "X spaces",
+    "i": 2,
+    "test": "sep_words",
+    "reading_value": -Infinity,
+    "plaintext_value": 0.24057211711333257,
+    "copies_max": -Infinity,
+    "letters_right": 37,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "OECSGROVENDTHEHASPLYDEASTNORTHEASTCITAMAPEILLSIONORSPNDCAXERRETBERLINCLOCKHONSMONSPININBUTORETTHR"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "X every kth",
+    "i": 0,
+    "test": "sep_regular",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.3535533905932737,
+    "copies_max": -Infinity,
+    "letters_right": 32,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "AWNTOFLIRTHORANRBTAIAEASTNORTHEASTOLIATEDACTMSAPLENBIKEDGEISCUEBERLINCLOCKHALUSPLEPEITSECULOFUTIG"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "X every kth",
+    "i": 1,
+    "test": "sep_regular",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.35136418446315326,
+    "copies_max": -Infinity,
+    "letters_right": 39,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "ORTOWAPEOFIRFIGENTSALEASTNORTHEASTENDSLOOREWETTONDLYOXHILEMILOFBERLINCLOCKIDDEDSEVERKEMOMESINDRYT"
+   },
+   {
+    "exp": "0142",
+    "L": 26,
+    "mask": "X every kth",
+    "i": 2,
+    "test": "sep_regular",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.6375164477658773,
+    "copies_max": -Infinity,
+    "letters_right": 38,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "IENTALSDEREIMBLASASEFEASTNORTHEASTEALPEDDRAELRDNESALSATTERBERYBBERLINCLOCKSWINGHTHERTHISGRABEDINZ"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "none",
+    "i": 0,
+    "test": "eng_base",
+    "reading_value": -4.865259097152336,
+    "plaintext_value": -4.020418586667907,
+    "copies_max": -4.880476311445674,
+    "letters_right": 32,
+    "found": true,
+    "plaintext_would_be_found": true,
+    "reading": "LTDOIALDNTMEMANZIASHSEASTNORTHEASTESINAWLNAQSAFLANOMESANDISOSTOBERLINCLOCKFORGETACAMERCOSCFMORASL"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "none",
+    "i": 1,
+    "test": "eng_base",
+    "reading_value": -5.016937851671445,
+    "plaintext_value": -4.341529311542787,
+    "copies_max": -4.880476311445674,
+    "letters_right": 33,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "EFTHVALFFEANDTHESAJAVEASTNORTHEASTWOPALUPMNDGIEBYRKMORELDRSTONTBERLINCLOCKOOKGREAKOUTGRICOFILORWA"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "none",
+    "i": 2,
+    "test": "eng_base",
+    "reading_value": -4.963907167652664,
+    "plaintext_value": -4.342449584943922,
+    "copies_max": -4.880476311445674,
+    "letters_right": 35,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "IGMAKIDSTBYCATESEEUSREASTNORTHEASTAMNYGUTTONESIFYFOGHVEWARKSCOMBERLINCLOCKNAKSRSANDTROKENDSHAOYAC"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "reversal",
+    "i": 0,
+    "test": "eng_reverse",
+    "reading_value": -6.289137839548456,
+    "plaintext_value": -5.069133110058933,
+    "copies_max": -5.919036530737811,
+    "letters_right": 39,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "WNUETUGARANISHEMALRYLEASTNORTHEASTILORTGLELYQSOCUMBERLGCLICTLOTBERLINCLOCKEDAIBOROTERSCWHICHOUSDY"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "reversal",
+    "i": 1,
+    "test": "eng_reverse",
+    "reading_value": -6.0301989459074745,
+    "plaintext_value": -4.89916585044709,
+    "copies_max": -5.919036530737811,
+    "letters_right": 38,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "NEIFEWSHEREMSISTLASDIEASTNORTHEASTSETHANTLITHEYLRECIALSCCRECTHOBERLINCLOCKHILDOLESSLFTYDADUNEJOET"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "reversal",
+    "i": 2,
+    "test": "eng_reverse",
+    "reading_value": -5.857258313712296,
+    "plaintext_value": -4.684913804587941,
+    "copies_max": -5.919036530737811,
+    "letters_right": 35,
+    "found": true,
+    "plaintext_would_be_found": true,
+    "reading": "RNDETTERBEDRINGHARANCEASTNORTHEASTEWICHLBERCASPFERISELEOTOFGOREBERLINCLOCKUTONSCRETEPEALNESNERGVI"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "X spaces",
+    "i": 0,
+    "test": "sep_words",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.37114804143884833,
+    "copies_max": -Infinity,
+    "letters_right": 43,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "TNKLRHANETHASROYOFTHEEASTNORTHEASTRELASMALPALMLOTOMSADALSSTOLONBERLINCLOCKHNOWINSFORCAOLIFORODUUT"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "X spaces",
+    "i": 1,
+    "test": "sep_words",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.5390403711262475,
+    "copies_max": -Infinity,
+    "letters_right": 33,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "LTMERYWOKERBARRELDWABEASTNORTHEASTRONICEJAZAMELOPRIOLEPUITCRIBEBERLINCLOCKYDOFPEDEDBLEIISATTHEREE"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "X spaces",
+    "i": 2,
+    "test": "sep_words",
+    "reading_value": -Infinity,
+    "plaintext_value": 0.15105034345567483,
+    "copies_max": -Infinity,
+    "letters_right": 33,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "YAPRALPHISSARYOKSARZIEASTNORTHEASTIWALTISYPTHEHIXRELYSTHROUNTYSBERLINCLOCKIESDIERSEGASONERUDFINDF"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "X every kth",
+    "i": 0,
+    "test": "sep_regular",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.33333333333333337,
+    "copies_max": -Infinity,
+    "letters_right": 33,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "PHEYDABEROLDDUERTOREMEASTNORTHEASTERDENGTYWERODUMHIGOWRMISUDDLEBERLINCLOCKVESTTIFILALBINEDOMSOCIC"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "X every kth",
+    "i": 1,
+    "test": "sep_regular",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.4899539464934427,
+    "copies_max": -Infinity,
+    "letters_right": 36,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "PADLSWOOSCMINTURBABOREASTNORTHEASTHOSEMENDEMCMETWEERYATLOFAINTOBERLINCLOCKSBYNTORRUPERKWRSTOPADEM"
+   },
+   {
+    "exp": "0140",
+    "L": 23,
+    "mask": "X every kth",
+    "i": 2,
+    "test": "sep_regular",
+    "reading_value": -Infinity,
+    "plaintext_value": -0.574959574576069,
+    "copies_max": -Infinity,
+    "letters_right": 41,
+    "found": false,
+    "plaintext_would_be_found": true,
+    "reading": "WICNTIRNROCTINAVEADIDEASTNORTHEASTBEEVERINCLARSMSRVIVANWELETOBEBERLINCLOCKTHEDIROCESTALSITRERGIMP"
+   }
+  ],
+  "plants_found": {
+   "0142 none": "2 of 3",
+   "0142 reversal": "0 of 3",
+   "0142 X spaces": "0 of 3",
+   "0142 X every kth": "0 of 3",
+   "0140 none": "1 of 3",
+   "0140 reversal": "1 of 3",
+   "0140 X spaces": "0 of 3",
+   "0140 X every kth": "0 of 3"
+  },
+  "plant_design": "3 per mask, Carter 1923 with the known letters set after masking, random alphabet and key, Beaufort form; climbed by the frozen climb_text (10 tempering runs); found = the mask's own test strictly above all 12 copies of that experiment",
+  "seconds": 17774.4
+ },
+ "notes": "2 candidate cells of 112 (chance 9.2); replication: 1 not a flag, 1 unresolved, 0 flags. Plants found by their own test: {'0142 none': '2 of 3', '0142 reversal': '0 of 3', '0142 X spaces': '0 of 3', '0142 X every kth': '0 of 3', '0140 none': '1 of 3', '0140 reversal': '1 of 3', '0140 X spaces': '0 of 3', '0140 X every kth': '0 of 3'}.",
+ "controls": [
+  -3.2534395568815255,
+  -3.2868173005615815,
+  -3.263746717807437,
+  -3.2418853316408898,
+  -3.266685987943582,
+  -3.309861123565073,
+  -3.267929873872079,
+  -3.270624714392483,
+  -3.2964099052509965,
+  -3.2939132955082626,
+  -6.543628112433681,
+  -6.4398953836805495,
+  -6.320692267023628,
+  -6.031713654888768,
+  -6.455750915760303,
+  -6.512466616794991,
+  -6.4526039671108375,
+  -6.2727004644003195,
+  -6.496655626032277,
+  -6.431634165548194,
+  -6.104421192598344,
+  -6.184756807656956,
+  -6.224345783213097,
+  -6.15970362504027,
+  -6.128428862661471,
+  -6.215560669873144,
+  -6.280477516312893,
+  -5.998140973245035,
+  -6.061112453727154,
+  -6.2444184316164835,
+  -5.333806549222182,
+  -5.185059620226859,
+  -5.175258074933802,
+  -5.056724246609289,
+  -5.01282571292752,
+  -5.1086732641078125,
+  -5.232142919664405,
+  -5.075998253843759,
+  -5.060390281047283,
+  -5.204711582082361,
+  -5.158882158183313,
+  -5.185392577263249,
+  -5.013960924029667,
+  -5.155526117086387,
+  -4.989464699788149,
+  -5.1200149079046975,
+  -5.087964345897925,
+  -5.201868724851003,
+  -5.238194676289201,
+  -5.210460176114337,
+  -5.101227084849185,
+  -5.071400682007089,
+  -5.2241374974673676,
+  -5.066020493255009,
+  -5.247272562604197,
+  -5.230768837241099,
+  -5.176477855579291,
+  -5.203080957885091,
+  -5.2413711106374965,
+  -5.159267235120847,
+  -5.144582086792959,
+  -5.375562153325714,
+  -5.202871704287106,
+  -5.293140807116703,
+  -5.359018046992981,
+  -5.297767105165712,
+  -5.261687543256906,
+  -5.148679561210455,
+  -5.056360251874153,
+  -5.417476115704262,
+  -5.244006554946091,
+  -4.981319020930748,
+  -5.079257919605038,
+  -5.158474045718713,
+  -4.948315439894936,
+  -4.903898552967131,
+  -5.0735680504735985,
+  -5.243923030669524,
+  -5.388064829913625,
+  -5.684612615946606,
+  -5.588513088584931,
+  -5.353176399789671,
+  -5.399266366533502,
+  -5.5766330282667935,
+  -5.534027814817023,
+  -5.375887358325658,
+  -5.643072912632491,
+  -5.366740393445178,
+  -5.517377115538717,
+  -5.488989739811314
+ ],
+ "error": null,
+ "worked_example": "0034's saved reading: RPRESIDENTHESTHERESANEASTNORTHEASTDERSTHEPRESINTHEREARENTHERETHBERLINCLOCKERESIDEDINGTHETHEREARTI\nbackwards:          ITRAEREHTEHTGNIDEDISEREKCOLCNILREBHTEREHTNERAEREHTNISERPEHTSREDTSAEHTRONTSAENASEREHTSEHTNEDISERPR\nbattery (higher = more structure):\n  eng_base        -3.642\n  freq_sorted     -2.575\n  ioc             0.106\n  sep_words       none\n  sep_regular     none\n  eng_reverse     -5.775\n  eng_keep_nth    -5.209\n  eng_drop_nth    -3.707\n  eng_step        -5.285\n  eng_affine_std  -3.642\n  eng_affine_kry  -3.642\n  eng_columns     -5.325\n  repeats         31.000\n  base_pairs      -0.604",
+ "seconds": 17774.439974069595
+}

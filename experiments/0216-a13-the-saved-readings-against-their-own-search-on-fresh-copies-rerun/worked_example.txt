@@ -1,0 +1,17 @@
+0034's saved reading: RPRESIDENTHESTHERESANEASTNORTHEASTDERSTHEPRESINTHEREARENTHERETHBERLINCLOCKERESIDEDINGTHETHEREARTI
+backwards:          ITRAEREHTEHTGNIDEDISEREKCOLCNILREBHTEREHTNERAEREHTNISERPEHTSREDTSAEHTRONTSAENASEREHTSEHTNEDISERPR
+battery (higher = more structure):
+  eng_base        -3.642
+  freq_sorted     -2.575
+  ioc             0.106
+  sep_words       none
+  sep_regular     none
+  eng_reverse     -5.775
+  eng_keep_nth    -5.209
+  eng_drop_nth    -3.707
+  eng_step        -5.285
+  eng_affine_std  -3.642
+  eng_affine_kry  -3.642
+  eng_columns     -5.325
+  repeats         31.000
+  base_pairs      -0.604

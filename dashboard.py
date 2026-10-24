@@ -2149,13 +2149,16 @@ def lineage_data(rows):
     groups = {}
     for r in rows:
         groups.setdefault(lane_of(r["family"]), []).append(r["family"])
-    keys = sorted(groups, key=lambda k: (int(k) if k.isdigit() else 999, k))
+    keys = list(groups)       # rows come in run order, so columns go left to right by first experiment
+    last = len(FAMILY_PALETTE) - 1
     fams = []
-    for i, k in enumerate(keys):
+    for k in keys:
         slug = max(set(groups[k]), key=lambda s: (groups[k].count(s), s))
         num, _, rest = slug.partition("-")
         label = f"{num} {rest.replace('-', ' ')}" if num.isdigit() and rest else slug
-        fams.append({"slug": slug, "label": label, "name": names.get(num, label), "c": i % 10,
+        # colour by family number, as on the other pages, not by column
+        c = min(int(k) - 1, last) if k.isdigit() else last
+        fams.append({"slug": slug, "label": label, "name": names.get(num, label), "c": c,
                      "count": len(groups[k])})
     idx = {s: keys.index(lane_of(s)) for s in {r["family"] for r in rows}}
     par = parent_tags(rows)

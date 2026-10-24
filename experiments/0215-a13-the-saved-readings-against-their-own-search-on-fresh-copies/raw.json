@@ -1,0 +1,9 @@
+{
+ "candidates": [],
+ "bounds": {},
+ "notes": "",
+ "controls": [],
+ "error": "Traceback (most recent call last):\n  File \"/Users/alexisrondeau/Workshop/cryptos/_runner.py\", line 41, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 232, in run\n    cells[f\"{e}/{t}\"] = {\"k4\": kv, \"copies_min\": min(vals), \"copies_max\": max(vals), \"n\": len(vals),\n                                                 ~~~^^^^^^\nValueError: min() iterable argument is empty\n",
+ "worked_example": "",
+ "seconds": 0.9109141826629639
+}

@@ -1,0 +1,31 @@
+{
+ "id": 215,
+ "tag": "0215-a13-the-saved-readings-against-their-own-search-on-fresh-copies",
+ "started": "2026-10-24T16:47:19+00:00",
+ "seconds": 1.0,
+ "status": "error",
+ "phases": {
+  "design": 374.8,
+  "test": 275568.9,
+  "implement": 115.9,
+  "run": 1.0,
+  "record": 0.1
+ },
+ "ended_epoch": 1792860440.2841852,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "judge": null,
+ "error": "Traceback (most recent call last):\n  File \"/Users/alexisrondeau/Workshop/cryptos/_runner.py\", line 41, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/Users/alexisrondeau/Workshop/cryptos/attack.py\", line 232, in run\n    cells[f\"{e}/{t}\"] = {\"k4\": kv, \"copies_min\": min(vals), \"copies_max\": max(vals), \"n\": len(vals),\n                                                 ~~~^^^^^^\nValueError: min() iterable argument is empty\n",
+ "candidates": []
+}

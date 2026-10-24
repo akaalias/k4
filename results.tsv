@@ -213,3 +213,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0212	0212-ciphertext-autokey-and-progressive-key-with-slips	1-keyed-periodic	0064-ciphertext-autokey-k1-k3-word-alphabets	reverted	10	0	24	25.587		304	implement=219 test=493 run=304 record=30
 0213	0213-plaintext-autokey-with-slips-and-a-lost-step	1-keyed-periodic	0025-autokey-keyword-mixed-alphabets	reverted	10	0	24	10.847		219	implement=246 test=81 run=219 record=61
 0214	0214-a-move-then-the-table-with-two-slips	6-transposition-then-tableau	0110-keyword-columnar-from-the-whole-dictionary	reverted	10	0	24	15.502		438	unattributed=3523 run=438 record=55
+0215	0215-a13-the-saved-readings-against-their-own-search-on-fresh-copies	1-keyed-periodic	0140-k4-against-its-own-copies-with-the-tempering-climb	error	0	0	0			1	design=375 test=275569 implement=116 run=1 record=0

@@ -217,7 +217,7 @@ returns on a copy. These items check whether the sampled verdicts still stand. R
 ## F13. Ciphertext only: the known words sealed (issue #85)
 
 Drafted 2026-10-24 at Alexis's question: what would we run if no plaintext were known? Queued after Stage 2,
-step 4 unless Alexis moves it. Every search so far prunes settings with the 24 known letters, which carry about
+step 4 (A6.1-A6.3), decided by Alexis 2026-10-24. Every search so far prunes settings with the 24 known letters, which carry about
 113 bits (24 x log2 26). Without them a search has only English to go on: about 1.78 bits per letter with the
 quadgram scorer (0136), about 170 bits over 97 letters. Here the known letters are not read by the search at
 all. They stay as gate 2, checked by the harness only after a reading has beaten its copies, so a hit is a

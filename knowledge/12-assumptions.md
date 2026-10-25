@@ -155,7 +155,7 @@ result, every blocked cell that fits at the coppers' rate, every discarded 24-of
 candidate. Cheapest check: collect every 24-of-24 candidate from the experiments' `raw.json`
 and test for structure other than fluent English (English letter frequencies out of order,
 regular X separators, English after a simple unmasking such as reversal, dropping every nth
-letter or an affine shift), against the coppers' candidates under the same tests.
+letter or an affine shift), against the coppers' candidates under the same tests. Checked 2026-10-21 to 10-25 (Stage 2 step 3, issue #75; `reports/a13-structure-check.md`): 14 structure tests on every kept 24-of-24 reading, against the same searches on copies, corrected for the cells looked at: no flag (A13.2; 0216, 0217; 0220). Fixed readings show no mask at a power that finds reversed, columnar, nth-letter, affine and X-spaced plants; X every kth letter and a letter swap are not seen. Climbed readings cannot show a mask (1 of 22 masked plants survived the climb), so sampled closes resting on a climb hold for unmasked English only until A6.3 says otherwise.
 
 **A14. The known words are only content.** (Alexis, 2026-10-16)
 EAST, NORTHEAST, BERLIN and CLOCK are treated as words of the message and nothing more.

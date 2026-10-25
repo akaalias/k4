@@ -147,3 +147,26 @@ p < 0.05 / 56 = 0.00089, which needs 1,123 copies with none at or above K4. With
 candidate (chance expects about 56/21 = 2.7); each is replicated on that test alone with the experiment's own search
 on fresh copies (its own `shuffled`, seeds 4113 onward), sequentially as in A13.3: it ends at the first copy at or
 above K4 (not a flag); a flag needs all 1,123 below.
+
+**Result (0218 errored in its plant step; 0219 recorded as kept by mistake, issue #88; 0220).** Readings per text: 0207
+80 (copies 70-91), 0212 404 (198-1,157), 0213 292 (258-820), 0214 53,150 (51,861-60,284); every saved K4 candidate is
+among them (50/50, 10/10, 10/10, 10/10, open slots read as unknown). K4 above every copy in **1 of 56 cells** (chance
+2.7): 0212/sep_regular (K4 -0.245), met by fresh copy 27 (-0.221). **No flag.**
+
+Masked Carter passages with two slips, enciphered under 0207's method (lengths 13 and 20) and run through its search,
+found when the mask's test is above all 20 of K4's copies: unmasked 6 of 6, reversal 6 of 6, X between words 4 of 6,
+X every kth letter 0 of 6. These readings are fixed by the known letters with no climb, so a mask survives into them,
+unlike A13.3's climbed readings.
+
+## A13.5 and the verdict
+
+No test flagged in A13.2, A13.3 or A13.4, so there is nothing to unmask: A13.5 closes with no run.
+
+**What A13 now says.** Among the readings with all 24 known letters that the record has kept:
+- readings a setting fixes with no climb (A13.2's key lengths 26-29; A13.4's slip searches) show no masked structure
+  beyond the copies', at a power that finds unmasked, reversed, columnar, nth-letter, affine and X-spaced plants;
+- the battery cannot see an X every kth letter in A13.4's partial readings (0 of 6) or a letter swap anywhere (a
+  second free alphabet, F1.2's ground);
+- climbed readings (A13.3) cannot show a mask at all: the climb overwrites it (1 of 22 masked plants survived). The
+  sampled closes that rest on climbs are therefore closes for unmasked English only, unless A6.3 shows F1.5's decider
+  keeps a masked answer.

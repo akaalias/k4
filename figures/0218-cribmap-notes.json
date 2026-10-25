@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A13.4: every reading the slip-tolerant searches 0207, 0212, 0213 and 0214 let through, K4's and their copies', through 14 pattern tests."
+ },
+ {
+  "anchor": "what happened",
+  "text": "The readings were regenerated (all 80 saved K4 candidates among them), then the plant step stopped: 0216's masking routine, loaded from its own folder, looked for Carter's book there."
+ },
+ {
+  "anchor": "the rerun",
+  "text": "0219: the routine's root set to the repository, the plant step tested on its own first, the same run repeated."
+ }
+]

@@ -1,0 +1,17 @@
+0207's saved reading (key length 25, std/std vig, slips at [22, 24, 73], 4 slots open (filled with A)):
+  LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA
+battery (higher = more structure):
+  eng_base        -6.616
+  freq_sorted     -3.116
+  ioc             0.041
+  sep_words       none
+  sep_regular     none
+  eng_reverse     -7.173
+  eng_keep_nth    -6.322
+  eng_drop_nth    -6.359
+  eng_step        -6.674
+  eng_affine_std  -6.616
+  eng_affine_kry  -6.616
+  eng_columns     -6.790
+  repeats         3.000
+  base_pairs      -0.917

@@ -217,3 +217,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0216	0216-a13-the-saved-readings-against-their-own-search-on-fresh-copies-rerun	1-keyed-periodic	0140-k4-against-its-own-copies-with-the-tempering-climb	reverted	16	0	24	4.042		17775	unattributed=353 run=17774 record=0
 0217	0217-a13-the-backwards-reading-of-0034-against-more-fresh-copies	1-keyed-periodic	0216-a13-the-saved-readings-against-their-own-search-on-fresh-copies-rerun	reverted	3	0	24	5.212		2172	design=234 implement=63 test=9 run=2172 record=0
 0218	0218-a13-the-slipped-readings-through-the-structure-battery	1-keyed-periodic	0217-a13-the-backwards-reading-of-0034-against-more-fresh-copies	error	0	0	0			726	unattributed=1042 run=726 record=0
+0219	0219-a13-the-slipped-readings-through-the-structure-battery-rerun	1-keyed-periodic	0218-a13-the-slipped-readings-through-the-structure-battery	kept	12	8	24	5.412	-12.0884	866	unattributed=37 run=866 record=34

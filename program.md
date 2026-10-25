@@ -48,6 +48,10 @@ a precise statement of what was searched.
    scores, each the best your same method reaches on a shuffled copy of the carved text at
    the same trial count. A reading is kept only if its English score is above all of them.
    No controls, no keep.
+5. The reading is whole: every letter is fixed by the key (decided by Alexis 2026-10-25, issue #88,
+   after 0219 was kept on readings padded with A). If the key leaves letters open, return the count as
+   `open_slots`; such a reading fails at `undetermined` and is never kept. Do not fill open letters
+   with a placeholder to get past the gates.
 
 Among readings that pass all four, the lowest loss wins. The loss charges the key by the
 length of its description, which the harness counts itself from the `key` you return

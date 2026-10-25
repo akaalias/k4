@@ -1708,7 +1708,7 @@ def experiment_page(tag):
 <div><b>{r['best_crib_hits']}/24</b><span>known letters</span></div>
 </div>
 <div class="meta-time">{phase_bar(ph if ph else {'run': r.get('seconds', 0)}, total or 1, width=980, height=8).replace('<svg width="980" height="8"', '<svg viewBox="0 0 980 8" preserveAspectRatio="none"', 1)}</div>"""
-    note = meta + (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the rules decided on 2026-10-15 it is not: '
+    note = meta + (f'<p class="verdict-note">Kept when it ran, under the rule of the time. Under the current rules it is not: '
                    f'{esc(r["verdict_note"])}.</p>' if r.get("verdict_note") else "")
     head = page_head(f"Experiment {num}", f'<span class="exp-q">&ldquo;{esc(r["title"])}&rdquo;</span>', esc(changed), "", note)
     # section 1: plain words with the glossary rail

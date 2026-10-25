@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from kryptos import facts
-from kryptos.gates import run_gates, crib_hits
+from kryptos.gates import run_gates, crib_hits, undetermined
 from kryptos.scorer import fitness, english_score, free_text, loss, key_bits_of
 import phase as phaseclock
 
@@ -108,7 +108,10 @@ def main():
                "loss": None}
         if g.failed_at in (None, "cribs"):  # valid candidates get a loss; invalid ones do not
             row["loss"] = loss(c["plaintext"], bits, g.crib_hits)
-        if g.passed:
+        if g.passed and undetermined(c):     # a whole reading only (Alexis 2026-10-25, issue #88)
+            row.update(gate_passed=False, failed_at="undetermined",
+                       gate_details={"open_slots": c.get("open_slots"), "rule": "every letter fixed by the key"})
+        elif g.passed:
             row["english_free"] = english_score(free_text(c["plaintext"]))
             row["fitness"] = fitness(c["plaintext"], bits)
             if len(controls) < 10 or row["english_free"] <= max(controls):

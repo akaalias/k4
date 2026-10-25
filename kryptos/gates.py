@@ -1,6 +1,20 @@
 """Hard gates. A candidate that fails a gate is never scored on English."""
+import re
 from dataclasses import dataclass, field
 from .facts import K4, KNOWN, CRIBS
+
+# A reading must be whole: every letter fixed by its key (rule decided by Alexis 2026-10-25, issue #88).
+# An attack whose key leaves letters open says how many in `open_slots`; records written before the rule
+# said it in the key description ("4 slots open (filled with A)", "free letters filled with A").
+_FILLED = re.compile(r"(?i)\bfilled\s+with\b|\b(?:letters|slots?)\s+fill|\b[1-9]\d*\s+slots?\s+open\b|\bopen\s+slots?\b")
+
+
+def undetermined(candidate: dict) -> bool:
+    """True when the reading has letters its key does not fix, padded with a filler."""
+    if int(candidate.get("open_slots") or 0) > 0:
+        return True
+    text = f"{candidate.get('key_description') or ''} {candidate.get('notes') or ''}"
+    return bool(_FILLED.search(text))
 
 
 @dataclass

@@ -113,7 +113,8 @@ def p1_job(args):
             rows.append((f"length {L}", r[1]))
     else:  # 0140 (23), 0142 (26), 0148 (19, slip at 33)
         L = {"0140": 23, "0142": 26, "0148": 19}[e]
-        r = m.climb_text(text, KNOWN, L, seed, 1000, time.time() + 10 ** 6)
+        kn = {q: a for q, a in KNOWN.items() if q != getattr(m, "SLIP", None)}  # 0148 drops the slip place's equation, as its _job does
+        r = m.climb_text(text, kn, L, seed, 1000, time.time() + 10 ** 6)
         rows = [(f"length {L}", r[1])]
     return e, idx, rows, time.time() - t0
 

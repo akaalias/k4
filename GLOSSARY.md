@@ -60,7 +60,7 @@ uses a word a stranger would not know.
 
 **Vigenere** (also: adding, Beaufort, subtracting): The three rules of arithmetic a table can use: add the key letter to the message letter, subtract the message letter from the key letter, or subtract the key letter from the message letter. Vigenere is the first; the Beauforts are the other two.
 
-**a shuffled control** (also: shuffled K4, random letters, the control, a scrambled version of the carved text): The same experiment run on the carved letters shuffled into a random order. Whatever the experiment finds on the shuffle is what luck alone can produce, so a result on the real text counts only if it beats the shuffles.
+**a shuffled control** (also: shuffled K4, random letters, the control, a scrambled version of the carved text, scrambled copies): The same experiment run on the carved letters shuffled into a random order. Whatever the experiment finds on the shuffle is what luck alone can produce, so a result on the real text counts only if it beats the shuffles.
 
 **the English score** (also: reads like English, reads most like English, quadgram score): A number saying how much a stretch of letters looks like English, computed from how common each run of four letters is in English text. Real English scores about -3.6, random letters about -6.5; higher is better.
 

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "If Sanborn disguised the English before enciphering it, the right reading would look like gibberish and would have been thrown away. 31 such readings with all 24 known letters were saved by eight experiments."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each reading through 14 pattern tests (backwards, every nth letter, X as a space, letter counts in any order...), against the very same search run on fresh scrambled copies; masked messages planted through two of the searches."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 led every copy in 2 of 112 comparisons, about what luck gives (9.2); 1 of them met a fresh copy at or above K4, 0 flags. Masked plants found: 0142 none 2 of 3, 0142 reversal 0 of 3, 0142 X spaces 0 of 3, 0142 X every kth 0 of 3, 0140 none 1 of 3, 0140 reversal 1 of 3, 0140 X spaces 0 of 3, 0140 X every kth 0 of 3."
+ }
+]

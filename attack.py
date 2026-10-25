@@ -1,435 +1,352 @@
-"""Experiment 0214. See program.md for the contract."""
+"""Experiment 0216. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "a-move-then-the-table-with-two-slips",
-    "title": "A1.5: a move, then the table (and the reverse), over every dictionary-keyed columnar, Myszkowski, double columnar, rail fence, AMSCO and type-1 route, with a repeating key of length 1-26 on the sculpture's tables and up to two of the 24 known letters carved wrong; exact, judged against scrambled copies, with planted slipped messages",
-    "family": "6-transposition-then-tableau",
-    "parent": "0110-keyword-columnar-from-the-whole-dictionary",
+    "slug": "a13-the-saved-readings-against-their-own-search-on-fresh-copies-rerun",
+    "title": "A13.3: the 31 saved 24-of-24 readings of eight experiments put through the 14-test structure battery, against the same experiments' frozen searches run unchanged on fresh scrambled copies, with masked plants through two of the climbs",
+    "family": "1-keyed-periodic",
+    "parent": "0140-k4-against-its-own-copies-with-the-tempering-climb",
     "changed": (
-        "A1.5 (Stage 2, step 2, issue #76). 0110-0114 and the type-1 library (0080-0129) required all 24 known letters to "
-        "agree with one repeating key after or before the move (nothing below key length 21-22). k = 1 was run as 'one "
-        "carved letter wrong' (0093); slipped columns are F6.21. Here k = 2: the union of 0110's keyword columnar, 0111's "
-        "Myszkowski, 0112's double columnar, 0113's rail fence and redefence, 0114's AMSCO (all from the whole dictionary) "
-        "and 0129's type-1 library, deduplicated by where the known letters land, both orders, 8 table classes, key lengths "
-        "1-26, compiled with an exact early exit; K4 against 20 scrambled copies; readings that keep 3 or more checks "
-        "to quadgrams and the blind judge; three planted messages with two slips each."
+        "A13.3 (Stage 2, step 3, issue #75). The 31 readings that put all 24 known letters in place and were saved in "
+        "raw.json (0034: 18, 0035: 3, 0048: 3, 0120: 2, 0137: 2, 0140, 0142, 0148: 1 each) were thrown away on their "
+        "quadgram score. Here they go through tools/a13_structure.py's 14 tests, each against the same experiment's "
+        "frozen attack.py run unchanged on fresh copies built as that experiment built them (tools/a13_check.py "
+        "pass1-regen, seed 1300, begun 2026-10-21 and finished 2026-10-24 before this run). Pre-registered "
+        "2026-10-21 in reports/a13-structure-check.md: 112 cells, flag at p < 0.05/112, candidates replicated "
+        "sequentially on fresh copies (seed 3113). New in this run: masked planted messages through 0140's and 0142's "
+        "climbs, to say what a 'nothing found' means for climbed readings. Rerun of 0215, which errored: the copy tool gave "
+        "0148's climb all 24 known letters where 0148 drops the one at place 33, so its copies had no reading; the tool is "
+        "fixed and 0148's 12 copies regenerated."
     ),
     "hypothesis_expert": (
-        "C1(a) (Sanborn, CNN 2005: 'I used a matrix code... double matrixes and triple matrixes... then went back to this "
-        "table'), C11 ('the other 91 characters and their proper order'), A1 (knowledge/12-assumptions.md), C27(a). Model: "
-        "a transposition w (message place i to carved place w(i)) and a periodic key k of length L on the table, plain and "
-        "cipher alphabets standard or KRYPTOS, added or Beaufort form (8 classes; the key alphabet drops out). Order A, move "
-        "then table: the key runs along the carved places, slot w(q) mod L; order B, table then move: slot q mod L, carved "
-        "letter at w(q). Each known letter forces a key value in its slot; the least number of slips is 24 minus the sum "
-        "over slots of the most common forced value's count, at most 2 here (17.5 bits to name). Cost estimated before the "
-        "run: about 1.8 million route maps x 2 orders x 8 classes x 26 lengths per text, compiled. Statistic: per order "
-        "and length, the number of (route, class) cells with 0, 1, 2 slips, K4 against each copy; the shortest length that "
-        "fits; the judge's best on readings keeping 3 or more checks."
+        "A13 (knowledge/12-assumptions.md): if the English was masked before the keyed stage (C4(a), Scheidt 2005 and "
+        "2015: 'I masked the English language', 'more than one stage'; C19, X and Q as stops), the right decryption "
+        "is masked English and its quadgram score sits with the copies'. The readings tested are the climbed "
+        "completions of F1's sampled cells: 0034 (periodic key 27-29 and 53-95 on standard/KRYPTOS tables, 24 "
+        "conventions), 0035 and 0048 (27-29, keyword-mixed tables), 0120, 0137, 0140, 0142 (one free alphabet, "
+        "Beaufort form, 23 and 26) and 0148 (K1/K2's added form, length 19, slip at 33). Statistic: for each "
+        "experiment and test, the best value over a text's readings; K4's rank among the copies' (ties against K4). "
+        "Copies: plain shuffles (0034, 0035, 0048; 10 each), shuffles passing 0119's exact decider at the length "
+        "(0120, 0137, 0140, 0142; 12 each), shuffles of the 73 unknown places (0148; 12). A cell is a candidate when "
+        "K4 is strictly above every copy (chance about 112/12 = 9); a flag needs p < 0.00045, all of 2,242 copies "
+        "below K4. Power: A13.1 (power.json) against flat noise; against climbed copies it is unmeasured, so "
+        "masked plants (reversal, X between words, X every kth letter, and unmasked) are enciphered under 0140's and "
+        "0142's own method and climbed by their frozen search."
     ),
     "hypothesis_eli5": (
-        "Sanborn described writing the message into a grid, reading it out in another order, and then using the table with "
-        "a key word. Experiments 110-114 tried every such grid keyed by any dictionary word, before and after the table, and "
-        "found nothing with all 24 known letters right. If he slipped at two of those places, that test would have missed "
-        "it. Here we allow two wrong, on the carving and on scrambled copies, and hide three messages of our own made that "
-        "way, slips included, to check the search finds them."
+        "Some earlier searches produced readings with all 24 known letters right but the rest gibberish, and threw "
+        "them away because they did not look like English. If Sanborn disguised the English before enciphering it "
+        "(writing it backwards, or with X between words), the right reading would look like gibberish too. Here we "
+        "test those saved readings for 14 kinds of hidden pattern, and run the very same searches on scrambled "
+        "copies of the carving to see how much pattern luck alone produces. We also hide a few disguised messages "
+        "of our own, run the same searches on them, and check whether the pattern tests would have noticed."
     ),
     "prediction": (
-        "With two slips the shortest key length that fits K4 drops from 21-22 to about 17-19, as on the copies; K4 above "
-        "every copy in no more (order, length) cells than a copy is above the rest; nothing judged above every copy. The "
-        "three plants are found. Zero candidates pass gate 4."
+        "K4 is strictly above every copy in about 9 of 112 cells (chance), and none of those replicates: every "
+        "candidate meets a fresh copy at or above K4 within a few dozen copies. No flag. The masked plants through "
+        "the climbs are found less often than A13.1's flat-noise rate: the climb pulls a reversed or X-spaced "
+        "message toward forward English junk, so most masked plants are not found by their own test. Zero "
+        "candidates pass gate 4."
     ),
     "method": (
-        "1. Build every route map of 0110-0114 and the type-1 library; keep one per distinct landing of the 24 known "
-        "places. 2. Compiled: for each route, class, order and key length, add the known places one by one into their slots "
-        "and count slips (a place whose forced value is not its slot's most common so far); stop at 3. 3. Count cells by "
-        "slips, K4 and 20 copies. 4. For cells keeping 3 or more checks, enumerate the key choices and read; each text's top "
-        "5 by quadgrams and every reading at or above -5.0 go to the judge in one call. 5. Plants and their own copies "
-        "through the same search."
+        "1. K4: every saved reading with 24 of 24 known letters in the eight experiments' raw.json, through the "
+        "battery; per experiment and test, the best value. "
+        "2. Copies: the readings in reports/a13-structure-data/pass1_copies.json (any job still missing is run here, "
+        "same seeds), through the battery the same way. "
+        "3. Rank K4 per cell; a cell where K4 is strictly above every copy is a candidate. "
+        "4. Replication, per experiment with candidates: fresh copies built the experiment's way (seed '3113'), its "
+        "frozen search, eight at a time, until every candidate test has met a copy at or above K4 (not a flag), or "
+        "2,242 copies all below (a flag), or the clock (unresolved, reported with its p). "
+        "5. Plants: three per mask (none, reversal, X between words, X every kth letter), Carter 1923 with the 24 "
+        "known letters set after masking, enciphered with a random alphabet and key under 0142's (length 26) and "
+        "0140's (length 23) Beaufort form, climbed by their frozen search; found when the mask's own test is above "
+        "every one of that experiment's 12 copies."
     ),
     "walkthrough": (
-        "1. Write the message into a grid under a key word and read the columns out in the word's order. "
-        "2. Choose a key length, say 11, and a table; each known letter now sits at a new carved place, and its key letter is read off the table from the carved letter. "
-        "3. Known letters in the same slot of the key must give the same key letter. "
-        "4. Count how many would have to be slips; keep the setting if 2 or fewer. "
-        "5. Read the message back through the key and the grid, and do the same on scrambled copies of the carving."
+        "1. Take one saved reading, say 0142's, with all 24 known letters in place. "
+        "2. Score it on each of 14 pattern tests: read backwards, every nth letter, X as a word space, letter "
+        "counts in any order, and so on. "
+        "3. Scramble the carved letters twelve times, keeping only scrambles the same search can fit, and run the "
+        "same search on each. "
+        "4. Score each scramble's reading on the same 14 tests. "
+        "5. On each test, see whether the carving's reading beats all twelve scrambles; with 112 such comparisons "
+        "about nine will by luck, so each one that does is rerun against fresh scrambles until one catches up."
     ),
 }
 
-import ctypes
-import importlib.util
-import itertools
-import multiprocessing as mp
-import os
+import json
+import math
 import random
-import subprocess
+import re
 import sys
-import tempfile
+import time
 import types
-from array import array
+from multiprocessing import get_context
 from pathlib import Path
 
-from kryptos.alphabets import decrypt_letter, encrypt_letter, key_letter_for
-from kryptos.facts import STANDARD_ALPHABET as STD, KRYPTOS_ALPHABET as KRY
+ROOT = Path(__file__).resolve().parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 N = 97
-ROOT = Path(__file__).resolve().parent
-if not (ROOT / "experiments").exists():
-    ROOT = Path.cwd()
-PMAX = 26
-KMAX = 2
-RMIN = 3
-CUT = -5.0
-TOPJ = 5
-N_COPIES = 20
-N_PLANT_COPIES = 5
-CLASSES = [(pa, ca, m) for pa in ("std", "kry") for ca in ("std", "kry") for m in ("vig", "beau")]
-AL = {"std": STD, "kry": KRY}
+EXPS = ("0034", "0035", "0048", "0120", "0137", "0140", "0142", "0148")
+PASS1 = ROOT / "reports" / "a13-structure-data" / "pass1_copies.json"
+CELLS = 14 * len(EXPS)
+P_FLAG = 0.05 / CELLS
+N_FLAG = 2242  # copies all below K4 needed for p = 1/2243 < 0.05/112
+MASKS = ("none", "reversal", "X spaces", "X every kth")
+TARGET = {"none": "eng_base", "reversal": "eng_reverse", "X spaces": "sep_words", "X every kth": "sep_regular"}
+PLANT_EXPS = (("0142", 26), ("0140", 23))
+N_PER_MASK = 3
 
 
-def _load(prefix):
-    d = sorted((ROOT / "experiments").glob(prefix + "-*"))[0]
-    spec = importlib.util.spec_from_file_location(f"exp{prefix}", d / "attack.py")
-    m = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(m)
-    return m
+def a13():
+    import tools.a13_check as a
+    return a
 
 
-def route_maps(vocab):
-    """Yield (family, name, where) for 0110-0114's route sets and 0129's type-1 library, forward and inverse."""
-    m110, m111, m113, m114, m129 = _load("0110"), _load("0111"), _load("0113"), _load("0114"), _load("0129")
-    words = [w.strip().upper() for w in (ROOT / "kryptos" / "data" / "words.txt").read_text().split()]
+# ---- copies: the same builders as a13_check.p1_copies, for the replication ---------------------
 
-    def both(fam, name, wh):
-        inv = [0] * N
-        for i, j in enumerate(wh):
-            inv[j] = i
-        yield fam, name, wh
-        yield fam, name + " inverse", inv
-    seqs = {}
-    for w in words:
-        if 2 <= len(w) <= 30 and w.isalpha():
-            for s in (tuple(m110.keyword_sequence(w)), tuple(m110.full_sequence(w))):
-                if len(s) >= 2 and s not in seqs and s != tuple(range(len(s))):
-                    seqs[s] = w
-    for s, w in seqs.items():
-        wh = m110.where_columnar(s)
-        yield from both("0110 keyword columnar", w, wh)
-        yield from both("0112 double columnar", w, [wh[wh[i]] for i in range(N)])
-    mys = {}
-    for w in words:
-        if 3 <= len(w) <= 30 and w.isalpha() and len(set(w)) < len(w):
-            mys.setdefault(m111.myszkowski_key(w), w)
-    for s, w in mys.items():
-        yield from both("0111 Myszkowski", w, m111.where_myszkowski(s))
-    for r in range(2, 49):
-        for off in range(2 * r - 2):
-            orders = itertools.permutations(range(r)) if r <= 6 else [tuple(range(r)), tuple(range(r))[::-1]]
-            for order in orders:
-                yield from both("0113 rail fence", f"{r} rails offset {off} order {order}", m113.where_rails(r, off, order))
-    am = {}
-    for w in words:
-        if 3 <= len(w) <= 30 and w.isalpha():
-            for s in (tuple(m110.keyword_sequence(w)), tuple(m110.full_sequence(w))):
-                if 3 <= len(s) <= 15:
-                    for first in (1, 2):
-                        am.setdefault((s, first), w)
-    for (s, first), w in am.items():
-        yield from both("0114 AMSCO", f"{w} first {first}", m114.where_amsco(s, first))
-    for name, wh in m129.route_library(vocab):
-        yield "type-1 library", name, list(wh)
+def rep_copy(e, i):
+    """Fresh copy i for experiment e, built as e built its own (seed '3113')."""
+    a = a13()
+    from kryptos.facts import K4, KNOWN
+    rng = random.Random(f"3113/{e}/{i}")
+
+    def shuffled():
+        sh = list(K4); rng.shuffle(sh); return "".join(sh)
+
+    def fitting(L):
+        m = a.mod("0120")
+        while True:
+            sh = shuffled()
+            if m.decide(m.equations(sh, KNOWN, L), "B", rng)[0] == "fit":
+                return sh
+    if e in ("0034", "0035", "0048"):
+        text = shuffled()
+    elif e in ("0120", "0137"):
+        text = {23: fitting(23), 26: fitting(26)}
+    elif e in ("0140", "0142"):
+        text = fitting({"0140": 23, "0142": 26}[e])
+    else:
+        free = [j for j in range(N) if (j + 1) not in KNOWN]
+        cp = list(K4); letters = [K4[j] for j in free]; rng.shuffle(letters)
+        for j, ch in zip(free, letters):
+            cp[j] = ch
+        text = "".join(cp)
+    return (e, i, text, rng.randrange(10 ** 9))
 
 
-C_SRC = r"""
-static int md(int x){ x%=26; return x<0?x+26:x; }
-/* lands: nr x 24 carved places (0-based) of the known letters; text 97 letters;
-   pidx[24] message places (0-based); P[2][24] plain index of each known letter in std / kry; C[2][26] letter -> index.
-   counts[2 orders][27 lengths][3 slips] summed over routes and classes; hits (route, class, order, L, d). */
-long run_mv(int nr,const int*lands,const int*text,const int*pidx,const int*P,const int*C,int rmin,
-            long*counts,long maxh,int*hits){
-  long nh=0; int f[24]; int cnt[27*26]; int mm[27]; int seen[27];
-  for(int r=0;r<nr;r++){ const int*land=lands+24*r;
-    for(int c=0;c<8;c++){ int pa=c>>2, ca=(c>>1)&1, beau=c&1;
-      for(int e=0;e<24;e++){ int cv=C[ca*26+text[land[e]]], pv=P[pa*24+e]; f[e]= beau? md(cv+pv) : md(cv-pv); }
-      for(int o=0;o<2;o++){
-        for(int L=1;L<=26;L++){
-          int d=0,nslots=0;
-          for(int s=0;s<L;s++){ mm[s]=0; seen[s]=0; }
-          for(int e=0;e<24;e++){ int pos=o==0?land[e]:pidx[e]; int s=pos%L; int idx=s*26+f[e];
-            if(!seen[s]){ seen[s]=1; nslots++; for(int v=0;v<26;v++) cnt[s*26+v]=0; }
-            cnt[idx]++; if(cnt[idx]>mm[s]) mm[s]=cnt[idx]; else { d++; if(d>2) break; } }
-          if(d<=2){ counts[(o*27+L)*3+d]++; int checks=24-nslots;
-            if(checks-d>=rmin && nh<maxh){ int*h=hits+5*nh; h[0]=r;h[1]=c;h[2]=o;h[3]=L;h[4]=d; nh++; } } } } } }
-  return nh; }
-"""
-_LIB = None
-_KEEP = []
+def best_stats(readings):
+    a = a13()
+    bs = [a.battery(r) for r in readings if r and a.fits24(r)]
+    if not bs:
+        return None
+    return {t: max(b[t] for b in bs) for t in a.TESTS}
 
 
-def lib():
-    global _LIB
-    if _LIB is None:
-        d = tempfile.mkdtemp(prefix="k4_mv_")
-        src, so = os.path.join(d, "mv.c"), os.path.join(d, "mv.so")
-        Path(src).write_text(C_SRC)
-        subprocess.run(["cc", "-O2", "-shared", "-fPIC", "-o", so, src], check=True, capture_output=True)
-        _LIB = ctypes.CDLL(so)
-        P_, ci, cl = ctypes.POINTER, ctypes.c_int, ctypes.c_long
-        _LIB.run_mv.restype = cl
-        _LIB.run_mv.argtypes = [ci, P_(ci), P_(ci), P_(ci), P_(ci), P_(ci), ci, P_(cl), cl, P_(ci)]
-    return _LIB
+# ---- plants ------------------------------------------------------------------------------------
+
+def _carter():
+    src = (ROOT / "knowledge/sources/carter-1923-tomb-of-tutankhamen-vol1.txt").read_text(errors="ignore").upper()
+    words = re.sub("[^A-Z ]", "", re.sub(r"\s+", " ", src)).split()
+    return words, "".join(words)
 
 
-def I(a):
-    buf = array("i", a)
-    _KEEP.append(buf)
-    return (ctypes.c_int * len(buf)).from_buffer(buf)
+def masked_plant(mask, rng):
+    from kryptos.facts import KNOWN
+    words, letters = _carter()
+    s0 = rng.randrange(20000, len(letters) - 200)
+    plain = letters[s0:s0 + N]
+    if mask == "none":
+        t = plain
+    elif mask == "reversal":
+        t = plain[::-1]
+    elif mask == "X spaces":
+        w0 = rng.randrange(5000, len(words) - 100)
+        t = "X".join(words[w0:w0 + 40])[:N]
+    else:
+        k = rng.randrange(5, 12); src = list(plain)
+        t = "".join("X" if i % k == k - 1 else src.pop(0) for i in range(N))
+    t = list(t)
+    for q, ch in KNOWN.items():
+        t[q - 1] = ch
+    return "".join(t)
 
 
-_STATE = {}
+def plant_job(args):
+    e, L, mask, idx, ct, truth, seed = args
+    from kryptos.facts import KNOWN
+    m = a13().mod(e)
+    sc, pt, alpha, k, done = m.climb_text(ct, KNOWN, L, seed, 1000, time.time() + 10 ** 6)
+    return e, L, mask, idx, pt, sum(1 for x, y in zip(pt, truth) if x == y), done
 
 
-def settings_for(text, known, where, cls, o, L, kmax):
-    """Key choices for one cell with at most kmax slips (as 0207's enumeration)."""
-    pa, ca, m = cls
-    slots = {}
-    for q in sorted(known):
-        j = where[q - 1]
-        v = STD.index(key_letter_for(known[q], text[j], pa, ca, "std", m))
-        slots.setdefault((j if o == 0 else q - 1) % L, []).append((q, v))
-    opts = [(s, [(v, [q for q, w in eqs if w != v]) for v in sorted({w for _, w in eqs})]) for s, eqs in sorted(slots.items())]
-    out = []
-
-    def dfs(k, d, key, sl):
-        if k == len(opts):
-            out.append((d, dict(key), list(sl))); return
-        s, ch = opts[k]
-        for v, bad in ch:
-            if d + len(bad) <= kmax:
-                key[s] = v
-                dfs(k + 1, d + len(bad), key, sl + bad)
-        key.pop(s, None)
-    dfs(0, 0, {}, [])
-    return out
-
-
-def reading(text, where, cls, o, L, key):
-    pa, ca, m = cls
-    out = []
-    for i in range(N):
-        j = where[i]
-        s = (j if o == 0 else i) % L
-        out.append(decrypt_letter(text[j], STD[key[s]], pa, ca, "std", m) if s in key else "?")
-    return "".join(out)
-
-
-def one_text(t):
-    lands, routes, known = _STATE["lands"], _STATE["routes"], _STATE["known"]
-    kq = sorted(known)
-    P = [STD.index(known[q]) for q in kq] + [KRY.index(known[q]) for q in kq]
-    C = [STD.index(c) for c in STD] + [KRY.index(c) for c in STD]
-    cl = ctypes.c_long
-    counts = (cl * (2 * 27 * 3))()
-    maxh = 300000
-    hits = (ctypes.c_int * (5 * maxh))()
-    nh = lib().run_mv(len(routes), lands, I([ord(c) - 65 for c in t]), I([q - 1 for q in kq]), I(P), I(C), RMIN, counts, maxh, hits)
-    recs = []
-    for i in range(nh):
-        r, c, o, L, d = (hits[5 * i + k] for k in range(5))
-        where = routes[r][2]
-        for dd, key, sl in settings_for(t, known, where, CLASSES[c], o, L, KMAX):
-            if dd == d:
-                recs.append({"r": r, "c": c, "o": o, "L": L, "d": d, "key": key, "slips": sl, "reading": reading(t, where, CLASSES[c], o, L, key)})
-    cnt = {o: {L: [counts[(o * 27 + L) * 3 + d] for d in range(3)] for L in range(1, 27)} for o in (0, 1)}
-    return {"counts": cnt, "recs": recs, "capped": nh >= maxh}
-
-
-def mv_encrypt(pt, where, cls, o, key):
-    pa, ca, m = cls
-    L = len(key)
-    if o == 0:
-        moved = [""] * N
-        for i in range(N):
-            moved[where[i]] = pt[i]
-        return "".join(encrypt_letter(moved[j], key[j % L], pa, ca, "std", m) for j in range(N))
-    out = [""] * N
-    for i in range(N):
-        out[where[i]] = encrypt_letter(pt[i], key[i % L], pa, ca, "std", m)
-    return "".join(out)
-
-
-def encrypt(plaintext, key):
-    out = list(mv_encrypt(plaintext, key["where"], tuple(key["cls"]), key["order"], key["key"]))
-    for q, ch in key.get("slips", []):
-        out[q - 1] = ch
-    return "".join(out)
-
-
-def shuffled(text, seed):
-    l_ = list(text)
-    random.Random(seed).shuffle(l_)
-    return "".join(l_)
+def _any(args):
+    if args[0] == "plant":
+        return plant_job(args[1])
+    return a13().p1_job(args[1])
 
 
 def run(ctx):
-    from kryptos.plants import english_plant
-    known = ctx.KNOWN
-    kq = sorted(known)
-    routes, seen, fams = [], set(), {}
-    lands = array("i")
-    for fam, name, wh in route_maps(ctx.vocabulary):
-        land = tuple(wh[q - 1] for q in kq)
-        fams[fam] = fams.get(fam, 0) + 1
-        if land in seen:
-            continue
-        seen.add(land)
-        routes.append((fam, name, wh))
-        lands.extend(land)
-    _KEEP.append(lands)
-    _STATE["lands"] = (ctypes.c_int * len(lands)).from_buffer(lands)
-    _STATE["routes"], _STATE["known"] = routes, known
-    by_name = {(f, n): i for i, (f, n, _) in enumerate(routes)}
-    # plants: route, class, order, key length, two slips at checked known places
-    plants = []
-    specs = [(2141, "0110 keyword columnar", 11, ("kry", "kry", "vig"), 0),
-             (2142, "0114 AMSCO", 9, ("std", "kry", "beau"), 1),
-             (2143, "0113 rail fence", 13, ("kry", "std", "vig"), 0)]
-    for seed, fam, L, cls, o in specs:
-        rng = random.Random(seed)
-        cand = [i for i, (f, n, _) in enumerate(routes) if f == fam]
-        r = cand[rng.randrange(len(cand))]
-        where = routes[r][2]
-        pt = english_plant(seed)
-        key = "".join(rng.choice(STD) for _ in range(L))
-        ct = list(mv_encrypt(pt, where, cls, o, key))
-        slots = {}
-        for q in kq:
-            slots.setdefault((where[q - 1] if o == 0 else q - 1) % L, []).append(q)
-        checked = [q for s_, qs in slots.items() if len(qs) >= 2 for q in qs]
-        places = sorted(rng.sample(checked, 2))
-        for q in places:
-            j = where[q - 1]
-            ct[j] = rng.choice([x for x in STD if x != ct[j]])
-        plants.append({"seed": seed, "r": r, "route": f"{fam}: {routes[r][1]}", "L": L, "cls": cls, "o": o, "slips": places, "pt": pt, "ct": "".join(ct)})
-    texts = []
-    for j, p in enumerate(plants):
-        texts.append((f"plant{j + 1}", p["ct"]))
-        texts += [(f"plant{j + 1}-copy{i + 1}", shuffled(p["ct"], p["seed"] * 100 + i)) for i in range(N_PLANT_COPIES)]
-    texts.append(("K4", ctx.K4))
-    texts += [(f"copy{i + 1}", shuffled(ctx.K4, 2150 + i)) for i in range(N_COPIES)]
-    if getattr(sys.modules.get(__name__), "one_text", None) is not one_text:
-        mod = types.ModuleType(__name__); mod.__dict__.update(globals()); sys.modules[__name__] = mod
-    res = {}
-    with mp.get_context("fork").Pool(8) as pool:
-        it = pool.imap(one_text, [t for _, t in texts])
-        for name, _ in texts:
-            res[name] = it.next()
-            if ctx.time_left() < 300:
-                pool.terminate()
-                break
+    a = a13()
+    from kryptos.scorer import english_score, free_text
+    t_start = time.time()
+    if getattr(sys.modules.get(__name__), "_any", None) is not _any:  # make the pool's pickles resolve
+        mm = types.ModuleType(__name__); mm.__dict__.update(globals()); sys.modules[__name__] = mm
 
-    def quad(r):
-        return ctx.english_score("".join(c for i, c in enumerate(r, start=1) if i not in known and c != "?"))
-    to_judge = set()
-    for v in res.values():
-        for r in v["recs"]:
-            r["quad"] = quad(r["reading"])
-        top = sorted(v["recs"], key=lambda r: -r["quad"])[:TOPJ]
-        for r in top + [r for r in v["recs"] if r["quad"] >= CUT]:
-            to_judge.add(r["reading"])
-    order = sorted(to_judge)
-    verdicts = dict(zip(order, ctx.judge(order))) if order else {}
-    for v in res.values():
-        for r in v["recs"]:
-            if r["reading"] in verdicts:
-                r["judge"] = verdicts[r["reading"]]["score"]
+    # 1. K4's saved readings, with keys, re-encrypted by their own frozen code
+    k4 = {}
+    for e in EXPS:
+        d = next((ROOT / "experiments").glob(f"{e}-*"))
+        raw = json.loads((d / "raw.json").read_text())
+        rows = [c for c in raw.get("candidates", []) if a.fits24(c["plaintext"])]
+        enc_ok = all(a.mod(e).encrypt(c["plaintext"], c["key"]) == ctx.K4 for c in rows)
+        k4[e] = {"rows": rows, "stats": best_stats([c["plaintext"] for c in rows]), "reencrypt_ok": enc_ok}
 
-    def jbest(name):
-        sc = [r["judge"] for r in res[name]["recs"] if r.get("judge") is not None]
-        return max(sc) if sc else None
-    plant_out = []
-    for j, p in enumerate(plants):
-        name = f"plant{j + 1}"
-        if name not in res:
-            plant_out.append({"seed": p["seed"], "found": False}); continue
-        good = [r for r in res[name]["recs"] if r["r"] == p["r"] and CLASSES[r["c"]] == p["cls"] and r["o"] == p["o"] and r["L"] == p["L"]
-                and all(c == "?" or c == p["pt"][i] or (i + 1) in known for i, c in enumerate(r["reading"]))]
-        best = max(good, key=lambda r: (r.get("judge") or -1)) if good else None
-        own = [jbest(f"{name}-copy{i + 1}") for i in range(N_PLANT_COPIES)]
-        own_bar = max([x for x in own if x is not None], default=None)
-        hj = best.get("judge") if best else None
-        plant_out.append({"seed": p["seed"], "route": p["route"], "L": p["L"], "cls": "/".join(p["cls"]), "order": "AB"[p["o"]], "slips": p["slips"],
-                          "planted_setting_found": bool(good), "slips_named": best["slips"] if best else None,
-                          "quad": round(best["quad"], 3) if best else None, "judge": hj, "own_copies_judge_best": own,
-                          "found": bool(best) and hj is not None and (own_bar is None or hj > own_bar)})
-    copies = [n for n, _ in texts if n.startswith("copy") and n in res]
-    k4 = res["K4"]
-    copies_j = [jbest(n) for n in copies]
-    bar = max([x for x in copies_j if x is not None], default=None)
-    by = {}
-    for o in (0, 1):
-        for L in range(1, 27):
-            by[f"{'AB'[o]}{L}"] = {"k4": k4["counts"][o][L], "copies_min": [min(res[n]["counts"][o][L][d] for n in copies) for d in range(3)],
-                                    "copies_max": [max(res[n]["counts"][o][L][d] for n in copies) for d in range(3)]}
-    tot = lambda n, o, L: sum(res[n]["counts"][o][L])  # noqa: E731
-    above = [f"{'AB'[o]}{L}" for o in (0, 1) for L in range(1, 27) if tot("K4", o, L) > max(tot(n, o, L) for n in copies)]
-    null = [sum(1 for o in (0, 1) for L in range(1, 27) if tot(n, o, L) > max(tot(x, o, L) for x in ["K4"] + copies if x != n)) for n in copies]
-    shortest = {n: {"AB"[o]: [next((L for L in range(1, 27) if sum(res[n]["counts"][o][L][:d + 1])), None) for d in range(3)] for o in (0, 1)} for n in ["K4"] + copies}
+    # 2. copies: pass1_copies.json, missing jobs run here with the same seeds
+    done = json.loads(PASS1.read_text()) if PASS1.exists() else {}
+    jobs = [j for j in a.p1_copies() if f"{j[0]}/{j[1]}" not in done]
+    missing_at_start = len(jobs)
+    if jobs:
+        a.mod("0120")
+        with get_context("fork").Pool(8) as pool:
+            for e, idx, rows, secs in pool.imap_unordered(_any, [("p1", j) for j in jobs]):
+                done[f"{e}/{idx}"] = {"rows": rows, "seconds": round(secs, 1)}
+                PASS1.write_text(json.dumps(done, indent=0))
+    copies = {e: [] for e in EXPS}
+    secs = {e: 0.0 for e in EXPS}
+    for key, v in done.items():
+        e = key.split("/")[0]
+        if e in copies:
+            s = best_stats([r for _, r in v["rows"]])
+            if s:
+                copies[e].append({"stats": s, "eng": max(english_score(free_text(r)) for _, r in v["rows"] if r and a.fits24(r))})
+            secs[e] += v["seconds"]
+
+    # 3. cells
+    cells, cand = {}, []
+    for e in EXPS:
+        ks, cs = k4[e]["stats"], copies[e]
+        if not cs:
+            raise RuntimeError(f"{e}: no copy readings")
+        for t in a.TESTS:
+            vals = [c["stats"][t] for c in cs]
+            kv = ks[t]
+            at_or_above = sum(1 for v in vals if v >= kv) if kv > -math.inf else len(vals)
+            cells[f"{e}/{t}"] = {"k4": kv, "copies_min": min(vals), "copies_max": max(vals), "n": len(vals),
+                                 "rank": 1 + at_or_above, "candidate": at_or_above == 0}
+            if at_or_above == 0:
+                cand.append((e, t))
+    expected = sum(1 / (len(copies[e]) + 1) for e in EXPS) * 14
+
+    # 5. sequential replication (after the plants, step 4), per experiment, eight copies at a time
+    rep = {}
+    by_e = {}
+    for e, t in cand:
+        by_e.setdefault(e, []).append(t)
+    per_copy = {e: secs[e] / max(1, len(copies[e])) for e in EXPS}
+    order = sorted(by_e, key=lambda e: per_copy[e])  # cheapest first
+    margin = 900  # leave time for the record
+    with get_context("fork").Pool(8) as pool:
+        # 4. masked plants first through 0142's and 0140's own climbs
+        prng = random.Random(2150)
+        pjobs, truths = [], {}
+        for e, L in PLANT_EXPS:
+            m0120 = a.mod("0120")
+            for mask in MASKS:
+                for i in range(N_PER_MASK):
+                    pt = masked_plant(mask, prng)
+                    alpha = list(ctx.STANDARD_ALPHABET); prng.shuffle(alpha); alpha = "".join(alpha)
+                    key = [prng.randrange(26) for _ in range(L)]
+                    ct = m0120.beaufort_encrypt(pt, alpha, key)
+                    truths[(e, mask, i)] = pt
+                    pjobs.append(("plant", (e, L, mask, i, ct, pt, prng.randrange(10 ** 9))))
+        plants = []
+        if ctx.time_left() > 600:
+            for e, L, mask, i, pt, right, nd in pool.map(_any, pjobs, chunksize=1):
+                t = TARGET[mask]
+                st = best_stats([pt])
+                truth_st = a.battery(truths[(e, mask, i)])
+                cmax = max(c["stats"][t] for c in copies[e])
+                plants.append({"exp": e, "L": L, "mask": mask, "i": i, "test": t, "reading_value": st[t] if st else None,
+                               "plaintext_value": truth_st[t], "copies_max": cmax, "letters_right": right,
+                               "found": bool(st and st[t] > cmax), "plaintext_would_be_found": truth_st[t] > cmax,
+                               "reading": pt})
+
+        for e in order:
+            open_t = {t: {"k4": k4[e]["stats"][t], "copies": 0, "first_at_or_above": None, "max": -math.inf} for t in by_e[e]}
+            i = 0
+            while any(v["first_at_or_above"] is None for v in open_t.values()) and i < N_FLAG:
+                if ctx.time_left() < margin + 1.5 * per_copy[e]:
+                    break
+                batch = [rep_copy(e, i + j) for j in range(8)]
+                res = sorted(pool.map(_any, [("p1", b) for b in batch], chunksize=1), key=lambda r: r[1])
+                for _, idx, rows, s_ in res:
+                    st = best_stats([r for _, r in rows])
+                    for t, v in open_t.items():
+                        if v["first_at_or_above"] is not None or st is None:
+                            continue
+                        v["copies"] += 1
+                        v["max"] = max(v["max"], st[t])
+                        if st[t] >= v["k4"]:
+                            v["first_at_or_above"] = idx + 1
+                i += 8
+            for t, v in open_t.items():
+                n_ = v["copies"]
+                if v["first_at_or_above"] is not None:
+                    verdict, p = "not a flag", None
+                elif n_ >= N_FLAG:
+                    verdict, p = "FLAG", 1 / (n_ + 1)
+                else:
+                    verdict, p = "unresolved", 1 / (n_ + 1)
+                rep[f"{e}/{t}"] = {"k4": v["k4"], "fresh_copies": n_, "first_copy_at_or_above": v["first_at_or_above"],
+                                   "fresh_max": v["max"], "verdict": verdict, "p_bound_if_unresolved": p}
+
+    flags = [c for c, v in rep.items() if v["verdict"] == "FLAG"]
+    unresolved = [c for c, v in rep.items() if v["verdict"] == "unresolved"]
+    found = {f"{e} {m}": f"{sum(p['found'] for p in plants if p['exp'] == e and p['mask'] == m)} of "
+             f"{sum(1 for p in plants if p['exp'] == e and p['mask'] == m)}" for e, _ in PLANT_EXPS for m in MASKS}
+
     cands = []
-    for r in sorted(k4["recs"], key=lambda r: (-(r.get("judge") or -1), -r["quad"]))[:10]:
-        where = routes[r["r"]][2]
-        L = r["L"]
-        key = "".join(STD[r["key"].get(s, 0)] for s in range(L))
-        pt = reading(ctx.K4, where, CLASSES[r["c"]], r["o"], L, {s: STD.index(key[s]) for s in range(L)})
-        pt = "".join(known.get(i + 1, ch) for i, ch in enumerate(pt))
-        kd = {"where": where, "cls": CLASSES[r["c"]], "order": r["o"], "key": key}
-        re_ = encrypt(pt, kd)
-        kd["slips"] = [[i + 1, ctx.K4[i]] for i in range(N) if re_[i] != ctx.K4[i]]
-        cands.append({"plaintext": pt, "key": kd, "key_bits": 4.7 * L + 20 + 9.3 * len(kd["slips"]),
-                      "key_description": f"{routes[r['r']][0]}: {routes[r['r']][1]}, order {'AB'[r['o']]}, key length {L}, {'/'.join(CLASSES[r['c']])}, slips {r['slips']}; open slots filled with A",
-                      "notes": f"judge {r.get('judge')}, quadgram {r['quad']:.3f}"})
-    return {
-        "candidates": cands,
-        "controls": [max([r["quad"] for r in res[n]["recs"]], default=-9.0) for n in copies],
-        "bounds": {
-            "family": "a move then the table and the reverse, 0110-0114 and the type-1 library, periodic key 1-26 on 8 table classes, 0-2 known letters slipped (A1.5)",
-            "route_maps_by_family": fams, "distinct_landings": len(routes), "orders": "A move then table, B table then move",
-            "classes": 8, "key_lengths": "1-26", "slips": "0-2 at the known places",
-            "by_order_and_length": by, "k4_above_every_copy": above, "copies_above_rest": null,
-            "shortest_length_by_slips": shortest,
-            "readings": {"k4": len(k4["recs"]), "copies": [len(res[n]["recs"]) for n in copies]},
-            "capped": [n for n, v in res.items() if v["capped"]],
-            "judge": {"sent": len(order), "none": sum(1 for v in verdicts.values() if v["score"] is None), "cut": CUT,
-                      "rule": f"each text's top {TOPJ} readings by quadgrams and every reading at or above {CUT}; one call"},
-            "k4_judge_best": jbest("K4"), "copies_judge_best": copies_j,
-            "k4_readings_above_every_copy": sum(1 for r in k4["recs"] if r.get("judge") is not None and bar is not None and r["judge"] > bar),
-            "k4_top": [{"reading": r["reading"], "judge": r.get("judge"), "quad": round(r["quad"], 3), "route": f"{routes[r['r']][0]}: {routes[r['r']][1]}",
-                        "order": "AB"[r["o"]], "L": r["L"], "class": "/".join(CLASSES[r["c"]])} for r in sorted(k4["recs"], key=lambda r: -(r.get("judge") or -1))[:5]],
-            "plants": plant_out,
-            "slip_cost_bits": {"2": 17.5},
-            "controls": f"{N_COPIES} shuffled copies (seeds 2150-2169); each plant against {N_PLANT_COPIES} shuffles of its own ciphertext",
-            "exhaustive": "yes",
-        },
-        "notes": (f"{len(routes):,} distinct landings; K4 shortest length with <= 2 slips A {shortest['K4']['A'][2]}, B {shortest['K4']['B'][2]}; "
-                  f"K4 above every copy in {len(above)} cells (copies {min(null)}-{max(null)}); judge sent {len(order)}, K4 best {jbest('K4')}, copies best {bar}; "
-                  f"plants found {[p['found'] for p in plant_out]}"),
+    for e in EXPS:
+        for c in k4[e]["rows"][:3]:
+            cands.append({"plaintext": c["plaintext"], "key": {"exp": e, "key": c["key"]}, "key_bits": c.get("key_bits", 0.0),
+                          "key_description": f"saved reading of {e}: " + c.get("key_description", "")[:120],
+                          "notes": f"A13.3: {e}'s saved 24-of-24 reading, through the battery"})
+    controls = [c["eng"] for e in EXPS for c in copies[e]]
+    bounds = {
+        "item": "A13.3", "pre_registered": "2026-10-21, reports/a13-structure-check.md",
+        "tests": a.TESTS, "experiments": list(EXPS), "cells": CELLS, "p_flag": P_FLAG,
+        "k4_readings": {e: len(k4[e]["rows"]) for e in EXPS},
+        "k4_reencrypt_ok": {e: k4[e]["reencrypt_ok"] for e in EXPS},
+        "copies": {e: len(copies[e]) for e in EXPS},
+        "copy_cpu_seconds_mean": {e: round(per_copy[e], 1) for e in EXPS},
+        "copies_regenerated": "tools/a13_check.py pass1-regen, seed 1300: 22 jobs on 2026-10-21, the other 68 on 2026-10-24 before this run",
+        "jobs_missing_at_start": missing_at_start,
+        "cells_table": cells, "candidates": [f"{e}/{t}" for e, t in cand], "candidates_expected_by_chance": round(expected, 2),
+        "replication": rep, "flags": flags, "unresolved": unresolved,
+        "plants": plants, "plants_found": found,
+        "plant_design": f"{N_PER_MASK} per mask, Carter 1923 with the known letters set after masking, random alphabet and key, Beaufort form; climbed by the frozen climb_text (10 tempering runs); found = the mask's own test strictly above all 12 copies of that experiment",
+        "seconds": round(time.time() - t_start, 1),
     }
+    notes = (f"{len(cand)} candidate cells of {CELLS} (chance {expected:.1f}); replication: "
+             f"{sum(1 for v in rep.values() if v['verdict'] == 'not a flag')} not a flag, {len(unresolved)} unresolved, {len(flags)} flags. "
+             f"Plants found by their own test: {found}.")
+    return {"candidates": cands, "controls": controls, "bounds": bounds, "notes": notes}
+
+
+def encrypt(plaintext, key):
+    """Each saved reading re-enciphered by its own experiment's frozen encrypt."""
+    return a13().mod(key["exp"]).encrypt(plaintext, key["key"])
 
 
 def worked_example(ctx, key):
-    m110 = _load("0110")
-    seq = m110.keyword_sequence("PYRAMID")
-    where = m110.where_columnar(seq)
-    L, cls = 11, ("kry", "kry", "vig")
-    lines = [f"keyword columnar PYRAMID (move first), then the KRYPTOS table, key length {L}: key letter forced at each known place", ""]
-    slots = {}
-    for q in sorted(ctx.KNOWN):
-        j = where[q - 1]
-        k = key_letter_for(ctx.KNOWN[q], ctx.K4[j], "kry", "kry", "std", "vig")
-        slots.setdefault(j % L, []).append(f"{q}{ctx.KNOWN[q]}@{j + 1}:{k}")
-    need = 0
-    for s in sorted(slots):
-        ks = [x[-1] for x in slots[s]]
-        need += len(ks) - max(ks.count(v) for v in set(ks))
-        lines.append(f"  slot {s:>2}: " + "  ".join(slots[s]))
-    lines += ["", f"slips needed: {need} (2 allowed)"]
+    a = a13()
+    e = key["exp"] if key else "0142"
+    d = next((ROOT / "experiments").glob(f"{e}-*"))
+    raw = json.loads((d / "raw.json").read_text())
+    r = next(c["plaintext"] for c in raw["candidates"] if a.fits24(c["plaintext"]))
+    b = a.battery(r)
+    lines = [f"{e}'s saved reading: {r}", f"backwards:          {r[::-1]}", "battery (higher = more structure):"]
+    lines += [f"  {t:15s} {b[t]:.3f}" if b[t] > -math.inf else f"  {t:15s} none" for t in a.TESTS]
     return "\n".join(lines)

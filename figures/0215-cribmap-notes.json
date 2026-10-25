@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A13.3: the 31 saved readings with all 24 known letters, through 14 pattern tests, against the same searches run on fresh scrambled copies."
+ },
+ {
+  "anchor": "what happened",
+  "text": "The run stopped after one second: 0148's twelve copies had no reading. The copy tool had given 0148's climb all 24 known letters, but 0148 drops the one at its slip place 33, so no setting was feasible."
+ },
+ {
+  "anchor": "the rerun",
+  "text": "0216: the tool fixed to drop place 33 for 0148 as its own search does, 0148's copies regenerated, the run guarded against an experiment with no copies."
+ }
+]

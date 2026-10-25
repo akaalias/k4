@@ -1,0 +1,184 @@
+{
+ "candidates": [
+  {
+   "plaintext": "HUKSALLTHAVICEFFICESAEASTNORTHEASTNATIONANDINATESTINANDATTHERESBERLINCLOCKENSTIONESERTERETOODSLCQ",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "m": "vig",
+     "key": "KSDEGWSDMKXVMAYZNVJUIQTELWEHGZUPFHUFMTEZYWBPEPUHJVTJPMDVTVBWFQUOGHTTKPB"
+    }
+   },
+   "key_bits": 333.7,
+   "key_description": "0034's saved reading, backwards score -5.458: period 71 key KSDEGWSDMKXVMAYZNVJUIQTELWEHGZUPFHUFMTEZYWBPEPUHJVTJPMDVTVBWFQUOGHTTKPB (47 free slots",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3 replication: K4's best backwards readings"
+  },
+  {
+   "plaintext": "TOVENOTHESTHERSTTHESAEASTNORTHEASTRERESIDENTERSAREARETOTHERATERBERLINCLOCKSONOFTHISFREETERSINEEDL",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "kry",
+     "ka": "kry",
+     "m": "varbeau",
+     "key": "HSUPMCUYLTXJVEGYTUVDPMCLWNQHMHLKFGFKQKXYGDAGNLNRQWVRTYNCMWQEKMCBYHITCDFYZDURP"
+    }
+   },
+   "key_bits": 361.90000000000003,
+   "key_description": "0034's saved reading, backwards score -5.525: period 77 key HSUPMCUYLTXJVEGYTUVDPMCLWNQHMHLKFGFKQKXYGDAGNLNRQWVRTYNCMWQEKMCBYHITCDFYZDURP (53 free",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3 replication: K4's best backwards readings"
+  },
+  {
+   "plaintext": "WAROUNTRETHEREATEDINTEASTNORTHEASTERESTOREASTEVERESANDINTHETHESBERLINCLOCKTATTHECONTHESTORATANAME",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "std",
+     "ka": "std",
+     "m": "varbeau",
+     "key": "IZHXAZWDYMNTQMMIWYHMXZPBYXYCCUYQABQYIZDWIOIAPUWFVEZRDSOKLHILUZROGCQPUQMJNAXUQJIHJFLQZY"
+    }
+   },
+   "key_bits": 404.2,
+   "key_description": "0034's saved reading, backwards score -5.764: period 86 key IZHXAZWDYMNTQMMIWYHMXZPBYXYCCUYQABQYIZDWIOIAPUWFVEZRDSOKLHILUZROGCQPUQMJNAXUQJIHJFLQZY",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.3 replication: K4's best backwards readings"
+  }
+ ],
+ "bounds": {
+  "item": "A13.3",
+  "cell": "0034/eng_reverse",
+  "pre_registered": "2026-10-21, reports/a13-structure-check.md; replication rule in 0216",
+  "k4_value": -5.4582804472186215,
+  "k4_period": "period 71 ",
+  "k4_readings": 18,
+  "k4_reencrypt_ok": true,
+  "k4_second": -5.524852191333664,
+  "pass1_copies": 10,
+  "pass1_max": -5.552742879798134,
+  "fresh_in_0216": 8,
+  "fresh_in_0216_max": -5.556524387129956,
+  "fresh_here": 8,
+  "fresh_here_first_index": 8,
+  "fresh_here_max": -5.419172888933401,
+  "first_copy_at_or_above": 14,
+  "verdict": "not a flag",
+  "p_bound_if_unresolved": null,
+  "fresh_values": [
+   {
+    "copy": 8,
+    "eng_reverse": -5.472861184804262,
+    "seconds": 2099.1
+   },
+   {
+    "copy": 9,
+    "eng_reverse": -5.494417584500462,
+    "seconds": 2103.8
+   },
+   {
+    "copy": 10,
+    "eng_reverse": -5.699543319851859,
+    "seconds": 2093.7
+   },
+   {
+    "copy": 11,
+    "eng_reverse": -5.69373566628631,
+    "seconds": 2104.7
+   },
+   {
+    "copy": 12,
+    "eng_reverse": -5.7093075085030565,
+    "seconds": 2101.6
+   },
+   {
+    "copy": 13,
+    "eng_reverse": -5.586167714240313,
+    "seconds": 2102.7
+   },
+   {
+    "copy": 14,
+    "eng_reverse": -5.419172888933401,
+    "seconds": 2102.9
+   },
+   {
+    "copy": 15,
+    "eng_reverse": -5.4632880133178015,
+    "seconds": 2103.5
+   }
+  ],
+  "search": "0034's frozen sweep unchanged: 24 conventions, periods 27-29 and 53-95 every third, 20 restarts, forward quadgram climb of the free slots",
+  "plants": [
+   {
+    "i": 0,
+    "convention": "std/kry/kry/vig",
+    "reading_value": -5.733801672211868,
+    "plaintext_value": -4.7109401666600945,
+    "letters_right": 35,
+    "found": false,
+    "reading": "AERENTORARECOULDIENTSEASTNORTHEASTINTHEREINTHESTERSTORINGINGINABERLINCLOCKTETESTEMPLEOFTEALLTAPEH"
+   },
+   {
+    "i": 1,
+    "convention": "std/std/kry/varbeau",
+    "reading_value": -6.034008897625186,
+    "plaintext_value": -4.744449294602478,
+    "letters_right": 42,
+    "found": false,
+    "reading": "EVENGTHEALINTHEECASHEEASTNORTHEASTREDINGTHERESTANDREATEDINTHEINBERLINCLOCKTERSPEANETECHISTILEHTHT"
+   },
+   {
+    "i": 2,
+    "convention": "kry/kry/std/vig",
+    "reading_value": -5.961819047930231,
+    "plaintext_value": -4.994601733560607,
+    "letters_right": 40,
+    "found": false,
+    "reading": "ETOGETHEALSEROOMSBEFIEASTNORTHEASTNTHERENTHESANDSOMETERANDINTHEBERLINCLOCKISHINTHERTHECOATTELATON"
+   },
+   {
+    "i": 3,
+    "convention": "kry/std/std/varbeau",
+    "reading_value": -5.8902599359223045,
+    "plaintext_value": -4.805241162387648,
+    "letters_right": 29,
+    "found": false,
+    "reading": "ACLOSERSABOUTSONOUSEOEASTNORTHEASTFTHERETHETHESERINTHESTHATIONOBERLINCLOCKMOREMENBURESTERIANEUVIT"
+   }
+  ],
+  "plants_found": "0 of 4",
+  "plant_design": "Carter 1923 written backwards, 24 known letters set after the reversal, random convention, random period-71 key; climbed by 0034's sweep at period 71 only (sliced); found = best backwards score above every pass-1 copy's (-5.553)",
+  "plant_seconds": 67.1,
+  "seconds": 2171.9
+ },
+ "notes": "0034/eng_reverse: K4 -5.458; 8 more fresh copies (max -5.419); first at or above: 14; verdict not a flag. Reversed plants found 0 of 4.",
+ "controls": [
+  -3.2534395568815255,
+  -3.2868173005615815,
+  -3.263746717807437,
+  -3.2418853316408898,
+  -3.266685987943582,
+  -3.309861123565073,
+  -3.267929873872079,
+  -3.270624714392483,
+  -3.2964099052509965,
+  -3.2939132955082626,
+  -3.309772383765877,
+  -3.2425200528912224,
+  -3.2351318845736965,
+  -3.2900216349513083,
+  -3.2874484855796804,
+  -3.258934127724131,
+  -3.2473812301724827,
+  -3.2324299737551594
+ ],
+ "error": null,
+ "worked_example": "0034's reading, period 71 : HUKSALLTHAVICEFFICESAEASTNORTHEASTNATIONANDINATESTINANDATTHERESBERLINCLOCKENSTIONESERTERETOODSLCQ\nwritten backwards:            QCLSDOOTERETRESENOITSNEKCOLCNILREBSEREHTTADNANITSETANIDNANOITANTSAEHTRONTSAEASECIFFECIVAHTLLASKUH\nEnglish score of the backwards text: -5.458\na fresh scrambled copy through the same search counts against it when its best backwards score is at or above this",
+ "seconds": 2171.9797241687775
+}

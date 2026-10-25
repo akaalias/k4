@@ -1805,7 +1805,7 @@ LIN_CSS = """
 #lin-diagram::-webkit-scrollbar{height:6px}#lin-diagram::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}
 .lane-lab{position:absolute;top:0;bottom:0;padding:9px 8px 8px 10px;cursor:default;font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-left:1px solid var(--rule-soft);overflow-wrap:break-word;hyphens:auto}
 .lane-lab:first-child{border-left:0}
-.lane-lab .sw{display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:0}
+.lane-lab .sw{position:absolute;left:10px;top:12px;width:8px;height:8px;border-radius:50%;background:currentColor}.lane-lab .nm{display:block;text-indent:14px}
 .lane-lab .cnt{display:block;color:var(--faint);font-weight:400;margin-top:2px;font-variant-numeric:lining-nums tabular-nums}
 .lane-lab.on .nm{text-decoration:underline;text-underline-offset:3px}
 #lin{display:block}
@@ -1845,7 +1845,7 @@ LIN_CSS = """
 #lin-tip .pop-open a{font:600 11px/1.35 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
 #lin-tip .pop-parent{font:600 11px/1.35 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
 .lin-foot{max-width:980px;margin:12px auto 0;font-size:13.5px;color:var(--muted)}
-@media(max-width:640px){.lin-head h1{font-size:26px}.lin-box{width:calc(100vw - 32px);margin-left:2px}.lane-lab{padding:8px 5px 7px 7px;font-size:9.5px;letter-spacing:.03em}.lane-lab .sw{width:7px;height:7px;margin-right:4px}.lane-lab .cw{display:none}}
+@media(max-width:640px){.lin-head h1{font-size:26px}.lin-box{width:calc(100vw - 32px);margin-left:2px}.lane-lab{padding:8px 5px 7px 7px;font-size:9.5px;letter-spacing:.03em}.lane-lab .sw{left:7px;top:11px;width:7px;height:7px}.lane-lab .nm{text-indent:11px}.lane-lab .cw{display:none}}
 """
 
 LIN_JS = r"""
@@ -2155,7 +2155,8 @@ def lineage_data(rows):
     for k in keys:
         slug = max(set(groups[k]), key=lambda s: (groups[k].count(s), s))
         num, _, rest = slug.partition("-")
-        label = f"{num} {rest.replace('-', ' ')}" if num.isdigit() and rest else slug
+        # name only: the columns run by first experiment, so numbers would read as out of order
+        label = rest.replace('-', ' ') if num.isdigit() and rest else slug
         # colour by family number, as on the other pages, not by column
         c = min(int(k) - 1, last) if k.isdigit() else last
         fams.append({"slug": slug, "label": label, "name": names.get(num, label), "c": c,

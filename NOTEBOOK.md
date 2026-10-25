@@ -5,6 +5,28 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-25
+
+Stage 2, step 3 (A13, ticket #75), resumed. The 2026-10-21 to 10-24 sessions closed A13.1 and A13.2 (no run; see
+`reports/a13-structure-check.md`), regenerated pass 1's copies, and ran 0215 and 0216 but left no notebook entry; they
+are recorded here.
+
+### A13 (ticket #75)
+
+| # | Item | One line |
+|---|---|---|
+| 215 | A13.3 | **Error after 1 s.** The copy tool gave 0148's climb all 24 known letters where 0148 drops place 33, so its copies had no reading. Tool fixed (drops the slip place as 0148 does). |
+| 216 | A13.3 | **The 31 saved 24-of-24 readings through the 14-test battery against their own frozen searches on fresh copies.** K4 above every copy in 2 of 112 cells (chance 9.2): 0034/eng_keep_nth caught by fresh copy 6; 0034/eng_reverse above all 18 copies drawn, unresolved at the clock. Masked plants through 0140's and 0142's climbs: unmasked 3 of 6, reversal 1 of 6, X spacing 0 of 12. Prediction held except for one unresolved cell. |
+| 217 | A13.3 | **Replication of 0034/eng_reverse.** The pre-registered fresh copies continued (seed 3113, copies 8-15) through 0034's sweep unchanged: copy 14 read -5.419 backwards against K4's -5.458. Not a flag; A13.3 ends with none. Reversed plants through 0034's climb at period 71: 0 of 4 found, though each message itself would be. Prediction held. |
+
+A13.3 is marked blocked as a test of masks, not closed: across 0216 and 0217, 1 of 22 masked plants survived the
+climbs (unmasked 3 of 6). A climb fills the free letters with forward-English junk and overwrites the mask, so the
+battery on climbed readings cannot see one. Mistake carried from 0216's design: its plants were added only after the
+copies, so the battery's power on climbed readings was unknown when the 112 cells were pre-registered.
+
+Left by the last session and done today: 0216's figures (drawn, header and worksheet overflow fixed), the copy-tool
+fix and regenerated copies committed (6917a1f), the comment on #75.
+
 ## 2026-10-20
 
 Stage 2's control table had no open rows, so the loop went back to the family items reopened on 2026-10-19 and 2026-10-20

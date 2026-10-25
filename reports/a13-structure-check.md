@@ -109,6 +109,25 @@ on fresh copies (seed 3113), **sequentially**: copies are drawn until one reache
 or above 2/2,243 = 0.0009 and ends the replication as not a flag; a flag needs all 2,242 copies below K4. Only a
 flag stops the queue.
 
+**Result (0215 errored; 0216, 0217).** Copies: 10 (0034, 0035, 0048) or 12 per experiment, all readings re-enciphered
+by their own frozen code. K4 above every copy in **2 of 112 cells** (chance 9.2): 0034/eng_keep_nth (K4 -4.752; a fresh
+copy reached it at copy 6, 0216) and 0034/eng_reverse (K4 -5.458 from its period-71 reading; all 8 fresh copies of 0216
+below, then 0217 continued the sequence and fresh copy 14 reached -5.419). **No flag.**
+
+**Power on climbed readings.** Masked Carter passages enciphered under the experiment's own method and climbed by its
+own frozen search, found when the mask's own test is above every copy of that experiment:
+
+| search | unmasked | reversal | X between words | X every kth |
+|---|---|---|---|---|
+| 0142 (one free alphabet, L26) | 2 of 3 | 0 of 3 | 0 of 3 | 0 of 3 |
+| 0140 (one free alphabet, L23) | 1 of 3 | 1 of 3 | 0 of 3 | 0 of 3 |
+| 0034 (periodic, P71, sliced to that period) | - | 0 of 4 | - | - |
+
+Every planted message itself would have been found by its test; the readings the climbs return are not. A climb fills
+the free letters with forward-English junk and overwrites the mask: 1 of 22 masked plants survived. **A13.3: no flag,
+but weak for masks** (blocked as a test of masked English: the battery on climbed readings cannot see one). Whether a
+masked answer survives F1.5's decider is A6.3.
+
 ## A13.4 Readings kept since 2026-10-18 (0199-0214)
 
 **Which experiments kept readings.** K4 24-of-24 readings were saved by 0207 (50), 0212 (10), 0213 (10) and 0214

@@ -1,0 +1,3271 @@
+{
+ "candidates": [
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "exp": "0207",
+    "key": {
+     "pa": "std",
+     "ca": "std",
+     "m": "vig",
+     "key": "DCYYGCKAZAAAAMUYKLGKORLAC",
+     "slips": [
+      [
+       22,
+       "F"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       73,
+       "P"
+      ]
+     ]
+    }
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "saved reading of 0207: key length 25, std/std vig, slips at [22, 24, 73], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0207's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIMWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA",
+   "key": {
+    "exp": "0207",
+    "key": {
+     "pa": "std",
+     "ca": "std",
+     "m": "vig",
+     "key": "DCYYGCKAZAAAAMUYKLGKORNAC",
+     "slips": [
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ]
+     ]
+    }
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "saved reading of 0207: key length 25, std/std vig, slips at [22, 23, 24], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0207's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRSWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP",
+   "key": {
+    "exp": "0207",
+    "key": {
+     "pa": "std",
+     "ca": "kry",
+     "m": "beau",
+     "key": "HIUUARAYZAAAAUGUHMRUKQRTP",
+     "slips": [
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ]
+     ]
+    }
+   },
+   "key_bits": 142.5829935746943,
+   "key_description": "saved reading of 0207: key length 25, std/kry beau, slips at [72, 73, 74], 4 slots open (filled with A)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0207's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "AAAAAAAAAAAAAAAAAAAAAEASTNORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKHROPCPRIVOTNOUGOBBVCTOC",
+   "key": {
+    "exp": "0212",
+    "key": {
+     "kind": "ca",
+     "pa": "LAYERBCDFGHIJKMNOPQSTUVWXZ",
+     "ca": "ANDBCEFGHIJKLMOPQRSTUVWXYZ",
+     "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "varbeau",
+     "lag": 69,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTM",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ]
+     ]
+    }
+   },
+   "key_bits": 1203.2,
+   "key_description": "saved reading of 0212: ciphertext autokey lag 69, LAYER/keyword|AND/keyword|std|varbeau, 2 slips at known places, skip None; free letters fille",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0212's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "AAAAAAAAAAAAAAAAAAAAAEASTNORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKHROPCPRIWOTNOUGOCBTCUPC",
+   "key": {
+    "exp": "0212",
+    "key": {
+     "kind": "ca",
+     "pa": "LAYERBCDFGHIJKMNOPQSTUVWXZ",
+     "ca": "MADEBCFGHIJKLNOPQRSTUVWXYZ",
+     "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "varbeau",
+     "lag": 69,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTM",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ]
+     ]
+    }
+   },
+   "key_bits": 1184.6,
+   "key_description": "saved reading of 0212: ciphertext autokey lag 69, LAYER/keyword|MADE/keyword|std|varbeau, 2 slips at known places, skip None; free letters fill",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0212's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "AAAAAAAAAAAAAAAAAAAAAEASTNORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKGJFRWMJVCTURRFLIEVETSAM",
+   "key": {
+    "exp": "0212",
+    "key": {
+     "kind": "ca",
+     "pa": "BURIEDACFGHJKLMNOPQSTVWXYZ",
+     "ca": "FITYABCDEGHJKLMNOPQRSUVWXZ",
+     "ka": "BURIEDACFGHJKLMNOPQSTVWXYZ",
+     "m": "varbeau",
+     "lag": 71,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFP",
+     "skip_at": 72,
+     "skip_lag": 72,
+     "slips": [
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   "key_bits": 1147.5,
+   "key_description": "saved reading of 0212: ciphertext autokey lag 71, BURIED/keyword|FIFTY/keyword|plain|varbeau, 0 slips at known places, skip (72, 72); free lett",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0212's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "IIDPVLMAAAAAAAAAAAAAAEASTNORTHEASTAFURGVTAAAAAAAAAAAAAECAITMOFDBERLINCLOCKAAAAAAAAAAAAAETAKTHIOXD",
+   "key": {
+    "exp": "0213",
+    "key": {
+     "pa": "WORLDCKABEFGHIJMNPQSTUVXYZ",
+     "ca": "UNDERGOABCFHIJKLMPQSTVWXYZ",
+     "ka": "WORLDCKABEFGHIJMNPQSTUVXYZ",
+     "m": "beau",
+     "lag": 33,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ]
+     ]
+    }
+   },
+   "key_bits": 703.8000000000001,
+   "key_description": "saved reading of 0213: plaintext autokey lag 33, WORLDCLOCK/keyword|UNDERGROUND/keyword|plain|beau, chain, cuts [67], lost step None; unknown l",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0213's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "BTUMOPAHOMRAVJABAIAAAEASTNORTHEASTANISHDHADEEXAAADFEGOGAVGWBGCABERLINCLOCKAAARCAMLOIYRJUSVAUIETHE",
+   "key": {
+    "exp": "0213",
+    "key": {
+     "pa": "WALBCDEFGHIJKMNOPQRSTUVXYZ",
+     "ca": "PALIMSETBCDFGHJKNOQRUVWXYZ",
+     "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "varbeau",
+     "lag": 28,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ]
+     ]
+    }
+   },
+   "key_bits": 447.80000000000007,
+   "key_description": "saved reading of 0213: plaintext autokey lag 28, WALL/keyword|PALIMPSEST/keyword|std|varbeau, bulk, cuts [], lost step None; unknown letters fi",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0213's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "MWVTALAKJOVRJERINTAAAEASTNORTHEASTATFCKHUVHISAAAAAUEAOFWECTHLDABERLINCLOCKAAAKSIUZFINHAGUYAWHEOFA",
+   "key": {
+    "exp": "0213",
+    "key": {
+     "pa": "DIGETALBCFHJKMNOPQRSUVWXYZ",
+     "ca": "WALBCDEFGHIJKMNOPQRSTUVXYZ",
+     "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "varbeau",
+     "lag": 28,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       91,
+       "A"
+      ]
+     ]
+    }
+   },
+   "key_bits": 457.1,
+   "key_description": "saved reading of 0213: plaintext autokey lag 28, DIGETAL/keyword|WALL/keyword|std|varbeau, bulk, cuts [], lost step None; unknown letters fille",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0213's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "UDYWHEKOVYGWAKEKRAXHSEASTNORTHEASTEVHWOODNSOMAMALKEYKWHENPUXQKQBERLINCLOCKZOOZHTIKLPUBVIEQTUATMIQ",
+   "key": {
+    "exp": "0214",
+    "key": {
+     "where": [
+      45,
+      11,
+      75,
+      46,
+      15,
+      79,
+      44,
+      9,
+      73,
+      42,
+      8,
+      72,
+      29,
+      93,
+      59,
+      30,
+      94,
+      63,
+      28,
+      92,
+      57,
+      26,
+      90,
+      56,
+      53,
+      19,
+      83,
+      54,
+      23,
+      87,
+      52,
+      17,
+      81,
+      50,
+      16,
+      80,
+      61,
+      27,
+      91,
+      62,
+      31,
+      95,
+      60,
+      25,
+      89,
+      58,
+      24,
+      88,
+      37,
+      3,
+      67,
+      38,
+      7,
+      71,
+      36,
+      1,
+      65,
+      34,
+      0,
+      64,
+      13,
+      77,
+      43,
+      14,
+      78,
+      47,
+      12,
+      76,
+      41,
+      10,
+      74,
+      40,
+      21,
+      85,
+      51,
+      22,
+      86,
+      55,
+      20,
+      84,
+      49,
+      18,
+      82,
+      48,
+      5,
+      69,
+      35,
+      6,
+      70,
+      39,
+      4,
+      68,
+      33,
+      2,
+      66,
+      32,
+      96
+     ],
+     "cls": [
+      "kry",
+      "kry",
+      "beau"
+     ],
+     "order": 1,
+     "key": "VBPWFJLTWIAAAAANKAZZNEOV",
+     "slips": [
+      [
+       27,
+       "Q"
+      ],
+      [
+       86,
+       "G"
+      ]
+     ]
+    }
+   },
+   "key_bits": 151.4,
+   "key_description": "saved reading of 0214: 0112 double columnar: TOSHNAIL inverse, order B, key length 24, kry/kry/beau, slips [74, 22]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0214's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "TXAWUAEZPUGAJTKPUUTREEASTNORTHEASTYIQAMIRSPZVBRFWITHSITSCDQKEZIBERLINCLOCKMWNSLOKIRHLYCOHALSHKENZ",
+   "key": {
+    "exp": "0214",
+    "key": {
+     "where": [
+      0,
+      86,
+      22,
+      1,
+      55,
+      23,
+      54,
+      56,
+      24,
+      2,
+      87,
+      57,
+      3,
+      88,
+      26,
+      4,
+      25,
+      27,
+      5,
+      89,
+      29,
+      28,
+      90,
+      30,
+      7,
+      91,
+      6,
+      8,
+      92,
+      31,
+      10,
+      9,
+      32,
+      11,
+      94,
+      33,
+      93,
+      95,
+      34,
+      12,
+      68,
+      96,
+      13,
+      69,
+      36,
+      14,
+      35,
+      37,
+      15,
+      70,
+      39,
+      38,
+      71,
+      40,
+      17,
+      72,
+      16,
+      18,
+      73,
+      41,
+      58,
+      19,
+      42,
+      59,
+      75,
+      43,
+      74,
+      76,
+      44,
+      60,
+      78,
+      77,
+      61,
+      79,
+      46,
+      62,
+      45,
+      47,
+      63,
+      80,
+      49,
+      48,
+      81,
+      50,
+      65,
+      82,
+      64,
+      66,
+      83,
+      51,
+      20,
+      67,
+      52,
+      21,
+      85,
+      53,
+      84
+     ],
+     "cls": [
+      "std",
+      "std",
+      "beau"
+     ],
+     "order": 1,
+     "key": "HHLXXRYHKEAAAAAJKJHLRPKY",
+     "slips": [
+      [
+       29,
+       "R"
+      ],
+      [
+       91,
+       "A"
+      ]
+     ]
+    }
+   },
+   "key_bits": 151.4,
+   "key_description": "saved reading of 0214: 0112 double columnar: AVICULTURE, order B, key length 24, std/std/beau, slips [22, 23]; open slots filled with A",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0214's saved 24-of-24 reading, through the battery"
+  },
+  {
+   "plaintext": "HRGASSTPDNAEAEWADYMOVEASTNORTHEASTBRBDIUAREDHEBAZKGCARSIUTOHEDXBERLINCLOCKAFIFROVRXBPEHAVKSBLZDZR",
+   "key": {
+    "exp": "0214",
+    "key": {
+     "where": [
+      40,
+      25,
+      10,
+      91,
+      78,
+      54,
+      44,
+      29,
+      12,
+      93,
+      77,
+      67,
+      52,
+      37,
+      24,
+      0,
+      81,
+      71,
+      56,
+      39,
+      23,
+      13,
+      94,
+      79,
+      64,
+      51,
+      27,
+      17,
+      2,
+      83,
+      66,
+      50,
+      58,
+      43,
+      28,
+      15,
+      96,
+      72,
+      62,
+      47,
+      30,
+      14,
+      95,
+      4,
+      85,
+      70,
+      55,
+      42,
+      18,
+      8,
+      89,
+      74,
+      57,
+      41,
+      76,
+      61,
+      46,
+      33,
+      9,
+      90,
+      80,
+      65,
+      48,
+      32,
+      22,
+      7,
+      88,
+      73,
+      60,
+      36,
+      26,
+      11,
+      92,
+      75,
+      59,
+      31,
+      16,
+      1,
+      82,
+      69,
+      45,
+      35,
+      20,
+      3,
+      84,
+      68,
+      49,
+      34,
+      19,
+      6,
+      87,
+      63,
+      53,
+      38,
+      21,
+      5,
+      86
+     ],
+     "cls": [
+      "std",
+      "kry",
+      "vig"
+     ],
+     "order": 1,
+     "key": "JDPVHDSEFNAAAAAFNODSGVJG",
+     "slips": [
+      [
+       12,
+       "L"
+      ],
+      [
+       14,
+       "S"
+      ]
+     ]
+    }
+   },
+   "key_bits": 151.4,
+   "key_description": "saved reading of 0214: 0112 double columnar: IDIOPATHICAL inverse, order B, key length 24, std/kry/vig, slips [22, 72]; open slots filled with ",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A13.4: 0214's saved 24-of-24 reading, through the battery"
+  }
+ ],
+ "bounds": {
+  "item": "A13.4",
+  "pre_registered": "2026-10-21, reports/a13-structure-check.md",
+  "tests": [
+   "eng_base",
+   "freq_sorted",
+   "ioc",
+   "sep_words",
+   "sep_regular",
+   "eng_reverse",
+   "eng_keep_nth",
+   "eng_drop_nth",
+   "eng_step",
+   "eng_affine_std",
+   "eng_affine_kry",
+   "eng_columns",
+   "repeats",
+   "base_pairs"
+  ],
+  "experiments": [
+   "0207",
+   "0212",
+   "0213",
+   "0214"
+  ],
+  "cells": 56,
+  "p_flag": 0.0008928571428571429,
+  "kept_no_k4_reading": "0199, 0201-0206, 0208-0211 (no setting fits K4, or a free alphabet leaves the reading undetermined); 0200 errored",
+  "readings_per_text": {
+   "0207": {
+    "k4": 80,
+    "copies_min": 70,
+    "copies_max": 91
+   },
+   "0212": {
+    "k4": 404,
+    "copies_min": 198,
+    "copies_max": 1157
+   },
+   "0213": {
+    "k4": 292,
+    "copies_min": 258,
+    "copies_max": 820
+   },
+   "0214": {
+    "k4": 53150,
+    "copies_min": 51861,
+    "copies_max": 60284
+   }
+  },
+  "saved_k4_candidates_regenerated": {
+   "0207": "50 of 50",
+   "0212": "10 of 10",
+   "0213": "10 of 10",
+   "0214": "10 of 10"
+  },
+  "text_seconds_mean": {
+   "0207": 0.4,
+   "0212": 36.8,
+   "0213": 18.7,
+   "0214": 202.8
+  },
+  "cells_table": {
+   "0207/eng_base": {
+    "k4": -6.488507779515539,
+    "copies_min": -6.677348554610516,
+    "copies_max": -5.99249409634102,
+    "rank": 13,
+    "candidate": false
+   },
+   "0207/freq_sorted": {
+    "k4": -3.0045782126449545,
+    "copies_min": -3.137311057284715,
+    "copies_max": -2.849384872543406,
+    "rank": 9,
+    "candidate": false
+   },
+   "0207/ioc": {
+    "k4": 0.04506172839506173,
+    "copies_min": 0.04145658263305322,
+    "copies_max": 0.062037037037037036,
+    "rank": 17,
+    "candidate": false
+   },
+   "0207/sep_words": {
+    "k4": -2.245484192630397,
+    "copies_min": -Infinity,
+    "copies_max": -0.19057652375707335,
+    "rank": 16,
+    "candidate": false
+   },
+   "0207/sep_regular": {
+    "k4": -Infinity,
+    "copies_min": -Infinity,
+    "copies_max": -0.3390552296506612,
+    "rank": 21,
+    "candidate": false
+   },
+   "0207/eng_reverse": {
+    "k4": -7.004841355601902,
+    "copies_min": -7.45799564339757,
+    "copies_max": -6.791646117828795,
+    "rank": 10,
+    "candidate": false
+   },
+   "0207/eng_keep_nth": {
+    "k4": -5.5199143903240255,
+    "copies_min": -5.980602418753946,
+    "copies_max": -5.135383687091392,
+    "rank": 7,
+    "candidate": false
+   },
+   "0207/eng_drop_nth": {
+    "k4": -5.989922305913885,
+    "copies_min": -6.397861147591042,
+    "copies_max": -5.667435020552687,
+    "rank": 9,
+    "candidate": false
+   },
+   "0207/eng_step": {
+    "k4": -6.144954953356035,
+    "copies_min": -6.7153040169762885,
+    "copies_max": -5.646266484192534,
+    "rank": 3,
+    "candidate": false
+   },
+   "0207/eng_affine_std": {
+    "k4": -6.48850777951554,
+    "copies_min": -6.6773485546105205,
+    "copies_max": -5.99249409634102,
+    "rank": 13,
+    "candidate": false
+   },
+   "0207/eng_affine_kry": {
+    "k4": -6.48850777951554,
+    "copies_min": -6.668634978180151,
+    "copies_max": -5.99249409634102,
+    "rank": 13,
+    "candidate": false
+   },
+   "0207/eng_columns": {
+    "k4": -6.180897605392552,
+    "copies_min": -6.640921659456301,
+    "copies_max": -6.060019029938818,
+    "rank": 3,
+    "candidate": false
+   },
+   "0207/repeats": {
+    "k4": 4.0,
+    "copies_min": 2.0,
+    "copies_max": 4.0,
+    "rank": 7,
+    "candidate": false
+   },
+   "0207/base_pairs": {
+    "k4": -0.8947368421052632,
+    "copies_min": -0.9473684210526315,
+    "copies_max": -0.875,
+    "rank": 8,
+    "candidate": false
+   },
+   "0212/eng_base": {
+    "k4": -5.391960153542632,
+    "copies_min": -5.553834973480158,
+    "copies_max": -5.018262135320959,
+    "rank": 18,
+    "candidate": false
+   },
+   "0212/freq_sorted": {
+    "k4": -2.7848294648194987,
+    "copies_min": -2.8153184485457783,
+    "copies_max": -2.679700357500534,
+    "rank": 18,
+    "candidate": false
+   },
+   "0212/ioc": {
+    "k4": 0.058279370952821465,
+    "copies_min": 0.0545790934320074,
+    "copies_max": 0.07030527289546716,
+    "rank": 14,
+    "candidate": false
+   },
+   "0212/sep_words": {
+    "k4": -0.33144396074579346,
+    "copies_min": -Infinity,
+    "copies_max": 0.8480119210157239,
+    "rank": 3,
+    "candidate": false
+   },
+   "0212/sep_regular": {
+    "k4": -0.2449489742783178,
+    "copies_min": -Infinity,
+    "copies_max": -0.31622776601683794,
+    "rank": 1,
+    "candidate": true
+   },
+   "0212/eng_reverse": {
+    "k4": -6.461567461147484,
+    "copies_min": -6.596547514193637,
+    "copies_max": -5.920926717302767,
+    "rank": 20,
+    "candidate": false
+   },
+   "0212/eng_keep_nth": {
+    "k4": -4.6112701539599845,
+    "copies_min": -4.875681808530856,
+    "copies_max": -4.076998701098784,
+    "rank": 17,
+    "candidate": false
+   },
+   "0212/eng_drop_nth": {
+    "k4": -5.222965247450425,
+    "copies_min": -5.245453186329582,
+    "copies_max": -4.714833398406718,
+    "rank": 20,
+    "candidate": false
+   },
+   "0212/eng_step": {
+    "k4": -3.916072851138032,
+    "copies_min": -4.016615116342211,
+    "copies_max": -3.0906982745166705,
+    "rank": 17,
+    "candidate": false
+   },
+   "0212/eng_affine_std": {
+    "k4": -5.391960153542633,
+    "copies_min": -5.55383497348016,
+    "copies_max": -5.01826213532096,
+    "rank": 18,
+    "candidate": false
+   },
+   "0212/eng_affine_kry": {
+    "k4": -5.391960153542633,
+    "copies_min": -5.55383497348016,
+    "copies_max": -5.01826213532096,
+    "rank": 18,
+    "candidate": false
+   },
+   "0212/eng_columns": {
+    "k4": -3.916072851138032,
+    "copies_min": -4.246529474266749,
+    "copies_max": -3.3691665092401824,
+    "rank": 17,
+    "candidate": false
+   },
+   "0212/repeats": {
+    "k4": 4.0,
+    "copies_min": 3.0,
+    "copies_max": 5.0,
+    "rank": 10,
+    "candidate": false
+   },
+   "0212/base_pairs": {
+    "k4": -0.8636363636363636,
+    "copies_min": -0.9090909090909091,
+    "copies_max": -0.8260869565217391,
+    "rank": 11,
+    "candidate": false
+   },
+   "0213/eng_base": {
+    "k4": -5.303759436756378,
+    "copies_min": -5.196810204489397,
+    "copies_max": -4.649955306112749,
+    "rank": 21,
+    "candidate": false
+   },
+   "0213/freq_sorted": {
+    "k4": -2.771387188077234,
+    "copies_min": -2.7905654488490677,
+    "copies_max": -2.689232907043878,
+    "rank": 18,
+    "candidate": false
+   },
+   "0213/ioc": {
+    "k4": 0.056910569105691054,
+    "copies_min": 0.053544494720965306,
+    "copies_max": 0.06685633001422475,
+    "rank": 9,
+    "candidate": false
+   },
+   "0213/sep_words": {
+    "k4": -1.1535827875275109,
+    "copies_min": -1.6705883989180406,
+    "copies_max": 0.45170784451327667,
+    "rank": 16,
+    "candidate": false
+   },
+   "0213/sep_regular": {
+    "k4": -0.6627307637727755,
+    "copies_min": -0.6938106839455911,
+    "copies_max": -0.2581117781084648,
+    "rank": 20,
+    "candidate": false
+   },
+   "0213/eng_reverse": {
+    "k4": -6.3175595742314625,
+    "copies_min": -6.462471024305855,
+    "copies_max": -6.090795085449097,
+    "rank": 14,
+    "candidate": false
+   },
+   "0213/eng_keep_nth": {
+    "k4": -4.648027526412451,
+    "copies_min": -4.863830409476908,
+    "copies_max": -3.8134593703083315,
+    "rank": 18,
+    "candidate": false
+   },
+   "0213/eng_drop_nth": {
+    "k4": -5.022964454704404,
+    "copies_min": -4.80087349452811,
+    "copies_max": -4.272584026871793,
+    "rank": 21,
+    "candidate": false
+   },
+   "0213/eng_step": {
+    "k4": -3.859825726487422,
+    "copies_min": -4.471197453451937,
+    "copies_max": -3.365839902716111,
+    "rank": 14,
+    "candidate": false
+   },
+   "0213/eng_affine_std": {
+    "k4": -5.303759436756379,
+    "copies_min": -5.196810204489399,
+    "copies_max": -4.64995530611275,
+    "rank": 21,
+    "candidate": false
+   },
+   "0213/eng_affine_kry": {
+    "k4": -5.303759436756379,
+    "copies_min": -5.196810204489399,
+    "copies_max": -4.64995530611275,
+    "rank": 21,
+    "candidate": false
+   },
+   "0213/eng_columns": {
+    "k4": -4.072230262043481,
+    "copies_min": -4.296174445142867,
+    "copies_max": -2.8022123569350694,
+    "rank": 19,
+    "candidate": false
+   },
+   "0213/repeats": {
+    "k4": 4.0,
+    "copies_min": 3.0,
+    "copies_max": 6.0,
+    "rank": 17,
+    "candidate": false
+   },
+   "0213/base_pairs": {
+    "k4": -0.8421052631578947,
+    "copies_min": -0.8947368421052632,
+    "copies_max": -0.8333333333333334,
+    "rank": 3,
+    "candidate": false
+   },
+   "0214/eng_base": {
+    "k4": -4.378393712209268,
+    "copies_min": -4.432211371114223,
+    "copies_max": -4.14429055188698,
+    "rank": 18,
+    "candidate": false
+   },
+   "0214/freq_sorted": {
+    "k4": -2.8439087541636354,
+    "copies_min": -2.8644986126896885,
+    "copies_max": -2.7929573984527685,
+    "rank": 13,
+    "candidate": false
+   },
+   "0214/ioc": {
+    "k4": 0.05878332194121668,
+    "copies_min": 0.05639097744360902,
+    "copies_max": 0.06596035543403965,
+    "rank": 15,
+    "candidate": false
+   },
+   "0214/sep_words": {
+    "k4": 0.5474426742391912,
+    "copies_min": 0.5436258429684764,
+    "copies_max": 0.9099766349793299,
+    "rank": 20,
+    "candidate": false
+   },
+   "0214/sep_regular": {
+    "k4": -0.17305741182250942,
+    "copies_min": -0.16605388905002247,
+    "copies_max": -0.0,
+    "rank": 21,
+    "candidate": false
+   },
+   "0214/eng_reverse": {
+    "k4": -5.928487672074871,
+    "copies_min": -6.083685868953683,
+    "copies_max": -5.756467623430984,
+    "rank": 11,
+    "candidate": false
+   },
+   "0214/eng_keep_nth": {
+    "k4": -3.7761235784685154,
+    "copies_min": -3.7989268792224977,
+    "copies_max": -2.9877864631589834,
+    "rank": 20,
+    "candidate": false
+   },
+   "0214/eng_drop_nth": {
+    "k4": -4.084043842257405,
+    "copies_min": -4.123268768591139,
+    "copies_max": -3.8704414180921574,
+    "rank": 18,
+    "candidate": false
+   },
+   "0214/eng_step": {
+    "k4": -5.005495904148879,
+    "copies_min": -5.246507028242858,
+    "copies_max": -4.380980130249045,
+    "rank": 7,
+    "candidate": false
+   },
+   "0214/eng_affine_std": {
+    "k4": -4.378393712209268,
+    "copies_min": -4.432211371114223,
+    "copies_max": -4.14429055188698,
+    "rank": 18,
+    "candidate": false
+   },
+   "0214/eng_affine_kry": {
+    "k4": -4.378393712209268,
+    "copies_min": -4.432211371114223,
+    "copies_max": -4.14429055188698,
+    "rank": 18,
+    "candidate": false
+   },
+   "0214/eng_columns": {
+    "k4": -5.062507253854869,
+    "copies_min": -5.320536921283422,
+    "copies_max": -4.869904843608957,
+    "rank": 10,
+    "candidate": false
+   },
+   "0214/repeats": {
+    "k4": 6.0,
+    "copies_min": 5.0,
+    "copies_max": 7.0,
+    "rank": 15,
+    "candidate": false
+   },
+   "0214/base_pairs": {
+    "k4": -0.8333333333333334,
+    "copies_min": -0.8333333333333334,
+    "copies_max": -0.7941176470588235,
+    "rank": 21,
+    "candidate": false
+   }
+  },
+  "candidates": [
+   "0212/sep_regular"
+  ],
+  "candidates_expected_by_chance": 2.67,
+  "replication": {
+   "0212/sep_regular": {
+    "k4": -0.2449489742783178,
+    "fresh_copies": 27,
+    "first_copy_at_or_above": 27,
+    "fresh_max": -0.22110831935702666,
+    "verdict": "not a flag",
+    "p_bound": null
+   }
+  },
+  "flags": [],
+  "unresolved": [],
+  "plants": [
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "none",
+    "i": 0,
+    "slips": [
+     29,
+     73
+    ],
+    "test": "eng_base",
+    "value": -4.278058097702933,
+    "copies_max": -5.99249409634102,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 79
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "none",
+    "i": 1,
+    "slips": [
+     26,
+     34
+    ],
+    "test": "eng_base",
+    "value": -4.176231053223467,
+    "copies_max": -5.99249409634102,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 75
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "none",
+    "i": 2,
+    "slips": [
+     32,
+     73
+    ],
+    "test": "eng_base",
+    "value": -4.023005511416989,
+    "copies_max": -5.99249409634102,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 79
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "reversal",
+    "i": 0,
+    "slips": [
+     31,
+     67
+    ],
+    "test": "eng_reverse",
+    "value": -5.133823739805622,
+    "copies_max": -6.791646117828795,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 78
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "reversal",
+    "i": 1,
+    "slips": [
+     26,
+     66
+    ],
+    "test": "eng_reverse",
+    "value": -4.705072923337778,
+    "copies_max": -6.791646117828795,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 83
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "reversal",
+    "i": 2,
+    "slips": [
+     22,
+     32
+    ],
+    "test": "eng_reverse",
+    "value": -4.8767659788877245,
+    "copies_max": -6.791646117828795,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 84
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "X spaces",
+    "i": 0,
+    "slips": [
+     64,
+     69
+    ],
+    "test": "sep_words",
+    "value": 0.15911564798904998,
+    "copies_max": -0.19057652375707335,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 78
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "X spaces",
+    "i": 1,
+    "slips": [
+     25,
+     71
+    ],
+    "test": "sep_words",
+    "value": 0.40112952046370565,
+    "copies_max": -0.19057652375707335,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 79
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "X spaces",
+    "i": 2,
+    "slips": [
+     31,
+     66
+    ],
+    "test": "sep_words",
+    "value": -0.16294223390491397,
+    "copies_max": -0.19057652375707335,
+    "found": true,
+    "planted_reading_among_readings": true,
+    "n_readings": 78
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "X every kth",
+    "i": 0,
+    "slips": [
+     66,
+     72
+    ],
+    "test": "sep_regular",
+    "value": -0.5656854249492381,
+    "copies_max": -0.3390552296506612,
+    "found": false,
+    "planted_reading_among_readings": true,
+    "n_readings": 83
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "X every kth",
+    "i": 1,
+    "slips": [
+     26,
+     74
+    ],
+    "test": "sep_regular",
+    "value": -0.5443310539518172,
+    "copies_max": -0.3390552296506612,
+    "found": false,
+    "planted_reading_among_readings": true,
+    "n_readings": 84
+   },
+   {
+    "L": 13,
+    "cls": [
+     "kry",
+     "kry",
+     "vig"
+    ],
+    "mask": "X every kth",
+    "i": 2,
+    "slips": [
+     65,
+     66
+    ],
+    "test": "sep_regular",
+    "value": -0.5656854249492381,
+    "copies_max": -0.3390552296506612,
+    "found": false,
+    "planted_reading_among_readings": true,
+    "n_readings": 83
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "none",
+    "i": 0,
+    "slips": [
+     24,
+     66
+    ],
+    "test": "eng_base",
+    "value": -4.2598701753099695,
+    "copies_max": -5.99249409634102,
+    "found": true,
+    "planted_reading_among_readings": false,
+    "n_readings": 80
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "none",
+    "i": 1,
+    "slips": [
+     28,
+     34
+    ],
+    "test": "eng_base",
+    "value": -4.102561667962152,
+    "copies_max": -5.99249409634102,
+    "found": true,
+    "planted_reading_among_readings": false,
+    "n_readings": 75
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "none",
+    "i": 2,
+    "slips": [
+     29,
+     64
+    ],
+    "test": "eng_base",
+    "value": -4.221914101020772,
+    "copies_max": -5.99249409634102,
+    "found": true,
+    "planted_reading_among_readings": false,
+    "n_readings": 84
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "reversal",
+    "i": 0,
+    "slips": [
+     67,
+     68
+    ],
+    "test": "eng_reverse",
+    "value": -4.823968593125095,
+    "copies_max": -6.791646117828795,
+    "found": true,
+    "planted_reading_among_readings": false,
+    "n_readings": 83
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "reversal",
+    "i": 1,
+    "slips": [
+     66,
+     73
+    ],
+    "test": "eng_reverse",
+    "value": -5.105174141828809,
+    "copies_max": -6.791646117828795,
+    "found": true,
+    "planted_reading_among_readings": false,
+    "n_readings": 88
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "reversal",
+    "i": 2,
+    "slips": [
+     26,
+     30
+    ],
+    "test": "eng_reverse",
+    "value": -5.103300580765398,
+    "copies_max": -6.791646117828795,
+    "found": true,
+    "planted_reading_among_readings": false,
+    "n_readings": 91
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "X spaces",
+    "i": 0,
+    "slips": [
+     32,
+     67
+    ],
+    "test": "sep_words",
+    "value": -1.079407504010587,
+    "copies_max": -0.19057652375707335,
+    "found": false,
+    "planted_reading_among_readings": false,
+    "n_readings": 75
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "X spaces",
+    "i": 1,
+    "slips": [
+     64,
+     74
+    ],
+    "test": "sep_words",
+    "value": -0.08727431161031354,
+    "copies_max": -0.19057652375707335,
+    "found": true,
+    "planted_reading_among_readings": false,
+    "n_readings": 79
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "X spaces",
+    "i": 2,
+    "slips": [
+     66,
+     68
+    ],
+    "test": "sep_words",
+    "value": -0.6191198322068695,
+    "copies_max": -0.19057652375707335,
+    "found": false,
+    "planted_reading_among_readings": false,
+    "n_readings": 92
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "X every kth",
+    "i": 0,
+    "slips": [
+     30,
+     74
+    ],
+    "test": "sep_regular",
+    "value": -0.708043494570254,
+    "copies_max": -0.3390552296506612,
+    "found": false,
+    "planted_reading_among_readings": false,
+    "n_readings": 80
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "X every kth",
+    "i": 1,
+    "slips": [
+     66,
+     71
+    ],
+    "test": "sep_regular",
+    "value": -Infinity,
+    "copies_max": -0.3390552296506612,
+    "found": false,
+    "planted_reading_among_readings": false,
+    "n_readings": 75
+   },
+   {
+    "L": 20,
+    "cls": [
+     "std",
+     "kry",
+     "beau"
+    ],
+    "mask": "X every kth",
+    "i": 2,
+    "slips": [
+     29,
+     74
+    ],
+    "test": "sep_regular",
+    "value": -0.4714045207910317,
+    "copies_max": -0.3390552296506612,
+    "found": false,
+    "planted_reading_among_readings": false,
+    "n_readings": 84
+   }
+  ],
+  "plants_found": {
+   "L13 none": "3 of 3",
+   "L13 reversal": "3 of 3",
+   "L13 X spaces": "3 of 3",
+   "L13 X every kth": "0 of 3",
+   "L20 none": "3 of 3",
+   "L20 reversal": "3 of 3",
+   "L20 X spaces": "1 of 3",
+   "L20 X every kth": "0 of 3"
+  },
+  "plant_design": "3 per mask at each of [13, 20], 0207's plant routine (2 slips at checked slots), masked Carter with the known letters set; found = the mask's test strictly above all 20 of K4's copies",
+  "controls": "the union of 0207, 0212, 0213 and 0214's own controls, so each re-submitted reading faces at least its own experiment's (issue #88)",
+  "seconds": 952.8
+ },
+ "notes": "1 candidate cells of 56 (chance 2.7); replication: 1 not a flag, 0 unresolved, 0 flags. Saved K4 candidates regenerated: {'0207': '50 of 50', '0212': '10 of 10', '0213': '10 of 10', '0214': '10 of 10'}. Plants found: {'L13 none': '3 of 3', 'L13 reversal': '3 of 3', 'L13 X spaces': '3 of 3', 'L13 X every kth': '0 of 3', 'L20 none': '3 of 3', 'L20 reversal': '3 of 3', 'L20 X spaces': '1 of 3', 'L20 X every kth': '0 of 3'}.",
+ "controls": [
+  -7.1293351132488105,
+  -7.57859996434921,
+  -7.335347374552417,
+  -7.936185529511743,
+  -7.4843128862838775,
+  -7.42118637402136,
+  -7.643195806376092,
+  -7.568175640251775,
+  -7.702194724497986,
+  -7.839364475477592,
+  -6.982100107367641,
+  -7.51108963045872,
+  -7.732325131026749,
+  -7.930897558792815,
+  -7.219197972677711,
+  -7.617524012171188,
+  -7.618864546591867,
+  -7.673935294625104,
+  -7.820545838695747,
+  -7.331853482865238,
+  -6.3105004259432445,
+  -6.487179237149846,
+  -6.058413631653615,
+  -6.253270975085456,
+  -6.730892498818096,
+  -5.813464056294469,
+  -6.388235041519545,
+  -6.663219155707,
+  -5.457376358351622,
+  -6.057266703977375,
+  -6.449172200631708,
+  -6.095280137453175,
+  -6.008399437964856,
+  -6.15195682143535,
+  -6.042704253710445,
+  -6.533865123748758,
+  -6.318485894410331,
+  -6.241774079728164,
+  -6.304436305608414,
+  -6.038077931316875,
+  -6.2050744865237455,
+  -6.378572714287263,
+  -5.783592520508795,
+  -6.4678790006366835,
+  -6.415105541066665,
+  -6.443639677838322,
+  -6.440274184629285,
+  -6.157189975190121,
+  -6.52206546841874,
+  -6.414335916929739,
+  -6.295528051741234,
+  -6.320733651504068,
+  -6.264409599980863,
+  -6.416223330387927,
+  -6.571985910150991,
+  -6.309725526686033,
+  -6.236749292594522,
+  -6.411153156819072,
+  -5.797568378608516,
+  -5.770675716848988,
+  -6.385882899259096,
+  -6.651641906872347,
+  -6.540979873704912,
+  -6.429632115644401,
+  -6.355958538280792,
+  -6.076040185870423,
+  -6.34206903039931,
+  -6.4288814349538175,
+  -6.613031419704652,
+  -6.482537994358393,
+  -6.496649976204084,
+  -6.400461409930114,
+  -6.446628864132753,
+  -6.52202350352003,
+  -6.535308511675051,
+  -6.600756379020927,
+  -6.5539654817637745,
+  -6.591490794782167,
+  -6.54925980897141,
+  -6.396384924070293
+ ],
+ "error": null,
+ "worked_example": "0207's saved reading (key length 25, std/std vig, slips at [22, 24, 73], 4 slots open (filled with A)):\n  LZMTOMNOHHULBGUNYUVRIEASTNORTHEASTOTWTEYLGHMUWIOWYQHMNOBYAXINFBBERLINCLOCKUDBMBRRZCEIGKUVACKTESMA\nbattery (higher = more structure):\n  eng_base        -6.616\n  freq_sorted     -3.116\n  ioc             0.041\n  sep_words       none\n  sep_regular     none\n  eng_reverse     -7.173\n  eng_keep_nth    -6.322\n  eng_drop_nth    -6.359\n  eng_step        -6.674\n  eng_affine_std  -6.616\n  eng_affine_kry  -6.616\n  eng_columns     -6.790\n  repeats         3.000\n  base_pairs      -0.917",
+ "seconds": 952.8320090770721
+}

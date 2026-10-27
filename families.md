@@ -23,11 +23,12 @@ Update the leaf when an experiment works on it.
       - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {closed · sampled · 0097, 0100, 0102, 0119, 0120, 0139, 0140, 0142}
         - Added form (Quagmire III proper, and variant Beaufort), lengths 1-26: S under S and K under K force key 0 in slots another known letter shares {closed · exact · 0119}
         - Beaufort form, lengths 1-22, 24, 25: no alphabet fits {closed · exact · 0119}
-        - Beaufort form, length 23 (7 checks): design 2 (F1.5) puts K4 9th of 13 among copies of itself; planted texts beat all their own copies 6 of 8 (0139) {closed · sampled · 0119, 0120, 0139, 0140}
+        - Beaufort form, length 23 (7 checks): design 2 (F1.5) puts K4 9th of 13 among copies of itself; planted texts beat all their own copies 6 of 8 (0139), Sanborn-style plants 10 of 12 (A6.2, 0226) {closed · sampled · 0119, 0120, 0139, 0140, 0226}
         - Beaufort form, length 26 (1 check): K4 12th of 13 among copies of itself; power 5 of 6 (0140) {closed · sampled · 0119, 0140, 0142}
-      - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26 {closed · sampled · 0097, 0123, 0124, 0143, 0144, 0145, 0146}
+      - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26 {open · sampled · 0097, 0123, 0124, 0143, 0144, 0145, 0146, 0226}
         - Lengths 1-7, 9-12, 14, 15, 17, 18, 21, 22, 25: no pair of alphabets fits {closed · exact · 0123}
-        - Lengths 8, 13, 16: design 2 on two alphabets puts K4 2nd, 13th and 7th of 13 among kept-place copies; power 4/4, 5/5, 4/5 {closed · sampled · 0143, 0144, 0145, 0146}
+        - Lengths 8, 16: design 2 on two alphabets puts K4 2nd and 7th of 13 among kept-place copies; power 4/4, 4/5 on clean Carter {closed · sampled · 0143, 0145, 0146}
+        - Length 13: K4 13th of 13 (0144), power 5/5 on clean Carter (0143) but 9/12 on Sanborn-style plants, under the 4/5 bar (A6.2, 0226): reopened {open · sampled · 0143, 0144, 0226}
         - Lengths 20, 23, 24, 26: above 0136's bound, only a better English model could decide {blocked · exact · 0123, 0136}
         - Length 19: a pair fits, 26 of 1,000 coppers do (R under P at 28 and 66, 38 apart) {noted · exact · 0123, 0124}
     - A progressive key {closed · exact · 0011, 0042, 0155}
@@ -41,7 +42,7 @@ Update the leaf when an experiment works on it.
     - A running key from a text
       - K1-K3, the sculpture's texts, Carter, Sanborn's letters {closed · exact · 0004, 0017, 0021, 0045, 0047, 0078, 0098, 0117}
       - An unknown English text, on standard, KRYPTOS or puzzle-word alphabets {closed · sampled · 0009, 0010}
-      - **F1.3** An unknown English text, on any dictionary-word alphabet {closed · sampled · 0125}
+      - **F1.3** An unknown English text, on any dictionary-word alphabet; Sanborn-style running keys found 12 of 12 by quadgrams and the judge (A6.2, 0226) {closed · sampled · 0125, 0226}
     - A key schedule worked by hand
       - The Berlin clock, the Carter dates {closed · exact · 0079, 0038}
       - **F1.4** Other hand schedules (C20(c)-(e)) {closed · exact · 0126, 0127, 0128}

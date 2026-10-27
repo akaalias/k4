@@ -18,6 +18,7 @@ Stage 2, step 4 (A6, ticket #84). Step 3 closed on 2026-10-25; a draft of A6.1 h
 | 223 | A6.1 | **Duplicate of 0222, by mistake.** The write of the replication's code failed (the file had changed since read) and the run chained after it went ahead on 0222's code. |
 | 224 | A6.1 | **Replication of 0034 at 27-29.** Fresh copy 6 of the first batch scored 8: not a flag. **Recorded as kept by mistake**: I gave gate 4 only the 8 fresh copies; K4's period-29 reading, below 0216's copies of the same search, passed them (issue #94, for Alexis). |
 | 225 | A6.1 | **0224 rerun with the search's own copies in gate 4** (54 controls): same replication, reverted. A6.1 closed: no sampled verdict weakened. |
+| 226 | A6.2 | **The climbs' power on Sanborn-style plaintext.** 12 messy plants per search (X stops, K1-K3 windows, three changed letters), each against its own copies. Quadgrams: F1.1 L23 10/12 (bar 6/8), 0125 12/12 (bar 11/20), both stand; F1.2 L13 9/12, under the pre-registered 4/5 bar, so F1.2's close at 13 is reopened. The judge: 1/12 and 0/12 on climbed readings, 12/12 on 0125's fixed ones. Prediction wrong in direction: messy text cost the climbs less than expected. |
 
 The judge cannot rescue a climbed reading: design 2's readings of planted English get about a third of the letters right,
 and the judge, reading for words, sees no more in them than in the copies'. So F1.1 and F1.2's sampled closes rest on
@@ -28,6 +29,8 @@ Fixed in the left draft before running: gate 4 was handed judge scores (0-100) a
 copies' quadgram scores. The re-submitted K4 readings re-encrypt through their own frozen `encrypt` instead of a
 hand-written one-alphabet rule. A6.2's dry run hung in 0123's witness search on one key draw; the search now runs under
 a 20-second alarm and the key is redrawn on timeout.
+
+A6.2 (0226) turned out the other way from my prediction: the climbs lose little on Sanborn-style text, because a climb scored by quadgrams is pulled toward English and an X stop or a misspelling costs the true reading only a few quadgrams. The one cell that falls under its bar, F1.2 at length 13 (9 of 12 against 4 of 5), falls by less than one plant, and K4 ranked last of 13 there; the pre-registered rule still sends it back to `open`, waiting for Alexis. D1 measures design 2 on these same plants, so a cheaper decider with more power would settle it. 0226 called no `ctx.progress` (drafted before #97); A6.3's draft now does.
 
 Mistakes today, both mine. A run chained after a file write that failed recorded a duplicate (0223): check the
 header of `attack.py` before every run, in its own command. 0224 handed gate 4 a smaller set of controls than the

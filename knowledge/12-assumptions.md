@@ -97,7 +97,7 @@ quadgram model. Scheidt "masked the English language" (2005, 2015). Firmness: fi
 is English; ours that it scores as English. Weakened by: masking, abbreviation, spelled
 numbers, X separators, deliberate misspellings. Stands on it: every sampled result, every
 English climb, F1.5's decider, the scrambled-copper comparison wherever it uses the English
-score. See A13.
+score. See A13. Checked 2026-10-27 (Stage 2 step 4, issue #84): the sampled verdicts rejudged blind by the judge, none weakened (A6.1; 0221, 0222, 0225); the climbs' power on Sanborn-style plaintext (X stops, K1-K3 windows, three changed letters; A6.2, 0226): quadgrams find 10 of 12 at F1.1's length 23 and 12 of 12 through 0125's running-key test, at or above the clean-Carter power, but 9 of 12 at F1.2's length 13, under its 4/5 bar, so that close is reopened; the judge reads fixed readings well (0125: 12 of 12) and climbed ones not at all (1 and 0 of 12).
 
 ## The method
 

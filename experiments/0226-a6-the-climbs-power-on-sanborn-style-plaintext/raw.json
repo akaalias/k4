@@ -1,0 +1,1054 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "A6.2",
+  "classes": [
+   "xstops",
+   "k123",
+   "sub3"
+  ],
+  "per_class": 4,
+  "own_copies": 6,
+  "arms": {
+   "23": "F1.1, one free alphabet, Beaufort form, length 23, 0140's frozen climb (design 2)",
+   "13": "F1.2, two free alphabets, length 13, 0144's frozen climb (design 2)",
+   "0125": "F1.3, running key on 208,062 dictionary tables, 0125's frozen search, the class text as the key"
+  },
+  "null_per_plant": {
+   "23": "1/7",
+   "13": "1/7",
+   "0125": "1/51"
+  },
+  "runs_done": {
+   "min": 10,
+   "max": 10
+  },
+  "decryption_checked": true,
+  "judge_texts_sent": 230,
+  "judge_calls_estimated": 230,
+  "expected_total_time": "about 31,000 core-seconds (84 texts at about 110 s in arm 23, 84 at about 235 s in arm 13, 62 at about 35 s for 0125; from 0140, 0144, 0125's runs), so 65-90 min on 8 cores",
+  "arm13_key_redraws": 1,
+  "result": {
+   "23": {
+    "rows": [
+     {
+      "cls": "xstops",
+      "q": -4.8059,
+      "own_q": [
+       -5.2723,
+       -5.1094,
+       -4.8284,
+       -4.9603,
+       -4.8965,
+       -5.0226
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       8,
+       12,
+       12,
+       7,
+       4,
+       6
+      ],
+      "judge_found": false,
+      "letters_right": 44,
+      "reading": "THATTNEERTRECYREAIINDEASTNORTHEASTSSUGMECEATLEGSBOBRTSCBEECHAILBERLINCLOCKSENDETHISINENOFJENTHENN"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.7998,
+      "own_q": [
+       -4.9677,
+       -4.9768,
+       -5.1043,
+       -4.9889,
+       -4.9601,
+       -5.0428
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       12,
+       8,
+       8,
+       8,
+       12,
+       8
+      ],
+      "judge_found": false,
+      "letters_right": 32,
+      "reading": "MYLOTULOUHANTSSTREAFREASTNORTHEASTOGEDEPAPPANOORSMUSIOMBWILINERBERLINCLOCKIDEESIRESOBEFENIACOREYI"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.7844,
+      "own_q": [
+       -4.9729,
+       -4.9939,
+       -4.9206,
+       -4.9878,
+       -4.861,
+       -5.0692
+      ],
+      "q_found": true,
+      "judge": 14,
+      "own_judge": [
+       6,
+       12,
+       8,
+       4,
+       12,
+       8
+      ],
+      "judge_found": true,
+      "letters_right": 35,
+      "reading": "PITHTTHEPEVINCESCARSIEASTNORTHEASTADIATDECHGMPOTSIDNTISMEBEWINSBERLINCLOCKYISHOLYOUBBONTHATMOTHDW"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.8675,
+      "own_q": [
+       -5.0167,
+       -4.9252,
+       -5.1212,
+       -5.0288,
+       -4.9116,
+       -5.0873
+      ],
+      "q_found": true,
+      "judge": 8,
+      "own_judge": [
+       12,
+       15,
+       6,
+       12,
+       8,
+       8
+      ],
+      "judge_found": false,
+      "letters_right": 38,
+      "reading": "VTAGGESNIGHAMMENALVESEASTNORTHEASTATEPLOADBERATDIPAYEYFOFSETTHEBERLINCLOCKTXOPORBIOLIALSTHALAFEYE"
+     },
+     {
+      "cls": "k123",
+      "q": -5.0364,
+      "own_q": [
+       -5.1767,
+       -4.9028,
+       -4.784,
+       -5.0346,
+       -5.0082,
+       -5.0387
+      ],
+      "q_found": false,
+      "judge": 12,
+      "own_judge": [
+       12,
+       12,
+       8,
+       12,
+       6,
+       12
+      ],
+      "judge_found": false,
+      "letters_right": 33,
+      "reading": "DOHAVINHPRTALSINTRACEEASTNORTHEASTHSLOOOYLSITPIIFETSMIFIGATSTERBERLINCLOCKEONRIBEATROIDMENDFUMANZ"
+     },
+     {
+      "cls": "k123",
+      "q": -4.7561,
+      "own_q": [
+       -5.0535,
+       -4.9742,
+       -4.9857,
+       -5.0145,
+       -4.8217,
+       -5.0641
+      ],
+      "q_found": true,
+      "judge": 6,
+      "own_judge": [
+       7,
+       12,
+       8,
+       8,
+       12,
+       22
+      ],
+      "judge_found": false,
+      "letters_right": 37,
+      "reading": "BIJESSELRCYLEINFACCONEASTNORTHEASTINICAISHELEGEEMESMNITIELLITHOBERLINCLOCKCRITISSORSEATHPHSASHINH"
+     },
+     {
+      "cls": "k123",
+      "q": -4.829,
+      "own_q": [
+       -5.0728,
+       -4.9517,
+       -4.9419,
+       -5.0744,
+       -4.9807,
+       -4.991
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       10,
+       12,
+       6,
+       12,
+       5,
+       12
+      ],
+      "judge_found": false,
+      "letters_right": 32,
+      "reading": "OHHSCOFLADANDRETHETYYEASTNORTHEASTBALLALICUTEEBADERABHUNTERCKINBERLINCLOCKGLACEOTFEWELIGHESERHUJS"
+     },
+     {
+      "cls": "k123",
+      "q": -4.7928,
+      "own_q": [
+       -5.0175,
+       -4.9779,
+       -4.9476,
+       -4.9708,
+       -4.8288,
+       -4.9815
+      ],
+      "q_found": true,
+      "judge": 8,
+      "own_judge": [
+       8,
+       12,
+       12,
+       8,
+       8,
+       12
+      ],
+      "judge_found": false,
+      "letters_right": 35,
+      "reading": "HTLADEDDPANDEPINKTHEDEASTNORTHEASTGADTOLOHENOTTONOTORYEETULREABBERLINCLOCKEERPOINTHFOREBYPECMUCAB"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.7241,
+      "own_q": [
+       -4.9747,
+       -4.8819,
+       -4.9198,
+       -5.0631,
+       -4.9571,
+       -4.8657
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       8,
+       12,
+       12,
+       8,
+       12,
+       8
+      ],
+      "judge_found": false,
+      "letters_right": 41,
+      "reading": "TNMOSTHEEZEREELYMORATEASTNORTHEASTICIEVEWARTSGREONEINUSGAMEHELIBERLINCLOCKESTPPGRETAWSUNCHMRTREGU"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.7725,
+      "own_q": [
+       -5.0466,
+       -4.8966,
+       -4.9518,
+       -4.9901,
+       -4.9307,
+       -5.0147
+      ],
+      "q_found": true,
+      "judge": 8,
+      "own_judge": [
+       8,
+       12,
+       8,
+       8,
+       8,
+       6
+      ],
+      "judge_found": false,
+      "letters_right": 33,
+      "reading": "RBBWHIMLOUTDEASIGRECREASTNORTHEASTREDHENTNOPTHOLLREFDERINDANOCKBERLINCLOCKOULIMCOLDMATENBRUSICESJ"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.9993,
+      "own_q": [
+       -5.0022,
+       -5.0084,
+       -4.9071,
+       -5.0021,
+       -4.9469,
+       -5.0562
+      ],
+      "q_found": false,
+      "judge": 12,
+      "own_judge": [
+       8,
+       12,
+       8,
+       12,
+       8,
+       7
+      ],
+      "judge_found": false,
+      "letters_right": 33,
+      "reading": "KRLMCGNERGYOTHINDULTYEASTNORTHEASTEVISPEEDWPANPORAHENOGAMASTGOMBERLINCLOCKHOWUSANADATRIVEUSPYEFAI"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.6449,
+      "own_q": [
+       -5.3063,
+       -5.0295,
+       -4.9492,
+       -5.0814,
+       -5.0785,
+       -5.0108
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       7,
+       8,
+       12,
+       8,
+       8,
+       12
+      ],
+      "judge_found": false,
+      "letters_right": 38,
+      "reading": "DSHADDARGELSONNESAAREEASTNORTHEASTRACHANANSTRUEMITDOINRETLTHEFTBERLINCLOCKNONMEINDULLYOFTHTHSSFRG"
+     }
+    ],
+    "quad_found": 10,
+    "judge_found": 1,
+    "of": 12,
+    "by_class": {
+     "xstops": {
+      "quad": 4,
+      "judge": 1,
+      "of": 4
+     },
+     "k123": {
+      "quad": 3,
+      "judge": 0,
+      "of": 4
+     },
+     "sub3": {
+      "quad": 3,
+      "judge": 0,
+      "of": 4
+     }
+    },
+    "stated_power": "6/8",
+    "quad_below_stated": false,
+    "judge_below_stated": true,
+    "judge_none": 0
+   },
+   "13": {
+    "rows": [
+     {
+      "cls": "xstops",
+      "q": -4.7417,
+      "own_q": [
+       -4.76,
+       -4.8349,
+       -4.8339,
+       -4.9048,
+       -4.8721,
+       -4.7346
+      ],
+      "q_found": false,
+      "judge": 8,
+      "own_judge": [
+       8,
+       12,
+       12,
+       12,
+       12,
+       32
+      ],
+      "judge_found": false,
+      "letters_right": 37,
+      "reading": "HUSNODOSINTPUGHTDOHEWEASTNORTHEASTBELELOMBUTORMOMETSGASABEREVEABERLINCLOCKMYOUTEDWILALADETHEEMOOH"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.6247,
+      "own_q": [
+       -4.8665,
+       -4.7787,
+       -4.7888,
+       -4.6581,
+       -4.7093,
+       -4.8393
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       15,
+       8,
+       8,
+       12,
+       12,
+       8
+      ],
+      "judge_found": false,
+      "letters_right": 39,
+      "reading": "IEASORSTHEMOFDANDYSCEEASTNORTHEASTOPLEYEBRIGOODOETERELSOTERMINTBERLINCLOCKLONHADRWITNINERCHCAUSTE"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.6289,
+      "own_q": [
+       -5.081,
+       -5.0302,
+       -4.9261,
+       -5.0011,
+       -4.8742,
+       -5.049
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       8,
+       12,
+       12,
+       12,
+       12,
+       12
+      ],
+      "judge_found": false,
+      "letters_right": 41,
+      "reading": "DRELLNOTDSAWHIMTHESBREASTNORTHEASTEADYFINTASSEHEPEOFANAGEELIMANBERLINCLOCKWEVESKNIGITIAMEOFNIFRUL"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.5964,
+      "own_q": [
+       -4.7843,
+       -4.8333,
+       -4.8621,
+       -4.8222,
+       -4.779,
+       -4.7826
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       12,
+       12,
+       6,
+       12,
+       18,
+       12
+      ],
+      "judge_found": false,
+      "letters_right": 50,
+      "reading": "GIONSMTHEETOHATENTIMEEASTNORTHEASTHERTEREHARENTIDIPLOVEUTRDEMYOBERLINCLOCKINDIUMOKEWAGREREGIEMEDC"
+     },
+     {
+      "cls": "k123",
+      "q": -4.7899,
+      "own_q": [
+       -5.0919,
+       -5.0758,
+       -4.965,
+       -5.1654,
+       -5.0804,
+       -5.2391
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       12,
+       12,
+       5,
+       6,
+       8,
+       8
+      ],
+      "judge_found": false,
+      "letters_right": 41,
+      "reading": "IKEGREEASPECLEGIARFISEASTNORTHEASTWILDEREDIBRWOMOSTYHEDUCELPLAYBERLINCLOCKESOOZYIDIASTWISPOVEDABO"
+     },
+     {
+      "cls": "k123",
+      "q": -4.6645,
+      "own_q": [
+       -4.7117,
+       -4.8337,
+       -4.8078,
+       -4.8508,
+       -4.961,
+       -4.9099
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       10,
+       12,
+       12,
+       8,
+       14,
+       12
+      ],
+      "judge_found": false,
+      "letters_right": 35,
+      "reading": "PATRIENTOTEINGOFEAREVEASTNORTHEASTRALOWWHILANDAFRISECRLBRIENANSBERLINCLOCKCYNTOMYILYMOROFINATYUMU"
+     },
+     {
+      "cls": "k123",
+      "q": -4.4983,
+      "own_q": [
+       -4.7823,
+       -4.7376,
+       -4.7459,
+       -4.8329,
+       -4.7873,
+       -4.5977
+      ],
+      "q_found": true,
+      "judge": 15,
+      "own_judge": [
+       12,
+       12,
+       12,
+       10,
+       18,
+       15
+      ],
+      "judge_found": false,
+      "letters_right": 39,
+      "reading": "IGPOSITYEINGTHEDTEESWEASTNORTHEASTHEARNORTHMONROMPREDORDEBYREUNBERLINCLOCKTISALHECTEACHEARFIGTOPP"
+     },
+     {
+      "cls": "k123",
+      "q": -4.7688,
+      "own_q": [
+       -4.9212,
+       -4.8306,
+       -4.7328,
+       -4.6979,
+       -4.8602,
+       -4.9024
+      ],
+      "q_found": false,
+      "judge": 12,
+      "own_judge": [
+       12,
+       12,
+       18,
+       12,
+       12,
+       4
+      ],
+      "judge_found": false,
+      "letters_right": 36,
+      "reading": "ADRSEDSOGERTOSAGRENEVEASTNORTHEASTINGOUSEXPAINSIDESYMEAKUATIMDIBERLINCLOCKTOWNTOPFONSIOCLAPRIMRBA"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.699,
+      "own_q": [
+       -4.8295,
+       -4.8396,
+       -4.9352,
+       -4.8247,
+       -4.768,
+       -4.8769
+      ],
+      "q_found": true,
+      "judge": 14,
+      "own_judge": [
+       12,
+       12,
+       8,
+       12,
+       18,
+       12
+      ],
+      "judge_found": false,
+      "letters_right": 33,
+      "reading": "MMIGTHERRESUSICAROTHLEASTNORTHEASTTTITISOUCOMANYSQUOTCHOFWHENEDBERLINCLOCKATTHTMAUNCYSTIRAINHOHOK"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.7594,
+      "own_q": [
+       -4.7921,
+       -4.8675,
+       -4.8461,
+       -4.8875,
+       -4.9556,
+       -4.9038
+      ],
+      "q_found": true,
+      "judge": 14,
+      "own_judge": [
+       14,
+       12,
+       8,
+       8,
+       12,
+       15
+      ],
+      "judge_found": false,
+      "letters_right": 36,
+      "reading": "IBOLUMBARERTECHADAGEVEASTNORTHEASTTONYNETHEMYSHADPRIZESIRCAMOSTBERLINCLOCKKTOFAWNWEINERRTAINISENG"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.8497,
+      "own_q": [
+       -4.8871,
+       -4.8017,
+       -4.9725,
+       -4.9927,
+       -5.0249,
+       -4.9803
+      ],
+      "q_found": false,
+      "judge": 12,
+      "own_judge": [
+       12,
+       8,
+       6,
+       12,
+       12,
+       6
+      ],
+      "judge_found": false,
+      "letters_right": 36,
+      "reading": "ZAKKUNASHEENTCASSOMETEASTNORTHEASTDOWSAGENCYFLTINJAMPHONDANROUPBERLINCLOCKSEVELSIOSEDACCKFALPOSRE"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.9625,
+      "own_q": [
+       -5.0314,
+       -5.1024,
+       -5.0498,
+       -5.0867,
+       -5.0737,
+       -5.1098
+      ],
+      "q_found": true,
+      "judge": 12,
+      "own_judge": [
+       12,
+       10,
+       7,
+       12,
+       12,
+       8
+      ],
+      "judge_found": false,
+      "letters_right": 43,
+      "reading": "HPLAYWILSFLNADURNEDLYEASTNORTHEASTERBEADDTOLEAPSMARXCHERANGIMGEBERLINCLOCKPITCHHURHTELLLATWOWIFAT"
+     }
+    ],
+    "quad_found": 9,
+    "judge_found": 0,
+    "of": 12,
+    "by_class": {
+     "xstops": {
+      "quad": 3,
+      "judge": 0,
+      "of": 4
+     },
+     "k123": {
+      "quad": 3,
+      "judge": 0,
+      "of": 4
+     },
+     "sub3": {
+      "quad": 3,
+      "judge": 0,
+      "of": 4
+     }
+    },
+    "stated_power": "5/5",
+    "quad_below_stated": true,
+    "judge_below_stated": true,
+    "judge_none": 0
+   },
+   "0125": {
+    "rows": [
+     {
+      "cls": "xstops",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "xstops",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "k123",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "k123",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "k123",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "k123",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     },
+     {
+      "cls": "sub3",
+      "q": -4.095,
+      "q_found": true,
+      "judge": 60,
+      "judge_found": true,
+      "window_letters_right": 24,
+      "recovered": true,
+      "reading": "EASTNORTHEASTBERLINCLOCK"
+     }
+    ],
+    "quad_found": 12,
+    "judge_found": 12,
+    "of": 12,
+    "by_class": {
+     "xstops": {
+      "quad": 4,
+      "judge": 4,
+      "of": 4
+     },
+     "k123": {
+      "quad": 4,
+      "judge": 4,
+      "of": 4
+     },
+     "sub3": {
+      "quad": 4,
+      "judge": 4,
+      "of": 4
+     }
+    },
+    "stated_power": "11/20",
+    "quad_below_stated": false,
+    "judge_below_stated": false,
+    "judge_none": 0,
+    "copies_quad_max": -4.3004,
+    "copies_judge": [
+     7,
+     22,
+     12,
+     6,
+     8,
+     8,
+     8,
+     12,
+     12,
+     15,
+     12,
+     12,
+     15,
+     12,
+     12,
+     6,
+     12,
+     12,
+     7,
+     12,
+     14,
+     15,
+     15,
+     12,
+     10,
+     8,
+     4,
+     6,
+     12,
+     6,
+     6,
+     8,
+     12,
+     8,
+     12,
+     12,
+     14,
+     8,
+     12,
+     12,
+     12,
+     22,
+     8,
+     8,
+     22,
+     12,
+     6,
+     12,
+     8,
+     8
+    ],
+    "copies_reproduced": true
+   }
+  },
+  "compute_seconds": 4046,
+  "exhaustive": false,
+  "controls": "quadgram scores of the plants' own copies' readings (no candidate is submitted)"
+ },
+ "notes": "23: quadgram 10/12, judge 1/12 (stated 6/8); 13: quadgram 9/12, judge 0/12 (stated 5/5); 0125: quadgram 12/12, judge 12/12 (stated 11/20)",
+ "controls": [
+  -5.688039923743856,
+  -5.452483129208083,
+  -5.072070095167932,
+  -5.267250199454557,
+  -5.076786953731046,
+  -5.241668673906987,
+  -5.266067137154549,
+  -5.2362078359610145,
+  -5.42390388673773,
+  -5.253347659935804,
+  -5.282580099337269,
+  -5.390472629588406,
+  -5.307970720279032,
+  -5.180317785091984,
+  -5.177539638384725,
+  -5.266005444557554,
+  -5.06087896897934,
+  -5.323829788667205,
+  -5.394052711600234,
+  -5.20374616468419,
+  -5.4184939852883165,
+  -5.2958536119835395,
+  -5.259880434996883,
+  -5.373623642078895,
+  -5.524303343255829,
+  -5.0517149733892195,
+  -5.043574957548465,
+  -5.2267491492969,
+  -5.2994492756277225,
+  -5.321208678982501,
+  -5.4138898602483785,
+  -5.268913665547246,
+  -5.251779949522571,
+  -5.375454659884647,
+  -5.1200809705397665,
+  -5.372321524523536,
+  -5.333646747423064,
+  -5.263145776533778,
+  -5.3099077066859435,
+  -5.403195973457955,
+  -5.305623852184333,
+  -5.242186179000583,
+  -5.2424579603322075,
+  -5.269157792003476,
+  -5.155620890850148,
+  -5.267911832197438,
+  -5.186081365094983,
+  -5.258160937591953,
+  -5.330410321735913,
+  -5.202505356651568,
+  -5.235024029974098,
+  -5.407844102355814,
+  -5.233389693965255,
+  -5.046349252935689,
+  -5.379570652126314,
+  -5.2273008695588015,
+  -5.210949594426627,
+  -5.253918305511495,
+  -5.1926500503932935,
+  -5.346396585565016,
+  -5.341564714673218,
+  -5.28347118608754,
+  -5.252073820321382,
+  -5.304359916042015,
+  -5.280569304912197,
+  -5.338241129466783,
+  -5.744056374868417,
+  -5.158169712601585,
+  -5.144547298940803,
+  -5.356245781615581,
+  -5.349735936867984,
+  -5.285543045700612,
+  -4.888206110563971,
+  -5.055569355690322,
+  -5.014480908541228,
+  -5.143781216026943,
+  -5.128924094155729,
+  -4.99236070638406,
+  -5.144465487656626,
+  -5.03424547200214,
+  -5.061727005810824,
+  -4.836113672145783,
+  -4.882358258802038,
+  -5.057995524053822,
+  -5.506244846827632,
+  -5.4275633946344,
+  -5.298420003398259,
+  -5.276923648892896,
+  -5.116505171573858,
+  -5.404065321358107,
+  -4.993721478685897,
+  -5.065681143266673,
+  -5.2071989712036375,
+  -5.199468391167976,
+  -5.04105271014213,
+  -4.912351754633777,
+  -5.530575697257835,
+  -5.357848520144505,
+  -5.267011585817075,
+  -5.521768422308344,
+  -5.423405805145802,
+  -5.6224913799470695,
+  -4.982485044628187,
+  -5.060968262562103,
+  -5.034439827916541,
+  -5.140163813361345,
+  -5.222123574938323,
+  -5.192882144594434,
+  -5.12366479929053,
+  -4.994303832388139,
+  -4.929464818020802,
+  -5.053489166567104,
+  -5.045274921336622,
+  -4.748581004239455,
+  -5.215194713963815,
+  -5.135453516483562,
+  -4.920959891035647,
+  -4.922415545442507,
+  -5.195188631855422,
+  -5.193017287364527,
+  -5.015336771615835,
+  -5.072929298585761,
+  -5.239879914428402,
+  -5.0033231747773765,
+  -4.927202496571784,
+  -5.144148718018229,
+  -4.979836311549391,
+  -5.1315472796601025,
+  -5.044397352703314,
+  -5.09865501491912,
+  -5.3398825984606,
+  -5.18036387209849,
+  -5.152161971347164,
+  -5.026680449259851,
+  -5.2985764871720855,
+  -5.230463686353133,
+  -5.2793566102706935,
+  -5.264084314517696,
+  -5.399494735108748,
+  -5.355030567808803,
+  -5.358072362898407,
+  -5.422494155822113,
+  -5.422757077466385,
+  -5.475676057027429
+ ],
+ "error": null,
+ "worked_example": "A6.2 plants Sanborn-style messages. A K1-K3 window with the known words set:\n\n  message      BETWEENSUBTLESHADINGAEASTNORTHEASTFLIGHTLIESTHENUANCEOFIQLUSIONBERLINCLOCKYINVISIBLEHOWSTHATPOSSI\n  judge sees   BETWEENSUBTLESHADINGA#############FLIGHTLIESTHENUANCEOFIQLUSION###########YINVISIBLEHOWSTHATPOSSI\n\n  enciphered with one shuffled alphabet and a key of 23 (Beaufort form), climbed by 0140's search\n  with six scrambled copies; found if its reading beats all six, by quadgrams and by the judge.",
+ "seconds": 4172.036227941513,
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 169,
+  "cached": 50,
+  "input_tokens": 100746,
+  "output_tokens": 88867,
+  "errors": 0
+ }
+}

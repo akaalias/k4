@@ -1,0 +1,7 @@
+A6.2 plants Sanborn-style messages. A K1-K3 window with the known words set:
+
+  message      BETWEENSUBTLESHADINGAEASTNORTHEASTFLIGHTLIESTHENUANCEOFIQLUSIONBERLINCLOCKYINVISIBLEHOWSTHATPOSSI
+  judge sees   BETWEENSUBTLESHADINGA#############FLIGHTLIESTHENUANCEOFIQLUSION###########YINVISIBLEHOWSTHATPOSSI
+
+  enciphered with one shuffled alphabet and a key of 23 (Beaufort form), climbed by 0140's search
+  with six scrambled copies; found if its reading beats all six, by quadgrams and by the judge.

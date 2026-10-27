@@ -235,3 +235,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0234	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	13-ciphertext-only	0233-f13-how-many-bits-per-letter-each-english-judge-extracts	reverted	36	0	5	192.241		116	implement=73 test=15 run=116 record=70
 0235	0235-f13-periodic-key-on-dictionary-keyword-tables-ciphertext-only	13-ciphertext-only	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	reverted	26	0	4	204.049		14753	implement=85 test=144 run=14753 record=77
 0236	0236-f13-one-free-alphabet-ciphertext-only-power-first	13-ciphertext-only	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	reverted	10	0	5	192.659		1024	test=5 run=1024 record=70
+0237	0237-f13-a-move-and-the-sculptures-table-ciphertext-only	13-ciphertext-only	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	reverted	40	0	4	212.398		274	implement=94 test=47 run=274 record=42

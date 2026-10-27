@@ -1,0 +1,7 @@
+The same climb on K1's 63 carved letters, key length 10, the KRYPTOS table, no known letter:
+
+  shifts found  PALIMPSEST
+  reading       BETWEENSUBTLESHADINGANDTHEABSENCEOFLIGHTLIESTHENUANCEOFIQLUSION
+
+On K4 the climb runs for every length 1-36 and all 8 ways of using the table, and K4's best is compared with
+the best that 200 shuffles of K4's letters reach.

@@ -232,3 +232,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0231	0231-f13-which-cipher-family-k4-resembles-rerun	13-ciphertext-only	0230-f13-which-cipher-family-k4-resembles	reverted	0	0	0			279	unattributed=24 run=279 record=0
 0232	0232-f13-replicate-k4-ciphertext-autokey-cell	13-ciphertext-only	0231-f13-which-cipher-family-k4-resembles-rerun	reverted	0	0	0			383	design=7 test=9 run=383 record=0
 0233	0233-f13-how-many-bits-per-letter-each-english-judge-extracts	13-ciphertext-only	0136-key-bits-against-english-redundancy	reverted	0	0	0			321	implement=166 test=77 run=321 record=0
+0234	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	13-ciphertext-only	0233-f13-how-many-bits-per-letter-each-english-judge-extracts	reverted	36	0	5	192.241		116	implement=73 test=15 run=116 record=70

@@ -1,0 +1,6891 @@
+{
+ "id": 234,
+ "tag": "0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only",
+ "started": "2026-10-27T16:39:18+00:00",
+ "seconds": 116.2,
+ "status": "ran",
+ "phases": {
+  "implement": 73.3,
+  "test": 14.7,
+  "run": 116.2,
+  "record": 69.6
+ },
+ "ended_epoch": 1793119344.007173,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 36,
+ "n_passed": 0,
+ "best_crib_hits": 5,
+ "best_crib_words": {
+  "EAST": [
+   0,
+   4
+  ],
+  "NORTHEAST": [
+   4,
+   9
+  ],
+  "BERLIN": [
+   0,
+   6
+  ],
+  "CLOCK": [
+   1,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 192.2405531398806,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -4.648495163623886,
+  -4.559804343493411,
+  -4.584760746239292,
+  -4.576517898277838,
+  -4.613365554568032,
+  -4.483455987756952,
+  -4.387951169014841,
+  -4.485733935189843,
+  -4.569961376087633,
+  -4.478113656420984,
+  -4.48763739681435,
+  -4.443513459318135,
+  -4.472674910249891,
+  -4.54218312770846,
+  -4.4312046807801595,
+  -4.4790689078184105,
+  -4.564163525191999,
+  -4.454791021359024,
+  -4.447456994486956,
+  -4.508317228570655,
+  -4.5232114938612655,
+  -4.517041194500559,
+  -4.410480487377787,
+  -4.467239295864972,
+  -4.493013903879983,
+  -4.46648017533058,
+  -4.323571820062788,
+  -4.5657845594410285,
+  -4.522341431965175,
+  -4.53565912955473,
+  -4.459079695673424,
+  -4.537277699702948,
+  -4.586439588207028,
+  -4.411804396326185,
+  -4.382664901514171,
+  -4.4571934339387225,
+  -4.41009785170418,
+  -4.485350851494021,
+  -4.547091826341252,
+  -4.412083062145811,
+  -4.384009473542074,
+  -4.5906311596223714,
+  -4.475038208454514,
+  -4.611803173825474,
+  -4.4918699349392135,
+  -4.454165131579927,
+  -4.258728369801988,
+  -4.442894900692782,
+  -4.487592796686123,
+  -4.563116651891974,
+  -4.468301037110725,
+  -4.616108516097649,
+  -4.55278801373652,
+  -4.562565775255249,
+  -4.576102612521823,
+  -4.583644110244328,
+  -4.440257286054596,
+  -4.468598962336676,
+  -4.597425503429793,
+  -4.4245009594032245,
+  -4.371324367673083,
+  -4.486975556876192,
+  -4.463673601041039,
+  -4.477807705409286,
+  -4.586700792657633,
+  -4.485842217304358,
+  -4.438688555355266,
+  -4.481359176141099,
+  -4.582400520840271,
+  -4.2308598069413454,
+  -4.258837332982478,
+  -4.50038820306419,
+  -4.466826881106355,
+  -4.410876557121412,
+  -4.567109509251954,
+  -4.378826095242583,
+  -4.5284800505837115,
+  -4.513915629002638,
+  -4.555196584023497,
+  -4.497944104454209,
+  -4.563152908875771,
+  -4.451922582830527,
+  -4.577505379706125,
+  -4.53063306479944,
+  -4.4439176803463125,
+  -4.48791159113136,
+  -4.479682404662975,
+  -4.509008470914789,
+  -4.503208799688255,
+  -4.393629033223006,
+  -4.573436299620125,
+  -4.384070251014766,
+  -4.425109694631491,
+  -4.489874459964131,
+  -4.60189932606749,
+  -4.464845660111604,
+  -4.477843565403779,
+  -4.520334023695497,
+  -4.380817557782423,
+  -4.445340904675197,
+  -4.5418687133041855,
+  -4.400841941704255,
+  -4.433528079612463,
+  -4.4066646368849405,
+  -4.631599381423199,
+  -4.45788787798631,
+  -4.538760558395567,
+  -4.512713501620223,
+  -4.483908389678316,
+  -4.468247825740459,
+  -4.528840268303413,
+  -4.454720752324746,
+  -4.3625556893489925,
+  -4.4348325646423215,
+  -4.519215960244377,
+  -4.498310181497312,
+  -4.541486898510411,
+  -4.538059679856576,
+  -4.467107991917458,
+  -4.4997438672144225,
+  -4.468895367561138,
+  -4.543973990015391,
+  -4.480114774922,
+  -4.49948922628615,
+  -4.6270444640394555,
+  -4.433888027985187,
+  -4.500881378487383,
+  -4.286360397550413,
+  -4.525307741860039,
+  -4.493268163498786,
+  -4.432868883058889,
+  -4.458606951756058,
+  -4.4632951496798325,
+  -4.467741042276571,
+  -4.5039463829937505,
+  -4.4590422087851405,
+  -4.559201980587154,
+  -4.500950574985009,
+  -4.507731784490276,
+  -4.418912463616751,
+  -4.586225395657053,
+  -4.473280325716905,
+  -4.360406258466691,
+  -4.4041186163154915,
+  -4.57871404122493,
+  -4.482567643923141,
+  -4.515127194558013,
+  -4.546806929102629,
+  -4.521284138483697,
+  -4.51664787001286,
+  -4.4939998736458895,
+  -4.629533241498555,
+  -4.501826342038744,
+  -4.547803751405568,
+  -4.453753637308807,
+  -4.494053544631988,
+  -4.524516342223054,
+  -4.4543767922817095,
+  -4.4496169590577175,
+  -4.400248605264151,
+  -4.512890636794352,
+  -4.621532217259078,
+  -4.609997618871417,
+  -4.364827588687771,
+  -4.482655422272346,
+  -4.457768127302911,
+  -4.441167432995757,
+  -4.518449098804554,
+  -4.4538111557111195,
+  -4.664938794182998,
+  -4.542749350959536,
+  -4.574610469663967,
+  -4.367090111615771,
+  -4.558486558729002,
+  -4.512383678622798,
+  -4.411597486671557,
+  -4.576671284645703,
+  -4.398840391426158,
+  -4.515106670585549,
+  -4.471345893265298,
+  -4.469152361615487,
+  -4.631635917206309,
+  -4.4859410995520435,
+  -4.522187832445165,
+  -4.360921731446755,
+  -4.525055985694078,
+  -4.41148721436868,
+  -4.513681123003604,
+  -4.592471037626457,
+  -4.479953374482649,
+  -4.451813939859928,
+  -4.313044889802929,
+  -4.465842016134216,
+  -4.51525697426895,
+  -4.516010974078949,
+  -4.497073591462886,
+  -4.596563346205412,
+  -4.536458568516982,
+  -4.443191207927167,
+  -4.3558153266764785
+ ],
+ "champion_before": null,
+ "bounds": {
+  "item": "F13.4a",
+  "search_reads_known_letters": false,
+  "classes": [
+   "std/std/vig",
+   "std/std/beau",
+   "std/kry/vig",
+   "std/kry/beau",
+   "kry/std/vig",
+   "kry/std/beau",
+   "kry/kry/vig",
+   "kry/kry/beau"
+  ],
+  "key_lengths": [
+   1,
+   36
+  ],
+  "restarts": 30,
+  "climb": "coordinate ascent on the shifts, quadgram table; best per (class, length) rescored by MIX8m (0233)",
+  "texts": 817,
+  "k4_copies": 200,
+  "k4_statistic": 2.147,
+  "k4_best_length": 20,
+  "k4_p": 0.6169,
+  "copies_statistic_max": 5.383,
+  "copies_statistic_median": 2.31,
+  "k4_rank_per_length_copies_at_or_above": {
+   "1": 136,
+   "2": 194,
+   "3": 179,
+   "4": 51,
+   "5": 8,
+   "6": 77,
+   "7": 11,
+   "8": 156,
+   "9": 168,
+   "10": 107,
+   "11": 61,
+   "12": 122,
+   "13": 38,
+   "14": 43,
+   "15": 73,
+   "16": 126,
+   "17": 168,
+   "18": 137,
+   "19": 138,
+   "20": 7,
+   "21": 53,
+   "22": 27,
+   "23": 135,
+   "24": 175,
+   "25": 38,
+   "26": 62,
+   "27": 76,
+   "28": 17,
+   "29": 18,
+   "30": 16,
+   "31": 83,
+   "32": 8,
+   "33": 94,
+   "34": 140,
+   "35": 14,
+   "36": 176
+  },
+  "plant_power": {
+   "5": [
+    8,
+    8
+   ],
+   "10": [
+    8,
+    8
+   ],
+   "15": [
+    8,
+    8
+   ],
+   "20": [
+    7,
+    8
+   ],
+   "26": [
+    6,
+    8
+   ],
+   "30": [
+    5,
+    8
+   ],
+   "36": [
+    2,
+    8
+   ]
+  },
+  "plant_exact_recovery": {
+   "5": [
+    8,
+    8
+   ],
+   "10": [
+    8,
+    8
+   ],
+   "15": [
+    7,
+    8
+   ],
+   "20": [
+    0,
+    8
+   ],
+   "26": [
+    0,
+    8
+   ],
+   "30": [
+    0,
+    8
+   ],
+   "36": [
+    0,
+    8
+   ]
+  },
+  "decided_lengths_at_6_of_8": [
+   5,
+   10,
+   15,
+   20,
+   26
+  ],
+  "k4_best_readings": {
+   "20": "MIMESONTENSNVSATOMCLEELERMUSTHGOESALAYNURTEDISLIOUTPMZUBORHENEVIONPORINTHASYTHEPHAUSEWANDAMESAMEF",
+   "7": "ESSHHBLERMQMOCEWLPROMTWONINFIUNIPADFLYUPWUDBUIDHMCDJIMMORACKJRAWFPNOCWLYPIFKOJIBENTORRSQUMBUPSSYF",
+   "10": "WWASSMUCBNCGRTMJFTWHEABSTONDMTOFITMRTHLYRLITCIWNRGBEAMSBFOROVAROWNSHOSHAFLUEAYUDBESEGEHICAIPULAYO"
+  },
+  "exhaustive": false,
+  "compute_seconds": 91
+ },
+ "notes": "K4 statistic 2.15 at length 20, p 0.617 against 200 shuffles; plant power L5 8/8, L10 8/8, L15 8/8, L20 7/8, L26 6/8, L30 5/8, L36 2/8; decided lengths [5, 10, 15, 20, 26]",
+ "judge": null,
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "DAIHNDKDVUNRACDRTWAALWRHMOOFHPVICCDELEOCSOCCXIJJLBESIRNYTBLTPWAPGFMEEQJWFILVYIJKESZYTVINUNBNXIZBH",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     8
+    ]
+   },
+   "key_bits": 12.654196310386876,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "W"
+     ],
+     [
+      23,
+      "A",
+      "R"
+     ],
+     [
+      24,
+      "S",
+      "H"
+     ],
+     [
+      25,
+      "T",
+      "M"
+     ],
+     [
+      26,
+      "N",
+      "O"
+     ],
+     [
+      28,
+      "R",
+      "F"
+     ],
+     [
+      29,
+      "T",
+      "H"
+     ],
+     [
+      30,
+      "H",
+      "P"
+     ],
+     [
+      31,
+      "E",
+      "V"
+     ],
+     [
+      32,
+      "A",
+      "I"
+     ],
+     [
+      33,
+      "S",
+      "C"
+     ],
+     [
+      34,
+      "T",
+      "C"
+     ],
+     [
+      64,
+      "B",
+      "P"
+     ],
+     [
+      65,
+      "E",
+      "G"
+     ],
+     [
+      66,
+      "R",
+      "F"
+     ],
+     [
+      67,
+      "L",
+      "M"
+     ],
+     [
+      68,
+      "I",
+      "E"
+     ],
+     [
+      69,
+      "N",
+      "E"
+     ],
+     [
+      70,
+      "C",
+      "Q"
+     ],
+     [
+      71,
+      "L",
+      "J"
+     ],
+     [
+      72,
+      "O",
+      "W"
+     ],
+     [
+      73,
+      "C",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "I"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 233.6797995382692
+  },
+  {
+   "plaintext": "RYWMAIDINBAFHNRFUSHYCSXMBLPJTHNEONRQCQPNVLONLEFKCRSDWFATURCCKSHHEJBQSGFSYECAJEFXSDITUAWUQUGULEIRT",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     13,
+     25
+    ]
+   },
+   "key_bits": 17.354196310386875,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     2,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "S"
+     ],
+     [
+      23,
+      "A",
+      "X"
+     ],
+     [
+      24,
+      "S",
+      "M"
+     ],
+     [
+      25,
+      "T",
+      "B"
+     ],
+     [
+      26,
+      "N",
+      "L"
+     ],
+     [
+      27,
+      "O",
+      "P"
+     ],
+     [
+      28,
+      "R",
+      "J"
+     ],
+     [
+      31,
+      "E",
+      "N"
+     ],
+     [
+      32,
+      "A",
+      "E"
+     ],
+     [
+      33,
+      "S",
+      "O"
+     ],
+     [
+      34,
+      "T",
+      "N"
+     ],
+     [
+      64,
+      "B",
+      "H"
+     ],
+     [
+      66,
+      "R",
+      "J"
+     ],
+     [
+      67,
+      "L",
+      "B"
+     ],
+     [
+      68,
+      "I",
+      "Q"
+     ],
+     [
+      69,
+      "N",
+      "S"
+     ],
+     [
+      70,
+      "C",
+      "G"
+     ],
+     [
+      71,
+      "L",
+      "F"
+     ],
+     [
+      72,
+      "O",
+      "S"
+     ],
+     [
+      73,
+      "C",
+      "Y"
+     ],
+     [
+      74,
+      "K",
+      "E"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 213.49524079824647
+  },
+  {
+   "plaintext": "EHSHADQRYTAAXODBURXHMYXGMPFFTCPWHIRINSFIVFIOKAFUNGISWALJTWCTDMWDEEMSICFRFWMPJSVDISIZONSLQJWAKAIVH",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     3,
+     13,
+     4
+    ]
+   },
+   "key_bits": 22.054196310386878,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "Y"
+     ],
+     [
+      23,
+      "A",
+      "X"
+     ],
+     [
+      24,
+      "S",
+      "G"
+     ],
+     [
+      25,
+      "T",
+      "M"
+     ],
+     [
+      26,
+      "N",
+      "P"
+     ],
+     [
+      27,
+      "O",
+      "F"
+     ],
+     [
+      28,
+      "R",
+      "F"
+     ],
+     [
+      30,
+      "H",
+      "C"
+     ],
+     [
+      31,
+      "E",
+      "P"
+     ],
+     [
+      32,
+      "A",
+      "W"
+     ],
+     [
+      33,
+      "S",
+      "H"
+     ],
+     [
+      34,
+      "T",
+      "I"
+     ],
+     [
+      64,
+      "B",
+      "D"
+     ],
+     [
+      66,
+      "R",
+      "E"
+     ],
+     [
+      67,
+      "L",
+      "M"
+     ],
+     [
+      68,
+      "I",
+      "S"
+     ],
+     [
+      69,
+      "N",
+      "I"
+     ],
+     [
+      71,
+      "L",
+      "F"
+     ],
+     [
+      72,
+      "O",
+      "R"
+     ],
+     [
+      73,
+      "C",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "W"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 213.55488011692168
+  },
+  {
+   "plaintext": "EINAOYSDNCCGXXIGLEYWPEMATKGCBPWHAXIOPWGSJKESUSTZPJDIIOCULJAJFEYERRBOSTTNDSAMVSTRSARULDNTMVPTUSRXB",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "form": "beau",
+    "shifts": [
+     25,
+     16,
+     3,
+     24
+    ]
+   },
+   "key_bits": 26.754196310386874,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     2,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      23,
+      "A",
+      "M"
+     ],
+     [
+      24,
+      "S",
+      "A"
+     ],
+     [
+      26,
+      "N",
+      "K"
+     ],
+     [
+      27,
+      "O",
+      "G"
+     ],
+     [
+      28,
+      "R",
+      "C"
+     ],
+     [
+      29,
+      "T",
+      "B"
+     ],
+     [
+      30,
+      "H",
+      "P"
+     ],
+     [
+      31,
+      "E",
+      "W"
+     ],
+     [
+      32,
+      "A",
+      "H"
+     ],
+     [
+      33,
+      "S",
+      "A"
+     ],
+     [
+      34,
+      "T",
+      "X"
+     ],
+     [
+      64,
+      "B",
+      "E"
+     ],
+     [
+      65,
+      "E",
+      "R"
+     ],
+     [
+      67,
+      "L",
+      "B"
+     ],
+     [
+      68,
+      "I",
+      "O"
+     ],
+     [
+      69,
+      "N",
+      "S"
+     ],
+     [
+      70,
+      "C",
+      "T"
+     ],
+     [
+      71,
+      "L",
+      "T"
+     ],
+     [
+      72,
+      "O",
+      "N"
+     ],
+     [
+      73,
+      "C",
+      "D"
+     ],
+     [
+      74,
+      "K",
+      "S"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 213.43632152656141
+  },
+  {
+   "plaintext": "MESSAMAWHNSOJTUJLNCHUITSBOTXSTENATURZBRYHTATKICHXGRMSMABLIXOLIJOENYBUSXIXLCEGSADRMKEOENCIAYXMLIYU",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     2,
+     23,
+     18,
+     25,
+     20
+    ]
+   },
+   "key_bits": 25.5,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 4,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     2,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "I"
+     ],
+     [
+      23,
+      "A",
+      "T"
+     ],
+     [
+      25,
+      "T",
+      "B"
+     ],
+     [
+      26,
+      "N",
+      "O"
+     ],
+     [
+      27,
+      "O",
+      "T"
+     ],
+     [
+      28,
+      "R",
+      "X"
+     ],
+     [
+      29,
+      "T",
+      "S"
+     ],
+     [
+      30,
+      "H",
+      "T"
+     ],
+     [
+      32,
+      "A",
+      "N"
+     ],
+     [
+      33,
+      "S",
+      "A"
+     ],
+     [
+      64,
+      "B",
+      "O"
+     ],
+     [
+      66,
+      "R",
+      "N"
+     ],
+     [
+      67,
+      "L",
+      "Y"
+     ],
+     [
+      68,
+      "I",
+      "B"
+     ],
+     [
+      69,
+      "N",
+      "U"
+     ],
+     [
+      70,
+      "C",
+      "S"
+     ],
+     [
+      71,
+      "L",
+      "X"
+     ],
+     [
+      72,
+      "O",
+      "I"
+     ],
+     [
+      73,
+      "C",
+      "X"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 203.2786197552014,
+   "readable_words": [
+    [
+     0,
+     4,
+     "MESS"
+    ],
+    [
+     5,
+     8,
+     "MAW"
+    ],
+    [
+     10,
+     12,
+     "SO"
+    ],
+    [
+     21,
+     24,
+     "ITS"
+    ],
+    [
+     24,
+     27,
+     "BOT"
+    ],
+    [
+     29,
+     32,
+     "TEN"
+    ],
+    [
+     32,
+     34,
+     "AT"
+    ],
+    [
+     67,
+     70,
+     "BUS"
+    ],
+    [
+     77,
+     80,
+     "SAD"
+    ]
+   ]
+  },
+  {
+   "plaintext": "GCAREWSSQHECJAFLOTJCTFANTURPLEURGSUVOORSSFHAMKILOBEJJCPEVAGARGINMUTOEMITERTGKMAZEJZYWHAUTGIVMKZZC",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "vig",
+    "shifts": [
+     18,
+     25,
+     19,
+     0,
+     10,
+     8
+    ]
+   },
+   "key_bits": 36.15419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 2,
+   "crib_words": {
+    "EAST": [
+     2,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "F"
+     ],
+     [
+      24,
+      "S",
+      "N"
+     ],
+     [
+      26,
+      "N",
+      "U"
+     ],
+     [
+      27,
+      "O",
+      "R"
+     ],
+     [
+      28,
+      "R",
+      "P"
+     ],
+     [
+      29,
+      "T",
+      "L"
+     ],
+     [
+      30,
+      "H",
+      "E"
+     ],
+     [
+      31,
+      "E",
+      "U"
+     ],
+     [
+      32,
+      "A",
+      "R"
+     ],
+     [
+      33,
+      "S",
+      "G"
+     ],
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "N"
+     ],
+     [
+      65,
+      "E",
+      "M"
+     ],
+     [
+      66,
+      "R",
+      "U"
+     ],
+     [
+      67,
+      "L",
+      "T"
+     ],
+     [
+      68,
+      "I",
+      "O"
+     ],
+     [
+      69,
+      "N",
+      "E"
+     ],
+     [
+      70,
+      "C",
+      "M"
+     ],
+     [
+      71,
+      "L",
+      "I"
+     ],
+     [
+      72,
+      "O",
+      "T"
+     ],
+     [
+      73,
+      "C",
+      "E"
+     ],
+     [
+      74,
+      "K",
+      "R"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 223.23948687701412
+  },
+  {
+   "plaintext": "ESSHHBLERMQMOCEWLPROMTWONINFIUNIPADFLYUPWUDBUIDHMCDJIMMORACKJRAWFPNOCWLYPIFKOJIBENTORRSQUMBUPSSYF",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     16,
+     14,
+     6,
+     15,
+     9,
+     13,
+     15
+    ]
+   },
+   "key_bits": 40.854196310386875,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "T"
+     ],
+     [
+      23,
+      "A",
+      "W"
+     ],
+     [
+      24,
+      "S",
+      "O"
+     ],
+     [
+      25,
+      "T",
+      "N"
+     ],
+     [
+      26,
+      "N",
+      "I"
+     ],
+     [
+      27,
+      "O",
+      "N"
+     ],
+     [
+      28,
+      "R",
+      "F"
+     ],
+     [
+      29,
+      "T",
+      "I"
+     ],
+     [
+      30,
+      "H",
+      "U"
+     ],
+     [
+      31,
+      "E",
+      "N"
+     ],
+     [
+      32,
+      "A",
+      "I"
+     ],
+     [
+      33,
+      "S",
+      "P"
+     ],
+     [
+      34,
+      "T",
+      "A"
+     ],
+     [
+      64,
+      "B",
+      "W"
+     ],
+     [
+      65,
+      "E",
+      "F"
+     ],
+     [
+      66,
+      "R",
+      "P"
+     ],
+     [
+      67,
+      "L",
+      "N"
+     ],
+     [
+      68,
+      "I",
+      "O"
+     ],
+     [
+      69,
+      "N",
+      "C"
+     ],
+     [
+      70,
+      "C",
+      "W"
+     ],
+     [
+      72,
+      "O",
+      "Y"
+     ],
+     [
+      73,
+      "C",
+      "P"
+     ],
+     [
+      74,
+      "K",
+      "I"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.78703549975714
+  },
+  {
+   "plaintext": "ESWOCFHTMYREPGOFOWEVEMAPVEQQITWOFQBREEDUPECTSAINWRADHREYORTCAMRHBNSRLSIACKTARAIMDAFXWNJJNFDISASVA",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "form": "vig",
+    "shifts": [
+     1,
+     16,
+     4,
+     13,
+     19,
+     0,
+     17,
+     12
+    ]
+   },
+   "key_bits": 45.55419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     2,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "M"
+     ],
+     [
+      24,
+      "S",
+      "P"
+     ],
+     [
+      25,
+      "T",
+      "V"
+     ],
+     [
+      26,
+      "N",
+      "E"
+     ],
+     [
+      27,
+      "O",
+      "Q"
+     ],
+     [
+      28,
+      "R",
+      "Q"
+     ],
+     [
+      29,
+      "T",
+      "I"
+     ],
+     [
+      30,
+      "H",
+      "T"
+     ],
+     [
+      31,
+      "E",
+      "W"
+     ],
+     [
+      32,
+      "A",
+      "O"
+     ],
+     [
+      33,
+      "S",
+      "F"
+     ],
+     [
+      34,
+      "T",
+      "Q"
+     ],
+     [
+      64,
+      "B",
+      "H"
+     ],
+     [
+      65,
+      "E",
+      "B"
+     ],
+     [
+      66,
+      "R",
+      "N"
+     ],
+     [
+      67,
+      "L",
+      "S"
+     ],
+     [
+      68,
+      "I",
+      "R"
+     ],
+     [
+      69,
+      "N",
+      "L"
+     ],
+     [
+      70,
+      "C",
+      "S"
+     ],
+     [
+      71,
+      "L",
+      "I"
+     ],
+     [
+      72,
+      "O",
+      "A"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 212.39925066156678
+  },
+  {
+   "plaintext": "SYODYIRYFLRPNWIFSEFYARPLPAPTORSOMMYSAQUENKMCDOWDIENDUKYAMMACHPARVTHXNGJETHASHETHSNZHUKEORTERIWGUL",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     22,
+     3,
+     22,
+     14,
+     22,
+     6,
+     6,
+     16,
+     1
+    ]
+   },
+   "key_bits": 44.300000000000004,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "R"
+     ],
+     [
+      23,
+      "A",
+      "P"
+     ],
+     [
+      24,
+      "S",
+      "L"
+     ],
+     [
+      25,
+      "T",
+      "P"
+     ],
+     [
+      26,
+      "N",
+      "A"
+     ],
+     [
+      27,
+      "O",
+      "P"
+     ],
+     [
+      28,
+      "R",
+      "T"
+     ],
+     [
+      29,
+      "T",
+      "O"
+     ],
+     [
+      30,
+      "H",
+      "R"
+     ],
+     [
+      31,
+      "E",
+      "S"
+     ],
+     [
+      32,
+      "A",
+      "O"
+     ],
+     [
+      33,
+      "S",
+      "M"
+     ],
+     [
+      34,
+      "T",
+      "M"
+     ],
+     [
+      64,
+      "B",
+      "R"
+     ],
+     [
+      65,
+      "E",
+      "V"
+     ],
+     [
+      66,
+      "R",
+      "T"
+     ],
+     [
+      67,
+      "L",
+      "H"
+     ],
+     [
+      68,
+      "I",
+      "X"
+     ],
+     [
+      70,
+      "C",
+      "G"
+     ],
+     [
+      71,
+      "L",
+      "J"
+     ],
+     [
+      72,
+      "O",
+      "E"
+     ],
+     [
+      73,
+      "C",
+      "T"
+     ],
+     [
+      74,
+      "K",
+      "H"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.5749954867994
+  },
+  {
+   "plaintext": "WWASSMUCBNCGRTMJFTWHEABSTONDMTOFITMRTHLYRLITCIWNRGBEAMSBFOROVAROWNSHOSHAFLUEAYUDBESEGEHICAIPULAYO",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     18,
+     5,
+     10,
+     25,
+     2,
+     2,
+     3,
+     12,
+     5,
+     20
+    ]
+   },
+   "key_bits": 49.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     2,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "A"
+     ],
+     [
+      23,
+      "A",
+      "B"
+     ],
+     [
+      26,
+      "N",
+      "O"
+     ],
+     [
+      27,
+      "O",
+      "N"
+     ],
+     [
+      28,
+      "R",
+      "D"
+     ],
+     [
+      29,
+      "T",
+      "M"
+     ],
+     [
+      30,
+      "H",
+      "T"
+     ],
+     [
+      31,
+      "E",
+      "O"
+     ],
+     [
+      32,
+      "A",
+      "F"
+     ],
+     [
+      33,
+      "S",
+      "I"
+     ],
+     [
+      64,
+      "B",
+      "O"
+     ],
+     [
+      65,
+      "E",
+      "W"
+     ],
+     [
+      66,
+      "R",
+      "N"
+     ],
+     [
+      67,
+      "L",
+      "S"
+     ],
+     [
+      68,
+      "I",
+      "H"
+     ],
+     [
+      69,
+      "N",
+      "O"
+     ],
+     [
+      70,
+      "C",
+      "S"
+     ],
+     [
+      71,
+      "L",
+      "H"
+     ],
+     [
+      72,
+      "O",
+      "A"
+     ],
+     [
+      73,
+      "C",
+      "F"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 212.6137864286841
+  },
+  {
+   "plaintext": "TASEWVADORTHAMAALMATICHHWLXXXPOFISDOINGSSHZINITGUTUSBOTOTLICHMAIDLCEONSOVIESEYJUBBROTOFTKNLKGAPBA",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     24,
+     8,
+     18,
+     5,
+     17,
+     0,
+     24,
+     8,
+     1,
+     5,
+     14
+    ]
+   },
+   "key_bits": 59.65419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "C"
+     ],
+     [
+      23,
+      "A",
+      "H"
+     ],
+     [
+      24,
+      "S",
+      "H"
+     ],
+     [
+      25,
+      "T",
+      "W"
+     ],
+     [
+      26,
+      "N",
+      "L"
+     ],
+     [
+      27,
+      "O",
+      "X"
+     ],
+     [
+      28,
+      "R",
+      "X"
+     ],
+     [
+      29,
+      "T",
+      "X"
+     ],
+     [
+      30,
+      "H",
+      "P"
+     ],
+     [
+      31,
+      "E",
+      "O"
+     ],
+     [
+      32,
+      "A",
+      "F"
+     ],
+     [
+      33,
+      "S",
+      "I"
+     ],
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "D"
+     ],
+     [
+      66,
+      "R",
+      "L"
+     ],
+     [
+      67,
+      "L",
+      "C"
+     ],
+     [
+      68,
+      "I",
+      "E"
+     ],
+     [
+      69,
+      "N",
+      "O"
+     ],
+     [
+      70,
+      "C",
+      "N"
+     ],
+     [
+      71,
+      "L",
+      "S"
+     ],
+     [
+      73,
+      "C",
+      "V"
+     ],
+     [
+      74,
+      "K",
+      "I"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.04739740138788
+  },
+  {
+   "plaintext": "WCAZDAPFCCONKAFITHGINARPHURRJUMAYRISIORTOVEGAUCRIBEHINKLEYALEGILLOREKGCHURTEZYTOKENFAHANPWFYAUNCN",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "vig",
+    "shifts": [
+     8,
+     25,
+     19,
+     2,
+     11,
+     24,
+     21,
+     19,
+     4,
+     5,
+     16,
+     24
+    ]
+   },
+   "key_bits": 64.35419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 2,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     2,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "A"
+     ],
+     [
+      23,
+      "A",
+      "R"
+     ],
+     [
+      24,
+      "S",
+      "P"
+     ],
+     [
+      25,
+      "T",
+      "H"
+     ],
+     [
+      26,
+      "N",
+      "U"
+     ],
+     [
+      27,
+      "O",
+      "R"
+     ],
+     [
+      29,
+      "T",
+      "J"
+     ],
+     [
+      30,
+      "H",
+      "U"
+     ],
+     [
+      31,
+      "E",
+      "M"
+     ],
+     [
+      33,
+      "S",
+      "Y"
+     ],
+     [
+      34,
+      "T",
+      "R"
+     ],
+     [
+      64,
+      "B",
+      "L"
+     ],
+     [
+      65,
+      "E",
+      "L"
+     ],
+     [
+      66,
+      "R",
+      "O"
+     ],
+     [
+      67,
+      "L",
+      "R"
+     ],
+     [
+      68,
+      "I",
+      "E"
+     ],
+     [
+      69,
+      "N",
+      "K"
+     ],
+     [
+      70,
+      "C",
+      "G"
+     ],
+     [
+      71,
+      "L",
+      "C"
+     ],
+     [
+      72,
+      "O",
+      "H"
+     ],
+     [
+      73,
+      "C",
+      "U"
+     ],
+     [
+      74,
+      "K",
+      "R"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 222.23187352506338
+  },
+  {
+   "plaintext": "ILIXILLIENIGRETHATTGAFIMPFGPBYPUVEPAGOFECCWLRTTMTCONNAOFROMUTUBETHWSVWSCHATPUMTUSSAYSWASYTYCHIGCH",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "form": "beau",
+    "shifts": [
+     3,
+     18,
+     25,
+     15,
+     9,
+     5,
+     14,
+     3,
+     17,
+     0,
+     9,
+     24,
+     2
+    ]
+   },
+   "key_bits": 69.05419631038687,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 0,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "F"
+     ],
+     [
+      23,
+      "A",
+      "I"
+     ],
+     [
+      24,
+      "S",
+      "M"
+     ],
+     [
+      25,
+      "T",
+      "P"
+     ],
+     [
+      26,
+      "N",
+      "F"
+     ],
+     [
+      27,
+      "O",
+      "G"
+     ],
+     [
+      28,
+      "R",
+      "P"
+     ],
+     [
+      29,
+      "T",
+      "B"
+     ],
+     [
+      30,
+      "H",
+      "Y"
+     ],
+     [
+      31,
+      "E",
+      "P"
+     ],
+     [
+      32,
+      "A",
+      "U"
+     ],
+     [
+      33,
+      "S",
+      "V"
+     ],
+     [
+      34,
+      "T",
+      "E"
+     ],
+     [
+      64,
+      "B",
+      "E"
+     ],
+     [
+      65,
+      "E",
+      "T"
+     ],
+     [
+      66,
+      "R",
+      "H"
+     ],
+     [
+      67,
+      "L",
+      "W"
+     ],
+     [
+      68,
+      "I",
+      "S"
+     ],
+     [
+      69,
+      "N",
+      "V"
+     ],
+     [
+      70,
+      "C",
+      "W"
+     ],
+     [
+      71,
+      "L",
+      "S"
+     ],
+     [
+      72,
+      "O",
+      "C"
+     ],
+     [
+      73,
+      "C",
+      "H"
+     ],
+     [
+      74,
+      "K",
+      "A"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 242.21886707770528
+  },
+  {
+   "plaintext": "EIMMICHOLLSTRIESPAYSIXGTORIMITONTBASARAINRDLANEIIPKIRTHERJUTLYTLYYOLOPLEINGRYDOAWOKERDMXVNOINOMHB",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     16,
+     23,
+     18,
+     19,
+     10,
+     14,
+     12,
+     10,
+     4,
+     5,
+     1,
+     21,
+     9,
+     21
+    ]
+   },
+   "key_bits": 73.75419631038687,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "X"
+     ],
+     [
+      23,
+      "A",
+      "G"
+     ],
+     [
+      24,
+      "S",
+      "T"
+     ],
+     [
+      25,
+      "T",
+      "O"
+     ],
+     [
+      26,
+      "N",
+      "R"
+     ],
+     [
+      27,
+      "O",
+      "I"
+     ],
+     [
+      28,
+      "R",
+      "M"
+     ],
+     [
+      29,
+      "T",
+      "I"
+     ],
+     [
+      30,
+      "H",
+      "T"
+     ],
+     [
+      31,
+      "E",
+      "O"
+     ],
+     [
+      32,
+      "A",
+      "N"
+     ],
+     [
+      33,
+      "S",
+      "T"
+     ],
+     [
+      34,
+      "T",
+      "B"
+     ],
+     [
+      64,
+      "B",
+      "L"
+     ],
+     [
+      65,
+      "E",
+      "Y"
+     ],
+     [
+      66,
+      "R",
+      "Y"
+     ],
+     [
+      67,
+      "L",
+      "O"
+     ],
+     [
+      68,
+      "I",
+      "L"
+     ],
+     [
+      69,
+      "N",
+      "O"
+     ],
+     [
+      70,
+      "C",
+      "P"
+     ],
+     [
+      72,
+      "O",
+      "E"
+     ],
+     [
+      73,
+      "C",
+      "I"
+     ],
+     [
+      74,
+      "K",
+      "N"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.1848355472063
+  },
+  {
+   "plaintext": "NNLPUPPOMHSTSREAFOVBEINTSARESWEREXETTSEVERBROXYMACTEDHALSADROICEHOOSRDYCEANELLOMTERUGHUNNULSSTARK",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     24,
+     1,
+     17,
+     4,
+     16,
+     8,
+     1,
+     10,
+     5,
+     2,
+     1,
+     21,
+     14,
+     7,
+     16
+    ]
+   },
+   "key_bits": 78.45419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "I"
+     ],
+     [
+      23,
+      "A",
+      "N"
+     ],
+     [
+      24,
+      "S",
+      "T"
+     ],
+     [
+      25,
+      "T",
+      "S"
+     ],
+     [
+      26,
+      "N",
+      "A"
+     ],
+     [
+      27,
+      "O",
+      "R"
+     ],
+     [
+      28,
+      "R",
+      "E"
+     ],
+     [
+      29,
+      "T",
+      "S"
+     ],
+     [
+      30,
+      "H",
+      "W"
+     ],
+     [
+      32,
+      "A",
+      "R"
+     ],
+     [
+      33,
+      "S",
+      "E"
+     ],
+     [
+      34,
+      "T",
+      "X"
+     ],
+     [
+      64,
+      "B",
+      "E"
+     ],
+     [
+      65,
+      "E",
+      "H"
+     ],
+     [
+      66,
+      "R",
+      "O"
+     ],
+     [
+      67,
+      "L",
+      "O"
+     ],
+     [
+      68,
+      "I",
+      "S"
+     ],
+     [
+      69,
+      "N",
+      "R"
+     ],
+     [
+      70,
+      "C",
+      "D"
+     ],
+     [
+      71,
+      "L",
+      "Y"
+     ],
+     [
+      72,
+      "O",
+      "C"
+     ],
+     [
+      73,
+      "C",
+      "E"
+     ],
+     [
+      74,
+      "K",
+      "A"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.2591205874606
+  },
+  {
+   "plaintext": "RARTLYCRYUNIQLAPEECENCYWERMRGTIFYOSANROYORTTWERENSONVHSSTHUGOWDOXYWAKIDBMAUEVERDKIDGEDELPYONWEENW",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "vig",
+    "shifts": [
+     4,
+     1,
+     25,
+     23,
+     4,
+     3,
+     15,
+     4,
+     11,
+     19,
+     2,
+     2,
+     14,
+     15,
+     24,
+     14
+    ]
+   },
+   "key_bits": 83.15419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "C"
+     ],
+     [
+      23,
+      "A",
+      "Y"
+     ],
+     [
+      24,
+      "S",
+      "W"
+     ],
+     [
+      25,
+      "T",
+      "E"
+     ],
+     [
+      26,
+      "N",
+      "R"
+     ],
+     [
+      27,
+      "O",
+      "M"
+     ],
+     [
+      29,
+      "T",
+      "G"
+     ],
+     [
+      30,
+      "H",
+      "T"
+     ],
+     [
+      31,
+      "E",
+      "I"
+     ],
+     [
+      32,
+      "A",
+      "F"
+     ],
+     [
+      33,
+      "S",
+      "Y"
+     ],
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "O"
+     ],
+     [
+      65,
+      "E",
+      "X"
+     ],
+     [
+      66,
+      "R",
+      "Y"
+     ],
+     [
+      67,
+      "L",
+      "W"
+     ],
+     [
+      68,
+      "I",
+      "A"
+     ],
+     [
+      69,
+      "N",
+      "K"
+     ],
+     [
+      70,
+      "C",
+      "I"
+     ],
+     [
+      71,
+      "L",
+      "D"
+     ],
+     [
+      72,
+      "O",
+      "B"
+     ],
+     [
+      73,
+      "C",
+      "M"
+     ],
+     [
+      74,
+      "K",
+      "A"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.08867225219086
+  },
+  {
+   "plaintext": "MIDMROOWWIJBONSEIDIURCLIDGREHABOLSMAPONSAYITTAMUATTHREPAIREYOURATTOTRTSAMKNOTLONGEGWIERNCRALMADPH",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     2,
+     19,
+     7,
+     5,
+     3,
+     0,
+     9,
+     18,
+     10,
+     25,
+     11,
+     10,
+     13,
+     5,
+     22,
+     7,
+     0
+    ]
+   },
+   "key_bits": 81.9,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "C"
+     ],
+     [
+      23,
+      "A",
+      "L"
+     ],
+     [
+      24,
+      "S",
+      "I"
+     ],
+     [
+      25,
+      "T",
+      "D"
+     ],
+     [
+      26,
+      "N",
+      "G"
+     ],
+     [
+      27,
+      "O",
+      "R"
+     ],
+     [
+      28,
+      "R",
+      "E"
+     ],
+     [
+      29,
+      "T",
+      "H"
+     ],
+     [
+      30,
+      "H",
+      "A"
+     ],
+     [
+      31,
+      "E",
+      "B"
+     ],
+     [
+      32,
+      "A",
+      "O"
+     ],
+     [
+      33,
+      "S",
+      "L"
+     ],
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "A"
+     ],
+     [
+      65,
+      "E",
+      "T"
+     ],
+     [
+      66,
+      "R",
+      "T"
+     ],
+     [
+      67,
+      "L",
+      "O"
+     ],
+     [
+      68,
+      "I",
+      "T"
+     ],
+     [
+      69,
+      "N",
+      "R"
+     ],
+     [
+      70,
+      "C",
+      "T"
+     ],
+     [
+      71,
+      "L",
+      "S"
+     ],
+     [
+      72,
+      "O",
+      "A"
+     ],
+     [
+      73,
+      "C",
+      "M"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.16266975831937
+  },
+  {
+   "plaintext": "ASTHASDAYNUNVESOUNTSAPEDFMUTILLLOJORIDDCFLYSTALEADASDHLTIBOVIKAHHABGATENCHAYMECHELAKITERVDONNINTA",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     12,
+     14,
+     4,
+     15,
+     2,
+     11,
+     8,
+     12,
+     15,
+     7,
+     16,
+     10,
+     4,
+     17,
+     11,
+     22,
+     10,
+     5
+    ]
+   },
+   "key_bits": 92.55419631038689,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "P"
+     ],
+     [
+      23,
+      "A",
+      "E"
+     ],
+     [
+      24,
+      "S",
+      "D"
+     ],
+     [
+      25,
+      "T",
+      "F"
+     ],
+     [
+      26,
+      "N",
+      "M"
+     ],
+     [
+      27,
+      "O",
+      "U"
+     ],
+     [
+      28,
+      "R",
+      "T"
+     ],
+     [
+      29,
+      "T",
+      "I"
+     ],
+     [
+      30,
+      "H",
+      "L"
+     ],
+     [
+      31,
+      "E",
+      "L"
+     ],
+     [
+      32,
+      "A",
+      "L"
+     ],
+     [
+      33,
+      "S",
+      "O"
+     ],
+     [
+      34,
+      "T",
+      "J"
+     ],
+     [
+      64,
+      "B",
+      "H"
+     ],
+     [
+      65,
+      "E",
+      "H"
+     ],
+     [
+      66,
+      "R",
+      "A"
+     ],
+     [
+      67,
+      "L",
+      "B"
+     ],
+     [
+      68,
+      "I",
+      "G"
+     ],
+     [
+      69,
+      "N",
+      "A"
+     ],
+     [
+      70,
+      "C",
+      "T"
+     ],
+     [
+      71,
+      "L",
+      "E"
+     ],
+     [
+      72,
+      "O",
+      "N"
+     ],
+     [
+      74,
+      "K",
+      "H"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.24943675191423
+  },
+  {
+   "plaintext": "TIMMUTSFONSNCESAUTHATTBRUYRUSTIREAUDIDNGBESONALTBCOURARYUSTADFARCURISNTGNSINCALITILLAMEWIKBELMISB",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "vig",
+    "shifts": [
+     1,
+     19,
+     8,
+     9,
+     0,
+     1,
+     18,
+     19,
+     8,
+     21,
+     15,
+     24,
+     25,
+     21,
+     25,
+     10,
+     20,
+     8,
+     20
+    ]
+   },
+   "key_bits": 97.25419631038687,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "T"
+     ],
+     [
+      23,
+      "A",
+      "B"
+     ],
+     [
+      24,
+      "S",
+      "R"
+     ],
+     [
+      25,
+      "T",
+      "U"
+     ],
+     [
+      26,
+      "N",
+      "Y"
+     ],
+     [
+      27,
+      "O",
+      "R"
+     ],
+     [
+      28,
+      "R",
+      "U"
+     ],
+     [
+      29,
+      "T",
+      "S"
+     ],
+     [
+      30,
+      "H",
+      "T"
+     ],
+     [
+      31,
+      "E",
+      "I"
+     ],
+     [
+      32,
+      "A",
+      "R"
+     ],
+     [
+      33,
+      "S",
+      "E"
+     ],
+     [
+      34,
+      "T",
+      "A"
+     ],
+     [
+      64,
+      "B",
+      "R"
+     ],
+     [
+      65,
+      "E",
+      "C"
+     ],
+     [
+      66,
+      "R",
+      "U"
+     ],
+     [
+      67,
+      "L",
+      "R"
+     ],
+     [
+      69,
+      "N",
+      "S"
+     ],
+     [
+      70,
+      "C",
+      "N"
+     ],
+     [
+      71,
+      "L",
+      "T"
+     ],
+     [
+      72,
+      "O",
+      "G"
+     ],
+     [
+      73,
+      "C",
+      "N"
+     ],
+     [
+      74,
+      "K",
+      "S"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.14045539114673
+  },
+  {
+   "plaintext": "MIMESONTENSNVSATOMCLEELERMUSTHGOESALAYNURTEDISLIOUTPMZUBORHENEVIONPORINTHASYTHEPHAUSEWANDAMESAMEF",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "beau",
+    "shifts": [
+     0,
+     9,
+     22,
+     21,
+     12,
+     2,
+     10,
+     7,
+     10,
+     20,
+     12,
+     24,
+     22,
+     10,
+     14,
+     4,
+     22,
+     17,
+     3,
+     12
+    ]
+   },
+   "key_bits": 96.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     2,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      23,
+      "A",
+      "L"
+     ],
+     [
+      24,
+      "S",
+      "E"
+     ],
+     [
+      25,
+      "T",
+      "R"
+     ],
+     [
+      26,
+      "N",
+      "M"
+     ],
+     [
+      27,
+      "O",
+      "U"
+     ],
+     [
+      28,
+      "R",
+      "S"
+     ],
+     [
+      31,
+      "E",
+      "G"
+     ],
+     [
+      32,
+      "A",
+      "O"
+     ],
+     [
+      33,
+      "S",
+      "E"
+     ],
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "O"
+     ],
+     [
+      66,
+      "R",
+      "N"
+     ],
+     [
+      67,
+      "L",
+      "P"
+     ],
+     [
+      68,
+      "I",
+      "O"
+     ],
+     [
+      69,
+      "N",
+      "R"
+     ],
+     [
+      70,
+      "C",
+      "I"
+     ],
+     [
+      71,
+      "L",
+      "N"
+     ],
+     [
+      72,
+      "O",
+      "T"
+     ],
+     [
+      73,
+      "C",
+      "H"
+     ],
+     [
+      74,
+      "K",
+      "A"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 212.1168669873355,
+   "readable_words": [
+    [
+     14,
+     18,
+     "ATOM"
+    ],
+    [
+     20,
+     23,
+     "EEL"
+    ],
+    [
+     25,
+     29,
+     "MUST"
+    ],
+    [
+     30,
+     34,
+     "GOES"
+    ],
+    [
+     35,
+     38,
+     "LAY"
+    ],
+    [
+     48,
+     51,
+     "OUT"
+    ],
+    [
+     58,
+     61,
+     "HEN"
+    ],
+    [
+     63,
+     66,
+     "ION"
+    ],
+    [
+     76,
+     79,
+     "THE"
+    ],
+    [
+     82,
+     85,
+     "USE"
+    ],
+    [
+     85,
+     89,
+     "WAND"
+    ],
+    [
+     92,
+     96,
+     "SAME"
+    ]
+   ]
+  },
+  {
+   "plaintext": "BWENTHNORTSIFROMAWLOTUNDSUSISLUNTHSPGLONGWAYTOPNOMARNISNEWSTAKINCBSKITUSENCANTEREDNGRRETAREYTHESM",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     6,
+     4,
+     4,
+     14,
+     14,
+     12,
+     11,
+     19,
+     4,
+     7,
+     13,
+     25,
+     13,
+     23,
+     19,
+     3,
+     15,
+     8,
+     19,
+     22,
+     16
+    ]
+   },
+   "key_bits": 106.65419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 0,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "U"
+     ],
+     [
+      23,
+      "A",
+      "N"
+     ],
+     [
+      24,
+      "S",
+      "D"
+     ],
+     [
+      25,
+      "T",
+      "S"
+     ],
+     [
+      26,
+      "N",
+      "U"
+     ],
+     [
+      27,
+      "O",
+      "S"
+     ],
+     [
+      28,
+      "R",
+      "I"
+     ],
+     [
+      29,
+      "T",
+      "S"
+     ],
+     [
+      30,
+      "H",
+      "L"
+     ],
+     [
+      31,
+      "E",
+      "U"
+     ],
+     [
+      32,
+      "A",
+      "N"
+     ],
+     [
+      33,
+      "S",
+      "T"
+     ],
+     [
+      34,
+      "T",
+      "H"
+     ],
+     [
+      64,
+      "B",
+      "N"
+     ],
+     [
+      65,
+      "E",
+      "C"
+     ],
+     [
+      66,
+      "R",
+      "B"
+     ],
+     [
+      67,
+      "L",
+      "S"
+     ],
+     [
+      68,
+      "I",
+      "K"
+     ],
+     [
+      69,
+      "N",
+      "I"
+     ],
+     [
+      70,
+      "C",
+      "T"
+     ],
+     [
+      71,
+      "L",
+      "U"
+     ],
+     [
+      72,
+      "O",
+      "S"
+     ],
+     [
+      73,
+      "C",
+      "E"
+     ],
+     [
+      74,
+      "K",
+      "N"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 242.12274140663277
+  },
+  {
+   "plaintext": "AWTHEARGEDIELFCFILEJANDANIISAHEALTTERTATPRESLHISCUOMASINDTRIDLETOCKOUNSJCLUESFNATHUNTENTHTHEREVRK",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "form": "beau",
+    "shifts": [
+     21,
+     24,
+     14,
+     5,
+     5,
+     21,
+     24,
+     1,
+     17,
+     17,
+     9,
+     22,
+     18,
+     4,
+     23,
+     23,
+     23,
+     22,
+     12,
+     17,
+     3,
+     24
+    ]
+   },
+   "key_bits": 111.35419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 5,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     4,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "N"
+     ],
+     [
+      23,
+      "A",
+      "D"
+     ],
+     [
+      24,
+      "S",
+      "A"
+     ],
+     [
+      25,
+      "T",
+      "N"
+     ],
+     [
+      26,
+      "N",
+      "I"
+     ],
+     [
+      27,
+      "O",
+      "I"
+     ],
+     [
+      28,
+      "R",
+      "S"
+     ],
+     [
+      29,
+      "T",
+      "A"
+     ],
+     [
+      33,
+      "S",
+      "L"
+     ],
+     [
+      64,
+      "B",
+      "T"
+     ],
+     [
+      65,
+      "E",
+      "O"
+     ],
+     [
+      66,
+      "R",
+      "C"
+     ],
+     [
+      67,
+      "L",
+      "K"
+     ],
+     [
+      68,
+      "I",
+      "O"
+     ],
+     [
+      69,
+      "N",
+      "U"
+     ],
+     [
+      70,
+      "C",
+      "N"
+     ],
+     [
+      71,
+      "L",
+      "S"
+     ],
+     [
+      72,
+      "O",
+      "J"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 192.2405531398806,
+   "readable_words": [
+    [
+     3,
+     7,
+     "HEAR"
+    ],
+    [
+     9,
+     12,
+     "DIE"
+    ],
+    [
+     15,
+     19,
+     "FILE"
+    ],
+    [
+     20,
+     23,
+     "AND"
+    ],
+    [
+     29,
+     33,
+     "HEAL"
+    ],
+    [
+     45,
+     48,
+     "HIS"
+    ],
+    [
+     53,
+     56,
+     "SIN"
+    ],
+    [
+     59,
+     63,
+     "IDLE"
+    ],
+    [
+     81,
+     85,
+     "HUNT"
+    ],
+    [
+     89,
+     94,
+     "THERE"
+    ]
+   ]
+  },
+  {
+   "plaintext": "PGIDFELMONAPEASALAYENASSAUCAHADCTOSPEEFRELYISOHERNESTINIUMSWORDIZZMUHREDBYNKACEDENLUTIFULLYINVANC",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     11,
+     14,
+     21,
+     7,
+     8,
+     3,
+     6,
+     22,
+     1,
+     14,
+     13,
+     8,
+     16,
+     11,
+     8,
+     4,
+     17,
+     24,
+     25,
+     16,
+     3,
+     24,
+     5
+    ]
+   },
+   "key_bits": 116.05419631038689,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "A"
+     ],
+     [
+      23,
+      "A",
+      "S"
+     ],
+     [
+      25,
+      "T",
+      "A"
+     ],
+     [
+      26,
+      "N",
+      "U"
+     ],
+     [
+      27,
+      "O",
+      "C"
+     ],
+     [
+      28,
+      "R",
+      "A"
+     ],
+     [
+      29,
+      "T",
+      "H"
+     ],
+     [
+      30,
+      "H",
+      "A"
+     ],
+     [
+      31,
+      "E",
+      "D"
+     ],
+     [
+      32,
+      "A",
+      "C"
+     ],
+     [
+      33,
+      "S",
+      "T"
+     ],
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "I"
+     ],
+     [
+      65,
+      "E",
+      "Z"
+     ],
+     [
+      66,
+      "R",
+      "Z"
+     ],
+     [
+      67,
+      "L",
+      "M"
+     ],
+     [
+      68,
+      "I",
+      "U"
+     ],
+     [
+      69,
+      "N",
+      "H"
+     ],
+     [
+      70,
+      "C",
+      "R"
+     ],
+     [
+      71,
+      "L",
+      "E"
+     ],
+     [
+      72,
+      "O",
+      "D"
+     ],
+     [
+      73,
+      "C",
+      "B"
+     ],
+     [
+      74,
+      "K",
+      "Y"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.2871460596358
+  },
+  {
+   "plaintext": "KAINTOITEACNARDPHISESOVETOOLNATYLISALTOAGAUGEANGSBEYOCLOCHAPPLANUREILINTMILBETHANYOUTKILIZTREADYO",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     15,
+     8,
+     8,
+     14,
+     14,
+     19,
+     6,
+     24,
+     17,
+     14,
+     23,
+     4,
+     8,
+     23,
+     8,
+     6,
+     22,
+     20,
+     0,
+     12,
+     15,
+     0,
+     12,
+     5
+    ]
+   },
+   "key_bits": 120.75419631038689,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 4,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     2,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "O"
+     ],
+     [
+      23,
+      "A",
+      "V"
+     ],
+     [
+      24,
+      "S",
+      "E"
+     ],
+     [
+      26,
+      "N",
+      "O"
+     ],
+     [
+      28,
+      "R",
+      "L"
+     ],
+     [
+      29,
+      "T",
+      "N"
+     ],
+     [
+      30,
+      "H",
+      "A"
+     ],
+     [
+      31,
+      "E",
+      "T"
+     ],
+     [
+      32,
+      "A",
+      "Y"
+     ],
+     [
+      33,
+      "S",
+      "L"
+     ],
+     [
+      34,
+      "T",
+      "I"
+     ],
+     [
+      64,
+      "B",
+      "N"
+     ],
+     [
+      65,
+      "E",
+      "U"
+     ],
+     [
+      67,
+      "L",
+      "E"
+     ],
+     [
+      69,
+      "N",
+      "L"
+     ],
+     [
+      70,
+      "C",
+      "I"
+     ],
+     [
+      71,
+      "L",
+      "N"
+     ],
+     [
+      72,
+      "O",
+      "T"
+     ],
+     [
+      73,
+      "C",
+      "M"
+     ],
+     [
+      74,
+      "K",
+      "I"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 202.3509777870896,
+   "readable_words": [
+    [
+     2,
+     6,
+     "INTO"
+    ],
+    [
+     7,
+     10,
+     "TEA"
+    ],
+    [
+     16,
+     19,
+     "HIS"
+    ],
+    [
+     22,
+     26,
+     "VETO"
+    ],
+    [
+     34,
+     38,
+     "SALT"
+    ],
+    [
+     40,
+     45,
+     "GAUGE"
+    ],
+    [
+     56,
+     60,
+     "CHAP"
+    ],
+    [
+     60,
+     64,
+     "PLAN"
+    ],
+    [
+     68,
+     72,
+     "LINT"
+    ],
+    [
+     75,
+     78,
+     "BET"
+    ],
+    [
+     79,
+     82,
+     "ANY"
+    ],
+    [
+     82,
+     85,
+     "OUT"
+    ],
+    [
+     91,
+     96,
+     "READY"
+    ]
+   ]
+  },
+  {
+   "plaintext": "TSINANCCHACIESDOMEMBERSTDIELNYVEDARLOAGENRYKEHEAPOSAIDASTERBADEFAATWILGRESEBUILDMUGEBURRATESDECOG",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "form": "vig",
+    "shifts": [
+     12,
+     16,
+     18,
+     14,
+     21,
+     18,
+     22,
+     3,
+     6,
+     14,
+     19,
+     9,
+     4,
+     14,
+     2,
+     3,
+     3,
+     8,
+     22,
+     7,
+     19,
+     21,
+     25,
+     8,
+     19
+    ]
+   },
+   "key_bits": 125.45419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 0,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "R"
+     ],
+     [
+      23,
+      "A",
+      "S"
+     ],
+     [
+      24,
+      "S",
+      "T"
+     ],
+     [
+      25,
+      "T",
+      "D"
+     ],
+     [
+      26,
+      "N",
+      "I"
+     ],
+     [
+      27,
+      "O",
+      "E"
+     ],
+     [
+      28,
+      "R",
+      "L"
+     ],
+     [
+      29,
+      "T",
+      "N"
+     ],
+     [
+      30,
+      "H",
+      "Y"
+     ],
+     [
+      31,
+      "E",
+      "V"
+     ],
+     [
+      32,
+      "A",
+      "E"
+     ],
+     [
+      33,
+      "S",
+      "D"
+     ],
+     [
+      34,
+      "T",
+      "A"
+     ],
+     [
+      64,
+      "B",
+      "F"
+     ],
+     [
+      65,
+      "E",
+      "A"
+     ],
+     [
+      66,
+      "R",
+      "A"
+     ],
+     [
+      67,
+      "L",
+      "T"
+     ],
+     [
+      68,
+      "I",
+      "W"
+     ],
+     [
+      69,
+      "N",
+      "I"
+     ],
+     [
+      70,
+      "C",
+      "L"
+     ],
+     [
+      71,
+      "L",
+      "G"
+     ],
+     [
+      72,
+      "O",
+      "R"
+     ],
+     [
+      73,
+      "C",
+      "E"
+     ],
+     [
+      74,
+      "K",
+      "S"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 242.2745531500526
+  },
+  {
+   "plaintext": "SEDIFSTZAGRSVERTINFEANDCATUSKEROODISTAKEMYSAINDHOLYMOONUTESTHEYUSBYBTUDITSORINDAMANHERETEBUGHSCIV",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     22,
+     23,
+     7,
+     9,
+     15,
+     22,
+     4,
+     15,
+     6,
+     1,
+     3,
+     19,
+     6,
+     14,
+     23,
+     18,
+     0,
+     18,
+     22,
+     23,
+     22,
+     18,
+     8,
+     15,
+     21,
+     23
+    ]
+   },
+   "key_bits": 124.2,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 0,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "N"
+     ],
+     [
+      23,
+      "A",
+      "D"
+     ],
+     [
+      24,
+      "S",
+      "C"
+     ],
+     [
+      25,
+      "T",
+      "A"
+     ],
+     [
+      26,
+      "N",
+      "T"
+     ],
+     [
+      27,
+      "O",
+      "U"
+     ],
+     [
+      28,
+      "R",
+      "S"
+     ],
+     [
+      29,
+      "T",
+      "K"
+     ],
+     [
+      30,
+      "H",
+      "E"
+     ],
+     [
+      31,
+      "E",
+      "R"
+     ],
+     [
+      32,
+      "A",
+      "O"
+     ],
+     [
+      33,
+      "S",
+      "O"
+     ],
+     [
+      34,
+      "T",
+      "D"
+     ],
+     [
+      64,
+      "B",
+      "U"
+     ],
+     [
+      65,
+      "E",
+      "S"
+     ],
+     [
+      66,
+      "R",
+      "B"
+     ],
+     [
+      67,
+      "L",
+      "Y"
+     ],
+     [
+      68,
+      "I",
+      "B"
+     ],
+     [
+      69,
+      "N",
+      "T"
+     ],
+     [
+      70,
+      "C",
+      "U"
+     ],
+     [
+      71,
+      "L",
+      "D"
+     ],
+     [
+      72,
+      "O",
+      "I"
+     ],
+     [
+      73,
+      "C",
+      "T"
+     ],
+     [
+      74,
+      "K",
+      "S"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 242.3263466836934
+  },
+  {
+   "plaintext": "NUAREYITVTRILEFOKHARDESEWHOMEXCOUNTIESDUNDHAIRTANDCINTHSCICESCANNERDANTHMIDDALSALSTHASCLAHARPCUTI",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "beau",
+    "shifts": [
+     1,
+     21,
+     10,
+     8,
+     24,
+     12,
+     5,
+     7,
+     1,
+     0,
+     11,
+     19,
+     12,
+     22,
+     19,
+     25,
+     18,
+     12,
+     1,
+     18,
+     25,
+     9,
+     3,
+     21,
+     17,
+     23,
+     4
+    ]
+   },
+   "key_bits": 128.9,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 2,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      23,
+      "A",
+      "S"
+     ],
+     [
+      24,
+      "S",
+      "E"
+     ],
+     [
+      25,
+      "T",
+      "W"
+     ],
+     [
+      26,
+      "N",
+      "H"
+     ],
+     [
+      28,
+      "R",
+      "M"
+     ],
+     [
+      29,
+      "T",
+      "E"
+     ],
+     [
+      30,
+      "H",
+      "X"
+     ],
+     [
+      31,
+      "E",
+      "C"
+     ],
+     [
+      32,
+      "A",
+      "O"
+     ],
+     [
+      33,
+      "S",
+      "U"
+     ],
+     [
+      34,
+      "T",
+      "N"
+     ],
+     [
+      64,
+      "B",
+      "N"
+     ],
+     [
+      65,
+      "E",
+      "N"
+     ],
+     [
+      66,
+      "R",
+      "E"
+     ],
+     [
+      67,
+      "L",
+      "R"
+     ],
+     [
+      68,
+      "I",
+      "D"
+     ],
+     [
+      69,
+      "N",
+      "A"
+     ],
+     [
+      70,
+      "C",
+      "N"
+     ],
+     [
+      71,
+      "L",
+      "T"
+     ],
+     [
+      72,
+      "O",
+      "H"
+     ],
+     [
+      73,
+      "C",
+      "M"
+     ],
+     [
+      74,
+      "K",
+      "I"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 222.5341544484368
+  },
+  {
+   "plaintext": "ASETHEYSLADVAPPEDFAZASPRIVANDMAWFINEANSPIRAMSLOWARENTLEAROWUAYSOCIETZWHOLLYTHELAGINAREEARLOFIDMEW",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     7,
+     21,
+     25,
+     13,
+     6,
+     3,
+     21,
+     8,
+     15,
+     0,
+     10,
+     15,
+     20,
+     15,
+     11,
+     0,
+     24,
+     19,
+     20,
+     2,
+     15,
+     25,
+     8,
+     16,
+     6,
+     20,
+     9,
+     22
+    ]
+   },
+   "key_bits": 139.55419631038686,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "S"
+     ],
+     [
+      23,
+      "A",
+      "P"
+     ],
+     [
+      24,
+      "S",
+      "R"
+     ],
+     [
+      25,
+      "T",
+      "I"
+     ],
+     [
+      26,
+      "N",
+      "V"
+     ],
+     [
+      27,
+      "O",
+      "A"
+     ],
+     [
+      28,
+      "R",
+      "N"
+     ],
+     [
+      29,
+      "T",
+      "D"
+     ],
+     [
+      30,
+      "H",
+      "M"
+     ],
+     [
+      31,
+      "E",
+      "A"
+     ],
+     [
+      32,
+      "A",
+      "W"
+     ],
+     [
+      33,
+      "S",
+      "F"
+     ],
+     [
+      34,
+      "T",
+      "I"
+     ],
+     [
+      64,
+      "B",
+      "O"
+     ],
+     [
+      65,
+      "E",
+      "C"
+     ],
+     [
+      66,
+      "R",
+      "I"
+     ],
+     [
+      67,
+      "L",
+      "E"
+     ],
+     [
+      68,
+      "I",
+      "T"
+     ],
+     [
+      69,
+      "N",
+      "Z"
+     ],
+     [
+      70,
+      "C",
+      "W"
+     ],
+     [
+      71,
+      "L",
+      "H"
+     ],
+     [
+      73,
+      "C",
+      "L"
+     ],
+     [
+      74,
+      "K",
+      "L"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.57802099376948
+  },
+  {
+   "plaintext": "FMEETORENCOCEENTERCROMAVENGOVEREFRONMALMATERMGLAMSAYOURTHENTHSANSFCONDCROSSSEAREINLAYFOLSONTEESHM",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     9,
+     15,
+     6,
+     13,
+     1,
+     0,
+     6,
+     10,
+     19,
+     5,
+     6,
+     9,
+     23,
+     14,
+     1,
+     18,
+     4,
+     14,
+     25,
+     10,
+     8,
+     19,
+     11,
+     22,
+     17,
+     3,
+     10,
+     1,
+     22
+    ]
+   },
+   "key_bits": 138.3,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "M"
+     ],
+     [
+      24,
+      "S",
+      "V"
+     ],
+     [
+      25,
+      "T",
+      "E"
+     ],
+     [
+      27,
+      "O",
+      "G"
+     ],
+     [
+      28,
+      "R",
+      "O"
+     ],
+     [
+      29,
+      "T",
+      "V"
+     ],
+     [
+      30,
+      "H",
+      "E"
+     ],
+     [
+      31,
+      "E",
+      "R"
+     ],
+     [
+      32,
+      "A",
+      "E"
+     ],
+     [
+      33,
+      "S",
+      "F"
+     ],
+     [
+      34,
+      "T",
+      "R"
+     ],
+     [
+      64,
+      "B",
+      "N"
+     ],
+     [
+      65,
+      "E",
+      "S"
+     ],
+     [
+      66,
+      "R",
+      "F"
+     ],
+     [
+      67,
+      "L",
+      "C"
+     ],
+     [
+      68,
+      "I",
+      "O"
+     ],
+     [
+      70,
+      "C",
+      "D"
+     ],
+     [
+      71,
+      "L",
+      "C"
+     ],
+     [
+      72,
+      "O",
+      "R"
+     ],
+     [
+      73,
+      "C",
+      "O"
+     ],
+     [
+      74,
+      "K",
+      "S"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 212.24162376595427,
+   "readable_words": [
+    [
+     1,
+     5,
+     "MEET"
+    ],
+    [
+     5,
+     8,
+     "ORE"
+    ],
+    [
+     13,
+     18,
+     "ENTER"
+    ],
+    [
+     27,
+     31,
+     "OVER"
+    ],
+    [
+     39,
+     43,
+     "MATE"
+    ],
+    [
+     51,
+     55,
+     "YOUR"
+    ],
+    [
+     55,
+     59,
+     "THEN"
+    ],
+    [
+     61,
+     65,
+     "SANS"
+    ],
+    [
+     66,
+     69,
+     "CON"
+    ],
+    [
+     70,
+     75,
+     "CROSS"
+    ],
+    [
+     75,
+     79,
+     "SEAR"
+    ],
+    [
+     80,
+     85,
+     "INLAY"
+    ],
+    [
+     88,
+     91,
+     "SON"
+    ]
+   ]
+  },
+  {
+   "plaintext": "WONDICASBESSORGIONNAMENMARGEWEIGGOODBARNEPARASUSTBEADYBEMARICREMBECALAYEDAUNDOYLEARCHBANDCUMBERAT",
+   "key": {
+    "pa": "kry",
+    "ca": "kry",
+    "form": "beau",
+    "shifts": [
+     2,
+     13,
+     19,
+     11,
+     10,
+     14,
+     5,
+     11,
+     21,
+     25,
+     1,
+     23,
+     13,
+     7,
+     18,
+     6,
+     20,
+     5,
+     1,
+     15,
+     15,
+     23,
+     10,
+     19,
+     3,
+     21,
+     7,
+     14,
+     24,
+     4
+    ]
+   },
+   "key_bits": 148.95419631038686,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      23,
+      "A",
+      "N"
+     ],
+     [
+      24,
+      "S",
+      "M"
+     ],
+     [
+      25,
+      "T",
+      "A"
+     ],
+     [
+      26,
+      "N",
+      "R"
+     ],
+     [
+      27,
+      "O",
+      "G"
+     ],
+     [
+      28,
+      "R",
+      "E"
+     ],
+     [
+      29,
+      "T",
+      "W"
+     ],
+     [
+      30,
+      "H",
+      "E"
+     ],
+     [
+      31,
+      "E",
+      "I"
+     ],
+     [
+      32,
+      "A",
+      "G"
+     ],
+     [
+      33,
+      "S",
+      "G"
+     ],
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "M"
+     ],
+     [
+      65,
+      "E",
+      "B"
+     ],
+     [
+      66,
+      "R",
+      "E"
+     ],
+     [
+      67,
+      "L",
+      "C"
+     ],
+     [
+      68,
+      "I",
+      "A"
+     ],
+     [
+      69,
+      "N",
+      "L"
+     ],
+     [
+      70,
+      "C",
+      "A"
+     ],
+     [
+      71,
+      "L",
+      "Y"
+     ],
+     [
+      72,
+      "O",
+      "E"
+     ],
+     [
+      73,
+      "C",
+      "D"
+     ],
+     [
+      74,
+      "K",
+      "A"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.550576929506
+  },
+  {
+   "plaintext": "EREDTOSPHYFERGEFANTANGLESACTATPAIMASWORTABLISATRESSALLHASMARTORDSBUTONAWADMUTERFLITEITHETYJANASUD",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     10,
+     10,
+     6,
+     14,
+     1,
+     0,
+     5,
+     25,
+     25,
+     9,
+     15,
+     7,
+     10,
+     12,
+     10,
+     6,
+     8,
+     18,
+     8,
+     1,
+     9,
+     25,
+     0,
+     13,
+     3,
+     16,
+     14,
+     22,
+     17,
+     20,
+     17
+    ]
+   },
+   "key_bits": 147.70000000000002,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "G"
+     ],
+     [
+      23,
+      "A",
+      "L"
+     ],
+     [
+      24,
+      "S",
+      "E"
+     ],
+     [
+      25,
+      "T",
+      "S"
+     ],
+     [
+      26,
+      "N",
+      "A"
+     ],
+     [
+      27,
+      "O",
+      "C"
+     ],
+     [
+      28,
+      "R",
+      "T"
+     ],
+     [
+      29,
+      "T",
+      "A"
+     ],
+     [
+      30,
+      "H",
+      "T"
+     ],
+     [
+      31,
+      "E",
+      "P"
+     ],
+     [
+      33,
+      "S",
+      "I"
+     ],
+     [
+      34,
+      "T",
+      "M"
+     ],
+     [
+      64,
+      "B",
+      "D"
+     ],
+     [
+      65,
+      "E",
+      "S"
+     ],
+     [
+      66,
+      "R",
+      "B"
+     ],
+     [
+      67,
+      "L",
+      "U"
+     ],
+     [
+      68,
+      "I",
+      "T"
+     ],
+     [
+      69,
+      "N",
+      "O"
+     ],
+     [
+      70,
+      "C",
+      "N"
+     ],
+     [
+      71,
+      "L",
+      "A"
+     ],
+     [
+      72,
+      "O",
+      "W"
+     ],
+     [
+      73,
+      "C",
+      "A"
+     ],
+     [
+      74,
+      "K",
+      "D"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.41223231774373
+  },
+  {
+   "plaintext": "USHAPONWHICHTATRISIGNALHOULDSARALIDORKKNESEARINGREWOORBYMEELDISTEMPOTALSOFANYINITYHEASMENLAONDOLM",
+   "key": {
+    "pa": "kry",
+    "ca": "std",
+    "form": "beau",
+    "shifts": [
+     9,
+     7,
+     24,
+     24,
+     23,
+     19,
+     16,
+     11,
+     20,
+     22,
+     3,
+     25,
+     5,
+     25,
+     18,
+     12,
+     23,
+     11,
+     16,
+     14,
+     15,
+     12,
+     2,
+     5,
+     0,
+     11,
+     7,
+     25,
+     23,
+     20,
+     7,
+     17
+    ]
+   },
+   "key_bits": 158.35419631038687,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     1,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "A"
+     ],
+     [
+      23,
+      "A",
+      "L"
+     ],
+     [
+      24,
+      "S",
+      "H"
+     ],
+     [
+      25,
+      "T",
+      "O"
+     ],
+     [
+      26,
+      "N",
+      "U"
+     ],
+     [
+      27,
+      "O",
+      "L"
+     ],
+     [
+      28,
+      "R",
+      "D"
+     ],
+     [
+      29,
+      "T",
+      "S"
+     ],
+     [
+      30,
+      "H",
+      "A"
+     ],
+     [
+      31,
+      "E",
+      "R"
+     ],
+     [
+      33,
+      "S",
+      "L"
+     ],
+     [
+      34,
+      "T",
+      "I"
+     ],
+     [
+      64,
+      "B",
+      "T"
+     ],
+     [
+      66,
+      "R",
+      "M"
+     ],
+     [
+      67,
+      "L",
+      "P"
+     ],
+     [
+      68,
+      "I",
+      "O"
+     ],
+     [
+      69,
+      "N",
+      "T"
+     ],
+     [
+      70,
+      "C",
+      "A"
+     ],
+     [
+      72,
+      "O",
+      "S"
+     ],
+     [
+      73,
+      "C",
+      "O"
+     ],
+     [
+      74,
+      "K",
+      "F"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 212.79590762430655
+  },
+  {
+   "plaintext": "SENITEDASNAHAPNLARONGTORSISPASTOFOREDUCIFICCORICAIDGEREWANCARMEMAILMENONLECORICKINGTHISESONEEUPFI",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "beau",
+    "shifts": [
+     6,
+     5,
+     23,
+     25,
+     13,
+     18,
+     0,
+     14,
+     24,
+     20,
+     20,
+     18,
+     1,
+     7,
+     1,
+     22,
+     8,
+     22,
+     15,
+     14,
+     2,
+     24,
+     25,
+     8,
+     13,
+     24,
+     8,
+     4,
+     17,
+     5,
+     25,
+     24,
+     23
+    ]
+   },
+   "key_bits": 157.1,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     1,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "T"
+     ],
+     [
+      23,
+      "A",
+      "O"
+     ],
+     [
+      24,
+      "S",
+      "R"
+     ],
+     [
+      25,
+      "T",
+      "S"
+     ],
+     [
+      26,
+      "N",
+      "I"
+     ],
+     [
+      27,
+      "O",
+      "S"
+     ],
+     [
+      28,
+      "R",
+      "P"
+     ],
+     [
+      29,
+      "T",
+      "A"
+     ],
+     [
+      30,
+      "H",
+      "S"
+     ],
+     [
+      31,
+      "E",
+      "T"
+     ],
+     [
+      32,
+      "A",
+      "O"
+     ],
+     [
+      33,
+      "S",
+      "F"
+     ],
+     [
+      34,
+      "T",
+      "O"
+     ],
+     [
+      64,
+      "B",
+      "M"
+     ],
+     [
+      65,
+      "E",
+      "A"
+     ],
+     [
+      66,
+      "R",
+      "I"
+     ],
+     [
+      68,
+      "I",
+      "M"
+     ],
+     [
+      69,
+      "N",
+      "E"
+     ],
+     [
+      70,
+      "C",
+      "N"
+     ],
+     [
+      71,
+      "L",
+      "O"
+     ],
+     [
+      72,
+      "O",
+      "N"
+     ],
+     [
+      73,
+      "C",
+      "L"
+     ],
+     [
+      74,
+      "K",
+      "E"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.63262730266192
+  },
+  {
+   "plaintext": "FIUPFSPLUSOISHADEDMINCEYENSETTEEOFFERSETHANKERJASTTHERLACEFIRNATTHEDESTANNOTRESPOREWEEEVELUSTTHIT",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "form": "vig",
+    "shifts": [
+     0,
+     0,
+     6,
+     12,
+     16,
+     13,
+     9,
+     20,
+     19,
+     22,
+     7,
+     9,
+     16,
+     25,
+     5,
+     14,
+     11,
+     9,
+     22,
+     0,
+     10,
+     10,
+     13,
+     3,
+     18,
+     7,
+     2,
+     25,
+     8,
+     0,
+     9,
+     22,
+     18,
+     1
+    ]
+   },
+   "key_bits": 167.75419631038687,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     3,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "C"
+     ],
+     [
+      23,
+      "A",
+      "E"
+     ],
+     [
+      24,
+      "S",
+      "Y"
+     ],
+     [
+      25,
+      "T",
+      "E"
+     ],
+     [
+      27,
+      "O",
+      "S"
+     ],
+     [
+      28,
+      "R",
+      "E"
+     ],
+     [
+      30,
+      "H",
+      "T"
+     ],
+     [
+      32,
+      "A",
+      "E"
+     ],
+     [
+      33,
+      "S",
+      "O"
+     ],
+     [
+      34,
+      "T",
+      "F"
+     ],
+     [
+      64,
+      "B",
+      "T"
+     ],
+     [
+      65,
+      "E",
+      "T"
+     ],
+     [
+      66,
+      "R",
+      "H"
+     ],
+     [
+      67,
+      "L",
+      "E"
+     ],
+     [
+      68,
+      "I",
+      "D"
+     ],
+     [
+      69,
+      "N",
+      "E"
+     ],
+     [
+      70,
+      "C",
+      "S"
+     ],
+     [
+      71,
+      "L",
+      "T"
+     ],
+     [
+      72,
+      "O",
+      "A"
+     ],
+     [
+      73,
+      "C",
+      "N"
+     ],
+     [
+      74,
+      "K",
+      "N"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 213.03999356509087
+  },
+  {
+   "plaintext": "INDICALEASOUTHOFCOUSEELYREESEASTHMINIMHAVEIMPEIRLANDTELLHADEBTEALBEINGTRIBESRATINSUSIAEDALITERYOF",
+   "key": {
+    "pa": "std",
+    "ca": "std",
+    "form": "vig",
+    "shifts": [
+     6,
+     14,
+     7,
+     9,
+     18,
+     14,
+     12,
+     10,
+     6,
+     15,
+     6,
+     17,
+     8,
+     11,
+     0,
+     6,
+     6,
+     17,
+     7,
+     9,
+     18,
+     1,
+     0,
+     19,
+     4,
+     12,
+     12,
+     23,
+     13,
+     13,
+     14,
+     17,
+     11,
+     6,
+     6
+    ]
+   },
+   "key_bits": 166.5,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 3,
+   "crib_words": {
+    "EAST": [
+     1,
+     4
+    ],
+    "NORTHEAST": [
+     0,
+     9
+    ],
+    "BERLIN": [
+     2,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      23,
+      "A",
+      "L"
+     ],
+     [
+      24,
+      "S",
+      "Y"
+     ],
+     [
+      25,
+      "T",
+      "R"
+     ],
+     [
+      26,
+      "N",
+      "E"
+     ],
+     [
+      27,
+      "O",
+      "E"
+     ],
+     [
+      28,
+      "R",
+      "S"
+     ],
+     [
+      29,
+      "T",
+      "E"
+     ],
+     [
+      30,
+      "H",
+      "A"
+     ],
+     [
+      31,
+      "E",
+      "S"
+     ],
+     [
+      32,
+      "A",
+      "T"
+     ],
+     [
+      33,
+      "S",
+      "H"
+     ],
+     [
+      34,
+      "T",
+      "M"
+     ],
+     [
+      64,
+      "B",
+      "A"
+     ],
+     [
+      65,
+      "E",
+      "L"
+     ],
+     [
+      66,
+      "R",
+      "B"
+     ],
+     [
+      67,
+      "L",
+      "E"
+     ],
+     [
+      70,
+      "C",
+      "G"
+     ],
+     [
+      71,
+      "L",
+      "T"
+     ],
+     [
+      72,
+      "O",
+      "R"
+     ],
+     [
+      73,
+      "C",
+      "I"
+     ],
+     [
+      74,
+      "K",
+      "B"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 212.71297313201043
+  },
+  {
+   "plaintext": "AILARTSONSELETSOPINGAYINDATOREDATSTUSEFFMIAPLEITTURNANAISTOBASHESOMERENCYAIMGOTHEUSELANSORMTOMATI",
+   "key": {
+    "pa": "std",
+    "ca": "kry",
+    "form": "vig",
+    "shifts": [
+     5,
+     0,
+     15,
+     1,
+     4,
+     12,
+     6,
+     17,
+     0,
+     22,
+     17,
+     6,
+     4,
+     13,
+     13,
+     3,
+     0,
+     4,
+     21,
+     2,
+     23,
+     14,
+     9,
+     14,
+     19,
+     20,
+     1,
+     15,
+     10,
+     15,
+     10,
+     0,
+     13,
+     14,
+     12,
+     10
+    ]
+   },
+   "key_bits": 177.15419631038688,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "cribs",
+   "crib_hits": 1,
+   "crib_words": {
+    "EAST": [
+     0,
+     4
+    ],
+    "NORTHEAST": [
+     1,
+     9
+    ],
+    "BERLIN": [
+     0,
+     6
+    ],
+    "CLOCK": [
+     0,
+     5
+    ]
+   },
+   "gate_details": {
+    "mismatches": [
+     [
+      22,
+      "E",
+      "Y"
+     ],
+     [
+      23,
+      "A",
+      "I"
+     ],
+     [
+      24,
+      "S",
+      "N"
+     ],
+     [
+      25,
+      "T",
+      "D"
+     ],
+     [
+      26,
+      "N",
+      "A"
+     ],
+     [
+      27,
+      "O",
+      "T"
+     ],
+     [
+      28,
+      "R",
+      "O"
+     ],
+     [
+      29,
+      "T",
+      "R"
+     ],
+     [
+      30,
+      "H",
+      "E"
+     ],
+     [
+      31,
+      "E",
+      "D"
+     ],
+     [
+      33,
+      "S",
+      "T"
+     ],
+     [
+      34,
+      "T",
+      "S"
+     ],
+     [
+      64,
+      "B",
+      "E"
+     ],
+     [
+      65,
+      "E",
+      "S"
+     ],
+     [
+      66,
+      "R",
+      "O"
+     ],
+     [
+      67,
+      "L",
+      "M"
+     ],
+     [
+      68,
+      "I",
+      "E"
+     ],
+     [
+      69,
+      "N",
+      "R"
+     ],
+     [
+      70,
+      "C",
+      "E"
+     ],
+     [
+      71,
+      "L",
+      "N"
+     ],
+     [
+      72,
+      "O",
+      "C"
+     ],
+     [
+      73,
+      "C",
+      "Y"
+     ],
+     [
+      74,
+      "K",
+      "A"
+     ]
+    ]
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 232.9266545943414
+  }
+ ]
+}

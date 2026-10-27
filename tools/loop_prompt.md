@@ -27,7 +27,8 @@ session can resume from: drafts in drafts/, the item's status in order-of-work.m
 
 ## House rules
 
-Never edit or commit dashboard.py, STYLE.md or the transcripts/ folder; another session works on them.
+Never edit or commit dashboard.py, STYLE.md or the transcripts/ folder; another session works on them. Never edit
+data/confirmed.json: only Alexis, with Claude, confirms a result for the public site (issue #95).
 Commit your own files with explicit paths (git commit -- path ...), then git pull --rebase --autostash and push.
 Comment on the item's GitHub issue after each experiment.
 

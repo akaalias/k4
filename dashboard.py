@@ -194,6 +194,16 @@ def rescore(r):
         r["best_loss"] = best
 
 
+def confirmed():
+    """Experiments Alexis and Claude have checked together (data/confirmed.json, issue #95). On the public
+    site a kept result or a champion shows only once it is listed here."""
+    p = ROOT / "data" / "confirmed.json"
+    return {c["experiment"] for c in json.loads(p.read_text()).get("confirmed", [])} if p.exists() else set()
+
+
+HELD = "Held back on the public site until it has been checked together (issue #95)."
+
+
 def replay():
     """Current verdicts from tools/replay_rules.py: {tag: {...}} (records keep their own decision)."""
     p = ROOT / "data" / "replay.json"
@@ -225,13 +235,18 @@ def load_results():
             if v and v["verdict_now"] != r.get("decision") and r.get("decision") in ("kept", "reverted"):
                 r["decision"] = v["verdict_now"]
                 r["verdict_note"] = v["reason"]
+            if EXPORT and r.get("decision") == "kept" and r["tag"] not in confirmed():
+                r["decision"], r["verdict_note"] = "awaiting review", HELD
             rows.append(r)
     return rows
 
 
 def champion():
     p = ROOT / "champion.json"
-    return json.loads(p.read_text()) if p.exists() else None
+    ch = json.loads(p.read_text()) if p.exists() else None
+    if ch and EXPORT and ch.get("experiment") not in confirmed():
+        return None          # the public site announces a champion only once confirmed (issue #95)
+    return ch
 
 
 PHASE_ORDER = ("design", "implement", "test", "run", "record", "unattributed")
@@ -1274,7 +1289,7 @@ def outcome_chart(rows):
     kinds = {}
     for r in rows:
         oc = grades.get(r["tag"][:4], {}).get("outcome")
-        if oc == "solved":
+        if oc == "solved" and not (EXPORT and r["tag"] not in confirmed()):
             kinds[r["tag"]] = "solved"
         elif r.get("decision") == "kept":
             kinds[r["tag"]] = "champion"

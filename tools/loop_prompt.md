@@ -5,7 +5,7 @@ Read program.md first and follow it exactly, including its reading list.
 ## What to work on
 
 Work the open items in order-of-work.md, top down, in the order the page lists its tables: the Stage 2 tables
-first, then F13, then any family table with open rows. Items added to order-of-work.md since your last session
+first, then the cheaper decider (#77), F13, F14, then any family table with open rows. Items added to order-of-work.md since your last session
 belong to the same queue; take them in their place. If an item can only be tested weakly, say so, mark it
 blocked with the reason, and move on rather than running a weak test. When you move to a new family, add a
 pivot page (pivots/PN.md).
@@ -50,6 +50,10 @@ Reuse tools/a13_structure.py, tools/a13_check.py and reports/a13-structure-data/
 is a candidate to replicate with enough fresh copies for the corrected p, not a stop on its own. A step-4 result
 that weakens a sampled close is written back to the family's table and grades.tsv; the reopened item goes back
 into the queue in its family's place.
+
+The cheaper decider (issue #77): D1 builds it and measures its cost and power against design 2 on the same plants;
+D2 re-costs the cells blocked by cost and reopens those that now fit. It is harness work, but each measurement is an
+experiment with a record.
 
 F13 (issue #85): ciphertext only, following program.md's "Ciphertext only (F13)". The search never reads the 24
 known letters; F13.1 comes first.

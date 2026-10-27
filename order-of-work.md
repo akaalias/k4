@@ -214,10 +214,23 @@ returns on a copy. These items check whether the sampled verdicts still stand. R
 | **A6.2** The climbs' power on Sanborn-style plaintext: plant the judge bench's xstops, k123 and sub3 classes (not clean Carter) through F1.5's design 2 at one length per family (F1.1 L23, F1.2 L13), and through 0125's running-key search; judged by quadgram and by the judge | open | sampled | - | If power falls below the verdict's stated power, the item it closed goes back to `open` (or `blocked` by cost) with the numbers |
 | **A6.3** A13's masks through the decider: a plaintext masked by each mask A13.1 can see (reversal, X every kth, nth letters), enciphered and run through design 2 at F1.1 L23 | open | sampled | - | Says whether a masked answer would have been found at all. If not, the sampled closes are `closed for unmasked English` only |
 
+## A cheaper decider (issue #77)
+
+Moved ahead of F13 by Alexis, 2026-10-27. The largest untested cells in the families with the strongest creator
+clues are blocked by cost alone: F1.4's free-alphabet residue (about 900 h), F1.7's fitting lags (about 100 h),
+F6.1 (about 443,000 settings), F6.2 at key lengths 3-14, F5.2's base 26 at lag 6. Each setting costs 20-30 minutes
+with F1.5's design-2 decider (0139-0146: a tempering climb, power on planted texts, K4 against 12 copies). A decider
+ten times cheaper at the same measured power reopens them. Work the table top down.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **D1** A decider at least ten times cheaper than design 2 per setting, with power at least design 2's on the same planted texts (F1.1 L23, L26; F1.2 L8, L13, L16) and Sanborn-style plants (A6.2's classes) | open | measured | - | Measure design 2's cost and power first on one cell. Candidates: compiled scoring, sequential copies (stop once a copy beats K4), shorter climbs with restarts, the F13.3 judge if it is cheaper per bit. A design that loses power is not a decider |
+| **D2** Re-cost every cell blocked by cost (F1.4, F1.7, F6.1, F6.2 3-14, F5.2) with D1's decider; a cell whose stated total fits in a long run goes back to `open` in its family's table, with the cost | open | exact (a count) | - | After D1. Alexis's 2026-10-20 rule still holds: long runs state their total cost and use a decider with measured power |
+
 ## F13. Ciphertext only: the known words sealed (issue #85)
 
 Drafted 2026-10-24 at Alexis's question: what would we run if no plaintext were known? Queued after Stage 2,
-step 4 (A6.1-A6.3), decided by Alexis 2026-10-24. Every search so far prunes settings with the 24 known letters, which carry about
+step 4 (A6.1-A6.3), decided by Alexis 2026-10-24; the cheaper decider (#77) moved ahead of it on 2026-10-27. Every search so far prunes settings with the 24 known letters, which carry about
 113 bits (24 x log2 26). Without them a search has only English to go on: about 1.78 bits per letter with the
 quadgram scorer (0136), about 170 bits over 97 letters. Here the known letters are not read by the search at
 all. They stay as gate 2, checked by the harness only after a reading has beaten its copies, so a hit is a

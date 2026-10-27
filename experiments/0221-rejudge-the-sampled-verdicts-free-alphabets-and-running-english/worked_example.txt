@@ -1,0 +1,7 @@
+A6.1 rejudges a climbed reading. 0140's reading of K4 at key length 23 (one alphabet, Beaufort form):
+
+  reading      BOARIMELRBCEHINVEHWATEASTNORTHEASTHATEGNANHIFPLLBADIRODMOROSORYBERLINCLOCKDAVARRUNDISHEDSAVEANLAP
+  judge sees   BOARIMELRBCEHINVEHWAT#############HATEGNANHIFPLLBADIRODMOROSORY###########DAVARRUNDISHEDSAVEANLAP
+
+  quadgram mean -4.9891, rank 9 of 13 among its own copies
+  the judge reads the same 13 readings, one at a time, unlabelled; K4 must score above all 12 copies.

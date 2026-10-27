@@ -52,3 +52,18 @@ measure its own power on plants without known words.
 Without the 24 known letters (113 bits) most cells the loop has decided exactly move into the 'better model' column: the
 known letters, not English, carried those verdicts. F13 can therefore add little where the known letters already
 decided; it matters where they may sit or read differently than assumed (A1, A2, A13), which is F13.5's hedge.
+
+## Update after F13.3 (0233, 2026-10-27)
+
+Measured evidence per letter on held-out 97-letter windows, scored with no history before the window:
+
+| Model | clean Carter | X stops | K1+K2 | bits in 97 (clean) |
+|---|---|---|---|---|
+| quadgram table (this map's ruler) | 1.75 | 1.65 | 1.74 | 170 |
+| Kneser-Ney order 8 on the manuals, no Carter, mixed with the table (MIX8m) | 1.95 | 1.85 | 1.94 | 189 |
+| the same trained with Carter's first 70% (MIX8), in domain | 2.38 | 2.27 | 2.00 | 231 |
+
+Out of domain the map gains about 19 bits: **Chaocipher (177) moves into reach**. F1.1 at key length 26 (202), F1.7 at
+lag 30 (221) and F1.2 at 13 (225) come into reach only if the message reads like Carter's book (231 bits; on K1+K2 the
+in-domain model gives 194). The running key from unknown English (283) and F6.2 (233) stay out. The judge passes a
+4-letter soup ladder rung but not 6-letter soup or word salad, so no number above the n-grams can be credited to it.

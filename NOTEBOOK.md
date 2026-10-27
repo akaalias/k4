@@ -55,6 +55,7 @@ until Alexis decides; from here on no experiment re-submits an older reading.
 | 230 | F13.2 | **Errored** before any text was made: the pool could not pickle the worker function under the harness's module name. |
 | 231 | F13.2 | **A classifier of 17 cipher families from K4's statistics alone.** Held-out accuracy 0.26-0.28 (chance 0.06). Alphabet swaps and transpositions are certain, short periodic keys and Hill fairly sure; the flat families are near chance against random letters. K4 names no family against 2,000 shuffles of itself; one cell (ciphertext autokey, p 0.001) under the corrected line with no power behind it. |
 | 232 | F13.2 | **Replication of that cell:** retrained on fresh texts, 5,000 fresh shuffles: p 0.030, not replicated. F13.2 closed. |
+| 233 | F13.3 | **Bits per letter for stronger English scorers.** Quadgrams 1.75; n-grams to order 8 trained without Carter, mixed with the quadgrams, 1.95 (+0.19, 189 bits in 97); trained with Carter 2.38. The judge beats 4-letter soup, not 6-letter soup or word salad. Chaocipher comes into reach; F1.1 L26 and F1.2 L13 only for Carter-like text. |
 
 What F13.2 says: at 97 letters, statistics can tell K4 is not an alphabet swap, a transposition, a short periodic key or
 (fairly surely) a Hill or trifid, which the cribs already said; among the flat families nothing in the statistics
@@ -63,6 +64,10 @@ ciphertext-autokey cell rode on K4's known width-7 pattern and its uneven letter
 0056 and 0168 already reported. My second run of the day was started with one test failing (the missing crib map of
 the errored 0230); the test only checks figures, but the rule is all tests pass first, and the chain `pytest | tail`
 hid the exit code. From here: run the tests as their own command and read the result before starting.
+
+0233's first dry run gained 0.6 bits per letter with n-grams trained on Carter's first 70%, scored on its last 20%: the book's own
+words. I added a no-Carter arm and moved the rule to it before the real run, and said so in the record. The honest number for a
+message not written like Carter is 1.95, not 2.38; on K1+K2 even the Carter-trained model gives 2.00.
 
 ## 2026-10-25
 

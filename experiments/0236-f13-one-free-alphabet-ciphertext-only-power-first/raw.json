@@ -1,0 +1,427 @@
+{
+ "candidates": [
+  {
+   "plaintext": "UGAWOUMUBVONGSUNFIGGRINWHYYZWLBASSUEREYSDYSSTAPPRKEDANOJFKRFLIGLQZHEEXPIZARBJAPMEDCJFBAOVOKOTACKW",
+   "key": {
+    "alphabet": "FZCPIYGLKEMUDWHSVRJOXTANBQ",
+    "form": "beaufort",
+    "shifts": [
+     4
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "MGAKIMVMSDINGFMNYUGGRUNKWOOLKHSAFFMEREOFCOFFJAPPRTECANIBYTRYHUGHQLWEEXPULARSBAPVECZBYSAIDITIJAZTK",
+   "key": {
+    "alphabet": "NTMSPKQBCWIHEXFLAOGZRYDJVU",
+    "form": "added",
+    "shifts": [
+     15
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "NHPPIUJULBIDDANDUNDHANGPEYMRZFLECANTATMAXYCAVERCASHIPDILUSAJONDFFRETHGRNKEAMBERWHISLUMPOTOWOVESSZ",
+   "key": {
+    "alphabet": "ATSXBZILPOMEFYVQNKGURDJCHW",
+    "form": "beaufort",
+    "shifts": [
+     25,
+     2
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "UGHDOWLWPVONNOUNTINGAIXDEFMHYPPECOURARMOFFCOVEDCALITHNOSTLAYBINPRHERIJDIGEAKZEDBITSSTKHAKAWAVESLY",
+   "key": {
+    "alphabet": "XSTVNUYQGWDJHLCIEBORMPAZFK",
+    "form": "added",
+    "shifts": [
+     13,
+     9
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "LYAWIREKHKINBNROUSBYDIFOYPYMALTOFAKERCYAMYANTHECRRECONNHISGIULPUBBYCEPESMODTHADVECTWFWANDUSITHTKW",
+   "key": {
+    "alphabet": "HDTRXLPUBNMOEWGZKJSYIQFVAC",
+    "form": "beaufort",
+    "shifts": [
+     16,
+     1,
+     14
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "QGULLADDJFLTIHABYDIGHJUSSVEOWLYNPTDOUFETMETHICEYUCORNTGOWERWATMAINSFOWEDONHYOUPPORACKBUGSFELICABL",
+   "key": {
+    "alphabet": "QTRGKEOSJUIAPVFWBNZDHMLYCX",
+    "form": "added",
+    "shifts": [
+     6,
+     13,
+     21
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "BTHODHERNORTOASTRLAGALVOCEMKIMYPKASLABMFLEOFTINWASWISFRARSTJGLANFULLENNSHITBUINCERFARCHUPPBUTIFDI",
+   "key": {
+    "alphabet": "AHNVDMOSQJLZKBXUCGPWTIYFRE",
+    "form": "beaufort",
+    "shifts": [
+     19,
+     7,
+     13,
+     4
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "VYCIMAKCOMARTINRELUZALTIPSIGURJVKINWAHIONSFODEEMANMPJPATENDAYLUSHTYWIVENSEDFREEHIDSTEWCEFOREDESQU",
+   "key": {
+    "alphabet": "UVTFQKDGAYMPICZJROBHLSEXWN",
+    "form": "added",
+    "shifts": [
+     16,
+     9,
+     18,
+     4
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "GHISSGPABRAAFREQUBGWWOUSPLESSTORPREITEOUSEPROFSMEMINITSCUOECHOFFLECELAYOSABOMICKINGHCORLDSUITAIUK",
+   "key": {
+    "alphabet": "JFQWLKSCVZRATEONMHGPIUXYBD",
+    "form": "beaufort",
+    "shifts": [
+     6,
+     15,
+     25,
+     16,
+     1
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "HQATIHAEFUGISALUSZKEPOWTORCOTHENTALAYINFICTAWYEROBARAPIOSMORTOSINCHIMSBOOLKELASTARHERENPRILMFLXLF",
+   "key": {
+    "alphabet": "KLPHRTMDEVJYUCZSAWOQNIXGFB",
+    "form": "added",
+    "shifts": [
+     15,
+     6,
+     10,
+     25,
+     17
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  }
+ ],
+ "bounds": {
+  "item": "F13.4c",
+  "search_reads_known_letters": false,
+  "forms": [
+   "beaufort",
+   "added"
+  ],
+  "search": "0140's parallel tempering, no known letter, 3 runs x 16 replicas x 625 rounds x 1000 moves; MIX8m rescoring",
+  "plant_power": {
+   "2": [
+    8,
+    8
+   ],
+   "3": [
+    8,
+    8
+   ],
+   "4": [
+    7,
+    8
+   ],
+   "5": [
+    7,
+    8
+   ],
+   "6": [
+    4,
+    8
+   ],
+   "7": [
+    5,
+    8
+   ],
+   "8": [
+    3,
+    8
+   ],
+   "10": [
+    3,
+    8
+   ],
+   "13": [
+    2,
+    8
+   ],
+   "16": [
+    4,
+    8
+   ],
+   "19": [
+    3,
+    8
+   ]
+  },
+  "plant_letters_right": {
+   "2": [
+    87,
+    90,
+    79,
+    92,
+    90,
+    93,
+    71,
+    91
+   ],
+   "3": [
+    58,
+    22,
+    69,
+    82,
+    68,
+    70,
+    87,
+    78
+   ],
+   "4": [
+    20,
+    44,
+    40,
+    17,
+    5,
+    72,
+    29,
+    15
+   ],
+   "5": [
+    11,
+    27,
+    0,
+    24,
+    16,
+    33,
+    6,
+    11
+   ],
+   "6": [
+    6,
+    19,
+    10,
+    30,
+    5,
+    11,
+    4,
+    19
+   ],
+   "7": [
+    27,
+    6,
+    10,
+    15,
+    17,
+    15,
+    5,
+    4
+   ],
+   "8": [
+    12,
+    8,
+    25,
+    1,
+    35,
+    7,
+    24,
+    10
+   ],
+   "10": [
+    13,
+    23,
+    11,
+    12,
+    13,
+    28,
+    9,
+    14
+   ],
+   "13": [
+    8,
+    5,
+    9,
+    5,
+    18,
+    14,
+    5,
+    13
+   ],
+   "16": [
+    6,
+    14,
+    15,
+    4,
+    10,
+    13,
+    8,
+    15
+   ],
+   "19": [
+    5,
+    10,
+    27,
+    5,
+    4,
+    4,
+    5,
+    14
+   ]
+  },
+  "decided_up_to_length": 5,
+  "decided_cells": [
+   "1/beaufort",
+   "1/added",
+   "2/beaufort",
+   "2/added",
+   "3/beaufort",
+   "3/added",
+   "4/beaufort",
+   "4/added",
+   "5/beaufort",
+   "5/added"
+  ],
+  "k4_z_by_cell": {
+   "1/beaufort": 1.243,
+   "1/added": 0.125,
+   "2/beaufort": 1.08,
+   "2/added": 1.167,
+   "3/beaufort": -1.039,
+   "3/added": -0.981,
+   "4/beaufort": -0.077,
+   "4/added": 0.763,
+   "5/beaufort": 1.667,
+   "5/added": 0.802
+  },
+  "k4_statistic": 1.6670400541040789,
+  "k4_p": 0.37254901960784315,
+  "k4_copies": 50,
+  "climbs": 2554,
+  "expected_total_time": "2,554 climbs x about 10 s, about 7 core-hours",
+  "exhaustive": false,
+  "compute_seconds": 990
+ },
+ "notes": "plant power L2 8/8, L3 8/8, L4 7/8, L5 7/8, L6 4/8, L7 5/8, L8 3/8, L10 3/8, L13 2/8, L16 4/8, L19 3/8; decided to length 5; K4 statistic 1.67, p 0.373",
+ "controls": [
+  -5.369967349858967,
+  -5.2488366108114,
+  -5.251083563274071,
+  -5.241598260379844,
+  -5.271026274187518,
+  -5.132752800934867,
+  -5.170479138996612,
+  -5.154571115905085,
+  -5.195514971134025,
+  -5.117354919937671,
+  -5.378293327872502,
+  -5.15680988623008,
+  -5.286631334076323,
+  -5.196563509565922,
+  -5.172703989643819,
+  -5.2734689767867104,
+  -5.091781409691901,
+  -5.2151363517594715,
+  -5.326653520857842,
+  -5.248048829998451,
+  -5.207024158492586,
+  -5.277572871166733,
+  -5.187960801654889,
+  -5.322385992311309,
+  -5.260605150369961,
+  -5.097843587946665,
+  -5.234389088569986,
+  -5.114131352674903,
+  -5.174325251549448,
+  -4.973748778337475,
+  -5.124796589862669,
+  -5.237402482562841,
+  -5.166032571452779,
+  -5.29774230927283,
+  -5.321220720198266,
+  -5.480851584465502,
+  -5.24920427187421,
+  -5.376644728586971,
+  -5.223782154324177,
+  -5.274454134616267,
+  -5.228683436728907,
+  -5.495000718628544,
+  -5.205127206715413,
+  -5.134022120550084,
+  -5.434627079020734,
+  -5.058975704991237,
+  -5.278659673435673,
+  -5.224100087237642,
+  -5.2764923281075236,
+  -5.3351016273534855
+ ],
+ "error": null,
+ "worked_example": "A planted message from K3's own words, a shuffled alphabet and a key of 3, Beaufort form, no known letter:\n\n  alphabet, true   CKEMJNZWSYGDRPVFBHOAQULXIT\n  carved           TUMWQZNVALJNNTWAEBRQETUMIURULMRRRMJMPPVLXYNYMTQBEVNXGASHZDCMBGCTBLPGZNVYBQBTUMRQPUNWTUWAGELCULK\n  alphabet, found  TUYVAIMHKQPEWRJLDZXBSCNGFO\n  reading          THEJOTAIRESCAKINGFROMTHECHAOBERCASSEDFJEDLAMETOFLICKERMUTPREHENTLYDETAILHOFTHEROHOWITHINEMERDETRN\n\n  letters right: 81 of 97",
+ "seconds": 1002.5750200748444,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 1005.8,
+  "dollars": 0.439
+ }
+}

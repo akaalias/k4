@@ -1,0 +1,232 @@
+{
+ "candidates": [
+  {
+   "plaintext": "YJAEIVIZKOYDBEACIOSSLEASTNORTHEASTVCACZLEVESITMILANBACMIIXDCHKYBERLINCLOCKATTHIZQLLPDLOFDFOIJGUSM",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "m": "beau",
+     "key": "HYHMKBNENTXBQRMAEROOOXYHANZEF"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0034: period 29 key HYHMKBNENTXBQRMAEROOOXYHANZEF (5 free slots climbed); kry/kry/std/beau",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1 replication of 0034 at 27-29"
+  },
+  {
+   "plaintext": "RYIHBKSCNNJARISEYUCCTEASTNORTHEASTWHCOFHCGDMXKAATSIXNHCIURRORLDBERLINCLOCKTHEJUFYFLIUAILUSCILVXVL",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "std",
+     "ka": "std",
+     "m": "vig",
+     "key": "NZVDMORFNOEEADIAGKSSSUELRXLO"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0034: period 28 key NZVDMORFNOEEADIAGKSSSUELRXLO (4 free slots climbed); kry/std/std/vig",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1 replication of 0034 at 27-29"
+  },
+  {
+   "plaintext": "ZWAWFAFIWGMGOGMDROTMAEASTNORTHEASTISTCDAPPUDSFROKLPDGBCUMLDWLBYBERLINCLOCKADHARIUHVWCQFISIQMNGDJK",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "m": "beau",
+     "key": "EFHYHMKUKBNENTXBQRMAEXYHANZ"
+    }
+   },
+   "key_bits": 0.0,
+   "key_description": "saved reading of 0034: period 27 key EFHYHMKUKBNENTXBQRMAEXYHANZ (3 free slots climbed); kry/kry/std/beau",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1 replication of 0034 at 27-29"
+  }
+ ],
+ "bounds": {
+  "item": "A6.1 (replication of 0222's cell 0034 P27-29)",
+  "k4_value": 8,
+  "copies_in_0222": "10, best 4-7 (0216's regeneration)",
+  "fresh_seed": 4222,
+  "search": "0034's frozen sweep at periods 27, 28, 29: 24 conventions, 20 restarts, quadgram climb of the 3-5 free slots",
+  "fresh_copies": 8,
+  "first_copy_at_or_above": 6,
+  "verdict": "not a flag",
+  "p_bound_if_unresolved": null,
+  "flag_rule": "80 fresh copies all below K4 (p < 0.05/4)",
+  "copies": [
+   {
+    "copy": 0,
+    "best": 3,
+    "by_period": {
+     "27": 3,
+     "28": 3,
+     "29": 3
+    },
+    "none": 0,
+    "best_reading": "OGNJPNCPUSGEDHWJPKFBIEASTNORTHEASTCERSUCWUNHETISNORELPFKEORDSFIBERLINCLOCKERMEGTDGCEFQVYONCLTKOWI"
+   },
+   {
+    "copy": 1,
+    "best": 4,
+    "by_period": {
+     "27": 4,
+     "28": 3,
+     "29": 3
+    },
+    "none": 0,
+    "best_reading": "XMLSSEWRYAUAISHQZGRXEEASTNORTHEASTONCYCOYESDLWNEKJHOITMVCRHYYERBERLINCLOCKOFYSHUDOLLHRWGOPJFOGRIB"
+   },
+   {
+    "copy": 2,
+    "best": 4,
+    "by_period": {
+     "27": 3,
+     "28": 3,
+     "29": 4
+    },
+    "none": 0,
+    "best_reading": "TBYFBDVYMDXYPPCVEIOBOEASTNORTHEASTTGUDEIXCYKWKINGHEITYRCABNUXBNBERLINCLOCKETEDELYGXTKPGBIGOVVAZZH"
+   },
+   {
+    "copy": 3,
+    "best": 4,
+    "by_period": {
+     "27": 2,
+     "28": 3,
+     "29": 4
+    },
+    "none": 0,
+    "best_reading": "MHFIKPXKAWGLTOMVEAHAVEASTNORTHEASTEEYAPENMBUYHAGECUPQCHHHKRASGMBERLINCLOCKFORDTELVXTCOMVQBFOEYEXZ"
+   },
+   {
+    "copy": 4,
+    "best": 4,
+    "by_period": {
+     "27": 4,
+     "28": 3,
+     "29": 4
+    },
+    "none": 0,
+    "best_reading": "ISYLCZGCRVSUSOJNBRNGOEASTNORTHEASTMIXADXRSHZSTBLAGLAGHEGGGGJRAPBERLINCLOCKEEUUMKPBVQFXRQALLHIMQLX"
+   },
+   {
+    "copy": 5,
+    "best": 4,
+    "by_period": {
+     "27": 4,
+     "28": 2,
+     "29": 3
+    },
+    "none": 0,
+    "best_reading": "TLSJNAILLWEZELMAENXWREASTNORTHEASTITIIOIHLXJXRHEJBYPLAYIHIFUZAIBERLINCLOCKSVRMARZKTENLEFUMBOPEMYX"
+   },
+   {
+    "copy": 6,
+    "best": 8,
+    "by_period": {
+     "27": 8,
+     "28": 3,
+     "29": 4
+    },
+    "none": 0,
+    "best_reading": "BMHIHAVEBELDPUSBMPCJLEASTNORTHEASTAKIKNSEVNUPJBTVKIMIWJEEIQFENFBERLINCLOCKREFOKYMZFKNRDHNTYPEISWX"
+   },
+   {
+    "copy": 7,
+    "best": 4,
+    "by_period": {
+     "27": 2,
+     "28": 4,
+     "29": 3
+    },
+    "none": 0,
+    "best_reading": "TYCZIQUASAGFGXHOXZYSTEASTNORTHEASTRONOMYABAEFJEAHUAIIPUETCIPLDWBERLINCLOCKHOFMWJUKTNKAKPRVOAYYZJM"
+   }
+  ],
+  "judge_texts_sent": 24,
+  "judge_calls_estimated": "24 per batch, at most 240",
+  "judge_none": 0,
+  "seconds": 17,
+  "controls": "quadgram scores of the 0034 search's readings at 27-29 on 0216's 10 copies and on the fresh copies (issue #88)",
+  "exhaustive": false
+ },
+ "notes": "not a flag: 8 fresh copies, first at or above K4's 8: copy 6; copies' best scores [3, 4, 4, 4, 4, 4, 8, 4]",
+ "controls": [
+  -6.765379996419275,
+  -7.171910563757588,
+  -6.851482620405374,
+  -7.090324306810166,
+  -7.021377260636531,
+  -7.19181228265396,
+  -7.49755313177459,
+  -7.070145269109212,
+  -7.185643205000775,
+  -7.385344223772804,
+  -7.106470043118713,
+  -6.969074799362742,
+  -7.665639798628836,
+  -7.211190794265664,
+  -7.065560145912826,
+  -6.920436576999468,
+  -7.586721688389271,
+  -7.265207918000613,
+  -7.052025673781608,
+  -7.124986923265072,
+  -6.950989458175575,
+  -7.529732177860306,
+  -7.26158807777378,
+  -7.557010100114312,
+  -7.051213853782897,
+  -6.8100085857592445,
+  -7.22074940000041,
+  -7.0176339977778985,
+  -6.908665850650332,
+  -7.08393957295741,
+  -7.024131075766702,
+  -7.136454938334109,
+  -7.178401989334342,
+  -7.064200688648056,
+  -7.432540291613636,
+  -7.0082193929319025,
+  -7.3512087424683825,
+  -7.340356284968146,
+  -7.146664662242846,
+  -7.024433599869442,
+  -7.382161540126929,
+  -6.627078007183835,
+  -7.456297002339621,
+  -7.233953814718595,
+  -6.922521580079613,
+  -6.939789530028834,
+  -6.838758660176003,
+  -6.992946413962662,
+  -6.9750962654923665,
+  -7.050806374223086,
+  -7.129192481186988,
+  -6.704951560385315,
+  -7.094103694223063,
+  -6.7712213907341745
+ ],
+ "error": null,
+ "worked_example": "0034's reading of K4 at key length 27 (3 free key slots climbed):\n  reading      ZWAWFAFIWGMGOGMDROTMAEASTNORTHEASTISTCDAPPUDSFROKLPDGBCUMLDWLBYBERLINCLOCKADHARIUHVWCQFISIQMNGDJK\n  judge sees   ZWAWFAFIWGMGOGMDROTMA#############ISTCDAPPUDSFROKLPDGBCUMLDWLBY###########ADHARIUHVWCQFISIQMNGDJK\n\nK4's best of its three readings (27, 28, 29) scored 8; a fresh copy's three readings by the same search must reach 8.",
+ "seconds": 17.283829927444458,
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 0,
+  "cached": 24,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "errors": 0
+ }
+}

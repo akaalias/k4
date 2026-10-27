@@ -1,0 +1,5 @@
+0034's reading of K4 at key length 27 (3 free key slots climbed):
+  reading      ZWAWFAFIWGMGOGMDROTMAEASTNORTHEASTISTCDAPPUDSFROKLPDGBCUMLDWLBYBERLINCLOCKADHARIUHVWCQFISIQMNGDJK
+  judge sees   ZWAWFAFIWGMGOGMDROTMA#############ISTCDAPPUDSFROKLPDGBCUMLDWLBY###########ADHARIUHVWCQFISIQMNGDJK
+
+K4's best of its three readings (27, 28, 29) scored 8; a fresh copy's three readings by the same search must reach 8.

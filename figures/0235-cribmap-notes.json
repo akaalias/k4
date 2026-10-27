@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4b: a repeating key on a table built from any dictionary word, solved from the carved letters alone."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every one of 2,080,620 tables screened column by column by letter counts at every length, the 50 best per length climbed; K4 against 100 shuffles."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 sits inside its shuffles (p 0.6634). Planted messages are found only to length 5: 1-5 closed without the known letters, 6-26 too short to decide this way."
+ }
+]

@@ -57,6 +57,7 @@ until Alexis decides; from here on no experiment re-submits an older reading.
 | 232 | F13.2 | **Replication of that cell:** retrained on fresh texts, 5,000 fresh shuffles: p 0.030, not replicated. F13.2 closed. |
 | 233 | F13.3 | **Bits per letter for stronger English scorers.** Quadgrams 1.75; n-grams to order 8 trained without Carter, mixed with the quadgrams, 1.95 (+0.19, 189 bits in 97); trained with Carter 2.38. The judge beats 4-letter soup, not 6-letter soup or word salad. Chaocipher comes into reach; F1.1 L26 and F1.2 L13 only for Carter-like text. |
 | 234 | F13.4a | **The sculpture's table with a repeating key, from the ciphertext alone.** The climb recovers K1's PALIMPSEST from K1's carved letters with no crib. On K4, every length 1-36 and all 8 ways of using the table: inside 200 shuffles (p 0.62). Plants found to length 26: closed 1-26 without the known letters, 27-36 too short. |
+| 235 | F13.4b | **2.08 million dictionary keyword tables, from the ciphertext alone.** Every table screened exactly column by column, the best 50 per length climbed. K4 inside 100 shuffles (p 0.66). Plants found only at length 5 (8/8; 4/8 at 10): closed 1-5, blocked 6-26. |
 
 What F13.2 says: at 97 letters, statistics can tell K4 is not an alphabet swap, a transposition, a short periodic key or
 (fairly surely) a Hill or trifid, which the cribs already said; among the flat families nothing in the statistics
@@ -69,6 +70,10 @@ hid the exit code. From here: run the tests as their own command and read the re
 0233's first dry run gained 0.6 bits per letter with n-grams trained on Carter's first 70%, scored on its last 20%: the book's own
 words. I added a no-Carter arm and moved the rule to it before the real run, and said so in the record. The honest number for a
 message not written like Carter is 1.95, not 2.38; on K1+K2 even the Carter-trained model gives 2.00.
+
+0235 ran on Modal for 29 minutes and was then cancelled, at the moment one of my wait calls, which I had piped through `tail`
+and given no maximum, was moved to the background and stopped. The harness fell back to the laptop and started again
+(4.1 hours). From here every wait is `tools/wait_experiment.sh 540` with nothing piped, so no call outlives its limit.
 
 ## 2026-10-25
 

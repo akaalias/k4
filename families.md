@@ -206,6 +206,8 @@ Update the leaf when an experiment works on it.
     - **F13.4** Ciphertext-only solves in the families F13.1 leaves decidable {open}
       - **F13.4a** Periodic key on the sculpture's 8 table classes, lengths 1-36: K4 inside 200 climbed shuffles (p 0.62); plants found to length 26 (6/8), not at 30-36 {closed · sampled · 0234}
         - Lengths 27-36: plants 5/8 at 30, 2/8 at 36: too short to decide from the ciphertext alone {blocked · sampled · 0234}
+      - **F13.4b** Periodic key on 2.08 million dictionary keyword tables, lengths 1-26: K4 inside 100 climbed shuffles (p 0.66); plants found at 5 only (8/8; 4/8 at 10) {closed · sampled · 0235}
+        - Lengths 6-26: the per-column frequency screen loses the true table {blocked · sampled · 0235}
     - **F13.5** Memorable keys from the named sources, scored by English alone {open}
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}

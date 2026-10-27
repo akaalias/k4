@@ -211,7 +211,7 @@ Stage 2, steps 3 and 4 (issues #75 and #84). The tables in `order-of-work.md` li
   method) and says whether it was found, in the same run.
 - **A verdict that changes is written back.** If A6.1-A6.3 weaken a sampled close, change that item's row in its family
   table (`closed` to `open` or `blocked`, with the numbers), its row in `grades.tsv`, and A6 or A13 in
-  `knowledge/12-assumptions.md`. Reopened family items are not worked in this step; they wait for Alexis.
+  `knowledge/12-assumptions.md`. Reopened family items go back into the queue in their family's place (Alexis, 2026-10-27, issue #92).
 
 ## Ciphertext only (F13)
 

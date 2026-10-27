@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from kryptos import facts
-from kryptos.gates import run_gates, crib_hits, undetermined
+from kryptos.gates import run_gates, crib_hits, undetermined, readings_before, resubmitted
 from kryptos.scorer import fitness, english_score, free_text, loss, key_bits_of
 import phase as phaseclock
 
@@ -99,6 +99,7 @@ def main():
     # it is not a gate.
     controls = [float(x) for x in raw.get("controls", []) if x is not None]
     scored = []
+    earlier = readings_before(EXPERIMENTS, exp_id)
     for c in raw["candidates"]:
         g = run_gates(c["plaintext"], c.get("reencrypted"))
         bits = key_bits_of(c.get("key"))      # the harness counts the key's description; the attack's figure is kept for reference
@@ -108,7 +109,10 @@ def main():
                "loss": None}
         if g.failed_at in (None, "cribs"):  # valid candidates get a loss; invalid ones do not
             row["loss"] = loss(c["plaintext"], bits, g.crib_hits)
-        if g.passed and undetermined(c):     # a whole reading only (Alexis 2026-10-25, issue #88)
+        if g.passed and resubmitted(c, exp_id, earlier):   # counts once, where it was found (Alexis 2026-10-27, #94)
+            row.update(gate_passed=False, failed_at="resubmitted",
+                       gate_details={"rule": "a reading counts only in the search that found it"})
+        elif g.passed and undetermined(c):     # a whole reading only (Alexis 2026-10-25, issue #88)
             row.update(gate_passed=False, failed_at="undetermined",
                        gate_details={"open_slots": c.get("open_slots"), "rule": "every letter fixed by the key"})
         elif g.passed:

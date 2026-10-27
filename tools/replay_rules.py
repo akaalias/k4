@@ -10,7 +10,9 @@ Current rules (decided 2026-10-15, issue #23): the original four gates; the key,
 harness and charged by the length of its description (not a gate); the reading's English score
 above every shuffled-copper control the experiment recorded (at least 10); among survivors, the
 lowest loss wins. Added 2026-10-25 (Alexis, issue #88): a reading must be whole, every letter fixed by
-its key; one padded with a filler where the key leaves letters open is never kept.
+its key; one padded with a filler where the key leaves letters open is never kept. Added 2026-10-27
+(Alexis, issue #94): a reading counts only in the search that found it; a later experiment that hands in an
+earlier record's reading cannot keep it.
 """
 import json
 import sys
@@ -20,7 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from kryptos.scorer import key_bits_of, loss, english_score, free_text  # noqa: E402
-from kryptos.gates import undetermined  # noqa: E402
+from kryptos.gates import undetermined, resubmitted  # noqa: E402
 
 
 def main():
@@ -30,14 +32,20 @@ def main():
     # says its key leaves letters open, it is open everywhere (0219 re-submitted 0212-0214's)
     open_readings = {c["plaintext"] for f in files for c in json.loads(f.read_text()).get("candidates", [])
                      if c.get("plaintext") and undetermined(c)}
+    seen = set()        # readings recorded by earlier experiments, in run order
     for f in files:
         r = json.loads(f.read_text())
+        num = int(f.parent.name[:4]) if f.parent.name[:4].isdigit() else 0
+        earlier = set(seen)
+        seen.update(c["plaintext"] for c in r.get("candidates", []) if c.get("plaintext"))
         controls = [float(x) for x in r.get("controls", []) if x is not None]
-        verdicts = {"baseline": 0, "undetermined": 0, "kept_now": 0}
+        verdicts = {"baseline": 0, "undetermined": 0, "resubmitted": 0, "kept_now": 0}
         best = None
         for c in r.get("candidates", []):
             if not (c.get("gate_passed") or c.get("failed_at") in ("memorable", "baseline")):
                 continue
+            if resubmitted(c, num, earlier):
+                verdicts["resubmitted"] += 1; continue
             if undetermined(c) or c["plaintext"] in open_readings:
                 verdicts["undetermined"] += 1; continue
             bits = key_bits_of(c.get("key"))
@@ -52,6 +60,8 @@ def main():
             survivors.append((best[0], r["tag"], best[1], best[2]))
         if any(verdicts.values()) or r.get("decision") == "kept":
             reason = ("passes the current gates" if verdicts["kept_now"] else
+                      f"{verdicts['resubmitted']} candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)"
+                      if verdicts["resubmitted"] and not verdicts["baseline"] and not verdicts["undetermined"] else
                       f"{verdicts['undetermined']} candidate(s) have letters their key leaves open, filled with a placeholder (rule of 2026-10-25, issue #88)"
                       if verdicts["undetermined"] and not verdicts["baseline"] else
                       f"{verdicts['baseline']} candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat")
@@ -76,7 +86,7 @@ def main():
         ch_p.write_text(json.dumps(champ, indent=1))
     elif ch_p.exists():
         ch_p.unlink()
-    out = {"date": date.today().isoformat(), "rules": "original gates; English above every shuffled-copper control the experiment ran (10 or more); key charged by the length of its description; every letter fixed by the key (2026-10-25, #88); lowest loss wins",
+    out = {"date": date.today().isoformat(), "rules": "original gates; English above every shuffled-copper control the experiment ran (10 or more); key charged by the length of its description; every letter fixed by the key (2026-10-25, #88); a reading counts only in the search that found it (2026-10-27, #94); lowest loss wins",
            "champion": champ["experiment"] if champ else None, "experiments": per}
     (ROOT / "data" / "replay.json").write_text(json.dumps(out, indent=1))
     print("champion now:", out["champion"])

@@ -1,6 +1,6 @@
 {
- "date": "2026-10-25",
- "rules": "original gates; English above every shuffled-copper control the experiment ran (10 or more); key charged by the length of its description; every letter fixed by the key (2026-10-25, #88); lowest loss wins",
+ "date": "2026-10-27",
+ "rules": "original gates; English above every shuffled-copper control the experiment ran (10 or more); key charged by the length of its description; every letter fixed by the key (2026-10-25, #88); a reading counts only in the search that found it (2026-10-27, #94); lowest loss wins",
  "champion": null,
  "experiments": {
   "0034-complete-the-key-at-surviving-periods": {
@@ -9,6 +9,7 @@
    "reason": "18 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 18,
    "undetermined": 0,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0035-complete-the-key-mixed-alphabets-27-29": {
@@ -17,6 +18,7 @@
    "reason": "3 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 3,
    "undetermined": 0,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0048-complete-the-key-both-alphabets-mixed-sampled": {
@@ -25,6 +27,7 @@
    "reason": "3 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 3,
    "undetermined": 0,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0120-one-free-alphabet-english-climb-at-23-and-26": {
@@ -33,6 +36,7 @@
    "reason": "2 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 2,
    "undetermined": 0,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0137-free-alphabet-climb-that-keeps-the-known-letters": {
@@ -41,6 +45,7 @@
    "reason": "2 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 2,
    "undetermined": 0,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0140-k4-against-its-own-copies-with-the-tempering-climb": {
@@ -49,6 +54,7 @@
    "reason": "1 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 1,
    "undetermined": 0,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0142-k4-at-26-against-its-own-copies": {
@@ -57,6 +63,7 @@
    "reason": "1 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 1,
    "undetermined": 0,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0148-k1-k2-system-with-a-slip-at-33": {
@@ -65,6 +72,7 @@
    "reason": "1 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
    "baseline": 1,
    "undetermined": 0,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0207-periodic-key-with-slips-at-known-places": {
@@ -73,6 +81,7 @@
    "reason": "50 candidate(s) have letters their key leaves open, filled with a placeholder (rule of 2026-10-25, issue #88)",
    "baseline": 0,
    "undetermined": 50,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0212-ciphertext-autokey-and-progressive-key-with-slips": {
@@ -81,6 +90,7 @@
    "reason": "10 candidate(s) have letters their key leaves open, filled with a placeholder (rule of 2026-10-25, issue #88)",
    "baseline": 0,
    "undetermined": 10,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0213-plaintext-autokey-with-slips-and-a-lost-step": {
@@ -89,6 +99,7 @@
    "reason": "10 candidate(s) have letters their key leaves open, filled with a placeholder (rule of 2026-10-25, issue #88)",
    "baseline": 0,
    "undetermined": 10,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0214-a-move-then-the-table-with-two-slips": {
@@ -97,30 +108,88 @@
    "reason": "10 candidate(s) have letters their key leaves open, filled with a placeholder (rule of 2026-10-25, issue #88)",
    "baseline": 0,
    "undetermined": 10,
+   "resubmitted": 0,
    "kept_now": 0
   },
   "0216-a13-the-saved-readings-against-their-own-search-on-fresh-copies-rerun": {
    "decision_recorded": "reverted",
    "verdict_now": "reverted",
-   "reason": "16 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
-   "baseline": 16,
+   "reason": "16 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
+   "baseline": 0,
    "undetermined": 0,
+   "resubmitted": 16,
    "kept_now": 0
   },
   "0217-a13-the-backwards-reading-of-0034-against-more-fresh-copies": {
    "decision_recorded": "reverted",
    "verdict_now": "reverted",
-   "reason": "3 candidate(s) fail the shuffled-copper baseline: the record has no set of ten or more controls their English must beat",
-   "baseline": 3,
+   "reason": "3 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
+   "baseline": 0,
    "undetermined": 0,
+   "resubmitted": 3,
    "kept_now": 0
   },
   "0219-a13-the-slipped-readings-through-the-structure-battery-rerun": {
    "decision_recorded": "kept",
    "verdict_now": "reverted",
-   "reason": "12 candidate(s) have letters their key leaves open, filled with a placeholder (rule of 2026-10-25, issue #88)",
+   "reason": "12 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
    "baseline": 0,
-   "undetermined": 12,
+   "undetermined": 0,
+   "resubmitted": 12,
+   "kept_now": 0
+  },
+  "0220-a13-the-slipped-readings-through-the-structure-battery-own-controls": {
+   "decision_recorded": "reverted",
+   "verdict_now": "reverted",
+   "reason": "12 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
+   "baseline": 0,
+   "undetermined": 0,
+   "resubmitted": 12,
+   "kept_now": 0
+  },
+  "0221-rejudge-the-sampled-verdicts-free-alphabets-and-running-english": {
+   "decision_recorded": "reverted",
+   "verdict_now": "reverted",
+   "reason": "4 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
+   "baseline": 0,
+   "undetermined": 0,
+   "resubmitted": 4,
+   "kept_now": 0
+  },
+  "0222-rejudge-the-sampled-verdicts-completed-periodic-keys": {
+   "decision_recorded": "reverted",
+   "verdict_now": "reverted",
+   "reason": "24 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
+   "baseline": 0,
+   "undetermined": 0,
+   "resubmitted": 24,
+   "kept_now": 0
+  },
+  "0223-rejudge-the-sampled-verdicts-completed-periodic-keys": {
+   "decision_recorded": "reverted",
+   "verdict_now": "reverted",
+   "reason": "24 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
+   "baseline": 0,
+   "undetermined": 0,
+   "resubmitted": 24,
+   "kept_now": 0
+  },
+  "0224-a6-replicate-0034-at-27-29-under-the-judge": {
+   "decision_recorded": "kept",
+   "verdict_now": "reverted",
+   "reason": "3 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
+   "baseline": 0,
+   "undetermined": 0,
+   "resubmitted": 3,
+   "kept_now": 0
+  },
+  "0225-a6-replicate-0034-at-27-29-under-the-judge-own-controls": {
+   "decision_recorded": "reverted",
+   "verdict_now": "reverted",
+   "reason": "3 candidate(s) are readings of an earlier experiment, which count only in the search that found them (rule of 2026-10-27, issue #94)",
+   "baseline": 0,
+   "undetermined": 0,
+   "resubmitted": 3,
    "kept_now": 0
   }
  }

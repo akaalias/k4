@@ -17,6 +17,28 @@ def undetermined(candidate: dict) -> bool:
     return bool(_FILLED.search(text))
 
 
+# A reading counts once, in the search that found it (rule decided by Alexis 2026-10-27, issue #94). Gate 4 is
+# only fair against the copies that reading's own search made; a later experiment that hands in an earlier
+# record's reading (to measure or judge it again) cannot keep it.
+def readings_before(experiments_dir, num: int) -> set:
+    """Every candidate reading recorded by experiments numbered below `num`."""
+    import json
+    out = set()
+    for f in sorted(experiments_dir.glob("*/result.json")):
+        n = f.parent.name[:4]
+        if n.isdigit() and int(n) < num:
+            out.update(c["plaintext"] for c in json.loads(f.read_text()).get("candidates", []) if c.get("plaintext"))
+    return out
+
+
+def resubmitted(candidate: dict, own_num: int, earlier: set) -> bool:
+    """True when the reading comes from an earlier experiment: its key names another experiment
+    (key["exp"]), or an earlier record already holds the same reading."""
+    key = candidate.get("key")
+    if isinstance(key, dict) and str(key.get("exp") or "")[:4] not in ("", f"{own_num:04d}"):
+        return True
+    return candidate.get("plaintext") in earlier
+
 @dataclass
 class GateResult:
     passed: bool

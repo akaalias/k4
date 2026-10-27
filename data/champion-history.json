@@ -178,5 +178,26 @@
    },
    "key_description": "saved reading of 0213: plaintext autokey lag 28, WALL/keyword|PALIMPSEST/keyword|std|varbeau, bulk, cuts [], lost step None; unknown letters fi"
   }
+ },
+ {
+  "until": "2026-10-27",
+  "rule": "lowest loss, gates without the memorable-key and baseline checks",
+  "champion": {
+   "experiment": "0224-a6-replicate-0034-at-27-29-under-the-judge",
+   "loss": 4.623134929906328,
+   "fitness": -8.264096778936356,
+   "plaintext": "YJAEIVIZKOYDBEACIOSSLEASTNORTHEASTVCACZLEVESITMILANBACMIIXDCHKYBERLINCLOCKATTHIZQLLPDLOFDFOIJGUSM",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "m": "beau",
+     "key": "HYHMKBNENTXBQRMAEROOOXYHANZEF"
+    }
+   },
+   "key_description": "saved reading of 0034: period 29 key HYHMKBNENTXBQRMAEROOOXYHANZEF (5 free slots climbed); kry/kry/std/beau"
+  }
  }
 ]

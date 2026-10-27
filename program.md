@@ -52,6 +52,11 @@ a precise statement of what was searched.
    after 0219 was kept on readings padded with A). If the key leaves letters open, return the count as
    `open_slots`; such a reading fails at `undetermined` and is never kept. Do not fill open letters
    with a placeholder to get past the gates.
+6. The reading is your search's own: a reading counts only in the search that found it, judged
+   against that search's copies (decided by Alexis 2026-10-27, issue #94, after 0224 was kept on an
+   earlier reading of 0034 against a smaller set of copies). A candidate whose key names another
+   experiment (`key["exp"]`) or whose reading an earlier record already holds fails at `resubmitted`.
+   To measure or judge an old reading again, report it in `bounds` or `notes`, not as a candidate.
 
 Among readings that pass all four, the lowest loss wins. The loss charges the key by the
 length of its description, which the harness counts itself from the `key` you return

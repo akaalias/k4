@@ -1,0 +1,17 @@
+{
+ "experiment": "0224-a6-replicate-0034-at-27-29-under-the-judge",
+ "loss": 4.623134929906328,
+ "fitness": -8.264096778936356,
+ "plaintext": "YJAEIVIZKOYDBEACIOSSLEASTNORTHEASTVCACZLEVESITMILANBACMIIXDCHKYBERLINCLOCKATTHIZQLLPDLOFDFOIJGUSM",
+ "key": {
+  "exp": "0034",
+  "key": {
+   "pa": "kry",
+   "ca": "kry",
+   "ka": "std",
+   "m": "beau",
+   "key": "HYHMKBNENTXBQRMAEROOOXYHANZEF"
+  }
+ },
+ "key_description": "saved reading of 0034: period 29 key HYHMKBNENTXBQRMAEROOOXYHANZEF (5 free slots climbed); kry/kry/std/beau"
+}

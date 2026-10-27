@@ -222,3 +222,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0221	0221-rejudge-the-sampled-verdicts-free-alphabets-and-running-english	1-keyed-periodic	0140-k4-against-its-own-copies-with-the-tempering-climb	reverted	4	0	24	4.094		3243	test=155158 design=137 implement=16 run=3243 record=0
 0222	0222-rejudge-the-sampled-verdicts-completed-periodic-keys	1-keyed-periodic	0221-rejudge-the-sampled-verdicts-free-alphabets-and-running-english	reverted	24	0	24	4.153		194	test=1 run=194 record=0
 0223	0223-rejudge-the-sampled-verdicts-completed-periodic-keys	1-keyed-periodic	0221-rejudge-the-sampled-verdicts-free-alphabets-and-running-english	reverted	24	0	24	4.153		0	unattributed=63 run=0 record=0
+0224	0224-a6-replicate-0034-at-27-29-under-the-judge	1-keyed-periodic	0222-rejudge-the-sampled-verdicts-completed-periodic-keys	kept	3	1	24	4.623	-8.2641	32	unattributed=62 run=32 record=0

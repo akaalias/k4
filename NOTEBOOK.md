@@ -14,6 +14,10 @@ Stage 2, step 4 (A6, ticket #84). Step 3 closed on 2026-10-25; a draft of A6.1 h
 | # | Item | One line |
 |---|---|---|
 | 221 | A6.1 | **The sampled verdicts of 0120, 0125, 0140, 0142, 0144, 0146 rerun from their frozen code and seeds and rejudged blind.** Every K4 reading and copy score reproduced exactly. K4 above every copy in 0 of 8 cells (chance 0.56): ranks 6-13 of 13, 42 of 51 for 0125. Plants: the judge found 20 of 20 planted running keys (quadgrams 11) but 2 of 18 climbed free-alphabet plants (quadgrams 9). Prediction held. |
+| 222 | A6.1 | **0034, 0035, 0048's completed keys rejudged** against 0216's regenerated copies (10 each). K4 above every copy in 1 of 4 cells (chance 0.36): 0034 at 27-29, judge 8 against 7. Queue stopped for replication. |
+| 223 | A6.1 | **Duplicate of 0222, by mistake.** The write of the replication's code failed (the file had changed since read) and the run chained after it went ahead on 0222's code. |
+| 224 | A6.1 | **Replication of 0034 at 27-29.** Fresh copy 6 of the first batch scored 8: not a flag. **Recorded as kept by mistake**: I gave gate 4 only the 8 fresh copies; K4's period-29 reading, below 0216's copies of the same search, passed them (issue #94, for Alexis). |
+| 225 | A6.1 | **0224 rerun with the search's own copies in gate 4** (54 controls): same replication, reverted. A6.1 closed: no sampled verdict weakened. |
 
 The judge cannot rescue a climbed reading: design 2's readings of planted English get about a third of the letters right,
 and the judge, reading for words, sees no more in them than in the copies'. So F1.1 and F1.2's sampled closes rest on
@@ -24,6 +28,11 @@ Fixed in the left draft before running: gate 4 was handed judge scores (0-100) a
 copies' quadgram scores. The re-submitted K4 readings re-encrypt through their own frozen `encrypt` instead of a
 hand-written one-alphabet rule. A6.2's dry run hung in 0123's witness search on one key draw; the search now runs under
 a 20-second alarm and the key is redrawn on timeout.
+
+Mistakes today, both mine. A run chained after a file write that failed recorded a duplicate (0223): check the
+header of `attack.py` before every run, in its own command. 0224 handed gate 4 a smaller set of controls than the
+reading had already failed against, and the harness kept it: the same gap as #88, now #94. `champion.json` names 0224
+until Alexis decides; from here on no experiment re-submits an older reading.
 
 ## 2026-10-25
 

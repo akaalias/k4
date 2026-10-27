@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "In 0222 K4's readings at key lengths 27-29 scored 8 out of 100 with the judge, every copy 7 or less. Luck is tested by more copies."
+ },
+ {
+  "anchor": "the check",
+  "text": "Fresh scrambles through 0034's frozen search at 27-29, judged in batches of eight; 80 in a row below 8 would be a flag."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Copy 6 of the first batch scored 8: not a flag; A6.1's cell closes. Rerun of 0224 with gate 4 given the 0034 search's own copies as well (issue #94): every reading fails, reverted."
+ }
+]

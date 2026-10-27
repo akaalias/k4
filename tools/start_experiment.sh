@@ -6,6 +6,10 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 marker=data/running-experiment.json
+if [ -f data/loop-stop-request ]; then
+  echo "A graceful stop was requested (data/loop-stop-request): no new experiment. Record the last one and end the session." >&2
+  exit 2
+fi
 if [ -f "$marker" ] && kill -0 "$(python3 -c "import json;print(json.load(open('$marker'))['pid'])")" 2>/dev/null; then
   echo "An experiment is already running: $(cat "$marker")" >&2
   exit 1

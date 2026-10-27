@@ -6,6 +6,7 @@ import json
 import sys
 import time
 import traceback
+from pathlib import Path
 from types import SimpleNamespace
 
 from kryptos import facts, ciphers, scorer
@@ -15,6 +16,23 @@ def _judge(texts):
     """The blind English judge (kryptos.judge, issue #76), imported only when an attack calls it."""
     from kryptos import judge
     return judge.judge(texts)
+
+
+PROGRESS = Path(__file__).resolve().parent / "data" / "experiment-progress.json"
+_last_write = [0.0]
+
+
+def _progress(done, total, label=""):
+    """ctx.progress(done, total, label): how far the run is, for the loop's terminal bar (issue #97).
+    Cheap to call often: it writes at most once a second, and always at the end."""
+    now = time.time()
+    if now - _last_write[0] < 1.0 and done < total:
+        return
+    _last_write[0] = now
+    try:
+        PROGRESS.write_text(json.dumps({"done": done, "total": total, "label": str(label)[:80], "updated": now}))
+    except OSError:
+        pass
 
 
 def main(attack_path, out_path, budget_s):
@@ -35,6 +53,7 @@ def main(attack_path, out_path, budget_s):
         deadline=t0 + budget_s,
         time_left=lambda: (t0 + budget_s) - time.time(),
         judge=_judge,
+        progress=_progress,
     )
     out = {"candidates": [], "bounds": {}, "notes": "", "controls": [], "error": None, "worked_example": ""}
     try:

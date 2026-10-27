@@ -5,6 +5,8 @@ seeing: what the agent is doing, the phase clock, the experiment it is working o
 experiment with its decision, and the elapsed time. The raw stream stays in logs/ untouched.
 
     tools/run_loop.sh --unattended                      # pipes through this automatically
+In a terminal, two live bars sit under the events (backlog items done; the running experiment's
+progress from ctx.progress, else its elapsed time), and pressing s asks for a graceful stop (issue #97).
     uv run python tools/loop_watch.py logs/loop-....log  # replay or follow a log from another shell
     uv run python tools/loop_watch.py --follow logs/loop-....log
 """
@@ -22,6 +24,9 @@ DIM, BOLD, RED, GREEN, RESET = "\033[2m", "\033[1m", "\033[31m", "\033[32m", "\0
 if not sys.stdout.isatty():
     DIM = BOLD = RED = GREEN = RESET = ""
 
+import threading as _threading
+LOCK = _threading.RLock()
+
 state = {"phase": None, "slug": None, "rows": None, "attack_mtime": 0.0, "start": None}
 
 
@@ -31,7 +36,9 @@ def stamp(ts=None):
 
 
 def say(text, ts=None):
+    footer.clear()
     print(f"{stamp(ts)} {text}", flush=True)
+    footer.draw()
 
 
 def short(s, n=110):
@@ -101,6 +108,148 @@ def tool_line(name, inp):
     return name
 
 
+# ---- live footer: two bars and the graceful stop (issue #97) ----------------------------------------
+
+REQ = ROOT / "data" / "loop-stop-request"
+MARKER = ROOT / "data" / "running-experiment.json"
+PROGRESS = ROOT / "data" / "experiment-progress.json"
+
+
+def bar(frac, width, moving=None):
+    """A bar of `width` cells; frac in 0..1, or moving=tick for a run that reports no progress."""
+    if moving is not None:
+        pos = moving % (2 * (width - 3)) if width > 4 else 0
+        pos = pos if pos < width - 3 else 2 * (width - 3) - pos
+        return "░" * pos + "███" + "░" * (width - 3 - pos)
+    n = max(0, min(width, round(frac * width)))
+    return "█" * n + "░" * (width - n)
+
+
+def mins(sec):
+    sec = int(sec)
+    return f"{sec // 3600}h{sec % 3600 // 60:02d}m" if sec >= 3600 else f"{sec // 60}m{sec % 60:02d}s"
+
+
+def backlog_line(width):
+    try:
+        text = (ROOT / "order-of-work.md").read_text()
+        st = [m.strip().strip("*").split()[0] for m in re.findall(r"^\| \*\*[A-Z][\w.]*\*\*[^|]*\| ([^|]+?) \|", text, re.M)]
+        done = sum(1 for x in st if x in ("closed", "blocked"))
+        n_exp = max(0, len((ROOT / "results.tsv").read_text().splitlines()) - 1)
+    except OSError:
+        return "backlog: not readable"
+    total = len(st) or 1
+    return (f"{BOLD}backlog   {RESET} {bar(done / total, width)} {done}/{total} items closed or blocked"
+            f" · {total - done} open · {n_exp} experiments")
+
+
+def experiment_line(width, tick):
+    try:
+        run = json.loads(MARKER.read_text())
+    except (OSError, ValueError):
+        return f"{BOLD}experiment{RESET} {DIM}none running{RESET}"
+    try:
+        started = datetime.strptime(run.get("started", ""), "%Y-%m-%d %H:%M:%S").timestamp()
+    except ValueError:
+        started = time.time()
+    el = time.time() - started
+    name = state.get("slug") or "experiment"
+    try:
+        pr = json.loads(PROGRESS.read_text())
+        done, total = float(pr.get("done", 0)), float(pr.get("total", 0)) or 1.0
+        frac = min(1.0, done / total)
+        eta = f" · about {mins(el * (1 - frac) / frac)} left" if 0 < frac < 1 else ""
+        lab = f" {pr['label']}" if pr.get("label") else ""
+        return (f"{BOLD}experiment{RESET} {bar(frac, width)} {frac * 100:.0f}%{lab} · {mins(el)}{eta} · {short(name, 40)}")
+    except (OSError, ValueError, KeyError):
+        return (f"{BOLD}experiment{RESET} {bar(0, width, moving=tick)} {mins(el)} running, no progress reported"
+                f" · {short(name, 40)}")
+
+
+def fit(row, cols):
+    """Cut a row to `cols` visible characters, keeping its colour codes whole."""
+    out, n = [], 0
+    for part in re.split(r"(\033\[[0-9;]*m)", row):
+        if part.startswith("\033["):
+            out.append(part)
+            continue
+        take = part[: max(0, cols - n)]
+        out.append(take)
+        n += len(take)
+    return "".join(out) + RESET
+
+
+class Footer:
+    """Two live bars under the event lines, redrawn once a second; s asks for a graceful stop."""
+
+    def __init__(self):
+        self.on = sys.stdout.isatty()
+        self.drawn = 0
+        self.tick = 0
+
+    def clear(self):
+        if self.on and self.drawn:
+            sys.stdout.write(f"\033[{self.drawn}A\033[J")
+            self.drawn = 0
+
+    def draw(self):
+        if not self.on:
+            return
+        import shutil
+        cols = shutil.get_terminal_size((100, 20)).columns
+        width = max(10, min(40, cols - 70))
+        hint = (f"{RED}stop requested{RESET}: finishing and recording the current experiment, then stopping"
+                f" {DIM}(s takes it back){RESET}" if REQ.exists() else f"{DIM}press s to stop gracefully{RESET}")
+        rows = ["", backlog_line(width), experiment_line(width, self.tick), hint]
+        # cut each row to the window so nothing wraps: a wrapped row would break the redraw
+        sys.stdout.write("".join("\033[K" + fit(r, cols - 1) + "\n" for r in rows))
+        sys.stdout.flush()
+        self.drawn = len(rows)
+
+    def refresh(self):
+        self.tick += 1
+        self.clear()
+        self.draw()
+
+
+footer = Footer()
+
+
+def toggle_stop():
+    if REQ.exists():
+        REQ.unlink(missing_ok=True)
+        say("stop request taken back; the loop carries on")
+    else:
+        REQ.write_text(time.strftime("%Y-%m-%d %H:%M:%S") + "\n")
+        say(f"{BOLD}stop requested{RESET}: no new experiment; the current one finishes and is recorded")
+
+
+def listen_keys():
+    """Read single keys from the terminal (not from the piped stream) in a background thread."""
+    try:
+        import termios
+        import tty
+        import atexit
+        import threading
+        fd = open("/dev/tty", "rb", buffering=0)
+        old = termios.tcgetattr(fd)
+        tty.setcbreak(fd)
+        atexit.register(lambda: termios.tcsetattr(fd, termios.TCSADRAIN, old))
+    except (OSError, ImportError):
+        return
+
+    def loop():
+        while True:
+            ch = fd.read(1)
+            if not ch:
+                return
+            if ch.lower() == b"s":
+                with LOCK:
+                    toggle_stop()
+
+    threading.Thread(target=loop, daemon=True).start()
+
+
 def ev_time(ev):
     ts = ev.get("timestamp")
     if ts:
@@ -134,7 +283,9 @@ def handle(ev):
         # a result ends one turn, not the loop: run_loop.sh prints "Loop finished" when the session exits
         say(f"{BOLD}turn ended{RESET}  {mins:.0f} min" + (f", ${cost:.2f} so far" if cost else ""))
         if ev.get("result"):
+            footer.clear()
             print("\n" + ev["result"], flush=True)
+            footer.draw()
     check_files()
 
 
@@ -144,22 +295,50 @@ def lines(src, follow):
         if ln:
             yield ln
         elif follow:
-            check_files()
-            time.sleep(1)
+            time.sleep(1)                     # the main thread checks files and redraws each second
         else:
             return
 
 
 def main():
+    import queue
+    import threading
     args = [a for a in sys.argv[1:] if a != "--follow"]
     follow = "--follow" in sys.argv
     src = open(args[0]) if args else sys.stdin
-    check_files()
-    for ln in lines(src, follow):
+    replay = bool(args) and not follow
+    if replay:
+        footer.on = False                     # replaying a finished log: no live bars
+    q = queue.Queue()
+
+    def read():
+        for ln in lines(src, follow):
+            q.put(ln)
+        q.put(None)
+
+    threading.Thread(target=read, daemon=True).start()
+    if footer.on:
+        listen_keys()
+    with LOCK:
+        check_files()
+        footer.draw()
+    while True:
         try:
-            handle(json.loads(ln))
-        except ValueError:
+            ln = q.get(timeout=1.0)
+        except queue.Empty:
+            with LOCK:
+                check_files()
+                footer.refresh()
             continue
+        if ln is None:
+            break
+        with LOCK:
+            try:
+                handle(json.loads(ln))
+            except ValueError:
+                continue
+    with LOCK:
+        footer.clear()
 
 
 if __name__ == "__main__":

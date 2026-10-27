@@ -12,6 +12,7 @@ while [ -f "$marker" ] && [ "$t" -lt "$max" ]; do
   kill -0 "$pid" 2>/dev/null || { rm -f "$marker"; break; }
   sleep 15; t=$((t + 15))
 done
+[ -f data/loop-stop-request ] && echo "Note: a graceful stop was requested. Let this run finish, record it, then end the session."
 if [ -f "$marker" ]; then
   log=$(python3 -c "import json;print(json.load(open('$marker'))['log'])")
   echo "Still running: $(cat "$marker")"

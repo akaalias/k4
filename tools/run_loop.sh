@@ -9,6 +9,8 @@
 # order-of-work.md and starts a new session whenever one ends, until data/loop-stop.json says why to stop:
 # a reading passed every gate (a possible solution, for Alexis to check) or nothing is left open. Delete that
 # file to start again after reviewing it. Five sessions in a row that end within five minutes also stop it.
+# To stop it gracefully, press s in its terminal (s again takes it back) or run tools/stop_loop.sh: it starts
+# no new experiment, finishes and records the current one, and exits.
 #
 # The prompt is tools/loop_prompt.md; edit it to change what the loop does. Its transcript is synced into
 # transcripts/ by the hooks in .claude/settings.json like any other session.
@@ -40,7 +42,9 @@ fi
 
 mkdir -p logs
 quick=0
-while [ ! -f "$stop" ]; do
+req=data/loop-stop-request          # a graceful stop: press s in this terminal, or tools/stop_loop.sh (issue #97)
+rm -f "$req"
+while [ ! -f "$stop" ] && [ ! -f "$req" ]; do
   git pull -q --rebase --autostash || true
   log="logs/loop-$(date +%Y%m%d-%H%M%S).log"
   echo "Loop session starting; log: $log"
@@ -55,6 +59,16 @@ while [ ! -f "$stop" ]; do
     echo "Five sessions in a row ended within five minutes; stopping. See the last logs in logs/."
     exit 1
   fi
-  [ -f "$stop" ] || sleep 30
+  [ -f "$stop" ] || [ -f "$req" ] || sleep 30
 done
+if [ -f "$req" ]; then
+  rm -f "$req"
+  if [ -f data/running-experiment.json ]; then
+    echo "Loop stopped at your request. An experiment is still running on its own: $(cat data/running-experiment.json)"
+    echo "Its record is written when it ends; the next loop session will read it."
+  else
+    echo "Loop stopped at your request, after recording the last experiment."
+  fi
+  exit 0
+fi
 echo "Loop stopped: $(cat "$stop")"

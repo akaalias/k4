@@ -21,6 +21,10 @@ There are no milestones. Keep working until the challenge may be solved. Stop on
    data/loop-stop.json: {"reason": "backlog empty", "date": "<today>"} and, in your report, list the most
    promising blocked items and what would unblock them.
 
+**A graceful stop requested by Alexis** (data/loop-stop-request exists; tools/start_experiment.sh then refuses to
+start): start nothing new, let the running experiment finish, write its record, commit and push, then end the
+session with your report. Do not delete the request; tools/run_loop.sh does.
+
 A session may end for other reasons (a long run, a full context). That is fine: tools/run_loop.sh starts a new
 session, which reads this prompt again and carries on from the record. Leave the record in a state the next
 session can resume from: drafts in drafts/, the item's status in order-of-work.md, a comment on its issue.

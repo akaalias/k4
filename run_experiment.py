@@ -83,6 +83,8 @@ def main():
                 phases["unattributed"] = max(0.0, t0 - prev_end)
     status = "ran"
     try:
+        progress = ROOT / "data" / "experiment-progress.json"     # ctx.progress's file (issue #97)
+        progress.unlink(missing_ok=True)
         limited = args.budget > 0
         subprocess.run([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path),
                         str(args.budget) if limited else "inf"],
@@ -90,6 +92,7 @@ def main():
     except subprocess.TimeoutExpired:
         status = "timeout"
     seconds = time.time() - t0
+    (ROOT / "data" / "experiment-progress.json").unlink(missing_ok=True)
     phases["run"] = seconds
     t_record = time.time()
     raw = json.loads(raw_path.read_text()) if raw_path.exists() else {"candidates": [], "bounds": {}, "error": "no output", "worked_example": "", "notes": ""}

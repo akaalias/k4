@@ -213,6 +213,8 @@ Update the leaf when an experiment works on it.
       - **F13.4d** 27,852 moves before or after the sculpture's tables, lengths 1-20: plants found to 12 {closed · sampled · 0237}
         - K4 above its shuffles at table-then-move, key length 2 (p 0.0099, replicated p 0.023 against 300 fresh); reading junk, 3 of 24 known letters; the judge at the edge of chance (14 of 300 at or above) {noted · sampled · 0237, 0238, 0239}
         - Lengths 13-20 by power; F6.1 (a free alphabet after a move) by 0236's power {blocked · sampled · 0237, 0236}
+      - **F13.4e** Hill 2x2 and 3x3, four numberings, every alignment, ciphertext only: 2x2 plants read 8/8, K4 inside 100 shuffles (p 0.73) {closed · sampled · 0240}
+        - Hill 3x3: plants found 4/8 {blocked · sampled · 0240}
     - **F13.5** Memorable keys from the named sources, scored by English alone {open}
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}

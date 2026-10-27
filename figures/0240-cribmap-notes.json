@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4e, Hill: the matrix cipher solved from the carved letters alone, one row of the decoding table at a time."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every row scored by letter counts, rows joined by English pairs and triples, the best matrices refined; K4 against 100 shuffles."
+ },
+ {
+  "anchor": "the bound",
+  "text": "2x2: plants read exactly 8/8 and K4 inside its shuffles (p 0.7327): closed. 3x3: plants found 4/8: blocked by power."
+ }
+]

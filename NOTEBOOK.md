@@ -62,6 +62,7 @@ until Alexis decides; from here on no experiment re-submits an older reading.
 | 237 | F13.4d | **Every type-1 move with the sculpture's tables, from the ciphertext alone.** Plants found to length 12. **K4 above all 100 shuffles** at table-then-move, key length 2 (p 0.0099). Queue stopped. |
 | 238 | F13.4d | **Replication against 300 fresh shuffles: replicated** (p 0.023; in the cell 1 of 300). The reading is junk with 3 of 24 known letters. |
 | 239 | F13.4d | **The judge on the replicated readings:** K4 12/100, 14 of 300 shuffles at or above. Word-level by my rule only at its edge. Not a solution; a property of the carved order, sent to Alexis (#101). |
+| 240 | F13.4e | **Hill from the ciphertext alone, row by row.** 2x2: plants read exactly 8/8, K4 inside 100 shuffles (p 0.73): closed. 3x3: plants found 4/8: blocked by power. Two dry-run fixes recorded: rows mapping every letter to E won a plain log-frequency sum (entropy term added); 40 rows per row lost the true 3x3 rows (beam of 2,000). |
 
 The first result in the record to beat its copies twice. My reading of it: the excess lives where every one of K4's earlier
 oddities lives, in the order of the carved letters (the width-7 doublets, the width-21 repeats, now a width-19 read with a

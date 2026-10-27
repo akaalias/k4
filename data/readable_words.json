@@ -3193,5 +3193,65 @@
     "PUB"
    ]
   ]
+ },
+ "CAUTFMCTMMFJSOBDSAJMNEASTNORTHEASTVWDWAAENGLJKRSWIDSUDFHLRCLHOSBERLINCLOCKSUYUVCNKPPLNAFGLNMBRLDP": {
+  "model": "claude-haiku-5-5",
+  "words": [
+   [
+    12,
+    15,
+    "SOB"
+   ],
+   [
+    21,
+    25,
+    "EAST"
+   ],
+   [
+    25,
+    34,
+    "NORTHEAST"
+   ],
+   [
+    63,
+    69,
+    "BERLIN"
+   ]
+  ]
+ },
+ "IIDPVLMAAAAAAAAAAAAAAEASTNORTHEASTAFURGVTAAAAAAAAAAAAAECAITMOFDBERLINCLOCKAAAAAAAAAAAAAETAKTHIOXD": {
+  "model": "claude-haiku-5-5",
+  "words": [
+   [
+    21,
+    25,
+    "EAST"
+   ],
+   [
+    25,
+    34,
+    "NORTHEAST"
+   ],
+   [
+    57,
+    59,
+    "IT"
+   ],
+   [
+    60,
+    62,
+    "OF"
+   ],
+   [
+    63,
+    69,
+    "BERLIN"
+   ],
+   [
+    69,
+    74,
+    "CLOCK"
+   ]
+  ]
  }
 }

@@ -5,6 +5,26 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-27
+
+Stage 2, step 4 (A6, ticket #84). Step 3 closed on 2026-10-25; a draft of A6.1 had been left in `attack.py` unrun.
+
+### A6 (ticket #84)
+
+| # | Item | One line |
+|---|---|---|
+| 221 | A6.1 | **The sampled verdicts of 0120, 0125, 0140, 0142, 0144, 0146 rerun from their frozen code and seeds and rejudged blind.** Every K4 reading and copy score reproduced exactly. K4 above every copy in 0 of 8 cells (chance 0.56): ranks 6-13 of 13, 42 of 51 for 0125. Plants: the judge found 20 of 20 planted running keys (quadgrams 11) but 2 of 18 climbed free-alphabet plants (quadgrams 9). Prediction held. |
+
+The judge cannot rescue a climbed reading: design 2's readings of planted English get about a third of the letters right,
+and the judge, reading for words, sees no more in them than in the copies'. So F1.1 and F1.2's sampled closes rest on
+the quadgram power alone; A6.2 asks whether that power holds on Sanborn-style text. Where the reading is fixed by the
+setting (0125's forced running key), the judge is stronger than quadgrams.
+
+Fixed in the left draft before running: gate 4 was handed judge scores (0-100) against a quadgram score; it now gets the
+copies' quadgram scores. The re-submitted K4 readings re-encrypt through their own frozen `encrypt` instead of a
+hand-written one-alphabet rule. A6.2's dry run hung in 0123's witness search on one key draw; the search now runs under
+a 20-second alarm and the key is redrawn on timeout.
+
 ## 2026-10-25
 
 Stage 2, step 3 (A13, ticket #75), resumed. The 2026-10-21 to 10-24 sessions closed A13.1 and A13.2 (no run; see

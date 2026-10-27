@@ -1,0 +1,1939 @@
+{
+ "id": 223,
+ "tag": "0223-rejudge-the-sampled-verdicts-completed-periodic-keys",
+ "started": "2026-10-27T10:22:49+00:00",
+ "seconds": 0.2,
+ "status": "ran",
+ "phases": {
+  "unattributed": 63.0,
+  "run": 0.2,
+  "record": 0.2
+ },
+ "ended_epoch": 1793096569.711425,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 24,
+ "n_passed": 0,
+ "best_crib_hits": 24,
+ "best_crib_words": {
+  "EAST": [
+   4,
+   4
+  ],
+  "NORTHEAST": [
+   9,
+   9
+  ],
+  "BERLIN": [
+   6,
+   6
+  ],
+  "CLOCK": [
+   5,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 4.152943145900252,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -7.024433599869442,
+  -7.382161540126929,
+  -6.627078007183835,
+  -5.233904386405745,
+  -4.982392522554447,
+  -4.79866072027831,
+  -4.648945031341219,
+  -4.6314163014722896,
+  -4.4597822733154135,
+  -3.9149251193556527,
+  -3.6380363673149843,
+  -3.6287291250764975,
+  -3.5749309481334093,
+  -3.4571322203971877,
+  -3.429508675064285,
+  -3.349345933509458,
+  -3.3238918151320127,
+  -3.309861123565073,
+  -7.064200688648056,
+  -7.432540291613636,
+  -7.0082193929319025,
+  -4.937199138953248,
+  -5.211674170665281,
+  -4.667198744752138,
+  -4.7150826662947605,
+  -4.362421460173002,
+  -4.13816508758831,
+  -3.9403659939757283,
+  -3.7646114573722538,
+  -3.648223091363275,
+  -3.6026504505231296,
+  -3.5304206846767445,
+  -3.427176501520863,
+  -3.378377144651718,
+  -3.3127822762521957,
+  -3.2418853316408898,
+  -6.939789530028834,
+  -6.838758660176003,
+  -6.992946413962662,
+  -5.106541368444204,
+  -4.948716933797208,
+  -4.592535796646235,
+  -4.730711128914411,
+  -4.550207074964642,
+  -4.182208114088296,
+  -3.752401258181951,
+  -3.7112405884358544,
+  -3.5937107238229995,
+  -3.530134457354075,
+  -3.490264603903795,
+  -3.42419915707056,
+  -3.3910540196695838,
+  -3.36670273744602,
+  -3.270624714392483,
+  -7.456297002339621,
+  -7.233953814718595,
+  -6.922521580079613,
+  -5.139516487951194,
+  -5.109864284204432,
+  -4.993776022342497,
+  -4.727034119658048,
+  -4.5829081479405005,
+  -4.151199299051991,
+  -3.9058661403904473,
+  -3.7241046288169573,
+  -3.6537925613566733,
+  -3.555458068990258,
+  -3.5389480681755106,
+  -3.443984249706428,
+  -3.3889800653646454,
+  -3.30923008535321,
+  -3.267929873872079,
+  -7.024131075766702,
+  -7.136454938334109,
+  -7.178401989334342,
+  -4.794488979962243,
+  -4.865401012963347,
+  -4.837675471300903,
+  -4.51163900909889,
+  -4.381128471599327,
+  -4.135076847966074,
+  -3.8684145172226936,
+  -3.6296006455224754,
+  -3.6321823309880656,
+  -3.5874745581356353,
+  -3.519542770801727,
+  -3.4779645533542287,
+  -3.416749687586211,
+  -3.34777605814372,
+  -3.263746717807437,
+  -7.051213853782897,
+  -6.8100085857592445,
+  -7.22074940000041,
+  -4.756935698897828,
+  -5.048214411650706,
+  -4.84427425355142,
+  -4.53122266489038,
+  -4.421409329372263,
+  -4.155875521209188,
+  -3.892731326416614,
+  -3.70371417384176,
+  -3.605259366998389,
+  -3.6126317059424693,
+  -3.513238455490651,
+  -3.422728078004443,
+  -3.3910948948949176,
+  -3.3312758288561133,
+  -3.2534395568815255,
+  -7.3512087424683825,
+  -7.340356284968146,
+  -7.146664662242846,
+  -5.112556333827317,
+  -5.05595295115253,
+  -4.765202060688215,
+  -4.65045925984849,
+  -4.518851529570241,
+  -4.108240525935441,
+  -3.95726562062709,
+  -3.711816965401599,
+  -3.4935482584866886,
+  -3.5451451689681597,
+  -3.4991343746807635,
+  -3.4473318351643467,
+  -3.3918968441418946,
+  -3.3262940170359743,
+  -3.266685987943582,
+  -7.0176339977778985,
+  -6.908665850650332,
+  -7.08393957295741,
+  -5.163863579739943,
+  -4.787955317601989,
+  -4.99032275074398,
+  -4.501683768460002,
+  -4.156011857926767,
+  -4.170767458548889,
+  -3.8194727159832147,
+  -3.6649864466979456,
+  -3.5847769584135483,
+  -3.534356735265277,
+  -3.496809926540524,
+  -3.4323567473464234,
+  -3.3841781996104907,
+  -3.3023869338046814,
+  -3.2868173005615815,
+  -6.704951560385315,
+  -7.094103694223063,
+  -6.7712213907341745,
+  -4.81219964178446,
+  -4.928004656929105,
+  -5.008590435586157,
+  -4.729378588911205,
+  -4.574160591974963,
+  -4.042322731839432,
+  -3.8122851465493235,
+  -3.7441846555231466,
+  -3.6700122809305142,
+  -3.5789994522445308,
+  -3.4886760387186677,
+  -3.4359778761665782,
+  -3.4060951502105707,
+  -3.3414984707621467,
+  -3.2939132955082626,
+  -6.9750962654923665,
+  -7.050806374223086,
+  -7.129192481186988,
+  -4.736920575127355,
+  -5.004906350821387,
+  -4.651394776535174,
+  -4.630498171161885,
+  -4.579039050551665,
+  -4.137409313306224,
+  -3.9248138552210565,
+  -3.721186126894341,
+  -3.673904285766452,
+  -3.5643850347822927,
+  -3.495102433206458,
+  -3.4189570749817557,
+  -3.3955634429875214,
+  -3.3479492462441884,
+  -3.2964099052509965,
+  -6.847015205137057,
+  -6.620066551680295,
+  -6.543628112433681,
+  -6.933601341892747,
+  -6.759995791158552,
+  -6.4398953836805495,
+  -6.823150245428217,
+  -6.548803438140133,
+  -6.320692267023628,
+  -6.675973967900046,
+  -6.348958064187626,
+  -6.031713654888768,
+  -6.755091792322144,
+  -6.455750915760303,
+  -6.554709848851817,
+  -6.512466616794991,
+  -6.617242567385336,
+  -6.606671941930913,
+  -6.4526039671108375,
+  -6.802348992976157,
+  -6.550510830535781,
+  -6.607352859171087,
+  -6.358562121516108,
+  -6.2727004644003195,
+  -6.77871346494909,
+  -6.590722978470808,
+  -6.496655626032277,
+  -6.734400991225439,
+  -6.613383988587475,
+  -6.431634165548194,
+  -6.452314944936084,
+  -6.104421192598344,
+  -6.316414246035222,
+  -6.4895371362939684,
+  -6.229834342734567,
+  -6.224345783213097,
+  -6.591920091357062,
+  -6.248560921842194,
+  -6.15970362504027,
+  -6.474583552884192,
+  -6.184756807656956,
+  -6.2762360792702285,
+  -6.478876032590873,
+  -6.409764579895985,
+  -6.128428862661471,
+  -6.499261800331974,
+  -6.296150474355374,
+  -6.215560669873144,
+  -6.5630538763288415,
+  -6.061112453727154,
+  -6.253034014668447,
+  -6.353757431402561,
+  -6.2444184316164835,
+  -6.261499827244693,
+  -6.566603741711695,
+  -6.150526898593489,
+  -5.998140973245035,
+  -6.479888958879308,
+  -6.519215254881572,
+  -6.280477516312893
+ ],
+ "champion_before": null,
+ "bounds": {
+  "item": "A6.1 (part 2)",
+  "experiments": [
+   "0034",
+   "0035",
+   "0048"
+  ],
+  "cells": 4,
+  "flag_level": "p < 0.05 / 4; needs 80 copies",
+  "copies": "0216's regeneration (tools/a13_check.py pass1-regen, seed 1300): each frozen search unchanged on 10 plain shuffles",
+  "by_cell": {
+   "0034 P53-95": {
+    "k4_judge": 30,
+    "k4_judge_reading": "IS IN G HIC NN JAR ISE Y UNDE ? NET IN THERE IN TED TO THE RECORDS ON ? HIM ? ? ?",
+    "copies_best": [
+     30,
+     45,
+     42,
+     30,
+     27,
+     28,
+     40,
+     40,
+     22,
+     33
+    ],
+    "copies_max": 45,
+    "k4_above_every_copy": false,
+    "k4_rank": 8,
+    "n_copies": 10,
+    "readings_per_text": 15,
+    "judge_none_in_call": 0
+   },
+   "0034 P27-29": {
+    "k4_judge": 8,
+    "k4_judge_reading": "? LEVES SIT MILAN BAC ? AT ? OF ?",
+    "copies_best": [
+     6,
+     6,
+     4,
+     4,
+     7,
+     6,
+     4,
+     4,
+     7,
+     7
+    ],
+    "copies_max": 7,
+    "k4_above_every_copy": true,
+    "k4_rank": 1,
+    "n_copies": 10,
+    "readings_per_text": 3,
+    "judge_none_in_call": 0
+   },
+   "0035 P27-29": {
+    "k4_judge": 6,
+    "k4_judge_reading": "? ? ? BUT THE ? ? ? SEA ? ? ? ?",
+    "copies_best": [
+     5,
+     8,
+     12,
+     12,
+     6,
+     4,
+     4,
+     12,
+     6,
+     8
+    ],
+    "copies_max": 12,
+    "k4_above_every_copy": false,
+    "k4_rank": 8,
+    "n_copies": 10,
+    "readings_per_text": 3,
+    "judge_none_in_call": 0
+   },
+   "0048 P27-29": {
+    "k4_judge": 12,
+    "k4_judge_reading": "? ? ? DEXZEMBER (DECEMBER?) ? ?",
+    "copies_best": [
+     8,
+     12,
+     6,
+     8,
+     12,
+     8,
+     12,
+     12,
+     12,
+     7
+    ],
+    "copies_max": 12,
+    "k4_above_every_copy": false,
+    "k4_rank": 6,
+    "n_copies": 10,
+    "readings_per_text": 3,
+    "judge_none_in_call": 0
+   }
+  },
+  "k4_above_every_copy_cells": [
+   "0034 P27-29"
+  ],
+  "chance_expected": 0.36,
+  "judge_texts_sent": 264,
+  "judge_calls_estimated": 264,
+  "quadgram_cut": "none: every reading of K4 and of the copies sent",
+  "not_rejudged": {
+   "0037": "F6.3b's close rests on 0158's exact count (105.5 million routes); 0037 kept no reading"
+  },
+  "controls": "quadgram scores of every copy reading of the three searches (pass1_copies.json); each K4 reading faces its own experiment's copies among them (issue #88)",
+  "exhaustive": false
+ },
+ "notes": "0034 P53-95: K4 30, copies best 45 (rank 8 of 11); 0034 P27-29: K4 8, copies best 7 (rank 1 of 11); 0035 P27-29: K4 6, copies best 12 (rank 8 of 11); 0048 P27-29: K4 12, copies best 12 (rank 6 of 11)",
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 0,
+  "cached": 264,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "errors": 0
+ },
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "RPRESIDENTHESTHERESANEASTNORTHEASTDERSTHEPRESINTHEREARENTHERETHBERLINCLOCKERESIDEDINGTHETHEREARTI",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "kry",
+     "ka": "kry",
+     "m": "varbeau",
+     "key": "FALPWPOZKOFGDGYGYMDMJMCLWNQHMHLKFGXKQHZRHUEXABHQDWGHKKCPTKAYEAZBYHITCDFYZDATQMCOKGZPLSACOFWVNKB"
+    }
+   },
+   "key_bits": 461.054109152574,
+   "key_description": "saved reading of 0034: period 95 key FALPWPOZKOFGDGYGYMDMJMCLWNQHMHLKFGXKQHZRHUEXABHQDWGHKKCPTKAYEAZBYHITCDFYZDATQMCOKGZPLS",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -3.277,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -3.2770305733113596,
+   "fitness": -8.030165719214184,
+   "loss": 6.684235152542899
+  },
+  {
+   "plaintext": "OFORESTINTEDINTHEARENEASTNORTHEASTTHESTHESTHERENTERSANDINGANDINBERLINCLOCKGSTANDTHERENTERSARETHAL",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "m": "vig",
+     "key": "KVUKDZQJQDDANGRPTOAWTRDUMRIYWOYNKYRJFXJMOHYMKZHSNVPDNXEUVQJVCWIELYOIECBAQKDASNSHKYXCTQVDGIKQ"
+    }
+   },
+   "key_bits": 446.954109152574,
+   "key_description": "saved reading of 0034: period 92 key KVUKDZQJQDDANGRPTOAWTRDUMRIYWOYNKYRJFXJMOHYMKZHSNVPDNXEUVQJVCWIELYOIECBAQKDASNSHKYXCTQ",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -3.334,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -3.3335667602695644,
+   "fitness": -7.941341081430121,
+   "loss": 6.4492351525429
+  },
+  {
+   "plaintext": "ISCOREATTHETHESTHEREAEASTNORTHEASTNDCONTHERESERINTHESTERANDERANBERLINCLOCKDRENTHEREARATERSTHEMARX",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "kry",
+     "ka": "std",
+     "m": "beau",
+     "key": "NACPMJYYGVZKPKXKWQZMXQRTPHIUUARAYZSHZSHZXYXKDEQHKALUSKZBPUATKMVUGUHMRUKAFKAEONSFIHNKGNTZF"
+    }
+   },
+   "key_bits": 432.854109152574,
+   "key_description": "saved reading of 0034: period 89 key NACPMJYYGVZKPKXKWQZMXQRTPHIUUARAYZSHZSHZXYXKDEQHKALUSKZBPUATKMVUGUHMRUKAFKAEONSFIHNKGN",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -3.392,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -3.392202783807545,
+   "fitness": -7.854616280225834,
+   "loss": 6.2142351525429
+  },
+  {
+   "plaintext": "WAROUNTRETHEREATEDINTEASTNORTHEASTERESTOREASTEVERESANDINTHETHESBERLINCLOCKTATTHECONTHESTORATANAME",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "std",
+     "ka": "std",
+     "m": "varbeau",
+     "key": "IZHXAZWDYMNTQMMIWYHMXZPBYXYCCUYQABQYIZDWIOIAPUWFVEZRDSOKLHILUZROGCQPUQMJNAXUQJIHJFLQZY"
+    }
+   },
+   "key_bits": 412.7999128421871,
+   "key_description": "saved reading of 0034: period 86 key IZHXAZWDYMNTQMMIWYHMXZPBYXYCCUYQABQYIZDWIOIAPUWFVEZRDSOKLHILUZROGCQPUQMJNAXUQJIHJFLQZY",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -3.466,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -3.466144481536806,
+   "fitness": -7.721813686095436,
+   "loss": 5.879998547369785
+  },
+  {
+   "plaintext": "OAREACHALLIONTHEREINTEASTNORTHEASTHEWITHEARECOMENTHEREINTERESANBERLINCLOCKDRESTATINTHEDALECTINGMO",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "kry",
+     "ka": "std",
+     "m": "varbeau",
+     "key": "JSRDFXJVYXNXFNCNCSAFWSJRXTUOSORAMNCAZEZBOGLYRONFQMDORNNDEXUPZOFICOPEJKMCZKGEUSUCPSE"
+    }
+   },
+   "key_bits": 404.654109152574,
+   "key_description": "saved reading of 0034: period 83 key JSRDFXJVYXNXFNCNCSAFWSJRXTUOSORAMNCAZEZBOGLYRONFQMDORNNDEXUPZOFICOPEJKMCZKGEUSUCPSE (5",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -3.487,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -3.4872509103921008,
+   "fitness": -7.658942757325853,
+   "loss": 5.7442351525429
+  },
+  {
+   "plaintext": "BERSDATEDTOARELETHESTEASTNORTHEASTORESTHATTHEREATTHETHEAREANDINBERLINCLOCKTHERESANDITISREELETOURJ",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "m": "vig",
+     "key": "XXZVLYUUDKQKHVOGLYXCTBKVSBPCXFCTACADMYQSJQCSAZOSTDQFWDKDOWQWJXPLRCFPLJIHUATZZZOS"
+    }
+   },
+   "key_bits": 390.554109152574,
+   "key_description": "saved reading of 0034: period 80 key XXZVLYUUDKQKHVOGLYXCTBKVSBPCXFCTACADMYQSJQCSAZOSTDQFWDKDOWQWJXPLRCFPLJIHUATZZZOS (56 f",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -3.59,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -3.5904199697999095,
+   "fitness": -7.616750991991394,
+   "loss": 5.5092351525428995
+  },
+  {
+   "plaintext": "TOVENOTHESTHERSTTHESAEASTNORTHEASTRERESIDENTERSAREARETOTHERATERBERLINCLOCKSONOFTHISFREETERSINEEDL",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "kry",
+     "ka": "kry",
+     "m": "varbeau",
+     "key": "HSUPMCUYLTXJVEGYTUVDPMCLWNQHMHLKFGFKQKXYGDAGNLNRQWVRTYNCMWQEKMCBYHITCDFYZDURP"
+    }
+   },
+   "key_bits": 376.454109152574,
+   "key_description": "saved reading of 0034: period 77 key HSUPMCUYLTXJVEGYTUVDPMCLWNQHMHLKFGFKQKXYGDAGNLNRQWVRTYNCMWQEKMCBYHITCDFYZDURP (53 free",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -3.614,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -3.614087564839593,
+   "fitness": -7.495057762288809,
+   "loss": 5.288322717382493
+  },
+  {
+   "plaintext": "WHEUSHESTIONSTEONLYCOEASTNORTHEASTNTHETHESTATESTIMENTSANDINGATIBERLINCLOCKONTHEWARKENHISTHESOMESG",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "m": "vig",
+     "key": "LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD"
+    }
+   },
+   "key_bits": 362.354109152574,
+   "key_description": "saved reading of 0034: period 74 key LGZVHKFBYMIMUHPSIHZMLQTELWEHGZUPFHUIBBFTXDHEKZNUABBJSOGDXEPUSRFOGHTTKPBKSD (50 free sl",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -3.704,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -3.703745933284947,
+   "fitness": -7.439355305991896,
+   "loss": 5.142981085827847
+  },
+  {
+   "plaintext": "HUKSALLTHAVICEFFICESAEASTNORTHEASTNATIONANDINATESTINANDATTHERESBERLINCLOCKENSTIONESERTERETOODSLCQ",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "m": "vig",
+     "key": "KSDEGWSDMKXVMAYZNVJUIQTELWEHGZUPFHUFMTEZYWBPEPUHJVTJPMDVTVBWFQUOGHTTKPB"
+    }
+   },
+   "key_bits": 348.25410915257396,
+   "key_description": "saved reading of 0034: period 71 key KSDEGWSDMKXVMAYZNVJUIQTELWEHGZUPFHUFMTEZYWBPEPUHJVTJPMDVTVBWFQUOGHTTKPB (47 free slots",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -4.008,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -4.008232678715802,
+   "fitness": -7.598481226680482,
+   "loss": 5.212467831258701
+  },
+  {
+   "plaintext": "IRWAHOTALLISAREATHENTEASTNORTHEASTINANDSOMESANDINTHERENTHERSEARBERLINCLOCKSSIONESISSTINGETPVCHACT",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "std",
+     "ka": "kry",
+     "m": "vig",
+     "key": "SDHLGKTHUVFNRRDEIXWHPREZYPYXXSYDKZSSVSGKUTHKTWVLCAFONAADRVOJCODFQXDE"
+    }
+   },
+   "key_bits": 334.154109152574,
+   "key_description": "saved reading of 0034: period 68 key SDHLGKTHUVFNRRDEIXWHPREZYPYXXSYDKZSSVSGKUTHKTWVLCAFONAADRVOJCODFQXDE (44 free slots cl",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -4.04,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -4.040383301433035,
+   "fitness": -7.4852710246554475,
+   "loss": 5.009618453975936
+  },
+  {
+   "plaintext": "ZONVSENAGRAYSTEDITSUREASTNORTHEASTESINTHERATIONANDTHESTIONSIDERBERLINCLOCKMICHEMWHATHEWPNOSTNOXLS",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "m": "beau",
+     "key": "TGNWRJLFKIYNHDJRTJHPXWXAKGZTOAXAFDJDFWXQRUGDKOMSJLBTEWZZQKPTPWCRG"
+    }
+   },
+   "key_bits": 320.054109152574,
+   "key_description": "saved reading of 0034: period 65 key TGNWRJLFKIYNHDJRTJHPXWXAKGZTOAXAFDJDFWXQRUGDKOMSJLBTEWZZQKPTPWCRG (41 free slots climb",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -4.313,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -4.3133094360258495,
+   "fitness": -7.612836334505994,
+   "loss": 5.0475445885687495
+  },
+  {
+   "plaintext": "ISINGHICNNJARISEYUNDEEASTNORTHEASTNETINTHEREINTEDTOTHERECORDSONBERLINCLOCKHIMJUFYFLIUAILUSOFFSOFV",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "std",
+     "ka": "std",
+     "m": "varbeau",
+     "key": "BFFCTASVNMWWAXSAUQSJPGWPJDPMNBFXOMFSIWDMFVJTLJFMOEMVEAHI"
+    }
+   },
+   "key_bits": 277.75410915257396,
+   "key_description": "saved reading of 0034: period 56 key BFFCTASVNMWWAXSAUQSJPGWPJDPMNBFXOMFSIWDMFVJTLJFMOEMVEAHI (32 free slots climbed); kry/",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -4.781,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -4.780780850860771,
+   "fitness": -7.6442252751141115,
+   "loss": 4.81001600340367
+  },
+  {
+   "plaintext": "YVWPJDWEXAHRENTERNINOEASTNORTHEASTTHEPARTERANDANDINTHECONTERATIBERLINCLOCKSANDMEARECTUNWVSGUCAJFA",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "m": "vig",
+     "key": "FOGHTTKPBKSDJZDKAFFBLQTELWEHGZUPFHDOEJCLOOLEEKMSFEKOVKEXIVEASR"
+    }
+   },
+   "key_bits": 305.954109152574,
+   "key_description": "saved reading of 0034: period 62 key FOGHTTKPBKSDJZDKAFFBLQTELWEHGZUPFHDOEJCLOOLEEKMSFEKOVKEXIVEASR (38 free slots climbed)",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -4.902,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -4.901640749075713,
+   "fitness": -8.05580682281359,
+   "loss": 5.400875901618614
+  },
+  {
+   "plaintext": "RROURUNXYOROCSVIOLEISEASTNORTHEASTANDINTHERATINGTHESTINTERSAIDEBERLINCLOCKTANYLOWCUVRISRQWLTMEDSL",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "m": "beau",
+     "key": "IYIFUCJFBFUJDXDKGVFJYJMWZCUJURLLXVUFSBCVWRNZBZMFKHTIHKGANRY"
+    }
+   },
+   "key_bits": 291.854109152574,
+   "key_description": "saved reading of 0034: period 59 key IYIFUCJFBFUJDXDKGVFJYJMWZCUJURLLXVUFSBCVWRNZBZMFKHTIHKGANRY (35 free slots climbed); k",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -5.034,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -5.033643707482985,
+   "fitness": -8.042448956478593,
+   "loss": 5.297878860025884
+  },
+  {
+   "plaintext": "PATEOVERSCURFONVGFSQYEASTNORTHEASTARELEDFEATHESTHEPRESHANINTSTIBERLINCLOCKNFGEEHNBSHCEBUDGEARESSU",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "std",
+     "ca": "std",
+     "ka": "kry",
+     "m": "beau",
+     "key": "PRPUBCROXCHYSSRSHDNLQCECHPTSDQDDDEHDKTQUHQMEEHLMPTBKH"
+    }
+   },
+   "key_bits": 263.654109152574,
+   "key_description": "saved reading of 0034: period 53 key PRPUBCROXCHYSSRSHDNLQCECHPTSDQDDDEHDKTQUHQMEEHLMPTBKH (29 free slots climbed); std/std",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P53-95, K4 best judge 30",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -5.108,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -5.10809389320522,
+   "fitness": -7.826177492716292,
+   "loss": 4.90232904574812
+  },
+  {
+   "plaintext": "YJAEIVIZKOYDBEACIOSSLEASTNORTHEASTVCACZLEVESITMILANBACMIIXDCHKYBERLINCLOCKATTHIZQLLPDLOFDFOIJGUSM",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "m": "beau",
+     "key": "HYHMKBNENTXBQRMAEROOOXYHANZEF"
+    }
+   },
+   "key_bits": 150.854109152574,
+   "key_description": "saved reading of 0034: period 29 key HYHMKBNENTXBQRMAEROOOXYHANZEF (5 free slots climbed); kry/kry/std/beau",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P27-29, K4 best judge 8",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -6.709,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -6.7088997773634285,
+   "fitness": -8.264096778936356,
+   "loss": 4.623134929906328
+  },
+  {
+   "plaintext": "RYIHBKSCNNJARISEYUCCTEASTNORTHEASTWHCOFHCGDMXKAATSIXNHCIURRORLDBERLINCLOCKTHEJUFYFLIUAILUSCILVXVL",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "std",
+     "ka": "std",
+     "m": "vig",
+     "key": "NZVDMORFNOEEADIAGKSSSUELRXLO"
+    }
+   },
+   "key_bits": 146.154109152574,
+   "key_description": "saved reading of 0034: period 28 key NZVDMORFNOEEADIAGKSSSUELRXLO (4 free slots climbed); kry/std/std/vig",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P27-29, K4 best judge 8",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -6.808,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -6.808093368741139,
+   "fitness": -8.314836762066644,
+   "loss": 4.643995187950706
+  },
+  {
+   "plaintext": "ZWAWFAFIWGMGOGMDROTMAEASTNORTHEASTISTCDAPPUDSFROKLPDGBCUMLDWLBYBERLINCLOCKADHARIUHVWCQFISIQMNGDJK",
+   "key": {
+    "exp": "0034",
+    "key": {
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "m": "beau",
+     "key": "EFHYHMKUKBNENTXBQRMAEXYHANZ"
+    }
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "saved reading of 0034: period 27 key EFHYHMKUKBNENTXBQRMAEXYHANZ (3 free slots climbed); kry/kry/std/beau",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0034 P27-29, K4 best judge 8",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -7.257,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -7.256812508092366,
+   "fitness": -8.71510229317045,
+   "loss": 5.0143809939686
+  },
+  {
+   "plaintext": "QGFMJOYSTOAEUHISNORDFEASTNORTHEASTSDKZSIZKIENYYISBUIIAWIVYLBOMOBERLINCLOCKFFEMXURMHAWYLVEERAJBUXH",
+   "key": {
+    "exp": "0035",
+    "key": {
+     "pa": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "ca": "HILABCDEFGJKMNOPQRSTUVWXYZ",
+     "m": "vig",
+     "key": [
+      24,
+      24,
+      6,
+      5,
+      11,
+      0,
+      25,
+      22,
+      16,
+      12,
+      20,
+      24,
+      10,
+      11,
+      6,
+      10,
+      14,
+      20,
+      13,
+      1,
+      17,
+      4,
+      2,
+      25,
+      2,
+      3,
+      2
+     ]
+    }
+   },
+   "key_bits": 141.454109152574,
+   "key_description": "saved reading of 0035: period 27, plain std, cipher HILL/keyword, vig; 3 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0035 P27-29, K4 best judge 6",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -6.822,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -6.821619186417705,
+   "fitness": -8.279908971495788,
+   "loss": 4.579187672293939
+  },
+  {
+   "plaintext": "DWIVEFUEXNARRMGFNUECOEASTNORTHEASTMWSESLIBREUKSFOCUJPVHUNIJEFUNBERLINCLOCKCEDWJICYBUNUIPOBOZZHUQP",
+   "key": {
+    "exp": "0035",
+    "key": {
+     "pa": "WILAMEBSTRCDFGHJKNOPQUVXYZ",
+     "ca": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "beau",
+     "key": [
+      25,
+      1,
+      11,
+      13,
+      25,
+      0,
+      18,
+      19,
+      3,
+      24,
+      23,
+      20,
+      10,
+      22,
+      1,
+      23,
+      25,
+      0,
+      6,
+      11,
+      14,
+      10,
+      14,
+      24,
+      3,
+      7,
+      8,
+      24
+     ]
+    }
+   },
+   "key_bits": 146.154109152574,
+   "key_description": "saved reading of 0035: period 28, plain WILLIAMWEBSTER/keyword, cipher std, beau; 4 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0035 P27-29, K4 best judge 6",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -6.615,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -6.614686827930469,
+   "fitness": -8.121430221255974,
+   "loss": 4.4505886471400355,
+   "readable_words": [
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     60,
+     63,
+     "FUN"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     79,
+     82,
+     "ICY"
+    ],
+    [
+     82,
+     85,
+     "BUN"
+    ]
+   ]
+  },
+  {
+   "plaintext": "FFATRYYSOWADXNDJBUTHEEASTNORTHEASTYFINMGHFNESEAVOLPGLEXNZIANXBIBERLINCLOCKRTRAAJSAKOWAAGGQIRORYUK",
+   "key": {
+    "exp": "0035",
+    "key": {
+     "pa": "LANGEYBCDFHIJKMOPQRSTUVWXZ",
+     "ca": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "beau",
+     "key": [
+      23,
+      10,
+      11,
+      11,
+      12,
+      19,
+      2,
+      7,
+      21,
+      4,
+      21,
+      19,
+      25,
+      20,
+      22,
+      23,
+      14,
+      0,
+      21,
+      11,
+      0,
+      9,
+      12,
+      10,
+      15,
+      18,
+      5,
+      7,
+      11
+     ]
+    }
+   },
+   "key_bits": 150.854109152574,
+   "key_description": "saved reading of 0035: period 29, plain LANGLEY/keyword, cipher std, beau; 5 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0035 P27-29, K4 best judge 6",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -6.614,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -6.614177883652327,
+   "fitness": -8.169374885225254,
+   "loss": 4.528413036195227,
+   "readable_words": [
+    [
+     3,
+     6,
+     "TRY"
+    ],
+    [
+     7,
+     10,
+     "SOW"
+    ],
+    [
+     18,
+     21,
+     "THE"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     35,
+     38,
+     "FIN"
+    ],
+    [
+     44,
+     47,
+     "SEA"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ]
+   ]
+  },
+  {
+   "plaintext": "UYUGNUWILATPSJGPEOMIFEASTNORTHEASTIAORTOOPSUPOUGHBHISCEBKRIFCSOBERLINCLOCKFWRZEIMDEXZEMBERHTJRETQ",
+   "key": {
+    "exp": "0048",
+    "key": {
+     "pa": "WEBSTRACDFGHIJKLMNOPQUVXYZ",
+     "ca": "WORLDCKABEFGHIJMNPQSTUVXYZ",
+     "m": "beau",
+     "key": [
+      22,
+      6,
+      1,
+      12,
+      12,
+      22,
+      23,
+      13,
+      0,
+      18,
+      25,
+      22,
+      11,
+      6,
+      11,
+      22,
+      14,
+      2,
+      24,
+      20,
+      9,
+      11,
+      9,
+      5,
+      0,
+      9,
+      10
+     ]
+    }
+   },
+   "key_bits": 147.4083054629609,
+   "key_description": "saved reading of 0048: period 27, plain WEBSTER/keyword, cipher WORLDCLOCK/keyword, beau; 3 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0048 P27-29, K4 best judge 12",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -6.355,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -6.354892285227295,
+   "fitness": -7.874565537422768,
+   "loss": 4.211697376276643,
+   "readable_words": [
+    [
+     20,
+     25,
+     "FEAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     43,
+     45,
+     "UP"
+    ],
+    [
+     46,
+     49,
+     "UGH"
+    ],
+    [
+     50,
+     53,
+     "HIS"
+    ],
+    [
+     58,
+     60,
+     "IF"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     85,
+     90,
+     "EMBER"
+    ]
+   ]
+  },
+  {
+   "plaintext": "ADJBNPTHULKBRUNTDELITEASTNORTHEASTYWBCIGZFRYRKWATWCULYBOLARSASWBERLINCLOCKALSKHOOJUOLBJCEGOTKPAKO",
+   "key": {
+    "exp": "0048",
+    "key": {
+     "pa": "SHADOWBCEFGIJKLMNPQRTUVXYZ",
+     "ca": "LODESTNABCFGHIJKMPQRUVWXYZ",
+     "m": "varbeau",
+     "key": [
+      1,
+      21,
+      23,
+      13,
+      22,
+      16,
+      23,
+      0,
+      10,
+      2,
+      19,
+      6,
+      11,
+      17,
+      15,
+      20,
+      16,
+      24,
+      6,
+      3,
+      24,
+      24,
+      2,
+      7,
+      25,
+      24,
+      12,
+      2
+     ]
+    }
+   },
+   "key_bits": 152.10830546296089,
+   "key_description": "saved reading of 0048: period 28, plain SHADOW/keyword, cipher LODESTONE/keyword, varbeau; 4 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0048 P27-29, K4 best judge 12",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -6.52,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -6.519914329451832,
+   "fitness": -8.088041189894728,
+   "loss": 4.455052753834513,
+   "readable_words": [
+    [
+     7,
+     11,
+     "HULK"
+    ],
+    [
+     11,
+     16,
+     "BRUNT"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     41,
+     44,
+     "FRY"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     89,
+     92,
+     "GOT"
+    ]
+   ]
+  },
+  {
+   "plaintext": "JGAFEEFGHJCJOUSTOLITIEASTNORTHEASTEHHUAODBULYMENDTRYFFLAWPKASEDBERLINCLOCKITHNDPRGADTYGABNDEDOZMS",
+   "key": {
+    "exp": "0048",
+    "key": {
+     "pa": "LUCIDABEFGHJKMNOPQRSTVWXYZ",
+     "ca": "WONDERFULABCGHIJKMPQSTVXYZ",
+     "m": "beau",
+     "key": [
+      12,
+      19,
+      21,
+      13,
+      14,
+      8,
+      5,
+      10,
+      22,
+      24,
+      9,
+      19,
+      25,
+      21,
+      20,
+      2,
+      3,
+      6,
+      13,
+      4,
+      3,
+      13,
+      13,
+      24,
+      16,
+      7,
+      8,
+      10,
+      25
+     ]
+    }
+   },
+   "key_bits": 156.8083054629609,
+   "key_description": "saved reading of 0048: period 29, plain LUCID/keyword, cipher WONDERFUL/keyword, beau; 5 free slots climbed",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "A6.1: cell 0048 P27-29, K4 best judge 12",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "baseline",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "english": -6.139,
+    "controls": 240,
+    "best_control": -3.242
+   },
+   "english_free": -6.139471388184237,
+   "fitness": -7.756051856874556,
+   "loss": 4.152943145900252,
+   "readable_words": [
+    [
+     3,
+     6,
+     "FEE"
+    ],
+    [
+     11,
+     16,
+     "JOUST"
+    ],
+    [
+     17,
+     20,
+     "LIT"
+    ],
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     45,
+     49,
+     "MEND"
+    ],
+    [
+     49,
+     52,
+     "TRY"
+    ],
+    [
+     53,
+     57,
+     "FLAW"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     81,
+     84,
+     "GAD"
+    ],
+    [
+     86,
+     89,
+     "GAB"
+    ]
+   ]
+  }
+ ]
+}

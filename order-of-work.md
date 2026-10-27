@@ -234,6 +234,30 @@ Work the table top down: F13.1 decides how much of F13.4 exists.
 | **F13.6** A13's battery on every reading F13.4 and F13.5 produce, not only those that put the 24 letters in place | open | sampled | - | Same multiple-test rule as A13 (program.md) |
 | **F13.7** The object: the carved letters checked against photographs, the ?, the line breaks, Antipodes' K4 against Kryptos' | blocked | - | - | Needs sharp photographs of the copper (#81) and Antipodes' layout (F4.5). One wrong carved letter breaks every other item |
 
+## F14. Scheidt's mask, keyed by words (issue #93)
+
+Drafted 2026-10-27 at Alexis's request, queued after F13. Scheidt, over 23 years: the English was masked and the
+mask must be solved first; more than one stage; "building layers... mix and match"; a math function on the
+English, another base; duress codes; simple, remembered, driven by key word/s; "98 characters left". Almost every
+reading of the mask lands in cells already blocked because free unknown alphabets leave 97 letters undecided (F1.2
+from key length 19, F6.1, F6.2; 0136's bound). A mask made from key words is a few dozen bits, not 88 per alphabet,
+so the keyed versions of those cells can be decided. Each item states its key source (program.md's order) and
+checks the prior-attempts database first. Work the table top down.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **F14.1** Two different key-word alphabets from the whole dictionary, one each side, plus a key word on the table, key lengths 19-26, both forms; the mask before or after the table is the same system here | open | exact | - | 0109 used one dictionary alphabet on both sides; 0020 pairs of the 248 puzzle words. Full pairs are about 4 x 10^10 per length: solve the cipher side from the plain side's constraints and look it up in the alphabet index, rather than enumerate pairs. Estimate the cost first |
+| **F14.2** A remembered route (keyword columnar, the K3 rule, grid paths, the type-1 library) plus key-word alphabets from the dictionary, in F6.1 and F6.2's blocked cells | open | exact | - | The keyword-alphabet version of F6.1/F6.2; F6's key-word runs used the sculpture's tables and puzzle words only |
+| **F14.3** Duress reading: a running key where the message and the key are both English (giving up the key yields believable text), judged by F13.3's judge | open | sampled | - | Reruns 0125's design with the stronger judge; needs F13.3 first |
+| **F14.4** How firm is A2 (letter for letter)? Re-read Sanborn's BERLIN and EAST statements and the 2010-2020 clue wording in the sources | open | by reading | - | No run. If letter-for-letter is looser than assumed, Morse and digit systems (VIC, straddling checkerboards, Nihilist substitution) come back as a new item |
+| **F14.5** Scheidt's "98 characters left": F14.1 and F14.2 on the 98-letter variants (the ? as a letter; one letter missing at each place) | open | exact | - | After F14.1 and F14.2; 0086 and F1.6 did this for the earlier key sources |
+| **F14.6** "Mix and match": every procedure of up to three hand steps built from K1-K3's operations (keyed alphabet, table with a key word, K3's rotation, keyword columnar, reversal), keys from the source list, ranked by the length of their description | open | exact | - | Write the grammar and count the procedures first; skip combinations an earlier family already closed and cite them |
+| **F14.7** Plaintext style as the mask: abbreviated, vowel-dropped or telegraphese English (Scheidt's "remember your process"; Sanborn's "disjointed") added to the judge bench, with the power of the quadgram scorer and the judge on it | open | measured | - | Extends A6.2's classes. If neither sees it, the sampled closes are "closed for ordinary English" only |
+
+Considered and left out: Baudot or other XOR in base 2 or 16 (outputs fall outside A-Z); a code layer or stego (they
+change the meaning, not the encipherment, so they sit outside the success criteria); an extinct language (Scheidt
+says it was refused).
+
 ## F1. One keyed stage, no move
 
 | Item | Status | Strength | Experiments | Next test or reason |

@@ -203,6 +203,14 @@ Update the leaf when an experiment works on it.
     - **F13.5** Memorable keys from the named sources, scored by English alone {open}
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}
+  - F14 Scheidt's mask, keyed by words: the blocked free-alphabet cells, shrunk by his "key word/s" (issue #93)
+    - **F14.1** Two dictionary key-word alphabets plus a key word, key lengths 19-26 {open}
+    - **F14.2** A remembered route plus key-word alphabets in F6.1 and F6.2's cells {open}
+    - **F14.3** Duress reading: a running key with the message and the key both English {open}
+    - **F14.4** How firm the letter-for-letter assumption (A2) is, from the sources {open}
+    - **F14.5** "98 characters left": F14.1 and F14.2 on the 98-letter variants {open}
+    - **F14.6** "Mix and match": every hand procedure of up to three steps from K1-K3's operations {open}
+    - **F14.7** Abbreviated or telegraphese English as the mask, through the judge bench {open}
 
 ## Full record by family
 

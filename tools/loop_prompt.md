@@ -53,3 +53,6 @@ into the queue in its family's place.
 
 F13 (issue #85): ciphertext only, following program.md's "Ciphertext only (F13)". The search never reads the 24
 known letters; F13.1 comes first.
+
+F14 (issue #93): Scheidt's mask, keyed by words. Each item names its key source and checks the prior-attempts
+database before running; F14.3 waits for F13.3's judge.

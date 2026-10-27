@@ -24,3 +24,4 @@ logs/
 data/running-experiment.json
 data/loop-stop-request
 data/experiment-progress.json
+data/loop.pid

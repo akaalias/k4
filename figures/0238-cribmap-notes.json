@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Replicate 0237's flag: K4 above all 100 shuffles at table-then-move, key length 2."
+ },
+ {
+  "anchor": "the check",
+  "text": "The same search, unchanged, on K4 and 300 fresh shuffles."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Replicated by the rule (p 0.0233): the same reading, junk with 3 of 24 known letters. Words or letter texture? 0239 asks the judge."
+ }
+]

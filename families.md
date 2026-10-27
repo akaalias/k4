@@ -210,6 +210,9 @@ Update the leaf when an experiment works on it.
         - Lengths 6-26: the per-column frequency screen loses the true table {blocked · sampled · 0235}
       - **F13.4c** One free alphabet with a periodic key, lengths 1-19, both forms: plants found to 5 (7/8); K4 inside 50 climbed shuffles there (p 0.37) {closed · sampled · 0236}
         - Lengths 6-19: alphabet and key not found together without known letters (plants 2-5/8) {blocked · sampled · 0236}
+      - **F13.4d** 27,852 moves before or after the sculpture's tables, lengths 1-20: plants found to 12 {closed · sampled · 0237}
+        - K4 above its shuffles at table-then-move, key length 2 (p 0.0099, replicated p 0.023 against 300 fresh); reading junk, 3 of 24 known letters; the judge at the edge of chance (14 of 300 at or above) {noted · sampled · 0237, 0238, 0239}
+        - Lengths 13-20 by power; F6.1 (a free alphabet after a move) by 0236's power {blocked · sampled · 0237, 0236}
     - **F13.5** Memorable keys from the named sources, scored by English alone {open}
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}

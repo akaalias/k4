@@ -59,6 +59,15 @@ until Alexis decides; from here on no experiment re-submits an older reading.
 | 234 | F13.4a | **The sculpture's table with a repeating key, from the ciphertext alone.** The climb recovers K1's PALIMPSEST from K1's carved letters with no crib. On K4, every length 1-36 and all 8 ways of using the table: inside 200 shuffles (p 0.62). Plants found to length 26: closed 1-26 without the known letters, 27-36 too short. |
 | 235 | F13.4b | **2.08 million dictionary keyword tables, from the ciphertext alone.** Every table screened exactly column by column, the best 50 per length climbed. K4 inside 100 shuffles (p 0.66). Plants found only at length 5 (8/8; 4/8 at 10): closed 1-5, blocked 6-26. |
 | 236 | F13.4c | **One free alphabet, from the ciphertext alone, power first.** Design 2 with no known letter finds plants to length 5 (7/8), not beyond (2-5/8). In the decided cells K4 is inside 50 shuffles (p 0.37). Closed 1-5, blocked 6-19. |
+| 237 | F13.4d | **Every type-1 move with the sculpture's tables, from the ciphertext alone.** Plants found to length 12. **K4 above all 100 shuffles** at table-then-move, key length 2 (p 0.0099). Queue stopped. |
+| 238 | F13.4d | **Replication against 300 fresh shuffles: replicated** (p 0.023; in the cell 1 of 300). The reading is junk with 3 of 24 known letters. |
+| 239 | F13.4d | **The judge on the replicated readings:** K4 12/100, 14 of 300 shuffles at or above. Word-level by my rule only at its edge. Not a solution; a property of the carved order, sent to Alexis (#101). |
+
+The first result in the record to beat its copies twice. My reading of it: the excess lives where every one of K4's earlier
+oddities lives, in the order of the carved letters (the width-7 doublets, the width-21 repeats, now a width-19 read with a
+period-2 key), and the n-gram model rewards that texture; the judge, which reads for words, barely separates it, and no
+ordering puts a known word in place. I wrote the rule for 0239 as 'at most 15 of 300'; it came out 14, so by my own rule
+it is word-level. I report it as such and as weak.
 
 What F13.2 says: at 97 letters, statistics can tell K4 is not an alphabet swap, a transposition, a short periodic key or
 (fairly surely) a Hill or trifid, which the cribs already said; among the flat families nothing in the statistics

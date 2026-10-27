@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4d: Sanborn's 'matrix codes, then the table', solved from the carved letters alone over 27,852 grid moves."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every move in both orders, lengths 1-20, the 8 table classes; K4 against 100 shuffles; plants found to length 12."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 scored above every shuffle at table-then-move, key length 2 (p 0.0099), with a reading that is junk and has 3 of 24 known letters: the queue stopped for a replication (0238)."
+ }
+]

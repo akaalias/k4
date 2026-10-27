@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Replicate 0231's one cell: was K4 really more autokey-like than its shuffles?"
+ },
+ {
+  "anchor": "the check",
+  "text": "The pipeline rebuilt from fresh fakes (held-out accuracy 28%), K4 against 5,000 new shuffles, and the measurements that push K4 toward autokey listed."
+ },
+ {
+  "anchor": "the bound",
+  "text": "p 0.02979, not replicated. The push came from segments: quarters, width 7: repeated vertical bigrams (0056's statistic), I.C. at 3 alphabets: letter counts by segment and K4's known width-7 pattern, not autokey."
+ }
+]

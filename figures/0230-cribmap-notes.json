@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.2: train a classifier on ciphertexts made by each family, measure how often it names the right one, then ask which family K4 looks like beyond its letter counts."
+ },
+ {
+  "anchor": "what happened",
+  "text": "The run stopped before any text was made: the worker function could not be sent to the pool, because the harness loads attack.py under another module name."
+ },
+ {
+  "anchor": "the rerun",
+  "text": "0231: the module registered under its own name, as 0229 does; the method unchanged."
+ }
+]

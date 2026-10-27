@@ -48,6 +48,22 @@ header of `attack.py` before every run, in its own command. 0224 handed gate 4 a
 reading had already failed against, and the harness kept it: the same gap as #88, now #94. `champion.json` names 0224
 until Alexis decides; from here on no experiment re-submits an older reading.
 
+### F13 (ticket #85)
+
+| # | Item | One line |
+|---|---|---|
+| 230 | F13.2 | **Errored** before any text was made: the pool could not pickle the worker function under the harness's module name. |
+| 231 | F13.2 | **A classifier of 17 cipher families from K4's statistics alone.** Held-out accuracy 0.26-0.28 (chance 0.06). Alphabet swaps and transpositions are certain, short periodic keys and Hill fairly sure; the flat families are near chance against random letters. K4 names no family against 2,000 shuffles of itself; one cell (ciphertext autokey, p 0.001) under the corrected line with no power behind it. |
+| 232 | F13.2 | **Replication of that cell:** retrained on fresh texts, 5,000 fresh shuffles: p 0.030, not replicated. F13.2 closed. |
+
+What F13.2 says: at 97 letters, statistics can tell K4 is not an alphabet swap, a transposition, a short periodic key or
+(fairly surely) a Hill or trifid, which the cribs already said; among the flat families nothing in the statistics
+separates them, and against its own shuffles the classifier has no power for any of them (0 of 12 plants found). The
+ciphertext-autokey cell rode on K4's known width-7 pattern and its uneven letter counts by quarter, the same features
+0056 and 0168 already reported. My second run of the day was started with one test failing (the missing crib map of
+the errored 0230); the test only checks figures, but the rule is all tests pass first, and the chain `pytest | tail`
+hid the exit code. From here: run the tests as their own command and read the result before starting.
+
 ## 2026-10-25
 
 Stage 2, step 3 (A13, ticket #75), resumed. The 2026-10-21 to 10-24 sessions closed A13.1 and A13.2 (no run; see

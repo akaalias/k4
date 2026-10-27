@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.2: from its statistics alone, which kind of cipher does K4 look like? No known letter is read."
+ },
+ {
+  "anchor": "the check",
+  "text": "A classifier trained on 17 families' fakes is right 28% of the time on fresh ones (chance 6%): sure for alphabet swaps, transpositions and short keys, near chance among the flat families."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Against 2,000 shuffles of itself K4 names no family by the rule; one cell (ciphertext autokey) fell under the corrected line with no power behind it, so it was replicated (0232)."
+ }
+]

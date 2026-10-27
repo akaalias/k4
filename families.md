@@ -201,7 +201,7 @@ Update the leaf when an experiment works on it.
     - No construction tried makes both patterns {closed · sampled · 0018, 0027, 0062, 0065, 0096}
   - F13 Ciphertext only: the known words sealed until a reading wins (a way of working across families, issue #85)
     - **F13.1** Which families 97 letters of English can decide with no known letter: key bits against the judge's reach (reports/f13-solvability-map.md) {closed · exact}
-    - **F13.2** The cipher type named from the ciphertext's statistics, power measured first {open}
+    - **F13.2** The cipher type named from the ciphertext's statistics, power measured first: held-out accuracy 0.28 (chance 0.06), the flat families near chance against random letters; K4 names no family against its shuffles; the one cell under the line (ciphertext autokey) not replicated {closed · sampled · 0231, 0232}
     - **F13.3** A stronger English judge: bits per letter it extracts on planted texts {open}
     - **F13.4** Ciphertext-only solves in the families F13.1 leaves decidable {open}
     - **F13.5** Memorable keys from the named sources, scored by English alone {open}

@@ -21,17 +21,20 @@ def _judge(texts):
 
 
 def _cap_workers():
-    """K4_MAX_WORKERS caps every Pool an attack starts (attacks ask for 8). run_experiment.py sets it when Modal
-    cannot take a run, so the laptop computes on fewer cores (issue #99)."""
+    """Sets how many processes every Pool an attack starts gets (attacks mostly ask for 8), issue #99.
+    K4_WORKERS: exactly that many (a Modal run with more cores sets it to its core count).
+    K4_MAX_WORKERS: at most that many (the laptop fallback when Modal cannot take a run)."""
+    force = int(os.environ.get("K4_WORKERS") or 0)
     cap = int(os.environ.get("K4_MAX_WORKERS") or 0)
-    if cap <= 0:
+    if force <= 0 and cap <= 0:
         return None
     pool = multiprocessing.context.BaseContext.Pool
 
-    def capped(self, processes=None, *a, **kw):
-        return pool(self, min(processes or cap, cap), *a, **kw)
-    multiprocessing.context.BaseContext.Pool = capped
-    return cap
+    def sized(self, processes=None, *a, **kw):
+        n = force if force > 0 else min(processes or cap, cap)
+        return pool(self, n, *a, **kw)
+    multiprocessing.context.BaseContext.Pool = sized
+    return force if force > 0 else cap
 
 
 PROGRESS = Path(__file__).resolve().parent / "data" / "experiment-progress.json"
@@ -102,7 +105,7 @@ def main(attack_path, out_path, budget_s):
     except Exception:  # noqa: BLE001
         out["error"] = traceback.format_exc()
     out["seconds"] = time.time() - t0
-    out["compute"] = {"where": "local", "max_workers": cap or "as the attack asks"}
+    out["compute"] = {"where": "local", "workers": cap or "as the attack asks"}
     if "kryptos.judge" in sys.modules:
         j = sys.modules["kryptos.judge"]
         out["judge"] = {"model": j.MODEL, "prompt": j.PROMPT_VERSION, **j.usage}

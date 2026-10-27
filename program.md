@@ -105,6 +105,11 @@ edited, and the dashboard shows each experiment's current verdict.
    all), so the loop's terminal shows how far the run is (issue #97); it is cheap to call often.
    Put your estimate of the run's length in `EXPERIMENT["expected_minutes"]` (a whole number); the
    terminal draws elapsed time against it until progress is reported, and flags a run that overruns.
+   The search may run on a Modal machine with more cores than the laptop's 8 (issue #99): every Pool
+   gets `K4_WORKERS` processes whatever number it asks for. So split the work into many small jobs
+   (several per worker), never into batches of exactly 8, and give each job its own seed, so that
+   the result is the same whatever the number of workers. Size a batch with
+   `int(os.environ.get("K4_WORKERS", 8))`. numpy is available; ask before adding another package.
 5. **Run** `uv run --with pytest pytest -q` (all must pass), then `tools/start_experiment.sh`, and
    wait for it with `tools/wait_experiment.sh`, calling it again for as long as it reports the run
    still going. **No time limits** (Alexis, 2026-10-27, issue #96): an experiment takes as long as it

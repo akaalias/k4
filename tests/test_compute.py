@@ -47,3 +47,12 @@ def test_modal_failure_hands_the_run_back(tmp_path, monkeypatch):
     monkeypatch.setattr(rr, "MARKER", tmp_path / "remote-run.json")
     assert rr.main(str(ROOT / "attack.py"), str(tmp_path / "raw.json"), "inf") == rr.UNAVAILABLE
     assert not (tmp_path / "raw.json").exists()
+
+
+def test_forced_worker_count_overrides_the_attack(monkeypatch):
+    monkeypatch.setattr(multiprocessing.context.BaseContext, "Pool", multiprocessing.context.BaseContext.Pool)
+    monkeypatch.delenv("K4_MAX_WORKERS", raising=False)
+    monkeypatch.setenv("K4_WORKERS", "3")
+    assert _runner._cap_workers() == 3
+    with mp.get_context("fork").Pool(8) as pool:
+        assert pool._processes == 3

@@ -14,6 +14,7 @@ import json
 import os
 import subprocess
 import sys
+import threading
 import time
 from pathlib import Path
 
@@ -33,6 +34,7 @@ def _setting():
 CPU = int(os.environ.get("K4_MODAL_CPU") or _setting().get("cpu", 8)) if modal.is_local() else 8
 MEMORY_GIB = max(4, CPU // 4)
 UNAVAILABLE = 75
+SILENCE = 15 * 60   # seconds without a heartbeat before the laptop takes the run back
 DOLLARS_PER_HOUR = CPU * 0.04716 + MEMORY_GIB * 0.00799   # modal.com/pricing, 2026-10-27
 # K4_REMOTE_TEST=DIR (parity tests): marker and progress go to DIR and changed files are not written back
 TEST_DIR = os.environ.get("K4_REMOTE_TEST")
@@ -60,14 +62,17 @@ def search(attack_rel: str, budget: str, workers: int):
     progress = Path(REMOTE) / "data" / "experiment-progress.json"
     proc = subprocess.Popen([sys.executable, f"{REMOTE}/_runner.py", f"{REMOTE}/{attack_rel}", str(out), budget],
                             cwd=REMOTE, env={**os.environ, "PYTHONPATH": REMOTE, "K4_WORKERS": str(workers)})
-    last = None
+    last, beat = None, time.time()
     while proc.poll() is None:
         time.sleep(5)
-        if progress.exists():
-            text = progress.read_text()
-            if text != last:
-                last = text
-                yield {"progress": text}
+        if progress.exists() and progress.read_text() != last:
+            last = progress.read_text()
+            yield {"progress": last}
+        elif time.time() - beat > 60:
+            yield {"alive": True}           # the heartbeat the laptop's watchdog waits for
+        else:
+            continue
+        beat = time.time()
     changed = {}
     for p in Path(REMOTE).rglob("*"):
         if (p.is_file() and "__pycache__" not in p.parts and p != progress
@@ -81,14 +86,26 @@ def main(attack, raw_out, budget):
     attack_rel = str(Path(attack).resolve().relative_to(ROOT))   # an attack file inside the repository
     progress = Path(TEST_DIR) / f"progress-{os.getpid()}.json" if TEST_DIR else ROOT / "data" / "experiment-progress.json"
     final = None
+    heard = [time.time()]
+
+    def watchdog():
+        """Modal can fail without raising (a container that never starts): hand the run back to the laptop."""
+        while True:
+            time.sleep(min(30, SILENCE))
+            if time.time() - heard[0] > SILENCE:
+                print(f"remote_run: no word from Modal for {SILENCE // 60} min; running locally", flush=True)
+                MARKER.unlink(missing_ok=True)
+                os._exit(UNAVAILABLE)
+    threading.Thread(target=watchdog, daemon=True).start()
     try:
         with modal.enable_output(), app.run():
             MARKER.write_text(json.dumps({"pid": os.getpid(), "attack": attack_rel, "cpu": CPU,
                                           "url": f"https://modal.com/apps/alexis-rondeau/main/{app.app_id}", "started": time.time()}))
             for msg in search.remote_gen(attack_rel, budget, CPU):
+                heard[0] = time.time()
                 if "progress" in msg:
                     progress.write_text(msg["progress"])
-                else:
+                elif "raw" in msg:
                     final = msg
     except Exception as e:  # noqa: BLE001  (billing limit, network, lost container)
         print(f"remote_run: Modal could not run the experiment: {e!r}")

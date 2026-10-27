@@ -215,6 +215,7 @@ Update the leaf when an experiment works on it.
         - Lengths 13-20 by power; F6.1 (a free alphabet after a move) by 0236's power {blocked · sampled · 0237, 0236}
       - **F13.4e** Hill 2x2 and 3x3, four numberings, every alignment, ciphertext only: 2x2 plants read 8/8, K4 inside 100 shuffles (p 0.73) {closed · sampled · 0240}
         - Hill 3x3: plants found 4/8 {blocked · sampled · 0240}
+        - Gromark (cost: 10^5 primers x 364 rules x a free-alphabet climb, about 8 h per text); trifid (0039's annealer fails even with the known letters); M-94 (25! disc orders, beyond 0236's ciphertext-only frontier) {blocked}
     - **F13.5** Memorable keys from the named sources, scored by English alone {open}
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}

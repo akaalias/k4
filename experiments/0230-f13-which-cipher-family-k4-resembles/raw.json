@@ -1,0 +1,17 @@
+{
+ "candidates": [],
+ "bounds": {},
+ "notes": "",
+ "controls": [],
+ "error": "Traceback (most recent call last):\n  File \"/repo/_runner.py\", line 80, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/repo/attack.py\", line 516, in run\n    for cls, split, chunk, F in pool.imap_unordered(_feat_job, jobs, chunksize=1):\n                                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/multiprocessing/pool.py\", line 873, in next\n    raise value\n  File \"/usr/local/lib/python3.14/multiprocessing/pool.py\", line 540, in _handle_tasks\n    put(task)\n    ~~~^^^^^^\n  File \"/usr/local/lib/python3.14/multiprocessing/connection.py\", line 212, in send\n    self._send_bytes(_ForkingPickler.dumps(obj))\n                     ~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/usr/local/lib/python3.14/multiprocessing/reduction.py\", line 51, in dumps\n    cls(buf, protocol).dump(obj)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n_pickle.PicklingError: Can't pickle <function _feat_job at 0x2abf1c5066c0>: it's not the same object as attack._feat_job\nwhen serializing tuple item 2\n",
+ "worked_example": "",
+ "seconds": 0.880035400390625,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 5.5,
+  "dollars": 0.002
+ }
+}

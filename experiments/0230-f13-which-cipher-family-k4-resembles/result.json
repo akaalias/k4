@@ -1,0 +1,31 @@
+{
+ "id": 230,
+ "tag": "0230-f13-which-cipher-family-k4-resembles",
+ "started": "2026-10-27T16:05:11+00:00",
+ "seconds": 40.3,
+ "status": "error",
+ "phases": {
+  "design": 235.2,
+  "implement": 169.2,
+  "test": 27.8,
+  "run": 40.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1793117151.8231199,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "judge": null,
+ "error": "Traceback (most recent call last):\n  File \"/repo/_runner.py\", line 80, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/repo/attack.py\", line 516, in run\n    for cls, split, chunk, F in pool.imap_unordered(_feat_job, jobs, chunksize=1):\n                                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/multiprocessing/pool.py\", line 873, in next\n    raise value\n  File \"/usr/local/lib/python3.14/multiprocessing/pool.py\", line 540, in _handle_tasks\n    put(task)\n    ~~~^^^^^^\n  File \"/usr/local/lib/python3.14/multiprocessing/connection.py\", line 212, in send\n    self._send_bytes(_ForkingPickler.dumps(obj))\n                     ~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/usr/local/lib/python3.14/multiprocessing/reduction.py\", line 51, in dumps\n    cls(buf, protocol).dump(obj)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n_pickle.PicklingError: Can't pickle <function _feat_job at 0x2abf1c5066c0>: it's not the same object as attack._feat_job\nwhen serializing tuple item 2\n",
+ "candidates": []
+}

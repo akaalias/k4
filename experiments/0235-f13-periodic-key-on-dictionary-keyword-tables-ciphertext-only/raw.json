@@ -1,0 +1,995 @@
+{
+ "candidates": [
+  {
+   "plaintext": "NLEBANXNHGAPLSNPTILLYIPBZCCDBMHESSNOYOCSFCSSJEVVYROFEPAUTRYTMILMWDZOOQVIDEYHUEVXOFKUTHEAGARAJEKRB",
+   "key": {
+    "pa": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "ca": "DISAMLTONBCEFGHJKPQRUVWXYZ",
+    "form": "beau",
+    "shifts": [
+     20
+    ],
+    "word": "DISASSIMILATION"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "IGHLCSMSPYCRSOIROESGAEZLNMFAEKPNBOIDADFOJMBORNLVAPYCHRCTOPAUVESKTANDYQLEGNABDNLWYCUTOBHIKIWIRNUPE",
+   "key": {
+    "pa": "IDOLMANCYBEFGHJKPQRSTUVWXZ",
+    "ca": "IDOLMANCYBEFGHJKPQRSTUVWXZ",
+    "form": "beau",
+    "shifts": [
+     2,
+     21
+    ],
+    "word": "IDOLOMANCY"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "NGSTRRSYVFRORDRJPURGHCUBYSAPOWETCUYEZWAUQAUDTIELZFEHTOXIYWAYMLNMCKYWELEUPTHEISDBEHHQGMSXNFWRTIHMT",
+   "key": {
+    "pa": "SODWRKABCEFGHIJLMNPQTUVXYZ",
+    "ca": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "form": "vig",
+    "shifts": [
+     23,
+     16,
+     10
+    ],
+    "word": "SODWORK"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "DSRSUNGELWEPICNPFUSJEUYSVAAQRQVISCNUEDATNACTARIZELDOHYEDFLOGGUSHXZFUTJILPROMCRIXTXTDFVRVMELVARTCR",
+   "key": {
+    "pa": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "ca": "MEADOWINKBCFGHJLPQRSTUVXYZ",
+    "form": "vig",
+    "shifts": [
+     1,
+     17,
+     17,
+     0
+    ],
+    "word": "MEADOWINK"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "NTTAENDCWNYLANTDOYZRWRSADAIEAHIMONTOEDOFFIONWEBIKYONTREKOHKMBRAPAPFDCITRESCISTHBONGYMIMNVESGFSXSU",
+   "key": {
+    "pa": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "ca": "ACEPTORBDFGHIJKLMNQSUVWXYZ",
+    "form": "beau",
+    "shifts": [
+     18,
+     0,
+     7,
+     6,
+     24
+    ],
+    "word": "ACCEPTOR"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "NGHGPQDRCSPOPELERHPGRNDWAWOCHSVONRCEEDORAVJETAONEBITEOFFUWKTGJEPMRADIDOHIORIZMCUITNCHKHOTILSTANDT",
+   "key": {
+    "pa": "UNISTAEDBCFGHJKLMOPQRVWXYZ",
+    "ca": "UNISTAEDBCFGHJKLMOPQRVWXYZ",
+    "form": "vig",
+    "shifts": [
+     16,
+     23,
+     2,
+     9,
+     8,
+     24
+    ],
+    "word": "UNINSTATED"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "ROECFCLRTISRIERMONSIAGMAHCSMSFUANGIVEBRNAFTUSABRALINARTONKFTHETEDTHEHUQSTADPOMAGGYNONTESXTRIGEIOF",
+   "key": {
+    "pa": "QUINEPDALBCFGHJKMORSTVWXYZ",
+    "ca": "QUINEPDALBCFGHJKMORSTVWXYZ",
+    "form": "vig",
+    "shifts": [
+     25,
+     18,
+     11,
+     8,
+     16,
+     7,
+     15
+    ],
+    "word": "QUINQUEPEDAL"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "MIXTNICUINCCBCLEHMQUPOVVBTBEAFHDGAORPHYOUTIMERENCENAISZYHEENWONRESDRYTEAYPEODRELLORWUEUITUMGEROSN",
+   "key": {
+    "pa": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "ca": "SIGNATORBCDEFHJKLMPQUVWXYZ",
+    "form": "vig",
+    "shifts": [
+     20,
+     0,
+     18,
+     14,
+     7,
+     24,
+     21,
+     12
+    ],
+    "word": "SIGNATOR"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "FLAOREBCSJOBGCEPOOGLUHNTANGUCLIMBNCRSHECLUNSUMTISACRIDRAWASAFETYPDWDCTWOUVUIPLDURLIMBILEGMAONMESI",
+   "key": {
+    "pa": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "ca": "UNDERWAISTCOBFGHJKLMPQVXYZ",
+    "form": "vig",
+    "shifts": [
+     25,
+     21,
+     10,
+     25,
+     25,
+     0,
+     15,
+     2,
+     8
+    ],
+    "word": "UNDERWAISTCOAT"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "LCONTOAFTEDICTEMIURAFEINOURREOROTTEWSTDYPMTTFBCDISCHOITTIMITVECABQOTFHIELOSIDIMVCHDRIIHOONWUPONEY",
+   "key": {
+    "pa": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "ca": "DOESKINABCFGHJLMPQRTUVWXYZ",
+    "form": "vig",
+    "shifts": [
+     10,
+     25,
+     25,
+     25,
+     16,
+     22,
+     16,
+     15,
+     7,
+     1
+    ],
+    "word": "DOESKIN"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "COQMCIWHEESHORTRHADHUGHWINEORLERLACKINTESABLIKEFANDSCISTBAIUMADUNCUSKETCPOPPHKLGRHLBGERSDVALYSIMS",
+   "key": {
+    "pa": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "ca": "MELANCHOISTBDFGJKPQRUVWXYZ",
+    "form": "beau",
+    "shifts": [
+     16,
+     16,
+     10,
+     11,
+     3,
+     22,
+     20,
+     21,
+     25,
+     17,
+     0
+    ],
+    "word": "MELANCHOLIST"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "ELEAMNERKITSCANSBITPAKNAPCCCOMPIDCHOOPCZSCIETGOTOSPERTHNRURNDILLIDGTSTOHUEXGWECASHEIFHEYTZADTGERS",
+   "key": {
+    "pa": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "ca": "LAMETIONBCDFGHJKPQRSUVWXYZ",
+    "form": "beau",
+    "shifts": [
+     10,
+     19,
+     19,
+     18,
+     6,
+     19,
+     1,
+     23,
+     22,
+     21,
+     13,
+     18
+    ],
+    "word": "LAMELLATION"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "DEDOHIUCSMOTSEACHIALSRITEINTERTOMMERMSIESLINEWVIEFSCIUIBAYSENOGAGANHPENANTERNELCHJMDEBTBSDROHDAOC",
+   "key": {
+    "pa": "NOCMPLITYABDEFGHJKQRSUVWXZ",
+    "ca": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "form": "vig",
+    "shifts": [
+     20,
+     22,
+     15,
+     0,
+     6,
+     25,
+     3,
+     3,
+     19,
+     11,
+     20,
+     10,
+     14
+    ],
+    "word": "NONCOMPLICITY"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "WITOASMRGMELEYWEATEGIVOFFBSASGMEMAPDLHYDPRIOSECEINSAILAONSOCWNTARDFELIBREETOBITODIFONTTUNTREERPOI",
+   "key": {
+    "pa": "SIMLARTYBCDEFGHJKNOPQUVWXZ",
+    "ca": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "form": "vig",
+    "shifts": [
+     17,
+     0,
+     4,
+     25,
+     16,
+     14,
+     21,
+     9,
+     19,
+     5,
+     9,
+     8,
+     16,
+     11
+    ],
+    "word": "SIMILARITY"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "AFEHXANATGIBLEHOLAYCHTOFSEEEDGRNLINEMEEPSETESTOWNTEATBOROFICSITEALLEHINPEOURGEUREANRUTASUNMRSCOMG",
+   "key": {
+    "pa": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "ca": "PACHYMBDEFGIJKLNOQRSTUVWXZ",
+    "form": "vig",
+    "shifts": [
+     9,
+     20,
+     2,
+     4,
+     23,
+     9,
+     5,
+     9,
+     6,
+     16,
+     6,
+     6,
+     15,
+     8,
+     2
+    ],
+    "word": "PACHYMA"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "ACECDIDEDMOZDIWELONNAMEITARHEAVASFORAJMCSATESTENCERTYNROAIDAPBABWIIRTANDHUDDATEDNAASCRATNSQUSTSTO",
+   "key": {
+    "pa": "SANDWORMBCEFGHIJKLPQTUVXYZ",
+    "ca": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "form": "beau",
+    "shifts": [
+     6,
+     17,
+     10,
+     10,
+     24,
+     19,
+     1,
+     15,
+     16,
+     21,
+     0,
+     16,
+     11,
+     20,
+     9,
+     1
+    ],
+    "word": "SANDWORM"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "KERJEONAREYSPASTENEERTHYEARTYAPOLSKLIONSQIITERKELETERSPREDFTOFEADTITSTCLIGITOHINDSCHEBRAMELARVINY",
+   "key": {
+    "pa": "LAMINBCDEFGHJKOPQRSTUVWXYZ",
+    "ca": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "form": "vig",
+    "shifts": [
+     1,
+     19,
+     19,
+     5,
+     12,
+     0,
+     19,
+     13,
+     15,
+     25,
+     22,
+     19,
+     12,
+     17,
+     22,
+     18,
+     0
+    ],
+    "word": "LAMIN"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "COANOFGHATIGARATELAOCGIADEISRIGIBSONVINTHURIPOORVSTPHIRRVARSAREFSYSOTAGLEDCHATHTYBEPINEDNOTPOUTHJ",
+   "key": {
+    "pa": "UNEXCPTABLDFGHIJKMOQRSVWYZ",
+    "ca": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "form": "vig",
+    "shifts": [
+     1,
+     16,
+     19,
+     0,
+     3,
+     20,
+     12,
+     18,
+     6,
+     8,
+     7,
+     5,
+     1,
+     12,
+     24,
+     11,
+     13,
+     3
+    ],
+    "word": "UNEXCEPTABLE"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OYFISTAPIVATBYTRATEBECATITGAIREGYSDSETIREKASHESOMORAFREPOWEREDAILARYCHICKMESCANPREGAHHHHERVETARWX",
+   "key": {
+    "pa": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "ca": "PLACENTIGROUSBDFHJKMQVWXYZ",
+    "form": "vig",
+    "shifts": [
+     5,
+     11,
+     6,
+     20,
+     5,
+     6,
+     16,
+     7,
+     19,
+     20,
+     4,
+     23,
+     5,
+     10,
+     6,
+     0,
+     0,
+     11,
+     2
+    ],
+    "word": "PLACENTIGEROUS"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "AGESISFACEDNOARVEVELLURSHILEESPAWARDRONTUPAGALDIODEBARELECICRUSIEWHORTYCLECOCTFOOTINTRONGOSUMEORH",
+   "key": {
+    "pa": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "ca": "BLEPHAROGICDFJKMNQSTUVWXYZ",
+    "form": "beau",
+    "shifts": [
+     7,
+     6,
+     18,
+     24,
+     2,
+     25,
+     2,
+     7,
+     10,
+     8,
+     23,
+     14,
+     14,
+     18,
+     24,
+     22,
+     13,
+     7,
+     4,
+     11
+    ],
+    "word": "BLEPHAROPLEGIA"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "ILIAMBONTFAILTWENDSAISYPEISGRACOPENANAORGEMEETTINSCHOICENTUGLENHINELEDARNOWREPRETHSPERIUSDTWPIGBU",
+   "key": {
+    "pa": "BASQUEDCFGHIJKLMNOPRTVWXYZ",
+    "ca": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "form": "vig",
+    "shifts": [
+     3,
+     13,
+     25,
+     16,
+     5,
+     14,
+     6,
+     24,
+     12,
+     25,
+     19,
+     0,
+     13,
+     24,
+     18,
+     6,
+     18,
+     25,
+     25,
+     0,
+     11
+    ],
+    "word": "BASQUED"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "NNEDGOITINTEUSAWAYSIXHORTLITGOIONDFMRBRAKTINSFREEINAFITSJORITYSANAHASACEUSTBIRTHTHEPRESTCSNITATHR",
+   "key": {
+    "pa": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "ca": "RHYMELSABCDFGIJKNOPQTUVWXZ",
+    "form": "beau",
+    "shifts": [
+     10,
+     1,
+     0,
+     10,
+     8,
+     22,
+     13,
+     21,
+     1,
+     20,
+     25,
+     16,
+     3,
+     12,
+     24,
+     2,
+     20,
+     13,
+     14,
+     23,
+     21,
+     25
+    ],
+    "word": "RHYMELESS"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "NTOBERMATEDCERTYPOLLBESENCAANDLANCOATSINBYTODIMWHUNGBEHANDRENASECRATTAWRSTWOHAZGALCERDCOVSAVRENUC",
+   "key": {
+    "pa": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "ca": "OCTILABDEFGHJKMNPQRSUVWXYZ",
+    "form": "vig",
+    "shifts": [
+     7,
+     2,
+     8,
+     10,
+     9,
+     25,
+     5,
+     19,
+     6,
+     0,
+     10,
+     21,
+     21,
+     18,
+     22,
+     2,
+     0,
+     4,
+     15,
+     15,
+     14,
+     24,
+     24
+    ],
+    "word": "OCOTILLO"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "EROFPHRATCHHIMWORKEYHILESIAAHEFISNORESMIESTUERATUTEXITODELFJORNTHEFAMSAITSMEDNEKCSEQUERETURNEREPO",
+   "key": {
+    "pa": "VERTBODYMUSACFGHIJKLNPQWXZ",
+    "ca": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "form": "beau",
+    "shifts": [
+     6,
+     10,
+     5,
+     14,
+     16,
+     20,
+     0,
+     16,
+     16,
+     0,
+     10,
+     6,
+     24,
+     14,
+     2,
+     22,
+     17,
+     4,
+     9,
+     15,
+     12,
+     2,
+     10,
+     2
+    ],
+    "word": "VERTEBRODYMUS"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "NDTIENPERITMEDONASTELLSTHROWIYANDAGOBAMNODTIRESHEROUTHEGRIORISENSERIESCLARGARTEROTTERAYOURTIUADWP",
+   "key": {
+    "pa": "TRIDECYLABFGHJKMNOPQSUVWXZ",
+    "ca": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "form": "beau",
+    "shifts": [
+     21,
+     11,
+     0,
+     3,
+     25,
+     21,
+     16,
+     9,
+     14,
+     16,
+     21,
+     6,
+     12,
+     9,
+     22,
+     7,
+     23,
+     6,
+     8,
+     12,
+     4,
+     19,
+     11,
+     1,
+     8
+    ],
+    "word": "TRIDECYL"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "WSLFANEAREAMATIONGINTSPEEDHISAGAMBLYVOLTYABOOKANAHUSEHABIZDNICDRUNAMCCTUREAMMANNOVEMPLOTHASAFTIDE",
+   "key": {
+    "pa": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+    "ca": "ENDOSTRUMABCFGHIJKLPQVWXYZ",
+    "form": "vig",
+    "shifts": [
+     6,
+     4,
+     0,
+     20,
+     0,
+     10,
+     12,
+     22,
+     12,
+     3,
+     0,
+     0,
+     3,
+     0,
+     14,
+     13,
+     22,
+     25,
+     21,
+     17,
+     18,
+     6,
+     15,
+     21,
+     10,
+     10
+    ],
+    "word": "ENDOSTERNUM"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  }
+ ],
+ "bounds": {
+  "item": "F13.4b",
+  "search_reads_known_letters": false,
+  "alphabets": 208062,
+  "tables": 2080620,
+  "pairings": [
+   "W/W",
+   "W/STD",
+   "STD/W",
+   "W/KRY",
+   "KRY/W"
+  ],
+  "forms": [
+   "added",
+   "Beaufort"
+  ],
+  "key_lengths": [
+   1,
+   26
+  ],
+  "screen": "per column best shift by English letter frequency, exact; best 50 tables per length",
+  "climb": "coordinate ascent on quadgrams from the screen's shifts and 9 random starts; MIX8m rescoring",
+  "texts": 541,
+  "k4_copies": 100,
+  "k4_statistic": 1.804,
+  "k4_best_length": 5,
+  "k4_p": 0.6634,
+  "copies_statistic_max": 4.639,
+  "copies_statistic_median": 2.052,
+  "k4_rank_per_length_copies_at_or_above": {
+   "1": 17,
+   "2": 48,
+   "3": 95,
+   "4": 42,
+   "5": 4,
+   "6": 70,
+   "7": 45,
+   "8": 99,
+   "9": 61,
+   "10": 37,
+   "11": 48,
+   "12": 67,
+   "13": 69,
+   "14": 83,
+   "15": 30,
+   "16": 40,
+   "17": 19,
+   "18": 81,
+   "19": 83,
+   "20": 75,
+   "21": 52,
+   "22": 37,
+   "23": 88,
+   "24": 53,
+   "25": 9,
+   "26": 31
+  },
+  "plant_power": {
+   "5": [
+    8,
+    8
+   ],
+   "10": [
+    4,
+    8
+   ],
+   "15": [
+    2,
+    8
+   ],
+   "20": [
+    0,
+    8
+   ],
+   "26": [
+    2,
+    8
+   ]
+  },
+  "plant_exact_recovery": {
+   "5": [
+    7,
+    8
+   ],
+   "10": [
+    2,
+    8
+   ],
+   "15": [
+    0,
+    8
+   ],
+   "20": [
+    0,
+    8
+   ],
+   "26": [
+    0,
+    8
+   ]
+  },
+  "plant_true_table_best": {
+   "5": [
+    7,
+    8
+   ],
+   "10": [
+    2,
+    8
+   ],
+   "15": [
+    0,
+    8
+   ],
+   "20": [
+    0,
+    8
+   ],
+   "26": [
+    0,
+    8
+   ]
+  },
+  "decided_lengths_at_6_of_8": [
+   5
+  ],
+  "k4_best_readings": {
+   "5": {
+    "reading": "NTTAENDCWNYLANTDOYZRWRSADAIEAHIMONTOEDOFFIONWEBIKYONTREKOHKMBRAPAPFDCITRESCISTHBONGYMIMNVESGFSXSU",
+    "word": "ACCEPTOR"
+   },
+   "10": {
+    "reading": "LCONTOAFTEDICTEMIURAFEINOURREOROTTEWSTDYPMTTFBCDISCHOITTIMITVECABQOTFHIELOSIDIMVCHDRIIHOONWUPONEY",
+    "word": "DOESKIN"
+   }
+  },
+  "expected_total_time": "541 texts x about 70 s = about 10.5 core-hours",
+  "exhaustive": false,
+  "compute_seconds": 12997
+ },
+ "notes": "K4 statistic 1.80 at length 5, p 0.663 against 100 shuffles; plant power L5 8/8, L10 4/8, L15 2/8, L20 0/8, L26 2/8; decided lengths [5]",
+ "controls": [
+  -4.638854922266467,
+  -4.803203225924004,
+  -4.652921273829145,
+  -4.69622332292581,
+  -4.5928419107815435,
+  -4.59899291888341,
+  -4.676290852401624,
+  -4.559259141587263,
+  -4.764472208249196,
+  -4.732230527999238,
+  -4.460053704548923,
+  -4.69001909762063,
+  -4.675736126935566,
+  -4.6592556086341625,
+  -4.794658223879871,
+  -4.521664608542851,
+  -4.710765224814787,
+  -4.7262430628788294,
+  -4.7871663188506615,
+  -4.75545919826618,
+  -4.671106190463179,
+  -4.51350717558598,
+  -4.65553479968085,
+  -4.7720250081812585,
+  -4.642910582202555,
+  -4.614269247453982,
+  -4.797799928531444,
+  -4.582144714770158,
+  -4.711436125070925,
+  -4.609639410455748,
+  -4.730172946304344,
+  -4.652442215779246,
+  -4.728215226291626,
+  -4.682014997074406,
+  -4.770102947129842,
+  -4.5907299214245665,
+  -4.74765165778922,
+  -4.722335025647116,
+  -4.50229312581966,
+  -4.63071862256642,
+  -4.635636052946698,
+  -4.665121889374461,
+  -4.814060232614477,
+  -4.755714488144059,
+  -4.457090146010432,
+  -4.61919279128279,
+  -4.52666960982195,
+  -4.6309769478264355,
+  -4.614109408989114,
+  -4.642198068389337,
+  -4.71984721765126,
+  -4.654951186233337,
+  -4.833647358473516,
+  -4.5854042174998435,
+  -4.867280544684735,
+  -4.531670050679207,
+  -4.570327848908082,
+  -4.668521027954232,
+  -4.602373920273987,
+  -4.793132427865498,
+  -4.592762193029524,
+  -4.559934081777079,
+  -4.8179632966297925,
+  -4.784390268524648,
+  -4.879188867318796,
+  -4.665342339126712,
+  -4.728797821645238,
+  -4.666308751706703,
+  -4.648197847000414,
+  -4.729211636290692,
+  -4.5608819130055895,
+  -4.575947792000243,
+  -4.719836154093604,
+  -4.753494153067081,
+  -4.69243381061098,
+  -4.329436961900252,
+  -4.748764556484953,
+  -4.676329687171398,
+  -4.6730266986379565,
+  -4.502641665044444,
+  -4.654405030252328,
+  -4.516720311890082,
+  -4.6764949944972045,
+  -4.643332624897117,
+  -4.698987338754918,
+  -4.627748827758102,
+  -4.78931481554775,
+  -4.582711114779965,
+  -4.6394752693021495,
+  -4.667131686322083,
+  -4.698467377802617,
+  -4.769570896800639,
+  -4.6275763240141785,
+  -4.641562085819,
+  -4.748175987922961,
+  -4.541807559339016,
+  -4.632228494269941,
+  -4.795217586018028,
+  -4.675312044098049,
+  -4.673459653948977
+ ],
+ "error": null,
+ "worked_example": "The screen's first step on a planted message: plain alphabet HYDRAULIC-mixed, key SHADOW (6), standard cipher alphabet:\n\n  plain alphabet  HYDRAULICBEFGJKMNOPQSTVWXZ\n  carved          NHKDFRWODNIEWZHTAHVYPYOGAHESXGVPEIIGUCANZCWWKYFHYOIRYZ\n  key, true       SHADOW\n  key, by letter counts per column alone: SHADOW\n  reading         THEHOTAIRESCAPINGFROMTHECHAMBERCAUSEDTHEFLAMETOFLICKER\n\nEvery one of 2.08 million tables gets this step at every key length; the 50 best per length are then climbed.",
+ "seconds": 12996.6890771389,
+ "compute": {
+  "where": "local",
+  "workers": 4
+ }
+}

@@ -1,0 +1,9 @@
+The screen's first step on a planted message: plain alphabet HYDRAULIC-mixed, key SHADOW (6), standard cipher alphabet:
+
+  plain alphabet  HYDRAULICBEFGJKMNOPQSTVWXZ
+  carved          NHKDFRWODNIEWZHTAHVYPYOGAHESXGVPEIIGUCANZCWWKYFHYOIRYZ
+  key, true       SHADOW
+  key, by letter counts per column alone: SHADOW
+  reading         THEHOTAIRESCAPINGFROMTHECHAMBERCAUSEDTHEFLAMETOFLICKER
+
+Every one of 2.08 million tables gets this step at every key length; the 50 best per length are then climbed.

@@ -230,3 +230,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0229	0229-d1-one-free-alphabet-power-per-run-with-enough-plants	1-keyed-periodic	0228-d1-design-2s-power-against-its-budget	reverted	0	0	0			2441	design=75 implement=0 test=5 run=2441 record=0
 0230	0230-f13-which-cipher-family-k4-resembles	13-ciphertext-only	0168-k4-statistics-against-a-thousand-shuffles	error	0	0	0			40	design=235 implement=169 test=28 run=40 record=0
 0231	0231-f13-which-cipher-family-k4-resembles-rerun	13-ciphertext-only	0230-f13-which-cipher-family-k4-resembles	reverted	0	0	0			279	unattributed=24 run=279 record=0
+0232	0232-f13-replicate-k4-ciphertext-autokey-cell	13-ciphertext-only	0231-f13-which-cipher-family-k4-resembles-rerun	reverted	0	0	0			383	design=7 test=9 run=383 record=0

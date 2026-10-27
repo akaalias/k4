@@ -1,0 +1,7 @@
+A6.3 plants a masked message. A reversed Carter passage with the known words set after masking:
+
+  plant        TIYROTSEHTSIFEIRBNITAEASTNORTHEASTDNAYRUJREPROFDEIRTSAWEHTINIDNBERLINCLOCKIHDNUOBSAWEGDUJASANAMYP
+  unmasked     PYMANASAJUDGEWASBOUND?????????????HI???????????NDINITHEWASTRIED???????????FORPERJURYAND?????????????ATINBRIEFISTHESTORYIT
+
+  enciphered at one free alphabet, Beaufort, key length 23; climbed by 0140's search with six copies;
+  found by the climb's score, by eng_reverse, or by the judge on the reading read backwards.

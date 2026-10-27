@@ -1,0 +1,1230 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "A6.3",
+  "masks": {
+   "reversal": {
+    "test": "eng_reverse",
+    "power_on_flat_noise_A13.1": "20 of 20"
+   },
+   "X every kth": {
+    "test": "eng_drop_nth",
+    "power_on_flat_noise_A13.1": "20 of 20"
+   },
+   "message in every nth": {
+    "test": "eng_keep_nth",
+    "power_on_flat_noise_A13.1": "20 of 20"
+   }
+  },
+  "decider": "0140's frozen climb (F1.5 design 2), one free alphabet, Beaufort form, length 23",
+  "per_mask": 8,
+  "own_copies": 6,
+  "null_per_plant": "1/7",
+  "bar": "6 of 8 (0139's 6/8)",
+  "runs_done": {
+   "min": 10,
+   "max": 10
+  },
+  "decryption_checked": true,
+  "judge_texts_sent": 168,
+  "judge_calls_estimated": 168,
+  "expected_total_time": "168 texts at about 110 s each (0140's climb) = about 18,500 core-seconds, 40-50 min on 8 cores",
+  "judge_none": 0,
+  "by_mask": {
+   "reversal": {
+    "decider": 7,
+    "test": 2,
+    "judge": 0,
+    "any": 7,
+    "of": 8,
+    "letters_right": [
+     41,
+     39,
+     37,
+     41,
+     36,
+     35,
+     38,
+     40
+    ],
+    "verdict": "found at power"
+   },
+   "X every kth": {
+    "decider": 5,
+    "test": 3,
+    "judge": 0,
+    "any": 5,
+    "of": 8,
+    "letters_right": [
+     38,
+     40,
+     34,
+     32,
+     29,
+     36,
+     33,
+     30
+    ],
+    "verdict": "not found: closes hold for unmasked English only"
+   },
+   "message in every nth": {
+    "decider": 1,
+    "test": 1,
+    "judge": 3,
+    "any": 4,
+    "of": 8,
+    "letters_right": [
+     34,
+     32,
+     33,
+     38,
+     33,
+     38,
+     31,
+     36
+    ],
+    "verdict": "not found: closes hold for unmasked English only"
+   }
+  },
+  "rows": [
+   {
+    "mask": "reversal",
+    "par": {},
+    "letters_right": 41,
+    "q": -4.8298,
+    "own_q": [
+     -4.918,
+     -4.9606,
+     -4.9706,
+     -4.8634,
+     -5.1284,
+     -4.9928
+    ],
+    "found_decider": true,
+    "test": "eng_reverse",
+    "test_value": -5.901149415351054,
+    "own_test": [
+     -5.87661044121735,
+     -6.287930536638362,
+     -5.935265193499738,
+     -5.7995468695910715,
+     -6.125072952018139,
+     -6.165449384034462
+    ],
+    "found_test": false,
+    "judge_unmasked": 4,
+    "own_judge_unmasked": [
+     6,
+     8,
+     6,
+     6,
+     6,
+     8
+    ],
+    "found_judge": false,
+    "reading": "GRVFRAREEFECAYFERENITEASTNORTHEASTMAINFAVITHSHEASREBSETWITTERAYBERLINCLOCKTAMPEROINLETISAPILMPATC",
+    "unmasked": "CTAPMLIPASITELNIOREPM?????????????AT???????????YARETTIWTESBERSA???????????EHSHTIVAFNIAM?????????????TINEREFYACEFEERARFVRG",
+    "judge_reading": "? (no readable English; fragments such as AT, TINE, REF, FACE are chance)"
+   },
+   {
+    "mask": "reversal",
+    "par": {},
+    "letters_right": 39,
+    "q": -4.8434,
+    "own_q": [
+     -5.0273,
+     -4.9877,
+     -5.0261,
+     -4.9758,
+     -5.2406,
+     -4.9553
+    ],
+    "found_decider": true,
+    "test": "eng_reverse",
+    "test_value": -5.766860333565446,
+    "own_test": [
+     -6.298397596131083,
+     -6.2136674509688286,
+     -6.390854399112176,
+     -6.186814543762342,
+     -5.8361172506569545,
+     -6.072688965839072
+    ],
+    "found_test": true,
+    "judge_unmasked": 6,
+    "own_judge_unmasked": [
+     6,
+     3,
+     8,
+     8,
+     5,
+     8
+    ],
+    "found_judge": false,
+    "reading": "OMSREUELYTEDEDERMOPITEASTNORTHEASTEPOFFAPUNNONSWHYTASNELAMSLIOFBERLINCLOCKURINITSEPETHENNOTBEANOS",
+    "unmasked": "SONAEBTONNEHTEPESTINI?????????????RU???????????FOILSMALENSATYHW???????????SNONNUPAFFOPE?????????????TIPOMREDEDETYLEUERSMO",
+    "judge_reading": "SON AEB TON NEH TEPEST INI ### RU ??? FOIL SMALEN SATY HW ### SNON NUP AFF OPE ??? TIP OMRED EDE TYLE UERS MO"
+   },
+   {
+    "mask": "reversal",
+    "par": {},
+    "letters_right": 37,
+    "q": -4.7964,
+    "own_q": [
+     -4.9166,
+     -4.959,
+     -5.025,
+     -5.1233,
+     -4.8935,
+     -4.9852
+    ],
+    "found_decider": true,
+    "test": "eng_reverse",
+    "test_value": -6.03006098604164,
+    "own_test": [
+     -5.823923350838825,
+     -6.293819258022509,
+     -6.003382954218951,
+     -6.555691789940932,
+     -6.200111818303409,
+     -6.130629953742599
+    ],
+    "found_test": false,
+    "judge_unmasked": 4,
+    "own_judge_unmasked": [
+     7,
+     4,
+     8,
+     3,
+     4,
+     4
+    ],
+    "found_judge": false,
+    "reading": "NOINLEHUMPASSTOSAXKMREASTNORTHEASTERESINGASRAVALGOOUTYRACHOOLIMBERLINCLOCKSARAINITHJIANMOGEMWORPI",
+    "unmasked": "IPROWMEGOMNAIJHTINIAR?????????????AS???????????MILOOHCARYTUOOGL???????????AVARSAGNISERE?????????????RMKXASOTSSAPMUHELNION",
+    "judge_reading": "? (IPROWMEGOMNAIJHTINIAR) ? (AS) ? (MILOOHCARYTUOOGL) ? (AVARSAGNISERE) ? (RMKXASOTSSAPMUHELNION)"
+   },
+   {
+    "mask": "reversal",
+    "par": {},
+    "letters_right": 41,
+    "q": -4.8546,
+    "own_q": [
+     -4.7535,
+     -5.0489,
+     -5.1013,
+     -5.013,
+     -4.9903,
+     -4.8748
+    ],
+    "found_decider": false,
+    "test": "eng_reverse",
+    "test_value": -6.088290741504085,
+    "own_test": [
+     -5.890762827644383,
+     -6.215207235746029,
+     -6.236211671000921,
+     -6.303597512552123,
+     -6.082907363938104,
+     -5.887137287257749
+    ],
+    "found_test": false,
+    "judge_unmasked": 4,
+    "own_judge_unmasked": [
+     6,
+     6,
+     6,
+     3,
+     8,
+     6
+    ],
+    "found_judge": false,
+    "reading": "UMWOSTADMIRGAITSASSOBEASTNORTHEASTHISCALSETFESBABSGOWOFFEEDPREMBERLINCLOCKTONTLLBYPHBROCAALITHEGC",
+    "unmasked": "CGEHTILAACORBHPYBLLTN?????????????OT???????????MERPDEEFFOWOGSBA???????????BSEFTESLACSIH?????????????BOSSASTIAGRIMDATSOWMU",
+    "judge_reading": "? (CGEHTILAACORBHPYBLLTN) ... OT ? ... ? (MERPDEEFFOWOGSBA) ... ? (BSEFTESLACSIH) ... ? (BOSSASTIAGRIMDATSOWMU)"
+   },
+   {
+    "mask": "reversal",
+    "par": {},
+    "letters_right": 36,
+    "q": -4.866,
+    "own_q": [
+     -5.0746,
+     -5.0314,
+     -4.9564,
+     -4.998,
+     -4.9418,
+     -5.0555
+    ],
+    "found_decider": true,
+    "test": "eng_reverse",
+    "test_value": -6.0207388926394945,
+    "own_test": [
+     -6.2441976122085014,
+     -5.979430708930225,
+     -5.880226687717638,
+     -5.876544521946114,
+     -5.930483553090232,
+     -5.946959073804661
+    ],
+    "found_test": false,
+    "judge_unmasked": 6,
+    "own_judge_unmasked": [
+     4,
+     6,
+     7,
+     8,
+     12,
+     4
+    ],
+    "found_judge": false,
+    "reading": "GNYUBYCOILLRENTERSKMWEASTNORTHEASTHEADHALETEISCOWATESEFLSIGLECTBERLINCLOCKOREUNAHALITEYORAHOARFEI",
+    "unmasked": "IEFRAOHAROYETILAHANUE?????????????RO???????????TCELGISLFESETAWO???????????CSIETELAHDAEH?????????????WMKSRETNERLLIOCYBUYNG",
+    "judge_reading": "IEFRAOHAROYETILAHANUE ############# RO??????????? TCELGISLFESETAWO ########### CSIETELAHDAEH ????????????? WMKSRETNERLLIOCYBUYNG"
+   },
+   {
+    "mask": "reversal",
+    "par": {},
+    "letters_right": 35,
+    "q": -4.8858,
+    "own_q": [
+     -4.9437,
+     -5.0086,
+     -5.124,
+     -4.8907,
+     -5.1062,
+     -4.8908
+    ],
+    "found_decider": true,
+    "test": "eng_reverse",
+    "test_value": -6.038795405858917,
+    "own_test": [
+     -6.091708215052774,
+     -5.9704025624539225,
+     -6.469437359295468,
+     -5.84489560679685,
+     -6.177000889414006,
+     -6.02893580582042
+    ],
+    "found_test": false,
+    "judge_unmasked": 5,
+    "own_judge_unmasked": [
+     8,
+     8,
+     4,
+     8,
+     8,
+     8
+    ],
+    "found_judge": false,
+    "reading": "RNSMIXUMAHOLIPIDIDEEHEASTNORTHEASTTHETALREAADSCALICHMSBEGYTHURSBERLINCLOCKATOHALACERSECOGOTOAMGIA",
+    "unmasked": "AIGMAOTOGOCESRECALAHO?????????????TA???????????SRUHTYGEBSMHCILA???????????CSDAAERLATEHT?????????????HEEDIDIPILOHAMUXIMSNR",
+    "judge_reading": "AIGMAOTOGOCESRECALAHO ############# TA ??????????? SRUHTYGEBSMHCILA ########### CSDAAERLATEHT ????????????? HEED I DI PILOHAMUXIMSNR"
+   },
+   {
+    "mask": "reversal",
+    "par": {},
+    "letters_right": 38,
+    "q": -4.8706,
+    "own_q": [
+     -4.9581,
+     -4.9789,
+     -5.1539,
+     -4.8821,
+     -5.0258,
+     -5.0138
+    ],
+    "found_decider": true,
+    "test": "eng_reverse",
+    "test_value": -6.365725620519367,
+    "own_test": [
+     -6.012411111432143,
+     -5.986082353606763,
+     -6.292377418673974,
+     -6.171679368232508,
+     -6.214810567139493,
+     -5.862383646839773
+    ],
+    "found_test": false,
+    "judge_unmasked": 4,
+    "own_judge_unmasked": [
+     8,
+     8,
+     4,
+     8,
+     4,
+     8
+    ],
+    "found_judge": false,
+    "reading": "TLANSINWEEXTRERBARTLHEASTNORTHEASTOTIERINQUINVINSPUTOWENDTHRAISBERLINCLOCKGDENAGLEOISTOASIOWOMLIQ",
+    "unmasked": "QILMOWOISAOTSIOELGANE?????????????DG???????????SIARHTDNEWOTUPSN???????????IVNIUQNIREITO?????????????HLTRABRERTXEEWNISNALT",
+    "judge_reading": "QILMOWOISAOTSIOELGANE ? DG ? SIARHTDNEWOTUPSN ? IVNIUQNIREITO ? HLTRABRERTXEEWNISNALT"
+   },
+   {
+    "mask": "reversal",
+    "par": {},
+    "letters_right": 40,
+    "q": -4.7424,
+    "own_q": [
+     -5.029,
+     -5.0987,
+     -4.9812,
+     -4.9832,
+     -5.0549,
+     -5.0854
+    ],
+    "found_decider": true,
+    "test": "eng_reverse",
+    "test_value": -5.74418466578789,
+    "own_test": [
+     -6.065301073905724,
+     -5.996193759991801,
+     -6.063608152351466,
+     -5.956944791315059,
+     -6.207554148549994,
+     -6.084731148859546
+    ],
+    "found_test": true,
+    "judge_unmasked": 8,
+    "own_judge_unmasked": [
+     4,
+     6,
+     7,
+     8,
+     6,
+     8
+    ],
+    "found_judge": false,
+    "reading": "ENEGIMELONENANGLISROMEASTNORTHEASTFRACEWOINAMESYVINTRDEVERIFATOBERLINCLOCKEISDEDEAPPROMEIIEORYWIN",
+    "unmasked": "NIWYROEIIEMORPPAEDEDS?????????????IE???????????OTAFIREVEDRTNIVY???????????SEMANIOWECARF?????????????MORSILGNANENOLEMIGENE",
+    "judge_reading": "NIWYROEIIEMORPPAEDEDS ### IE ??? OTAFIREVEDRTNIVY ### SEMANIOWECARF ??? MORSILGNANENOLEMIGENE (no coherent words in forward reading; reversed gives only fragments such as APPRO, NAMES, ENE, ONE)"
+   },
+   {
+    "mask": "X every kth",
+    "par": {
+     "k": 11
+    },
+    "letters_right": 38,
+    "q": -4.76,
+    "own_q": [
+     -4.9668,
+     -5.0093,
+     -4.9501,
+     -5.0683,
+     -4.974,
+     -5.0119
+    ],
+    "found_decider": true,
+    "test": "eng_drop_nth",
+    "test_value": -4.8325148910538385,
+    "own_test": [
+     -4.961282214189534,
+     -4.893098044951743,
+     -4.930898417701753,
+     -5.010193795663475,
+     -4.949794936999534,
+     -4.977020427152893
+    ],
+    "found_test": true,
+    "judge_unmasked": 8,
+    "own_judge_unmasked": [
+     7,
+     8,
+     5,
+     8,
+     15,
+     8
+    ],
+    "found_judge": false,
+    "reading": "BOFDETHATMEADYCLINLAKEASTNORTHEASTERSFORAHADINSCURLESELOWSINSADBERLINCLOCKPOPOTCAESAWACPDATCLAVTF",
+    "unmasked": "BOFDETHATMADYCLINLAK????????????????????????ERSFORAHAINSCURLESE???????????OWSINSAD??????????POOTCAESAWACDATCLAVTF",
+    "judge_reading": "BOF DE THAT MAD Y CLIN LAK ? ERS FOR A HA IN SCURL ESE ? OWS IN SAD ? POOT CAESA WA C DAT CLAV TF"
+   },
+   {
+    "mask": "X every kth",
+    "par": {
+     "k": 5
+    },
+    "letters_right": 40,
+    "q": -4.8405,
+    "own_q": [
+     -4.9372,
+     -4.9146,
+     -5.0395,
+     -4.8833,
+     -5.0867,
+     -5.0118
+    ],
+    "found_decider": true,
+    "test": "eng_drop_nth",
+    "test_value": -4.819868246490366,
+    "own_test": [
+     -4.867731892808282,
+     -4.686846452628119,
+     -4.94751357767593,
+     -4.872182733258081,
+     -5.033891003767247,
+     -4.843782157665743
+    ],
+    "found_test": false,
+    "judge_unmasked": 8,
+    "own_judge_unmasked": [
+     12,
+     7,
+     6,
+     8,
+     8,
+     8
+    ],
+    "found_judge": false,
+    "reading": "DAGLYITERLDAVEACHTENYEASTNORTHEASTSTIGHPARSWSKASPRIELEMEMASSCARBERLINCLOCKXFEASIFSEWERESEGARKERTW",
+    "unmasked": "DAGLITERDAVECHTEY????????????????????????TIGHARSWKASPIELEEMASCA???????????R?????????FEASFSEWRESEARKETW",
+    "judge_reading": "DAG LITER DAVE CHTEY ? TIGHAR SW KASPIEL EEMASCA ? R ? FEAS FSEW RESEAR KETW"
+   },
+   {
+    "mask": "X every kth",
+    "par": {
+     "k": 9
+    },
+    "letters_right": 34,
+    "q": -4.9098,
+    "own_q": [
+     -4.9014,
+     -4.8452,
+     -5.014,
+     -5.0121,
+     -5.0313,
+     -5.0433
+    ],
+    "found_decider": false,
+    "test": "eng_drop_nth",
+    "test_value": -4.866843490858191,
+    "own_test": [
+     -4.896614480205324,
+     -4.783358161224284,
+     -4.9635933171595,
+     -5.0549558050669585,
+     -4.9423447522884185,
+     -4.961098973194733
+    ],
+    "found_test": false,
+    "judge_unmasked": 8,
+    "own_judge_unmasked": [
+     12,
+     10,
+     8,
+     8,
+     12,
+     12
+    ],
+    "found_judge": false,
+    "reading": "WENIEIHNYERETERCOUREWEASTNORTHEASTEBATIZIEINCHHIRDLAMPEOFSTSOAMBERLINCLOCKILEVITAROSEIFTEGACLEDUT",
+    "unmasked": "WENIEIHNERETERCOREW?????????????????????????EATIZIEINHHIRDLAMEO???????????FSTSOA??????????ILEVITROSEIFTEACLEDUT",
+    "judge_reading": "WE NIE I HERE TER CORE W ?? ?? EAT IZ IN HHIRD LAME O ?? FSTSOA ?? ILEVIT ROSE IF TEA CLED UT"
+   },
+   {
+    "mask": "X every kth",
+    "par": {
+     "k": 8
+    },
+    "letters_right": 32,
+    "q": -4.945,
+    "own_q": [
+     -4.9041,
+     -5.0976,
+     -5.0963,
+     -4.9367,
+     -4.9994,
+     -5.0681
+    ],
+    "found_decider": false,
+    "test": "eng_drop_nth",
+    "test_value": -4.87847034519636,
+    "own_test": [
+     -4.930080441970241,
+     -5.011343283210476,
+     -5.021446882835742,
+     -4.782863995741678,
+     -4.959704640375867,
+     -5.040185529942109
+    ],
+    "found_test": false,
+    "judge_unmasked": 8,
+    "own_judge_unmasked": [
+     8,
+     4,
+     12,
+     4,
+     12,
+     8
+    ],
+    "found_judge": false,
+    "reading": "EGRATRALBIZDAYOYTOOOFEASTNORTHEASTESETHATHIUSTSOCZETHINGONEGOUTBERLINCLOCKAITORSGIPPLYARDALYRMAFA",
+    "unmasked": "EGRATRABIZDAYOTOOOF????????????????????????ESETHTHIUSTSCZETHINO???????????NEGOUT?????????AITORGIPPLYADALYRMAA",
+    "judge_reading": "EGRATRABIZ DAY TO OOF ? ? ESE TH THIUSTSCZ THIN O ? NE G OUT ? AI TOR GIP PLY A DALY R MAA"
+   },
+   {
+    "mask": "X every kth",
+    "par": {
+     "k": 10
+    },
+    "letters_right": 29,
+    "q": -5.0319,
+    "own_q": [
+     -4.8662,
+     -5.0307,
+     -4.9036,
+     -4.883,
+     -4.9384,
+     -4.9512
+    ],
+    "found_decider": false,
+    "test": "eng_drop_nth",
+    "test_value": -4.9632292542245455,
+    "own_test": [
+     -4.834443750767553,
+     -4.979269983889171,
+     -4.879965397236601,
+     -4.884035828852274,
+     -4.88352356103564,
+     -4.963784998460358
+    ],
+    "found_test": false,
+    "judge_unmasked": 8,
+    "own_judge_unmasked": [
+     12,
+     5,
+     10,
+     8,
+     12,
+     12
+    ],
+    "found_judge": false,
+    "reading": "VATEHASIPCONHALLINCHTEASTNORTHEASTSORAINNAUBLCHMILLUANJULFAFFNOBERLINCLOCKTBUTEXANDEGRETWPEDOFIPD",
+    "unmasked": "VATEHASIPONHALLINCT?????????????????????????SORAINAUBLCHMILUANJ???????????ULFAFNO??????????TBUTEANDEGRETWEDOFIPD",
+    "judge_reading": "VATE HAS I PON HALL IN CT ?? ... ?? SO RAIN A UBL CH MIL UAN J ... ULF AF NO ?? T BUT E AND EGRET WE DO FIPD"
+   },
+   {
+    "mask": "X every kth",
+    "par": {
+     "k": 7
+    },
+    "letters_right": 36,
+    "q": -4.8077,
+    "own_q": [
+     -4.9988,
+     -4.9746,
+     -5.0136,
+     -5.0413,
+     -4.8963,
+     -4.9433
+    ],
+    "found_decider": true,
+    "test": "eng_drop_nth",
+    "test_value": -4.792641996800414,
+    "own_test": [
+     -5.003696998857897,
+     -4.949685611999807,
+     -4.937245194588508,
+     -4.8878436498005815,
+     -4.834918044032481,
+     -4.946395697499038
+    ],
+    "found_test": true,
+    "judge_unmasked": 6,
+    "own_judge_unmasked": [
+     8,
+     4,
+     8,
+     6,
+     6,
+     8
+    ],
+    "found_judge": false,
+    "reading": "JINTDSONUPHICLISRANSREASTNORTHEASTURYHINTPSCRSHITEDFLAYROBERNMYBERLINCLOCKGTTISTOTHALITYCETHEENBY",
+    "unmasked": "JINTDSNUPHICISRANS?????????????????????????RYHINTSCRSHIEDFLAYOB???????????ERNM??????????GTISTOTHLITYCEHEENBY",
+    "judge_reading": "JINTDSNUPHICISRANS ??? ... ??? RYHINTSCRSHIEDFLAYOB ... ERNM ??? GTISTOTHLITYCEHEENBY"
+   },
+   {
+    "mask": "X every kth",
+    "par": {
+     "k": 11
+    },
+    "letters_right": 33,
+    "q": -4.8682,
+    "own_q": [
+     -4.9504,
+     -5.0626,
+     -5.0791,
+     -4.996,
+     -5.028,
+     -4.9258
+    ],
+    "found_decider": true,
+    "test": "eng_drop_nth",
+    "test_value": -4.811221016682184,
+    "own_test": [
+     -4.86569435164752,
+     -5.092445296330828,
+     -4.977882870542143,
+     -5.035559104588669,
+     -4.977827935276473,
+     -4.908867816574025
+    ],
+    "found_test": true,
+    "judge_unmasked": 12,
+    "own_judge_unmasked": [
+     6,
+     8,
+     6,
+     12,
+     8,
+     12
+    ],
+    "found_judge": false,
+    "reading": "LHEABRANSWISMETYEASUHEASTNORTHEASTHEARMANEMGUSRYDEITNINOTTAYELLBERLINCLOCKLIFTTATERRAUERDOORAPYTC",
+    "unmasked": "LHEABRANSWSMETYEASUH????????????????????????HEARMANEMUSRYDEITNI???????????OTTAYELL??????????LITTATERRAUEDOORAPYTC",
+    "judge_reading": "L HE A BRANS W S ME T YEAS UH ? HEAR MAN E MUS RYDE IT NI ? OTTA YELL ? LIT TA TERRA UE DOOR A PYTC"
+   },
+   {
+    "mask": "X every kth",
+    "par": {
+     "k": 7
+    },
+    "letters_right": 30,
+    "q": -4.8301,
+    "own_q": [
+     -4.9561,
+     -4.9864,
+     -5.0467,
+     -4.8906,
+     -4.9414,
+     -4.9724
+    ],
+    "found_decider": true,
+    "test": "eng_drop_nth",
+    "test_value": -4.797656159362681,
+    "own_test": [
+     -4.731362146622668,
+     -4.898453932346142,
+     -4.999850178055117,
+     -4.687756697285086,
+     -4.91174312426039,
+     -4.951600977668774
+    ],
+    "found_test": false,
+    "judge_unmasked": 8,
+    "own_judge_unmasked": [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8
+    ],
+    "found_judge": false,
+    "reading": "EGTONGEDSUESANAMECALGEASTNORTHEASTENTUSABHOFDLMULACAITHITCOYINGBERLINCLOCKINGROUNARTOFTOGOBODGSHG",
+    "unmasked": "EGTONGDSUESAAMECAL?????????????????????????NTUSABOFDLMUACAITHTC???????????OYIN??????????INROUNAROFTOGOODGSHG",
+    "judge_reading": "? ? ? ? IN ROUN A ROF TO GOOD ?"
+   },
+   {
+    "mask": "message in every nth",
+    "par": {
+     "n": 4,
+     "o": 0
+    },
+    "letters_right": 34,
+    "q": -4.9796,
+    "own_q": [
+     -5.0871,
+     -5.1079,
+     -5.0518,
+     -4.9038,
+     -5.1152,
+     -4.9637
+    ],
+    "found_decider": false,
+    "test": "eng_keep_nth",
+    "test_value": -5.858229915111002,
+    "own_test": [
+     -5.681021236264516,
+     -5.897335865076661,
+     -5.816355659718639,
+     -5.790009162537873,
+     -5.6451240528519895,
+     -5.235283767979625
+    ],
+    "found_test": false,
+    "judge_unmasked": 5,
+    "own_judge_unmasked": [
+     4,
+     3,
+     3,
+     3,
+     6,
+     4
+    ],
+    "found_judge": false,
+    "reading": "GORYEWZOYDWRATHEWSEACEASTNORTHEASTOBLEASABSHOUTIDEUTENSITALISNUBERLINCLOCKFOEXDISKRIMMEDSCASSANNA",
+    "unmasked": "GEYAWC???LAODETS???ES?????????????MSSA???????????",
+    "judge_reading": "GEYAWC ??? LAODETS ??? ES ... MSSA ???"
+   },
+   {
+    "mask": "message in every nth",
+    "par": {
+     "n": 3,
+     "o": 1
+    },
+    "letters_right": 32,
+    "q": -4.9701,
+    "own_q": [
+     -5.1695,
+     -4.9581,
+     -5.0625,
+     -4.9857,
+     -4.9733,
+     -4.9783
+    ],
+    "found_decider": false,
+    "test": "eng_keep_nth",
+    "test_value": -5.959131206525695,
+    "own_test": [
+     -5.800507836432968,
+     -5.78538965981235,
+     -5.879922467496519,
+     -5.577195346972135,
+     -5.705112460045872,
+     -5.839267157546377
+    ],
+    "found_test": false,
+    "judge_unmasked": 4,
+    "own_judge_unmasked": [
+     4,
+     3,
+     4,
+     6,
+     3,
+     3
+    ],
+    "found_judge": false,
+    "reading": "YURYINEXPREVESTMACOOCEASTNORTHEASTAGRANERAPHDEVSJOROTINEAYKINSTBERLINCLOCKEKGOAPEROYEFFFEDGEDEWEB",
+    "unmasked": "UIXESAO????AARHVOTEKS?????????????????GPOFEEW???????????",
+    "judge_reading": "? ? ? VOTE ? ? ?"
+   },
+   {
+    "mask": "message in every nth",
+    "par": {
+     "n": 2,
+     "o": 1
+    },
+    "letters_right": 33,
+    "q": -5.0458,
+    "own_q": [
+     -5.1492,
+     -4.953,
+     -5.0272,
+     -4.8785,
+     -4.9402,
+     -4.8895
+    ],
+    "found_decider": false,
+    "test": "eng_keep_nth",
+    "test_value": -5.845082113170777,
+    "own_test": [
+     -5.92620646677816,
+     -5.655295220365316,
+     -5.814061068718729,
+     -5.764111168789949,
+     -5.793175762258122,
+     -5.28346935583775
+    ],
+    "found_test": false,
+    "judge_unmasked": 22,
+    "own_judge_unmasked": [
+     4,
+     3,
+     4,
+     3,
+     4,
+     4
+    ],
+    "found_judge": true,
+    "reading": "ADBSPRIBHAVILEINGPINSEASTNORTHEASTASUMKDAULBANTEEWSSATCAERUTTRIBERLINCLOCKMKBOLOFTWASSEDAFREANIGH",
+    "unmasked": "DSRBAIENPN???????SMDU?????????????BNEWSTARTR??????KOOTASDFENG???????????",
+    "judge_reading": "DSRBAIENPN ??? SMDU ### B NEW START R ??? KOOTASDFENG ???"
+   },
+   {
+    "mask": "message in every nth",
+    "par": {
+     "n": 3,
+     "o": 1
+    },
+    "letters_right": 38,
+    "q": -5.1041,
+    "own_q": [
+     -4.8754,
+     -5.041,
+     -5.1325,
+     -5.0179,
+     -4.8381,
+     -4.9038
+    ],
+    "found_decider": false,
+    "test": "eng_keep_nth",
+    "test_value": -5.7750342997823445,
+    "own_test": [
+     -5.792006241312651,
+     -5.976511369839172,
+     -6.087997131157935,
+     -5.463585149172645,
+     -5.559449204661859,
+     -5.534131444546208
+    ],
+    "found_test": false,
+    "judge_unmasked": 4,
+    "own_judge_unmasked": [
+     6,
+     6,
+     4,
+     3,
+     4,
+     8
+    ],
+    "found_judge": false,
+    "reading": "WNTOUMCHEZEWARSSTBOGUEASTNORTHEASTOLEGYBALMBSHIPERKAIDIRKSOCCESBERLINCLOCKPTLRHESTFRANNIFERUPTHAR",
+    "unmasked": "NUHERTG????OGABIRIROE?????????????????LEFNFUH???????????",
+    "judge_reading": "? NUHERTG ???? OGABIRIROE ? LEFNFUH ?"
+   },
+   {
+    "mask": "message in every nth",
+    "par": {
+     "n": 4,
+     "o": 3
+    },
+    "letters_right": 33,
+    "q": -4.8846,
+    "own_q": [
+     -5.0947,
+     -4.984,
+     -5.0045,
+     -5.0248,
+     -5.0146,
+     -4.8732
+    ],
+    "found_decider": false,
+    "test": "eng_keep_nth",
+    "test_value": -5.492489226412262,
+    "own_test": [
+     -5.594562825173521,
+     -4.913391863452898,
+     -5.674529200155031,
+     -5.599111698851055,
+     -5.740044552691863,
+     -6.13606454414698
+    ],
+    "found_test": false,
+    "judge_unmasked": 18,
+    "own_judge_unmasked": [
+     4,
+     4,
+     6,
+     5,
+     3,
+     5
+    ],
+    "found_judge": true,
+    "reading": "MISKOANYPONSHISEXCEESEASTNORTHEASTHODOAPOISENXINGHOTVUYIANDTHADBERLINCLOCKAAIDROCAMSCAMEDCHERILJE",
+    "unmasked": "KYSEE???OPENTIT???AOS?????????????EEJ???????????",
+    "judge_reading": "KYSEE ??? OPEN IT(T) ??? AOS ############# EEJ ???????????"
+   },
+   {
+    "mask": "message in every nth",
+    "par": {
+     "n": 3,
+     "o": 1
+    },
+    "letters_right": 38,
+    "q": -4.8895,
+    "own_q": [
+     -4.9258,
+     -4.8973,
+     -4.7821,
+     -4.9912,
+     -4.9778,
+     -4.9715
+    ],
+    "found_decider": false,
+    "test": "eng_keep_nth",
+    "test_value": -5.599120699178348,
+    "own_test": [
+     -5.6317351043319395,
+     -5.951752073736418,
+     -5.450861662586152,
+     -5.738419027903659,
+     -5.7751132510442895,
+     -5.7861100316473495
+    ],
+    "found_test": false,
+    "judge_unmasked": 4,
+    "own_judge_unmasked": [
+     8,
+     3,
+     12,
+     4,
+     6,
+     2
+    ],
+    "found_judge": false,
+    "reading": "PTWAPPVERCENSTESONTRYEASTNORTHEASTEBEENKERTENDSINWOTHMHINHEIMEOBERLINCLOCKBOXSOCKITHRASSOSUITCPRL",
+    "unmasked": "TPEETOR????EEEESWHIEE?????????????????XCTAOIP???????????",
+    "judge_reading": "TPEETOR ???? EEEESWHIEE ????? X CTAOIP ???????????"
+   },
+   {
+    "mask": "message in every nth",
+    "par": {
+     "n": 3,
+     "o": 2
+    },
+    "letters_right": 31,
+    "q": -5.0664,
+    "own_q": [
+     -4.9367,
+     -5.0614,
+     -5.0322,
+     -5.1027,
+     -5.0712,
+     -5.0074
+    ],
+    "found_decider": false,
+    "test": "eng_keep_nth",
+    "test_value": -5.524815619803737,
+    "own_test": [
+     -5.825993180080099,
+     -5.57864759959726,
+     -5.6966549489526805,
+     -6.252786239929131,
+     -5.767558349829971,
+     -5.63187880989415
+    ],
+    "found_test": true,
+    "judge_unmasked": 3,
+    "own_judge_unmasked": [
+     3,
+     2,
+     5,
+     4,
+     6,
+     4
+    ],
+    "found_judge": false,
+    "reading": "AWERSFINSVEHINGPENCYREASTNORTHEASTRULORDRAFFIDUPPLEOVEIILANPASOBERLINCLOCKPOSACRITFEEFIULHAYHHFYM",
+    "unmasked": "EFSHGNR????URAIPEELPO????????????????PAIEIHHY???????????",
+    "judge_reading": "EFSHGNR ???? URAIPEELPO ??? PAIEIHHY ???"
+   },
+   {
+    "mask": "message in every nth",
+    "par": {
+     "n": 3,
+     "o": 0
+    },
+    "letters_right": 36,
+    "q": -4.9528,
+    "own_q": [
+     -5.0273,
+     -5.0191,
+     -5.0437,
+     -5.0685,
+     -5.0007,
+     -5.0273
+    ],
+    "found_decider": true,
+    "test": "eng_keep_nth",
+    "test_value": -5.726759867660663,
+    "own_test": [
+     -5.879428634768218,
+     -5.487265352922217,
+     -5.412153102859307,
+     -5.558946080537637,
+     -5.6174317186752845,
+     -6.178461301231974
+    ],
+    "found_test": false,
+    "judge_unmasked": 8,
+    "own_judge_unmasked": [
+     4,
+     3,
+     6,
+     4,
+     4,
+     3
+    ],
+    "found_judge": true,
+    "reading": "SNECTWAIRNGERYLEFODALEASTNORTHEASTEDMANTCOVUVSIRADBRLRARACELORSBERLINCLOCKVIAINLYDREWINGFORETSSUS",
+    "unmasked": "SCANRED?????MTVSARACO?????????????????INDWGRSS???????????",
+    "judge_reading": "SCANRED ????? MTVSARACO ############# ???? IN DWGRSS ???????????"
+   }
+  ],
+  "compute_seconds": 3188,
+  "exhaustive": false,
+  "controls": "quadgram scores of the plants' own copies' readings (no candidate is submitted)"
+ },
+ "notes": "reversal: decider 7/8, test 2/8, judge 0/8; X every kth: decider 5/8, test 3/8, judge 0/8; message in every nth: decider 1/8, test 1/8, judge 3/8",
+ "controls": [
+  -5.1095517998090925,
+  -5.305919309770659,
+  -5.216864743163515,
+  -5.10480897729883,
+  -5.436147429676774,
+  -5.346673881581725,
+  -5.429522128403088,
+  -5.362612856730737,
+  -5.307839358790091,
+  -5.326110028889449,
+  -5.576246267604087,
+  -5.282140071437186,
+  -5.181507737830287,
+  -5.242843051341567,
+  -5.385685103651503,
+  -5.485497838726565,
+  -5.140004246783676,
+  -5.259619030398355,
+  -5.058786070489899,
+  -5.403635739710969,
+  -5.453926357039748,
+  -5.296083067231903,
+  -5.263322108389529,
+  -5.134662636480016,
+  -5.364977806662831,
+  -5.302080832010428,
+  -5.307731977930581,
+  -5.280610406106308,
+  -5.171031315204964,
+  -5.358767088210757,
+  -5.1963104693991315,
+  -5.320081548936277,
+  -5.447247469942453,
+  -5.190392439551111,
+  -5.439065104169242,
+  -5.072810531556648,
+  -5.210429138249189,
+  -5.269736667858758,
+  -5.491906449828533,
+  -5.171655000960656,
+  -5.32976297540686,
+  -5.315816518410207,
+  -5.333179211693961,
+  -5.457177093042735,
+  -5.323000072486702,
+  -5.205644755198979,
+  -5.335423101461444,
+  -5.4694844449319575,
+  -5.272382324416702,
+  -5.329482700052715,
+  -5.266983793812615,
+  -5.359508107330154,
+  -5.253100749817209,
+  -5.351657845115418,
+  -5.154330510271252,
+  -5.060730504560937,
+  -5.358832534936295,
+  -5.140153094469445,
+  -5.472090900861874,
+  -5.284469577844261,
+  -5.141168992658377,
+  -5.1343427084013875,
+  -5.241095186026818,
+  -5.257305022203016,
+  -5.300962828641978,
+  -5.312858954260977,
+  -5.202958075637127,
+  -5.538585410044024,
+  -5.441288966837736,
+  -5.249904474820228,
+  -5.248932369066098,
+  -5.324288700586906,
+  -5.116079780142226,
+  -5.321849694739488,
+  -5.206457665391828,
+  -5.1166250867392815,
+  -5.184391054148185,
+  -5.262065487373094,
+  -5.257009761456861,
+  -5.24866507447292,
+  -5.371734906389105,
+  -5.396489611036173,
+  -5.135834091851385,
+  -5.3734969015898315,
+  -5.2058128708717515,
+  -5.381312463938396,
+  -5.436597027080369,
+  -5.366879725847975,
+  -5.360664515035559,
+  -5.292838540132102,
+  -5.302339111711372,
+  -5.305542303268508,
+  -5.449417664384724,
+  -5.137129152663846,
+  -5.233019511148347,
+  -5.335653945765326,
+  -5.494711222635618,
+  -5.447351536148238,
+  -5.377521762449041,
+  -5.140916428848688,
+  -5.448299599245842,
+  -5.372988969374613,
+  -5.562558979227402,
+  -5.157739140602083,
+  -5.3144168462218335,
+  -5.065682690558564,
+  -5.287826083009283,
+  -5.23495482658925,
+  -5.54156175505294,
+  -5.1899609654119025,
+  -5.350298813540681,
+  -5.073010098481097,
+  -5.239615952047343,
+  -5.2942109873554415,
+  -5.234230181875639,
+  -5.324548638048541,
+  -5.4934570835430785,
+  -5.327520553016653,
+  -5.078035650197741,
+  -5.1764551850481295,
+  -5.387560494438617,
+  -5.1857760459283195,
+  -5.19163661782009,
+  -5.338793043208731,
+  -5.261643505605736,
+  -5.064083977914418,
+  -5.197301804617175,
+  -5.198178812152904,
+  -5.046940280018813,
+  -5.261504822511134,
+  -5.354743603945019,
+  -5.315914226169828,
+  -5.192189894320119,
+  -5.321428426577867,
+  -5.344436748789287,
+  -5.447123733220494,
+  -5.379735272786439,
+  -5.276858205458882,
+  -5.314036471646729,
+  -5.3211314473514095,
+  -5.386491878359212,
+  -5.345409658722995,
+  -5.2958016564683765,
+  -5.3628646295857765
+ ],
+ "error": null,
+ "worked_example": "A6.3 plants a masked message. A reversed Carter passage with the known words set after masking:\n\n  plant        TIYROTSEHTSIFEIRBNITAEASTNORTHEASTDNAYRUJREPROFDEIRTSAWEHTINIDNBERLINCLOCKIHDNUOBSAWEGDUJASANAMYP\n  unmasked     PYMANASAJUDGEWASBOUND?????????????HI???????????NDINITHEWASTRIED???????????FORPERJURYAND?????????????ATINBRIEFISTHESTORYIT\n\n  enciphered at one free alphabet, Beaufort, key length 23; climbed by 0140's search with six copies;\n  found by the climb's score, by eng_reverse, or by the judge on the reading read backwards.",
+ "seconds": 3303.272953271866,
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 168,
+  "cached": 0,
+  "input_tokens": 98089,
+  "output_tokens": 82078,
+  "errors": 0
+ }
+}

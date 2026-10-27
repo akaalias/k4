@@ -1,0 +1,6 @@
+Cross-entropy, letter by letter, with the quadgram table (no history before the window):
+
+  letter      T     H     E     H     O     T     A     I     R     E     S     C
+  -log2 P  3.47  1.71  0.59  5.50  2.12  4.54  3.95  6.64  4.38  3.54  3.39  5.32
+
+  mean over the 31 letters: 2.71 bits; evidence 1.99 bits per letter (log2 26 = 4.70)

@@ -1,0 +1,852 @@
+{
+ "id": 233,
+ "tag": "0233-f13-how-many-bits-per-letter-each-english-judge-extracts",
+ "started": "2026-10-27T16:28:02+00:00",
+ "seconds": 321.4,
+ "status": "ran",
+ "phases": {
+  "implement": 166.3,
+  "test": 77.4,
+  "run": 321.4,
+  "record": 0.1
+ },
+ "ended_epoch": 1793118804.086014,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "item": "F13.3",
+  "search_reads_known_letters": false,
+  "models": {
+   "Q": "the quadgram table (kryptos/data, 4.2e9 counts) as interpolated Kneser-Ney order 4",
+   "KN5": "interpolated Kneser-Ney order 5, local corpus",
+   "KN6": "interpolated Kneser-Ney order 6, local corpus",
+   "KN7": "interpolated Kneser-Ney order 7, local corpus",
+   "KN8": "interpolated Kneser-Ney order 8, local corpus",
+   "MIX5": "Q and KN5 mixed, weight on Q 0.3 (validation)",
+   "MIX6": "Q and KN6 mixed, weight on Q 0.3 (validation)",
+   "MIX7": "Q and KN7 mixed, weight on Q 0.3 (validation)",
+   "MIX8": "Q and KN8 mixed, weight on Q 0.3 (validation)",
+   "KN6m": "interpolated Kneser-Ney order 6, manuals only (no Carter)",
+   "KN8m": "interpolated Kneser-Ney order 8, manuals only (no Carter)",
+   "MIX6m": "Q and KN6m mixed, weight on Q 0.55",
+   "MIX8m": "Q and KN8m mixed, weight on Q 0.55",
+   "W": "word unigrams (corpus counts, dictionary words 0.5) or single letters, summed over segmentations"
+  },
+  "corpus_letters_train": 1429659,
+  "manual_lines_kept": 26017,
+  "test_windows": {
+   "clean": 529,
+   "xstops": 534,
+   "k123": 34,
+   "k12": 17,
+   "sub3": 529
+  },
+  "validation_windows": 268,
+  "cross_entropy": {
+   "Q": {
+    "clean": {
+     "H_mean": 2.947,
+     "bits_per_letter": 1.753,
+     "H_median": 2.89,
+     "H_p90_least_predictable": 3.383,
+     "bits_in_97": 170.0,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 3.049,
+     "bits_per_letter": 1.651,
+     "H_median": 2.987,
+     "H_p90_least_predictable": 3.531,
+     "bits_in_97": 160.2,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.962,
+     "bits_per_letter": 1.739,
+     "H_median": 2.952,
+     "H_p90_least_predictable": 3.163,
+     "bits_in_97": 168.6,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.965,
+     "bits_per_letter": 1.735,
+     "H_median": 2.943,
+     "H_p90_least_predictable": 3.172,
+     "bits_in_97": 168.3,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 3.29,
+     "bits_per_letter": 1.411,
+     "H_median": 3.243,
+     "H_p90_least_predictable": 3.708,
+     "bits_in_97": 136.8,
+     "windows": 529
+    }
+   },
+   "KN5": {
+    "clean": {
+     "H_mean": 2.64,
+     "bits_per_letter": 2.06,
+     "H_median": 2.604,
+     "H_p90_least_predictable": 3.099,
+     "bits_in_97": 199.9,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.753,
+     "bits_per_letter": 1.948,
+     "H_median": 2.728,
+     "H_p90_least_predictable": 3.241,
+     "bits_in_97": 188.9,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.813,
+     "bits_per_letter": 1.888,
+     "H_median": 2.732,
+     "H_p90_least_predictable": 3.51,
+     "bits_in_97": 183.1,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.903,
+     "bits_per_letter": 1.798,
+     "H_median": 2.813,
+     "H_p90_least_predictable": 3.397,
+     "bits_in_97": 174.4,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 3.146,
+     "bits_per_letter": 1.555,
+     "H_median": 3.125,
+     "H_p90_least_predictable": 3.569,
+     "bits_in_97": 150.8,
+     "windows": 529
+    }
+   },
+   "MIX5": {
+    "clean": {
+     "H_mean": 2.546,
+     "bits_per_letter": 2.155,
+     "H_median": 2.517,
+     "H_p90_least_predictable": 2.897,
+     "bits_in_97": 209.0,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.651,
+     "bits_per_letter": 2.05,
+     "H_median": 2.622,
+     "H_p90_least_predictable": 3.036,
+     "bits_in_97": 198.8,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.686,
+     "bits_per_letter": 2.014,
+     "H_median": 2.596,
+     "H_p90_least_predictable": 3.162,
+     "bits_in_97": 195.4,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.733,
+     "bits_per_letter": 1.968,
+     "H_median": 2.655,
+     "H_p90_least_predictable": 3.084,
+     "bits_in_97": 190.9,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 2.967,
+     "bits_per_letter": 1.733,
+     "H_median": 2.953,
+     "H_p90_least_predictable": 3.297,
+     "bits_in_97": 168.1,
+     "windows": 529
+    }
+   },
+   "KN6": {
+    "clean": {
+     "H_mean": 2.501,
+     "bits_per_letter": 2.2,
+     "H_median": 2.458,
+     "H_p90_least_predictable": 2.972,
+     "bits_in_97": 213.4,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.616,
+     "bits_per_letter": 2.084,
+     "H_median": 2.576,
+     "H_p90_least_predictable": 3.122,
+     "bits_in_97": 202.2,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.643,
+     "bits_per_letter": 2.057,
+     "H_median": 2.733,
+     "H_p90_least_predictable": 3.469,
+     "bits_in_97": 199.6,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.977,
+     "bits_per_letter": 1.724,
+     "H_median": 2.916,
+     "H_p90_least_predictable": 3.429,
+     "bits_in_97": 167.2,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 3.039,
+     "bits_per_letter": 1.662,
+     "H_median": 3.011,
+     "H_p90_least_predictable": 3.459,
+     "bits_in_97": 161.2,
+     "windows": 529
+    }
+   },
+   "MIX6": {
+    "clean": {
+     "H_mean": 2.398,
+     "bits_per_letter": 2.302,
+     "H_median": 2.377,
+     "H_p90_least_predictable": 2.755,
+     "bits_in_97": 223.3,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.507,
+     "bits_per_letter": 2.193,
+     "H_median": 2.475,
+     "H_p90_least_predictable": 2.924,
+     "bits_in_97": 212.8,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.51,
+     "bits_per_letter": 2.19,
+     "H_median": 2.541,
+     "H_p90_least_predictable": 3.084,
+     "bits_in_97": 212.4,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.719,
+     "bits_per_letter": 1.982,
+     "H_median": 2.68,
+     "H_p90_least_predictable": 3.042,
+     "bits_in_97": 192.2,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 2.847,
+     "bits_per_letter": 1.853,
+     "H_median": 2.826,
+     "H_p90_least_predictable": 3.183,
+     "bits_in_97": 179.7,
+     "windows": 529
+    }
+   },
+   "KN7": {
+    "clean": {
+     "H_mean": 2.446,
+     "bits_per_letter": 2.254,
+     "H_median": 2.439,
+     "H_p90_least_predictable": 2.928,
+     "bits_in_97": 218.7,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.563,
+     "bits_per_letter": 2.137,
+     "H_median": 2.528,
+     "H_p90_least_predictable": 3.046,
+     "bits_in_97": 207.3,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.512,
+     "bits_per_letter": 2.188,
+     "H_median": 2.763,
+     "H_p90_least_predictable": 3.457,
+     "bits_in_97": 212.3,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 3.001,
+     "bits_per_letter": 1.7,
+     "H_median": 2.964,
+     "H_p90_least_predictable": 3.42,
+     "bits_in_97": 164.9,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 2.994,
+     "bits_per_letter": 1.707,
+     "H_median": 2.993,
+     "H_p90_least_predictable": 3.404,
+     "bits_in_97": 165.6,
+     "windows": 529
+    }
+   },
+   "MIX7": {
+    "clean": {
+     "H_mean": 2.342,
+     "bits_per_letter": 2.358,
+     "H_median": 2.329,
+     "H_p90_least_predictable": 2.693,
+     "bits_in_97": 228.8,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.452,
+     "bits_per_letter": 2.248,
+     "H_median": 2.42,
+     "H_p90_least_predictable": 2.856,
+     "bits_in_97": 218.1,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.401,
+     "bits_per_letter": 2.299,
+     "H_median": 2.57,
+     "H_p90_least_predictable": 3.074,
+     "bits_in_97": 223.0,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.72,
+     "bits_per_letter": 1.98,
+     "H_median": 2.681,
+     "H_p90_least_predictable": 3.049,
+     "bits_in_97": 192.1,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 2.803,
+     "bits_per_letter": 1.897,
+     "H_median": 2.794,
+     "H_p90_least_predictable": 3.124,
+     "bits_in_97": 184.0,
+     "windows": 529
+    }
+   },
+   "KN8": {
+    "clean": {
+     "H_mean": 2.421,
+     "bits_per_letter": 2.28,
+     "H_median": 2.411,
+     "H_p90_least_predictable": 2.902,
+     "bits_in_97": 221.1,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.536,
+     "bits_per_letter": 2.165,
+     "H_median": 2.511,
+     "H_p90_least_predictable": 3.026,
+     "bits_in_97": 210.0,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.43,
+     "bits_per_letter": 2.271,
+     "H_median": 2.741,
+     "H_p90_least_predictable": 3.382,
+     "bits_in_97": 220.2,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.978,
+     "bits_per_letter": 1.722,
+     "H_median": 2.939,
+     "H_p90_least_predictable": 3.363,
+     "bits_in_97": 167.1,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 2.97,
+     "bits_per_letter": 1.731,
+     "H_median": 2.972,
+     "H_p90_least_predictable": 3.385,
+     "bits_in_97": 167.9,
+     "windows": 529
+    }
+   },
+   "MIX8": {
+    "clean": {
+     "H_mean": 2.318,
+     "bits_per_letter": 2.382,
+     "H_median": 2.311,
+     "H_p90_least_predictable": 2.682,
+     "bits_in_97": 231.1,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.427,
+     "bits_per_letter": 2.273,
+     "H_median": 2.404,
+     "H_p90_least_predictable": 2.836,
+     "bits_in_97": 220.5,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.333,
+     "bits_per_letter": 2.367,
+     "H_median": 2.55,
+     "H_p90_least_predictable": 3.038,
+     "bits_in_97": 229.6,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.702,
+     "bits_per_letter": 1.998,
+     "H_median": 2.644,
+     "H_p90_least_predictable": 3.022,
+     "bits_in_97": 193.8,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 2.784,
+     "bits_per_letter": 1.916,
+     "H_median": 2.776,
+     "H_p90_least_predictable": 3.113,
+     "bits_in_97": 185.8,
+     "windows": 529
+    }
+   },
+   "KN6m": {
+    "clean": {
+     "H_mean": 3.218,
+     "bits_per_letter": 1.482,
+     "H_median": 3.161,
+     "H_p90_least_predictable": 3.995,
+     "bits_in_97": 143.8,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 3.307,
+     "bits_per_letter": 1.393,
+     "H_median": 3.247,
+     "H_p90_least_predictable": 4.079,
+     "bits_in_97": 135.1,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 3.283,
+     "bits_per_letter": 1.418,
+     "H_median": 3.263,
+     "H_p90_least_predictable": 3.734,
+     "bits_in_97": 137.5,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 3.192,
+     "bits_per_letter": 1.508,
+     "H_median": 3.227,
+     "H_p90_least_predictable": 3.704,
+     "bits_in_97": 146.3,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 3.627,
+     "bits_per_letter": 1.073,
+     "H_median": 3.576,
+     "H_p90_least_predictable": 4.303,
+     "bits_in_97": 104.1,
+     "windows": 529
+    }
+   },
+   "MIX6m": {
+    "clean": {
+     "H_mean": 2.768,
+     "bits_per_letter": 1.932,
+     "H_median": 2.694,
+     "H_p90_least_predictable": 3.296,
+     "bits_in_97": 187.4,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.862,
+     "bits_per_letter": 1.839,
+     "H_median": 2.787,
+     "H_p90_least_predictable": 3.404,
+     "bits_in_97": 178.4,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.805,
+     "bits_per_letter": 1.895,
+     "H_median": 2.783,
+     "H_p90_least_predictable": 3.101,
+     "bits_in_97": 183.8,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.765,
+     "bits_per_letter": 1.936,
+     "H_median": 2.763,
+     "H_p90_least_predictable": 3.038,
+     "bits_in_97": 187.8,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 3.125,
+     "bits_per_letter": 1.576,
+     "H_median": 3.074,
+     "H_p90_least_predictable": 3.608,
+     "bits_in_97": 152.8,
+     "windows": 529
+    }
+   },
+   "KN8m": {
+    "clean": {
+     "H_mean": 3.174,
+     "bits_per_letter": 1.526,
+     "H_median": 3.108,
+     "H_p90_least_predictable": 3.886,
+     "bits_in_97": 148.0,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 3.261,
+     "bits_per_letter": 1.439,
+     "H_median": 3.213,
+     "H_p90_least_predictable": 3.938,
+     "bits_in_97": 139.6,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 3.283,
+     "bits_per_letter": 1.417,
+     "H_median": 3.3,
+     "H_p90_least_predictable": 3.657,
+     "bits_in_97": 137.5,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 3.206,
+     "bits_per_letter": 1.495,
+     "H_median": 3.236,
+     "H_p90_least_predictable": 3.526,
+     "bits_in_97": 145.0,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 3.569,
+     "bits_per_letter": 1.131,
+     "H_median": 3.524,
+     "H_p90_least_predictable": 4.179,
+     "bits_in_97": 109.7,
+     "windows": 529
+    }
+   },
+   "MIX8m": {
+    "clean": {
+     "H_mean": 2.755,
+     "bits_per_letter": 1.945,
+     "H_median": 2.682,
+     "H_p90_least_predictable": 3.264,
+     "bits_in_97": 188.7,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.849,
+     "bits_per_letter": 1.852,
+     "H_median": 2.78,
+     "H_p90_least_predictable": 3.405,
+     "bits_in_97": 179.6,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.809,
+     "bits_per_letter": 1.891,
+     "H_median": 2.798,
+     "H_p90_least_predictable": 3.104,
+     "bits_in_97": 183.4,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.766,
+     "bits_per_letter": 1.935,
+     "H_median": 2.766,
+     "H_p90_least_predictable": 3.008,
+     "bits_in_97": 187.7,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 3.113,
+     "bits_per_letter": 1.587,
+     "H_median": 3.053,
+     "H_p90_least_predictable": 3.594,
+     "bits_in_97": 154.0,
+     "windows": 529
+    }
+   },
+   "W": {
+    "clean": {
+     "H_mean": 2.62,
+     "bits_per_letter": 2.081,
+     "H_median": 2.625,
+     "H_p90_least_predictable": 2.942,
+     "bits_in_97": 201.8,
+     "windows": 529
+    },
+    "xstops": {
+     "H_mean": 2.702,
+     "bits_per_letter": 1.998,
+     "H_median": 2.685,
+     "H_p90_least_predictable": 3.054,
+     "bits_in_97": 193.8,
+     "windows": 534
+    },
+    "k123": {
+     "H_mean": 2.768,
+     "bits_per_letter": 1.932,
+     "H_median": 2.749,
+     "H_p90_least_predictable": 3.042,
+     "bits_in_97": 187.4,
+     "windows": 34
+    },
+    "k12": {
+     "H_mean": 2.799,
+     "bits_per_letter": 1.902,
+     "H_median": 2.813,
+     "H_p90_least_predictable": 2.937,
+     "bits_in_97": 184.5,
+     "windows": 17
+    },
+    "sub3": {
+     "H_mean": 3.136,
+     "bits_per_letter": 1.564,
+     "H_median": 3.131,
+     "H_p90_least_predictable": 3.474,
+     "bits_in_97": 151.8,
+     "windows": 529
+    }
+   }
+  },
+  "best_model_clean": "MIX8",
+  "gain_over_Q_bits_per_letter_clean": {
+   "Q": 0.0,
+   "KN5": 0.307,
+   "MIX5": 0.401,
+   "KN6": 0.446,
+   "MIX6": 0.549,
+   "KN7": 0.501,
+   "MIX7": 0.605,
+   "KN8": 0.526,
+   "MIX8": 0.629,
+   "KN6m": -0.271,
+   "MIX6m": 0.179,
+   "KN8m": -0.227,
+   "MIX8m": 0.192,
+   "W": 0.327
+  },
+  "rule_stronger": "cross-entropy on clean held-out Carter at least 0.10 bits per letter under Q",
+  "stronger_models": [
+   "KN5",
+   "MIX5",
+   "KN6",
+   "MIX6",
+   "KN7",
+   "MIX7",
+   "KN8",
+   "MIX8",
+   "MIX6m",
+   "MIX8m",
+   "W"
+  ],
+  "best_out_of_domain": "MIX8m",
+  "out_of_domain_stronger": true,
+  "ladder": {
+   "Q": {
+    "soup4 (from Q)": {
+     "threshold": -246.83,
+     "found": {
+      "clean": 1,
+      "xstops": 1
+     },
+     "passes": false
+    },
+    "soup6 (from KN6)": {
+     "threshold": -231.68,
+     "found": {
+      "clean": 0,
+      "xstops": 1
+     },
+     "passes": false
+    },
+    "word salad": {
+     "threshold": -255.74,
+     "found": {
+      "clean": 8,
+      "xstops": 2
+     },
+     "passes": false
+    }
+   },
+   "MIX8": {
+    "soup4 (from Q)": {
+     "threshold": -286.73,
+     "found": {
+      "clean": 29,
+      "xstops": 30
+     },
+     "passes": true
+    },
+    "soup6 (from KN6)": {
+     "threshold": -165.42,
+     "found": {
+      "clean": 0,
+      "xstops": 0
+     },
+     "passes": false
+    },
+    "word salad": {
+     "threshold": -217.78,
+     "found": {
+      "clean": 15,
+      "xstops": 10
+     },
+     "passes": false
+    }
+   },
+   "W": {
+    "soup4 (from Q)": {
+     "threshold": -343.88,
+     "found": {
+      "clean": 29,
+      "xstops": 30
+     },
+     "passes": true
+    },
+    "soup6 (from KN6)": {
+     "threshold": -205.51,
+     "found": {
+      "clean": 0,
+      "xstops": 0
+     },
+     "passes": false
+    },
+    "word salad": {
+     "threshold": -171.52,
+     "found": {
+      "clean": 0,
+      "xstops": 0
+     },
+     "passes": false
+    }
+   },
+   "judge": {
+    "soup4 (from Q)": {
+     "threshold": 72.0,
+     "found": {
+      "clean": 29,
+      "xstops": 29
+     },
+     "passes": true
+    },
+    "soup6 (from KN6)": {
+     "threshold": 90.0,
+     "found": {
+      "clean": 18,
+      "xstops": 17
+     },
+     "passes": false
+    },
+    "word salad": {
+     "threshold": 88.0,
+     "found": {
+      "clean": 25,
+      "xstops": 24
+     },
+     "passes": false
+    }
+   }
+  },
+  "ladder_rule": "a rung passes when at least 90% of clean and of X-stop windows (30 each) score above every one of its 40 negatives",
+  "judge_calls": 180,
+  "judge_none": 0,
+  "f13_1_cells": {
+   "F1.1 one free alphabet + key L = 26": {
+    "key_bits": 202.3,
+    "Q_clean": false,
+    "best_out_of_domain_clean": false,
+    "best_out_of_domain_k12": false,
+    "best_clean": true,
+    "best_xstops": true
+   },
+   "F1.2 two free alphabets + key L = 13": {
+    "key_bits": 224.9,
+    "Q_clean": false,
+    "best_out_of_domain_clean": false,
+    "best_out_of_domain_k12": false,
+    "best_clean": true,
+    "best_xstops": false
+   },
+   "F1.7 autokey on one free alphabet, lag 30": {
+    "key_bits": 221.1,
+    "Q_clean": false,
+    "best_out_of_domain_clean": false,
+    "best_out_of_domain_k12": false,
+    "best_clean": true,
+    "best_xstops": false
+   },
+   "F10 Chaocipher": {
+    "key_bits": 176.8,
+    "Q_clean": false,
+    "best_out_of_domain_clean": true,
+    "best_out_of_domain_k12": true,
+    "best_clean": true,
+    "best_xstops": true
+   },
+   "F6.2 two free alphabets after a width-10 columnar, L = 10": {
+    "key_bits": 232.6,
+    "Q_clean": false,
+    "best_out_of_domain_clean": false,
+    "best_out_of_domain_k12": false,
+    "best_clean": false,
+    "best_xstops": false
+   },
+   "F1 running key from unknown English": {
+    "key_bits": 282.8,
+    "Q_clean": false,
+    "best_out_of_domain_clean": false,
+    "best_out_of_domain_k12": false,
+    "best_clean": false,
+    "best_xstops": false
+   }
+  },
+  "reference_0136_quadgram_H_carter_book": 2.916,
+  "exhaustive": false,
+  "compute_seconds": 152
+ },
+ "notes": "clean Carter: Q 1.753 bits/letter; out of domain MIX8m 1.945 (K1+K2 1.935); in domain MIX8 2.382; stronger by the rule: ['KN5', 'MIX5', 'KN6', 'MIX6', 'KN7', 'MIX7', 'KN8', 'MIX8', 'MIX6m', 'MIX8m', 'W']; judge ladder: soup4 (from Q) pass, soup6 (from KN6) fail, word salad fail",
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 180,
+  "cached": 0,
+  "input_tokens": 106183,
+  "output_tokens": 114505,
+  "errors": 0
+ },
+ "error": null,
+ "candidates": []
+}

@@ -227,3 +227,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0226	0226-a6-the-climbs-power-on-sanborn-style-plaintext	1-keyed-periodic	0221-rejudge-the-sampled-verdicts-free-alphabets-and-running-english	reverted	0	0	0			4172	design=91 implement=223 test=10 run=4172 record=0
 0227	0227-a6-masked-messages-through-the-decider	1-keyed-periodic	0226-a6-the-climbs-power-on-sanborn-style-plaintext	reverted	0	0	0			3303	design=0 implement=8 test=82 run=3304 record=0
 0228	0228-d1-design-2s-power-against-its-budget	1-keyed-periodic	0226-a6-the-climbs-power-on-sanborn-style-plaintext	reverted	0	0	0			6714	implement=0 test=5 run=6714 record=0
+0229	0229-d1-one-free-alphabet-power-per-run-with-enough-plants	1-keyed-periodic	0228-d1-design-2s-power-against-its-budget	reverted	0	0	0			2441	design=75 implement=0 test=5 run=2441 record=0

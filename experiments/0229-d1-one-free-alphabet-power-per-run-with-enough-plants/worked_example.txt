@@ -1,0 +1,8 @@
+D1 measures how fast design 2 finds a planted message. For one plant and its six copies:
+
+  run          1      2      3   ...   10
+  plant      best of runs 1..r
+  copies     best of runs 1..r, each
+  found at r when the plant's best is above every copy's best.
+
+Repeated with runs a tenth as long; power at each budget is the share of plants found.

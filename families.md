@@ -204,6 +204,8 @@ Update the leaf when an experiment works on it.
     - **F13.2** The cipher type named from the ciphertext's statistics, power measured first: held-out accuracy 0.28 (chance 0.06), the flat families near chance against random letters; K4 names no family against its shuffles; the one cell under the line (ciphertext autokey) not replicated {closed · sampled · 0231, 0232}
     - **F13.3** A stronger English judge: bits per letter it extracts on held-out English: quadgrams 1.75, n-grams without Carter mixed with them 1.95 (189 bits in 97), with Carter 2.38; the judge passes 4-letter soup, not 6-letter soup or word salad {closed · measured · 0233}
     - **F13.4** Ciphertext-only solves in the families F13.1 leaves decidable {open}
+      - **F13.4a** Periodic key on the sculpture's 8 table classes, lengths 1-36: K4 inside 200 climbed shuffles (p 0.62); plants found to length 26 (6/8), not at 30-36 {closed · sampled · 0234}
+        - Lengths 27-36: plants 5/8 at 30, 2/8 at 36: too short to decide from the ciphertext alone {blocked · sampled · 0234}
     - **F13.5** Memorable keys from the named sources, scored by English alone {open}
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}

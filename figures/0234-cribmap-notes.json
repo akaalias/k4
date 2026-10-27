@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4a: the sculpture's own table with a repeating key, solved from the carved letters alone, never looking at the clue words."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every length 1-36 and all 8 ways of using the table, climbed and rescored by the best English model; K4 against 200 shuffles of itself."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 sits inside its shuffles (p 0.6169). Planted messages are found to length 26, so 1-26 is closed without the known letters; 27-36 is too short to decide."
+ }
+]

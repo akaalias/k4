@@ -56,6 +56,7 @@ until Alexis decides; from here on no experiment re-submits an older reading.
 | 231 | F13.2 | **A classifier of 17 cipher families from K4's statistics alone.** Held-out accuracy 0.26-0.28 (chance 0.06). Alphabet swaps and transpositions are certain, short periodic keys and Hill fairly sure; the flat families are near chance against random letters. K4 names no family against 2,000 shuffles of itself; one cell (ciphertext autokey, p 0.001) under the corrected line with no power behind it. |
 | 232 | F13.2 | **Replication of that cell:** retrained on fresh texts, 5,000 fresh shuffles: p 0.030, not replicated. F13.2 closed. |
 | 233 | F13.3 | **Bits per letter for stronger English scorers.** Quadgrams 1.75; n-grams to order 8 trained without Carter, mixed with the quadgrams, 1.95 (+0.19, 189 bits in 97); trained with Carter 2.38. The judge beats 4-letter soup, not 6-letter soup or word salad. Chaocipher comes into reach; F1.1 L26 and F1.2 L13 only for Carter-like text. |
+| 234 | F13.4a | **The sculpture's table with a repeating key, from the ciphertext alone.** The climb recovers K1's PALIMPSEST from K1's carved letters with no crib. On K4, every length 1-36 and all 8 ways of using the table: inside 200 shuffles (p 0.62). Plants found to length 26: closed 1-26 without the known letters, 27-36 too short. |
 
 What F13.2 says: at 97 letters, statistics can tell K4 is not an alphabet swap, a transposition, a short periodic key or
 (fairly surely) a Hill or trifid, which the cribs already said; among the flat families nothing in the statistics

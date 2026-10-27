@@ -64,6 +64,42 @@ def runner_running():
         return False
 
 
+_spend = {"t": 0.0, "v": 0.0}
+
+
+def compute_setting():
+    try:
+        return json.loads((ROOT / "data" / "compute.json").read_text())
+    except (OSError, ValueError):
+        return {"where": "local"}
+
+
+def modal_spend_this_month():
+    """Dollars the month's Modal runs cost, from each record's raw.json (issue #99); rechecked every minute."""
+    if time.time() - _spend["t"] > 60:
+        month, total = time.strftime("%Y-%m"), 0.0
+        for raw in (ROOT / "experiments").glob("*/raw.json"):
+            if time.strftime("%Y-%m", time.localtime(raw.stat().st_mtime)) != month:
+                continue
+            try:
+                c = json.loads(raw.read_text()).get("compute") or {}
+            except (OSError, ValueError):
+                continue
+            if c.get("where") == "modal":
+                total += float(c.get("dollars", 0))
+        _spend.update(t=time.time(), v=total)
+    return _spend["v"]
+
+
+def remote_run():
+    """The Modal run in progress, if any (tools/remote_run.py writes data/remote-run.json while it runs)."""
+    try:
+        r = json.loads((ROOT / "data" / "remote-run.json").read_text())
+        return r if alive(r.get("pid", 0)) else None
+    except (OSError, ValueError):
+        return None
+
+
 # ---- data -------------------------------------------------------------------------------------------
 
 def backlog():
@@ -171,7 +207,15 @@ def header():
         state = Text("not running", style=BAD)
     t = Table.grid(expand=True)
     t.add_column(); t.add_column(justify="right")
-    t.add_row(Text("KRYPTOS K4 · autoresearch loop", style="bold"), Text("loop: ") + state + Text(f"   {time.strftime('%H:%M')}", style=MUTED))
+    cs = compute_setting()
+    if cs.get("where") == "modal":
+        where = Text("compute: Modal", style=OK) + Text(f" ${modal_spend_this_month():.2f}"
+                                                        + (f" of ${cs['budget_dollars']:.2f}" if cs.get("budget_dollars") else "")
+                                                        + " this month   ", style=MUTED)
+    else:
+        where = Text("compute: laptop   ", style=MUTED)
+    t.add_row(Text("KRYPTOS K4 · autoresearch loop", style="bold"),
+              where + Text("loop: ") + state + Text(f"   {time.strftime('%H:%M')}", style=MUTED))
     return Panel(t, box=box.HEAVY, style="bold")
 
 
@@ -258,9 +302,15 @@ def experiment_panel(tick):
         if expected:
             when += Text(f"  ·  expected to end about {datetime.fromtimestamp(started + expected * 60).strftime('%H:%M')}", style=MUTED)
         lines.append(Text("       ") + when)
+        rr = remote_run()
         n = lw.busy_workers(int(run.get("pid", 0)))
-        lines.append(Text("cpu    ", style=MUTED) + (Text(f"{n} processes computing", style=OK) if n
-                                                    else Text("no process using the CPU: check the run", style=BAD)))
+        if rr:
+            lines.append(Text("cpu    ", style=MUTED) + Text(f"on Modal, {rr['cpu']} cores", style=OK)
+                         + Text("  ·  the laptop stays cool", style=MUTED))
+            lines.append(Text(f"       {rr['url']}", style=MUTED, overflow="ellipsis", no_wrap=True))
+        else:
+            lines.append(Text("cpu    ", style=MUTED) + (Text(f"{n} processes on the laptop", style=OK) if n
+                                                        else Text("no process using the CPU: check the run", style=BAD)))
         try:
             last = [ln for ln in (ROOT / run["log"]).read_text().splitlines() if ln.strip()][-1:]
             if last:

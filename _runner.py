@@ -3,6 +3,8 @@ every candidate with the attack's own forward function, writes JSON.
 Invoked by run_experiment.py; not meant to be called by hand."""
 import importlib.util
 import json
+import multiprocessing.context
+import os
 import sys
 import time
 import traceback
@@ -16,6 +18,20 @@ def _judge(texts):
     """The blind English judge (kryptos.judge, issue #76), imported only when an attack calls it."""
     from kryptos import judge
     return judge.judge(texts)
+
+
+def _cap_workers():
+    """K4_MAX_WORKERS caps every Pool an attack starts (attacks ask for 8). run_experiment.py sets it when Modal
+    cannot take a run, so the laptop computes on fewer cores (issue #99)."""
+    cap = int(os.environ.get("K4_MAX_WORKERS") or 0)
+    if cap <= 0:
+        return None
+    pool = multiprocessing.context.BaseContext.Pool
+
+    def capped(self, processes=None, *a, **kw):
+        return pool(self, min(processes or cap, cap), *a, **kw)
+    multiprocessing.context.BaseContext.Pool = capped
+    return cap
 
 
 PROGRESS = Path(__file__).resolve().parent / "data" / "experiment-progress.json"
@@ -37,6 +53,7 @@ def _progress(done, total, label=""):
 
 def main(attack_path, out_path, budget_s):
     t0 = time.time()
+    cap = _cap_workers()
     spec = importlib.util.spec_from_file_location("attack", attack_path)
     attack = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(attack)
@@ -85,6 +102,7 @@ def main(attack_path, out_path, budget_s):
     except Exception:  # noqa: BLE001
         out["error"] = traceback.format_exc()
     out["seconds"] = time.time() - t0
+    out["compute"] = {"where": "local", "max_workers": cap or "as the attack asks"}
     if "kryptos.judge" in sys.modules:
         j = sys.modules["kryptos.judge"]
         out["judge"] = {"model": j.MODEL, "prompt": j.PROMPT_VERSION, **j.usage}

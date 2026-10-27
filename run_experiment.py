@@ -8,6 +8,7 @@ Start it with tools/start_experiment.sh so it runs outside any session's time li
 """
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -25,6 +26,17 @@ EXPERIMENTS = ROOT / "experiments"
 RESULTS = ROOT / "results.tsv"
 CHAMPION = ROOT / "champion.json"
 ATTACK = ROOT / "attack.py"
+
+COMPUTE = ROOT / "data" / "compute.json"   # {"where": "modal"} or {"where": "local"}; tools/compute.sh sets it
+LOCAL_FALLBACK_WORKERS = 4                # when Modal cannot run the search (issue #99)
+
+
+def compute_where():
+    try:
+        return json.loads(COMPUTE.read_text()).get("where", "local")
+    except (OSError, ValueError):
+        return "local"
+
 
 REQUIRED = ["slug", "title", "family", "parent", "changed", "hypothesis_expert",
             "hypothesis_eli5", "prediction", "method", "walkthrough"]
@@ -86,9 +98,21 @@ def main():
         progress = ROOT / "data" / "experiment-progress.json"     # ctx.progress's file (issue #97)
         progress.unlink(missing_ok=True)
         limited = args.budget > 0
-        subprocess.run([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path),
-                        str(args.budget) if limited else "inf"],
-                       timeout=args.budget + 60 if limited else None, check=False, cwd=ROOT)
+        budget = str(args.budget) if limited else "inf"
+        timeout = args.budget + 600 if limited else None
+        ran_remote = False
+        if compute_where() == "modal":    # issue #99: the search runs on Modal; gates and record stay here
+            r = subprocess.run(["uv", "run", "--with", "modal", "python", str(ROOT / "tools" / "remote_run.py"),
+                                str(ATTACK), str(raw_path), budget], timeout=timeout, check=False, cwd=ROOT)
+            ran_remote = r.returncode == 0
+            if not ran_remote:
+                print(f"Modal unavailable; running locally on {LOCAL_FALLBACK_WORKERS} workers")
+        if not ran_remote:
+            env = dict(os.environ)
+            if compute_where() == "modal":   # the fallback: fewer workers, so the laptop runs cooler
+                env["K4_MAX_WORKERS"] = str(LOCAL_FALLBACK_WORKERS)
+            subprocess.run([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path), budget],
+                           timeout=timeout, check=False, cwd=ROOT, env=env)
     except subprocess.TimeoutExpired:
         status = "timeout"
     seconds = time.time() - t0

@@ -35,6 +35,9 @@ Experiments have no time limit (issue #96): start each with tools/start_experime
 calls to tools/wait_experiment.sh, never as a background task of your session. At the start of a session, run
 tools/wait_experiment.sh first in case a run is still going.
 
+Where the search computes (Modal or the laptop) is Alexis's setting in data/compute.json (issue #99); never change
+it. run_experiment.py handles Modal and falls back to the laptop by itself; a raw.json's "compute" says where it ran.
+
 Never edit or commit dashboard.py, STYLE.md or the transcripts/ folder; another session works on them. Never edit
 data/confirmed.json: only Alexis, with Claude, confirms a result for the public site (issue #95).
 Commit your own files with explicit paths (git commit -- path ...), then git pull --rebase --autostash and push.

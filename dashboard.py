@@ -1605,6 +1605,22 @@ def cribmap_out_row(svg, hits):
     return svg
 
 
+def label_bands(svg):
+    """Stage labels (the small-caps headings such as "IN: THE COPPER...") drawn last, on a band of
+    the page's colour, so the curves pass under them instead of through them (issue #91)."""
+    labels = list(re.finditer(r'<text[^>]*letter-spacing="1.4" font-weight="600"[^>]*>[^<]*</text>', svg))
+    if not labels:
+        return svg
+    for m in reversed(labels):
+        svg = svg[:m.start()] + svg[m.end():]
+    band = ('<defs><filter id="lbl-band" x="-0.02" y="-0.4" width="1.04" height="1.8">'
+            '<feFlood style="flood-color:var(--paper)" result="bg"/>'
+            '<feMerge><feMergeNode in="bg"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>')
+    tops = "".join(m.group(0).replace("<text ", '<text filter="url(#lbl-band)" ', 1) for m in labels)
+    i = svg.rfind("</svg>")
+    return svg[:i] + band + tops + svg[i:]
+
+
 def cribmap_figure(tag):
     """The experiment's crib map, if one has been drawn (figures/NNNN-cribmap.svg), wide, with its
     notes in short blocks underneath."""
@@ -1638,9 +1654,10 @@ def cribmap_figure(tag):
         a = next(iter(re.finditer(r'<path d="M([\d.]+),([\d.]+) L\1,([\d.]+)" stroke="#6b6a60"[^>]*/>', svg)), None)
         if a:
             x, y0 = float(a.group(1)), float(a.group(2))
-            moved = (f'<text x="{x:g}" y="{y0 + 8:g}" text-anchor="middle" paint-order="stroke" stroke="#fffff8" stroke-width="5" stroke-linejoin="round"{inl.group(1)}>{inl.group(2)}</text>'
+            moved = (f'<text x="{x:g}" y="{y0 + 8:g}" text-anchor="middle"{inl.group(1)}>{inl.group(2)}</text>'
                      + a.group(0).replace(f'M{a.group(1)},{a.group(2)}', f'M{a.group(1)},{y0 + 16:g}', 1))
             svg = svg[:a.start()] + moved + svg[a.end():]
+    svg = label_bands(svg)
     notes_p = ROOT / "figures" / f"{num}-cribmap-notes.json"
     notes = json.loads(notes_p.read_text()) if notes_p.exists() else []
     below = "".join(f'<div class="fig-note"><b>{esc(n.get("anchor", ""))}</b><p>{crib_cells(esc(n.get("text", "")))}</p></div>' for n in notes)
@@ -1661,6 +1678,7 @@ def worksheet_figure(tag):
         svg = svg.replace(m.group(0), f'viewBox="{vx} 0 {vw} {m.group(2)}"', 1)
         w_, h_ = vw * FIG_SCALE, float(m.group(2)) * FIG_SCALE
         svg = re.sub(r'(<svg[^>]*?)\swidth="[^"]*"\s+height="[^"]*"', rf'\1 width="{w_:.0f}" height="{h_:.0f}"', svg, count=1)
+    svg = label_bands(svg)
     return (f'<div class="fig-row ws"><figure class="fig-main"><figcaption class="fig-eyebrow">the worksheet: the first steps by hand, on squared paper</figcaption>'
             f'<div class="fig-scroll">{svg}</div></figure></div>')
 

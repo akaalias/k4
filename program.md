@@ -103,6 +103,8 @@ edited, and the dashboard shows each experiment's current verdict.
    against K1-K3 inside `run` first and say so in notes. Report progress with
    `ctx.progress(done, total, label)` from the main loop (settings, copies or plants done out of
    all), so the loop's terminal shows how far the run is (issue #97); it is cheap to call often.
+   Put your estimate of the run's length in `EXPERIMENT["expected_minutes"]` (a whole number); the
+   terminal draws elapsed time against it until progress is reported, and flags a run that overruns.
 5. **Run** `uv run --with pytest pytest -q` (all must pass), then `tools/start_experiment.sh`, and
    wait for it with `tools/wait_experiment.sh`, calling it again for as long as it reports the run
    still going. **No time limits** (Alexis, 2026-10-27, issue #96): an experiment takes as long as it

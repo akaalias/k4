@@ -143,40 +143,138 @@ def backlog_line(width):
             f" · {total - done} open · {n_exp} experiments")
 
 
-def experiment_line(width, tick):
+PHASES = ("design", "implement", "test", "run", "record")
+_busy = {"t": 0.0, "n": 0}
+
+
+def busy_workers(root_pid):
+    """Processes under the run using the CPU (above 20%), checked every five seconds."""
+    if time.time() - _busy["t"] < 5:
+        return _busy["n"]
+    _busy["t"] = time.time()
+    try:
+        import subprocess
+        out = subprocess.run(["ps", "-A", "-o", "pid=,ppid=,%cpu="], capture_output=True, text=True, timeout=5).stdout
+    except Exception:  # noqa: BLE001
+        return _busy["n"]
+    kids, cpu = {}, {}
+    for ln in out.splitlines():
+        f = ln.split()
+        if len(f) == 3:
+            kids.setdefault(int(f[1]), []).append(int(f[0]))
+            cpu[int(f[0])] = float(f[2])
+    todo, n = [root_pid], 0
+    while todo:
+        q = todo.pop()
+        for c in kids.get(q, []):
+            n += cpu.get(c, 0.0) > 20
+            todo.append(c)
+    _busy["n"] = n
+    return n
+
+
+def attack_info():
+    """The experiment in attack.py: its item (A6.2, F13.1...) and expected minutes, if stated."""
+    try:
+        text = (ROOT / "attack.py").read_text()
+    except OSError:
+        return None, None
+    ch = re.search(r'"changed":\s*\(?\s*"([^"]{0,300})', text)
+    item = re.search(r"\b(?:[ADF]\d+(?:\.\d+)?)\b", ch.group(1)) if ch else None
+    m = re.search(r'"expected_minutes":\s*(\d+)', text)
+    if m:
+        return (item.group(0) if item else None), int(m.group(1))
+    m = re.search(r'expected_total_time[^\n]*?(\d+)(?:\s*-\s*(\d+))?\s*min', text)       # older free-text estimates
+    return (item.group(0) if item else None), (int(m.group(2) or m.group(1)) if m else None)
+
+
+def current_phase():
+    """(phase, seconds in it, run marker or None). The run is known from the marker; record is the
+    time after the search wrote raw.json; design, implement and test come from phase.py's clock."""
     try:
         run = json.loads(MARKER.read_text())
     except (OSError, ValueError):
-        return f"{BOLD}experiment{RESET} {DIM}none running{RESET}"
+        run = None
+    if run:
+        try:
+            started = datetime.strptime(run.get("started", ""), "%Y-%m-%d %H:%M:%S").timestamp()
+        except ValueError:
+            started = time.time()
+        dirs = sorted(d for d in (ROOT / "experiments").iterdir() if d.is_dir() and d.stat().st_mtime >= started - 5)
+        raw = dirs[-1] / "raw.json" if dirs else None
+        if raw and raw.exists():
+            return "record", time.time() - raw.stat().st_mtime, run, started
+        return "run", time.time() - started, run, started
     try:
-        started = datetime.strptime(run.get("started", ""), "%Y-%m-%d %H:%M:%S").timestamp()
-    except ValueError:
-        started = time.time()
+        ticks = json.loads((ROOT / ".phase.json").read_text()).get("ticks", [])
+        if ticks:
+            return ticks[-1]["phase"], time.time() - ticks[-1]["t"], None, None
+    except (OSError, ValueError, KeyError):
+        pass
+    return "design", None, None, None
+
+
+def experiment_line(width, tick):
+    """The bar: ctx.progress if the run reports it, else elapsed against the stated expected time,
+    else a moving bar."""
+    phase, _, run, started = current_phase()
+    item, expected = attack_info()
+    if not run:
+        return f"{BOLD}experiment{RESET} {bar(0, width)} {DIM}no run yet: the loop is in {phase}{RESET}"
     el = time.time() - started
-    name = state.get("slug") or "experiment"
     try:
         pr = json.loads(PROGRESS.read_text())
         done, total = float(pr.get("done", 0)), float(pr.get("total", 0)) or 1.0
         frac = min(1.0, done / total)
         eta = f" · about {mins(el * (1 - frac) / frac)} left" if 0 < frac < 1 else ""
         lab = f" {pr['label']}" if pr.get("label") else ""
-        return (f"{BOLD}experiment{RESET} {bar(frac, width)} {frac * 100:.0f}%{lab} · {mins(el)}{eta} · {short(name, 40)}")
+        return f"{BOLD}experiment{RESET} {bar(frac, width)} {frac * 100:.0f}%{lab} · {mins(el)}{eta}"
     except (OSError, ValueError, KeyError):
-        return (f"{BOLD}experiment{RESET} {bar(0, width, moving=tick)} {mins(el)} running, no progress reported"
-                f" · {short(name, 40)}")
+        pass
+    if expected:
+        frac = el / (expected * 60)
+        over = f" {RED}over the estimate{RESET}" if frac > 1 else ""
+        return (f"{BOLD}experiment{RESET} {bar(min(frac, 1.0), width)} {mins(el)} of about {expected} min expected{over}"
+                f" {DIM}(time, not progress){RESET}")
+    return f"{BOLD}experiment{RESET} {bar(0, width, moving=tick)} {mins(el)} {DIM}(no estimate stated){RESET}"
+
+
+def phase_line():
+    """Which experiment, which item, where in design · implement · test · run · record, and whether it computes."""
+    phase, secs, run, _ = current_phase()
+    item, _ = attack_info()
+    name = state.get("slug") or "next experiment"
+    try:
+        num = max(int(d.name[:4]) for d in (ROOT / "experiments").iterdir() if d.name[:4].isdigit())
+        num = num if run else num + 1
+    except ValueError:
+        num = None
+    steps = " · ".join(f"{BOLD}[{p}]{RESET}" if p == phase else f"{DIM}{p}{RESET}" for p in PHASES)
+    if phase == "pause":
+        steps += f" · {BOLD}[paused for Alexis]{RESET}"
+    t = f" · {mins(secs)} in {phase}" if secs is not None else ""
+    cores = ""
+    if run and phase == "run":
+        n = busy_workers(int(run.get("pid", 0)))
+        cores = f" · {n} processes computing" if n else f" · {RED}no process using the CPU{RESET}"
+    head = f"{num:04d}" if isinstance(num, int) else ""
+    return f"{BOLD}now{RESET}        {head}{f' ({item})' if item else ''} {short(name, 40)} · {steps}{t}{cores}"
 
 
 def fit(row, cols):
-    """Cut a row to `cols` visible characters, keeping its colour codes whole."""
+    """Cut a row to `cols` visible characters, keeping its colour codes whole; a cut ends in …"""
+    plain = re.sub(r"\033\[[0-9;]*m", "", row)
+    if len(plain) <= cols:
+        return row + RESET
     out, n = [], 0
     for part in re.split(r"(\033\[[0-9;]*m)", row):
         if part.startswith("\033["):
             out.append(part)
             continue
-        take = part[: max(0, cols - n)]
+        take = part[: max(0, cols - 1 - n)]
         out.append(take)
         n += len(take)
-    return "".join(out) + RESET
+    return "".join(out) + "…" + RESET
 
 
 class Footer:
@@ -200,7 +298,7 @@ class Footer:
         width = max(10, min(40, cols - 70))
         hint = (f"{RED}stop requested{RESET}: finishing and recording the current experiment, then stopping"
                 f" {DIM}(s takes it back){RESET}" if REQ.exists() else f"{DIM}press s to stop gracefully{RESET}")
-        rows = ["", backlog_line(width), experiment_line(width, self.tick), hint]
+        rows = ["", backlog_line(width), experiment_line(width, self.tick), phase_line(), hint]
         # cut each row to the window so nothing wraps: a wrapped row would break the redraw
         sys.stdout.write("".join("\033[K" + fit(r, cols - 1) + "\n" for r in rows))
         sys.stdout.flush()

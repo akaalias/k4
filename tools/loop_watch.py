@@ -82,8 +82,12 @@ def tool_line(name, inp):
     if name == "Bash":
         d = inp.get("description") or inp.get("command", "")
         cmd = inp.get("command", "")
-        if "run_experiment.py" in cmd:
-            return f"{BOLD}running the experiment{RESET} (budget 30 min)"
+        # only a command that starts a run counts, not one that reads or greps the harness (issue #96)
+        if "start_experiment.sh" in cmd or re.search(r"python[^|;&]*\brun_experiment\.py", cmd):
+            m = re.search(r"--budget\s+(\d+)", cmd)
+            return f"{BOLD}starting the experiment{RESET} " + (f"(capped at {int(m.group(1)) // 60} min)" if m else "(no time limit)")
+        if "wait_experiment.sh" in cmd:
+            return "waiting for the experiment"
         if "pytest" in cmd:
             return "running the tests"
         if cmd.startswith("git commit") or " git commit" in cmd:

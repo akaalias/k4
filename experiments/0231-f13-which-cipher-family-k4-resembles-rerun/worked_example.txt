@@ -1,0 +1,8 @@
+F13.2 measures a ciphertext and asks which kind of cipher made it. For K4 (no known letter read):
+
+  index of coincidence          0.0361   (random letters 0.0385, English 0.066)
+  kappa at shifts 1-10          0.062 0.042 0.043 0.054 0.033 0.033 0.100 0.022 0.034 0.057
+  doublets 6, longest repeat 2, distinct letters 26
+
+Each of 17 cipher kinds makes 4,000 such texts; a classifier learns the kinds from 155 such numbers,
+is scored on texts it never saw, then reads K4 and 2,000 shuffles of K4's letters.

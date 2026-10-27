@@ -1,0 +1,1167 @@
+# 0231-f13-which-cipher-family-k4-resembles-rerun: F13.2: a classifier trained on 17 cipher families' own 97-letter ciphertexts (no known words), its power on held-out texts, and K4 named against 2,000 shuffles of itself
+
+**Family:** 13-ciphertext-only  
+**Parent:** 0230-f13-which-cipher-family-k4-resembles  
+**Decision:** reverted  
+**Run:** 2026-10-27T16:06:15+00:00, 279.4 s, status ran  
+**Time by phase:** unattributed 24 s, run 279 s, record 0 s
+
+## In plain words
+
+Before attacking a cipher, codebreakers often ask what kind it is: some kinds leave fingerprints, such as letters repeating at a fixed spacing. Here we build a sorting machine (a classifier): we make 4,000 fake K4s with each of 17 kinds of cipher, measure 155 things about each, and teach the machine to tell the kinds apart. We test it on fakes it has never seen, to know how often it is right, and then show it K4. Because K4's letter counts alone could fool it, K4 counts as looking like a kind only if it looks more like that kind than 2,000 shuffles of its own letters do.
+
+## Walkthrough, by hand
+
+1. Take 97 letters of English and encipher them with one kind of cipher and a random key.
+2. Measure the result: how evenly letters are spread, how often a letter recurs 1, 2, 3 ... 60 places later, repeated pairs and triples, doublets.
+3. Do this thousands of times for each of 17 kinds, and fit weights that turn the measurements into a guess of the kind.
+4. Check the guesses on fresh fakes: the share right is the machine's power.
+5. Measure K4 and 2,000 shuffles of K4's letters; a kind is named only if K4 scores higher for it than nearly every shuffle.
+
+## Worked example (generated)
+
+```
+F13.2 measures a ciphertext and asks which kind of cipher made it. For K4 (no known letter read):
+
+  index of coincidence          0.0361   (random letters 0.0385, English 0.066)
+  kappa at shifts 1-10          0.062 0.042 0.043 0.054 0.033 0.033 0.100 0.022 0.034 0.057
+  doublets 6, longest repeat 2, distinct letters 26
+
+Each of 17 cipher kinds makes 4,000 such texts; a classifier learns the kinds from 155 such numbers,
+is scored on texts it never saw, then reads K4 and 2,000 shuffles of K4's letters.
+```
+
+## Lineage
+
+Inherits from 0230-f13-which-cipher-family-k4-resembles. What changed: F13.2 (issue #85), the first F13 run. 0168 measured K4 on 71 statistics one at a time against shuffles and found nothing outside them; F7 (0018, 0027) built ciphers by family and compared single statistics. Here the statistics are combined: 17 generators (one per family or cell of the map, keys drawn at random inside each family's space, plaintext from Carter's book with no known word, half of it Sanborn-style) make 4,000 ciphertexts each; every text is measured by 0168's 71 statistics, A13's 14 tests and 70 classic cipher-identification statistics (kappa at shifts 1-60, digraphic and even-pair I.C., delta I.C., repeats); a multinomial logistic classifier is trained on 3,000 per family and its power measured on 1,000 held-out per family, written from the other end of the book. Then K4's posterior for each family is ranked against 2,000 shuffles of K4, which keep its letter counts, so a family is named only for structure beyond the counts. The search never reads the 24 known letters. Rerun of 0230, which errored before any text was made: its worker function could not be sent to the pool (the harness loads attack.py under another module name); fixed as 0229 does, the method unchanged.
+
+## Hypothesis (domain expert)
+
+Cipher-type identification (the ACA's and NCID's practice; Sinkov's statistics) asks which generator a ciphertext is typical of. F13.1 (reports/f13-solvability-map.md) lists the families English alone could decide; F13.2 asks whether K4's own statistics point at any of them, without the known letters. Classes: monoalphabetic, columnar transposition (width 2-30), substitution then transposition (F9), periodic key on any of six alphabet pairs (standard, KRYPTOS, mixed; Quagmire I-IV) in three forms at lengths 2-12, 13-26 and 27-60 (F1, F1.1, F1.2), progressive key (F1.9), ciphertext and plaintext autokey with primers 1-30 (F1.7), running key from English (F1.3), Gromark base 10 (F5), Hill 2x2 and 3x3, plain or affine (F8), trifid 27-cell cube with no 27th symbol in the output (F4), Chaocipher (F10.1), a move then the table and the table then a move (F6), and uniform random letters (the one-time pad, the null). Features: 0168's 71 (segment chi-squares, I.C. at 1-48 alphabets, repeats at widths 7, 21, 31: the width-7 doublet column and width-21 repeats among them, 04-structure.md), A13's 14 (tools/a13_structure.py), and 70 more. Tests C4(a)-(b) (a mask leaves a type signature?), C1(a) (move then table), C11a ('interval 7') and F7's fingerprints as features rather than single tests. Pre-registered: 34 cells (17 families x two feature sets: the item's named 85 and all 155); K4 names a family when its posterior for that family is above all but a share p < 0.05/34 = 0.00147 of 2,000 shuffles of K4, and that family's positive control (12 held-out plants per family, each against 1,000 of its own shuffles, the same rule) finds at least 6 of 12. A named family is a candidate, replicated with a retrained classifier and fresh shuffles before anything else.
+
+## Prediction
+
+Held-out accuracy well above chance (1/17) overall, near 100% for monoalphabetic, transposition, substitution then transposition and Hill; high for short periodic keys; but the flat families (long periodic keys, running key, autokeys, Gromark, Chaocipher, the move-and-table pairs, random letters) confused with each other near chance among themselves. K4 is put among the flat families; against its shuffles no family is named (p above 0.00147 in all 34 cells). Plants of the distinctive families are found against their own shuffles; plants of the flat families are not. Zero candidates.
+
+## Method
+
+1. Plaintexts: 97-letter windows of Carter's Tomb of Tut-ankh-Amen (the plants' source), half clean, half Sanborn-style (full stops as X, three letters changed); training from the first 80% of the book, held-out texts and plants from the last 20%. No known word is written in.
+2. 17 generators, keys at random inside each family's space; 3,000 training and 1,000 held-out texts per family, in jobs of 100 with their own seeds.
+3. 155 features per text: 0168's all_stats (frozen), A13's battery, and kappa at shifts 1-60, digraphic and even-pair I.C., delta I.C. on both alphabets, doublets, longest repeat, distinct letters, top count, English letter log-likelihood.
+4. Multinomial logistic regression (numpy, L2 1e-3, Adam 3,000 steps, standardized features), one on the named 85 features and one on all 155. Power: held-out confusion matrix, recall per family, AUC of each family against random letters.
+5. K4 and 2,000 shuffles of K4 through both models; per family the share of shuffles at or above K4's posterior.
+6. Positive control: 12 held-out plants per family, each against 1,000 of its own shuffles, the same rule.
+
+## Result
+
+Candidates returned: 0. Passed all gates: 0. Best crib hits among all candidates: 0/24
+(no candidates).
+Best loss: None (0 is solved; 10 per missed crib letter; the harness keeps by lowest loss). Best fitness, diagnostic only: None. Champion before this run: none.
+
+| # | gate | cribs | fitness | plaintext | key |
+|---|---|---|---|---|---|
+| - | no candidates | | | | |
+
+### Bounds searched (the negative result this experiment leaves behind)
+
+```
+{
+ "item": "F13.2",
+ "search_reads_known_letters": false,
+ "self_check": "K1 reproduced by the periodic substitution (KRYPTOS table, PALIMPSEST); Chaocipher matches Rubin's vector; columnar, Hill 2x2/3x3 affine and trifid round-trip",
+ "families": [
+  "monoalphabetic",
+  "transposition",
+  "substitution then move",
+  "periodic 2-12",
+  "periodic 13-26",
+  "periodic 27-60",
+  "progressive key",
+  "ciphertext autokey",
+  "plaintext autokey",
+  "running key",
+  "Gromark",
+  "Hill",
+  "trifid",
+  "Chaocipher",
+  "move then table",
+  "table then move",
+  "random letters"
+ ],
+ "texts_per_family": {
+  "train": 3000,
+  "held_out": 1000
+ },
+ "plaintext": "Carter 1923, half clean, half full stops as X with three letters changed; train first 80%, held-out last 20%; no known words",
+ "features": {
+  "named (0168's 71 + A13's 14)": 85,
+  "all (plus 70 classic identification statistics)": 155
+ },
+ "classifier": "multinomial logistic, L2 0.001, Adam 3000 steps, standardized",
+ "chance_accuracy": 0.059,
+ "power": {
+  "named": {
+   "held_out_accuracy": 0.26,
+   "train_accuracy": 0.272,
+   "recall": {
+    "monoalphabetic": 0.851,
+    "transposition": 0.913,
+    "substitution then move": 0.489,
+    "periodic 2-12": 0.435,
+    "periodic 13-26": 0.127,
+    "periodic 27-60": 0.113,
+    "progressive key": 0.16,
+    "ciphertext autokey": 0.078,
+    "plaintext autokey": 0.09,
+    "running key": 0.046,
+    "Gromark": 0.097,
+    "Hill": 0.436,
+    "trifid": 0.11,
+    "Chaocipher": 0.124,
+    "move then table": 0.173,
+    "table then move": 0.148,
+    "random letters": 0.033
+   },
+   "auc_against_random_letters": {
+    "monoalphabetic": 1.0,
+    "transposition": 1.0,
+    "substitution then move": 1.0,
+    "periodic 2-12": 0.894,
+    "periodic 13-26": 0.652,
+    "periodic 27-60": 0.541,
+    "progressive key": 0.519,
+    "ciphertext autokey": 0.553,
+    "plaintext autokey": 0.624,
+    "running key": 0.582,
+    "Gromark": 0.578,
+    "Hill": 0.805,
+    "trifid": 0.757,
+    "Chaocipher": 0.545,
+    "move then table": 0.727,
+    "table then move": 0.675
+   },
+   "confusion": {
+    "monoalphabetic": {
+     "monoalphabetic": 851,
+     "transposition": 78,
+     "substitution then move": 52,
+     "periodic 2-12": 17,
+     "trifid": 2
+    },
+    "transposition": {
+     "monoalphabetic": 39,
+     "transposition": 913,
+     "substitution then move": 32,
+     "periodic 2-12": 5,
+     "trifid": 10,
+     "move then table": 1
+    },
+    "substitution then move": {
+     "monoalphabetic": 79,
+     "transposition": 417,
+     "substitution then move": 489,
+     "periodic 2-12": 5,
+     "trifid": 8,
+     "move then table": 1,
+     "table then move": 1
+    },
+    "periodic 2-12": {
+     "monoalphabetic": 24,
+     "transposition": 8,
+     "substitution then move": 8,
+     "periodic 2-12": 435,
+     "periodic 13-26": 29,
+     "periodic 27-60": 22,
+     "progressive key": 20,
+     "ciphertext autokey": 13,
+     "plaintext autokey": 24,
+     "running key": 7,
+     "Gromark": 29,
+     "Hill": 124,
+     "trifid": 72,
+     "Chaocipher": 22,
+     "move then table": 110,
+     "table then move": 52,
+     "random letters": 1
+    },
+    "periodic 13-26": {
+     "substitution then move": 1,
+     "periodic 2-12": 84,
+     "periodic 13-26": 127,
+     "periodic 27-60": 75,
+     "progressive key": 87,
+     "ciphertext autokey": 52,
+     "plaintext autokey": 55,
+     "running key": 18,
+     "Gromark": 59,
+     "Hill": 101,
+     "trifid": 63,
+     "Chaocipher": 82,
+     "move then table": 95,
+     "table then move": 84,
+     "random letters": 17
+    },
+    "periodic 27-60": {
+     "monoalphabetic": 1,
+     "periodic 2-12": 52,
+     "periodic 13-26": 90,
+     "periodic 27-60": 113,
+     "progressive key": 125,
+     "ciphertext autokey": 70,
+     "plaintext autokey": 47,
+     "running key": 35,
+     "Gromark": 67,
+     "Hill": 71,
+     "trifid": 51,
+     "Chaocipher": 105,
+     "move then table": 73,
+     "table then move": 73,
+     "random letters": 27
+    },
+    "progressive key": {
+     "monoalphabetic": 1,
+     "periodic 2-12": 39,
+     "periodic 13-26": 67,
+     "periodic 27-60": 94,
+     "progressive key": 160,
+     "ciphertext autokey": 69,
+     "plaintext autokey": 52,
+     "running key": 44,
+     "Gromark": 80,
+     "Hill": 62,
+     "trifid": 34,
+     "Chaocipher": 130,
+     "move then table": 69,
+     "table then move": 73,
+     "random letters": 26
+    },
+    "ciphertext autokey": {
+     "periodic 2-12": 29,
+     "periodic 13-26": 63,
+     "periodic 27-60": 85,
+     "progressive key": 125,
+     "ciphertext autokey": 78,
+     "plaintext autokey": 62,
+     "running key": 33,
+     "Gromark": 87,
+     "Hill": 69,
+     "trifid": 52,
+     "Chaocipher": 126,
+     "move then table": 89,
+     "table then move": 76,
+     "random letters": 26
+    },
+    "plaintext autokey": {
+     "monoalphabetic": 2,
+     "transposition": 3,
+     "periodic 2-12": 74,
+     "periodic 13-26": 74,
+     "periodic 27-60": 79,
+     "progressive key": 101,
+     "ciphertext autokey": 71,
+     "plaintext autokey": 90,
+     "running key": 41,
+     "Gromark": 51,
+     "Hill": 76,
+     "trifid": 60,
+     "Chaocipher": 71,
+     "move then table": 101,
+     "table then move": 81,
+     "random letters": 25
+    },
+    "running key": {
+     "periodic 2-12": 47,
+     "periodic 13-26": 83,
+     "periodic 27-60": 110,
+     "progressive key": 88,
+     "ciphertext autokey": 66,
+     "plaintext autokey": 61,
+     "running key": 46,
+     "Gromark": 72,
+     "Hill": 60,
+     "trifid": 45,
+     "Chaocipher": 96,
+     "move then table": 103,
+     "table then move": 99,
+     "random letters": 24
+    },
+    "Gromark": {
+     "monoalphabetic": 2,
+     "periodic 2-12": 61,
+     "periodic 13-26": 77,
+     "periodic 27-60": 98,
+     "progressive key": 113,
+     "ciphertext autokey": 65,
+     "plaintext autokey": 55,
+     "running key": 26,
+     "Gromark": 97,
+     "Hill": 68,
+     "trifid": 37,
+     "Chaocipher": 86,
+     "move then table": 92,
+     "table then move": 92,
+     "random letters": 31
+    },
+    "Hill": {
+     "monoalphabetic": 3,
+     "substitution then move": 4,
+     "periodic 2-12": 104,
+     "periodic 13-26": 49,
+     "periodic 27-60": 51,
+     "progressive key": 33,
+     "ciphertext autokey": 27,
+     "plaintext autokey": 46,
+     "running key": 14,
+     "Gromark": 31,
+     "Hill": 436,
+     "trifid": 52,
+     "Chaocipher": 49,
+     "move then table": 52,
+     "table then move": 39,
+     "random letters": 10
+    },
+    "trifid": {
+     "monoalphabetic": 13,
+     "transposition": 16,
+     "substitution then move": 11,
+     "periodic 2-12": 120,
+     "periodic 13-26": 54,
+     "periodic 27-60": 52,
+     "progressive key": 45,
+     "ciphertext autokey": 39,
+     "plaintext autokey": 51,
+     "running key": 18,
+     "Gromark": 38,
+     "Hill": 131,
+     "trifid": 110,
+     "Chaocipher": 56,
+     "move then table": 102,
+     "table then move": 137,
+     "random letters": 7
+    },
+    "Chaocipher": {
+     "periodic 2-12": 34,
+     "periodic 13-26": 63,
+     "periodic 27-60": 114,
+     "progressive key": 140,
+     "ciphertext autokey": 83,
+     "plaintext autokey": 61,
+     "running key": 31,
+     "Gromark": 84,
+     "Hill": 61,
+     "trifid": 36,
+     "Chaocipher": 124,
+     "move then table": 77,
+     "table then move": 64,
+     "random letters": 28
+    },
+    "move then table": {
+     "monoalphabetic": 4,
+     "transposition": 9,
+     "substitution then move": 4,
+     "periodic 2-12": 191,
+     "periodic 13-26": 64,
+     "periodic 27-60": 66,
+     "progressive key": 65,
+     "ciphertext autokey": 40,
+     "plaintext autokey": 46,
+     "running key": 21,
+     "Gromark": 57,
+     "Hill": 53,
+     "trifid": 81,
+     "Chaocipher": 50,
+     "move then table": 173,
+     "table then move": 64,
+     "random letters": 12
+    },
+    "table then move": {
+     "monoalphabetic": 3,
+     "transposition": 13,
+     "substitution then move": 21,
+     "periodic 2-12": 57,
+     "periodic 13-26": 65,
+     "periodic 27-60": 57,
+     "progressive key": 83,
+     "ciphertext autokey": 62,
+     "plaintext autokey": 63,
+     "running key": 31,
+     "Gromark": 70,
+     "Hill": 59,
+     "trifid": 93,
+     "Chaocipher": 74,
+     "move then table": 89,
+     "table then move": 148,
+     "random letters": 12
+    },
+    "random letters": {
+     "substitution then move": 2,
+     "periodic 2-12": 46,
+     "periodic 13-26": 68,
+     "periodic 27-60": 98,
+     "progressive key": 151,
+     "ciphertext autokey": 63,
+     "plaintext autokey": 63,
+     "running key": 38,
+     "Gromark": 70,
+     "Hill": 69,
+     "trifid": 32,
+     "Chaocipher": 108,
+     "move then table": 89,
+     "table then move": 70,
+     "random letters": 33
+    }
+   }
+  },
+  "all": {
+   "held_out_accuracy": 0.284,
+   "train_accuracy": 0.302,
+   "recall": {
+    "monoalphabetic": 0.925,
+    "transposition": 0.951,
+    "substitution then move": 0.761,
+    "periodic 2-12": 0.428,
+    "periodic 13-26": 0.116,
+    "periodic 27-60": 0.067,
+    "progressive key": 0.038,
+    "ciphertext autokey": 0.081,
+    "plaintext autokey": 0.104,
+    "running key": 0.038,
+    "Gromark": 0.064,
+    "Hill": 0.435,
+    "trifid": 0.159,
+    "Chaocipher": 0.262,
+    "move then table": 0.15,
+    "table then move": 0.141,
+    "random letters": 0.112
+   },
+   "auc_against_random_letters": {
+    "monoalphabetic": 1.0,
+    "transposition": 1.0,
+    "substitution then move": 1.0,
+    "periodic 2-12": 0.895,
+    "periodic 13-26": 0.649,
+    "periodic 27-60": 0.538,
+    "progressive key": 0.516,
+    "ciphertext autokey": 0.547,
+    "plaintext autokey": 0.623,
+    "running key": 0.582,
+    "Gromark": 0.585,
+    "Hill": 0.809,
+    "trifid": 0.761,
+    "Chaocipher": 0.557,
+    "move then table": 0.726,
+    "table then move": 0.68
+   },
+   "confusion": {
+    "monoalphabetic": {
+     "monoalphabetic": 925,
+     "transposition": 21,
+     "substitution then move": 37,
+     "periodic 2-12": 13,
+     "Hill": 1,
+     "trifid": 3
+    },
+    "transposition": {
+     "monoalphabetic": 17,
+     "transposition": 951,
+     "substitution then move": 25,
+     "periodic 2-12": 1,
+     "trifid": 6
+    },
+    "substitution then move": {
+     "monoalphabetic": 82,
+     "transposition": 133,
+     "substitution then move": 761,
+     "periodic 2-12": 7,
+     "trifid": 9,
+     "move then table": 4,
+     "table then move": 4
+    },
+    "periodic 2-12": {
+     "monoalphabetic": 24,
+     "transposition": 4,
+     "substitution then move": 8,
+     "periodic 2-12": 428,
+     "periodic 13-26": 28,
+     "periodic 27-60": 14,
+     "progressive key": 3,
+     "ciphertext autokey": 13,
+     "plaintext autokey": 25,
+     "running key": 13,
+     "Gromark": 19,
+     "Hill": 119,
+     "trifid": 101,
+     "Chaocipher": 38,
+     "move then table": 90,
+     "table then move": 54,
+     "random letters": 19
+    },
+    "periodic 13-26": {
+     "periodic 2-12": 78,
+     "periodic 13-26": 116,
+     "periodic 27-60": 51,
+     "progressive key": 23,
+     "ciphertext autokey": 49,
+     "plaintext autokey": 73,
+     "running key": 13,
+     "Gromark": 39,
+     "Hill": 111,
+     "trifid": 72,
+     "Chaocipher": 136,
+     "move then table": 88,
+     "table then move": 81,
+     "random letters": 70
+    },
+    "periodic 27-60": {
+     "monoalphabetic": 1,
+     "periodic 2-12": 52,
+     "periodic 13-26": 78,
+     "periodic 27-60": 67,
+     "progressive key": 40,
+     "ciphertext autokey": 54,
+     "plaintext autokey": 67,
+     "running key": 35,
+     "Gromark": 48,
+     "Hill": 66,
+     "trifid": 55,
+     "Chaocipher": 218,
+     "move then table": 70,
+     "table then move": 63,
+     "random letters": 86
+    },
+    "progressive key": {
+     "monoalphabetic": 1,
+     "periodic 2-12": 40,
+     "periodic 13-26": 77,
+     "periodic 27-60": 43,
+     "progressive key": 38,
+     "ciphertext autokey": 65,
+     "plaintext autokey": 71,
+     "running key": 43,
+     "Gromark": 46,
+     "Hill": 60,
+     "trifid": 42,
+     "Chaocipher": 253,
+     "move then table": 54,
+     "table then move": 74,
+     "random letters": 93
+    },
+    "ciphertext autokey": {
+     "transposition": 1,
+     "periodic 2-12": 38,
+     "periodic 13-26": 68,
+     "periodic 27-60": 62,
+     "progressive key": 22,
+     "ciphertext autokey": 81,
+     "plaintext autokey": 80,
+     "running key": 29,
+     "Gromark": 58,
+     "Hill": 70,
+     "trifid": 50,
+     "Chaocipher": 216,
+     "move then table": 67,
+     "table then move": 77,
+     "random letters": 81
+    },
+    "plaintext autokey": {
+     "monoalphabetic": 1,
+     "transposition": 3,
+     "substitution then move": 1,
+     "periodic 2-12": 73,
+     "periodic 13-26": 75,
+     "periodic 27-60": 36,
+     "progressive key": 22,
+     "ciphertext autokey": 70,
+     "plaintext autokey": 104,
+     "running key": 35,
+     "Gromark": 46,
+     "Hill": 77,
+     "trifid": 69,
+     "Chaocipher": 142,
+     "move then table": 84,
+     "table then move": 84,
+     "random letters": 78
+    },
+    "running key": {
+     "periodic 2-12": 45,
+     "periodic 13-26": 75,
+     "periodic 27-60": 68,
+     "progressive key": 19,
+     "ciphertext autokey": 70,
+     "plaintext autokey": 76,
+     "running key": 38,
+     "Gromark": 50,
+     "Hill": 60,
+     "trifid": 68,
+     "Chaocipher": 174,
+     "move then table": 94,
+     "table then move": 87,
+     "random letters": 76
+    },
+    "Gromark": {
+     "periodic 2-12": 57,
+     "periodic 13-26": 80,
+     "periodic 27-60": 59,
+     "progressive key": 26,
+     "ciphertext autokey": 59,
+     "plaintext autokey": 66,
+     "running key": 34,
+     "Gromark": 64,
+     "Hill": 73,
+     "trifid": 51,
+     "Chaocipher": 182,
+     "move then table": 80,
+     "table then move": 84,
+     "random letters": 85
+    },
+    "Hill": {
+     "monoalphabetic": 3,
+     "periodic 2-12": 105,
+     "periodic 13-26": 50,
+     "periodic 27-60": 37,
+     "progressive key": 10,
+     "ciphertext autokey": 22,
+     "plaintext autokey": 58,
+     "running key": 11,
+     "Gromark": 17,
+     "Hill": 435,
+     "trifid": 62,
+     "Chaocipher": 74,
+     "move then table": 44,
+     "table then move": 38,
+     "random letters": 34
+    },
+    "trifid": {
+     "monoalphabetic": 9,
+     "transposition": 12,
+     "substitution then move": 10,
+     "periodic 2-12": 120,
+     "periodic 13-26": 50,
+     "periodic 27-60": 36,
+     "progressive key": 14,
+     "ciphertext autokey": 41,
+     "plaintext autokey": 65,
+     "running key": 20,
+     "Gromark": 33,
+     "Hill": 122,
+     "trifid": 159,
+     "Chaocipher": 82,
+     "move then table": 75,
+     "table then move": 116,
+     "random letters": 36
+    },
+    "Chaocipher": {
+     "periodic 2-12": 37,
+     "periodic 13-26": 54,
+     "periodic 27-60": 65,
+     "progressive key": 37,
+     "ciphertext autokey": 71,
+     "plaintext autokey": 60,
+     "running key": 29,
+     "Gromark": 45,
+     "Hill": 60,
+     "trifid": 41,
+     "Chaocipher": 262,
+     "move then table": 71,
+     "table then move": 61,
+     "random letters": 107
+    },
+    "move then table": {
+     "monoalphabetic": 4,
+     "transposition": 2,
+     "substitution then move": 8,
+     "periodic 2-12": 189,
+     "periodic 13-26": 73,
+     "periodic 27-60": 40,
+     "progressive key": 19,
+     "ciphertext autokey": 49,
+     "plaintext autokey": 58,
+     "running key": 19,
+     "Gromark": 43,
+     "Hill": 49,
+     "trifid": 90,
+     "Chaocipher": 97,
+     "move then table": 150,
+     "table then move": 67,
+     "random letters": 43
+    },
+    "table then move": {
+     "monoalphabetic": 4,
+     "transposition": 5,
+     "substitution then move": 22,
+     "periodic 2-12": 55,
+     "periodic 13-26": 58,
+     "periodic 27-60": 39,
+     "progressive key": 24,
+     "ciphertext autokey": 63,
+     "plaintext autokey": 71,
+     "running key": 31,
+     "Gromark": 47,
+     "Hill": 54,
+     "trifid": 107,
+     "Chaocipher": 133,
+     "move then table": 83,
+     "table then move": 141,
+     "random letters": 63
+    },
+    "random letters": {
+     "transposition": 2,
+     "substitution then move": 2,
+     "periodic 2-12": 48,
+     "periodic 13-26": 68,
+     "periodic 27-60": 55,
+     "progressive key": 29,
+     "ciphertext autokey": 76,
+     "plaintext autokey": 67,
+     "running key": 32,
+     "Gromark": 34,
+     "Hill": 63,
+     "trifid": 52,
+     "Chaocipher": 222,
+     "move then table": 72,
+     "table then move": 66,
+     "random letters": 112
+    }
+   }
+  }
+ },
+ "k4_top_posteriors": {
+  "named": [
+   [
+    "ciphertext autokey",
+    0.163
+   ],
+   [
+    "running key",
+    0.102
+   ],
+   [
+    "periodic 27-60",
+    0.095
+   ],
+   [
+    "random letters",
+    0.085
+   ]
+  ],
+  "all": [
+   [
+    "ciphertext autokey",
+    0.162
+   ],
+   [
+    "running key",
+    0.104
+   ],
+   [
+    "plaintext autokey",
+    0.101
+   ],
+   [
+    "Chaocipher",
+    0.095
+   ]
+  ]
+ },
+ "k4_shuffles_argmax": {
+  "named": [
+   [
+    "Chaocipher",
+    552
+   ],
+   [
+    "progressive key",
+    443
+   ],
+   [
+    "periodic 27-60",
+    310
+   ],
+   [
+    "ciphertext autokey",
+    173
+   ],
+   [
+    "random letters",
+    163
+   ]
+  ],
+  "all": [
+   [
+    "Chaocipher",
+    895
+   ],
+   [
+    "random letters",
+    358
+   ],
+   [
+    "periodic 27-60",
+    167
+   ],
+   [
+    "ciphertext autokey",
+    122
+   ],
+   [
+    "Hill",
+    119
+   ]
+  ]
+ },
+ "cells": 34,
+ "alpha_per_cell": 0.00147,
+ "k4_shuffles": 2000,
+ "positive_control": "12 held-out plants per family, each against 1000 own shuffles, the K4 rule",
+ "k4_cells": {
+  "named/monoalphabetic": {
+   "k4_posterior": 0.0,
+   "shuffles_mean": 0.0,
+   "shuffles_at_or_above": 1939,
+   "p": 0.96952,
+   "plants_found": [
+    8,
+    12
+   ]
+  },
+  "named/transposition": {
+   "k4_posterior": 0.0,
+   "shuffles_mean": 0.0,
+   "shuffles_at_or_above": 74,
+   "p": 0.03748,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/substitution then move": {
+   "k4_posterior": 0.0,
+   "shuffles_mean": 0.0,
+   "shuffles_at_or_above": 261,
+   "p": 0.13093,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/periodic 2-12": {
+   "k4_posterior": 0.0127,
+   "shuffles_mean": 0.0256,
+   "shuffles_at_or_above": 1307,
+   "p": 0.65367,
+   "plants_found": [
+    3,
+    12
+   ]
+  },
+  "named/periodic 13-26": {
+   "k4_posterior": 0.0394,
+   "shuffles_mean": 0.0719,
+   "shuffles_at_or_above": 1935,
+   "p": 0.96752,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/periodic 27-60": {
+   "k4_posterior": 0.0946,
+   "shuffles_mean": 0.1002,
+   "shuffles_at_or_above": 1194,
+   "p": 0.5972,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/progressive key": {
+   "k4_posterior": 0.07,
+   "shuffles_mean": 0.1057,
+   "shuffles_at_or_above": 1926,
+   "p": 0.96302,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/ciphertext autokey": {
+   "k4_posterior": 0.1629,
+   "shuffles_mean": 0.0917,
+   "shuffles_at_or_above": 1,
+   "p": 0.001,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/plaintext autokey": {
+   "k4_posterior": 0.0812,
+   "shuffles_mean": 0.0676,
+   "shuffles_at_or_above": 415,
+   "p": 0.2079,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/running key": {
+   "k4_posterior": 0.1015,
+   "shuffles_mean": 0.0818,
+   "shuffles_at_or_above": 181,
+   "p": 0.09095,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/Gromark": {
+   "k4_posterior": 0.0568,
+   "shuffles_mean": 0.0785,
+   "shuffles_at_or_above": 1795,
+   "p": 0.89755,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/Hill": {
+   "k4_posterior": 0.0784,
+   "shuffles_mean": 0.047,
+   "shuffles_at_or_above": 280,
+   "p": 0.14043,
+   "plants_found": [
+    4,
+    12
+   ]
+  },
+  "named/trifid": {
+   "k4_posterior": 0.0482,
+   "shuffles_mean": 0.0373,
+   "shuffles_at_or_above": 293,
+   "p": 0.14693,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/Chaocipher": {
+   "k4_posterior": 0.0837,
+   "shuffles_mean": 0.1064,
+   "shuffles_at_or_above": 1715,
+   "p": 0.85757,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/move then table": {
+   "k4_posterior": 0.0287,
+   "shuffles_mean": 0.0445,
+   "shuffles_at_or_above": 1469,
+   "p": 0.73463,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/table then move": {
+   "k4_posterior": 0.0563,
+   "shuffles_mean": 0.0434,
+   "shuffles_at_or_above": 133,
+   "p": 0.06697,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "named/random letters": {
+   "k4_posterior": 0.0855,
+   "shuffles_mean": 0.0985,
+   "shuffles_at_or_above": 1583,
+   "p": 0.7916,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/monoalphabetic": {
+   "k4_posterior": 0.0,
+   "shuffles_mean": 0.0,
+   "shuffles_at_or_above": 1786,
+   "p": 0.89305,
+   "plants_found": [
+    8,
+    12
+   ]
+  },
+  "all/transposition": {
+   "k4_posterior": 0.0,
+   "shuffles_mean": 0.0,
+   "shuffles_at_or_above": 1050,
+   "p": 0.52524,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/substitution then move": {
+   "k4_posterior": 0.0,
+   "shuffles_mean": 0.0,
+   "shuffles_at_or_above": 1812,
+   "p": 0.90605,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/periodic 2-12": {
+   "k4_posterior": 0.0131,
+   "shuffles_mean": 0.026,
+   "shuffles_at_or_above": 1264,
+   "p": 0.63218,
+   "plants_found": [
+    2,
+    12
+   ]
+  },
+  "all/periodic 13-26": {
+   "k4_posterior": 0.0386,
+   "shuffles_mean": 0.0713,
+   "shuffles_at_or_above": 1885,
+   "p": 0.94253,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/periodic 27-60": {
+   "k4_posterior": 0.0832,
+   "shuffles_mean": 0.0966,
+   "shuffles_at_or_above": 1418,
+   "p": 0.70915,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/progressive key": {
+   "k4_posterior": 0.0597,
+   "shuffles_mean": 0.0906,
+   "shuffles_at_or_above": 1913,
+   "p": 0.95652,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/ciphertext autokey": {
+   "k4_posterior": 0.1617,
+   "shuffles_mean": 0.0894,
+   "shuffles_at_or_above": 10,
+   "p": 0.0055,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/plaintext autokey": {
+   "k4_posterior": 0.1015,
+   "shuffles_mean": 0.0708,
+   "shuffles_at_or_above": 166,
+   "p": 0.08346,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/running key": {
+   "k4_posterior": 0.1042,
+   "shuffles_mean": 0.0829,
+   "shuffles_at_or_above": 229,
+   "p": 0.11494,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/Gromark": {
+   "k4_posterior": 0.0642,
+   "shuffles_mean": 0.0705,
+   "shuffles_at_or_above": 1213,
+   "p": 0.6067,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/Hill": {
+   "k4_posterior": 0.0688,
+   "shuffles_mean": 0.0489,
+   "shuffles_at_or_above": 400,
+   "p": 0.2004,
+   "plants_found": [
+    3,
+    12
+   ]
+  },
+  "all/trifid": {
+   "k4_posterior": 0.0376,
+   "shuffles_mean": 0.0331,
+   "shuffles_at_or_above": 600,
+   "p": 0.30035,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/Chaocipher": {
+   "k4_posterior": 0.0952,
+   "shuffles_mean": 0.1234,
+   "shuffles_at_or_above": 1674,
+   "p": 0.83708,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/move then table": {
+   "k4_posterior": 0.0292,
+   "shuffles_mean": 0.0427,
+   "shuffles_at_or_above": 1381,
+   "p": 0.69065,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/table then move": {
+   "k4_posterior": 0.0489,
+   "shuffles_mean": 0.0437,
+   "shuffles_at_or_above": 580,
+   "p": 0.29035,
+   "plants_found": [
+    0,
+    12
+   ]
+  },
+  "all/random letters": {
+   "k4_posterior": 0.0941,
+   "shuffles_mean": 0.1099,
+   "shuffles_at_or_above": 1538,
+   "p": 0.76912,
+   "plants_found": [
+    0,
+    12
+   ]
+  }
+ },
+ "named_families": [],
+ "smallest_p": 0.001,
+ "exhaustive": false,
+ "compute_seconds": 173
+}
+```
+
+Notes: held-out accuracy named 0.26, all 0.284 (chance 0.059); K4 top (all): [('ciphertext autokey', 0.162), ('running key', 0.104)]; families named against shuffles: none (smallest p 0.001, alpha 0.00147)
+
+

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.3: how much can 97 letters of English prove by themselves? Measured in bits per letter for stronger scorers than the quadgram table."
+ },
+ {
+  "anchor": "the check",
+  "text": "Held-out Carter: quadgrams 1.753, mixed n-grams trained without Carter 1.945, with Carter 2.382 bits per letter; the judge beats 4-letter soup but not 6-letter soup or word salad."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Without Carter, 97 letters carry 189 bits: Chaocipher (177) comes into reach; F1.1 at 26 (202) and F1.2 at 13 (225) only if the message reads like Carter (231)."
+ }
+]

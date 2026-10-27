@@ -237,3 +237,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0236	0236-f13-one-free-alphabet-ciphertext-only-power-first	13-ciphertext-only	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	reverted	10	0	5	192.659		1024	test=5 run=1024 record=70
 0237	0237-f13-a-move-and-the-sculptures-table-ciphertext-only	13-ciphertext-only	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	reverted	40	0	4	212.398		274	implement=94 test=47 run=274 record=42
 0238	0238-f13-replicate-k4-table-then-move-length-2-against-fresh-shuffles	13-ciphertext-only	0237-f13-a-move-and-the-sculptures-table-ciphertext-only	reverted	40	0	4	212.398		272	design=0 test=32 run=272 record=0
+0239	0239-f13-the-replicated-b2-readings-judged-blind	13-ciphertext-only	0238-f13-replicate-k4-table-then-move-length-2-against-fresh-shuffles	reverted	4	0	4	213.538		734	test=20 run=734 record=30

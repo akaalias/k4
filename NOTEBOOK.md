@@ -41,6 +41,8 @@ A6.3 (0227) surprised me on reversal: the climb finds reversed messages as often
 
 0229 settles what 0228 hinted: design 2's power for one free alphabet does not depend on how many runs it gets, because each extra run lifts the copies as much as the plant. At length 26 (one check) it is barely above a coin toss on clean Carter, 13 of 24, against the 5 of 6 that closed the cell. Every free-alphabet sampled close now rests on a power figure that, redrawn with enough plants, is lower than the bar it claimed: F1.1 23 and 26 and F1.2 13 are open and wait for Alexis. D1's strict rule ('at least design 2's power') cannot be met by a noisy comparison; a margin is his decision (🛑 issue).
 
+F13.1 closed with no run (`reports/f13-solvability-map.md`): without the 24 known letters, 97 letters of English carry about 173 bits by quadgrams. Most cells the known letters decided exactly fall into the 'better model' column without them; F13 adds little where they hold and matters where they may not. Pivot P20 to F13.
+
 Mistakes today, both mine. A run chained after a file write that failed recorded a duplicate (0223): check the
 header of `attack.py` before every run, in its own command. 0224 handed gate 4 a smaller set of controls than the
 reading had already failed against, and the harness kept it: the same gap as #88, now #94. `champion.json` names 0224

@@ -200,7 +200,7 @@ Update the leaf when an experiment works on it.
     - K4's two patterns, doublets lining up in sevens and repeats 21 apart, are real {noted · sampled · 0056}
     - No construction tried makes both patterns {closed · sampled · 0018, 0027, 0062, 0065, 0096}
   - F13 Ciphertext only: the known words sealed until a reading wins (a way of working across families, issue #85)
-    - **F13.1** Which families 97 letters of English can decide with no known letter: key bits against the judge's reach {open}
+    - **F13.1** Which families 97 letters of English can decide with no known letter: key bits against the judge's reach (reports/f13-solvability-map.md) {closed · exact}
     - **F13.2** The cipher type named from the ciphertext's statistics, power measured first {open}
     - **F13.3** A stronger English judge: bits per letter it extracts on planted texts {open}
     - **F13.4** Ciphertext-only solves in the families F13.1 leaves decidable {open}
@@ -342,7 +342,7 @@ Every experiment's `bounds` should say which key source it drew from.
 
 ## Pivot log
 
-Each pivot has a details page in `pivots/` (P1-P19 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
+Each pivot has a details page in `pivots/` (P1-P20 so far), rendered on the Pivots page and marked on the experiments chart, the lineage and the experiments table. P1 (after 0005) came before P2 (after 0012); the first two rows below are in the order they were written.
 
 | Date | From | To | Reason |
 |---|---|---|---|
@@ -365,3 +365,4 @@ Each pivot has a details page in `pivots/` (P1-P19 so far), rendered on the Pivo
 | 2026-10-20 | F6 a move, then the table, reopened for #78 (0199-0204) | F2 masked plaintext (F2.4) | F6.20 closed for key words and short free keys (turning grille, every card, by rows and by columns); F6.21 closed (one slip around every keyword columnar; the row-reshuffle excess of 0203 dissolved against 40 fresh copies). Ranking unchanged; F12 and F3 have no open item, so F2 is next (P17). |
 | 2026-10-20 | F2 masked plaintext, reopened (0205) | F11 agency hand systems (F11.5) | F2.4 closed: nulls at both ends revive no periodic or progressive key below 26. F4 and F10 have no open item, so F11 is next. Ranking unchanged (P18). |
 | 2026-10-20 | F11 agency hand systems, reopened (no run) | F5 Gromark (F5.3) | F11.5 blocked by cost: two five-word keys from K1-K3's 163 words are 8.1 x 10^17 pairs, and no known letter can be placed without both keys. F8 has no open item, so F5 is next. Ranking unchanged (P19). |
+| 2026-10-27 | A cheaper decider (D1, 0228-0229) | F13 ciphertext only (F13.1) | Stage 2 step 4 done (0226, 0227). D1 not reached under its strict rule: design 2's one-alphabet power is flat in runs, a margin is Alexis's call (#100); its redrawn power reopened F1.1 23, 26 and F1.2 13. D2 waits on D1. Ranking unchanged (P20). |

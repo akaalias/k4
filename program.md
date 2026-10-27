@@ -101,10 +101,16 @@ edited, and the dashboard shows each experiment's current verdict.
 4. **Implement** `run`, `encrypt`, `worked_example`. Use primitives from `kryptos.ciphers`
    where they exist; they are verified against K1-K3. If you write a new primitive, verify it
    against K1-K3 inside `run` first and say so in notes.
-5. **Run** `uv run --with pytest pytest -q` (all must pass), then
-   `uv run python run_experiment.py`. Default budget is 30 minutes. Design the search to reach
-   a verdict as early as possible: gate on cribs inside your search loop, do not generate
-   English and hope.
+5. **Run** `uv run --with pytest pytest -q` (all must pass), then `tools/start_experiment.sh`, and
+   wait for it with `tools/wait_experiment.sh`, calling it again for as long as it reports the run
+   still going. **No time limits** (Alexis, 2026-10-27, issue #96): an experiment takes as long as it
+   needs. The harness kills nothing unless you pass `--budget`; `ctx.time_left()` is then infinite.
+   Never shorten a search, skip an arm or cut copies or plants to fit a clock, and never run an
+   experiment as a background task of your own session, which a tool limit can stop. Before a run
+   that will take more than a few hours, state its expected total time in `bounds` (Alexis's rule
+   of 2026-10-20). A new session first runs `tools/wait_experiment.sh`: a run may still be going.
+   Design the search to reach a verdict as early as possible: gate on cribs inside your search
+   loop, do not generate English and hope.
 6. **Read the record** the harness wrote. If `kept`, the champion advanced. If `reverted`,
    restore `attack.py` from the champion's snapshot or start the next root. Either way the
    record stays.

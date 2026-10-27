@@ -3,7 +3,8 @@
 gates, scores survivors, decides keep or revert against the champion, and
 writes the experiment record. The agent runs this and never edits it.
 
-Usage: python run_experiment.py [--budget SECONDS] [--no-commit]
+Usage: python run_experiment.py [--budget SECONDS (default: no limit)] [--no-commit]
+Start it with tools/start_experiment.sh so it runs outside any session's time limit.
 """
 import argparse
 import json
@@ -54,7 +55,9 @@ def load_champion():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--budget", type=float, default=1800.0, help="seconds (default 30 min)")
+    # no time limit by default (Alexis, 2026-10-27, issue #96): a run takes as long as it needs; pass a
+    # budget only for a deliberate cap. ctx.time_left() is then infinite and no clock check skips work.
+    ap.add_argument("--budget", type=float, default=0.0, help="seconds; 0 (the default) means no limit")
     ap.add_argument("--no-commit", action="store_true")
     ap.add_argument("--rerender", action="store_true", help="rebuild all experiment.md files and exit")
     args = ap.parse_args()
@@ -80,8 +83,10 @@ def main():
                 phases["unattributed"] = max(0.0, t0 - prev_end)
     status = "ran"
     try:
-        subprocess.run([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path), str(args.budget)],
-                       timeout=args.budget + 60, check=False, cwd=ROOT)
+        limited = args.budget > 0
+        subprocess.run([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path),
+                        str(args.budget) if limited else "inf"],
+                       timeout=args.budget + 60 if limited else None, check=False, cwd=ROOT)
     except subprocess.TimeoutExpired:
         status = "timeout"
     seconds = time.time() - t0

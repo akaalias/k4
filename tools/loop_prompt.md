@@ -27,6 +27,10 @@ session can resume from: drafts in drafts/, the item's status in order-of-work.m
 
 ## House rules
 
+Experiments have no time limit (issue #96): start each with tools/start_experiment.sh and wait with repeated
+calls to tools/wait_experiment.sh, never as a background task of your session. At the start of a session, run
+tools/wait_experiment.sh first in case a run is still going.
+
 Never edit or commit dashboard.py, STYLE.md or the transcripts/ folder; another session works on them. Never edit
 data/confirmed.json: only Alexis, with Claude, confirms a result for the public site (issue #95).
 Commit your own files with explicit paths (git commit -- path ...), then git pull --rebase --autostash and push.

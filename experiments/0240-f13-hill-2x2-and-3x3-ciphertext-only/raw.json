@@ -1,0 +1,693 @@
+{
+ "candidates": [
+  {
+   "plaintext": "YWAQMPTFCKSEDPEYCWLWAKLETTSGHEWVITOKYSMRRHITATTEKJLAMUISMVUVFONOCONEFLHARRYFPFXOLASAARUBNLORATYPR",
+   "key": {
+    "n": 2,
+    "numbering": 0,
+    "align": 0,
+    "M": [
+     [
+      5,
+      24
+     ],
+     [
+      14,
+      15
+     ]
+    ],
+    "b": [
+     16,
+     11
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OGASWTNKTOUTWONMSBAUIRYROGHPEUYMVONWWCSTBERYPFROSHLEMAAOGENLTBACKLYZULHNSIPPFFRLAMYOGIBBHILEFCTJB",
+   "key": {
+    "n": 2,
+    "numbering": 0,
+    "align": 1,
+    "M": [
+     [
+      20,
+      17
+     ],
+     [
+      7,
+      12
+     ]
+    ],
+    "b": [
+     11,
+     20
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "YWAQMPTFCKSEDPEYCWLWAKLETTSGHEWVITOKYSMRRHITATTEKJLAMUISMVUVFONOCONEFLHARRYFPFXOLASAARUBNLORATYPR",
+   "key": {
+    "n": 2,
+    "numbering": 1,
+    "align": 0,
+    "M": [
+     [
+      5,
+      24
+     ],
+     [
+      14,
+      15
+     ]
+    ],
+    "b": [
+     14,
+     9
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OGASWTNKTOUTWONMSBAUIRYROGHPEUYMVONWWCSTBERYPFROSHLEMAAOGENLTBACKLYZULHNSIPPFFRLAMYOGIBBHILEFCTJB",
+   "key": {
+    "n": 2,
+    "numbering": 1,
+    "align": 1,
+    "M": [
+     [
+      20,
+      17
+     ],
+     [
+      7,
+      12
+     ]
+    ],
+    "b": [
+     1,
+     2
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "VIOENXENDACWALHAYEWDAMIHOPREERBYTHPENWEPSSFORNTVDREOGOHEENGLYOPEAGIOPLRLCRDDEOMYLEACRITRISTOTJIRR",
+   "key": {
+    "n": 3,
+    "numbering": 0,
+    "align": 0,
+    "M": [
+     [
+      19,
+      14,
+      14
+     ],
+     [
+      17,
+      1,
+      25
+     ],
+     [
+      7,
+      1,
+      16
+     ]
+    ],
+    "b": [
+     9,
+     14,
+     21
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OOKIRBERPOINGTPKODOCSYNEOLFOIEDEHZTRNTITLITSTNUOFARATTDJURTHEVEWAFIAUFNEUSTRISEVEALLLINNHOBETNHPE",
+   "key": {
+    "n": 3,
+    "numbering": 0,
+    "align": 1,
+    "M": [
+     [
+      24,
+      1,
+      24
+     ],
+     [
+      13,
+      25,
+      11
+     ],
+     [
+      0,
+      20,
+      25
+     ]
+    ],
+    "b": [
+     9,
+     10,
+     7
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OBWQNCOZSWHOHAAARDBOTODATIPYPERDSKILHRLIESIEVESUNDEHEBBRESCLSPMLOFREPRTENGBAILIBSHEIFTRACYEAGESAR",
+   "key": {
+    "n": 3,
+    "numbering": 0,
+    "align": 2,
+    "M": [
+     [
+      0,
+      23,
+      2
+     ],
+     [
+      0,
+      9,
+      15
+     ],
+     [
+      5,
+      16,
+      4
+     ]
+    ],
+    "b": [
+     6,
+     16,
+     18
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "VIOENXENDACWALHAYEWDAMIHOPREERBYTHPENWEPSSFORNTVDREOGOHEENGLYOPEAGIOPLRLCRDDEOMYLEACRITRISTOTJIRR",
+   "key": {
+    "n": 3,
+    "numbering": 1,
+    "align": 0,
+    "M": [
+     [
+      19,
+      14,
+      14
+     ],
+     [
+      17,
+      1,
+      25
+     ],
+     [
+      7,
+      1,
+      16
+     ]
+    ],
+    "b": [
+     15,
+     24,
+     24
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OOKIRBERPOINGTPKODOCSYNEOLFOIEDEHZTRNTITLITSTNUOFARATTDJURTHEVEWAFIAUFNEUSTRISEVEALLLINNHOBETNHPE",
+   "key": {
+    "n": 3,
+    "numbering": 1,
+    "align": 1,
+    "M": [
+     [
+      24,
+      1,
+      24
+     ],
+     [
+      13,
+      25,
+      11
+     ],
+     [
+      0,
+      20,
+      25
+     ]
+    ],
+    "b": [
+     13,
+     14,
+     15
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OBWQNCOZSWHOHAAARDBOTODATIPYPERDSKILHRLIESIEVESUNDEHEBBRESCLSPMLOFREPRTENGBAILIBSHEIFTRACYEAGESAR",
+   "key": {
+    "n": 3,
+    "numbering": 1,
+    "align": 2,
+    "M": [
+     [
+      0,
+      23,
+      2
+     ],
+     [
+      0,
+      9,
+      15
+     ],
+     [
+      5,
+      16,
+      4
+     ]
+    ],
+    "b": [
+     8,
+     19,
+     20
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "SFUOMGRITLAHLBMBARRSDROYDLFESETHATHSTHRYGSATTREVYNNGSBELIPBESBEILOSEKYTJNAIDHEYHUVTBHOURUPABOUCFR",
+   "key": {
+    "n": 3,
+    "numbering": 2,
+    "align": 0,
+    "M": [
+     [
+      4,
+      18,
+      7
+     ],
+     [
+      5,
+      5,
+      21
+     ],
+     [
+      15,
+      6,
+      2
+     ]
+    ],
+    "b": [
+     8,
+     23,
+     4
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OYBULDAAMPCMIAABYLSKQSASIBTEDNCALPESDIANUNGDSFTORJAVOWSNATHOLFHAMYKOULUTHRRDSSAOEACHFAHFOOSEBEFIW",
+   "key": {
+    "n": 3,
+    "numbering": 2,
+    "align": 1,
+    "M": [
+     [
+      11,
+      5,
+      6
+     ],
+     [
+      5,
+      7,
+      19
+     ],
+     [
+      23,
+      8,
+      13
+     ]
+    ],
+    "b": [
+     2,
+     3,
+     8
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OBYTBEMYITBHMADEDKOPPHTBMATBYGNWRASUSCSULDENEQSTADDEZICRDUMWICUDAYBURGSIVEOIROTECAMDBYAHIDETATTAR",
+   "key": {
+    "n": 3,
+    "numbering": 2,
+    "align": 2,
+    "M": [
+     [
+      7,
+      17,
+      19
+     ],
+     [
+      15,
+      2,
+      19
+     ],
+     [
+      2,
+      12,
+      25
+     ]
+    ],
+    "b": [
+     0,
+     19,
+     3
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "SFUOMGRITLAHLBMBARRSDROYDLFESETHATHSTHRYGSATTREVYNNGSBELIPBESBEILOSEKYTJNAIDHEYHUVTBHOURUPABOUCFR",
+   "key": {
+    "n": 3,
+    "numbering": 3,
+    "align": 0,
+    "M": [
+     [
+      4,
+      18,
+      7
+     ],
+     [
+      5,
+      5,
+      21
+     ],
+     [
+      15,
+      6,
+      2
+     ]
+    ],
+    "b": [
+     6,
+     19,
+     8
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OYBULDAAMPCMIAABYLSKQSASIBTEDNCALPESDIANUNGDSFTORJAVOWSNATHOLFHAMYKOULUTHRRDSSAOEACHFAHFOOSEBEFIW",
+   "key": {
+    "n": 3,
+    "numbering": 3,
+    "align": 1,
+    "M": [
+     [
+      11,
+      5,
+      6
+     ],
+     [
+      5,
+      7,
+      19
+     ],
+     [
+      23,
+      8,
+      13
+     ]
+    ],
+    "b": [
+     7,
+     25,
+     17
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OBYTBEMYITBHMADEDKOPPHTBMATBYGNWRASUSCSULDENEQSTADDEZICRDUMWICUDAYBURGSIVEOIROTECAMDBYAHIDETATTAR",
+   "key": {
+    "n": 3,
+    "numbering": 3,
+    "align": 2,
+    "M": [
+     [
+      7,
+      17,
+      19
+     ],
+     [
+      15,
+      2,
+      19
+     ],
+     [
+      2,
+      12,
+      25
+     ]
+    ],
+    "b": [
+     10,
+     10,
+     17
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  }
+ ],
+ "bounds": {
+  "item": "F13.4e (Hill)",
+  "search_reads_known_letters": false,
+  "cells": [
+   "2x2 std0 align 0",
+   "2x2 std0 align 1",
+   "2x2 std1 align 0",
+   "2x2 std1 align 1",
+   "2x2 kry0 align 0",
+   "2x2 kry0 align 1",
+   "2x2 kry1 align 0",
+   "2x2 kry1 align 1",
+   "3x3 std0 align 0",
+   "3x3 std0 align 1",
+   "3x3 std0 align 2",
+   "3x3 std1 align 0",
+   "3x3 std1 align 1",
+   "3x3 std1 align 2",
+   "3x3 kry0 align 0",
+   "3x3 kry0 align 1",
+   "3x3 kry0 align 2",
+   "3x3 kry1 align 0",
+   "3x3 kry1 align 1",
+   "3x3 kry1 align 2"
+  ],
+  "beam": {
+   "rows": 2000,
+   "pairs": 3000,
+   "triples": 3000,
+   "full": 300
+  },
+  "affine": true,
+  "texts": 277,
+  "k4_copies": 100,
+  "k4_statistic": 0.902,
+  "k4_best_cell": "2x2 kry0 align 0",
+  "k4_p": 0.7327,
+  "copies_statistic_median": 1.474,
+  "copies_statistic_max": 3.98,
+  "plant_power": {
+   "2": [
+    8,
+    8
+   ],
+   "3": [
+    4,
+    8
+   ]
+  },
+  "plant_exact_recovery": {
+   "2": [
+    8,
+    8
+   ],
+   "3": [
+    2,
+    8
+   ]
+  },
+  "k4_best_reading": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+  "exhaustive": "per row exact; rows joined by a beam of 2,000 rows, 3,000 pairs and triples, 300 matrices, 20 refined",
+  "compute_seconds": 657
+ },
+ "notes": "K4 statistic 0.90 at 2x2 kry0 align 0, p 0.733; plant power 2x2 8/8, 3x3 4/8; read exactly 8/8, 2/8",
+ "controls": [
+  -5.396983789025088,
+  -5.608220479691269,
+  -5.5290838947264564,
+  -5.708524756799482,
+  -5.616069394476036,
+  -5.750040251166189,
+  -5.526027813214682,
+  -5.554061178847293,
+  -5.539247179982956,
+  -5.433094891702747,
+  -5.605165291080326,
+  -5.50379204663462,
+  -5.839080882452073,
+  -5.541075510757172,
+  -5.623410408038621,
+  -5.6190702471837985,
+  -5.543906973120909,
+  -5.275260770011491,
+  -5.412317703045844,
+  -5.666842041102282,
+  -5.526405112194332,
+  -5.7849818294990225,
+  -5.670137834200203,
+  -5.6017138113654426,
+  -5.41244585144032,
+  -5.4742926744333165,
+  -5.568171803438957,
+  -5.49161342640986,
+  -5.612220012520348,
+  -5.382902155820982,
+  -5.754332845529031,
+  -5.453353737731829,
+  -5.68383495076671,
+  -5.568239042771245,
+  -5.750574410247147,
+  -5.573941296275041,
+  -5.575289752246594,
+  -5.733624350240187,
+  -5.58963649312543,
+  -5.398045084061663,
+  -5.616518516879012,
+  -5.657770085358591,
+  -5.677773463846575,
+  -5.797270769498274,
+  -5.757898797172343,
+  -5.356257793492342,
+  -5.5000743891305115,
+  -5.527243487999942,
+  -5.462942531534497,
+  -5.527382542492026,
+  -5.7390242369508355,
+  -5.532304868888846,
+  -5.787591603326522,
+  -5.641688968484064,
+  -5.793544594905048,
+  -5.7153858060768545,
+  -5.281315669253538,
+  -5.559899174488671,
+  -5.402822028876129,
+  -5.549524574490837,
+  -5.607259593310487,
+  -5.613156038653406,
+  -5.681946878995451,
+  -5.593640719336133,
+  -5.6670717207493935,
+  -5.564450664735635,
+  -5.703246951498879,
+  -5.5927694401127,
+  -5.759854071124957,
+  -5.683598515315409,
+  -5.585229659600727,
+  -5.6133618586199105,
+  -5.398535896689468,
+  -5.557295280521028,
+  -5.810605012510173,
+  -5.511633362686273,
+  -5.631799672342694,
+  -5.690372832892398,
+  -5.608688924556227,
+  -5.670620451181336,
+  -5.63328271685825,
+  -5.614472944305497,
+  -5.563022371885013,
+  -5.469568164540721,
+  -5.7542159105930555,
+  -5.543085195804987,
+  -5.683188996049473,
+  -5.514192237190197,
+  -5.490677600744278,
+  -5.666846034880873,
+  -5.350967979183756,
+  -5.658707135725147,
+  -5.855544804993607,
+  -5.399109802933246,
+  -5.663539295083718,
+  -5.691188045913185,
+  -5.54395832391035,
+  -5.703806583434181,
+  -5.73471965139214,
+  -5.383463812659932
+ ],
+ "error": null,
+ "worked_example": "Row by row on a planted 2x2 Hill message (A = 0, matrix [[3, 3], [2, 5]]), no known letter:\n\n  carved     VEEIFTMNEYMIAMQGBMLGFKJGPFAOFTPSKGHDBMPWTHFKEGOXQCDCWPDPAVKWVAAAUBLPAVBHXXHBAVRZAKTUUBNFNNZDKIZVW\n  rows found [[15, 17], [20, 9]], offsets [0, 0]; true inverse [[15, 17], [20, 9]]\n  reading    TOOWILLTAKEAWEEKLYHOLIDAYHEWILLUSUALLYBEOBLIGEDTOABANDONTHEIDEAAFTERTHEFIRSTTHETOMBOFTUTANKHAMENW",
+ "seconds": 659.3100693225861,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 661.0,
+  "dollars": 0.289
+ }
+}

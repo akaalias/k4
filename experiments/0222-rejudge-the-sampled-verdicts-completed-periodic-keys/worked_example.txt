@@ -1,0 +1,5 @@
+0035's reading of K4 (period 27, plain std, cipher HILL/keyword, vig; 3 free slots climbed):
+  reading      QGFMJOYSTOAEUHISNORDFEASTNORTHEASTSDKZSIZKIENYYISBUIIAWIVYLBOMOBERLINCLOCKFFEMXURMHAWYLVEERAJBUXH
+  judge sees   QGFMJOYSTOAEUHISNORDF#############SDKZSIZKIENYYISBUIIAWIVYLBOMO###########FFEMXURMHAWYLVEERAJBUXH
+
+  the judge reads it among 30 readings of 10 scrambled copies by the same search, one at a time, unlabelled.

@@ -64,6 +64,9 @@ until Alexis decides; from here on no experiment re-submits an older reading.
 | 239 | F13.4d | **The judge on the replicated readings:** K4 12/100, 14 of 300 shuffles at or above. Word-level by my rule only at its edge. Not a solution; a property of the carved order, sent to Alexis (#101). |
 | 240 | F13.4e | **Hill from the ciphertext alone, row by row.** 2x2: plants read exactly 8/8, K4 inside 100 shuffles (p 0.73): closed. 3x3: plants found 4/8: blocked by power. Two dry-run fixes recorded: rows mapping every letter to E won a plain log-frequency sum (entropy term added); 40 rows per row lost the true 3x3 rows (beam of 2,000). |
 
+F13.4e's other families were blocked at the desk with reasons (Gromark by cost, trifid and M-94 by power). Session ends
+here with F13.4f designed but not built (`drafts/F13.4f-design.md`); #100 and #101 wait for Alexis.
+
 The first result in the record to beat its copies twice. My reading of it: the excess lives where every one of K4's earlier
 oddities lives, in the order of the carved letters (the width-7 doublets, the width-21 repeats, now a width-19 read with a
 period-2 key), and the n-gram model rewards that texture; the judge, which reads for words, barely separates it, and no

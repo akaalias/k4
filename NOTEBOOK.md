@@ -58,6 +58,7 @@ until Alexis decides; from here on no experiment re-submits an older reading.
 | 233 | F13.3 | **Bits per letter for stronger English scorers.** Quadgrams 1.75; n-grams to order 8 trained without Carter, mixed with the quadgrams, 1.95 (+0.19, 189 bits in 97); trained with Carter 2.38. The judge beats 4-letter soup, not 6-letter soup or word salad. Chaocipher comes into reach; F1.1 L26 and F1.2 L13 only for Carter-like text. |
 | 234 | F13.4a | **The sculpture's table with a repeating key, from the ciphertext alone.** The climb recovers K1's PALIMPSEST from K1's carved letters with no crib. On K4, every length 1-36 and all 8 ways of using the table: inside 200 shuffles (p 0.62). Plants found to length 26: closed 1-26 without the known letters, 27-36 too short. |
 | 235 | F13.4b | **2.08 million dictionary keyword tables, from the ciphertext alone.** Every table screened exactly column by column, the best 50 per length climbed. K4 inside 100 shuffles (p 0.66). Plants found only at length 5 (8/8; 4/8 at 10): closed 1-5, blocked 6-26. |
+| 236 | F13.4c | **One free alphabet, from the ciphertext alone, power first.** Design 2 with no known letter finds plants to length 5 (7/8), not beyond (2-5/8). In the decided cells K4 is inside 50 shuffles (p 0.37). Closed 1-5, blocked 6-19. |
 
 What F13.2 says: at 97 letters, statistics can tell K4 is not an alphabet swap, a transposition, a short periodic key or
 (fairly surely) a Hill or trifid, which the cribs already said; among the flat families nothing in the statistics

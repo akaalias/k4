@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4c: K1-K2's system with the alphabet unknown, solved from the carved letters alone: alphabet and key guessed together."
+ },
+ {
+  "anchor": "the check",
+  "text": "Power first: planted messages at lengths 2-19, each against its own shuffles; then K4 against 50 shuffles where the plants are found."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Plants are found to length 5; there K4 sits inside its shuffles (p 0.37). Lengths 6-19 cannot be decided this way."
+ }
+]

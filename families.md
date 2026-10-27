@@ -23,8 +23,8 @@ Update the leaf when an experiment works on it.
       - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {open · sampled · 0097, 0100, 0102, 0119, 0120, 0139, 0140, 0142, 0226, 0227, 0228}
         - Added form (Quagmire III proper, and variant Beaufort), lengths 1-26: S under S and K under K force key 0 in slots another known letter shares {closed · exact · 0119}
         - Beaufort form, lengths 1-22, 24, 25: no alphabet fits {closed · exact · 0119}
-        - Beaufort form, length 23 (7 checks): design 2 (F1.5) puts K4 9th of 13 among copies of itself; planted texts beat all their own copies 6 of 8 (0139, again 0228), Sanborn-style plants 10 of 12 (0226) then 6 of 12 (0228): pooled 16 of 24, under the bar: reopened {open · sampled · 0119, 0120, 0139, 0140, 0226, 0228}
-        - Beaufort form, length 26 (1 check): K4 12th of 13 among copies of itself; power 5 of 6 (0140) {closed · sampled · 0119, 0140, 0142}
+        - Beaufort form, length 23 (7 checks): design 2 (F1.5) puts K4 9th of 13 among copies of itself; planted texts beat all their own copies 6 of 8 (0139, again 0228), Sanborn-style plants 10 of 12 (0226), 6 of 12 (0228), 16 of 24 (0229): pooled 32 of 48, under the bar; clean pooled 33 of 40: reopened {open · sampled · 0119, 0120, 0139, 0140, 0226, 0228, 0229}
+        - Beaufort form, length 26 (1 check): K4 12th of 13 among copies of itself; power 5 of 6 (0140), redrawn 13 of 24 clean and 17 of 24 Sanborn-style (0229), under the bar: reopened {open · sampled · 0119, 0140, 0142, 0229}
         - Masked messages at the sampled lengths (A6.3): reversed found 7 of 8; an X every kth letter 5 of 8, the message in every nth place 3 of 8, under the 6 of 8 bar: not decided {blocked · sampled · 0227}
       - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26 {open · sampled · 0097, 0123, 0124, 0143, 0144, 0145, 0146, 0226}
         - Lengths 1-7, 9-12, 14, 15, 17, 18, 21, 22, 25: no pair of alphabets fits {closed · exact · 0123}
@@ -55,6 +55,7 @@ Update the leaf when an experiment works on it.
       - Step 2, design 1 (check-keeping climb, compiled): plants beat K4's copies 10 of 12 but only 6 of 12 their own: power came from letter counts, fails {closed · sampled · 0137, 0138}
       - Step 2, design 2 (parallel tempering in the check-keeping set): plants beat their own copies 6 of 8 at 23, 5 of 6 at 26, 4/4-5/5 with two alphabets; decides F1.1 and F1.2's cells {closed · sampled · 0139, 0140, 0143, 0145}
       - Design 2 against its budget (D1): one full run matches ten at 23, nothing under nine at 13; the ten-run power redrawn lower than recorded (messy 6/12 at 23, clean 2/5 at 13) {noted · sampled · 0228}
+      - One free alphabet with 24 plants per class (D1): power does not rise with runs (L23 clean 21-23, Sanborn-style 14-16; L26 11-18, 11-17 over r = 1-10); strict rule not met {noted · sampled · 0229}
       - Step 1, the bound: the quadgram scorer extracts 1.78 bits per letter (130 bits in 73 letters); one free alphabet at every length, two to 16 (14 with a move), Hill with any key decidable in principle; two alphabets from 19 (15 with a move) and autokey 53-84 only with a better model; autokey 85-96 by none {closed · exact · 0136}
     - **F1.6** One carved letter wrong, missing or extra, through the exact unknown-alphabet tests {closed · exact · 0147, 0148, 0150, 0151, 0152}
       - One and two free alphabets, periodic, 604 variants: at the coppers' rate {closed · exact · 0147}

@@ -21,6 +21,8 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 
 Caught in 0243's dry run: 0210's source 'right panel K1-K4' contains K4's own carved letters, so as a running key it reads K4 as all A under Beaufort, and would have flagged K4 against shuffles that do not contain themselves. Left out. Any self-referential source needs that check when the known letters no longer filter.
 
+F13.6 blocked at the desk after a probe on 0243's search: a mask either keeps the reading English, and then the English statistic already finds it (X every kth, nulls: read exactly 4 of 4), or breaks it, and then the search never keeps that reading (every nth place, affine: 0 of 4). The battery has nothing left to add on readings chosen by English. That ends F13 apart from D1/D2, which wait on #100.
+
 F13.4f's second half (two dictionary key-word alphabets) and F13.4g (Chaocipher) closed as blocked at the desk. For Chaocipher a short probe showed why: once the left wheel is guessed the rest is a simple substitution, but an annealer over the left wheel finds wrong wheels whose index stream looks more English than the true one's, on every plant.
 
 ## 2026-10-27

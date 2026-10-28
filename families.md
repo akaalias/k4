@@ -220,7 +220,7 @@ Update the leaf when an experiment works on it.
         - Two key-word alphabets plus a key word (F14.1's space): about 4.3 x 10^10 alphabet pairs per text, beyond any screen, and 0235's screen already lost one dictionary table among 2 million beyond length 5 {blocked}
       - **F13.4g** Chaocipher, two free wheels: given the left wheel the reading is a simple substitution of an index stream, but annealing the left wheel finds wrong wheels above the true one (stream IC 0.070-0.073 against 0.058-0.068, 3 plants); 97 letters do not single out the wheel {blocked · desk probe}
     - **F13.5** Memorable keys from the named sources, scored by English alone: key words, keyword tables, running keys from 36 named texts, autokey primers, keyword columnars; plants found 40/40, K4 inside 100 shuffles (p 0.099) {closed · sampled · 0243}
-    - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
+    - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones: the readings are chosen by English, so masks that break English never reach it (every nth 0/4, affine 0/4, columns 1/4) and those that keep it are already found (X every kth, nulls 4/4) {blocked · desk probe}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}
   - F14 Scheidt's mask, keyed by words: the blocked free-alphabet cells, shrunk by his "key word/s" (issue #93)
     - **F14.1** Two dictionary key-word alphabets plus a key word, key lengths 19-26 {open}

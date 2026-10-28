@@ -1,0 +1,1001 @@
+{
+ "candidates": [
+  {
+   "plaintext": "EPOTGETEUCNCHBEYDETHSLYPOFTYAABSRFADESMRPPFNZSKYSGLESCUFOOLHELDSJROPDNYTRSIMFZGMWBIFOUONZUCUSOBSA",
+   "key": {
+    "method": "A",
+    "mode": "var",
+    "pa": "std",
+    "ca": "kry",
+    "ka": "kry",
+    "key": "MEZUZAH",
+    "start": 4
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "RDALSRDRIONBLURSJPFLCUSLIXPACBTAEJSDWMEEXBJCKARSCFPSABEZBOFJDUVIADIODOSHDAZVZZZGMNNZBIANMELEEARAC",
+   "key": {
+    "method": "B",
+    "mode": "vig",
+    "pa": "kry",
+    "ca": "VIRTUALYNSBECDFGHJKMOPQWXZ",
+    "ka": "std",
+    "key": "TOTALLY",
+    "start": 2
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "SORDYKNOXGCWPBJRMAPCHSQMBGISTYSTOTARTPWRENOWJOTSTWEINHLQZTHTEZNEOFWHAROYBDHHOVFFBEVBIRECASOFMAMWE",
+   "key": {
+    "method": "C",
+    "mode": "beau",
+    "pa": "kry",
+    "ca": "kry",
+    "ka": "kry",
+    "source": "carter vol1 fwd",
+    "offset": 45124
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "AFLUEJTKWYOROMEGGSSNAMXWRCWAIDANIZPPPFOLFNUTCREMLTYDUPEADDLEXFEWIKNOTCHOBIKILIAFNXNMIMPMKFIFAYYFS",
+   "key": {
+    "method": "D",
+    "mode": "var",
+    "pa": "kry",
+    "ca": "std",
+    "ka": "kry",
+    "kind": "plain",
+    "key": "NEATLY"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "LRESBAMVEGLMVCDHFGHOFTESWTFUZAKPHEDKEAPOSSIXLYWEBOYFARWRFHEINEMQIUVZHURHOJYEVJMQNESHOCKVHKSCUDIEU",
+   "key": {
+    "method": "E",
+    "mode": "var",
+    "pa": "kry",
+    "ca": "kry",
+    "ka": "kry",
+    "key": "SCHEIDT",
+    "start": 0,
+    "columnar": "TRANSMIT",
+    "order": "move_then_table"
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  }
+ ],
+ "bounds": {
+  "item": "F13.5",
+  "search_reads_known_letters": false,
+  "methods": {
+   "A": "24 rules x (1,084 puzzle-word starts + 2,241,060 dictionary rotations)",
+   "B": "5,100 keyword-table setups (170 puzzle alphabets) x 1,084 puzzle-word starts",
+   "C": "24 rules x 36 named texts (both directions), every offset: 596,530 offsets",
+   "D": "24 rules x 2 kinds x 233,014 primer words",
+   "E": "138 keyword columnars x 2 orders x 24 rules x 1,084 puzzle-word starts"
+  },
+  "exhaustive": true,
+  "scoring": "every setting read in full and scored by the harness quadgram table; the 20 best per method rescored by MIX8m (0233)",
+  "texts": 541,
+  "k4_copies": 100,
+  "k4_statistic": 2.228,
+  "k4_best_method": "C",
+  "k4_p": 0.099,
+  "copies_statistic_max": 3.663,
+  "copies_statistic_median": 1.122,
+  "k4_rank_per_method_copies_at_or_above": {
+   "A": 6,
+   "B": 96,
+   "C": 2,
+   "D": 21,
+   "E": 45
+  },
+  "plant_power": {
+   "A": [
+    8,
+    8
+   ],
+   "B": [
+    8,
+    8
+   ],
+   "C": [
+    8,
+    8
+   ],
+   "D": [
+    8,
+    8
+   ],
+   "E": [
+    8,
+    8
+   ]
+  },
+  "plant_exact_recovery": {
+   "A": [
+    8,
+    8
+   ],
+   "B": [
+    8,
+    8
+   ],
+   "C": [
+    8,
+    8
+   ],
+   "D": [
+    6,
+    8
+   ],
+   "E": [
+    6,
+    8
+   ]
+  },
+  "decided_methods_at_6_of_8": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "plants": {
+   "plantA_0": {
+    "kind": "clean",
+    "key": {
+     "method": "A",
+     "mode": "var",
+     "pa": "std",
+     "ca": "kry",
+     "ka": "std",
+     "key": "OVERDUE",
+     "start": 6
+    },
+    "S": 40.96,
+    "own_max": 2.74,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantA_1": {
+    "kind": "xstops",
+    "key": {
+     "method": "A",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "key": "CHOLECYSTOGASTROSTOMY",
+     "start": 1
+    },
+    "S": 40.55,
+    "own_max": 2.64,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantA_2": {
+    "kind": "clean",
+    "key": {
+     "method": "A",
+     "mode": "vig",
+     "pa": "std",
+     "ca": "std",
+     "ka": "std",
+     "key": "NONRETRACEABLE",
+     "start": 13
+    },
+    "S": 44.47,
+    "own_max": 3.21,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantA_3": {
+    "kind": "xstops",
+    "key": {
+     "method": "A",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "key": "LEK",
+     "start": 1
+    },
+    "S": 38.91,
+    "own_max": 2.84,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantA_4": {
+    "kind": "clean",
+    "key": {
+     "method": "A",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "key": "PERQUADRAT",
+     "start": 0
+    },
+    "S": 42.44,
+    "own_max": 3.38,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantA_5": {
+    "kind": "xstops",
+    "key": {
+     "method": "A",
+     "mode": "vig",
+     "pa": "std",
+     "ca": "std",
+     "ka": "std",
+     "key": "FORMALDEHYDESULPHOXYLIC",
+     "start": 19
+    },
+    "S": 39.23,
+    "own_max": 2.3,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantA_6": {
+    "kind": "clean",
+    "key": {
+     "method": "A",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "key": "BY",
+     "start": 0
+    },
+    "S": 34.05,
+    "own_max": 4.04,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantA_7": {
+    "kind": "xstops",
+    "key": {
+     "method": "A",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "std",
+     "key": "RECOUNTENANCE",
+     "start": 1
+    },
+    "S": 34.6,
+    "own_max": 3.35,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantB_0": {
+    "kind": "clean",
+    "key": {
+     "method": "B",
+     "mode": "var",
+     "pa": "std",
+     "ca": "PALIMSETBCDFGHJKNOQRUVWXYZ",
+     "ka": "kry",
+     "key": "HOWARDCARTER",
+     "start": 5
+    },
+    "S": 51.24,
+    "own_max": 3.12,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantB_1": {
+    "kind": "xstops",
+    "key": {
+     "method": "B",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "FOURABCDEGHIJKLMNPQSTVWXYZ",
+     "ka": "std",
+     "key": "CARNARVON",
+     "start": 1
+    },
+    "S": 28.54,
+    "own_max": 1.97,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantB_2": {
+    "kind": "clean",
+    "key": {
+     "method": "B",
+     "mode": "beau",
+     "pa": "std",
+     "ca": "SOMEWHRABCDFGIJKLNPQTUVXYZ",
+     "ka": "std",
+     "key": "PALIMPSEST",
+     "start": 0
+    },
+    "S": 47.43,
+    "own_max": 1.87,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantB_3": {
+    "kind": "xstops",
+    "key": {
+     "method": "B",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "POINTABCDEFGHJKLMQRSUVWXYZ",
+     "ka": "std",
+     "key": "INVISIBLE",
+     "start": 1
+    },
+    "S": 43.45,
+    "own_max": 2.87,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantB_4": {
+    "kind": "clean",
+    "key": {
+     "method": "B",
+     "mode": "vig",
+     "pa": "FORTYABCDEGHIJKLMNPQSUVWXZ",
+     "ca": "kry",
+     "ka": "kry",
+     "key": "POSSIBLE",
+     "start": 1
+    },
+    "S": 48.62,
+    "own_max": 4.83,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantB_5": {
+    "kind": "xstops",
+    "key": {
+     "method": "B",
+     "mode": "beau",
+     "pa": "UNKOWABCDEFGHIJLMPQRSTVXYZ",
+     "ca": "kry",
+     "ka": "kry",
+     "key": "ENCUMBERED",
+     "start": 9
+    },
+    "S": 43.19,
+    "own_max": 2.88,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantB_6": {
+    "kind": "clean",
+    "key": {
+     "method": "B",
+     "mode": "beau",
+     "pa": "REMAINSBCDFGHJKLOPQTUVWXYZ",
+     "ca": "REMAINSBCDFGHJKLOPQTUVWXYZ",
+     "ka": "std",
+     "key": "FOUR",
+     "start": 2
+    },
+    "S": 45.89,
+    "own_max": 1.94,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantB_7": {
+    "kind": "xstops",
+    "key": {
+     "method": "B",
+     "mode": "beau",
+     "pa": "THEYABCDFGIJKLMNOPQRSUVWXZ",
+     "ca": "kry",
+     "ka": "kry",
+     "key": "WAS",
+     "start": 2
+    },
+    "S": 32.53,
+    "own_max": 4.49,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantC_0": {
+    "kind": "clean",
+    "key": {
+     "method": "C",
+     "mode": "var",
+     "pa": "std",
+     "ca": "std",
+     "ka": "kry",
+     "source": "tableau rows with index column fwd",
+     "offset": 396
+    },
+    "S": 45.98,
+    "own_max": 2.91,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantC_1": {
+    "kind": "xstops",
+    "key": {
+     "method": "C",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "source": "tableau rows fwd",
+     "offset": 157
+    },
+    "S": 35.2,
+    "own_max": 3.05,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantC_2": {
+    "kind": "clean",
+    "key": {
+     "method": "C",
+     "mode": "var",
+     "pa": "std",
+     "ca": "std",
+     "ka": "std",
+     "source": "Cryptogram 1991 bwd",
+     "offset": 4527
+    },
+    "S": 33.69,
+    "own_max": 2.35,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantC_3": {
+    "kind": "xstops",
+    "key": {
+     "method": "C",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "source": "K3 cipher bwd",
+     "offset": 32
+    },
+    "S": 44.77,
+    "own_max": 2.73,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantC_4": {
+    "kind": "clean",
+    "key": {
+     "method": "C",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "source": "K1+K2+K3 plain fwd",
+     "offset": 128
+    },
+    "S": 47.21,
+    "own_max": 4.4,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantC_5": {
+    "kind": "xstops",
+    "key": {
+     "method": "C",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "source": "Cryptogram 1991 bwd",
+     "offset": 3182
+    },
+    "S": 31.3,
+    "own_max": 2.4,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantC_6": {
+    "kind": "clean",
+    "key": {
+     "method": "C",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "std",
+     "source": "Cryptogram 1991 fwd",
+     "offset": 3834
+    },
+    "S": 44.78,
+    "own_max": 3.16,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantC_7": {
+    "kind": "xstops",
+    "key": {
+     "method": "C",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "source": "K2 plain bwd",
+     "offset": 205
+    },
+    "S": 47.76,
+    "own_max": 2.55,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantD_0": {
+    "kind": "clean",
+    "key": {
+     "method": "D",
+     "mode": "vig",
+     "pa": "std",
+     "ca": "kry",
+     "ka": "kry",
+     "kind": "cipher",
+     "key": "ID"
+    },
+    "S": 32.03,
+    "own_max": 3.08,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantD_1": {
+    "kind": "xstops",
+    "key": {
+     "method": "D",
+     "mode": "var",
+     "pa": "std",
+     "ca": "kry",
+     "ka": "kry",
+     "kind": "cipher",
+     "key": "BENIGNITY"
+    },
+    "S": 35.16,
+    "own_max": 4.19,
+    "found": true,
+    "read_exactly": false
+   },
+   "plantD_2": {
+    "kind": "clean",
+    "key": {
+     "method": "D",
+     "mode": "var",
+     "pa": "std",
+     "ca": "std",
+     "ka": "kry",
+     "kind": "cipher",
+     "key": "HYPERCONSCIENTIOUSNESS"
+    },
+    "S": 43.82,
+    "own_max": 2.05,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantD_3": {
+    "kind": "xstops",
+    "key": {
+     "method": "D",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "kind": "cipher",
+     "key": "ASSIMILATIVENESS"
+    },
+    "S": 36.03,
+    "own_max": 3.54,
+    "found": true,
+    "read_exactly": false
+   },
+   "plantD_4": {
+    "kind": "clean",
+    "key": {
+     "method": "D",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "kind": "cipher",
+     "key": "ANEMOGRAPHICALLY"
+    },
+    "S": 33.63,
+    "own_max": 3.85,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantD_5": {
+    "kind": "xstops",
+    "key": {
+     "method": "D",
+     "mode": "var",
+     "pa": "std",
+     "ca": "kry",
+     "ka": "std",
+     "kind": "plain",
+     "key": "TREILLAGE"
+    },
+    "S": 42.31,
+    "own_max": 2.62,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantD_6": {
+    "kind": "clean",
+    "key": {
+     "method": "D",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "kind": "cipher",
+     "key": "LAUND"
+    },
+    "S": 39.07,
+    "own_max": 2.6,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantD_7": {
+    "kind": "xstops",
+    "key": {
+     "method": "D",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "kind": "plain",
+     "key": "MESODERMIC"
+    },
+    "S": 35.62,
+    "own_max": 3.61,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantE_0": {
+    "kind": "clean",
+    "key": {
+     "method": "E",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "key": "NOVEMBER",
+     "start": 5,
+     "columnar": "DIGITAL",
+     "order": "move_then_table"
+    },
+    "S": 35.58,
+    "own_max": 2.41,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantE_1": {
+    "kind": "xstops",
+    "key": {
+     "method": "E",
+     "mode": "vig",
+     "pa": "std",
+     "ca": "std",
+     "ka": "std",
+     "key": "WORLDCLOCK",
+     "start": 3,
+     "columnar": "USED",
+     "order": "move_then_table"
+    },
+    "S": 33.51,
+    "own_max": 2.84,
+    "found": true,
+    "read_exactly": false
+   },
+   "plantE_2": {
+    "kind": "clean",
+    "key": {
+     "method": "E",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "key": "ID",
+     "start": 0,
+     "columnar": "COMPASS",
+     "order": "move_then_table"
+    },
+    "S": 43.77,
+    "own_max": 3.03,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantE_3": {
+    "kind": "xstops",
+    "key": {
+     "method": "E",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "std",
+     "key": "SHADOWFORCES",
+     "start": 6,
+     "columnar": "MADE",
+     "order": "table_then_move"
+    },
+    "S": 45.32,
+    "own_max": 2.37,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantE_4": {
+    "kind": "clean",
+    "key": {
+     "method": "E",
+     "mode": "vig",
+     "pa": "std",
+     "ca": "kry",
+     "ka": "kry",
+     "key": "TUTANKHAMEN",
+     "start": 0,
+     "columnar": "WEBSTER",
+     "order": "table_then_move"
+    },
+    "S": 45.43,
+    "own_max": 2.67,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantE_5": {
+    "kind": "xstops",
+    "key": {
+     "method": "E",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "std",
+     "key": "ENCUMBERED",
+     "start": 9,
+     "columnar": "THE",
+     "order": "move_then_table"
+    },
+    "S": 32.77,
+    "own_max": 3.0,
+    "found": true,
+    "read_exactly": false
+   },
+   "plantE_6": {
+    "kind": "clean",
+    "key": {
+     "method": "E",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "std",
+     "key": "LAYER",
+     "start": 4,
+     "columnar": "NORTHEAST",
+     "order": "move_then_table"
+    },
+    "S": 37.61,
+    "own_max": 3.17,
+    "found": true,
+    "read_exactly": true
+   },
+   "plantE_7": {
+    "kind": "xstops",
+    "key": {
+     "method": "E",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "key": "SOMEWHERE",
+     "start": 5,
+     "columnar": "VIRTUALLYINVISIBLE",
+     "order": "table_then_move"
+    },
+    "S": 38.55,
+    "own_max": 3.67,
+    "found": true,
+    "read_exactly": true
+   }
+  },
+  "k4_best_readings": {
+   "A": [
+    "EPOTGETEUCNCHBEYDETHSLYPOFTYAABSRFADESMRPPFNZSKYSGLESCUFOOLHELDSJROPDNYTRSIMFZGMWBIFOUONZUCUSOBSA",
+    {
+     "method": "A",
+     "mode": "var",
+     "pa": "std",
+     "ca": "kry",
+     "ka": "kry",
+     "key": "MEZUZAH",
+     "start": 4
+    }
+   ],
+   "B": [
+    "RDALSRDRIONBLURSJPFLCUSLIXPACBTAEJSDWMEEXBJCKARSCFPSABEZBOFJDUVIADIODOSHDAZVZZZGMNNZBIANMELEEARAC",
+    {
+     "method": "B",
+     "mode": "vig",
+     "pa": "kry",
+     "ca": "VIRTUALYNSBECDFGHJKMOPQWXZ",
+     "ka": "std",
+     "key": "TOTALLY",
+     "start": 2
+    }
+   ],
+   "C": [
+    "SORDYKNOXGCWPBJRMAPCHSQMBGISTYSTOTARTPWRENOWJOTSTWEINHLQZTHTEZNEOFWHAROYBDHHOVFFBEVBIRECASOFMAMWE",
+    {
+     "method": "C",
+     "mode": "beau",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "source": "carter vol1 fwd",
+     "offset": 45124
+    }
+   ],
+   "D": [
+    "AFLUEJTKWYOROMEGGSSNAMXWRCWAIDANIZPPPFOLFNUTCREMLTYDUPEADDLEXFEWIKNOTCHOBIKILIAFNXNMIMPMKFIFAYYFS",
+    {
+     "method": "D",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "std",
+     "ka": "kry",
+     "kind": "plain",
+     "key": "NEATLY"
+    }
+   ],
+   "E": [
+    "LRESBAMVEGLMVCDHFGHOFTESWTFUZAKPHEDKEAPOSSIXLYWEBOYFARWRFHEINEMQIUVZHURHOJYEVJMQNESHOCKVHKSCUDIEU",
+    {
+     "method": "E",
+     "mode": "var",
+     "pa": "kry",
+     "ca": "kry",
+     "ka": "kry",
+     "key": "SCHEIDT",
+     "start": 0,
+     "columnar": "TRANSMIT",
+     "order": "move_then_table"
+    }
+   ]
+  },
+  "compute_seconds": 801
+ },
+ "notes": "K4 statistic 2.23 (method C), p 0.099 against 100 shuffles; plant power A 8/8, B 8/8, C 8/8, D 8/8, E 8/8; decided ['A', 'B', 'C', 'D', 'E']",
+ "controls": [
+  -6.474986444454602,
+  -6.40483034820384,
+  -6.632318115432632,
+  -6.383987504947022,
+  -6.251731021679904,
+  -6.510263079736186,
+  -6.320402341609573,
+  -6.574939963674944,
+  -6.530329436818633,
+  -6.534726108996253,
+  -6.727425139455798,
+  -6.575393428638732,
+  -6.422093706502745,
+  -6.632133596997087,
+  -6.711044640972886,
+  -6.572142623730101,
+  -6.642559593972829,
+  -5.8540194014242815,
+  -6.3488903403514785,
+  -6.489549095574424,
+  -6.479649588183184,
+  -6.338751633319841,
+  -5.997818750820024,
+  -6.04139139350104,
+  -6.338166021971903,
+  -6.688711113444195,
+  -6.238704223085261,
+  -6.4580600535458945,
+  -6.62213559913998,
+  -6.5152886128080745,
+  -6.764936609139337,
+  -6.4399484777650775,
+  -6.4053802331516945,
+  -6.502620157789381,
+  -6.524820239084134,
+  -6.515870774922222,
+  -6.4401543458054,
+  -6.551344460212109,
+  -6.534683283072439,
+  -6.002892410152141,
+  -6.6280645245216565,
+  -6.409933870954457,
+  -6.446513963197657,
+  -6.450021653523833,
+  -6.368044486394009,
+  -6.320809362377821,
+  -6.284509498675847,
+  -6.4553395584839395,
+  -6.386488007608676,
+  -6.425636474454186,
+  -6.376039512283863,
+  -6.4776836277788545,
+  -6.296240847227275,
+  -6.437349516329237,
+  -6.530053391250754,
+  -6.351396667918164,
+  -6.505272881781354,
+  -6.371303518146926,
+  -6.458912201075739,
+  -6.395425477560938,
+  -6.5586498612950015,
+  -6.4891856334208216,
+  -6.410911206616254,
+  -6.504029257949853,
+  -6.493070046943103,
+  -6.292984321035298,
+  -6.41900395764916,
+  -6.380849474343649,
+  -6.610835513486953,
+  -6.5117895515397715,
+  -6.248780403879411,
+  -6.6198475572965245,
+  -6.481290659893503,
+  -6.553174980787549,
+  -6.541286976292501,
+  -6.409148767460621,
+  -6.417580965457899,
+  -6.560404809061055,
+  -6.503387159116595,
+  -6.564287544663341,
+  -6.406579688643658,
+  -6.527575277313621,
+  -6.292548902842348,
+  -6.435700301149304,
+  -6.616154038113492,
+  -6.411212173501378,
+  -6.3794731537256135,
+  -6.465529015651887,
+  -6.451082575731254,
+  -6.511316980975913,
+  -6.462839477225732,
+  -6.372550184170898,
+  -6.3791702937264345,
+  -6.593944476823343,
+  -6.623740476440797,
+  -6.3976147732632445,
+  -6.306835398699126,
+  -6.511011404569616,
+  -6.712904125233143,
+  -6.415288751887463
+ ],
+ "error": null,
+ "worked_example": "Key: method A, mode var, pa std, ca kry, ka kry, key MEZUZAH, start 4\n\n  carved   OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWI\n  reading  EPOTGETEUCNCHBEYDETHSLYPOFTYAABSRFADESMRPPFNZSKYSGLESCUFOOLH\n\nEvery key in the lists is read like this, in full, and scored by English alone; no known letter is read.",
+ "seconds": 800.8601915836334,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 806.0,
+  "dollars": 0.352
+ }
+}

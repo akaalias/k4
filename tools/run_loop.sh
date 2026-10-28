@@ -91,3 +91,8 @@ if [ -f "$req" ]; then
   exit 0
 fi
 echo "Loop stopped: $(cat "$stop")"
+dirty="$(git status --short)"   # issue #103: the last session should have committed everything
+if [ -n "$dirty" ]; then
+  echo "Warning: the loop stopped with uncommitted files:"
+  echo "$dirty"
+fi

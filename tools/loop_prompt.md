@@ -25,6 +25,11 @@ There are no milestones. Keep working until the challenge may be solved. Stop on
 start): start nothing new, let the running experiment finish, write its record, commit and push, then end the
 session with your report. Do not delete the request; tools/run_loop.sh does.
 
+**Leave a clean tree before any stop** (issue #103). Before writing data/loop-stop.json or ending on a stop request,
+run `git status --short`; it must print nothing. After a revert, restore `attack.py` (program.md step 6); commit
+the judge cache (data/judge/responses.jsonl), data/readable_words.json, drafts/ and any new report data. The
+`--autostash` on every pull carries uncommitted files along silently, so do not take a quiet pull as a clean tree.
+
 A session may end for other reasons (a long run, a full context). That is fine: tools/run_loop.sh starts a new
 session, which reads this prompt again and carries on from the record. Leave the record in a state the next
 session can resume from: drafts in drafts/, the item's status in order-of-work.md, a comment on its issue.

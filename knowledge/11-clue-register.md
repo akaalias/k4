@@ -126,7 +126,7 @@ parameter.
 
 **C18. "Scheidt's 'a bit of stego'" and "I think there are 98 characters left."** (2004,
 2005). Readings: (a) the plaintext is hidden among nulls; (b) a 98-character working
-text including "?"; (c) an even length for a digraphic or 7x14 layout. Status: the 98-character reading is bounded by 0009 for periodic tableau keys; (b) and (c) as a 98-cell grid (7 x 14 among them) turned so the ? comes out first, with periodic keys or either autokey: dead (0086); other families untested.
+text including "?"; (c) an even length for a digraphic or 7x14 layout. Status: the 98-character reading is bounded by 0009 for periodic tableau keys; (b) and (c) as a 98-cell grid (7 x 14 among them) turned so the ? comes out first, with periodic keys or either autokey: dead (0086); (b) as one carved letter lost, under two dictionary keyword alphabets and a key word, every place that changes the key's alignment: no key word fits (0247); other families untested.
 
 **C19. "What's a period, because there's more than one sentence in there... special
 characters don't work."** (Scheidt, 2015). Readings: (a) K4 has sentence breaks marked

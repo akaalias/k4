@@ -23,6 +23,8 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 |---|---|---|
 | 244 | F14.1 | **Two dictionary keyword alphabets and a key word, every pair.** 4.3 x 10^10 alphabet pairs per form matched exactly by filing each alphabet under the gaps the known letters ask for. No key word fits K4 or any of 50 shuffles; plants 12 of 12. Closed for key lengths 1-24. |
 | 245 | F14.1 | **Replication of K4's 5 pairs at key length 16** (above all 50 shuffles in 0244): 1,000 fresh shuffles, p 0.009, under the 52-cell line only at 0.00096: not a flag. |
+| - | F14.2 | **Blocked by cost, decision asked.** The move library times dictionary alphabets is about 1,000 core-hours with copies (about $50). |
+| 246 | F14.3 | **The duress reading.** 0125's 3.7 million forced running keys ranked by MIX8m and read by the judge. Plants 20 of 20 (0125's quadgrams had 11); K4 inside 50 shuffles (p 0.59). Closed; 0125's close now at full power. |
 
 0241 went far better than I predicted (I expected the screen to lose the word from about length 15). Requiring the key to be a real word is worth more than the letter counts lose: among 2 million rotations the true one wins its own setting even with columns of five letters, and the full reading then stands 7-10 times above the shuffles. The general lesson for F13: a key drawn from a word list is decidable from the ciphertext alone where a free key of the same length is not (0235, 0236).
 

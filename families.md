@@ -225,8 +225,8 @@ Update the leaf when an experiment works on it.
   - F14 Scheidt's mask, keyed by words: the blocked free-alphabet cells, shrunk by his "key word/s" (issue #93)
     - **F14.1** Two dictionary key-word alphabets plus a key word: all 4.3 x 10^10 pairs per form matched exactly, key lengths 1-24; no key word on K4 or any shuffle, pairs only where the shuffles have them; plants 12/12; K4's count at 16 replicated, p 0.009, not a flag {closed · exact · 0244, 0245}
       - Key lengths 25-26: no dictionary word that long; 10^6-10^9 pairs fit by chance {blocked}
-    - **F14.2** A remembered route plus key-word alphabets in F6.1 and F6.2's cells {open}
-    - **F14.3** Duress reading: a running key with the message and the key both English {open}
+    - **F14.2** A remembered route plus key-word alphabets in F6.1 and F6.2's cells: about 1,000 core-hours with copies {blocked · cost, decision asked}
+    - **F14.3** Duress reading: a running key with the message and the key both English; 0125's 3.7 million forced keys ranked by MIX8m, read by the judge: plants 20/20, K4 inside 50 shuffles (p 0.59) {closed · sampled · 0246}
     - **F14.4** How firm the letter-for-letter assumption (A2) is, from the sources {open}
     - **F14.5** "98 characters left": F14.1 and F14.2 on the 98-letter variants {open}
     - **F14.6** "Mix and match": every hand procedure of up to three steps from K1-K3's operations {open}

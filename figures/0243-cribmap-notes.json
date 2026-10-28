@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.5: keys a person could remember (puzzle words, any dictionary word, passages of the named texts) read without the clue words."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every key read in full and scored as English; the best per way rescored by the strongest model. K4 against 100 shuffles."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Plants found 40 of 40; K4 inside its shuffles (p 0.099): closed over the stated key lists."
+ }
+]

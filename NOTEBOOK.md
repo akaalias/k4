@@ -14,8 +14,12 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 | # | Item | One line |
 |---|---|---|
 | 241 | F13.4f | **A puzzle word plus any dictionary word, from the ciphertext alone.** Every puzzle word and start taken off, then all 2.24 million dictionary rotations scored exactly by column letter counts, the best read in full. Plants read exactly 32 of 32 at lengths 5-20; K4 inside 100 shuffles (p 0.42). Closed. |
+| 242 | F13.5 | **Errored** while making plants: a running-key plant was drawn from K1's text, 63 letters, shorter than K4. |
+| 243 | F13.5 | **Memorable keys from the source lists, read without the known letters.** Key words, keyword tables, running keys from 36 named texts, autokey primers, keyword columnars: every key read in full. Plants 40 of 40; K4 inside 100 shuffles (p 0.099). Closed. |
 
 0241 went far better than I predicted (I expected the screen to lose the word from about length 15). Requiring the key to be a real word is worth more than the letter counts lose: among 2 million rotations the true one wins its own setting even with columns of five letters, and the full reading then stands 7-10 times above the shuffles. The general lesson for F13: a key drawn from a word list is decidable from the ciphertext alone where a free key of the same length is not (0235, 0236).
+
+Caught in 0243's dry run: 0210's source 'right panel K1-K4' contains K4's own carved letters, so as a running key it reads K4 as all A under Beaufort, and would have flagged K4 against shuffles that do not contain themselves. Left out. Any self-referential source needs that check when the known letters no longer filter.
 
 F13.4f's second half (two dictionary key-word alphabets) and F13.4g (Chaocipher) closed as blocked at the desk. For Chaocipher a short probe showed why: once the left wheel is guessed the rest is a simple substitution, but an annealer over the left wheel finds wrong wheels whose index stream looks more English than the true one's, on every plant.
 

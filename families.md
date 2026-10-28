@@ -203,7 +203,7 @@ Update the leaf when an experiment works on it.
     - **F13.1** Which families 97 letters of English can decide with no known letter: key bits against the judge's reach (reports/f13-solvability-map.md) {closed · exact}
     - **F13.2** The cipher type named from the ciphertext's statistics, power measured first: held-out accuracy 0.28 (chance 0.06), the flat families near chance against random letters; K4 names no family against its shuffles; the one cell under the line (ciphertext autokey) not replicated {closed · sampled · 0231, 0232}
     - **F13.3** A stronger English judge: bits per letter it extracts on held-out English: quadgrams 1.75, n-grams without Carter mixed with them 1.95 (189 bits in 97), with Carter 2.38; the judge passes 4-letter soup, not 6-letter soup or word salad {closed · measured · 0233}
-    - **F13.4** Ciphertext-only solves in the families F13.1 leaves decidable {open}
+    - **F13.4** Ciphertext-only solves in the families F13.1 leaves decidable {closed where decided, blocked elsewhere · sampled · 0234-0241}
       - **F13.4a** Periodic key on the sculpture's 8 table classes, lengths 1-36: K4 inside 200 climbed shuffles (p 0.62); plants found to length 26 (6/8), not at 30-36 {closed · sampled · 0234}
         - Lengths 27-36: plants 5/8 at 30, 2/8 at 36: too short to decide from the ciphertext alone {blocked · sampled · 0234}
       - **F13.4b** Periodic key on 2.08 million dictionary keyword tables, lengths 1-26: K4 inside 100 climbed shuffles (p 0.66); plants found at 5 only (8/8; 4/8 at 10) {closed · sampled · 0235}
@@ -219,7 +219,7 @@ Update the leaf when an experiment works on it.
       - **F13.4f** A puzzle word plus a dictionary word added (0115's space), ciphertext only: 26,040 puzzle-word settings x 2,241,060 dictionary rotations per text, exhaustive per-column screen; plants read exactly 32/32 at 5, 10, 15, 20; K4 inside 100 shuffles (p 0.42) {closed · sampled · 0241}
         - Two key-word alphabets plus a key word (F14.1's space): about 4.3 x 10^10 alphabet pairs per text, beyond any screen, and 0235's screen already lost one dictionary table among 2 million beyond length 5 {blocked}
       - **F13.4g** Chaocipher, two free wheels: given the left wheel the reading is a simple substitution of an index stream, but annealing the left wheel finds wrong wheels above the true one (stream IC 0.070-0.073 against 0.058-0.068, 3 plants); 97 letters do not single out the wheel {blocked · desk probe}
-    - **F13.5** Memorable keys from the named sources, scored by English alone {open}
+    - **F13.5** Memorable keys from the named sources, scored by English alone: key words, keyword tables, running keys from 36 named texts, autokey primers, keyword columnars; plants found 40/40, K4 inside 100 shuffles (p 0.099) {closed · sampled · 0243}
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}
   - F14 Scheidt's mask, keyed by words: the blocked free-alphabet cells, shrunk by his "key word/s" (issue #93)

@@ -29,6 +29,7 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 | 247 | F14.5 | **A carved letter lost, under F14.1's keyed mask.** 23 places where a loss shifts the key between known places; no key word on K4 in any; plants 23 of 23. Closed for F14.1's half. |
 | - | F14.6 | **Grammar written** (`reports/f14.6-grammar.md`): up to three steps from K1-K3's operations collapse to 11 forms; 7 closed and cited, 4 open as F14.6a-c. |
 | 248 | F14.6a | **Three puzzle words summed; a puzzle keyword table with two words summed.** The known letters force the last word; it is never a word on K4 or its shuffles. Plants 16 of 16. Dead. |
+| 249 | F14.6b | **A puzzle-word alphabet, a move, then the table with a key word.** 2.47 billion settings per text decided exactly; no key word on K4 or its shuffles; plants 8 of 8. Dead. |
 
 0241 went far better than I predicted (I expected the screen to lose the word from about length 15). Requiring the key to be a real word is worth more than the letter counts lose: among 2 million rotations the true one wins its own setting even with columns of five letters, and the full reading then stands 7-10 times above the shuffles. The general lesson for F13: a key drawn from a word list is decidable from the ciphertext alone where a free key of the same length is not (0235, 0236).
 

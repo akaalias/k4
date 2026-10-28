@@ -231,7 +231,7 @@ Update the leaf when an experiment works on it.
     - **F14.5** Scheidt's '98 characters': F14.1 with one carved letter lost, the 23 places that change anything: no key word on K4 in any; plants 23/23 {closed · exact · 0247}
     - **F14.6** Mix and match, up to three steps from K1-K3's operations: 11 canonical forms, 7 closed and cited (reports/f14.6-grammar.md) {open}
       - **F14.6a** Three puzzle words summed; a puzzle keyword table with a puzzle word plus a dictionary word: nothing fits K4 or its shuffles; plants 16/16 {closed · exact · 0248}
-      - **F14.6b** Puzzle keyword alphabets around a move, key word of any length {open}
+      - **F14.6b** Puzzle keyword alphabets around a move, key word of any length: 2.47 x 10^9 settings, exact; no key word on K4 or any shuffle; plants 8/8 {closed · exact · 0249}
       - **F14.6c** A move, then a puzzle word plus a dictionary word summed {open}
     - **F14.7** Abbreviated or telegraphese English as the mask, through the judge bench {open}
 

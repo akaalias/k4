@@ -1,0 +1,263 @@
+{
+ "id": 250,
+ "tag": "0250-f14-a-move-then-a-puzzle-word-plus-a-dictionary-word",
+ "started": "2026-10-28T04:33:49+00:00",
+ "seconds": 9920.2,
+ "status": "ran",
+ "phases": {
+  "unattributed": 160.8,
+  "run": 9920.2,
+  "record": 0.1
+ },
+ "ended_epoch": 1793171949.408155,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "item": "F14.6c",
+  "moves": 27852,
+  "orders": 2,
+  "rules": 24,
+  "puzzle_word_starts": 1085,
+  "settings_per_text": 1450532160,
+  "dictionary_word_lengths": [
+   3,
+   24
+  ],
+  "survivors_by_order_and_length": {
+   "A18": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 2
+   },
+   "A19": {
+    "k4": 1,
+    "copies_median": 3.0,
+    "copies_max": 22
+   },
+   "A20": {
+    "k4": 52,
+    "copies_median": 62.0,
+    "copies_max": 94
+   },
+   "A21": {
+    "k4": 1686,
+    "copies_median": 610.0,
+    "copies_max": 2282
+   },
+   "A22": {
+    "k4": 52086,
+    "copies_median": 45629.0,
+    "copies_max": 71477
+   },
+   "A23": {
+    "k4": 129215,
+    "copies_median": 126909.5,
+    "copies_max": 128284
+   },
+   "A24": {
+    "k4": 1400824,
+    "copies_median": 1373813.0,
+    "copies_max": 1736259
+   },
+   "B17": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 1
+   },
+   "B18": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 2
+   },
+   "B23": {
+    "k4": 1,
+    "copies_median": 0.0,
+    "copies_max": 1
+   },
+   "B24": {
+    "k4": 30,
+    "copies_median": 35.0,
+    "copies_max": 1830
+   }
+  },
+  "cells_k4_above_every_copy": [
+   "A23"
+  ],
+  "hits": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "plants_found": 8,
+  "plants": 8,
+  "plant_detail": {
+   "plant0": {
+    "found": true,
+    "n": 12,
+    "order": "A",
+    "words": [
+     [
+      "REMAINS",
+      4
+     ],
+     [
+      "SEMIPELLUCID",
+      4
+     ]
+    ]
+   },
+   "plant1": {
+    "found": true,
+    "n": 12,
+    "order": "A",
+    "words": [
+     [
+      "WILLIAMWEBSTER",
+      12
+     ],
+     [
+      "FLAVANTHRONE",
+      3
+     ]
+    ]
+   },
+   "plant2": {
+    "found": true,
+    "n": 4,
+    "order": "B",
+    "words": [
+     [
+      "POINT",
+      3
+     ],
+     [
+      "ALLE",
+      1
+     ]
+    ]
+   },
+   "plant3": {
+    "found": true,
+    "n": 13,
+    "order": "B",
+    "words": [
+     [
+      "BETWEEN",
+      3
+     ],
+     [
+      "PREPREFERENCE",
+      6
+     ]
+    ]
+   },
+   "plant4": {
+    "found": true,
+    "n": 5,
+    "order": "A",
+    "words": [
+     [
+      "WILLIAMWEBSTER",
+      12
+     ],
+     [
+      "TOMBE",
+      1
+     ]
+    ]
+   },
+   "plant5": {
+    "found": true,
+    "n": 4,
+    "order": "A",
+    "words": [
+     [
+      "DOES",
+      2
+     ],
+     [
+      "PEAR",
+      1
+     ]
+    ]
+   },
+   "plant6": {
+    "found": true,
+    "n": 21,
+    "order": "B",
+    "words": [
+     [
+      "WEST",
+      2
+     ],
+     [
+      "GLOSSOLABIOPHARYNGEAL",
+      7
+     ]
+    ]
+   },
+   "plant7": {
+    "found": true,
+    "n": 17,
+    "order": "A",
+    "words": [
+     [
+      "DEGREES",
+      5
+     ],
+     [
+      "PROCRASTINATIVELY",
+      1
+     ]
+    ]
+   }
+  },
+  "texts": 39,
+  "copies": 30,
+  "exhaustive": true,
+  "compute_seconds": 9877
+ },
+ "notes": "1,450,532,160 settings per text; dictionary-word hits K4 0, shuffles max 0; cells with K4 above every shuffle 1 of 44; plants 8/8",
+ "judge": null,
+ "error": null,
+ "candidates": []
+}

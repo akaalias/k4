@@ -1,0 +1,251 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F14.6c",
+  "moves": 27852,
+  "orders": 2,
+  "rules": 24,
+  "puzzle_word_starts": 1085,
+  "settings_per_text": 1450532160,
+  "dictionary_word_lengths": [
+   3,
+   24
+  ],
+  "survivors_by_order_and_length": {
+   "A18": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 2
+   },
+   "A19": {
+    "k4": 1,
+    "copies_median": 3.0,
+    "copies_max": 22
+   },
+   "A20": {
+    "k4": 52,
+    "copies_median": 62.0,
+    "copies_max": 94
+   },
+   "A21": {
+    "k4": 1686,
+    "copies_median": 610.0,
+    "copies_max": 2282
+   },
+   "A22": {
+    "k4": 52086,
+    "copies_median": 45629.0,
+    "copies_max": 71477
+   },
+   "A23": {
+    "k4": 129215,
+    "copies_median": 126909.5,
+    "copies_max": 128284
+   },
+   "A24": {
+    "k4": 1400824,
+    "copies_median": 1373813.0,
+    "copies_max": 1736259
+   },
+   "B17": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 1
+   },
+   "B18": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 2
+   },
+   "B23": {
+    "k4": 1,
+    "copies_median": 0.0,
+    "copies_max": 1
+   },
+   "B24": {
+    "k4": 30,
+    "copies_median": 35.0,
+    "copies_max": 1830
+   }
+  },
+  "cells_k4_above_every_copy": [
+   "A23"
+  ],
+  "hits": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "plants_found": 8,
+  "plants": 8,
+  "plant_detail": {
+   "plant0": {
+    "found": true,
+    "n": 12,
+    "order": "A",
+    "words": [
+     [
+      "REMAINS",
+      4
+     ],
+     [
+      "SEMIPELLUCID",
+      4
+     ]
+    ]
+   },
+   "plant1": {
+    "found": true,
+    "n": 12,
+    "order": "A",
+    "words": [
+     [
+      "WILLIAMWEBSTER",
+      12
+     ],
+     [
+      "FLAVANTHRONE",
+      3
+     ]
+    ]
+   },
+   "plant2": {
+    "found": true,
+    "n": 4,
+    "order": "B",
+    "words": [
+     [
+      "POINT",
+      3
+     ],
+     [
+      "ALLE",
+      1
+     ]
+    ]
+   },
+   "plant3": {
+    "found": true,
+    "n": 13,
+    "order": "B",
+    "words": [
+     [
+      "BETWEEN",
+      3
+     ],
+     [
+      "PREPREFERENCE",
+      6
+     ]
+    ]
+   },
+   "plant4": {
+    "found": true,
+    "n": 5,
+    "order": "A",
+    "words": [
+     [
+      "WILLIAMWEBSTER",
+      12
+     ],
+     [
+      "TOMBE",
+      1
+     ]
+    ]
+   },
+   "plant5": {
+    "found": true,
+    "n": 4,
+    "order": "A",
+    "words": [
+     [
+      "DOES",
+      2
+     ],
+     [
+      "PEAR",
+      1
+     ]
+    ]
+   },
+   "plant6": {
+    "found": true,
+    "n": 21,
+    "order": "B",
+    "words": [
+     [
+      "WEST",
+      2
+     ],
+     [
+      "GLOSSOLABIOPHARYNGEAL",
+      7
+     ]
+    ]
+   },
+   "plant7": {
+    "found": true,
+    "n": 17,
+    "order": "A",
+    "words": [
+     [
+      "DEGREES",
+      5
+     ],
+     [
+      "PROCRASTINATIVELY",
+      1
+     ]
+    ]
+   }
+  },
+  "texts": 39,
+  "copies": 30,
+  "exhaustive": true,
+  "compute_seconds": 9877
+ },
+ "notes": "1,450,532,160 settings per text; dictionary-word hits K4 0, shuffles max 0; cells with K4 above every shuffle 1 of 44; plants 8/8",
+ "controls": [],
+ "error": null,
+ "worked_example": "No move, KRYPTOS table (Vigenere), KRYPTOS from K as the puzzle word; the dictionary word's forced letters:\n\nplace  known  carved  key value  KRYPTOS  second word's letter\n   22      E       F          1        K                     R\n   23      A       L         10        R                     C\n   24      S       R         21        Y                     N\n   25      T       V         18        P                     I\n   64      B       N         11        K                     E\n   65      E       Y         17        R                     J\n   66      R       P          2        Y                     K\n\nWith a move, each known letter's slot is its landing place (order A) or its message place (order B) mod the word length.",
+ "seconds": 9877.347460269928,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 9883.1,
+  "dollars": 4.318
+ }
+}

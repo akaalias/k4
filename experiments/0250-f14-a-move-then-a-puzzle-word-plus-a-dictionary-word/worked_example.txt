@@ -1,0 +1,12 @@
+No move, KRYPTOS table (Vigenere), KRYPTOS from K as the puzzle word; the dictionary word's forced letters:
+
+place  known  carved  key value  KRYPTOS  second word's letter
+   22      E       F          1        K                     R
+   23      A       L         10        R                     C
+   24      S       R         21        Y                     N
+   25      T       V         18        P                     I
+   64      B       N         11        K                     E
+   65      E       Y         17        R                     J
+   66      R       P          2        Y                     K
+
+With a move, each known letter's slot is its landing place (order A) or its message place (order B) mod the word length.

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F14.6a: the table used three times with three remembered words, or a puzzle-word table used with two words: one key, the words added."
+ },
+ {
+  "anchor": "the check",
+  "text": "Guess all but the last word; the known letters force the last one, which is looked up among every word from every start."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Nothing fits K4 or any of its 50 shuffles; plants 8 + 8 of 16: dead, exactly."
+ }
+]

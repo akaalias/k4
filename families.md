@@ -229,7 +229,10 @@ Update the leaf when an experiment works on it.
     - **F14.3** Duress reading: a running key with the message and the key both English; 0125's 3.7 million forced keys ranked by MIX8m, read by the judge: plants 20/20, K4 inside 50 shuffles (p 0.59) {closed · sampled · 0246}
     - **F14.4** How firm is letter for letter (A2)? The 2010 Times wording ties carved 64-69 to BERLIN, three dinner accounts say one-to-one, the 2019 retreat refuses more without contradicting; A2 stands, length-changing digit systems stay out {closed · by reading}
     - **F14.5** Scheidt's '98 characters': F14.1 with one carved letter lost, the 23 places that change anything: no key word on K4 in any; plants 23/23 {closed · exact · 0247}
-    - **F14.6** "Mix and match": every hand procedure of up to three steps from K1-K3's operations {open}
+    - **F14.6** Mix and match, up to three steps from K1-K3's operations: 11 canonical forms, 7 closed and cited (reports/f14.6-grammar.md) {open}
+      - **F14.6a** Three puzzle words summed; a puzzle keyword table with a puzzle word plus a dictionary word: nothing fits K4 or its shuffles; plants 16/16 {closed · exact · 0248}
+      - **F14.6b** Puzzle keyword alphabets around a move, key word of any length {open}
+      - **F14.6c** A move, then a puzzle word plus a dictionary word summed {open}
     - **F14.7** Abbreviated or telegraphese English as the mask, through the judge bench {open}
 
 ## Full record by family

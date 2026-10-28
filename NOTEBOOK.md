@@ -27,6 +27,8 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 | 246 | F14.3 | **The duress reading.** 0125's 3.7 million forced running keys ranked by MIX8m and read by the judge. Plants 20 of 20 (0125's quadgrams had 11); K4 inside 50 shuffles (p 0.59). Closed; 0125's close now at full power. |
 | - | F14.4 | **Letter for letter, read in the sources.** The Times' 2010 wording ties carved 64-69 to BERLIN; three dinner accounts say one-to-one; the 2019 retreat refuses more without contradicting. A2 stands; no digit system comes back. Added Scheidt's 2020 email ('a masking technique') to 03-scheidt-said.md. |
 | 247 | F14.5 | **A carved letter lost, under F14.1's keyed mask.** 23 places where a loss shifts the key between known places; no key word on K4 in any; plants 23 of 23. Closed for F14.1's half. |
+| - | F14.6 | **Grammar written** (`reports/f14.6-grammar.md`): up to three steps from K1-K3's operations collapse to 11 forms; 7 closed and cited, 4 open as F14.6a-c. |
+| 248 | F14.6a | **Three puzzle words summed; a puzzle keyword table with two words summed.** The known letters force the last word; it is never a word on K4 or its shuffles. Plants 16 of 16. Dead. |
 
 0241 went far better than I predicted (I expected the screen to lose the word from about length 15). Requiring the key to be a real word is worth more than the letter counts lose: among 2 million rotations the true one wins its own setting even with columns of five letters, and the full reading then stands 7-10 times above the shuffles. The general lesson for F13: a key drawn from a word list is decidable from the ciphertext alone where a free key of the same length is not (0235, 0236).
 

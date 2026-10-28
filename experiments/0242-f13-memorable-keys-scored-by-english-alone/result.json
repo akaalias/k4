@@ -1,0 +1,29 @@
+{
+ "id": 242,
+ "tag": "0242-f13-memorable-keys-scored-by-english-alone",
+ "started": "2026-10-28T03:07:19+00:00",
+ "seconds": 31.3,
+ "status": "error",
+ "phases": {
+  "test": 742.5,
+  "run": 31.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1793156871.070743,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "judge": null,
+ "error": "Traceback (most recent call last):\n  File \"/repo/_runner.py\", line 80, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/repo/attack.py\", line 477, in run\n    key = make_plant_key(m, rng)\n  File \"/repo/attack.py\", line 441, in make_plant_key\n    return {**base, \"source\": name, \"offset\": rng.randrange(len(K[\"sources\"][name]) - N)}\n                                              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/random.py\", line 312, in randrange\n    raise ValueError(\"empty range for randrange()\")\nValueError: empty range for randrange()\n",
+ "candidates": []
+}

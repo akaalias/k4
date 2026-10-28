@@ -240,3 +240,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0239	0239-f13-the-replicated-b2-readings-judged-blind	13-ciphertext-only	0238-f13-replicate-k4-table-then-move-length-2-against-fresh-shuffles	reverted	4	0	4	213.538		734	test=20 run=734 record=30
 0240	0240-f13-hill-2x2-and-3x3-ciphertext-only	13-ciphertext-only	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	reverted	16	0	3	212.847		682	implement=63 test=155 run=682 record=43
 0241	0241-f13-a-puzzle-word-plus-a-dictionary-word-ciphertext-only	13-ciphertext-only	0234-f13-periodic-key-on-the-sculptures-tables-ciphertext-only	reverted	22	0	4	203.329		16511	design=21 implement=101 test=100 run=16511 record=60
+0242	0242-f13-memorable-keys-scored-by-english-alone	13-ciphertext-only	0241-f13-a-puzzle-word-plus-a-dictionary-word-ciphertext-only	error	0	0	0			31	test=742 run=31 record=0

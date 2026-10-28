@@ -30,6 +30,7 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 | - | F14.6 | **Grammar written** (`reports/f14.6-grammar.md`): up to three steps from K1-K3's operations collapse to 11 forms; 7 closed and cited, 4 open as F14.6a-c. |
 | 248 | F14.6a | **Three puzzle words summed; a puzzle keyword table with two words summed.** The known letters force the last word; it is never a word on K4 or its shuffles. Plants 16 of 16. Dead. |
 | 249 | F14.6b | **A puzzle-word alphabet, a move, then the table with a key word.** 2.47 billion settings per text decided exactly; no key word on K4 or its shuffles; plants 8 of 8. Dead. |
+| 250 | F14.6c | **A move, then a puzzle word plus a dictionary word.** 1.45 billion settings per text; the forced second word is never a word on K4 or its shuffles; plants 8 of 8. Dead. F14.6 closed. |
 
 0241 went far better than I predicted (I expected the screen to lose the word from about length 15). Requiring the key to be a real word is worth more than the letter counts lose: among 2 million rotations the true one wins its own setting even with columns of five letters, and the full reading then stands 7-10 times above the shuffles. The general lesson for F13: a key drawn from a word list is decidable from the ciphertext alone where a free key of the same length is not (0235, 0236).
 
@@ -38,6 +39,8 @@ Caught in 0243's dry run: 0210's source 'right panel K1-K4' contains K4's own ca
 F13.6 blocked at the desk after a probe on 0243's search: a mask either keeps the reading English, and then the English statistic already finds it (X every kth, nulls: read exactly 4 of 4), or breaks it, and then the search never keeps that reading (every nth place, affine: 0 of 4). The battery has nothing left to add on readings chosen by English. That ends F13 apart from D1/D2, which wait on #100.
 
 F14.1 turned out cheap: a same-slot check between two known places splits into a gap on the cipher alphabet and a gap on the plain alphabet, so the pairs never need to be enumerated, only filed and looked up (0244 ran in 94 s). The pre-registered prediction said no pair below 23; K4 had 5 at 16, which the dry run had already shown. Since every slot at 16 holds a known place, those pairs fix the whole reading, so I added full readings for K4 and copies before the run and said so in the method. The count replicated weakly (0245, p 0.009), short of the corrected line; the readings are junk.
+
+F14.6c's dry run caught a bug of mine: with the move first, the table runs over carved places, so the puzzle word has to be read at each known letter's landing place, not its message place; the order-A plants were missed (0 of 2) until that was fixed. 0250 ran 2.8 h on Modal, five times my local estimate: 32 processes on 32 vCPUs run at about half a core each.
 
 Mistake: I started 0245 with a test failing (0244's crib map not yet drawn); the pipe into `tail` hid pytest's exit status from the `&&` chain. From here on pytest runs on its own line before a start.
 

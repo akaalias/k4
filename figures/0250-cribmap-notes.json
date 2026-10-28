@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F14.6c: K3's grid shuffle, then K1's table used twice, with a puzzle word and any English word."
+ },
+ {
+  "anchor": "the check",
+  "text": "1,450,532,160 settings per text; the known letters force the second word, looked up from every start."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No word on K4 or any shuffle; plants 8 of 8: dead. One count cell (A23) just above the shuffles, with no word behind it."
+ }
+]

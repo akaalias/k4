@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4f: the table used twice, with a puzzle word and then any English word, solved from the carved letters alone."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each puzzle word's effect taken off; every dictionary word, from every letter, scored by its columns' letter counts; the best read in full. K4 against 100 shuffles."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 p 0.4158. Plants found 8/8 at 5, 8/8 at 10, 8/8 at 15, 8/8 at 20."
+ }
+]

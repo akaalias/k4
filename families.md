@@ -216,6 +216,9 @@ Update the leaf when an experiment works on it.
       - **F13.4e** Hill 2x2 and 3x3, four numberings, every alignment, ciphertext only: 2x2 plants read 8/8, K4 inside 100 shuffles (p 0.73) {closed · sampled · 0240}
         - Hill 3x3: plants found 4/8 {blocked · sampled · 0240}
         - Gromark (cost: 10^5 primers x 364 rules x a free-alphabet climb, about 8 h per text); trifid (0039's annealer fails even with the known letters); M-94 (25! disc orders, beyond 0236's ciphertext-only frontier) {blocked}
+      - **F13.4f** A puzzle word plus a dictionary word added (0115's space), ciphertext only: 26,040 puzzle-word settings x 2,241,060 dictionary rotations per text, exhaustive per-column screen; plants read exactly 32/32 at 5, 10, 15, 20; K4 inside 100 shuffles (p 0.42) {closed · sampled · 0241}
+        - Two key-word alphabets plus a key word (F14.1's space): about 4.3 x 10^10 alphabet pairs per text, beyond any screen, and 0235's screen already lost one dictionary table among 2 million beyond length 5 {blocked}
+      - **F13.4g** Chaocipher, two free wheels: given the left wheel the reading is a simple substitution of an index stream, but annealing the left wheel finds wrong wheels above the true one (stream IC 0.070-0.073 against 0.058-0.068, 3 plants); 97 letters do not single out the wheel {blocked · desk probe}
     - **F13.5** Memorable keys from the named sources, scored by English alone {open}
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones {open}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}

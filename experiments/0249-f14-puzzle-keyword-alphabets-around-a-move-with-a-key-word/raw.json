@@ -1,0 +1,377 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F14.6b",
+  "moves": 27852,
+  "tables": 854,
+  "puzzle_words": 171,
+  "settings_per_text": 2473703232,
+  "survivors_by_order_and_length": {
+   "A1": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A2": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A3": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A4": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A5": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A6": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A7": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A8": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A9": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A10": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A11": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A12": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A13": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A14": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A15": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A16": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A17": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "A18": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 2
+   },
+   "A19": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 3
+   },
+   "A20": {
+    "k4": 5,
+    "copies_median": 5.0,
+    "copies_max": 14
+   },
+   "A21": {
+    "k4": 56,
+    "copies_median": 52.0,
+    "copies_max": 90
+   },
+   "A22": {
+    "k4": 3983,
+    "copies_median": 3308.0,
+    "copies_max": 5186
+   },
+   "A23": {
+    "k4": 8111,
+    "copies_median": 8359.0,
+    "copies_max": 9364
+   },
+   "A24": {
+    "k4": 94456,
+    "copies_median": 88094.0,
+    "copies_max": 94694
+   },
+   "A25": {
+    "k4": 254488,
+    "copies_median": 256656.0,
+    "copies_max": 258251
+   },
+   "A26": {
+    "k4": 1713788,
+    "copies_median": 1710825.0,
+    "copies_max": 1717041
+   },
+   "B1": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B2": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B3": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B4": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B5": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B6": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B7": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B8": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B9": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B10": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B11": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B12": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B13": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B14": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B15": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B16": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B17": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B18": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B19": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B20": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B21": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B22": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B23": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0
+   },
+   "B24": {
+    "k4": 4,
+    "copies_median": 4.0,
+    "copies_max": 10
+   },
+   "B25": {
+    "k4": 2801,
+    "copies_median": 2712.5,
+    "copies_max": 2915
+   },
+   "B26": {
+    "k4": 1833004,
+    "copies_median": 1825778.5,
+    "copies_max": 1840347
+   }
+  },
+  "cells_k4_above_every_copy": [],
+  "key_word_hits": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "plants_found": 8,
+  "plants": 8,
+  "plant_detail": {
+   "plant0": {
+    "found": true,
+    "L": 21,
+    "order": "B",
+    "word": "ANATOMICOPATHOLOGICAL"
+   },
+   "plant1": {
+    "found": true,
+    "L": 6,
+    "order": "A",
+    "word": "TWEAKY"
+   },
+   "plant2": {
+    "found": true,
+    "L": 10,
+    "order": "B",
+    "word": "MENAGERIST"
+   },
+   "plant3": {
+    "found": true,
+    "L": 14,
+    "order": "A",
+    "word": "POLYPRAGMATIST"
+   },
+   "plant4": {
+    "found": true,
+    "L": 24,
+    "order": "A",
+    "word": "FORMALDEHYDESULPHOXYLATE"
+   },
+   "plant5": {
+    "found": true,
+    "L": 5,
+    "order": "A",
+    "word": "SCENT"
+   },
+   "plant6": {
+    "found": true,
+    "L": 21,
+    "order": "A",
+    "word": "DISPROPORTIONABLENESS"
+   },
+   "plant7": {
+    "found": true,
+    "L": 16,
+    "order": "B",
+    "word": "SUBCONSCIOUSNESS"
+   }
+  },
+  "texts": 39,
+  "copies": 30,
+  "exhaustive": true,
+  "compute_seconds": 415
+ },
+ "notes": "2,473,703,232 settings per text; key-word hits K4 0, shuffles max 0; cells with K4 above every shuffle 0 of 52; plants 8/8",
+ "controls": [],
+ "error": null,
+ "worked_example": "SHADOW's keyword alphabet SHADOWBCEFGIJKLMNPQRTUVXYZ on both sides, added form, no move, key length 11:\n\nplace  known  carved  key value  slot\n   22      E       F          1    10\n   23      A       L         12     0\n   24      S       R         19     1\n   25      T       V          2     2\n   33      S       S          0    10\n   34      T       S          6     0\n   66      R       P         24    10\n   67      L       V          8     0\n\nPlaces in the same slot must ask the same key value; with a move, the slot is the landing place mod 11.",
+ "seconds": 415.66761016845703,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 420.7,
+  "dollars": 0.184
+ }
+}

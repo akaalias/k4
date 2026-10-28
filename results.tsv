@@ -247,3 +247,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0246	0246-f14-duress-reading-running-english-key-judged-by-mix8m-and-the-judge	14-scheidt-mask-keyed-by-words	0125-forced-key-as-running-english-on-dictionary-alphabets	reverted	0	0	0			251	unattributed=384 run=251 record=0
 0247	0247-f14-two-dictionary-alphabets-with-a-carved-letter-lost	14-scheidt-mask-keyed-by-words	0244-f14-two-dictionary-keyword-alphabets-and-a-key-word	reverted	0	0	0			535	unattributed=312 run=535 record=0
 0248	0248-f14-three-key-words-summed-and-a-keyword-table-with-two	14-scheidt-mask-keyed-by-words	0115-a-puzzle-word-plus-any-english-word	reverted	0	0	0			178	unattributed=242 run=178 record=0
+0249	0249-f14-puzzle-keyword-alphabets-around-a-move-with-a-key-word	14-scheidt-mask-keyed-by-words	0129-one-free-alphabet-after-every-move-exact	reverted	0	0	0			463	unattributed=293 run=463 record=0

@@ -1,0 +1,13 @@
+SHADOW's keyword alphabet SHADOWBCEFGIJKLMNPQRTUVXYZ on both sides, added form, no move, key length 11:
+
+place  known  carved  key value  slot
+   22      E       F          1    10
+   23      A       L         12     0
+   24      S       R         19     1
+   25      T       V          2     2
+   33      S       S          0    10
+   34      T       S          6     0
+   66      R       P         24    10
+   67      L       V          8     0
+
+Places in the same slot must ask the same key value; with a move, the slot is the landing place mod 11.

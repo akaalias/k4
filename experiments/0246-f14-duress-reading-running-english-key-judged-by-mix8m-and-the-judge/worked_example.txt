@@ -1,0 +1,12 @@
+The key letters forced at the known places on the sculpture's own table (Vigenere, KRYPTOS alphabet both sides):
+
+place  known  carved  key letter
+   22      E       F           R
+   23      A       L           D
+   24      S       R           U
+   25      T       V           M
+   64      B       N           E
+   65      E       Y           L
+   66      R       P           Y
+
+If the key were a passage of a book, the 13 letters at 22-34 and the 11 at 64-74 would read as English.

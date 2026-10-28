@@ -244,3 +244,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0243	0243-f13-memorable-keys-scored-by-english-alone-rerun	13-ciphertext-only	0242-f13-memorable-keys-scored-by-english-alone	reverted	5	0	2	222.923		829	unattributed=370 run=829 record=68
 0244	0244-f14-two-dictionary-keyword-alphabets-and-a-key-word	14-scheidt-mask-keyed-by-words	0109-keyword-tables-from-the-whole-dictionary	reverted	5	0	24	7.761		94	implement=140 test=114 run=94 record=29
 0245	0245-f14-replicate-k4-fit-count-at-key-length-16	14-scheidt-mask-keyed-by-words	0244-f14-two-dictionary-keyword-alphabets-and-a-key-word	reverted	5	0	24	7.761		197	unattributed=58 run=196 record=0
+0246	0246-f14-duress-reading-running-english-key-judged-by-mix8m-and-the-judge	14-scheidt-mask-keyed-by-words	0125-forced-key-as-running-english-on-dictionary-alphabets	reverted	0	0	0			251	unattributed=384 run=251 record=0

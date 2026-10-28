@@ -1,0 +1,9 @@
+Rule var on plain std, cipher std, key letters numbered on std; first word ORDINATE from 7, second HUP from 1
+
+  carved            OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZ
+  first word        EORDINATEORDINATEORDINATEORDINATEORDINATEORDINAT
+  first word off    SPBUCBXHKVLOJFOEMTSEESLKZEHSZAGDWGFWEGQLNEJVMXZS
+  second word       UPHUPHUPHUPHUPHUPHUPHUPHUPHUPHUPHUPHUPHUPHUPHUPH
+  reading           MEIORIRWRPAVDUVYBAMTLMARTTOMOHASDAUDYVXFCLDKTROZ
+
+The search never reads the known letters: the second word is chosen by how English its columns look.

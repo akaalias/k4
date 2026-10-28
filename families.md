@@ -223,7 +223,8 @@ Update the leaf when an experiment works on it.
     - **F13.6** A13's structure battery on every reading, not only 24-of-24 ones: the readings are chosen by English, so masks that break English never reach it (every nth 0/4, affine 0/4, columns 1/4) and those that keep it are already found (X every kth, nulls 4/4) {blocked · desk probe}
     - **F13.7** The object: the copper's letters, the ?, the line breaks, Antipodes' K4; needs the photographs (#81) {blocked}
   - F14 Scheidt's mask, keyed by words: the blocked free-alphabet cells, shrunk by his "key word/s" (issue #93)
-    - **F14.1** Two dictionary key-word alphabets plus a key word, key lengths 19-26 {open}
+    - **F14.1** Two dictionary key-word alphabets plus a key word: all 4.3 x 10^10 pairs per form matched exactly, key lengths 1-24; no key word on K4 or any shuffle, pairs only where the shuffles have them; plants 12/12; K4's count at 16 replicated, p 0.009, not a flag {closed · exact · 0244, 0245}
+      - Key lengths 25-26: no dictionary word that long; 10^6-10^9 pairs fit by chance {blocked}
     - **F14.2** A remembered route plus key-word alphabets in F6.1 and F6.2's cells {open}
     - **F14.3** Duress reading: a running key with the message and the key both English {open}
     - **F14.4** How firm the letter-for-letter assumption (A2) is, from the sources {open}

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "Replication of 0244's one unusual count: 5 fitting alphabet pairs on K4 at key length 16, more than any of 50 shuffles."
+ },
+ {
+  "anchor": "the check",
+  "text": "The same search at length 16 on 1,000 fresh shuffles; counted as pairs and as distinct cipher alphabets."
+ },
+ {
+  "anchor": "the bound",
+  "text": "p 0.00899 and 0.03796, above the corrected line 0.000962: not a flag. The readings are junk."
+ }
+]

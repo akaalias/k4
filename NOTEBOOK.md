@@ -17,11 +17,22 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 | 242 | F13.5 | **Errored** while making plants: a running-key plant was drawn from K1's text, 63 letters, shorter than K4. |
 | 243 | F13.5 | **Memorable keys from the source lists, read without the known letters.** Key words, keyword tables, running keys from 36 named texts, autokey primers, keyword columnars: every key read in full. Plants 40 of 40; K4 inside 100 shuffles (p 0.099). Closed. |
 
+### F14 (ticket #93), after pivot P21
+
+| # | Item | One line |
+|---|---|---|
+| 244 | F14.1 | **Two dictionary keyword alphabets and a key word, every pair.** 4.3 x 10^10 alphabet pairs per form matched exactly by filing each alphabet under the gaps the known letters ask for. No key word fits K4 or any of 50 shuffles; plants 12 of 12. Closed for key lengths 1-24. |
+| 245 | F14.1 | **Replication of K4's 5 pairs at key length 16** (above all 50 shuffles in 0244): 1,000 fresh shuffles, p 0.009, under the 52-cell line only at 0.00096: not a flag. |
+
 0241 went far better than I predicted (I expected the screen to lose the word from about length 15). Requiring the key to be a real word is worth more than the letter counts lose: among 2 million rotations the true one wins its own setting even with columns of five letters, and the full reading then stands 7-10 times above the shuffles. The general lesson for F13: a key drawn from a word list is decidable from the ciphertext alone where a free key of the same length is not (0235, 0236).
 
 Caught in 0243's dry run: 0210's source 'right panel K1-K4' contains K4's own carved letters, so as a running key it reads K4 as all A under Beaufort, and would have flagged K4 against shuffles that do not contain themselves. Left out. Any self-referential source needs that check when the known letters no longer filter.
 
 F13.6 blocked at the desk after a probe on 0243's search: a mask either keeps the reading English, and then the English statistic already finds it (X every kth, nulls: read exactly 4 of 4), or breaks it, and then the search never keeps that reading (every nth place, affine: 0 of 4). The battery has nothing left to add on readings chosen by English. That ends F13 apart from D1/D2, which wait on #100.
+
+F14.1 turned out cheap: a same-slot check between two known places splits into a gap on the cipher alphabet and a gap on the plain alphabet, so the pairs never need to be enumerated, only filed and looked up (0244 ran in 94 s). The pre-registered prediction said no pair below 23; K4 had 5 at 16, which the dry run had already shown. Since every slot at 16 holds a known place, those pairs fix the whole reading, so I added full readings for K4 and copies before the run and said so in the method. The count replicated weakly (0245, p 0.009), short of the corrected line; the readings are junk.
+
+Mistake: I started 0245 with a test failing (0244's crib map not yet drawn); the pipe into `tail` hid pytest's exit status from the `&&` chain. From here on pytest runs on its own line before a start.
 
 F13.4f's second half (two dictionary key-word alphabets) and F13.4g (Chaocipher) closed as blocked at the desk. For Chaocipher a short probe showed why: once the left wheel is guessed the rest is a simple substitution, but an annealer over the left wheel finds wrong wheels whose index stream looks more English than the true one's, on every plant.
 

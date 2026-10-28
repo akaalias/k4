@@ -44,7 +44,7 @@ EXPERIMENT = {
     ),
     "walkthrough": (
         "1. Take a sentence of Carter, say 'the remains of passage debris that encumbered the lower part of the doorway'. "
-        "2. Vowel-dropped: 'th rmns o pssg dbrs tht encmbrd th lwr prt o th drwy' (a word's first letter kept). "
+        "2. Vowel-dropped: 'th rmns of pssg dbrs tht encmbrd th lwr prt of th drwy' (a word's first letter kept). "
         "3. Telegraphese: 'remains passage debris encumbered lower part doorway X'. "
         "4. Abbreviated: 'the rema of pass debris that encu the lower part of the door' (words of 7 letters or more cut to 4). "
         "5. Score each with the detector and compare with the highest score any nonsense text reaches."

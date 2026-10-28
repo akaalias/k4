@@ -1,0 +1,741 @@
+{
+ "id": 245,
+ "tag": "0245-f14-replicate-k4-fit-count-at-key-length-16",
+ "started": "2026-10-28T03:43:32+00:00",
+ "seconds": 196.5,
+ "status": "ran",
+ "phases": {
+  "unattributed": 57.6,
+  "run": 196.5,
+  "record": 0.2
+ },
+ "ended_epoch": 1793159208.8075352,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 5,
+ "n_passed": 0,
+ "best_crib_hits": 24,
+ "best_crib_words": {
+  "EAST": [
+   4,
+   4
+  ],
+  "NORTHEAST": [
+   9,
+   9
+  ],
+  "BERLIN": [
+   6,
+   6
+  ],
+  "CLOCK": [
+   5,
+   5
+  ]
+ },
+ "best_fitness": null,
+ "best_loss": 7.76067198827605,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -7.858174481977571,
+  -8.15037610349487,
+  -7.395429098750593,
+  -8.086525909752957,
+  -8.868274763662868,
+  -8.312053413588787,
+  -8.279944070247167,
+  -8.55022400959269,
+  -8.457969946381837,
+  -8.199650635846352,
+  -7.990663638421383,
+  -8.369745501230732,
+  -8.397437374836178,
+  -7.591397060390118,
+  -8.051382126573607,
+  -7.850045623590998,
+  -8.71481769907116,
+  -8.44594980932223,
+  -8.133630753078956,
+  -8.435717732677807,
+  -8.068017573817073,
+  -9.256534052575782,
+  -8.168654350328605,
+  -8.321796491168616,
+  -8.603256667775577,
+  -8.771606025428854,
+  -8.209016039368931,
+  -7.857626936675476,
+  -8.017666098536594,
+  -8.301625917269826,
+  -8.805493761564264,
+  -7.85129279042888,
+  -8.156700481108082,
+  -7.986740883281935,
+  -8.068274245480712,
+  -8.212145726217287,
+  -7.709802324950897,
+  -8.077522320299229,
+  -8.195484669622637,
+  -8.119889480433075,
+  -8.668112164746649,
+  -8.080310033982784,
+  -8.572597417289854,
+  -7.5477077713141965,
+  -7.942185823993106,
+  -8.298281501292772,
+  -7.955216603704394,
+  -8.116799273443103,
+  -8.795394671202986,
+  -8.237938188729396,
+  -9.198473808463243,
+  -7.832076027114883,
+  -7.874564415946791,
+  -8.222022650752578,
+  -7.910150371851382,
+  -8.913712544989911,
+  -8.374714184180396,
+  -8.347812236919562,
+  -9.063846380510215,
+  -8.936475250178855,
+  -8.249159270403565,
+  -8.322868064680742,
+  -8.655656461237044,
+  -8.24519165355695,
+  -8.10402974474193,
+  -8.55913604452386,
+  -8.586123093627966,
+  -7.752252731682882,
+  -7.958562687758497,
+  -7.8208332517908,
+  -8.536464553038428,
+  -8.186422069037016,
+  -8.127711121285415,
+  -8.040133536405063,
+  -8.405018491597014,
+  -7.818456827490689,
+  -8.65972187972833,
+  -8.312583096306856,
+  -8.144197198590385,
+  -7.903930960081525,
+  -8.384944568906947,
+  -7.511484635926187,
+  -8.047620700285997,
+  -7.897738168414667,
+  -8.299962501287297,
+  -8.302416607550652,
+  -8.552141413552036,
+  -8.69279131093295,
+  -8.936925968204795,
+  -8.161907713869688,
+  -8.934124662547012,
+  -7.842070349067736,
+  -8.318902385721596,
+  -8.399164571141224,
+  -7.179138123669121,
+  -8.42820636263732,
+  -8.097917511304205,
+  -7.552405093159187,
+  -7.9015943520637055,
+  -8.755370581897129,
+  -8.231966009019123,
+  -8.107362957807743,
+  -8.533959920803786,
+  -8.151767790545279,
+  -8.270535354200408,
+  -8.780672451921808,
+  -8.549477841086068,
+  -8.118282142341759,
+  -7.797986274882081,
+  -8.99423115643563,
+  -8.89512093784513,
+  -8.165401654376602,
+  -7.7374420629008975,
+  -8.69513211034214,
+  -8.63909979013995,
+  -7.688115751287871,
+  -8.278042156507848,
+  -8.783862211705635,
+  -7.75526986540313,
+  -7.9859784977505655,
+  -8.385198919007513,
+  -8.022445733398326,
+  -8.376054227296617,
+  -8.817138641369601,
+  -7.802529150523216,
+  -8.284516550534924,
+  -8.150306316502355,
+  -8.684009078018715,
+  -8.254918110390598,
+  -7.970254642567134,
+  -8.24971433551734,
+  -8.068920699296834,
+  -7.861858817753161,
+  -7.9151563884996365,
+  -8.278025291685964,
+  -8.7780913355916,
+  -7.871624568856207,
+  -7.758590103518388,
+  -8.543843906395352,
+  -7.772698209140936,
+  -8.750174110747867,
+  -8.168092271261905,
+  -8.070376335994068,
+  -8.279197046042677,
+  -9.079948504373235,
+  -8.033200808396742,
+  -8.46866298987985,
+  -8.464727139903427,
+  -7.561519488013167,
+  -8.070295400739635,
+  -7.733055816353889,
+  -7.960304887710827,
+  -8.283330393061695,
+  -8.890700332745638,
+  -7.745509092957283,
+  -8.365435974128408,
+  -7.414488249115852,
+  -8.030847665873807,
+  -8.014974998999396,
+  -8.104658547361428,
+  -8.219668162464586,
+  -7.657375226699842,
+  -8.656554673515755,
+  -8.397934639199029,
+  -9.144707028951567,
+  -8.191796928767173,
+  -8.465420413599787,
+  -8.0064667586939,
+  -8.13564056850399,
+  -8.907784519316388,
+  -7.723336132184254,
+  -8.50124920689269,
+  -8.659829703416156,
+  -8.347934920735218,
+  -9.103684020895583,
+  -8.1372284364244,
+  -8.120141849009372,
+  -8.294377890805753,
+  -8.481218358001817,
+  -8.433285576641685,
+  -8.148368963963982,
+  -8.31510992214224,
+  -8.0199693967829,
+  -7.536971880494789,
+  -7.604769404565817,
+  -7.989340207843749,
+  -7.831029182098656,
+  -8.494363382862142,
+  -8.832959170923553,
+  -8.161582249543674,
+  -7.999185902425826,
+  -8.661279146051115,
+  -7.276845188533254,
+  -7.703355527106378,
+  -8.111646193543203,
+  -7.635123839529534,
+  -8.1406241882272,
+  -7.744322336233189,
+  -8.330482137787893,
+  -8.182332087471867,
+  -8.759098064555594,
+  -9.095800497444547,
+  -8.280374994701846,
+  -8.399458423628886,
+  -7.934614120274747,
+  -7.866447837494255,
+  -8.502783743657396,
+  -7.93712010249101,
+  -8.429842777743724,
+  -8.008448618534839,
+  -8.149337908581797,
+  -7.983395607282822,
+  -8.09159878321967
+ ],
+ "champion_before": null,
+ "bounds": {
+  "item": "F14.1 replication",
+  "key_length": 16,
+  "copies": 1000,
+  "seed": 245,
+  "alpha_corrected": 0.000962,
+  "cells": {
+   "added": {
+    "k4_pairs": 5,
+    "k4_distinct_cipher_alphabets": 2,
+    "p_pairs": 0.00899,
+    "p_distinct": 0.03796,
+    "copies_with_any": 120,
+    "copies_max_pairs": 16,
+    "copies_pairs_histogram": {
+     "0": 880,
+     "1": 78,
+     "2": 22,
+     "3": 9,
+     "4": 3,
+     "5": 4,
+     "7": 1,
+     "8": 1,
+     "10": 1,
+     "16": 1
+    }
+   },
+   "beaufort": {
+    "k4_pairs": 0,
+    "k4_distinct_cipher_alphabets": 0,
+    "p_pairs": 1.0,
+    "p_distinct": 1.0,
+    "copies_with_any": 106,
+    "copies_max_pairs": 17,
+    "copies_pairs_histogram": {
+     "0": 894,
+     "1": 68,
+     "2": 18,
+     "3": 6,
+     "4": 4,
+     "5": 3,
+     "6": 1,
+     "7": 2,
+     "8": 1,
+     "9": 1,
+     "12": 1,
+     "17": 1
+    }
+   }
+  },
+  "flag": false,
+  "alphabets": 208064,
+  "compute_seconds": 36,
+  "k4_readings": [
+   [
+    "HOLOZOIC",
+    "AEOLOTROPISM",
+    "KVXCCXHPKGLNYPWRRYQFBEASTNORTHEASTEIBHVVNNPTPYTMBJGPLYWHAVISBUCBERLINCLOCKIHOYTJNLRJRFTDMPDAPYANP"
+   ],
+   [
+    "OCYROIDAE",
+    "DIOPTROMETRY",
+    "CGBDEWKNHHYPZKVEOJYGFEASTNORTHEASTTIFZBBKNCTVFSMVFVMYJGLZAICEDIBERLINCLOCKIKMFSLRMROKBDFJQNUVFDZI"
+   ],
+   [
+    "OLOGICAL",
+    "AEOLOTROPISM",
+    "KVXCCXZPKHLNYOWRRYQFBEASTNORTHEASTEIBZVVNNPTPFTMBJHPLYWZAVISBACBERLINCLOCKIZOFTJNLRJRFTDMPDAPFANP"
+   ],
+   [
+    "POLYOPIC",
+    "AEOLOTROPISM",
+    "JVXCAXPNJHLMZLWRRZQFDEASTNORTHEASTEIDPVVMNNTNGTKBHGNYZWPAWISBBCBERLINCLOCKIPOGTHMLRHSFTDKQDANGAMN"
+   ],
+   [
+    "ZOOLOGIC",
+    "AEOLOTROPISM",
+    "KVXCCXZPKHLNYOWRRYQFBEASTNORTHEASTEIBZVVNNPTPFTMBJHPLYWZAVISBACBERLINCLOCKIZOFTJNLRJRFTDMPDAPFANP"
+   ]
+  ]
+ },
+ "notes": "16/added: K4 5 pairs (2 cipher alphabets), p 0.00899 / 0.03796 against 1000 fresh shuffles; flag False",
+ "judge": null,
+ "error": null,
+ "candidates": [
+  {
+   "plaintext": "KVXCCXHPKGLNYPWRRYQFBEASTNORTHEASTEIBHVVNNPTPYTMBJGPLYWHAVISBUCBERLINCLOCKIHOYTJNLRJRFTDMPDAPYANP",
+   "key": {
+    "pa": "HOLZICABDEFGJKMNPQRSTUVWXY",
+    "ca": "AEOLTRPISMBCDFGHJKNQUVWXYZ",
+    "form": "added",
+    "ka": "std",
+    "word": "POTAPEXMBESOLSFL",
+    "start": 0,
+    "shift": 0
+   },
+   "key_bits": 267.1998256843743,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "resubmitted",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "rule": "a reading counts only in the search that found it"
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 7.76067198827605,
+   "readable_words": [
+    [
+     20,
+     25,
+     "BEAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     51,
+     54,
+     "PLY"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ]
+   ]
+  },
+  {
+   "plaintext": "CGBDEWKNHHYPZKVEOJYGFEASTNORTHEASTTIFZBBKNCTVFSMVFVMYJGLZAICEDIBERLINCLOCKIKMFSLRMROKBDFJQNUVFDZI",
+   "key": {
+    "pa": "OCYRIDAEBFGHJKLMNPQSTUVWXZ",
+    "ca": "DIOPTRMEYABCFGHJKLNQSUVWXZ",
+    "form": "added",
+    "ka": "std",
+    "word": "BAIAOFLMCDTALHGK",
+    "start": 0,
+    "shift": 0
+   },
+   "key_bits": 267.1998256843743,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "resubmitted",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "rule": "a reading counts only in the search that found it"
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 8.421126255273096,
+   "readable_words": [
+    [
+     3,
+     6,
+     "DEW"
+    ],
+    [
+     20,
+     25,
+     "FEAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     58,
+     62,
+     "ICED"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ]
+   ]
+  },
+  {
+   "plaintext": "KVXCCXZPKHLNYOWRRYQFBEASTNORTHEASTEIBZVVNNPTPFTMBJHPLYWZAVISBACBERLINCLOCKIZOFTJNLRJRFTDMPDAPFANP",
+   "key": {
+    "pa": "OLGICABDEFHJKMNPQRSTUVWXYZ",
+    "ca": "AEOLTRPISMBCDFGHJKNQUVWXYZ",
+    "form": "added",
+    "ka": "std",
+    "word": "QPUBQFYNCFTPMIGM",
+    "start": 0,
+    "shift": 0
+   },
+   "key_bits": 267.1998256843743,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "resubmitted",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "rule": "a reading counts only in the search that found it"
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 8.018349462588692,
+   "readable_words": [
+    [
+     20,
+     25,
+     "BEAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     51,
+     54,
+     "PLY"
+    ],
+    [
+     58,
+     60,
+     "IS"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     76,
+     78,
+     "OF"
+    ],
+    [
+     93,
+     96,
+     "FAN"
+    ]
+   ]
+  },
+  {
+   "plaintext": "JVXCAXPNJHLMZLWRRZQFDEASTNORTHEASTEIDPVVMNNTNGTKBHGNYZWPAWISBBCBERLINCLOCKIPOGTHMLRHSFTDKQDANGAMN",
+   "key": {
+    "pa": "POLYICABDEFGHJKMNQRSTUVWXZ",
+    "ca": "AEOLTRPISMBCDFGHJKNQUVWXYZ",
+    "form": "added",
+    "ka": "std",
+    "word": "POTAOEXMBDSOLGFL",
+    "start": 0,
+    "shift": 0
+   },
+   "key_bits": 267.1998256843743,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "resubmitted",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "rule": "a reading counts only in the search that found it"
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 8.186930309264415,
+   "readable_words": [
+    [
+     21,
+     25,
+     "EAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     55,
+     58,
+     "PAW"
+    ],
+    [
+     58,
+     60,
+     "IS"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     90,
+     94,
+     "DANG"
+    ]
+   ]
+  },
+  {
+   "plaintext": "KVXCCXZPKHLNYOWRRYQFBEASTNORTHEASTEIBZVVNNPTPFTMBJHPLYWZAVISBACBERLINCLOCKIZOFTJNLRJRFTDMPDAPFANP",
+   "key": {
+    "pa": "ZOLGICABDEFHJKMNPQRSTUVWXY",
+    "ca": "AEOLTRPISMBCDFGHJKNQUVWXYZ",
+    "form": "added",
+    "ka": "std",
+    "word": "POTAPEXMBESOLHFL",
+    "start": 0,
+    "shift": 0
+   },
+   "key_bits": 267.1998256843743,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": "",
+   "key_bits_declared": 0.0,
+   "gate_passed": false,
+   "failed_at": "resubmitted",
+   "crib_hits": 24,
+   "crib_words": {
+    "EAST": [
+     4,
+     4
+    ],
+    "NORTHEAST": [
+     9,
+     9
+    ],
+    "BERLIN": [
+     6,
+     6
+    ],
+    "CLOCK": [
+     5,
+     5
+    ]
+   },
+   "gate_details": {
+    "rule": "a reading counts only in the search that found it"
+   },
+   "english_free": null,
+   "fitness": null,
+   "loss": 8.018349462588692,
+   "readable_words": [
+    [
+     20,
+     25,
+     "BEAST"
+    ],
+    [
+     25,
+     34,
+     "NORTHEAST"
+    ],
+    [
+     51,
+     54,
+     "PLY"
+    ],
+    [
+     58,
+     60,
+     "IS"
+    ],
+    [
+     63,
+     69,
+     "BERLIN"
+    ],
+    [
+     69,
+     74,
+     "CLOCK"
+    ],
+    [
+     76,
+     78,
+     "OF"
+    ],
+    [
+     93,
+     96,
+     "FAN"
+    ]
+   ]
+  }
+ ]
+}

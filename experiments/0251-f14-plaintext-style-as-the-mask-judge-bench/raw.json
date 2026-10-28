@@ -1,0 +1,84 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F14.7",
+  "classes": {
+   "vowelless": 30,
+   "telegraphese": 30,
+   "abbreviated": 30
+  },
+  "negatives": {
+   "unigram": 100,
+   "markov": 100
+  },
+  "reference": [
+   "clean",
+   "xstops"
+  ],
+  "power_at_negatives_max": {
+   "quadgram": {
+    "T": -400,
+    "clean": 0.1,
+    "xstops": 0.033,
+    "vowelless": 0.0,
+    "telegraphese": 0.0,
+    "abbreviated": 0.0
+   },
+   "mix8m": {
+    "T": -204.47492468881808,
+    "clean": 0.333,
+    "xstops": 0.167,
+    "vowelless": 0.0,
+    "telegraphese": 0.1,
+    "abbreviated": 0.133
+   },
+   "judge": {
+    "T": 68,
+    "clean": 1.0,
+    "xstops": 1.0,
+    "vowelless": 0.133,
+    "telegraphese": 1.0,
+    "abbreviated": 0.967
+   }
+  },
+  "seen_by": {
+   "vowelless": [],
+   "telegraphese": [
+    "judge"
+   ],
+   "abbreviated": [
+    "judge"
+   ]
+  },
+  "rule": "a scorer sees a class when at least 90% of it is above the highest negative",
+  "judge_none": 0,
+  "examples": {
+   "vowelless": "FREXMPLTHRMYVRYLKLYBDEASTNORTHEASTPCSTHRARINMSMSWTHVGPRBBLYMDDLBERLINCLOCKBLSWHCHBYRFRNCTTHOBJCTS",
+   "telegraphese": "TENROYALTOMBSONEFOUNDEASTNORTHEASTNINTOATTEMPTSBADMADETWOOTHERSBERLINCLOCKSTOMBSTWOPILLAGEDTWOINT",
+   "abbreviated": "BYREMOANTIQUITIESTOMUEASTNORTHEASTASSUTHEIRSAFETYLEFTINSITUTHEYBERLINCLOCKNERORLATERBECOMETHEPREY"
+  },
+  "compute_seconds": 84
+ },
+ "notes": "vowelless: quadgram 0.0, MIX8m 0.0, judge 0.133; telegraphese: quadgram 0.0, MIX8m 0.1, judge 1.0; abbreviated: quadgram 0.0, MIX8m 0.133, judge 0.967",
+ "controls": [],
+ "error": null,
+ "worked_example": "Carter: THE REMAINS OF PASSAGE DEBRIS THAT ENCUMBERED THE LOWER PART OF THE DOORWAY\n\n  vowelless     THRMNSOFPSSGDBRSTHTENCMBRDTHLWRPRTOFTHDRWY\n  telegraphese  REMAINSPASSAGEDEBRISENCUMBEREDLOWERPARTDOORWAYX\n  abbreviated   THEREMAOFPASSDEBRISTHATENCUTHELOWERPARTOFTHEDOOR",
+ "seconds": 84.64257407188416,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 90.5,
+  "dollars": 0.04
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 90,
+  "cached": 260,
+  "input_tokens": 53998,
+  "output_tokens": 61910,
+  "errors": 0
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "id": 251,
+ "tag": "0251-f14-plaintext-style-as-the-mask-judge-bench",
+ "started": "2026-10-28T07:20:19+00:00",
+ "seconds": 136.3,
+ "status": "ran",
+ "phases": {
+  "unattributed": 70.4,
+  "run": 136.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1793172156.1705651,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "item": "F14.7",
+  "classes": {
+   "vowelless": 30,
+   "telegraphese": 30,
+   "abbreviated": 30
+  },
+  "negatives": {
+   "unigram": 100,
+   "markov": 100
+  },
+  "reference": [
+   "clean",
+   "xstops"
+  ],
+  "power_at_negatives_max": {
+   "quadgram": {
+    "T": -400,
+    "clean": 0.1,
+    "xstops": 0.033,
+    "vowelless": 0.0,
+    "telegraphese": 0.0,
+    "abbreviated": 0.0
+   },
+   "mix8m": {
+    "T": -204.47492468881808,
+    "clean": 0.333,
+    "xstops": 0.167,
+    "vowelless": 0.0,
+    "telegraphese": 0.1,
+    "abbreviated": 0.133
+   },
+   "judge": {
+    "T": 68,
+    "clean": 1.0,
+    "xstops": 1.0,
+    "vowelless": 0.133,
+    "telegraphese": 1.0,
+    "abbreviated": 0.967
+   }
+  },
+  "seen_by": {
+   "vowelless": [],
+   "telegraphese": [
+    "judge"
+   ],
+   "abbreviated": [
+    "judge"
+   ]
+  },
+  "rule": "a scorer sees a class when at least 90% of it is above the highest negative",
+  "judge_none": 0,
+  "examples": {
+   "vowelless": "FREXMPLTHRMYVRYLKLYBDEASTNORTHEASTPCSTHRARINMSMSWTHVGPRBBLYMDDLBERLINCLOCKBLSWHCHBYRFRNCTTHOBJCTS",
+   "telegraphese": "TENROYALTOMBSONEFOUNDEASTNORTHEASTNINTOATTEMPTSBADMADETWOOTHERSBERLINCLOCKSTOMBSTWOPILLAGEDTWOINT",
+   "abbreviated": "BYREMOANTIQUITIESTOMUEASTNORTHEASTASSUTHEIRSAFETYLEFTINSITUTHEYBERLINCLOCKNERORLATERBECOMETHEPREY"
+  },
+  "compute_seconds": 84
+ },
+ "notes": "vowelless: quadgram 0.0, MIX8m 0.0, judge 0.133; telegraphese: quadgram 0.0, MIX8m 0.1, judge 1.0; abbreviated: quadgram 0.0, MIX8m 0.133, judge 0.967",
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 90,
+  "cached": 260,
+  "input_tokens": 53998,
+  "output_tokens": 61910,
+  "errors": 0
+ },
+ "error": null,
+ "candidates": []
+}

@@ -31,6 +31,7 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 | 248 | F14.6a | **Three puzzle words summed; a puzzle keyword table with two words summed.** The known letters force the last word; it is never a word on K4 or its shuffles. Plants 16 of 16. Dead. |
 | 249 | F14.6b | **A puzzle-word alphabet, a move, then the table with a key word.** 2.47 billion settings per text decided exactly; no key word on K4 or its shuffles; plants 8 of 8. Dead. |
 | 250 | F14.6c | **A move, then a puzzle word plus a dictionary word.** 1.45 billion settings per text; the forced second word is never a word on K4 or its shuffles; plants 8 of 8. Dead. F14.6 closed. |
+| 251 | F14.7 | **Plaintext style as the mask, on the judge bench.** The judge reads telegraphese and abbreviated English as English (30 and 29 of 30 above every negative); vowel-dropped English it does not (4 of 30), nor does any letter model. Written into A6. |
 
 0241 went far better than I predicted (I expected the screen to lose the word from about length 15). Requiring the key to be a real word is worth more than the letter counts lose: among 2 million rotations the true one wins its own setting even with columns of five letters, and the full reading then stands 7-10 times above the shuffles. The general lesson for F13: a key drawn from a word list is decidable from the ciphertext alone where a free key of the same length is not (0235, 0236).
 

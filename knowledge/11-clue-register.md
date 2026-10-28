@@ -131,7 +131,7 @@ text including "?"; (c) an even length for a digraphic or 7x14 layout. Status: t
 **C19. "What's a period, because there's more than one sentence in there... special
 characters don't work."** (Scheidt, 2015). Readings: (a) K4 has sentence breaks marked
 by X or Q as in K2 and K3; (b) the breaks fall at structurally meaningful positions.
-Constraint on the scorer: tolerate X and Q. Status: constraint. 2026-10-27 (A6.2): X-stop plants through the sampled searches: F1.1 L23 4 of 4, F1.2 L13 3 of 4, 0125 4 of 4 by quadgrams (0226). X stops cost 0.10 bits per letter on every English model (F13.3, 0233: quadgrams 1.75 to 1.65, the best mix 1.95 to 1.85).
+Constraint on the scorer: tolerate X and Q. Status: constraint. 2026-10-27 (A6.2): X-stop plants through the sampled searches: F1.1 L23 4 of 4, F1.2 L13 3 of 4, 0125 4 of 4 by quadgrams (0226). X stops cost 0.10 bits per letter on every English model (F13.3, 0233: quadgrams 1.75 to 1.65, the best mix 1.95 to 1.85). Telegraphese (function words dropped, X stops) and abbreviated words: the judge sees them, the letter models do not; vowel-dropped text: no scorer sees it (F14.7, 0251).
 
 **C20. "Layer two."** (K2, confirmed 2006). Readings: (a) a second layer of encryption
 on K4; (b) fold the halves; (c) the second plate; (d) the tableau row two; (e) K5.

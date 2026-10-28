@@ -233,7 +233,7 @@ Update the leaf when an experiment works on it.
       - **F14.6a** Three puzzle words summed; a puzzle keyword table with a puzzle word plus a dictionary word: nothing fits K4 or its shuffles; plants 16/16 {closed · exact · 0248}
       - **F14.6b** Puzzle keyword alphabets around a move, key word of any length: 2.47 x 10^9 settings, exact; no key word on K4 or any shuffle; plants 8/8 {closed · exact · 0249}
       - **F14.6c** A move, then a puzzle word plus a dictionary word summed: 1.45 x 10^9 settings, exact; no word on K4 or any shuffle; plants 8/8 {closed · exact · 0250}
-    - **F14.7** Abbreviated or telegraphese English as the mask, through the judge bench {open}
+    - **F14.7** Plaintext style as the mask, on the judge bench: the judge sees telegraphese (1.00) and abbreviated (0.97) English, not vowel-dropped (0.13); MIX8m and quadgrams see none {closed · measured · 0251}
 
 ## Full record by family
 

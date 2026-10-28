@@ -178,6 +178,12 @@ is no longer there."
 trying to break it. It becomes more of a challenge now, when it was used as the mask it
 was current."
 
+## 2020, New York Times (January 29, by email)
+
+The fourth section, "just 97 characters," "could, in itself, present a decryption challenge." The last passage "uses
+what is known as a masking technique, a further level of obfuscation" (Schwartz's paraphrase around the quote;
+`sources/nyt-2020-northeast-clue.txt`).
+
 ## 2022, Northern Virginia Magazine (October 14)
 
 "We used voice as the medium." They met at secret locations, wrote very little down, left

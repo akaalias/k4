@@ -62,7 +62,7 @@ of disinformational way" (2005). Weakened by: any reading where the clue positio
 an intermediate text, or only approximately. Stands on it: every result in the record, and
 the exclusion of fractionating systems (VIC and straddling checkerboards, fractionated Morse,
 Nihilist), which are out only while A2 holds (issue #51). Cheapest check: list which closed
-results survive the 2019 reading ("BERLIN at 64" only).
+results survive the 2019 reading ("BERLIN at 64" only). Checked 2026-10-28 by reading (F14.4): the Times' 2010 wording, 'The characters that are the 64th through 69th in the final series on the sculpture read NYPVTT. When deciphered, they read BERLIN', ties carved places to message places; Bogart's account of the same 2019 lunch ('plain B taken... out pops a cipher N') agrees with the 2011 and 2013 dinners; Dunin's note of that lunch records a refusal to say more when asked about masking, not a denial. Firmness unchanged; no length-changing system comes back.
 
 **A3. A negative result is correct.**
 "Closed" means our code searched the space and found nothing. The primitives in

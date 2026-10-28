@@ -33,6 +33,10 @@ F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexi
 | 250 | F14.6c | **A move, then a puzzle word plus a dictionary word.** 1.45 billion settings per text; the forced second word is never a word on K4 or its shuffles; plants 8 of 8. Dead. F14.6 closed. |
 | 251 | F14.7 | **Plaintext style as the mask, on the judge bench.** The judge reads telegraphese and abbreviated English as English (30 and 29 of 30 above every negative); vowel-dropped English it does not (4 of 30), nor does any letter model. Written into A6. |
 
+### Open at close of day
+
+F14 is done apart from F14.2, blocked by cost with a decision asked (#102, about $50 of Modal time, or about $10 with 10 shuffles). Every other row still open (D1, D2, F1.1 Beaufort 23 and 26, F1.2 length 13) waits on Alexis's decision about D1's power margin (#100); they are marked blocked on it, which leaves the backlog empty under the 2026-10-27 stop rule (#92), so the loop stops here (data/loop-stop.json). The 0237-0239 table-then-move excess waits on #101. Most promising to unblock: #100 (one free alphabet at about 32 times cheaper reopens F1.1's cells and starts D2's re-costing of F1.4, F1.7, F6.1, F6.2, F5.2), then #102.
+
 0241 went far better than I predicted (I expected the screen to lose the word from about length 15). Requiring the key to be a real word is worth more than the letter counts lose: among 2 million rotations the true one wins its own setting even with columns of five letters, and the full reading then stands 7-10 times above the shuffles. The general lesson for F13: a key drawn from a word list is decidable from the ciphertext alone where a free key of the same length is not (0235, 0236).
 
 Caught in 0243's dry run: 0210's source 'right panel K1-K4' contains K4's own carved letters, so as a running key it reads K4 as all A under Beaufort, and would have flagged K4 against shuffles that do not contain themselves. Left out. Any self-referential source needs that check when the known letters no longer filter.

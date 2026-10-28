@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "D2: yesterday's cheaper judge (one search instead of ten) checked on two more kinds of cipher, key-skipping rules and a shuffle before or after the table."
+ },
+ {
+  "anchor": "the check",
+  "text": "192 planted messages, 6 scrambled copies each, 1344 searches; the same search as 0140, generalised and checked to give 0140's own scores."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Found 37, 37, 31 and 32 of 48 (chance 7). Deciding every setting K4 fits costs 41 core-hours for F1.4, 248 for F6.1 at lengths 6-10, 7,649 for F6.1 at 11-26."
+ }
+]

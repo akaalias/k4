@@ -46,7 +46,7 @@ Update the leaf when an experiment works on it.
       - **F1.3** An unknown English text, on any dictionary-word alphabet; Sanborn-style running keys found 12 of 12 by quadgrams and the judge (A6.2, 0226) {closed · sampled · 0125, 0226}
     - A key schedule worked by hand
       - The Berlin clock, the Carter dates {closed · exact · 0079, 0038}
-      - **F1.4** Other hand schedules (C20(c)-(e)) {closed · exact · 0126, 0127, 0128}
+      - **F1.4** Other hand schedules (C20(c)-(e)) {open · exact on the tables; one-alphabet residue reopened by D2 · 0126, 0127, 0128, 0252}
         - The tableau rows as repeating keys ("layer two", C20(d)): 6 of 24 known letters, coppers 5-8 {closed · exact · 0126, 0128}
         - A key word stepped by skip, stutter, back and forth, triangle or square numbers, or restarted at each carved line, on standard or KRYPTOS tables: no setting fits {closed · exact · 0127, 0128}
         - The same rules on free alphabets: consistent at the coppers' rate; a decider exists (F1.5) but about 1,900 settings at 20-30 min each: blocked by cost {blocked · exact · 0127, 0128}
@@ -101,7 +101,7 @@ Update the leaf when an experiment works on it.
         - Four column readings (turn either way, rows-then-columns-down, its reverse), every pair at widths 2-96 and every triple at 2-24: nothing live below key length 20 {closed · exact · 0134}
         - **F6.3b** Mixed triples at widths 25-96: 105.5 million routes, nothing live below 18, at the coppers' rate {closed · exact · 0037, 0158}
     - Alphabets in unknown orders after or before a move
-      - **F6.1** One unknown alphabet (Quagmire III) {blocked · exact · 0097, 0129, 0130}
+      - **F6.1** One unknown alphabet (Quagmire III) {open at lengths 6-10 (D2); 11-26 blocked by money · exact · 0097, 0129, 0130, 0252}
         - Every type-1 move, either order, added or Beaufort form, key lengths 1-5: no alphabet fits {closed · exact · 0129, 0130}
         - Lengths 6-26: settings fit at the scrambled-copper rate; only an English climb could judge them (0120) {blocked · exact · 0129, 0130}
       - **F6.2** Two unknown alphabets (Quagmire IV) {blocked · exact · 0097, 0131, 0132, 0133}
@@ -190,7 +190,7 @@ Update the leaf when an experiment works on it.
   - F5 Gromark and number feedback
     - Two- and three-term rules, bases 2-26 (three-term free alphabet in base 10 only) {closed · exact · 0013, 0028, 0046, 0054, 0069, 0076, 0107}
     - **F5.1** Multiplicative feedback; the raised YAR as primer {closed · exact · 0196}
-    - **F5.2** Three-term Gromark on a free alphabet in other bases {closed · exact · 0195}
+    - **F5.2** Three-term Gromark on a free alphabet in other bases {closed · exact · 0195; base 26 lag 6 reopened (D2: cost was the old budget)}
     - **F5.3** Rules in bases 16-26 on 0054's K1-K3-word alphabet pairs (0054 stopped at 15) {closed · exact · 0206}
   - F9 Substitution, then a move
     - One-to-one substitution, then any of the 1.86M built routes {closed · exact · 0019, 0106}

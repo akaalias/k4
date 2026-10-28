@@ -51,6 +51,14 @@ Mistake: I started 0245 with a test failing (0244's crib map not yet drawn); the
 
 F13.4f's second half (two dictionary key-word alphabets) and F13.4g (Chaocipher) closed as blocked at the desk. For Chaocipher a short probe showed why: once the left wheel is guessed the rest is a simple substitution, but an annealer over the left wheel finds wrong wheels whose index stream looks more English than the true one's, on every plant.
 
+### The cheaper decider, D2 (ticket #77), after Alexis's decision on #100
+
+| # | Item | One line |
+|---|---|---|
+| 252 | D2 | **The one-run decider on key schedules and moves.** 0140's climb generalised to any slot map and reading order (same scores as 0140 on the same seeds); 192 plants on settings K4 itself fits: found 37, 37, 31, 32 of 48 (chance 7). F1.4's one-alphabet residue is 2,093 settings, about 41 core-hours; F6.1 at lengths 6-10 7,443, about 248 (about $12); F6.1 at 11-26 about $376, which waits for Alexis. F1.4 and F6.1 6-10 reopened. |
+
+At short lengths with many checks, 0140's random depth-first start sometimes fails where the exact decider finds an alphabet; the climb then returns -99 and any plant would beat such a copy. Found in a desk test before the run; the climb now falls back to the decider's witness after 200 failed starts (0 climbs without a start in 0252). F5.2's base 26 lag 6 turned out to be blocked by the 30-minute budget of its day, not by a decider: about two of 0195's runs. The 0130 record's zero fits at length 9 (order B) are real; the recount agrees.
+
 ## 2026-10-27
 
 Stage 2, step 4 (A6, ticket #84). Step 3 closed on 2026-10-25; a draft of A6.1 had been left in `attack.py` unrun.

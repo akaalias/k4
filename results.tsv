@@ -245,3 +245,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0244	0244-f14-two-dictionary-keyword-alphabets-and-a-key-word	14-scheidt-mask-keyed-by-words	0109-keyword-tables-from-the-whole-dictionary	reverted	5	0	24	7.761		94	implement=140 test=114 run=94 record=29
 0245	0245-f14-replicate-k4-fit-count-at-key-length-16	14-scheidt-mask-keyed-by-words	0244-f14-two-dictionary-keyword-alphabets-and-a-key-word	reverted	5	0	24	7.761		197	unattributed=58 run=196 record=0
 0246	0246-f14-duress-reading-running-english-key-judged-by-mix8m-and-the-judge	14-scheidt-mask-keyed-by-words	0125-forced-key-as-running-english-on-dictionary-alphabets	reverted	0	0	0			251	unattributed=384 run=251 record=0
+0247	0247-f14-two-dictionary-alphabets-with-a-carved-letter-lost	14-scheidt-mask-keyed-by-words	0244-f14-two-dictionary-keyword-alphabets-and-a-key-word	reverted	0	0	0			535	unattributed=312 run=535 record=0

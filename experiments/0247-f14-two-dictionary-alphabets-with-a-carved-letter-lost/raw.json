@@ -1,0 +1,292 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F14.5 (F14.1's half)",
+  "variants": [
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74
+  ],
+  "variant_meaning": "a carved letter lost at place j; 35 stands for any place 35-64",
+  "alphabets": 208064,
+  "key_lengths": [
+   1,
+   26
+  ],
+  "copies_per_variant": 20,
+  "texts": 506,
+  "per_variant": {
+   "23": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 23,
+    "cells_k4_above_every_copy": [
+     "25/added"
+    ],
+    "plant_found": true,
+    "plant_L": 21,
+    "plant_word": "ANTHROPOCLIMATOLOGIST"
+   },
+   "24": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 16,
+    "cells_k4_above_every_copy": [
+     "16/added"
+    ],
+    "plant_found": true,
+    "plant_L": 21,
+    "plant_word": "PENTAMETHYLENEDIAMINE"
+   },
+   "25": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 16,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 16,
+    "plant_word": "IMPERFECTIBILITY"
+   },
+   "26": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 23,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 21,
+    "plant_word": "INTERTRANSFORMABILITY"
+   },
+   "27": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 19,
+    "cells_k4_above_every_copy": [
+     "19/added"
+    ],
+    "plant_found": true,
+    "plant_L": 16,
+    "plant_word": "PHANTASMOGENESIS"
+   },
+   "28": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 19,
+    "cells_k4_above_every_copy": [
+     "19/added"
+    ],
+    "plant_found": true,
+    "plant_L": 18,
+    "plant_word": "PHYSICOTHEOLOGICAL"
+   },
+   "29": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 18,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 17,
+    "plant_word": "TRANSCENDENTALITY"
+   },
+   "30": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 18,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 17,
+    "plant_word": "CRYSTALLOCHEMICAL"
+   },
+   "31": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 18,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 24,
+    "plant_word": "THYROPARATHYROIDECTOMIZE"
+   },
+   "32": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 18,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 17,
+    "plant_word": "TEMPOROCEREBELLAR"
+   },
+   "33": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 18,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 17,
+    "plant_word": "MICROLEPIDOPTERAN"
+   },
+   "34": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 18,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 16,
+    "plant_word": "UNCONSPIRINGNESS"
+   },
+   "35": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 18,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 17,
+    "plant_word": "UNCONVERSABLENESS"
+   },
+   "65": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 16,
+    "cells_k4_above_every_copy": [
+     "16/added",
+     "24/added"
+    ],
+    "plant_found": true,
+    "plant_L": 19,
+    "plant_word": "AUTOCHOLECYSTECTOMY"
+   },
+   "66": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 16,
+    "cells_k4_above_every_copy": [
+     "16/added"
+    ],
+    "plant_found": true,
+    "plant_L": 18,
+    "plant_word": "ACTINOELECTRICALLY"
+   },
+   "67": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 24,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 23,
+    "plant_word": "PSEUDOLAMELLIBRANCHIATE"
+   },
+   "68": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 19,
+    "cells_k4_above_every_copy": [
+     "19/added",
+     "19/beaufort",
+     "24/added"
+    ],
+    "plant_found": true,
+    "plant_L": 22,
+    "plant_word": "STEREOPHOTOMICROGRAPHY"
+   },
+   "69": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 19,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 21,
+    "plant_word": "STEREOPHOTOMICROGRAPH"
+   },
+   "70": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 19,
+    "cells_k4_above_every_copy": [
+     "19/beaufort"
+    ],
+    "plant_found": true,
+    "plant_L": 19,
+    "plant_word": "PSEUDOCHROMESTHESIA"
+   },
+   "71": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 19,
+    "cells_k4_above_every_copy": [
+     "19/added"
+    ],
+    "plant_found": true,
+    "plant_L": 18,
+    "plant_word": "DISCOMMENDABLENESS"
+   },
+   "72": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 19,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 18,
+    "plant_word": "COUNTERTRANSLATION"
+   },
+   "73": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 24,
+    "cells_k4_above_every_copy": [],
+    "plant_found": true,
+    "plant_L": 19,
+    "plant_word": "ANTHROPOSOCIOLOGIST"
+   },
+   "74": {
+    "k4_key_word_matches": 0,
+    "copies_key_word_matches_max": 0,
+    "k4_first_fitting_length": 24,
+    "cells_k4_above_every_copy": [
+     "24/added"
+    ],
+    "plant_found": true,
+    "plant_L": 23,
+    "plant_word": "HEMATOSPECTROPHOTOMETER"
+   }
+  },
+  "k4_key_word_matches_total": 0,
+  "plants_found": 23,
+  "plants_total": 23,
+  "cells_k4_above_every_copy": 13,
+  "cells": 1196,
+  "subsumed_by_0244": "a '?' counted before OBKR, or a letter lost before 22 or after 74: every known place shifts alike, which a free key absorbs",
+  "exhaustive": true,
+  "compute_seconds": 472
+ },
+ "notes": "23 lost-letter variants x 4.3e10 alphabet pairs x lengths 1-26: K4 key-word matches 0; cells with K4 above all 20 copies 13 of 1196; plants found 23/23",
+ "controls": [],
+ "error": null,
+ "worked_example": "Key length 19: known places in the same key slot, and what they ask of the two alphabets (added form)\n\nplaces   known  carved   the gap on the cipher alphabet must equal the gap on the plain alphabet\n 26,64    NB     QN       gap(Q to N) on the cipher alphabet = gap(N to B) on the plain alphabet\n 27,65    OE     QY       gap(Q to Y) on the cipher alphabet = gap(O to E) on the plain alphabet\n 28,66    RR     PP       gap(P to P) on the cipher alphabet = gap(R to R) on the plain alphabet\n 29,67    TL     RV       gap(R to V) on the cipher alphabet = gap(T to L) on the plain alphabet\n 30,68    HI     NT       gap(N to T) on the cipher alphabet = gap(H to I) on the plain alphabet\n 31,69    EN     GT       gap(G to T) on the cipher alphabet = gap(E to N) on the plain alphabet\n 32,70    AC     KM       gap(K to M) on the cipher alphabet = gap(A to C) on the plain alphabet\n 33,71    SL     SZ       gap(S to Z) on the cipher alphabet = gap(S to L) on the plain alphabet\n 34,72    TO     SF       gap(S to F) on the cipher alphabet = gap(T to O) on the plain alphabet\n\nEvery cipher alphabet is filed by its gaps; every plain alphabet looks up the gaps it needs.",
+ "seconds": 471.70602464675903,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 475.6,
+  "dollars": 0.208
+ }
+}

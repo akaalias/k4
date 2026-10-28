@@ -1,0 +1,62 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F14.6a (forms 8 and 11)",
+  "puzzle_words": 171,
+  "puzzle_word_starts": 1085,
+  "puzzle_alphabets": 170,
+  "form8_settings_per_text": 14139720,
+  "form8_third_word_lengths": [
+   2,
+   30
+  ],
+  "form11_setups": 5100,
+  "form11_dictionary_word_lengths": [
+   3,
+   24
+  ],
+  "summary": {
+   "form8": {
+    "k4_hits": 0,
+    "copies_hits_max": 0,
+    "copies_hits_median": 0.0,
+    "copies_with_any": 0,
+    "p": 1.0
+   },
+   "form11": {
+    "k4_hits": 0,
+    "copies_hits_max": 0,
+    "copies_hits_median": 0.0,
+    "copies_with_any": 0,
+    "p": 1.0
+   }
+  },
+  "flag_alpha": 0.025,
+  "plants_found": {
+   "form8": 8,
+   "form11": 8
+  },
+  "plants_per_form": 8,
+  "k4_hits": {
+   "form8": [],
+   "form11": []
+  },
+  "texts": 67,
+  "copies": 50,
+  "exhaustive": true,
+  "compute_seconds": 89
+ },
+ "notes": "form 8 (three puzzle words): K4 0 hits, shuffles max 0; form 11 (puzzle table, puzzle + dictionary word): K4 0, shuffles max 0; plants {'form8': 8, 'form11': 8}",
+ "controls": [],
+ "error": null,
+ "worked_example": "Three words summed on the KRYPTOS table (Vigenere): KRYPTOS from K, ABSCISSA from A; the third word forced\n\nplace  known  carved  key value  KRYPTOS  ABSCISSA  third word's letter\n   22      E       F          1        K         S                   U\n   23      A       L         10        R         S                   P\n   24      S       R         21        Y         A                   F\n   25      T       V         18        P         A                   B\n   26      N       Q          1        T         B                   I\n   64      B       N         11        K         A                   T\n   65      E       Y         17        R         A                   C\n\nPlaces a word-length apart must ask the same letter; the forced word is looked up from every start.",
+ "seconds": 91.09572982788086,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 95.6,
+  "dollars": 0.042
+ }
+}

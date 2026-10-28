@@ -1,0 +1,12 @@
+Three words summed on the KRYPTOS table (Vigenere): KRYPTOS from K, ABSCISSA from A; the third word forced
+
+place  known  carved  key value  KRYPTOS  ABSCISSA  third word's letter
+   22      E       F          1        K         S                   U
+   23      A       L         10        R         S                   P
+   24      S       R         21        Y         A                   F
+   25      T       V         18        P         A                   B
+   26      N       Q          1        T         B                   I
+   64      B       N         11        K         A                   T
+   65      E       Y         17        R         A                   C
+
+Places a word-length apart must ask the same letter; the forced word is looked up from every start.

@@ -1,0 +1,9 @@
+D2 measures the one-run decider on settings other than a plain repeating key.
+
+  setting      skip one key letter every 7 letters, 11 key letters
+  slot map     place 1 2 3 4 5 6 7 8 9 ...
+  key letter         1 2 3 4 5 6 8 9 10 ... (letter 7 skipped)
+
+  a hidden message under that slot map and its six scrambled copies get one tempering search each;
+  found when the hidden message's best English score is above all six copies'.
+  The time per search times the settings K4 fits gives the cost of deciding the whole cell.

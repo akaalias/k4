@@ -6,9 +6,20 @@ Read program.md first and follow it exactly, including its reading list.
 
 Work the open items in order-of-work.md, top down, in the order the page lists its tables: the Stage 2 tables
 first, then the cheaper decider (#77), F13, F14, then any family table with open rows. Items added to order-of-work.md since your last session
-belong to the same queue; take them in their place. If an item can only be tested weakly, say so, mark it
-blocked with the reason, and move on rather than running a weak test. When you move to a new family, add a
-pivot page (pivots/PN.md).
+belong to the same queue; take them in their place. When you move to a new family, add a pivot page
+(pivots/PN.md).
+
+**Run more experiments, not fewer** (Alexis, 2026-10-28, #100). Missing a lead is the worse mistake; a spent run
+is not. So:
+- If an item can only be tested weakly, run it anyway at its measured power and close it as "sampled at power p".
+  Block an item only when a run would tell nothing at all, or it cannot be tested with the known letters.
+- A close at low power is not the end: add a rerun row (more copies, more plants, a second decider) when one is
+  in reach.
+- A result that beats its copies, even at the edge, gets a row to chase it rather than a note.
+- When a choice is waiting on Alexis and one option runs the experiment without spending money, take that
+  option, say so on the issue, and go on; he can overrule it. Only money (one run estimated above $20 of Modal
+  time at tools/remote_run.py's rate, or a purchase), accounts and irreversible steps wait for him. A row blocked only on such a free decision
+  counts as open.
 
 ## When to stop (decided by Alexis 2026-10-27, issue #92)
 
@@ -17,7 +28,9 @@ There are no milestones. Keep working until the challenge may be solved. Stop on
 1. **A reading passes every gate** (run_experiment.py records it as kept and champion.json names it). Replicate
    it first if program.md asks for that, then stop and report it so Alexis can check it against the four success
    criteria. Write data/loop-stop.json: {"reason": "possible solution", "experiment": "<tag>", "date": "<today>"}.
-2. **No item in order-of-work.md is open** (every row closed or blocked). Do not invent items to keep going. Write
+2. **No item in order-of-work.md is open** (every row closed or blocked, and every blocked row waits on money or
+   on a reason no run can answer). Before stopping, look again for reruns at stated power and for results worth
+   chasing, as above; do not invent items unrelated to the record. Write
    data/loop-stop.json: {"reason": "backlog empty", "date": "<today>"} and, in your report, list the most
    promising blocked items and what would unblock them.
 

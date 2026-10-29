@@ -1,0 +1,8 @@
+Replication of 0253: is the excess K4's or the test's?
+
+  target      its fitting settings   400 drawn   above all 12 copies
+  K4          2,093                   400         ?   (0253: 14.3%)
+  stand-in 1  its own                 400         ?
+  ... four stand-ins (shuffles of K4), the same procedure
+
+  a fair test gives 1 in 13 (7.7%) for every target.

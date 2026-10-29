@@ -14,10 +14,13 @@ D2's re-costed cells (ticket #77). The morning's 0253 attempt was lost to a DNS 
 | # | Item | One line |
 |---|---|---|
 | 253 | F1.4 | **Every hand key schedule K4 fits on one free alphabet, decided by the one-run decider.** 2,093 settings, 21,878 climbs, 4 h on Modal ($6.33). K4 above all 12 of its copies in 299 settings where chance gives 161 (p 1e-24), above all 100 in 66 where chance gives 21; readings junk; plants 17 of 24. Queue stopped for replication. |
+| 254 | F1.4 | **Replication with stand-ins.** K4 13.3% of 400 schedules above all 12 copies (replicated); four shuffles of K4 through the identical procedure: 10.2%, 7.2%, 1.5%, 17.5%. The rate belongs to each text and is shared by all its schedules, so 1 in 13 per schedule was the wrong null and 0253's p meaningless. K4 2nd of 5; pre-registered verdict 'unclear'. Modal preempted the container near the end; the laptop finished the last units from the checkpoint. |
 
 The excess is spread over the whole cell (K4 beat its first copy in 61% of settings, not 50%), and no reading is English, which points at the test rather than at a message: the settings were chosen because K4 fits them, and a shuffle that also fits need not have the same freedom. A desk check of the letters the witness pins did not show it (K4 21, copies 20.7). 0254 runs the procedure on four shuffles of K4 as stand-ins, each on its own fitting settings, beside K4 with fresh copies: if the stand-ins show the excess too, it belongs to the test.
 
 Desk work while 0253 ran: the F1.7 draft's climb was broken (it never reached a state with all 24 known letters at short plaintext-autokey lags and left the true alphabet when started on it); fixed with the full chain equations (0149 used only pairs L apart) and 0139's repair moves; on ciphertext autokey no variant reached a plant's own score, so its power there will be low and is measured in the run. Drafts written and smoke-tested: D1b, F5.2 (27 core-hours), F13.4c at 6-19 for D3, F13.4h, F1.12. D3's cells listed: six were already run on K4 against its own copies in their closing experiments and are closed as sampled at their measured power, three tell nothing, one (F13.4c 6-19) is drafted.
+
+What 0254 taught: whenever a statistic is counted over many settings of one text, the settings are not independent draws, because they all read the same 24 known places of the same text; the null has to be a distribution over texts put through the whole procedure (stand-ins), not a binomial over settings. 0255 ranks K4 among 40 stand-ins.
 
 Mistake: 0254 was started with one failing test (0253's figures not yet drawn); the exit code was hidden by a pipe through `tail`. The figures were drawn while it ran and the suite passes.
 

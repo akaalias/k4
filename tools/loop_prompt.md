@@ -17,8 +17,8 @@ is not. So:
   in reach.
 - A result that beats its copies, even at the edge, gets a row to chase it rather than a note.
 - When a choice is waiting on Alexis and one option runs the experiment without spending money, take that
-  option, say so on the issue, and go on; he can overrule it. Only money (one run estimated above $20 of Modal
-  time at tools/remote_run.py's rate, or a purchase), accounts and irreversible steps wait for him. A row blocked only on such a free decision
+  option, say so on the issue, and go on; he can overrule it. Only purchases, accounts and irreversible steps
+  wait for him; Modal spending is settled below. A row blocked only on such a free decision
   counts as open.
 
 ## When to stop (decided by Alexis 2026-10-27, issue #92)
@@ -53,8 +53,17 @@ Experiments have no time limit (issue #96): start each with tools/start_experime
 calls to tools/wait_experiment.sh, never as a background task of your session. At the start of a session, run
 tools/wait_experiment.sh first in case a run is still going.
 
-Where the search computes (Modal or the laptop) is Alexis's setting in data/compute.json (issue #99); never change
-it. run_experiment.py handles Modal and falls back to the laptop by itself; a raw.json's "compute" says where it ran.
+Where the search computes (Modal or the laptop) is Alexis's setting in data/compute.json (issue #99); change it
+only as the Modal credit rule below says. run_experiment.py handles Modal and falls back to the laptop by itself;
+a raw.json's "compute" says where it ran.
+
+**Modal credit** (Alexis, 2026-10-29, #102): $25.59 was left at 10:37 that day, of Modal's $42.50 limit, and no more
+can be bought. Spending all of it is approved. Credit left = $25.59 minus the `compute.dollars` of every run that
+ended after 2026-10-29 10:37, less a 10% margin (Modal bills a little more than the harness counts). Before each
+run, state its estimated Modal cost in `bounds`. If the estimate is above the credit left, run `tools/compute.sh
+local 42.5 32` first: when Modal hits its limit mid-run, the run is lost and starts again on the laptop, wasting the
+credit. Switch back with `tools/compute.sh modal 42.5 32` for a later run that fits. When the credit is gone, stay
+local; no run waits for money.
 
 Never edit or commit dashboard.py, STYLE.md or the transcripts/ folder; another session works on them. Never edit
 data/confirmed.json: only Alexis, with Claude, confirms a result for the public site (issue #95).

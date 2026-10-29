@@ -59,7 +59,7 @@ Update the leaf when an experiment works on it.
       - Step 1, the bound: the quadgram scorer extracts 1.78 bits per letter (130 bits in 73 letters); one free alphabet at every length, two to 16 (14 with a move), Hill with any key decidable in principle; two alphabets from 19 (15 with a move) and autokey 53-84 only with a better model; autokey 85-96 by none {closed · exact · 0136}
     - **F1.6** One carved letter wrong, missing or extra, through the exact unknown-alphabet tests {closed · exact · 0147, 0148, 0150, 0151, 0152}
       - One and two free alphabets, periodic, 604 variants: at the coppers' rate {closed · exact · 0147}
-      - K1/K2's system revived at length 19 by a slip at 33: decider power 3 of 5, too weak {blocked · sampled · 0148}
+      - K1/K2's system revived at length 19 by a slip at 33: decider power 3 of 5, K4 7th of 13: sampled at power 3/5 (D3) {closed · sampled · 0148}
       - Gromark (all free-alphabet rules and bases), 605 variants: no fit {closed · exact · 0150}
       - Trifid and Hill, every single-letter error anywhere (5,044): no cube; Hill at the coppers' rate {closed · exact · 0151, 0152}
     - **F1.7** Autokey on one unknown alphabet, with no move, then after each move {closed · exact · 0149}
@@ -205,16 +205,16 @@ Update the leaf when an experiment works on it.
     - **F13.3** A stronger English judge: bits per letter it extracts on held-out English: quadgrams 1.75, n-grams without Carter mixed with them 1.95 (189 bits in 97), with Carter 2.38; the judge passes 4-letter soup, not 6-letter soup or word salad {closed · measured · 0233}
     - **F13.4** Ciphertext-only solves in the families F13.1 leaves decidable {closed where decided, blocked elsewhere · sampled · 0234-0241}
       - **F13.4a** Periodic key on the sculpture's 8 table classes, lengths 1-36: K4 inside 200 climbed shuffles (p 0.62); plants found to length 26 (6/8), not at 30-36 {closed · sampled · 0234}
-        - Lengths 27-36: plants 5/8 at 30, 2/8 at 36: too short to decide from the ciphertext alone {blocked · sampled · 0234}
+        - Lengths 27-36: plants 5/8 at 30, 2/8 at 36; K4 never above all 200 shuffles: sampled at that power (D3) {closed · sampled · 0234}
       - **F13.4b** Periodic key on 2.08 million dictionary keyword tables, lengths 1-26: K4 inside 100 climbed shuffles (p 0.66); plants found at 5 only (8/8; 4/8 at 10) {closed · sampled · 0235}
-        - Lengths 6-26: the per-column frequency screen loses the true table {blocked · sampled · 0235}
+        - Lengths 6-26: the per-column frequency screen loses the true table (plants 0-4/8); K4 never above all 100 shuffles: sampled at that power (D3) {closed · sampled · 0235}
       - **F13.4c** One free alphabet with a periodic key, lengths 1-19, both forms: plants found to 5 (7/8); K4 inside 50 climbed shuffles there (p 0.37) {closed · sampled · 0236}
         - Lengths 6-19: alphabet and key not found together without known letters (plants 2-5/8) {blocked · sampled · 0236}
       - **F13.4d** 27,852 moves before or after the sculpture's tables, lengths 1-20: plants found to 12 {closed · sampled · 0237}
         - K4 above its shuffles at table-then-move, key length 2 (p 0.0099, replicated p 0.023 against 300 fresh); reading junk, 3 of 24 known letters; the judge at the edge of chance (14 of 300 at or above) {noted · sampled · 0237, 0238, 0239}
-        - Lengths 13-20 by power; F6.1 (a free alphabet after a move) by 0236's power {blocked · sampled · 0237, 0236}
+        - Lengths 13-20 sampled at power 1-6/8, K4 never above all shuffles (D3); F6.1 (a free alphabet after a move) blocked by 0236's power {closed · sampled · 0237, 0238, 0236}
       - **F13.4e** Hill 2x2 and 3x3, four numberings, every alignment, ciphertext only: 2x2 plants read 8/8, K4 inside 100 shuffles (p 0.73) {closed · sampled · 0240}
-        - Hill 3x3: plants found 4/8 {blocked · sampled · 0240}
+        - Hill 3x3: plants found 4/8; K4 inside 100 shuffles: sampled at that power (D3) {closed · sampled · 0240}
         - Gromark (cost: 10^5 primers x 364 rules x a free-alphabet climb, about 8 h per text); trifid (0039's annealer fails even with the known letters); M-94 (25! disc orders, beyond 0236's ciphertext-only frontier) {blocked}
       - **F13.4f** A puzzle word plus a dictionary word added (0115's space), ciphertext only: 26,040 puzzle-word settings x 2,241,060 dictionary rotations per text, exhaustive per-column screen; plants read exactly 32/32 at 5, 10, 15, 20; K4 inside 100 shuffles (p 0.42) {closed · sampled · 0241}
         - Two key-word alphabets plus a key word (F14.1's space): about 4.3 x 10^10 alphabet pairs per text, beyond any screen, and 0235's screen already lost one dictionary table among 2 million beyond length 5 {blocked}

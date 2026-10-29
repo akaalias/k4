@@ -53,6 +53,11 @@ Experiments have no time limit (issue #96): start each with tools/start_experime
 calls to tools/wait_experiment.sh, never as a background task of your session. At the start of a session, run
 tools/wait_experiment.sh first in case a run is still going.
 
+To stop a run early, use only tools/stop_experiment.sh (issue #104): it stops the search, its workers and any
+Modal app together. Never `kill` a pid by hand; that left workers running on 2026-10-29. Finished units are kept
+(program.md step 4, issue #105): start the same attack.py unchanged and it resumes under the same experiment
+number. To resume a stopped run, do not edit attack.py first.
+
 Where the search computes (Modal or the laptop) is Alexis's setting in data/compute.json (issue #99); change it
 only as the Modal credit rule below says. run_experiment.py handles Modal and falls back to the laptop by itself;
 a raw.json's "compute" says where it ran.

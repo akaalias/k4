@@ -12,6 +12,7 @@ Exit codes: 0 the run finished on Modal (the attack itself may still have failed
 """
 import json
 import os
+import signal
 import subprocess
 import sys
 import threading
@@ -60,19 +61,31 @@ def search(attack_rel: str, budget: str, workers: int):
     before = {p: p.stat().st_mtime for p in Path(REMOTE).rglob("*") if p.is_file()}
     out = Path("/tmp/raw.json")
     progress = Path(REMOTE) / "data" / "experiment-progress.json"
+    sys.path.insert(0, REMOTE)
+    from kryptos import checkpoint                 # issue #105: finished units go home as they are saved
+    ckpt = checkpoint.path_for(f"{REMOTE}/{attack_rel}", root=REMOTE)
+    sent = ckpt.stat().st_size if ckpt.exists() else 0
     proc = subprocess.Popen([sys.executable, f"{REMOTE}/_runner.py", f"{REMOTE}/{attack_rel}", str(out), budget],
                             cwd=REMOTE, env={**os.environ, "PYTHONPATH": REMOTE, "K4_WORKERS": str(workers)})
     last, beat = None, time.time()
-    while proc.poll() is None:
-        time.sleep(5)
+    while True:
+        running = proc.poll() is None
+        if running:
+            time.sleep(5)
+        msg = {}
         if progress.exists() and progress.read_text() != last:
             last = progress.read_text()
-            yield {"progress": last}
-        elif time.time() - beat > 60:
-            yield {"alive": True}           # the heartbeat the laptop's watchdog waits for
-        else:
-            continue
-        beat = time.time()
+            msg["progress"] = last
+        lines, sent = checkpoint.new_lines(ckpt, sent)
+        if lines:
+            msg["checkpoint"] = lines
+        if not msg and time.time() - beat > 60:
+            msg["alive"] = True              # the heartbeat the laptop's watchdog waits for
+        if msg:
+            yield msg
+            beat = time.time()
+        if not running:
+            break
     changed = {}
     for p in Path(REMOTE).rglob("*"):
         if (p.is_file() and "__pycache__" not in p.parts and p != progress
@@ -87,6 +100,14 @@ def main(attack, raw_out, budget):
     progress = Path(TEST_DIR) / f"progress-{os.getpid()}.json" if TEST_DIR else ROOT / "data" / "experiment-progress.json"
     final = None
     heard = [time.time()]
+    sys.path.insert(0, str(ROOT))
+    from kryptos import checkpoint
+    ckpt = checkpoint.path_for(attack, root=None if TEST_DIR is None else TEST_DIR)
+
+    def stop(signum, frame):
+        """Stopped (tools/stop_experiment.sh, issue #104): leaving app.run() stops the Modal app too."""
+        raise KeyboardInterrupt
+    signal.signal(signal.SIGTERM, stop)
 
     def watchdog():
         """Modal can fail without raising (a container that never starts): hand the run back to the laptop."""
@@ -105,7 +126,11 @@ def main(attack, raw_out, budget):
                 heard[0] = time.time()
                 if "progress" in msg:
                     progress.write_text(msg["progress"])
-                elif "raw" in msg:
+                if "checkpoint" in msg:
+                    ckpt.parent.mkdir(parents=True, exist_ok=True)
+                    with open(ckpt, "ab") as f:
+                        f.write(msg["checkpoint"])
+                if "raw" in msg:
                     final = msg
     except Exception as e:  # noqa: BLE001  (billing limit, network, lost container)
         print(f"remote_run: Modal could not run the experiment: {e!r}")

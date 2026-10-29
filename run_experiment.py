@@ -10,13 +10,14 @@ import argparse
 import json
 import os
 import shutil
+import signal
 import subprocess
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from kryptos import facts
+from kryptos import facts, checkpoint
 from kryptos.gates import run_gates, crib_hits, undetermined, readings_before, resubmitted
 from kryptos.scorer import fitness, english_score, free_text, loss, key_bits_of
 import phase as phaseclock
@@ -61,6 +62,58 @@ def next_id():
     return max(ids, default=0) + 1
 
 
+def unfinished_folder(attack_bytes):
+    """A folder a stopped run left behind (no result.json) for this same attack.py: the rerun takes its number."""
+    for p in sorted(EXPERIMENTS.iterdir(), reverse=True):
+        if p.is_dir() and p.name[:4].isdigit() and not (p / "result.json").exists():
+            a = p / "attack.py"
+            if a.exists() and a.read_bytes() == attack_bytes:
+                return p
+    return None
+
+
+_child = [None]
+_stopping = [False]
+
+
+def _stop(signum, frame):
+    """Stopped from outside (tools/stop_experiment.sh, issue #104): stop the whole search, its workers and any
+    Modal app with it, then exit. The checkpoint file keeps what was finished; the folder stays for the rerun."""
+    if _stopping[0]:                  # the signal can arrive twice (uv passes it on too)
+        return
+    _stopping[0] = True
+    proc = _child[0]
+    if proc is not None:
+        # Not proc.wait(): the interrupted main code may be inside it, holding its lock.
+        try:
+            os.killpg(proc.pid, signal.SIGTERM)   # remote_run stops its Modal app on SIGTERM
+            deadline = time.time() + 60
+            while time.time() < deadline and os.waitpid(proc.pid, os.WNOHANG)[0] != proc.pid:
+                time.sleep(0.2)
+        except (ProcessLookupError, ChildProcessError):
+            pass
+        try:
+            os.killpg(proc.pid, signal.SIGKILL)   # anything left in the group
+        except (ProcessLookupError, PermissionError):
+            pass
+    print(f"run_experiment: stopped (signal {signum}); finished units are kept in data/checkpoints/", flush=True)
+    sys.exit(128 + signum)
+
+
+def run_child(cmd, timeout=None, env=None):
+    """subprocess.run in its own process group, so a stop or a timeout ends every process the search started."""
+    proc = subprocess.Popen(cmd, cwd=ROOT, env=env, start_new_session=True)
+    _child[0] = proc
+    try:
+        return proc.wait(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        os.killpg(proc.pid, signal.SIGKILL)
+        proc.wait()
+        raise
+    finally:
+        _child[0] = None
+
+
 def load_champion():
     return json.loads(CHAMPION.read_text()) if CHAMPION.exists() else None
 
@@ -77,10 +130,20 @@ def main():
         rerender(); return
 
     meta = load_experiment_meta()
-    exp_id = next_id()
-    tag = f"{exp_id:04d}-{meta['slug']}"
+    for sig in (signal.SIGTERM, signal.SIGHUP, signal.SIGINT):
+        signal.signal(sig, _stop)
+    resumed = unfinished_folder(ATTACK.read_bytes())
+    if resumed:                       # a stopped run of this same attack.py: same number, resumes its checkpoint
+        exp_id = int(resumed.name[:4])
+        tag = f"{exp_id:04d}-{meta['slug']}"
+        if resumed.name != tag:
+            resumed.rename(EXPERIMENTS / tag)
+        print(f"run_experiment: resuming {tag} ({len(checkpoint.load(checkpoint.path_for(ATTACK)))} units saved)")
+    else:
+        exp_id = next_id()
+        tag = f"{exp_id:04d}-{meta['slug']}"
     outdir = EXPERIMENTS / tag
-    outdir.mkdir(parents=True)
+    outdir.mkdir(parents=True, exist_ok=True)
     shutil.copy(ATTACK, outdir / "attack.py")
     raw_path = outdir / "raw.json"
 
@@ -102,17 +165,17 @@ def main():
         timeout = args.budget + 600 if limited else None
         ran_remote = False
         if compute_where() == "modal":    # issue #99: the search runs on Modal; gates and record stay here
-            r = subprocess.run(["uv", "run", "--with", "modal", "python", str(ROOT / "tools" / "remote_run.py"),
-                                str(ATTACK), str(raw_path), budget], timeout=timeout, check=False, cwd=ROOT)
-            ran_remote = r.returncode == 0
+            rc = run_child(["uv", "run", "--with", "modal", "python", str(ROOT / "tools" / "remote_run.py"),
+                            str(ATTACK), str(raw_path), budget], timeout=timeout)
+            ran_remote = rc == 0
             if not ran_remote:
                 print(f"Modal unavailable; running locally on {LOCAL_FALLBACK_WORKERS} workers")
         if not ran_remote:
             env = dict(os.environ)
             if compute_where() == "modal":   # the fallback: fewer workers, so the laptop runs cooler
                 env["K4_MAX_WORKERS"] = str(LOCAL_FALLBACK_WORKERS)
-            subprocess.run([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path), budget],
-                           timeout=timeout, check=False, cwd=ROOT, env=env)
+            run_child([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path), budget],
+                      timeout=timeout, env=env)
     except subprocess.TimeoutExpired:
         status = "timeout"
     seconds = time.time() - t0
@@ -202,6 +265,8 @@ def main():
     (outdir / "result.json").write_text(json.dumps(result, indent=1))
     (outdir / "worked_example.txt").write_text(raw.get("worked_example", "") or "")
     (outdir / "experiment.md").write_text(render_md(meta, result, raw))
+    if status == "ran":               # recorded: the finished units are in the record now (issue #105)
+        checkpoint.path_for(ATTACK).unlink(missing_ok=True)
 
     if not RESULTS.exists():
         RESULTS.write_text("id\ttag\tfamily\tparent\tdecision\tn_candidates\tn_passed\tbest_crib_hits\tbest_loss\tbest_fitness\tseconds\tphases\n")

@@ -26,3 +26,6 @@ data/loop-stop-request
 data/experiment-progress.json
 data/loop.pid
 data/remote-run.json
+
+# checkpoints of running experiments (kryptos/checkpoint.py, issue #105); deleted when a run is recorded
+data/checkpoints/

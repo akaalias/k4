@@ -11,7 +11,7 @@ import traceback
 from pathlib import Path
 from types import SimpleNamespace
 
-from kryptos import facts, ciphers, scorer
+from kryptos import facts, ciphers, scorer, checkpoint
 
 
 def _judge(texts):
@@ -60,6 +60,9 @@ def main(attack_path, out_path, budget_s):
     spec = importlib.util.spec_from_file_location("attack", attack_path)
     attack = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(attack)
+    ckpt = checkpoint.path_for(attack_path, root=Path(attack_path).resolve().parent)
+    saved = checkpoint.load(ckpt)          # units an earlier run of this same attack.py finished (issue #105)
+    save = checkpoint.Saver(ckpt)
 
     ctx = SimpleNamespace(
         K4=facts.K4,
@@ -74,6 +77,8 @@ def main(attack_path, out_path, budget_s):
         time_left=lambda: (t0 + budget_s) - time.time(),
         judge=_judge,
         progress=_progress,
+        saved=saved,
+        save=save,
     )
     out = {"candidates": [], "bounds": {}, "notes": "", "controls": [], "error": None, "worked_example": ""}
     try:
@@ -106,6 +111,7 @@ def main(attack_path, out_path, budget_s):
         out["error"] = traceback.format_exc()
     out["seconds"] = time.time() - t0
     out["compute"] = {"where": "local", "workers": cap or "as the attack asks"}
+    out["checkpoint"] = {"file": ckpt.name, "resumed": len(saved), "saved": save.count}
     if "kryptos.judge" in sys.modules:
         j = sys.modules["kryptos.judge"]
         out["judge"] = {"model": j.MODEL, "prompt": j.PROMPT_VERSION, **j.usage}

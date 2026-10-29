@@ -110,6 +110,13 @@ edited, and the dashboard shows each experiment's current verdict.
    (several per worker), never into batches of exactly 8, and give each job its own seed, so that
    the result is the same whatever the number of workers. Size a batch with
    `int(os.environ.get("K4_WORKERS", 8))`. numpy is available; ask before adding another package.
+   **Save each finished unit** (issue #105) so a stop, a Modal drop or the credit limit loses
+   nothing: from the main process, call `ctx.save(key, value)` as each unit (a setting, a copy, a
+   plant) finishes, with a string key and a JSON value holding everything the end of `run` needs
+   from it. Before computing a unit, look in `ctx.saved` (the same keys and values from an earlier
+   run of this exact attack.py) and reuse what is there. Units with their own seeds give the same
+   value however often the run is resumed. Any edit to attack.py starts afresh. A run that takes
+   more than a few minutes must do this.
 5. **Run** `uv run --with pytest pytest -q` (all must pass), then `tools/start_experiment.sh`, and
    wait for it with `tools/wait_experiment.sh`, calling it again for as long as it reports the run
    still going. **No time limits** (Alexis, 2026-10-27, issue #96): an experiment takes as long as it

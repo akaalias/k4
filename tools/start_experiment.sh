@@ -16,6 +16,7 @@ if [ -f "$marker" ] && kill -0 "$(python3 -c "import json;print(json.load(open('
 fi
 mkdir -p logs
 log="logs/experiment-$(date +%Y%m%d-%H%M%S).log"
+set -m   # the run gets its own process group (its id is the pid below): tools/stop_experiment.sh stops all of it (#104)
 nohup bash -c 'uv run python run_experiment.py "$@"; echo "exit code $?"; rm -f data/running-experiment.json' \
   _ "$@" > "$log" 2>&1 < /dev/null &
 pid=$!

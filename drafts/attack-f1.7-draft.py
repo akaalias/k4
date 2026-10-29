@@ -1,4 +1,4 @@
-"""Experiment 0254 (draft). See program.md for the contract."""
+"""Experiment (F1.7, D2). See program.md for the contract."""
 
 EXPERIMENT = {
     "slug": "f1.7-autokey-on-one-free-alphabet-decided-by-an-english-climb",
@@ -30,9 +30,32 @@ EXPERIMENT = {
         "for the scrambled alphabet that makes K4 read most like English, and do the same on scrambled copies of K4 "
         "that agree with the known letters equally well. The real answer should read better than all its copies."
     ),
-    "prediction": "Plants found about 3 in 4; K4 inside its copies: cells beating all 12 copies within chance (about 8 of 103). Zero candidates.",
-    "method": "see draft",
-    "walkthrough": "see draft",
+    "prediction": (
+        "Low power, measured: ciphertext-autokey plants found at most 1 in 4 (the desk climbs never reached a plant's own "
+        "score there); plaintext-autokey plants about 1 in 3 overall, better at short lags where the checks pin the alphabet. "
+        "Some of 0149's 103 cells die under the full chain equations. K4 inside its copies: cells beating all 12 copies within "
+        "the binomial range for 1/13. Zero candidates."
+    ),
+    "method": (
+        "1. Cells: every (kind, form, lag) where K4 fits the exact decider, now with plaintext autokey's chains in full "
+        "(consecutive known places of one chain linked through the carved letters between them; 0149 used only pairs L apart), "
+        "solved by 0149's exact solver. "
+        "2. Per cell (one job, own seed): climb K4 once; then draw shuffles of K4 that fit the same cell, climb each, stop at "
+        "the first at or above K4; at most 12, escalated to 100 where K4 beats all 12. "
+        "3. Climb: plaintext autokey at lags up to 12, check-keeping tempering from the exact witness with repair swaps (0139's "
+        "move); every other cell, tempering with a fixed penalty per known letter out of place, recording only states with all 24 in place. "
+        "Ciphertext autokey readings are scored on places L+1 to 97 (the first L come from single-use primer letters). "
+        "4. Plants: per kind 12 clean and 12 Sanborn-style messages enciphered on cells drawn from K4's, through the same decision without escalation; power per kind and per climb. "
+        "5. Verdict: cells where K4 beats all 12 copies against Binomial(n, 1/13); the top readings listed."
+    ),
+    "walkthrough": (
+        "1. Pick a cell: plaintext autokey, Beaufort form, lag 33, with an unknown scrambled alphabet. "
+        "2. In that system each plain letter becomes the key 33 places later, so once the alphabet is fixed, a chain of places 33 apart is fixed by its first letter. "
+        "3. Chains holding a known letter are fixed by it; the others get a free starting letter. "
+        "4. Search alphabets (and free starts) for the most English-looking reading that keeps all 24 known letters. "
+        "5. Shuffle K4 until a shuffle also fits the cell, and search it the same way; repeat up to 12 times, stopping when a shuffle reads as well as K4. "
+        "6. Count the cells where K4 beat all 12; chance gives about one in 13."
+    ),
     "expected_minutes": 60,
 }
 
@@ -49,14 +72,17 @@ ROOT = Path(__file__).resolve().parent
 BASE, ESC = 12, 100
 PLANTS = 12                      # per kind and class: 12 clean + 12 Sanborn-style per kind
 RESTARTS, MOVES, T0, T1 = 20, 500000, 0.15, 0.003
-MODE, PT_R, PT_ROUNDS, PT_MOVES = "sa", 16, 300, 1000
-PEN = 0.04                       # per known place out of place (mean log10 quadgram units), raised 50-fold through each run
+MODE, PT_R, PT_ROUNDS, PT_MOVES = "keep", 16, 300, 1000
+K_R, K_ROUNDS, K_MOVES, K_T0, K_T1 = 16, 300, 1000, 0.1, 0.002   # check-keeping tempering, 0140's temperatures
+PEN = 0.04                       # "sa" only: per known place out of place, raised 50-fold through each run
+PT_PEN = 0.6                     # "pt": fixed penalty per known place out of place (desk tests 2026-10-29: 0.2 loses the check-keeping states, 2.0 no better)
+SHORT = 12                       # plaintext autokey at lags up to SHORT: check-keeping tempering ("keep"); every other cell "pt"
 _MODS = {}
 
 C_SOURCE = r"""
 #include <stdint.h>
 #include <math.h>
-static const double *TAB; static int N, L, KIND, FORM, C[128], NK, KP[24], KL[24], FIRSTK[128], S;
+static const double *TAB; static int N, L, KIND, FORM, C[128], NK, KP[24], KL[24], FIRSTK[128], S, KIDX[128];
 static uint64_t RS;
 static inline uint64_t rnd(void) { RS ^= RS << 13; RS ^= RS >> 7; RS ^= RS << 17; return RS; }
 static inline int md(int v) { v %= 26; return v < 0 ? v + 26 : v; }
@@ -65,7 +91,8 @@ static inline int keyof(int c, int p) { return FORM == 0 ? md(c - p) : FORM == 1
 int setup(const double *tab, const int *ct, int n, int l, int kind, int form, const int *kp, const int *kl, int nk) {
     TAB = tab; N = n; L = l; KIND = kind; FORM = form; NK = nk;
     for (int i = 0; i < n; i++) C[i] = ct[i];
-    for (int j = 0; j < nk; j++) { KP[j] = kp[j]; KL[j] = kl[j]; }
+    for (int i = 0; i < 128; i++) KIDX[i] = -1;
+    for (int j = 0; j < nk; j++) { KP[j] = kp[j]; KL[j] = kl[j]; KIDX[kp[j]] = j; }
     for (int r = 0; r < l; r++) FIRSTK[r] = -1;
     if (kind == 1) for (int j = 0; j < nk; j++) { int r = kp[j] % l; if (FIRSTK[r] < 0 || kp[j] < kp[FIRSTK[r]]) FIRSTK[r] = j; }
     S = kind == 0 ? l : 0;
@@ -87,6 +114,24 @@ static int decode(const int *x, const int *inv, const int *prim, int *pt) {
     }
     int bad = 0;
     for (int j = 0; j < NK; j++) if (pt[KP[j]] >= 0 && pt[KP[j]] != KL[j]) bad++;
+    return bad;
+}
+// the number of known places out of place, without decoding the rest (for the check-keeping moves)
+static int nbad(const int *x) {
+    int bad = 0;
+    if (KIND == 0) {
+        for (int j = 0; j < NK; j++) { int q = KP[j]; if (q >= L && dec(x[C[q]], x[C[q - L]]) != x[KL[j]]) bad++; }
+        return bad;
+    }
+    for (int j = 0; j < NK; j++) {               // walk each chain from its first known place to the later ones
+        int q = KP[j], r = q % L;
+        if (FIRSTK[r] != j) continue;
+        int v = x[KL[j]];
+        for (int i = q + L; i < N; i += L) {
+            v = dec(x[C[i]], v);
+            if (KIDX[i] >= 0 && v != x[KL[KIDX[i]]]) bad++;
+        }
+    }
     return bad;
 }
 static double score(const int *pt) {
@@ -172,6 +217,90 @@ double ptemper(uint64_t seed, const int *w, int R, int ROUNDS, int M, double t0,
     }
     return best;
 }
+// check-keeping tempering (as 0139/0140): each replica first reaches a state with every known place right (annealing
+// on the count of known places out of place, from the witness or a shuffle), then moves are accepted only if every
+// known place stays right; Metropolis on the quadgram mean, replica swaps between neighbouring temperatures.
+// Returns the best score among kept states (-99 if no replica reached one), its reading and alphabet.
+double keep(uint64_t seed, const int *w, int R, int ROUNDS, int M, double t0, double t1, int *bp, int *bx, int *nlive) {
+    RS = seed * 2862933555777941757ULL + 3037000493ULL; if (!RS) RS = 1;
+    static int X[32][26], INV[32][26], PR[32][64], PT[128], LIVE[32];
+    double CUR[32], T[32], best = -99;
+    int nfree = 0, fr[64], live = 0;
+    if (KIND == 1) for (int r = 0; r < L; r++) if (FIRSTK[r] < 0) fr[nfree++] = r;
+    for (int j = 0; j < R; j++) {
+        T[j] = R > 1 ? t0 * pow(t1 / t0, (double)j / (R - 1)) : t1;
+        int *x = X[j], *inv = INV[j], *prim = PR[j];
+        for (int i = 0; i < 26; i++) x[i] = w[i];
+        for (int i = 0; i < 26; i++) inv[x[i]] = i;
+        for (int r = 0; r < L && r < 64; r++) prim[r] = rnd() % 26;
+        int bad = decode(x, inv, prim, PT);
+        for (int m = 0; m < 400000 && bad > 0; m++) {
+            int a = rnd() % 26, b = rnd() % 26; if (a == b) continue;
+            int z = x[a]; x[a] = x[b]; x[b] = z; inv[x[a]] = a; inv[x[b]] = b;
+            int nb = decode(x, inv, prim, PT);
+            if (nb <= bad || exp(-(nb - bad) / 0.4) * 4294967296.0 > (double)(rnd() & 0xffffffffULL)) bad = nb;
+            else { z = x[a]; x[a] = x[b]; x[b] = z; inv[x[a]] = a; inv[x[b]] = b; }
+        }
+        LIVE[j] = bad == 0; live += LIVE[j];
+        CUR[j] = bad == 0 ? score(PT) : -99;
+        if (bad == 0 && CUR[j] > best) { best = CUR[j]; for (int i = 0; i < N; i++) bp[i] = PT[i]; for (int i = 0; i < 26; i++) bx[i] = x[i]; }
+    }
+    *nlive = live;
+    if (!live) return -99;
+    for (int j = 0; j < R; j++) if (!LIVE[j]) {          // dead replicas copy a live one
+        int s = j; while (!LIVE[s]) s = (s + 1) % R;
+        for (int i = 0; i < 26; i++) { X[j][i] = X[s][i]; INV[j][i] = INV[s][i]; }
+        for (int i = 0; i < 64; i++) PR[j][i] = PR[s][i];
+        CUR[j] = CUR[s];
+    }
+    for (int round = 0; round < ROUNDS; round++) {
+        for (int j = 0; j < R; j++) {
+            int *x = X[j], *inv = INV[j], *prim = PR[j];
+            for (int m = 0; m < M; m++) {
+                int mv = (nfree && (rnd() % 5 == 0)) ? 1 : 0, a = 0, b = 0, a2 = -1, b2 = -1, old = 0, r = 0, z;
+                if (mv == 0) {
+                    a = rnd() % 26; b = rnd() % 26; if (a == b) continue;
+                    z = x[a]; x[a] = x[b]; x[b] = z;
+                    if (nbad(x)) {                     // repair: a second swap that restores every check (as 0139)
+                        int opts[325][2], no = 0;
+                        for (int m1 = 0; m1 < 26; m1++) for (int m2 = m1 + 1; m2 < 26; m2++) {
+                            z = x[m1]; x[m1] = x[m2]; x[m2] = z;
+                            if (!nbad(x)) { opts[no][0] = m1; opts[no][1] = m2; no++; }
+                            z = x[m1]; x[m1] = x[m2]; x[m2] = z;
+                        }
+                        if (!no) { z = x[a]; x[a] = x[b]; x[b] = z; continue; }
+                        int pick = rnd() % no; a2 = opts[pick][0]; b2 = opts[pick][1];
+                        z = x[a2]; x[a2] = x[b2]; x[b2] = z;
+                    }
+                    for (int i = 0; i < 26; i++) inv[x[i]] = i;
+                }
+                else { r = fr[rnd() % nfree]; old = prim[r]; prim[r] = rnd() % 26; }
+                int nb = decode(x, inv, prim, PT);
+                double sc = nb ? -1e9 : score(PT);
+                if (nb == 0 && (sc >= CUR[j] || exp((sc - CUR[j]) / T[j]) * 4294967296.0 > (double)(rnd() & 0xffffffffULL))) {
+                    CUR[j] = sc;
+                    if (sc > best) { best = sc; for (int i = 0; i < N; i++) bp[i] = PT[i]; for (int i = 0; i < 26; i++) bx[i] = x[i]; }
+                } else if (mv == 0) {
+                    if (a2 >= 0) { z = x[a2]; x[a2] = x[b2]; x[b2] = z; }
+                    z = x[a]; x[a] = x[b]; x[b] = z;
+                    for (int i = 0; i < 26; i++) inv[x[i]] = i;
+                }
+                else prim[r] = old;
+            }
+        }
+        for (int j = 0; j + 1 < R; j++) {
+            double dd = (CUR[j + 1] - CUR[j]) * (1.0 / T[j] - 1.0 / T[j + 1]);
+            if (dd >= 0 || exp(dd) * 4294967296.0 > (double)(rnd() & 0xffffffffULL)) {
+                int tmp[26]; double c;
+                for (int i = 0; i < 26; i++) { tmp[i] = X[j][i]; X[j][i] = X[j + 1][i]; X[j + 1][i] = tmp[i]; }
+                for (int i = 0; i < 26; i++) { tmp[i] = INV[j][i]; INV[j][i] = INV[j + 1][i]; INV[j + 1][i] = tmp[i]; }
+                for (int i = 0; i < 64; i++) { int z = PR[j][i]; PR[j][i] = PR[j + 1][i]; PR[j + 1][i] = z; }
+                c = CUR[j]; CUR[j] = CUR[j + 1]; CUR[j + 1] = c;
+            }
+        }
+    }
+    return best;
+}
 """
 
 
@@ -200,6 +329,10 @@ def lib():
         L_.ptemper.restype = ctypes.c_double
         L_.ptemper.argtypes = [ctypes.c_uint64, ctypes.POINTER(ctypes.c_int), ctypes.c_int, ctypes.c_int, ctypes.c_int,
                                ctypes.c_double, ctypes.c_double, ctypes.c_double, ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_int)]
+        L_.keep.restype = ctypes.c_double
+        L_.keep.argtypes = [ctypes.c_uint64, ctypes.POINTER(ctypes.c_int), ctypes.c_int, ctypes.c_int, ctypes.c_int,
+                            ctypes.c_double, ctypes.c_double, ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_int),
+                            ctypes.POINTER(ctypes.c_int)]
         L_.climb.restype = ctypes.c_double
         L_.climb.argtypes = [ctypes.c_uint64, ctypes.POINTER(ctypes.c_int), ctypes.c_int, ctypes.c_int, ctypes.c_double,
                              ctypes.c_double, ctypes.c_double, ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_int)]
@@ -217,12 +350,49 @@ def lib():
 KINDS, FORMS = ("ct", "pt"), ("V", "B", "R")
 
 
+def full_equations(text, known, L, kind, form):
+    """0149's equations, with plaintext autokey's chains in full: between consecutive known places q1 < q2 of one
+    chain (q2 = q1 + mL) the values follow v_i = X[c_i] - v_(i-L) (V), v_(i-L) - X[c_i] (B), v_(i-L) + X[c_i] (R), so
+    X[p2] is linear in X[p1] and the carved letters at q1+L, ..., q2. Ciphertext autokey is unchanged (each known place
+    already gives its own equation). Rows: {letter: coefficient}, sum = 0 mod 26."""
+    if kind == "ct":
+        return _load("0149").equations(text, known, L, kind, form)
+    rows = []
+    by = {}
+    for q in sorted(known):
+        by.setdefault((q - 1) % L, []).append(q - 1)
+    for chain in by.values():
+        for i1, i2 in zip(chain, chain[1:]):
+            r = {}
+
+            def add(v, a):
+                r[v] = (r.get(v, 0) + a) % 26
+            sign = 1                                  # v_i = sign * v_i1 + sum(coef * X[c])
+            terms = []
+            i = i1 + L
+            while i <= i2:
+                c = ord(text[i]) - 65
+                if form == "V":
+                    terms = [(v, -a) for v, a in terms] + [(c, 1)]; sign = -sign
+                elif form == "B":
+                    terms = terms + [(c, -1)]
+                else:
+                    terms = terms + [(c, 1)]
+                i += L
+            add(ord(known[i2 + 1]) - 65, 1)
+            add(ord(known[i1 + 1]) - 65, -sign)
+            for v, a in terms:
+                add(v, -a)
+            rows.append({v: a for v, a in r.items() if a})
+    return rows
+
+
 def witness(text, cell, rng):
     """0149's exact decider; a full alphabet (letter -> value) from its witness, or None if the cell does not fit."""
     from kryptos.facts import KNOWN
     m = _load("0149")
     kind, form, L = cell
-    rows = m.equations(text, KNOWN, L, kind, form)
+    rows = full_equations(text, KNOWN, L, kind, form)
     if not rows:
         return None
     st, x = m.solve(rows)
@@ -241,8 +411,12 @@ def climb(text, cell, w, seed):
     L_.setup(_MODS["tab"], (ctypes.c_int * N)(*[ord(c) - 65 for c in text]), N, L, KINDS.index(kind), FORMS.index(form),
              (ctypes.c_int * 24)(*[q - 1 for q in kp]), (ctypes.c_int * 24)(*[ord(KNOWN[q]) - 65 for q in kp]), 24)
     bp, bx = (ctypes.c_int * 128)(), (ctypes.c_int * 26)()
-    if MODE == "pt":
-        sc = L_.ptemper(seed, (ctypes.c_int * 26)(*w), PT_R, PT_ROUNDS, PT_MOVES, T0, T1, PEN, bp, bx)
+    mode = "keep" if (kind == "pt" and L <= SHORT) else "pt"
+    if mode == "keep":
+        live = ctypes.c_int()
+        sc = L_.keep(seed, (ctypes.c_int * 26)(*w), K_R, K_ROUNDS, K_MOVES, K_T0, K_T1, bp, bx, ctypes.byref(live))
+    elif mode == "pt":
+        sc = L_.ptemper(seed, (ctypes.c_int * 26)(*w), PT_R, PT_ROUNDS, PT_MOVES, T0, T1, PT_PEN, bp, bx)
     else:
         sc = L_.climb(seed, (ctypes.c_int * 26)(*w), RESTARTS, MOVES, T0, T1, PEN, bp, bx)
     return round(sc, 5), "".join("?" if bp[i] < 0 else chr(65 + bp[i]) for i in range(N))
@@ -328,9 +502,16 @@ def run(ctx):
 
     work = plants + [(("k4", i), k4, c, 2000 + i, True) for i, c in enumerate(fit)]
     res = {}
+    saved = getattr(ctx, "saved", {}) or {}
+    for key, *_ in work:                      # units an earlier run of this attack.py finished (#105)
+        if f"{key[0]}:{key[1]}" in saved:
+            res[key] = saved[f"{key[0]}:{key[1]}"]
+    todo = [w for w in work if w[0] not in res]
+    ctx.progress(len(res), len(work), "settings")
     with mp.get_context("fork").Pool(W) as pool:
-        for key, out in pool.imap_unordered(_job, work, chunksize=1):
+        for key, out in pool.imap_unordered(_job, todo, chunksize=1):
             res[key] = out
+            ctx.save(f"{key[0]}:{key[1]}", out)
             ctx.progress(len(res), len(work), "settings")
 
     power = {}
@@ -341,6 +522,9 @@ def run(ctx):
                  letters_right=sum(a == b for a, b in zip(r["reading"][S:], v.pop("pt")[S:])), letters_scored=N - S)
         b = f"{kind}/{'clean' if v['cls'] == 'clean' else 'sanborn'}"
         power.setdefault(b, [0, 0]); power[b][0] += v["found"]; power[b][1] += 1
+        lag = int(v["cell"].split("/")[2])
+        g = "pt_short_keep" if kind == "pt" and lag <= SHORT else f"{kind}_tempering"
+        power.setdefault(g, [0, 0]); power[g][0] += v["found"]; power[g][1] += 1
     n = len(fit)
     q12, q100 = 1 / (BASE + 1), 1 / (ESC + 1)
 
@@ -358,7 +542,10 @@ def run(ctx):
                           "reading": r["reading"], "known_in_place": sum(r["reading"][q - 1] == c for q, c in ctx.KNOWN.items())})
     bounds = {
         "item": "F1.7 (D2's last re-cost; the cells decided in the same run)",
-        "decider": f"compiled annealing over the alphabet (and free plaintext-autokey chain starts): {RESTARTS} restarts x {MOVES} moves, T {T0}->{T1}, penalty per known letter out of place {PEN} raised 50-fold through each run; only states with every known letter in place count; ciphertext autokey scored on places L+1..97 (the first L letters come from single-use primer letters and are open)",
+        "decider_used": f"plaintext autokey at lags 1-{SHORT}: check-keeping parallel tempering ({K_R} replicas x {K_ROUNDS} rounds x {K_MOVES} moves, T {K_T0}->{K_T1}; every replica starts from the exact solver's witness of the full chain equations; a swap that breaks a check is repaired by a second swap that restores every check, as 0139, or dropped); every other cell: parallel tempering with a fixed penalty {PT_PEN} per known place out of place ({PT_R} replicas x {PT_ROUNDS} rounds x {PT_MOVES} moves, T {T0}->{T1}), only states with every known place right recorded",
+        "desk_tests": "2026-10-29, before the run: the draft's annealing ('sa', penalty 0.04 ramped) never reached a state with all 24 in place at plaintext lags 6-12 and left the true alphabet when started on it; the full-chain witness and the check-keeping moves read 2 of 3 plants at lag 6 exactly; on ciphertext autokey (lags 34-70) no variant (sa, keep, tempering at penalties 0.2/0.6/2.0, up to 5x longer) reached the true reading's score (plants -4.2, climbs -5.5 to -6.3): low power is expected there and is measured here",
+        "modal_cost_estimate": "about 103 cells x up to 13 climbs plus 48 plants: 'keep' cells about 4 min per climb (10 cells), others about 3 s: about 10-12 core-hours, under $1 of Modal credit",
+        "decider_draft": f"compiled annealing over the alphabet (and free plaintext-autokey chain starts): {RESTARTS} restarts x {MOVES} moves, T {T0}->{T1}, penalty per known letter out of place {PEN} raised 50-fold through each run; only states with every known letter in place count; ciphertext autokey scored on places L+1..97 (the first L letters come from single-use primer letters and are open)",
         "copies": "shuffles 0149's exact decider fits in the same cell, climbed one at a time; stop at the first at or above K4, at most 12, escalated to 100 for K4",
         "k4_fitting_cells": n, "matches_0149_record": fit == rec_fit, "fit_0149_record_count": len(rec_fit),
         "per_kind": per_kind, "k4_cells_with_a_valid_reading": len(valid),

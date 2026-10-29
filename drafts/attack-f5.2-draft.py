@@ -204,10 +204,16 @@ def run(ctx):
     W = int(os.environ.get("K4_WORKERS", 8))
     work = [(so, texts, B, lags, top) for B, lags in J for top in range(B)]
     work.sort(key=lambda w: -(w[2] ** (max(w[3]) - 1)))          # largest jobs first
-    res = []
+    saved = getattr(ctx, "saved", {}) or {}
+    def ukey(B, lags, top):
+        return f"{B}:{'-'.join(map(str, lags))}:{top}"
+    res = [tuple(saved[ukey(w[2], w[3], w[4])]) for w in work if ukey(w[2], w[3], w[4]) in saved]
+    todo = [w for w in work if ukey(w[2], w[3], w[4]) not in saved]
+    ctx.progress(len(res), len(work), "rule slices")
     with mp.get_context("fork").Pool(W) as pool:
-        for r in pool.imap_unordered(job, work, chunksize=1):
+        for r in pool.imap_unordered(job, todo, chunksize=1):
             res.append(r)
+            ctx.save(ukey(r[0], r[1], r[2]), list(r))
             ctx.progress(len(res), len(work), "rule slices")
     nc = 1 + N_CONTROLS
     tot = [0] * len(texts)
@@ -228,6 +234,7 @@ def run(ctx):
         "consistent": {"k4": tot[0], "copies": tot[1:nc], "plants": tot[nc:]}, "plants": plants, "k4_consistent": k4[:20],
         "not_covered": "three-term lag 8 and beyond; two-term base 26 lag 8 and beyond (26^8 = 2.1e11 primers per rule); two-term lags beyond 8 outside base 10",
         "copies": f"{N_CONTROLS} shuffled copies (seed 1940)", "seconds": round(time.time() - t0), "exhaustive": True,
+        "cost_estimate": "2.34e11 primers at about 2.4 million per core-second with 14 texts (desk timing 2026-10-29): about 27 core-hours, about 1 h on 32 cores, about $1.5 of Modal credit",
     }
     notes = f"{primers:,} primers x 4 forms; consistent K4 {tot[0]} (copies {min(tot[1:nc])}-{max(tot[1:nc])}); plants {tot[nc:]}"
     return {"candidates": [], "bounds": bounds, "notes": notes}

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F1.4: the cipher table with a scrambled alphabet and a key stepped by a hand rule (skip a key letter every m letters, back and forth); 2,093 such rules agree with the 24 known letters."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each rule: one search on K4, then scrambled copies fitting the same rule until one reads as well; 21,878 searches in all. Planted messages found 17 of 24."
+ },
+ {
+  "anchor": "the surprise",
+  "text": "K4 beats all 12 copies in 299 rules where chance gives 161, and all 100 in 66 where chance gives 21, yet every reading is gibberish: the next run checks the test itself (0254)."
+ }
+]

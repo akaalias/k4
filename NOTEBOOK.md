@@ -5,6 +5,22 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-29
+
+D2's re-costed cells (ticket #77). The morning's 0253 attempt was lost to a DNS outage and stopped by hand (#104); the harness gained checkpoints (#105) and the run was restarted with them.
+
+### D2 and F1.4 (ticket #77)
+
+| # | Item | One line |
+|---|---|---|
+| 253 | F1.4 | **Every hand key schedule K4 fits on one free alphabet, decided by the one-run decider.** 2,093 settings, 21,878 climbs, 4 h on Modal ($6.33). K4 above all 12 of its copies in 299 settings where chance gives 161 (p 1e-24), above all 100 in 66 where chance gives 21; readings junk; plants 17 of 24. Queue stopped for replication. |
+
+The excess is spread over the whole cell (K4 beat its first copy in 61% of settings, not 50%), and no reading is English, which points at the test rather than at a message: the settings were chosen because K4 fits them, and a shuffle that also fits need not have the same freedom. A desk check of the letters the witness pins did not show it (K4 21, copies 20.7). 0254 runs the procedure on four shuffles of K4 as stand-ins, each on its own fitting settings, beside K4 with fresh copies: if the stand-ins show the excess too, it belongs to the test.
+
+Desk work while 0253 ran: the F1.7 draft's climb was broken (it never reached a state with all 24 known letters at short plaintext-autokey lags and left the true alphabet when started on it); fixed with the full chain equations (0149 used only pairs L apart) and 0139's repair moves; on ciphertext autokey no variant reached a plant's own score, so its power there will be low and is measured in the run. Drafts written and smoke-tested: D1b, F5.2 (27 core-hours), F13.4c at 6-19 for D3, F13.4h, F1.12. D3's cells listed: six were already run on K4 against its own copies in their closing experiments and are closed as sampled at their measured power, three tell nothing, one (F13.4c 6-19) is drafted.
+
+Mistake: 0254 was started with one failing test (0253's figures not yet drawn); the exit code was hidden by a pipe through `tail`. The figures were drawn while it ran and the suite passes.
+
 ## 2026-10-28
 
 F13 continues (ticket #85). F13.4f is next in the queue; D1 still waits on Alexis (#100).

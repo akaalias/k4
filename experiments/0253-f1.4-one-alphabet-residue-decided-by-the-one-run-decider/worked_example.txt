@@ -1,0 +1,9 @@
+F1.4: one free alphabet under a hand key schedule, decided setting by setting.
+
+  setting      skip one key letter every 7 letters, 11 key letters
+  slot map     place 1 2 3 4 5 6 7 8 9 ...
+  key letter         1 2 3 4 5 6 8 9 10 ... (letter 7 skipped)
+
+  K4 gets one tempering search under that slot map; then scrambled copies that fit the same 24 checks
+  get one each, one at a time, until a copy reads as well as K4 (at most 12, or 100 if K4 keeps winning).
+  Chance alone lets K4 win all 12 in about 1 setting of 13.

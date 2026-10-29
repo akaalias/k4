@@ -2107,7 +2107,16 @@ LIN_JS = r"""
       el.addEventListener('mouseenter',function(){litFam(+el.getAttribute('data-fam'));});
       el.addEventListener('mouseleave',function(){clearLit();});});
   }
-  render();wire();
+  // On opening, glide down and across to the most recent experiment (#106), unless the reader
+  // has scrolled already or the address names a place on the page.
+  function toLatest(){
+    var last=nodes[nodes.length-1];if(!last||location.hash||window.scrollY>0||host.scrollLeft>0)return;
+    var how=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+    var C=geo.cols[last.fam],top=window.scrollY+svg.getBoundingClientRect().top+geo.y[last.key];
+    host.scrollTo({left:Math.max(0,C.x-host.clientWidth/2),behavior:how});
+    window.scrollTo({top:Math.max(0,top-window.innerHeight*0.6),behavior:how});
+  }
+  render();wire();setTimeout(toLatest,400);
   host.addEventListener('scroll',function(){syncHeads();if(shownKey)hideTip();},{passive:true});
   window.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
   var rw=null,lastW=host.clientWidth;

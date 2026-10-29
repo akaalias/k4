@@ -2109,14 +2109,27 @@ LIN_JS = r"""
   }
   // On opening, glide down and across to the most recent experiment (#106), unless the reader
   // has scrolled already or the address names a place on the page.
+  // Both axes move together on one ease-in-out curve, slower for longer distances; a wheel,
+  // touch or key from the reader stops it where it is.
   function toLatest(){
     var last=nodes[nodes.length-1];if(!last||location.hash||window.scrollY>0||host.scrollLeft>0)return;
-    var how=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
     var C=geo.cols[last.fam],top=window.scrollY+svg.getBoundingClientRect().top+geo.y[last.key];
-    host.scrollTo({left:Math.max(0,C.x-host.clientWidth/2),behavior:how});
-    window.scrollTo({top:Math.max(0,top-window.innerHeight*0.6),behavior:how});
+    var y0=window.scrollY,x0=host.scrollLeft,
+        y1=Math.max(0,Math.min(top-window.innerHeight*0.6,document.documentElement.scrollHeight-window.innerHeight)),
+        x1=Math.max(0,Math.min(C.x-host.clientWidth/2,host.scrollWidth-host.clientWidth));
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){window.scrollTo(0,y1);host.scrollLeft=x1;return;}
+    var dist=Math.hypot(y1-y0,x1-x0),dur=Math.min(2200,Math.max(900,500+dist*0.25)),t0=null,stopped=false;
+    var stop=function(){stopped=true;};
+    ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){window.addEventListener(ev,stop,{passive:true,once:true});});
+    var ease=function(t){return t<0.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;};
+    requestAnimationFrame(function step(now){
+      if(stopped)return;if(t0===null)t0=now;
+      var t=Math.min(1,(now-t0)/dur),e=ease(t);
+      window.scrollTo(0,y0+(y1-y0)*e);host.scrollLeft=x0+(x1-x0)*e;
+      if(t<1)requestAnimationFrame(step);
+    });
   }
-  render();wire();setTimeout(toLatest,400);
+  render();wire();setTimeout(toLatest,500);
   host.addEventListener('scroll',function(){syncHeads();if(shownKey)hideTip();},{passive:true});
   window.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
   var rw=null,lastW=host.clientWidth;

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F6.22b, rerun: a key taken from any English text should read as English wherever the known letters force it, gaps and all."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every forced letter scored, given the forced letters before it in its run, English against random letters, in bits; K4's best key against the best of each of 200 shuffles; 20 planted English keys."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Planted keys +9.3 to +36.7 bits, all 20 above every shuffle; K4's best -11.8, below zero, though above 195 of 200 shuffles' bests. K4 has more settings to take a best from (21, median 8): F6.22c matches the count."
+ }
+]

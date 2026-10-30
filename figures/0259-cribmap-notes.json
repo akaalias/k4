@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4h: 0237-0239 found K4 reading better than its shuffles under the table with a two-letter key, then a width-19 move; the guess was a pattern of the carved letters at width 19."
+ },
+ {
+  "anchor": "the check",
+  "text": "1,000 fresh shuffles; the search repeated with width-19 moves only and without them; a direct measure of the pattern under the flagged move."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 above 999 of 1,000 again, and above 996 even without width-19 moves; the simple pattern measure is ordinary. The guess is wrong as stated; the excess is real and not yet explained (F13.4i)."
+ }
+]

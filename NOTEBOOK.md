@@ -24,6 +24,7 @@ D2's re-costed cells (ticket #77). The morning's 0253 attempt was lost to a DNS 
 | # | Item | One line |
 |---|---|---|
 | 258 | F13.4c (D3) | **One free alphabet at key lengths 6-19, ciphertext only, K4 against 100 shuffles per cell.** K4 p 0.84, in no cell above all 100; plants 2-5 of 8. Closed at that power; D3 closed. Modal failed at the very end because I committed P22 while it uploaded the repository; the laptop finished the last climbs from the checkpoint, so the record says local and its Modal cost (about $3.6 by wall time) is not counted. |
+| 259 | F13.4h | **The B2 excess against 1,000 fresh shuffles, with and without width-19 moves.** K4 above 999 of 1,000 with every move (p 0.002), 1,000 of 1,000 with width-19 reads only, and 996 of 1,000 without them. The repeat rate of the moved text is ordinary. So the excess is real against shuffles and not a width-19 artifact; the readings are still junk with 3 of 24 known letters. F13.4i asks what carries it. $0.04. |
 
 The excess is spread over the whole cell (K4 beat its first copy in 61% of settings, not 50%), and no reading is English, which points at the test rather than at a message: the settings were chosen because K4 fits them, and a shuffle that also fits need not have the same freedom. A desk check of the letters the witness pins did not show it (K4 21, copies 20.7). 0254 runs the procedure on four shuffles of K4 as stand-ins, each on its own fitting settings, beside K4 with fresh copies: if the stand-ins show the excess too, it belongs to the test.
 

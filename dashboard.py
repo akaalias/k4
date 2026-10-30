@@ -2221,8 +2221,8 @@ def lineage_data(rows):
 
 
 def lineage_section(n, tag):
-    """The lineage diagram cut down to one experiment's line: its ancestors back to the root and
-    everything built on it since, in the family columns that line touches, without pivot rows."""
+    """The lineage diagram cut down to one experiment's ancestry: the experiment and every parent
+    back to the root of its line, in the family columns that path touches, without pivot rows."""
     rows = load_results()
     par = parent_tags(rows)
     line = set()
@@ -2230,27 +2230,17 @@ def lineage_section(n, tag):
     while k and k not in line:
         line.add(k)
         k = par.get(k)
-    kids = {}
-    for c, p in par.items():
-        kids.setdefault(p, []).append(c)
-    todo = list(kids.get(tag, []))
-    while todo:
-        c = todo.pop()
-        if c not in line:
-            line.add(c)
-            todo += kids.get(c, [])
     sub = [r for r in rows if r["tag"] in line]
-    up, down = sum(1 for r in sub if r["tag"] < tag), sum(1 for r in sub if r["tag"] > tag)
+    up = len(sub) - 1
     title = "Experiment lineage"
-    if len(sub) < 2:
-        return sec(n, title, "This experiment started a line of its own, and nothing has been built on it yet.")
-    say = (f"{up} experiment{'s' if up != 1 else ''} before it, back to the root of its line" if up else "it starts a line of its own")
-    say += (f"; {down} experiment{'s' if down != 1 else ''} built on it since." if down else "; nothing has been built on it yet.")
+    if not up:
+        return sec(n, title, "This experiment started a line of its own: it was built on no earlier experiment.")
+    say = f"{up} experiment{'s' if up != 1 else ''} before it, back to the root of its line."
     data = lineage_data(sub)
     data["pivots"] = []
     data["current"] = tag
     blob = json.dumps(data).replace("</", "<\\/")
-    return (f"<style>{LIN_CSS}</style>" + sec(n, title, "Only this experiment's line from the lineage page: " + say + " Its number is in bold.")
+    return (f"<style>{LIN_CSS}</style>" + sec(n, title, "What this experiment was built on, from the lineage page: " + say + " Its number is in bold.")
             + '<div class="lin"><div style="max-width:980px;margin:0 auto">' + LIN_LEGEND.replace('<span class="k"><svg width="12" height="10" viewBox="0 0 12 10"><path d="M1,1 L11,1 L6,9 z" fill="var(--accent)"/></svg>pivot</span>\n', "") + "</div>"
             + '<div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>'
             + f'<div id="lin-tip" role="tooltip"></div><script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}')

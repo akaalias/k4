@@ -1865,6 +1865,8 @@ LIN_CSS = """
 #lin .nk{fill:var(--ink)}
 #lin .nwas{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-dasharray:2 2}
 #lin .ne{stroke:var(--accent);stroke-width:1.8;stroke-linecap:round}
+#lin .ntitle{fill:var(--muted);font:12.5px/1 var(--serif)}
+#lin .ng.row-on .ntitle{fill:var(--ink);font-weight:600}
 #lin .nlab{fill:var(--faint);font:9.5px/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
 #lin .ng:focus-visible .hit{stroke:var(--accent);stroke-width:1.5}
 #lin.dim .ng,#lin.dim .edge{opacity:.1}
@@ -1878,7 +1880,7 @@ LIN_CSS = """
 #lin-tip p{margin:0;font:italic 13px/1.5 var(--serif);color:var(--muted)}
 #lin-tip .pop-sec+.pop-sec{margin-top:10px}
 #lin-tip .pop-parent{font:600 11px/1.35 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
-.lin-box.fit{width:fit-content;max-width:min(980px,calc(100vw - 32px));margin:16px 0 0 max(0px,calc((100% - 980px) / 2))}
+.lin-box.fit{width:min(980px,calc(100vw - 32px));margin:16px 0 0 max(0px,calc((100% - 980px) / 2))}
 .lin-foot{max-width:980px;margin:12px auto 0;font-size:13.5px;color:var(--muted)}
 @media(max-width:640px){.lin-head h1{font-size:26px}.lin-box{width:calc(100vw - 32px);margin-left:2px}.lane-lab{padding:8px 5px 7px 7px;font-size:9.5px;letter-spacing:.03em}.lane-lab .sw{left:7px;top:11px;width:7px;height:7px}.lane-lab .nm{text-indent:11px}.lane-lab .cw{display:none}}
 """
@@ -1902,7 +1904,7 @@ LIN_JS = r"""
   // experiment numbers, then the line of dots; same-family arcs bulge right into the rest
   // of the column, never wider than the column allows.
   function layout(){
-    var n=nodes.length,nf=fams.length,padY=16,sp=16,MINCOL=data.current?150:112,NUMW=30;
+    var n=nodes.length,nf=fams.length,padY=16,sp=data.current?22:16,MINCOL=data.current?120:112,NUMW=30;
     var avail=host.clientWidth||1000;
     var y={},cols=[],py={},slot=0;
     var pAfter={};pivots.forEach(function(pv){pAfter[pv.after]=pv;});
@@ -1910,10 +1912,13 @@ LIN_JS = r"""
     nodes.forEach(function(nd){y[nd.key]=padY+slot*sp;slot++;if(pAfter[nd.key]){py[pAfter[nd.key].id]=padY+slot*sp;slot++;}});
     var n=slot,L=lanes(y,sp);
     // a column is as wide as its lanes need, at least MINCOL; spare width is shared out evenly
-    var need=fams.map(function(f,i){return Math.max(MINCOL,NUMW+6+LANE*(L.nl[i]||0)+12);}),tot=need.reduce(function(s,v){return s+v;},0),
+    var need=fams.map(function(f,i){var word=data.current?Math.max.apply(null,f.label.split(' ').map(function(w){return w.length;}))*9.6+22:0;
+      return Math.max(MINCOL,word,NUMW+6+LANE*(L.nl[i]||0)+12);}),tot=need.reduce(function(s,v){return s+v;},0),
         extra=data.current?0:Math.max(0,(avail-tot)/nf),left=0;
     fams.forEach(function(f,i){var w=need[i]+extra;cols.push({left:left,x:left+NUMW,w:w});left+=w;});
-    return {sp:sp,W:Math.floor(left),H:Math.ceil(2*padY+(n-1)*sp),y:y,py:py,cols:cols,padY:padY,laneOf:L.laneOf};
+    // on an experiment's page the rest of the width names each experiment of the line
+    var tl=left;if(data.current)left+=Math.max(240,avail-left);
+    return {sp:sp,tl:tl,W:Math.floor(left),H:Math.ceil(2*padY+(n-1)*sp),y:y,py:py,cols:cols,padY:padY,laneOf:L.laneOf};
   }
 
   // Lanes: a same-family edge that skips an experiment gets a lane of its own beside the column.
@@ -1941,6 +1946,7 @@ LIN_JS = r"""
     geo=layout();
     var y=geo.y,cols=geo.cols,W=geo.W,H=geo.H,g='';
     var xOf=function(k){return cols[byKey[k].fam].x;};
+    if(data.current)g+='<line class="lbound" x1="'+geo.tl.toFixed(1)+'" x2="'+geo.tl.toFixed(1)+'" y1="0" y2="'+H+'"/>';
     cols.forEach(function(C,i){
       g+='<rect class="lband f'+fams[i].c+'" x="'+C.left.toFixed(1)+'" y="0" width="'+C.w.toFixed(1)+'" height="'+H+'"/>';
       if(i)g+='<line class="lbound" x1="'+C.left.toFixed(1)+'" x2="'+C.left.toFixed(1)+'" y1="0" y2="'+H+'"/>';
@@ -2010,7 +2016,8 @@ LIN_JS = r"""
       if(nd.recorded==='kept'&&nd.decision!=='kept')m+='<circle class="nwas" cx="'+cx+'" cy="'+cy+'" r="7.5"/>';
       g+='<a class="ng f'+fams[nd.fam].c+(nd.key===data.current?' row-on':'')+'" data-key="'+k+'" href="/exp/'+encodeURIComponent(nd.key)+'" target="_blank" rel="noopener" aria-label="'+esc(nd.n+': '+nd.title)+'">'+m
         +'<circle class="hit" cx="'+cx+'" cy="'+cy+'" r="10" fill="transparent"/>'
-        +'<text class="nlab" x="'+(parseFloat(cx)-10)+'" y="'+(cy+3.3)+'" text-anchor="end">'+nd.n+'</text></a>';
+        +'<text class="nlab" x="'+(parseFloat(cx)-10)+'" y="'+(cy+3.3)+'" text-anchor="end">'+nd.n+'</text>'
+        +(data.current?'<text class="ntitle" x="'+(geo.tl+12)+'" y="'+(cy+4.2)+'">'+esc(short(nd.title,Math.floor((W-geo.tl-24)/6.4)))+'</text>':'')+'</a>';
     });
     pivots.forEach(function(pv){if(!(pv.id in geo.py))return;
       var ty=geo.py[pv.id];
@@ -2022,7 +2029,8 @@ LIN_JS = r"""
     lanesEl.style.width=W+'px';lanesEl.style.height='';
     lanesEl.innerHTML=cols.map(function(C,i){var f=fams[i];
       return '<div class="lane-lab f'+f.c+'" data-fam="'+i+'" title="'+esc(f.name)+'" style="left:'+C.left.toFixed(1)+'px;width:'+C.w.toFixed(1)+'px"><span class="sw"></span><span class="nm">'+esc(f.label)+'</span>'
-        +'<span class="cnt">'+f.count+'<span class="cw">'+(f.count===1?' experiment':' experiments')+'</span></span></div>';}).join('');
+        +'<span class="cnt">'+f.count+'<span class="cw">'+(f.count===1?' experiment':' experiments')+'</span></span></div>';}).join('')
+      +(data.current?'<div class="lane-lab" style="left:'+geo.tl.toFixed(1)+'px;width:'+(W-geo.tl).toFixed(1)+'px"><span class="nm" style="text-indent:0">experiment</span><span class="cnt">'+nodes.length+' in this line</span></div>':'');
     // the heads are absolutely placed, so the strip takes the height of the tallest one
     var hh=0;lanesEl.querySelectorAll('.lane-lab').forEach(function(el){el.style.bottom='auto';hh=Math.max(hh,el.offsetHeight);el.style.bottom='';});
     lanesEl.style.height=hh+'px';syncHeads();

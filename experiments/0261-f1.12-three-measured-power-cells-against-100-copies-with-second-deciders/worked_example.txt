@@ -1,0 +1,9 @@
+F1.12: three cells, K4 against 100 of its own copies, three deciders.
+
+  cell            alphabets  key length  checks
+  F1.1 B23        one        23          7
+  F1.1 B26        one        26          1
+  F1.2 13         two        13          11
+
+  each text: one tempering run keeping the 24 known letters -> best reading
+  rank K4 among its copies by quadgrams, by MIX8m, by the blind judge.

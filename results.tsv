@@ -259,3 +259,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0258	0258-f13-one-free-alphabet-ciphertext-only-lengths-6-19-at-measured-power	13-ciphertext-only	0236-f13-one-free-alphabet-ciphertext-only	reverted	28	0	3	212.615		8500	test=10 run=8500 record=70
 0259	0259-f13-chase-the-table-then-move-excess-width-19	13-ciphertext-only	0238-f13-replicate-k4-table-then-move-length-2-against-fresh-shuffles	reverted	0	0	0			118	test=10 run=118 record=0
 0260	0260-f13-what-carries-the-b2-excess-rotations-reversal-blocks	13-ciphertext-only	0259-f13-chase-the-table-then-move-excess-width-19	reverted	0	0	0			70	test=10 run=70 record=0
+0261	0261-f1.12-three-measured-power-cells-against-100-copies-with-second-deciders	1-keyed-periodic	0229-d1-one-free-alphabet-power-per-run-with-enough-plants	reverted	0	0	0			759	test=10 run=759 record=0

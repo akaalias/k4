@@ -13,6 +13,12 @@ holds the reasoning and the mistakes.
 |---|---|---|
 | 262 | F5.2 | **The Gromark rules 0195 left for cost, exact.** 445 rules (three-term base 26 lag 6, lag 7 in bases 2-16, two-term lags to 8, base 10 to 10), 2.34 x 10^11 primers, 4 forms, free alphabet: nothing fits K4; one copy of ten fits 3 settings; the plants' settings are found. Closed. Began on Modal, finished there after a crawl on the loaded laptop; $0.54 for the second leg. |
 
+### F6 (ticket #100)
+
+| # | Item | One line |
+|---|---|---|
+| 263 | F6.22 | **0114's AMSCO excess at 23 against 200 fresh shuffles.** K4 21 agreeing settings, shuffles 1-31 (median 8), 4 at or above (p 0.025; 0.075 over the three key lengths looked at); 22 and 24 ordinary. None of K4's 21 forced keys is a passage of a named text; the planted K3 key is found. At the edge: chased in F6.22b. $0.03. |
+
 The morning's Modal leg was judged slow from too little to go on: resumed on Modal it did the remaining 43% in 20 minutes ($0.54). The laptop, at load 50 from other work, managed about a million primers a second. A measured rate on a run's first minutes is a poor guide on either machine.
 
 The record's '1,346 two-alphabet settings' for F1.4 counted distinct partitions of the 24 known places (0127, 0128). A climb reads the whole slot map, so the cell is the 4,706 slot maps over all 97 places that fit K4 on two free alphabets (desk count): about 98,000 tempering runs, 330-410 core-hours. Drafted (`drafts/attack-f1.4-two-draft.py`, self-check against 0144 passes, plants read in part on one run).

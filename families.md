@@ -93,7 +93,8 @@ Update the leaf when an experiment works on it.
       - Columnar (plain, keyed, double, Myszkowski, AMSCO), rail fence {closed · exact · 0006, 0026, 0058, 0084, 0085, 0110, 0111, 0112, 0113, 0114}
       - K3's rule, quarter turns, grid paths, the ? as a 98th symbol {closed · exact · 0008, 0041, 0082, 0083, 0086, 0099}
       - Key on both sides of the move, the same table both sides {closed · exact · 0080}
-      - AMSCO at key length 23: above the coppers, within the number expected by chance {noted · exact · 0114}
+      - **F6.22** AMSCO at key length 23: above the coppers in 0114; against 200 fresh shuffles K4 21, 4 of 200 at or above (p 0.025, 0.075 over three lengths), no forced key a named passage {closed · exact · 0114, 0263; chased in F6.22b}
+      - **F6.22b** The forced period-23 keys read for English against the shuffles' {open · 0264}
     - One move with an autokey, running key or clock schedule {closed · exact · 0063, 0081, 0090, 0091}
     - One carved letter wrong, missing or extra, through every move {closed · exact · 0093, 0094}
     - Three stages

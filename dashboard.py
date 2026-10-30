@@ -1904,7 +1904,7 @@ LIN_JS = r"""
   // experiment numbers, then the line of dots; same-family arcs bulge right into the rest
   // of the column, never wider than the column allows.
   function layout(){
-    var n=nodes.length,nf=fams.length,padY=16,sp=data.current?22:16,MINCOL=data.current?120:112,NUMW=30;
+    var n=nodes.length,nf=fams.length,padY=data.current?20:16,sp=data.current?22:16,MINCOL=data.current?120:112,NUMW=30;
     var avail=host.clientWidth||1000;
     var y={},cols=[],py={},slot=0;
     var pAfter={};pivots.forEach(function(pv){pAfter[pv.after]=pv;});
@@ -2017,7 +2017,7 @@ LIN_JS = r"""
       g+='<a class="ng f'+fams[nd.fam].c+(nd.key===data.current?' row-on':'')+'" data-key="'+k+'" href="/exp/'+encodeURIComponent(nd.key)+'" target="_blank" rel="noopener" aria-label="'+esc(nd.n+': '+nd.title)+'">'+m
         +'<circle class="hit" cx="'+cx+'" cy="'+cy+'" r="10" fill="transparent"/>'
         +'<text class="nlab" x="'+(parseFloat(cx)-10)+'" y="'+(cy+3.3)+'" text-anchor="end">'+nd.n+'</text>'
-        +(data.current?'<text class="ntitle" x="'+(geo.tl+12)+'" y="'+(cy+4.2)+'">'+esc(short(nd.title,Math.floor((W-geo.tl-24)/6.4)))+'</text>':'')+'</a>';
+        +(data.current?'<text class="ntitle" x="'+(geo.tl+12)+'" y="'+(cy-3)+'">'+esc(short(nd.title,Math.floor((W-geo.tl-24)/6.4)))+'</text>':'')+'</a>';
     });
     pivots.forEach(function(pv){if(!(pv.id in geo.py))return;
       var ty=geo.py[pv.id];

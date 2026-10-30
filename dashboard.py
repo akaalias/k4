@@ -1342,10 +1342,9 @@ def outcome_chart(rows):
         if pv.get("after") in pos:
             px = L + (pos[pv["after"]] + 1) * step
             g.append(f'<a href="/pivot/{esc(pv["id"])}"><g data-tip="Pivot {esc(pv["id"])}, {esc(pv["date"])}<br>{esc(pv["from"])} &rarr; {esc(pv["to"])}">'
-                     f'<line x1="{px:.1f}" x2="{px:.1f}" y1="{T}" y2="{T + band * (len(shown) - 0.5):.1f}" stroke="var(--accent)" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="0.5 4" stroke-linecap="round"/>'
                      f'<path d="M{px - 3.5:.1f},{T - 6:.1f} L{px + 3.5:.1f},{T - 6:.1f} L{px:.1f},{T - 0.4:.1f} z" fill="var(--accent)" fill-opacity=".8"/>'
                      f'<text x="{px:.1f}" y="{T - 10:.1f}" font-size="11" font-style="italic" fill="var(--accent)" text-anchor="middle">{esc(pv["id"])}</text>'
-                     f'<rect x="{px - 6:.1f}" y="{T}" width="12" height="{band * len(shown)}" fill="transparent"/></g></a>')
+                     f'<rect x="{px - 8:.1f}" y="{T - 22:.1f}" width="16" height="22" fill="transparent"/></g></a>')
     tick_every = next(t for t in (10, 20, 50, 100, 200, 500, 1000) if n / t <= 14)
     for i, r in enumerate(rows):
         num = int(r["tag"][:4]) if r["tag"][:4].isdigit() else i + 1

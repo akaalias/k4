@@ -1780,7 +1780,8 @@ def experiment_page(tag):
     # Tufte sidenotes: each word's definition sits in the margin beside the line where it appears
     more = '<p class="sidenote-more">Words in the margin are defined on the <a href="/glossary">glossary</a> page.</p>' if kept else ""
     cm = cribmap_figure(tag)
-    off = 0
+    off = 1
+    lin = lineage_section(2, tag)
     plain = (sec(1, "The experiment method", "What the method does with the 24 known letters.")
              + f'<div class="plain tufte">{eli5_html}{more}</div>'
              + ('<div class="subsec"><b>1.1</b><h3>The method at work</h3></div>'
@@ -1791,7 +1792,7 @@ def experiment_page(tag):
         how = "the lowest-loss reading that passed the original gates" if best.get("gate_passed") else "the candidate with most known letters right; none passed every gate"
         cand = sec(2 + off, "Best candidate against the known letters", f"Laid out as the copper carries K4: OBKR ends the line that finishes K3, then three lines of 31. Left, as carved, the 24 known places in accent. Right, the candidate: a known place it gets right is an accent cell, one it misses is outlined. This is {how}.") + panel_block(K4, best["plaintext"], KNOWN).replace('class="panel-wrap"', 'class="panel-wrap wide"', 1)
     else:
-        cand = sec(2 + off, "Best candidate against the known letters", "This experiment produced no candidate: the search ruled everything out before a full text was built. Its product is the bounded negative in section 7.")
+        cand = sec(2 + off, "Best candidate against the known letters", "This experiment produced no candidate: the search ruled everything out before a full text was built. Its product is the bounded negative under Result and bounds below.")
     # remaining sections from the record, numbered
     order = [("Walkthrough, by hand", "Walkthrough, by hand", "Redo the method on a few letters with pencil and paper."),
              ("Worked example (generated)", "Worked example, generated", "The same steps run by the code on the real letters."),
@@ -1799,7 +1800,7 @@ def experiment_page(tag):
              ("Prediction", "Prediction", "Written before the run; the result decides it."),
              ("Method", "Method", ""),
              ("Result", "Result and bounds", "The harness's record: candidates, gates, loss, and the negative result this experiment leaves behind.")]
-    body = [head, plain, cand]
+    body = [head, plain, lin, cand]
     n = 3 + off
     sc = score_section(n, r, best)
     if sc:
@@ -2006,7 +2007,7 @@ LIN_JS = r"""
       else if(nd.decision==='reverted')m='<circle class="nr" cx="'+cx+'" cy="'+cy+'" r="3.6"/>';
       else{var c=parseFloat(cx),s=3.6;m='<path class="ne" d="M'+(c-s)+','+(cy-s)+' L'+(c+s)+','+(cy+s)+' M'+(c+s)+','+(cy-s)+' L'+(c-s)+','+(cy+s)+'"/>';}
       if(nd.recorded==='kept'&&nd.decision!=='kept')m+='<circle class="nwas" cx="'+cx+'" cy="'+cy+'" r="7.5"/>';
-      g+='<a class="ng f'+fams[nd.fam].c+'" data-key="'+k+'" href="/exp/'+encodeURIComponent(nd.key)+'" target="_blank" rel="noopener" aria-label="'+esc(nd.n+': '+nd.title)+'">'+m
+      g+='<a class="ng f'+fams[nd.fam].c+(nd.key===data.current?' row-on':'')+'" data-key="'+k+'" href="/exp/'+encodeURIComponent(nd.key)+'" target="_blank" rel="noopener" aria-label="'+esc(nd.n+': '+nd.title)+'">'+m
         +'<circle class="hit" cx="'+cx+'" cy="'+cy+'" r="10" fill="transparent"/>'
         +'<text class="nlab" x="'+(parseFloat(cx)-10)+'" y="'+(cy+3.3)+'" text-anchor="end">'+nd.n+'</text></a>';
     });
@@ -2030,6 +2031,10 @@ LIN_JS = r"""
 
   function clearLit(){svg.classList.remove('dim');svg.querySelectorAll('.lit,.lit-direct').forEach(function(el){el.classList.remove('lit','lit-direct');});
     lanesEl.querySelectorAll('.on').forEach(function(el){el.classList.remove('on');});}
+  // On an experiment's own page every node is its line: light all of it, the experiment itself strongest
+  function reset(){clearLit();if(!data.current)return;svg.classList.add('dim');
+    nodes.forEach(function(nd){mark(nd.key,nd.key===data.current?'lit-direct':'lit');});
+    svg.querySelectorAll('.edge').forEach(function(e){e.classList.add('lit');});}
   function mark(k,cls){var el=svg.querySelector('.ng[data-key="'+CSS.escape(k)+'"]');if(el)el.classList.add(cls);}
   // Trace a node's line back to its root, every ancestor and edge in full.
   function lit(key){
@@ -2076,7 +2081,7 @@ LIN_JS = r"""
   var rowOn=null;
   function rowHi(key){
     if(rowOn===key)return;
-    if(rowOn)svg.querySelectorAll('.row-on,.rhit.on').forEach(function(el){el.classList.remove('row-on','on');});
+    if(rowOn)svg.querySelectorAll('.row-on,.rhit.on').forEach(function(el){if(el.getAttribute('data-key')!==data.current||!el.classList.contains('ng'))el.classList.remove('row-on','on');});
     rowOn=key;if(!key)return;
     var q='[data-key="'+CSS.escape(key)+'"]';
     var b=svg.querySelector('.rhit'+q),l=svg.querySelector('.lrow'+q),n=svg.querySelector('.ng'+q);
@@ -2096,25 +2101,25 @@ LIN_JS = r"""
     svg.querySelectorAll('.edge').forEach(function(e){var h=document.createElementNS('http://www.w3.org/2000/svg','path');
       h.setAttribute('class','ehit');h.setAttribute('d',e.getAttribute('d'));h.setAttribute('data-c',e.getAttribute('data-c'));h.setAttribute('data-p',e.getAttribute('data-p'));e.after(h);});
     svg.addEventListener('mouseover',function(e){var h=e.target.closest('.ehit');if(h)litEdge(h.getAttribute('data-c'),h.getAttribute('data-p'));});
-    svg.addEventListener('mouseout',function(e){if(e.target.closest('.ehit')&&!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('.ng')))clearLit();});
+    svg.addEventListener('mouseout',function(e){if(e.target.closest('.ehit')&&!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('.ng')))reset();});
     svg.addEventListener('mouseover',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');lit(k);showTip(k,a);});
-    svg.addEventListener('mouseout',function(e){var a=e.target.closest('.ng');if(!a||a.contains(e.relatedTarget))return;clearLit();hideTip();});
+    svg.addEventListener('mouseout',function(e){var a=e.target.closest('.ng');if(!a||a.contains(e.relatedTarget))return;reset();hideTip();});
     svg.addEventListener('focusin',function(e){var a=e.target.closest('.ng');if(a){var k=a.getAttribute('data-key');lit(k);showTip(k,a);}});
-    svg.addEventListener('focusout',function(){clearLit();hideTip();});
+    svg.addEventListener('focusout',function(){reset();hideTip();});
     // A click opens the record in a new tab (the dot's link); on a touch screen the first tap
     // shows the popover and the second opens the record.
     svg.addEventListener('click',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');
       if(lastPointer==='touch'&&shownKey!==k){e.preventDefault();lit(k);showTip(k,a);}});
     lanesEl.querySelectorAll('.lane-lab').forEach(function(el){
       el.addEventListener('mouseenter',function(){litFam(+el.getAttribute('data-fam'));});
-      el.addEventListener('mouseleave',function(){clearLit();});});
+      el.addEventListener('mouseleave',function(){reset();});});
   }
   // On opening, glide down and across to the most recent experiment (#106), unless the reader
   // has scrolled already or the address names a place on the page.
   // Both axes move together on one ease-in-out curve, slower for longer distances; a wheel,
   // touch or key from the reader stops it where it is.
   function toLatest(){
-    var last=nodes[nodes.length-1];if(!last||location.hash||window.scrollY>0||host.scrollLeft>0)return;
+    var last=nodes[nodes.length-1];if(data.current||!last||location.hash||window.scrollY>0||host.scrollLeft>0)return;
     var C=geo.cols[last.fam],top=window.scrollY+svg.getBoundingClientRect().top+geo.y[last.key];
     var y0=window.scrollY,x0=host.scrollLeft,
         y1=Math.max(0,Math.min(top-window.innerHeight*0.6,document.documentElement.scrollHeight-window.innerHeight)),
@@ -2131,12 +2136,12 @@ LIN_JS = r"""
       if(t<1)requestAnimationFrame(step);
     });
   }
-  render();wire();setTimeout(toLatest,500);
+  render();wire();reset();setTimeout(toLatest,500);
   host.addEventListener('scroll',function(){syncHeads();if(shownKey)hideTip();},{passive:true});
-  window.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
+  window.addEventListener('scroll',function(){if(shownKey){reset();hideTip();}},{passive:true});
   var rw=null,lastW=host.clientWidth;
   window.addEventListener('resize',function(){clearTimeout(rw);rw=setTimeout(function(){if(host.clientWidth===lastW)return;lastW=host.clientWidth;
-    render();wire();},150);});
+    render();wire();reset();},150);});
 })();
 </script>"""
 
@@ -2213,6 +2218,42 @@ def lineage_data(rows):
     pivots = [{"id": p["id"], "after": next((r["tag"] for r in rows if r["tag"][:4] == p["after"]), None),
                "label": f'Pivot {p["id"]}: {p["from"]} \u2192 {p["to"]}'} for p in load_pivots()]
     return {"nodes": nodes, "families": fams, "pivots": [p for p in pivots if p["after"]]}
+
+
+def lineage_section(n, tag):
+    """The lineage diagram cut down to one experiment's line: its ancestors back to the root and
+    everything built on it since, in the family columns that line touches, without pivot rows."""
+    rows = load_results()
+    par = parent_tags(rows)
+    line = set()
+    k = tag
+    while k and k not in line:
+        line.add(k)
+        k = par.get(k)
+    kids = {}
+    for c, p in par.items():
+        kids.setdefault(p, []).append(c)
+    todo = list(kids.get(tag, []))
+    while todo:
+        c = todo.pop()
+        if c not in line:
+            line.add(c)
+            todo += kids.get(c, [])
+    sub = [r for r in rows if r["tag"] in line]
+    up, down = sum(1 for r in sub if r["tag"] < tag), sum(1 for r in sub if r["tag"] > tag)
+    title = "Experiment lineage"
+    if len(sub) < 2:
+        return sec(n, title, "This experiment started a line of its own, and nothing has been built on it yet.")
+    say = (f"{up} experiment{'s' if up != 1 else ''} before it, back to the root of its line" if up else "it starts a line of its own")
+    say += (f"; {down} experiment{'s' if down != 1 else ''} built on it since." if down else "; nothing has been built on it yet.")
+    data = lineage_data(sub)
+    data["pivots"] = []
+    data["current"] = tag
+    blob = json.dumps(data).replace("</", "<\\/")
+    return (f"<style>{LIN_CSS}</style>" + sec(n, title, "Only this experiment's line from the lineage page: " + say + " Its number is in bold.")
+            + '<div class="lin"><div style="max-width:980px;margin:0 auto">' + LIN_LEGEND.replace('<span class="k"><svg width="12" height="10" viewBox="0 0 12 10"><path d="M1,1 L11,1 L6,9 z" fill="var(--accent)"/></svg>pivot</span>\n', "") + "</div>"
+            + '<div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>'
+            + f'<div id="lin-tip" role="tooltip"></div><script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}')
 
 
 LIN_LEGEND = """<div class="lin-legend">

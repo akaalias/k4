@@ -1,0 +1,7 @@
+F6.22b: the keys K4's AMSCO settings force at period 23, read for English.
+
+  AMSCO keyed by a word, then the table with a 23-letter key: each known letter lands on a carved place p,
+  and forces the key letter at slot p mod 23 (carved minus known on the table, or their sum for Beaufort).
+  Written in slot order with '?' where nothing lands, a key taken from English text reads as English in runs of four.
+
+  per text: the best such key over its agreeing settings; K4's against 200 shuffles'; 20 planted English keys for power.

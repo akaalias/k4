@@ -1,0 +1,185 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "Gromark, free mixed alphabet, the rules 0195 left: three-term base 26 lag 6; three-term lag 7 in bases 2-16; two-term base 26 lags 6-7; two-term lags 7-8 in bases 2-9, 11-16; two-term base 10 lags 9-10; four forms; exact",
+  "rule_jobs": 445,
+  "primers": 234092726300,
+  "per_base": {
+   "10": {
+    "rules": 32,
+    "primers": 98150000000,
+    "k4": 0
+   },
+   "26": {
+    "rules": 21,
+    "primers": 52824597696,
+    "k4": 0
+   },
+   "16": {
+    "rules": 28,
+    "primers": 35701915648,
+    "k4": 0
+   },
+   "15": {
+    "rules": 28,
+    "primers": 21528281250,
+    "k4": 0
+   },
+   "14": {
+    "rules": 28,
+    "primers": 12544206976,
+    "k4": 0
+   },
+   "13": {
+    "rules": 28,
+    "primers": 7027833904,
+    "k4": 0
+   },
+   "12": {
+    "rules": 28,
+    "primers": 3762339840,
+    "k4": 0
+   },
+   "11": {
+    "rules": 28,
+    "primers": 1909742758,
+    "k4": 0
+   },
+   "9": {
+    "rules": 28,
+    "primers": 401769396,
+    "k4": 0
+   },
+   "8": {
+    "rules": 28,
+    "primers": 161480704,
+    "k4": 0
+   },
+   "7": {
+    "rules": 28,
+    "primers": 57648010,
+    "k4": 0
+   },
+   "6": {
+    "rules": 28,
+    "primers": 17635968,
+    "k4": 0
+   },
+   "5": {
+    "rules": 28,
+    "primers": 4375000,
+    "k4": 0
+   },
+   "4": {
+    "rules": 28,
+    "primers": 802816,
+    "k4": 0
+   },
+   "3": {
+    "rules": 28,
+    "primers": 91854,
+    "k4": 0
+   },
+   "2": {
+    "rules": 28,
+    "primers": 4480,
+    "k4": 0
+   }
+  },
+  "consistent": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0
+   ],
+   "plants": [
+    4,
+    1,
+    2
+   ]
+  },
+  "plants": [
+   {
+    "base": 26,
+    "lags": [
+     1,
+     3,
+     6
+    ],
+    "primer": [
+     8,
+     15,
+     21,
+     0,
+     25,
+     0
+    ]
+   },
+   {
+    "base": 16,
+    "lags": [
+     2,
+     8
+    ],
+    "primer": [
+     1,
+     10,
+     9,
+     2,
+     3,
+     14,
+     9,
+     12
+    ]
+   },
+   {
+    "base": 26,
+    "lags": [
+     2,
+     7
+    ],
+    "primer": [
+     17,
+     17,
+     16,
+     2,
+     22,
+     13,
+     8
+    ]
+   }
+  ],
+  "k4_consistent": [],
+  "not_covered": "three-term lag 8 and beyond; two-term base 26 lag 8 and beyond (26^8 = 2.1e11 primers per rule); two-term lags beyond 8 outside base 10",
+  "copies": "10 shuffled copies (seed 1940)",
+  "seconds": 1230,
+  "exhaustive": true,
+  "cost_estimate": "2.34e11 primers at about 2.4 million per core-second with 14 texts (desk timing 2026-10-29): about 27 core-hours, about 1 h on 32 cores, about $1.5 of Modal credit (about $3.4 left after the margin)"
+ },
+ "notes": "234,092,726,300 primers x 4 forms; consistent K4 0 (copies 0-3); plants [4, 1, 2]",
+ "controls": [],
+ "error": null,
+ "worked_example": "base 16, each digit the sum of the digits 1, 3 and 6 places back, primer 1 2 3 4 5 6:\n1 2 3 4 5 6 11 2 11 10 1 2 7 10 7 8 3 12 11 8 11 14 9 0 9 10 5 12 15 4 9 2 11 0\nplaces 26 and 27 (N, O over Q, Q), form M[P+d]=c: need d26 - d27 = 1; here 10 - 5 = 5",
+ "seconds": 1229.639748096466,
+ "compute": {
+  "where": "modal",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 1230.9,
+  "dollars": 0.538
+ },
+ "checkpoint": {
+  "file": "d76635c15464bc81.jsonl",
+  "resumed": 240,
+  "saved": 4126
+ }
+}

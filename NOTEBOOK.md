@@ -19,6 +19,12 @@ D2's re-costed cells (ticket #77). The morning's 0253 attempt was lost to a DNS 
 | 256 | F1.7 | **Autokey on one free alphabet, every cell K4 fits, with stand-ins.** Plaintext autokey's chains written out in full: 130 cells fit K4 (0149: 103), three of 0149's are dead, 30 it never decided are checked. K4 above all 12 copies in 7 of 130 cells; 6 of 10 stand-ins at or above (p 0.64). Plants 8 of 24 (ciphertext autokey) and 4 of 24 (plaintext): closed at that low power, F1.13 for a better climb. $3.74. |
 | 257 | D1b | **Design 2's power per run for two free alphabets.** 96 plants at 13 and 16: one run finds 63, ten find 71, four find 66. One run does not qualify by D1's rule (within 5); four do. Power alike at 13 and 16. $1.70. |
 
+### F13 (ticket #85), after pivot P22
+
+| # | Item | One line |
+|---|---|---|
+| 258 | F13.4c (D3) | **One free alphabet at key lengths 6-19, ciphertext only, K4 against 100 shuffles per cell.** K4 p 0.84, in no cell above all 100; plants 2-5 of 8. Closed at that power; D3 closed. Modal failed at the very end because I committed P22 while it uploaded the repository; the laptop finished the last climbs from the checkpoint, so the record says local and its Modal cost (about $3.6 by wall time) is not counted. |
+
 The excess is spread over the whole cell (K4 beat its first copy in 61% of settings, not 50%), and no reading is English, which points at the test rather than at a message: the settings were chosen because K4 fits them, and a shuffle that also fits need not have the same freedom. A desk check of the letters the witness pins did not show it (K4 21, copies 20.7). 0254 runs the procedure on four shuffles of K4 as stand-ins, each on its own fitting settings, beside K4 with fresh copies: if the stand-ins show the excess too, it belongs to the test.
 
 Desk work while 0253 ran: the F1.7 draft's climb was broken (it never reached a state with all 24 known letters at short plaintext-autokey lags and left the true alphabet when started on it); fixed with the full chain equations (0149 used only pairs L apart) and 0139's repair moves; on ciphertext autokey no variant reached a plant's own score, so its power there will be low and is measured in the run. Drafts written and smoke-tested: D1b, F5.2 (27 core-hours), F13.4c at 6-19 for D3, F13.4h, F1.12. D3's cells listed: six were already run on K4 against its own copies in their closing experiments and are closed as sampled at their measured power, three tell nothing, one (F13.4c 6-19) is drafted.

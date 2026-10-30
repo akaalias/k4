@@ -210,7 +210,7 @@ Update the leaf when an experiment works on it.
       - **F13.4b** Periodic key on 2.08 million dictionary keyword tables, lengths 1-26: K4 inside 100 climbed shuffles (p 0.66); plants found at 5 only (8/8; 4/8 at 10) {closed · sampled · 0235}
         - Lengths 6-26: the per-column frequency screen loses the true table (plants 0-4/8); K4 never above all 100 shuffles: sampled at that power (D3) {closed · sampled · 0235}
       - **F13.4c** One free alphabet with a periodic key, lengths 1-19, both forms: plants found to 5 (7/8); K4 inside 50 climbed shuffles there (p 0.37) {closed · sampled · 0236}
-        - Lengths 6-19: alphabet and key not found together without known letters (plants 2-5/8) {blocked · sampled · 0236}
+        - Lengths 6-19: plants 2-5/8; K4 inside 100 fresh shuffles climbed the same way (p 0.84), no cell above all 100 (D3) {closed · sampled · 0236, 0258}
       - **F13.4d** 27,852 moves before or after the sculpture's tables, lengths 1-20: plants found to 12 {closed · sampled · 0237}
         - K4 above its shuffles at table-then-move, key length 2 (p 0.0099, replicated p 0.023 against 300 fresh); reading junk, 3 of 24 known letters; the judge at the edge of chance (14 of 300 at or above) {noted · sampled · 0237, 0238, 0239}
         - Lengths 13-20 sampled at power 1-6/8, K4 never above all shuffles (D3); F6.1 (a free alphabet after a move) blocked by 0236's power {closed · sampled · 0237, 0238, 0236}

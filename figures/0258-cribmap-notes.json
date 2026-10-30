@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4c: one scrambled alphabet with a repeating key of 6-19 letters, solved from the ciphertext alone; 0236 measured this search's power but judged K4 only to length 5."
+ },
+ {
+  "anchor": "the check",
+  "text": "K4 and 100 fresh shuffles at every length and both forms, 3,220 searches; planted messages redrawn in the same run."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4's best cell 11/beaufort, p 0.84; planted messages found 2-5 of 8: closed at that power."
+ }
+]

@@ -1,0 +1,1044 @@
+{
+ "candidates": [
+  {
+   "plaintext": "DHOUNCKSCKNETOKNCMTHROLDERYVKINEMAWHANYATSSOTHEBAYEDREMLDSONGGALSGENETEMIERIGAHMEDIRPFORAYWITHIKC",
+   "key": {
+    "alphabet": "MLQJUBGKOCAPZYVSEFHIWRDXNT",
+    "form": "beaufort",
+    "shifts": [
+     4,
+     23,
+     15,
+     25,
+     2,
+     17
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "KDISLALSMALPANSEMHADTOBYOFFITWHINGCESOFGOLINALAMSVONGPEEURROURDMEFOOODAHMITBYTRGONSKDMIYDSTBALSUP",
+   "key": {
+    "alphabet": "FSMERNLAJKHVCIYWPUZTXBQOGD",
+    "form": "added",
+    "shifts": [
+     14,
+     22,
+     22,
+     3,
+     11,
+     16
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "IRORCHEINNINCDISTHECASSPAPROUGZETUPMVIGTENFLDERMANOFENSSOFCULLIACRASARDAREKISHKMTOBSONOIMSWRIODIQ",
+   "key": {
+    "alphabet": "MAYJWRSLBVPCFUQXENTZKOGIHD",
+    "form": "beaufort",
+    "shifts": [
+     18,
+     13,
+     15,
+     10,
+     24,
+     19,
+     5
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "OVEOFKTONATCOMOEYSTOAFEDEMABRWOAENDTOFFECHSTBAURAABRACHSIDINGIGNALESWIZULANDSKMCCOMSINETIHEUSEDYS",
+   "key": {
+    "alphabet": "FTLPAHOGZVSCXYIWQUBEKDRJNM",
+    "form": "added",
+    "shifts": [
+     0,
+     9,
+     1,
+     16,
+     17,
+     12,
+     11
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "UHESNTINDBYOLNGSSTHISREDALLVESOGIOSTSOVLPLORRISHCAFFADTRSAWBURNORGITIPSAJEWEMISTERNATHRBLYAURIPFY",
+   "key": {
+    "alphabet": "QERYTMSGCBAHNPOZFUJKLVXWDI",
+    "form": "beaufort",
+    "shifts": [
+     5,
+     20,
+     20,
+     8,
+     3,
+     18,
+     21,
+     0
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "QYNJUDGENKAYBAYBODEDWHONHEFERWKCIZYAWOFUSEWIESTILLUSKEAGOLIONHESFORATITREHINDSTHANSRICNOCIPPESSYJ",
+   "key": {
+    "alphabet": "UOEXHMWAYDGJZIPQVKCTLBFRNS",
+    "form": "added",
+    "shifts": [
+     12,
+     13,
+     19,
+     12,
+     0,
+     18,
+     19,
+     25
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "YKYALITSSHIEFBIMTOCKABUCHNAMPSTHASSEDTRIFYSOTENFEDLCARTOPRIONPUALICOLLCOMBATAMABEZACSEMERBNILLMSO",
+   "key": {
+    "alphabet": "DTOAMKSILZRXGJVQFEPNYUWBHC",
+    "form": "beaufort",
+    "shifts": [
+     22,
+     2,
+     25,
+     13,
+     3,
+     9,
+     12,
+     8,
+     18
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "FRMTODBEEMARHADSHYCRAZELINBNUSSUNTENEOFAPMTOIBEHINENTWHINNITESULWEGLEDAYNSASBOURNAPORSOFGCTATUMWV",
+   "key": {
+    "alphabet": "SUTFGKRHVXIBPMWDJCNYEQAOLZ",
+    "form": "added",
+    "shifts": [
+     20,
+     5,
+     18,
+     4,
+     4,
+     8,
+     24,
+     3,
+     10
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "BTISAGYPINVARREDSDODESPSPELOTHICERESFACAFIEROFANESREIVALSTELASRUDIVAREPSLECOURPOREACBONISTNUSEWHO",
+   "key": {
+    "alphabet": "NWUOPIGZBVEACSMRDFKLJXTYHQ",
+    "form": "beaufort",
+    "shifts": [
+     11,
+     4,
+     23,
+     2,
+     13,
+     9,
+     18,
+     7,
+     11,
+     24
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "TIONTINTSDOUNTAWOSTYBEINOBELULDCUTAFLARECOUTCLINOGAROSTJOHOSPENIFRJAYINEYAMEYEEWARHMSEHOFTHATARSP",
+   "key": {
+    "alphabet": "ZSGIAMOWVXLJNKDFHYTBURQCPE",
+    "form": "added",
+    "shifts": [
+     14,
+     16,
+     7,
+     9,
+     2,
+     3,
+     23,
+     14,
+     1,
+     2
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "HPERLYONOODEPATUSESTARESINGATOONIVCLISECTIVILTHEYPRTLEDGASIENESSFASKLLORNHEDUNDNONXIYONDONSHIMSAH",
+   "key": {
+    "alphabet": "PBHGAEKSCZFYUJVNLWDORTXIMQ",
+    "form": "beaufort",
+    "shifts": [
+     21,
+     1,
+     11,
+     14,
+     2,
+     4,
+     15,
+     8,
+     22,
+     21,
+     4
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "PLFAMBUTAMENLLIELADMOWNATERUDAAGNTINSGOVEHINDHARLSSEYWERYISSHADRASSUNDOTOWNTOAREUNNEUAGEONINAVIJC",
+   "key": {
+    "alphabet": "SUQDAPWTXMRFYJLGZHIVBNEKOC",
+    "form": "added",
+    "shifts": [
+     19,
+     6,
+     12,
+     6,
+     18,
+     4,
+     7,
+     17,
+     11,
+     8,
+     5
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "BYOURINICVELOAKILLACIESTUNNVUTHESAFREINYMGODTOANESIMAFTSWSYSNEYESHINEMAFSOCOFEEVERMOGPORTABATOMER",
+   "key": {
+    "alphabet": "BCDEQXNFZWYAOPHIUJMRLTVGKS",
+    "form": "beaufort",
+    "shifts": [
+     12,
+     10,
+     10,
+     9,
+     9,
+     1,
+     11,
+     1,
+     24,
+     10,
+     19,
+     14
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "MAAHISDEGONLEDDANDINWYERULEFMYOUSMSTORENTFUIEROZONLOSECTISHICEPLOMNOTTOFTHUSABMATERDAMARDNTPERRAG",
+   "key": {
+    "alphabet": "OWLKFXSHEBDUVAIJCNTPZGRYQM",
+    "form": "added",
+    "shifts": [
+     1,
+     22,
+     16,
+     15,
+     23,
+     20,
+     21,
+     18,
+     0,
+     7,
+     20,
+     0
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "GUENMATFIFOUREHOMATIJETABENSURESHITLEFEETACRICAWARFSHERATOESKHIRLAINFULVENALAIRANEONBYNISLUDLESFY",
+   "key": {
+    "alphabet": "XYNAZUGLODRPQTVIJWSKCHEMBF",
+    "form": "beaufort",
+    "shifts": [
+     14,
+     3,
+     15,
+     12,
+     2,
+     11,
+     13,
+     7,
+     21,
+     20,
+     13,
+     12,
+     8
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "HITRYINDOTHLENTSISRYAGINVIDFENCHAUSHITINCOSNGEVISTTOGANDANUTERANSREATPOINASMDUKRAJETHPAADURYPTCOM",
+   "key": {
+    "alphabet": "QFTXYEUCLGBKWZRHPOMAVIJNDS",
+    "form": "added",
+    "shifts": [
+     2,
+     15,
+     9,
+     0,
+     2,
+     22,
+     6,
+     19,
+     18,
+     13,
+     17,
+     0,
+     5
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "RKOEASTFURIONTRMAYPMEOTHERSFORMOLOVERPPTORAGROWLEXLEMOREETSAFALISTESFUNEVOZINLOSTALEESONEDAYMUDJU",
+   "key": {
+    "alphabet": "OZLSWQCKJFEUBIVXGMDPAHNRYT",
+    "form": "beaufort",
+    "shifts": [
+     23,
+     19,
+     7,
+     7,
+     5,
+     3,
+     14,
+     9,
+     1,
+     18,
+     24,
+     2,
+     8,
+     2
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "RALANCHERUKRHERERGEDELANETANPUCNORANSOLDICHZANSHEMICAREHATOEMINGUSEOFTWOINHEOFNARCYHAILORSUITIOFM",
+   "key": {
+    "alphabet": "XQVDKJLEBATPGICRHWFOSZYMNU",
+    "form": "added",
+    "shifts": [
+     4,
+     25,
+     24,
+     6,
+     1,
+     5,
+     10,
+     12,
+     23,
+     17,
+     21,
+     17,
+     18,
+     13
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "GHINETASHEMIQIVERJANWONARSEIGNOMEMMORREWTENIGUALLYOTHINGLOCRASTRANERNANDINTOLITTOTEFODOTOUNUSESHW",
+   "key": {
+    "alphabet": "KUMCSOEDPHIWJANZXTRBYLGVFQ",
+    "form": "beaufort",
+    "shifts": [
+     1,
+     2,
+     10,
+     6,
+     7,
+     22,
+     3,
+     9,
+     5,
+     15,
+     3,
+     5,
+     18,
+     14,
+     2
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "HSABRTWHASCRITTAMESTSTANDTEDAPSALLSORETULEMTHORRICONOFFICOOLYESOMNIESTUNDESSFARHONLIPAWTMADNGANUE",
+   "key": {
+    "alphabet": "CUZKEXYIDSTQNRAGVHMFLJWOBP",
+    "form": "added",
+    "shifts": [
+     6,
+     15,
+     15,
+     15,
+     14,
+     13,
+     9,
+     6,
+     1,
+     8,
+     1,
+     7,
+     17,
+     25,
+     13
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "HLRHEGARCKATHETURINWANCOULDCANDSMATEASIFALSUCOMINSOFPEDINNIGDANDBTLETANSEHIINOMOUNCODOMEMOUSCOCRI",
+   "key": {
+    "alphabet": "RUJXCFPHKSBYMEOGLAVDTIZWNQ",
+    "form": "beaufort",
+    "shifts": [
+     21,
+     0,
+     8,
+     7,
+     14,
+     3,
+     20,
+     14,
+     19,
+     15,
+     18,
+     10,
+     17,
+     22,
+     8,
+     17
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "RWESLTVIESAREURNORYINWROPLEANDCRUARENEXTALYIBETANDSPECONGOTURGYBAEMESAGERATTHETSSTIMONNSOFNOBEITH",
+   "key": {
+    "alphabet": "KNEDFZGTCSIUOLRBHYPAQXVJMW",
+    "form": "added",
+    "shifts": [
+     24,
+     16,
+     24,
+     5,
+     24,
+     5,
+     25,
+     2,
+     4,
+     7,
+     18,
+     25,
+     13,
+     24,
+     24,
+     12
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "EACTCINEWDEBSNFRAMALISPORNISTITEATENIRECESTRUCEITSSALBELOWNAPALIAATSTENABYALEANDYPRIALLEOCTTOMEFT",
+   "key": {
+    "alphabet": "COBNZLHKJTADYGPWUEISVMXFRQ",
+    "form": "beaufort",
+    "shifts": [
+     18,
+     12,
+     7,
+     7,
+     16,
+     19,
+     25,
+     18,
+     2,
+     17,
+     7,
+     7,
+     21,
+     22,
+     24,
+     3,
+     2
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "TNEPROCUTGLATTHTHINNIALTHOWSGODEONTOMSBSWOMBUTYAMPEDESASIDENUESONINECALOWKOTINGERSTSHEEPERALCASDG",
+   "key": {
+    "alphabet": "ASNPOGWZJYCKXIHQMLBUTERFDV",
+    "form": "added",
+    "shifts": [
+     10,
+     16,
+     16,
+     19,
+     23,
+     0,
+     2,
+     11,
+     11,
+     9,
+     2,
+     17,
+     24,
+     7,
+     16,
+     23,
+     25
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "MENCANIEDKMONMTSNOHEALIMAUROLEMILLEMEUMURDERTHESHNONTHINETHTYMANBISTOCLONLANTATDELCALEGRANCTIOOKW",
+   "key": {
+    "alphabet": "ODXEFTCGPZHSIUJBQNRALVWYKM",
+    "form": "beaufort",
+    "shifts": [
+     25,
+     18,
+     15,
+     24,
+     6,
+     17,
+     14,
+     3,
+     8,
+     8,
+     12,
+     20,
+     6,
+     10,
+     5,
+     5,
+     3,
+     4
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "UEEAXRIDRESMITONHEREIRREPREYEANUSEYREANTEDGIANINMSTODINISSUMANTINSTOTACEITIEFANANDHUBEKRATTODUPCH",
+   "key": {
+    "alphabet": "SQUGJFLTXMEIRZOHNCYAVKWPBD",
+    "form": "added",
+    "shifts": [
+     12,
+     14,
+     11,
+     19,
+     20,
+     2,
+     23,
+     15,
+     17,
+     5,
+     2,
+     23,
+     13,
+     19,
+     0,
+     16,
+     22,
+     21
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "ARDCUSONRENBUENTSBEYTODERTROBUSLETRONTISATIONINUSEARITUTNOTHENDEDOFCUNDEIBNCCOMOOURYANGTOPPERSGOB",
+   "key": {
+    "alphabet": "EXWVYCRIZPONAGKQUDBJLFTMHS",
+    "form": "beaufort",
+    "shifts": [
+     22,
+     24,
+     5,
+     11,
+     6,
+     9,
+     11,
+     21,
+     19,
+     24,
+     1,
+     12,
+     8,
+     25,
+     21,
+     16,
+     6,
+     13,
+     18
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  },
+  {
+   "plaintext": "BEASEAMICAPIKEFICOURNTONCEBEDADGELLEANIOREROULDYOFMBAILEFENORKERTELLASATHBACKTEMASHEFIRELYWEILZEL",
+   "key": {
+    "alphabet": "SCYGFQIHJVAELPNXTUOBRMWDKZ",
+    "form": "added",
+    "shifts": [
+     25,
+     8,
+     14,
+     20,
+     6,
+     8,
+     20,
+     12,
+     2,
+     23,
+     4,
+     6,
+     21,
+     15,
+     14,
+     6,
+     5,
+     12,
+     2
+    ]
+   },
+   "key_bits": 0.0,
+   "key_description": "",
+   "reencrypted": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+   "notes": ""
+  }
+ ],
+ "bounds": {
+  "item": "F13.4c lengths 6-19 (D3)",
+  "search_reads_known_letters": false,
+  "forms": [
+   "beaufort",
+   "added"
+  ],
+  "search": "0236's climb, unchanged (imported): 0140's parallel tempering with no known letter, 3 runs x 16 replicas x 625 rounds x 1000 moves; MIX8m rescoring",
+  "k4_copies": 100,
+  "cells": 28,
+  "plant_power": {
+   "6": [
+    3,
+    8
+   ],
+   "7": [
+    5,
+    8
+   ],
+   "8": [
+    4,
+    8
+   ],
+   "10": [
+    4,
+    8
+   ],
+   "13": [
+    5,
+    8
+   ],
+   "16": [
+    4,
+    8
+   ],
+   "19": [
+    2,
+    8
+   ]
+  },
+  "plant_letters_right": {
+   "6": [
+    9,
+    7,
+    11,
+    12,
+    26,
+    34,
+    2,
+    17
+   ],
+   "7": [
+    9,
+    7,
+    7,
+    2,
+    6,
+    2,
+    24,
+    10
+   ],
+   "8": [
+    18,
+    4,
+    25,
+    9,
+    11,
+    13,
+    3,
+    21
+   ],
+   "10": [
+    12,
+    8,
+    22,
+    23,
+    13,
+    6,
+    10,
+    10
+   ],
+   "13": [
+    7,
+    6,
+    16,
+    10,
+    13,
+    2,
+    12,
+    4
+   ],
+   "16": [
+    10,
+    6,
+    11,
+    6,
+    5,
+    2,
+    5,
+    10
+   ],
+   "19": [
+    8,
+    12,
+    10,
+    7,
+    7,
+    1,
+    5,
+    5
+   ]
+  },
+  "k4_z_by_cell": {
+   "6/beaufort": -1.573,
+   "6/added": -0.952,
+   "7/beaufort": -0.009,
+   "7/added": -0.915,
+   "8/beaufort": -2.01,
+   "8/added": -0.66,
+   "9/beaufort": 0.697,
+   "9/added": -2.769,
+   "10/beaufort": -0.565,
+   "10/added": 0.913,
+   "11/beaufort": 1.469,
+   "11/added": -1.215,
+   "12/beaufort": -1.398,
+   "12/added": 0.615,
+   "13/beaufort": -1.176,
+   "13/added": 0.171,
+   "14/beaufort": 1.447,
+   "14/added": 1.377,
+   "15/beaufort": 0.39,
+   "15/added": -0.724,
+   "16/beaufort": 0.104,
+   "16/added": 0.104,
+   "17/beaufort": -0.413,
+   "17/added": -1.743,
+   "18/beaufort": -2.717,
+   "18/added": 0.104,
+   "19/beaufort": 0.383,
+   "19/added": -0.493
+  },
+  "k4_copies_at_or_above_by_cell": {
+   "6/beaufort": 93,
+   "6/added": 81,
+   "7/beaufort": 49,
+   "7/added": 81,
+   "8/beaufort": 96,
+   "8/added": 73,
+   "9/beaufort": 24,
+   "9/added": 100,
+   "10/beaufort": 69,
+   "10/added": 17,
+   "11/beaufort": 11,
+   "11/added": 90,
+   "12/beaufort": 93,
+   "12/added": 28,
+   "13/beaufort": 89,
+   "13/added": 42,
+   "14/beaufort": 9,
+   "14/added": 10,
+   "15/beaufort": 33,
+   "15/added": 74,
+   "16/beaufort": 48,
+   "16/added": 43,
+   "17/beaufort": 66,
+   "17/added": 94,
+   "18/beaufort": 99,
+   "18/added": 42,
+   "19/beaufort": 39,
+   "19/added": 67
+  },
+  "k4_cells_above_all_copies": 0,
+  "k4_statistic": 1.469,
+  "k4_best_cell": "11/beaufort",
+  "k4_p": 0.8416,
+  "k4_known_letters_in_place_by_cell": {
+   "6/beaufort": 0,
+   "6/added": 2,
+   "7/beaufort": 1,
+   "7/added": 1,
+   "8/beaufort": 0,
+   "8/added": 0,
+   "9/beaufort": 2,
+   "9/added": 2,
+   "10/beaufort": 3,
+   "10/added": 3,
+   "11/beaufort": 3,
+   "11/added": 3,
+   "12/beaufort": 3,
+   "12/added": 1,
+   "13/beaufort": 3,
+   "13/added": 1,
+   "14/beaufort": 0,
+   "14/added": 2,
+   "15/beaufort": 1,
+   "15/added": 2,
+   "16/beaufort": 1,
+   "16/added": 1,
+   "17/beaufort": 3,
+   "17/added": 3,
+   "18/beaufort": 3,
+   "18/added": 1,
+   "19/beaufort": 1,
+   "19/added": 1
+  },
+  "climbs": 3220,
+  "exhaustive": false,
+  "compute_seconds": 8485,
+  "modal_cost_estimate": "3220 climbs x about 10 s (0236) = about 9 core-hours, about $0.6 of Modal credit"
+ },
+ "notes": "F13.4c 6-19: K4 statistic 1.47 at 11/beaufort, p 0.842 against 100 shuffles; cells with K4 above all 0 of 28; plant power L6 3/8, L7 5/8, L8 4/8, L10 4/8, L13 5/8, L16 4/8, L19 2/8",
+ "controls": [
+  -4.697503019479107,
+  -4.582844344210806,
+  -4.702105101086777,
+  -4.665751616174407,
+  -4.6081543077165135,
+  -4.625556801276288,
+  -4.724673520375579,
+  -4.5314274176995895,
+  -4.654676106978501,
+  -4.706246307708724,
+  -4.59166488963642,
+  -4.425374896073805,
+  -4.534680931970649,
+  -4.577193775970864,
+  -4.6353956049261384,
+  -4.641269546828369,
+  -4.511089508623267,
+  -4.574842806261541,
+  -4.703556474645602,
+  -4.486138726600396,
+  -4.596415710518637,
+  -4.789272454249806,
+  -4.733083934600436,
+  -4.640818516139756,
+  -4.409285149444698,
+  -4.612980397219164,
+  -4.461774625873901,
+  -4.652366635746463,
+  -4.6756249548520685,
+  -4.624111202699311,
+  -4.53742681403669,
+  -4.653145964207042,
+  -4.562882655717583,
+  -4.635660190732826,
+  -4.77508751743113,
+  -4.683548655327794,
+  -4.542805863005495,
+  -4.601896966488583,
+  -4.668757583597253,
+  -4.494663036531479,
+  -4.737961789663594,
+  -4.638798059293385,
+  -4.681951386349582,
+  -4.639570149151477,
+  -4.614634259963538,
+  -4.58740750762492,
+  -4.539917197853658,
+  -4.671903548324295,
+  -4.626631160280105,
+  -4.686785198557035,
+  -4.531418803390805,
+  -4.530561113538532,
+  -4.643596192154902,
+  -4.5449686270367184,
+  -4.618978146899747,
+  -4.687755700038642,
+  -4.656796848348053,
+  -4.5919048149834305,
+  -4.736685579445035,
+  -4.725648146364687,
+  -4.505355983107947,
+  -4.570719446165235,
+  -4.525658157811368,
+  -4.714867872701685,
+  -4.642054267025862,
+  -4.698799549974552,
+  -4.62255373787475,
+  -4.603656433702514,
+  -4.566799121719856,
+  -4.647910331595498,
+  -4.675914208256379,
+  -4.62176908828972,
+  -4.698683343592488,
+  -4.703730269829776,
+  -4.565997874504291,
+  -4.590492572414303,
+  -4.561308050218426,
+  -4.584955018724338,
+  -4.568392365559616,
+  -4.708766909781363,
+  -4.617749237722088,
+  -4.598415001455548,
+  -4.659192606292671,
+  -4.687501665076804,
+  -4.586818844040092,
+  -4.656995872498683,
+  -4.6348088160779595,
+  -4.771047577495002,
+  -4.708085610557681,
+  -4.715717129307583,
+  -4.620135514963481,
+  -4.681654994846345,
+  -4.547209568477867,
+  -4.792539771606286,
+  -4.676402847576378,
+  -4.66232274176248,
+  -4.717062697346228,
+  -4.743588020804306,
+  -4.620420019433429,
+  -4.467942454920248
+ ],
+ "error": null,
+ "worked_example": "A planted message from K3's own words, a shuffled alphabet and a key of 3, Beaufort form, no known letter:\n\n  alphabet, true   CKEMJNZWSYGDRPVFBHOAQULXIT\n  carved           TUMWQZNVALJNNTWAEBRQETUMIURULMRRRMJMPPVLXYNYMTQBEVNXGASHZDCMBGCTBLPGZNVYBQBTUMRQPUNWTUWAGELCULK\n  alphabet, found  TUYVAIMHKQPEWRJLDZXBSCNGFO\n  reading          THEJOTAIRESCAKINGFROMTHECHAOBERCASSEDFJEDLAMETOFLICKERMUTPREHENTLYDETAILHOFTHEROHOWITHINEMERDETRN\n\n  letters right: 81 of 97",
+ "seconds": 8492.481893062592,
+ "compute": {
+  "where": "local",
+  "workers": 4
+ },
+ "checkpoint": {
+  "file": "4d069267c4a1c06b.jsonl",
+  "resumed": 0,
+  "saved": 3220
+ }
+}

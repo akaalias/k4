@@ -256,3 +256,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0255	0255-f1.4-k4-among-40-stand-ins-through-the-same-procedure	1-keyed-periodic	0254-f1.4-replicate-the-excess-with-fresh-copies-and-null-targets	reverted	0	0	0			8250	test=10 run=8250 record=0
 0256	0256-f1.7-autokey-on-one-free-alphabet-decided-by-an-english-climb	1-keyed-periodic	0149-autokey-on-one-unknown-alphabet	reverted	0	0	0			8588	implement=0 test=10 run=8588 record=0
 0257	0257-d1b-two-free-alphabets-power-per-run-at-13-and-16	1-keyed-periodic	0229-d1-one-free-alphabet-power-per-run-with-enough-plants	reverted	0	0	0			3914	test=10 run=3914 record=0
+0258	0258-f13-one-free-alphabet-ciphertext-only-lengths-6-19-at-measured-power	13-ciphertext-only	0236-f13-one-free-alphabet-ciphertext-only	reverted	28	0	3	212.615		8500	test=10 run=8500 record=70

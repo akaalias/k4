@@ -13,8 +13,11 @@ import hashlib
 import html
 import json
 import re
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+
+STARTED = int(time.time())
 
 try:
     import markdown as _md
@@ -2672,7 +2675,7 @@ def route(path):
     if path.startswith("/exp/"):
         return experiment_page(path[5:].strip("/"))
     if path == "/version":
-        stamp = "|".join(str(int(p.stat().st_mtime)) for p in (ROOT / "results.tsv", ROOT / "champion.json", ROOT / "NOTEBOOK.md", ROOT / "controls.tsv") if p.exists())
+        stamp = "|".join(str(int(p.stat().st_mtime)) for p in (ROOT / "results.tsv", ROOT / "champion.json", ROOT / "NOTEBOOK.md", ROOT / "controls.tsv") if p.exists()) + f"|{STARTED}"   # a restart (new code) also reloads open pages
         return ("text/plain", stamp)
     if path.startswith("/assets/"):
         f = ROOT / "assets" / path[len("/assets/"):]

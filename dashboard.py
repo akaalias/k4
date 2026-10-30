@@ -1878,6 +1878,7 @@ LIN_CSS = """
 #lin-tip p{margin:0;font:italic 13px/1.5 var(--serif);color:var(--muted)}
 #lin-tip .pop-sec+.pop-sec{margin-top:10px}
 #lin-tip .pop-parent{font:600 11px/1.35 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
+.lin-box.fit{width:fit-content;max-width:min(980px,calc(100vw - 32px));margin:16px 0 0 max(0px,calc((100% - 980px) / 2))}
 .lin-foot{max-width:980px;margin:12px auto 0;font-size:13.5px;color:var(--muted)}
 @media(max-width:640px){.lin-head h1{font-size:26px}.lin-box{width:calc(100vw - 32px);margin-left:2px}.lane-lab{padding:8px 5px 7px 7px;font-size:9.5px;letter-spacing:.03em}.lane-lab .sw{left:7px;top:11px;width:7px;height:7px}.lane-lab .nm{text-indent:11px}.lane-lab .cw{display:none}}
 """
@@ -1901,7 +1902,7 @@ LIN_JS = r"""
   // experiment numbers, then the line of dots; same-family arcs bulge right into the rest
   // of the column, never wider than the column allows.
   function layout(){
-    var n=nodes.length,nf=fams.length,padY=16,sp=16,MINCOL=112,NUMW=30;
+    var n=nodes.length,nf=fams.length,padY=16,sp=16,MINCOL=data.current?150:112,NUMW=30;
     var avail=host.clientWidth||1000;
     var y={},cols=[],py={},slot=0;
     var pAfter={};pivots.forEach(function(pv){pAfter[pv.after]=pv;});
@@ -1910,7 +1911,7 @@ LIN_JS = r"""
     var n=slot,L=lanes(y,sp);
     // a column is as wide as its lanes need, at least MINCOL; spare width is shared out evenly
     var need=fams.map(function(f,i){return Math.max(MINCOL,NUMW+6+LANE*(L.nl[i]||0)+12);}),tot=need.reduce(function(s,v){return s+v;},0),
-        extra=Math.max(0,(avail-tot)/nf),left=0;
+        extra=data.current?0:Math.max(0,(avail-tot)/nf),left=0;
     fams.forEach(function(f,i){var w=need[i]+extra;cols.push({left:left,x:left+NUMW,w:w});left+=w;});
     return {sp:sp,W:Math.floor(left),H:Math.ceil(2*padY+(n-1)*sp),y:y,py:py,cols:cols,padY:padY,laneOf:L.laneOf};
   }
@@ -2242,7 +2243,7 @@ def lineage_section(n, tag):
     blob = json.dumps(data).replace("</", "<\\/")
     return (f"<style>{LIN_CSS}</style>" + sec(n, title, "What this experiment was built on, from the lineage page: " + say + " Its number is in bold.")
             + '<div class="lin"><div style="max-width:980px;margin:0 auto">' + LIN_LEGEND.replace('<span class="k"><svg width="12" height="10" viewBox="0 0 12 10"><path d="M1,1 L11,1 L6,9 z" fill="var(--accent)"/></svg>pivot</span>\n', "") + "</div>"
-            + '<div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>'
+            + '<div class="lin-box fit"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>'
             + f'<div id="lin-tip" role="tooltip"></div><script id="lin-data" type="application/json">{blob}</script></div>{LIN_JS}')
 
 

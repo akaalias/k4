@@ -46,7 +46,7 @@ Update the leaf when an experiment works on it.
       - **F1.3** An unknown English text, on any dictionary-word alphabet; Sanborn-style running keys found 12 of 12 by quadgrams and the judge (A6.2, 0226) {closed · sampled · 0125, 0226}
     - A key schedule worked by hand
       - The Berlin clock, the Carter dates {closed · exact · 0079, 0038}
-      - **F1.4** Other hand schedules (C20(c)-(e)) {open · exact on the tables; one-alphabet residue decided (0253): K4 above all 12 copies in 299 of 2,093 settings (chance 161), junk readings; 0254: four shuffled stand-ins through the same procedure range 1.5-17.5% against K4's 13.3%, so the rate belongs to the text; K4 among 40 stand-ins in 0255 · 0126, 0127, 0128, 0252, 0253, 0254}
+      - **F1.4** Other hand schedules (C20(c)-(e)) {open · exact on the tables; one-alphabet residue closed, sampled (0253-0255: K4 above all 12 copies in 299 of 2,093 settings looked like an excess, but 40 shuffled stand-ins through the same procedure average 10.8% with K4 at 10.0%, p 0.51; plants 17/24); two-alphabet residue waits for D1b · 0126, 0127, 0128, 0252, 0253, 0254, 0255}
         - The tableau rows as repeating keys ("layer two", C20(d)): 6 of 24 known letters, coppers 5-8 {closed · exact · 0126, 0128}
         - A key word stepped by skip, stutter, back and forth, triangle or square numbers, or restarted at each carved line, on standard or KRYPTOS tables: no setting fits {closed · exact · 0127, 0128}
         - The same rules on free alphabets: consistent at the coppers' rate; a decider exists (F1.5) but about 1,900 settings at 20-30 min each: blocked by cost {blocked · exact · 0127, 0128}

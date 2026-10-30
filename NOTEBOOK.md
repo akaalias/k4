@@ -28,6 +28,12 @@ F1.13 desk work (autokey on one free alphabet, a better climb): the consistent a
 
 The record's '1,346 two-alphabet settings' for F1.4 counted distinct partitions of the 24 known places (0127, 0128). A climb reads the whole slot map, so the cell is the 4,706 slot maps over all 97 places that fit K4 on two free alphabets (desk count): about 98,000 tempering runs, 330-410 core-hours. Drafted (`drafts/attack-f1.4-two-draft.py`, self-check against 0144 passes, plants read in part on one run).
 
+### Open at close of session (2026-10-30, about 21:20)
+
+- **Running:** 0267, F1.4's two-alphabet residue (4,706 slot maps, D1b's four runs, 20 stand-ins x 60, 24 plants), on the laptop (the Modal credit, about $2.6 after the margin, is short of its about $5.6). 390 of 5,930 units at 21:16. It ran at about 80 units an hour until the laptop went on battery and to sleep (about 19:49; issue #109 asks Alexis to plug it in). Do not edit attack.py until it is recorded; partial counts so far: K4 above all 12 copies in about 8.6% of its settings, stand-ins about 7%.
+- **Next, in order:** F6.1 at 6-10 (drafted, `drafts/attack-f6.1-draft.py`, laptop, about 230-300 core-hours); F1.13 (needs a new search for autokey on one free alphabet, see the desk note above); F14.2 last (design in `drafts/F14.2-design.md`, about 460 core-hours).
+- **Mistake:** waits on tools/wait_experiment.sh overran the tool limit while the laptop slept and were moved to the background, against the house rule; they were stopped. With the laptop asleep, a wait of any length can overrun.
+
 ## 2026-10-29
 
 D2's re-costed cells (ticket #77). The morning's 0253 attempt was lost to a DNS outage and stopped by hand (#104); the harness gained checkpoints (#105) and the run was restarted with them.

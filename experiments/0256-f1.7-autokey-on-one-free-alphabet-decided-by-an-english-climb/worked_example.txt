@@ -1,0 +1,7 @@
+F1.7: autokey on one unknown alphabet.
+
+  ciphertext autokey, lag L: key letter at place i = carved letter at place i - L
+  so x(plain_i) = x(carved_i) - x(carved_{i-L}) on the unknown alphabet x: the alphabet alone fixes places L+1..97
+  plaintext autokey, lag L: key letter = plain letter L places back; a chain i, i+L, i+2L ... is fixed by x and its first letter
+
+  per cell: climb x for the most English reading; climb scrambled copies that fit the same cell; K4 must beat them all.

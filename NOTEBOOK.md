@@ -24,6 +24,8 @@ holds the reasoning and the mistakes.
 
 The morning's Modal leg was judged slow from too little to go on: resumed on Modal it did the remaining 43% in 20 minutes ($0.54). The laptop, at load 50 from other work, managed about a million primers a second. A measured rate on a run's first minutes is a poor guide on either machine.
 
+F1.13 desk work (autokey on one free alphabet, a better climb): the consistent alphabets per K4 cell number 10^12.7 to 10^25 (rank of the known-letter equations mod 2 and 13), so no exact enumeration. On ciphertext-autokey plants 0256's tempering stops 1.0-1.5 quadgram units under the true reading; ten times the rounds or ten runs reach it in 1 of 5; the check-keeping climb is no better; climbing first on the coincidence rate of the difference stream overfits by a factor of 3-5. F1.13 stays open for a new search.
+
 The record's '1,346 two-alphabet settings' for F1.4 counted distinct partitions of the 24 known places (0127, 0128). A climb reads the whole slot map, so the cell is the 4,706 slot maps over all 97 places that fit K4 on two free alphabets (desk count): about 98,000 tempering runs, 330-410 core-hours. Drafted (`drafts/attack-f1.4-two-draft.py`, self-check against 0144 passes, plants read in part on one run).
 
 ## 2026-10-29

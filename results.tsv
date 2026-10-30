@@ -253,3 +253,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0252	0252-d2-one-run-decider-power-and-cost-on-schedules-and-moves	1-keyed-periodic	0229-d1-one-free-alphabet-power-per-run-with-enough-plants	reverted	0	0	0			925	design=188 implement=548 test=1466 run=925 record=0
 0253	0253-f1.4-one-alphabet-residue-decided-by-the-one-run-decider	1-keyed-periodic	0252-d2-one-run-decider-power-and-cost-on-schedules-and-moves	reverted	0	0	0			14650	design=131 implement=3 test=13 run=14650 record=0
 0254	0254-f1.4-replicate-the-excess-with-fresh-copies-and-null-targets	1-keyed-periodic	0253-f1.4-one-alphabet-residue-decided-by-the-one-run-decider	reverted	0	0	0			8278	test=10 run=8278 record=0
+0255	0255-f1.4-k4-among-40-stand-ins-through-the-same-procedure	1-keyed-periodic	0254-f1.4-replicate-the-excess-with-fresh-copies-and-null-targets	reverted	0	0	0			8250	test=10 run=8250 record=0

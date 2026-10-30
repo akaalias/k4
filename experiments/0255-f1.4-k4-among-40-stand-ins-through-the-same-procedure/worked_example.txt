@@ -1,0 +1,8 @@
+K4 among 40 stand-ins: where does its rate fall?
+
+  target       fitting schedules   80 drawn   above all 12 copies
+  K4           2,093               80         ?   (0253: 14.3%, 0254: 13.3%)
+  stand-in 1   its own             80         ?
+  ... 40 stand-ins (shuffles of K4), the same procedure
+
+  K4's rank among the 41 texts is the verdict.

@@ -263,3 +263,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0262	0262-f5.2-gromark-free-alphabet-base-26-lag-6-and-longer-lags	5-gromark	0195-gromark-free-alphabet-other-bases	reverted	0	0	0			1251	unattributed=13892 run=1251 record=0
 0263	0263-f6-amsco-period-23-excess-against-200-shuffles-and-named-keys	6-move-then-table	0114-amsco-keyed-by-the-dictionary	reverted	0	0	0			81	test=17 implement=0 run=81 record=0
 0264	0264-f6.22b-amsco-period-23-forced-keys-read-for-english	6-move-then-table	0263-f6-amsco-period-23-excess-against-200-shuffles-and-named-keys	reverted	0	0	0			64	test=0 run=64 record=0
+0265	0265-f6.22b-amsco-period-23-forced-keys-by-english-likelihood-gaps-allowed	6-move-then-table	0264-f6.22b-amsco-period-23-forced-keys-read-for-english	reverted	0	0	0			64	test=0 run=64 record=0

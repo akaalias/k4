@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F13.4i: K4 beats its shuffles under the table with a two-letter key, then a move. Does the effect follow K4's letters around, as a hidden message would?"
+ },
+ {
+  "anchor": "the check",
+  "text": "K4 rotated 96 ways, reversed, and cut into shuffled blocks; three planted messages under the same cipher rotated 24 ways each."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Every rotation of every planted message stays above 95% of the shuffles; only 3 of K4's 96 rotations do. The excess belongs to K4's exact order against this search, not to a message enciphered this way."
+ }
+]

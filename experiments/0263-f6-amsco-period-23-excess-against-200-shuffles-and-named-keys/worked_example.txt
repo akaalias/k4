@@ -1,0 +1,7 @@
+F6.22: AMSCO keyed by a word, then the table with a 23-letter key.
+
+  AMSCO: write the message in rows of cells holding 1 and 2 letters alternately, read the columns in keyword order
+  the table: each moved letter shifted by the key letter at its place mod 23
+  the known letters force the key letter at their places mod 23; two known letters in one key place must agree
+
+  count the agreeing settings for K4 and 200 shuffles; for K4's, look for the forced key as a 23-letter passage.

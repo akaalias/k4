@@ -1,0 +1,6 @@
+F13.4h: is K4's English-like jumble at B2 a pattern of the carved order at width 19?
+
+  K4 --(two turns cw 70, 19, inverse)--> moved text
+  moved text: odd places | even places   -> index of coincidence of each half
+  same for 1,000 scrambled copies; K4's rank says whether the width-19 pattern is unusual,
+  and the search repeated with and without width-19 moves says whether it carries the excess.

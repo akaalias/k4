@@ -1305,10 +1305,7 @@ def outcome_chart(rows):
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="What each experiment found against the scrambled copies, in run order">']
     for j, (k, _) in enumerate(shown):
         y0 = yrow[k]
-        if k == "solved":
-            g.append(f'<rect x="{L + 1}" y="{y0 + 6}" width="{W - L - R - 2}" height="{band - 12}" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="7 5"/>')
-        else:
-            g.append(f'<line x1="{L}" x2="{W - R}" y1="{y0 + band / 2:.1f}" y2="{y0 + band / 2:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
+        g.append(f'<line x1="{L}" x2="{W - R}" y1="{y0 + band / 2:.1f}" y2="{y0 + band / 2:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
     # solid divides: below "solved"; above "at chance" the outcomes that could be the solution; above "not a decryption test" the rest that were not tests
     for k in ("champion", "chance", "diagnostic"):
         if k in yrow:

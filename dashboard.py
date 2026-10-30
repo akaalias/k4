@@ -1306,6 +1306,10 @@ def outcome_chart(rows):
             g.append(f'<rect x="{L + 1}" y="{y0 + 6}" width="{W - L - R - 2}" height="{band - 12}" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="7 5"/>')
         else:
             g.append(f'<line x1="{L}" x2="{W - R}" y1="{y0 + band / 2:.1f}" y2="{y0 + band / 2:.1f}" stroke="var(--rule-soft)" stroke-width="1"/>')
+    # solid divides: above "at chance" the outcomes that could be the solution; above "not a decryption test" the rest that were not tests
+    for k in ("chance", "diagnostic"):
+        if k in yrow:
+            g.append(f'<line x1="{L}" x2="{W - 16}" y1="{yrow[k]}" y2="{yrow[k]}" stroke="var(--muted)" stroke-width="1.2"/>')
     counts = {k: 0 for k, _ in shown}
     for i, r in enumerate(rows):
         k = kinds[r["tag"]]

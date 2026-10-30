@@ -66,7 +66,7 @@ CELLS = (("1.1-B23", "one", 23), ("1.1-B26", "one", 26), ("1.2-13", "two", 13))
 N_COPIES = 100
 PLANTS, OWN = 8, 6
 RUNS_ONE = 1               # D1 (Alexis, #100): one run qualifies for one free alphabet
-RUNS_TWO = 1               # set from D1b's result before the run (1 if one run qualifies, else 10)
+RUNS_TWO = 4               # D1b (0257): four runs qualify for two free alphabets (66 of 96 against ten runs' 71), one does not (63)
 SEED = 2580
 _MODS = {}
 

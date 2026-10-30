@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "D1b: the cheaper judge for the hardest version, two scrambled alphabets; does one search find as many hidden messages as ten?"
+ },
+ {
+  "anchor": "the check",
+  "text": "96 planted messages, 6 scrambled copies each, ten searches per text, every search's best kept; 180 s per text for ten."
+ },
+ {
+  "anchor": "the bound",
+  "text": "One search finds 63, ten find 71: one is not enough; four (66) are within 5. Power the same at 13 and 16 (30 and 33 of 48 at one search)."
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F1.12: three cells closed at measured power on 2026-10-28 with K4 ranked among only 12 copies; rerun against 100, with two more readers."
+ },
+ {
+  "anchor": "the check",
+  "text": "One-search decider (four searches for two alphabets, D1b); MIX8m and the blind judge read the best readings, K4 and copies together (303 judge calls)."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 is never above more than 90 of its 100 copies on any reader; planted messages found 7, 5 and 5 of 8. Closed."
+ }
+]

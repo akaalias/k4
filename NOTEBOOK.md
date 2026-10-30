@@ -29,6 +29,12 @@ D2's re-costed cells (ticket #77). The morning's 0253 attempt was lost to a DNS 
 
 The pre-registered rule for 0260 had the direction backwards: I assumed rotating a planted message would destroy it, so 'rotations at chance' would mean a positional, message-like effect. The planted messages showed the move library absorbs a cyclic shift. The control decided the reading, which is what it is for; the rule is recorded as written and the verdict as the control gives it.
 
+### F1 (ticket #77)
+
+| # | Item | One line |
+|---|---|---|
+| 261 | F1.12 | **Three measured-power cells against 100 copies, three readers.** F1.1 Beaufort 23 and 26, F1.2 at 13: K4 never above all its copies on quadgrams, MIX8m or the judge (fewest at or above: 10 of 100, MIX8m at B26). Plants 7, 5, 5 of 8. Closed. $0.32. |
+
 The excess is spread over the whole cell (K4 beat its first copy in 61% of settings, not 50%), and no reading is English, which points at the test rather than at a message: the settings were chosen because K4 fits them, and a shuffle that also fits need not have the same freedom. A desk check of the letters the witness pins did not show it (K4 21, copies 20.7). 0254 runs the procedure on four shuffles of K4 as stand-ins, each on its own fitting settings, beside K4 with fresh copies: if the stand-ins show the excess too, it belongs to the test.
 
 Desk work while 0253 ran: the F1.7 draft's climb was broken (it never reached a state with all 24 known letters at short plaintext-autokey lags and left the true alphabet when started on it); fixed with the full chain equations (0149 used only pairs L apart) and 0139's repair moves; on ciphertext autokey no variant reached a plant's own score, so its power there will be low and is measured in the run. Drafts written and smoke-tested: D1b, F5.2 (27 core-hours), F13.4c at 6-19 for D3, F13.4h, F1.12. D3's cells listed: six were already run on K4 against its own copies in their closing experiments and are closed as sampled at their measured power, three tell nothing, one (F13.4c 6-19) is drafted.

@@ -20,13 +20,13 @@ Update the leaf when an experiment works on it.
         - Lengths above 53: a planted text at 80 is not told from its copies (C-F1-2d); 0136's bound {blocked · sampled · 0034}
       - Alphabets from any dictionary word, key lengths 1-26 {closed · exact · 0109}
       - Alphabets one swap or move from KRYPTOS {closed · exact · 0071}
-      - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26 {open · sampled · 0097, 0100, 0102, 0119, 0120, 0139, 0140, 0142, 0226, 0227, 0228}
+      - **F1.1** One alphabet in an unknown order on both sides (Quagmire III), key lengths 3-26; Beaufort 23 and 26 rerun against 100 own copies with MIX8m and the judge (F1.12): K4 inside on all three {closed · sampled · 0097, 0100, 0102, 0119, 0120, 0139, 0140, 0142, 0226, 0227, 0228, 0229, 0261}
         - Added form (Quagmire III proper, and variant Beaufort), lengths 1-26: S under S and K under K force key 0 in slots another known letter shares {closed · exact · 0119}
         - Beaufort form, lengths 1-22, 24, 25: no alphabet fits {closed · exact · 0119}
         - Beaufort form, length 23 (7 checks): design 2 (F1.5) puts K4 9th of 13 among copies of itself; planted texts beat all their own copies 6 of 8 (0139, again 0228), Sanborn-style plants 10 of 12 (0226), 6 of 12 (0228), 16 of 24 (0229): pooled 32 of 48, under the bar; clean pooled 33 of 40: reopened {open · sampled · 0119, 0120, 0139, 0140, 0226, 0228, 0229}
         - Beaufort form, length 26 (1 check): K4 12th of 13 among copies of itself; power 5 of 6 (0140), redrawn 13 of 24 clean and 17 of 24 Sanborn-style (0229), under the bar: reopened {open · sampled · 0119, 0140, 0142, 0229}
         - Masked messages at the sampled lengths (A6.3): reversed found 7 of 8; an X every kth letter 5 of 8, the message in every nth place 3 of 8, under the 6 of 8 bar: not decided {blocked · sampled · 0227}
-      - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26 {open · sampled · 0097, 0123, 0124, 0143, 0144, 0145, 0146, 0226}
+      - **F1.2** Two alphabets in unknown orders (Quagmire IV), key lengths 3-26; length 13 power remeasured on 48 plants (D1b: 16/24 clean, 16/24 Sanborn-style at ten runs) and rerun against 100 own copies (F1.12): K4 last by quadgrams, inside on all readers {closed where decidable · sampled · 0097, 0123, 0124, 0143, 0144, 0145, 0146, 0226, 0257, 0261}
         - Lengths 1-7, 9-12, 14, 15, 17, 18, 21, 22, 25: no pair of alphabets fits {closed · exact · 0123}
         - Lengths 8, 16: design 2 on two alphabets puts K4 2nd and 7th of 13 among kept-place copies; power 4/4, 4/5 on clean Carter {closed · sampled · 0143, 0145, 0146}
         - Length 13: K4 13th of 13 (0144), power 5/5 on clean Carter (0143) but 9/12 on Sanborn-style plants, under the 4/5 bar (A6.2, 0226); a second draw 2/5 clean, 8/12 messy (0228): reopened {open · sampled · 0143, 0144, 0226, 0228}

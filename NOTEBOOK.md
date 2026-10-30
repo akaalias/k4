@@ -5,6 +5,18 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-30
+
+### F5 (ticket #77)
+
+| # | Item | One line |
+|---|---|---|
+| 262 | F5.2 | **The Gromark rules 0195 left for cost, exact.** 445 rules (three-term base 26 lag 6, lag 7 in bases 2-16, two-term lags to 8, base 10 to 10), 2.34 x 10^11 primers, 4 forms, free alphabet: nothing fits K4; one copy of ten fits 3 settings; the plants' settings are found. Closed. Began on Modal, finished there after a crawl on the loaded laptop; $0.54 for the second leg. |
+
+The morning's Modal leg was judged slow from too little to go on: resumed on Modal it did the remaining 43% in 20 minutes ($0.54). The laptop, at load 50 from other work, managed about a million primers a second. A measured rate on a run's first minutes is a poor guide on either machine.
+
+The record's '1,346 two-alphabet settings' for F1.4 counted distinct partitions of the 24 known places (0127, 0128). A climb reads the whole slot map, so the cell is the 4,706 slot maps over all 97 places that fit K4 on two free alphabets (desk count): about 98,000 tempering runs, 330-410 core-hours. Drafted (`drafts/attack-f1.4-two-draft.py`, self-check against 0144 passes, plants read in part on one run).
+
 ## 2026-10-29
 
 D2's re-costed cells (ticket #77). The morning's 0253 attempt was lost to a DNS outage and stopped by hand (#104); the harness gained checkpoints (#105) and the run was restarted with them.

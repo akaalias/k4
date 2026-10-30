@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F1.7: an autokey cipher (the message or the ciphertext becomes the key) on a scrambled alphabet; 130 cells agree with the 24 known letters once plaintext autokey's chains are written out in full."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each cell: one search on K4, then fitting scrambled copies one at a time; ten shuffles of K4 put through the same test give the null."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 beats all 12 copies in 7 cells, inside the stand-ins (p 0.64); three cells 0149 called fit are dead. Planted messages found only 8 of 24 and 4 of 24: a weak test, run at its power."
+ }
+]

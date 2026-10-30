@@ -62,9 +62,10 @@ Update the leaf when an experiment works on it.
       - K1/K2's system revived at length 19 by a slip at 33: decider power 3 of 5, K4 7th of 13: sampled at power 3/5 (D3) {closed · sampled · 0148}
       - Gromark (all free-alphabet rules and bases), 605 variants: no fit {closed · exact · 0150}
       - Trifid and Hill, every single-letter error anywhere (5,044): no cube; Hill at the coppers' rate {closed · exact · 0151, 0152}
-    - **F1.7** Autokey on one unknown alphabet, with no move, then after each move {closed · exact · 0149}
+    - **F1.7** Autokey on one unknown alphabet, with no move, then after each move {closed · exact · 0149, 0256}
       - No move: dead lags closed; fitting lags at the coppers' rate {closed · exact · 0149}
-      - Fitting lags judged by English, and the move-first version: blocked by cost {blocked}
+      - Fitting cells (130 under full chain equations; 3 of 0149's dead) judged by English against fitting copies and 10 stand-ins: K4 p 0.64; plants 12/48 (F1.13 reruns with a better climb) {closed · weak · 0256}
+      - The move-first version: blocked by cost {blocked}
     - **F1.8** Carter's book as a running key on an unknown alphabet {closed · exact · 0153, 0154}
       - One alphabet, every offset both ways: no fit on K4 or copies {closed · exact · 0154}
       - Two alphabets, any running key: almost no checks; undecidable by the known letters {blocked · exact · 0154}

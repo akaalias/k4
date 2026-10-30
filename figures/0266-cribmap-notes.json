@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F6.22c chases 0265: K4's best forced key beat 195 of 200 shuffles' bests, but K4 had 21 settings to choose from where the median shuffle had 8."
+ },
+ {
+  "anchor": "the check",
+  "text": "The same per-setting scores; the null is the best of 21 keys drawn from the shuffles' pooled settings, 20,000 times; and K4's 21 keys against the pool, setting by setting."
+ },
+ {
+  "anchor": "the bound",
+  "text": "Count-matched p 0.06, per setting p 0.84. K4's best key is below zero bits, every planted key above +9. F6.22 closed."
+ }
+]

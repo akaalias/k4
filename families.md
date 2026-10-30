@@ -95,7 +95,7 @@ Update the leaf when an experiment works on it.
       - Key on both sides of the move, the same table both sides {closed · exact · 0080}
       - **F6.22** AMSCO at key length 23: above the coppers in 0114; against 200 fresh shuffles K4 21, 4 of 200 at or above (p 0.025, 0.075 over three lengths), no forced key a named passage {closed · exact · 0114, 0263; chased in F6.22b}
       - **F6.22b** The forced period-23 keys read for English against the shuffles' {closed · sampled, plants 20/20 · 0264 (flawed score), 0265: K4's best key -11.9 bits, below random; p 0.03 on more settings; chased in F6.22c}
-      - **F6.22c** The same against a count-matched null {open · 0266}
+      - **F6.22c** The same against a count-matched null {closed · sampled · 0266: p 0.06, per setting p 0.84}
     - One move with an autokey, running key or clock schedule {closed · exact · 0063, 0081, 0090, 0091}
     - One carved letter wrong, missing or extra, through every move {closed · exact · 0093, 0094}
     - Three stages

@@ -18,6 +18,7 @@ holds the reasoning and the mistakes.
 | # | Item | One line |
 |---|---|---|
 | 263 | F6.22 | **0114's AMSCO excess at 23 against 200 fresh shuffles.** K4 21 agreeing settings, shuffles 1-31 (median 8), 4 at or above (p 0.025; 0.075 over the three key lengths looked at); 22 and 24 ordinary. None of K4's 21 forced keys is a passage of a named text; the planted K3 key is found. At the edge: chased in F6.22b. $0.03. |
+| 264 | F6.22b | **The forced keys read for English: flawed score.** K4's best key inside the shuffles (p 0.12) but only 6 of 20 plants found: the score skipped keys with fewer than 8 fully forced runs of four, and on many routes the known letters reach 12-18 of the 23 slots, so the plants' own keys were never scored. Rerun as 0265 with a score that allows gaps. $0.02. |
 
 The morning's Modal leg was judged slow from too little to go on: resumed on Modal it did the remaining 43% in 20 minutes ($0.54). The laptop, at load 50 from other work, managed about a million primers a second. A measured rate on a run's first minutes is a poor guide on either machine.
 

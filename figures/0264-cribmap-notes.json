@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F6.22b chases 0263: if K4's period-23 AMSCO settings are real, the key they force should read as English, as a key from a book would."
+ },
+ {
+  "anchor": "the check",
+  "text": "Each forced key scored by its mean quadgram over runs of four forced letters, keys with fewer than 8 such runs skipped; K4's best against 200 shuffles'; 20 planted English keys."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 inside (24 of 200 at or above), but only 6 of 20 plants found: their keys are often forced at 12-18 of 23 slots and were skipped. Rerun with a score that allows gaps (0265)."
+ }
+]

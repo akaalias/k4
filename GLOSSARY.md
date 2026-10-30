@@ -119,3 +119,5 @@ uses a word a stranger would not know.
 **a tempering search** (also: parallel tempering, the tempering climb, one run): Trial and error run as sixteen searches side by side at different levels of daring, the bold ones exploring and the careful ones refining, which swap places now and then so a good find is polished and a rut is escaped. One run is one such session of fixed length; the project's strongest judge for an unknown alphabet is one run on the carved letters against the same on scrambled copies.
 
 **AMSCO** (also: an AMSCO grid): A grid shuffle from the American Cryptogram Association's list: the message is written across a grid in cells holding one and two letters alternately, and the columns are read out in the order a keyword gives. It moves letters without changing them.
+
+**a stand-in** (also: stand-ins, shuffled stand-ins, scrambled stand-ins): A scrambled copy of the carved letters put through a whole experiment exactly as K4 is, with scrambled copies of its own. When an experiment counts how often K4 beats its copies over many settings, the stand-ins show how often a text with no message does, since every text has its own level.

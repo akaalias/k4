@@ -1872,6 +1872,7 @@ LIN_CSS = """
 #lin.dim .ng,#lin.dim .edge{opacity:.1}
 #lin.dim .ng.lit,#lin.dim .ng.lit-direct{opacity:1}
 #lin.dim .ng.lit .nlab,#lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
+#lin.dim .edge.fam{opacity:1}
 #lin.dim .edge.lit,#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
 #lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
 #lin-tip .pop-title{font-weight:700;font-size:14.5px;line-height:1.25;margin-bottom:3px}
@@ -2038,7 +2039,7 @@ LIN_JS = r"""
   // On a narrow screen the figure scrolls sideways; the sticky heads follow it.
   function syncHeads(){lanesEl.style.transform='translateX('+(-host.scrollLeft)+'px)';}
 
-  function clearLit(){svg.classList.remove('dim');svg.querySelectorAll('.lit,.lit-direct').forEach(function(el){el.classList.remove('lit','lit-direct');});
+  function clearLit(){svg.classList.remove('dim');svg.querySelectorAll('.lit,.lit-direct,.fam').forEach(function(el){el.classList.remove('lit','lit-direct','fam');});
     lanesEl.querySelectorAll('.on').forEach(function(el){el.classList.remove('on');});}
   // On an experiment's own page every node is its line: light all of it, the experiment itself strongest
   function reset(){clearLit();if(!data.current)return;svg.classList.add('dim');
@@ -2062,7 +2063,8 @@ LIN_JS = r"""
   function litFam(fi){
     clearLit();svg.classList.add('dim');
     nodes.forEach(function(nd){if(nd.fam===fi)mark(nd.key,'lit-direct');});
-    svg.querySelectorAll('.edge').forEach(function(e){if(byKey[e.getAttribute('data-c')].fam===fi)e.classList.add('lit');});
+    // the column's edges stay as drawn, only undimmed: lighting all of them at once is noise
+    svg.querySelectorAll('.edge').forEach(function(e){if(byKey[e.getAttribute('data-c')].fam===fi)e.classList.add('fam');});
     var lab=lanesEl.querySelector('[data-fam="'+fi+'"]');if(lab)lab.classList.add('on');
   }
 

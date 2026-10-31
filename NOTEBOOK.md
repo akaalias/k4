@@ -9,6 +9,10 @@ holds the reasoning and the mistakes.
 
 F1.13 desk note (`drafts/F1.13-design.md`): the autokey forms are linear in the alphabet's numbering, so the numbering splits mod 13 and mod 2. A climb over which two letters share each residue mod 13, with the remaining 13 bits solved exactly per pairing, replaces 0256's climb over the whole alphabet, which lost its plants to search failure. Not measured yet: the laptop slept on battery from about 03:00 to 09:40, and 0267 went from 405 to 430 of 5,930 settings (#109).
 
+Laptop on AC from 11:11 (#109 closed); 0267 back to about 80 settings an hour. F1.13 measured on the desk (b2f38cb): the split climb, the split with exact pairings, 0256's check-keeping climb past lag 12 (0 of 8) and a constructive beam along the chains (right when seeded with the true alphabet, dead unseeded at 200,000 states) all miss the bar. The useful finding is a ceiling: 0256's climbs already beat the true reading at ct lags 66-73 and pt lags 32-52, so about half of K4's 130 cells are capped by the score, not the search. F1.13 stays open for the other 63.
+
+Mistake: three desk probes run as a background group outlived the tool's stop and kept three cores from 0267 for about 18 minutes (514 settings at 12:04 against about 530 expected). Desk probes now run one at a time in the foreground, under 10 minutes each.
+
 ## 2026-10-30
 
 ### F5 (ticket #77)

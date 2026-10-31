@@ -1875,6 +1875,9 @@ LIN_CSS = """
 #lin.dim .edge.fam{opacity:1}
 #lin.dim .edge.lit,#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
 #lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
+#lin-tip:has(.pop-mini){display:flex;gap:18px;max-width:min(640px,calc(100vw - 24px))}#lin-tip .pop-main{flex:1;min-width:0}
+#lin-tip .pop-mini{flex:none;width:150px;padding-left:16px;border-left:1px solid var(--rule-soft)}#lin-tip .pop-mini svg{display:block}
+@media(max-width:640px){#lin-tip .pop-mini{display:none}}
 #lin-tip .pop-title{font-weight:700;font-size:14.5px;line-height:1.25;margin-bottom:3px}
 #lin-tip .pop-meta{color:var(--muted);font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
 #lin-tip .pop-h{font:600 10px/1 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-bottom:4px}
@@ -2083,7 +2086,23 @@ LIN_JS = r"""
     if(nd.note)html+='<div class="pop-sec"><div class="pop-h">Kept when it ran, reverted under today\'s rules</div><p>'+esc(nd.note)+'</p></div>';
     html+='<div class="pop-sec"><div class="pop-h">Built on</div>'+(p?'<span class="pop-parent">#'+byKey[p].n+' '+esc(short(byKey[p].title,60))+'</span>':'<p>Nothing: it starts a line.</p>')+'</div>';
     if(ks.length)html+='<div class="pop-sec"><div class="pop-h">Built on by</div><p>'+ks.map(function(k){return '#'+byKey[k].n;}).join(', ')+'</p></div>';
+    if(!data.current)html='<div class="pop-main">'+html+'</div>'+minimap(key);
     tip.innerHTML=html;tip.style.opacity='1';shownKey=key;placeTip(el);
+  }
+  // The whole lineage in miniature beside the popover: family bands, every experiment a dot, the
+  // hovered experiment's line back to its root in ink, and a frame for the part on screen, so the
+  // line can be seen whole without scrolling away from it.
+  function minimap(key){
+    var w=150,h=250,sx=w/geo.W,sy=(h-8)/geo.H,X=function(k){return (geo.cols[byKey[k].fam].x*sx).toFixed(1);},Y=function(k){return (4+geo.y[k]*sy).toFixed(1);},m='';
+    geo.cols.forEach(function(C,i){m+='<rect class="f'+fams[i].c+'" x="'+(C.left*sx).toFixed(1)+'" y="0" width="'+Math.max(1,C.w*sx-1).toFixed(1)+'" height="'+h+'" fill="currentColor" fill-opacity=".07"/>';});
+    nodes.forEach(function(nd){m+='<circle cx="'+X(nd.key)+'" cy="'+Y(nd.key)+'" r=".9" fill="var(--faint)" fill-opacity=".7"/>';});
+    var chain=[key],cur=key;while((cur=parentOf(cur))&&chain.indexOf(cur)<0)chain.push(cur);
+    m+='<polyline points="'+chain.map(function(k){return X(k)+','+Y(k);}).join(' ')+'" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-linejoin="round"/>';
+    chain.forEach(function(k,i){if(i)m+='<circle class="f'+fams[byKey[k].fam].c+'" cx="'+X(k)+'" cy="'+Y(k)+'" r="1.8" fill="currentColor"/>';});
+    m+='<circle cx="'+X(key)+'" cy="'+Y(key)+'" r="3.2" fill="var(--ink)"/>';
+    var r=svg.getBoundingClientRect(),v0=Math.max(0,-r.top),v1=Math.min(geo.H,window.innerHeight-r.top);
+    if(v1>v0)m+='<rect x=".5" y="'+(4+v0*sy).toFixed(1)+'" width="'+(w-1)+'" height="'+Math.max(2,(v1-v0)*sy).toFixed(1)+'" fill="none" stroke="var(--muted)" stroke-width="1"/>';
+    return '<div class="pop-mini"><div class="pop-h">Its line in the whole lineage</div><svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'">'+m+'</svg></div>';
   }
   function hideTip(){tip.style.opacity='0';shownKey=null;}
 

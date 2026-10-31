@@ -11,6 +11,7 @@ It only reads the record and the logs; the one file it writes is data/loop-stop-
 import collections
 import importlib.util
 import json
+import os
 import re
 import sys
 import threading
@@ -84,6 +85,19 @@ def attack_eli5():
                     except ValueError:
                         return ""
     return ""
+
+
+def recent_per_unit(n=100):
+    """Seconds per finished unit over the last n units of the running attack, from the "secs" each
+    unit saves in its checkpoint, divided by the worker count; None when the units carry no time."""
+    try:
+        import hashlib
+        digest = hashlib.sha256((ROOT / "attack.py").read_bytes()).hexdigest()[:16]
+        tail = (ROOT / "data" / "checkpoints" / f"{digest}.jsonl").read_text().splitlines()[-n:]
+        secs = [float(json.loads(ln)["v"]["secs"]) for ln in tail]
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+    return sum(secs) / len(secs) / int(os.environ.get("K4_WORKERS", 8)) if len(secs) >= 10 else None
 
 
 def compute_setting():
@@ -313,11 +327,13 @@ def experiment_panel(tick):
         if prog:
             frac, lab = prog
             lines.append(row("done", bar(frac), (f"  {frac * 100:.0f}%  {done:,}/{total:,} {lab}", "default")))
-            if 0 < frac < 1:
-                left = el * (1 - frac) / frac
+            recent = recent_per_unit()
+            if done and done < total:
+                per = recent or el / done          # the recent pace; the whole run's only when units carry no time
+                left = per * (total - done)
             if done and upd and done < total:
                 # the unit in progress, against the average time a unit takes
-                per, since = el / done, max(0.0, time.time() - upd)
+                since = max(0.0, time.time() - upd)
                 one = lab[:-1] if lab.endswith("s") else (lab or "unit")
                 if since > 3 * per and since > 120:
                     lines.append(row(one, (f"none finished for {mins(since)}: check the run", BAD)))
@@ -337,7 +353,7 @@ def experiment_panel(tick):
             lines.append(row("left", (f"about {mins(left)}{est}", "default")))
             lines.append(row("ends", (f"about {day(time.time() + left)}{est}", "default")))
         if per:
-            lines.append(row("average", (f"{mins(per)} per {one}", "default")))
+            lines.append(row("average", (f"{mins(per)} per {one}" + (", last 100" if recent else ""), "default")))
         rr = remote_run()
         n = lw.busy_workers(int(run.get("pid", 0)))
         if rr:

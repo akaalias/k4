@@ -283,7 +283,7 @@ def experiment_panel(tick):
         el = time.time() - started
         row = lambda name, *parts: Text(f"{name[:8]:<9}", style=MUTED) + Text.assemble(*parts)
         day = lambda t: (lambda d: d.strftime('%H:%M') if d.date() == datetime.now().date() else d.strftime('%a %-d %b, %H:%M'))(datetime.fromtimestamp(t))
-        prog, left = None, None
+        prog, left, per = None, None, None
         try:
             pr = json.loads(lw.PROGRESS.read_text())
             done, total, upd = int(pr["done"]), int(pr["total"]), float(pr.get("updated") or 0)
@@ -305,7 +305,7 @@ def experiment_panel(tick):
                     lines.append(row(one, (f"none finished for {mins(since)}: check the run", BAD)))
                 else:
                     lines.append(row(one, bar(min(since / per, 1.0), colour=ACCENT_SOFT),
-                                     (f"  {min(since / per, 0.99) * 100:.0f}%  {mins(min(since, per))}/{mins(per)}", "default")))
+                                     (f"  {mins(since)} so far", "default")))
         elif expected:
             frac = el / (expected * 60)
             colour = BAD if frac > 1 else ACCENT
@@ -318,6 +318,8 @@ def experiment_panel(tick):
             est = "" if prog else " (estimate)"
             lines.append(row("left", (f"about {mins(left)}{est}", "default")))
             lines.append(row("ends", (f"about {day(time.time() + left)}{est}", "default")))
+        if per:
+            lines.append(row("average", (f"{mins(per)} per {one}", "default")))
         rr = remote_run()
         n = lw.busy_workers(int(run.get("pid", 0)))
         if rr:

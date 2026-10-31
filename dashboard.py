@@ -1843,7 +1843,6 @@ LIN_CSS = """
 .lane-lab:first-child{border-left:0}
 .lane-lab .sw{position:absolute;left:10px;top:12px;width:8px;height:8px;border-radius:50%;background:currentColor}.lane-lab .nm{display:block;text-indent:14px}
 .lane-lab .cnt{display:block;color:var(--faint);font-weight:400;margin-top:2px;font-variant-numeric:lining-nums tabular-nums}
-.lane-lab.on .nm{text-decoration:underline;text-underline-offset:3px}
 #lin{display:block}
 #lin .lband{fill:currentColor;fill-opacity:.05}
 #lin .lbound{stroke:var(--rule-soft);stroke-width:1}
@@ -1869,11 +1868,8 @@ LIN_CSS = """
 #lin .ng.row-on .ntitle{fill:var(--ink);font-weight:600}
 #lin .nlab{fill:var(--faint);font:9.5px/1 var(--serif);font-variant-numeric:lining-nums tabular-nums}
 #lin .ng:focus-visible .hit{stroke:var(--accent);stroke-width:1.5}
-#lin.dim .ng,#lin.dim .edge{opacity:.1}
-#lin.dim .ng.lit,#lin.dim .ng.lit-direct{opacity:1}
-#lin.dim .ng.lit .nlab,#lin.dim .ng.lit-direct .nlab{fill:var(--ink)}
-#lin.dim .edge.fam{opacity:1}
-#lin.dim .edge.lit,#lin.dim .edge.lit-direct{opacity:1;stroke:var(--ink);stroke-width:2}
+#lin .ng.lit .nlab,#lin .ng.lit-direct .nlab{fill:var(--ink)}
+#lin .edge.lit,#lin .edge.lit-direct{stroke:var(--ink);stroke-width:2}
 #lin-tip{position:fixed;z-index:30;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;font:13px/1.45 var(--serif);padding:12px 14px;max-width:min(430px,calc(100vw - 24px))}
 #lin-tip:has(.pop-mini){display:flex;gap:18px;max-width:min(640px,calc(100vw - 24px))}#lin-tip .pop-main{flex:1;min-width:0}
 #lin-tip .pop-mini{flex:none;width:150px;padding-left:16px;border-left:1px solid var(--rule-soft)}#lin-tip .pop-mini svg{display:block}
@@ -2042,16 +2038,16 @@ LIN_JS = r"""
   // On a narrow screen the figure scrolls sideways; the sticky heads follow it.
   function syncHeads(){lanesEl.style.transform='translateX('+(-host.scrollLeft)+'px)';}
 
-  function clearLit(){svg.classList.remove('dim');svg.querySelectorAll('.lit,.lit-direct,.fam').forEach(function(el){el.classList.remove('lit','lit-direct','fam');});
-    lanesEl.querySelectorAll('.on').forEach(function(el){el.classList.remove('on');});}
+  function clearLit(){svg.querySelectorAll('.lit,.lit-direct').forEach(function(el){el.classList.remove('lit','lit-direct');});
+}
   // On an experiment's own page every node is its line: light all of it, the experiment itself strongest
-  function reset(){clearLit();if(!data.current)return;svg.classList.add('dim');
+  function reset(){clearLit();if(!data.current)return;
     nodes.forEach(function(nd){mark(nd.key,nd.key===data.current?'lit-direct':'lit');});
     svg.querySelectorAll('.edge').forEach(function(e){e.classList.add('lit');});}
   function mark(k,cls){var el=svg.querySelector('.ng[data-key="'+CSS.escape(k)+'"]');if(el)el.classList.add(cls);}
   // Trace a node's line back to its root, every ancestor and edge in full.
   function lit(key){
-    clearLit();svg.classList.add('dim');
+    clearLit();
     var chain=[key],cur=key;while((cur=parentOf(cur))&&chain.indexOf(cur)<0)chain.push(cur);
     chain.forEach(function(k,i){mark(k,i<2?'lit-direct':'lit');});
     var row=svg.querySelector('.lrow[data-key="'+CSS.escape(key)+'"]');if(row)row.classList.add('lit-direct');
@@ -2060,15 +2056,8 @@ LIN_JS = r"""
   }
   // An edge alone: the edge and the two experiments it joins.
   function litEdge(c,p){
-    clearLit();svg.classList.add('dim');mark(c,'lit-direct');mark(p,'lit-direct');
+    clearLit();mark(c,'lit-direct');mark(p,'lit-direct');
     svg.querySelectorAll('.edge[data-c="'+CSS.escape(c)+'"]').forEach(function(e){e.classList.add('lit-direct');});
-  }
-  function litFam(fi){
-    clearLit();svg.classList.add('dim');
-    nodes.forEach(function(nd){if(nd.fam===fi)mark(nd.key,'lit-direct');});
-    // the column's edges stay as drawn, only undimmed: lighting all of them at once is noise
-    svg.querySelectorAll('.edge').forEach(function(e){if(byKey[e.getAttribute('data-c')].fam===fi)e.classList.add('fam');});
-    var lab=lanesEl.querySelector('[data-fam="'+fi+'"]');if(lab)lab.classList.add('on');
   }
 
   function placeTip(el){
@@ -2148,9 +2137,6 @@ LIN_JS = r"""
     // shows the popover and the second opens the record.
     svg.addEventListener('click',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');
       if(lastPointer==='touch'&&shownKey!==k){e.preventDefault();lit(k);showTip(k,a);}});
-    lanesEl.querySelectorAll('.lane-lab').forEach(function(el){
-      el.addEventListener('mouseenter',function(){litFam(+el.getAttribute('data-fam'));});
-      el.addEventListener('mouseleave',function(){reset();});});
   }
   // On opening, glide down and across to the most recent experiment (#106), unless the reader
   // has scrolled already or the address names a place on the page.
@@ -2313,7 +2299,7 @@ def lineage_page():
         facts += f' The most built-on is <a href="/exp/{esc(top[0])}">{int(top[0][:4])}</a>, with {top[1]} children.'
     blob = json.dumps(data).replace("</", "<\\/")
     body = f"""<style>{LIN_CSS}</style><div class="lin">
-{page_head("Lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. A curve beside a column joins an experiment to the one it built on, from the bottom of the parent to the top of the child. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, an edge to light the two experiments it joins, or a family's name to light its column. Click a dot to open its record in a new tab.")}
+{page_head("Lineage", "The lineage of each experiment", "Every experiment, top to bottom in the order it ran, in the column of its family. A curve beside a column joins an experiment to the one it built on, from the bottom of the parent to the top of the child. A dashed curve means the parent sits in another family. Hover a dot to trace its line back to the root, or an edge to light the two experiments it joins. Click a dot to open its record in a new tab.")}
 {sec(1, "Every experiment by family")}<div style="max-width:980px;margin:0 auto"><p class="facts" style="font-size:14.5px;color:var(--muted);margin:4px 0 12px;max-width:820px">{facts}</p>{LIN_LEGEND}</div>
 <div class="lin-box"><div id="lin-heads"><div id="lin-lanes"></div></div><div id="lin-diagram"></div></div>
 {page_foot('Each family and its hypotheses are on the <a href="/families">families</a> page; the order they are worked in is on <a href="/priorities">Priorities</a>.')}

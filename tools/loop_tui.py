@@ -36,6 +36,7 @@ REQ = ROOT / "data" / "loop-stop-request"
 STOP = ROOT / "data" / "loop-stop.json"
 PID = ROOT / "data" / "loop.pid"
 ACCENT, MUTED, OK, BAD = "#c0614a", "grey58", "green3", "red3"
+ACCENT_SOFT = "#e0a191"   # the accent, lighter: a part of a unit rather than whole units
 
 
 def mins(sec):
@@ -44,7 +45,7 @@ def mins(sec):
 
 def bar(frac, width=30, colour=ACCENT):
     n = max(0, min(width, round(frac * width)))
-    return Text("█" * n, style=colour) + Text("░" * (width - n), style="grey35")
+    return Text("█" * n, style=colour) + Text("█" * (width - n), style="grey23")   # one glyph, so fill and track match
 
 
 def alive(pid):
@@ -290,7 +291,7 @@ def experiment_panel(tick):
         if prog:
             frac, lab = prog
             left = f"  ·  about {mins(el * (1 - frac) / frac)} left" if 0 < frac < 1 else ""
-            lines.append(Text("done   ", style=MUTED) + bar(frac) + Text(f"  {frac * 100:.0f}% {lab}{left}"))
+            lines.append(Text("done   ", style=MUTED) + bar(frac) + Text(f"  {frac * 100:.0f}%", style="default") + Text(f"  {done:,}/{total:,} {lab}", style="default") + Text(left, style=MUTED))
             if 0 < frac < 1:
                 end = time.time() + el * (1 - frac) / frac
             # between two reported units: how far the next one is, by the average time a unit takes
@@ -300,9 +301,9 @@ def experiment_panel(tick):
                 if since > 3 * per and since > 120:
                     lines.append(Text("now    ", style=MUTED) + Text(f"no {one} finished for {mins(since)}, usually one every {mins(per)}: check the run", style=BAD))
                 else:
-                    lines.append(Text("now    ", style=MUTED) + bar(min(since / per, 1.0), width=12, colour=MUTED)
-                                 + Text(f"  next {one} about {min(since / per, 0.99) * 100:.0f}% through, by the average", style="default")
-                                 + Text(f"  ·  one every {mins(per)}  ·  last {mins(since)} ago", style=MUTED))
+                    lines.append(Text("now    ", style=MUTED) + bar(min(since / per, 1.0), colour=ACCENT_SOFT)
+                                 + Text(f"  {min(since / per, 0.99) * 100:.0f}%", style="default") + Text(f"  {mins(min(since, per))}/{mins(per)} of the next {one}", style="default")
+                                 + Text(", by the average", style=MUTED))
         elif expected:
             frac = el / (expected * 60)
             colour = BAD if frac > 1 else ACCENT

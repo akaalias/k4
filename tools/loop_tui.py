@@ -68,6 +68,24 @@ def runner_running():
 _spend = {"t": 0.0, "v": 0.0}
 
 
+def attack_eli5():
+    """The plain-words hypothesis attack.py states ("hypothesis_eli5"), if any."""
+    import ast
+    try:
+        tree = ast.parse((ROOT / "attack.py").read_text())
+    except (OSError, SyntaxError):
+        return ""
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Dict):
+            for k, v in zip(node.keys, node.values):
+                if isinstance(k, ast.Constant) and k.value == "hypothesis_eli5":
+                    try:
+                        return str(ast.literal_eval(v))
+                    except ValueError:
+                        return ""
+    return ""
+
+
 def compute_setting():
     try:
         return json.loads((ROOT / "data" / "compute.json").read_text())
@@ -336,6 +354,9 @@ def experiment_panel(tick):
                 lines.append(row("log", (last[0][-110:], "default")))
         except OSError:
             pass
+        eli5 = attack_eli5()
+        if eli5:
+            lines += [Text(""), Text("in plain words", style=MUTED), Text(eli5, style="default")]
     else:
         lines.append(Text("no run in progress: the loop is preparing the next experiment", style=MUTED))
     return Panel(Group(*lines), title="current experiment", title_align="left", border_style=ACCENT)
@@ -365,9 +386,16 @@ def footer():
 
 
 def render(act, tick, height):
+    import shutil
+    from rich.console import Console
     lay = Layout()
-    lay.split_column(Layout(header(), size=3), Layout(name="top", ratio=5), Layout(name="bottom", ratio=4), Layout(footer(), size=1))
-    lay["top"].split_row(Layout(experiment_panel(tick), ratio=6), Layout(backlog_panel(), ratio=5))
+    exp = experiment_panel(tick)
+    # the top row as tall as the experiment panel needs, leaving the bottom row at least 8 lines
+    w = shutil.get_terminal_size((160, 45)).columns * 6 // 11
+    need = len(Console(width=max(40, w)).render_lines(exp))
+    top = max(height * 5 // 9, min(need, height - 3 - 1 - 8))
+    lay.split_column(Layout(header(), size=3), Layout(name="top", size=top), Layout(name="bottom"), Layout(footer(), size=1))
+    lay["top"].split_row(Layout(exp, ratio=6), Layout(backlog_panel(), ratio=5))
     lay["bottom"].split_row(Layout(recent_panel(), ratio=6), Layout(activity_panel(act, max(3, height * 4 // 9 - 3)), ratio=5))
     return lay
 

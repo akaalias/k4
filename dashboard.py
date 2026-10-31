@@ -2093,15 +2093,23 @@ LIN_JS = r"""
   // hovered experiment's line back to its root in ink, and a frame for the part on screen, so the
   // line can be seen whole without scrolling away from it.
   function minimap(key){
-    var w=150,h=250,sx=w/geo.W,sy=(h-8)/geo.H,X=function(k){return (geo.cols[byKey[k].fam].x*sx).toFixed(1);},Y=function(k){return (4+geo.y[k]*sy).toFixed(1);},m='';
+    var w=150,h=250,pad=4,sx=w/geo.W,sy=(h-2*pad)/geo.H,X=function(k){return (geo.cols[byKey[k].fam].x*sx).toFixed(1);},Y=function(k){return (pad+geo.y[k]*sy).toFixed(1);},m='';
     geo.cols.forEach(function(C,i){m+='<rect class="f'+fams[i].c+'" x="'+(C.left*sx).toFixed(1)+'" y="0" width="'+Math.max(1,C.w*sx-1).toFixed(1)+'" height="'+h+'" fill="currentColor" fill-opacity=".07"/>';});
+    // the part on screen: a soft shaded area under the marks, inside the map, following both scrolls
+    var r=svg.getBoundingClientRect(),v0=Math.max(0,-r.top),v1=Math.min(geo.H,window.innerHeight-r.top),
+        x0=Math.max(0,-r.left)+0,x1=Math.min(geo.W,window.innerWidth-r.left);
+    if(v1>v0&&x1>x0){var fx=Math.max(1,x0*sx),fw=Math.min(w-1,x1*sx)-fx,fy=Math.max(1,pad+v0*sy-2),fh=Math.min(h-1,pad+v1*sy+2)-fy;
+      m+='<rect x="'+fx.toFixed(1)+'" y="'+fy.toFixed(1)+'" width="'+Math.max(4,fw).toFixed(1)+'" height="'+Math.max(4,fh).toFixed(1)+'" rx="3" fill="var(--ink)" fill-opacity=".07" stroke="var(--muted)" stroke-opacity=".45" stroke-width="1"/>';}
     nodes.forEach(function(nd){m+='<circle cx="'+X(nd.key)+'" cy="'+Y(nd.key)+'" r=".9" fill="var(--faint)" fill-opacity=".7"/>';});
     var chain=[key],cur=key;while((cur=parentOf(cur))&&chain.indexOf(cur)<0)chain.push(cur);
-    m+='<polyline points="'+chain.map(function(k){return X(k)+','+Y(k);}).join(' ')+'" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-linejoin="round"/>';
+    // the line's own edges, the same curves as the diagram scaled down: solid within a family, dotted across
+    var e='';
+    chain.forEach(function(k,i){if(!i&&chain.length<2)return;var p=chain[i+1];if(!p)return;
+      var el=svg.querySelector('.edge[data-c="'+CSS.escape(k)+'"][data-p="'+CSS.escape(p)+'"]');if(!el)return;
+      e+='<path d="'+el.getAttribute('d')+'" fill="none" stroke="var(--ink)" stroke-width="1.2" vector-effect="non-scaling-stroke"'+(el.classList.contains('x')?' stroke-dasharray="1.6 1.6"':'')+'/>';});
+    m+='<g transform="translate(0,'+pad+') scale('+sx.toFixed(5)+','+sy.toFixed(5)+')">'+e+'</g>';
     chain.forEach(function(k,i){if(i)m+='<circle class="f'+fams[byKey[k].fam].c+'" cx="'+X(k)+'" cy="'+Y(k)+'" r="1.8" fill="currentColor"/>';});
     m+='<circle cx="'+X(key)+'" cy="'+Y(key)+'" r="3.2" fill="var(--ink)"/>';
-    var r=svg.getBoundingClientRect(),v0=Math.max(0,-r.top),v1=Math.min(geo.H,window.innerHeight-r.top);
-    if(v1>v0)m+='<rect x=".5" y="'+(4+v0*sy).toFixed(1)+'" width="'+(w-1)+'" height="'+Math.max(2,(v1-v0)*sy).toFixed(1)+'" fill="none" stroke="var(--muted)" stroke-width="1"/>';
     return '<div class="pop-mini"><div class="pop-h">Its line in the whole lineage</div><svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'">'+m+'</svg></div>';
   }
   function hideTip(){tip.style.opacity='0';shownKey=null;}

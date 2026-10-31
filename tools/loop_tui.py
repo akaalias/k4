@@ -302,8 +302,7 @@ def experiment_panel(tick):
                     lines.append(Text("now    ", style=MUTED) + Text(f"no {one} finished for {mins(since)}, usually one every {mins(per)}: check the run", style=BAD))
                 else:
                     lines.append(Text("now    ", style=MUTED) + bar(min(since / per, 1.0), colour=ACCENT_SOFT)
-                                 + Text(f"  {min(since / per, 0.99) * 100:.0f}%", style="default") + Text(f"  {mins(min(since, per))}/{mins(per)} of the next {one}", style="default")
-                                 + Text(", by the average", style=MUTED))
+                                 + Text(f"  {min(since / per, 0.99) * 100:.0f}%", style="default") + Text(f"  {mins(min(since, per))}/{mins(per)}", style="default"))
         elif expected:
             frac = el / (expected * 60)
             colour = BAD if frac > 1 else ACCENT

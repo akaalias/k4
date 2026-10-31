@@ -5,6 +5,10 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-10-31
+
+F1.13 desk note (`drafts/F1.13-design.md`): the autokey forms are linear in the alphabet's numbering, so the numbering splits mod 13 and mod 2. A climb over which two letters share each residue mod 13, with the remaining 13 bits solved exactly per pairing, replaces 0256's climb over the whole alphabet, which lost its plants to search failure. Not measured yet: the laptop slept on battery from about 03:00 to 09:40, and 0267 went from 405 to 430 of 5,930 settings (#109).
+
 ## 2026-10-30
 
 ### F5 (ticket #77)

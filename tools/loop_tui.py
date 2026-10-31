@@ -280,16 +280,29 @@ def experiment_panel(tick):
     lines += [Text(""), steps]
     if run:
         el = time.time() - started
-        prog = None
+        prog, end = None, None
         try:
             pr = json.loads(lw.PROGRESS.read_text())
             prog = min(1.0, float(pr["done"]) / (float(pr["total"]) or 1.0)), pr.get("label", "")
+            done, total, upd = int(pr["done"]), int(pr["total"]), float(pr.get("updated") or 0)
         except (OSError, ValueError, KeyError):
             pass
         if prog:
             frac, lab = prog
             left = f"  ·  about {mins(el * (1 - frac) / frac)} left" if 0 < frac < 1 else ""
             lines.append(Text("done   ", style=MUTED) + bar(frac) + Text(f"  {frac * 100:.0f}% {lab}{left}"))
+            if 0 < frac < 1:
+                end = time.time() + el * (1 - frac) / frac
+            # between two reported units: how far the next one is, by the average time a unit takes
+            if done and upd and done < total:
+                per, since = el / done, max(0.0, time.time() - upd)
+                one = lab[:-1] if lab.endswith("s") else (lab or "unit")
+                if since > 3 * per and since > 120:
+                    lines.append(Text("now    ", style=MUTED) + Text(f"no {one} finished for {mins(since)}, usually one every {mins(per)}: check the run", style=BAD))
+                else:
+                    lines.append(Text("now    ", style=MUTED) + bar(min(since / per, 1.0), width=12, colour=MUTED)
+                                 + Text(f"  next {one} about {min(since / per, 0.99) * 100:.0f}% through, by the average", style="default")
+                                 + Text(f"  ·  one every {mins(per)}  ·  last {mins(since)} ago", style=MUTED))
         elif expected:
             frac = el / (expected * 60)
             colour = BAD if frac > 1 else ACCENT
@@ -298,9 +311,13 @@ def experiment_panel(tick):
                          + Text("  (estimate)", style=MUTED))
         else:
             lines.append(Text("time   ", style=MUTED) + Text(f"{mins(el)} running, no estimate stated", style="default"))
-        when = Text(f"started {datetime.fromtimestamp(started).strftime('%H:%M')}", style=MUTED)
-        if expected:
-            when += Text(f"  ·  expected to end about {datetime.fromtimestamp(started + expected * 60).strftime('%H:%M')}", style=MUTED)
+        st = datetime.fromtimestamp(started)
+        when = Text(f"started {st.strftime('%H:%M') if st.date() == datetime.now().date() else st.strftime('%a %-d %b, %H:%M')}", style=MUTED)
+        end = end or (started + expected * 60 if expected else None)
+        if end:
+            d = datetime.fromtimestamp(end)
+            when += Text(f"  ·  expected to end about {d.strftime('%H:%M') if d.date() == datetime.now().date() else d.strftime('%a %-d %b, %H:%M')}"
+                         + ("" if prog else " (estimate)"), style=MUTED)
         lines.append(Text("       ") + when)
         rr = remote_run()
         n = lw.busy_workers(int(run.get("pid", 0)))
@@ -309,7 +326,7 @@ def experiment_panel(tick):
                          + Text("  ·  the laptop stays cool", style=MUTED))
             lines.append(Text(f"       {rr['url']}", style=MUTED, overflow="ellipsis", no_wrap=True))
         else:
-            lines.append(Text("cpu    ", style=MUTED) + (Text(f"{n} processes on the laptop", style=OK) if n
+            lines.append(Text("cpu    ", style=MUTED) + (Text(f"{n} processes on the laptop", style=OK) + Text(f"  ·  {lw.busy_cpu() / 100:.1f} cores busy", style=MUTED) if n
                                                         else Text("no process using the CPU: check the run", style=BAD)))
         try:
             last = [ln for ln in (ROOT / run["log"]).read_text().splitlines() if ln.strip()][-1:]

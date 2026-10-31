@@ -144,7 +144,7 @@ def backlog_line(width):
 
 
 PHASES = ("design", "implement", "test", "run", "record")
-_busy = {"t": 0.0, "n": 0}
+_busy = {"t": 0.0, "n": 0, "cpu": 0.0}
 
 
 def busy_workers(root_pid):
@@ -163,14 +163,20 @@ def busy_workers(root_pid):
         if len(f) == 3:
             kids.setdefault(int(f[1]), []).append(int(f[0]))
             cpu[int(f[0])] = float(f[2])
-    todo, n = [root_pid], 0
+    todo, n, tot = [root_pid], 0, 0.0
     while todo:
         q = todo.pop()
         for c in kids.get(q, []):
             n += cpu.get(c, 0.0) > 20
+            tot += cpu.get(c, 0.0)
             todo.append(c)
-    _busy["n"] = n
+    _busy["n"], _busy["cpu"] = n, tot
     return n
+
+
+def busy_cpu():
+    """Total CPU of the run's processes at the last busy_workers check, in percent of one core."""
+    return _busy["cpu"]
 
 
 def attack_info():

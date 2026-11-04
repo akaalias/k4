@@ -1,0 +1,56 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Look",
+      "Effect": "Allow",
+      "Action": ["ec2:DescribeImages", "ec2:DescribeSubnets", "ec2:DescribeInstances", "ec2:DescribeSpotPriceHistory"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "LaunchOnlyTheseMachines",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:eu-central-1:*:instance/*",
+      "Condition": {"StringEquals": {"ec2:InstanceType": ["c8g.8xlarge", "c7g.8xlarge"]}}
+    },
+    {
+      "Sid": "LaunchUses",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": [
+        "arn:aws:ec2:eu-central-1::image/*",
+        "arn:aws:ec2:eu-central-1:*:subnet/*",
+        "arn:aws:ec2:eu-central-1:*:security-group/*",
+        "arn:aws:ec2:eu-central-1:*:volume/*",
+        "arn:aws:ec2:eu-central-1:*:network-interface/*"
+      ]
+    },
+    {
+      "Sid": "TagAtLaunch",
+      "Effect": "Allow",
+      "Action": "ec2:CreateTags",
+      "Resource": "*",
+      "Condition": {"StringEquals": {"ec2:CreateAction": "RunInstances"}}
+    },
+    {
+      "Sid": "TerminateOnlyOwnMachines",
+      "Effect": "Allow",
+      "Action": "ec2:TerminateInstances",
+      "Resource": "*",
+      "Condition": {"StringEquals": {"ec2:ResourceTag/Project": "cryptos"}}
+    },
+    {
+      "Sid": "OwnBucket",
+      "Effect": "Allow",
+      "Action": ["s3:CreateBucket", "s3:PutBucketPublicAccessBlock", "s3:PutLifecycleConfiguration", "s3:ListBucket"],
+      "Resource": "arn:aws:s3:::k4-runs-*"
+    },
+    {
+      "Sid": "OwnBucketObjects",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
+      "Resource": "arn:aws:s3:::k4-runs-*/*"
+    }
+  ]
+}

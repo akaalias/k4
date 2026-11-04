@@ -105,12 +105,12 @@ edited, and the dashboard shows each experiment's current verdict.
    all), so the loop's terminal shows how far the run is (issue #97); it is cheap to call often.
    Put your estimate of the run's length in `EXPERIMENT["expected_minutes"]` (a whole number); the
    terminal draws elapsed time against it until progress is reported, and flags a run that overruns.
-   The search may run on a Modal machine with more cores than the laptop's 8 (issue #99): every Pool
+   The search usually runs on a 32-core AWS machine (issue #115; Modal before it, #99): every Pool
    gets `K4_WORKERS` processes whatever number it asks for. So split the work into many small jobs
    (several per worker), never into batches of exactly 8, and give each job its own seed, so that
    the result is the same whatever the number of workers. Size a batch with
    `int(os.environ.get("K4_WORKERS", 8))`. numpy is available; ask before adding another package.
-   **Save each finished unit** (issue #105) so a stop, a Modal drop or the credit limit loses
+   **Save each finished unit** (issue #105) so a stop, a lost cloud machine or the budget limit loses
    nothing: from the main process, call `ctx.save(key, value)` as each unit (a setting, a copy, a
    plant) finishes, with a string key and a JSON value holding everything the end of `run` needs
    from it. Before computing a unit, look in `ctx.saved` (the same keys and values from an earlier

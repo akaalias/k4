@@ -84,3 +84,52 @@ sys.exit(rr.main({str(ROOT / "attack.py")!r}, {str(tmp_path / "raw.json")!r}, "i
     r = subprocess.run([sys.executable, "-c", script], capture_output=True, text=True, timeout=90)
     assert r.returncode == 75, r.stdout + r.stderr
     assert "no word from Modal" in r.stdout
+
+
+def _aws_run():
+    spec = importlib.util.spec_from_file_location("aws_run", ROOT / "tools" / "aws_run.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def test_aws_is_a_compute_place(tmp_path, monkeypatch):
+    monkeypatch.setattr(run_experiment, "COMPUTE", tmp_path / "compute.json")
+    (tmp_path / "compute.json").write_text(json.dumps({"where": "aws"}))
+    assert run_experiment.compute_where() == "aws"
+    assert "aws_run.py" in run_experiment.REMOTE["aws"][1][-1]
+
+
+def test_aws_package_ships_no_secrets_or_large_folders():
+    """The machine gets the code, never .env, .git or the large folders (issue #115)."""
+    import io
+    import tarfile
+    names = tarfile.open(fileobj=io.BytesIO(_aws_run().package_code())).getnames()
+    tops = {n.split("/")[1] for n in names if n.count("/") >= 1}
+    assert {"kryptos", "tools", "experiments", "_runner.py", "uv.lock"} <= tops
+    assert not tops & {".env", ".git", ".venv", "transcripts", "logs", "figures", "Kryptos Blender Model"}
+    assert not any("__pycache__" in n for n in names)
+
+
+def test_aws_budget_reached_hands_the_run_back(tmp_path, monkeypatch):
+    rr = _aws_run()
+    monkeypatch.setattr(rr, "env_file", lambda: {"AWS_ACCESS_KEY_ID": "x", "AWS_SECRET_ACCESS_KEY": "y"})
+    monkeypatch.setattr(rr, "setting", lambda: {"where": "aws", "budget_dollars": 10})
+    monkeypatch.setattr(rr, "spend_this_month", lambda where="aws": 10.5)
+    assert rr.main(str(ROOT / "attack.py"), str(tmp_path / "raw.json"), "inf") == rr.UNAVAILABLE
+    assert not (tmp_path / "raw.json").exists()
+
+
+def test_aws_without_credentials_hands_the_run_back(tmp_path, monkeypatch):
+    rr = _aws_run()
+    monkeypatch.setattr(rr, "env_file", lambda: {})
+    monkeypatch.delenv("AWS_ACCESS_KEY_ID", raising=False)
+    assert rr.main(str(ROOT / "attack.py"), str(tmp_path / "raw.json"), "inf") == rr.UNAVAILABLE
+
+
+def test_aws_boot_script_fits_and_shuts_down_first():
+    rr = _aws_run()
+    urls = {k: "https://example.com/" + "x" * 1500 for k in ("code", "secret", "status", "checkpoint", "log", "result")}
+    s = rr.boot_script(urls, 1440)
+    assert s.splitlines()[2].startswith("shutdown -h +1440")
+    assert len(s.encode()) < 16000

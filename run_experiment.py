@@ -28,8 +28,11 @@ RESULTS = ROOT / "results.tsv"
 CHAMPION = ROOT / "champion.json"
 ATTACK = ROOT / "attack.py"
 
-COMPUTE = ROOT / "data" / "compute.json"   # {"where": "modal"} or {"where": "local"}; tools/compute.sh sets it
-LOCAL_FALLBACK_WORKERS = 4                # when Modal cannot run the search (issue #99)
+COMPUTE = ROOT / "data" / "compute.json"   # {"where": "aws" | "modal" | "local"}; tools/compute.sh sets it
+LOCAL_FALLBACK_WORKERS = 4                # when the cloud cannot run the search (issues #99, #115)
+# The cloud runners: same contract (exit 0 = ran there, 75 = run it on the laptop)
+REMOTE = {"aws": ("AWS", ["uv", "run", "--with", "boto3", "python", str(ROOT / "tools" / "aws_run.py")]),
+          "modal": ("Modal", ["uv", "run", "--with", "modal", "python", str(ROOT / "tools" / "remote_run.py")])}
 
 
 def compute_where():
@@ -78,7 +81,7 @@ _stopping = [False]
 
 def _stop(signum, frame):
     """Stopped from outside (tools/stop_experiment.sh, issue #104): stop the whole search, its workers and any
-    Modal app with it, then exit. The checkpoint file keeps what was finished; the folder stays for the rerun."""
+    cloud machine with it, then exit. The checkpoint file keeps what was finished; the folder stays for the rerun."""
     if _stopping[0]:                  # the signal can arrive twice (uv passes it on too)
         return
     _stopping[0] = True
@@ -86,7 +89,7 @@ def _stop(signum, frame):
     if proc is not None:
         # Not proc.wait(): the interrupted main code may be inside it, holding its lock.
         try:
-            os.killpg(proc.pid, signal.SIGTERM)   # remote_run stops its Modal app on SIGTERM
+            os.killpg(proc.pid, signal.SIGTERM)   # remote_run / aws_run stop their Modal app / AWS machine on SIGTERM
             deadline = time.time() + 60
             while time.time() < deadline and os.waitpid(proc.pid, os.WNOHANG)[0] != proc.pid:
                 time.sleep(0.2)
@@ -164,15 +167,16 @@ def main():
         budget = str(args.budget) if limited else "inf"
         timeout = args.budget + 600 if limited else None
         ran_remote = False
-        if compute_where() == "modal":    # issue #99: the search runs on Modal; gates and record stay here
-            rc = run_child(["uv", "run", "--with", "modal", "python", str(ROOT / "tools" / "remote_run.py"),
-                            str(ATTACK), str(raw_path), budget], timeout=timeout)
+        where = compute_where()
+        if where in REMOTE:    # issues #99, #115: the search runs in the cloud; gates and record stay here
+            name, cmd = REMOTE[where]
+            rc = run_child(cmd + [str(ATTACK), str(raw_path), budget], timeout=timeout)
             ran_remote = rc == 0
             if not ran_remote:
-                print(f"Modal unavailable; running locally on {LOCAL_FALLBACK_WORKERS} workers")
+                print(f"{name} unavailable; running locally on {LOCAL_FALLBACK_WORKERS} workers")
         if not ran_remote:
             env = dict(os.environ)
-            if compute_where() == "modal":   # the fallback: fewer workers, so the laptop runs cooler
+            if where in REMOTE:   # the fallback: fewer workers, so the laptop runs cooler
                 env["K4_MAX_WORKERS"] = str(LOCAL_FALLBACK_WORKERS)
             run_child([sys.executable, str(ROOT / "_runner.py"), str(ATTACK), str(raw_path), budget],
                       timeout=timeout, env=env)

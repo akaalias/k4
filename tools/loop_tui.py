@@ -107,9 +107,10 @@ def compute_setting():
         return {"where": "local"}
 
 
-def modal_spend_this_month():
-    """Dollars the month's Modal runs cost, from each record's raw.json (issue #99); rechecked every minute."""
-    if time.time() - _spend["t"] > 60:
+def spend_this_month(where="modal"):
+    """Dollars the month's runs on Modal or AWS cost, from each record's raw.json (issues #99, #115); rechecked every
+    minute."""
+    if time.time() - _spend["t"] > 60 or _spend.get("where") != where:
         month, total = time.strftime("%Y-%m"), 0.0
         for raw in (ROOT / "experiments").glob("*/raw.json"):
             if time.strftime("%Y-%m", time.localtime(raw.stat().st_mtime)) != month:
@@ -118,14 +119,14 @@ def modal_spend_this_month():
                 c = json.loads(raw.read_text()).get("compute") or {}
             except (OSError, ValueError):
                 continue
-            if c.get("where") == "modal":
-                total += float(c.get("dollars", 0))
-        _spend.update(t=time.time(), v=total)
+            if c.get("where") == where:
+                total += float(c.get("dollars") or 0)
+        _spend.update(t=time.time(), v=total, where=where)
     return _spend["v"]
 
 
 def remote_run():
-    """The Modal run in progress, if any (tools/remote_run.py writes data/remote-run.json while it runs)."""
+    """The cloud run in progress, if any (tools/remote_run.py and tools/aws_run.py write data/remote-run.json)."""
     try:
         r = json.loads((ROOT / "data" / "remote-run.json").read_text())
         return r if alive(r.get("pid", 0)) else None
@@ -241,8 +242,9 @@ def header():
     t = Table.grid(expand=True)
     t.add_column(); t.add_column(justify="right")
     cs = compute_setting()
-    if cs.get("where") == "modal":
-        where = Text("compute: Modal", style=OK) + Text(f" ${modal_spend_this_month():.2f}"
+    if cs.get("where") in ("modal", "aws"):
+        name = {"modal": "Modal", "aws": "AWS"}[cs["where"]]
+        where = Text(f"compute: {name}", style=OK) + Text(f" ${spend_this_month(cs['where']):.2f}"
                                                         + (f" of ${cs['budget_dollars']:.2f}" if cs.get("budget_dollars") else "")
                                                         + " this month   ", style=MUTED)
     else:
@@ -357,7 +359,8 @@ def experiment_panel(tick):
         rr = remote_run()
         n = lw.busy_workers(int(run.get("pid", 0)))
         if rr:
-            lines.append(row("cpu", (f"on Modal, {rr['cpu']} cores", OK)))
+            lines.append(row("cpu", (f"on AWS {rr.get('instance', '')}, {rr['cpu']} cores" if rr.get("where") == "aws"
+                                     else f"on Modal, {rr['cpu']} cores", OK)))
             lines.append(row("", (rr["url"], MUTED)))
         elif n:
             lines.append(row("cpu", (f"{n} processes on the laptop", OK)))

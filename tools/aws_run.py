@@ -45,6 +45,7 @@ CORES = {"c8g.8xlarge": 32, "c7g.8xlarge": 32, "c8g.16xlarge": 64, "c7g.16xlarge
 MAX_MINUTES = int(os.environ.get("AWS_MAX_MINUTES", 24 * 60))   # a guard against a forgotten machine, not a budget
 BOOT_SILENCE = 15 * 60     # seconds from launch to the first word from the machine
 SILENCE = 15 * 60          # seconds without a heartbeat once it runs
+CAPACITY_WAIT = 5 * 60     # seconds to keep retrying a launch (spot limit still held by the last machine)
 TEST_DIR = os.environ.get("K4_REMOTE_TEST")
 MARKER = Path(TEST_DIR) / f"remote-run-{os.getpid()}.json" if TEST_DIR else ROOT / "data" / "remote-run.json"
 # Never shipped: secrets, version control, and the folders no attack reads (they are large). As tools/remote_run.py.
@@ -163,6 +164,7 @@ def launch(ec2, ami, root_dev, user_data, tag):
     from botocore.exceptions import ClientError
     subnets = {s["AvailabilityZone"]: s["SubnetId"] for s in ec2.describe_subnets(
         Filters=[{"Name": "default-for-az", "Values": ["true"]}])["Subnets"]}
+    codes = set()
     for itype in TYPES:
         prices = {}
         for p in ec2.describe_spot_price_history(
@@ -185,10 +187,13 @@ def launch(ec2, ami, root_dev, user_data, tag):
                 code = e.response["Error"]["Code"]
                 if "Capacity" in code or "Spot" in code or "Unsupported" in code or "MaxSpot" in code:
                     log(f"{itype} {zone}: no capacity ({code})")
+                    codes.add(code)
                     continue
                 raise
             log(f"launched {inst['InstanceId']} {itype} spot in {zone} at ${prices[zone]:.3f}/h")
             return inst["InstanceId"], itype, zone, prices[zone]
+    if codes == {"MaxSpotInstanceCountExceeded"}:
+        raise Unavailable("the account's 32-vCPU spot limit is in use (the last machine is still shutting down?)")
     raise Unavailable(f"no spot capacity for {' / '.join(TYPES)} in {ec2.meta.region_name}")
 
 
@@ -240,7 +245,19 @@ def run_once(sess, attack_rel, budget, ckpt, progress, attempt):
         raise Unavailable("boot script over EC2's 16 KB user-data limit")
     ami, ami_name, root_dev = find_ami(ec2)
     log(f"code {len(code) / 1e6:.1f} MB, image {ami} {ami_name}")
-    iid, itype, zone, price = launch(ec2, ami, root_dev, user_data, tag)
+    # A machine just terminated keeps counting against the account's 32-vCPU spot limit for a minute or two
+    # (MaxSpotInstanceCountExceeded on back-to-back runs, 2026-11-04), and spot capacity comes and goes:
+    # retry every minute for up to CAPACITY_WAIT before handing the run to the laptop.
+    t_wait = time.time()
+    while True:
+        try:
+            iid, itype, zone, price = launch(ec2, ami, root_dev, user_data, tag)
+            break
+        except Unavailable as e:
+            if time.time() - t_wait + 60 > CAPACITY_WAIT:
+                raise
+            log(f"{e}; trying again in 60 s")
+            time.sleep(60)
     t_launch = time.time()
     MARKER.write_text(json.dumps({"pid": os.getpid(), "attack": attack_rel, "where": "aws", "instance": itype,
                                   "cpu": CORES.get(itype, 32), "zone": zone, "dollars_per_hour": price,

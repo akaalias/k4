@@ -2,7 +2,7 @@
 
 EXPERIMENT = {
     "slug": "f6.1-free-alphabet-around-every-move-lengths-6-10-with-stand-ins",
-    "title": "F6.1: one free alphabet after or before every type-1 move, key lengths 6-10, every setting K4 fits decided by D1's one-run decider, with 10 shuffled stand-ins through the same procedure",
+    "title": "F6.1: one free alphabet after or before every type-1 move, key lengths 6-10, every setting K4 fits decided by D1's one-run decider, with 20 shuffled stand-ins through the same procedure",
     "family": "6-move-then-table",
     "parent": "0253-f1.4-one-alphabet-residue-decided-by-the-one-run-decider",
     "changed": (
@@ -10,7 +10,7 @@ EXPERIMENT = {
         "fitting settings). 0253's decide() unchanged (one tempering run of 0252's climb on K4, then shuffles the exact "
         "decider fits at the same setting climbed one at a time, stop at the first at or above, at most 12; no escalation, "
         "so K4 and the stand-ins are decided alike), now on 0129's move library: every (move, order, length 6-10, form) "
-        "that fits K4. Ten full shuffles of K4 stand in for it (0254/0255: a count over settings needs texts put through "
+        "that fits K4. Twenty full shuffles of K4 stand in for it (0254/0255: a count over settings needs texts put through "
         "the whole procedure), each on 300 of its own fitting settings."
     ),
     "hypothesis_expert": (
@@ -26,10 +26,10 @@ EXPERIMENT = {
         "Sanborn said he wrote the message into a grid, read it out another way, and then used the cipher table. With his "
         "own scrambled alphabet in the table and a short key word, thousands of such recipes agree with the 24 known "
         "letters. For each one we search for the most English-looking reading of K4 and do the same on scrambled copies; "
-        "ten scrambled stand-ins for K4 go through the very same test, so we know what 'K4 wins often' would mean."
+        "twenty scrambled stand-ins for K4 go through the very same test, so we know what 'K4 wins often' would mean."
     ),
     "prediction": (
-        "K4's rate of settings above all 12 copies inside the 10 stand-ins' spread (p above 0.1); plants (24, on settings "
+        "K4's rate of settings above all 12 copies inside the 20 stand-ins' spread (p above 0.05); plants (24, on settings "
         "K4 fits) found about 14 of 24; no reading English. Zero candidates."
     ),
     "method": (
@@ -37,7 +37,7 @@ EXPERIMENT = {
         "x form (added, Beaufort); each decided exactly on K4 by 0252's fits(); the fitting ones are K4's cell. "
         "2. Per setting (one job, own seed): 0253's decide() without escalation: one tempering run on K4, then shuffles "
         "that fit the same setting climbed one at a time until one reaches K4, at most 12. "
-        "3. Stand-ins: 10 shuffles of K4 (seed 2680), each with its own fitting settings found the same way, 300 drawn "
+        "3. Stand-ins: 20 shuffles of K4 (seed 2680), each with its own fitting settings found the same way, 300 drawn "
         "and decided alike. "
         "4. Plants: 12 clean and 12 Sanborn-style messages on settings K4 fits, random alphabet and key; found if above all 12. "
         "5. Verdict: K4's share of settings above all 12 copies, ranked among the stand-ins' shares."
@@ -50,7 +50,7 @@ EXPERIMENT = {
         "4. Search alphabets and keys for the most English-looking reading of K4 under the recipe. "
         "5. Shuffle K4 until the shuffle also passes step 3, search it the same way; stop when a shuffle reads as well as "
         "K4, at most 12 shuffles. "
-        "6. Do steps 4-5 for every recipe K4 fits, and for ten scrambled stand-ins of K4; compare how often each wins all 12."
+        "6. Do steps 4-5 for every recipe K4 fits, and for twenty scrambled stand-ins of K4; compare how often each wins all 12."
     ),
     "expected_minutes": 5000,
 }
@@ -68,7 +68,7 @@ ROOT = Path(__file__).resolve().parent
 LENGTHS = (6, 7, 8, 9, 10)
 BASE = 12
 PLANTS = 24
-N_STANDIN, SAMPLE = 10, 300
+N_STANDIN, SAMPLE = 20, 300
 SEED = 2680
 _MODS = {}
 
@@ -224,10 +224,10 @@ def run(ctx):
         "core_seconds": round(sum(v["secs"] for v in res.values())), "compute_seconds": round(time.time() - t0),
         "exhaustive": True, "exhaustive_over": "every type-1 move of 0129's library, both orders, key lengths 6-10, both forms, that K4 fits on one free alphabet; each decided at D1's one-run power",
         "resumed_units": len(work) - len(todo),
-        "cost_estimate": "about 7,443 K4 settings (0252) and 3,000 stand-in settings x about 4.1 one-run climbs (H_12 copies) at 17-25 core-s, plus 11 exact scans of the library (about 18 core-minutes each) and 24 plants: about 230-300 core-hours; about $11 on Modal, above the credit left, so on the laptop: several days",
+        "cost_estimate": "about 7,443 K4 settings (0252) and 6,000 stand-in settings x about 4.1 one-run climbs (H_12 copies) at 17-25 core-s, plus 21 exact scans of the library (about 18 core-minutes each) and 24 plants: about 300-400 core-hours; on AWS c8g.8xlarge (32 cores, $0.60/h): about 10-13 h, about $6-8",
     }
     notes = (f"F6.1 lengths 6-10: {n} settings fit K4; K4 above all 12 copies in {per['k4']['above_all_12']} ({100 * kr:.1f}%); "
-             f"10 stand-ins {100 * min(sr):.1f}-{100 * max(sr):.1f}%, {ge} at or above K4 (p {p:.2f}); plants clean "
+             f"{N_STANDIN} stand-ins {100 * min(sr):.1f}-{100 * max(sr):.1f}%, {ge} at or above K4 (p {p:.2f}); plants clean "
              f"{bounds['plants']['clean_found']}, Sanborn-style {bounds['plants']['sanborn_found']}.")
     controls = [c for k, v in res.items() if k.startswith("k4:") for c in v["copies"]][:2000]
     return {"candidates": [], "bounds": bounds, "notes": notes, "controls": controls}
@@ -245,4 +245,4 @@ def worked_example(ctx, key):
         "  slot map     each carved letter's key slot and message place follow from the move",
         "  K4 gets one tempering search under that setting; shuffles of K4 that fit the same 24 checks get the same,",
         "  one at a time, until a shuffle reads as well as K4 (at most 12).",
-        "  Ten shuffled stand-ins for K4 go through the whole procedure: K4's rate of wins must stand out from theirs."])
+        "  Twenty shuffled stand-ins for K4 go through the whole procedure: K4's rate of wins must stand out from theirs."])

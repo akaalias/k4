@@ -5,6 +5,16 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-11-04
+
+### F1.4 (ticket #77), first loop run on AWS (#115)
+
+| # | Item | One line |
+|---|---|---|
+| 267 | F1.4 | **The two-alphabet residue: every hand key schedule K4 fits on two free alphabets, with 20 stand-ins.** 4,706 slot maps, D1b's four runs per climb, 24,309 climbs. K4 above all 12 kept-place copies in 363 (7.7%; chance 7.7%); stand-ins 0-15%, 8 of 20 at or above (p 0.43); readings junk; plants 8/12 clean, 4/12 Sanborn-style. F1.4 closed at that power; F1.14 reruns at ten runs if a desk measure shows they lift the plants. Begun on the laptop 2026-10-30, stopped at 821 of 5,930 units, resumed unchanged from the checkpoint on AWS c8g.8xlarge: 532 min, $5.35, about 580 units an hour against the laptop's 80. |
+
+Mistake: one wait call chained two tools/wait_experiment.sh calls, overran the tool limit and went to the background; stopped at once (the run was untouched). One wait per call.
+
 ## 2026-10-31
 
 F1.13 desk note (`drafts/F1.13-design.md`): the autokey forms are linear in the alphabet's numbering, so the numbering splits mod 13 and mod 2. A climb over which two letters share each residue mod 13, with the remaining 13 bits solved exactly per pairing, replaces 0256's climb over the whole alphabet, which lost its plants to search failure. Not measured yet: the laptop slept on battery from about 03:00 to 09:40, and 0267 went from 405 to 430 of 5,930 settings (#109).

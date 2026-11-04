@@ -1,0 +1,5 @@
+F1.14's gate: does searching ten times instead of four find more hidden messages?
+
+  one hidden message and its 12 shuffled copies, each searched ten times; best of the first r searches:
+  found at r when the message's best beats all 12 copies' bests.
+  24 messages (0267's own); run the full rerun only if r = 10 finds at least 3 more than r = 4.

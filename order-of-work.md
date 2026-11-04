@@ -35,6 +35,7 @@ construction) are in `grades.tsv`.
 | 9th | F8 Hill | weak: the HILL column only (C21) | nothing testable here: 3x3 with a free numbering has no checks; the older undecided settings have none either | - | done (P15, 2026-10-17): F8.1 closed for 2x2, blocked for 3x3 |
 | 10th | F5 Gromark | weak: no creator remark | nothing testable here: base 26 with lag 6 and longer two-term lags blocked by cost | - | done (P16, 2026-10-17): F5.1 and F5.2 closed; reopened 2026-10-19 for F5.3 (#73), closed 2026-10-20 (0206) |
 | 11th | F9 substitution, then a move | against it: Sanborn's NYPVTT to BERLIN mapping | nothing testable here: routes outside every built library are unbounded | - | done (2026-10-17): F9.1 closed; STOP_AFTER reached |
+| next | F15 K1-K3 as a guide to K4's content | medium: Sanborn, "I have left instructions in the earlier text that refer to later text" (2005), K4 "will come back to the first part" (2009); no source text exists (#117) | everything: F15.1-F15.6 | low (drafts: a few dollars of Claude calls; searches: one AWS run each) | queued after 0267 (Alexis, 2026-11-04, #118) |
 | - | F7 construction simulation | a tool, not a cipher | run before each family's first open item: does its construction make both fingerprints? | low | standing step |
 
 Why this order: F1 and F6 rest on the two most direct creator statements. Both were tested
@@ -284,6 +285,25 @@ checks the prior-attempts database first. Work the table top down.
 Considered and left out: Baudot or other XOR in base 2 or 16 (outputs fall outside A-Z); a code layer or stego (they
 change the meaning, not the encipherment, so they sit outside the success criteria); an extinct language (Scheidt
 says it was refused).
+
+## F15. K1-K3 as a guide to K4's content (issue #118)
+
+Drafted 2026-11-04 at Alexis's request, queued after 0267. No published text holds both known phrases (#117), so the
+plaintext is Sanborn's own prose. Every family so far used K1-K3 as key material. Their content was used only as single
+probable words (0095, 0172: weak, chance). Sanborn: "I have left instructions in the earlier text that refer to later
+text" (2005); K4 "will come back to the first part" (2009). This family models what K4 says, then tests whether that
+model gives a search more to work with than the 24 known letters. The guessed texts are called **drafts**, not
+stand-ins: a stand-in here is a scrambled copy of K4 (GLOSSARY.md). The judge never sees the drafts, so it stays a
+blind check. Work the table top down; F15.3 decides whether F15.4-F15.6 run.
+
+| Item | Status | Strength | Experiments | Next test or reason |
+|---|---|---|---|---|
+| **F15.1** The content model, by reading | open | by reading | - | Write `reports/f15.1-content-model.md`. (a) K1-K3: themes (shading and illusion; something buried and sent underground, its exact location; Carter opening the tomb), voice (first person, short clauses), mechanics (X as a stop in K2, spelled numbers, misspellings, K3's closing question). (b) Every statement on K4's content in `knowledge/02-sanborn-said.md` and the #117 notes: the two events (Egypt 1986, the fall of the Wall 1989), the World Clock as the crowds' gathering place, "delivering a message", "something following K4", 1991's "not a negative message" and "never totally clear", Kobek's "makes semantic sense", the 1990 strips vetted as not offensive. (c) The layout the known letters fix: 21 letters before EASTNORTHEAST (22-34), 29 between, BERLINCLOCK (64-74), 23 after. Output: 4-8 content hypotheses, each with predicted words and the places they could sit. Candidates: a continuation of K3 in Egypt; Berlin, November 1989; the two events linked; a callback to K2, the buried thing's location given as a bearing from a landmark; the Agency's work; an instruction pointing past K4 |
+| **F15.2** Drafts: the corpus | open | - | - | For each F15.1 hypothesis, Claude writes about 50 texts: exactly 97 letters A-Z, the 24 known letters in place, several sentences that make sense, nothing offensive. Mechanics are sampled per draft and recorded: X stops or none, spelled numbers, 0-3 Sanborn-style misspellings, tense and person. Each draft is stored with its word split, hypothesis, mechanics, model and prompt version in `data/drafts/`. Guards: a draft within a few letters of a published fan candidate (#28, #117 lists) is dropped, as are near-duplicates. A **held-out set** (different prompt and model, optionally a few written by Alexis) is never shown to any search and serves only as plants in F15.3 |
+| **F15.3** Power first | open | measured | - | Plant held-out drafts through the cells now blocked for lack of checks (F1.1 Beaufort 23 and 26, F1.2 13 and 20-26, F1.4's two-alphabet residue, F6.1). Search each two ways: the 24 letters alone (today's decider), and the 24 letters plus the draft corpus as a prior (English plus closeness to the drafts' words and phrases, never the plant itself). Bar, set before the run: the draft prior finds at least 2 more plants of 12 than the 24 letters alone. Under the bar, F15.4-F15.6 are closed as weak and the family stops here |
+| **F15.4** Probable phrases at fixed places | open | exact per phrase, sampled verdict | - | Phrases at least a third of the drafts put at the same place, plus K1-K3's own phrases (LAYERTWO, THEEXACTLOCATION, CANYOUSEEANYTHING, WW...) at every open place. Each placement adds checks to the exact families that were blocked for lack of them (F1.2 from length 20, plaintext autokey lags 53-96, F14.1 lengths 25-26). K4 against kept-place copies, as 0172 did for single words |
+| **F15.5** Each draft as a full crib, with slip tolerance | open | sampled | - | For every draft and every family with a closed-form key (periodic, autokey, running key, the sculpture's tables), force the key from all 97 letters, allowing the draft to be wrong in up to half its unknown letters (A1's slip tolerance), and read the key for structure: period, a dictionary word, running English. K4 against copies with the same drafts |
+| **F15.6** Past readings rescored by content | open | sampled | - | The kept readings of every F13 and F14 search, rescored by closeness to the drafts' content. A reading that rises above its copies goes to the judge, which still sees only the reading |
 
 ## F1. One keyed stage, no move
 

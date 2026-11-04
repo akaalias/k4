@@ -253,8 +253,9 @@ def run_once(sess, attack_rel, budget, ckpt, progress, attempt):
         try:
             iid, itype, zone, price = launch(ec2, ami, root_dev, user_data, tag)
             break
-        except Unavailable as e:
-            if time.time() - t_wait + 60 > CAPACITY_WAIT:
+        except Exception as e:  # noqa: BLE001
+            if not isinstance(e, Unavailable) or time.time() - t_wait + 60 > CAPACITY_WAIT:
+                s3.delete_object(Bucket=bucket, Key=f"{job}/secret.env")   # no machine will fetch it
                 raise
             log(f"{e}; trying again in 60 s")
             time.sleep(60)

@@ -21,7 +21,8 @@ The pattern is ballpark's infra/aws_train.py:
   data/compute.json, runs go to the laptop.
 
 Credentials: AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY (and optionally AWS_DEFAULT_REGION, default eu-central-1)
-in .env, for this project's own IAM user. Env (optional): AWS_INSTANCE_TYPES ("c8g.8xlarge c7g.8xlarge"),
+in .env. This project shares ballpark's IAM user (ballpark-loop), Alexis's call 2026-11-04 (#116);
+tools/aws_policy.json is the narrower policy for a separate user, should one be made later. Env (optional): AWS_INSTANCE_TYPES ("c8g.8xlarge c7g.8xlarge"),
 AWS_MAX_MINUTES (1440), K4_REMOTE_TEST=DIR (parity tests: marker, progress and checkpoint go to DIR and changed
 files are not written back).
 """

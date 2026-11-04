@@ -51,8 +51,8 @@ The "not found" verdict rests on full-text indexes that are strongest for books 
 
 | Channel | Status | What closing it takes |
 |---|---|---|
-| Google Books, nine remaining pairings (`"east-northeast" weltzeituhr`, `"east northeast" mengenlehreuhr`, `"east northeast" "world clock" alexanderplatz`, page 2 and `cd_max:1990` of the main query, etc.) | 1 of about 11 queries run | 🛑 Alexis runs them by hand in a normal browser, one a minute (about 15 minutes), or supplies a Google Cloud key with the Books API enabled |
-| Google Books snippet-only 1980s books that HathiTrust does not hold | Not tested | Covered by the same manual run |
+| Google Books, ten remaining searches (all pairings with a pre-1991 date filter, plus page 2 of the main query) | **Tested by hand 2026-11-04 by Alexis: no qualifying result in any of the ten** | Closed |
+| Google Books snippet-only 1980s books that HathiTrust does not hold | Covered by the same manual run: nothing found | Closed |
 | 1989 press: NYT TimesMachine (Schmemann, 5 Nov 1989), WaPo, UPI, Time/Newsweek, Spiegel 41–46/1989, ZEFYS DDR-Presse | Not tested (login required) | A logged-in search for `Weltzeituhr`/`"world clock"` + `northeast`/`nordost`, Oct–Dec 1989; ZEFYS takes a free Google or ORCID login |
 | Berlin spy fiction in the window: Deighton *Spy Line* (1989), *Spy Sinker* (1990); le Carré *The Russia House* (1989), *The Secret Pilgrim* (1990) | Not tested beyond the Internet Archive sweep | Kindle copies (about four books) and a text search for "north-east"/"east-northeast" + clock |
 | Archival: AAA Sanborn papers finding aid, NSA 2021 Kryptos FOIA PDFs, CIA FOIA request for its copy of the plaintext | Finding aid and NSA PDFs returned HTTP 403; papers sealed to 2075 | A browser fetch of the finding aid ([PDF](https://sirismm.si.edu/EADpdfs/AAA.sanbojim.pdf)) and NSA summary ([PDF](https://media.defense.gov/2021/Jul/12/2002760463/-1/-1/0/KRYPTOS_SUMMARY.PDF)) to see folder titles and reading matter for 1988–90 |
@@ -65,4 +65,4 @@ The search changes the project's assumptions more than its experiment list. K4 h
 
 The remaining channels are worth closing because they are cheap, not because they are likely to pay off. The Google Books manual run takes a quarter of an hour, and the ZEFYS login is free. Together they would turn "untested" into "negative" for the two genres a 1989 source would most likely come from. The Kindle novels and press archives cost money or logins for a low-odds return, so they wait. One archival item would actually change the picture: the AAA finding aid's folder list could show whether Sanborn kept any 1989 Berlin clippings, which is the only evidence short of 2075 that could revive the source-text hypothesis.
 
-🛑 Alexis: run the nine Google Books queries in the table by hand (about 15 minutes, one per minute), or supply a Google Cloud API key with the Books API enabled.
+Update 2026-11-04: Alexis ran the ten Google Books searches by hand (pre-1991 filter). None returned a book with both phrases near each other. Google Books is now closed as a negative.

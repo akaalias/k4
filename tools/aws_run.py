@@ -267,6 +267,7 @@ def run_once(sess, attack_rel, budget, ckpt, progress, attempt):
                                          f"#InstanceDetails:instanceId={iid}", "started": t_launch}))
     heard, status_etag, ck_etag, secret_gone, shown, last_state = None, None, None, False, 0, 0.0
     result = None
+    net_down = None
     try:
         while True:
             time.sleep(15)
@@ -323,7 +324,12 @@ def run_once(sess, attack_rel, budget, ckpt, progress, attempt):
                         if "Spot" in reason or "spot" in reason:
                             return "interrupted", None
                         raise Unavailable(f"machine ended without a result ({reason})")
+                if net_down is not None:   # so the dashboard's last log line doesn't keep showing a fixed hiccup
+                    log(f"network back after {now - net_down:.0f}s; the machine kept running")
+                    net_down = None
             except (OSError, BotoConnectionError, HTTPClientError) as e:   # laptop network trouble: the machine keeps running
+                if net_down is None:
+                    net_down = now
                 log(f"network trouble ({type(e).__name__}); still waiting")
             if heard is None and now - t_launch > BOOT_SILENCE:
                 raise Unavailable(f"no word from the machine {BOOT_SILENCE // 60} min after launch")

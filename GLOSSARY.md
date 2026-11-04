@@ -120,4 +120,6 @@ uses a word a stranger would not know.
 
 **AMSCO** (also: an AMSCO grid): A grid shuffle from the American Cryptogram Association's list: the message is written across a grid in cells holding one and two letters alternately, and the columns are read out in the order a keyword gives. It moves letters without changing them.
 
+**a draft** (also: drafts, held-out drafts, the draft prior): A guessed text of K4's whole 97 letters, written in words by a language model from what K1-K3 say and what Sanborn has said about K4, with the two known words in place (F15). The drafts are not answers. They are used as test messages, and as a list of likely four-letter pieces that a search can reward. Held-out drafts are written separately and used only as test messages.
+
 **a stand-in** (also: stand-ins, shuffled stand-ins, scrambled stand-ins): A scrambled copy of the carved letters put through a whole experiment exactly as K4 is, with scrambled copies of its own. When an experiment counts how often K4 beats its copies over many settings, the stand-ins show how often a text with no message does, since every text has its own level.

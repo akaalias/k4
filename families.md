@@ -241,10 +241,10 @@ Update the leaf when an experiment works on it.
   - F15 K1-K3 as a guide to K4's content: the plaintext is Sanborn's own prose (#117), so model what it says, then use that as extra known plaintext (issue #118)
     - **F15.1** The content model, by reading: K1-K3's themes, voice and mechanics, every statement on K4's content, the layout the 24 letters fix; written as content hypotheses with predicted words {closed · by reading · `reports/f15.1-content-model.md`: seven hypotheses H1-H7}
     - **F15.2** Drafts: hundreds of 97-letter texts in Sanborn's voice, one set per content hypothesis, the 24 letters in place, plus a held-out set {closed · 329 corpus drafts (Opus) + 28 held-out (Sonnet, another prompt) in `data/drafts/drafts.jsonl`}
-    - **F15.3** Power first: on planted drafts, do the other drafts help a search find the plant, beyond the 24 letters alone? {open}
-    - **F15.4** Probable phrases at fixed places: phrases the drafts agree on, and K1-K3's own phrases ("comes back to the first part"), as extra cribs in the cells blocked for lack of checks {open}
-    - **F15.5** Each draft as a full crib with slip tolerance: the forced key read for structure, against copies {open}
-    - **F15.6** Past readings rescored by closeness to the drafts' content, the judge kept blind {open}
+    - **F15.3** Power first: on planted drafts, do the other drafts help a search find the plant, beyond the 24 letters alone? {closed · measured · 0268: English 18/24, drafts prior 16/24 (bar +4 not met)}
+    - **F15.4** Probable phrases at fixed places: phrases the drafts agree on, and K1-K3's own phrases ("comes back to the first part"), as extra cribs in the cells blocked for lack of checks {closed as weak by F15.3's rule (0268)}
+    - **F15.5** Each draft as a full crib with slip tolerance: the forced key read for structure, against copies {closed as weak by F15.3's rule (0268)}
+    - **F15.6** Past readings rescored by closeness to the drafts' content, the judge kept blind {closed as weak by F15.3's rule (0268)}
 
 ## Full record by family
 

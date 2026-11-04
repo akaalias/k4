@@ -13,6 +13,18 @@ holds the reasoning and the mistakes.
 |---|---|---|
 | 267 | F1.4 | **The two-alphabet residue: every hand key schedule K4 fits on two free alphabets, with 20 stand-ins.** 4,706 slot maps, D1b's four runs per climb, 24,309 climbs. K4 above all 12 kept-place copies in 363 (7.7%; chance 7.7%); stand-ins 0-15%, 8 of 20 at or above (p 0.43); readings junk; plants 8/12 clean, 4/12 Sanborn-style. F1.4 closed at that power; F1.14 reruns at ten runs if a desk measure shows they lift the plants. Begun on the laptop 2026-10-30, stopped at 821 of 5,930 units, resumed unchanged from the checkpoint on AWS c8g.8xlarge: 532 min, $5.35, about 580 units an hour against the laptop's 80. |
 
+### F15: K1-K3 as a guide to content (ticket #118, pivot P23)
+
+F15.1 written by reading (`reports/f15.1-content-model.md`): seven content hypotheses (a paced location, a meeting at the World Clock, the crowds of 1989, two breaches, light and shadow, K3 continued, a pointer onward). F15.2: 329 corpus drafts (Opus) and 28 held-out (Sonnet, another prompt), each exactly 97 letters with the known words in place, about $14 (`data/drafts/`, `tools/f15_drafts.py`).
+
+| # | Item | One line |
+|---|---|---|
+| 268 | F15.3 | **Do the drafts help the climb?** 24 held-out drafts planted under two free alphabets (13 and 20), 12 kept-place copies each, climbed with English alone and with English mixed with the drafts' quadgrams. Found 18, 16 (half drafts) and 12 (a fifth) of 24: the prior lifts the copies as much as the plants. Bar +4 not met; F15.4-F15.6 closed as weak. $0.35. |
+
+The drafts are narrower than the held-out set: 316 of 329 put THE at 61-63 (held-out 15 of 28). Opus wrote one kind of sentence before BERLINCLOCK; a prior built on it rewards that habit, not Sanborn's.
+
+Mistake: 0268's hypothesis_expert cites "C2" and "C20(a)" for "instructions in the earlier text" and "come back to the first part"; those are C7 (and C13, C14 for the content). The register was updated under C7, C13 and C14.
+
 Mistake: one wait call chained two tools/wait_experiment.sh calls, overran the tool limit and went to the background; stopped at once (the run was untouched). One wait per call.
 
 ## 2026-10-31

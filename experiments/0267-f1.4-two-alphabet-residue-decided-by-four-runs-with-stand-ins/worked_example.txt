@@ -1,0 +1,10 @@
+F1.4: two free alphabets under a hand key schedule, decided setting by setting.
+
+  setting      skip one key letter every 7 letters, 11 key letters
+  slot map     place 1 2 3 4 5 6 7 8 9 ...
+  key letter         1 2 3 4 5 6 8 9 10 ... (letter 7 skipped)
+  cipher       C(carved) = P(plain) + key[slot], P and C two unknown alphabets
+
+  K4 gets four tempering searches under that slot map; then copies that keep the carved letters at the 24 known
+  places (so they fit the same checks) get the same, one at a time, until a copy reads as well as K4 (at most 12).
+  20 shuffled stand-ins for K4 go through the same test: K4's rate of wins must stand out from theirs.

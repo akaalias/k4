@@ -265,3 +265,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0264	0264-f6.22b-amsco-period-23-forced-keys-read-for-english	6-move-then-table	0263-f6-amsco-period-23-excess-against-200-shuffles-and-named-keys	reverted	0	0	0			64	test=0 run=64 record=0
 0265	0265-f6.22b-amsco-period-23-forced-keys-by-english-likelihood-gaps-allowed	6-move-then-table	0264-f6.22b-amsco-period-23-forced-keys-read-for-english	reverted	0	0	0			64	test=0 run=64 record=0
 0266	0266-f6.22c-amsco-period-23-forced-keys-against-a-count-matched-null	6-move-then-table	0265-f6.22b-amsco-period-23-forced-keys-by-english-likelihood-gaps-allowed	reverted	0	0	0			72	test=0 run=72 record=0
+0267	0267-f1.4-two-alphabet-residue-decided-by-four-runs-with-stand-ins	1-keyed-periodic	0253-f1.4-one-alphabet-residue-decided-by-the-one-run-decider	reverted	0	0	0			31943	test=0 run=31943 record=0

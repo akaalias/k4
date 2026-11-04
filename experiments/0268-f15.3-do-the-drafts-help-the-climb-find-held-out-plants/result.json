@@ -1,0 +1,995 @@
+{
+ "id": 268,
+ "tag": "0268-f15.3-do-the-drafts-help-the-climb-find-held-out-plants",
+ "started": "2026-11-04T18:45:55+00:00",
+ "seconds": 2133.9,
+ "status": "ran",
+ "phases": {
+  "design": 56.2,
+  "implement": 12.2,
+  "test": 19.8,
+  "run": 2133.9,
+  "record": 0.2
+ },
+ "ended_epoch": 1793820089.693986,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -4.49295,
+  -4.47917,
+  -4.52664,
+  -4.565,
+  -4.47231,
+  -4.59385,
+  -4.53715,
+  -4.52318,
+  -4.56268,
+  -4.48437,
+  -4.53474,
+  -4.56748,
+  -4.78899,
+  -4.98737,
+  -4.83613,
+  -4.95817,
+  -4.86052,
+  -4.90135,
+  -4.91403,
+  -4.69152,
+  -4.90315,
+  -4.93238,
+  -4.88086,
+  -4.93301,
+  -4.88517,
+  -4.8931,
+  -4.82586,
+  -4.92614,
+  -4.98257,
+  -4.5181,
+  -4.57221,
+  -4.60137,
+  -4.54039,
+  -4.7821,
+  -4.71734,
+  -4.59797,
+  -4.69006,
+  -4.81304,
+  -4.76229,
+  -4.55864,
+  -4.533,
+  -4.53561,
+  -4.48603,
+  -4.52319,
+  -4.57896,
+  -4.61724,
+  -4.84848,
+  -4.89428,
+  -4.84889,
+  -4.81545,
+  -4.81035,
+  -4.97459,
+  -4.98643,
+  -4.75249,
+  -4.82001,
+  -4.87305,
+  -4.78638,
+  -4.83982,
+  -4.78422,
+  -4.60603,
+  -4.55273,
+  -4.59118,
+  -4.63353,
+  -4.53753,
+  -4.57282,
+  -4.53419,
+  -4.56576,
+  -4.53033,
+  -4.6021,
+  -4.52393,
+  -4.49296,
+  -4.85531,
+  -4.79457,
+  -4.75892,
+  -4.83808,
+  -4.88636,
+  -4.78152,
+  -4.85756,
+  -4.54689,
+  -4.97376,
+  -4.79187,
+  -4.86781,
+  -4.77793,
+  -4.78195,
+  -4.56513,
+  -4.58659,
+  -4.56388,
+  -4.86683,
+  -4.54687,
+  -4.56654,
+  -4.54139,
+  -4.54026,
+  -4.50848,
+  -4.46607,
+  -4.55845,
+  -4.56566,
+  -4.91899,
+  -4.90601,
+  -4.9655,
+  -4.97767,
+  -4.90452,
+  -4.52778,
+  -4.51793,
+  -4.56392,
+  -4.41657,
+  -4.51505,
+  -4.54268,
+  -4.56186,
+  -4.48938,
+  -4.56191,
+  -4.79144,
+  -4.99459,
+  -4.8474,
+  -4.99428,
+  -4.81396,
+  -4.86581,
+  -4.96664,
+  -4.44109,
+  -4.61516,
+  -4.55829,
+  -4.85326,
+  -4.93277,
+  -4.79896,
+  -4.90972,
+  -4.75914,
+  -4.84714,
+  -4.82626,
+  -4.56346,
+  -4.56524,
+  -4.52988,
+  -4.90066,
+  -4.51157,
+  -4.56043,
+  -4.50691,
+  -4.58721,
+  -4.49419,
+  -4.90549,
+  -4.80712,
+  -4.58576,
+  -4.57745,
+  -4.51246,
+  -4.49168,
+  -4.77408,
+  -4.84435,
+  -4.84056,
+  -4.83052,
+  -4.9172,
+  -4.87562,
+  -4.91933,
+  -4.93348,
+  -4.79741,
+  -4.9528,
+  -4.93425,
+  -4.88388,
+  -4.79919,
+  -4.80776,
+  -4.66402,
+  -4.94303,
+  -4.57777,
+  -4.60998,
+  -4.55877,
+  -4.64262,
+  -4.90764,
+  -4.60699,
+  -4.56949,
+  -4.63299,
+  -4.85652,
+  -4.92947,
+  -4.56587,
+  -4.53541,
+  -4.65114,
+  -4.84436,
+  -4.48221,
+  -4.93669,
+  -4.77538,
+  -4.89909,
+  -4.89278,
+  -4.84437,
+  -4.9913,
+  -4.48867,
+  -4.46084,
+  -4.48083,
+  -4.63886,
+  -4.98313,
+  -4.52409,
+  -4.60183,
+  -4.5412,
+  -4.5377,
+  -4.65109,
+  -4.60499,
+  -4.5611,
+  -4.48573,
+  -4.83915,
+  -4.74101,
+  -5.02755,
+  -5.05363,
+  -4.96178,
+  -4.90489,
+  -4.84002,
+  -5.0957,
+  -4.89699,
+  -4.82776,
+  -4.99243,
+  -4.50393,
+  -4.93451,
+  -4.53494,
+  -4.54105,
+  -4.50068,
+  -4.60801,
+  -4.74901,
+  -4.51786,
+  -4.52354,
+  -4.54486,
+  -4.51168,
+  -4.69748,
+  -4.64405,
+  -4.78533,
+  -4.91393,
+  -4.85728,
+  -4.85435,
+  -4.87409,
+  -4.60151,
+  -4.54745,
+  -4.60704,
+  -4.5138,
+  -4.56811,
+  -4.50599,
+  -4.57757,
+  -4.53807,
+  -4.87469,
+  -4.73804,
+  -4.70337,
+  -4.80849,
+  -4.78143,
+  -4.75823,
+  -4.75635,
+  -4.55304,
+  -4.56276,
+  -4.51079,
+  -4.50165,
+  -4.79333,
+  -4.70664,
+  -4.45188,
+  -4.53797,
+  -4.47086,
+  -4.47477,
+  -4.86871,
+  -4.51509,
+  -4.54273,
+  -4.53498,
+  -4.84328,
+  -4.5246,
+  -4.46669,
+  -4.84285,
+  -4.54914,
+  -4.5358,
+  -4.52699,
+  -4.91254,
+  -4.90426,
+  -4.78838,
+  -4.79405,
+  -4.67835,
+  -4.84389,
+  -4.82054,
+  -4.9644,
+  -4.89959,
+  -5.06727,
+  -5.00129,
+  -5.04572,
+  -5.05456,
+  -5.19612,
+  -5.03993,
+  -4.92906,
+  -4.9715,
+  -4.98349,
+  -5.11095,
+  -4.58697,
+  -4.5423,
+  -4.62038,
+  -4.61891,
+  -4.50681,
+  -4.56614,
+  -4.66721,
+  -4.60155,
+  -4.61031,
+  -4.58968,
+  -4.52262,
+  -4.57556
+ ],
+ "champion_before": null,
+ "bounds": {
+  "item": "F15.3 (power first)",
+  "cells": "F1.2 two free alphabets (Quagmire IV), key lengths 13 and 20",
+  "decider": "0144's compiled tempering unchanged (16 x 625 x 1000), D1b's four runs, from the exact witness",
+  "plants": "24 held-out drafts (claude-sonnet-5-5, prompt h1; never in the prior), alternating 13 and 20",
+  "own_copies": 12,
+  "null_per_plant": "1/13",
+  "copies": "kept-place: the 24 known places kept, the 73 others shuffled",
+  "tables": {
+   "E": "English quadgrams (0144's)",
+   "D50": "log10(0.5 P_eng + 0.5 P_drafts)",
+   "D20": "log10(0.8 P_eng + 0.2 P_drafts)"
+  },
+  "draft_prior": "25004 quadgrams (6529 distinct) from the 329 corpus drafts, windows touching a free place",
+  "found_by_table_and_length": {
+   "E": {
+    "13": 9,
+    "20": 9
+   },
+   "D50": {
+    "13": 8,
+    "20": 8
+   },
+   "D20": {
+    "13": 6,
+    "20": 6
+   }
+  },
+  "found_by_table": {
+   "E": 18,
+   "D50": 16,
+   "D20": 12
+  },
+  "gain_D50_over_E": -2,
+  "bar": 4,
+  "bar_met": false,
+  "mean_letters_right_by_table": {
+   "E": 36.8,
+   "D50": 37.9,
+   "D20": 37.2
+  },
+  "each": {
+   "0": {
+    "draft": "h0329",
+    "hyp": "H2",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.68927,
+     "letters_right": 43,
+     "reading": "CCORTSARTYRDCINEIMEINEASTNORTHEASTOASTAKAYONTRYRIPLODGENEARUSUEBERLINCLOCKAHEDOIDTREUNIVEDINONNEW"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.75798,
+     "letters_right": 43,
+     "reading": "UNARTSANTERDCEMEIBEIREASTNORTHEASTOASTAWAYORTHUROPEGDPENEAHHSDEBERLINCLOCKALLDOIDTHEFRIKEDINONNEX"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.60328,
+     "letters_right": 43,
+     "reading": "YNORTSANTERDCEMEIVEIREASTNORTHEASTOASTAKAWORTHUROFLODGENEAHHSDEBERLINCLOCKALEDOIDTHEPRIKEDINONNEX"
+    }
+   },
+   "1": {
+    "draft": "h0330",
+    "hyp": "H2",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.43091,
+     "letters_right": 37,
+     "reading": "YEAHETHERINWHOREVERTREASTNORTHEASTANDREVEDMEEADCKDENTOMEONTHEPTBERLINCLOCKOWORESTMOFATHEBOADBEEHI"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.46961,
+     "letters_right": 44,
+     "reading": "DEAVETHEPEARORNWAITHMEASTNORTHEASTUNSONISFRIEDANKMEFARYWINEASOCBERLINCLOCKATIONPOWNOFTHEYORSELLED"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.3921,
+     "letters_right": 39,
+     "reading": "KEALETHEONGWHESASSTEDEASTNORTHEASTHOMINGSCHEEASAKLENNEBAHTANSOMBERLINCLOCKXTHINDONYONTHEBYADOFMEK"
+    }
+   },
+   "2": {
+    "draft": "h0331",
+    "hyp": "H1",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.73365,
+     "letters_right": 37,
+     "reading": "SRYDIVELBETEEEINEMBBLEASTNORTHEASTHRJUNGEREMISADOWNOFMATENTOIRIBERLINCLOCKSTONEOUSINAFTTDSOBESEYN"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.87759,
+     "letters_right": 36,
+     "reading": "WRECAFTEDTOVEYUPETRHEEASTNORTHEASTBERONDIRETSSSYINGUNDATEDPRSEMBERLINCLOCKLOANYPORADMAUBYLUSINEXD"
+    },
+    "D20": {
+     "found": false,
+     "above": 11,
+     "score": -4.79358,
+     "letters_right": 41,
+     "reading": "JROFTSHLYSOCEETSENDPLEASTNORTHEASTHERINGABENESATONSTHEQUETLOBEMBERLINCLOCKPORNEDWATTBMSTAKTMAVEKT"
+    }
+   },
+   "3": {
+    "draft": "h0332",
+    "hyp": "H1",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.48466,
+     "letters_right": 36,
+     "reading": "YTARKEYCAMIEVEDWITCALEASTNORTHEASTEWHEOFTBUTRIRUNEBEDAYSETHRENTBERLINCLOCKINTAINGEANSTIMENONSTPIE"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.4151,
+     "letters_right": 38,
+     "reading": "AMAAGAYDOUNSANDOUTTEEEASTNORTHEASTFOREACCASEUTRANOUSTANATTWOFHEBERLINCLOCKINGUNDREAPOLEYEARDSTART"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.43642,
+     "letters_right": 36,
+     "reading": "EYANCISADONCISVENTUSSEASTNORTHEASTHEMEYDIAPUBORENEXCROSSTTHEOREBERLINCLOCKXHECOMBEARIEDBEDGESTWOT"
+    }
+   },
+   "4": {
+    "draft": "h0333",
+    "hyp": "H1",
+    "L": 13,
+    "E": {
+     "found": false,
+     "above": 3,
+     "score": -4.82537,
+     "letters_right": 30,
+     "reading": "PANIDYWIAMIDTUMMERYTHEASTNORTHEASTTVWOOATALORACECRITUPORTSINGDUBERLINCLOCKLYAEDESKISHWASAREINNAMF"
+    },
+    "D50": {
+     "found": false,
+     "above": 3,
+     "score": -4.92074,
+     "letters_right": 30,
+     "reading": "GZBYTHEIRMGLASUREGHTYEASTNORTHEASTTLIAMACAPARACENTMASFOGODIGARHBERLINCLOCKXASETOSSYDWARSECEINBRUG"
+    },
+    "D20": {
+     "found": false,
+     "above": 6,
+     "score": -4.81116,
+     "letters_right": 34,
+     "reading": "YHREADEASSOUSINGANDWHEASTNORTHEASTTYPLIADARTEXCELHASIVEMOFTLIKEBERLINCLOCKPTPEWMCKSFISSUBSESTROPZ"
+    }
+   },
+   "5": {
+    "draft": "h0334",
+    "hyp": "H2",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.43099,
+     "letters_right": 35,
+     "reading": "GEONOLALEUNITTIONATAREASTNORTHEASTAGAMEONLYCEENTSWERESADENTUMBUBERLINCLOCKANARYEVEREURBOREARPERMU"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.52751,
+     "letters_right": 40,
+     "reading": "JEWERGDEGLANTTHINTOISEASTNORTHEASTASACINELYDEVENAGEEEPACTROOKTOBERLINCLOCKAGAMETHEEOURALMEBELIVEE"
+    },
+    "D20": {
+     "found": false,
+     "above": 11,
+     "score": -4.4692,
+     "letters_right": 37,
+     "reading": "UELEFACKANHEMTORYMINDEASTNORTHEASTASSETORSOMESHOSPERDGAMESIBELIBERLINCLOCKATSPARCEDFORBULDIRONEAJ"
+    }
+   },
+   "6": {
+    "draft": "h0335",
+    "hyp": "H2",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.66668,
+     "letters_right": 39,
+     "reading": "DWHETHREERLESFUPAMEETEASTNORTHEASTHOLLTIESHESIGNKINENECEACINEDIBERLINCLOCKSUMYNOTERKETUPTOAPOFHOT"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.77188,
+     "letters_right": 37,
+     "reading": "WWORDEAVESANCHODKIDNTEASTNORTHEASTWEAPRDSSHEGUAINYMENSURYOUPERYBERLINCLOCKITLINETRKINTHOLDPSEXHAS"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.69467,
+     "letters_right": 40,
+     "reading": "ZILEPELVEMURADBNSTHATEASTNORTHEASTITUNDIDWHEGUBSHELENDUESSUMEVEBERLINCLOCKXPAYNOTEOFATHECOMEORHRR"
+    }
+   },
+   "7": {
+    "draft": "h0336",
+    "hyp": "H1",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.45122,
+     "letters_right": 34,
+     "reading": "SOEVIOSAGASESEDLANTIMEASTNORTHEASTHETOBEROFEGGELDFROTHELEGENERSBERLINCLOCKNENDEDFOFPERYOUSAWINGAA"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.45821,
+     "letters_right": 34,
+     "reading": "MAUDIOANDACESSANDGAIDEASTNORTHEASTRACHOLSANEXTYPENDONHINGREARYSBERLINCLOCKWASSENTANCERIORSULIFTUD"
+    },
+    "D20": {
+     "found": false,
+     "above": 11,
+     "score": -4.44618,
+     "letters_right": 32,
+     "reading": "DOWNMESERMOUSINLINANGEASTNORTHEASTHEGOBINONEAPECURIOFFALAWEREHUBERLINCLOCKMENEETRONHERTTHEPREDIVI"
+    }
+   },
+   "8": {
+    "draft": "h0337",
+    "hyp": "H3",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.76723,
+     "letters_right": 47,
+     "reading": "NVEYCANHASWEDIDBIANTHEASTNORTHEASTSFTMEDITYHRHPOPERWHINDITAGINEBERLINCLOCKTOTRHOULPACHOKEVEOPENET"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.79475,
+     "letters_right": 50,
+     "reading": "NGEYCAPERPONDGELDOGYEEASTNORTHEASTUNTMEDOTYFEELTLEGLAORULTARIVEBERLINCLOCKELTRANSERABETTEREOPENET"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.75631,
+     "letters_right": 41,
+     "reading": "XTOFCARLASHALKSHISOPLEASTNORTHEASTOCKWEFETFGMARITERIHEWAYSDUGUEBERLINCLOCKIDTOHAREMAILIFECEOBONES"
+    }
+   },
+   "9": {
+    "draft": "h0338",
+    "hyp": "H3",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.40438,
+     "letters_right": 35,
+     "reading": "GFLICALLYIPTUFFERECAREASTNORTHEASTPALINANETHANDCOLLETWOMPELLLIEBERLINCLOCKHASSISANOFESTSOINEINLOB"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.42527,
+     "letters_right": 33,
+     "reading": "NLEFUELLINDTOLSOFARTYEASTNORTHEASTDIDTOTHEDURNAPOOLENGINTANDPITBERLINCLOCKXISECOMALHESHEONUEARAME"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.35721,
+     "letters_right": 35,
+     "reading": "BDTONALODESPEANDVANTHEASTNORTHEASTHOLOUTFEWLINDCHILEWOMEHATONCOBERLINCLOCKSONTOSTARGESEDHEMEANTHO"
+    }
+   },
+   "10": {
+    "draft": "h0339",
+    "hyp": "H3",
+    "L": 13,
+    "E": {
+     "found": false,
+     "above": 10,
+     "score": -4.79774,
+     "letters_right": 33,
+     "reading": "PGROUNGBECARALKMANDTHEASTNORTHEASTOCOLOALRESNRYEAIMHDRVICCLENEEBERLINCLOCKTISRSTFORCHICHADEEMEITK"
+    },
+    "D50": {
+     "found": false,
+     "above": 10,
+     "score": -4.83281,
+     "letters_right": 40,
+     "reading": "NNAPLYIHERORDEALLTINGEASTNORTHEASTHRBYMILAIDYADEANWAHREACEHELIEBERLINCLOCKSNESSCOPPEDOADOPEFURAJK"
+    },
+    "D20": {
+     "found": false,
+     "above": 10,
+     "score": -4.75773,
+     "letters_right": 34,
+     "reading": "TURIFTHSETHIKSOLONETHEASTNORTHEASTOTTAGALRESTAMEANDMKRCYCOMEQUEBERLINCLOCKONSSESDIAOPICKHOEDWAYTV"
+    }
+   },
+   "11": {
+    "draft": "h0340",
+    "hyp": "H3",
+    "L": 20,
+    "E": {
+     "found": false,
+     "above": 11,
+     "score": -4.49183,
+     "letters_right": 35,
+     "reading": "XPREASTOTHCOUNEESTATOEASTNORTHEASTSDEVEGARDOFMOVERNEREAWAASDENIBERLINCLOCKYSHIGNDPOLENTOSTBEISTED"
+    },
+    "D50": {
+     "found": false,
+     "above": 11,
+     "score": -4.53814,
+     "letters_right": 36,
+     "reading": "XSTECORETHTOLDNANEANBEASTNORTHEASTHWANILEDINAMONYOUNREESUPTRAVEBERLINCLOCKAMEONOWSOFENREPAINALGAM"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.4215,
+     "letters_right": 32,
+     "reading": "GRETHERETHTOFGREARODEEASTNORTHEASTMOFFEATPURASOLANDTRESTETHCOMIBERLINCLOCKILWEWERROVENREHESTOODEC"
+    }
+   },
+   "12": {
+    "draft": "h0341",
+    "hyp": "H4",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.77961,
+     "letters_right": 34,
+     "reading": "AHOGAFRADSNAFGIFFCSTYEASTNORTHEASTORIISCHEVERBARUPALSTHRATINMANBERLINCLOCKEDAENDSIGNIFIVEORECTGIV"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.91895,
+     "letters_right": 32,
+     "reading": "PBYEACLORITSHCOATCHIREASTNORTHEASTOROFFSBUDEIGOTHMSGUNDIAGESHATBERLINCLOCKDISEEIKYSTEALLELSFATEFW"
+    },
+    "D20": {
+     "found": false,
+     "above": 11,
+     "score": -4.81412,
+     "letters_right": 31,
+     "reading": "DOHEADWENGURAWCALCELHEASTNORTHEASTMEDWRYONRESPELWORDFILMAINGCAUBERLINCLOCKIGREATBAIGNWIDENTUATEXN"
+    }
+   },
+   "13": {
+    "draft": "h0342",
+    "hyp": "H5",
+    "L": 20,
+    "E": {
+     "found": false,
+     "above": 2,
+     "score": -4.64319,
+     "letters_right": 31,
+     "reading": "IFMYOURPOWANDWOFDEBANEASTNORTHEASTTERSTHAMILLTAKAKNOBIGIMONBALLBERLINCLOCKBOSTERSCHEDWATETGMALLYV"
+    },
+    "D50": {
+     "found": false,
+     "above": 6,
+     "score": -4.68638,
+     "letters_right": 28,
+     "reading": "LOFMAHENBEPEDFIRDINGOEASTNORTHEASTCEITSHADERCOREVATONOPLAYAKALLBERLINCLOCKEASPEARNIXWARHANFULAYBC"
+    },
+    "D20": {
+     "found": false,
+     "above": 3,
+     "score": -4.61965,
+     "letters_right": 32,
+     "reading": "MFLAMAEMPLACHESYESCUSEASTNORTHEASTPARTECOMFIRSTYREGOLIVICERNOLDBERLINCLOCKBEINLARRYFITTLEPNINSOMW"
+    }
+   },
+   "14": {
+    "draft": "h0343",
+    "hyp": "H5",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.74508,
+     "letters_right": 36,
+     "reading": "DRDBENFORUNAOURCPLIEDEASTNORTHEASTTWERSANTDINFOREEPVIDLYCOMPHENBERLINCLOCKILAGOVERNORTWOIDSECLORE"
+    },
+    "D50": {
+     "found": false,
+     "above": 11,
+     "score": -4.87702,
+     "letters_right": 38,
+     "reading": "GROVENESSPEAPURLSWUNGEASTNORTHEASTHEIMSSATDONESSRIDGEGPACEIFIREBERLINCLOCKSDAYOFEITEATWOFFSNCPOMP"
+    },
+    "D20": {
+     "found": false,
+     "above": 11,
+     "score": -4.79873,
+     "letters_right": 32,
+     "reading": "DRYBENEARNUDOFROMMUNDEASTNORTHEASTYLOWUPATRUNEARRORIEDRACEYOURUBERLINCLOCKMADSOWUPNEATHCPFUNCROWF"
+    }
+   },
+   "15": {
+    "draft": "h0344",
+    "hyp": "H4",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.44633,
+     "letters_right": 43,
+     "reading": "YANEOFOLEODSCITINTROVEASTNORTHEASTENDTOTHEISAALIGHOUREEPRAIGNTOBERLINCLOCKTHISTRICTMOTOMEAOKINSUS"
+    },
+    "D50": {
+     "found": false,
+     "above": 9,
+     "score": -4.59967,
+     "letters_right": 39,
+     "reading": "ETINCEOPENARCHEINELIVEASTNORTHEASTNOBESOMERSAWLIBHDELINERRERTHEBERLINCLOCKETOGRANYJRCTOFEEDUPFIJI"
+    },
+    "D20": {
+     "found": false,
+     "above": 8,
+     "score": -4.51805,
+     "letters_right": 38,
+     "reading": "ORNWASOLDEASCIENESHASEASTNORTHEASTHATSONEERSPOLIGHIRTCHICOVETOMBERLINCLOCKESWICHANCHATOEDNIINLYKM"
+    }
+   },
+   "16": {
+    "draft": "h0345",
+    "hyp": "H5",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.70943,
+     "letters_right": 38,
+     "reading": "TODITIPLELPENNYRATIPSEASTNORTHEASTHETOFILTDSETTINCREARMCCRYWHETBERLINCLOCKSWEATOLIPGATHCERSVIDCOL"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.73986,
+     "letters_right": 42,
+     "reading": "DOPETORSELEINNPASTORNEASTNORTHEASTHERYFULTXDITTIRTHESRECCHHWHERBERLINCLOCKDAISDONEANDTHIGHAMUPCOL"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.66369,
+     "letters_right": 48,
+     "reading": "TOLENOTSEYNONNGCONOTYEASTNORTHEASTISEDWALTIDBUTSDILEUREACTHUISEBERLINCLOCKGROUTORESEPTIMPLIBALABL"
+    }
+   },
+   "17": {
+    "draft": "h0346",
+    "hyp": "H4",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.44745,
+     "letters_right": 38,
+     "reading": "JORTERRIEDURITINGHISMEASTNORTHEASTHESSSCALPANYTSELYCOSSEDTORGORBERLINCLOCKSUNSEWASOFPLYERBEDFRUNA"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.48515,
+     "letters_right": 37,
+     "reading": "FASTERTISESSATIVEDPASEASTNORTHEASTEATOCKNOUNSABUSTHEMETAMTHECASBERLINCLOCKTIGOWINTWILLNERVEHULDVA"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.45493,
+     "letters_right": 32,
+     "reading": "RHEPERFISLYDUTISISINNEASTNORTHEASTHINEEDSOMEOUSASWAITEDITBROTHEBERLINCLOCKDUSENTSTXTDDALAMECASTSW"
+    }
+   },
+   "18": {
+    "draft": "h0347",
+    "hyp": "H4",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.5484,
+     "letters_right": 41,
+     "reading": "AEGRAMEOCORNEYLOUREOFEASTNORTHEASTHEMYNATHECIVATOPPEACTHEBILLSTBERLINCLOCKMSGLEDAHTHANTENDPOWEVES"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.71319,
+     "letters_right": 45,
+     "reading": "SNSANDLACEFRELLOWLTOGEASTNORTHEASTXTHENSBADCRYPHECHESHTHEYALSCOBERLINCLOCKNSIGDOWHOURNHTEDCODEFEI"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.61553,
+     "letters_right": 44,
+     "reading": "AEORAMTOCORNEYLLPRTOWEASTNORTHEASTHENYNATHECEKATOLDEACTHEBELLSTBERLINCLOCKMSULTICHTHANTEDITONGWES"
+    }
+   },
+   "19": {
+    "draft": "h0348",
+    "hyp": "H6",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.49043,
+     "letters_right": 30,
+     "reading": "ADEDFORBARYINENDEVESTEASTNORTHEASTODRESARMYNOLODIEANDPEATTAWADEBERLINCLOCKTONVEROLLICATITRIDNOUGC"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.46288,
+     "letters_right": 39,
+     "reading": "THEWATBYASWHANCEEALSDEASTNORTHEASTHEWEENWARNBOOEXIFULLSGOTHATHEBERLINCLOCKITFALLALLOSSEITSMCAPTAB"
+    },
+    "D20": {
+     "found": false,
+     "above": 11,
+     "score": -4.47735,
+     "letters_right": 33,
+     "reading": "ITELYMENDMUSENDEDTALLEASTNORTHEASTHEWEMANGTOSSOWEARRHIMPIONVITEBERLINCLOCKATOTADEMUCHIFITMACELLYP"
+    }
+   },
+   "20": {
+    "draft": "h0349",
+    "hyp": "H5",
+    "L": 13,
+    "E": {
+     "found": false,
+     "above": 10,
+     "score": -4.76382,
+     "letters_right": 43,
+     "reading": "WARYARDISNEELIGNERIANEASTNORTHEASTILLANLDQUEITYNDHEAPOBESLASUPRBERLINCLOCKANDKMANATMINUENTLEFTRWI"
+    },
+    "D50": {
+     "found": false,
+     "above": 11,
+     "score": -4.80774,
+     "letters_right": 38,
+     "reading": "UEPARTAGLXWARNCERKEDEEASTNORTHEASTAMLONSOFBEEENDSTAITTOROLDITWEBERLINCLOCKAMDAMEEDSUNETOMTRINTYPE"
+    },
+    "D20": {
+     "found": false,
+     "above": 10,
+     "score": -4.73608,
+     "letters_right": 42,
+     "reading": "GEMILIPFANDCHANERBEEIEASTNORTHEASTDOFUNJOSDEEREWSACTITORFLEDSIMBERLINCLOCKATSAFEEMUGLISETTHEYTORE"
+    }
+   },
+   "21": {
+    "draft": "h0350",
+    "hyp": "H6",
+    "L": 20,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.36239,
+     "letters_right": 33,
+     "reading": "CEHORMWATHESECURSONLEEASTNORTHEASTALCOATWARENANCEPRILENOOFTHECEBERLINCLOCKSINEWAYOFEDOVEHIMILESCI"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.39538,
+     "letters_right": 36,
+     "reading": "UEDEGUNDTHESPERAROUSLEASTNORTHEASTBECONANDSTIDEAMSPHERHILREPLAYBERLINCLOCKSTHEBETTETATFEELWHERSGI"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.29176,
+     "letters_right": 40,
+     "reading": "RETPHORATHEMERHOMEDBEEASTNORTHEASTAPPEEDIALOLANDERWIDEINGRASEDEBERLINCLOCKSLASSETTHOFTHEBINIDESAC"
+    }
+   },
+   "22": {
+    "draft": "h0351",
+    "hyp": "H7",
+    "L": 13,
+    "E": {
+     "found": true,
+     "above": 12,
+     "score": -4.86266,
+     "letters_right": 39,
+     "reading": "TRDONTANDPOMOUSDAWAKPEASTNORTHEASTFINIDDITUHASMOTESEDBILYIEMERMBERLINCLOCKFACTHILMOSHEELYEXPEROBY"
+    },
+    "D50": {
+     "found": true,
+     "above": 12,
+     "score": -4.90326,
+     "letters_right": 37,
+     "reading": "TRDOFTANDWOMOUSDAWAKWEASTNORTHEASTXITIDDITPHASMOTESEDBILVIEMERMBERLINCLOCKXACTHILMOSHOELVEYWEROBV"
+    },
+    "D20": {
+     "found": true,
+     "above": 12,
+     "score": -4.83262,
+     "letters_right": 39,
+     "reading": "URDARIALDECRAVIDEBATHEASTNORTHEASTFORACTSTRGASEAHUGETWILYUGEEVEBERLINCLOCKTHDMESAMAMPBENKLSXTMANS"
+    }
+   },
+   "23": {
+    "draft": "h0352",
+    "hyp": "H7",
+    "L": 20,
+    "E": {
+     "found": false,
+     "above": 11,
+     "score": -4.51386,
+     "letters_right": 36,
+     "reading": "TASANSUSTIMSUDIFICEIVEASTNORTHEASTAAMERPETESAIDENNTEEACHARISALEBERLINCLOCKUNTEATOVERTALEGARYWINAJ"
+    },
+    "D50": {
+     "found": false,
+     "above": 11,
+     "score": -4.56901,
+     "letters_right": 38,
+     "reading": "MCLCROWNTOFDEIATAMACLEASTNORTHEASTHERTIMPSESPANANUTIVETACROSINEBERLINCLOCKXBUTTHATENTPLAITANDSWEH"
+    },
+    "D20": {
+     "found": false,
+     "above": 11,
+     "score": -4.50428,
+     "letters_right": 37,
+     "reading": "KBOTYSENTRUGHFLACUPESEASTNORTHEASTTEBANGPRESKASANDSDRESWICESTHEBERLINCLOCKATMAINATEATPLAIORTENEER"
+    }
+   }
+  },
+  "texts": 312,
+  "climbs": 936,
+  "runs_per_climb": 4,
+  "core_seconds": 60744,
+  "compute_seconds": 1965,
+  "resumed_units": 0,
+  "exhaustive": false,
+  "cost_estimate": "312 texts x 3 tables x 4 runs x about 18 s: about 19 core-hours; on AWS 32 cores about 40 min, about $0.40"
+ },
+ "notes": "F15.3: plants found against 12 own copies, English 18/24, drafts 50% 16/24, drafts 20% 12/24; gain -2 against the bar 4: not met. Letters right 36.8, 37.9, 37.2.",
+ "judge": null,
+ "error": null,
+ "candidates": []
+}

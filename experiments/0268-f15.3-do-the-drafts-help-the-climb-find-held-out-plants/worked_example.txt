@@ -1,0 +1,7 @@
+F15.3 asks whether guessed texts help the search. For one hidden test message and its 12 shuffled copies:
+
+  score E     English four-letter pieces only            plant best vs copies' bests
+  score D50   half English, half the guesses' pieces     plant best vs copies' bests
+  found when the plant beats all 12 copies under the same score.
+
+24 test messages written by another model; the guesses help if D50 finds at least 4 more than E.

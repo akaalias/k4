@@ -25,6 +25,14 @@ The drafts are narrower than the held-out set: 316 of 329 put THE at 61-63 (held
 
 Mistake: 0268's hypothesis_expert cites "C2" and "C20(a)" for "instructions in the earlier text" and "come back to the first part"; those are C7 (and C13, C14 for the content). The register was updated under C7, C13 and C14.
 
+### F1.14's gate (ticket #77)
+
+| # | Item | One line |
+|---|---|---|
+| 269 | F1.14 | **Ten runs against four on 0267's own plants.** 0267's 24 plants regenerated exactly, 12 kept-place copies each, ten runs per text: 14, 12, 14 of 24 found after 1, 4, 10 runs. Gain 2 under the gate of 3; F1.14 closed. The climb's power on hand schedules over two alphabets is flat at about half: the score caps it, as F1.13's desk note found for autokey. $0.22. |
+
+Mistake: three wait calls (and a desk smoke test) outran the 10-minute tool limit and went to the background; all stopped. tools/wait_experiment.sh takes its own limit as an argument; calls now pass 480.
+
 Mistake: one wait call chained two tools/wait_experiment.sh calls, overran the tool limit and went to the background; stopped at once (the run was untouched). One wait per call.
 
 ## 2026-10-31

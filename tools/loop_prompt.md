@@ -5,7 +5,7 @@ Read program.md first and follow it exactly, including its reading list.
 ## What to work on
 
 Work the open items in order-of-work.md, top down, in the order the page lists its tables: the Stage 2 tables
-first, then the cheaper decider (#77), F13, F14, then any family table with open rows. Items added to order-of-work.md since your last session
+first, then the cheaper decider (#77), F13, F14, F15 (#118; after the experiment in progress, 0267, is recorded), then any family table with open rows. Items added to order-of-work.md since your last session
 belong to the same queue; take them in their place. When you move to a new family, add a pivot page
 (pivots/PN.md).
 

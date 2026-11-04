@@ -64,7 +64,7 @@ Update the leaf when an experiment works on it.
       - Trifid and Hill, every single-letter error anywhere (5,044): no cube; Hill at the coppers' rate {closed · exact · 0151, 0152}
     - **F1.7** Autokey on one unknown alphabet, with no move, then after each move {closed · exact · 0149, 0256}
       - No move: dead lags closed; fitting lags at the coppers' rate {closed · exact · 0149}
-      - Fitting cells (130 under full chain equations; 3 of 0149's dead) judged by English against fitting copies and 10 stand-ins: K4 p 0.64; plants 12/48 (F1.13 reruns with a better climb) {closed · weak · 0256}
+      - Fitting cells (130 under full chain equations; 3 of 0149's dead) judged by English against fitting copies and 10 stand-ins: K4 p 0.64; plants 12/48 (F1.13, a rerun with a better climb, blocked: no decider found, 2026-11-04) {closed · weak · 0256}
       - The move-first version: blocked by cost {blocked}
     - **F1.8** Carter's book as a running key on an unknown alphabet {closed · exact · 0153, 0154}
       - One alphabet, every offset both ways: no fit on K4 or copies {closed · exact · 0154}

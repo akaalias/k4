@@ -89,7 +89,8 @@ def attack_eli5():
 
 def recent_per_unit(n=100):
     """Seconds per finished unit over the last n units of the running attack, from the "secs" each
-    unit saves in its checkpoint, divided by the worker count; None when the units carry no time."""
+    unit saves in its checkpoint, divided by the worker count (the cloud machine's cores while one runs it);
+    None when the units carry no time."""
     try:
         import hashlib
         digest = hashlib.sha256((ROOT / "attack.py").read_bytes()).hexdigest()[:16]
@@ -97,7 +98,9 @@ def recent_per_unit(n=100):
         secs = [float(json.loads(ln)["v"]["secs"]) for ln in tail]
     except (OSError, ValueError, KeyError, TypeError):
         return None
-    return sum(secs) / len(secs) / int(os.environ.get("K4_WORKERS", 8)) if len(secs) >= 10 else None
+    rr = remote_run()
+    workers = int(rr["cpu"]) if rr and rr.get("cpu") else int(os.environ.get("K4_WORKERS", 8))
+    return sum(secs) / len(secs) / workers if len(secs) >= 10 else None
 
 
 def compute_setting():
@@ -361,7 +364,8 @@ def experiment_panel(tick):
         if rr:
             lines.append(row("cpu", (f"on AWS {rr.get('instance', '')}, {rr['cpu']} cores" if rr.get("where") == "aws"
                                      else f"on Modal, {rr['cpu']} cores", OK)))
-            lines.append(row("", (rr["url"], MUTED)))
+            # the AWS console link is too long for the panel; the instance id finds it there
+            lines.append(row("", (re.sub(r".*instanceId=", "", rr["url"]) if rr.get("where") == "aws" else rr["url"], MUTED)))
         elif n:
             lines.append(row("cpu", (f"{n} processes on the laptop", OK)))
             lines.append(row("load", (f"{lw.busy_cpu() / 100:.1f} cores busy", "default")))

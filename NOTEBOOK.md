@@ -5,6 +5,16 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-11-05
+
+### F6.1 (ticket #77)
+
+| # | Item | One line |
+|---|---|---|
+| 270 | F6.1 | **One free alphabet around every move, key lengths 6-10, with 20 stand-ins.** 7,443 settings fit K4 (of 557,040). K4 above all 12 fitting copies in 570 (7.7%; chance 7.7%); stand-ins 3.0-13.3%, 8 of 20 at or above (p 0.43); readings junk; plants 6/12 clean, 5/12 Sanborn-style. Closed at that power. AWS 542 min, $5.45. |
+
+The first AWS leg died after 65 min on S3's RequestTimeTooSkewed: the laptop had slept and woke with a stale clock, and aws_run handed the run to the laptop. Stopped it with stop_experiment.sh and restarted unchanged; it resumed from 1,028 saved units on AWS (#115). The laptop then slept again at 23:46; `caffeinate -s -w <run pid>` kept it awake for the rest of the run and exited with it.
+
 ## 2026-11-04
 
 ### F1.4 (ticket #77), first loop run on AWS (#115)

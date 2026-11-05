@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "A grid move, then the table with one scrambled alphabet and a key of 6-10 letters: 7,443 such recipes fit the 24 known letters."
+ },
+ {
+  "anchor": "the check",
+  "text": "Every recipe searched once on K4 and on shuffles that fit it, up to 12; 20 shuffled stand-ins through the same test."
+ },
+ {
+  "anchor": "the bound",
+  "text": "K4 beat all 12 copies in 570 recipes (7.7%); 8 of 20 stand-ins at or above. Plants 6/12 clean, 5/12 Sanborn-style: closed at that power."
+ }
+]

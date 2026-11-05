@@ -104,7 +104,7 @@ Update the leaf when an experiment works on it.
         - Four column readings (turn either way, rows-then-columns-down, its reverse), every pair at widths 2-96 and every triple at 2-24: nothing live below key length 20 {closed · exact · 0134}
         - **F6.3b** Mixed triples at widths 25-96: 105.5 million routes, nothing live below 18, at the coppers' rate {closed · exact · 0037, 0158}
     - Alphabets in unknown orders after or before a move
-      - **F6.1** One unknown alphabet (Quagmire III) {open at lengths 6-10 (D2); 11-26 blocked by money · exact · 0097, 0129, 0130, 0252}
+      - **F6.1** One unknown alphabet (Quagmire III) {closed, sampled at lengths 6-10 (0270: K4 inside 20 stand-ins, p 0.43; plants 11/24); 11-26 blocked by money · exact · 0097, 0129, 0130, 0252, 0270}
         - Every type-1 move, either order, added or Beaufort form, key lengths 1-5: no alphabet fits {closed · exact · 0129, 0130}
         - Lengths 6-26: settings fit at the scrambled-copper rate; only an English climb could judge them (0120) {blocked · exact · 0129, 0130}
       - **F6.2** Two unknown alphabets (Quagmire IV) {blocked · exact · 0097, 0131, 0132, 0133}

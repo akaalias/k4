@@ -331,6 +331,10 @@ def run_once(sess, attack_rel, budget, ckpt, progress, attempt):
                 if net_down is None:
                     net_down = now
                 log(f"network trouble ({type(e).__name__}); still waiting")
+            if net_down is not None:
+                # Silence is judged only on a poll that reached AWS. A laptop that slept or lost its network has
+                # not heard from a machine that may be working fine; 0271 was cut off this way after finishing (#119).
+                continue
             if heard is None and now - t_launch > BOOT_SILENCE:
                 raise Unavailable(f"no word from the machine {BOOT_SILENCE // 60} min after launch")
             if heard is not None and now - heard > SILENCE:

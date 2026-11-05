@@ -7,6 +7,16 @@ holds the reasoning and the mistakes.
 
 ## 2026-11-05
 
+### F14.2 (ticket #93)
+
+| # | Item | One line |
+|---|---|---|
+| 271 | F14.2 | **Every move, then two dictionary keyword alphabets and a key word.** 1.36 million listed settings per text, 4.3 x 10^10 alphabet pairs each: no key word on K4 or any of 50 shuffles; fit counts as the shuffles (smallest p 0.02 of 100 cells); plants 12/12. A listing flaw left 3.1% of settings unverified: F14.2a. AWS 315 min, about $3.20. |
+
+The AWS leg finished all 697 units at 13:06, but the laptop had slept; on waking its first polls failed and the silence check cut the machine off and fell back to the laptop from 96 units (#119). Alexis's session fixed the check, put the 697-unit checkpoint from S3 in place and restarted; the resume took 88 s.
+
+K4's one edge cell (order A, length 10: one setting fits, every shuffle none) led to a flaw. At route 'two turns cw 17,95 inverse' three of the first six checks repeat a known letter (E with E, A with A). Those checks hold for every alphabet pair, so the index keyed on three informative checks, 2.4 million pairs passed, over the listing cap, and the code counted them without testing the other eight checks and never ran the key-word step. The true setting always passes repeated-letter checks, so a true key on such a setting would have been missed. 41,986 of 1,363,532 listed settings are affected (every order-B length-9 setting among them); plants missed it because none fell there. F14.2a reruns those settings with repeated-letter checks tested directly and the index on informative checks only.
+
 ### F6.1 (ticket #77)
 
 | # | Item | One line |

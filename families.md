@@ -229,7 +229,7 @@ Update the leaf when an experiment works on it.
   - F14 Scheidt's mask, keyed by words: the blocked free-alphabet cells, shrunk by his "key word/s" (issue #93)
     - **F14.1** Two dictionary key-word alphabets plus a key word: all 4.3 x 10^10 pairs per form matched exactly, key lengths 1-24; no key word on K4 or any shuffle, pairs only where the shuffles have them; plants 12/12; K4's count at 16 replicated, p 0.009, not a flag {closed · exact · 0244, 0245}
       - Key lengths 25-26: no dictionary word that long; 10^6-10^9 pairs fit by chance {blocked}
-    - **F14.2** A remembered route plus key-word alphabets in F6.1 and F6.2's cells: about 1,000 core-hours with copies {blocked · cost, decision asked}
+    - **F14.2** A remembered route plus key-word alphabets in F6.1 and F6.2's cells {closed for 96.9% of settings · exact · 0271: no key word on K4 or any of 50 shuffles, plants 12/12; 41,986 settings unverified by a listing flaw, open for F14.2a}
     - **F14.3** Duress reading: a running key with the message and the key both English; 0125's 3.7 million forced keys ranked by MIX8m, read by the judge: plants 20/20, K4 inside 50 shuffles (p 0.59) {closed · sampled · 0246}
     - **F14.4** How firm is letter for letter (A2)? The 2010 Times wording ties carved 64-69 to BERLIN, three dinner accounts say one-to-one, the 2019 retreat refuses more without contradicting; A2 stands, length-changing digit systems stay out {closed · by reading}
     - **F14.5** Scheidt's '98 characters': F14.1 with one carved letter lost, the 23 places that change anything: no key word on K4 in any; plants 23/23 {closed · exact · 0247}

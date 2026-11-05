@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the idea",
+  "text": "F14.2: any of 27,852 remembered grid moves, then K1's table with both alphabets scrambled by dictionary words and a key word."
+ },
+ {
+  "anchor": "the check",
+  "text": "1,448,304 settings per text, every pair of keyword alphabets tested exactly by the known letters; 50 shuffles alike."
+ },
+ {
+  "anchor": "the bound",
+  "text": "No key word on K4 or any shuffle; plants 12/12. A flaw left 3.1% of settings unchecked (length 10's lone fit is one): rerun as F14.2a."
+ }
+]

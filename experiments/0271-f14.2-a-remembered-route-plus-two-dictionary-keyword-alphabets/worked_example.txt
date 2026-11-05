@@ -1,0 +1,8 @@
+F14.2: a remembered route, then a table with two word-scrambled alphabets and a key word.
+
+  move       write the message in rows, read the columns in a key word's order (one of 27,852 moves)
+  checks     two known letters that share a key slot after the move: their gap on the plain alphabet
+             equals their carved letters' gap on the cipher alphabet (added form)
+  index      every keyword alphabet filed by its gaps, plain side and cipher side; matching files pair up
+  key word   the pair forces the key at the covered slots; a word of the key's length must give it
+  50 scrambled copies of K4 through the same steps give chance's counts.

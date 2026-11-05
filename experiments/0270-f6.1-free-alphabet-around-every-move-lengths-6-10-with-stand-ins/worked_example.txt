@@ -1,0 +1,7 @@
+F6.1: one free alphabet around a move, key lengths 6-10, decided setting by setting.
+
+  setting      columns of a 9-wide grid read in key-word order, then the table, key length 7, Beaufort
+  slot map     each carved letter's key slot and message place follow from the move
+  K4 gets one tempering search under that setting; shuffles of K4 that fit the same 24 checks get the same,
+  one at a time, until a shuffle reads as well as K4 (at most 12).
+  Twenty shuffled stand-ins for K4 go through the whole procedure: K4's rate of wins must stand out from theirs.

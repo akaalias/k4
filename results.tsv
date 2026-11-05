@@ -268,3 +268,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0267	0267-f1.4-two-alphabet-residue-decided-by-four-runs-with-stand-ins	1-keyed-periodic	0253-f1.4-one-alphabet-residue-decided-by-the-one-run-decider	reverted	0	0	0			31943	test=0 run=31943 record=0
 0268	0268-f15.3-do-the-drafts-help-the-climb-find-held-out-plants	15-content-from-k1-k3	0257-d1b-two-free-alphabets-power-per-run-at-13-and-16	reverted	0	0	0			2134	design=56 implement=12 test=20 run=2134 record=0
 0269	0269-f1.14-gate-ten-runs-against-four-on-0267s-own-plants	1-keyed-periodic	0267-f1.4-two-alphabet-residue-decided-by-four-runs-with-stand-ins	reverted	0	0	0			1306	test=1237 run=1306 record=0
+0270	0270-f6.1-free-alphabet-around-every-move-lengths-6-10-with-stand-ins	6-move-then-table	0253-f1.4-one-alphabet-residue-decided-by-the-one-run-decider	reverted	0	0	0			32558	unattributed=4370 run=32558 record=0

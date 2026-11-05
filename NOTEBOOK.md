@@ -17,6 +17,8 @@ The AWS leg finished all 697 units at 13:06, but the laptop had slept; on waking
 
 K4's one edge cell (order A, length 10: one setting fits, every shuffle none) led to a flaw. At route 'two turns cw 17,95 inverse' three of the first six checks repeat a known letter (E with E, A with A). Those checks hold for every alphabet pair, so the index keyed on three informative checks, 2.4 million pairs passed, over the listing cap, and the code counted them without testing the other eight checks and never ran the key-word step. The true setting always passes repeated-letter checks, so a true key on such a setting would have been missed. 41,986 of 1,363,532 listed settings are affected (every order-B length-9 setting among them); plants missed it because none fell there. F14.2a reruns those settings with repeated-letter checks tested directly and the index on informative checks only.
 
+F14.2a started at 15:35 on AWS. A 1/40 desk dry run had confirmed the flaw: of 12 plants on the affected settings 0271's code finds 2, the fixed test 12, and the two agree on 1,800 unaffected checks. The laptop lost its network for 90 minutes; the machine kept running, as #119 intended, but the run was stopped for Alexis's graceful stop at 18:05 with only 5 of 140 blocks saved on the laptop: no record. F14.2a's attack.py is kept in drafts/ to resume unchanged.
+
 ### F6.1 (ticket #77)
 
 | # | Item | One line |

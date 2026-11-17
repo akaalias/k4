@@ -1,0 +1,8 @@
+Carter's book as the key, from letter 1000, standard plain and KRYPTOS cipher alphabet, key letters on KRYPTOS, Vigenere
+
+place  known  key  gives  carved
+   64      B    N      Q       N   slip?
+   65      E    A      E       Y   slip?
+   66      R    T      U       P   slip?
+
+places that disagree, of 24: 20 (7 or fewer would be kept)

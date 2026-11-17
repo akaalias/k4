@@ -1,0 +1,5 @@
+F16.1a-r2: two settings from 0280, one fresh search for K4 each, 1,000 fresh fitting copies each.
+
+  V10, slips at 73 and 74: 0280's K4 reading CDKLDCBCBETHBTROYGINFOLLK... beat 100 copies
+  B10, slip at 69:         0280's K4 reading XTWAILFLONYSDTOOIMIKCOLAN... beat 100 copies
+  flag only if no fresh copy reads as well (p < 0.001, for the 49 settings 0280 looked at)

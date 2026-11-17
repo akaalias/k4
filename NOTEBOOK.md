@@ -15,6 +15,8 @@ holds the reasoning and the mistakes.
 | 275 | F16.1b | **Two dictionary keyword alphabets on the 20 official letters.** 0244's exact pair index without EAST: no key word for the forced key (lengths 3-23, every rotation, numbering and shift) on K4 or any of 50 shuffles; plants 12/12. Free-key fit counts inside the shuffles (lowest p 0.098); K4 first fits at 16, as with EAST. AWS 5.5 min, $0.05. |
 | 276 | F16.1c | **The autokeys on the 20 official letters.** 0149, 0212, 0213 run as recorded with 20 known letters (C loops told 20): K4 inside its copies everywhere. Plaintext autokey's shortest lag falls 24 -> 15, the copies' to 14-15. K4's best judged reading 10, a copy's 12. Plants 5/5 and 3/3. AWS 4.9 min, $0.05. |
 | 277 | F16.1d | **Gromark on the 20 official letters.** 0195 and 0262 as recorded (2.36 x 10^11 primers x 4 forms): no primer fits K4; every copy fits some primer of 0262's rules (1-1,158). Plants found. AWS 64 min, $0.60. |
+| 278 | F16.1e | **Errored.** The loaded 0210 looked for the sculpture's texts under its own experiment folder; rerun as 0279. |
+| 279 | F16.1e | **The named running keys on the 20 official letters.** 1.36 x 10^9 settings, up to 5 slips: nothing on K4 or any shuffle; plants 3/3. F16.1 closed. AWS about $0.03. |
 
 K4's top plaintext-autokey reading in 0276 (table WELTZEITUHR/SECRET, lag 29) has ...ELBERWALLBERLINCLOCK...: WALL before BERLIN, on the World Clock's keyword. With EAST filled, its other places read OIHB and NJXP and the rest is gibberish; the judge gave it 10, under a copy's 12. A climb over 35,343 tables makes fragments like this. Noted, not chased.
 

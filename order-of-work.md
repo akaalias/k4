@@ -16,6 +16,14 @@ sweep follows a fixed order, set before any further run:
 5. A result outside the scrambled-copper range stops the queue. It is replicated against
    fresh controls before anything else, as 0100 was by 0102.
 6. The ranking changes only at a family boundary, with the reason in the pivot log.
+7. No mathematics, as a preference, not a gate (Alexis, 2026-11-17, #123). Sanborn, 2009 oral history: Scheidt
+   gave him systems "that didn't necessarily depend on mathematics. That was one of my prerequisites"; "I am
+   totally unable to do mathematics"; and he modified them himself "so that even he would not know what it says"
+   (knowledge/sources/aaa-oral-history-2009-kryptos.md). Steps done with letters come first: a lookup in a
+   printed table (the tableau), a keyword alphabet, writing in a grid and reading out in another order, counting
+   places, a key copied from a text. Steps done with numbers come last: adding or multiplying modulo 26 or 10
+   (Hill, affine), chain addition (Gromark, lagged keys), digit keys added in, binary. Nothing is closed by this
+   rule; a new item or follow-up that needs arithmetic says why the evidence calls for it.
 
 Per-experiment grades (outcome, strength, whether the known letters were fitted by
 construction) are in `grades.tsv`.

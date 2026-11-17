@@ -8,7 +8,8 @@ The agent reads `program.md`; this page is for you.
 uv run python dashboard.py
 ```
 
-Use `uv run`, not plain `python3`; without it the markdown pages show raw text.
+Use `uv run`, not plain `python3`; without it the markdown pages show raw text. `tools/run_loop.sh` starts it for
+you (log: `logs/dashboard.log`) unless one is already serving, and leaves it running after the loop ends.
 
 **The loop.** Start the autoresearch loop as its own Claude Code session, in a separate terminal, while
 you keep working on anything else:

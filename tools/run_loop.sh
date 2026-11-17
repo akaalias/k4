@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Start the autoresearch loop as its own Claude Code session, in this repository.
+# Start the autoresearch loop as its own Claude Code session, in this repository. Either way it also starts the
+# local dashboard at http://127.0.0.1:8765 if nothing is serving there yet.
 #
 #   tools/run_loop.sh                       interactive: you see it work and approve its commands
 #   tools/run_loop.sh --unattended          headless, no permission prompts: the loop runs in the background and this
@@ -23,7 +24,7 @@ while [ $# -gt 0 ]; do
   case "$1" in
     --unattended) mode=unattended; shift ;;
     --service) mode=service; shift ;;          # internal: the loop itself, started in the background
-    -h|--help) sed -n '2,14p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,16p' "$0"; exit 0 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
 done
@@ -36,6 +37,18 @@ if [ -f "$stop" ]; then
 fi
 
 prompt="$(cat tools/loop_prompt.md)"
+
+# Issue #120: the local dashboard (http://127.0.0.1:8765) starts with the loop unless one is already serving.
+# It runs on its own, survives this terminal and keeps serving after the loop ends; its log is logs/dashboard.log.
+if [ "$mode" != service ]; then
+  if lsof -nP -iTCP:8765 -sTCP:LISTEN >/dev/null 2>&1; then
+    echo "Dashboard already serving at http://127.0.0.1:8765"
+  else
+    mkdir -p logs
+    nohup uv run python dashboard.py >> logs/dashboard.log 2>&1 < /dev/null &
+    echo "Dashboard started at http://127.0.0.1:8765 (pid $!; log: logs/dashboard.log)"
+  fi
+fi
 
 if [ "$mode" = interactive ]; then
   git pull -q --rebase --autostash || true

@@ -44,9 +44,24 @@ def mins(sec):
     return lw.mins(max(0, sec))
 
 
-def bar(frac, width=30, colour=ACCENT):
+def bar(frac, width=30, colour=ACCENT, blocked=0.0):
+    """Done in the accent, then blocked in red (issue #121), then the open track."""
     n = max(0, min(width, round(frac * width)))
-    return Text("█" * n, style=colour) + Text("█" * (width - n), style="grey23")   # one glyph, so fill and track match
+    b = max(0, min(width, round((frac + blocked) * width))) - n if blocked else 0
+    if frac + blocked < 1 and n + b == width:   # an open item always leaves a cell of track (23/24 is not full)
+        b, n = (b - 1, n) if b > 1 or n == 0 else (b, n - 1)
+    return (Text("█" * n, style=colour) + Text("█" * b, style=BAD)
+            + Text("█" * (width - n - b), style="grey23"))   # one glyph, so fill and track match
+
+
+ITEM_ROW = r"^\| \*\*([A-Z][\w.]*)\*\* ?([^|]*)\| ([^|]+?) \|"
+
+
+def status_word(s):
+    """The status cell's first word without markup or punctuation: "**open** at ..." and "closed: ..." read as
+    open and closed (issue #121)."""
+    m = re.match(r"[a-z]+", s.strip().strip("*`").lower())
+    return m.group(0) if m else ""
 
 
 def alive(pid):
@@ -140,20 +155,20 @@ def remote_run():
 # ---- data -------------------------------------------------------------------------------------------
 
 def backlog():
-    """[(section, done, total, first open (id, text))] in page order, and the overall counts."""
+    """[(section, done, total, first open (id, text), blocked)] in page order; done counts closed and blocked."""
     text = (ROOT / "order-of-work.md").read_text()
     out = []
     for part in re.split(r"^## ", text, flags=re.M)[1:]:
         head = part.splitlines()[0]
-        rows = re.findall(r"^\| \*\*([A-Z][\w.]*)\*\* ?([^|]*)\| ([^|]+?) \|", part, re.M)
+        rows = re.findall(ITEM_ROW, part, re.M)
         if not rows:
             continue
-        st = [(i, d.strip(), s.strip().strip("*").split()[0]) for i, d, s in rows]
+        st = [(i, d.strip(), status_word(s)) for i, d, s in rows]
         done = sum(1 for _, _, s in st if s in ("closed", "blocked"))
         nxt = next(((i, d) for i, d, s in st if s not in ("closed", "blocked")), None)
         name = re.sub(r"\s*\(issues? [^)]*\)", "", head)
         name = re.sub(r"^Stage 2, step (\d): ", r"S2.\1 ", name)
-        out.append((name, done, len(st), nxt))
+        out.append((name, done, len(st), nxt, sum(1 for _, _, s in st if s == "blocked")))
     return out
 
 
@@ -260,23 +275,23 @@ def header():
 def backlog_panel():
     secs = backlog()
     running_item = lw.attack_info()[0] if lw.current_phase()[2] else None
-    done = sum(d for _, d, _, _ in secs)
-    total = sum(t for _, _, t, _ in secs) or 1
+    done = sum(d for _, d, _, _, _ in secs)
+    blocked = sum(b for *_, b in secs)
+    total = sum(t for _, _, t, _, _ in secs) or 1
     n_exp = max(0, len((ROOT / "results.tsv").read_text().splitlines()) - 1)
-    top = Text.assemble(bar(done / total, 26), f"  {done}/{total} done", (f" · {total - done} open · {n_exp} experiments", MUTED))
+    top = Text.assemble(bar((done - blocked) / total, 26, blocked=blocked / total), f"  {done}/{total} done", (f" · {total - done} open · {n_exp} experiments", MUTED))
     t = Table(box=None, expand=True, show_header=False, padding=(0, 1))
     t.add_column(ratio=5); t.add_column(width=12); t.add_column(justify="right", width=6)
     nxt = None
     text = (ROOT / "order-of-work.md").read_text()
-    opens = [(i, d) for i, d, st in re.findall(r"^\| \*\*([A-Z][\w.]*)\*\* ?([^|]*)\| ([^|]+?) \|", text, re.M)
-             if st.strip().strip("*").split()[0] not in ("closed", "blocked")]
+    opens = [(i, d) for i, d, st in re.findall(ITEM_ROW, text, re.M) if status_word(st) not in ("closed", "blocked")]
     after = [o for o in opens if o[0] != running_item]
     nxt = after[0] if after else None
-    for name, d, n, first in secs:
+    for name, d, n, first, b in secs:
         if d == n:
             continue
-        t.add_row(Text(name, overflow="ellipsis", no_wrap=True), bar(d / n, 12), Text(f"{d}/{n}", style=MUTED))
-    closed = sum(1 for _, d, n, _ in secs if d == n)
+        t.add_row(Text(name, overflow="ellipsis", no_wrap=True), bar((d - b) / n, 12, blocked=b / n), Text(f"{d}/{n}", style=MUTED))
+    closed = sum(1 for _, d, n, _, _ in secs if d == n)
     t.add_row(Text(f"{closed} more sections closed or blocked", style=MUTED), Text(""), Text(""))
     nx = Text("next after this  " if running_item else "next  ", style=MUTED)
     if nxt:

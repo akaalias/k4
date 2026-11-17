@@ -133,7 +133,7 @@ def mins(sec):
 def backlog_line(width):
     try:
         text = (ROOT / "order-of-work.md").read_text()
-        st = [m.strip().strip("*").split()[0] for m in re.findall(r"^\| \*\*[A-Z][\w.]*\*\*[^|]*\| ([^|]+?) \|", text, re.M)]
+        st = [(re.match(r"[a-z]*", m.strip().strip("*`").lower()).group(0)) for m in re.findall(r"^\| \*\*[A-Z][\w.]*\*\*[^|]*\| ([^|]+?) \|", text, re.M)]
         done = sum(1 for x in st if x in ("closed", "blocked"))
         n_exp = max(0, len((ROOT / "results.tsv").read_text().splitlines()) - 1)
     except OSError:
@@ -186,7 +186,7 @@ def attack_info():
     except OSError:
         return None, None
     ch = re.search(r'"changed":\s*\(?\s*"([^"]{0,300})', text)
-    item = re.search(r"\b(?:[ADF]\d+(?:\.\d+)?)\b", ch.group(1)) if ch else None
+    item = re.search(r"\b(?:[ADF]\d+(?:\.\d+[a-z]?)?)\b", ch.group(1)) if ch else None
     m = re.search(r'"expected_minutes":\s*(\d+)', text)
     if m:
         return (item.group(0) if item else None), int(m.group(1))

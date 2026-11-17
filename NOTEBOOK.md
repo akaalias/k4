@@ -5,6 +5,18 @@ what was found, and what was left open. Experiment numbers link to the records i
 `experiments/`. The families table and the clue register hold the bounds; this notebook
 holds the reasoning and the mistakes.
 
+## 2026-11-17
+
+### F14.2a (ticket #93)
+
+| # | Item | One line |
+|---|---|---|
+| 272 | F14.2a | **0271's 41,986 flawed settings decided in full.** No key word on K4 or any of 50 shuffles; no listed fit on K4 (0271's lone A10 fit: 0 pairs once all 11 informative checks are tested); plants 12/12 (0271's code 3/12). One count-only cell, A25 Beaufort (key length 25, 4 or fewer informative checks), above all 50 shuffles: p 0.02 of 76 cells, chased as F14.2b. F14.2 closed. AWS 2.2 min, $0.03. |
+
+The first start of 0272 (2026-11-05) did not hang on the network: CPU sat at zero for two hours. Each job built a 40 MB index per setting (a 16.7 MB bitmap per form) and cached all 300 of its settings across the 51 texts: about 12 GB per worker, 32 workers on a 64 GB machine. Workers were killed for memory and `Pool.imap_unordered` waited forever for their tasks. Restarted from scratch with settings outside and texts inside; a 60-setting, 4-text desk slice gave output identical to the draft's. The run then took 2.2 minutes.
+
+F14.2 closing reopens F14.5's second half (F14.2 on the 98-letter variants), queued as F14.5b.
+
 ## 2026-11-05
 
 ### F14.2 (ticket #93)

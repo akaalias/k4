@@ -1,0 +1,679 @@
+{
+ "id": 275,
+ "tag": "0275-f16.1b-two-dictionary-keyword-alphabets-on-the-20-official-letters",
+ "started": "2026-11-17T14:40:16+00:00",
+ "seconds": 353.9,
+ "status": "ran",
+ "phases": {
+  "test": 18.0,
+  "run": 353.9,
+  "record": 0.1
+ },
+ "ended_epoch": 1794926770.262002,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "item": "F16.1b",
+  "known_places": [
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74
+  ],
+  "alphabets": 208064,
+  "alphabet_pairs_per_form": 43290628096,
+  "alphabet_source": "0244's: keyword-mixed alphabet of every dictionary word of 4+ letters plus standard and KRYPTOS",
+  "key_lengths": [
+   1,
+   26
+  ],
+  "key_word_check_lengths": [
+   3,
+   23
+  ],
+  "count_only_lengths": [
+   24,
+   26
+  ],
+  "key_numbering": "standard, KRYPTOS, the plain alphabet or the cipher alphabet, any indicator shift 0-25",
+  "screen": "64-bit hash of the forced key on covered slots against every rotation (differences for standard/KRYPTOS, letters for each of 26 first letters for plain/cipher); every hit confirmed by 0244's match_key_word",
+  "fitting_pairs": {
+   "1/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "1/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "2/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "2/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "3/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "3/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "4/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "4/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "5/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "5/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "6/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "6/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "7/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "7/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "8/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "8/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "9/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "9/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "10/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "10/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "11/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "11/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "12/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 33,
+    "copies_with_any": 5,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "12/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 2,
+    "copies_with_any": 4,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "13/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "13/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "14/added": {
+    "k4": 0,
+    "copies_median": 2.0,
+    "copies_max": 29,
+    "copies_with_any": 37,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "14/beaufort": {
+    "k4": 0,
+    "copies_median": 2.5,
+    "copies_max": 32,
+    "copies_with_any": 41,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "15/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 124911,
+    "copies_with_any": 3,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "15/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 262808,
+    "copies_with_any": 3,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "16/added": {
+    "k4": 312778,
+    "copies_median": 57895.0,
+    "copies_max": 1055253,
+    "copies_with_any": 45,
+    "at_or_above": 4,
+    "p": 0.098
+   },
+   "16/beaufort": {
+    "k4": 10940,
+    "copies_median": 60565.5,
+    "copies_max": 3492231,
+    "copies_with_any": 45,
+    "at_or_above": 44,
+    "p": 0.8824
+   },
+   "17/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 83074,
+    "copies_with_any": 1,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "17/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 91826,
+    "copies_with_any": 1,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "18/added": {
+    "k4": 0,
+    "copies_median": 3.0,
+    "copies_max": 992,
+    "copies_with_any": 34,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "18/beaufort": {
+    "k4": 0,
+    "copies_median": 2.5,
+    "copies_max": 31,
+    "copies_with_any": 36,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "19/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "19/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "20/added": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "20/beaufort": {
+    "k4": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "copies_with_any": 0,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "21/added": {
+    "k4": 0,
+    "copies_median": 2.0,
+    "copies_max": 29,
+    "copies_with_any": 37,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "21/beaufort": {
+    "k4": 0,
+    "copies_median": 2.5,
+    "copies_max": 32,
+    "copies_with_any": 41,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "22/added": {
+    "k4": 83,
+    "copies_median": 1818.5,
+    "copies_max": 77415,
+    "copies_with_any": 46,
+    "at_or_above": 45,
+    "p": 0.902
+   },
+   "22/beaufort": {
+    "k4": 3574,
+    "copies_median": 2472.0,
+    "copies_max": 79735,
+    "copies_with_any": 46,
+    "at_or_above": 22,
+    "p": 0.451
+   },
+   "23/added": {
+    "k4": 3206250,
+    "copies_median": 1847044.5,
+    "copies_max": 11327771,
+    "copies_with_any": 42,
+    "at_or_above": 11,
+    "p": 0.2353
+   },
+   "23/beaufort": {
+    "k4": 410571,
+    "copies_median": 1725622.5,
+    "copies_max": 6298711,
+    "copies_with_any": 42,
+    "at_or_above": 42,
+    "p": 0.8431
+   },
+   "24/added": {
+    "k4": 2654922390,
+    "copies_median": 1464269229.5,
+    "copies_max": 5207052069,
+    "copies_with_any": 47,
+    "at_or_above": 4,
+    "p": 0.098
+   },
+   "24/beaufort": {
+    "k4": 287773089,
+    "copies_median": 1471262525.5,
+    "copies_max": 6735212072,
+    "copies_with_any": 47,
+    "at_or_above": 47,
+    "p": 0.9412
+   },
+   "25/added": {
+    "k4": 43290628096,
+    "copies_median": 43290628096.0,
+    "copies_max": 43290628096,
+    "copies_with_any": 50,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "25/beaufort": {
+    "k4": 43290628096,
+    "copies_median": 43290628096.0,
+    "copies_max": 43290628096,
+    "copies_with_any": 50,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "26/added": {
+    "k4": 43290628096,
+    "copies_median": 43290628096.0,
+    "copies_max": 43290628096,
+    "copies_with_any": 50,
+    "at_or_above": 50,
+    "p": 1.0
+   },
+   "26/beaufort": {
+    "k4": 43290628096,
+    "copies_median": 43290628096.0,
+    "copies_max": 43290628096,
+    "copies_with_any": 50,
+    "at_or_above": 50,
+    "p": 1.0
+   }
+  },
+  "k4_above_every_copy_cells": [],
+  "copies_above_the_rest_cells": {
+   "min": 0,
+   "max": 2
+  },
+  "lowest_length_with_a_fit_k4": 16,
+  "key_word_matches": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "screen_hits_k4": 0,
+  "plants": {
+   "plant16_0": {
+    "L": 16,
+    "found": true,
+    "fits_at_L": 2175002,
+    "matches": 1,
+    "key_word": "EQUIDISTRIBUTION",
+    "key_numbering": "cipher",
+    "pa_word": "STERNUTATIVE",
+    "ca_word": "RECORDATIVELY"
+   },
+   "plant16_1": {
+    "L": 16,
+    "found": true,
+    "fits_at_L": 314558,
+    "matches": 1,
+    "key_word": "DISCOLOURIZATION",
+    "key_numbering": "cipher",
+    "pa_word": "ERMELIN",
+    "ca_word": "STUMBLER"
+   },
+   "plant18_0": {
+    "L": 18,
+    "found": true,
+    "fits_at_L": 391,
+    "matches": 2,
+    "key_word": "PSYCHOANALYTICALLY",
+    "key_numbering": "cipher",
+    "pa_word": "OVERSTOUT",
+    "ca_word": "COTYLIGEROUS"
+   },
+   "plant18_1": {
+    "L": 18,
+    "found": true,
+    "fits_at_L": 21,
+    "matches": 1,
+    "key_word": "TRANSRECTIFICATION",
+    "key_numbering": "kry",
+    "pa_word": "DESMODACTYLI",
+    "ca_word": "GISMONDITE"
+   },
+   "plant20_0": {
+    "L": 20,
+    "found": true,
+    "fits_at_L": 2,
+    "matches": 4,
+    "key_word": "ELECTROPHYSIOLOGICAL",
+    "key_numbering": "plain",
+    "pa_word": "COSTOTOMY",
+    "ca_word": "PAMPHILIUS"
+   },
+   "plant20_1": {
+    "L": 20,
+    "found": true,
+    "fits_at_L": 13,
+    "matches": 6,
+    "key_word": "SUPERPHLOGISTICATION",
+    "key_numbering": "kry",
+    "pa_word": "TASTEABLE",
+    "ca_word": "SPIFF"
+   },
+   "plant21_0": {
+    "L": 21,
+    "found": true,
+    "fits_at_L": 142,
+    "matches": 1,
+    "key_word": "NONINTERCHANGEABILITY",
+    "key_numbering": "cipher",
+    "pa_word": "CASTLEWISE",
+    "ca_word": "THREADMAKER"
+   },
+   "plant21_1": {
+    "L": 21,
+    "found": true,
+    "fits_at_L": 17,
+    "matches": 1,
+    "key_word": "CHOLEDOCHOLITHOTRIPSY",
+    "key_numbering": "std",
+    "pa_word": "FACTICE",
+    "ca_word": "UNDEFRAYED"
+   },
+   "plant22_0": {
+    "L": 22,
+    "found": true,
+    "fits_at_L": 37924,
+    "matches": 1,
+    "key_word": "PHILOSOPHICOHISTORICAL",
+    "key_numbering": "kry",
+    "pa_word": "DOUGHBIRD",
+    "ca_word": "AZONIUM"
+   },
+   "plant22_1": {
+    "L": 22,
+    "found": true,
+    "fits_at_L": 76766,
+    "matches": 1,
+    "key_word": "PYOPNEUMOCHOLECYSTITIS",
+    "key_numbering": "kry",
+    "pa_word": "PHELLOGEN",
+    "ca_word": "ASPICULATE"
+   },
+   "plant23_0": {
+    "L": 23,
+    "found": true,
+    "fits_at_L": 1477409,
+    "matches": 1,
+    "key_word": "GASTROENTEROANASTOMOSIS",
+    "key_numbering": "kry",
+    "pa_word": "SCLERETINITE",
+    "ca_word": "BEKNOW"
+   },
+   "plant23_1": {
+    "L": 23,
+    "found": true,
+    "fits_at_L": 5850818,
+    "matches": 1,
+    "key_word": "PERICARDIOMEDIASTINITIS",
+    "key_numbering": "cipher",
+    "pa_word": "AFFECTIBLE",
+    "ca_word": "SURREY"
+   }
+  },
+  "plants_found": 12,
+  "plants_total": 12,
+  "texts": 63,
+  "copies": 50,
+  "exhaustive": true,
+  "compute_seconds": 282,
+  "aws_cost_estimate_dollars": 0.5
+ },
+ "notes": "20 official letters; K4 first fit at L 16; key-word matches K4 0, copies max 0; K4 above every copy in 0 of 52 cells [] (copies 0-2); plants found 12/12",
+ "judge": null,
+ "error": null,
+ "candidates": []
+}

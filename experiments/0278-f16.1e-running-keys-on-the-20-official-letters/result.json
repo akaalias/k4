@@ -1,0 +1,29 @@
+{
+ "id": 278,
+ "tag": "0278-f16.1e-running-keys-on-the-20-official-letters",
+ "started": "2026-11-17T16:25:15+00:00",
+ "seconds": 98.1,
+ "status": "error",
+ "phases": {
+  "test": 17.9,
+  "run": 98.1,
+  "record": 0.1
+ },
+ "ended_epoch": 1794932813.432192,
+ "decision": "error",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {},
+ "notes": "",
+ "judge": null,
+ "error": "Traceback (most recent call last):\n  File \"/opt/repo/_runner.py\", line 85, in main\n    res = attack.run(ctx) or {}\n          ~~~~~~~~~~^^^^^\n  File \"/opt/repo/attack.py\", line 95, in run\n    r = m.run(Ctx20(ctx, \"0210\"))\n  File \"/opt/repo/experiments/0210-running-keys-with-slips-at-known-places/attack.py\", line 260, in run\n    srcs = sources()\n  File \"/opt/repo/experiments/0210-running-keys-with-slips-at-known-places/attack.py\", line 110, in sources\n    site = json.loads((ROOT / \"data\" / \"site_texts.json\").read_text())\n                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/opt/python/cpython-3.14.10-linux-aarch64-gnu/lib/python3.14/pathlib/__init__.py\", line 787, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/python/cpython-3.14.10-linux-aarch64-gnu/lib/python3.14/pathlib/__init__.py\", line 771, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/opt/repo/experiments/0210-running-keys-with-slips-at-known-places/data/site_texts.json'\n",
+ "candidates": []
+}

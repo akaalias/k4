@@ -1,0 +1,7 @@
+F14.2a: 0271's flawed settings, every check tested.
+
+  setting    a grid move, before or after the table, and a key length (41,986 of them)
+  repeats    two known E's in one key slot must sit over one carved letter; that holds for every alphabet or none
+  index      only checks between different known letters pair up the word-scrambled alphabets
+  key word   each fitting pair forces the key; a word of the key's length must give it
+  0271 keyed on the first six checks, repeats included: three repeats left too few, and it counted instead of testing.

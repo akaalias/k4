@@ -1,0 +1,712 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F14.2a",
+  "settings": 41986,
+  "settings_5plus_informative": 38203,
+  "settings_4_or_fewer_informative": 3783,
+  "of_0271_listed": 1363532,
+  "routes": 27852,
+  "alphabets": 208064,
+  "forms": [
+   "added",
+   "Beaufort"
+  ],
+  "key_word_lengths": [
+   1,
+   24
+  ],
+  "key_numbering": "standard or KRYPTOS (and the pair's own alphabets when 20 or fewer pairs fit), any shift",
+  "selfcheck_unaffected_settings_agree": "1800/1800",
+  "k4_a10_setting_0271_vs_fixed": {
+   "two turns cw 17,95 inverse/V": {
+    "checks": 14,
+    "informative": 11,
+    "0271_count": 3476236,
+    "fixed_count": 0
+   },
+   "two turns cw 17,95 inverse/B": {
+    "checks": 14,
+    "informative": 11,
+    "0271_count": 2590349,
+    "fixed_count": 0
+   }
+  },
+  "per_class": {
+   "A4B": {
+    "settings": 39,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A4V": {
+    "settings": 39,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A5B": {
+    "settings": 152,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A5V": {
+    "settings": 152,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A6B": {
+    "settings": 185,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A6V": {
+    "settings": 185,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A7B": {
+    "settings": 328,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A7V": {
+    "settings": 328,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A8B": {
+    "settings": 495,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A8V": {
+    "settings": 495,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A9B": {
+    "settings": 3193,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A9V": {
+    "settings": 3193,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A10B": {
+    "settings": 631,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A10V": {
+    "settings": 631,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A11B": {
+    "settings": 915,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A11V": {
+    "settings": 915,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A12B": {
+    "settings": 674,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A12V": {
+    "settings": 674,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A13B": {
+    "settings": 612,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A13V": {
+    "settings": 612,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A14B": {
+    "settings": 562,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A14V": {
+    "settings": 562,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A15B": {
+    "settings": 457,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A15V": {
+    "settings": 457,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A16B": {
+    "settings": 258,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A16V": {
+    "settings": 258,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A17B": {
+    "settings": 278,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A17V": {
+    "settings": 278,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A18B": {
+    "settings": 599,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A18V": {
+    "settings": 599,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A19B": {
+    "settings": 171,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A19V": {
+    "settings": 171,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A20B": {
+    "settings": 127,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A20V": {
+    "settings": 127,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A21B": {
+    "settings": 157,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 1,
+    "p_at_or_above": 1.0
+   },
+   "A21V": {
+    "settings": 157,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 1,
+    "p_at_or_above": 1.0
+   },
+   "A22B": {
+    "settings": 106,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A22V": {
+    "settings": 106,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A23B": {
+    "settings": 112,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A23V": {
+    "settings": 112,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A24B": {
+    "settings": 62,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A24V": {
+    "settings": 62,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A25B": {
+    "settings": 131,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A25V": {
+    "settings": 131,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A26B": {
+    "settings": 107,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 1,
+    "p_at_or_above": 1.0
+   },
+   "A26V": {
+    "settings": 107,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 1,
+    "p_at_or_above": 1.0
+   },
+   "B9B": {
+    "settings": 27852,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "B9V": {
+    "settings": 27852,
+    "k4_settings_with_fit": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   }
+  },
+  "few_informative_counted": {
+   "A13B": {
+    "settings": 2,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A13V": {
+    "settings": 2,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A15B": {
+    "settings": 37,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A15V": {
+    "settings": 37,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A16B": {
+    "settings": 112,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A16V": {
+    "settings": 112,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A17B": {
+    "settings": 175,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A17V": {
+    "settings": 175,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A18B": {
+    "settings": 1183,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A18V": {
+    "settings": 1183,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A19B": {
+    "settings": 243,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 4084314,
+    "p_at_or_above": 1.0
+   },
+   "A19V": {
+    "settings": 243,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 4680815,
+    "p_at_or_above": 1.0
+   },
+   "A20B": {
+    "settings": 236,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 2665977,
+    "p_at_or_above": 1.0
+   },
+   "A20V": {
+    "settings": 236,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 2258647,
+    "p_at_or_above": 1.0
+   },
+   "A21B": {
+    "settings": 319,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A21V": {
+    "settings": 319,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p_at_or_above": 1.0
+   },
+   "A22B": {
+    "settings": 354,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 8736489,
+    "p_at_or_above": 1.0
+   },
+   "A22V": {
+    "settings": 354,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 9426297,
+    "p_at_or_above": 1.0
+   },
+   "A23B": {
+    "settings": 274,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 1730114,
+    "p_at_or_above": 1.0
+   },
+   "A23V": {
+    "settings": 274,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 5549017,
+    "p_at_or_above": 1.0
+   },
+   "A24B": {
+    "settings": 307,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 6471770,
+    "p_at_or_above": 1.0
+   },
+   "A24V": {
+    "settings": 307,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 2107709,
+    "p_at_or_above": 1.0
+   },
+   "A25B": {
+    "settings": 295,
+    "k4_pairs": 3718027,
+    "copies_median": 0.0,
+    "copies_max": 3444844,
+    "p_at_or_above": 0.02
+   },
+   "A25V": {
+    "settings": 295,
+    "k4_pairs": 3150163,
+    "copies_median": 0.0,
+    "copies_max": 5292102,
+    "p_at_or_above": 0.039
+   },
+   "A26B": {
+    "settings": 246,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 4754714,
+    "p_at_or_above": 1.0
+   },
+   "A26V": {
+    "settings": 246,
+    "k4_pairs": 0,
+    "copies_median": 0.0,
+    "copies_max": 4894728,
+    "p_at_or_above": 1.0
+   }
+  },
+  "smallest_class_p": null,
+  "classes": 48,
+  "capped_settings": {
+   "k4": 0,
+   "copies_max": 0
+  },
+  "key_word_matches": {
+   "k4": 0,
+   "copies_median": 0.0,
+   "copies_max": 0,
+   "p_at_or_above": 1.0
+  },
+  "k4_best_readings": [],
+  "plants": [
+   {
+    "L": 9,
+    "o": "B",
+    "route": "K3 rule a=6 b=3 inverse",
+    "checks": 15,
+    "informative": 10,
+    "found_0271": true,
+    "found": true
+   },
+   {
+    "L": 9,
+    "o": "B",
+    "route": "two turns cw 8,81",
+    "checks": 15,
+    "informative": 10,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 9,
+    "o": "B",
+    "route": "two turns cw 49,52 inverse",
+    "checks": 15,
+    "informative": 10,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 9,
+    "o": "A",
+    "route": "two turns cw 43,45",
+    "checks": 15,
+    "informative": 11,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 11,
+    "o": "A",
+    "route": "two turns cw 10,93 inverse",
+    "checks": 13,
+    "informative": 10,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 13,
+    "o": "A",
+    "route": "K3 rule a=12 b=23",
+    "checks": 11,
+    "informative": 6,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 12,
+    "o": "A",
+    "route": "K3 rule a=90 b=36 inverse",
+    "checks": 13,
+    "informative": 10,
+    "found_0271": true,
+    "found": true
+   },
+   {
+    "L": 12,
+    "o": "A",
+    "route": "K3 rule a=82 b=70",
+    "checks": 12,
+    "informative": 9,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 24,
+    "o": "A",
+    "route": "K3 rule a=15 b=70",
+    "checks": 10,
+    "informative": 7,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 19,
+    "o": "A",
+    "route": "K3 rule a=8 b=82",
+    "checks": 10,
+    "informative": 7,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 19,
+    "o": "A",
+    "route": "two turns cw 77,23",
+    "checks": 9,
+    "informative": 5,
+    "found_0271": false,
+    "found": true
+   },
+   {
+    "L": 19,
+    "o": "A",
+    "route": "two turns cw 36,44",
+    "checks": 10,
+    "informative": 6,
+    "found_0271": true,
+    "found": true
+   }
+  ],
+  "plants_found": 12,
+  "plants_found_by_0271": 3,
+  "plants_total": 12,
+  "texts": 51,
+  "exhaustive": true,
+  "core_seconds": 1352,
+  "compute_seconds": 127,
+  "resumed_units": 0,
+  "cost_estimate": "41,986 settings x 51 texts at 0271's rate (about 0.008 core-s per setting and text) plus one index per setting: about 5-6 core-hours; AWS 32 cores about 15 min, under $0.30"
+ },
+ "notes": "F14.2a: 0271's 41,986 flawed settings decided in full (38,203 with 5+ informative checks); key-word matches K4 0, copies median 0.0, max 0; smallest per-class p None over 48 classes; plants found 12/12 (0271's code: 3); K4's A10 setting: {'two turns cw 17,95 inverse/V': {'checks': 14, 'informative': 11, '0271_count': 3476236, 'fixed_count': 0}, 'two turns cw 17,95 inverse/B': {'checks': 14, 'informative': 11, '0271_count': 2590349, 'fixed_count': 0}}.",
+ "controls": [],
+ "error": null,
+ "worked_example": "F14.2a: 0271's flawed settings, every check tested.\n\n  setting    a grid move, before or after the table, and a key length (41,986 of them)\n  repeats    two known E's in one key slot must sit over one carved letter; that holds for every alphabet or none\n  index      only checks between different known letters pair up the word-scrambled alphabets\n  key word   each fitting pair forces the key; a word of the key's length must give it\n  0271 keyed on the first six checks, repeats included: three repeats left too few, and it counted instead of testing.",
+ "seconds": 127.15697979927063,
+ "compute": {
+  "where": "aws",
+  "instance": "c8g.8xlarge",
+  "zone": "eu-central-1c",
+  "market": "spot",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 130.8,
+  "machine_seconds": 173.4,
+  "dollars": 0.027
+ },
+ "checkpoint": {
+  "file": "2673ce951ff7fcb9.jsonl",
+  "resumed": 0,
+  "saved": 140
+ }
+}

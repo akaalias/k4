@@ -1,0 +1,186 @@
+{
+ "id": 273,
+ "tag": "0273-f14.2b-0272s-edge-cell-a25-on-2000-fresh-shuffles",
+ "started": "2026-11-17T12:18:16+00:00",
+ "seconds": 82.3,
+ "status": "ran",
+ "phases": {
+  "design": 47.8,
+  "implement": 0.0,
+  "test": 36.6,
+  "run": 82.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1794917978.795553,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "item": "F14.2b",
+  "cell": "order A (move then table), key length 25, 4 or fewer informative checks",
+  "settings": 295,
+  "alphabets": 208064,
+  "pairs_per_setting_and_form": 43290628096,
+  "texts": 2001,
+  "shuffle_seed": 2272,
+  "exhaustive": true,
+  "k4_reproduces_0272": true,
+  "primary_A25_Beaufort_pairs": {
+   "k4": 3718027,
+   "copies_nonzero": 154,
+   "copies_median": 0.0,
+   "copies_max": 97342649,
+   "at_or_above": 40,
+   "p": 0.02049
+  },
+  "A25_added_pairs": {
+   "k4": 3150163,
+   "copies_nonzero": 154,
+   "copies_median": 0.0,
+   "copies_max": 128712794,
+   "at_or_above": 54,
+   "p": 0.02749
+  },
+  "settings_with_fit_Beaufort": {
+   "k4": 1,
+   "copies_nonzero": 154,
+   "copies_median": 0.0,
+   "copies_max": 4,
+   "at_or_above": 154,
+   "p": 0.07746
+  },
+  "settings_with_fit_added": {
+   "k4": 1,
+   "copies_nonzero": 154,
+   "copies_median": 0.0,
+   "copies_max": 4,
+   "at_or_above": 154,
+   "p": 0.07746
+  },
+  "corrected_line": 0.00066,
+  "flag": false,
+  "k4_settings_with_fit": [
+   {
+    "route": 13027,
+    "form": "V",
+    "pairs": 3150163,
+    "checks": 5,
+    "repeated": 2,
+    "informative": 3,
+    "route_name": "two turns cw 19,62 inverse"
+   },
+   {
+    "route": 13027,
+    "form": "B",
+    "pairs": 3718027,
+    "checks": 5,
+    "repeated": 2,
+    "informative": 3,
+    "route_name": "two turns cw 19,62 inverse"
+   }
+  ],
+  "plants": [
+   {
+    "route": "K3 rule a=27 b=12 inverse",
+    "form": "V",
+    "pairs_counted": 8330232444,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 17,92",
+    "form": "V",
+    "pairs_counted": 5385841,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "K3 rule a=8 b=8",
+    "form": "V",
+    "pairs_counted": 86069516,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 16,77",
+    "form": "B",
+    "pairs_counted": 2169513,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 86,12",
+    "form": "V",
+    "pairs_counted": 1055849260,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 91,12",
+    "form": "V",
+    "pairs_counted": 68600042,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 46,54 inverse",
+    "form": "B",
+    "pairs_counted": 6977051,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 12,88",
+    "form": "B",
+    "pairs_counted": 68039,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 12,93",
+    "form": "B",
+    "pairs_counted": 2817770,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 66,57",
+    "form": "V",
+    "pairs_counted": 1632450,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "K3 rule a=57 b=8",
+    "form": "B",
+    "pairs_counted": 437312812,
+    "true_pair_fits": true,
+    "found": true
+   },
+   {
+    "route": "two turns cw 8,94 inverse",
+    "form": "V",
+    "pairs_counted": 765694186,
+    "true_pair_fits": true,
+    "found": true
+   }
+  ],
+  "plants_found": 12,
+  "plants_total": 12,
+  "core_seconds": 11,
+  "resumed_units": 0,
+  "cost_estimate": "295 settings x 2,001 texts, the index built only where repeated-letter checks hold: minutes on 32 cores, under $0.10"
+ },
+ "notes": "F14.2b: A25 Beaufort pairs K4 3,718,027, 40 of 2,000 fresh shuffles at or above (p 0.02049; line 0.00066; flag False); A25 added p 0.02749; settings with a fit (Beaufort) K4 1, p 0.07746. K4's fitting settings: [{'route': 13027, 'form': 'V', 'pairs': 3150163, 'checks': 5, 'repeated': 2, 'informative': 3, 'route_name': 'two turns cw 19,62 inverse'}, {'route': 13027, 'form': 'B', 'pairs': 3718027, 'checks': 5, 'repeated': 2, 'informative': 3, 'route_name': 'two turns cw 19,62 inverse'}]. Plants 12/12.",
+ "judge": null,
+ "error": null,
+ "candidates": []
+}

@@ -1,0 +1,6 @@
+F14.2b: one cell of 0272, against 2,000 fresh shuffles.
+
+  cell       a grid move, then the table, key length 25; 295 settings with 4 or fewer informative checks
+  repeats    two known E's in one key slot must sit over one carved letter, or the setting is out
+  count      the alphabet pairs that fit every other check, exactly, out of 208,064 x 208,064
+  verdict    K4's total ranked among the 2,000 shuffles' totals; a flag needs p below 0.05 / 76

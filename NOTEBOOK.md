@@ -12,6 +12,7 @@ holds the reasoning and the mistakes.
 | # | Item | One line |
 |---|---|---|
 | 274 | F16.1a | **One free alphabet on the 20 official letters.** 0119/0208's exact decider without EAST, 0-2 slips: K4 fits 9/23/34 cells at 0/1/2 slips, fewer than its 200 shuffles (medians 15/30/39, p 0.90-0.95); no flag. 20 cells only EAST closed (no slip: B11, B16, B22, B24, B25, V25, V26). A fit count cannot pick out a plant (0 of 6), so those cells go to an English decider as F16.1a-r. AWS 7.5 min, $0.07. |
+| 275 | F16.1b | **Two dictionary keyword alphabets on the 20 official letters.** 0244's exact pair index without EAST: no key word for the forced key (lengths 3-23, every rotation, numbering and shift) on K4 or any of 50 shuffles; plants 12/12. Free-key fit counts inside the shuffles (lowest p 0.098); K4 first fits at 16, as with EAST. AWS 5.5 min, $0.05. |
 
 The number 0274 was first given to F14.5b, stopped for the graceful stop before it wrote a record; the harness reused it for F16.1a. F14.5b, when resumed from drafts/, takes the next free number.
 

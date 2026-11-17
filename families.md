@@ -245,6 +245,17 @@ Update the leaf when an experiment works on it.
     - **F15.4** Probable phrases at fixed places: phrases the drafts agree on, and K1-K3's own phrases ("comes back to the first part"), as extra cribs in the cells blocked for lack of checks {closed as weak by F15.3's rule (0268)}
     - **F15.5** Each draft as a full crib with slip tolerance: the forced key read for structure, against copies {closed as weak by F15.3's rule (0268)}
     - **F15.6** Past readings rescored by closeness to the drafts' content, the judge kept blind {closed as weak by F15.3's rule (0268)}
+  - F16 Simple hand methods, from the step-back review (issue #123, pivot P24): the exact, hand-sized tests earlier choices skipped, known letters kept in place
+    - **F16.1** The exact deciders without EAST (the 20 official letters, 0-2 slips) {open · F16.1a done}
+      - **F16.1a** One free alphabet, periodic key 1-26: K4 fits fewer cells than its 200 shuffles (p 0.90-0.95); 20 cells only EAST closed; a fit count has no power here (plants 0/6) {closed · exact · 0274}
+      - **F16.1a-r** The cells only EAST closed (B11, B16, B22, B24, B25, V25, V26 at no slip), by D1's English decider {open}
+    - **F16.2** A book plus a keyword {open}
+    - **F16.8** An artist's twist on K1/K2's method {open}
+    - **F16.4** Small shifts and carved lines, pre-registered {open}
+    - **F16.5** An unknown text plus a dictionary word {open}
+    - **F16.6** The word-key verdicts, reopened as chart keys {open}
+    - **F16.3** Keyword alphabets mixed in a grid, at dictionary scale {open}
+    - **F16.7** K4 and K5 in depth {blocked · K5 not published}
 
 ## Full record by family
 

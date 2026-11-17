@@ -7,6 +7,14 @@ holds the reasoning and the mistakes.
 
 ## 2026-11-17
 
+### F16.1 (ticket #123)
+
+| # | Item | One line |
+|---|---|---|
+| 274 | F16.1a | **One free alphabet on the 20 official letters.** 0119/0208's exact decider without EAST, 0-2 slips: K4 fits 9/23/34 cells at 0/1/2 slips, fewer than its 200 shuffles (medians 15/30/39, p 0.90-0.95); no flag. 20 cells only EAST closed (no slip: B11, B16, B22, B24, B25, V25, V26). A fit count cannot pick out a plant (0 of 6), so those cells go to an English decider as F16.1a-r. AWS 7.5 min, $0.07. |
+
+The number 0274 was first given to F14.5b, stopped for the graceful stop before it wrote a record; the harness reused it for F16.1a. F14.5b, when resumed from drafts/, takes the next free number.
+
 ### F14.2a (ticket #93)
 
 | # | Item | One line |

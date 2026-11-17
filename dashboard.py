@@ -2308,6 +2308,187 @@ def lineage_page():
     return page("research lineage", body, "/lineage")
 
 
+# ---- Lineage on one line (#126): a UX experiment beside /lineage. Every experiment on one
+# horizontal line in run order, no family columns, each dot in its family's colour. An edge to a
+# parent in the same family rides in a lane above the line, one to another family in a lane below.
+
+LINH_CSS = """
+.linh-key{display:flex;flex-wrap:wrap;gap:6px 18px;margin:14px 0 4px}
+.linh-key .fk{font:600 10.5px/1.3 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.linh-key .fk .sw{display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:0}
+.linh-key .fk .nm{color:var(--muted)}.linh-key .fk .cnt{color:var(--faint);font-weight:400;margin-left:5px;font-variant-numeric:lining-nums tabular-nums}
+#lin .lside{font:600 9.5px/1 var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.07em;fill:var(--faint)}
+#lin .laxis{stroke:var(--rule-soft);stroke-width:1}
+#lin .lcol{stroke:var(--rule-soft);stroke-width:1;shape-rendering:crispEdges}
+#lin .lcol.ten{stroke:var(--rule);stroke-opacity:.6}
+#lin .ng .nk{fill:currentColor;stroke:var(--ink);stroke-width:1.4}
+#lin .nlab.ten{fill:var(--muted)}
+.linh-legend .lin-legend .lkept{background:var(--disc);border:1.4px solid var(--ink);box-sizing:border-box}
+.linh-legend .lin-legend .larc{width:16px;height:8px;border:1.2px solid var(--muted);border-bottom:0;border-radius:9px 9px 0 0;vertical-align:-2px}
+.linh-legend .lin-legend .lx{width:16px;height:0;border-left:0;border-top:1.2px dashed var(--muted);vertical-align:3px;margin:0 2px}
+"""
+
+LINH_JS = r"""
+<script>
+(function(){
+  var data={};try{data=JSON.parse(document.getElementById('lin-data').textContent||'{}');}catch(e){}
+  var nodes=data.nodes||[],fams=data.families||[],pivots=data.pivots||[];
+  var host=document.getElementById('lin-diagram'),tip=document.getElementById('lin-tip');
+  if(!host)return;
+  if(!nodes.length){host.innerHTML='<p class="muted">No experiments yet.</p>';return;}
+  var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+  var byKey={};nodes.forEach(function(n){byKey[n.key]=n;});
+  var short=function(t,n){if(t.length<=n)return t;var c=t.slice(0,n);return c.slice(0,c.lastIndexOf(' '))+'...';};
+  var parentOf=function(k){var p=byKey[k]&&byKey[k].parent;return p&&byKey[p]?p:null;};
+  var kids={};nodes.forEach(function(n){var p=parentOf(n.key);if(p)(kids[p]=kids[p]||[]).push(n.key);});
+  var same=function(nd,p){return byKey[p].fam===nd.fam;};
+  var svg=null,geo=null,shownKey=null,lastPointer='mouse';
+  var SX=19,LANE=4,PADX=28,f1=function(v){return v.toFixed(1);};
+
+  // Geometry: x is run order, one slot per experiment and per pivot. An edge whose parent sits in
+  // the slot just before its child is a straight piece of the line; every other edge gets a lane,
+  // above the line within a family, below it across families. Lanes are packed left-edge style,
+  // shortest span innermost, so nested edges never cross and no two share a lane where they overlap.
+  function layout(){
+    var x={},px={},slot=0,pAfter={};pivots.forEach(function(pv){pAfter[pv.after]=pv;});
+    nodes.forEach(function(nd){x[nd.key]=PADX+slot*SX;slot++;if(pAfter[nd.key]){px[pAfter[nd.key].id]=PADX+slot*SX;slot++;}});
+    var GAP=SX*0.4,busy={up:[],dn:[]},laneOf={},nl={up:0,dn:0},idx={};nodes.forEach(function(nd,i){idx[nd.key]=i;});
+    nodes.filter(function(nd){var p=parentOf(nd.key);return p&&!(same(nd,p)&&idx[nd.key]-idx[p]===1);})
+      .map(function(nd){var p=parentOf(nd.key);return {k:nd.key,s:same(nd,p)?'up':'dn',a:x[p],b:x[nd.key]};})
+      .sort(function(u,v){return (u.b-u.a)-(v.b-v.a)||u.a-v.a;})
+      .forEach(function(r){var iv=busy[r.s],l=0;
+        while(iv.some(function(q){return q.l===l&&q.a<r.b+GAP&&r.a<q.b+GAP;}))l++;
+        iv.push({l:l,a:r.a,b:r.b});laneOf[r.k]=l;nl[r.s]=Math.max(nl[r.s],l+1);});
+    var top=22,up=14+LANE*nl.up,Y0=top+up,dn=34+LANE*nl.dn;
+    return {x:x,px:px,idx:idx,laneOf:laneOf,Y0:Y0,W:Math.ceil(2*PADX+(slot-1)*SX),H:Math.ceil(Y0+dn+6),top:top};
+  }
+
+  function render(){
+    geo=layout();
+    var x=geo.x,Y0=geo.Y0,W=geo.W,H=geo.H,g='',R=4;
+    // one faint rule per experiment, top to bottom, so a lane can be read down to its dot; every tenth stronger
+    nodes.forEach(function(nd){var tx=x[nd.key],ten=typeof nd.n==='number'&&nd.n%10===0;
+      g+='<rect class="rhit" data-key="'+esc(nd.key)+'" x="'+(tx-SX/2)+'" y="0" width="'+SX+'" height="'+H+'"/>'
+        +'<line class="lcol'+(ten?' ten':'')+'" data-key="'+esc(nd.key)+'" x1="'+tx+'" x2="'+tx+'" y1="'+geo.top+'" y2="'+H+'"/>';});
+    pivots.forEach(function(pv){if(!(pv.id in geo.px))return;var cx=geo.px[pv.id];
+      g+='<a href="/pivot/'+encodeURIComponent(pv.id)+'"><rect class="lpivot-row" x="'+(cx-SX/2)+'" y="0" width="'+SX+'" height="'+H+'"/></a>';});
+    g+='<line class="laxis" x1="'+PADX+'" x2="'+(W-PADX)+'" y1="'+Y0+'" y2="'+Y0+'"/>';
+    // edges: out of the top of the parent (or the bottom, to another family), up into the lane,
+    // along it, and down into the child, each bend spread over a run longer than the rise
+    nodes.forEach(function(nd){
+      var p=parentOf(nd.key);if(!p)return;
+      var a=x[p],b=x[nd.key],c=esc(nd.key),pp=esc(p),s=same(nd,p);
+      if(!(nd.key in geo.laneOf)){g+='<path class="edge" data-c="'+c+'" data-p="'+pp+'" d="M'+f1(a+R)+','+Y0+' L'+f1(b-R)+','+Y0+'"/>';return;}
+      var dir=s?-1:1,o=(s?10:30)+LANE*geo.laneOf[nd.key],ly=Y0+dir*o,y0=Y0+dir*R,q=Math.min((b-a)/2,Math.max(6,o*0.8));
+      var d='M'+f1(a)+','+f1(y0)+' C'+f1(a)+','+f1(Y0+dir*o*0.6)+' '+f1(a+q*0.4)+','+f1(ly)+' '+f1(a+q)+','+f1(ly)
+        +' L'+f1(b-q)+','+f1(ly)+' C'+f1(b-q*0.4)+','+f1(ly)+' '+f1(b)+','+f1(Y0+dir*o*0.6)+' '+f1(b)+','+f1(y0);
+      g+='<path class="edge'+(s?'':' x')+'" data-c="'+c+'" data-p="'+pp+'" d="'+d+'"/>';
+    });
+    nodes.forEach(function(nd){
+      var cx=x[nd.key],cy=Y0,k=esc(nd.key),m='',ten=typeof nd.n==='number'&&nd.n%10===0;
+      if(nd.decision==='kept')m='<circle class="nk" cx="'+cx+'" cy="'+cy+'" r="5"/>';
+      else if(nd.decision==='reverted')m='<circle class="nr" cx="'+cx+'" cy="'+cy+'" r="3.6"/>';
+      else{var s=3.6;m='<path class="ne" d="M'+(cx-s)+','+(cy-s)+' L'+(cx+s)+','+(cy+s)+' M'+(cx+s)+','+(cy-s)+' L'+(cx-s)+','+(cy+s)+'"/>';}
+      if(nd.recorded==='kept'&&nd.decision!=='kept')m+='<circle class="nwas" cx="'+cx+'" cy="'+cy+'" r="7.5"/>';
+      // the number stands under the dot, in the gap before the lanes to other families
+      g+='<a class="ng f'+fams[nd.fam].c+'" data-key="'+k+'" href="/exp/'+encodeURIComponent(nd.key)+'" target="_blank" rel="noopener" aria-label="'+esc(nd.n+': '+nd.title)+'">'+m
+        +'<circle class="hit" cx="'+cx+'" cy="'+cy+'" r="9" fill="transparent"/>'
+        +'<text class="nlab'+(ten?' ten':'')+'" x="'+cx+'" y="'+(cy+20)+'" text-anchor="middle">'+nd.n+'</text></a>';
+    });
+    pivots.forEach(function(pv){if(!(pv.id in geo.px))return;var cx=geo.px[pv.id],ty=8;
+      g+='<a href="/pivot/'+encodeURIComponent(pv.id)+'"><path d="M'+(cx-3.5)+','+(ty-2.8)+' L'+(cx+3.5)+','+(ty-2.8)+' L'+cx+','+(ty+2.8)+' z" fill="var(--accent)"/>'
+        +'<text class="lpivot-lab" x="'+(cx+6)+'" y="'+(ty+3.6)+'">'+esc(pv.id)+'</text><title>'+esc(pv.label)+'</title></a>';});
+    host.innerHTML='<svg id="lin" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>';
+    svg=document.getElementById('lin');
+  }
+
+  function clearLit(){svg.querySelectorAll('.lit,.lit-direct').forEach(function(el){el.classList.remove('lit','lit-direct');});}
+  function mark(k,cls){var el=svg.querySelector('.ng[data-key="'+CSS.escape(k)+'"]');if(el)el.classList.add(cls);}
+  function lit(key){
+    clearLit();
+    var chain=[key],cur=key;while((cur=parentOf(cur))&&chain.indexOf(cur)<0)chain.push(cur);
+    chain.forEach(function(k,i){mark(k,i<2?'lit-direct':'lit');});
+    svg.querySelectorAll('.edge').forEach(function(e){var c=e.getAttribute('data-c'),i=chain.indexOf(c);
+      if(i>=0&&e.getAttribute('data-p')===chain[i+1])e.classList.add(i===0?'lit-direct':'lit');});
+  }
+  function litEdge(c,p){clearLit();mark(c,'lit-direct');mark(p,'lit-direct');
+    svg.querySelectorAll('.edge[data-c="'+CSS.escape(c)+'"]').forEach(function(e){e.classList.add('lit-direct');});}
+
+  function placeTip(el){
+    var r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight,cx=r.left+r.width/2;
+    var left=Math.max(8,Math.min(cx-w/2,window.innerWidth-w-8)),top=r.bottom+6;
+    if(top+h>window.innerHeight-8)top=Math.max(8,r.top-h-6);
+    tip.style.left=left+'px';tip.style.top=top+'px';
+  }
+  function showTip(key,el){
+    var nd=byKey[key],f=fams[nd.fam],p=parentOf(key),ks=kids[key]||[];
+    var verdict=nd.decision==='kept'?'kept':nd.decision==='reverted'?'reverted':esc(nd.decision||'no verdict');
+    var meta='#'+nd.n+' · '+esc(f.label)+' · '+verdict+(nd.loss?' · loss '+esc(nd.loss):'')+' · '+nd.cribs+'/24 cribs';
+    var html='<div class="pop-title">'+esc(nd.title)+'</div><div class="pop-meta">'+meta+'</div>';
+    if(nd.summary)html+='<div class="pop-sec"><div class="pop-h">In plain words</div><p>'+esc(nd.summary)+'</p></div>';
+    if(nd.note)html+='<div class="pop-sec"><div class="pop-h">Kept when it ran, reverted under today\'s rules</div><p>'+esc(nd.note)+'</p></div>';
+    html+='<div class="pop-sec"><div class="pop-h">Built on</div>'+(p?'<span class="pop-parent">#'+byKey[p].n+' '+esc(short(byKey[p].title,60))+'</span>':'<p>Nothing: it starts a line.</p>')+'</div>';
+    if(ks.length)html+='<div class="pop-sec"><div class="pop-h">Built on by</div><p>'+ks.map(function(k){return '#'+byKey[k].n;}).join(', ')+'</p></div>';
+    tip.innerHTML=html;tip.style.opacity='1';shownKey=key;placeTip(el);
+  }
+  function hideTip(){tip.style.opacity='0';shownKey=null;}
+
+  // a light band down the slot under the pointer; it never dims the rest
+  var colOn=null;
+  function colHi(key){
+    if(colOn===key)return;
+    if(colOn)svg.querySelectorAll('.row-on,.rhit.on').forEach(function(el){el.classList.remove('row-on','on');});
+    colOn=key;if(!key)return;
+    var q='[data-key="'+CSS.escape(key)+'"]',b=svg.querySelector('.rhit'+q),l=svg.querySelector('.lcol'+q),n=svg.querySelector('.ng'+q);
+    if(b)b.classList.add('on');if(l)l.classList.add('row-on');if(n)n.classList.add('row-on');
+  }
+  function colAt(e){var r=svg.getBoundingClientRect(),xx=e.clientX-r.left,best=null,bd=SX/2+0.01;
+    nodes.forEach(function(nd){var d=Math.abs(xx-geo.x[nd.key]);if(d<bd){bd=d;best=nd.key;}});return best;}
+  function wire(){
+    colOn=null;
+    svg.addEventListener('mousemove',function(e){colHi(colAt(e));});
+    svg.addEventListener('mouseleave',function(){colHi(null);});
+    svg.addEventListener('pointerdown',function(e){lastPointer=e.pointerType||'mouse';});
+    svg.querySelectorAll('.edge').forEach(function(e){var h=document.createElementNS('http://www.w3.org/2000/svg','path');
+      h.setAttribute('class','ehit');h.setAttribute('d',e.getAttribute('d'));h.setAttribute('data-c',e.getAttribute('data-c'));h.setAttribute('data-p',e.getAttribute('data-p'));e.after(h);});
+    svg.addEventListener('mouseover',function(e){var h=e.target.closest('.ehit');if(h)litEdge(h.getAttribute('data-c'),h.getAttribute('data-p'));});
+    svg.addEventListener('mouseout',function(e){if(e.target.closest('.ehit')&&!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('.ng')))clearLit();});
+    svg.addEventListener('mouseover',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');lit(k);showTip(k,a);});
+    svg.addEventListener('mouseout',function(e){var a=e.target.closest('.ng');if(!a||a.contains(e.relatedTarget))return;clearLit();hideTip();});
+    svg.addEventListener('focusin',function(e){var a=e.target.closest('.ng');if(a){var k=a.getAttribute('data-key');lit(k);showTip(k,a);}});
+    svg.addEventListener('focusout',function(){clearLit();hideTip();});
+    svg.addEventListener('click',function(e){var a=e.target.closest('.ng');if(!a)return;var k=a.getAttribute('data-key');
+      if(lastPointer==='touch'&&shownKey!==k){e.preventDefault();lit(k);showTip(k,a);}});
+  }
+  render();wire();
+  // open at the most recent experiment, at the right-hand end
+  if(!location.hash)host.scrollLeft=host.scrollWidth;
+  host.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
+  window.addEventListener('scroll',function(){if(shownKey){clearLit();hideTip();}},{passive:true});
+})();
+</script>"""
+
+
+def lineage_line_page():
+    rows = load_results()
+    data = lineage_data(rows)
+    fams = data["families"]
+    key = "".join(f'<span class="fk f{f["c"]}" title="{esc(f["name"])}"><span class="sw"></span><span class="nm">{esc(f["label"])}</span><span class="cnt">{f["count"]}</span></span>' for f in fams)
+    legend = (LIN_LEGEND.replace("reverted, in its family's colour", "reverted")
+              .replace('<span class="ldot lkept"></span>kept', '<span class="ldot lkept"></span>kept, ringed in ink')
+              .replace("built on a parent in the same family", "same family, above the line")
+              .replace("built on a parent in another family", "another family, below the line"))
+    blob = json.dumps(data).replace("</", "<\\/")
+    body = f"""<style>{LIN_CSS}{LINH_CSS}</style><div class="lin">
+{page_head("Lineage", "The lineage on one line", "Every experiment on one line, left to right in the order it ran, each dot in its family's colour. A curve above the line joins an experiment to a parent in its own family; a dashed curve below joins it to a parent in another family. A parent just before its child joins it along the line. Hover a dot to trace its line back to the root. Click a dot to open its record in a new tab.")}
+{sec(1, "Every experiment in run order")}<div class="linh-legend" style="max-width:980px;margin:0 auto">{legend}<div class="linh-key">{key}</div></div>
+<div class="lin-box"><div id="lin-diagram"></div></div>
+{page_foot('The same lineage in family columns is on the <a href="/lineage">lineage</a> page.')}
+<div id="lin-tip" role="tooltip"></div>
+<script id="lin-data" type="application/json">{blob}</script></div>{LINH_JS}"""
+    return page("research lineage on one line", body, "/lineage")
+
+
 TREE_CSS = """<style>
 .ht-wrap{width:calc(50% + 50vw - 32px);margin:4px 0 28px}
 .ht li,.ht p{max-width:none}
@@ -2735,6 +2916,8 @@ def route(path):
             return ("model/gltf-binary", f.read_bytes())
     if path == "/lineage":
         return lineage_page()
+    if path == "/lineage/line":
+        return lineage_line_page()
     if path in ("/experiments", "/live"):
         return live_page()
     if path == "/glossary":

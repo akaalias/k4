@@ -133,7 +133,7 @@ def mins(sec):
 def backlog_line(width):
     try:
         text = (ROOT / "order-of-work.md").read_text()
-        st = [(re.match(r"[a-z]*", m.strip().strip("*`").lower()).group(0)) for m in re.findall(r"^\| \*\*[A-Z][\w.]*\*\*[^|]*\| ([^|]+?) \|", text, re.M)]
+        st = [(re.match(r"[a-z]*", m.strip().strip("*`").lower()).group(0)) for m in re.findall(r"^\| \*\*[A-Z][\w.-]*\*\*[^|]*\| ([^|]+?) \|", text, re.M)]
         done = sum(1 for x in st if x in ("closed", "blocked"))
         n_exp = max(0, len((ROOT / "results.tsv").read_text().splitlines()) - 1)
     except OSError:

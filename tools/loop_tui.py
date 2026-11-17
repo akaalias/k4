@@ -54,7 +54,7 @@ def bar(frac, width=30, colour=ACCENT, blocked=0.0, glyph="█"):
             + Text(glyph * (width - n - b), style="grey23"))   # one glyph, so fill and track match
 
 
-ITEM_ROW = r"^\| \*\*([A-Z][\w.]*)\*\* ?([^|]*)\| ([^|]+?) \|"
+ITEM_ROW = r"^\| \*\*([A-Z][\w.-]*)\*\* ?([^|]*)\| ([^|]+?) \|"
 
 
 def status_word(s):

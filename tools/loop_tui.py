@@ -44,14 +44,14 @@ def mins(sec):
     return lw.mins(max(0, sec))
 
 
-def bar(frac, width=30, colour=ACCENT, blocked=0.0):
+def bar(frac, width=30, colour=ACCENT, blocked=0.0, glyph="█"):
     """Done in the accent, then blocked in red (issue #121), then the open track."""
     n = max(0, min(width, round(frac * width)))
     b = max(0, min(width, round((frac + blocked) * width))) - n if blocked else 0
     if frac + blocked < 1 and n + b == width:   # an open item always leaves a cell of track (23/24 is not full)
         b, n = (b - 1, n) if b > 1 or n == 0 else (b, n - 1)
-    return (Text("█" * n, style=colour) + Text("█" * b, style=BAD)
-            + Text("█" * (width - n - b), style="grey23"))   # one glyph, so fill and track match
+    return (Text(glyph * n, style=colour) + Text(glyph * b, style=BAD)
+            + Text(glyph * (width - n - b), style="grey23"))   # one glyph, so fill and track match
 
 
 ITEM_ROW = r"^\| \*\*([A-Z][\w.]*)\*\* ?([^|]*)\| ([^|]+?) \|"
@@ -272,7 +272,35 @@ def header():
     return Panel(t, box=box.HEAVY, style="bold")
 
 
-def backlog_panel():
+def short_name(name):
+    """A finished section's code for the compact list (issue #122): "F13", "S2.4", "F8/5/9", "D" for the decider."""
+    codes = re.findall(r"\b(?:S\d\.\d|F\d+)\b", name)
+    if codes:
+        return codes[0] + "".join("/" + c[1:] for c in codes[1:]) if name.startswith(codes[0]) else codes[0]
+    return "D" if "decider" in name else name.split()[0][:6]
+
+
+def finished_grid(secs, width, rows):
+    """The finished sections, several to a line, each a code, a thin bar (closed, then blocked in red) and its
+    count, all muted so the open sections stay in front (issue #122). None if they do not fit in `rows` lines."""
+    if not secs or rows < 1:
+        return None
+    label = max(len(short_name(n)) for n, *_ in secs)
+    cell = label + 1 + 6 + 1 + 5 + 2
+    cols = max(1, width // cell)
+    if -(-len(secs) // cols) > rows:
+        return None
+    g = Table.grid(expand=False, padding=(0, 2, 0, 0))
+    for _ in range(cols):
+        g.add_column(no_wrap=True)
+    cells = [Text.assemble((f"{short_name(n):<{label}} ", MUTED), bar((d - b) / t, 6, blocked=b / t, glyph="━"),
+                           (f" {d:>2}/{t:<2}", MUTED)) for n, d, t, _, b in secs]
+    for i in range(0, len(cells), cols):
+        g.add_row(*cells[i:i + cols])
+    return g
+
+
+def backlog_panel(width=70, height=None):
     secs = backlog()
     running_item = lw.attack_info()[0] if lw.current_phase()[2] else None
     done = sum(d for _, d, _, _, _ in secs)
@@ -291,15 +319,22 @@ def backlog_panel():
         if d == n:
             continue
         t.add_row(Text(name, overflow="ellipsis", no_wrap=True), bar((d - b) / n, 12, blocked=b / n), Text(f"{d}/{n}", style=MUTED))
-    closed = sum(1 for _, d, n, _, _ in secs if d == n)
-    t.add_row(Text(f"{closed} more sections closed or blocked", style=MUTED), Text(""), Text(""))
+    finished = [s for s in secs if s[1] == s[2]]
+    # lines left for the finished list: borders 2, top bar 1, blanks 3, open rows, the next line (about 2)
+    spare = (height - 2 - 1 - 3 - (len(secs) - len(finished)) - 2) if height else len(finished)
+    grid = finished_grid(finished, width - 4, spare)
     nx = Text("next after this  " if running_item else "next  ", style=MUTED)
     if nxt:
         d = re.sub(r"[*`]", "", nxt[1]).strip()
         nx += Text(f"{nxt[0]}  ", style="bold") + Text(d if len(d) <= 160 else d[:159] + "…", style="default")
     else:
         nx += Text("nothing open", style=BAD)
-    return Panel(Group(top, Text(""), t, Text(""), nx), title="backlog", title_align="left", border_style="grey50")
+    if grid is None:
+        t.add_row(Text(f"{len(finished)} more sections closed or blocked", style=MUTED), Text(""), Text(""))
+        body = [top, Text(""), t, Text(""), nx]
+    else:
+        body = [top, Text(""), t, Text(""), grid, Text(""), nx]
+    return Panel(Group(*body), title="backlog", title_align="left", border_style="grey50")
 
 
 def experiment_panel(tick):
@@ -433,7 +468,8 @@ def render(act, tick, height):
     need = len(Console(width=max(40, w)).render_lines(exp))
     top = max(height * 5 // 9, min(need, height - 3 - 1 - 8))
     lay.split_column(Layout(header(), size=3), Layout(name="top", size=top), Layout(name="bottom"), Layout(footer(), size=1))
-    lay["top"].split_row(Layout(exp, ratio=6), Layout(backlog_panel(), ratio=5))
+    cols = shutil.get_terminal_size((160, 45)).columns
+    lay["top"].split_row(Layout(exp, ratio=6), Layout(backlog_panel(cols * 5 // 11, top), ratio=5))
     lay["bottom"].split_row(Layout(recent_panel(), ratio=6), Layout(activity_panel(act, max(3, height * 4 // 9 - 3)), ratio=5))
     return lay
 

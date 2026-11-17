@@ -275,3 +275,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0274	0274-f16.1a-one-free-alphabet-on-the-20-official-letters	16-simple-hand-methods	0208-one-free-alphabet-with-slips-at-known-places	reverted	0	0	0			475	design=172 test=37 run=474 record=0
 0275	0275-f16.1b-two-dictionary-keyword-alphabets-on-the-20-official-letters	16-simple-hand-methods	0244-f14-two-dictionary-keyword-alphabets-and-a-key-word	reverted	0	0	0			354	test=18 run=354 record=0
 0276	0276-f16.1c-autokeys-on-the-20-official-letters	16-simple-hand-methods	0213-plaintext-autokey-with-slips-and-a-lost-step	reverted	0	0	0			320	test=18 run=320 record=0
+0277	0277-f16.1d-gromark-on-the-20-official-letters	16-simple-hand-methods	0262-f5.2-gromark-free-alphabet-base-26-lag-6-and-longer-lags	reverted	0	0	0			3866	test=18 run=3866 record=0

@@ -23,18 +23,25 @@ current numbers are on the site.
 
 Decided 2026-10-14. A reproducible procedure that turns the 97-letter K4 ciphertext into 97 letters that:
 
-1. contain `EASTNORTHEAST` at positions 22 to 34 and `BERLINCLOCK` at 64 to 74, exactly
-   (position 1 is the O of OBKR);
-2. read as English, allowing the one or two deliberate mistakes Sanborn puts in every section, and
-   X as a separator;
-3. re-encrypt to the exact sculpture ciphertext when the procedure is run forward;
-4. come from a procedure a person could carry out by hand in 1990, written down step by step, keyed
-   by something with a short description (key words, a named text and a place in it) rather than
-   letters fitted to the known places.
+1. contain Sanborn's published clues exactly: NORTHEAST at positions 26-34 (2020), BERLIN at 64-69 (2010) and
+   CLOCK at 70-74 (2014), position 1 being the O of OBKR; and EAST at 22-25, which Sanborn confirmed privately
+   (August 2020, second-hand), so it weighs less: a reading that misses only EAST is reported, not discarded;
+2. read as English, allowing deliberate misspellings like those Sanborn confirmed in K1-K3, and X as a separator
+   as in K2;
+3. re-encrypt to the sculpture ciphertext when the procedure is run forward, allowing a carving or enciphering
+   slip of the kind K2 has (a letter lost); the slip is named in the key, not hidden;
+4. come from a procedure a person could carry out by hand in 1990, written down step by step, keyed by key
+   words, a named text and a place in it, or a chart or table (Sanborn's archive holds hand-drawn coding charts),
+   rather than letters fitted to the known places. A key with a short description is preferred, after Scheidt
+   (2011: "simple, can be remembered... with the correct key word/s"), but that preference is the project's own and is not a gate;
+5. once K5 is published (97 letters, "a similar coding system to K4", BERLINCLOCK in the same place; Sanborn,
+   November 2025), give readable text from K5 by the same procedure.
 
-Words without a method is not success. There is no external oracle: the loop certifies on these
-four criteria, the same standard that settled K1 to K3 before Sanborn confirmed anything. The
-verifier offered by the buyer of Sanborn's archive (2025) is not used.
+Words without a method is not success: Sanborn, after the 2025 archive find, "K4 has not been solved. K4 has been
+discovered." The only official check today is Paradigm's plaintext-hash verifier ($1 a try, 2026), which asks for no
+method; the loop certifies on these criteria, and whether a candidate also goes to the verifier is Alexis's call. A
+correct plaintext is not the whole of Kryptos: Sanborn says it "leads somewhere else". Criteria revised 2026-11-17
+against the official sources (#124).
 
 ## How the loop works
 

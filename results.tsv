@@ -272,3 +272,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0271	0271-f14.2-a-remembered-route-plus-two-dictionary-keyword-alphabets	14-scheidt-mask-keyed-by-words	0244-f14-two-dictionary-keyword-alphabets-and-a-key-word	reverted	0	0	0			88	unattributed=27054 run=88 record=0
 0272	0272-f14.2a-0271s-flawed-settings-decided-in-full	14-scheidt-mask-keyed-by-words	0271-f14.2-a-remembered-route-plus-two-dictionary-keyword-alphabets	reverted	0	0	0			191	design=14 implement=143 test=42 run=191 record=0
 0273	0273-f14.2b-0272s-edge-cell-a25-on-2000-fresh-shuffles	14-scheidt-mask-keyed-by-words	0272-f14.2a-0271s-flawed-settings-decided-in-full	reverted	0	0	0			82	design=48 implement=0 test=37 run=82 record=0
+0274	0274-f16.1a-one-free-alphabet-on-the-20-official-letters	16-simple-hand-methods	0208-one-free-alphabet-with-slips-at-known-places	reverted	0	0	0			475	design=172 test=37 run=474 record=0

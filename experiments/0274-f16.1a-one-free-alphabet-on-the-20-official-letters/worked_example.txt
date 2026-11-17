@@ -1,0 +1,7 @@
+Beaufort form: A(carved) = k[slot] - A(known), on the 20 official letters
+
+  length  7: 20 letters dead   24 letters dead
+  length 11: 20 letters fit    24 letters dead
+  length 23: 20 letters fit    24 letters fit
+
+(With EAST set aside, fewer lines must hold, so more lengths fit; the shuffles say whether K4 fits more than chance.)

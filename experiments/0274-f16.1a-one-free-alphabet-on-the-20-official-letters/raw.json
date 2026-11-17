@@ -1,0 +1,1877 @@
+{
+ "candidates": [],
+ "bounds": {
+  "family": "one unknown alphabet on both sides (Quagmire III), periodic key 1-26, forms V and B, on the 20 official known letters (26-34, 64-74), 0-2 slips (F16.1a)",
+  "known_places": [
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74
+  ],
+  "key_lengths": [
+   1,
+   26
+  ],
+  "slips": [
+   0,
+   2
+  ],
+  "drop_sets": "every set of 0-2 of the 20 places (211 per cell), supersets of a fitting set skipped; 0119's decide() via 0208's attack.py unchanged",
+  "slip_cost_bits": {
+   "1": 9.0,
+   "2": 17.0
+  },
+  "preregistered": {
+   "shortest_V_k0": {
+    "k4": 25,
+    "copies_min": 4,
+    "copies_median": 13,
+    "copies_max": 25,
+    "copies_as_extreme": 200,
+    "p": 1.0,
+    "flag": false
+   },
+   "shortest_B_k0": {
+    "k4": 11,
+    "copies_min": 6,
+    "copies_median": 11,
+    "copies_max": 25,
+    "copies_as_extreme": 108,
+    "p": 0.5423,
+    "flag": false
+   },
+   "cells_fit_k0": {
+    "k4": 9,
+    "copies_min": 6,
+    "copies_median": 15,
+    "copies_max": 27,
+    "copies_as_extreme": 189,
+    "p": 0.9453,
+    "flag": false
+   },
+   "cells_fit_k1": {
+    "k4": 23,
+    "copies_min": 16,
+    "copies_median": 30,
+    "copies_max": 41,
+    "copies_as_extreme": 180,
+    "p": 0.9005,
+    "flag": false
+   },
+   "cells_fit_k2": {
+    "k4": 34,
+    "copies_min": 28,
+    "copies_median": 39,
+    "copies_max": 46,
+    "copies_as_extreme": 180,
+    "p": 0.9005,
+    "flag": false
+   }
+  },
+  "flagged": [],
+  "cells": {
+   "V1": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     0
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B1": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     0
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V2": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     2
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B2": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     0
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V3": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     1,
+     7
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B3": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     0
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V4": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     1,
+     7,
+     48
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B4": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     1,
+     9
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V5": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     1,
+     40
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B5": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     0,
+     0,
+     15
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V6": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     15,
+     74,
+     145
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B6": {
+    "k4_20": [
+     0,
+     0,
+     8
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      28,
+      32
+     ],
+     [
+      28,
+      74
+     ],
+     [
+      30,
+      32
+     ],
+     [
+      30,
+      74
+     ],
+     [
+      32,
+      64
+     ],
+     [
+      32,
+      66
+     ],
+     [
+      64,
+      74
+     ],
+     [
+      66,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     6,
+     32,
+     92
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V7": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     27,
+     98,
+     161
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B7": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     9,
+     40,
+     124
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V8": {
+    "k4_20": [
+     0,
+     0,
+     1
+    ],
+    "k4_24": [
+     0,
+     0,
+     1
+    ],
+    "k4_20_sets": [
+     [
+      33,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     37,
+     97,
+     161
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 8
+   },
+   "B8": {
+    "k4_20": [
+     0,
+     0,
+     8
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      28,
+      29
+     ],
+     [
+      28,
+      69
+     ],
+     [
+      29,
+      34
+     ],
+     [
+      29,
+      66
+     ],
+     [
+      29,
+      68
+     ],
+     [
+      34,
+      69
+     ],
+     [
+      66,
+      69
+     ],
+     [
+      68,
+      69
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     19,
+     83,
+     157
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V9": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     2,
+     55,
+     140
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B9": {
+    "k4_20": [
+     0,
+     0,
+     2
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      27,
+      28
+     ],
+     [
+      28,
+      72
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     1,
+     41,
+     118
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V10": {
+    "k4_20": [
+     0,
+     0,
+     2
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      33,
+      74
+     ],
+     [
+      73,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     55,
+     130,
+     182
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B10": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      29
+     ],
+     [
+      69
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     51,
+     129,
+     175
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V11": {
+    "k4_20": [
+     0,
+     0,
+     4
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      30,
+      33
+     ],
+     [
+      30,
+      66
+     ],
+     [
+      33,
+      74
+     ],
+     [
+      66,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     60,
+     134,
+     184
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B11": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     54,
+     141,
+     190
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V12": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     70,
+     157,
+     193
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B12": {
+    "k4_20": [
+     0,
+     4,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     8
+    ],
+    "k4_20_sets": [
+     [
+      28
+     ],
+     [
+      30
+     ],
+     [
+      64
+     ],
+     [
+      66
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     72,
+     144,
+     185
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V13": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     4
+    ],
+    "k4_20_sets": [
+     [
+      33
+     ],
+     [
+      72
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     56,
+     142,
+     187
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B13": {
+    "k4_20": [
+     0,
+     0,
+     4
+    ],
+    "k4_24": [
+     0,
+     0,
+     4
+    ],
+    "k4_20_sets": [
+     [
+      29,
+      30
+     ],
+     [
+      29,
+      69
+     ],
+     [
+      30,
+      68
+     ],
+     [
+      68,
+      69
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     69,
+     148,
+     190
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V14": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     4
+    ],
+    "k4_20_sets": [
+     [
+      32
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     89,
+     163,
+     191
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B14": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      32
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     86,
+     167,
+     197
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V15": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     3,
+     113,
+     192
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B15": {
+    "k4_20": [
+     0,
+     0,
+     4
+    ],
+    "k4_24": [
+     0,
+     0,
+     4
+    ],
+    "k4_20_sets": [
+     [
+      27,
+      28
+     ],
+     [
+      27,
+      73
+     ],
+     [
+      28,
+      72
+     ],
+     [
+      72,
+      73
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     4,
+     124,
+     187
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V16": {
+    "k4_20": [
+     0,
+     0,
+     4
+    ],
+    "k4_24": [
+     0,
+     0,
+     4
+    ],
+    "k4_20_sets": [
+     [
+      26,
+      33
+     ],
+     [
+      26,
+      65
+     ],
+     [
+      33,
+      74
+     ],
+     [
+      65,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     125,
+     182,
+     197
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B16": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     120,
+     183,
+     198
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V17": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     7,
+     130,
+     193
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B17": {
+    "k4_20": [
+     0,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [],
+    "copies_fitting_at_k_or_less": [
+     5,
+     123,
+     185
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V18": {
+    "k4_20": [
+     0,
+     0,
+     8
+    ],
+    "k4_24": [
+     0,
+     0,
+     8
+    ],
+    "k4_20_sets": [
+     [
+      28,
+      33
+     ],
+     [
+      28,
+      69
+     ],
+     [
+      30,
+      33
+     ],
+     [
+      30,
+      69
+     ],
+     [
+      33,
+      64
+     ],
+     [
+      33,
+      66
+     ],
+     [
+      64,
+      69
+     ],
+     [
+      66,
+      69
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     84,
+     170,
+     196
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B18": {
+    "k4_20": [
+     0,
+     4,
+     0
+    ],
+    "k4_24": [
+     0,
+     4,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      28
+     ],
+     [
+      30
+     ],
+     [
+      64
+     ],
+     [
+      66
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     83,
+     155,
+     189
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V19": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      33
+     ],
+     [
+      71
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     5,
+     83,
+     159
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B19": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      26
+     ],
+     [
+      64
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     6,
+     75,
+     167
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V20": {
+    "k4_20": [
+     0,
+     0,
+     4
+    ],
+    "k4_24": [
+     0,
+     0,
+     4
+    ],
+    "k4_20_sets": [
+     [
+      33,
+      34
+     ],
+     [
+      33,
+      74
+     ],
+     [
+      34,
+      73
+     ],
+     [
+      73,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     61,
+     138,
+     188
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B20": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      29
+     ],
+     [
+      69
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     73,
+     151,
+     186
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V21": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     4
+    ],
+    "k4_20_sets": [
+     [
+      32
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     89,
+     163,
+     191
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B21": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      32
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     86,
+     167,
+     197
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V22": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     8
+    ],
+    "k4_20_sets": [
+     [
+      30
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     102,
+     174,
+     198
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B22": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     100,
+     180,
+     197
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V23": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      28
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     126,
+     192,
+     199
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B23": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     1,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     121,
+     192,
+     200
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V24": {
+    "k4_20": [
+     0,
+     2,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     [
+      26
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": [
+     172,
+     200,
+     200
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B24": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     173,
+     200,
+     200
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V25": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     0,
+     4
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     200,
+     200,
+     200
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B25": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     200,
+     200,
+     200
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "V26": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     0,
+     2,
+     0
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     200,
+     200,
+     200
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   },
+   "B26": {
+    "k4_20": [
+     1,
+     0,
+     0
+    ],
+    "k4_24": [
+     1,
+     0,
+     0
+    ],
+    "k4_20_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": [
+     200,
+     200,
+     200
+    ],
+    "undecided_k4": 0,
+    "undecided_copies": 0
+   }
+  },
+  "only_east_closed": [
+   {
+    "cell": "B6",
+    "k": 2,
+    "k4_minimal_sets": [
+     [
+      28,
+      32
+     ],
+     [
+      28,
+      74
+     ],
+     [
+      30,
+      32
+     ],
+     [
+      30,
+      74
+     ],
+     [
+      32,
+      64
+     ],
+     [
+      32,
+      66
+     ],
+     [
+      64,
+      74
+     ],
+     [
+      66,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 92
+   },
+   {
+    "cell": "B8",
+    "k": 2,
+    "k4_minimal_sets": [
+     [
+      28,
+      29
+     ],
+     [
+      28,
+      69
+     ],
+     [
+      29,
+      34
+     ],
+     [
+      29,
+      66
+     ],
+     [
+      29,
+      68
+     ],
+     [
+      34,
+      69
+     ],
+     [
+      66,
+      69
+     ],
+     [
+      68,
+      69
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 157
+   },
+   {
+    "cell": "B9",
+    "k": 2,
+    "k4_minimal_sets": [
+     [
+      27,
+      28
+     ],
+     [
+      28,
+      72
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 118
+   },
+   {
+    "cell": "V10",
+    "k": 2,
+    "k4_minimal_sets": [
+     [
+      33,
+      74
+     ],
+     [
+      73,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 182
+   },
+   {
+    "cell": "B10",
+    "k": 1,
+    "k4_minimal_sets": [
+     [
+      29
+     ],
+     [
+      69
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 129
+   },
+   {
+    "cell": "V11",
+    "k": 2,
+    "k4_minimal_sets": [
+     [
+      30,
+      33
+     ],
+     [
+      30,
+      66
+     ],
+     [
+      33,
+      74
+     ],
+     [
+      66,
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 184
+   },
+   {
+    "cell": "B11",
+    "k": 0,
+    "k4_minimal_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": 54
+   },
+   {
+    "cell": "B12",
+    "k": 1,
+    "k4_minimal_sets": [
+     [
+      28
+     ],
+     [
+      30
+     ],
+     [
+      64
+     ],
+     [
+      66
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 144
+   },
+   {
+    "cell": "V13",
+    "k": 1,
+    "k4_minimal_sets": [
+     [
+      33
+     ],
+     [
+      72
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 142
+   },
+   {
+    "cell": "V14",
+    "k": 1,
+    "k4_minimal_sets": [
+     [
+      32
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 163
+   },
+   {
+    "cell": "B14",
+    "k": 1,
+    "k4_minimal_sets": [
+     [
+      32
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 167
+   },
+   {
+    "cell": "B16",
+    "k": 0,
+    "k4_minimal_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": 120
+   },
+   {
+    "cell": "V21",
+    "k": 1,
+    "k4_minimal_sets": [
+     [
+      32
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 163
+   },
+   {
+    "cell": "B21",
+    "k": 1,
+    "k4_minimal_sets": [
+     [
+      32
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 167
+   },
+   {
+    "cell": "V22",
+    "k": 1,
+    "k4_minimal_sets": [
+     [
+      30
+     ],
+     [
+      74
+     ]
+    ],
+    "copies_fitting_at_k_or_less": 174
+   },
+   {
+    "cell": "B22",
+    "k": 0,
+    "k4_minimal_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": 100
+   },
+   {
+    "cell": "B24",
+    "k": 0,
+    "k4_minimal_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": 173
+   },
+   {
+    "cell": "V25",
+    "k": 0,
+    "k4_minimal_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": 200
+   },
+   {
+    "cell": "B25",
+    "k": 0,
+    "k4_minimal_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": 200
+   },
+   {
+    "cell": "V26",
+    "k": 0,
+    "k4_minimal_sets": [
+     []
+    ],
+    "copies_fitting_at_k_or_less": 200
+   }
+  ],
+  "plants": [
+   {
+    "seed": 16101,
+    "L": 7,
+    "form": "V",
+    "k": 0,
+    "slips": [],
+    "planted_slips_fit": true,
+    "count_at_k": 1,
+    "own_copies_fitting_at_k": 4,
+    "own_copies_max": 1,
+    "found": false
+   },
+   {
+    "seed": 16102,
+    "L": 7,
+    "form": "B",
+    "k": 1,
+    "slips": [
+     33
+    ],
+    "planted_slips_fit": true,
+    "count_at_k": 1,
+    "own_copies_fitting_at_k": 5,
+    "own_copies_max": 2,
+    "found": false
+   },
+   {
+    "seed": 16103,
+    "L": 11,
+    "form": "B",
+    "k": 2,
+    "slips": [
+     71,
+     73
+    ],
+    "planted_slips_fit": true,
+    "count_at_k": 1,
+    "own_copies_fitting_at_k": 18,
+    "own_copies_max": 4,
+    "found": false
+   },
+   {
+    "seed": 16104,
+    "L": 12,
+    "form": "V",
+    "k": 2,
+    "slips": [
+     30,
+     70
+    ],
+    "planted_slips_fit": true,
+    "count_at_k": 1,
+    "own_copies_fitting_at_k": 20,
+    "own_copies_max": 4,
+    "found": false
+   },
+   {
+    "seed": 16105,
+    "L": 16,
+    "form": "V",
+    "k": 1,
+    "slips": [
+     26
+    ],
+    "planted_slips_fit": true,
+    "count_at_k": 1,
+    "own_copies_fitting_at_k": 15,
+    "own_copies_max": 2,
+    "found": false
+   },
+   {
+    "seed": 16106,
+    "L": 20,
+    "form": "B",
+    "k": 0,
+    "slips": [],
+    "planted_slips_fit": true,
+    "count_at_k": 1,
+    "own_copies_fitting_at_k": 6,
+    "own_copies_max": 1,
+    "found": false
+   }
+  ],
+  "undecided_drop_sets_total": 8,
+  "controls": "200 shuffles of K4 (seeds 16100-16299); each plant against 20 shuffles of its own ciphertext",
+  "exhaustive": "yes: exact per drop set; undecided sets counted",
+  "judge": "not called: where a free alphabet fits, the alphabet and so the reading are undetermined",
+  "modal_cost_estimate_dollars": 0,
+  "aws_cost_estimate_dollars": 0.2
+ },
+ "notes": "pre-registered flags none; K4 {'shortest_V_k0': 25, 'shortest_B_k0': 11, 'cells_fit_k0': 9, 'cells_fit_k1': 23, 'cells_fit_k2': 34}; cells only EAST closed: [('B6', 2), ('B8', 2), ('B9', 2), ('V10', 2), ('B10', 1), ('V11', 2), ('B11', 0), ('B12', 1), ('V13', 1), ('V14', 1), ('B14', 1), ('B16', 0), ('V21', 1), ('B21', 1), ('V22', 1), ('B22', 0), ('B24', 0), ('V25', 0), ('B25', 0), ('V26', 0)]; plants found [False, False, False, False, False, False]; undecided 8",
+ "controls": [],
+ "error": null,
+ "worked_example": "Beaufort form: A(carved) = k[slot] - A(known), on the 20 official letters\n\n  length  7: 20 letters dead   24 letters dead\n  length 11: 20 letters fit    24 letters dead\n  length 23: 20 letters fit    24 letters fit\n\n(With EAST set aside, fewer lines must hold, so more lengths fit; the shuffles say whether K4 fits more than chance.)",
+ "seconds": 405.4130771160126,
+ "compute": {
+  "where": "aws",
+  "instance": "c8g.8xlarge",
+  "zone": "eu-central-1c",
+  "market": "spot",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 406.3,
+  "machine_seconds": 448.0,
+  "dollars": 0.07
+ },
+ "checkpoint": {
+  "file": "cd8336b530e9e502.jsonl",
+  "resumed": 0,
+  "saved": 328
+ }
+}

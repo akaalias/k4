@@ -1,0 +1,8 @@
+ciphertext autokey, lag 9, KRYPTOS table, Vigenere: the key for each known place is the carved letter 9 before it
+
+place  known  key(carved L back)  gives  carved
+   64      B                   U      P       N   x
+   65      E                   D      U       Y   x
+   66      R                   I      J       P   x
+
+failed checks: 20 of 24 (2 allowed as slips)

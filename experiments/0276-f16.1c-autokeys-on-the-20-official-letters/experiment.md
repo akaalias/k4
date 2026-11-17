@@ -1,0 +1,11253 @@
+# 0276-f16.1c-autokeys-on-the-20-official-letters: F16.1c: both autokeys on the 20 official known letters (EAST set aside): 0149 (one free alphabet, every lag), 0212 (ciphertext autokey on every keyword table, progressive key, 0-2 slips or a skipped step) and 0213 (plaintext autokey, 0-2 breaks or a lost step), each run as recorded with only the known letters changed; K4 against their own copies, their own plants, the judge as before
+
+**Family:** 16-simple-hand-methods  
+**Parent:** 0213-plaintext-autokey-with-slips-and-a-lost-step  
+**Decision:** reverted  
+**Run:** 2026-11-17T14:47:39+00:00, 319.7 s, status ran  
+**Time by phase:** test 18 s, run 320 s, record 0 s
+
+## In plain words
+
+In an autokey cipher the key is the message itself (or the cipher text), shifted along by some distance. Three past experiments tested every such scheme we could list and found nothing, but each needed EAST, which Sanborn confirmed only privately. Here the same three searches run again with only the 20 letters he published, on the carving and on the same scrambled copies, with the same planted test messages.
+
+## Walkthrough, by hand
+
+1. Choose a table, a form and a lag, say 12.
+2. For each official known place q past 12, the key letter is the plain (or carved) letter 12 places earlier.
+3. Where that earlier letter is also known (or carved), look up the table: the known letter at q under that key must give the carved letter at q.
+4. Count the checks that fail; allow up to two as slips.
+5. Places 22-25 are not used: their letters are read, not checked.
+6. Do the same on scrambled copies and compare.
+
+## Worked example (generated)
+
+```
+ciphertext autokey, lag 9, KRYPTOS table, Vigenere: the key for each known place is the carved letter 9 before it
+
+place  known  key(carved L back)  gives  carved
+   64      B                   U      P       N   x
+   65      E                   D      U       Y   x
+   66      R                   I      J       P   x
+
+failed checks: 20 of 24 (2 allowed as slips)
+```
+
+## Lineage
+
+Inherits from 0213-plaintext-autokey-with-slips-and-a-lost-step. What changed: F16.1 (issue #123), third part. The three autokey attacks are loaded from their records and run with a context whose known letters are the 20 Sanborn published himself (26-34, 64-74), everything else as recorded: same tables, lags, slips, copies, plants, quadgram cut and judge. The only source edit: 0212's and 0213's compiled C loops have the count of known places written as 24 (`e<24`, `f<24`, `e0<24`); it is replaced by 20 and 0212's `24 - len(slots)` by `len(known) - len(slots)`, each replacement asserted. Their 24-letter records are read back to list what only EAST closed.
+
+## Hypothesis (domain expert)
+
+F1's autokey arm and A1 (C27(a), C27(c); NSA 1992 'plaintext autokey', 05-attacks.md; Gillogly; Bean 2024 'From Gromark to Autoclave'). Criteria revised 2026-11-17 (#124): EAST is second-hand. Models as recorded: 0149 c_i = A^-1(A(p_i) +/- A(x_{i-L})) with x the plain (pt) or cipher (ct) letter L back, one free alphabet A, lags 1-96, three forms, decided exactly; 0212 ciphertext autokey on 487,734 keyword-table setups, lags 1-96, with 0-2 failed checks or one skipped step, and the progressive key; 0213 plaintext autokey on 35,343 tables, lags 1-52, chains between known letters with 0-2 breaks or one lost step. Without EAST, checks that tied 22-25 to 26-34 and 64-74 vanish: fits come at shorter lags and more often, on K4 and copies alike; the question is whether K4 stands outside its copies, and whether its readings beat theirs at the judge.
+
+## Prediction
+
+More fitting cells than with 24 letters on K4 and copies alike; K4 inside its copies on every count (0149's fit counts per kind and form, 0212's and 0213's shortest fitting lag); K4's best judged reading not above every copy's; plants found as in the originals (0212 5/5, 0213 3/3) or nearly. No candidate passes.
+
+## Method
+
+1. Load 0149, 0212, 0213's attack.py from their records (0212 and 0213 with 24 -> 20 in the C loops).
+2. Give each a context whose known letters are the 20 official ones; run each unchanged otherwise.
+3. Compare each count with its own copies, as in the originals.
+4. Read the 24-letter records and list the lags or cells that fit on 20 letters but not on 24.
+5. Readings stay in the bounds.
+
+## Result
+
+Candidates returned: 0. Passed all gates: 0. Best crib hits among all candidates: 0/24
+(no candidates).
+Best loss: None (0 is solved; 10 per missed crib letter; the harness keeps by lowest loss). Best fitness, diagnostic only: None. Champion before this run: none.
+
+| # | gate | cribs | fitness | plaintext | key |
+|---|---|---|---|---|---|
+| - | no candidates | | | | |
+
+### Bounds searched (the negative result this experiment leaves behind)
+
+```
+{
+ "item": "F16.1c",
+ "known_places": [
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74
+ ],
+ "0149": {
+  "bounds_20": {
+   "family": "ciphertext and plaintext autokey on one unknown alphabet (both sides), no move, every lag 1-96, three forms",
+   "solver": "propagation depth-first over the 26 places, node limit 200,000; checked on 6 planted texts",
+   "summary": {
+    "ct/V": {
+     "lags_with_equations": 73,
+     "k4_fit_lags": [
+      37,
+      41,
+      46,
+      60,
+      64,
+      67,
+      69,
+      70,
+      71,
+      72,
+      73
+     ],
+     "coppers_fit_count": [
+      27,
+      14,
+      4,
+      4,
+      20,
+      22,
+      9,
+      16,
+      5,
+      15
+     ],
+     "k4_fit_count": 11
+    },
+    "ct/B": {
+     "lags_with_equations": 73,
+     "k4_fit_lags": [
+      32,
+      34,
+      36,
+      38,
+      41,
+      43,
+      46,
+      47,
+      48,
+      52,
+      54,
+      56,
+      57,
+      59,
+      61,
+      64,
+      66,
+      67,
+      68,
+      69,
+      70,
+      72,
+      73
+     ],
+     "coppers_fit_count": [
+      23,
+      17,
+      23,
+      3,
+      25,
+      16,
+      26,
+      24,
+      4,
+      3
+     ],
+     "k4_fit_count": 23
+    },
+    "ct/R": {
+     "lags_with_equations": 73,
+     "k4_fit_lags": [
+      41,
+      43,
+      60,
+      61,
+      67,
+      69,
+      70,
+      72,
+      73
+     ],
+     "coppers_fit_count": [
+      27,
+      12,
+      4,
+      4,
+      17,
+      30,
+      9,
+      12,
+      4,
+      15
+     ],
+     "k4_fit_count": 9
+    },
+    "pt/V": {
+     "lags_with_equations": 29,
+     "k4_fit_lags": [
+      10,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      41,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      8,
+      9
+     ],
+     "coppers_fit_count": [
+      23,
+      16,
+      11,
+      10,
+      18,
+      19,
+      15,
+      18,
+      15,
+      17
+     ],
+     "k4_fit_count": 20
+    },
+    "pt/B": {
+     "lags_with_equations": 29,
+     "k4_fit_lags": [
+      10,
+      30,
+      31,
+      32,
+      33,
+      36,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      6,
+      7,
+      8,
+      9
+     ],
+     "coppers_fit_count": [
+      20,
+      17,
+      20,
+      15,
+      21,
+      20,
+      21,
+      22,
+      16,
+      14
+     ],
+     "k4_fit_count": 21
+    },
+    "pt/R": {
+     "lags_with_equations": 29,
+     "k4_fit_lags": [
+      10,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37,
+      38,
+      39,
+      41,
+      42,
+      44,
+      46,
+      47,
+      48,
+      8,
+      9
+     ],
+     "coppers_fit_count": [
+      23,
+      18,
+      12,
+      13,
+      19,
+      19,
+      16,
+      18,
+      15,
+      16
+     ],
+     "k4_fit_count": 18
+    }
+   },
+   "undecided": {
+    "k4": 6,
+    "controls": [
+     16,
+     5,
+     0,
+     7,
+     7,
+     8,
+     2,
+     5,
+     19,
+     13
+    ]
+   },
+   "k4_rare_fits": [
+    "ct/B/61",
+    "ct/V/64",
+    "pt/V/39"
+   ],
+   "null_rare_fits_per_copper": [
+    20,
+    7,
+    1,
+    0,
+    13,
+    28,
+    9,
+    13,
+    1,
+    9
+   ],
+   "stop_queue": false,
+   "controls": "10 shuffled coppers (seed 147), identical search",
+   "exhaustive": "exact per cell; undecided counted",
+   "not_covered": "the move-first version (27,852 moves x 96 lags x 3 forms x 11 texts)"
+  },
+  "notes_20": "ct/V K4 11 fits (coppers 4-27), ct/B K4 23 fits (coppers 3-26), ct/R K4 9 fits (coppers 4-30), pt/V K4 20 fits (coppers 10-23), pt/B K4 21 fits (coppers 14-22), pt/R K4 18 fits (coppers 12-23); rare K4 fits 3 vs null 0-28; stop False; undecided K4 6",
+  "notes_24": "ct/V K4 11 fits (coppers 4-27), ct/B K4 23 fits (coppers 3-26), ct/R K4 9 fits (coppers 4-30), pt/V K4 18 fits (coppers 10-22), pt/B K4 23 fits (coppers 14-24), pt/R K4 19 fits (coppers 12-25); rare K4 fits 4 vs null 0-27; stop False; undecided K4 7",
+  "readings_20": [],
+  "controls_20": null
+ },
+ "0212": {
+  "bounds_20": {
+   "family": "ciphertext autokey (union of 0025/0064/0071/0072 tables) and progressive key (0011), 0-2 known letters slipped, or one skipped step (A1.4)",
+   "ca_table_setups": 487734,
+   "ca_lags": "1-96",
+   "skip": "lag L before the e-th known place, L+1 or L-1 from it, e = 2-24, exact fit",
+   "prog": "8 table classes, periods 1-52, steps 1-25, per letter and per repeat",
+   "slips": "0-2 at known places",
+   "readings_judged_when_checks_left": ">= 3",
+   "ca_by_lag": {
+    "1": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "2": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "3": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "4": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "5": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "6": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "7": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "8": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "9": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "10": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "11": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "12": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "13": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "14": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "15": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "16": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "17": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "18": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "19": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "20": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "21": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "22": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "23": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "24": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "25": {
+     "checks": 20,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "26": {
+     "checks": 19,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "27": {
+     "checks": 18,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "28": {
+     "checks": 17,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "29": {
+     "checks": 16,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "30": {
+     "checks": 15,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "31": {
+     "checks": 14,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "32": {
+     "checks": 13,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "33": {
+     "checks": 12,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "34": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "35": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "36": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "37": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "38": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "39": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "40": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "41": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "42": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "43": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "44": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "45": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "46": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "47": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "48": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "49": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "50": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "51": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "52": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "53": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "54": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "55": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "56": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "57": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "58": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "59": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "60": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "61": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "62": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "63": {
+     "checks": 11,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "64": {
+     "checks": 10,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "65": {
+     "checks": 9,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "66": {
+     "checks": 8,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "67": {
+     "checks": 7,
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      2
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "68": {
+     "checks": 6,
+     "k4": [
+      0,
+      0,
+      3
+     ],
+     "copies_max": [
+      0,
+      4,
+      85
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "69": {
+     "checks": 5,
+     "k4": [
+      0,
+      0,
+      146
+     ],
+     "copies_max": [
+      0,
+      15,
+      608
+     ],
+     "copies_min": [
+      0,
+      0,
+      49
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      375,
+      4
+     ]
+    },
+    "70": {
+     "checks": 4,
+     "k4": [
+      0,
+      184,
+      5264
+     ],
+     "copies_max": [
+      25,
+      458,
+      8336
+     ],
+     "copies_min": [
+      0,
+      3,
+      1427
+     ],
+     "skip_k4": [
+      480,
+      1
+     ],
+     "skip_copies_max": [
+      3344,
+      12
+     ]
+    },
+    "71": {
+     "checks": 3,
+     "k4": [
+      30,
+      1954,
+      55341
+     ],
+     "copies_max": [
+      209,
+      4628,
+      74925
+     ],
+     "copies_min": [
+      0,
+      732,
+      35290
+     ],
+     "skip_k4": [
+      12594,
+      103
+     ],
+     "skip_copies_max": [
+      32175,
+      702
+     ]
+    },
+    "72": {
+     "checks": 2,
+     "k4": [
+      739,
+      39263,
+      447732
+     ],
+     "copies_max": [
+      1884,
+      54692,
+      467272
+     ],
+     "copies_min": [
+      94,
+      20368,
+      431158
+     ],
+     "skip_k4": [
+      279036,
+      1731
+     ],
+     "skip_copies_max": [
+      717991,
+      6060
+     ]
+    },
+    "73": {
+     "checks": 1,
+     "k4": [
+      15495,
+      472239,
+      0
+     ],
+     "copies_max": [
+      39730,
+      482288,
+      0
+     ],
+     "copies_min": [
+      5446,
+      448004,
+      0
+     ],
+     "skip_k4": [
+      0,
+      36060
+     ],
+     "skip_copies_max": [
+      0,
+      71175
+     ]
+    },
+    "74": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      294405
+     ],
+     "skip_copies_max": [
+      0,
+      754870
+     ]
+    },
+    "75": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "76": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "77": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "78": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "79": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "80": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "81": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "82": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "83": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "84": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "85": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "86": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "87": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "88": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "89": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "90": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "91": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "92": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "93": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "94": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "95": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "96": {
+     "checks": 0,
+     "k4": [
+      487734,
+      0,
+      0
+     ],
+     "copies_max": [
+      487734,
+      0,
+      0
+     ],
+     "copies_min": [
+      487734,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    }
+   },
+   "ca_k4_above_every_copy_lags": [],
+   "ca_copies_above_rest": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0
+   ],
+   "ca_shortest_lag_fitting": {
+    "K4": 68,
+    "copy1": 68,
+    "copy2": 67,
+    "copy3": 68,
+    "copy4": 67,
+    "copy5": 68,
+    "copy6": 67,
+    "copy7": 67,
+    "copy8": 67,
+    "copy9": 68,
+    "copy10": 67,
+    "copy11": 68,
+    "copy12": 67,
+    "copy13": 68,
+    "copy14": 68,
+    "copy15": 69,
+    "copy16": 67,
+    "copy17": 67,
+    "copy18": 67,
+    "copy19": 68,
+    "copy20": 68
+   },
+   "skip_shortest_lag_fitting": {
+    "K4": 70,
+    "copy1": 69,
+    "copy2": 70,
+    "copy3": 70,
+    "copy4": 69,
+    "copy5": 70,
+    "copy6": 69,
+    "copy7": 69,
+    "copy8": 70,
+    "copy9": 69,
+    "copy10": 70,
+    "copy11": 70,
+    "copy12": 69,
+    "copy13": 70,
+    "copy14": 69,
+    "copy15": 69,
+    "copy16": 70,
+    "copy17": 69,
+    "copy18": 69,
+    "copy19": 69,
+    "copy20": 69
+   },
+   "prog_shortest_period": {
+    "K4": {
+     "per-letter": 16,
+     "per-repeat": 16
+    },
+    "copy1": {
+     "per-letter": 23,
+     "per-repeat": 16
+    },
+    "copy2": {
+     "per-letter": 15,
+     "per-repeat": 15
+    },
+    "copy3": {
+     "per-letter": 23,
+     "per-repeat": 23
+    },
+    "copy4": {
+     "per-letter": 15,
+     "per-repeat": 15
+    },
+    "copy5": {
+     "per-letter": 16,
+     "per-repeat": 16
+    },
+    "copy6": {
+     "per-letter": 16,
+     "per-repeat": 16
+    },
+    "copy7": {
+     "per-letter": 23,
+     "per-repeat": 16
+    },
+    "copy8": {
+     "per-letter": 16,
+     "per-repeat": 16
+    },
+    "copy9": {
+     "per-letter": 15,
+     "per-repeat": 15
+    },
+    "copy10": {
+     "per-letter": 16,
+     "per-repeat": 16
+    },
+    "copy11": {
+     "per-letter": 23,
+     "per-repeat": 23
+    },
+    "copy12": {
+     "per-letter": 16,
+     "per-repeat": 16
+    },
+    "copy13": {
+     "per-letter": 16,
+     "per-repeat": 16
+    },
+    "copy14": {
+     "per-letter": 23,
+     "per-repeat": 23
+    },
+    "copy15": {
+     "per-letter": 23,
+     "per-repeat": 16
+    },
+    "copy16": {
+     "per-letter": 16,
+     "per-repeat": 16
+    },
+    "copy17": {
+     "per-letter": 15,
+     "per-repeat": 15
+    },
+    "copy18": {
+     "per-letter": 23,
+     "per-repeat": 23
+    },
+    "copy19": {
+     "per-letter": 23,
+     "per-repeat": 23
+    },
+    "copy20": {
+     "per-letter": 16,
+     "per-repeat": 16
+    }
+   },
+   "prog_k4_counts": {
+    "per-letter|16": [
+     0,
+     0,
+     8
+    ],
+    "per-letter|23": [
+     0,
+     0,
+     96
+    ],
+    "per-letter|24": [
+     0,
+     400,
+     0
+    ],
+    "per-letter|25": [
+     200,
+     0,
+     0
+    ],
+    "per-letter|26": [
+     200,
+     0,
+     0
+    ],
+    "per-letter|27": [
+     200,
+     0,
+     0
+    ],
+    "per-letter|28": [
+     200,
+     0,
+     0
+    ],
+    "per-letter|29": [
+     200,
+     0,
+     0
+    ],
+    "per-letter|30": [
+     0,
+     400,
+     0
+    ],
+    "per-letter|31": [
+     0,
+     32,
+     736
+    ],
+    "per-letter|32": [
+     0,
+     4,
+     104
+    ],
+    "per-letter|33": [
+     0,
+     2,
+     16
+    ],
+    "per-letter|45": [
+     0,
+     0,
+     12
+    ],
+    "per-letter|46": [
+     0,
+     0,
+     96
+    ],
+    "per-letter|47": [
+     1,
+     28,
+     740
+    ],
+    "per-letter|48": [
+     0,
+     400,
+     0
+    ],
+    "per-letter|49": [
+     200,
+     0,
+     0
+    ],
+    "per-letter|50": [
+     200,
+     0,
+     0
+    ],
+    "per-letter|51": [
+     200,
+     0,
+     0
+    ],
+    "per-letter|52": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|16": [
+     0,
+     0,
+     12
+    ],
+    "per-repeat|23": [
+     0,
+     0,
+     96
+    ],
+    "per-repeat|24": [
+     0,
+     400,
+     0
+    ],
+    "per-repeat|25": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|26": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|27": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|28": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|29": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|30": [
+     8,
+     384,
+     0
+    ],
+    "per-repeat|31": [
+     0,
+     32,
+     736
+    ],
+    "per-repeat|32": [
+     0,
+     2,
+     80
+    ],
+    "per-repeat|33": [
+     0,
+     2,
+     16
+    ],
+    "per-repeat|45": [
+     0,
+     0,
+     12
+    ],
+    "per-repeat|46": [
+     0,
+     0,
+     96
+    ],
+    "per-repeat|47": [
+     1,
+     28,
+     740
+    ],
+    "per-repeat|48": [
+     8,
+     384,
+     0
+    ],
+    "per-repeat|49": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|50": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|51": [
+     200,
+     0,
+     0
+    ],
+    "per-repeat|52": [
+     200,
+     0,
+     0
+    ]
+   },
+   "capped_texts": [],
+   "readings": {
+    "k4": 1492,
+    "copies": [
+     1197,
+     411,
+     522,
+     766,
+     757,
+     2041,
+     1201,
+     3689,
+     2464,
+     797,
+     661,
+     413,
+     932,
+     6986,
+     1230,
+     4196,
+     643,
+     7747,
+     4298,
+     4841
+    ]
+   },
+   "judge": {
+    "sent": 62,
+    "none": 0,
+    "cut": -5.0
+   },
+   "k4_judge_best": 4,
+   "copies_judge_best": [
+    4,
+    4,
+    8,
+    4,
+    8,
+    12,
+    8,
+    3,
+    4,
+    6,
+    4,
+    4,
+    8,
+    8,
+    4,
+    8,
+    8,
+    4,
+    8,
+    4
+   ],
+   "k4_readings_above_every_copy": 0,
+   "k4_top": [
+    {
+     "reading": "?????????????????????????????????????????????????????????????????????ALOCBHROPCPRIVOTNOUGOBBVCTOC",
+     "judge": 4,
+     "quad": -6.362,
+     "setting": [
+      "LAYER/keyword|AND/keyword|std|varbeau",
+      [
+       69,
+       2,
+       -1,
+       -1
+      ]
+     ]
+    },
+    {
+     "reading": "?????????????????????????????????????????????????????????????????????CCFCKSRLWIXSSQLDCVHUCFRNLOQY",
+     "judge": null,
+     "quad": -7.821,
+     "setting": [
+      "std|std|std|beau",
+      [
+       69,
+       2,
+       -1,
+       -1
+      ]
+     ]
+    },
+    {
+     "reading": "?????????????????????????????????????????????????????????????????????CCECKSQKWIXSSSKKBVHTCDRMLQOY",
+     "judge": null,
+     "quad": -8.611,
+     "setting": [
+      "std|CIA/keyword|std|beau",
+      [
+       69,
+       2,
+       -1,
+       -1
+      ]
+     ]
+    },
+    {
+     "reading": "?????????????????????????????????????????????????????????????????????CEECKSQKXJXSUSKKUWJVCERMLQOY",
+     "judge": null,
+     "quad": -8.754,
+     "setting": [
+      "std|CIA/keyword|cipher|beau",
+      [
+       69,
+       2,
+       -1,
+       -1
+      ]
+     ]
+    },
+    {
+     "reading": "?????????????????????????????????????????????????????????????????????CGLCKTPIXKYSVNILTPKWBWRPRLNY",
+     "judge": null,
+     "quad": -8.048,
+     "setting": [
+      "std|FIVE/keyword|cipher|beau",
+      [
+       69,
+       2,
+       -1,
+       -1
+      ]
+     ]
+    }
+   ],
+   "plants": [
+    {
+     "kind": "ca",
+     "seed": 2121,
+     "params": {
+      "m": "vig",
+      "L": 9
+     },
+     "k": 2,
+     "skip": null,
+     "slips": [
+      29,
+      69
+     ],
+     "planted_setting_found": true,
+     "quad": -4.214,
+     "judge": 93,
+     "own_copies_judge_best": [
+      8,
+      4,
+      5,
+      4,
+      4
+     ],
+     "found": true
+    },
+    {
+     "kind": "ca",
+     "seed": 2122,
+     "params": {
+      "m": "beau",
+      "L": 60
+     },
+     "k": 2,
+     "skip": null,
+     "slips": [
+      68,
+      73
+     ],
+     "planted_setting_found": true,
+     "quad": -4.705,
+     "judge": 62,
+     "own_copies_judge_best": [
+      6,
+      4,
+      5,
+      3,
+      7
+     ],
+     "found": true
+    },
+    {
+     "kind": "ca",
+     "seed": 2123,
+     "params": {
+      "m": "vig",
+      "L": 15
+     },
+     "k": 0,
+     "skip": [
+      63,
+      16
+     ],
+     "slips": [],
+     "planted_setting_found": true,
+     "quad": -4.119,
+     "judge": 60,
+     "own_copies_judge_best": [
+      8,
+      4,
+      6,
+      8,
+      4
+     ],
+     "found": true
+    },
+    {
+     "kind": "prog",
+     "seed": 2124,
+     "params": {
+      "P": 11,
+      "d": 3,
+      "form": "per-letter",
+      "cls": [
+       "kry",
+       "kry",
+       "vig"
+      ]
+     },
+     "k": 2,
+     "skip": null,
+     "slips": [
+      28,
+      31
+     ],
+     "planted_setting_found": true,
+     "quad": -5.248,
+     "judge": 85,
+     "own_copies_judge_best": [
+      18,
+      12,
+      4,
+      5,
+      6
+     ],
+     "found": true
+    },
+    {
+     "kind": "prog",
+     "seed": 2125,
+     "params": {
+      "P": 20,
+      "d": 5,
+      "form": "per-repeat",
+      "cls": [
+       "std",
+       "kry",
+       "beau"
+      ]
+     },
+     "k": 2,
+     "skip": null,
+     "slips": [
+      28,
+      73
+     ],
+     "planted_setting_found": true,
+     "quad": -4.354,
+     "judge": 62,
+     "own_copies_judge_best": [
+      5,
+      12,
+      4,
+      3,
+      5
+     ],
+     "found": true
+    }
+   ],
+   "slip_cost_bits": {
+    "1": 9.3,
+    "2": 17.5,
+    "skip": 5.6
+   },
+   "controls": "20 shuffled copies (seeds 2130-2149); each plant against 5 shuffles of its own ciphertext",
+   "exhaustive": "yes"
+  },
+  "notes_20": "487,734 autokey table setups; K4 shortest fitting lag with <= 2 slips 68, copies [67, 67, 67, 67, 67, 67, 67, 67, 67, 67, 68, 68, 68, 68, 68, 68, 68, 68, 68, 69]; judge sent 62, K4 best 4, copies best 12; plants found [True, True, True, True, True]",
+  "notes_24": "487,734 autokey table setups; K4 shortest fitting lag with <= 2 slips 68, copies [67, 67, 67, 67, 67, 67, 67, 67, 67, 67, 68, 68, 68, 68, 68, 68, 68, 68, 68, 69]; judge sent 56, K4 best 4, copies best 12; plants found [True, True, True, True, True]",
+  "readings_20": [
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKHROPCPRIVOTNOUGOBBVCTOC",
+    "key": {
+     "kind": "ca",
+     "pa": "LAYERBCDFGHIJKMNOPQSTUVWXZ",
+     "ca": "ANDBCEFGHIJKLMOPQRSTUVWXYZ",
+     "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "varbeau",
+     "lag": 69,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTM",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKHROPCPRIWOTNOUGOCBTCUPC",
+    "key": {
+     "kind": "ca",
+     "pa": "LAYERBCDFGHIJKMNOPQSTUVWXZ",
+     "ca": "MADEBCFGHIJKLNOPQRSTUVWXYZ",
+     "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "varbeau",
+     "lag": 69,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTM",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKGJFRWMJVCTURRFLIEVETSAM",
+    "key": {
+     "kind": "ca",
+     "pa": "BURIEDACFGHJKLMNOPQSTVWXYZ",
+     "ca": "FITYABCDEGHJKLMNOPQRSUVWXZ",
+     "ka": "BURIEDACFGHJKLMNOPQSTVWXYZ",
+     "m": "varbeau",
+     "lag": 71,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFP",
+     "skip_at": 72,
+     "skip_lag": 72,
+     "slips": [
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKOQISSEYHKSOCKPDESPDPCWD",
+    "key": {
+     "kind": "ca",
+     "pa": "ESCAPINGBDFHJKLMOQRTUVWXYZ",
+     "ca": "LIGHTABCDEFJKMNOPQRSUVWXYZ",
+     "ka": "LIGHTABCDEFJKMNOPQRSUVWXYZ",
+     "m": "varbeau",
+     "lag": 70,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZ",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKLDTSDUGHOTPPOFUVNTULGDK",
+    "key": {
+     "kind": "ca",
+     "pa": "SOUTHBYWEACDFGIJKLMNPQRVXZ",
+     "ca": "OFSETABCDGHIJKLMNPQRUVWXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 69,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTM",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKLDTSDUGHOTPPOFUVNTULGDK",
+    "key": {
+     "kind": "ca",
+     "pa": "SOUTHWEBYACDFGIJKLMNPQRVXZ",
+     "ca": "OFSETABCDGHIJKLMNPQRUVWXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 69,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTM",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKGABAWKSTAUSIAGTSCWZRTWL",
+    "key": {
+     "kind": "ca",
+     "pa": "ABSENCDFGHIJKLMOPQRTUVWXYZ",
+     "ca": "FIVEABCDGHJKLMNOPQRSTUWXYZ",
+     "ka": "ABSENCDFGHIJKLMOPQRTUVWXYZ",
+     "m": "varbeau",
+     "lag": 71,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFP",
+     "skip_at": 72,
+     "skip_lag": 72,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKVHAMUDGSSEIEYPNGNXLYCHO",
+    "key": {
+     "kind": "ca",
+     "pa": "INTERPAOBCDFGHJKLMQSUVWXYZ",
+     "ca": "TREMBLINGACDFHJKOPQSUVWXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 70,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZF",
+     "skip_at": 26,
+     "skip_lag": 71,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKVHAMUDGSSEIEYPNGNXLYCHO",
+    "key": {
+     "kind": "ca",
+     "pa": "INTERPAOBCDFGHJKLMQSUVWXYZ",
+     "ca": "TREMBLINGACDFHJKOPQSUVWXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 70,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZF",
+     "skip_at": 27,
+     "skip_lag": 71,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAANORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKVHAMUDGSSEIEYPNGNXLYCHO",
+    "key": {
+     "kind": "ca",
+     "pa": "INTERPAOBCDFGHJKLMQSUVWXYZ",
+     "ca": "TREMBLINGACDFHJKOPQSUVWXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 70,
+     "primer": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZF",
+     "skip_at": 28,
+     "skip_lag": 71,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       64,
+       "N"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       66,
+       "P"
+      ],
+      [
+       67,
+       "V"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       69,
+       "T"
+      ],
+      [
+       70,
+       "M"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       72,
+       "F"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       74,
+       "K"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       94,
+       "K"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   }
+  ],
+  "controls_20": [
+   -6.3105004259432445,
+   -6.487179237149846,
+   -6.058413631653615,
+   -6.253270975085456,
+   -6.730892498818096,
+   -5.813464056294469,
+   -6.388235041519545,
+   -6.663219155707,
+   -5.457376358351622,
+   -6.057266703977375,
+   -6.449172200631708,
+   -6.095280137453175,
+   -6.008399437964856,
+   -6.15195682143535,
+   -6.042704253710445,
+   -6.533865123748758,
+   -6.318485894410331,
+   -6.241774079728164,
+   -6.304436305608414,
+   -6.038077931316875
+  ]
+ },
+ "0213": {
+  "bounds_20": {
+   "family": "plaintext autokey on 0025's tables, lags 1-52, up to 2 chain breaks (slips) or one lost step (A1.4)",
+   "table_setups": 35343,
+   "lags": "1-52 (53-96 blocked by 0136's bound)",
+   "breaks": "0-2 anywhere in a chain between neighbouring known letters (known places included)",
+   "lost_step": "lag L before place j, L+1 or L-1 from j on, j = 2-74; known letters in one tree must agree",
+   "bulk": "lags 26-29 with no break: every table's reading scored by quadgrams; the top 20 and all at or above -5.0 per text to the judge",
+   "by_lag": {
+    "1": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "2": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "3": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "4": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "5": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "6": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "7": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "8": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "9": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "10": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "11": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "12": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "13": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "14": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      1
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "15": {
+     "k4": [
+      0,
+      0,
+      20
+     ],
+     "copies_max": [
+      0,
+      1,
+      36
+     ],
+     "copies_min": [
+      0,
+      0,
+      8
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      15,
+      0
+     ]
+    },
+    "16": {
+     "k4": [
+      0,
+      5,
+      261
+     ],
+     "copies_max": [
+      1,
+      14,
+      422
+     ],
+     "copies_min": [
+      0,
+      2,
+      211
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      9,
+      7
+     ]
+    },
+    "17": {
+     "k4": [
+      0,
+      0,
+      11
+     ],
+     "copies_max": [
+      0,
+      3,
+      95
+     ],
+     "copies_min": [
+      0,
+      0,
+      11
+     ],
+     "skip_k4": [
+      0,
+      11
+     ],
+     "skip_copies_max": [
+      0,
+      69
+     ]
+    },
+    "18": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      1
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "19": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "20": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "21": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      1
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "22": {
+     "k4": [
+      0,
+      2,
+      24
+     ],
+     "copies_max": [
+      0,
+      2,
+      33
+     ],
+     "copies_min": [
+      0,
+      0,
+      7
+     ],
+     "skip_k4": [
+      29,
+      0
+     ],
+     "skip_copies_max": [
+      265,
+      1
+     ]
+    },
+    "23": {
+     "k4": [
+      1,
+      192,
+      4270
+     ],
+     "copies_max": [
+      9,
+      230,
+      4868
+     ],
+     "copies_min": [
+      0,
+      84,
+      2802
+     ],
+     "skip_k4": [
+      39481,
+      3
+     ],
+     "skip_copies_max": [
+      63387,
+      20
+     ]
+    },
+    "24": {
+     "k4": [
+      1287,
+      34056,
+      0
+     ],
+     "copies_max": [
+      2106,
+      34334,
+      0
+     ],
+     "copies_min": [
+      1009,
+      33237,
+      0
+     ],
+     "skip_k4": [
+      34295,
+      3131
+     ],
+     "skip_copies_max": [
+      47260,
+      3389
+     ]
+    },
+    "25": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      34244,
+      63063
+     ],
+     "skip_copies_max": [
+      46688,
+      103194
+     ]
+    },
+    "26": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      35885,
+      0
+     ],
+     "skip_copies_max": [
+      41822,
+      0
+     ]
+    },
+    "27": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      35113,
+      0
+     ],
+     "skip_copies_max": [
+      39293,
+      0
+     ]
+    },
+    "28": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      33522,
+      0
+     ],
+     "skip_copies_max": [
+      39794,
+      0
+     ]
+    },
+    "29": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      73128,
+      0
+     ],
+     "skip_copies_max": [
+      114130,
+      0
+     ]
+    },
+    "30": {
+     "k4": [
+      1234,
+      34109,
+      0
+     ],
+     "copies_max": [
+      1963,
+      34459,
+      0
+     ],
+     "copies_min": [
+      884,
+      33380,
+      0
+     ],
+     "skip_k4": [
+      2502,
+      12340
+     ],
+     "skip_copies_max": [
+      8400,
+      19630
+     ]
+    },
+    "31": {
+     "k4": [
+      40,
+      2601,
+      32702
+     ],
+     "copies_max": [
+      156,
+      3539,
+      33454
+     ],
+     "copies_min": [
+      13,
+      1862,
+      31718
+     ],
+     "skip_k4": [
+      65,
+      79533
+     ],
+     "skip_copies_max": [
+      675,
+      126601
+     ]
+    },
+    "32": {
+     "k4": [
+      1,
+      93,
+      3509
+     ],
+     "copies_max": [
+      12,
+      359,
+      5563
+     ],
+     "copies_min": [
+      0,
+      61,
+      2623
+     ],
+     "skip_k4": [
+      0,
+      2639
+     ],
+     "skip_copies_max": [
+      113,
+      9999
+     ]
+    },
+    "33": {
+     "k4": [
+      0,
+      4,
+      247
+     ],
+     "copies_max": [
+      2,
+      61,
+      804
+     ],
+     "copies_min": [
+      0,
+      1,
+      186
+     ],
+     "skip_k4": [
+      0,
+      67
+     ],
+     "skip_copies_max": [
+      3,
+      758
+     ]
+    },
+    "34": {
+     "k4": [
+      0,
+      0,
+      9
+     ],
+     "copies_max": [
+      0,
+      3,
+      74
+     ],
+     "copies_min": [
+      0,
+      0,
+      11
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      126
+     ]
+    },
+    "35": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      1,
+      4
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "36": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      2
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "37": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "38": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "39": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "40": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "41": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "42": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      0
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "43": {
+     "k4": [
+      0,
+      0,
+      0
+     ],
+     "copies_max": [
+      0,
+      0,
+      8
+     ],
+     "copies_min": [
+      0,
+      0,
+      0
+     ],
+     "skip_k4": [
+      0,
+      0
+     ],
+     "skip_copies_max": [
+      0,
+      0
+     ]
+    },
+    "44": {
+     "k4": [
+      0,
+      0,
+      6
+     ],
+     "copies_max": [
+      0,
+      2,
+      44
+     ],
+     "copies_min": [
+      0,
+      0,
+      6
+     ],
+     "skip_k4": [
+      63,
+      0
+     ],
+     "skip_copies_max": [
+      253,
+      0
+     ]
+    },
+    "45": {
+     "k4": [
+      1,
+      4,
+      198
+     ],
+     "copies_max": [
+      4,
+      41,
+      433
+     ],
+     "copies_min": [
+      0,
+      2,
+      158
+     ],
+     "skip_k4": [
+      128,
+      0
+     ],
+     "skip_copies_max": [
+      1073,
+      1
+     ]
+    },
+    "46": {
+     "k4": [
+      2,
+      204,
+      4047
+     ],
+     "copies_max": [
+      17,
+      434,
+      4834
+     ],
+     "copies_min": [
+      0,
+      81,
+      3179
+     ],
+     "skip_k4": [
+      2153,
+      72
+     ],
+     "skip_copies_max": [
+      6670,
+      306
+     ]
+    },
+    "47": {
+     "k4": [
+      34,
+      2416,
+      32893
+     ],
+     "copies_max": [
+      105,
+      3102,
+      33532
+     ],
+     "copies_min": [
+      9,
+      1802,
+      32149
+     ],
+     "skip_k4": [
+      43731,
+      260
+     ],
+     "skip_copies_max": [
+      154009,
+      1319
+     ]
+    },
+    "48": {
+     "k4": [
+      690,
+      34653,
+      0
+     ],
+     "copies_max": [
+      2431,
+      34653,
+      0
+     ],
+     "copies_min": [
+      690,
+      32912,
+      0
+     ],
+     "skip_k4": [
+      12028,
+      3467
+     ],
+     "skip_copies_max": [
+      17591,
+      8922
+     ]
+    },
+    "49": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      12028,
+      50370
+     ],
+     "skip_copies_max": [
+      17591,
+      177463
+     ]
+    },
+    "50": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      12028,
+      0
+     ],
+     "skip_copies_max": [
+      17591,
+      0
+     ]
+    },
+    "51": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      12028,
+      0
+     ],
+     "skip_copies_max": [
+      17591,
+      0
+     ]
+    },
+    "52": {
+     "k4": [
+      35343,
+      0,
+      0
+     ],
+     "copies_max": [
+      35343,
+      0,
+      0
+     ],
+     "copies_min": [
+      35343,
+      0,
+      0
+     ],
+     "skip_k4": [
+      12028,
+      0
+     ],
+     "skip_copies_max": [
+      17591,
+      0
+     ]
+    }
+   },
+   "k4_above_every_copy_lags": [],
+   "copies_above_rest": [
+    0,
+    1,
+    0,
+    2,
+    0,
+    1,
+    1,
+    0,
+    5,
+    0,
+    4,
+    4,
+    2,
+    0,
+    7,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "shortest_lag_with_breaks": {
+    "K4": 15,
+    "copy1": 15,
+    "copy2": 14,
+    "copy3": 15,
+    "copy4": 15,
+    "copy5": 15,
+    "copy6": 15,
+    "copy7": 14,
+    "copy8": 15,
+    "copy9": 15,
+    "copy10": 15,
+    "copy11": 15,
+    "copy12": 15,
+    "copy13": 15,
+    "copy14": 15,
+    "copy15": 15,
+    "copy16": 15,
+    "copy17": 15,
+    "copy18": 15,
+    "copy19": 15,
+    "copy20": 15
+   },
+   "shortest_lag_lost_step": {
+    "K4": 17,
+    "copy1": 17,
+    "copy2": 16,
+    "copy3": 16,
+    "copy4": 16,
+    "copy5": 17,
+    "copy6": 16,
+    "copy7": 16,
+    "copy8": 22,
+    "copy9": 16,
+    "copy10": 17,
+    "copy11": 16,
+    "copy12": 16,
+    "copy13": 16,
+    "copy14": 15,
+    "copy15": 15,
+    "copy16": 16,
+    "copy17": 17,
+    "copy18": 15,
+    "copy19": 16,
+    "copy20": 16
+   },
+   "readings": {
+    "k4": 1053,
+    "copies": [
+     811,
+     1396,
+     614,
+     3552,
+     1256,
+     851,
+     754,
+     1308,
+     1855,
+     1044,
+     2517,
+     644,
+     2138,
+     902,
+     1077,
+     2627,
+     1330,
+     1714,
+     1081,
+     1371
+    ]
+   },
+   "capped": [],
+   "judge": {
+    "sent": 199,
+    "none": 0,
+    "cut": -5.0,
+    "rule": "each text's top 5 readings by quadgrams and every reading at or above -5.0; one call"
+   },
+   "k4_judge_best": 10,
+   "copies_judge_best": [
+    6,
+    6,
+    7,
+    4,
+    8,
+    6,
+    6,
+    4,
+    5,
+    4,
+    5,
+    8,
+    3,
+    12,
+    4,
+    8,
+    4,
+    6,
+    3,
+    5
+   ],
+   "k4_readings_above_every_copy": 0,
+   "k4_top": [
+    {
+     "reading": "CBTTWUTDFIGCNULR?????????NORTHEASTSWDNZFTWIAW?????????ELBERWALLBERLINCLOCK?????????SPELOFFGTOLEGG",
+     "judge": 10,
+     "quad": -6.423,
+     "kind": "bulk",
+     "setup": "WELTZEITUHR/keyword|SECRET/keyword|kry|vig",
+     "L": 29
+    },
+    {
+     "reading": "TPCMYCIAKPKAWHEE?????????NORTHEASTDHRUPWBYBEK?????????GASOFTEANBERLINCLOCK?????????ZYBETUVLGRODPR",
+     "judge": 6,
+     "quad": -6.429,
+     "kind": "bulk",
+     "setup": "IQLUSION/keyword|WELTZEITUHR/keyword|kry|vig",
+     "L": 29
+    },
+    {
+     "reading": "???????????????????VVYPODNORTHEAST?????????????????????????????BERLINCLOCKREAB???????????????????",
+     "judge": 3,
+     "quad": -5.749,
+     "kind": "chain",
+     "setup": "SCHEIDT/keyword|CARNARVON/keyword|plain|vig",
+     "L": 44
+    },
+    {
+     "reading": "PNYPMCL??IDGAKLANUMA?????NORTHEAST??ISPRACRATAL?????OAYPUAAWC??BERLINCLOCK?????WIOFQMPSJ??UHIKORY",
+     "judge": 3,
+     "quad": -6.455,
+     "kind": "bulk",
+     "setup": "VIRTUALLYINVISIBLE/keyword|WEBSTER/keyword|plain|beau",
+     "L": 27
+    },
+    {
+     "reading": "BTUMOP?HOMRAVJABAI???????NORTHEAST?NISHDHADEEX???????OGAVGWBGC?BERLINCLOCK???????LOIYRJUSV?UIETHE",
+     "judge": 2,
+     "quad": -6.415,
+     "kind": "bulk",
+     "setup": "WALL/keyword|PALIMPSEST/keyword|std|varbeau",
+     "L": 28
+    }
+   ],
+   "plants": [
+    {
+     "seed": 2131,
+     "L": 12,
+     "k": 2,
+     "skip": null,
+     "slips": [
+      50,
+      62
+     ],
+     "planted_setting_found": true,
+     "wrong_letters_in_reading": 2,
+     "quad": -3.994,
+     "judge": 93,
+     "own_copies_judge_best": [
+      3,
+      4,
+      6,
+      6,
+      6
+     ],
+     "found": true
+    },
+    {
+     "seed": 2132,
+     "L": 20,
+     "k": 0,
+     "skip": [
+      49,
+      21
+     ],
+     "slips": [],
+     "planted_setting_found": true,
+     "wrong_letters_in_reading": 0,
+     "quad": -4.402,
+     "judge": 72,
+     "own_copies_judge_best": [
+      4,
+      8,
+      12,
+      5,
+      5
+     ],
+     "found": true
+    },
+    {
+     "seed": 2133,
+     "L": 8,
+     "k": 1,
+     "skip": null,
+     "slips": [
+      77
+     ],
+     "planted_setting_found": true,
+     "wrong_letters_in_reading": 3,
+     "quad": -4.944,
+     "judge": 85,
+     "own_copies_judge_best": [
+      5,
+      4,
+      8,
+      2,
+      4
+     ],
+     "found": true
+    }
+   ],
+   "slip_cost_bits": {
+    "1": 9.3,
+    "2": 17.5,
+    "lost step": 7.2
+   },
+   "controls": "20 shuffled copies (seeds 2140-2159); each plant against 5 shuffles of its own ciphertext",
+   "exhaustive": "yes"
+  },
+  "notes_20": "35,343 tables x lags 1-52; K4 shortest lag with <= 2 breaks 15, lost step 17; copies [14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]; judge sent 199, K4 best 10, copies best 12; plants found [True, True, True]",
+  "notes_24": "35,343 tables x lags 1-52; K4 shortest lag with <= 2 breaks 24, lost step 24; copies [17, 17, 17, 17, 18, 18, 18, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24]; judge sent 194, K4 best 4, copies best 12; plants found [True, True, True]",
+  "readings_20": [
+   {
+    "plaintext": "CBTTWUTDFIGCNULRAAAAAAAAANORTHEASTSWDNZFTWIAWAAAAAAAAAELBERWALLBERLINCLOCKAAAAAAAAASPELOFFGTOLEGG",
+    "key": {
+     "pa": "WELTZIUHRABCDFGJKMNOPQSVXY",
+     "ca": "SECRTABDFGHIJKLMNOPQUVWXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 29,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "TPCMYCIAKPKAWHEEAAAAAAAAANORTHEASTDHRUPWBYBEKAAAAAAAAAGASOFTEANBERLINCLOCKAAAAAAAAAZYBETUVLGRODPR",
+    "key": {
+     "pa": "IQLUSONABCDEFGHJKMPRTVWXYZ",
+     "ca": "WELTZIUHRABCDFGJKMNOPQSVXY",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 29,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "AAAAAAAAAAAAAAAAAAAVVYPODNORTHEASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERLINCLOCKREABAAAAAAAAAAAAAAAAAAA",
+    "key": {
+     "pa": "SCHEIDTABFGJKLMNOPQRUVWXYZ",
+     "ca": "CARNVOBDEFGHIJKLMPQSTUWXYZ",
+     "ka": "SCHEIDTABFGJKLMNOPQRUVWXYZ",
+     "m": "vig",
+     "lag": 44,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       30,
+       "N"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       37,
+       "W"
+      ],
+      [
+       38,
+       "T"
+      ],
+      [
+       39,
+       "Q"
+      ],
+      [
+       40,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       60,
+       "I"
+      ],
+      [
+       61,
+       "N"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       71,
+       "Z"
+      ],
+      [
+       73,
+       "P"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       95,
+       "C"
+      ],
+      [
+       96,
+       "A"
+      ],
+      [
+       97,
+       "R"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "PNYPMCLAAIDGAKLANUMAAAAAANORTHEASTAAISPRACRATALAAAAAOAYPUAAWCAABERLINCLOCKAAAAAWIOFQMPSJAAUHIKORY",
+    "key": {
+     "pa": "VIRTUALYNSBECDFGHJKMOPQWXZ",
+     "ca": "WEBSTRACDFGHIJKLMNOPQUVXYZ",
+     "ka": "VIRTUALYNSBECDFGHJKMOPQWXZ",
+     "m": "beau",
+     "lag": 27,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       36,
+       "T"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       62,
+       "F"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "BTUMOPAHOMRAVJABAIAAAAAAANORTHEASTANISHDHADEEXAAAAAAAOGAVGWBGCABERLINCLOCKAAAAAAALOIYRJUSVAUIETHE",
+    "key": {
+     "pa": "WALBCDEFGHIJKMNOPQRSTUVXYZ",
+     "ca": "PALIMSETBCDFGHJKNOQRUVWXYZ",
+     "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "varbeau",
+     "lag": 28,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "INSHTMAAAAAAAAAAAAAAAAAAANORTHEASTNNOHQTAAAAAAAAAAAAAAAAAAAORKEBERLINCLOCKAAAAAAAAAAAAAAAAAAASUMT",
+    "key": {
+     "pa": "TUANKHMEBCDFGIJLOPQRSVWXYZ",
+     "ca": "TUANKHMBCDEFGIJLOPQRSVWXYZ",
+     "ka": "TUANKHMEBCDFGIJLOPQRSVWXYZ",
+     "m": "varbeau",
+     "lag": 34,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       31,
+       "G"
+      ],
+      [
+       32,
+       "K"
+      ],
+      [
+       33,
+       "S"
+      ],
+      [
+       34,
+       "S"
+      ],
+      [
+       41,
+       "J"
+      ],
+      [
+       42,
+       "Q"
+      ],
+      [
+       43,
+       "S"
+      ],
+      [
+       44,
+       "S"
+      ],
+      [
+       45,
+       "E"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       55,
+       "U"
+      ],
+      [
+       56,
+       "D"
+      ],
+      [
+       57,
+       "I"
+      ],
+      [
+       58,
+       "A"
+      ],
+      [
+       59,
+       "W"
+      ],
+      [
+       65,
+       "Y"
+      ],
+      [
+       68,
+       "T"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ],
+      [
+       84,
+       "D"
+      ],
+      [
+       85,
+       "I"
+      ],
+      [
+       86,
+       "G"
+      ],
+      [
+       87,
+       "K"
+      ],
+      [
+       88,
+       "U"
+      ],
+      [
+       89,
+       "H"
+      ],
+      [
+       90,
+       "U"
+      ],
+      [
+       91,
+       "A"
+      ],
+      [
+       92,
+       "U"
+      ],
+      [
+       93,
+       "E"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "STHASNALNGEJFADRAAAAAAAAANORTHEASTEJJABLYDSMRAAAAAAAAAROINMRGOVBERLINCLOCKAAAAAAAAAFEXWNVERZUVEMP",
+    "key": {
+     "pa": "CARNVOBDEFGHIJKLMPQSTUWXYZ",
+     "ca": "SOMEWHRABCDFGIJKLNPQTUVXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 29,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "TAOSOMDDLOUFEILFAAAAAAAAANORTHEASTAQGGIROLCAXAAAAAAAAAADCOLOBENBERLINCLOCKAAAAAAAAAONNACZSSAODFIR",
+    "key": {
+     "pa": "WONDERFULABCGHIJKMPQSTVXYZ",
+     "ca": "SOUTHABCDEFGIJKLMNPQRVWXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 29,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "IREKSTBYMBBDIVMCAAAAAAAAANORTHEASTSIDABPADOCZAAAAAAAAAAYBYNSEDABERLINCLOCKAAAAAAAAAVEAGAUBPKSAFGO",
+    "key": {
+     "pa": "SHADOWFRCEBGIJKLMNPQTUVXYZ",
+     "ca": "SHADOWBCEFGIJKLMNPQRTUVXYZ",
+     "ka": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+     "m": "vig",
+     "lag": 29,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       11,
+       "U"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       29,
+       "R"
+      ],
+      [
+       46,
+       "K"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       54,
+       "L"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       77,
+       "D"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       82,
+       "J"
+      ],
+      [
+       83,
+       "C"
+      ]
+     ]
+    }
+   },
+   {
+    "plaintext": "MWVTALAKJOVRJERINTAAAAAAANORTHEASTATFCKHUVHISAAAAAAAAOFWECTHLDABERLINCLOCKAAAAAAAZFINHAGUYAWHEOFA",
+    "key": {
+     "pa": "DIGETALBCFHJKMNOPQRSUVWXYZ",
+     "ca": "WALBCDEFGHIJKMNOPQRSTUVXYZ",
+     "ka": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+     "m": "varbeau",
+     "lag": 28,
+     "primer": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "skip_at": null,
+     "skip_lag": null,
+     "slips": [
+      [
+       1,
+       "O"
+      ],
+      [
+       2,
+       "B"
+      ],
+      [
+       3,
+       "K"
+      ],
+      [
+       4,
+       "R"
+      ],
+      [
+       5,
+       "U"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       7,
+       "X"
+      ],
+      [
+       8,
+       "O"
+      ],
+      [
+       9,
+       "G"
+      ],
+      [
+       10,
+       "H"
+      ],
+      [
+       12,
+       "L"
+      ],
+      [
+       13,
+       "B"
+      ],
+      [
+       14,
+       "S"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       16,
+       "L"
+      ],
+      [
+       17,
+       "I"
+      ],
+      [
+       18,
+       "F"
+      ],
+      [
+       19,
+       "B"
+      ],
+      [
+       20,
+       "B"
+      ],
+      [
+       21,
+       "W"
+      ],
+      [
+       22,
+       "F"
+      ],
+      [
+       23,
+       "L"
+      ],
+      [
+       24,
+       "R"
+      ],
+      [
+       25,
+       "V"
+      ],
+      [
+       26,
+       "Q"
+      ],
+      [
+       27,
+       "Q"
+      ],
+      [
+       28,
+       "P"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       47,
+       "Z"
+      ],
+      [
+       48,
+       "Z"
+      ],
+      [
+       49,
+       "W"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       51,
+       "T"
+      ],
+      [
+       52,
+       "J"
+      ],
+      [
+       53,
+       "K"
+      ],
+      [
+       63,
+       "B"
+      ],
+      [
+       75,
+       "W"
+      ],
+      [
+       76,
+       "G"
+      ],
+      [
+       78,
+       "K"
+      ],
+      [
+       79,
+       "Z"
+      ],
+      [
+       80,
+       "X"
+      ],
+      [
+       81,
+       "T"
+      ],
+      [
+       91,
+       "A"
+      ]
+     ]
+    }
+   }
+  ],
+  "controls_20": [
+   -6.193885356504141,
+   -6.223995576140463,
+   -5.708695862367679,
+   -6.202642005756789,
+   -5.842367110691125,
+   -6.021857011900352,
+   -6.312652434162326,
+   -4.9960156622867355,
+   -6.239765033584907,
+   -6.449186180711139,
+   -6.108031905580239,
+   -6.120530972723192,
+   -5.751767019825729,
+   -6.100821172344926,
+   -6.052873207997529,
+   -6.036491349658868,
+   -5.009083799372197,
+   -5.9676659421490825,
+   -5.804271282335096,
+   -6.188108123284584
+  ]
+ },
+ "only_east_closed": {
+  "0149_lags_by_kind_form": {
+   "ct/V": [],
+   "ct/B": [],
+   "ct/R": [],
+   "pt/V": [
+    8,
+    9,
+    10,
+    41,
+    43,
+    44,
+    45,
+    47
+   ],
+   "pt/B": [
+    9,
+    40,
+    42,
+    43
+   ],
+   "pt/R": [
+    8,
+    9,
+    10,
+    41,
+    42
+   ]
+  }
+ },
+ "aws_cost_estimate_dollars": 0.3,
+ "judge_calls_estimate": "under 1,000 (0212: 56, 0213: 194 on 24 letters)"
+}
+```
+
+Notes: 0149: ct/V K4 11 fits (coppers 4-27), ct/B K4 23 fits (coppers 3-26), ct/R K4 9 fits (coppers 4-30), pt/V K4 20 fits (coppers 10-23), pt/B K4 21 fits (coppers 14-22), pt/R K4 18 fits (coppers 12-23); rare K4 fits 3 vs null 0-28; stop False; undecided K4 6 | 0212: 487,734 autokey table setups; K4 shortest fitting lag with <= 2 slips 68, copies [67, 67, 67, 67, 67, 67, 67, 67, 67, 67, 68, 68, 68, 68, 68, 68, 68, 68, 68, 69]; judge sent 62, K4 best 4, copies best 12; plants found [True, True, True, True, True] | 0213: 35,343 tables x lags 1-52; K4 shortest lag with <= 2 breaks 15, lost step 17; copies [14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]; judge sent 199, K4 best 10, copies best 12; plants found [True, True, True]
+
+

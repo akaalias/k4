@@ -20,6 +20,10 @@ holds the reasoning and the mistakes.
 | 280 | F16.1a-r | **The cells only EAST closed, by the one-run decider.** 49 settings: K4 above all 12 fitting copies in 6 (chance 3.8, p 0.17), above all 100 in 2 (V10 slips 73-74, B10 slip 69; chance 0.5, p 0.08); readings not English. Plants clean 7/12, Sanborn-style 9/12. Replicated next as F16.1a-r2. AWS 27 min, $0.25. |
 | 281 | F16.1a-r2 | **0280's two edge settings on 1,000 fresh copies each.** V10 [73,74] p 0.013, B10 [69] p 0.036, line 0.001: chance. AWS 16 min, $0.15. |
 
+F16.1b-s started as 0282 at 18:19 and was stopped by the graceful stop (requested 22:12) at 4,522 of 5,670 units. Saved units: K4 and all 20 copies finished every drop set of 1-2 slips, with no key word on any of them; the six plants are unfinished, so the power is not yet measured. attack.py is committed unchanged and kept in drafts/; the unfinished experiment folder (a copy of attack.py) was removed, so the resume takes the next free number. The run took about twice my estimate (0.23-0.39 units per second).
+
+Also drafted today, not yet run: F16.2, F16.8, F16.4, F16.5, F16.6-r (drafts/). F16.6 closed by reading (reports/f16.6-chart-keys.md).
+
 K4's top plaintext-autokey reading in 0276 (table WELTZEITUHR/SECRET, lag 29) has ...ELBERWALLBERLINCLOCK...: WALL before BERLIN, on the World Clock's keyword. With EAST filled, its other places read OIHB and NJXP and the rest is gibberish; the judge gave it 10, under a copy's 12. A climb over 35,343 tables makes fragments like this. Noted, not chased.
 
 Mistake: my waits on the run used `until ! pgrep -f run_experiment.py`, which matches its own command line, so they never ended and timed out; 0277 had finished at 17:20. Wait on tools/wait_experiment.sh or on the log's last line instead.

@@ -19,7 +19,9 @@ The first start of 0272 (2026-11-05) did not hang on the network: CPU sat at zer
 |---|---|---|
 | 273 | F14.2b | **0272's edge cell on 2,000 fresh shuffles.** K4's A25 Beaufort count comes from one setting with 2 repeated and 3 informative checks; 40 of 2,000 shuffles at or above, p 0.020 (line 0.00066): chance. Plants 12/12. AWS 0.4 min, $0.01. |
 
-F14.2 closing reopens F14.5's second half (F14.2 on the 98-letter variants), queued as F14.5b.
+F14.2 closing reopens F14.5's second half (F14.2 on the 98-letter variants), queued as F14.5b. Under a move a lost letter changes the geometry everywhere, so 0247's 23 variants do not carry over. Split: F14.5b, the ? as the first of 98 cipher letters (moves rebuilt for 98 letters: 23,280, three plaintext alignments; desk 3.7 h on 32 cores), and F14.5c, any lost letter, about $110, blocked by cost.
+
+F14.5b started as 0274 at 13:27 on AWS and was stopped at 14:48 for Alexis's graceful stop, with 192 of 932 route blocks saved: no record. Its attack.py is committed and kept as drafts/F14.5b-attack.py, to resume unchanged.
 
 ## 2026-11-05
 

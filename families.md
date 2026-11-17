@@ -254,7 +254,7 @@ Update the leaf when an experiment works on it.
       - **F16.1d** Gromark, free alphabet (0195, 0262 as recorded): no primer fits K4 without EAST; copies do {closed · exact · 0277}
       - **F16.1e** The named running keys (0210), 0-5 slips: nothing on K4 or shuffles; plants 3/3 {closed · exact · 0279}
       - **F16.1a-r** The cells only EAST closed (49 settings), by D1's English decider: no excess (6 above 12 copies, chance 3.8) {closed · sampled · 0280}
-      - **F16.1a-r2** Its two settings above 100 copies (V10 [73,74], B10 [69]) on 1,000 fresh copies {open}
+      - **F16.1a-r2** Its two settings above 100 copies (V10 [73,74], B10 [69]) on 1,000 fresh copies: p 0.013, 0.036, chance {closed · sampled · 0281}
     - **F16.2** A book plus a keyword {open}
     - **F16.8** An artist's twist on K1/K2's method {open}
     - **F16.4** Small shifts and carved lines, pre-registered {open}

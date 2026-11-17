@@ -18,6 +18,7 @@ holds the reasoning and the mistakes.
 | 278 | F16.1e | **Errored.** The loaded 0210 looked for the sculpture's texts under its own experiment folder; rerun as 0279. |
 | 279 | F16.1e | **The named running keys on the 20 official letters.** 1.36 x 10^9 settings, up to 5 slips: nothing on K4 or any shuffle; plants 3/3. F16.1 closed. AWS about $0.03. |
 | 280 | F16.1a-r | **The cells only EAST closed, by the one-run decider.** 49 settings: K4 above all 12 fitting copies in 6 (chance 3.8, p 0.17), above all 100 in 2 (V10 slips 73-74, B10 slip 69; chance 0.5, p 0.08); readings not English. Plants clean 7/12, Sanborn-style 9/12. Replicated next as F16.1a-r2. AWS 27 min, $0.25. |
+| 281 | F16.1a-r2 | **0280's two edge settings on 1,000 fresh copies each.** V10 [73,74] p 0.013, B10 [69] p 0.036, line 0.001: chance. AWS 16 min, $0.15. |
 
 K4's top plaintext-autokey reading in 0276 (table WELTZEITUHR/SECRET, lag 29) has ...ELBERWALLBERLINCLOCK...: WALL before BERLIN, on the World Clock's keyword. With EAST filled, its other places read OIHB and NJXP and the rest is gibberish; the judge gave it 10, under a copy's 12. A climb over 35,343 tables makes fragments like this. Noted, not chased.
 

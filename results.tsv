@@ -278,3 +278,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0277	0277-f16.1d-gromark-on-the-20-official-letters	16-simple-hand-methods	0262-f5.2-gromark-free-alphabet-base-26-lag-6-and-longer-lags	reverted	0	0	0			3866	test=18 run=3866 record=0
 0278	0278-f16.1e-running-keys-on-the-20-official-letters	16-simple-hand-methods	0210-running-keys-with-slips-at-known-places	error	0	0	0			98	test=18 run=98 record=0
 0279	0279-f16.1e-running-keys-on-the-20-official-letters	16-simple-hand-methods	0210-running-keys-with-slips-at-known-places	reverted	0	0	0			219	unattributed=43 run=219 record=0
+0280	0280-f16.1a-r-the-cells-only-east-closed-by-the-one-run-decider	16-simple-hand-methods	0253-f1.4-one-alphabet-residue-decided-by-the-one-run-decider	reverted	0	0	0			1630	test=18 run=1630 record=0

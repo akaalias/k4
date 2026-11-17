@@ -1,0 +1,1431 @@
+{
+ "id": 280,
+ "tag": "0280-f16.1a-r-the-cells-only-east-closed-by-the-one-run-decider",
+ "started": "2026-11-17T16:32:21+00:00",
+ "seconds": 1630.3,
+ "status": "ran",
+ "phases": {
+  "test": 17.7,
+  "run": 1630.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1794934772.068188,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [
+  -6.98245,
+  -6.26551,
+  -6.96435,
+  -6.96466,
+  -6.52835,
+  -6.73883,
+  -6.66774,
+  -7.30652,
+  -6.3463,
+  -7.07427,
+  -6.81973,
+  -6.911,
+  -7.00078,
+  -6.53967,
+  -6.47455,
+  -6.57679,
+  -6.14596,
+  -6.88195,
+  -6.53999,
+  -6.763,
+  -6.29279,
+  -6.33696,
+  -6.31991,
+  -6.30521,
+  -6.44605,
+  -6.3955,
+  -6.20238,
+  -6.13048,
+  -6.05615,
+  -6.03113,
+  -6.58021,
+  -6.4971,
+  -6.57759,
+  -6.01499,
+  -6.51754,
+  -6.35792,
+  -6.24303,
+  -6.65145,
+  -5.88625,
+  -5.63868,
+  -6.38691,
+  -6.54085,
+  -6.2652,
+  -6.05118,
+  -6.28919,
+  -6.28134,
+  -6.24364,
+  -6.21803,
+  -6.17939,
+  -6.12709,
+  -6.33539,
+  -6.24335,
+  -6.37633,
+  -6.58486,
+  -6.10237,
+  -6.22824,
+  -6.13272,
+  -6.07565,
+  -5.95098,
+  -6.54233,
+  -6.39354,
+  -6.49454,
+  -6.21226,
+  -6.35839,
+  -6.10974,
+  -6.11031,
+  -6.28969,
+  -6.31816,
+  -6.12809,
+  -6.04362,
+  -6.36903,
+  -6.13954,
+  -6.659,
+  -6.41275,
+  -6.5213,
+  -6.30353,
+  -6.08367,
+  -6.08244,
+  -6.27446,
+  -6.10705,
+  -6.24698,
+  -6.09505,
+  -6.43333,
+  -6.19889,
+  -6.10261,
+  -6.55926,
+  -6.29518,
+  -5.99483,
+  -6.19704,
+  -6.39586,
+  -6.44761,
+  -6.31769,
+  -6.66104,
+  -6.13696,
+  -6.41916,
+  -6.20291,
+  -6.26626,
+  -6.38996,
+  -6.13851,
+  -6.07062,
+  -6.33461,
+  -6.30685,
+  -6.49539,
+  -6.20766,
+  -6.10866,
+  -6.57516,
+  -6.53424,
+  -6.22809,
+  -6.47108,
+  -6.52695,
+  -6.08755,
+  -6.20881,
+  -6.68453,
+  -6.03573,
+  -6.03815,
+  -6.12037,
+  -6.49127,
+  -6.1504,
+  -6.32003,
+  -5.97776,
+  -6.21283,
+  -5.87594,
+  -6.04453,
+  -5.99284,
+  -5.81276,
+  -5.84501,
+  -5.64653,
+  -5.80468,
+  -5.79939,
+  -5.85038,
+  -5.97385,
+  -5.94613,
+  -5.68825,
+  -5.95961,
+  -5.96732,
+  -5.94627,
+  -5.73875,
+  -6.00861,
+  -5.94412,
+  -5.8426,
+  -5.76672,
+  -5.70194,
+  -5.87468,
+  -5.93557,
+  -5.97233,
+  -5.78379,
+  -5.86248,
+  -5.9632,
+  -5.83445,
+  -5.83092,
+  -5.89569,
+  -6.11617,
+  -5.86147,
+  -5.8732,
+  -5.70428,
+  -5.83386,
+  -5.89887,
+  -5.75015,
+  -5.83757,
+  -5.73296,
+  -5.92418,
+  -5.79637,
+  -6.00958,
+  -5.82107,
+  -5.81744,
+  -6.02283,
+  -5.70659,
+  -5.80955,
+  -5.87782,
+  -5.82109,
+  -5.73634,
+  -5.95402,
+  -5.82404,
+  -5.75291,
+  -5.63398,
+  -5.93631,
+  -5.83341,
+  -5.77115,
+  -5.77067,
+  -5.92334,
+  -5.93141,
+  -6.00564,
+  -6.01684,
+  -5.928,
+  -5.74865,
+  -5.71077,
+  -5.9575,
+  -5.73315,
+  -5.83501,
+  -5.79722,
+  -5.80947,
+  -5.78407,
+  -6.14149,
+  -5.96822,
+  -6.04117,
+  -5.86989,
+  -5.67623,
+  -5.79085,
+  -5.90634,
+  -6.01923,
+  -5.83859,
+  -6.01578,
+  -5.80889,
+  -6.23277,
+  -6.25453,
+  -5.90107,
+  -5.85442,
+  -6.21423,
+  -5.89285,
+  -6.08875,
+  -6.07993,
+  -5.75309,
+  -5.95398,
+  -6.29344,
+  -5.95126,
+  -5.75522,
+  -5.98793,
+  -5.86695,
+  -5.80629,
+  -5.93963,
+  -5.84556,
+  -5.86594,
+  -5.87452,
+  -5.75088,
+  -5.82941,
+  -5.78983,
+  -6.24311,
+  -6.1548,
+  -6.01528,
+  -6.17667,
+  -6.15594,
+  -6.05047,
+  -6.36177,
+  -6.00847,
+  -6.24649,
+  -6.03824,
+  -6.40729,
+  -6.33437,
+  -6.05408,
+  -6.03656,
+  -6.29904,
+  -5.93734,
+  -6.18943,
+  -6.27235,
+  -5.98561,
+  -6.17589,
+  -5.99854,
+  -6.0342,
+  -6.10474,
+  -6.46574,
+  -6.26384,
+  -6.43579,
+  -5.91663,
+  -6.41635,
+  -6.15789,
+  -5.85964,
+  -5.88891,
+  -5.89129,
+  -6.36358,
+  -6.21869,
+  -6.05779,
+  -6.19635,
+  -6.15657,
+  -6.10305,
+  -6.47019,
+  -6.23448,
+  -6.19017,
+  -5.71439,
+  -6.03686,
+  -6.21319,
+  -6.34108,
+  -6.19635,
+  -6.5516,
+  -6.11465,
+  -6.29884,
+  -5.99416,
+  -6.06677,
+  -6.32959,
+  -6.01956,
+  -6.13581,
+  -6.03402,
+  -6.03319,
+  -6.35407,
+  -6.0856,
+  -6.07153,
+  -5.98626,
+  -6.18346,
+  -6.42167,
+  -6.37301,
+  -6.03941,
+  -6.20239,
+  -6.26191,
+  -6.17255,
+  -6.16855,
+  -6.32321,
+  -6.45147,
+  -6.57421,
+  -6.33277,
+  -6.14414,
+  -6.08543,
+  -6.02373,
+  -5.9402,
+  -6.35148,
+  -6.11891,
+  -5.91649,
+  -6.1817,
+  -6.2338,
+  -6.38593,
+  -6.0378,
+  -6.25141,
+  -6.5761,
+  -5.99012,
+  -6.25501,
+  -6.07299,
+  -6.1969,
+  -6.47986,
+  -6.35961,
+  -6.2441,
+  -6.0115,
+  -6.51859,
+  -6.1359,
+  -6.41614,
+  -6.35558,
+  -6.26525,
+  -6.10864,
+  -5.87326,
+  -6.15672,
+  -6.19486,
+  -6.4121,
+  -6.12656,
+  -6.18011,
+  -6.30476,
+  -6.01862,
+  -6.49904,
+  -6.02962,
+  -6.27568,
+  -6.2771,
+  -6.53536,
+  -5.9025,
+  -5.94039,
+  -6.12237,
+  -6.01284,
+  -6.26049,
+  -6.36388,
+  -6.49482,
+  -6.13052,
+  -6.33279,
+  -6.19272,
+  -6.30002,
+  -6.32762,
+  -6.31188,
+  -6.29977,
+  -6.12099,
+  -5.86211,
+  -6.03016,
+  -6.19594,
+  -6.13928,
+  -6.22815,
+  -6.08705,
+  -5.89561,
+  -6.17541,
+  -5.93816,
+  -6.58208,
+  -6.44434,
+  -6.33832,
+  -6.0996,
+  -6.27939,
+  -6.42177,
+  -5.63948,
+  -5.70047,
+  -5.71609,
+  -5.69213,
+  -5.9001,
+  -6.46015,
+  -6.31688,
+  -5.98579,
+  -6.03537,
+  -6.12368,
+  -6.16023,
+  -5.99129,
+  -6.04926,
+  -6.25124,
+  -6.01488,
+  -6.06772,
+  -6.00051,
+  -5.66185,
+  -5.97103,
+  -5.79815,
+  -5.92801,
+  -5.77889,
+  -5.60987,
+  -5.70492,
+  -5.67436,
+  -5.80418,
+  -5.60269,
+  -5.54735,
+  -5.63948,
+  -5.74392,
+  -5.6078,
+  -5.65342,
+  -5.59166,
+  -5.71071,
+  -5.56186,
+  -5.64593,
+  -5.24951,
+  -4.91175,
+  -5.13326,
+  -4.93947,
+  -5.03812,
+  -5.0436,
+  -5.18365,
+  -4.9643,
+  -4.91222,
+  -4.92841,
+  -5.00021,
+  -4.77616,
+  -4.69855,
+  -4.81645
+ ],
+ "champion_before": null,
+ "bounds": {
+  "item": "F16.1a-r",
+  "settings": 49,
+  "cells": [
+   "B10",
+   "B11",
+   "B12",
+   "B14",
+   "B16",
+   "B21",
+   "B22",
+   "B24",
+   "B25",
+   "B6",
+   "B8",
+   "B9",
+   "V10",
+   "V11",
+   "V13",
+   "V14",
+   "V21",
+   "V22",
+   "V25",
+   "V26"
+  ],
+  "decider": "0253's: 0252's generalised 0140 tempering (16 x 625 x 1000), copies = shuffles that fit the setting exactly on its own known letters, one at a time, stop at the first at or above K4, at most 12, 100 while K4 wins",
+  "self_check_against_0140": [
+   [
+    23,
+    -5.23832,
+    -5.23832
+   ],
+   [
+    26,
+    -5.13042,
+    -5.13042
+   ]
+  ],
+  "k4_above_all_12": 6,
+  "expected_by_chance_12": 3.77,
+  "binomial_p_12": 0.17251139872198787,
+  "k4_above_all_100": 2,
+  "expected_by_chance_100": 0.49,
+  "binomial_p_100": 0.084962372725599,
+  "per_setting": [
+   {
+    "cell": "V10",
+    "slips": [
+     73,
+     74
+    ],
+    "above": 100,
+    "copies_climbed": 100,
+    "score": -5.61821,
+    "copies_max": -5.63398,
+    "lost": 0,
+    "reading": "CDKLDCBCBETHBTROYGINFOLLKNORTHEASTRIVISOXISTTJULPLISKADAYSPMWOBBERLINCLOPCHEFJFGISCYSEPTCASBECBSS",
+    "east_at_22_25": "OLLK"
+   },
+   {
+    "cell": "B10",
+    "slips": [
+     69
+    ],
+    "above": 100,
+    "copies_climbed": 100,
+    "score": -5.77579,
+    "copies_max": -5.86211,
+    "lost": 0,
+    "reading": "XTWAILFLONYSDTOOIMIKCOLANNORTHEASTOITISARHSTYHHJPSNEWDICIEPQTODBERLIRCLOCKZSAHADNEPLUSSUEVIDRKBEB",
+    "east_at_22_25": "OLAN"
+   },
+   {
+    "cell": "B9",
+    "slips": [
+     28,
+     72
+    ],
+    "above": 60,
+    "copies_climbed": 61,
+    "score": -5.97807,
+    "copies_max": -5.97776,
+    "lost": 0,
+    "reading": "OIZANDAAWTHECVDUMENIFYGAKNOCTHEASTAKSRSSPWTCFRPKQKNEDYALAREKYHABERLINCLECKFEMIOTKINDKLILFRUHLICRG",
+    "east_at_22_25": "YGAK"
+   },
+   {
+    "cell": "B10",
+    "slips": [
+     29
+    ],
+    "above": 40,
+    "copies_climbed": 41,
+    "score": -5.8385,
+    "copies_max": -5.71439,
+    "lost": 0,
+    "reading": "JHIESOROSNAXLTCLEZVKTOBEANORWHEASTCIAIMLOISTYSYFRJWEIUSHEGRUROLBERLINCLOCKPANSOFWEPINAGBEIUWEKOGX",
+    "east_at_22_25": "OBEA"
+   },
+   {
+    "cell": "B9",
+    "slips": [
+     27,
+     28
+    ],
+    "above": 15,
+    "copies_climbed": 16,
+    "score": -6.04679,
+    "copies_max": -5.95098,
+    "lost": 0,
+    "reading": "AGFRYOWSHSALAGOGGONGMFOMBNDCTHEASTSUKRSKMYTOVWXUDKNEDALHDBWLAMIBERLINCLOCKMENUDRUYSINSUIETOABSCEK",
+    "east_at_22_25": "FOMB"
+   },
+   {
+    "cell": "B11",
+    "slips": [],
+    "above": 13,
+    "copies_climbed": 14,
+    "score": -5.84176,
+    "copies_max": -5.66185,
+    "lost": 0,
+    "reading": "ORRFWFOCEDCVRATZELENQOVBYNORTHEASTENANGMSATSYPLEUHRSIVCHTSACKLEBERLINCLOCKDBYAFGODUNDEACDDSSPNPYO",
+    "east_at_22_25": "OVBY"
+   },
+   {
+    "cell": "V10",
+    "slips": [
+     33,
+     74
+    ],
+    "above": 6,
+    "copies_climbed": 7,
+    "score": -5.71482,
+    "copies_max": -5.64653,
+    "lost": 0,
+    "reading": "JPINKMFMUFFYOTRWASKUCOUNWNORTHEANTRINICOPHNTHUDHENONIGKCATEWIOOBERLINCLOCOLFTUBMONSETFEPGARTAODTU",
+    "east_at_22_25": "OUNW"
+   },
+   {
+    "cell": "B14",
+    "slips": [
+     74
+    ],
+    "above": 5,
+    "copies_climbed": 6,
+    "score": -5.58755,
+    "copies_max": -5.56186,
+    "lost": 0,
+    "reading": "ULTTNIKLUKCHHDUBIDAKNSTPLNORTHEASTAYSOMEXYMRGATANELEBHASEAJEUPEBERLINCLOCALDTIVASUSSEETOECOZYHUGY",
+    "east_at_22_25": "STPL"
+   },
+   {
+    "cell": "B8",
+    "slips": [
+     28,
+     29
+    ],
+    "above": 5,
+    "copies_climbed": 6,
+    "score": -6.16208,
+    "copies_max": -6.13048,
+    "lost": 0,
+    "reading": "IEDGULAFWAPVIGNTOFFFSUZVANOUKHEASTQISAMEKNJJEELIGHISROCXOHETTUDBERLINCLOCKERVELDDOZKBSWMFDYPEEUKX",
+    "east_at_22_25": "UZVA"
+   },
+   {
+    "cell": "B6",
+    "slips": [
+     30,
+     74
+    ],
+    "above": 4,
+    "copies_climbed": 5,
+    "score": -6.73934,
+    "copies_max": -6.53967,
+    "lost": 0,
+    "reading": "QMYPDFUSEVDUROQUQORMDOZPLNORTBEASTOSDIOTPQSOGGLEDKNIKUXEFDAJTRRBERLINCLOCADKUGHHNIBAFUYLGLAGGGBDB",
+    "east_at_22_25": "OZPL"
+   },
+   {
+    "cell": "B8",
+    "slips": [
+     29,
+     34
+    ],
+    "above": 3,
+    "copies_climbed": 4,
+    "score": -6.41644,
+    "copies_max": -6.01499,
+    "lost": 0,
+    "reading": "ILZPPSPFHEPBAOFZOAALERZHMNORYHEASCQIEPTURNDCWELLDFNYZGSCOFETTRNBERLINCLOCKEDSELPLYHGILASGWBWWEDKJ",
+    "east_at_22_25": "RZHM"
+   },
+   {
+    "cell": "B6",
+    "slips": [
+     30,
+     32
+    ],
+    "above": 3,
+    "copies_climbed": 4,
+    "score": -6.49716,
+    "copies_max": -6.3463,
+    "lost": 0,
+    "reading": "SCCPOFTAYZODWGQDFOWCWOZPLNORTBEKSTUSBIOTNYOGAILHBONEDDIPVUCKYLLBERLINCLOCKWVKIKJNEWLUSCAVARHAIWUA",
+    "east_at_22_25": "OZPL"
+   },
+   {
+    "cell": "B8",
+    "slips": [
+     68,
+     69
+    ],
+    "above": 2,
+    "copies_climbed": 3,
+    "score": -6.29883,
+    "copies_max": -6.2652,
+    "lost": 0,
+    "reading": "VLYPGRAFXWEBKEYGIGGLLUZJONORTHEASTQSLAPDANNTDDLERUTEBITSIUACCURBERLSRCLOCKAFEDLMQECOOPMCUAWADDVKW",
+    "east_at_22_25": "UZJO"
+   },
+   {
+    "cell": "B6",
+    "slips": [
+     32,
+     64
+    ],
+    "above": 2,
+    "copies_climbed": 3,
+    "score": -6.4,
+    "copies_max": -6.14596,
+    "lost": 0,
+    "reading": "ZBIPOFFCXNOURAQUVORBBOZPLNORTHEKSTUSJIOTKYIALALIJSNEJUHFKKAZADWHERLINCLOCKBDDAORNECGSUILFLNGLACKB",
+    "east_at_22_25": "OZPL"
+   },
+   {
+    "cell": "B6",
+    "slips": [
+     28,
+     74
+    ],
+    "above": 2,
+    "copies_climbed": 3,
+    "score": -6.81298,
+    "copies_max": -6.52835,
+    "lost": 0,
+    "reading": "OFFRIFJSVPIGAOQUUOAFRZZPLNOHTHEASTDCWIOTJUNOEILEWKNAGGKJYJBISBHBERLINCLOCARDOVDLNANYQRFLAQBPEINSM",
+    "east_at_22_25": "ZZPL"
+   },
+   {
+    "cell": "V21",
+    "slips": [
+     74
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -4.98251,
+    "copies_max": -4.93947,
+    "lost": 0,
+    "reading": "IKOCKPUSERSLURPATIMANEGDLNORTHEASTINECOUNDRINEVESOLGALLASSESHSLBERLINCLOCAWBABMINGORYRODUFFEINPAK",
+    "east_at_22_25": "EGDL"
+   },
+   {
+    "cell": "V22",
+    "slips": [
+     30
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -5.05293,
+    "copies_max": -4.9643,
+    "lost": 0,
+    "reading": "ITHSKELOESUCHORWEELIPOFEYNORTNEASTEVEDATIOICACARDLEJANUOADERWELBERLINCLOCKOEDHISHEPOTFUNWASOYBOAD",
+    "east_at_22_25": "OFEY"
+   },
+   {
+    "cell": "B16",
+    "slips": [],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -5.45311,
+    "copies_max": -5.24951,
+    "lost": 0,
+    "reading": "TJIGSICFLEINLYISGAOFIAZISNORTHEASTBIISEHENATERWOLFAYONJEHUDONWJBERLINCLOCKDEIRWTOBHOWERNIASXERMKB",
+    "east_at_22_25": "AZIS"
+   },
+   {
+    "cell": "B12",
+    "slips": [
+     30
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -5.79361,
+    "copies_max": -5.77889,
+    "lost": 0,
+    "reading": "QIDPWTHUYBATTFQSPGALDNZDANORTBEASTELETOLBYCYARLWEDBASSJPOPSINSTBERLINCLOCKEFHEOENDTRYODUDUBOARTAX",
+    "east_at_22_25": "NZDA"
+   },
+   {
+    "cell": "B12",
+    "slips": [
+     28
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -5.90325,
+    "copies_max": -5.79815,
+    "lost": 0,
+    "reading": "IONSWGSLPESKHXQALKOPJIZISNOFTHEASTPPDCORFYXHINLEDUSEDBAYEANREWDBERLINCLOCKYIKFRENGAHOENUGMUNINABU",
+    "east_at_22_25": "IZIS"
+   },
+   {
+    "cell": "B8",
+    "slips": [
+     28,
+     69
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -6.04233,
+    "copies_max": -6.03113,
+    "lost": 0,
+    "reading": "GFPQASIFOGNUPOFZIBBADEZCDNONTHEASTQIDGHURNYJMILLHCHSGASPICETJENBERLIRCLOCKEDWILINICGSTASWEZLMIRKJ",
+    "east_at_22_25": "EZCD"
+   },
+   {
+    "cell": "B8",
+    "slips": [
+     34,
+     69
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -6.35393,
+    "copies_max": -5.88625,
+    "lost": 0,
+    "reading": "OSXPMTRFMGEONQMIDDDSPAZTNNORTHEASBQIPOHCUNTBDELYKESYADIEDEWTBAYBERLIRCLOCKWHEELVBYAFLYNMFUCUDEWKA",
+    "east_at_22_25": "AZTN"
+   },
+   {
+    "cell": "B8",
+    "slips": [
+     29,
+     66
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -6.36935,
+    "copies_max": -6.35792,
+    "lost": 0,
+    "reading": "JORPOSSFFUDGDOOGHFFNYIZPNNORMHEASTQIYZJUONCUSELYDRHEZAIDHRATTIVBEWLINCLOCKALBELHALSDLUPSIHWSSERKX",
+    "east_at_22_25": "IZPN"
+   },
+   {
+    "cell": "B6",
+    "slips": [
+     64,
+     74
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -6.48391,
+    "copies_max": -6.29279,
+    "lost": 0,
+    "reading": "RJPPOFKWMNOUSLQUIOSJROZPLNORTHEASTUSMIOTQXBLFELVMKNAHUFFUJAYJDAHERLINCLOCARWMEDMNANBAYPLKLICFENJO",
+    "east_at_22_25": "OZPL"
+   },
+   {
+    "cell": "B6",
+    "slips": [
+     28,
+     32
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -6.77626,
+    "copies_max": -6.26551,
+    "lost": 0,
+    "reading": "QJDKOFMYEVOSRUQEWORJUIZPLNOZTHEKSTUGUIOTAXSUGRLIUVNDFSWCAUIZTZRBERLINCLOCKUYBEHRNDHMAMDACCISGRHWB",
+    "east_at_22_25": "IZPL"
+   },
+   {
+    "cell": "B6",
+    "slips": [
+     32,
+     66
+    ],
+    "above": 1,
+    "copies_climbed": 2,
+    "score": -6.8111,
+    "copies_max": -6.53999,
+    "lost": 0,
+    "reading": "QEZPAFISEVASUOQADOUERDZELNORTHEKSTMARIOTSYSOGULPRDNWFSBAXLXCTJUBEZLINCLOCKRIIJKUNWBXXZZKGWAXGUBTW",
+    "east_at_22_25": "DZEL"
+   },
+   {
+    "cell": "V25",
+    "slips": [],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -4.82823,
+    "copies_max": -4.77616,
+    "lost": 0,
+    "reading": "IZATEDOORAIREGATOMOANOURINORTHEASTINDOURUNCRPJSAWREMAREPLAYOFVEBERLINCLOCKEMSAIDSUCOOLETTICBOUTUL",
+    "east_at_22_25": "OURI"
+   },
+   {
+    "cell": "B25",
+    "slips": [],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -4.87735,
+    "copies_max": -4.69855,
+    "lost": 0,
+    "reading": "TRETATRALAMMEHSBUYSFNONTONORTHEASTRIAGEOGOLBORPOODOSELALCOMECHEBERLINCLOCKHEMEMCOURPERTOSANIAOMJY",
+    "east_at_22_25": "ONTO"
+   },
+   {
+    "cell": "V22",
+    "slips": [
+     74
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -4.99239,
+    "copies_max": -4.91222,
+    "lost": 0,
+    "reading": "ARTOGEBLEFUNDONBATOTFOGTONORTHEASTWREETHESTAMWEHHMITHCUHLEEASTOBERLINCLOCIPIDDINOFORGEDDRGURANNGI",
+    "east_at_22_25": "OGTO"
+   },
+   {
+    "cell": "B24",
+    "slips": [],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.0035,
+    "copies_max": -5.00021,
+    "lost": 0,
+    "reading": "TEDPHOTHTINTHIRADHERAAZENNORTHEASTALOATEANAMCOLIUSTTOLUCERIZERNBERLINCLOCKEINCPTGYHASMIXRDSACONDD",
+    "east_at_22_25": "AZEN"
+   },
+   {
+    "cell": "B22",
+    "slips": [],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.01538,
+    "copies_max": -4.92841,
+    "lost": 0,
+    "reading": "SHCEWFIEESERSATTINANGOVERNORTHEASTODILLYROMSPDDAULRWOFEDESINUNABERLINCLOCKSPCINGOATRISTEDSESCNPST",
+    "east_at_22_25": "OVER"
+   },
+   {
+    "cell": "V26",
+    "slips": [],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.01701,
+    "copies_max": -4.81645,
+    "lost": 0,
+    "reading": "YCRAPEXEMPTCCARASREENFISONORTHEASTHANYPATTELAULZERBUSTYTOFWGLIEBERLINCLOCKEWARISSENSICWEWRINKCRTY",
+    "east_at_22_25": "FISO"
+   },
+   {
+    "cell": "V21",
+    "slips": [
+     32
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.13158,
+    "copies_max": -4.91175,
+    "lost": 0,
+    "reading": "GYTYRANSSFULATFEDERITYNOLNORTHEKSTREPLAWRUFIGHAEADILKLONTREMIWEBERLINCLOCKWENSUOPESORTTAUBBETICAP",
+    "east_at_22_25": "YNOL"
+   },
+   {
+    "cell": "B21",
+    "slips": [
+     74
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.13243,
+    "copies_max": -5.0436,
+    "lost": 0,
+    "reading": "GPORWQBEDMETALAFICADUTIPLNORTHEASTOECONTANZKANMANDCOATITHISTOURBERLINCLOCAOFTRDHILLSMGOSEVEYLLOCY",
+    "east_at_22_25": "TIPL"
+   },
+   {
+    "cell": "B21",
+    "slips": [
+     32
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.20722,
+    "copies_max": -5.03812,
+    "lost": 0,
+    "reading": "CDOWBQUOSISOLDTOKTANTISPLNORTHEKSTHOHEHEWARLATGDSAMAKOASAFULLIKBERLINCLOCKHISLEOFOODFFONOFEIDSAFO",
+    "east_at_22_25": "ISPL"
+   },
+   {
+    "cell": "V14",
+    "slips": [
+     74
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.57085,
+    "copies_max": -5.54735,
+    "lost": 0,
+    "reading": "SRIOURCETTHEALSCHVBULKROLNORTHEASTROOSIDHHAMSAZOLLWMZEKERUMDNBUBERLINCLOCAWAISIKESSERBIBHEKCFAROU",
+    "east_at_22_25": "KROL"
+   },
+   {
+    "cell": "V14",
+    "slips": [
+     32
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.64973,
+    "copies_max": -5.60269,
+    "lost": 0,
+    "reading": "BFORUGBUKTHELOBEVFBOIAFALNORTHEKSTSDPGEMUSEMIKZMISAYMEREMUZINCEBERLINCLOCKWAFOCLOBSEMWOUHERMOIDUK",
+    "east_at_22_25": "AFAL"
+   },
+   {
+    "cell": "B14",
+    "slips": [
+     32
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.65891,
+    "copies_max": -5.63948,
+    "lost": 0,
+    "reading": "HUSREGUTOTBAIGHVANWKSRJPLNORTHEKSTDOIHRVRASKGKLASUSESAHIPITHAMABERLINCLOCKBOOMALWWEIPESTONBAYUPLJ",
+    "east_at_22_25": "RJPL"
+   },
+   {
+    "cell": "V13",
+    "slips": [
+     33
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.70795,
+    "copies_max": -5.67436,
+    "lost": 0,
+    "reading": "ESRANSPHGBYGUGEKOSRLIFPUSNORTHEATTOREANGNAIOGJEZSTAAITSVUHINNINBERLINCLOCKSLYTHUIZVENDKHOROCKRDKN",
+    "east_at_22_25": "FPUS"
+   },
+   {
+    "cell": "V11",
+    "slips": [
+     33,
+     74
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.74082,
+    "copies_max": -5.71609,
+    "lost": 0,
+    "reading": "ALDKZGEMENAPLEVICLOGFOPNINORTHEANTXNIEVAACINNOPAHIVALSASUGIMPLOBERLINCLOCEQUECCTUFTOSEAARHGEASQKA",
+    "east_at_22_25": "OPNI"
+   },
+   {
+    "cell": "V11",
+    "slips": [
+     66,
+     74
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.74633,
+    "copies_max": -5.69213,
+    "lost": 0,
+    "reading": "FCWXFELUEJUICCUCLATHOFIDINORTHEASTGNSMMEEDUSOFKADDOEVPUAYOSNCATBEPLINCLOCOINDYEALITIKEAUXPORKJFMM",
+    "east_at_22_25": "FIDI"
+   },
+   {
+    "cell": "B12",
+    "slips": [
+     64
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.76141,
+    "copies_max": -5.60987,
+    "lost": 0,
+    "reading": "NINPUTTRMENNUFQBGWWYANZAENORTHEASTSUSTOUSMYDULLESUHEMBJSJOTMOSEHERLINCLOCKICAZONNDAYDONSOSPVULARK",
+    "east_at_22_25": "NZAE"
+   },
+   {
+    "cell": "V11",
+    "slips": [
+     30,
+     66
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.79035,
+    "copies_max": -5.70047,
+    "lost": 0,
+    "reading": "FAPDRBGOETUEAMBYHEBALFENANORTNEASTUNFINDJOYSACOISERJCGURVSFVMEBBEPLINCLOCKSNDDLESPTSIEAUIRSAKYPAN",
+    "east_at_22_25": "FENA"
+   },
+   {
+    "cell": "B12",
+    "slips": [
+     66
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.833,
+    "copies_max": -5.70492,
+    "lost": 0,
+    "reading": "YDEPQSHBMEYCRAQQHEDOANZEANORTHEASTHHTYOFAYADORLATSGDGLUSULKSGMWBEILINCLOCKBAODPENIANDEEMIRSLORAZB",
+    "east_at_22_25": "NZEA"
+   },
+   {
+    "cell": "V13",
+    "slips": [
+     72
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.89766,
+    "copies_max": -5.80418,
+    "lost": 0,
+    "reading": "TYAATGXDGDRULATPESCBOFFUKNORTHEASTOGISNADYBYRKIZEOSQUEJIMNWANIMBERLINCLFCKENOTNBIGFSISKALFICMATGT",
+    "east_at_22_25": "FFUK"
+   },
+   {
+    "cell": "V11",
+    "slips": [
+     30,
+     33
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -5.9175,
+    "copies_max": -5.63948,
+    "lost": 0,
+    "reading": "PRBLYDBOEDPAREGINEBSMOAARNORTNEAITKNEBMOJAWINVWSHUPJNUPREOERCEBBERLINCLOCKLLADTYMUTSIEAPOOOHALUAM",
+    "east_at_22_25": "OAAR"
+   },
+   {
+    "cell": "B8",
+    "slips": [
+     29,
+     68
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -6.36005,
+    "copies_max": -6.24303,
+    "lost": 0,
+    "reading": "NWCPMIXFLDPYDBBLDMMWITZDMNOREHEASTQSIFFIUNDTRELEFUTIZXDRDUNJTTOBERLSNCLOCKNZBELPHIKHWAPTTAIAREAKA",
+    "east_at_22_25": "TZDM"
+   },
+   {
+    "cell": "B8",
+    "slips": [
+     66,
+     69
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -6.46134,
+    "copies_max": -5.63868,
+    "lost": 0,
+    "reading": "IMPPNLOFBUNNXQXMOXXVDIZZKNORTHEASTQIDATEDNFWIELRURRFPOATORDTUIPBEDLIRCLOCKDOWELGHEHEEDYCTHZMIEIKX",
+    "east_at_22_25": "IZZK"
+   },
+   {
+    "cell": "B6",
+    "slips": [
+     66,
+     74
+    ],
+    "above": 0,
+    "copies_climbed": 1,
+    "score": -6.60976,
+    "copies_max": -6.33696,
+    "lost": 0,
+    "reading": "ZGIPWFSRWZWBDEQGOODGGAZILNORTHEASTIZKIOTBAXEVELTKKNDHBYZKFURALMBEKLINCLOCAGLFPOWNDAVIBIUKSNPVEAQR",
+    "east_at_22_25": "AZIL"
+   }
+  ],
+  "plants": {
+   "clean_found": [
+    7,
+    12
+   ],
+   "sanborn_found": [
+    9,
+    12
+   ],
+   "each": {
+    "0": {
+     "cls": "clean",
+     "cell": "B21",
+     "slips": [
+      32
+     ],
+     "found": false,
+     "above": 2,
+     "score": -4.93037,
+     "letters_right": 28
+    },
+    "1": {
+     "cls": "clean",
+     "cell": "V11",
+     "slips": [
+      66,
+      74
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.45719,
+     "letters_right": 34
+    },
+    "2": {
+     "cls": "clean",
+     "cell": "B10",
+     "slips": [
+      69
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.6761,
+     "letters_right": 49
+    },
+    "3": {
+     "cls": "clean",
+     "cell": "B8",
+     "slips": [
+      68,
+      69
+     ],
+     "found": false,
+     "above": 3,
+     "score": -5.92405,
+     "letters_right": 41
+    },
+    "4": {
+     "cls": "clean",
+     "cell": "B9",
+     "slips": [
+      28,
+      72
+     ],
+     "found": false,
+     "above": 11,
+     "score": -5.90306,
+     "letters_right": 44
+    },
+    "5": {
+     "cls": "clean",
+     "cell": "B12",
+     "slips": [
+      30
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.37642,
+     "letters_right": 39
+    },
+    "6": {
+     "cls": "clean",
+     "cell": "V14",
+     "slips": [
+      74
+     ],
+     "found": false,
+     "above": 3,
+     "score": -5.24738,
+     "letters_right": 31
+    },
+    "7": {
+     "cls": "clean",
+     "cell": "V21",
+     "slips": [
+      74
+     ],
+     "found": false,
+     "above": 3,
+     "score": -4.89833,
+     "letters_right": 27
+    },
+    "8": {
+     "cls": "clean",
+     "cell": "B25",
+     "slips": [],
+     "found": true,
+     "above": 12,
+     "score": -4.7357,
+     "letters_right": 31
+    },
+    "9": {
+     "cls": "clean",
+     "cell": "B25",
+     "slips": [],
+     "found": true,
+     "above": 12,
+     "score": -4.60344,
+     "letters_right": 32
+    },
+    "10": {
+     "cls": "clean",
+     "cell": "V21",
+     "slips": [
+      74
+     ],
+     "found": true,
+     "above": 12,
+     "score": -4.75429,
+     "letters_right": 34
+    },
+    "11": {
+     "cls": "clean",
+     "cell": "V26",
+     "slips": [],
+     "found": true,
+     "above": 12,
+     "score": -4.63484,
+     "letters_right": 44
+    },
+    "12": {
+     "cls": "xstops",
+     "cell": "B16",
+     "slips": [],
+     "found": false,
+     "above": 11,
+     "score": -5.32735,
+     "letters_right": 35
+    },
+    "13": {
+     "cls": "xstops",
+     "cell": "V11",
+     "slips": [
+      33,
+      74
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.3058,
+     "letters_right": 37
+    },
+    "14": {
+     "cls": "xstops",
+     "cell": "B24",
+     "slips": [],
+     "found": true,
+     "above": 12,
+     "score": -4.61152,
+     "letters_right": 36
+    },
+    "15": {
+     "cls": "xstops",
+     "cell": "B9",
+     "slips": [
+      28,
+      72
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.30529,
+     "letters_right": 37
+    },
+    "16": {
+     "cls": "xstops",
+     "cell": "B21",
+     "slips": [
+      74
+     ],
+     "found": true,
+     "above": 12,
+     "score": -4.77487,
+     "letters_right": 31
+    },
+    "17": {
+     "cls": "xstops",
+     "cell": "V11",
+     "slips": [
+      30,
+      33
+     ],
+     "found": false,
+     "above": 3,
+     "score": -5.63316,
+     "letters_right": 41
+    },
+    "18": {
+     "cls": "xstops",
+     "cell": "V11",
+     "slips": [
+      30,
+      66
+     ],
+     "found": false,
+     "above": 1,
+     "score": -5.63515,
+     "letters_right": 34
+    },
+    "19": {
+     "cls": "xstops",
+     "cell": "B8",
+     "slips": [
+      34,
+      69
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.64153,
+     "letters_right": 46
+    },
+    "20": {
+     "cls": "xstops",
+     "cell": "B9",
+     "slips": [
+      28,
+      72
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.50234,
+     "letters_right": 44
+    },
+    "21": {
+     "cls": "xstops",
+     "cell": "V14",
+     "slips": [
+      32
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.27265,
+     "letters_right": 30
+    },
+    "22": {
+     "cls": "xstops",
+     "cell": "B8",
+     "slips": [
+      68,
+      69
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.38389,
+     "letters_right": 46
+    },
+    "23": {
+     "cls": "xstops",
+     "cell": "B8",
+     "slips": [
+      29,
+      34
+     ],
+     "found": true,
+     "above": 12,
+     "score": -5.64699,
+     "letters_right": 41
+    }
+   }
+  },
+  "core_seconds": 9408,
+  "compute_seconds": 1545,
+  "exhaustive": true,
+  "exhaustive_over": "every K4 setting 0274 lists as only EAST closed (one free alphabet, periodic key, minimal slip sets on the 20 official letters)",
+  "aws_cost_estimate_dollars": 0.5
+ },
+ "notes": "49 settings in 20 cells; K4 above all 12 copies in 6 (chance 3.8, p 0.173), above all 100 in 2; plants clean [7, 12], Sanborn-style [9, 12]",
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 0,
+  "cached": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "errors": 0
+ },
+ "error": null,
+ "candidates": []
+}

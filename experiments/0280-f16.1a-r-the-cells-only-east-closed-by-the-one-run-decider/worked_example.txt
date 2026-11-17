@@ -1,0 +1,6 @@
+F16.1a-r: one free alphabet, a periodic key, the 20 official known letters; one setting at a time.
+
+  setting      Beaufort, key length 11, no slip (0274: fits on 20 letters, not on 24)
+  K4           one tempering search for the most English reading with NORTHEAST, BERLIN, CLOCK in place
+  copies       scrambles of K4 that also fit length 11, one search each, until one reads as well as K4
+  verdict      K4 beating 12 in a row happens 1 time in 13 by chance; count over all settings

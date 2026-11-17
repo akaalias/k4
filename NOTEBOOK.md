@@ -15,6 +15,10 @@ holds the reasoning and the mistakes.
 
 The first start of 0272 (2026-11-05) did not hang on the network: CPU sat at zero for two hours. Each job built a 40 MB index per setting (a 16.7 MB bitmap per form) and cached all 300 of its settings across the 51 texts: about 12 GB per worker, 32 workers on a 64 GB machine. Workers were killed for memory and `Pool.imap_unordered` waited forever for their tasks. Restarted from scratch with settings outside and texts inside; a 60-setting, 4-text desk slice gave output identical to the draft's. The run then took 2.2 minutes.
 
+| # | Item | One line |
+|---|---|---|
+| 273 | F14.2b | **0272's edge cell on 2,000 fresh shuffles.** K4's A25 Beaufort count comes from one setting with 2 repeated and 3 informative checks; 40 of 2,000 shuffles at or above, p 0.020 (line 0.00066): chance. Plants 12/12. AWS 0.4 min, $0.01. |
+
 F14.2 closing reopens F14.5's second half (F14.2 on the 98-letter variants), queued as F14.5b.
 
 ## 2026-11-05

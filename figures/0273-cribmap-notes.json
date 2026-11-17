@@ -1,0 +1,14 @@
+[
+ {
+  "anchor": "the cell",
+  "text": "0272's one cell above all 50 shuffles: the move first, key length 25, 295 settings with 4 or fewer informative checks, pairs counted only."
+ },
+ {
+  "anchor": "the replication",
+  "text": "K4 against 2,000 fresh shuffles: 40 at or above, p 0.020, as in 0272; the corrected line is 0.00066."
+ },
+ {
+  "anchor": "what it means",
+  "text": "A count is non-zero when a setting's repeated known letters sit over repeated carved letters: 7.7% of shuffles do it somewhere, K4 once."
+ }
+]

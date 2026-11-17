@@ -259,7 +259,8 @@ Update the leaf when an experiment works on it.
     - **F16.8** An artist's twist on K1/K2's method {open}
     - **F16.4** Small shifts and carved lines, pre-registered {open}
     - **F16.5** An unknown text plus a dictionary word {open}
-    - **F16.6** The word-key verdicts, reopened as chart keys {open}
+    - **F16.6** The word-key verdicts, reopened as chart keys: decided by count or reduction, one edge (AMSCO 23) {closed · by reading · reports/f16.6-chart-keys.md}
+      - **F16.6-r** AMSCO period 23's 21 settings read as chart keys {open}
     - **F16.3** Keyword alphabets mixed in a grid, at dictionary scale {open}
     - **F16.7** K4 and K5 in depth {blocked · K5 not published}
 

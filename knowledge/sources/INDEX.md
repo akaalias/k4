@@ -89,3 +89,14 @@ Dates are publication dates where the source gives one. Web pages without a date
 | `wired-2014-clock-clue.txt` | Kim Zetter, Wired, "Finally, a New Clue to Solve the CIA's Mysterious Kryptos Sculpture" | 2014-11-20 | [wired.com](https://www.wired.com/2014/11/second-kryptos-clue/) | no |
 | `wired2005-2025.txt` | Kim Zetter, Wired, "Questions for Kryptos' Creator" (third capture) | 2005-01-20 | [wired.com](https://www.wired.com/2005/01/questions-for-kryptos-creator/) | no |
 | `zona-2025.txt` | Zona Motel (Substack), "Kryptos K4 Uncovered": interview with Jarett Kobek and Richard Byrne | 2025-10-17 | [substack.com](https://zonamotel.substack.com/p/interview-kryptos-k4-uncovered-jarett) | no |
+| `carter-1927-tomb-of-tutankhamen-vol2.txt` | Howard Carter, *The Tomb of Tut-ankh-Amen*, vol. 2 (OCR text; running-key candidate for F16.2) | 1927 | [archive.org](https://archive.org/details/tomboftutankhame02cart) | no |
+| `carter-1933-tomb-of-tutankhamen-vol3.txt` | Howard Carter, *The Tomb of Tut-ankh-Amen*, vol. 3 (OCR text; running-key candidate for F16.2) | 1933 | [archive.org](https://archive.org/details/in.ernet.dli.2015.537287) | no |
+| `kjv-genesis.txt` | King James Bible, Genesis (Project Gutenberg #10; F16.2) | 1611 | [gutenberg.org](https://www.gutenberg.org/ebooks/10) | no |
+| `kjv-john.txt` | King James Bible, Gospel of John (Project Gutenberg #10; F16.2) | 1611 | [gutenberg.org](https://www.gutenberg.org/ebooks/10) | no |
+| `declaration-of-independence-1776.txt` | The Declaration of Independence (Project Gutenberg #1; F16.2) | 1776-07-04 | [gutenberg.org](https://www.gutenberg.org/ebooks/1) | no |
+| `us-constitution-1787.txt` | The Constitution of the United States (Project Gutenberg #5; F16.2) | 1787-09-17 | [gutenberg.org](https://www.gutenberg.org/ebooks/5) | no |
+| `gettysburg-address-1863.txt` | Abraham Lincoln, the Gettysburg Address, Gutenberg's transcription (#4; F16.2) | 1863-11-19 | [gutenberg.org](https://www.gutenberg.org/ebooks/4) | no |
+| `poe-1843-the-gold-bug.txt` | Edgar Allan Poe, "The Gold-Bug" (Project Gutenberg #2147; F16.2) | 1843 | [gutenberg.org](https://www.gutenberg.org/ebooks/2147) | no |
+| `kennedy-1963-ich-bin-ein-berliner.txt` | John F. Kennedy, Remarks in the Rudolph Wilde Platz, Berlin (American Presidency Project; F16.2) | 1963-06-26 | [presidency.ucsb.edu](https://www.presidency.ucsb.edu/documents/remarks-the-rudolph-wilde-platz-berlin) | no |
+| `reagan-1987-brandenburg-gate.txt` | Ronald Reagan, Remarks on East-West Relations at the Brandenburg Gate (Reagan Library; F16.2) | 1987-06-12 | [reaganlibrary.gov](https://www.reaganlibrary.gov/archives/speech/remarks-east-west-relations-brandenburg-gate-west-berlin) | no |
+| `national-security-act-1947.txt` | National Security Act of 1947, 61 Stat. 495 (govinfo text layer; F16.2) | 1947-07-26 | [govinfo.gov](https://www.govinfo.gov/content/pkg/STATUTE-61/pdf/STATUTE-61-Pg495.pdf) | no |

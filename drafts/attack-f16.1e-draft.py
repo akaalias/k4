@@ -6,7 +6,7 @@ EXPERIMENT = {
     "family": "16-simple-hand-methods",
     "parent": "0210-running-keys-with-slips-at-known-places",
     "changed": (
-        "F16.1 (issue #123), fifth part. 0210's attack.py loaded from its record and run with only the 20 official known "
+        "F16.1 (issue #123), fifth part; reruns 0278, which stopped before searching because the loaded 0210 looked for its data under its own folder (its ROOT now set to the repository). 0210's attack.py loaded from its record and run with only the 20 official known "
         "places (26-34, 64-74). Its pigeonhole index used 8 blocks of 3 known places to be exact for up to 7 slips; 20 "
         "places give 6 whole blocks, so the blocks are taken over the first 18 places and the slip limit is 5 (exact for "
         "5 or fewer), each replacement asserted; the bit counts use 20 places. Everything else as recorded: sources, "
@@ -69,6 +69,7 @@ def load(prefix):
     m.__file__ = str(path)
     sys.modules[name] = m
     exec(compile(src, str(path), "exec"), m.__dict__)
+    m.ROOT = ROOT
     return m
 
 

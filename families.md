@@ -251,6 +251,7 @@ Update the leaf when an experiment works on it.
       - **F16.1b** Two dictionary keyword alphabets, every pair, key lengths 1-26: no key word on K4 or 50 shuffles (plants 12/12); free-key counts inside the shuffles {closed · exact · 0275}
       - **F16.1b-s** The same with one or two slips {open}
       - **F16.1c** Both autokeys (0149, 0212, 0213) as recorded: K4 inside its copies; 0213's best judged reading 10 against copies' 12; plants 5/5, 3/3 {closed · exact · 0276}
+      - **F16.1d** Gromark, free alphabet (0195, 0262 as recorded): no primer fits K4 without EAST; copies do {closed · exact · 0277}
       - **F16.1a-r** The cells only EAST closed (B11, B16, B22, B24, B25, V25, V26 at no slip), by D1's English decider {open}
     - **F16.2** A book plus a keyword {open}
     - **F16.8** An artist's twist on K1/K2's method {open}

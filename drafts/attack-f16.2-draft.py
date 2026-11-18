@@ -333,11 +333,21 @@ def run(ctx):
         name, o, tb, form, sgn, L, need = r["fit"]
         if "?" in r["reading"]:
             continue
-        cands.append({"plaintext": r["reading"], "key": {"source": name, "offset": o, "table": tb, "form": form, "sign": sgn,
-                                                         "word": r["word"]}, "notes": f"judge {r.get('judge')}, quad {r['quad']}, slips {need}"})
+        # a slip is part of the key (program.md): the plaintext carries the known letter, the key names the place and the carved letter
+        pt = list(r["reading"])
+        slips = []
+        for q, ch in k24.items():
+            if pt[q - 1] != ch:
+                pt[q - 1] = ch
+                slips.append([q, ctx.K4[q - 1]])
+        cands.append({"plaintext": "".join(pt), "key": {"source": name, "offset": o, "table": tb, "form": form, "sign": sgn,
+                                                        "word": r["word"], "slips": slips},
+                      "notes": f"judge {r.get('judge')}, quad {r['quad']}, slips {need}"})
+    controls = [max([r["quad"] for r in recs[(f"copy{i}", "k24")]] or [-9.0]) for i in range(N_COPIES)]
     total_letters = sum(len(s) for s in srcs.values())
     return {
         "candidates": cands,
+        "controls": controls,
         "bounds": {
             "item": "F16.2", "sources": {k: len(v) for k, v in srcs.items()}, "source_letters_both_directions": total_letters,
             "tables": list(TABLES), "forms": "Vigenere (c = p + s t + w) and Beaufort (c = s t + w - p), s = +1 or -1; variant forms coincide",
@@ -361,7 +371,10 @@ def run(ctx):
 
 def encrypt(plaintext, key):
     srcs = sources()
-    return encipher(plaintext, srcs[key["source"]], key["offset"], key["table"], key["form"], key["sign"], key["word"])
+    ct = list(encipher(plaintext, srcs[key["source"]], key["offset"], key["table"], key["form"], key["sign"], key["word"]))
+    for q, ch in key.get("slips", []):
+        ct[q - 1] = ch
+    return "".join(ct)
 
 
 def worked_example(ctx, key):

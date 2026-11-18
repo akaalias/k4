@@ -249,7 +249,9 @@ Update the leaf when an experiment works on it.
     - **F16.1** The exact deciders without EAST (the 20 official letters, 0-2 slips) {closed · exact · 0274-0279}
       - **F16.1a** One free alphabet, periodic key 1-26: K4 fits fewer cells than its 200 shuffles (p 0.90-0.95); 20 cells only EAST closed; a fit count has no power here (plants 0/6) {closed · exact · 0274}
       - **F16.1b** Two dictionary keyword alphabets, every pair, key lengths 1-26: no key word on K4 or 50 shuffles (plants 12/12); free-key counts inside the shuffles {closed · exact · 0275}
-      - **F16.1b-s** The same with one or two slips {open}
+      - **F16.1b-s** The same with one or two slips (210 drop sets): no key word on K4 or 20 shuffles; plants 6/6; cells over the 5 million pair cap counted only {closed · exact · 0282}
+        - **F16.1b-s-r** Length 19: K4 fits 200 of 210 drop sets, shuffles at most 39 (p 0.048) {open}
+        - **F16.1b-s2** The cells over the listing cap (16, 22 Beaufort, 23), screened in streams {open}
       - **F16.1c** Both autokeys (0149, 0212, 0213) as recorded: K4 inside its copies; 0213's best judged reading 10 against copies' 12; plants 5/5, 3/3 {closed · exact · 0276}
       - **F16.1d** Gromark, free alphabet (0195, 0262 as recorded): no primer fits K4 without EAST; copies do {closed · exact · 0277}
       - **F16.1e** The named running keys (0210), 0-5 slips: nothing on K4 or shuffles; plants 3/3 {closed · exact · 0279}

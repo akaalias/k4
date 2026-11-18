@@ -280,3 +280,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0279	0279-f16.1e-running-keys-on-the-20-official-letters	16-simple-hand-methods	0210-running-keys-with-slips-at-known-places	reverted	0	0	0			219	unattributed=43 run=219 record=0
 0280	0280-f16.1a-r-the-cells-only-east-closed-by-the-one-run-decider	16-simple-hand-methods	0253-f1.4-one-alphabet-residue-decided-by-the-one-run-decider	reverted	0	0	0			1630	test=18 run=1630 record=0
 0281	0281-f16.1a-r2-0280s-two-edge-settings-on-fresh-copies	16-simple-hand-methods	0280-f16.1a-r-the-cells-only-east-closed-by-the-one-run-decider	reverted	0	0	0			998	test=18 run=998 record=0
+0282	0282-f16.1b-s-two-dictionary-keyword-alphabets-with-slips	16-simple-hand-methods	0275-f16.1b-two-dictionary-keyword-alphabets-on-the-20-official-letters	reverted	0	0	0			4196	unattributed=56714 run=4196 record=0

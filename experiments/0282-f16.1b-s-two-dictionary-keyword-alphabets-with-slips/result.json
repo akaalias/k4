@@ -1,0 +1,503 @@
+{
+ "id": 282,
+ "tag": "0282-f16.1b-s-two-dictionary-keyword-alphabets-with-slips",
+ "started": "2026-11-18T09:03:09+00:00",
+ "seconds": 4196.3,
+ "status": "ran",
+ "phases": {
+  "unattributed": 56713.6,
+  "run": 4196.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1794996785.757399,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "item": "F16.1b-s",
+  "drop_sets": 210,
+  "known_places": [
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74
+  ],
+  "cap_pairs_listed": 5000000,
+  "key_word_check_lengths": [
+   3,
+   23
+  ],
+  "fitting": {
+   "1/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "1/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "2/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "2/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "3/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "3/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "4/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "4/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "5/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "5/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "6/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "6/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "7/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "7/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "8/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 2,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "8/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 0,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "9/added": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 16,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "9/beaufort": {
+    "k4_drop_sets_fitting": 0,
+    "copies_median": 0.0,
+    "copies_max": 15,
+    "p": null,
+    "k4_unscreened_drop_sets": 0
+   },
+   "10/added": {
+    "k4_drop_sets_fitting": 4,
+    "copies_median": 16.0,
+    "copies_max": 133,
+    "p": 0.81,
+    "k4_unscreened_drop_sets": 0
+   },
+   "10/beaufort": {
+    "k4_drop_sets_fitting": 12,
+    "copies_median": 9.0,
+    "copies_max": 66,
+    "p": 0.429,
+    "k4_unscreened_drop_sets": 0
+   },
+   "11/added": {
+    "k4_drop_sets_fitting": 28,
+    "copies_median": 109.5,
+    "copies_max": 207,
+    "p": 0.857,
+    "k4_unscreened_drop_sets": 0
+   },
+   "11/beaufort": {
+    "k4_drop_sets_fitting": 52,
+    "copies_median": 104.0,
+    "copies_max": 150,
+    "p": 0.667,
+    "k4_unscreened_drop_sets": 0
+   },
+   "12/added": {
+    "k4_drop_sets_fitting": 74,
+    "copies_median": 189.0,
+    "copies_max": 210,
+    "p": 0.762,
+    "k4_unscreened_drop_sets": 0
+   },
+   "12/beaufort": {
+    "k4_drop_sets_fitting": 52,
+    "copies_median": 189.0,
+    "copies_max": 210,
+    "p": 0.762,
+    "k4_unscreened_drop_sets": 0
+   },
+   "13/added": {
+    "k4_drop_sets_fitting": 143,
+    "copies_median": 133.0,
+    "copies_max": 179,
+    "p": 0.429,
+    "k4_unscreened_drop_sets": 0
+   },
+   "13/beaufort": {
+    "k4_drop_sets_fitting": 132,
+    "copies_median": 121.5,
+    "copies_max": 172,
+    "p": 0.429,
+    "k4_unscreened_drop_sets": 0
+   },
+   "14/added": {
+    "k4_drop_sets_fitting": 39,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.952,
+    "k4_unscreened_drop_sets": 0
+   },
+   "14/beaufort": {
+    "k4_drop_sets_fitting": 39,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.952,
+    "k4_unscreened_drop_sets": 0
+   },
+   "15/added": {
+    "k4_drop_sets_fitting": 4,
+    "copies_median": 39.0,
+    "copies_max": 210,
+    "p": 1.0,
+    "k4_unscreened_drop_sets": 0
+   },
+   "15/beaufort": {
+    "k4_drop_sets_fitting": 4,
+    "copies_median": 39.0,
+    "copies_max": 210,
+    "p": 1.0,
+    "k4_unscreened_drop_sets": 0
+   },
+   "16/added": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.857,
+    "k4_unscreened_drop_sets": 78
+   },
+   "16/beaufort": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.857,
+    "k4_unscreened_drop_sets": 24
+   },
+   "17/added": {
+    "k4_drop_sets_fitting": 4,
+    "copies_median": 39.0,
+    "copies_max": 210,
+    "p": 0.952,
+    "k4_unscreened_drop_sets": 0
+   },
+   "17/beaufort": {
+    "k4_drop_sets_fitting": 4,
+    "copies_median": 39.0,
+    "copies_max": 210,
+    "p": 0.952,
+    "k4_unscreened_drop_sets": 0
+   },
+   "18/added": {
+    "k4_drop_sets_fitting": 74,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.762,
+    "k4_unscreened_drop_sets": 0
+   },
+   "18/beaufort": {
+    "k4_drop_sets_fitting": 74,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.762,
+    "k4_unscreened_drop_sets": 0
+   },
+   "19/added": {
+    "k4_drop_sets_fitting": 200,
+    "copies_median": 26.0,
+    "copies_max": 39,
+    "p": 0.048,
+    "k4_unscreened_drop_sets": 0
+   },
+   "19/beaufort": {
+    "k4_drop_sets_fitting": 200,
+    "copies_median": 22.0,
+    "copies_max": 39,
+    "p": 0.048,
+    "k4_unscreened_drop_sets": 0
+   },
+   "20/added": {
+    "k4_drop_sets_fitting": 96,
+    "copies_median": 135.5,
+    "copies_max": 193,
+    "p": 0.857,
+    "k4_unscreened_drop_sets": 0
+   },
+   "20/beaufort": {
+    "k4_drop_sets_fitting": 120,
+    "copies_median": 123.5,
+    "copies_max": 154,
+    "p": 0.571,
+    "k4_unscreened_drop_sets": 0
+   },
+   "21/added": {
+    "k4_drop_sets_fitting": 39,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.952,
+    "k4_unscreened_drop_sets": 0
+   },
+   "21/beaufort": {
+    "k4_drop_sets_fitting": 39,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.952,
+    "k4_unscreened_drop_sets": 0
+   },
+   "22/added": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.857,
+    "k4_unscreened_drop_sets": 0
+   },
+   "22/beaufort": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.857,
+    "k4_unscreened_drop_sets": 12
+   },
+   "23/added": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.762,
+    "k4_unscreened_drop_sets": 105
+   },
+   "23/beaufort": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 0.762,
+    "k4_unscreened_drop_sets": 105
+   },
+   "24/added": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 1.0,
+    "k4_unscreened_drop_sets": 0
+   },
+   "24/beaufort": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 1.0,
+    "k4_unscreened_drop_sets": 0
+   },
+   "25/added": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 1.0,
+    "k4_unscreened_drop_sets": 0
+   },
+   "25/beaufort": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 1.0,
+    "k4_unscreened_drop_sets": 0
+   },
+   "26/added": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 1.0,
+    "k4_unscreened_drop_sets": 0
+   },
+   "26/beaufort": {
+    "k4_drop_sets_fitting": 210,
+    "copies_median": 210.0,
+    "copies_max": 210,
+    "p": 1.0,
+    "k4_unscreened_drop_sets": 0
+   }
+  },
+  "key_word_matches": {
+   "k4": 0,
+   "copies": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "k4_matches": [],
+  "plants": {
+   "plant0": {
+    "L": 14,
+    "slips": [
+     30
+    ],
+    "found": true
+   },
+   "plant1": {
+    "L": 16,
+    "slips": [
+     68,
+     70
+    ],
+    "found": true
+   },
+   "plant2": {
+    "L": 18,
+    "slips": [
+     74
+    ],
+    "found": true
+   },
+   "plant3": {
+    "L": 20,
+    "slips": [
+     34,
+     64
+    ],
+    "found": true
+   },
+   "plant4": {
+    "L": 21,
+    "slips": [
+     28
+    ],
+    "found": true
+   },
+   "plant5": {
+    "L": 22,
+    "slips": [
+     30,
+     34
+    ],
+    "found": true
+   }
+  },
+  "plants_found": 6,
+  "copies": 20,
+  "compute_seconds": 4132,
+  "exhaustive": "yes where pairs are listed; cells above the cap counted only (k4_unscreened_drop_sets)",
+  "aws_cost_estimate_dollars": 2.0
+ },
+ "notes": "210 drop sets; key-word matches K4 0, copies max 0; plants 6/6",
+ "judge": null,
+ "error": null,
+ "candidates": []
+}

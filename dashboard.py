@@ -899,6 +899,16 @@ def sculpture_block():
             '<script type="importmap">{"imports": {"three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>'
             '<script type="module" src="/assets/sculpture.js"></script>')
 
+# Where each line starts and ends on the copper, in millimetres of Bret L Bowen's 1:38 model, measured by
+# unrolling its copper sheet (issue #127). Messages: from the sheet's outer edge towards the middle. Table: from
+# the row labels towards the middle, as the table reads from its own side. Both halves share one scale.
+COPPER_SPANS = {
+    "messages": [(0.3, 108.3), (0.2, 108.3), (0.3, 108.2), (0.2, 107.7), (0.3, 107.5), (0.2, 108.4), (0.2, 107.7), (0.0, 108.2), (0.2, 108.2), (0.3, 106.6), (0.3, 106.4), (0.3, 107.9), (0.3, 108.8), (0.3, 108.4), (0.1, 108.0), (0.3, 107.0), (0.3, 106.9), (0.2, 108.6), (0.2, 108.1), (0.2, 107.3), (0.2, 108.2), (0.3, 107.9), (0.3, 108.4), (0.2, 107.8), (0.2, 106.9), (0.3, 108.7), (0.3, 107.9), (0.3, 108.2)],
+    "table": [(5.2, 111.9), (1.0, 112.1), (1.0, 111.5), (1.1, 111.4), (0.9, 110.8), (1.0, 111.3), (1.2, 111.7), (1.0, 111.2), (0.7, 111.9), (1.8, 111.8), (1.5, 111.7), (0.9, 111.9), (1.2, 112.3), (0.3, 110.8), (0.8, 113.3), (1.0, 109.8), (1.1, 110.4), (0.9, 112.1), (0.9, 112.8), (1.2, 113.0), (1.1, 112.0), (1.1, 113.0), (1.2, 112.9), (0.0, 112.8), (0.9, 112.9), (0.9, 112.3), (1.2, 111.7), (5.2, 112.0)],
+}
+COPPER_WIDTH = 113.3      # the longest line, row N of the table
+
+
 LETTER_KEY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?"
 
 
@@ -925,30 +935,39 @@ def sculpture_page():
     lines = p["ul"] + p["ll"]
     assert sum(map(len, lines)) == len(plain)
     cell = lambda ch, pt=None: f'<i class="lc" data-l="{esc(ch)}"' + (f' data-c="{esc(ch)}" data-p="{esc(pt)}"' if pt else "") + f'>{esc(ch)}</i>'
+    def row(k, span, cells):
+        x0, x1 = span
+        plate = ' style="margin-top:5px"' if k == 14 else ""     # the seam between the upper and lower plates
+        return (f'<div class="lrow"{plate}><div class="cu" style="margin-left:{x0 / COPPER_WIDTH * 100:.2f}%;'
+                f'width:{(x1 - x0) / COPPER_WIDTH * 100:.2f}%">{cells}</div></div>')
     rows, at = [], 0
-    for ln in lines:
-        rows.append('<div class="lrow">' + "".join(cell(ch, plain[at + j]) for j, ch in enumerate(ln)) + "</div>")
+    for k, ln in enumerate(lines):
+        cells = [cell(ch, plain[at + j]) for j, ch in enumerate(ln)]
+        if k == 14:                                               # Y, A and R of ENDYAHR sit above the line
+            for j in (3, 4, 6):
+                cells[j] = cells[j].replace('class="lc"', 'class="lc up"', 1)
+        rows.append(row(k, COPPER_SPANS["messages"][k], "".join(cells)))
         at += len(ln)
-    blank = '<i class="lc blank"></i>'
-    table = p["ur"] + p["lr"]
-    trows = "".join('<div class="lrow">' + (blank if k in (0, len(table) - 1) else "") + "".join(cell(ch) for ch in ln) + "</div>"
-                    for k, ln in enumerate(table))
+    # the row labels form one column on the copper; the measured starts differ only by the width of each label's glyph
+    tspan = lambda k: COPPER_SPANS["table"][k] if k in (0, 27) else (1.0, COPPER_SPANS["table"][k][1])
+    trows = "".join(row(k, tspan(k), "".join(cell(ch) for ch in ln)) for k, ln in enumerate(p["ur"] + p["lr"]))
     box = lambda eyebrow, title, body: (f'<div class="lp-col"><p class="lp-eyebrow">{eyebrow}</p><div class="lp"><div class="lp-box">'
                                         f'<div class="lp-title">{title}</div>{body}</div></div></div>')
     key = "".join(cell(ch) for ch in LETTER_KEY)
     head = page_head("Sculpture", "The copper, letter by letter",
-                     "The four messages on the left and the table on the right, line by line as carved. Each letter has its own colour, and so does the question mark. "
+                     "The four messages on the left and the table on the right, line by line as carved. Each line starts and ends where it does on the copper, so the letters of a short line sit further apart. Each letter has its own colour, and so does the question mark. "
                      "The plaintext tab puts the solved text in place of the carved letters: K1 and K2 place for place, K3 in reading order, and the 24 known letters of K4.")
-    body = (f'<style>{letter_colour_css()}.scp .lc.blank{{background:transparent}}.scp .lc.dot{{background:#ebe7d8}}'
+    body = (f'<style>{letter_colour_css()}.scp .lc.dot{{background:#ebe7d8}}.scp:not(.pt) .lc.up{{transform:translateY(-5px)}}.scp .lrow{{display:block}}.scp .cu{{display:flex;justify-content:space-between}}'
+            '.scp .lp-box{{padding-top:14px}}'
             '.scp-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;margin:18px 0 0}.scp-bar .ktabs{margin:0}'
             '@media(max-width:1240px){.scp .panel-wrap{flex-direction:column;align-items:center}}@media(max-width:640px){.scp .lp-col{zoom:.56}}</style>'
             f'<div class="scp">{head}<div class="scp-bar"><div class="ktabs"><button class="ktab on" data-v="c">ciphertext</button>'
-            f'<button class="ktab" data-v="p">plaintext</button></div><div class="lrow">{key}</div></div>'
+            f'<button class="ktab" data-v="p">plaintext</button></div><div class="cu" style="gap:1.5px">{key}</div></div>'
             f'<div class="panel-wrap wide">{box("the four messages", "K1 and K2 above, K3 and K4 below", "".join(rows))}'
             f'{box("the table", "26 rows of the keyed alphabet", trows)}</div></div>'
             "<script>(function(){var s=document.querySelector('.scp'),cells=s.querySelectorAll('.lc[data-p]'),tabs=s.querySelectorAll('.ktab');"
             "tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('on',x===b);});"
-            "var k=b.dataset.v;cells.forEach(function(c){var ch=c.dataset[k],un=ch==='.';c.textContent=un?'':ch;c.classList.toggle('dot',un);"
+            "var k=b.dataset.v;s.classList.toggle('pt',k==='p');cells.forEach(function(c){var ch=c.dataset[k],un=ch==='.';c.textContent=un?'':ch;c.classList.toggle('dot',un);"
             "if(un)c.removeAttribute('data-l');else c.dataset.l=ch;});});});if(location.hash==='#plaintext')tabs[1].click();})();</script>")
     return page("the sculpture, letter by letter", body, "", False)
 

@@ -899,6 +899,60 @@ def sculpture_block():
             '<script type="importmap">{"imports": {"three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>'
             '<script type="module" src="/assets/sculpture.js"></script>')
 
+LETTER_KEY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?"
+
+
+def letter_colour_css():
+    """One background per letter, round the hue wheel in alphabet order, with three steps of lightness so
+    neighbours in the alphabet stay apart; the question mark is ink. The text on a coloured cell is always dark."""
+    tiers = ((0.90, 0.075), (0.74, 0.135), (0.83, 0.115))
+    out = []
+    for i in range(26):
+        l, c = tiers[i % 3]
+        out.append(f'.scp .lc[data-l="{LETTER_KEY[i]}"]{{background:oklch({l} {c} {(25 + i * 360 / 26) % 360:.1f});color:#111}}')
+    out.append('.scp .lc[data-l="?"]{background:var(--ink);color:var(--paper);font-weight:700}')
+    return "".join(out)
+
+
+def sculpture_page():
+    """Issue #127: the copper laid flat, the four messages on the left and the table on the right, line by line
+    as carved, every letter on its own colour. The tabs swap the carved letters for the known plaintext:
+    K1 and K2 place for place (K2 as carved, so it ends ID BY ROWS), K3 in reading order, K4's 24 known letters."""
+    from kryptos.facts import load_k1, load_k2, load_k3, KNOWN, K4
+    p = sculpture_panels()
+    plain = (load_k1()["plaintext"] + load_k2()["plaintext_as_carved"] + load_k3()["plaintext"]
+             + "".join(KNOWN.get(i, ".") for i in range(1, len(K4) + 1)))
+    lines = p["ul"] + p["ll"]
+    assert sum(map(len, lines)) == len(plain)
+    cell = lambda ch, pt=None: f'<i class="lc" data-l="{esc(ch)}"' + (f' data-c="{esc(ch)}" data-p="{esc(pt)}"' if pt else "") + f'>{esc(ch)}</i>'
+    rows, at = [], 0
+    for ln in lines:
+        rows.append('<div class="lrow">' + "".join(cell(ch, plain[at + j]) for j, ch in enumerate(ln)) + "</div>")
+        at += len(ln)
+    blank = '<i class="lc blank"></i>'
+    table = p["ur"] + p["lr"]
+    trows = "".join('<div class="lrow">' + (blank if k in (0, len(table) - 1) else "") + "".join(cell(ch) for ch in ln) + "</div>"
+                    for k, ln in enumerate(table))
+    box = lambda eyebrow, title, body: (f'<div class="lp-col"><p class="lp-eyebrow">{eyebrow}</p><div class="lp"><div class="lp-box">'
+                                        f'<div class="lp-title">{title}</div>{body}</div></div></div>')
+    key = "".join(cell(ch) for ch in LETTER_KEY)
+    head = page_head("Sculpture", "The copper, letter by letter",
+                     "The four messages on the left and the table on the right, line by line as carved. Each letter has its own colour, and so does the question mark. "
+                     "The plaintext tab puts the solved text in place of the carved letters: K1 and K2 place for place, K3 in reading order, and the 24 known letters of K4.")
+    body = (f'<style>{letter_colour_css()}.scp .lc.blank{{background:transparent}}.scp .lc.dot{{background:#ebe7d8}}'
+            '.scp-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;margin:18px 0 0}.scp-bar .ktabs{margin:0}'
+            '@media(max-width:1240px){.scp .panel-wrap{flex-direction:column;align-items:center}}@media(max-width:640px){.scp .lp-col{zoom:.56}}</style>'
+            f'<div class="scp">{head}<div class="scp-bar"><div class="ktabs"><button class="ktab on" data-v="c">ciphertext</button>'
+            f'<button class="ktab" data-v="p">plaintext</button></div><div class="lrow">{key}</div></div>'
+            f'<div class="panel-wrap wide">{box("the four messages", "K1 and K2 above, K3 and K4 below", "".join(rows))}'
+            f'{box("the table", "26 rows of the keyed alphabet", trows)}</div></div>'
+            "<script>(function(){var s=document.querySelector('.scp'),cells=s.querySelectorAll('.lc[data-p]'),tabs=s.querySelectorAll('.ktab');"
+            "tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('on',x===b);});"
+            "var k=b.dataset.v;cells.forEach(function(c){var ch=c.dataset[k],un=ch==='.';c.textContent=un?'':ch;c.classList.toggle('dot',un);"
+            "if(un)c.removeAttribute('data-l');else c.dataset.l=ch;});});});if(location.hash==='#plaintext')tabs[1].click();})();</script>")
+    return page("the sculpture, letter by letter", body, "", False)
+
+
 # K1-K3 solutions with word breaks, for the word boxes; each joins back to the record's text exactly
 SPACED = {
     "K1": "BETWEEN SUBTLE SHADING AND THE ABSENCE OF LIGHT LIES THE NUANCE OF IQLUSION",
@@ -2918,6 +2972,8 @@ def route(path):
         return lineage_page()
     if path == "/lineage/line":
         return lineage_line_page()
+    if path == "/sculpture":
+        return sculpture_page()
     if path in ("/experiments", "/live"):
         return live_page()
     if path == "/glossary":

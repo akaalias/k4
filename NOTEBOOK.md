@@ -12,6 +12,7 @@ holds the reasoning and the mistakes.
 | # | Item | One line |
 |---|---|---|
 | 282 | F16.1b-s | **Two dictionary keyword alphabets on the 20 official letters, one or two slips.** 210 drop sets: no key word on K4 or any of 20 shuffles; plants 6/6. Free-key counts inside the shuffles except length 19: K4 fits 200 of 210 drop sets, the shuffles at most 39 (p 0.048, both forms): F16.1b-s-r. Cells over the 5 million pair cap were counted, not screened (K4: 16, 22 Beaufort, 23): F16.1b-s2. Resumed from 4,522 of 5,670 units; AWS 69.5 min, $0.64 (plus $2.15 on 2026-11-17). |
+| 283 | F16.2 | **A book plus a keyword.** 30 named texts both ways (2.6 million starting letters) as a running key with a repeated word of 1-16 letters on top, plain and KRYPTOS tables, 0-2 slips: on all 24 letters nothing fits K4 or any of 20 shuffles; on the 20 official letters K4 fits 35 settings (shuffles 33-78), judged 3 against the shuffles' 4. Plants 12/12. F16.2 closed. AWS 5.4 min, $0.05. |
 
 Length 19 in 0282: with no slip no pair fits K4 (0275), but any two letters dropped gives a fit, and so do 10 of the 20 single drops. At 19 the two official runs share key slots (64 - 26 = 38), and places 28 and 66 both turn R into P, so one check in nine is free on K4 and on no shuffle; 0123/0124 put that coincidence at about 1 in 40 and 0148 found K1/K2's own tables one slip (at 33) from fitting. The fair null keeps the R/P repeat; the readings with the key free have not been read. Both go into F16.1b-s-r.
 

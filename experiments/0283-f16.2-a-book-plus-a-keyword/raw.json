@@ -1,0 +1,868 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F16.2",
+  "sources": {
+   "K1 plain fwd": 63,
+   "K1 plain bwd": 63,
+   "K2 plain fwd": 369,
+   "K2 plain bwd": 369,
+   "K3 plain fwd": 336,
+   "K3 plain bwd": 336,
+   "K1+K2+K3 plain fwd": 768,
+   "K1+K2+K3 plain bwd": 768,
+   "K1 cipher fwd": 63,
+   "K1 cipher bwd": 63,
+   "K2 cipher fwd": 369,
+   "K2 cipher bwd": 369,
+   "K3 cipher fwd": 336,
+   "K3 cipher bwd": 336,
+   "K1+K2+K3 cipher fwd": 768,
+   "K1+K2+K3 cipher bwd": 768,
+   "K2 plain corrected ending fwd": 13,
+   "K2 plain corrected ending bwd": 13,
+   "carter vol1 fwd": 284914,
+   "carter vol1 bwd": 284914,
+   "tableau rows fwd": 781,
+   "tableau rows bwd": 781,
+   "tableau rows with index column fwd": 807,
+   "tableau rows with index column bwd": 807,
+   "tableau columns fwd": 781,
+   "tableau columns bwd": 781,
+   "morse as carved fwd": 80,
+   "morse as carved bwd": 80,
+   "morse reversed order fwd": 80,
+   "morse reversed order bwd": 80,
+   "right panel K1-K4 fwd": 865,
+   "right panel K1-K4 bwd": 865,
+   "letter 1989 fwd": 2176,
+   "letter 1989 bwd": 2176,
+   "Cryptogram 1991 fwd": 4880,
+   "Cryptogram 1991 bwd": 4880,
+   "open letter 2025 fwd": 2228,
+   "open letter 2025 bwd": 2228,
+   "carter-1927-tomb-of-tutankhamen-vol2 fwd": 351185,
+   "carter-1927-tomb-of-tutankhamen-vol2 bwd": 351185,
+   "carter-1933-tomb-of-tutankhamen-vol3 fwd": 261363,
+   "carter-1933-tomb-of-tutankhamen-vol3 bwd": 261363,
+   "kjv-genesis fwd": 151872,
+   "kjv-genesis bwd": 151872,
+   "kjv-john fwd": 75525,
+   "kjv-john bwd": 75525,
+   "declaration-of-independence-1776 fwd": 6534,
+   "declaration-of-independence-1776 bwd": 6534,
+   "us-constitution-1787 fwd": 22328,
+   "us-constitution-1787 bwd": 22328,
+   "gettysburg-address-1863 fwd": 1152,
+   "gettysburg-address-1863 bwd": 1152,
+   "poe-1843-the-gold-bug fwd": 70739,
+   "poe-1843-the-gold-bug bwd": 70739,
+   "kennedy-1963-ich-bin-ein-berliner fwd": 2824,
+   "kennedy-1963-ich-bin-ein-berliner bwd": 2824,
+   "reagan-1987-brandenburg-gate fwd": 12576,
+   "reagan-1987-brandenburg-gate bwd": 12576,
+   "national-security-act-1947 fwd": 42536,
+   "national-security-act-1947 bwd": 42536
+  },
+  "source_letters_both_directions": 2598622,
+  "tables": [
+   "std",
+   "kry"
+  ],
+  "forms": "Vigenere (c = p + s t + w) and Beaufort (c = s t + w - p), s = +1 or -1; variant forms coincide",
+  "word_lengths": [
+   1,
+   16
+  ],
+  "slips": "0-2 at lengths 1-12, 0 at 13-16",
+  "settings_per_text": 332623616,
+  "known_sets": {
+   "k24": "all 24",
+   "k20": "the 20 official (26-34, 64-74)"
+  },
+  "summary": {
+   "k24": {
+    "per_length": {
+     "1": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "2": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "3": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "4": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "5": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "6": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "7": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "8": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "9": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "10": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "11": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "12": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "13": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "14": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "15": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "16": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     }
+    },
+    "k4_total": 0,
+    "copies_total": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "k4_judge_best": null,
+    "copies_judge_best": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "k4_above_every_copy_at_judge": false,
+    "k4_top": []
+   },
+   "k20": {
+    "per_length": {
+     "1": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "2": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "3": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "4": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "5": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "6": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "7": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "8": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "9": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "10": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "11": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 1,
+      "at_or_above": 20,
+      "p": null
+     },
+     "12": {
+      "k4": 1,
+      "copies_median": 1.0,
+      "copies_max": 5,
+      "at_or_above": 14,
+      "p": 0.714
+     },
+     "13": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "14": {
+      "k4": 0,
+      "copies_median": 0.0,
+      "copies_max": 0,
+      "at_or_above": 20,
+      "p": null
+     },
+     "15": {
+      "k4": 0,
+      "copies_median": 1.0,
+      "copies_max": 3,
+      "at_or_above": 20,
+      "p": null
+     },
+     "16": {
+      "k4": 34,
+      "copies_median": 43.5,
+      "copies_max": 73,
+      "at_or_above": 17,
+      "p": 0.857
+     }
+    },
+    "k4_total": 35,
+    "copies_total": [
+     41,
+     36,
+     39,
+     42,
+     46,
+     48,
+     50,
+     50,
+     58,
+     42,
+     36,
+     52,
+     46,
+     52,
+     78,
+     53,
+     64,
+     42,
+     34,
+     33
+    ],
+    "k4_judge_best": 3,
+    "copies_judge_best": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     4,
+     4,
+     3,
+     3,
+     4,
+     3,
+     3,
+     3,
+     4,
+     4,
+     4,
+     4,
+     3,
+     3,
+     2
+    ],
+    "k4_above_every_copy_at_judge": false,
+    "k4_top": [
+     {
+      "fit": [
+       "carter-1927-tomb-of-tutankhamen-vol2 fwd",
+       329442,
+       "std",
+       "beau",
+       -1,
+       16,
+       0
+      ],
+      "reading": "CMSWAILEINRVBUCOOIVSUCZJONORTHEASTEJREQNDPXOEULYVRNPXDEPJCACTCCBERLINCLOCKPILULXYIEIZCHKELITOOWIZ",
+      "word": "KYKNHZKSFHPRKMDB",
+      "quad": -7.226,
+      "judge": 3
+     },
+     {
+      "fit": [
+       "carter-1927-tomb-of-tutankhamen-vol2 bwd",
+       64005,
+       "kry",
+       "vig",
+       -1,
+       16,
+       0
+      ],
+      "reading": "KPDSOFSAEBWMYJFQDTONFUDJRNORTHEASTGGGJUSINHLSMLOFKFZLKNCSTCOMIHBERLINCLOCKKCBMVUNOHMCHPTCJALYNISQ",
+      "word": "VLCVUYPFSAPEFNZT",
+      "quad": -7.295,
+      "judge": 3
+     },
+     {
+      "fit": [
+       "poe-1843-the-gold-bug bwd",
+       22426,
+       "kry",
+       "vig",
+       -1,
+       16,
+       0
+      ],
+      "reading": "YEFIDMDBNGSIERNXWBTSTLNBANORTHEASTEMMIFIDHEWSVTRSDPTUXPARHHNNLZBERLINCLOCKFWTDWKOROBPMNMNIXHUUAQA",
+      "word": "SBIJJSZXRFJGECGT",
+      "quad": -7.47,
+      "judge": 3
+     },
+     {
+      "fit": [
+       "carter-1933-tomb-of-tutankhamen-vol3 bwd",
+       25424,
+       "kry",
+       "beau",
+       1,
+       16,
+       0
+      ],
+      "reading": "UPCNEEPVIDRCHYDHJSZJFLUIYNORTHEASTBHDRWAFTCDVTHDTWSKTSBREWVROXABERLINCLOCKKKMAYRMZQADEUBBOSCGKENR",
+      "word": "UPYCMFDDUUTIWZCQ",
+      "quad": -7.514,
+      "judge": null
+     },
+     {
+      "fit": [
+       "carter vol1 bwd",
+       183759,
+       "std",
+       "beau",
+       -1,
+       16,
+       0
+      ],
+      "reading": "GONYHMLCXTLCVIVRTNJGBAWLPNORTHEASTHIUXBLMKBSRYJORBRSJVFQENIENKLBERLINCLOCKEETUAEWCHMITKCSDXPWWKSE",
+      "word": "VTOTXSZKRBFYOIQV",
+      "quad": -7.625,
+      "judge": null
+     },
+     {
+      "fit": [
+       "reagan-1987-brandenburg-gate bwd",
+       7952,
+       "kry",
+       "vig",
+       -1,
+       16,
+       0
+      ],
+      "reading": "SKRZFMWSTQHCCBONIVRSRZSZWNORTHEASTKCOAPXIKTTHUMSLDWVITIRLFKGQAOBERLINCLOCKTNQUYCJFRIRNJIEUPREGFGV",
+      "word": "DCHSYXFGGOBGECBT",
+      "quad": -7.658,
+      "judge": null
+     },
+     {
+      "fit": [
+       "kjv-john fwd",
+       29953,
+       "kry",
+       "vig",
+       -1,
+       16,
+       0
+      ],
+      "reading": "EVZMRBLVVDWJCCAIQACRSLCUWNORTHEASTVIFMIHXINDMSIXAXHRIFIBHYUQYCZBERLINCLOCKDLLSILMTACRRYNUCQUMMADT",
+      "word": "RJJNZJFGONLHTCJT",
+      "quad": -7.774,
+      "judge": null
+     },
+     {
+      "fit": [
+       "carter-1927-tomb-of-tutankhamen-vol2 fwd",
+       168514,
+       "std",
+       "beau",
+       1,
+       16,
+       0
+      ],
+      "reading": "YFEHMOTOVWAPPGFFCVQHQMFMTNORTHEASTMYBCLPJZCSUXWAPAGJCHSQKRSCUJLBERLINCLOCKTKFEYGEVIZEITOHBPHREGOJ",
+      "word": "TSMKTKMAKDBWCHEW",
+      "quad": -7.882,
+      "judge": null
+     },
+     {
+      "fit": [
+       "carter-1933-tomb-of-tutankhamen-vol3 bwd",
+       22770,
+       "kry",
+       "vig",
+       1,
+       16,
+       0
+      ],
+      "reading": "CGHCUVNXBEHBEMPMTIEOJOYIWNORTHEASTSMMUYKVMYWBCFFLDVRCVGZISTQMUOBERLINCLOCKFVATUDJGZLBHEWTCRLDFWKP",
+      "word": "OMQEYXTYNWKJMZXD",
+      "quad": -8.006,
+      "judge": null
+     },
+     {
+      "fit": [
+       "kjv-john bwd",
+       54934,
+       "std",
+       "vig",
+       1,
+       16,
+       0
+      ],
+      "reading": "OHNTZQZUQRCDDIKGALXBLDWGANORTHEASTOZRRBPQXINIZZNEDMXSGHHFBEDKVJBERLINCLOCKFCEGCTXFLCZEVTHALZESBHK",
+      "word": "OGGTSYUDPMYRFGXM",
+      "quad": -8.074,
+      "judge": null
+     }
+    ]
+   }
+  },
+  "plants": [
+   {
+    "seed": 16301,
+    "known": "k24",
+    "source": "gettysburg-address-1863 fwd",
+    "L": 5,
+    "k": 0,
+    "slips": [],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 1.0,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16301,
+    "known": "k20",
+    "source": "gettysburg-address-1863 fwd",
+    "L": 5,
+    "k": 0,
+    "slips": [],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 1.0,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16302,
+    "known": "k24",
+    "source": "K1+K2+K3 plain fwd",
+    "L": 7,
+    "k": 1,
+    "slips": [
+     74
+    ],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 0.9896907216494846,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16302,
+    "known": "k20",
+    "source": "K1+K2+K3 plain fwd",
+    "L": 7,
+    "k": 1,
+    "slips": [
+     74
+    ],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 0.9896907216494846,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16303,
+    "known": "k24",
+    "source": "carter vol1 bwd",
+    "L": 11,
+    "k": 2,
+    "slips": [
+     33,
+     71
+    ],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 0.9072164948453608,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16303,
+    "known": "k20",
+    "source": "carter vol1 bwd",
+    "L": 11,
+    "k": 2,
+    "slips": [
+     33,
+     71
+    ],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 0.9072164948453608,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16304,
+    "known": "k24",
+    "source": "reagan-1987-brandenburg-gate fwd",
+    "L": 3,
+    "k": 2,
+    "slips": [
+     33,
+     66
+    ],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 0.979381443298969,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16304,
+    "known": "k20",
+    "source": "reagan-1987-brandenburg-gate fwd",
+    "L": 3,
+    "k": 2,
+    "slips": [
+     33,
+     66
+    ],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 0.979381443298969,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16305,
+    "known": "k24",
+    "source": "kjv-genesis fwd",
+    "L": 14,
+    "k": 0,
+    "slips": [],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 1.0,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16305,
+    "known": "k20",
+    "source": "kjv-genesis fwd",
+    "L": 14,
+    "k": 0,
+    "slips": [],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 1.0,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16306,
+    "known": "k24",
+    "source": "poe-1843-the-gold-bug bwd",
+    "L": 9,
+    "k": 1,
+    "slips": [
+     69
+    ],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 0.9896907216494846,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   },
+   {
+    "seed": 16306,
+    "known": "k20",
+    "source": "poe-1843-the-gold-bug bwd",
+    "L": 9,
+    "k": 1,
+    "slips": [
+     69
+    ],
+    "planted_setting_fits": true,
+    "reading_right_fraction": 0.9896907216494846,
+    "own_copies_fits_at_L": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "found": true
+   }
+  ],
+  "plants_found": {
+   "k24": 6,
+   "k20": 6
+  },
+  "judge": {
+   "sent": 63,
+   "none": 0,
+   "cut": -5.0,
+   "rule": "each text's top 3 by quadgrams and every reading at or above -5.0; plants not sent"
+  },
+  "controls": "20 shuffles of K4 (seeds 16300-16319); each plant against 5 shuffles of its own",
+  "exhaustive": "yes: every cyclic offset of every source, both directions; fits capped at 20,000 per text and known set (reported)",
+  "aws_cost_estimate_dollars": 1.0
+ },
+ "notes": "k24: K4 fits 0 (copies 0-0), judge K4 None vs copies' best None; k20: K4 fits 35 (copies 33-78), judge K4 3 vs copies' best 4; plants found [(16301, 'k24', True), (16301, 'k20', True), (16302, 'k24', True), (16302, 'k20', True), (16303, 'k24', True), (16303, 'k20', True), (16304, 'k24', True), (16304, 'k20', True), (16305, 'k24', True), (16305, 'k20', True), (16306, 'k24', True), (16306, 'k20', True)]",
+ "controls": [
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0,
+  -9.0
+ ],
+ "error": null,
+ "worked_example": "plain table, Vigenere: the forced key at each known place minus the Gettysburg letter under it, offset 0\n\nplace  known  carved  key  text  word letter\n   26      N       Q    D     O            P\n   27      O       Q    C     U            I\n   28      R       P    Y     R            H\n   64      B       N    M     T            T\n   65      E       Y    U     A            U\n   66      R       P    Y     N            L\n\nFor a word of length L the word letters at places equal mod L must agree (two slips allowed at L <= 12).",
+ "seconds": 271.8504385948181,
+ "compute": {
+  "where": "aws",
+  "instance": "c8g.8xlarge",
+  "zone": "eu-central-1c",
+  "market": "spot",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 276.8,
+  "machine_seconds": 325.3,
+  "dollars": 0.05
+ },
+ "checkpoint": {
+  "file": "ada8010bfbfc544c.jsonl",
+  "resumed": 0,
+  "saved": 114
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "prompt": "j3",
+  "calls": 63,
+  "cached": 0,
+  "input_tokens": 37829,
+  "output_tokens": 25876,
+  "errors": 0
+ }
+}

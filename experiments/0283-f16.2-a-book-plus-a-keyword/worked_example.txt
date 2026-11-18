@@ -1,0 +1,11 @@
+plain table, Vigenere: the forced key at each known place minus the Gettysburg letter under it, offset 0
+
+place  known  carved  key  text  word letter
+   26      N       Q    D     O            P
+   27      O       Q    C     U            I
+   28      R       P    Y     R            H
+   64      B       N    M     T            T
+   65      E       Y    U     A            U
+   66      R       P    Y     N            L
+
+For a word of length L the word letters at places equal mod L must agree (two slips allowed at L <= 12).

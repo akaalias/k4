@@ -940,9 +940,10 @@ def sculpture_page():
         plate = ' style="margin-top:5px"' if k == 14 else ""     # the seam between the upper and lower plates
         return (f'<div class="lrow"{plate}><div class="cu" style="margin-left:{x0 / COPPER_WIDTH * 100:.2f}%;'
                 f'width:{(x1 - x0) / COPPER_WIDTH * 100:.2f}%">{cells}</div></div>')
+    ends = (len(load_k1()["ciphertext"]), sum(map(len, p["ul"])), len(plain) - len(K4))      # where K1, K2 and K3 end
     rows, at = [], 0
     for k, ln in enumerate(lines):
-        cells = [cell(ch, plain[at + j]) for j, ch in enumerate(ln)]
+        cells = [cell(ch, plain[at + j]).replace("<i ", f'<i data-s="{sum(at + j >= e for e in ends)}" ', 1) for j, ch in enumerate(ln)]
         if k == 14:                                               # Y, A and R of ENDYAHR sit above the line
             for j in (3, 4, 6):
                 cells[j] = cells[j].replace('class="lc"', 'class="lc up"', 1)
@@ -960,15 +961,17 @@ def sculpture_page():
     body = (f'<style>{letter_colour_css()}.scp .lc.dot{{background:#ebe7d8}}.scp:not(.pt) .lc.up{{transform:translateY(-5px)}}.scp .lrow{{display:block}}.scp .cu{{display:flex;justify-content:space-between}}'
             '.scp .lp-box{{padding-top:14px}}'
             '.scp-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;margin:18px 0 0}.scp-bar .ktabs{margin:0}'
+            '.scp .lp-box{position:relative}.scp-sec{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;display:none}.scp.sec .scp-sec{display:block}'
+            '.scp-sec path{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round}.scp-bar .ktabs{gap:6px}.scp-bar .ktab.sep{margin-left:14px}'
             '.scp .panel-wrap.wide{width:96vw}.scp .panel-wrap.stack{flex-direction:column;align-items:center}@media(max-width:900px){.scp .panel-wrap.wide{width:auto}}</style>'
             f'<div class="scp">{head}<div class="scp-bar"><div class="ktabs"><button class="ktab on" data-v="c">ciphertext</button>'
-            f'<button class="ktab" data-v="p">plaintext</button></div><div class="cu" style="gap:1.5px">{key}</div></div>'
+            f'<button class="ktab" data-v="p">plaintext</button><button class="ktab sep" id="scp-sec">sections</button></div><div class="cu" style="gap:1.5px">{key}</div></div>'
             f'<div class="panel-wrap wide">{box("the four messages", "K1 and K2 above, K3 and K4 below", "".join(rows))}'
             f'{box("the table", "26 rows of the keyed alphabet", trows)}</div></div>'
-            "<script>(function(){var s=document.querySelector('.scp'),cells=s.querySelectorAll('.lc[data-p]'),tabs=s.querySelectorAll('.ktab');"
+            "<script>(function(){var s=document.querySelector('.scp'),cells=s.querySelectorAll('.lc[data-p]'),tabs=s.querySelectorAll('.ktab[data-v]');"
             "tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('on',x===b);});"
             "var k=b.dataset.v;s.classList.toggle('pt',k==='p');cells.forEach(function(c){var ch=c.dataset[k],un=ch==='.';c.textContent=un?'':ch;c.classList.toggle('dot',un);"
-            "if(un)c.removeAttribute('data-l');else c.dataset.l=ch;});});});if(location.hash==='#plaintext')tabs[1].click();var wrap=s.querySelector('.panel-wrap'),cols=s.querySelectorAll('.lp-col');function fit(){var w=wrap.clientWidth,z=(w-18)/1146,st=z<0.9;if(st)z=w/573;z=Math.min(1.8,z);wrap.classList.toggle('stack',st);cols.forEach(function(c){c.style.zoom=z;});}fit();addEventListener('resize',fit);})();</script>")
+            "if(un)c.removeAttribute('data-l');else c.dataset.l=ch;});});});if(location.hash==='#plaintext')tabs[1].click();var wrap=s.querySelector('.panel-wrap'),cols=s.querySelectorAll('.lp-col');function fit(){var w=wrap.clientWidth,z=(w-18)/1146,st=z<0.9;if(st)z=w/573;z=Math.min(1.8,z);wrap.classList.toggle('stack',st);cols.forEach(function(c){c.style.zoom=z;});}fit();addEventListener('resize',fit);var sb=document.getElementById('scp-sec'),box=cells[0].closest('.lp-box'),svg=null;function outline(){var rows=[].slice.call(box.querySelectorAll('.cu')).map(function(r){return [].slice.call(r.children);}),d=[],pad=2.5;var top=function(i){return i===0?rows[0][0].offsetTop-pad:(rows[i-1][0].offsetTop+rows[i-1][0].offsetHeight+rows[i][0].offsetTop)/2;},bot=function(i){return i===rows.length-1?rows[i][0].offsetTop+rows[i][0].offsetHeight+pad:top(i+1);};for(var k=0;k<4;k++){var R=[];rows.forEach(function(r,i){var c=r.filter(function(x){return x.dataset.s==k;});if(!c.length)return;var a=c[0],b=c[c.length-1],pa=a.previousElementSibling,nb=b.nextElementSibling;R.push({l:pa?(pa.offsetLeft+pa.offsetWidth+a.offsetLeft)/2:a.offsetLeft-pad,r:nb?(b.offsetLeft+b.offsetWidth+nb.offsetLeft)/2:b.offsetLeft+b.offsetWidth+pad,t:top(i),b:bot(i)});});var q='M'+R[0].l+' '+R[0].t;R.forEach(function(x){q+=' L'+x.r+' '+x.t+' L'+x.r+' '+x.b;});for(var i=R.length-1;i>=0;i--)q+=' L'+R[i].l+' '+R[i].b+' L'+R[i].l+' '+R[i].t;d.push('<path d='+JSON.stringify(q+' Z')+'/>');}svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('class','scp-sec');svg.innerHTML=d.join('');box.appendChild(svg);}sb.addEventListener('click',function(){if(!svg)outline();sb.classList.toggle('on',s.classList.toggle('sec'));});if(location.hash==='#sections')sb.click();})();</script>")
     return page("the sculpture, letter by letter", body, "", False)
 
 

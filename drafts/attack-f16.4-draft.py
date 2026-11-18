@@ -37,7 +37,8 @@ EXPERIMENT = {
         "1. For each of the 8 table-form pairs, the forced key at the 24 known places, as -13..12. 2. Count |k| <= 3 in "
         "each of the 10 groups; score by the binomial tail at 7/26. 3. T = the best score. 4. The same on 10,000 "
         "shuffles of K4 (seed 16400). 5. p = (1 + shuffles at or above) / 10,001. 6. Report the best group, table and "
-        "form for K4, and the per-group p's as diagnostics only."
+        "form for K4, and the per-group p's as diagnostics only. 7. Plants: four messages with small shifts (whole text, one "
+        "carved line) and one without, each against 2,000 shuffles of its own."
     ),
     "walkthrough": (
         "1. Under each known letter of EASTNORTHEAST write the carved letter above it. "
@@ -46,7 +47,7 @@ EXPERIMENT = {
         "4. Ask how likely 10 or more of 13 is when each has a 7 in 26 chance: about 1 in 5,000. "
         "5. Do the same for every group, table and form, keep the best, and compare with scrambled copies of K4 treated the same way."
     ),
-    "expected_minutes": 3,
+    "expected_minutes": 10,
 }
 
 import math
@@ -118,6 +119,38 @@ def run(ctx):
     ctx.progress(N_SHUF, N_SHUF, "shuffles")
     at = sum(1 for x in Ts if x >= k4T - 1e-12)
     p = (1 + at) / (N_SHUF + 1)
+    # plants: messages whose key has small shifts somewhere; found when T is above 99% of the plant's own 2,000 shuffles
+    from kryptos.plants import english_plant
+    plant_specs = [("std", "vig", "all", "small digits 0-3, period 7, plain table, whole text"),
+                   ("kry", "vig", "all", "small digits 0-3, period 5, KRYPTOS table, whole text"),
+                   ("std", "vig", "line2", "small digits on carved line 2 (places 5-35) only, a random key elsewhere"),
+                   ("std", "beau", "line4", "Beaufort, small key values on carved line 4 (places 67-97) only"),
+                   ("std", "vig", "none", "a random key everywhere (must not be found)")]
+    plants = []
+    for j, (tb, form, where, what) in enumerate(plant_specs):
+        prng = random.Random(SEED + 100 + j)
+        pt = english_plant(SEED + 100 + j)
+        A = TABLES[tb]
+        per = [prng.randrange(0, 4) for _ in range(7 if j != 1 else 5)]
+        out = []
+        for i, ch in enumerate(pt):
+            q = i + 1
+            small_here = where == "all" or (where == "line2" and 5 <= q <= 35) or (where == "line4" and q >= 67)
+            k = per[i % len(per)] if small_here else prng.randrange(26)
+            pv = A.index(ch)
+            out.append(A[(pv + k) % 26] if form == "vig" else A[(k - pv) % 26])
+        ct = "".join(out)
+        pk = {q: pt[q - 1] for q in Q}
+        pT, parg = T_of(ct, pk, Q, groups, score)
+        shp = list(ct)
+        pTs = []
+        for _ in range(2000):
+            prng.shuffle(shp)
+            pTs.append(T_of("".join(shp), pk, Q, groups, score)[0])
+        pp = (1 + sum(1 for x in pTs if x >= pT - 1e-12)) / 2001
+        plants.append({"what": what, "T": round(pT, 3), "argmax": parg, "p": round(pp, 4), "found": pp < 0.01, "should_be_found": where != "none"})
+        ctx.progress(N_SHUF, N_SHUF, f"plant {j + 1} of {len(plant_specs)}")
+    plants_ok = sum(1 for x in plants if x["found"] == x["should_be_found"])
     # diagnostics: K4's best per group (over tables and forms)
     diag = {}
     for g, ix in groups.items():
@@ -132,10 +165,10 @@ def run(ctx):
             "k4_T": round(k4T, 4), "k4_argmax": k4arg, "shuffles": N_SHUF, "shuffles_at_or_above": at, "p": round(p, 5),
             "flag_line": 0.01, "flag": p < 0.01,
             "shuffle_T_quantiles": {q: round(float(np.quantile(Ts, q)), 3) for q in (0.5, 0.9, 0.99, 0.999)},
-            "k4_per_group": diag, "controls": f"{N_SHUF} shuffles of K4, seed {SEED}", "exhaustive": True,
+            "k4_per_group": diag, "plants": plants, "plants_as_expected": f"{plants_ok} of {len(plants)}", "controls": f"{N_SHUF} shuffles of K4, seed {SEED}", "exhaustive": True,
             "aws_cost_estimate_dollars": 0.02,
         },
-        "notes": f"K4 T {k4T:.3f} from {k4arg}; {at} of {N_SHUF} shuffles at or above, p {p:.4f} (flag below 0.01: {p < 0.01})",
+        "notes": f"K4 T {k4T:.3f} from {k4arg}; {at} of {N_SHUF} shuffles at or above, p {p:.4f} (flag below 0.01: {p < 0.01}); plants as expected {plants_ok}/{len(plants)}",
     }
 
 

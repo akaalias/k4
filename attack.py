@@ -1,46 +1,70 @@
-"""Experiment: F16.1b-s. See program.md for the contract."""
+"""Experiment: F16.1b-s-r. See program.md for the contract."""
 
 EXPERIMENT = {
-    "slug": "f16.1b-s-two-dictionary-keyword-alphabets-with-slips",
-    "title": "F16.1b-s: 0275 (two dictionary keyword alphabets, every pair, key lengths 1-26, the 20 official letters) with one or two of the 20 known letters slipped: every drop set, the key word screened where the fitting pairs can be listed; K4 against 20 shuffles, 6 plants with slips",
+    "slug": "f16.1b-s-r-length-19-one-slip-from-two-keyword-alphabets",
+    "title": "F16.1b-s-r: 0282's edge at key length 19 (K4 one slip from fitting two dictionary keyword alphabets): the count against 1,000 fresh shuffles and against stand-ins that keep the R-to-P repeat at 28 and 66; K4's one-slip settings read with the key free against 1,000 copies that keep the 20 official places; plants with one slip",
     "family": "16-simple-hand-methods",
-    "parent": "0275-f16.1b-two-dictionary-keyword-alphabets-on-the-20-official-letters",
+    "parent": "0282-f16.1b-s-two-dictionary-keyword-alphabets-with-slips",
     "changed": (
-        "F16.1b-s (issue #123): 0275's search, imported unchanged (0244's index and matcher, 0275's hash screen), run on "
-        "the 20 official letters less each set of 1 or 2 places (20 + 190 drop sets). Where a length and form has more "
-        "than 5 million fitting pairs the pairs are counted, not listed, and the key word is not checked there (the reach, "
-        "reported per cell)."
+        "F16.1b-s-r (issue #123). 0282 found K4 fitting a pair of dictionary keyword alphabets at key length 19 in 200 of "
+        "210 drop sets of one or two of the 20 official letters, its 20 shuffles in at most 39 (p 0.048, both forms). "
+        "Here, length 19 only: (1) the same count for 1,000 fresh shuffles, for 300 stand-ins that keep the carved "
+        "letters at 28 and 66 (R to P twice, 38 = 2 x 19 apart: one of the nine checks at 19 is then free, as on K4), "
+        "and for 300 that also keep 32 and 70 (A to K, C to M: the same shift on the plain table); (2) every setting K4 "
+        "fits with one letter dropped, the key free (a chart key, #124): the 11 forced key letters read 33 unknown "
+        "letters in three runs of 11; quadgram score of the best setting against the same settings on 1,000 copies "
+        "that keep the 20 official places and shuffle the other 77; the judge on the tops. Strength aimed at: sampled."
     ),
     "hypothesis_expert": (
-        "As 0275 and 0244 (C4(a), C5; Quagmire IV with two keyword-mixed alphabets from the dictionary and a key word), "
-        "with A1's slip at a known place (Sanborn 2005, 'Saying I was sloppy'; K2's carved errors, 01-facts.md) and "
-        "EAST set aside (#124). A slip at known place q removes q's equation; the key word still has to match the forced "
-        "key on every slot the remaining places cover. With 18 or 19 places the slots covered at lengths 3-16 still leave "
-        "word matches far below one per text by chance; at the long lengths the fitting pairs run to billions and only "
-        "counts are possible."
+        "C27(c) and C1(c) (two keyword-mixed alphabets, Quagmire IV, a repeating key), C17 and A1 (one enciphering slip, "
+        "as K2 has; 12-assumptions.md), the revised criteria (#124: a chart key, a named slip). Cipher: c = CA[PA^-1(p) + "
+        "k_(i mod 19)] (added) or CA[k - PA^-1(p)] (Beaufort), PA and CA keyword alphabets of 208,064 dictionary and puzzle "
+        "words, key free. At length 19 the official runs 26-34 and 64-72 share key slots 6-14 (nine checks), 73 and 74 sit "
+        "alone in slots 15 and 16. A true period-19 system predicts the R/P repeat at 28 and 66 (same slot, same plain "
+        "letter). 0123/0124 put the repeat at about 1 in 40 by chance; 0148 found K1/K2's own tables one slip (at 33) from "
+        "fitting, with a decider too weak to read it. Tests: counts (drop sets with a fitting pair, per form; one-slip "
+        "settings) against plain shuffles (replication of 0282) and against repeat-keeping stand-ins (the fair null: is "
+        "there more than the repeat?); readings (max over K4's one-slip settings of the mean log10 quadgram probability "
+        "over the three 11-letter runs at places 7-17, 45-55, 83-93) against kept-place copies under the same settings. "
+        "Flag lines, set before the run: counts against the repeat-keeping stand-ins p < 0.01; reading p < 0.01. "
+        "Plants: English with the known words, two random keyword alphabets, a random 19-letter key, one slip at a "
+        "paired official place; found when the planted pair is listed, ranks first among the plant's settings and beats "
+        "every one of the plant's 1,000 kept-place copies."
     ),
     "hypothesis_eli5": (
-        "Experiment 275 tried every pair of dictionary-word alphabets with a key word on the 20 letters Sanborn published. "
-        "If he miscopied one or two of those letters, it would have missed. Here we drop each one and each pair in turn "
-        "and look again for a key word."
+        "With a key 19 letters long, the two known stretches of K4 sit exactly under the same key letters, and K4 comes "
+        "within one wrong letter of fitting a cipher built from two keyword alphabets (an alphabet that starts with a "
+        "word and goes on with the unused letters). Scrambled copies rarely come that close. Part of the reason is known: "
+        "the letter R turns into P at two places 38 apart. We check whether there is more to it than that, and we read "
+        "the letters each near-fit would give, against scrambled copies read the same way."
     ),
     "prediction": (
-        "No key word on K4 at any drop set where the screen reaches; shuffles the same; plants (one or two slips) found "
-        "6 of 6; fit counts inside the shuffles. Zero candidates unless a key word fits."
+        "Against plain shuffles K4's count stays rare (p between 0.01 and 0.06); against stand-ins that keep the R/P "
+        "repeat it is ordinary (p above 0.05). K4's best one-slip reading scores inside its kept-place copies (p above "
+        "0.05) and the judge gives it no more than the copies' tops. Plants found at least 6 of 8. No candidate (8 of 19 "
+        "key letters stay open)."
     ),
     "method": (
-        "1. 0275's alphabets and word rotations. 2. For each text and each drop set of 1 or 2 of the 20 places: 0244's "
-        "pair index over the remaining places, lengths 1-26, both forms; pairs listed when 5 million or fewer, then 0275's "
-        "screen and 0244's matcher. 3. K4, 20 shuffles, 6 plants (two random dictionary alphabets, a dictionary key word, "
-        "1 or 2 letters changed at official places). 4. Matches and counts against the shuffles."
+        "1. 0282's pair index (0275's, 0244's alphabets), key length 19 only, for each text and each of the 210 drop sets "
+        "of one or two official letters: the number of fitting alphabet pairs per form; one-letter drops listed. "
+        "2. Texts: K4; 1,000 shuffles; 300 shuffles keeping the carved letters at 28, 66; 300 keeping 28, 66, 32, 70; 8 plants. "
+        "3. Counts: drop sets fitting per form, one-slip settings; p of K4 against each set of stand-ins. "
+        "4. Readings: for each one-slip setting (form, alphabets, dropped place) the key letter of each slot 6-16 from the "
+        "remaining known letter there; decrypt places 7-17, 45-55, 83-93; score by quadgrams. K4's best against the best "
+        "of each of 1,000 kept-place copies (20 official places kept, 77 shuffled) under the same settings. "
+        "5. Judge: K4's top 5 readings and the top reading of each of the first 100 kept-place copies, one call, '?' for open letters. "
+        "6. Plants: the same, each against its own 1,000 kept-place copies."
     ),
     "walkthrough": (
-        "1. Strike out one of the 20 known letters, say the K at 74, as a slip. "
-        "2. Repeat 0275's test on the other 19: for each pair of word alphabets, the same-slot distances must agree. "
-        "3. Read the key letters the pair forces and look for a word. "
-        "4. Do this for each letter struck out, and each pair struck out, on the carving and on scrambled copies."
+        "1. Write K4 in rows of 19: places 26-34 fall under places 64-72, column for column. "
+        "2. Pick two keyword alphabets, say one from FOREST for the cipher side and one from BINDERY for the plain side. "
+        "3. In each column the two known pairs must need the same key letter; count the columns where they do not. "
+        "4. If exactly one column fails, call one of its two carved letters a slip and take the key letter from the other. "
+        "5. Columns 7-17 now have key letters: decrypt the three other rows of those columns (places 7-17, 45-55, 83-93). "
+        "6. Score those 33 letters as English; repeat for every pair of alphabets that comes this close. "
+        "7. Do the same on copies of K4 whose other 77 letters are shuffled, and compare the best scores."
     ),
-    "expected_minutes": 150,
+    "expected_minutes": 130,
 }
 
 import itertools
@@ -48,7 +72,6 @@ import multiprocessing as mp
 import os
 import random
 import sys
-import time
 import types
 from pathlib import Path
 
@@ -56,168 +79,302 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent
 N = 97
+L = 19
 OFFICIAL = tuple(range(26, 35)) + tuple(range(64, 75))
-LCOUNT, WMAX = 26, 23
-CAP = 5_000_000
-N_COPIES = 20
-SEED = 16250
+N_SHUF, N_RP, N_RPAM = 1000, 300, 300
+N_KEPT = 1000
+N_PLANTS = 8
+SEED = 16400
+RUNS = ((7, 17), (45, 55), (83, 93))            # places read, 1-based, slots 6-16
+LIST_CAP = 4000
+N_JUDGE_COPIES = 100
 _G = {}
 
 
-def F():
-    """0275's attack.py, unchanged (it loads 0244's)."""
-    if "f" not in _G:
+def A282():
+    """0282's attack.py, unchanged (it loads 0275's, which loads 0244's)."""
+    if "a" not in _G:
         import importlib.util
-        path = next((ROOT / "experiments").glob("0275-*")) / "attack.py"
-        spec = importlib.util.spec_from_file_location("frozen0275", path)
-        m = importlib.util.module_from_spec(spec)
-        sys.modules[spec.name] = m
-        spec.loader.exec_module(m)
-        m.ROOT = ROOT
-        _G["f"] = m
-    return _G["f"]
+        path = next((ROOT / "experiments").glob("0282-*")) / "attack.py"
+        spec = importlib.util.spec_from_file_location("frozen0282", path)
+        a = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = a
+        spec.loader.exec_module(a)
+        a.ROOT = ROOT
+        _G["a"] = a
+    return _G["a"]
 
 
-def pairs_capped(known, text, L):
-    f = F(); m = f.frozen()
-    pos = m._G["pos"]
-    places = sorted(known)
-    pl_index = {q: e for e, q in enumerate(places)}
-    ci = np.array([ord(text[q - 1]) - 65 for q in places])
-    pi = np.array([ord(known[q]) - 65 for q in places])
-    sl = m.slots_of(L, places)
-    prs = [(v[0], u) for v in sl.values() for u in v[1:]]
-    out = {}
-    if not prs:
-        return {fm: (len(pos) ** 2, None, None) for fm in ("added", "beaufort")}, sl
-    a_idx = np.array([pl_index[x] for x, _ in prs]); b_idx = np.array([pl_index[y] for _, y in prs])
-    cvec = (pos[:, ci[a_idx]] - pos[:, ci[b_idx]]) % 26
-    pvec = (pos[:, pi[a_idx]] - pos[:, pi[b_idx]]) % 26
-    cidx = {}
-    for a, kb in enumerate(r.tobytes() for r in cvec.astype(np.uint8)):
-        cidx.setdefault(kb, []).append(a)
-    for fm in ("added", "beaufort"):
-        pv = pvec if fm == "added" else (-pvec) % 26
-        pk = [r.tobytes() for r in pv.astype(np.uint8)]
-        n = int(sum(len(cidx.get(kb, ())) for kb in pk))
-        if L > WMAX or n > CAP:
-            out[fm] = (n, None, None)
-            continue
-        P, C = [], []
-        for p_a, kb in enumerate(pk):
-            partners = cidx.get(kb)
-            if partners:
-                P.extend([p_a] * len(partners)); C.extend(partners)
-        out[fm] = (n, np.array(P, dtype=np.int64), np.array(C, dtype=np.int64))
-    return out, sl
+DROPS = [D for k in (1, 2) for D in itertools.combinations(OFFICIAL, k)]
 
 
 def job(args):
-    tid, text, known, D = args
-    f = F(); m = f.frozen()
-    kn = {q: c for q, c in known.items() if q not in D}
-    res = {"fits": {}, "unscreened": [], "matches": []}
-    for L in range(1, LCOUNT + 1):
-        fs, sl = pairs_capped(kn, text, L)
-        cover = sorted(sl); first = {s: sl[s][0] for s in cover}
+    """One text: fitting pairs per drop set and form at length 19; the one-letter drops listed."""
+    tid, text, known = args
+    a = A282()
+    counts = {"added": [], "beaufort": []}
+    listed = []
+    for D in DROPS:
+        kn = {q: c for q, c in known.items() if q not in D}
+        fs, _ = a.pairs_capped(kn, text, L)
         for fm, (n, P, C) in fs.items():
-            res["fits"][f"{L}/{fm}"] = n
-            if P is None:
-                if n and L <= WMAX:
-                    res["unscreened"].append(f"{L}/{fm}")
-                continue
-            hits = f.word_hits(L, fm, P, C, cover, first, text, kn)
-            out = {"matches": []}
-            for i in hits[:5000]:
-                m.match_key_word(L, fm, int(P[i]), int(C[i]), cover, first, text, kn, out)
-            for x in out["matches"][:50]:
-                x["drop"] = list(D)
-                res["matches"].append(x)
-    return tid, list(D), res
+            counts[fm].append(int(n))
+            if len(D) == 1 and P is not None and len(listed) < LIST_CAP:
+                listed.extend([fm, D[0], int(p), int(c)] for p, c in zip(P[:LIST_CAP], C[:LIST_CAP]))
+    return tid, {"counts": counts, "listed": listed[:LIST_CAP]}
+
+
+def shuffle_keeping(text, keep, rng):
+    idx = [i for i in range(N) if (i + 1) not in keep]
+    letters = [text[i] for i in idx]
+    rng.shuffle(letters)
+    out = list(text)
+    for i, c in zip(idx, letters):
+        out[i] = c
+    return "".join(out)
+
+
+def quad_table():
+    from kryptos.scorer import _table
+    logs, floor = _table()
+    t = np.full(26 ** 4, floor, dtype=np.float64)
+    for k, v in logs.items():
+        if len(k) == 4 and k.isalpha():
+            i = 0
+            for ch in k:
+                i = i * 26 + ord(ch) - 65
+            t[i] = v
+    return t
+
+
+def key_slots(setting, text, known):
+    """The forced key value per slot (6-16) for a one-slip setting: from the slot's first remaining known place."""
+    fm, q, pa, ca = setting
+    pos = A282().F().frozen()._G["pos"]
+    k = {}
+    for x in sorted(known):
+        if x == q:
+            continue
+        s = (x - 1) % L
+        if s in k:
+            continue
+        cc, pp = int(pos[ca, ord(text[x - 1]) - 65]), int(pos[pa, ord(known[x]) - 65])
+        k[s] = (cc - pp) % 26 if fm == "added" else (cc + pp) % 26
+    return k
+
+
+def read_runs(setting, kslots, T):
+    """T: texts as an int array (n x 97). -> letters (n x 33) of the three runs under the setting."""
+    fm, q, pa, ca = setting
+    m = A282().F().frozen()
+    pos = m._G["pos"]
+    PA = np.array([ord(c) - 65 for c in m._G["A"][pa]], dtype=np.int64)
+    out = []
+    for lo, hi in RUNS:
+        for place in range(lo, hi + 1):
+            kv = kslots[(place - 1) % L]
+            cc = pos[ca, T[:, place - 1]].astype(np.int64)
+            out.append(PA[(cc - kv) % 26] if fm == "added" else PA[(kv - cc) % 26])
+    return np.stack(out, axis=1)
+
+
+def score_runs(R, qt):
+    """Mean log10 quadgram probability over the 24 quadgrams inside the three runs of 11."""
+    s = np.zeros(R.shape[0])
+    for r in range(3):
+        b = R[:, r * 11:(r + 1) * 11]
+        for i in range(8):
+            s += qt[((b[:, i] * 26 + b[:, i + 1]) * 26 + b[:, i + 2]) * 26 + b[:, i + 3]]
+    return s / 24.0
+
+
+def reading_string(setting, kslots, text):
+    fm, q, pa, ca = setting
+    m = A282().F().frozen()
+    pos, PAs = m._G["pos"], m._G["A"][pa]
+    out = []
+    for i in range(N):
+        s = i % L
+        if s not in kslots:
+            out.append("?")
+            continue
+        cc = int(pos[ca, ord(text[i]) - 65])
+        out.append(PAs[(cc - kslots[s]) % 26] if fm == "added" else PAs[(kslots[s] - cc) % 26])
+    return "".join(out)
+
+
+def to_arr(texts):
+    return np.array([[ord(c) - 65 for c in t] for t in texts], dtype=np.int64)
+
+
+def read_test(text, known, settings, qt, seed):
+    """Best run score over the settings for the text and for N_KEPT kept-place copies. -> dict."""
+    rng = random.Random(seed)
+    copies = [shuffle_keeping(text, set(OFFICIAL), rng) for _ in range(N_KEPT)]
+    T = to_arr([text] + copies)
+    best = np.full(T.shape[0], -99.0)
+    per = []
+    for st in settings:
+        ks = key_slots(st, text, known)
+        sc = score_runs(read_runs(st, ks, T), qt)
+        best = np.maximum(best, sc)
+        per.append(float(sc[0]))
+    return {"own": per, "own_best": float(best[0]) if settings else None, "copies_best": [float(x) for x in best[1:]],
+            "copies": copies}
 
 
 def run(ctx):
     me = sys.modules.get(__name__)
     if getattr(me, "job", None) is not job:
         mm = types.ModuleType(__name__); mm.__dict__.update(globals()); sys.modules[__name__] = mm
-    t0 = time.time()
-    f = F(); m = f.frozen()
+    from kryptos.plants import english_plant
+    a = A282(); f = a.F(); m = f.frozen()
     f.setup(ctx.vocabulary)
-    A = m._G["A"]
+    A, names = m._G["A"], m._G["names"]
     k20 = {q: ctx.KNOWN[q] for q in OFFICIAL}
     rng = random.Random(SEED)
     texts = [("k4", ctx.K4, k20)]
-    for i in range(N_COPIES):
-        s = list(ctx.K4); rng.shuffle(s); texts.append((f"copy{i}", "".join(s), k20))
-    carter = "".join(c for c in (ROOT / "knowledge" / "sources" / "carter-1923-tomb-of-tutankhamen-vol1.txt").read_text(errors="ignore").upper() if "A" <= c <= "Z")
+    texts += [(f"sh{i}", shuffle_keeping(ctx.K4, set(), rng), k20) for i in range(N_SHUF)]
+    texts += [(f"rp{i}", shuffle_keeping(ctx.K4, {28, 66}, rng), k20) for i in range(N_RP)]
+    texts += [(f"rpam{i}", shuffle_keeping(ctx.K4, {28, 66, 32, 70}, rng), k20) for i in range(N_RPAM)]
     plants = {}
-    for j, (L, k) in enumerate(((14, 1), (16, 2), (18, 1), (20, 2), (21, 1), (22, 2))):
-        strs, src = m._G["rots"][L]
-        o = rng.randrange(len(carter) // 2, len(carter) - N)
-        pt = carter[o:o + N]
-        w, r = src[rng.randrange(len(src))]
-        key = {"pa": A[rng.randrange(2, len(A))], "ca": A[rng.randrange(2, len(A))], "form": rng.choice(("added", "beaufort")),
-               "ka": rng.choice(("std", "kry", "plain", "cipher")), "word": w, "start": r, "shift": rng.randrange(26)}
-        ct = list(m.encrypt(pt, key))
-        D = sorted(rng.sample(OFFICIAL, k))
-        for q in D:
-            ct[q - 1] = rng.choice([c for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if c != ct[q - 1]])
+    paired = [q for q in OFFICIAL if q <= 72]
+    for j in range(N_PLANTS):
+        pt = english_plant(SEED + 100 + j)
+        pa, ca = rng.randrange(2, len(A)), rng.randrange(2, len(A))
+        fm = rng.choice(("added", "beaufort"))
+        kv = [rng.randrange(26) for _ in range(L)]
+        PA, CA = A[pa], A[ca]
+        ct = [CA[(PA.index(p) + kv[i % L]) % 26] if fm == "added" else CA[(kv[i % L] - PA.index(p)) % 26] for i, p in enumerate(pt)]
+        q = rng.choice(paired)
+        ct[q - 1] = rng.choice([c for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if c != ct[q - 1]])
         pid = f"plant{j}"
-        plants[pid] = {"L": L, "key": key, "slips": D, "pt": pt}
-        texts.append((pid, "".join(ct), {q: pt[q - 1] for q in OFFICIAL}))
-    drops = [D for k in (1, 2) for D in itertools.combinations(OFFICIAL, k)]
-    work = [(tid, t, kn, D) for tid, t, kn in texts for D in drops]
+        plants[pid] = {"pt": pt, "pa": pa, "ca": ca, "form": fm, "slip": q, "ct": "".join(ct), "known": {x: pt[x - 1] for x in OFFICIAL}}
+        texts.append((pid, "".join(ct), plants[pid]["known"]))
     saved = getattr(ctx, "saved", {}) or {}
-    res = {}
-    for tid, t, kn, D in work:
-        key = f"{tid}|{'-'.join(map(str, D))}"
-        if key in saved:
-            res[key] = saved[key]
-    todo = [w for w in work if f"{w[0]}|{'-'.join(map(str, w[3]))}" not in res]
-    todo.sort(key=lambda w: w[0] != "k4")
+    res = {tid: saved[tid] for tid, _, _ in texts if tid in saved}
+    todo = [t for t in texts if t[0] not in res]
+    todo.sort(key=lambda t: not (t[0] == "k4" or t[0].startswith("plant")))
     W = int(os.environ.get("K4_WORKERS", 8))
-    ctx.progress(len(res), len(work), "texts x drop sets")
+    ctx.progress(len(res), len(texts), "texts")
     with mp.get_context("fork").Pool(W) as pool:
-        for tid, D, out in pool.imap_unordered(job, todo, chunksize=1):
-            key = f"{tid}|{'-'.join(map(str, D))}"
-            res[key] = out
-            ctx.save(key, out)
-            ctx.progress(len(res), len(work), "texts x drop sets")
+        for tid, out in pool.imap_unordered(job, todo, chunksize=1):
+            res[tid] = out
+            ctx.save(tid, out)
+            ctx.progress(len(res), len(texts), "texts")
 
-    def of(tid):
-        return [v for k, v in res.items() if k.split("|")[0] == tid]
-    k4m = [x for v in of("k4") for x in v["matches"]]
-    cm = [sum(len(v["matches"]) for v in of(f"copy{i}")) for i in range(N_COPIES)]
-    cells = [f"{L}/{fm}" for L in range(1, LCOUNT + 1) for fm in ("added", "beaufort")]
-    fits = {}
-    for c in cells:
-        kv = sum(1 for v in of("k4") if v["fits"][c])
-        cv = [sum(1 for v in of(f"copy{i}") if v["fits"][c]) for i in range(N_COPIES)]
-        fits[c] = {"k4_drop_sets_fitting": kv, "copies_median": float(np.median(cv)), "copies_max": max(cv),
-                   "p": round((1 + sum(1 for x in cv if x >= kv)) / (N_COPIES + 1), 3) if kv else None,
-                   "k4_unscreened_drop_sets": sum(1 for v in of("k4") if c in v["unscreened"])}
-    found = {}
+    # ---- counts -------------------------------------------------------------------------------------
+    def stats(tid):
+        c = res[tid]["counts"]
+        return {"drop_sets_added": sum(1 for x in c["added"] if x), "drop_sets_beaufort": sum(1 for x in c["beaufort"] if x),
+                "single_drops_fitting": sum(1 for fm in c for x in c[fm][:len(OFFICIAL)] if x),
+                "one_slip_settings": sum(x for fm in c for x in c[fm][:len(OFFICIAL)])}
+    k4s = stats("k4")
+    counts = {"k4": k4s}
+    for grp, n in (("sh", N_SHUF), ("rp", N_RP), ("rpam", N_RPAM)):
+        ss = [stats(f"{grp}{i}") for i in range(n)]
+        counts[grp] = {}
+        for key in k4s:
+            v = [s[key] for s in ss]
+            counts[grp][key] = {"median": float(np.median(v)), "max": max(v), "at_or_above": sum(1 for x in v if x >= k4s[key]),
+                                "p": round((1 + sum(1 for x in v if x >= k4s[key])) / (n + 1), 4)}
+
+    # ---- readings -----------------------------------------------------------------------------------
+    qt = quad_table()
+    tmap = {tid: (t, kn) for tid, t, kn in texts}
+
+    def settings_of(tid):
+        return [tuple(x) for x in res[tid]["listed"] if x[1] <= 72]       # 73 and 74 have no partner: no key letter left
+    k4set = settings_of("k4")
+    rt = read_test(ctx.K4, k20, k4set, qt, SEED + 1)
+    order = sorted(range(len(k4set)), key=lambda i: -rt["own"][i])
+    k4_top = []
+    for i in order[:10]:
+        st = k4set[i]
+        ks = key_slots(st, ctx.K4, k20)
+        k4_top.append({"form": st[0], "slip_at": st[1], "plain_alphabet": names[st[2]], "cipher_alphabet": names[st[3]],
+                       "score": round(rt["own"][i], 3), "reading": reading_string(st, ks, ctx.K4)})
+    at_or_above = sum(1 for x in rt["copies_best"] if x >= rt["own_best"]) if k4set else None
+    # the judge: K4's top 5 and the top reading of the first 100 kept-place copies
+    copy_tops = []
+    for cpy in rt["copies"][:N_JUDGE_COPIES]:
+        T = to_arr([cpy])
+        best, bst = -99.0, None
+        for st in k4set:
+            ks = key_slots(st, ctx.K4, k20)
+            sc = float(score_runs(read_runs(st, ks, T), qt)[0])
+            if sc > best:
+                best, bst = sc, (st, ks)
+        copy_tops.append(reading_string(bst[0], bst[1], cpy) if bst else None)
+    to_judge = [r["reading"] for r in k4_top[:5]] + [r for r in copy_tops if r]
+    verdicts = ctx.judge(to_judge) if to_judge else []
+    js = [v.get("score") if v else None for v in verdicts]
+    k4_j = [x for x in js[:min(5, len(k4_top))] if x is not None]
+    cp_j = [x for x in js[min(5, len(k4_top)):] if x is not None]
+    for r, x in zip(k4_top[:5], js):
+        r["judge"] = x
+
+    # ---- plants -------------------------------------------------------------------------------------
+    plant_out = []
     for pid, p in plants.items():
-        k = p["key"]
-        hit = any(x["L"] == p["L"] and x["pa"] == k["pa"] and x["ca"] == k["ca"] and x["form"] == k["form"]
-                  and sum(a == b for a, b in zip(m.decrypt(texts[[t[0] for t in texts].index(pid)][1], m.key_of(x)), p["pt"])) >= N - 2
-                  for v in of(pid) for x in v["matches"])
-        found[pid] = {"L": p["L"], "slips": p["slips"], "found": bool(hit)}
-    cands = [{"plaintext": m.decrypt(ctx.K4, m.key_of(x)), "key": {**m.key_of(x), "slips_dropped": x["drop"]}} for x in k4m[:100]]
-    bounds = {"item": "F16.1b-s", "drop_sets": len(drops), "known_places": list(OFFICIAL), "cap_pairs_listed": CAP,
-              "key_word_check_lengths": [3, WMAX], "fitting": fits,
-              "key_word_matches": {"k4": len(k4m), "copies": cm}, "k4_matches": k4m[:50],
-              "plants": found, "plants_found": sum(v["found"] for v in found.values()),
-              "copies": N_COPIES, "compute_seconds": round(time.time() - t0), "exhaustive": "yes where pairs are listed; cells above the cap counted only (k4_unscreened_drop_sets)",
-              "aws_cost_estimate_dollars": 2.0}
-    return {"candidates": cands, "bounds": bounds,
-            "notes": f"{len(drops)} drop sets; key-word matches K4 {len(k4m)}, copies max {max(cm)}; plants {bounds['plants_found']}/{len(found)}"}
+        sts = settings_of(pid)
+        prt = read_test(p["ct"], p["known"], sts, qt, SEED + 10 + int(pid[5:]))
+        partner = p["slip"] + 38 if p["slip"] <= 34 else p["slip"] - 38
+        idx = [i for i, st in enumerate(sts) if st[0] == p["form"] and st[2] == p["pa"] and st[3] == p["ca"] and st[1] == p["slip"]]
+        listed = bool(idx)
+        own = prt["own"][idx[0]] if idx else None
+        first = listed and own >= max(prt["own"]) - 1e-12
+        beats = listed and own > max(prt["copies_best"])
+        exact = None
+        if idx:
+            st = sts[idx[0]]
+            r = reading_string(st, key_slots(st, p["ct"], p["known"]), p["ct"])
+            exact = sum(1 for i, c in enumerate(r) if c != "?" and c == p["pt"][i]) / sum(1 for c in r if c != "?")
+        plant_out.append({"plant": pid, "form": p["form"], "slip": p["slip"], "partner": partner, "settings": len(sts), "listed": listed,
+                          "reading_right_fraction": exact, "score": own, "ranks_first": bool(first),
+                          "copies_best_max": max(prt["copies_best"]) if sts else None, "found": bool(first and beats)})
+    found = sum(p["found"] for p in plant_out)
+    read_p = round((1 + at_or_above) / (N_KEPT + 1), 4) if k4set else None
+    bounds = {
+        "item": "F16.1b-s-r", "key_length": L, "known_places": list(OFFICIAL), "drop_sets": len(DROPS),
+        "alphabets_each_side": len(A), "counts": counts,
+        "count_flag_line": "p < 0.01 against the stand-ins that keep 28 and 66 (rp)",
+        "reading": {"k4_one_slip_settings": len(k4set), "letters_read": 33, "runs": [list(r) for r in RUNS],
+                    "k4_best": rt["own_best"], "copies": N_KEPT, "copies_best_median": float(np.median(rt["copies_best"])) if k4set else None,
+                    "copies_best_max": max(rt["copies_best"]) if k4set else None, "at_or_above": at_or_above, "p": read_p,
+                    "flag_line": "p < 0.01", "k4_top": k4_top},
+        "judge": {"sent": len(to_judge), "none": sum(1 for x in js if x is None), "k4_top5": js[:min(5, len(k4_top))],
+                  "k4_best": max(k4_j) if k4_j else None, "copies_best": max(cp_j) if cp_j else None,
+                  "k4_above_every_copy": bool(k4_j and cp_j and max(k4_j) > max(cp_j))},
+        "plants": plant_out, "plants_found": found, "plants_total": N_PLANTS,
+        "not_covered": "settings needing two slips (pair drops) are counted, not read; 8 of 19 key letters stay open in every reading",
+        "controls": f"{N_SHUF} plain shuffles, {N_RP} keeping 28 and 66, {N_RPAM} keeping 28, 66, 32, 70 (counts); {N_KEPT} kept-place copies (readings)",
+        "exhaustive": "yes at key length 19 for the 210 drop sets; readings sampled against copies",
+        "aws_cost_estimate_dollars": 1.3,
+    }
+    return {"candidates": [], "bounds": bounds,
+            "notes": (f"counts: K4 {k4s}; p against plain shuffles {counts['sh']['drop_sets_added']['p']}/{counts['sh']['drop_sets_beaufort']['p']}, "
+                      f"against R/P-keeping stand-ins {counts['rp']['drop_sets_added']['p']}/{counts['rp']['drop_sets_beaufort']['p']}; "
+                      f"reading: K4 best {rt['own_best']}, {at_or_above} of {N_KEPT} kept-place copies at or above (p {read_p}); "
+                      f"judge K4 {max(k4_j) if k4_j else None} vs copies {max(cp_j) if cp_j else None}; plants {found}/{N_PLANTS}")}
 
 
 def encrypt(plaintext, key):
-    out = list(F().frozen().encrypt(plaintext, {k: v for k, v in key.items() if k != "slips_dropped"}))
+    PA, CA, kv, fm = key["pa"], key["ca"], key["k"], key["form"]
+    out = [CA[(PA.index(p) + kv[i % len(kv)]) % 26] if fm == "added" else CA[(kv[i % len(kv)] - PA.index(p)) % 26] for i, p in enumerate(plaintext)]
+    for q, ch in key.get("slips", []):
+        out[q - 1] = ch
     return "".join(out)
 
 
 def worked_example(ctx, key):
-    return F().worked_example(ctx, key)
+    lines = ["K4 in rows of 19: the official runs 26-34 and 64-72 share columns 7-15", "",
+             "column  place  known  carved   place  known  carved   shift on the plain table (carved - known)"]
+    S = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    for q in range(26, 35):
+        r = q + 38
+        d1 = (S.index(ctx.K4[q - 1]) - S.index(ctx.KNOWN[q])) % 26
+        d2 = (S.index(ctx.K4[r - 1]) - S.index(ctx.KNOWN[r])) % 26
+        lines.append(f"{(q - 1) % L + 1:>6}  {q:>5}  {ctx.KNOWN[q]:>5}  {ctx.K4[q - 1]:>6}   {r:>5}  {ctx.KNOWN[r]:>5}  {ctx.K4[r - 1]:>6}   {d1:>2} and {d2:>2}{'   equal' if d1 == d2 else ''}")
+    lines += ["", "Places 28 and 66 both turn R into P; 32 and 70 share the shift 10 (A to K, C to M)."]
+    return "\n".join(lines)

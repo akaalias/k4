@@ -960,7 +960,7 @@ def sculpture_page():
     body = (f'<style>{letter_colour_css()}.scp .lc.dot{{background:#ebe7d8}}.scp:not(.pt) .lc.up{{transform:translateY(-5px)}}.scp .lrow{{display:block}}.scp .cu{{display:flex;justify-content:space-between}}'
             '.scp .lp-box{{padding-top:14px}}'
             '.scp-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;margin:18px 0 0}.scp-bar .ktabs{margin:0}'
-            '@media(max-width:1240px){.scp .panel-wrap{flex-direction:column;align-items:center}}@media(max-width:640px){.scp .lp-col{zoom:.56}}</style>'
+            '.scp .panel-wrap.wide{width:96vw}.scp .panel-wrap.stack{flex-direction:column;align-items:center}@media(max-width:900px){.scp .panel-wrap.wide{width:auto}}</style>'
             f'<div class="scp">{head}<div class="scp-bar"><div class="ktabs"><button class="ktab on" data-v="c">ciphertext</button>'
             f'<button class="ktab" data-v="p">plaintext</button></div><div class="cu" style="gap:1.5px">{key}</div></div>'
             f'<div class="panel-wrap wide">{box("the four messages", "K1 and K2 above, K3 and K4 below", "".join(rows))}'
@@ -968,7 +968,7 @@ def sculpture_page():
             "<script>(function(){var s=document.querySelector('.scp'),cells=s.querySelectorAll('.lc[data-p]'),tabs=s.querySelectorAll('.ktab');"
             "tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('on',x===b);});"
             "var k=b.dataset.v;s.classList.toggle('pt',k==='p');cells.forEach(function(c){var ch=c.dataset[k],un=ch==='.';c.textContent=un?'':ch;c.classList.toggle('dot',un);"
-            "if(un)c.removeAttribute('data-l');else c.dataset.l=ch;});});});if(location.hash==='#plaintext')tabs[1].click();})();</script>")
+            "if(un)c.removeAttribute('data-l');else c.dataset.l=ch;});});});if(location.hash==='#plaintext')tabs[1].click();var wrap=s.querySelector('.panel-wrap'),cols=s.querySelectorAll('.lp-col');function fit(){var w=wrap.clientWidth,z=(w-18)/1146,st=z<0.9;if(st)z=w/573;z=Math.min(1.8,z);wrap.classList.toggle('stack',st);cols.forEach(function(c){c.style.zoom=z;});}fit();addEventListener('resize',fit);})();</script>")
     return page("the sculpture, letter by letter", body, "", False)
 
 

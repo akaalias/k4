@@ -982,8 +982,11 @@ def sculpture_page():
            '.scp-sec,.scp-words{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;display:none}.scp.sec .scp-sec,.scp.words .scp-words{display:block}'
            '.scp-sec path{fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round}.scp-words path{fill:none;stroke:var(--ink);stroke-width:.9;stroke-linejoin:round;stroke-linecap:round}'
            '.scp:not(.pt) .scp-words path.k3{display:none}'
-           '.scp[data-blur="s"] .lp-box .lc::before{filter:blur(1px)}.scp[data-blur="m"] .lp-box .lc::before{filter:blur(2.5px)}'
-           '.scp[data-blur="l"] .lp-box .lc::before{filter:blur(5px)}.scp[data-blur="xl"] .lp-box .lc::before{filter:blur(10px)}'
+           # the blurred swatch is the layer's own shadow, thrown back onto the cell from off to the left: a filter on each of
+           # 1,700 cells took most of a second per change, a shadow costs nothing to speak of
+           '.scp[data-blur]:not([data-blur=""]) .lp-box .lc::before{left:-3000px;right:3000px;background:transparent;box-shadow:3000px 0 var(--blur) var(--c)}'
+           '.scp[data-blur="s"]{--blur:2px}.scp[data-blur="m"]{--blur:5px}.scp[data-blur="l"]{--blur:10px}.scp[data-blur="xl"]{--blur:20px}'
+           '.scp.gray[data-blur] .lp-box .lc[data-l="?"]::before{left:0;right:0;background:#fff;box-shadow:inset 0 0 0 1.5px #111}'
            '.scp.nolet .lp-box .lc{color:transparent!important}.scp.nolet .lp-box .lc.dot:after{display:none}'
            '.scp-main{display:flex;gap:26px;align-items:flex-start;width:96vw;position:relative;left:50%;transform:translateX(-50%);margin-top:18px}'
            '.scp-side{flex:0 0 172px;position:sticky;top:12px}.scp-side .lp-eyebrow{margin:14px 0 5px}.scp-side .lp-eyebrow:first-child{margin-top:0}'

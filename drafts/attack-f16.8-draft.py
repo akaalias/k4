@@ -95,39 +95,52 @@ def words(vocab):
     return sorted(ws)
 
 
-def build_index(ws, lengths):
-    """For each run length n and key numbering: normalised (first letter = 0) cyclic stretches of every word -> words."""
-    idx = {}
-    for ka, A in ALPH.items():
-        pos = {c: i for i, c in enumerate(A)}
-        for n in lengths:
-            d = {}
-            for w in ws:
-                L = len(w)
-                v = [pos[c] for c in w]
-                for ph in range(L):
-                    seq = [v[(ph + j) % L] for j in range(n)]
-                    key = bytes((x - seq[0]) % 26 for x in seq)
-                    d.setdefault(key, set()).add(w)
-            idx[(ka, n)] = d
-    return idx
-
-
-def part_a(text, known, runs):
-    """Words matching run 1 and run 2 (any phase, any shift), per table and form."""
+def wanted_keys(text, known, runs):
+    """The normalised forced key of each run, per table and form. -> list of (ka, n, key bytes, table, form, run number)."""
     out = []
     for (pa, ca, ka), form in product(tables(), FORMS):
-        hits = []
-        for r in runs:
+        for rn, r in enumerate(runs):
             k = [kval(known[q], text[q - 1], pa, ca, form) for q in r]
-            # key letter values are positions in the key alphabet: k is already an index; normalise
-            key = bytes((x - k[0]) % 26 for x in k)
-            hits.append(_G["idx"][(ka, len(r))].get(key, set()))
-        both = hits[0] & hits[1]
-        if hits[0] or hits[1]:
-            out.append({"table": [pa, ca, ka], "form": form, "run1": sorted(hits[0])[:20], "run2": sorted(hits[1])[:20],
-                        "both": sorted(both)[:20]})
+            out.append((ka, len(r), bytes((x - k[0]) % 26 for x in k), (pa, ca, ka), form, rn))
     return out
+
+
+def scan_words(ws, wanted):
+    """wanted: {(ka, n, key bytes)}. One pass over every cyclic stretch of every word. -> {(ka, n, key): [words]}."""
+    hits = {}
+    by = {}
+    for ka, n, key in wanted:
+        by.setdefault((ka, n), set()).add(key)
+    for (ka, n), keys in by.items():
+        pos = {c: i for i, c in enumerate(ALPH[ka])}
+        firsts = {}
+        for key in keys:                       # prefilter on the first three steps
+            firsts.setdefault(key[:3], set()).add(key)
+        for w in ws:
+            Lw = len(w)
+            v = [pos[c] for c in w]
+            for ph in range(Lw):
+                a = v[ph]
+                pre = bytes(((v[(ph + j) % Lw] - a) % 26) for j in range(3))
+                if pre not in firsts:
+                    continue
+                key = bytes(((v[(ph + j) % Lw] - a) % 26) for j in range(n))
+                if key in firsts[pre]:
+                    hits.setdefault((ka, n, key), set()).add(w)
+    return {k: sorted(v) for k, v in hits.items()}
+
+
+def part_a(text, known, runs, hits):
+    """Words matching run 1 and run 2 (any phase, any shift), per table and form."""
+    out = {}
+    for ka, n, key, tb, form, rn in wanted_keys(text, known, runs):
+        h = hits.get((ka, n, key))
+        if h:
+            out.setdefault((tb, form), {0: [], 1: []})[rn] = h
+    res = []
+    for (tb, form), h in out.items():
+        res.append({"table": list(tb), "form": form, "run1": h[0][:20], "run2": h[1][:20], "both": sorted(set(h[0]) & set(h[1]))[:20]})
+    return res
 
 
 def line_of(q):
@@ -169,7 +182,7 @@ def _job(args):
     tid, text, kn = args
     known = _G["known"][kn]
     runs = RUNS24 if kn == "k24" else RUNS20
-    return tid, kn, {"a": part_a(text, known, runs), "b": [list(x) for x in part_b(text, known)]}
+    return tid, kn, {"b": [list(x) for x in part_b(text, known)]}
 
 
 def shuffled(text, seed):
@@ -197,7 +210,6 @@ def run(ctx):
     from kryptos.plants import english_plant
     import json
     ws = words(ctx.vocabulary)
-    _G["idx"] = build_index(ws, (9, 11, 13))
     k24 = dict(ctx.KNOWN)
     _G["known"] = {"k24": k24, "k20": {q: k24[q] for q in RUNS20[0] + RUNS20[1]}}
     # K1 self-check: KRYPTOS tables, PALIMPSEST, Vigenere, one phase
@@ -215,6 +227,31 @@ def run(ctx):
         ct = enc(pt, w, ph, *tb, form)
         plants.append({"id": f"plant{j}", "word": w, "table": list(tb), "form": form, "phases": ph})
         texts.append((f"plant{j}", ct))
+    bplants = []
+    for j in range(4):
+        pt = english_plant(SEED + 50 + j)
+        pa, ca = rng.choice(list(ALPH)), rng.choice(list(ALPH))
+        pair = rng.choice(PAIRS)
+        pname = rng.choice(("parity0", "parity1", "runs01", "runs10", "lines010", "lines011", "lines101"))
+        Lk = rng.randrange(5, 13)
+        kv = [rng.randrange(26) for _ in range(Lk)]
+
+        def fpat(q, pname=pname, pair=pair):
+            if pname == "parity0":
+                return pair[(q - 1) % 2]
+            if pname == "parity1":
+                return pair[q % 2]
+            if pname.startswith("runs"):
+                return pair[int(pname[4])] if q < 50 else pair[int(pname[5])]
+            return pair[int(pname[5:][line_of(q) - 2])]
+        out = []
+        for i, ch in enumerate(pt):
+            form = fpat(i + 1)
+            pv, k = ALPH[pa].index(ch), kv[i % Lk]
+            v = (pv + k) % 26 if form == "vig" else (k - pv) % 26 if form == "beau" else (pv - k) % 26
+            out.append(ALPH[ca][v])
+        bplants.append({"id": f"bplant{j}", "table": [pa, ca], "pair": list(pair), "pattern": pname, "L": Lk})
+        texts.append((f"bplant{j}", "".join(out)))
     jobs = [(tid, t, kn) for tid, t in texts for kn in ("k24", "k20")]
     saved = getattr(ctx, "saved", {}) or {}
     res = {(j[0], j[2]): saved[f"{j[0]}|{j[2]}"] for j in jobs if f"{j[0]}|{j[2]}" in saved}
@@ -226,6 +263,15 @@ def run(ctx):
             res[(tid, kn)] = out
             ctx.save(f"{tid}|{kn}", out)
             ctx.progress(len(res), len(jobs), "texts")
+    wanted = set()
+    for tid, t in texts:
+        for kn in ("k24", "k20"):
+            for ka, n, key, tb, form, rn in wanted_keys(t, _G["known"][kn], RUNS24 if kn == "k24" else RUNS20):
+                wanted.add((ka, n, key))
+    hits = scan_words(ws, wanted)
+    for tid, t in texts:
+        for kn in ("k24", "k20"):
+            res[(tid, kn)]["a"] = part_a(t, _G["known"][kn], RUNS24 if kn == "k24" else RUNS20, hits)
     summ = {}
     for kn in ("k24", "k20"):
         def counts(tid):
@@ -249,6 +295,14 @@ def run(ctx):
             a = res[(p["id"], kn)]["a"]
             hit = any(p["word"] in x["both"] for x in a)   # reversed alphabets make some table-form pairs equivalent
             pout.append({"id": p["id"], "known": kn, "word": p["word"], "found": hit})
+    bout = []
+    for p in bplants:
+        for kn in ("k24", "k20"):
+            b = res[(p["id"], kn)]["b"]
+            hit = any(x[0] == p["table"][0] and x[1] == p["table"][1] and list(x[2]) == p["pair"] and x[3] == p["pattern"] and x[4] == p["L"] for x in b)
+            shortest = min([x[4] for x in b] or [99])
+            bout.append({"id": p["id"], "known": kn, "pattern": p["pattern"], "pair": p["pair"], "L": p["L"], "fits": hit, "shortest_fit": shortest,
+                         "found": bool(hit and shortest >= p["L"] // 2)})
     cands = []
     return {
         "candidates": cands,
@@ -258,10 +312,11 @@ def run(ctx):
             "b": "periodic key 1-26, form switching within a pair (vig/var, vig/beau, beau/var) by letter parity, by known run, or by carved line (5-35, 36-66, 67-97); exact",
             "c": "the reversed alphabets (tableau read from the right or the bottom) are in (a) and (b)",
             "prior": "0128 restarts at carved lines; 0171 free keys split between runs; 0017 tableau as running key; 0005 forms and alphabets",
-            "summary": summ, "plants": pout, "copies": N_COPIES, "exhaustive": True, "aws_cost_estimate_dollars": 0.1,
+            "summary": summ, "plants": pout, "plants_b": bout, "copies": N_COPIES,
+            "quirks": "the extra L of row N and the four repeated columns change no lookup: not a separate case", "exhaustive": True, "aws_cost_estimate_dollars": 0.1,
         },
         "notes": (f"k24: K4 {summ['k24']['k4']}, copies max {summ['k24']['copies_max']}; k20: K4 {summ['k20']['k4']}, copies max {summ['k20']['copies_max']}; "
-                  f"plants {[(p['id'], p['known'], p['found']) for p in pout]}"),
+                  f"plants (a) {sum(p['found'] for p in pout)}/{len(pout)}, (b) {sum(p['found'] for p in bout)}/{len(bout)}"),
     }
 
 

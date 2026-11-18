@@ -916,16 +916,18 @@ def letter_colour_css():
     """One background per letter, round the hue wheel in alphabet order, with three steps of lightness so
     neighbours in the alphabet stay apart; the question mark is ink. The text on a coloured cell is always dark."""
     tiers = ((0.90, 0.075), (0.74, 0.135), (0.83, 0.115))
-    out = []
+    # the colour sits on a layer under the letter, so a blur softens the swatch and leaves the letter sharp
+    out = ['.scp .lc{--c:#ebe7d8;background:transparent;position:relative;isolation:isolate}'
+           '.scp .lc::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--c);z-index:-1}']
     for i in range(26):
         l, c = tiers[i % 3]
-        out.append(f'.scp .lc[data-l="{LETTER_KEY[i]}"]{{background:oklch({l} {c} {(25 + i * 360 / 26) % 360:.1f});color:#111}}')
-    out.append('.scp .lc[data-l="?"]{background:var(--ink);color:var(--paper);font-weight:700}')
+        out.append(f'.scp .lc[data-l="{LETTER_KEY[i]}"]{{--c:oklch({l} {c} {(25 + i * 360 / 26) % 360:.1f});color:#111}}')
+    out.append('.scp .lc[data-l="?"]{--c:var(--ink);color:var(--paper);font-weight:700}')
     # grey scale: A lightest to Z darkest, the text turning light where the cell is dark; the question mark is an outlined white cell
     for i in range(26):
         l = 0.96 - i * 0.68 / 25
-        out.append(f'.scp.gray .lc[data-l="{LETTER_KEY[i]}"]{{background:oklch({l:.3f} 0 0);color:{"#111" if l > 0.6 else "#fff"}}}')
-    out.append('.scp.gray .lc[data-l="?"]{background:#fff;color:#111;box-shadow:inset 0 0 0 1.5px #111}')
+        out.append(f'.scp.gray .lc[data-l="{LETTER_KEY[i]}"]{{--c:oklch({l:.3f} 0 0);color:{"#111" if l > 0.6 else "#fff"}}}')
+    out.append('.scp.gray .lc[data-l="?"]{--c:#fff;color:#111}.scp.gray .lc[data-l="?"]::before{box-shadow:inset 0 0 0 1.5px #111}')
     return "".join(out)
 
 
@@ -933,7 +935,7 @@ def sculpture_page():
     """Issue #127: the copper laid flat, the four messages on the left and the table on the right, line by line
     as carved, every letter on its own colour. The tabs swap the carved letters for the known plaintext:
     K1 and K2 place for place (K2 as carved, so it ends ID BY ROWS), K3 in reading order, K4's 24 known letters."""
-    from kryptos.facts import load_k1, load_k2, load_k3, KNOWN, K4
+    from kryptos.facts import load_k1, load_k2, load_k3, KNOWN, K4, CRIBS
     p = sculpture_panels()
     plain = (load_k1()["plaintext"] + load_k2()["plaintext_as_carved"] + load_k3()["plaintext"]
              + "".join(KNOWN.get(i, ".") for i in range(1, len(K4) + 1)))
@@ -945,10 +947,21 @@ def sculpture_page():
         plate = ' style="margin-top:5px"' if k == 14 else ""     # the seam between the upper and lower plates
         return (f'<div class="lrow"{plate}><div class="cu" style="margin-left:{x0 / COPPER_WIDTH * 100:.2f}%;'
                 f'width:{(x1 - x0) / COPPER_WIDTH * 100:.2f}%">{cells}</div></div>')
+    word_of, pos, n = {}, 0, 0                     # place in the plaintext -> word number; X, Q and ? stand alone
+    for name in ("K1", "K2", "K3"):
+        for tok in SPACED[name].split():
+            if tok not in ("X", "Q", "?"):
+                n += 1
+                word_of.update((pos + q, n) for q in range(len(tok)))
+            pos += len(tok)
+    assert pos == len(plain) - len(K4)
+    for start, word in CRIBS:
+        n += 1
+        word_of.update((pos + start - 1 + q, n) for q in range(len(word)))
     ends = (len(load_k1()["ciphertext"]), sum(map(len, p["ul"])), len(plain) - len(K4))      # where K1, K2 and K3 end
     rows, at = [], 0
     for k, ln in enumerate(lines):
-        cells = [cell(ch, plain[at + j]).replace("<i ", f'<i data-s="{sum(at + j >= e for e in ends)}" ', 1) for j, ch in enumerate(ln)]
+        cells = [cell(ch, plain[at + j]).replace("<i ", f'<i data-s="{sum(at + j >= e for e in ends)}" data-w="{word_of.get(at + j, 0)}" ', 1) for j, ch in enumerate(ln)]
         if k == 14:                                               # Y, A and R of ENDYAHR sit above the line
             for j in (3, 4, 6):
                 cells[j] = cells[j].replace('class="lc"', 'class="lc up"', 1)
@@ -963,28 +976,35 @@ def sculpture_page():
     head = page_head("Sculpture", "The copper, letter by letter",
                      "The four messages on the left and the table on the right, line by line as carved. Each line starts and ends where it does on the copper, so the letters of a short line sit further apart. Each letter has its own colour, and so does the question mark. "
                      "The plaintext tab puts the solved text in place of the carved letters: K1 and K2 place for place, K3 in reading order, and the 24 known letters of K4.")
-    body = (f'<style>{letter_colour_css()}.scp .lc.dot{{background:#ebe7d8}}.scp:not(.pt) .lc.up{{transform:translateY(-5px)}}.scp .lrow{{display:block}}.scp .cu{{display:flex;justify-content:space-between}}'
-            '.scp .lp-box{{padding-top:14px}}'
-            '.scp-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;margin:18px 0 0}.scp-bar .ktabs{margin:0}'
-            '.scp .lp-box{position:relative}.scp-sec{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;display:none}.scp.sec .scp-sec{display:block}'
-            '.scp-sec path{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round}.scp-bar .ktabs{gap:6px;flex-wrap:wrap}.scp-bar .ktab{white-space:nowrap}.scp-bar .ktab.sep{margin-left:14px}'
-            '.scp[data-blur="s"] .lp-box .lrow{filter:blur(1px)}.scp[data-blur="m"] .lp-box .lrow{filter:blur(2.5px)}.scp[data-blur="l"] .lp-box .lrow{filter:blur(5px)}.scp[data-blur="xl"] .lp-box .lrow{filter:blur(10px)}'
-            '.scp.nolet .lp-box .lc{color:transparent!important}.scp.nolet .lp-box .lc.dot:after{display:none}'
-            '.scp .panel-wrap.wide{width:96vw}.scp .panel-wrap.stack{flex-direction:column;align-items:center}@media(max-width:900px){.scp .panel-wrap.wide{width:auto}}</style>'
-            f'<div class="scp">{head}<div class="scp-bar"><div class="ktabs"><button class="ktab on" data-v="c">ciphertext</button>'
-            f'<button class="ktab" data-v="p">plaintext</button><button class="ktab sep" id="scp-sec">sections</button>'
-            f'<button class="ktab sep on" data-m="rainbow">rainbow</button><button class="ktab" data-m="gray">gray scale</button>'
-            '<button class="ktab sep on" data-k="shown">colour as shown</button><button class="ktab" data-k="c">as ciphertext</button>'
-            f'<button class="ktab" data-k="p">as plaintext</button>'
-            '<button class="ktab sep on" data-b="">no blur</button><button class="ktab" data-b="s">s</button><button class="ktab" data-b="m">m</button>'
-            f'<button class="ktab" data-b="l">l</button><button class="ktab" data-b="xl">xl</button><button class="ktab sep on" id="scp-let">letters</button></div><div class="cu" style="gap:1.5px">{key}</div></div>'
+    css = ('.scp:not(.pt) .lc.up{transform:translateY(-5px)}.scp .lrow{display:block}.scp .cu{display:flex;justify-content:space-between}'
+           '.scp .lp-box{padding-top:14px;position:relative}'
+           '.scp-sec,.scp-words{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;display:none}.scp.sec .scp-sec,.scp.words .scp-words{display:block}'
+           '.scp-sec path{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round}.scp-words path{fill:none;stroke:var(--ink);stroke-width:1.1;stroke-linejoin:round}'
+           '.scp:not(.pt) .scp-words path.k3{display:none}'
+           '.scp[data-blur="s"] .lp-box .lc::before{filter:blur(1px)}.scp[data-blur="m"] .lp-box .lc::before{filter:blur(2.5px)}'
+           '.scp[data-blur="l"] .lp-box .lc::before{filter:blur(5px)}.scp[data-blur="xl"] .lp-box .lc::before{filter:blur(10px)}'
+           '.scp.nolet .lp-box .lc{color:transparent!important}.scp.nolet .lp-box .lc.dot:after{display:none}'
+           '.scp-main{display:flex;gap:26px;align-items:flex-start;width:96vw;position:relative;left:50%;transform:translateX(-50%);margin-top:18px}'
+           '.scp-side{flex:0 0 172px;position:sticky;top:12px}.scp-side .lp-eyebrow{margin:14px 0 5px}.scp-side .lp-eyebrow:first-child{margin-top:0}'
+           '.scp-side .ktabs{margin:0;gap:5px;flex-wrap:wrap}.scp-side .ktab{white-space:nowrap;padding:4px 10px}.scp-side .cu{flex-wrap:wrap;justify-content:flex-start;gap:1.5px}'
+           '.scp .panel-wrap.wide{flex:1;min-width:0;width:auto;left:0;transform:none;margin:0}.scp .panel-wrap.stack{flex-direction:column;align-items:center}'
+           '@media(max-width:900px){.scp-main{flex-direction:column;width:auto;left:0;transform:none}.scp-side{position:static;flex:none}.scp .panel-wrap.wide{width:100%}}')
+    group = lambda label, buttons: f'<p class="lp-eyebrow">{label}</p><div class="ktabs">{buttons}</div>'
+    tab = lambda attr, label, on=False: f'<button class="ktab{" on" if on else ""}" {attr}>{label}</button>'
+    side = (group("text", tab('data-v="c"', "ciphertext", True) + tab('data-v="p"', "plaintext"))
+            + group("colours", tab('data-m="rainbow"', "rainbow", True) + tab('data-m="gray"', "gray scale"))
+            + group("colours follow", tab('data-k="shown"', "text shown", True) + tab('data-k="c"', "ciphertext") + tab('data-k="p"', "plaintext"))
+            + group("blur", tab('data-b=""', "none", True) + "".join(tab(f'data-b="{k}"', k) for k in ("s", "m", "l", "xl")))
+            + group("show", tab('id="scp-let"', "letters", True) + tab('id="scp-sec"', "sections") + tab('id="scp-words"', "words"))
+            + f'<p class="lp-eyebrow">key</p><div class="cu">{key}</div>')
+    body = (f'<style>{letter_colour_css()}{css}</style><div class="scp">{head}<div class="scp-main"><div class="scp-side">{side}</div>'
             f'<div class="panel-wrap wide">{box("the four messages", "K1 and K2 above, K3 and K4 below", "".join(rows))}'
-            f'{box("the table", "26 rows of the keyed alphabet", trows)}</div></div>'
+            f'{box("the table", "26 rows of the keyed alphabet", trows)}</div></div></div>'
             "<script>(function(){var s=document.querySelector('.scp'),cells=s.querySelectorAll('.lc[data-p]'),tabs=s.querySelectorAll('.ktab[data-v]');"
             "var show='c',col='shown',cols3=s.querySelectorAll('.ktab[data-k]');function paint(){s.classList.toggle('pt',show==='p');var ck=col==='shown'?show:col;cells.forEach(function(c){var ch=c.dataset[show],l=c.dataset[ck],un=ch==='.';c.textContent=un?'':ch;c.classList.toggle('dot',un);if(un||l==='.')c.removeAttribute('data-l');else c.dataset.l=l;});}"
             "tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.classList.toggle('on',x===b);});show=b.dataset.v;paint();});});"
             "cols3.forEach(function(b){b.addEventListener('click',function(){cols3.forEach(function(x){x.classList.toggle('on',x===b);});col=b.dataset.k;paint();});});"
-            "if(location.hash==='#plaintext')tabs[1].click();var wrap=s.querySelector('.panel-wrap'),cols=s.querySelectorAll('.lp-col');function fit(){var w=wrap.clientWidth,z=(w-18)/1146,st=z<0.9;if(st)z=w/573;z=Math.min(1.8,z);wrap.classList.toggle('stack',st);cols.forEach(function(c){c.style.zoom=z;});}fit();addEventListener('resize',fit);var sb=document.getElementById('scp-sec'),box=cells[0].closest('.lp-box'),svg=null;function outline(){var rows=[].slice.call(box.querySelectorAll('.cu')).map(function(r){return [].slice.call(r.children);}),d=[],pad=2.5;var top=function(i){return i===0?rows[0][0].offsetTop-pad:(rows[i-1][0].offsetTop+rows[i-1][0].offsetHeight+rows[i][0].offsetTop)/2;},bot=function(i){return i===rows.length-1?rows[i][0].offsetTop+rows[i][0].offsetHeight+pad:top(i+1);};for(var k=0;k<4;k++){var R=[];rows.forEach(function(r,i){var c=r.filter(function(x){return x.dataset.s==k;});if(!c.length)return;var a=c[0],b=c[c.length-1],pa=a.previousElementSibling,nb=b.nextElementSibling;R.push({l:pa?(pa.offsetLeft+pa.offsetWidth+a.offsetLeft)/2:a.offsetLeft-pad,r:nb?(b.offsetLeft+b.offsetWidth+nb.offsetLeft)/2:b.offsetLeft+b.offsetWidth+pad,t:top(i),b:bot(i)});});var q='M'+R[0].l+' '+R[0].t;R.forEach(function(x){q+=' L'+x.r+' '+x.t+' L'+x.r+' '+x.b;});for(var i=R.length-1;i>=0;i--)q+=' L'+R[i].l+' '+R[i].b+' L'+R[i].l+' '+R[i].t;d.push('<path d='+JSON.stringify(q+' Z')+'/>');}svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('class','scp-sec');svg.innerHTML=d.join('');box.appendChild(svg);}sb.addEventListener('click',function(){if(!svg)outline();sb.classList.toggle('on',s.classList.toggle('sec'));});if(location.hash==='#sections')sb.click();var blurs=s.querySelectorAll('.ktab[data-b]');blurs.forEach(function(b){b.addEventListener('click',function(){blurs.forEach(function(x){x.classList.toggle('on',x===b);});s.dataset.blur=b.dataset.b;});});var lb=document.getElementById('scp-let');lb.addEventListener('click',function(){lb.classList.toggle('on',!s.classList.toggle('nolet'));});var modes=s.querySelectorAll('.ktab[data-m]');modes.forEach(function(b){b.addEventListener('click',function(){modes.forEach(function(x){x.classList.toggle('on',x===b);});s.classList.toggle('gray',b.dataset.m==='gray');});});})();</script>")
+            "if(location.hash==='#plaintext')tabs[1].click();var wrap=s.querySelector('.panel-wrap'),cols=s.querySelectorAll('.lp-col');function fit(){var w=wrap.clientWidth,z=(w-18)/1146,st=z<0.9;if(st)z=w/573;z=Math.min(1.8,z);wrap.classList.toggle('stack',st);cols.forEach(function(c){c.style.zoom=z;});}fit();addEventListener('resize',fit);var sb=document.getElementById('scp-sec'),box=cells[0].closest('.lp-box'),svg=null;function outline(){var rows=[].slice.call(box.querySelectorAll('.cu')).map(function(r){return [].slice.call(r.children);}),d=[],pad=2.5;var top=function(i){return i===0?rows[0][0].offsetTop-pad:(rows[i-1][0].offsetTop+rows[i-1][0].offsetHeight+rows[i][0].offsetTop)/2;},bot=function(i){return i===rows.length-1?rows[i][0].offsetTop+rows[i][0].offsetHeight+pad:top(i+1);};for(var k=0;k<4;k++){var R=[];rows.forEach(function(r,i){var c=r.filter(function(x){return x.dataset.s==k;});if(!c.length)return;var a=c[0],b=c[c.length-1],pa=a.previousElementSibling,nb=b.nextElementSibling;R.push({l:pa?(pa.offsetLeft+pa.offsetWidth+a.offsetLeft)/2:a.offsetLeft-pad,r:nb?(b.offsetLeft+b.offsetWidth+nb.offsetLeft)/2:b.offsetLeft+b.offsetWidth+pad,t:top(i),b:bot(i)});});var q='M'+R[0].l+' '+R[0].t;R.forEach(function(x){q+=' L'+x.r+' '+x.t+' L'+x.r+' '+x.b;});for(var i=R.length-1;i>=0;i--)q+=' L'+R[i].l+' '+R[i].b+' L'+R[i].l+' '+R[i].t;d.push('<path d='+JSON.stringify(q+' Z')+'/>');}svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('class','scp-sec');svg.innerHTML=d.join('');box.appendChild(svg);}sb.addEventListener('click',function(){if(!svg)outline();sb.classList.toggle('on',s.classList.toggle('sec'));});if(location.hash==='#sections')sb.click();var blurs=s.querySelectorAll('.ktab[data-b]');blurs.forEach(function(b){b.addEventListener('click',function(){blurs.forEach(function(x){x.classList.toggle('on',x===b);});s.dataset.blur=b.dataset.b;});});var lb=document.getElementById('scp-let');lb.addEventListener('click',function(){lb.classList.toggle('on',!s.classList.toggle('nolet'));});var wb=document.getElementById('scp-words'),wsvg=null;function words(){var d=[],prev=null;[].slice.call(box.querySelectorAll('.cu')).forEach(function(r){var c=[].slice.call(r.children),i=0;while(i<c.length){var w=c[i].dataset.w;if(w==='0'){prev=null;i++;continue;}var j=i;while(j+1<c.length&&c[j+1].dataset.w===w)j++;var a=c[i],b=c[j],pa=a.previousElementSibling,nb=b.nextElementSibling,nr=r.parentNode.nextElementSibling,l=pa?(pa.offsetLeft+pa.offsetWidth+a.offsetLeft)/2:a.offsetLeft-1.5,rr=nb?(b.offsetLeft+b.offsetWidth+nb.offsetLeft)/2:b.offsetLeft+b.offsetWidth+1.5,t=a.offsetTop-1,bt=a.offsetTop+a.offsetHeight+1;var from=prev===w&&i===0,to=j===c.length-1&&nr&&nr.querySelector('.lc').dataset.w===w;var q=from?(to?'M'+l+' '+t+' L'+rr+' '+t+' M'+l+' '+bt+' L'+rr+' '+bt:'M'+l+' '+t+' L'+rr+' '+t+' L'+rr+' '+bt+' L'+l+' '+bt):(to?'M'+rr+' '+t+' L'+l+' '+t+' L'+l+' '+bt+' L'+rr+' '+bt:'M'+l+' '+t+' L'+rr+' '+t+' L'+rr+' '+bt+' L'+l+' '+bt+' Z');d.push('<path'+(a.dataset.s==='2'?' class=k3':'')+' d='+JSON.stringify(q)+'/>');prev=w;i=j+1;}});wsvg=document.createElementNS('http://www.w3.org/2000/svg','svg');wsvg.setAttribute('class','scp-words');wsvg.innerHTML=d.join('');box.appendChild(wsvg);}wb.addEventListener('click',function(){if(!wsvg)words();wb.classList.toggle('on',s.classList.toggle('words'));});var modes=s.querySelectorAll('.ktab[data-m]');modes.forEach(function(b){b.addEventListener('click',function(){modes.forEach(function(x){x.classList.toggle('on',x===b);});s.classList.toggle('gray',b.dataset.m==='gray');});});})();</script>")
     return page("the sculpture, letter by letter", body, "", False)
 
 

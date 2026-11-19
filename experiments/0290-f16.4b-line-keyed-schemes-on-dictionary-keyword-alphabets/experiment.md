@@ -1,0 +1,3820 @@
+# 0290-f16.4b-line-keyed-schemes-on-dictionary-keyword-alphabets: F16.4b: a key that knows the carved lines: a repeating key of 1-26 with its own offset on each carved line, restarted at each line, or both, on every pair of dictionary keyword alphabets (208,064 each side, plain and KRYPTOS among them), both forms; exact fit counts against 50 shuffles, the forced key looked up as a word
+
+**Family:** 16-simple-hand-methods  
+**Parent:** 0244-f14-two-dictionary-keyword-alphabets-and-a-key-word  
+**Decision:** reverted  
+**Run:** 2026-11-19T10:15:12+00:00, 2181.5 s, status ran  
+**Time by phase:** implement 109 s, test 27 s, run 2182 s, record 0 s
+
+## In plain words
+
+Sanborn worked on charts with the text in lines of 31 letters. Perhaps the key word started again on each carved line, or each line was slid by its own amount. We test both on every pair of alphabets made from dictionary words and ask whether the key the known letters force is ever a word.
+
+## Walkthrough, by hand
+
+1. Write K4 in its carved lines and mark the known letters: 22-34 on the second line, 64-66 on the third, 67-74 on the fourth.
+2. Choose a key length, say 9, and write the key under each line, starting again at each line's first letter.
+3. Two known letters under the same key letter must give the same key: for a pair of alphabets, that is a check.
+4. With an offset per line, compare differences instead: two pairs of known letters that straddle the same two lines must differ by the same amount.
+5. Keep the alphabet pairs that pass every check and read the key they force; look it up in the dictionary.
+
+## Worked example (generated)
+
+```
+key length 9, restart at each carved line: the key letter each known place falls under
+
+place line column slot known carved
+   22    2     17    8     E      F
+   23    2     18    0     A      L
+   24    2     19    1     S      R
+   25    2     20    2     T      V
+   26    2     21    3     N      Q
+   27    2     22    4     O      Q
+   28    2     23    5     R      P
+   29    2     24    6     T      R
+   30    2     25    7     H      N
+   31    2     26    8     E      G
+   32    2     27    0     A      K
+   33    2     28    1     S      S
+   34    2     29    2     T      S
+   64    3     28    1     B      N
+   65    3     29    2     E      Y
+   66    3     30    3     R      P
+   67    4      0    0     L      V
+   68    4      1    1     I      T
+   69    4      2    2     N      T
+   70    4      3    3     C      M
+   71    4      4    4     L      Z
+   72    4      5    5     O      F
+   73    4      6    6     C      P
+   74    4      7    7     K      K
+```
+
+## Lineage
+
+Inherits from 0244-f14-two-dictionary-keyword-alphabets-and-a-key-word. What changed: F16.4b (issue #123). 0288 found no sign of the carved line in the small shifts (p 0.20, 0.28), so this row runs without a lead behind it (run more experiments, #100). 0244's exact pair index, with the same-slot checks replaced by the checks a line-keyed key leaves: (1) OFFSET: key[(q-1) mod L] plus an unknown offset per carved line (K4 places 1-4, 5-35, 36-66, 67-97); (2) RESTART: the key begins again at each carved line, no offset; (3) BOTH. Each check is a signed sum of forced keys that must be zero, and still splits into a cipher-side and a plain-side number, so the index works unchanged. On the 24 and on the 20 official letters. Before: 0088 (a shift per line plus a column word) and 0128 (restart per line), plain and KRYPTOS tables only. Strength aimed at: exact.
+
+## Hypothesis (domain expert)
+
+C27(b) (the BERLIN chart's 31-character lines he counted on), A7 (one procedure for all 97 letters), C5(a). Quagmire IV with dictionary keyword alphabets P and C (kryptos.alphabets.keyword_mixed; 4.3 x 10^10 ordered pairs per form), added form k = C(c) - P(p) and Beaufort k = C(c) + P(p). Known places by carved line: 22-34 on line 2, 64-66 on line 3, 67-74 on line 4. The consistency checks are the cycles of the graph whose nodes are key slots and lines and whose edges are known places; with E independent checks a random pair fits with chance 26^-E, so the space is decided where E is about 8 or more and counted elsewhere. Where 10,000 pairs or fewer fit, the forced key (relative to line 2's offset) is looked up among every rotation of every dictionary and puzzle word of the length, numbered on the standard, KRYPTOS, plain or cipher alphabet, any shift. Prediction basis: 0244 and 0275 found no key word with a plain repeating key.
+
+## Prediction
+
+No key word on K4 or any shuffle. K4's fit counts inside its shuffles: cells where K4 is above all 50 no more than a shuffle shows against the other 49. Plants found 12 of 12.
+
+## Method
+
+1. For each model and key length, the known places as edges between key slots and carved lines; a spanning forest gives each slot's key as a signed sum of forced keys, and every other edge a check.
+2. For every alphabet the checks' cipher-side and plain-side numbers; pairs with equal numbers fit (index, exact).
+3. Count per cell; where at most 10,000 pairs fit, read the forced key and look it up as a word.
+4. K4, 50 shuffles, 12 plants (random dictionary alphabets and key word, key lengths 7-14, the three models).
+
+## Result
+
+Candidates returned: 0. Passed all gates: 0. Best crib hits among all candidates: 0/24
+(no candidates).
+Best loss: None (0 is solved; 10 per missed crib letter; the harness keeps by lowest loss). Best fitness, diagnostic only: None. Champion before this run: none.
+
+| # | gate | cribs | fitness | plaintext | key |
+|---|---|---|---|---|---|
+| - | no candidates | | | | |
+
+### Bounds searched (the negative result this experiment leaves behind)
+
+```
+{
+ "item": "F16.4b",
+ "alphabets": 208064,
+ "alphabet_pairs_per_form": 43290628096,
+ "models": [
+  "offset",
+  "restart",
+  "both"
+ ],
+ "key_lengths": [
+  1,
+  26
+ ],
+ "lines": "K4 places 1-4, 5-35, 36-66, 67-97",
+ "checks_per_cell": {
+  "24/offset/1": 21,
+  "24/offset/2": 20,
+  "24/offset/3": 19,
+  "24/offset/4": 18,
+  "24/offset/5": 17,
+  "24/offset/6": 16,
+  "24/offset/7": 15,
+  "24/offset/8": 14,
+  "24/offset/9": 13,
+  "24/offset/10": 12,
+  "24/offset/11": 11,
+  "24/offset/12": 10,
+  "24/offset/13": 9,
+  "24/offset/14": 9,
+  "24/offset/15": 7,
+  "24/offset/16": 6,
+  "24/offset/17": 5,
+  "24/offset/18": 5,
+  "24/offset/19": 7,
+  "24/offset/20": 9,
+  "24/offset/21": 9,
+  "24/offset/22": 7,
+  "24/offset/23": 6,
+  "24/offset/24": 4,
+  "24/offset/25": 2,
+  "24/offset/26": 0,
+  "24/restart/1": 23,
+  "24/restart/2": 22,
+  "24/restart/3": 21,
+  "24/restart/4": 20,
+  "24/restart/5": 19,
+  "24/restart/6": 18,
+  "24/restart/7": 17,
+  "24/restart/8": 16,
+  "24/restart/9": 15,
+  "24/restart/10": 14,
+  "24/restart/11": 13,
+  "24/restart/12": 12,
+  "24/restart/13": 11,
+  "24/restart/14": 10,
+  "24/restart/15": 9,
+  "24/restart/16": 9,
+  "24/restart/17": 10,
+  "24/restart/18": 10,
+  "24/restart/19": 10,
+  "24/restart/20": 10,
+  "24/restart/21": 10,
+  "24/restart/22": 10,
+  "24/restart/23": 10,
+  "24/restart/24": 9,
+  "24/restart/25": 8,
+  "24/restart/26": 7,
+  "24/both/1": 21,
+  "24/both/2": 20,
+  "24/both/3": 19,
+  "24/both/4": 18,
+  "24/both/5": 17,
+  "24/both/6": 16,
+  "24/both/7": 15,
+  "24/both/8": 14,
+  "24/both/9": 13,
+  "24/both/10": 12,
+  "24/both/11": 11,
+  "24/both/12": 10,
+  "24/both/13": 9,
+  "24/both/14": 8,
+  "24/both/15": 7,
+  "24/both/16": 7,
+  "24/both/17": 8,
+  "24/both/18": 8,
+  "24/both/19": 8,
+  "24/both/20": 8,
+  "24/both/21": 8,
+  "24/both/22": 8,
+  "24/both/23": 8,
+  "24/both/24": 7,
+  "24/both/25": 6,
+  "24/both/26": 5,
+  "20/offset/1": 17,
+  "20/offset/2": 16,
+  "20/offset/3": 15,
+  "20/offset/4": 14,
+  "20/offset/5": 13,
+  "20/offset/6": 12,
+  "20/offset/7": 11,
+  "20/offset/8": 10,
+  "20/offset/9": 9,
+  "20/offset/10": 8,
+  "20/offset/11": 7,
+  "20/offset/12": 6,
+  "20/offset/13": 7,
+  "20/offset/14": 6,
+  "20/offset/15": 3,
+  "20/offset/16": 2,
+  "20/offset/17": 3,
+  "20/offset/18": 5,
+  "20/offset/19": 7,
+  "20/offset/20": 7,
+  "20/offset/21": 6,
+  "20/offset/22": 4,
+  "20/offset/23": 2,
+  "20/offset/24": 0,
+  "20/offset/25": 0,
+  "20/offset/26": 0,
+  "20/restart/1": 19,
+  "20/restart/2": 18,
+  "20/restart/3": 17,
+  "20/restart/4": 16,
+  "20/restart/5": 15,
+  "20/restart/6": 14,
+  "20/restart/7": 13,
+  "20/restart/8": 12,
+  "20/restart/9": 11,
+  "20/restart/10": 10,
+  "20/restart/11": 10,
+  "20/restart/12": 9,
+  "20/restart/13": 7,
+  "20/restart/14": 6,
+  "20/restart/15": 5,
+  "20/restart/16": 5,
+  "20/restart/17": 6,
+  "20/restart/18": 7,
+  "20/restart/19": 8,
+  "20/restart/20": 9,
+  "20/restart/21": 10,
+  "20/restart/22": 10,
+  "20/restart/23": 10,
+  "20/restart/24": 9,
+  "20/restart/25": 8,
+  "20/restart/26": 7,
+  "20/both/1": 17,
+  "20/both/2": 16,
+  "20/both/3": 15,
+  "20/both/4": 14,
+  "20/both/5": 13,
+  "20/both/6": 12,
+  "20/both/7": 11,
+  "20/both/8": 10,
+  "20/both/9": 9,
+  "20/both/10": 8,
+  "20/both/11": 8,
+  "20/both/12": 7,
+  "20/both/13": 5,
+  "20/both/14": 4,
+  "20/both/15": 3,
+  "20/both/16": 3,
+  "20/both/17": 4,
+  "20/both/18": 5,
+  "20/both/19": 6,
+  "20/both/20": 7,
+  "20/both/21": 8,
+  "20/both/22": 8,
+  "20/both/23": 8,
+  "20/both/24": 7,
+  "20/both/25": 6,
+  "20/both/26": 5
+ },
+ "cells": {
+  "24/offset/1/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 21
+  },
+  "24/offset/1/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 21
+  },
+  "24/offset/2/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 20
+  },
+  "24/offset/2/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 20
+  },
+  "24/offset/3/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 19
+  },
+  "24/offset/3/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 19
+  },
+  "24/offset/4/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 18
+  },
+  "24/offset/4/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 18
+  },
+  "24/offset/5/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "24/offset/5/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "24/offset/6/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "24/offset/6/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "24/offset/7/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "24/offset/7/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "24/offset/8/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "24/offset/8/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "24/offset/9/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "24/offset/9/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "24/offset/10/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "24/offset/10/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "24/offset/11/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "24/offset/11/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "24/offset/12/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/offset/12/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/offset/13/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/offset/13/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/offset/14/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/offset/14/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/offset/15/added": {
+   "k4": 7,
+   "copies_min_median_max": [
+    0,
+    4,
+    76
+   ],
+   "copies_at_or_above": 10,
+   "checks": 7
+  },
+  "24/offset/15/beaufort": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    3,
+    57
+   ],
+   "copies_at_or_above": 39,
+   "checks": 7
+  },
+  "24/offset/16/added": {
+   "k4": 213,
+   "copies_min_median_max": [
+    66,
+    146,
+    319
+   ],
+   "copies_at_or_above": 3,
+   "checks": 6
+  },
+  "24/offset/16/beaufort": {
+   "k4": 71,
+   "copies_min_median_max": [
+    63,
+    134,
+    280
+   ],
+   "copies_at_or_above": 49,
+   "checks": 6
+  },
+  "24/offset/17/added": {
+   "k4": 1331,
+   "copies_min_median_max": [
+    0,
+    3235,
+    10219
+   ],
+   "copies_at_or_above": 49,
+   "checks": 5
+  },
+  "24/offset/17/beaufort": {
+   "k4": 5131,
+   "copies_min_median_max": [
+    0,
+    3489,
+    30056
+   ],
+   "copies_at_or_above": 13,
+   "checks": 5
+  },
+  "24/offset/18/added": {
+   "k4": 2825,
+   "copies_min_median_max": [
+    2468,
+    3644,
+    5262
+   ],
+   "copies_at_or_above": 45,
+   "checks": 5
+  },
+  "24/offset/18/beaufort": {
+   "k4": 3532,
+   "copies_min_median_max": [
+    1837,
+    3678,
+    5437
+   ],
+   "copies_at_or_above": 30,
+   "checks": 5
+  },
+  "24/offset/19/added": {
+   "k4": 3,
+   "copies_min_median_max": [
+    0,
+    4,
+    15
+   ],
+   "copies_at_or_above": 41,
+   "checks": 7
+  },
+  "24/offset/19/beaufort": {
+   "k4": 3,
+   "copies_min_median_max": [
+    0,
+    4,
+    22
+   ],
+   "copies_at_or_above": 34,
+   "checks": 7
+  },
+  "24/offset/20/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/offset/20/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/offset/21/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/offset/21/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/offset/22/added": {
+   "k4": 4,
+   "copies_min_median_max": [
+    0,
+    3,
+    17
+   ],
+   "copies_at_or_above": 20,
+   "checks": 7
+  },
+  "24/offset/22/beaufort": {
+   "k4": 1,
+   "copies_min_median_max": [
+    0,
+    4,
+    80
+   ],
+   "copies_at_or_above": 48,
+   "checks": 7
+  },
+  "24/offset/23/added": {
+   "k4": 111,
+   "copies_min_median_max": [
+    11,
+    139,
+    271
+   ],
+   "copies_at_or_above": 34,
+   "checks": 6
+  },
+  "24/offset/23/beaufort": {
+   "k4": 88,
+   "copies_min_median_max": [
+    39,
+    132,
+    296
+   ],
+   "copies_at_or_above": 42,
+   "checks": 6
+  },
+  "24/offset/24/added": {
+   "k4": 111765,
+   "copies_min_median_max": [
+    52620,
+    93813,
+    149201
+   ],
+   "copies_at_or_above": 8,
+   "checks": 4
+  },
+  "24/offset/24/beaufort": {
+   "k4": 77579,
+   "copies_min_median_max": [
+    48406,
+    93178,
+    175685
+   ],
+   "copies_at_or_above": 43,
+   "checks": 4
+  },
+  "24/offset/25/added": {
+   "k4": 52652470,
+   "copies_min_median_max": [
+    42577419,
+    64485124,
+    86946107
+   ],
+   "copies_at_or_above": 46,
+   "checks": 2
+  },
+  "24/offset/25/beaufort": {
+   "k4": 73619904,
+   "copies_min_median_max": [
+    40407927,
+    64743350,
+    81738216
+   ],
+   "copies_at_or_above": 7,
+   "checks": 2
+  },
+  "24/offset/26/added": {
+   "k4": 43290628096,
+   "copies_min_median_max": [
+    43290628096,
+    43290628096,
+    43290628096
+   ],
+   "copies_at_or_above": 50,
+   "checks": 0
+  },
+  "24/offset/26/beaufort": {
+   "k4": 43290628096,
+   "copies_min_median_max": [
+    43290628096,
+    43290628096,
+    43290628096
+   ],
+   "copies_at_or_above": 50,
+   "checks": 0
+  },
+  "24/restart/1/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 23
+  },
+  "24/restart/1/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 23
+  },
+  "24/restart/2/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 22
+  },
+  "24/restart/2/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 22
+  },
+  "24/restart/3/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 21
+  },
+  "24/restart/3/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 21
+  },
+  "24/restart/4/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 20
+  },
+  "24/restart/4/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 20
+  },
+  "24/restart/5/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 19
+  },
+  "24/restart/5/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 19
+  },
+  "24/restart/6/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 18
+  },
+  "24/restart/6/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 18
+  },
+  "24/restart/7/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "24/restart/7/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "24/restart/8/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "24/restart/8/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "24/restart/9/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "24/restart/9/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "24/restart/10/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "24/restart/10/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "24/restart/11/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "24/restart/11/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "24/restart/12/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "24/restart/12/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "24/restart/13/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "24/restart/13/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "24/restart/14/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/14/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/15/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/restart/15/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/restart/16/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/restart/16/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/restart/17/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/17/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/18/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/18/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/19/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/19/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/20/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/20/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/21/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/21/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/22/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/22/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/23/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/23/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/restart/24/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/restart/24/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/restart/25/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    12
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/restart/25/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    8
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/restart/26/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    1,
+    41
+   ],
+   "copies_at_or_above": 50,
+   "checks": 7
+  },
+  "24/restart/26/beaufort": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    2,
+    23
+   ],
+   "copies_at_or_above": 27,
+   "checks": 7
+  },
+  "24/both/1/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 21
+  },
+  "24/both/1/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 21
+  },
+  "24/both/2/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 20
+  },
+  "24/both/2/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 20
+  },
+  "24/both/3/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 19
+  },
+  "24/both/3/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 19
+  },
+  "24/both/4/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 18
+  },
+  "24/both/4/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 18
+  },
+  "24/both/5/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "24/both/5/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "24/both/6/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "24/both/6/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "24/both/7/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "24/both/7/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "24/both/8/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "24/both/8/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "24/both/9/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "24/both/9/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "24/both/10/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "24/both/10/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "24/both/11/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "24/both/11/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "24/both/12/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/both/12/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "24/both/13/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/both/13/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "24/both/14/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/14/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/15/added": {
+   "k4": 8,
+   "copies_min_median_max": [
+    0,
+    4,
+    18
+   ],
+   "copies_at_or_above": 8,
+   "checks": 7
+  },
+  "24/both/15/beaufort": {
+   "k4": 6,
+   "copies_min_median_max": [
+    0,
+    6,
+    20
+   ],
+   "copies_at_or_above": 25,
+   "checks": 7
+  },
+  "24/both/16/added": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    5,
+    26
+   ],
+   "copies_at_or_above": 45,
+   "checks": 7
+  },
+  "24/both/16/beaufort": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    4,
+    19
+   ],
+   "copies_at_or_above": 46,
+   "checks": 7
+  },
+  "24/both/17/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    3
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/17/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/18/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/18/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/19/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/19/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/20/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/20/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    3
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/21/added": {
+   "k4": 4,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 0,
+   "checks": 8
+  },
+  "24/both/21/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/22/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/22/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/23/added": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 0,
+   "checks": 8
+  },
+  "24/both/23/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "24/both/24/added": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    4,
+    41
+   ],
+   "copies_at_or_above": 42,
+   "checks": 7
+  },
+  "24/both/24/beaufort": {
+   "k4": 3,
+   "copies_min_median_max": [
+    0,
+    4,
+    30
+   ],
+   "copies_at_or_above": 38,
+   "checks": 7
+  },
+  "24/both/25/added": {
+   "k4": 93,
+   "copies_min_median_max": [
+    58,
+    125,
+    311
+   ],
+   "copies_at_or_above": 45,
+   "checks": 6
+  },
+  "24/both/25/beaufort": {
+   "k4": 96,
+   "copies_min_median_max": [
+    56,
+    128,
+    248
+   ],
+   "copies_at_or_above": 41,
+   "checks": 6
+  },
+  "24/both/26/added": {
+   "k4": 3519,
+   "copies_min_median_max": [
+    2412,
+    3652,
+    8153
+   ],
+   "copies_at_or_above": 29,
+   "checks": 5
+  },
+  "24/both/26/beaufort": {
+   "k4": 3559,
+   "copies_min_median_max": [
+    2328,
+    3469,
+    7225
+   ],
+   "copies_at_or_above": 22,
+   "checks": 5
+  },
+  "20/offset/1/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "20/offset/1/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "20/offset/2/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "20/offset/2/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "20/offset/3/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "20/offset/3/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "20/offset/4/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "20/offset/4/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "20/offset/5/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "20/offset/5/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "20/offset/6/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "20/offset/6/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "20/offset/7/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "20/offset/7/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "20/offset/8/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/offset/8/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/offset/9/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/offset/9/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/offset/10/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    5
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/offset/10/beaufort": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 2,
+   "checks": 8
+  },
+  "20/offset/11/added": {
+   "k4": 4,
+   "copies_min_median_max": [
+    0,
+    4,
+    19
+   ],
+   "copies_at_or_above": 26,
+   "checks": 7
+  },
+  "20/offset/11/beaufort": {
+   "k4": 4,
+   "copies_min_median_max": [
+    0,
+    4,
+    115
+   ],
+   "copies_at_or_above": 32,
+   "checks": 7
+  },
+  "20/offset/12/added": {
+   "k4": 99,
+   "copies_min_median_max": [
+    65,
+    133,
+    294
+   ],
+   "copies_at_or_above": 46,
+   "checks": 6
+  },
+  "20/offset/12/beaufort": {
+   "k4": 132,
+   "copies_min_median_max": [
+    46,
+    143,
+    288
+   ],
+   "copies_at_or_above": 32,
+   "checks": 6
+  },
+  "20/offset/13/added": {
+   "k4": 5,
+   "copies_min_median_max": [
+    0,
+    5,
+    31
+   ],
+   "copies_at_or_above": 27,
+   "checks": 7
+  },
+  "20/offset/13/beaufort": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    4,
+    21
+   ],
+   "copies_at_or_above": 42,
+   "checks": 7
+  },
+  "20/offset/14/added": {
+   "k4": 93,
+   "copies_min_median_max": [
+    53,
+    117,
+    1017
+   ],
+   "copies_at_or_above": 40,
+   "checks": 6
+  },
+  "20/offset/14/beaufort": {
+   "k4": 114,
+   "copies_min_median_max": [
+    67,
+    139,
+    555
+   ],
+   "copies_at_or_above": 35,
+   "checks": 6
+  },
+  "20/offset/15/added": {
+   "k4": 4925470,
+   "copies_min_median_max": [
+    775818,
+    2174260,
+    5905755
+   ],
+   "copies_at_or_above": 2,
+   "checks": 3
+  },
+  "20/offset/15/beaufort": {
+   "k4": 1317130,
+   "copies_min_median_max": [
+    656748,
+    2305341,
+    4299736
+   ],
+   "copies_at_or_above": 47,
+   "checks": 3
+  },
+  "20/offset/16/added": {
+   "k4": 64117548,
+   "copies_min_median_max": [
+    51072914,
+    65845213,
+    82940200
+   ],
+   "copies_at_or_above": 28,
+   "checks": 2
+  },
+  "20/offset/16/beaufort": {
+   "k4": 64587404,
+   "copies_min_median_max": [
+    45726178,
+    63496457,
+    86365158
+   ],
+   "copies_at_or_above": 21,
+   "checks": 2
+  },
+  "20/offset/17/added": {
+   "k4": 844430,
+   "copies_min_median_max": [
+    0,
+    2297695,
+    5860135
+   ],
+   "copies_at_or_above": 49,
+   "checks": 3
+  },
+  "20/offset/17/beaufort": {
+   "k4": 2621920,
+   "copies_min_median_max": [
+    0,
+    2718588,
+    19126824
+   ],
+   "copies_at_or_above": 26,
+   "checks": 3
+  },
+  "20/offset/18/added": {
+   "k4": 2825,
+   "copies_min_median_max": [
+    2468,
+    3644,
+    5262
+   ],
+   "copies_at_or_above": 45,
+   "checks": 5
+  },
+  "20/offset/18/beaufort": {
+   "k4": 3532,
+   "copies_min_median_max": [
+    1837,
+    3678,
+    5437
+   ],
+   "copies_at_or_above": 30,
+   "checks": 5
+  },
+  "20/offset/19/added": {
+   "k4": 3,
+   "copies_min_median_max": [
+    0,
+    4,
+    15
+   ],
+   "copies_at_or_above": 41,
+   "checks": 7
+  },
+  "20/offset/19/beaufort": {
+   "k4": 3,
+   "copies_min_median_max": [
+    0,
+    4,
+    22
+   ],
+   "copies_at_or_above": 34,
+   "checks": 7
+  },
+  "20/offset/20/added": {
+   "k4": 1,
+   "copies_min_median_max": [
+    0,
+    4,
+    30
+   ],
+   "copies_at_or_above": 48,
+   "checks": 7
+  },
+  "20/offset/20/beaufort": {
+   "k4": 4,
+   "copies_min_median_max": [
+    0,
+    4,
+    21
+   ],
+   "copies_at_or_above": 25,
+   "checks": 7
+  },
+  "20/offset/21/added": {
+   "k4": 93,
+   "copies_min_median_max": [
+    53,
+    117,
+    1017
+   ],
+   "copies_at_or_above": 40,
+   "checks": 6
+  },
+  "20/offset/21/beaufort": {
+   "k4": 114,
+   "copies_min_median_max": [
+    67,
+    139,
+    555
+   ],
+   "copies_at_or_above": 35,
+   "checks": 6
+  },
+  "20/offset/22/added": {
+   "k4": 130063,
+   "copies_min_median_max": [
+    0,
+    85882,
+    171221
+   ],
+   "copies_at_or_above": 6,
+   "checks": 4
+  },
+  "20/offset/22/beaufort": {
+   "k4": 96118,
+   "copies_min_median_max": [
+    0,
+    87779,
+    280612
+   ],
+   "copies_at_or_above": 19,
+   "checks": 4
+  },
+  "20/offset/23/added": {
+   "k4": 48636066,
+   "copies_min_median_max": [
+    48626990,
+    62549115,
+    86313835
+   ],
+   "copies_at_or_above": 49,
+   "checks": 2
+  },
+  "20/offset/23/beaufort": {
+   "k4": 61128945,
+   "copies_min_median_max": [
+    45163615,
+    62133870,
+    115222299
+   ],
+   "copies_at_or_above": 28,
+   "checks": 2
+  },
+  "20/offset/24/added": {
+   "k4": 43290628096,
+   "copies_min_median_max": [
+    43290628096,
+    43290628096,
+    43290628096
+   ],
+   "copies_at_or_above": 50,
+   "checks": 0
+  },
+  "20/offset/24/beaufort": {
+   "k4": 43290628096,
+   "copies_min_median_max": [
+    43290628096,
+    43290628096,
+    43290628096
+   ],
+   "copies_at_or_above": 50,
+   "checks": 0
+  },
+  "20/offset/25/added": {
+   "k4": 43290628096,
+   "copies_min_median_max": [
+    43290628096,
+    43290628096,
+    43290628096
+   ],
+   "copies_at_or_above": 50,
+   "checks": 0
+  },
+  "20/offset/25/beaufort": {
+   "k4": 43290628096,
+   "copies_min_median_max": [
+    43290628096,
+    43290628096,
+    43290628096
+   ],
+   "copies_at_or_above": 50,
+   "checks": 0
+  },
+  "20/offset/26/added": {
+   "k4": 43290628096,
+   "copies_min_median_max": [
+    43290628096,
+    43290628096,
+    43290628096
+   ],
+   "copies_at_or_above": 50,
+   "checks": 0
+  },
+  "20/offset/26/beaufort": {
+   "k4": 43290628096,
+   "copies_min_median_max": [
+    43290628096,
+    43290628096,
+    43290628096
+   ],
+   "copies_at_or_above": 50,
+   "checks": 0
+  },
+  "20/restart/1/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 19
+  },
+  "20/restart/1/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 19
+  },
+  "20/restart/2/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 18
+  },
+  "20/restart/2/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 18
+  },
+  "20/restart/3/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "20/restart/3/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "20/restart/4/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "20/restart/4/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "20/restart/5/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "20/restart/5/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "20/restart/6/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "20/restart/6/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "20/restart/7/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "20/restart/7/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "20/restart/8/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "20/restart/8/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "20/restart/9/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "20/restart/9/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "20/restart/10/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/10/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/11/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/11/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/12/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/restart/12/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/restart/13/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    1,
+    41
+   ],
+   "copies_at_or_above": 50,
+   "checks": 7
+  },
+  "20/restart/13/beaufort": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    2,
+    23
+   ],
+   "copies_at_or_above": 27,
+   "checks": 7
+  },
+  "20/restart/14/added": {
+   "k4": 85,
+   "copies_min_median_max": [
+    0,
+    57,
+    903
+   ],
+   "copies_at_or_above": 20,
+   "checks": 6
+  },
+  "20/restart/14/beaufort": {
+   "k4": 67,
+   "copies_min_median_max": [
+    0,
+    56,
+    1070
+   ],
+   "copies_at_or_above": 24,
+   "checks": 6
+  },
+  "20/restart/15/added": {
+   "k4": 3130,
+   "copies_min_median_max": [
+    0,
+    2390,
+    15672
+   ],
+   "copies_at_or_above": 18,
+   "checks": 5
+  },
+  "20/restart/15/beaufort": {
+   "k4": 484,
+   "copies_min_median_max": [
+    0,
+    2849,
+    27467
+   ],
+   "copies_at_or_above": 41,
+   "checks": 5
+  },
+  "20/restart/16/added": {
+   "k4": 4502,
+   "copies_min_median_max": [
+    0,
+    2461,
+    21272
+   ],
+   "copies_at_or_above": 13,
+   "checks": 5
+  },
+  "20/restart/16/beaufort": {
+   "k4": 763,
+   "copies_min_median_max": [
+    0,
+    2699,
+    56961
+   ],
+   "copies_at_or_above": 41,
+   "checks": 5
+  },
+  "20/restart/17/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    9659
+   ],
+   "copies_at_or_above": 50,
+   "checks": 6
+  },
+  "20/restart/17/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    3827
+   ],
+   "copies_at_or_above": 50,
+   "checks": 6
+  },
+  "20/restart/18/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    2,
+    23
+   ],
+   "copies_at_or_above": 50,
+   "checks": 7
+  },
+  "20/restart/18/beaufort": {
+   "k4": 9,
+   "copies_min_median_max": [
+    0,
+    2,
+    392
+   ],
+   "copies_at_or_above": 10,
+   "checks": 7
+  },
+  "20/restart/19/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    76
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/restart/19/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    17
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/restart/20/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/restart/20/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/restart/21/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/21/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/22/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/22/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/23/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/23/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/restart/24/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/restart/24/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/restart/25/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    12
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/restart/25/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    8
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/restart/26/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    1,
+    41
+   ],
+   "copies_at_or_above": 50,
+   "checks": 7
+  },
+  "20/restart/26/beaufort": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    2,
+    23
+   ],
+   "copies_at_or_above": 27,
+   "checks": 7
+  },
+  "20/both/1/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "20/both/1/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 17
+  },
+  "20/both/2/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "20/both/2/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 16
+  },
+  "20/both/3/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "20/both/3/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 15
+  },
+  "20/both/4/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "20/both/4/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 14
+  },
+  "20/both/5/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "20/both/5/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 13
+  },
+  "20/both/6/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "20/both/6/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 12
+  },
+  "20/both/7/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "20/both/7/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 11
+  },
+  "20/both/8/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/both/8/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 10
+  },
+  "20/both/9/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/both/9/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    0
+   ],
+   "copies_at_or_above": 50,
+   "checks": 9
+  },
+  "20/both/10/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/both/10/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    3
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/both/11/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/both/11/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/both/12/added": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    4,
+    41
+   ],
+   "copies_at_or_above": 42,
+   "checks": 7
+  },
+  "20/both/12/beaufort": {
+   "k4": 3,
+   "copies_min_median_max": [
+    0,
+    4,
+    30
+   ],
+   "copies_at_or_above": 38,
+   "checks": 7
+  },
+  "20/both/13/added": {
+   "k4": 3519,
+   "copies_min_median_max": [
+    2412,
+    3652,
+    8153
+   ],
+   "copies_at_or_above": 29,
+   "checks": 5
+  },
+  "20/both/13/beaufort": {
+   "k4": 3559,
+   "copies_min_median_max": [
+    2328,
+    3469,
+    7225
+   ],
+   "copies_at_or_above": 22,
+   "checks": 5
+  },
+  "20/both/14/added": {
+   "k4": 65434,
+   "copies_min_median_max": [
+    73003,
+    94159,
+    151639
+   ],
+   "copies_at_or_above": 50,
+   "checks": 4
+  },
+  "20/both/14/beaufort": {
+   "k4": 75027,
+   "copies_min_median_max": [
+    45453,
+    91727,
+    153268
+   ],
+   "copies_at_or_above": 46,
+   "checks": 4
+  },
+  "20/both/15/added": {
+   "k4": 2220995,
+   "copies_min_median_max": [
+    1908807,
+    2431884,
+    4020353
+   ],
+   "copies_at_or_above": 39,
+   "checks": 3
+  },
+  "20/both/15/beaufort": {
+   "k4": 2448076,
+   "copies_min_median_max": [
+    1701743,
+    2472203,
+    3553149
+   ],
+   "copies_at_or_above": 26,
+   "checks": 3
+  },
+  "20/both/16/added": {
+   "k4": 1919473,
+   "copies_min_median_max": [
+    1775138,
+    2371852,
+    3187654
+   ],
+   "copies_at_or_above": 48,
+   "checks": 3
+  },
+  "20/both/16/beaufort": {
+   "k4": 2292102,
+   "copies_min_median_max": [
+    1637478,
+    2433123,
+    5130675
+   ],
+   "copies_at_or_above": 35,
+   "checks": 3
+  },
+  "20/both/17/added": {
+   "k4": 210396,
+   "copies_min_median_max": [
+    37401,
+    86158,
+    290843
+   ],
+   "copies_at_or_above": 1,
+   "checks": 4
+  },
+  "20/both/17/beaufort": {
+   "k4": 50474,
+   "copies_min_median_max": [
+    21655,
+    95257,
+    181142
+   ],
+   "copies_at_or_above": 47,
+   "checks": 4
+  },
+  "20/both/18/added": {
+   "k4": 5557,
+   "copies_min_median_max": [
+    0,
+    3391,
+    7625
+   ],
+   "copies_at_or_above": 4,
+   "checks": 5
+  },
+  "20/both/18/beaufort": {
+   "k4": 3279,
+   "copies_min_median_max": [
+    0,
+    3448,
+    14334
+   ],
+   "copies_at_or_above": 29,
+   "checks": 5
+  },
+  "20/both/19/added": {
+   "k4": 45,
+   "copies_min_median_max": [
+    20,
+    112,
+    629
+   ],
+   "copies_at_or_above": 48,
+   "checks": 6
+  },
+  "20/both/19/beaufort": {
+   "k4": 88,
+   "copies_min_median_max": [
+    30,
+    121,
+    536
+   ],
+   "copies_at_or_above": 36,
+   "checks": 6
+  },
+  "20/both/20/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    5,
+    40
+   ],
+   "copies_at_or_above": 50,
+   "checks": 7
+  },
+  "20/both/20/beaufort": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    6,
+    19
+   ],
+   "copies_at_or_above": 46,
+   "checks": 7
+  },
+  "20/both/21/added": {
+   "k4": 4,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 0,
+   "checks": 8
+  },
+  "20/both/21/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    2
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/both/22/added": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/both/22/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/both/23/added": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    0,
+    1
+   ],
+   "copies_at_or_above": 0,
+   "checks": 8
+  },
+  "20/both/23/beaufort": {
+   "k4": 0,
+   "copies_min_median_max": [
+    0,
+    0,
+    4
+   ],
+   "copies_at_or_above": 50,
+   "checks": 8
+  },
+  "20/both/24/added": {
+   "k4": 2,
+   "copies_min_median_max": [
+    0,
+    4,
+    41
+   ],
+   "copies_at_or_above": 42,
+   "checks": 7
+  },
+  "20/both/24/beaufort": {
+   "k4": 3,
+   "copies_min_median_max": [
+    0,
+    4,
+    30
+   ],
+   "copies_at_or_above": 38,
+   "checks": 7
+  },
+  "20/both/25/added": {
+   "k4": 93,
+   "copies_min_median_max": [
+    58,
+    125,
+    311
+   ],
+   "copies_at_or_above": 45,
+   "checks": 6
+  },
+  "20/both/25/beaufort": {
+   "k4": 96,
+   "copies_min_median_max": [
+    56,
+    128,
+    248
+   ],
+   "copies_at_or_above": 41,
+   "checks": 6
+  },
+  "20/both/26/added": {
+   "k4": 3519,
+   "copies_min_median_max": [
+    2412,
+    3652,
+    8153
+   ],
+   "copies_at_or_above": 29,
+   "checks": 5
+  },
+  "20/both/26/beaufort": {
+   "k4": 3559,
+   "copies_min_median_max": [
+    2328,
+    3469,
+    7225
+   ],
+   "copies_at_or_above": 22,
+   "checks": 5
+  }
+ },
+ "cells_looked_at": 312,
+ "cells_k4_above_all_copies": [
+  "24/both/21/added",
+  "24/both/23/added",
+  "20/both/21/added",
+  "20/both/23/added"
+ ],
+ "null_cells_above_all_others_per_copy": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  4,
+  4,
+  5,
+  5,
+  5,
+  6,
+  6,
+  6,
+  6,
+  7,
+  7,
+  8,
+  8
+ ],
+ "shortest_fitting_length": {
+  "24/offset": {
+   "k4": 15,
+   "copies_min_median_max": [
+    13,
+    15,
+    16
+   ]
+  },
+  "24/restart": {
+   "k4": 26,
+   "copies_min_median_max": [
+    15,
+    26,
+    99
+   ]
+  },
+  "24/both": {
+   "k4": 15,
+   "copies_min_median_max": [
+    13,
+    15,
+    15
+   ]
+  },
+  "20/offset": {
+   "k4": 10,
+   "copies_min_median_max": [
+    10,
+    11,
+    12
+   ]
+  },
+  "20/restart": {
+   "k4": 13,
+   "copies_min_median_max": [
+    12,
+    13,
+    99
+   ]
+  },
+  "20/both": {
+   "k4": 12,
+   "copies_min_median_max": [
+    9,
+    11,
+    12
+   ]
+  }
+ },
+ "key_word_matches": {
+  "k4": 0,
+  "copies": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "k4_matches": [],
+ "k4_cells_over_the_list_cap": [
+  [
+   "24",
+   "offset",
+   24,
+   "added",
+   111765
+  ],
+  [
+   "24",
+   "offset",
+   24,
+   "beaufort",
+   77579
+  ],
+  [
+   "20",
+   "offset",
+   15,
+   "added",
+   4925470
+  ],
+  [
+   "20",
+   "offset",
+   15,
+   "beaufort",
+   1317130
+  ],
+  [
+   "20",
+   "offset",
+   16,
+   "added",
+   64117548
+  ],
+  [
+   "20",
+   "offset",
+   16,
+   "beaufort",
+   64587404
+  ],
+  [
+   "20",
+   "offset",
+   17,
+   "added",
+   844430
+  ],
+  [
+   "20",
+   "offset",
+   17,
+   "beaufort",
+   2621920
+  ],
+  [
+   "20",
+   "offset",
+   22,
+   "added",
+   130063
+  ],
+  [
+   "20",
+   "offset",
+   22,
+   "beaufort",
+   96118
+  ],
+  [
+   "20",
+   "offset",
+   23,
+   "added",
+   48636066
+  ],
+  [
+   "20",
+   "offset",
+   23,
+   "beaufort",
+   61128945
+  ],
+  [
+   "20",
+   "both",
+   14,
+   "added",
+   65434
+  ],
+  [
+   "20",
+   "both",
+   14,
+   "beaufort",
+   75027
+  ],
+  [
+   "20",
+   "both",
+   15,
+   "added",
+   2220995
+  ],
+  [
+   "20",
+   "both",
+   15,
+   "beaufort",
+   2448076
+  ],
+  [
+   "20",
+   "both",
+   16,
+   "added",
+   1919473
+  ],
+  [
+   "20",
+   "both",
+   16,
+   "beaufort",
+   2292102
+  ],
+  [
+   "20",
+   "both",
+   17,
+   "added",
+   210396
+  ],
+  [
+   "20",
+   "both",
+   17,
+   "beaufort",
+   50474
+  ]
+ ],
+ "list_cap": 10000,
+ "plants": {
+  "plant0": {
+   "model": "offset",
+   "L": 7,
+   "form": "added",
+   "word": "DUBBING",
+   "found": true,
+   "fits_in_its_cell": 1,
+   "matches_all_cells": 1,
+   "checks": 15
+  },
+  "plant1": {
+   "model": "offset",
+   "L": 9,
+   "form": "beaufort",
+   "word": "PUBLICISM",
+   "found": true,
+   "fits_in_its_cell": 1,
+   "matches_all_cells": 1,
+   "checks": 13
+  },
+  "plant2": {
+   "model": "offset",
+   "L": 12,
+   "form": "beaufort",
+   "word": "UNPERSPIRING",
+   "found": true,
+   "fits_in_its_cell": 1,
+   "matches_all_cells": 1,
+   "checks": 10
+  },
+  "plant3": {
+   "model": "offset",
+   "L": 14,
+   "form": "beaufort",
+   "word": "UNHYGIENICALLY",
+   "found": true,
+   "fits_in_its_cell": 4,
+   "matches_all_cells": 4,
+   "checks": 9
+  },
+  "plant4": {
+   "model": "restart",
+   "L": 7,
+   "form": "beaufort",
+   "word": "LOXOMMA",
+   "found": true,
+   "fits_in_its_cell": 1,
+   "matches_all_cells": 2,
+   "checks": 17
+  },
+  "plant5": {
+   "model": "restart",
+   "L": 9,
+   "form": "added",
+   "word": "HYDROPULT",
+   "found": true,
+   "fits_in_its_cell": 1,
+   "matches_all_cells": 2,
+   "checks": 15
+  },
+  "plant6": {
+   "model": "restart",
+   "L": 12,
+   "form": "beaufort",
+   "word": "LANCEOLATELY",
+   "found": true,
+   "fits_in_its_cell": 1,
+   "matches_all_cells": 2,
+   "checks": 12
+  },
+  "plant7": {
+   "model": "restart",
+   "L": 14,
+   "form": "added",
+   "word": "SCHWENDENERIAN",
+   "found": true,
+   "fits_in_its_cell": 2,
+   "matches_all_cells": 4,
+   "checks": 10
+  },
+  "plant8": {
+   "model": "both",
+   "L": 7,
+   "form": "beaufort",
+   "word": "WOORALI",
+   "found": true,
+   "fits_in_its_cell": 1,
+   "matches_all_cells": 1,
+   "checks": 15
+  },
+  "plant9": {
+   "model": "both",
+   "L": 9,
+   "form": "beaufort",
+   "word": "HARMONITE",
+   "found": true,
+   "fits_in_its_cell": 3,
+   "matches_all_cells": 1,
+   "checks": 13
+  },
+  "plant10": {
+   "model": "both",
+   "L": 12,
+   "form": "added",
+   "word": "PREVENTATIVE",
+   "found": true,
+   "fits_in_its_cell": 1,
+   "matches_all_cells": 1,
+   "checks": 10
+  },
+  "plant11": {
+   "model": "both",
+   "L": 14,
+   "form": "added",
+   "word": "ESTHESIOGRAPHY",
+   "found": true,
+   "fits_in_its_cell": 6,
+   "matches_all_cells": 1,
+   "checks": 8
+  }
+ },
+ "plants_found": "12 of 12",
+ "controls": "50 shuffles of K4 with the known letters kept in place",
+ "exhaustive": true,
+ "compute_seconds": 2112,
+ "aws_cost_estimate_dollars": 0.2,
+ "not_covered": "key words where more than 10,000 alphabet pairs fit (listed); line offsets with a non-repeating key; lines other than the carved ones"
+}
+```
+
+Notes: key-word matches K4 0, copies max 0; cells K4 above all copies 4 of 312 (a copy against the others: median 2, max 8); plants 12/12
+
+

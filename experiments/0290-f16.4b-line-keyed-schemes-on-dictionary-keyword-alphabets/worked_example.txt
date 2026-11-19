@@ -1,0 +1,27 @@
+key length 9, restart at each carved line: the key letter each known place falls under
+
+place line column slot known carved
+   22    2     17    8     E      F
+   23    2     18    0     A      L
+   24    2     19    1     S      R
+   25    2     20    2     T      V
+   26    2     21    3     N      Q
+   27    2     22    4     O      Q
+   28    2     23    5     R      P
+   29    2     24    6     T      R
+   30    2     25    7     H      N
+   31    2     26    8     E      G
+   32    2     27    0     A      K
+   33    2     28    1     S      S
+   34    2     29    2     T      S
+   64    3     28    1     B      N
+   65    3     29    2     E      Y
+   66    3     30    3     R      P
+   67    4      0    0     L      V
+   68    4      1    1     I      T
+   69    4      2    2     N      T
+   70    4      3    3     C      M
+   71    4      4    4     L      Z
+   72    4      5    5     O      F
+   73    4      6    6     C      P
+   74    4      7    7     K      K

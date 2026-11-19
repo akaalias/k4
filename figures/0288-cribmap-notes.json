@@ -1,0 +1,18 @@
+[
+ {
+  "anchor": "by letter",
+  "text": "Of the ten known letters that are in KRYPTOS, nine have a carved letter within 2 steps on the plain table. 12 of 100,000 shuffles do as well by any letter group, table, form and cut-off: p 0.00013. This count was seen before the run (Bean, 2018), so it describes; it is not a new test."
+ },
+ {
+  "anchor": "by line",
+  "text": "Places 22-34 without those letters (E, A, N, H, E, A: six places) are ordinary: p 0.20. The three such letters outside 22-34 (R, O, K in BERLINCLOCK) have two within 2 steps; three places cannot reach a small p (0.61)."
+ },
+ {
+  "anchor": "an offset per line",
+  "text": "BERLINCLOCK with one fixed number of steps taken off each carved line shows nothing: p 0.28."
+ },
+ {
+  "anchor": "what it means",
+  "text": "The pattern follows the letter, which points at the alphabets (F16.4d), not at a key per carved line. Plants as expected 13 of 16: a small-step key on one line and offsets per line found 8 of 8; a random keyword alphabet 1 of 4."
+ }
+]

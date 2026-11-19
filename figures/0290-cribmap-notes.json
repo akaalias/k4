@@ -1,0 +1,18 @@
+[
+ {
+  "anchor": "three rules",
+  "text": "A repeating key with its own offset on each carved line; a key that starts again at each line; or both. Each leaves exact checks on a pair of alphabets, so every pair of dictionary keyword alphabets is decided through 0244's index."
+ },
+ {
+  "anchor": "K4",
+  "text": "No forced key is a dictionary or puzzle word, on K4 or any of 50 shuffles. Shortest key that fits some pair on the 24 letters: 15 (offset), 26 (restart), 15 (both); the shuffles' medians are 15, 26, 15."
+ },
+ {
+  "anchor": "counts",
+  "text": "K4 has more fitting pairs than every shuffle in 4 of 312 cells (restart with offsets, lengths 21 and 23). A shuffle set against the other 49 does that in 2 cells at the median and up to 8, so this is ordinary; replicated on fresh shuffles in 0291."
+ },
+ {
+  "anchor": "power",
+  "text": "Plants (random keyword alphabets, a dictionary key word of 7-14 letters, each rule): found 12 of 12. Where more than 10,000 pairs fit, the key was counted, not looked up."
+ }
+]

@@ -359,12 +359,24 @@ def run(ctx):
     }
     notes = (f"key-word matches K4 {km['k4']}, copies max {km['copies'][-1]}; cells K4 above all copies {len(above)} of {len(keys)} "
              f"(a copy against the others: median {sorted(null)[len(null) // 2]}, max {max(null)}); plants {n_found}/{len(found)}")
-    cands = []
-    for m in res["k4"]["matches"][:50]:
-        key = {x: m[x] for x in ("pa", "ca", "form", "ka", "word", "shift", "model")}
-        key["offsets"] = {}
-        cands.append({"plaintext": decrypt(k4, {**key, "word": m["word"][m["start"]:] + m["word"][:m["start"]]}), "key": key, "open_slots": 4 if m["model"] != "restart" else 0})
-    return {"candidates": cands, "bounds": bounds, "notes": notes}
+    # a restart-model match fixes every letter (no offsets): those are candidates; the copies' best are the controls
+    from kryptos.scorer import free_text
+
+    def readings(text, matches):
+        out = []
+        for m in matches[:50]:
+            if m["model"] != "restart":
+                continue
+            key = {"pa": m["pa"], "ca": m["ca"], "form": m["form"], "ka": m["ka"], "shift": m["shift"], "model": "restart",
+                   "word": m["word"][m["start"]:] + m["word"][:m["start"]]}
+            out.append((decrypt(text, key), key))
+        return out
+    cands = [{"plaintext": pt, "key": key} for pt, key in readings(k4, res["k4"]["matches"])]
+    controls = []
+    for i in range(N_COPIES):
+        sc = [ctx.english_score(free_text(pt)) for pt, _ in readings(texts[1 + i][1], copies[i]["matches"])]
+        controls.append(max(sc) if sc else -10.0)
+    return {"candidates": cands, "controls": controls, "bounds": bounds, "notes": notes}
 
 
 def worked_example(ctx, key):

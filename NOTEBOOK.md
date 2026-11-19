@@ -7,7 +7,7 @@ holds the reasoning and the mistakes.
 
 ## 2026-11-19
 
-### F16.1b-s-r, F16.8, F16.4, F16.4a, F16.4d (ticket #123)
+### F16.1b-s-r, F16.8, F16.4, F16.4a, F16.4d, F16.4b (ticket #123)
 
 | # | Item | One line |
 |---|---|---|
@@ -17,6 +17,7 @@ holds the reasoning and the mistakes.
 | 287 | F16.4-r | **The replication.** 100,000 fresh shuffles: p 0.0040; with every cut-off 1-6 allowed (the 3 was picked after seeing K4) K4's best is 9 of 13 within 2, p 0.0080. On the 20 official letters p 0.050 and 0.146. Replicated; a lead, chased in F16.4a-d. AWS $0.01. |
 | 288 | F16.4a | **Line or letter.** Three groupings of the shifts, each against 100,000 shuffles: by letter (the known letters in KRYPTOS: 9 of 10 within 2) p 0.00013, seen before the run; places 22-34 without those letters p 0.20; an offset per carved line on BERLINCLOCK p 0.28. The letters carry the closeness, not the line. Plants 13/16 (random keyword alphabets 1/4). F16.4d next. AWS $0.01. |
 | 289 | F16.4d | **A key of small numbers on keyword alphabets.** Every pair of 208,666 dictionary keyword alphabets, three key rules, no period: no pair leaves the digits 0-9 at all 24 known places on K4; 23 pairs with one place missing, 34 within ten values from any start, none narrower; K4 inside 50 shuffles in all 30 cells (smallest p 0.12). No digit string repeats or matches a known number. Plants 8/8. Closed. AWS 34 min, $0.42. |
+| 290 | F16.4b | **Line-keyed rules on keyword-alphabet pairs.** An offset per carved line, a restart per line, or both, key lengths 1-26, every pair of 208,064 keyword alphabets: no key word on K4 or any of 50 shuffles; plants 12/12. K4 above all shuffles in 2 distinct cells (restart with offsets, 21 and 23), which a shuffle against the other 49 matches or beats 14 times in 50; replicated next (F16.4b-r). AWS 35 min, $0.34. |
 
 The repeat itself (R to P at two places 38 apart) is what a period of 19 or 38 predicts, and what 1 shuffle in about 40 has by chance (0123, 0124). 0284 says only that nothing beyond it points to two keyword alphabets at 19: given the repeat, K4 is an ordinary text, and no near-fit reads as English. A free-alphabet system at 19 stays where 0136 left it (too many open key bits to decide).
 

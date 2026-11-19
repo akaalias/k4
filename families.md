@@ -261,7 +261,9 @@ Update the leaf when an experiment works on it.
     - **F16.8** An artist's twist on K1/K2's method: a key word restarted between the runs (234,451 words, 64 tables incl. reversed alphabets, 3 forms): no word in either run on K4 or 50 shuffles; enciphering and deciphering alternating under a key of 1-26: nothing below 25, as the shuffles; plants 12/12, 8/8 {closed · exact · 0285}
     - **F16.4** Small shifts and carved lines, pre-registered: 10 of 13 shifts within 3 at 22-34 on the plain table; p 0.0065 against 10,000 shuffles (0286), replicated on 100,000 (p 0.0040; 0.0080 with any cut-off 1-6; 0.05-0.15 on the 20 official letters): Bean's closeness with a fixed statistic, a lead {closed · sampled · 0286, 0287}
       - **F16.4a** What carries the small shifts: the letters (known letters in KRYPTOS 9 of 10 within 2, p 0.00013 on 100,000 shuffles, seen before the run); the line without them p 0.20; an offset per carved line p 0.28; plants 13/16 {closed · sampled · 0288}
-      - **F16.4b** Line-keyed schemes on fixed and keyword tables {open}
+      - **F16.4b** Line-keyed schemes on keyword-alphabet pairs (an offset per carved line, a restart per line, or both; key lengths 1-26): no key word on K4 or 50 shuffles; plants 12/12; K4 above all shuffles in 2 cells, ordinary by the text-level null {closed · exact · 0290}
+        - **F16.4b-r** The two edge cells (restart with offsets, 21 and 23) on 10,000 fresh shuffles {open}
+        - **F16.4b-s2** The cells over the listing cap, screened in streams {open}
       - **F16.4c** Line-keyed schemes on one free alphabet {open}
       - **F16.4d** A key of small numbers on keyword alphabets: 4.35 x 10^10 pairs of dictionary keyword alphabets, three key rules, no period: no pair leaves digits 0-9 at all 24 places; 34 pairs within ten values from any start; K4 inside 50 shuffles in all 30 cells; plants 8/8 {closed · exact · 0289}
     - **F16.5** An unknown text plus a dictionary word {open}

@@ -1,0 +1,27 @@
+plain table, Vigenere: shift = carved - known, as -13..12
+
+place known carved shift  in KRYPTOS
+   22     E      F     1  
+   23     A      L    11  
+   24     S      R    -1  yes
+   25     T      V     2  yes
+   26     N      Q     3  
+   27     O      Q     2  yes
+   28     R      P    -2  yes
+   29     T      R    -2  yes
+   30     H      N     6  
+   31     E      G     2  
+   32     A      K    10  
+   33     S      S     0  yes
+   34     T      S    -1  yes
+   64     B      N    12  
+   65     E      Y    -6  
+   66     R      P    -2  yes
+   67     L      V    10  
+   68     I      T    11  
+   69     N      T     6  
+   70     C      M    10  
+   71     L      Z   -12  
+   72     O      F    -9  yes
+   73     C      P   -13  
+   74     K      K     0  yes

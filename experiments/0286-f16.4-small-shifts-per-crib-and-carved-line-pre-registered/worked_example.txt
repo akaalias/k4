@@ -1,0 +1,18 @@
+plain table, Vigenere: shift = carved - known, as -13..12
+
+place known carved shift small
+   22     E      F     1  yes
+   23     A      L    11  
+   24     S      R    -1  yes
+   25     T      V     2  yes
+   26     N      Q     3  yes
+   27     O      Q     2  yes
+   28     R      P    -2  yes
+   29     T      R    -2  yes
+   30     H      N     6  
+   31     E      G     2  yes
+   32     A      K    10  
+   33     S      S     0  yes
+   34     T      S    -1  yes
+
+10 of 13 small; P(>= 10 of 13 at 7/26) = 2.47e-04

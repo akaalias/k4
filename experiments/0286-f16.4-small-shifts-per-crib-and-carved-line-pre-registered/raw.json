@@ -1,0 +1,367 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F16.4",
+  "statistic": "T = max over (plain table, cipher table) in {std, KRYPTOS}^2, form in {Vigenere, Beaufort}, group in 10 groups of -log10 P(Binomial(n, 7/26) >= count of |k| <= 3)",
+  "groups": {
+   "run 22-34": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "run 64-74": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74
+   ],
+   "EAST": [
+    22,
+    23,
+    24,
+    25
+   ],
+   "NORTHEAST": [
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "BERLIN": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69
+   ],
+   "CLOCK": [
+    70,
+    71,
+    72,
+    73,
+    74
+   ],
+   "line 3 (64-66)": [
+    64,
+    65,
+    66
+   ],
+   "line 4 (67-74)": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74
+   ],
+   "all 24": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74
+   ],
+   "official 20": [
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74
+   ]
+  },
+  "k4_T": 3.607,
+  "k4_argmax": [
+   "std",
+   "std",
+   "vig",
+   "run 22-34",
+   10,
+   13
+  ],
+  "shuffles": 10000,
+  "shuffles_at_or_above": 64,
+  "p": 0.0065,
+  "flag_line": 0.01,
+  "flag": true,
+  "shuffle_T_quantiles": {
+   "0.5": 1.444,
+   "0.9": 2.28,
+   "0.99": 3.419,
+   "0.999": 3.724
+  },
+  "k4_per_group": {
+   "run 22-34": {
+    "best_score": 3.607,
+    "table_form_count": [
+     "std",
+     "std",
+     "vig",
+     "run 22-34",
+     10,
+     13
+    ]
+   },
+   "run 64-74": {
+    "best_score": 0.467,
+    "table_form_count": [
+     "kry",
+     "kry",
+     "beau",
+     "run 64-74",
+     4,
+     11
+    ]
+   },
+   "EAST": {
+    "best_score": 1.206,
+    "table_form_count": [
+     "std",
+     "std",
+     "vig",
+     "EAST",
+     3,
+     4
+    ]
+   },
+   "NORTHEAST": {
+    "best_score": 2.666,
+    "table_form_count": [
+     "std",
+     "std",
+     "vig",
+     "NORTHEAST",
+     7,
+     9
+    ]
+   },
+   "BERLIN": {
+    "best_score": 0.292,
+    "table_form_count": [
+     "std",
+     "std",
+     "beau",
+     "BERLIN",
+     2,
+     6
+    ]
+   },
+   "CLOCK": {
+    "best_score": 0.39,
+    "table_form_count": [
+     "std",
+     "kry",
+     "vig",
+     "CLOCK",
+     2,
+     5
+    ]
+   },
+   "line 3 (64-66)": {
+    "best_score": 0.215,
+    "table_form_count": [
+     "std",
+     "std",
+     "vig",
+     "line 3 (64-66)",
+     1,
+     3
+    ]
+   },
+   "line 4 (67-74)": {
+    "best_score": 0.432,
+    "table_form_count": [
+     "kry",
+     "std",
+     "vig",
+     "line 4 (67-74)",
+     3,
+     8
+    ]
+   },
+   "all 24": {
+    "best_score": 1.874,
+    "table_form_count": [
+     "std",
+     "std",
+     "vig",
+     "all 24",
+     12,
+     24
+    ]
+   },
+   "official 20": {
+    "best_score": 1.201,
+    "table_form_count": [
+     "std",
+     "std",
+     "vig",
+     "official 20",
+     9,
+     20
+    ]
+   }
+  },
+  "plants": [
+   {
+    "what": "small digits 0-3, period 7, plain table, whole text",
+    "T": 13.677,
+    "argmax": [
+     "std",
+     "std",
+     "vig",
+     "all 24",
+     24,
+     24
+    ],
+    "p": 0.0005,
+    "found": true,
+    "should_be_found": true
+   },
+   {
+    "what": "small digits 0-3, period 5, KRYPTOS table, whole text",
+    "T": 13.677,
+    "argmax": [
+     "kry",
+     "kry",
+     "vig",
+     "all 24",
+     24,
+     24
+    ],
+    "p": 0.0005,
+    "found": true,
+    "should_be_found": true
+   },
+   {
+    "what": "small digits on carved line 2 (places 5-35) only, a random key elsewhere",
+    "T": 7.408,
+    "argmax": [
+     "std",
+     "std",
+     "vig",
+     "run 22-34",
+     13,
+     13
+    ],
+    "p": 0.0005,
+    "found": true,
+    "should_be_found": true
+   },
+   {
+    "what": "Beaufort, small key values on carved line 4 (places 67-97) only",
+    "T": 4.779,
+    "argmax": [
+     "std",
+     "std",
+     "beau",
+     "run 64-74",
+     10,
+     11
+    ],
+    "p": 0.0005,
+    "found": true,
+    "should_be_found": true
+   },
+   {
+    "what": "a random key everywhere (must not be found)",
+    "T": 1.444,
+    "argmax": [
+     "std",
+     "kry",
+     "vig",
+     "run 22-34",
+     7,
+     13
+    ],
+    "p": 0.5322,
+    "found": false,
+    "should_be_found": false
+   }
+  ],
+  "plants_as_expected": "5 of 5",
+  "controls": "10000 shuffles of K4, seed 16400",
+  "exhaustive": true,
+  "aws_cost_estimate_dollars": 0.02
+ },
+ "notes": "K4 T 3.607 from ('std', 'std', 'vig', 'run 22-34', 10, 13); 64 of 10000 shuffles at or above, p 0.0065 (flag below 0.01: True); plants as expected 5/5",
+ "controls": [],
+ "error": null,
+ "worked_example": "plain table, Vigenere: shift = carved - known, as -13..12\n\nplace known carved shift small\n   22     E      F     1  yes\n   23     A      L    11  \n   24     S      R    -1  yes\n   25     T      V     2  yes\n   26     N      Q     3  yes\n   27     O      Q     2  yes\n   28     R      P    -2  yes\n   29     T      R    -2  yes\n   30     H      N     6  \n   31     E      G     2  yes\n   32     A      K    10  \n   33     S      S     0  yes\n   34     T      S    -1  yes\n\n10 of 13 small; P(>= 10 of 13 at 7/26) = 2.47e-04",
+ "seconds": 4.29580545425415,
+ "compute": {
+  "where": "aws",
+  "instance": "c8g.8xlarge",
+  "zone": "eu-central-1c",
+  "market": "spot",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 5.1,
+  "machine_seconds": 46.8,
+  "dollars": 0.007
+ },
+ "checkpoint": {
+  "file": "7d795cdd37c22b08.jsonl",
+  "resumed": 0,
+  "saved": 0
+ }
+}

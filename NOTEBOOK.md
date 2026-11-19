@@ -7,14 +7,18 @@ holds the reasoning and the mistakes.
 
 ## 2026-11-19
 
-### F16.1b-s-r, F16.8 (ticket #123)
+### F16.1b-s-r, F16.8, F16.4 (ticket #123)
 
 | # | Item | One line |
 |---|---|---|
 | 284 | F16.1b-s-r | **Length 19, one slip from two keyword alphabets.** K4 fits 200 of 210 drop sets; 1,000 plain shuffles p 0.017 and 0.014; 300 stand-ins that keep the R-to-P repeat at 28 and 66 p 0.31 and 0.32 (line 0.01); with 32 and 70 kept too, p 0.59 and 0.41. K4's 272 one-slip settings read with the key free: best -6.66, 406 of 1,000 kept-place copies at or above; judge 4 against 12. Plants 8/8. The edge is the repeat; closed. Resumed from 778 of 1,609 texts; AWS 36 min, $0.34. |
 | 285 | F16.8 | **An artist's twist on K1/K2's method.** A key word restarted between the runs (234,451 words, every stretch, 64 tables with reversed alphabets, 3 forms): no word in either run on K4 or any of 50 shuffles. Enciphering and deciphering alternating by letter, run or carved line under a key of 1-26: nothing below 26 on the 24 letters, 25 on the 20, as the shuffles. Plants 12/12 and 8/8. Closed. AWS 0.8 min, $0.01. |
+| 286 | F16.4 | **Small shifts, statistic fixed first.** Best group, table and form on K4: 10 of 13 shifts within 3 at 22-34 on the plain table; 64 of 10,000 shuffles at or above, p 0.0065, under the 0.01 line. BERLINCLOCK 2 of 11. Plants as expected 5/5. Queue stopped for the replication. AWS $0.01. |
+| 287 | F16.4-r | **The replication.** 100,000 fresh shuffles: p 0.0040; with every cut-off 1-6 allowed (the 3 was picked after seeing K4) K4's best is 9 of 13 within 2, p 0.0080. On the 20 official letters p 0.050 and 0.146. Replicated; a lead, chased in F16.4a-d. AWS $0.01. |
 
 The repeat itself (R to P at two places 38 apart) is what a period of 19 or 38 predicts, and what 1 shuffle in about 40 has by chance (0123, 0124). 0284 says only that nothing beyond it points to two keyword alphabets at 19: given the repeat, K4 is an ordinary text, and no near-fit reads as English. A free-alphabet system at 19 stays where 0136 left it (too many open key bits to decide).
+
+F16.4 is the first statistic in F16 to cross a line set before its run, and it held on fresh shuffles. What it is: Bean's closeness (2018; 04-structure.md, "The minor differences"), which 0029 had measured with a statistic one far letter spoils. What it is not: new, or strong. The review picked the cut-off of 3 after seeing BLZCDCYYGCKAZ; with every cut-off allowed p is 0.008; without EAST it is 0.05-0.15; and this project has looked at a great many statistics. Read by letter instead of by line, the ten known plaintext letters that are in KRYPTOS (S, T, O, R, K) have 9 shifts within 2, and the other fourteen have 3 within 3, eight of them between 10 and 14 (A to L and K, B to N, C to M and P, I to T, L to V and Z). The two groupings are confounded, since seven of those ten letters sit in EASTNORTHEAST. So before the line-keyed rows the item asks for, F16.4a asks which grouping carries the count. A shift that depends on the letter is what a keyword-mixed alphabet set against the plain one leaves (late letters barely move, early ones move by about the keyword's length), which is Bean's reading and points at alphabets, where the exact tests have already been (0119, 0123, 0244); a shift that depends on the line points at the rows 0088 and 0128 only touched.
 
 ## 2026-11-18
 

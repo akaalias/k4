@@ -259,7 +259,11 @@ Update the leaf when an experiment works on it.
       - **F16.1a-r2** Its two settings above 100 copies (V10 [73,74], B10 [69]) on 1,000 fresh copies: p 0.013, 0.036, chance {closed · sampled · 0281}
     - **F16.2** A book plus a keyword: 30 named texts as a running key with a repeated word of 1-16 letters on top, 0-2 slips: nothing on the 24 letters; on the 20, K4 inside its shuffles; plants 12/12 {closed · exact · 0283}
     - **F16.8** An artist's twist on K1/K2's method: a key word restarted between the runs (234,451 words, 64 tables incl. reversed alphabets, 3 forms): no word in either run on K4 or 50 shuffles; enciphering and deciphering alternating under a key of 1-26: nothing below 25, as the shuffles; plants 12/12, 8/8 {closed · exact · 0285}
-    - **F16.4** Small shifts and carved lines, pre-registered {open}
+    - **F16.4** Small shifts and carved lines, pre-registered: 10 of 13 shifts within 3 at 22-34 on the plain table; p 0.0065 against 10,000 shuffles (0286), replicated on 100,000 (p 0.0040; 0.0080 with any cut-off 1-6; 0.05-0.15 on the 20 official letters): Bean's closeness with a fixed statistic, a lead {closed · sampled · 0286, 0287}
+      - **F16.4a** What carries the small shifts: the carved line or the letters {open}
+      - **F16.4b** Line-keyed schemes on fixed and keyword tables {open}
+      - **F16.4c** Line-keyed schemes on one free alphabet {open}
+      - **F16.4d** A key of small numbers on keyword alphabets {open}
     - **F16.5** An unknown text plus a dictionary word {open}
     - **F16.6** The word-key verdicts, reopened as chart keys: decided by count or reduction, one edge (AMSCO 23) {closed · by reading · reports/f16.6-chart-keys.md}
       - **F16.6-r** AMSCO period 23's 21 settings read as chart keys {open}

@@ -1,0 +1,18 @@
+[
+ {
+  "anchor": "the replication",
+  "text": "0286's statistic on 100,000 fresh shuffles: 401 at or above K4, p 0.0040 (0286: 0.0065)."
+ },
+ {
+  "anchor": "any cut-off",
+  "text": "The cut-off of 3 steps was picked after seeing K4. Letting K4 and every shuffle take their best cut-off from 1 to 6, K4's best is 9 of 13 within 2 steps; 794 shuffles do as well: p 0.0080, still under 0.01."
+ },
+ {
+  "anchor": "without EAST",
+  "text": "On the 20 official letters alone (NORTHEAST 7 of 9 within 3) the pattern is ordinary: p 0.05 and 0.15. EAST's 3 of 4 carry a good part of it."
+ },
+ {
+  "anchor": "what it is",
+  "text": "Bean's closeness (2018), seen again with a fixed statistic: about 1 scrambled copy in 125-250 shows as much. A lead for keys of small steps, not a reading; chased in F16.4a-d."
+ }
+]

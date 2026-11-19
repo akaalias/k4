@@ -1,0 +1,14 @@
+K4 in rows of 19: the official runs 26-34 and 64-72 share columns 7-15
+
+column  place  known  carved   place  known  carved   shift on the plain table (carved - known)
+     7     26      N       Q      64      B       N    3 and 12
+     8     27      O       Q      65      E       Y    2 and 20
+     9     28      R       P      66      R       P   24 and 24   equal
+    10     29      T       R      67      L       V   24 and 10
+    11     30      H       N      68      I       T    6 and 11
+    12     31      E       G      69      N       T    2 and  6
+    13     32      A       K      70      C       M   10 and 10   equal
+    14     33      S       S      71      L       Z    0 and 14
+    15     34      T       S      72      O       F   25 and 17
+
+Places 28 and 66 both turn R into P; 32 and 70 share the shift 10 (A to K, C to M).

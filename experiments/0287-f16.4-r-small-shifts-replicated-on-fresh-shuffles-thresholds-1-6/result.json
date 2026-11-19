@@ -1,0 +1,232 @@
+{
+ "id": 287,
+ "tag": "0287-f16.4-r-small-shifts-replicated-on-fresh-shuffles-thresholds-1-6",
+ "started": "2026-11-19T08:58:33+00:00",
+ "seconds": 93.3,
+ "status": "ran",
+ "phases": {
+  "implement": 5.2,
+  "test": 159.7,
+  "run": 93.3,
+  "record": 0.1
+ },
+ "ended_epoch": 1795078807.085973,
+ "decision": "reverted",
+ "decision_rule": "loss",
+ "n_candidates": 0,
+ "n_passed": 0,
+ "best_crib_hits": 0,
+ "best_crib_words": {},
+ "best_fitness": null,
+ "best_loss": null,
+ "gates": "length, alphabet, cribs, reencryption, baseline",
+ "controls": [],
+ "champion_before": null,
+ "bounds": {
+  "item": "F16.4-r",
+  "shuffles": 100000,
+  "seeds": "16450000..16450199",
+  "thresholds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "statistics": "T: 0286's (threshold 3). T*: the same maximum over thresholds 1-6, each count scored by its binomial tail at (2t+1)/26",
+  "summary": {
+   "k24": {
+    "k4_T": 3.607,
+    "k4_T_argmax": [
+     "std",
+     "std",
+     "vig",
+     "run 22-34",
+     10,
+     13,
+     3
+    ],
+    "T_at_or_above": 401,
+    "p_T": 0.00402,
+    "k4_Tstar": 3.9187,
+    "k4_Tstar_argmax": [
+     "std",
+     "std",
+     "vig",
+     "run 22-34",
+     9,
+     13,
+     2
+    ],
+    "Tstar_at_or_above": 794,
+    "p_Tstar": 0.00795,
+    "T_quantiles": {
+     "0.5": 1.444,
+     "0.9": 2.28,
+     "0.99": 3.388,
+     "0.999": 4.141
+    },
+    "Tstar_quantiles": {
+     "0.5": 2.038,
+     "0.9": 2.872,
+     "0.99": 3.838,
+     "0.999": 4.855
+    }
+   },
+   "k20": {
+    "k4_T": 2.6655,
+    "k4_T_argmax": [
+     "std",
+     "std",
+     "vig",
+     "NORTHEAST",
+     7,
+     9,
+     3
+    ],
+    "T_at_or_above": 4991,
+    "p_T": 0.04992,
+    "k4_Tstar": 2.6655,
+    "k4_Tstar_argmax": [
+     "std",
+     "std",
+     "vig",
+     "NORTHEAST",
+     7,
+     9,
+     3
+    ],
+    "Tstar_at_or_above": 14570,
+    "p_Tstar": 0.145709,
+    "T_quantiles": {
+     "0.5": 1.429,
+     "0.9": 2.182,
+     "0.99": 3.203,
+     "0.999": 3.724
+    },
+    "Tstar_quantiles": {
+     "0.5": 1.892,
+     "0.9": 2.764,
+     "0.99": 3.724,
+     "0.999": 4.689
+    }
+   }
+  },
+  "k4_small_counts_22_34_plain_table": {
+   "1": 4,
+   "2": 9,
+   "3": 10,
+   "4": 10,
+   "5": 10,
+   "6": 11
+  },
+  "k4_shifts_22_34_plain_table": [
+   1,
+   11,
+   -1,
+   2,
+   3,
+   2,
+   -2,
+   -2,
+   6,
+   2,
+   10,
+   0,
+   -1
+  ],
+  "lines": "T replicates below 0.01; a lead only if T* is below 0.01 too",
+  "verdict": "replicated on both statistics",
+  "plants": [
+   {
+    "what": "small digits 0-3, period 7, plain table, whole text",
+    "Tstar": 13.677,
+    "argmax": [
+     "std",
+     "std",
+     "vig",
+     "all 24",
+     24,
+     24,
+     3
+    ],
+    "p": 0.0005,
+    "found": true,
+    "should_be_found": true
+   },
+   {
+    "what": "small digits 0-3, period 5, KRYPTOS table, whole text",
+    "Tstar": 13.677,
+    "argmax": [
+     "kry",
+     "kry",
+     "vig",
+     "all 24",
+     24,
+     24,
+     3
+    ],
+    "p": 0.0005,
+    "found": true,
+    "should_be_found": true
+   },
+   {
+    "what": "small digits on carved line 2 (places 5-35) only, a random key elsewhere",
+    "Tstar": 7.408,
+    "argmax": [
+     "std",
+     "std",
+     "vig",
+     "run 22-34",
+     13,
+     13,
+     3
+    ],
+    "p": 0.0005,
+    "found": true,
+    "should_be_found": true
+   },
+   {
+    "what": "Beaufort, small key values on carved line 4 (places 67-97) only",
+    "Tstar": 4.559,
+    "argmax": [
+     "std",
+     "std",
+     "beau",
+     "line 4 (67-74)",
+     8,
+     8,
+     3
+    ],
+    "p": 0.002,
+    "found": true,
+    "should_be_found": true
+   },
+   {
+    "what": "a random key everywhere (must not be found)",
+    "Tstar": 2.073,
+    "argmax": [
+     "std",
+     "kry",
+     "vig",
+     "line 4 (67-74)",
+     4,
+     8,
+     1
+    ],
+    "p": 0.4768,
+    "found": false,
+    "should_be_found": false
+   }
+  ],
+  "plants_as_expected": "5 of 5",
+  "controls": "100000 shuffles of K4 with the known letters kept in place",
+  "exhaustive": true,
+  "aws_cost_estimate_dollars": 0.05
+ },
+ "notes": "24 letters: T p 0.00402 (401 of 100000), T* 3.9187 from ('std', 'std', 'vig', 'run 22-34', 9, 13, 2) p 0.00795 (794); 20 official: T p 0.04992, T* p 0.145709; verdict: replicated on both statistics; plants as expected 5/5",
+ "judge": null,
+ "error": null,
+ "candidates": []
+}

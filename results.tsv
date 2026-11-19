@@ -285,3 +285,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0284	0284-f16.1b-s-r-length-19-one-slip-from-two-keyword-alphabets	16-simple-hand-methods	0282-f16.1b-s-two-dictionary-keyword-alphabets-with-slips	reverted	0	0	0			2230	design=22 test=19 run=2230 record=0
 0285	0285-f16.8-an-artists-twist-on-k1-k2s-method	16-simple-hand-methods	0171-two-parts-with-their-own-keys	reverted	0	0	0			122	design=35 test=23 run=122 record=0
 0286	0286-f16.4-small-shifts-per-crib-and-carved-line-pre-registered	16-simple-hand-methods	0029-small-shift-keys-closeness-under-all-alphabets	reverted	0	0	0			77	design=5 test=23 run=77 record=0
+0287	0287-f16.4-r-small-shifts-replicated-on-fresh-shuffles-thresholds-1-6	16-simple-hand-methods	0286-f16.4-small-shifts-per-crib-and-carved-line-pre-registered	reverted	0	0	0			93	implement=5 test=160 run=93 record=0

@@ -263,7 +263,7 @@ Update the leaf when an experiment works on it.
       - **F16.4a** What carries the small shifts: the letters (known letters in KRYPTOS 9 of 10 within 2, p 0.00013 on 100,000 shuffles, seen before the run); the line without them p 0.20; an offset per carved line p 0.28; plants 13/16 {closed · sampled · 0288}
       - **F16.4b** Line-keyed schemes on fixed and keyword tables {open}
       - **F16.4c** Line-keyed schemes on one free alphabet {open}
-      - **F16.4d** A key of small numbers on keyword alphabets {open}
+      - **F16.4d** A key of small numbers on keyword alphabets: 4.35 x 10^10 pairs of dictionary keyword alphabets, three key rules, no period: no pair leaves digits 0-9 at all 24 places; 34 pairs within ten values from any start; K4 inside 50 shuffles in all 30 cells; plants 8/8 {closed · exact · 0289}
     - **F16.5** An unknown text plus a dictionary word {open}
     - **F16.6** The word-key verdicts, reopened as chart keys: decided by count or reduction, one edge (AMSCO 23) {closed · by reading · reports/f16.6-chart-keys.md}
       - **F16.6-r** AMSCO period 23's 21 settings read as chart keys {open}

@@ -7,7 +7,7 @@ holds the reasoning and the mistakes.
 
 ## 2026-11-19
 
-### F16.1b-s-r, F16.8, F16.4 (ticket #123)
+### F16.1b-s-r, F16.8, F16.4, F16.4a, F16.4d (ticket #123)
 
 | # | Item | One line |
 |---|---|---|
@@ -16,10 +16,13 @@ holds the reasoning and the mistakes.
 | 286 | F16.4 | **Small shifts, statistic fixed first.** Best group, table and form on K4: 10 of 13 shifts within 3 at 22-34 on the plain table; 64 of 10,000 shuffles at or above, p 0.0065, under the 0.01 line. BERLINCLOCK 2 of 11. Plants as expected 5/5. Queue stopped for the replication. AWS $0.01. |
 | 287 | F16.4-r | **The replication.** 100,000 fresh shuffles: p 0.0040; with every cut-off 1-6 allowed (the 3 was picked after seeing K4) K4's best is 9 of 13 within 2, p 0.0080. On the 20 official letters p 0.050 and 0.146. Replicated; a lead, chased in F16.4a-d. AWS $0.01. |
 | 288 | F16.4a | **Line or letter.** Three groupings of the shifts, each against 100,000 shuffles: by letter (the known letters in KRYPTOS: 9 of 10 within 2) p 0.00013, seen before the run; places 22-34 without those letters p 0.20; an offset per carved line on BERLINCLOCK p 0.28. The letters carry the closeness, not the line. Plants 13/16 (random keyword alphabets 1/4). F16.4d next. AWS $0.01. |
+| 289 | F16.4d | **A key of small numbers on keyword alphabets.** Every pair of 208,666 dictionary keyword alphabets, three key rules, no period: no pair leaves the digits 0-9 at all 24 known places on K4; 23 pairs with one place missing, 34 within ten values from any start, none narrower; K4 inside 50 shuffles in all 30 cells (smallest p 0.12). No digit string repeats or matches a known number. Plants 8/8. Closed. AWS 34 min, $0.42. |
 
 The repeat itself (R to P at two places 38 apart) is what a period of 19 or 38 predicts, and what 1 shuffle in about 40 has by chance (0123, 0124). 0284 says only that nothing beyond it points to two keyword alphabets at 19: given the repeat, K4 is an ordinary text, and no near-fit reads as English. A free-alphabet system at 19 stays where 0136 left it (too many open key bits to decide).
 
 F16.4 is the first statistic in F16 to cross a line set before its run, and it held on fresh shuffles. What it is: Bean's closeness (2018; 04-structure.md, "The minor differences"), which 0029 had measured with a statistic one far letter spoils. What it is not: new, or strong. The review picked the cut-off of 3 after seeing BLZCDCYYGCKAZ; with every cut-off allowed p is 0.008; without EAST it is 0.05-0.15; and this project has looked at a great many statistics. Read by letter instead of by line, the ten known plaintext letters that are in KRYPTOS (S, T, O, R, K) have 9 shifts within 2, and the other fourteen have 3 within 3, eight of them between 10 and 14 (A to L and K, B to N, C to M and P, I to T, L to V and Z). The two groupings are confounded, since seven of those ten letters sit in EASTNORTHEAST. So before the line-keyed rows the item asks for, F16.4a asks which grouping carries the count. A shift that depends on the letter is what a keyword-mixed alphabet set against the plain one leaves (late letters barely move, early ones move by about the keyword's length), which is Bean's reading and points at alphabets, where the exact tests have already been (0119, 0123, 0244); a shift that depends on the line points at the rows 0088 and 0128 only touched.
+
+0288 answered the line-or-letter question for the letters: with the KRYPTOS letters taken out, places 22-34 are ordinary (p 0.20), and BERLINCLOCK shows nothing under any offset per carved line (p 0.28). The letter count itself (9 of the 10 known letters in KRYPTOS within 2 steps, p 0.00013 against 100,000 shuffles) is Bean's and was seen before the run. A random keyword alphabet with a small-step key reproduces that grouping in only 1 of 4 plants: "in KRYPTOS or not" is not what an arbitrary keyword alphabet leaves, it is what was looked for. 0289 then put Bean's own explanation (a keyword alphabet near the plain one, a key of small numbers) to an exact test at dictionary scale with no period: nothing. What is left of the closeness as a lead: a free alphabet with a non-repeating small key, which the known letters cannot decide (ten choices per unknown letter), and K5, where a shared table would show (F16.7). Mistake in 0289's record: the title says 208,064 alphabets (0244's count, words of 4+ letters); the run used every word, 208,666.
 
 ## 2026-11-18
 

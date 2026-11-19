@@ -1,0 +1,18 @@
+[
+ {
+  "anchor": "the search",
+  "text": "Every ordered pair of 208,666 keyword alphabets (every dictionary word; plain and KRYPTOS among them), three key rules: is the key at every known place one of the digits 0-9? No period is assumed."
+ },
+ {
+  "anchor": "K4",
+  "text": "On all 24 letters no pair gives digits everywhere. With one known place allowed to miss, 21 pairs do under the added rule (9 of 50 shuffles have as many); none of their digit strings repeats or matches a known number."
+ },
+ {
+  "anchor": "any start",
+  "text": "Ten neighbouring key values from any start (a digit added to one fixed letter): 34 pairs fit K4, none inside a narrower window than ten. Shuffles: median 0-1, largest 10,458; K4 is inside them in all 30 cells (smallest p 0.12)."
+ },
+ {
+  "anchor": "power",
+  "text": "Plants (random keyword alphabets, random digits, two with a slip): the planted pair listed 8 of 8. A fit alone cannot be read on: ten choices per letter are more than English decides."
+ }
+]

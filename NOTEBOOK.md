@@ -7,11 +7,12 @@ holds the reasoning and the mistakes.
 
 ## 2026-11-19
 
-### F16.1b-s-r (ticket #123)
+### F16.1b-s-r, F16.8 (ticket #123)
 
 | # | Item | One line |
 |---|---|---|
 | 284 | F16.1b-s-r | **Length 19, one slip from two keyword alphabets.** K4 fits 200 of 210 drop sets; 1,000 plain shuffles p 0.017 and 0.014; 300 stand-ins that keep the R-to-P repeat at 28 and 66 p 0.31 and 0.32 (line 0.01); with 32 and 70 kept too, p 0.59 and 0.41. K4's 272 one-slip settings read with the key free: best -6.66, 406 of 1,000 kept-place copies at or above; judge 4 against 12. Plants 8/8. The edge is the repeat; closed. Resumed from 778 of 1,609 texts; AWS 36 min, $0.34. |
+| 285 | F16.8 | **An artist's twist on K1/K2's method.** A key word restarted between the runs (234,451 words, every stretch, 64 tables with reversed alphabets, 3 forms): no word in either run on K4 or any of 50 shuffles. Enciphering and deciphering alternating by letter, run or carved line under a key of 1-26: nothing below 26 on the 24 letters, 25 on the 20, as the shuffles. Plants 12/12 and 8/8. Closed. AWS 0.8 min, $0.01. |
 
 The repeat itself (R to P at two places 38 apart) is what a period of 19 or 38 predicts, and what 1 shuffle in about 40 has by chance (0123, 0124). 0284 says only that nothing beyond it points to two keyword alphabets at 19: given the repeat, K4 is an ordinary text, and no near-fit reads as English. A free-alphabet system at 19 stays where 0136 left it (too many open key bits to decide).
 

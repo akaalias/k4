@@ -1,0 +1,283 @@
+{
+ "candidates": [],
+ "bounds": {
+  "item": "F16.8",
+  "alphabets": [
+   "std",
+   "kry",
+   "std_rev",
+   "kry_rev"
+  ],
+  "tables": 64,
+  "forms": [
+   "vig",
+   "beau",
+   "var"
+  ],
+  "words": 234451,
+  "a": "each run's forced key against every cyclic stretch of every word of 2-24 letters (dictionary and puzzle), any shift, per key numbering; both runs = same word, phases free",
+  "b": "periodic key 1-26, form switching within a pair (vig/var, vig/beau, beau/var) by letter parity, by known run, or by carved line (5-35, 36-66, 67-97); exact",
+  "c": "the reversed alphabets (tableau read from the right or the bottom) are in (a) and (b)",
+  "prior": "0128 restarts at carved lines; 0171 free keys split between runs; 0017 tableau as running key; 0005 forms and alphabets",
+  "summary": {
+   "k24": {
+    "k4": {
+     "a_both": 0,
+     "a_single": 0,
+     "b_fits": 12,
+     "b_shortest": 26
+    },
+    "copies_max": {
+     "a_both": 0,
+     "a_single": 0,
+     "b_fits": 84,
+     "b_shortest": 99
+    },
+    "copies_median": {
+     "a_both": 0,
+     "a_single": 0,
+     "b_fits": 12,
+     "b_shortest": 26
+    },
+    "copies_min_b_shortest": 26,
+    "p_a_single": 1.0,
+    "p_b_fits": 0.686,
+    "p_b_shortest": 0.843,
+    "k4_a_hits": [],
+    "k4_b_fits_short": []
+   },
+   "k20": {
+    "k4": {
+     "a_both": 0,
+     "a_single": 0,
+     "b_fits": 960,
+     "b_shortest": 25
+    },
+    "copies_max": {
+     "a_both": 0,
+     "a_single": 0,
+     "b_fits": 1038,
+     "b_shortest": 25
+    },
+    "copies_median": {
+     "a_both": 0,
+     "a_single": 0,
+     "b_fits": 984,
+     "b_shortest": 24
+    },
+    "copies_min_b_shortest": 24,
+    "p_a_single": 1.0,
+    "p_b_fits": 1.0,
+    "p_b_shortest": 1.0,
+    "k4_a_hits": [],
+    "k4_b_fits_short": []
+   }
+  },
+  "plants": [
+   {
+    "id": "plant0",
+    "known": "k24",
+    "word": "PECULATE",
+    "found": true
+   },
+   {
+    "id": "plant0",
+    "known": "k20",
+    "word": "PECULATE",
+    "found": true
+   },
+   {
+    "id": "plant1",
+    "known": "k24",
+    "word": "INSEER",
+    "found": true
+   },
+   {
+    "id": "plant1",
+    "known": "k20",
+    "word": "INSEER",
+    "found": true
+   },
+   {
+    "id": "plant2",
+    "known": "k24",
+    "word": "BALLOONET",
+    "found": true
+   },
+   {
+    "id": "plant2",
+    "known": "k20",
+    "word": "BALLOONET",
+    "found": true
+   },
+   {
+    "id": "plant3",
+    "known": "k24",
+    "word": "CONJUROR",
+    "found": true
+   },
+   {
+    "id": "plant3",
+    "known": "k20",
+    "word": "CONJUROR",
+    "found": true
+   },
+   {
+    "id": "plant4",
+    "known": "k24",
+    "word": "DONKEYWORK",
+    "found": true
+   },
+   {
+    "id": "plant4",
+    "known": "k20",
+    "word": "DONKEYWORK",
+    "found": true
+   },
+   {
+    "id": "plant5",
+    "known": "k24",
+    "word": "BALLADLING",
+    "found": true
+   },
+   {
+    "id": "plant5",
+    "known": "k20",
+    "word": "BALLADLING",
+    "found": true
+   }
+  ],
+  "plants_b": [
+   {
+    "id": "bplant0",
+    "known": "k24",
+    "pattern": "lines101",
+    "pair": [
+     "vig",
+     "beau"
+    ],
+    "L": 12,
+    "fits": true,
+    "shortest_fit": 12,
+    "found": true
+   },
+   {
+    "id": "bplant0",
+    "known": "k20",
+    "pattern": "lines101",
+    "pair": [
+     "vig",
+     "beau"
+    ],
+    "L": 12,
+    "fits": true,
+    "shortest_fit": 12,
+    "found": true
+   },
+   {
+    "id": "bplant1",
+    "known": "k24",
+    "pattern": "lines011",
+    "pair": [
+     "beau",
+     "var"
+    ],
+    "L": 7,
+    "fits": true,
+    "shortest_fit": 7,
+    "found": true
+   },
+   {
+    "id": "bplant1",
+    "known": "k20",
+    "pattern": "lines011",
+    "pair": [
+     "beau",
+     "var"
+    ],
+    "L": 7,
+    "fits": true,
+    "shortest_fit": 7,
+    "found": true
+   },
+   {
+    "id": "bplant2",
+    "known": "k24",
+    "pattern": "runs01",
+    "pair": [
+     "vig",
+     "beau"
+    ],
+    "L": 7,
+    "fits": true,
+    "shortest_fit": 7,
+    "found": true
+   },
+   {
+    "id": "bplant2",
+    "known": "k20",
+    "pattern": "runs01",
+    "pair": [
+     "vig",
+     "beau"
+    ],
+    "L": 7,
+    "fits": true,
+    "shortest_fit": 7,
+    "found": true
+   },
+   {
+    "id": "bplant3",
+    "known": "k24",
+    "pattern": "runs01",
+    "pair": [
+     "vig",
+     "var"
+    ],
+    "L": 8,
+    "fits": true,
+    "shortest_fit": 8,
+    "found": true
+   },
+   {
+    "id": "bplant3",
+    "known": "k20",
+    "pattern": "runs01",
+    "pair": [
+     "vig",
+     "var"
+    ],
+    "L": 8,
+    "fits": true,
+    "shortest_fit": 8,
+    "found": true
+   }
+  ],
+  "copies": 50,
+  "quirks": "the extra L of row N and the four repeated columns change no lookup: not a separate case",
+  "exhaustive": true,
+  "aws_cost_estimate_dollars": 0.1
+ },
+ "notes": "k24: K4 {'a_both': 0, 'a_single': 0, 'b_fits': 12, 'b_shortest': 26}, copies max {'a_both': 0, 'a_single': 0, 'b_fits': 84, 'b_shortest': 99}; k20: K4 {'a_both': 0, 'a_single': 0, 'b_fits': 960, 'b_shortest': 25}, copies max {'a_both': 0, 'a_single': 0, 'b_fits': 1038, 'b_shortest': 25}; plants (a) 12/12, (b) 8/8",
+ "controls": [],
+ "error": null,
+ "worked_example": "KRYPTOS table, Vigenere: the key each known place needs, as steps from the run's first key letter\n\n  places 22-34: key RDUMRIYWOYNKY  steps [0, 9, 20, 17, 0, 14, 1, 22, 4, 1, 18, 25, 1]\n  places 64-74: key ELYOIECBAQK  steps [0, 6, 17, 20, 4, 0, 24, 23, 22, 9, 15]\n\nA key word restarted at a sentence break fits when both step lists occur in the word written round and round.",
+ "seconds": 45.3261616230011,
+ "compute": {
+  "where": "aws",
+  "instance": "c8g.8xlarge",
+  "zone": "eu-central-1c",
+  "market": "spot",
+  "cpu": 32,
+  "workers": 32,
+  "python": "3.14",
+  "seconds": 50.2,
+  "machine_seconds": 94.0,
+  "dollars": 0.015
+ },
+ "checkpoint": {
+  "file": "ccec2736da93ed60.jsonl",
+  "resumed": 0,
+  "saved": 122
+ }
+}

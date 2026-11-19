@@ -1,0 +1,6 @@
+KRYPTOS table, Vigenere: the key each known place needs, as steps from the run's first key letter
+
+  places 22-34: key RDUMRIYWOYNKY  steps [0, 9, 20, 17, 0, 14, 1, 22, 4, 1, 18, 25, 1]
+  places 64-74: key ELYOIECBAQK  steps [0, 6, 17, 20, 4, 0, 24, 23, 22, 9, 15]
+
+A key word restarted at a sentence break fits when both step lists occur in the word written round and round.

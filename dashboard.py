@@ -45,7 +45,9 @@ body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--seri
 a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}a:hover{border-bottom-color:var(--accent)}
 .smcp{font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.08em}
 .num{font-variant-numeric:lining-nums tabular-nums}
-.topnav{display:flex;gap:22px;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding:18px 28px 12px;margin:0}
+.topnav{display:flex;gap:22px;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding:18px 28px 12px;margin:0;position:sticky;top:0;z-index:8;background:var(--paper)}
+html{scroll-padding-top:calc(var(--nav-h,49px) + 8px)}
+thead th{position:sticky;top:var(--nav-h,49px);z-index:4;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
 .topnav .spacer{flex:1 1 24px}
 .topnav .sec{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
 .topnav .sec a{font-size:10.5px;letter-spacing:.08em;color:var(--faint)}
@@ -833,7 +835,7 @@ def page(title, body, active="", refresh=True):
            + "</span>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(title)}</title>{meta}{social_tags() if EXPORT else ""}
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>{CSS}</style></head><body>
-<nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><div class="wrap">{body}</div>
+<nav class="topnav"><span class="brand">Kryptos K4</span>{nav}</nav><script>(function(){{var n=document.querySelector(".topnav"),r=document.documentElement;function f(){{r.style.setProperty("--nav-h",n.offsetHeight+"px")}}f();if(window.ResizeObserver)new ResizeObserver(f).observe(n);else addEventListener("resize",f)}})();</script><div class="wrap">{body}</div>
 <div class="foot"><span class="dot"></span>{f"Rendered from the record on {EXPORT['date']}; updated after every experiment." if EXPORT else "Rendered from the record. Reloads when a new experiment lands."}</div>{JS}{GL_JS}{GH_RIBBON if EXPORT else ""}</body></html>"""
 
 
@@ -989,7 +991,7 @@ def sculpture_page():
            '.scp.gray[data-blur] .lp-box .lc[data-l="?"]::before{left:0;right:0;background:#fff;box-shadow:inset 0 0 0 1.5px #111}'
            '.scp.nolet .lp-box .lc{color:transparent!important}.scp.nolet .lp-box .lc.dot:after{display:none}'
            '.scp-main{display:flex;gap:26px;align-items:flex-start;width:96vw;position:relative;left:50%;transform:translateX(-50%);margin-top:18px}'
-           '.scp-side{flex:0 0 172px;position:sticky;top:12px}.scp-side .lp-eyebrow{margin:14px 0 5px}.scp-side .lp-eyebrow:first-child{margin-top:0}'
+           '.scp-side{flex:0 0 172px;position:sticky;top:calc(var(--nav-h,49px) + 12px)}.scp-side .lp-eyebrow{margin:14px 0 5px}.scp-side .lp-eyebrow:first-child{margin-top:0}'
            '.scp-side .ktabs{margin:0;gap:5px;flex-wrap:wrap}.scp-side .ktab{white-space:nowrap;padding:4px 10px}.scp-side .cu{flex-wrap:wrap;justify-content:flex-start;gap:1.5px}'
            '.scp .panel-wrap.wide{flex:1;min-width:0;width:auto;left:0;transform:none;margin:0}.scp .panel-wrap.stack{flex-direction:column;align-items:center}'
            '@media(max-width:900px){.scp-main{flex-direction:column;width:auto;left:0;transform:none}.scp-side{position:static;flex:none}.scp .panel-wrap.wide{width:100%}}')
@@ -2065,7 +2067,7 @@ LIN_CSS = """
 .lin-head h1{font:400 34px/1.18 var(--serif);margin:18px 0 10px;letter-spacing:-.005em}
 .lin-head .standfirst{max-width:760px}
 .lin-box{position:relative;width:calc(100vw - 32px);margin:16px 0 0 calc(50% - 50vw + 16px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-#lin-heads{position:sticky;top:0;z-index:5;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--rule)}
+#lin-heads{position:sticky;top:var(--nav-h,49px);z-index:5;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--rule)}
 #lin-lanes{position:relative;will-change:transform}
 #lin-diagram{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}
 #lin-diagram::-webkit-scrollbar{height:6px}#lin-diagram::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}

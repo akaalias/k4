@@ -826,7 +826,7 @@ def page(title, body, active="", refresh=True):
     refresh = refresh and not EXPORT
     meta = '<script>(function(){var v=null;setInterval(function(){fetch("/version").then(function(r){return r.text()}).then(function(t){if(v===null)v=t;else if(t!==v)location.reload();});},10000);})();</script>' if refresh else ""
     link = lambda h, t: f'<a href="{h}" class="{"on" if active == h else ""}">{t}</a>'
-    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/experiments", "Experiments"), ("/lineage", "Lineage"), ("/learnings", "Learnings")))
+    nav = ("".join(link(h, t) for h, t in (("/", "Project Overview"), ("/experiments", "Experiments"), ("/lineage", "Lineage"), ("/evolution", "Evolution"), ("/learnings", "Learnings")))
            + '<span class="spacer"></span><span class="sec">'
            + "".join(link(h, t) for h, t in (("/families", "Families"), ("/priorities", "Priorities"), ("/keys", "Keys"), ("/dead-ends", "Dead Ends"), ("/pivots", "Pivots")))
            + f'<a href="/reference" class="{"on" if active == "/reference" or active in REFERENCE else ""}">Reference</a>'
@@ -1495,6 +1495,123 @@ def learnings_page():
     soon = ('<div class="hf-method learn-soon"><b>Our learnings, coming soon</b>'
             '<span>What the experiments have taught us about K4, one finding at a time.</span></div>')
     return page("learnings", '<div class="learn-hero">' + hero + arrow + soon + "</div>", "/learnings", False)
+
+
+EVO_CSS = """
+.evo-figure{width:100vw;position:relative;left:50%;margin-left:-50vw;overflow-x:auto;overflow-y:hidden;padding:8px 0 14px;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}
+.evo-figure::-webkit-scrollbar{height:8px}.evo-figure::-webkit-scrollbar-thumb{background:var(--rule);border-radius:4px}
+.evo-scrollhint{text-align:center;font:600 10px var(--serif);text-transform:uppercase;letter-spacing:.09em;color:var(--faint);margin:26px 0 10px}
+#evo-svg{display:block}
+.evo-era{fill:rgba(107,106,96,.055);pointer-events:none}.evo-erabound{stroke:var(--rule);stroke-width:1}
+.evo-eralab{fill:var(--muted);font:600 11px var(--serif);font-feature-settings:"smcp" 1;text-transform:uppercase;letter-spacing:.07em;pointer-events:none}
+.evo-grid{stroke:var(--rule-soft);stroke-width:1}
+.evo-day{fill:var(--faint);font:600 9.5px var(--serif);letter-spacing:.08em;text-transform:uppercase}
+.evo-axis{stroke:var(--faint);stroke-width:1}.evo-exptick{stroke:var(--faint);stroke-width:1}.evo-explab{fill:var(--muted);font:10.5px var(--serif);text-anchor:middle;font-variant-numeric:lining-nums tabular-nums}
+.evo-exp{fill:var(--faint);stroke:var(--paper);stroke-width:.8;cursor:pointer}.evo-exp.kept{fill:var(--ink)}
+.evo-trunk{stroke:var(--ink);stroke-width:2.5;stroke-linecap:round}
+.evo-tick{stroke:var(--rule);stroke-width:1}
+.evo-node{fill:var(--ink);stroke:var(--paper);stroke-width:2;cursor:pointer}
+.evo-tlab{fill:var(--ink);font:600 10.5px var(--serif);cursor:pointer}
+.evo-dead{fill:none;stroke:var(--faint);stroke-width:2;stroke-dasharray:5 4}
+.evo-end line{stroke:var(--faint);stroke-width:2;stroke-linecap:round}
+.evo-super{fill:none;stroke:var(--accent);stroke-width:2}
+.evo-endr{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.evo-lab,.evo-mlab,.evo-tlab,.evo-endlab,.evo-pinlab{paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+.evo-lab{font:600 10.5px var(--serif);cursor:pointer}.evo-lab.d{fill:var(--muted)}.evo-lab.s{fill:var(--accent)}
+.evo-endlab{font:600 9.5px var(--serif);letter-spacing:.02em;pointer-events:none}.evo-endlab.s{fill:var(--accent)}.evo-endlab.d{fill:var(--muted)}
+.evo-pin{stroke:var(--accent);stroke-width:1;stroke-dasharray:2 2}.evo-pindot{fill:var(--accent);cursor:pointer}
+.evo-pinlab{fill:var(--accent);font:600 9px var(--serif);cursor:pointer;text-transform:uppercase;letter-spacing:.05em;text-anchor:middle}
+.evo-merge{fill:none;stroke:var(--ink);stroke-width:2}.evo-arrow{fill:var(--ink)}
+.evo-mstart{fill:var(--paper);stroke:var(--ink);stroke-width:2}
+.evo-mlab{fill:var(--ink);font:italic 600 10.5px var(--serif);cursor:pointer;text-anchor:end}
+.evo-gap{fill:var(--paper);stroke:var(--rule);stroke-width:1;stroke-dasharray:3 3}
+.evo-gaplab{fill:var(--faint);font:600 10px var(--serif);text-anchor:middle;letter-spacing:.07em;text-transform:uppercase}
+.evo-svg-dim [data-k]:not(.on){opacity:.22}
+.evo-read{max-width:760px;margin:26px auto 0;font-size:15.5px;line-height:1.7;color:var(--muted)}
+#evo-tip{position:fixed;z-index:60;max-width:390px;background:var(--paper);border:1px solid var(--rule);box-shadow:0 6px 22px rgba(0,0,0,.13);padding:12px 15px;font-size:13px;line-height:1.6;color:var(--muted);opacity:0;pointer-events:none;transition:opacity .12s}
+#evo-tip .tt{font:600 13.5px var(--serif);color:var(--ink);display:block;margin-bottom:5px}
+#evo-tip .tk{font:600 9.5px var(--serif);text-transform:uppercase;letter-spacing:.09em;display:block;margin-bottom:7px;color:var(--muted)}
+#evo-tip .tk.superseded,#evo-tip .tk.incident{color:var(--accent)}#evo-tip .tk.kept,#evo-tip .tk.insight{color:var(--ink)}#evo-tip .tk.silence{color:var(--faint)}
+"""
+
+EVO_JS = """<script>
+(function(){
+  var tips={}; try{tips=JSON.parse(document.getElementById('evo-tips').textContent||'{}')}catch(e){}
+  var svg=document.getElementById('evo-svg'), tip=document.getElementById('evo-tip');
+  if(!svg||!tip) return;
+  var KIND={kept:'on the trunk: this survived',abandoned:'tried, then abandoned',superseded:'ran as the mainline, then replaced',
+            insight:'an insight that merged in',experiment:'experiment',incident:'incident: something broke',silence:'nothing happened'};
+  function show(k,ev){
+    var d=tips[k]; if(!d) return;
+    tip.innerHTML="<span class='tk "+d.k+"'>"+(KIND[d.k]||d.k)+"</span><span class='tt'>"+d.t+"</span>"+d.d;
+    tip.style.opacity=1;
+    var x=Math.min(ev.clientX+16,window.innerWidth-tip.offsetWidth-10);
+    var y=Math.min(ev.clientY+14,window.innerHeight-tip.offsetHeight-10);
+    tip.style.left=x+'px'; tip.style.top=Math.max(8,y)+'px';
+    svg.classList.add('evo-svg-dim');
+    svg.querySelectorAll("[data-k='"+k+"']").forEach(function(n){n.classList.add('on')});
+  }
+  function hide(){tip.style.opacity=0; svg.classList.remove('evo-svg-dim');
+    svg.querySelectorAll('.on').forEach(function(n){n.classList.remove('on')});}
+  svg.querySelectorAll('[data-k]').forEach(function(n){
+    var k=n.getAttribute('data-k');
+    n.addEventListener('mousemove',function(ev){show(k,ev)});
+    n.addEventListener('mouseleave',hide);
+    if(tips[k]&&tips[k].h) n.addEventListener('click',function(){window.open(tips[k].h,'_blank')});
+  });
+  svg.addEventListener('mouseleave',hide);
+  var fig=document.querySelector('.evo-figure');
+  if(fig){
+    var LATEST=__LATEST__;
+    fig.scrollLeft=0;
+    setTimeout(function(){
+      var t=Math.max(0,Math.min(LATEST-fig.clientWidth/2,fig.scrollWidth-fig.clientWidth));
+      try{fig.scrollTo({left:t,behavior:'smooth'})}catch(e){fig.scrollLeft=t}
+    },450);
+  }
+})();
+</script>"""
+
+
+def evolution_page():
+    """/evolution (issue #130): what happened to the research itself, drawn from evolution.py."""
+    import evolution
+    svg, tips, latest = evolution.build()
+    tags = {int(r["tag"][:4]): r["tag"] for r in load_results()}
+    for t in tips.values():
+        h = t.get("h") or ""
+        if h.startswith("exp:"):
+            h = "/exp/" + tags.get(int(h[4:]), "")
+        if h and EXPORT:
+            h = EXPORT["base"] + h
+        t["h"] = h
+        t["t"], t["d"] = esc(t["t"]), esc(t["d"])
+    sw = lambda inner, w=36: f'<svg width="{w}" height="12">{inner}</svg>'
+    legend = ('<div class="ph-legend">'
+              + '<span>' + sw('<line x1="0" y1="6" x2="36" y2="6" stroke="var(--ink)" stroke-width="2.5"/><circle cx="18" cy="6" r="4.5" fill="var(--ink)"/>') + 'the trunk: what the project still does today</span>'
+              + '<span>' + sw('<line x1="0" y1="6" x2="24" y2="6" stroke="var(--faint)" stroke-width="2" stroke-dasharray="5 4"/><line x1="27" y1="2" x2="34" y2="10" stroke="var(--faint)" stroke-width="2"/><line x1="27" y1="10" x2="34" y2="2" stroke="var(--faint)" stroke-width="2"/>') + 'tried, then abandoned</span>'
+              + '<span>' + sw('<line x1="0" y1="6" x2="25" y2="6" stroke="var(--accent)" stroke-width="2"/><circle cx="30" cy="6" r="5" fill="var(--paper)" stroke="var(--accent)" stroke-width="2"/>') + 'ran as the mainline, then replaced</span>'
+              + '<span>' + sw('<line x1="0" y1="3" x2="24" y2="3" stroke="var(--ink)" stroke-width="2"/><path d="M24,3 C30,3 32,7 32,10" stroke="var(--ink)" stroke-width="2" fill="none"/><path d="M28.5,8 L32,12 L35.5,8 z" fill="var(--ink)"/>') + 'an insight that merged in</span>'
+              + '<span>' + sw('<path d="M11,0.5 l5.5,5.5 l-5.5,5.5 l-5.5,-5.5 z" fill="var(--accent)"/>', 22) + 'incident: something broke</span></div>')
+    c = evolution.COUNTS
+    facts = (f'{evolution.span_label()}. {c["trunk"]} steps on the trunk, {c["dead"]} branches abandoned, {c["super"]} rules replaced, '
+             f'{c["merges"]} insights and {c["incidents"]} incidents.')
+    head = page_head("Evolution", "How the research itself changed course",
+                     'The <a href="/lineage">lineage</a> shows what the loop tried. This shows what happened to the research around it. '
+                     "Time runs left to right. The dark line is what survived. Above it are the branches that were abandoned and the insights that changed the work; "
+                     "below it are the rules that ran as the mainline for a while and were then replaced, the machines among them. Hover a mark for what happened and why.",
+                     facts, legend)
+    read = ('<p class="evo-read">The long lines below the trunk are the story. Each is a rule the loop worked under without question: '
+            "a pivot rule that cut threads off before they were finished, a verdict of closed that no planted answer had ever tested, "
+            "a thirty-minute budget that decided which tests were designed at all, and success criteria that asked for more than the official record does. "
+            "The loop tests what its rules let it test, so each of these was found by a person looking at the results, and the results measured under them were measured again.</p>")
+    blob = json.dumps(tips).replace("</", "<\\/")
+    body = (f"<style>{EVO_CSS}</style>" + head
+            + '<p class="evo-scrollhint">scroll sideways &rarr; quiet days are drawn narrow</p>'
+            + f'<div class="evo-figure">{svg}</div>' + read
+            + page_foot('Each change of family has its own page under <a href="/pivots">pivots</a>; what the project takes for granted is on the <a href="/assumptions">assumptions</a> page.')
+            + f'<div id="evo-tip"></div><script type="application/json" id="evo-tips">{blob}</script>' + EVO_JS.replace("__LATEST__", f"{latest:.0f}"))
+    return page("evolution", body, "/evolution", False)
 
 
 def pivot_page(pid):
@@ -3055,6 +3172,8 @@ def route(path):
                        foot='The same items as a tree are on the <a href="/families">families</a> page; the rules the loop follows are in the <a href="/program">program</a>.')
     if path == "/learnings":
         return learnings_page()
+    if path == "/evolution":
+        return evolution_page()
     if path == "/pivots":
         return pivots_page()
     if path.startswith("/pivot/"):
@@ -3112,7 +3231,7 @@ def export(out, base=""):
     from datetime import datetime, timezone
     EXPORT.update(base=base, date=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
     rows = load_results()
-    paths = (["/", "/experiments", "/lineage", "/learnings", "/families", "/priorities", "/pivots", "/record",
+    paths = (["/", "/experiments", "/lineage", "/evolution", "/learnings", "/families", "/priorities", "/pivots", "/record",
               "/notebook", "/clues", "/assumptions", "/glossary", "/program", "/reference", "/controls"]
              + [p for p in FAM_SECTIONS if p != "/pivots"]
              + [f"/pivot/{p['id']}" for p in load_pivots()] + [f"/exp/{r['tag']}" for r in rows])

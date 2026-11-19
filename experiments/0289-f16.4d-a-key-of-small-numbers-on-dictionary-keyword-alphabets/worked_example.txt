@@ -1,0 +1,27 @@
+message alphabet: plain A-Z; carved alphabet: plain A-Z; rule: steps from the known letter to the carved one
+
+place known carved steps  a digit 0-9?
+   22     E      F     1  yes
+   23     A      L    11  no
+   24     S      R    25  no
+   25     T      V     2  yes
+   26     N      Q     3  yes
+   27     O      Q     2  yes
+   28     R      P    24  no
+   29     T      R    24  no
+   30     H      N     6  yes
+   31     E      G     2  yes
+   32     A      K    10  no
+   33     S      S     0  yes
+   34     T      S    25  no
+   64     B      N    12  no
+   65     E      Y    20  no
+   66     R      P    24  no
+   67     L      V    10  no
+   68     I      T    11  no
+   69     N      T     6  yes
+   70     C      M    10  no
+   71     L      Z    14  no
+   72     O      F    17  no
+   73     C      P    13  no
+   74     K      K     0  yes

@@ -287,3 +287,4 @@ id	tag	family	parent	decision	n_candidates	n_passed	best_crib_hits	best_loss	bes
 0286	0286-f16.4-small-shifts-per-crib-and-carved-line-pre-registered	16-simple-hand-methods	0029-small-shift-keys-closeness-under-all-alphabets	reverted	0	0	0			77	design=5 test=23 run=77 record=0
 0287	0287-f16.4-r-small-shifts-replicated-on-fresh-shuffles-thresholds-1-6	16-simple-hand-methods	0286-f16.4-small-shifts-per-crib-and-carved-line-pre-registered	reverted	0	0	0			93	implement=5 test=160 run=93 record=0
 0288	0288-f16.4a-what-carries-the-small-shifts-line-or-letter	16-simple-hand-methods	0287-f16.4-r-small-shifts-replicated-on-fresh-shuffles-thresholds-1-6	reverted	0	0	0			106	implement=0 test=252 design=103 run=106 record=0
+0289	0289-f16.4d-a-key-of-small-numbers-on-dictionary-keyword-alphabets	16-simple-hand-methods	0288-f16.4a-what-carries-the-small-shifts-line-or-letter	reverted	0	0	0			2731	design=274 test=78 run=2731 record=0
